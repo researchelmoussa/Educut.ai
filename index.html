@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EduCut.ai — Professional AI & Digital Transformation Training. Take the 3-minute assessment and receive a personalized 3, 5 or 7-course AI learning path for your company." />
+  <title>EduCut.ai — Build Your Company's AI Path</title>
+  <style>
+    :root{
+      --ink:#0b0b0c; --paper:#f5f5f2; --white:#fff; --muted:#8d8d88;
+      --line:#d7d7d1; --lime:#a8ef31; --blue:#3357ff; --soft:#ecece7;
+      --max:1240px; --radius:2px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.4}
+    button,input{font:inherit} a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+    .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;text-transform:uppercase;letter-spacing:.15em;font-size:11px}
+    .nav{height:76px;display:flex;align-items:center;border-bottom:1px solid #242424;background:var(--ink);color:white;position:sticky;top:0;z-index:20}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
+    .brand{font-weight:800;letter-spacing:-.04em;font-size:22px}.brand span{color:var(--lime)}
+    .nav-links{display:flex;gap:28px;align-items:center;font-size:13px}.nav-links a{color:#c7c7c7}.nav-links a:hover{color:white}
+    .btn{border:1px solid var(--ink);background:var(--ink);color:white;padding:13px 18px;cursor:pointer;font-weight:700;letter-spacing:-.01em;transition:.2s}
+    .btn:hover{transform:translateY(-1px)} .btn-lime{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+    .btn-outline{background:transparent;border-color:#555}.btn-lg{padding:17px 24px;font-size:15px}
+    .hero{background:var(--ink);color:white;padding:92px 0 70px;min-height:670px;display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:74px;align-items:center}
+    .eyebrow{color:var(--lime);margin-bottom:22px}.hero h1{font-size:clamp(54px,7vw,96px);line-height:.91;letter-spacing:-.065em;margin:0 0 28px;max-width:850px}
+    .hero h1 .outline{color:transparent;-webkit-text-stroke:1px #777}
+    .hero-copy{font-size:19px;max-width:650px;color:#c9c9c6;margin-bottom:34px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}.trust{display:flex;gap:25px;margin-top:34px;color:#8e8e8b;font-size:12px}
+    .assessment-card{border:1px solid #444;padding:28px;background:#111;position:relative;overflow:hidden}
+    .assessment-card:before{content:"";position:absolute;width:160px;height:7px;background:var(--lime);top:0;left:0}
+    .assessment-card h3{font-size:31px;line-height:1.05;margin:22px 0 12px;letter-spacing:-.04em}.assessment-card p{color:#aaa}
+    .result-preview{margin-top:28px;border-top:1px solid #3a3a3a}.preview-row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid #2d2d2d;font-size:13px}.preview-row b{color:var(--lime)}
+    .stats{background:white;border-bottom:1px solid var(--line)}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .stat{padding:30px 0;border-right:1px solid var(--line)}.stat:not(:first-child){padding-left:30px}.stat:last-child{border-right:0}.stat strong{font-size:28px}.stat span{display:block;color:#7b7b76;margin-top:3px;font-size:12px}
+    section{padding:92px 0}.section-head{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;margin-bottom:50px}.section-head h2{font-size:48px;line-height:.98;letter-spacing:-.05em;margin:0}.section-head p{font-size:17px;color:#5e5e5a;max-width:670px;margin:0}
+    .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+    .plan{background:var(--paper);padding:32px;min-height:360px;display:flex;flex-direction:column}.plan:nth-child(2){background:#fff}.plan .num{font-size:84px;line-height:1;letter-spacing:-.08em}.plan h3{font-size:28px;margin:18px 0 10px}.plan p{color:#696965}.plan ul{list-style:none;padding:0;margin:22px 0 30px;border-top:1px solid var(--line)}.plan li{padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}.plan .tag{margin-top:auto;color:var(--blue)}
+    .academy-section{background:#fff}.academies{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--line)}
+    .academy{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:128px}.academy .code{color:var(--blue)}.academy h4{font-size:18px;margin:20px 0 0}
+    .how{background:var(--ink);color:white}.how .section-head p{color:#aaa}.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #444}.step{padding:28px;border-right:1px solid #333}.step:last-child{border-right:0}.step .n{color:var(--lime);font-size:12px}.step h3{font-size:22px;margin:40px 0 10px}.step p{color:#9e9e9a;font-size:14px}
+    .cta{background:var(--lime);padding:74px 0}.cta-grid{display:flex;justify-content:space-between;gap:40px;align-items:center}.cta h2{font-size:54px;line-height:.95;letter-spacing:-.05em;margin:0;max-width:750px}.cta .btn{white-space:nowrap}
+    footer{background:var(--ink);color:white;padding:38px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;color:#7f7f7a;font-size:12px}
+
+
+    /* Interactive Academy Explorer */
+    .academy{position:relative;cursor:pointer;transition:background .2s,color .2s,transform .2s;overflow:hidden}
+    .academy:after{content:"↗";position:absolute;right:22px;top:22px;font-size:17px;color:#a1a19c;transition:.2s}
+    .academy:hover{background:#f7f7f3}.academy:hover:after{color:var(--blue);transform:translate(2px,-2px)}
+    .academy.active{background:var(--ink);color:#fff}.academy.active .code{color:var(--lime)}.academy.active:after{content:"×";color:var(--lime);transform:none}
+    .academy-explorer{grid-column:1/-1;background:var(--ink);color:#fff;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);overflow:hidden;max-height:0;opacity:0;transition:max-height .45s ease,opacity .25s ease}
+    .academy-explorer.open{max-height:620px;opacity:1}
+    .academy-detail{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;padding:42px 44px 46px}
+    .academy-detail-kicker{color:var(--lime);margin-bottom:14px}
+    .academy-detail h3{font-size:38px;line-height:1;letter-spacing:-.045em;margin:0 0 16px}
+    .academy-detail-summary{font-size:17px;line-height:1.55;color:#c3c3bf;max-width:650px;margin:0}
+    .academy-detail-label{color:#858580;margin:0 0 12px}
+    .academy-topic-list{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
+    .academy-topic{border:1px solid #3d3d3d;padding:9px 11px;font-size:12px;background:#151515}
+    .academy-audience{border-top:1px solid #353535;padding-top:18px;color:#aaa;font-size:13px;line-height:1.5}
+    .academy-audience strong{display:block;color:#fff;font-size:12px;margin-bottom:7px;text-transform:uppercase;letter-spacing:.12em}
+    .academy-detail-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+    .academy-detail-meta span{font-family:"SFMono-Regular",Consolas,monospace;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#93938e}
+    .academy-hint{font-size:12px;color:#8a8a85;margin-top:-34px;margin-bottom:28px}
+    @media(max-width:900px){.academy-detail{grid-template-columns:1fr;gap:30px;padding:34px 30px}.academy-explorer.open{max-height:820px}}
+    @media(max-width:600px){.academy-detail{padding:28px 22px}.academy-detail h3{font-size:31px}.academy-detail-summary{font-size:15px}.academy-hint{margin-top:-30px}}
+
+
+
+    /* Motion system — inspired by modern kinetic web experiences */
+    html{scroll-behavior:smooth}
+    body{overflow-x:hidden}
+    .motion-ready [data-reveal],
+    .motion-ready .stat,
+    .motion-ready .path-card{opacity:0;transform:translateY(26px)}
+    .motion-ready .hero .eyebrow,
+    .motion-ready .hero h1,
+    .motion-ready .hero p,
+    .motion-ready .hero .hero-actions{opacity:0;transform:translateY(24px)}
+    .motion-line{overflow:hidden}
+    .motion-line-inner{display:inline-block;will-change:transform,opacity}
+    .kinetic-word{display:inline-block;will-change:transform}
+    .hero-orbit{
+      position:absolute;pointer-events:none;z-index:0;border:1px solid rgba(47,85,255,.16);
+      border-radius:999px;transform-origin:center;will-change:transform
+    }
+    .hero-orbit.o1{width:430px;height:430px;right:-140px;top:40px}
+    .hero-orbit.o2{width:260px;height:260px;right:-55px;top:125px;border-color:rgba(184,255,54,.28)}
+    .hero-grid-motion{
+      position:absolute;inset:0;pointer-events:none;opacity:.15;
+      background-image:linear-gradient(to right,rgba(20,20,20,.08) 1px,transparent 1px),
+                       linear-gradient(to bottom,rgba(20,20,20,.08) 1px,transparent 1px);
+      background-size:52px 52px;mask-image:linear-gradient(to bottom,#000,transparent 82%);
+      will-change:background-position
+    }
+    .hero>*:not(.hero-orbit):not(.hero-grid-motion){position:relative;z-index:1}
+    .academy{will-change:transform,opacity}
+    .academy .code{transition:transform .25s ease}
+    .academy:hover .code{transform:translateX(5px)}
+    .btn{position:relative;overflow:hidden;isolation:isolate}
+    .btn::after{
+      content:"";position:absolute;left:var(--mx,50%);top:var(--my,50%);
+      width:0;height:0;border-radius:50%;background:rgba(255,255,255,.22);
+      transform:translate(-50%,-50%);transition:width .45s ease,height .45s ease;z-index:-1
+    }
+    .btn:hover::after{width:320px;height:320px}
+    .motion-progress{
+      position:fixed;left:0;top:0;height:3px;background:var(--blue);z-index:9999;
+      transform-origin:left center;transform:scaleX(0);pointer-events:none
+    }
+    .cursor-dot{
+      position:fixed;width:9px;height:9px;border-radius:50%;background:var(--blue);
+      pointer-events:none;z-index:9998;transform:translate(-50%,-50%);
+      mix-blend-mode:multiply;opacity:0;transition:opacity .2s ease
+    }
+    .cursor-ring{
+      position:fixed;width:32px;height:32px;border:1px solid rgba(47,85,255,.45);
+      border-radius:50%;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);
+      opacity:0;transition:width .22s ease,height .22s ease,opacity .2s ease,border-color .2s ease
+    }
+    .cursor-ring.active{width:48px;height:48px;border-color:var(--lime)}
+    .modal.open .consult-shell,.modal.open .quiz-shell{animation:modalIn .42s cubic-bezier(.2,.8,.2,1) both}
+    @keyframes modalIn{from{opacity:0;transform:translateY(20px) scale(.985)}to{opacity:1;transform:none}}
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+      .motion-ready [data-reveal],.motion-ready .stat,.motion-ready .path-card,
+      .motion-ready .hero .eyebrow,.motion-ready .hero h1,.motion-ready .hero p,.motion-ready .hero .hero-actions{opacity:1!important;transform:none!important}
+      .cursor-dot,.cursor-ring,.hero-orbit,.hero-grid-motion{display:none!important}
+    }
+
+
+    /* Academy motion fix — dynamic cards remain visible and animate after render */
+    .academy.academy-enter{opacity:0;transform:translateY(20px) scale(.988)}
+    .academy.academy-visible{opacity:1;transform:translateY(0) scale(1);transition:opacity .58s cubic-bezier(.16,1,.3,1),transform .58s cubic-bezier(.16,1,.3,1)}
+
+    /* Free consultation & catalogue */
+    .consult-section{background:#fff;padding:78px 0;border-top:1px solid var(--line)}
+    .consult-box{display:grid;grid-template-columns:1.05fr .95fr;border:1px solid var(--ink);background:var(--paper)}
+    .consult-copy{padding:44px 46px}
+    .consult-copy h2{font-size:46px;line-height:.98;letter-spacing:-.05em;margin:10px 0 18px}
+    .consult-copy p{font-size:16px;color:#62625d;max-width:650px;margin:0 0 28px}
+    .consult-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .consult-side{background:var(--ink);color:#fff;padding:36px 38px;display:flex;flex-direction:column;justify-content:space-between}
+    .consult-side .mono{color:var(--lime)}
+    .consult-points{margin-top:28px;border-top:1px solid #333}
+    .consult-point{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid #2b2b2b;font-size:13px}
+    .consult-point span:last-child{color:#999;text-align:right}
+    .consult-modal .consult-shell{background:var(--paper);width:min(1080px,100%);height:min(790px,95vh);display:grid;grid-template-columns:330px 1fr;box-shadow:0 30px 80px #000;overflow:hidden}
+    .consult-panel{background:var(--ink);color:#fff;padding:32px;display:flex;flex-direction:column}
+    .consult-panel h3{font-size:31px;line-height:1.02;letter-spacing:-.04em;margin:40px 0 14px}
+    .consult-panel p{font-size:13px;color:#9b9b97}
+    .consult-panel .panel-bottom{margin-top:auto;border-top:1px solid #333;padding-top:20px;color:#8d8d88;font-size:12px}
+    .consult-main{display:flex;flex-direction:column;min-width:0;min-height:0}
+    .consult-top{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px}
+    .consult-top button{border:0;background:transparent;font-size:25px;cursor:pointer}
+    .consult-body{padding:30px 34px 36px;overflow-y:auto;min-height:0}
+    .consult-intro{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:24px}
+    .consult-intro h2{font-size:34px;line-height:1;letter-spacing:-.04em;margin:4px 0 8px}
+    .consult-intro p{margin:0;color:#6f6f6a;max-width:570px}
+    .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .contact-form .field.full{grid-column:1/-1}
+    .contact-form label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;color:#6d6d68}
+    .contact-form input{width:100%;border:1px solid var(--line);background:#fff;padding:13px 14px;outline:none}
+    .contact-form input:focus{border-color:var(--ink)}
+    .choice-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0}
+    .choice-card{border:1px solid var(--line);background:#fff;padding:17px;cursor:pointer;transition:.15s;text-align:left}
+    .choice-card strong{display:block;margin-bottom:4px}
+    .choice-card span{font-size:12px;color:#777}
+    .choice-card.active{border-color:var(--ink);box-shadow:inset 4px 0 0 var(--lime)}
+    .booking-block{border-top:1px solid var(--line);padding-top:22px}
+    .booking-block h4{font-size:18px;margin:0 0 5px}
+    .booking-block>p{font-size:12px;color:#777;margin:0 0 16px}
+    .date-strip{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
+    .date-btn{min-width:96px;border:1px solid var(--line);background:#fff;padding:12px 9px;cursor:pointer;text-align:center}
+    .date-btn .day{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#777}
+    .date-btn .date{display:block;font-weight:800;font-size:15px;margin-top:3px}
+    .date-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+    .date-btn.active .day{color:var(--lime)}
+    .time-label{margin:18px 0 10px;color:#777}
+    .time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .time-btn{border:1px solid var(--line);background:#fff;padding:11px 8px;cursor:pointer;font-weight:700}
+    .time-btn:hover{border-color:#888}
+    .time-btn.active{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+    .catalogue-check{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);background:#fff;padding:14px;margin-top:20px}
+    .catalogue-check input{margin-top:3px}
+    .catalogue-check strong{display:block;font-size:13px}
+    .catalogue-check span{display:block;font-size:12px;color:#777;margin-top:2px}
+    .consult-submit{margin-top:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .consult-submit .mono{color:#777}
+    .consult-success{border:1px solid var(--ink);background:#fff;padding:28px;margin-top:18px}
+    .consult-success h3{font-size:28px;margin:0 0 8px;letter-spacing:-.03em}
+    .consult-success p{color:#666;margin:0}
+    @media(max-width:900px){
+      .consult-box{grid-template-columns:1fr}.consult-side{min-height:260px}
+      .consult-modal .consult-shell{grid-template-columns:1fr;height:96vh}.consult-panel{display:none}
+    }
+    @media(max-width:650px){
+      .consult-copy{padding:34px 26px}.consult-copy h2{font-size:38px}
+      .consult-body{padding:24px 20px 30px}.contact-form{grid-template-columns:1fr}
+      .contact-form .field.full{grid-column:auto}.choice-row{grid-template-columns:1fr}
+      .time-grid{grid-template-columns:repeat(3,1fr)}
+    }
+
+    /* Quiz */
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:100;display:none;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}
+    .quiz-shell{background:var(--paper);width:min(940px,100%);height:min(760px,94vh);display:grid;grid-template-columns:240px 1fr;box-shadow:0 30px 80px #000;overflow:hidden}
+    .quiz-side{background:var(--ink);color:white;padding:28px;display:flex;flex-direction:column}.quiz-side .brand{font-size:19px}.quiz-side h3{font-size:25px;line-height:1.05;margin:44px 0 12px}.quiz-side p{font-size:13px;color:#999}.quiz-side .side-bottom{margin-top:auto}.mini-line{height:4px;background:#272727;margin-bottom:12px}.mini-line span{display:block;height:100%;background:var(--lime);width:5%}
+    .quiz-main{display:flex;flex-direction:column;min-width:0}.quiz-top{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px}.quiz-top button{border:0;background:transparent;font-size:24px;cursor:pointer}.quiz-body{padding:42px 48px;overflow:auto;flex:1}.q-count{color:var(--blue);margin-bottom:14px}.q-title{font-size:31px;line-height:1.12;letter-spacing:-.035em;margin:0 0 26px}.q-note{color:#797975;font-size:13px;margin-top:-14px;margin-bottom:20px}
+    .options{display:grid;gap:9px}.multi-status{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:14px 0 0;color:#6f6f6a;font-size:12px}.multi-status strong{color:var(--ink)}.multi-continue{margin-top:16px;width:100%}.option{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);background:white;padding:15px 16px;cursor:pointer;text-align:left;width:100%;transition:.15s}.option:hover{border-color:#8c8c88}.option.selected{border-color:var(--ink);box-shadow:inset 4px 0 0 var(--lime)}.letter{font-family:monospace;color:var(--blue);width:19px;flex:0 0 19px}.quiz-foot{padding:18px 32px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.quiz-foot button:disabled{opacity:.3;cursor:not-allowed;transform:none}
+    .lead-box{max-width:560px}.lead-box h2{font-size:42px;letter-spacing:-.05em;line-height:1;margin:0 0 12px}.lead-box p{color:#666}.form-grid{display:grid;gap:12px;margin-top:25px}.field label{display:block;font-size:10px;letter-spacing:.14em;color:#777;text-transform:uppercase;margin-bottom:6px}.field input{width:100%;padding:14px 13px;border:1px solid var(--line);background:white;outline:none}.field input:focus{border-color:var(--ink)}.consent{font-size:11px;color:#777}.error{color:#b00020;font-size:12px;margin-top:8px}
+    .results h2{font-size:42px;letter-spacing:-.05em;margin:0}.score-wrap{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center;margin:24px 0 30px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.score{font-size:56px;letter-spacing:-.06em}.score small{font-size:18px;color:#999}.focus-chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid var(--line);padding:8px 10px;background:white;font-size:12px}
+    .result-plans{display:grid;gap:10px}.result-plan{background:white;border:1px solid var(--line);padding:16px}.result-plan-head{display:flex;justify-content:space-between;align-items:baseline;gap:15px}.result-plan h3{margin:0;font-size:18px}.price{font-weight:800}.course-row{display:flex;gap:12px;padding:9px 0;border-top:1px solid #eee;font-size:12px}.course-row:first-of-type{margin-top:12px}.course-row .course-code{color:var(--blue);font-family:monospace;min-width:64px}.saved{background:#e9f9ce;border-left:4px solid var(--lime);padding:10px 12px;margin-top:18px;font-size:12px}
+    @media(max-width:900px){.hero-grid,.section-head{grid-template-columns:1fr}.hero{padding-top:60px}.stats-grid,.plans,.academies,.steps{grid-template-columns:1fr 1fr}.quiz-shell{grid-template-columns:1fr}.quiz-side{display:none}.cta-grid{align-items:flex-start;flex-direction:column}}
+    @media(max-width:600px){.wrap{width:min(100% - 28px,var(--max))}.nav-links a:not(.btn){display:none}.hero h1{font-size:52px}.stats-grid,.plans,.academies,.steps{grid-template-columns:1fr}.stat{padding:20px!important;border-right:0;border-bottom:1px solid var(--line)}.section-head h2,.cta h2{font-size:40px}.quiz-body{padding:30px 20px}.quiz-top,.quiz-foot{padding-left:20px;padding-right:20px}.q-title{font-size:25px}}
+  
+/* Quiz viewport scrolling fix */
+.quiz-modal{overflow-y:auto!important;overflow-x:hidden!important;-webkit-overflow-scrolling:touch!important;overscroll-behavior:contain}
+.quiz-shell{min-height:100%;height:auto!important;max-height:none!important;overflow:visible!important}
+.quiz-main{height:auto!important;max-height:none!important;overflow:visible!important}
+.quiz-body{height:auto!important;max-height:none!important;overflow:visible!important;padding-bottom:32px!important}
+.quiz-foot{position:sticky!important;bottom:0!important;z-index:20;background:rgba(247,247,244,.97);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding-top:14px;padding-bottom:14px}
+@media(max-width:760px){
+  .quiz-modal{align-items:flex-start!important}
+  .quiz-shell{width:100%!important}
+  .quiz-body{padding-bottom:28px!important}
+}
+
+
+.dna-summary{margin:20px 0 24px;padding:18px 20px;border-left:4px solid var(--lime);background:#fff;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dna-summary .mono{color:var(--blue);font-size:11px;margin-bottom:7px}
+.dna-summary p{margin:0;line-height:1.55;color:#333}
+
+
+
+
+
+.vision-strap{background:var(--paper);border-bottom:1px solid var(--line);padding:15px 0}.vision-strap .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}.vision-strap strong{font-size:14px;letter-spacing:-.01em}.vision-strap span{color:#73736f;font-size:12px}.vision-strap .vision-words{color:var(--blue);font-weight:700;letter-spacing:.04em;text-transform:uppercase}@media(max-width:760px){.vision-strap .wrap{display:block}.vision-strap span{display:block;margin-top:6px}.vision-strap .vision-words{margin-top:8px}}
+
+
+    /* Assessment results — brand-aligned scrolling, close control & next step */
+    .quiz-modal{
+      align-items:flex-start!important;
+      overflow-y:auto!important;
+      overflow-x:hidden!important;
+      padding:24px 18px!important;
+      -webkit-overflow-scrolling:touch!important;
+      overscroll-behavior:contain;
+    }
+    .quiz-modal .quiz-shell{
+      width:min(980px,100%)!important;
+      min-height:0!important;
+      height:auto!important;
+      max-height:none!important;
+      overflow:visible!important;
+      margin:auto;
+      border:1px solid #2f2f2f;
+    }
+    .quiz-modal .quiz-main{height:auto!important;max-height:none!important;overflow:visible!important}
+    .quiz-modal .quiz-top{
+      position:sticky!important;
+      top:0!important;
+      z-index:35!important;
+      background:rgba(245,245,242,.96)!important;
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    #closeQuiz{
+      width:44px;height:44px;display:grid;place-items:center;
+      border:1px solid var(--ink)!important;background:var(--paper)!important;color:var(--ink)!important;
+      transition:.2s!important
+    }
+    #closeQuiz:hover{background:var(--ink)!important;color:#fff!important}
+    .quiz-modal .quiz-body{height:auto!important;max-height:none!important;overflow:visible!important;padding-bottom:36px!important}
+    .quiz-modal .quiz-foot{
+      position:sticky!important;bottom:0!important;z-index:30!important;
+      background:rgba(245,245,242,.97)!important;backdrop-filter:blur(10px);
+      border-top:1px solid var(--line)!important
+    }
+    .results-next{
+      margin:24px 0 6px;
+      border:1px solid var(--ink);
+      background:var(--ink);
+      color:#fff;
+      padding:22px;
+      position:relative;
+      overflow:hidden
+    }
+    .results-next:before{
+      content:"";position:absolute;left:0;top:0;width:7px;height:100%;background:var(--lime)
+    }
+    .results-next .mono{color:var(--lime)!important;margin-bottom:8px}
+    .results-next h3{font-size:25px;line-height:1.05;margin:0 0 8px;letter-spacing:-.03em}
+    .results-next p{color:#aaa;margin:0 0 16px;max-width:700px}
+    .results-next-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .results-next .btn-outline-light{background:transparent;color:#fff;border-color:#666}
+    .results-next .btn-outline-light:hover{border-color:#fff}
+    .results-close-row{
+      display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+      margin-top:18px;padding-top:18px;border-top:1px solid var(--line)
+    }
+    .results-close-note{color:#7b7b76;font-size:11px}
+    .scroll-cue{
+      position:sticky;bottom:76px;z-index:25;margin:0 auto 10px;width:max-content;
+      background:var(--ink);color:#fff;padding:7px 11px;font-size:10px;
+      text-transform:uppercase;letter-spacing:.12em;pointer-events:none;opacity:.84
+    }
+    @media(max-width:900px){
+      .quiz-modal{padding:0!important}
+      .quiz-modal .quiz-shell{width:100%!important;border:0}
+      .quiz-modal .quiz-side{display:none!important}
+      .results-next-actions .btn{width:100%}
+    }
+
+
+    /* Trusted collaborators — country ticker */
+    .trusted-banner{
+      background:var(--ink);color:#fff;border-top:1px solid #2b2b2b;
+      overflow:hidden;padding:22px 0
+    }
+    .trusted-inner{display:flex;align-items:center;gap:28px}
+    .trusted-label{
+      flex:0 0 auto;padding-left:max(24px,calc((100vw - 1180px)/2));
+      padding-right:26px;border-right:1px solid #3a3a3a;white-space:nowrap
+    }
+    .trusted-label .mono{color:var(--lime);font-size:10px}
+    .trusted-label strong{display:block;font-size:14px;margin-top:4px;font-weight:650}
+    .trusted-marquee{position:relative;overflow:hidden;flex:1;min-width:0}
+    .trusted-track{
+      display:flex;width:max-content;align-items:center;
+      animation:trustedScroll 22s linear infinite;will-change:transform
+    }
+    .trusted-group{display:flex;align-items:center}
+    .trusted-country{
+      display:flex;align-items:center;gap:18px;white-space:nowrap;
+      font-size:17px;font-weight:650;letter-spacing:-.01em;padding:0 30px
+    }
+    .trusted-country::after{
+      content:"";width:5px;height:5px;border-radius:50%;background:var(--blue);display:block
+    }
+    .trusted-country:nth-child(even)::after{background:var(--lime)}
+    .trusted-marquee:before,.trusted-marquee:after{
+      content:"";position:absolute;top:0;bottom:0;width:55px;z-index:2;pointer-events:none
+    }
+    .trusted-marquee:before{left:0;background:linear-gradient(90deg,var(--ink),transparent)}
+    .trusted-marquee:after{right:0;background:linear-gradient(-90deg,var(--ink),transparent)}
+    .trusted-banner:hover .trusted-track{animation-play-state:paused}
+    @keyframes trustedScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @media(max-width:700px){
+      .trusted-banner{padding:18px 0}
+      .trusted-inner{display:block}
+      .trusted-label{padding:0 22px 15px;border-right:0;border-bottom:1px solid #333;margin-bottom:15px}
+      .trusted-country{font-size:15px;padding:0 22px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .trusted-track{animation:none;transform:none}
+      .trusted-marquee{overflow-x:auto}
+    }
+
+</style>
+</head>
+<body class="motion-ready"><div class="motion-progress" id="motionProgress"></div><div class="cursor-dot" id="cursorDot"></div><div class="cursor-ring" id="cursorRing"></div>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">EduCut<span>.ai</span></div>
+      <div class="nav-links">
+        <a href="#academy">Academy</a><a href="#paths">AI Paths</a><a href="#how">How it works</a><a href="/signup">Sign up</a><a href="/signin">Sign In</a>
+        <button class="btn btn-lime" data-start>Take the 3-min test</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="mono eyebrow">Bridging AI with Education</div>
+        <h1>Build the right<br><span class="outline">AI path</span> for your company.</h1>
+        <p class="hero-copy">Focused, business-oriented AI learning that connects cutting-edge technology with the capabilities professionals actually need. Take our 3-minute assessment and receive a personalized 3, 5 and 7-course learning path.</p>
+        <div class="hero-actions"><button class="btn btn-lime btn-lg" data-start>Build my free AI Path →</button><a class="btn btn-outline btn-lg" href="#academy">Explore the Academy</a></div>
+        <div class="trust"><span>20 questions</span><span>≈ 3 minutes</span><span>Free recommendation</span><span>No commitment</span></div>
+      </div>
+      <div class="assessment-card">
+        <div class="mono">Free company assessment</div>
+        <h3>Your AI training roadmap.<br>Built in minutes.</h3>
+        <p>We translate your maturity, teams, goals and risk profile into concrete courses from the EduCut.ai catalogue.</p>
+        <div class="result-preview">
+          <div class="preview-row"><span>Essential path</span><b>03 courses</b></div>
+          <div class="preview-row"><span>Accelerate path</span><b>05 courses</b></div>
+          <div class="preview-row"><span>Transform path</span><b>07 courses</b></div>
+          <div class="preview-row"><span>Personalized quotation</span><b>Included</b></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="stats"><div class="wrap stats-grid">
+    <div class="stat"><strong>18</strong><span class="mono">Specialized academies</span></div>
+    <div class="stat"><strong>180+</strong><span class="mono">Professional courses</span></div>
+    <div class="stat"><strong>3</strong><span class="mono">Personalized AI paths</span></div>
+    <div class="stat"><strong>100%</strong><span class="mono">Online & self-paced</span></div>
+  </div></div>
+
+  <div class="vision-strap"><div class="wrap"><strong>AI learning built for business — not a generic course library.</strong><span>Specialized courses that evolve as AI evolves.</span><span class="vision-words">Focused • Relevant • Evolving</span></div></div>
+
+  <section id="paths"><div class="wrap">
+    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--blue);margin-bottom:14px">Your learning architecture</div><h2>One assessment.<br>Three ways forward.</h2></div><p>We don't label companies simply “beginner” or “advanced.” Your recommendation combines organizational maturity, business priorities, target teams, technical ambition and governance needs. You receive three paths with increasing depth.</p></div>
+    <div class="plans">
+      <article class="plan"><div class="mono">Level 01 — Essential</div><div class="num">03</div><h3>Quick capability</h3><p>Build shared understanding and activate your first high-value AI use cases.</p><ul><li>Core AI literacy</li><li>Immediate business application</li><li>One prioritized capability</li></ul><div class="mono tag">Understand → Apply → Quick win</div></article>
+      <article class="plan"><div class="mono">Level 02 — Accelerate</div><div class="num">05</div><h3>Operational capability</h3><p>Build repeatable workflows and stronger team-level AI capabilities.</p><ul><li>Foundations + specialization</li><li>Workflow acceleration</li><li>Responsible adoption</li></ul><div class="mono tag">Apply → Automate → Specialize</div></article>
+      <article class="plan"><div class="mono">Level 03 — Transform</div><div class="num">07</div><h3>Strategic capability</h3><p>Connect skills, technology, governance and business transformation.</p><ul><li>Cross-functional capability</li><li>Governance & risk</li><li>Scale and transformation</li></ul><div class="mono tag">Strategy → Govern → Scale</div></article>
+    </div>
+  </div></section>
+
+  <section class="academy-section" id="academy"><div class="wrap">
+    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--blue);margin-bottom:14px">EduCut.ai Academy</div><h2>From foundations<br>to transformation.</h2></div><p>A focused AI-only portfolio built around precise professional needs — from productivity and business functions to LLMs, RAG, agents, governance, security and enterprise transformation. Courses are continuously updated and expanded as AI evolves.</p></div>
+    <div class="academy-hint mono">Click an Academy to discover its focus →</div>
+    <div class="academies" id="academyGrid"></div>
+    <div class="academy-explorer" id="academyExplorer" aria-live="polite"></div>
+  </div></section>
+
+  <section class="how" id="how"><div class="wrap">
+    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--lime);margin-bottom:14px">3-minute assessment</div><h2>Tell us where you are.<br>We'll map where to go.</h2></div><p>Twenty concise questions help us understand what your organization actually needs, so we can recommend a focused path instead of sending you through a broad, generic course library.</p></div>
+    <div class="steps"><div class="step"><span class="n mono">01</span><h3>Assess</h3><p>Answer 20 focused multiple-choice questions.</p></div><div class="step"><span class="n mono">02</span><h3>Map</h3><p>Our scoring model identifies your highest-priority AI capabilities.</p></div><div class="step"><span class="n mono">03</span><h3>Recommend</h3><p>Receive 3, 5 and 7-course paths using exact EduCut.ai courses.</p></div><div class="step"><span class="n mono">04</span><h3>Plan</h3><p>Receive your results, catalogue and indicative quotation free of charge.</p></div></div>
+  </div></section>
+
+
+  <section class="consult-section" id="consultation"><div class="wrap">
+    <div class="consult-box" data-reveal>
+      <div class="consult-copy">
+        <div class="mono" style="color:var(--blue)">Need help choosing?</div>
+        <h2>Let's identify the right AI learning path together.</h2>
+        <p>Not sure which Academy, course or learning path fits your organization? Request a free consultation with EduCut.ai, or ask us to send you the complete catalogue by email.</p>
+        <div class="consult-actions">
+          <button class="btn btn-lime btn-lg" data-consult>Book a free consultation →</button>
+          <button class="btn btn-lg" data-catalogue>Request the free catalogue</button>
+        </div>
+      </div>
+      <div class="consult-side">
+        <div>
+          <div class="mono">Free · No commitment</div>
+          <div class="consult-points">
+            <div class="consult-point"><span>Discuss your needs</span><span>Company, teams & objectives</span></div>
+            <div class="consult-point"><span>Choose a time</span><span>Select a convenient 1-hour slot</span></div>
+            <div class="consult-point"><span>Get the catalogue</span><span>Full details by business email</span></div>
+          </div>
+        </div>
+        <div class="mono" style="color:#777">EduCut.ai · Bridging AI with Education</div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="cta"><div class="wrap cta-grid"><h2>Build AI capabilities that evolve with technology.</h2><button class="btn btn-lg" data-start>Start the free assessment →</button></div></section>
+
+  
+  <section class="trusted-banner" aria-label="Countries where EduCut.ai collaborators have worked with us">
+    <div class="trusted-inner">
+      <div class="trusted-label">
+        <div class="mono">TRUSTED ACROSS BORDERS</div>
+        <strong>Collaborators who trusted us</strong>
+      </div>
+      <div class="trusted-marquee">
+        <div class="trusted-track">
+          <div class="trusted-group">
+            <span class="trusted-country">Switzerland</span>
+            <span class="trusted-country">France</span>
+            <span class="trusted-country">UAE</span>
+            <span class="trusted-country">Vietnam</span>
+            <span class="trusted-country">Senegal</span>
+            <span class="trusted-country">United States</span>
+          </div>
+          <div class="trusted-group" aria-hidden="true">
+            <span class="trusted-country">Switzerland</span>
+            <span class="trusted-country">France</span>
+            <span class="trusted-country">UAE</span>
+            <span class="trusted-country">Vietnam</span>
+            <span class="trusted-country">Senegal</span>
+            <span class="trusted-country">United States</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer><div class="wrap footer-row"><div>EDUCUT.AI — BRIDGING AI WITH EDUCATION</div><div>FOCUSED • RELEVANT • CONTINUOUSLY EVOLVING</div></div></footer>
+
+
+  <div class="modal consult-modal" id="consultModal" aria-hidden="true">
+    <div class="consult-shell" role="dialog" aria-modal="true" aria-label="Book a free EduCut.ai consultation">
+      <aside class="consult-panel">
+        <div class="brand">EduCut<span>.ai</span></div>
+        <h3>Let's understand<br>your AI learning needs.</h3>
+        <p>Choose a free one-hour consultation or simply request the complete EduCut.ai catalogue by email.</p>
+        <div class="panel-bottom">
+          <div class="mono" style="color:var(--lime);margin-bottom:8px">What we'll discuss</div>
+          Your organization, target learners, priority AI capabilities and the most relevant EduCut.ai Academies.
+        </div>
+      </aside>
+      <main class="consult-main">
+        <div class="consult-top"><div class="mono">Free consultation & catalogue</div><button id="closeConsult" aria-label="Close">×</button></div>
+        <div class="consult-body" id="consultBody">
+          <div class="consult-intro">
+            <div><div class="mono" style="color:var(--blue)">Step 01</div><h2>Tell us how to reach you.</h2><p>Use your professional details so we can prepare the discussion around your organization.</p></div>
+          </div>
+
+          <form id="consultForm">
+            <div class="contact-form">
+              <div class="field"><label>Full name *</label><input name="fullName" required autocomplete="name" placeholder="Company representative"></div>
+              <div class="field"><label>Company / Institution *</label><input name="company" required autocomplete="organization" placeholder="Organization name"></div>
+              <div class="field"><label>Business email *</label><input name="email" type="email" required autocomplete="email" placeholder="name@company.com"></div>
+              <div class="field"><label>Phone number *</label><input name="phone" type="tel" required autocomplete="tel" placeholder="+41 ..."></div>
+            </div>
+
+            <div class="choice-row">
+              <button type="button" class="choice-card active" data-contact-mode="consultation">
+                <strong>Book a free consultation</strong>
+                <span>Select a date and one-hour time slot for a call.</span>
+              </button>
+              <button type="button" class="choice-card" data-contact-mode="catalogue">
+                <strong>Catalogue by email</strong>
+                <span>Request the complete EduCut.ai catalogue without booking a call.</span>
+              </button>
+            </div>
+
+            <div class="booking-block" id="bookingBlock">
+              <h4>Select when we can call you</h4>
+              <p>Choose a date, then click the one-hour time slot that works best for you.</p>
+              <div class="date-strip" id="consultDates"></div>
+              <div class="time-label mono">Available one-hour slots</div>
+              <div class="time-grid" id="consultTimes"></div>
+            </div>
+
+            <label class="catalogue-check">
+              <input type="checkbox" id="catalogueEmail" checked>
+              <span><strong>Send me the full EduCut.ai catalogue by email</strong><span>Receive detailed Academy and course information at the business email provided above.</span></span>
+            </label>
+
+            <div class="consult-submit">
+              <button type="submit" class="btn btn-lime btn-lg" id="consultSubmit">Request free consultation →</button>
+              <span class="mono">Free · No commitment</span>
+            </div>
+            <div id="consultError" class="error"></div>
+          </form>
+          <div id="consultSuccess" style="display:none"></div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <div class="modal quiz-modal" id="quizModal" aria-hidden="true">
+    <div class="quiz-shell" role="dialog" aria-modal="true" aria-label="EduCut.ai AI Path Assessment">
+      <aside class="quiz-side"><div class="brand">EduCut<span>.ai</span></div><h3>AI Path<br>Assessment</h3><p>20 questions · ≈ 3 minutes<br>Personalized for your company</p><div class="side-bottom"><div class="mini-line"><span id="sideProgress"></span></div><div class="mono" id="sideLabel">Question 01 / 20</div></div></aside>
+      <main class="quiz-main">
+        <div class="quiz-top"><div class="mono">AI Readiness & Learning Path Assessment</div><button id="closeQuiz" aria-label="Close">×</button></div>
+        <div class="quiz-body" id="quizBody"></div>
+        <div class="quiz-foot" id="quizFoot"><button type="button" class="btn" id="backBtn">← Back</button><button type="button" class="btn btn-lime" id="nextBtn">Continue →</button></div>
+      </main>
+    </div>
+  </div>
+
+<script>
+
+// ---------- EduCut.ai motion system ----------
+(() => {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const body = document.body;
+  if (reduce) {
+    body.classList.remove('motion-ready');
+    return;
+  }
+
+  const easeOut = 'cubic-bezier(.16,1,.3,1)';
+  const animate = (el, keyframes, options={}) => {
+    if (!el || !el.animate) return null;
+    return el.animate(keyframes, {duration:700, easing:easeOut, fill:'forwards', ...options});
+  };
+
+  // Hero: staggered entrance + subtle kinetic accent.
+  const heroItems = [
+    document.querySelector('.hero .eyebrow'),
+    document.querySelector('.hero h1'),
+    document.querySelector('.hero p'),
+    document.querySelector('.hero .hero-actions')
+  ].filter(Boolean);
+  heroItems.forEach((el,i) => animate(el,
+    [{opacity:0,transform:'translateY(28px)'},{opacity:1,transform:'translateY(0)'}],
+    {delay:100+i*115,duration:760}
+  ));
+
+  const heroTitle = document.querySelector('.hero h1');
+  if (heroTitle) {
+    const strong = heroTitle.querySelector('span, em, strong');
+    if (strong) {
+      strong.classList.add('kinetic-word');
+      animate(strong,
+        [{transform:'translateY(8px) rotate(.6deg)',opacity:.72},{transform:'translateY(0) rotate(0)',opacity:1}],
+        {delay:520,duration:850}
+      );
+    }
+  }
+
+  // Scroll reveal with IntersectionObserver.
+  const revealEls = [
+    ...document.querySelectorAll('[data-reveal]'),
+    ...document.querySelectorAll('.stat'),
+    ...document.querySelectorAll('.path-card')
+  ];
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const group = entry.target.parentElement ? [...entry.target.parentElement.children].indexOf(entry.target) : 0;
+      animate(entry.target,
+        [{opacity:0,transform:'translateY(28px)'},{opacity:1,transform:'translateY(0)'}],
+        {delay:Math.min(group,5)*55,duration:680}
+      );
+      revealObserver.unobserve(entry.target);
+    });
+  }, {threshold:.13, rootMargin:'0px 0px -7% 0px'});
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // Academies: stagger in as a kinetic grid.
+  const academyEls = [...document.querySelectorAll('.academy')];
+  const academyGrid = document.getElementById('academyGrid');
+  if (academyGrid && academyEls.length) {
+    const academyObserver = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      academyEls.forEach((el,i)=>animate(el,
+        [{opacity:0,transform:`translateY(${18 + (i%3)*5}px) scale(.985)`},{opacity:1,transform:'translateY(0) scale(1)'}],
+        {delay:(i%6)*55 + Math.floor(i/6)*25,duration:560}
+      ));
+      academyObserver.disconnect();
+    }, {threshold:.08});
+    academyObserver.observe(academyGrid);
+  }
+
+  // Animated scroll progress.
+  const progress = document.getElementById('motionProgress');
+  const onScroll = () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    const p = max > 0 ? scrollY / max : 0;
+    if (progress) progress.style.transform = `scaleX(${Math.max(0,Math.min(1,p))})`;
+
+    // Gentle hero parallax — deliberately low-amplitude.
+    const y = Math.min(scrollY, 700);
+    document.querySelectorAll('.hero-orbit').forEach((el,i)=>{
+      el.style.transform = `translate3d(0,${y*(i?-.028:.018)}px,0) rotate(${y*(i?-.018:.012)}deg)`;
+    });
+    const grid = document.querySelector('.hero-grid-motion');
+    if (grid) grid.style.backgroundPosition = `${y*.035}px ${y*.055}px`;
+  };
+  addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Pointer-following glow/ripple coordinates on buttons.
+  document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('pointermove', e => {
+      const r = btn.getBoundingClientRect();
+      btn.style.setProperty('--mx', `${e.clientX-r.left}px`);
+      btn.style.setProperty('--my', `${e.clientY-r.top}px`);
+    });
+  });
+
+  // Magnetic effect for primary CTAs, desktop pointer only.
+  if (matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    document.querySelectorAll('.btn-lime').forEach(btn => {
+      btn.addEventListener('pointermove', e => {
+        const r = btn.getBoundingClientRect();
+        const dx = (e.clientX - (r.left+r.width/2)) * .08;
+        const dy = (e.clientY - (r.top+r.height/2)) * .10;
+        btn.style.transform = `translate(${dx}px,${dy}px)`;
+      });
+      btn.addEventListener('pointerleave', () => {
+        btn.animate([{transform:btn.style.transform||'translate(0,0)'},{transform:'translate(0,0)'}],
+          {duration:420,easing:easeOut,fill:'forwards'});
+        btn.style.transform='';
+      });
+    });
+
+    // Custom cursor for a more kinetic, premium feel.
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx=0,my=0,rx=0,ry=0,raf=0;
+    const tick=()=>{
+      rx += (mx-rx)*.16; ry += (my-ry)*.16;
+      if(dot) dot.style.transform=`translate(${mx}px,${my}px) translate(-50%,-50%)`;
+      if(ring) ring.style.transform=`translate(${rx}px,${ry}px) translate(-50%,-50%)`;
+      raf=requestAnimationFrame(tick);
+    };
+    addEventListener('pointermove',e=>{
+      mx=e.clientX; my=e.clientY;
+      if(dot) dot.style.opacity='.9';
+      if(ring) ring.style.opacity='1';
+    },{passive:true});
+    document.querySelectorAll('a,button,.academy,input').forEach(el=>{
+      el.addEventListener('pointerenter',()=>ring&&ring.classList.add('active'));
+      el.addEventListener('pointerleave',()=>ring&&ring.classList.remove('active'));
+    });
+    tick();
+  }
+
+  // Small kinetic response when an Academy is opened.
+  document.addEventListener('click', e => {
+    const card = e.target.closest && e.target.closest('.academy');
+    if (!card) return;
+    animate(card,
+      [{transform:'scale(1)'},{transform:'scale(.975)'},{transform:'scale(1)'}],
+      {duration:330,easing:'cubic-bezier(.3,.7,.3,1)'}
+    );
+    const explorer = document.getElementById('academyExplorer');
+    if (explorer) setTimeout(()=>animate(explorer,
+      [{opacity:.45,transform:'translateY(10px)'},{opacity:1,transform:'translateY(0)'}],
+      {duration:430}
+    ),30);
+  });
+
+  // Remove the initial no-motion state after first paint.
+})();
+
+
+// Free consultation & catalogue
+const consultModal=document.getElementById('consultModal');
+const consultForm=document.getElementById('consultForm');
+const bookingBlock=document.getElementById('bookingBlock');
+const consultDates=document.getElementById('consultDates');
+const consultTimes=document.getElementById('consultTimes');
+const consultSubmit=document.getElementById('consultSubmit');
+const catalogueEmail=document.getElementById('catalogueEmail');
+let contactMode='consultation';
+let selectedConsultDate='';
+let selectedConsultTime='';
+
+function nextBusinessDays(count=8){
+  const days=[];
+  const d=new Date();
+  d.setHours(12,0,0,0);
+  d.setDate(d.getDate()+1);
+  while(days.length<count){
+    const day=d.getDay();
+    if(day!==0 && day!==6) days.push(new Date(d));
+    d.setDate(d.getDate()+1);
+  }
+  return days;
+}
+function isoLocalDate(d){
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+const consultDayOptions=nextBusinessDays(10);
+const consultTimeOptions=['09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00'];
+
+function renderConsultDates(){
+  consultDates.innerHTML=consultDayOptions.map((d,i)=>{
+    const id=isoLocalDate(d);
+    const label=d.toLocaleDateString('en-GB',{weekday:'short'});
+    const date=d.toLocaleDateString('en-GB',{day:'2-digit',month:'short'});
+    return `<button type="button" class="date-btn ${selectedConsultDate===id?'active':''}" data-date="${id}"><span class="day">${label}</span><span class="date">${date}</span></button>`;
+  }).join('');
+}
+function renderConsultTimes(){
+  consultTimes.innerHTML=consultTimeOptions.map(t=>`<button type="button" class="time-btn ${selectedConsultTime===t?'active':''}" data-time="${t}">${t}</button>`).join('');
+}
+function openConsult(mode='consultation'){
+  contactMode=mode;
+  consultModal.classList.add('open');
+  consultModal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+  document.querySelectorAll('[data-contact-mode]').forEach(b=>b.classList.toggle('active',b.dataset.contactMode===mode));
+  bookingBlock.style.display=mode==='consultation'?'block':'none';
+  catalogueEmail.checked=true;
+  consultSubmit.textContent=mode==='consultation'?'Request free consultation →':'Email me the free catalogue →';
+  if(mode==='consultation' && !selectedConsultDate){
+    selectedConsultDate=isoLocalDate(consultDayOptions[0]);
+    selectedConsultTime='10:00';
+  }
+  renderConsultDates(); renderConsultTimes();
+}
+function closeConsult(){
+  consultModal.classList.remove('open');
+  consultModal.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+document.querySelectorAll('[data-consult]').forEach(b=>b.addEventListener('click',()=>openConsult('consultation')));
+document.querySelectorAll('[data-catalogue]').forEach(b=>b.addEventListener('click',()=>openConsult('catalogue')));
+document.getElementById('closeConsult').addEventListener('click',closeConsult);
+consultModal.addEventListener('click',e=>{if(e.target===consultModal)closeConsult()});
+
+document.querySelectorAll('[data-contact-mode]').forEach(b=>b.addEventListener('click',()=>{
+  contactMode=b.dataset.contactMode;
+  document.querySelectorAll('[data-contact-mode]').forEach(x=>x.classList.toggle('active',x===b));
+  bookingBlock.style.display=contactMode==='consultation'?'block':'none';
+  consultSubmit.textContent=contactMode==='consultation'?'Request free consultation →':'Email me the free catalogue →';
+  if(contactMode==='catalogue') catalogueEmail.checked=true;
+}));
+
+consultDates.addEventListener('click',e=>{
+  const b=e.target.closest('[data-date]'); if(!b)return;
+  selectedConsultDate=b.dataset.date; renderConsultDates();
+});
+consultTimes.addEventListener('click',e=>{
+  const b=e.target.closest('[data-time]'); if(!b)return;
+  selectedConsultTime=b.dataset.time; renderConsultTimes();
+});
+
+consultForm.addEventListener('submit',e=>{
+  e.preventDefault();
+  const fd=new FormData(consultForm);
+  const error=document.getElementById('consultError');
+  error.textContent='';
+  if(contactMode==='consultation' && (!selectedConsultDate || !selectedConsultTime)){
+    error.textContent='Please select both a date and a one-hour time slot.';
+    return;
+  }
+
+  const catalogueRequested=catalogueEmail.checked || contactMode==='catalogue';
+  const name=fd.get('fullName');
+  const company=fd.get('company');
+  const email=fd.get('email');
+  const phone=fd.get('phone');
+
+  // Front-end prototype: keep the full booking request in the browser.
+  // A production deployment can POST this object to CRM/calendar/email services.
+  const request={
+    type:contactMode,
+    fullName:name,
+    company,
+    businessEmail:email,
+    phone,
+    date:contactMode==='consultation'?selectedConsultDate:null,
+    time:contactMode==='consultation'?selectedConsultTime:null,
+    catalogueRequested,
+    createdAt:new Date().toISOString()
+  };
+  try{
+    const previous=JSON.parse(localStorage.getItem('educutConsultationRequests')||'[]');
+    previous.push(request);
+    localStorage.setItem('educutConsultationRequests',JSON.stringify(previous));
+  }catch(_){}
+
+  consultForm.style.display='none';
+  const success=document.getElementById('consultSuccess');
+  const dateText=contactMode==='consultation'
+    ? new Date(selectedConsultDate+'T12:00:00').toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'})
+    : '';
+  success.style.display='block';
+  success.innerHTML=`<div class="consult-success">
+    <div class="mono" style="color:var(--blue);margin-bottom:10px">Request received</div>
+    <h3>${contactMode==='consultation'?'Your consultation request is ready.':'Your catalogue request is ready.'}</h3>
+    <p>${contactMode==='consultation'
+      ? `You selected <strong>${dateText}</strong> at <strong>${selectedConsultTime}</strong>. We will use <strong>${email}</strong> and <strong>${phone}</strong> to contact you.`
+      : `The complete EduCut.ai catalogue will be requested for <strong>${email}</strong>.`
+    } ${catalogueRequested && contactMode==='consultation'?'We will also send the full catalogue to your business email.':''}</p>
+    <button type="button" class="btn btn-lime" style="margin-top:20px" id="consultDone">Done</button>
+  </div>`;
+  document.getElementById('consultDone').onclick=()=>{
+    closeConsult();
+    consultForm.reset();
+    consultForm.style.display='block';
+    success.style.display='none';
+    contactMode='consultation';
+    selectedConsultDate=isoLocalDate(consultDayOptions[0]);
+    selectedConsultTime='10:00';
+    catalogueEmail.checked=true;
+    document.querySelectorAll('[data-contact-mode]').forEach(b=>b.classList.toggle('active',b.dataset.contactMode==='consultation'));
+    bookingBlock.style.display='block';
+    consultSubmit.textContent='Request free consultation →';
+    renderConsultDates();renderConsultTimes();
+  };
+});
+renderConsultDates();
+renderConsultTimes();
+
+const academyDetails = {"A001": {"title": "AI Foundations", "summary": "Build a rigorous understanding of the core disciplines behind modern AI — from machine learning and deep learning to NLP, computer vision, reasoning, safety and AI systems.", "topics": ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Reasoning", "AI Safety"], "audience": "Professionals and technical teams who want a strong, structured foundation across the major fields of Artificial Intelligence.", "count": "24 courses"}, "A002": {"title": "Generative AI", "summary": "Understand how generative AI works and how to use it effectively across professional workflows, from foundation models and multimodal systems to practical business applications.", "topics": ["Generative AI", "Foundation Models", "Multimodal AI", "Business Applications", "Responsible Use"], "audience": "Professionals and organizations that want to understand and adopt the technologies powering today's generative AI systems.", "count": "Specialized courses"}, "A003": {"title": "Prompt Engineering", "summary": "Learn to design reliable prompts for everyday work, data analysis, software development, research, multimodal AI and advanced agentic or RAG-based applications.", "topics": ["Prompt Design", "Advanced Prompting", "Workplace Productivity", "Data Analysis", "Multimodal", "Agents & RAG"], "audience": "Professionals and teams using generative AI to create, analyze, automate or structure business tasks.", "count": "10 courses"}, "A004": {"title": "AI Productivity", "summary": "Turn AI into a practical productivity layer for daily work — improving communication, documents, meetings, research, spreadsheets, planning and repeatable workflows.", "topics": ["Email & Communication", "Documents", "Meetings", "Research", "Excel & Data", "Automation"], "audience": "Business professionals who want measurable productivity gains from AI in their everyday work.", "count": "10 courses"}, "A005": {"title": "Data Analytics", "summary": "Strengthen the statistical, mathematical and analytical foundations needed to interpret data, build reliable analyses and support better evidence-based decisions.", "topics": ["Statistics", "Mathematics", "Data Analysis", "Interpretation", "Decision Support"], "audience": "Professionals and teams who need stronger analytical foundations for data-driven and AI-enabled work.", "count": "Specialized courses"}, "A006": {"title": "AI for Leaders", "summary": "Equip leaders to identify valuable AI opportunities, make informed investment decisions, lead adoption, govern risk and build an AI-ready organization.", "topics": ["AI Strategy", "Use Cases", "Decision-Making", "Transformation", "ROI", "Governance"], "audience": "Executives, managers and decision-makers responsible for AI strategy, investment and organizational change.", "count": "10 courses"}, "A007": {"title": "AI for Marketing", "summary": "Apply AI across the marketing lifecycle — from strategy, content and social media to SEO, advertising, customer insight, analytics, personalization and automation.", "topics": ["Strategy", "Content", "Social Media", "SEO", "Advertising", "Analytics & Automation"], "audience": "Marketing, communication, acquisition and customer-experience professionals.", "count": "10 courses"}, "A008": {"title": "AI for Finance", "summary": "Use AI to enhance financial analysis, reporting, forecasting, accounting, modeling, risk management, investment analysis and finance-team automation.", "topics": ["Financial Analysis", "Forecasting", "Accounting", "Financial Modeling", "Risk", "FP&A & Automation"], "audience": "Finance professionals, analysts, FP&A teams, controllers and finance leaders.", "count": "10 courses"}, "A009": {"title": "AI for HR", "summary": "Apply AI across the employee lifecycle — recruitment, onboarding, learning, performance, engagement, workforce planning, people analytics and responsible HR transformation.", "topics": ["Recruitment", "Onboarding", "L&D", "Performance", "People Analytics", "Workforce Planning"], "audience": "HR professionals, talent leaders, L&D teams, people analytics professionals and managers.", "count": "10 courses"}, "A010": {"title": "AI for Education", "summary": "Integrate AI into teaching and learning — from course design and classroom engagement to personalization, assessment, content creation, research and academic integrity.", "topics": ["Course Design", "Teaching", "Personalized Learning", "Assessment", "Content Creation", "Academic Integrity"], "audience": "Teachers, trainers, academic leaders, researchers and education professionals.", "count": "10 courses"}, "A011": {"title": "AI for Developers", "summary": "Help software teams use AI across the development lifecycle and build AI-powered applications using prompting, APIs, RAG, agents, testing, automation and secure production practices.", "topics": ["AI-Assisted Coding", "LLM APIs", "RAG", "Agents", "Testing", "Production AI"], "audience": "Developers, software engineers and technical teams integrating AI into products and engineering workflows.", "count": "10 courses"}, "A012": {"title": "LLM Engineering", "summary": "Move from LLM fundamentals to production systems — covering context engineering, APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, security and LLMOps.", "topics": ["LLM APIs", "Embeddings", "RAG", "Fine-Tuning", "Evaluation", "LLMOps"], "audience": "Developers, software engineers, AI engineers and technical professionals building LLM applications.", "count": "10 courses"}, "A013": {"title": "RAG Systems", "summary": "Design reliable knowledge-powered AI systems by mastering document ingestion, chunking, embeddings, retrieval, context engineering, advanced RAG, evaluation, security and RAGOps.", "topics": ["Document Ingestion", "Embeddings", "Retrieval", "Context Engineering", "Advanced RAG", "RAGOps"], "audience": "Developers and AI engineers building assistants and applications grounded in enterprise or domain knowledge.", "count": "10 courses"}, "A014": {"title": "AI Agents", "summary": "Learn how to design AI systems that can plan, use tools, manage memory and state, access knowledge, collaborate with other agents and operate safely in production.", "topics": ["Agent Architecture", "Tool Use", "Memory", "Planning", "Multi-Agent Systems", "AgentOps"], "audience": "Developers, AI engineers and advanced professionals building autonomous or semi-autonomous AI workflows.", "count": "10 courses"}, "A015": {"title": "Responsible AI", "summary": "Build AI that is trustworthy and accountable by addressing ethics, fairness, transparency, privacy, safety, governance, regulation and responsible use of generative and agentic AI.", "topics": ["Ethics", "Fairness", "Explainability", "Privacy", "Safety", "Responsible GenAI"], "audience": "Professionals, leaders and teams responsible for designing, using or overseeing AI responsibly.", "count": "10 courses"}, "A016": {"title": "AI Governance", "summary": "Create the organizational controls needed to govern AI at scale — policies, risk assessment, lifecycle governance, compliance, vendor oversight, auditability and enterprise governance programs.", "topics": ["Regulation", "Risk Management", "Policies", "Lifecycle Governance", "Vendor Governance", "Audit"], "audience": "Governance, compliance, risk, legal, security and management teams overseeing organizational AI.", "count": "10 courses"}, "A017": {"title": "AI Security", "summary": "Protect AI systems across their lifecycle — from threat modeling and prompt injection to RAG and agent security, model supply chains, red teaming, monitoring and incident response.", "topics": ["Threat Modeling", "Prompt Injection", "RAG Security", "Agent Security", "Red Teaming", "Incident Response"], "audience": "Security, risk, compliance and technical teams responsible for the safe deployment of AI systems.", "count": "10 courses"}, "A018": {"title": "AI Transformation", "summary": "Turn AI ambition into enterprise execution — assess readiness, define strategy, prioritize use cases, redesign processes, develop skills, govern risk, measure ROI and scale transformation.", "topics": ["AI Readiness", "Strategy", "Use Cases", "Operating Model", "Change Management", "ROI & Scale"], "audience": "Executives, managers, transformation leaders and decision-makers leading organization-wide AI initiatives.", "count": "10 courses"}};
+
+const academies = Object.entries(academyDetails).map(([code,d]) => [code,d.title]);
+const academyGrid = document.getElementById('academyGrid');
+const academyExplorer = document.getElementById('academyExplorer');
+let activeAcademy = null;
+
+academyGrid.innerHTML = academies.map(a=>`
+  <div class="academy" role="button" tabindex="0" data-academy="${a[0]}" aria-expanded="false">
+    <div class="mono code">${a[0]}</div>
+    <h4>${a[1]}</h4>
+  </div>`).join('');
+
+// Cards are created dynamically, so animate them only after insertion.
+const renderedAcademyCards=[...academyGrid.querySelectorAll('.academy')];
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  renderedAcademyCards.forEach((card,i)=>{
+    card.classList.add('academy-enter');
+    requestAnimationFrame(()=>setTimeout(()=>{
+      card.classList.add('academy-visible');
+      card.classList.remove('academy-enter');
+    }, Math.min(i,11)*42));
+  });
+}
+
+function renderAcademyDetail(code){
+  const d = academyDetails[code];
+  const cards = [...academyGrid.querySelectorAll('.academy')];
+
+  if(activeAcademy === code){
+    activeAcademy = null;
+    cards.forEach(c=>{c.classList.remove('active');c.setAttribute('aria-expanded','false')});
+    academyExplorer.classList.remove('open');
+    setTimeout(()=>{ if(!activeAcademy) academyExplorer.innerHTML=''; },250);
+    return;
+  }
+
+  activeAcademy = code;
+  cards.forEach(c=>{
+    const isActive = c.dataset.academy === code;
+    c.classList.toggle('active', isActive);
+    c.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+  });
+
+  academyExplorer.innerHTML = `
+    <div class="academy-detail">
+      <div>
+        <div class="academy-detail-kicker mono">${code} · ${d.count}</div>
+        <h3>${d.title}</h3>
+        <p class="academy-detail-summary">${d.summary}</p>
+        <div class="academy-detail-meta">
+          <span>100% online</span><span>Self-paced</span><span>Certificate</span>
+        </div>
+      </div>
+      <div>
+        <div class="academy-detail-label mono">What you'll explore</div>
+        <div class="academy-topic-list">${d.topics.map(t=>`<span class="academy-topic">${t}</span>`).join('')}</div>
+        <div class="academy-audience"><strong>Designed for</strong>${d.audience}</div>
+      </div>
+    </div>`;
+  academyExplorer.classList.add('open');
+  academyExplorer.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+academyGrid.addEventListener('click', e=>{
+  const card = e.target.closest('.academy');
+  if(card) renderAcademyDetail(card.dataset.academy);
+});
+academyGrid.addEventListener('keydown', e=>{
+  const card = e.target.closest('.academy');
+  if(card && (e.key === 'Enter' || e.key === ' ')){
+    e.preventDefault();
+    renderAcademyDetail(card.dataset.academy);
+  }
+});
+
+const questions = [
+ {q:'What best describes your role?', o:['Executive / C-Level / Founder','Business or Department Manager','HR / Learning & Development','Data / AI / Technology','Marketing / Sales / Communication','Finance / Operations','Education / Training / Research','Other']},
+ {q:'Approximately how large is your organization?', o:['1–10 employees','11–50 employees','51–250 employees','251–1,000 employees','More than 1,000 employees']},
+ {q:"Which best describes your organization's current use of AI?", o:['We have barely started using AI','Employees occasionally use tools such as ChatGPT or Copilot','Some teams already use AI regularly','We have several AI projects or pilots','AI systems are already integrated into business processes']},
+ {q:"How would you rate your employees' general understanding of AI?", o:['Very limited','Basic awareness','Moderate','Strong','Advanced']},
+ {q:"What is your company's MAIN reason for investing in AI training?", o:['Improve employee productivity','Automate business processes','Improve decision-making with data','Develop AI-powered products or services','Improve customer experience','Build an organization-wide AI strategy','Manage AI risks, governance and compliance']},
+ {q:'What other outcomes are important to you?', note:'Choose up to 3.', multi:true, max:3, o:['Save employees time','Reduce operational costs','Improve content creation','Improve data analysis','Automate repetitive tasks','Improve customer interactions','Build internal AI applications','Improve strategic decision-making','Reduce AI-related risks','Develop new AI-enabled products/services']},
+ {q:'Which teams should benefit most from the training?', note:'Choose up to 3.', multi:true, max:3, o:['Leadership / Management','Marketing / Communication','Finance','Human Resources','Education / Training','Developers / IT','Data / Analytics','Operations / General Business Teams','The entire organization']},
+ {q:'How important is using Generative AI in your organization?', o:['Not currently important','Something we want to explore','Important for several teams','A strategic priority','Already widely used']},
+ {q:'How are employees currently using tools such as ChatGPT, Claude, Gemini or Copilot?', o:["They generally aren't",'Basic questions and simple text generation','Writing, summarizing, research and analysis','Structured prompts and repeatable workflows','Advanced workflows, APIs, agents or custom applications']},
+ {q:'How important is improving everyday employee productivity with AI?', o:['Not a priority','Low priority','Moderate priority','High priority','One of our top priorities']},
+ {q:'How important are data and analytics to your AI strategy?', o:['Not currently important','We mainly work with spreadsheets/basic reporting','We want better AI-assisted analytics','Data-driven decision-making is strategically important','We want advanced analytics / predictive AI capabilities']},
+ {q:'Does your organization want to create its own AI-powered applications?', o:['No','Maybe in the future','Yes, using existing AI platforms/tools','Yes, by integrating AI models and APIs','Yes, we want advanced production AI systems']},
+ {q:"How important is using your company's own documents and knowledge with AI?", note:'Examples: internal policies, contracts, manuals, reports, databases or knowledge bases.', o:['Not relevant','Interesting, but not currently planned','We want employees to search/query internal knowledge with AI','We are planning AI assistants connected to company information','This is already a strategic technical project']},
+ {q:'How interested are you in AI agents and workflow automation?', note:'AI agents can perform multi-step tasks, use tools and interact with business processes.', o:['Not currently relevant','We want to understand the possibilities','We want to automate some workflows','We want to build AI agents for specific teams','Agents are a strategic technology priority']},
+ {q:'Which statement best describes your AI strategy today?', o:['We do not have an AI strategy','We are exploring opportunities','Individual departments are experimenting independently','We have identified AI priorities or projects','We have a structured organization-wide AI strategy']},
+ {q:'How prepared is your organization to manage AI-related risks?', note:'Consider privacy, bias, security, responsible use, regulations and human oversight.', o:['We have not addressed these topics yet','We are beginning to discuss them','Some policies or controls exist','We have formal AI governance processes','We have mature enterprise AI governance']},
+ {q:'How sensitive is the information your employees may use with AI?', o:['Mostly public information','Internal business information','Confidential company information','Personal / customer / employee information','Highly regulated or business-critical information']},
+ {q:'What level of AI capability do you ultimately want to build?', o:['AI Awareness — Employees understand AI and use it responsibly','AI Users — Teams use AI effectively in everyday work','AI Power Users — Teams build sophisticated AI workflows','AI Builders — Technical teams develop AI applications','AI-Driven Organization — AI becomes part of our strategy and operating model']},
+ {q:'Who should initially participate in the training?', o:['Executive / leadership team','One specialized department','Technical / data team','Several departments','Organization-wide cohort']},
+ {q:'What is your preferred AI transformation horizon?', o:['Start now — Build essential capability quickly','Next 3–6 months — Develop structured team capabilities','6–12 months — Build several specialized capabilities','Long-term — Develop an organization-wide AI transformation program','We are not sure — recommend the best approach for us']}
+];
+const letters='ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+let step=0, answers={}, transitioning=false;
+const modal=document.getElementById('quizModal'), body=document.getElementById('quizBody'), foot=document.getElementById('quizFoot'), back=document.getElementById('backBtn'), next=document.getElementById('nextBtn');
+
+document.querySelectorAll('[data-start]').forEach(b=>b.addEventListener('click',()=>{modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';step=0;render();try{modal.scrollTo({top:0,behavior:'instant'})}catch(_){modal.scrollTop=0}}));
+document.getElementById('closeQuiz').onclick=()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''};
+back.onclick=()=>{if(step>0){transitioning=false;step--;render()}};
+next.onclick=()=>advanceFromQuestion();
+
+function key(){return `q${step+1}`}
+
+function hasAnswer(){
+ const v=answers[key()];
+ return Array.isArray(v) ? v.length > 0 : Boolean(v);
+}
+
+function advanceFromQuestion(){
+ if(step >= questions.length){ return; }
+ if(!hasAnswer()){ updateNext(); return; }
+ transitioning=false;
+ if(step < questions.length-1){
+   step++;
+   render();
+ } else {
+   step=questions.length;
+   renderLead();
+ }
+}
+
+
+function scrollQuizToTop(){
+  try{
+    modal.scrollTo({top:0,behavior:'instant'});
+  }catch(e){
+    modal.scrollTop=0;
+  }
+  if(body) body.scrollTop=0;
+}
+
+function render(){
+ if(step >= questions.length){ renderLead(); return; }
+ transitioning=false;
+ const q=questions[step]; 
+ const val=answers[key()];
+ const selectedCount=Array.isArray(val)?val.length:0;
+ document.getElementById('sideProgress').style.width=`${((step+1)/20)*100}%`;
+ document.getElementById('sideLabel').textContent=`Question ${String(step+1).padStart(2,'0')} / 20`;
+ body.innerHTML=`<div class="q-count mono">Question ${String(step+1).padStart(2,'0')} / 20</div>
+ <h2 class="q-title">${q.q}</h2>
+ ${q.note?`<div class="q-note">${q.note}</div>`:''}
+ <div class="options">${q.o.map((label,i)=>{const v=letters[i];const selected=q.multi?(Array.isArray(val)&&val.includes(v)):val===v;return `<button type="button" class="option ${selected?'selected':''}" data-v="${v}"><span class="letter">${v}</span><span>${label}</span></button>`}).join('')}</div>
+ ${q.multi?`<div class="multi-status"><span><strong>${selectedCount}</strong> of ${q.max} selected</span><span>You may continue with 1–${q.max} choices.</span></div><button type="button" class="btn btn-lime multi-continue" id="multiContinue" ${selectedCount===0?'disabled':''}>Continue →</button>`:''}`;
+ body.querySelectorAll('.option').forEach(btn=>btn.addEventListener('click',()=>select(btn.dataset.v)));
+ const multiContinue=body.querySelector('#multiContinue');
+ if(multiContinue) multiContinue.addEventListener('click',advanceFromQuestion);
+ back.style.visibility=step===0?'hidden':'visible';
+ next.textContent=step===19?'Build my AI Path →':'Continue →';
+ updateNext();
+ foot.style.display='flex';
+ body.scrollTop=0;
+}
+
+function select(v){
+ if(step >= questions.length) return;
+ const q=questions[step];
+
+ if(q.multi){
+   let a=Array.isArray(answers[key()])?[...answers[key()]]:[];
+   if(a.includes(v)){
+     a=a.filter(x=>x!==v);
+   } else if(a.length<q.max){
+     a.push(v);
+   }
+   answers[key()]=a;
+   render();
+
+   // Once the maximum number of choices is reached, move forward automatically.
+   // Users selecting fewer choices can use either visible Continue button.
+   if(a.length===q.max){
+     const currentStep=step;
+     setTimeout(()=>{
+       if(step===currentStep && Array.isArray(answers[key()]) && answers[key()].length===q.max){
+         advanceFromQuestion();
+       }
+     },320);
+   }
+   return;
+ }
+
+ if(transitioning) return;
+ transitioning=true;
+ answers[key()]=v;
+
+ const selectedButton=body.querySelector(`.option[data-v="${v}"]`);
+ if(selectedButton) selectedButton.classList.add('selected');
+ body.querySelectorAll('.option').forEach(btn=>btn.disabled=true);
+
+ const currentStep=step;
+ setTimeout(()=>{
+   if(step!==currentStep){ transitioning=false; return; }
+   transitioning=false;
+   advanceFromQuestion();
+ },180);
+}
+
+function updateNext(){
+ if(step >= questions.length){ next.disabled=true; return; }
+ next.disabled=!hasAnswer();
+}
+
+
+const recommendationCourses = {
+  foundations: [
+    { code: 'A001.01', title: 'Machine Learning - Foundations & Methods I', price6: 2400 },
+    { code: 'A006.01', title: 'AI Essentials for Leaders', price6: 1800 },
+    { code: 'A018.01', title: 'AI Transformation Fundamentals', price6: 1800 }
+  ],
+  genai: [
+    { code: 'A002.07', title: 'Inference & Prompting I', price6: 2400 },
+    { code: 'A003.01', title: 'Introduction to Prompt Engineering', price6: 1800 },
+    { code: 'A003.02', title: 'Writing Effective Prompts', price6: 1800 }
+  ],
+  productivity: [
+    { code: 'A004.01', title: 'AI Productivity Fundamentals', price6: 1800 },
+    { code: 'A004.03', title: 'AI for Documents, Reports & Presentations', price6: 1800 },
+    { code: 'A004.09', title: 'AI Automation & No-Code Workflows', price6: 1800 }
+  ],
+  data: [
+    { code: 'A005.01', title: 'Data Analytics — Statistical & Mathematical Foundations I', price6: 2400 },
+    { code: 'A004.06', title: 'AI for Excel, Data Analysis & Visualization', price6: 1800 }
+  ],
+  developers: [
+    { code: 'A011.01', title: 'AI Fundamentals for Developers', price6: 1800 },
+    { code: 'A011.05', title: 'Building Applications with LLM APIs', price6: 1800 },
+    { code: 'A012.10', title: 'Production LLM Systems & LLMOps', price6: 1800 }
+  ],
+  rag: [
+    { code: 'A013.01', title: 'RAG Fundamentals & Architecture', price6: 1800 },
+    { code: 'A012.05', title: 'Retrieval-Augmented Generation (RAG) Engineering', price6: 1800 },
+    { code: 'A013.10', title: 'Production RAG Systems & RAGOps', price6: 1800 }
+  ],
+  agents: [
+    { code: 'A014.01', title: 'AI Agent Fundamentals & Architectures', price6: 1800 },
+    { code: 'A014.02', title: 'Designing & Building Your First AI Agent', price6: 1800 },
+    { code: 'A014.10', title: 'Production Agentic Systems & AgentOps', price6: 1800 }
+  ],
+  governance: [
+    { code: 'A015.01', title: 'Responsible AI Fundamentals', price6: 1800 },
+    { code: 'A016.01', title: 'AI Governance Fundamentals', price6: 1800 },
+    { code: 'A017.01', title: 'AI Security Fundamentals', price6: 1800 }
+  ],
+  transformation: [
+    { code: 'A018.02', title: 'AI Readiness & Maturity Assessment', price6: 1800 },
+    { code: 'A018.03', title: 'AI Strategy & Transformation Roadmapping', price6: 1800 },
+    { code: 'A018.10', title: 'Leading Enterprise AI Transformation', price6: 1800 }
+  ],
+  leaders: [
+    { code: 'A006.02', title: 'AI Strategy & Competitive Advantage', price6: 1800 },
+    { code: 'A006.03', title: 'Identifying & Prioritizing AI Use Cases', price6: 1800 },
+    { code: 'A006.04', title: 'Leading AI Transformation', price6: 1800 }
+  ],
+  marketing: [
+    { code: 'A007.01', title: 'AI Fundamentals for Marketing', price6: 1800 },
+    { code: 'A007.03', title: 'AI for Content Marketing & Copywriting', price6: 1800 },
+    { code: 'A007.10', title: 'Building an AI-Powered Marketing Strategy', price6: 1800 }
+  ],
+  finance: [
+    { code: 'A008.01', title: 'AI Fundamentals for Finance', price6: 1800 },
+    { code: 'A008.02', title: 'AI for Financial Analysis & Reporting', price6: 1800 },
+    { code: 'A008.10', title: 'AI Governance & Transformation for Finance', price6: 1800 }
+  ],
+  hr: [
+    { code: 'A009.01', title: 'AI Fundamentals for Human Resources', price6: 1800 },
+    { code: 'A009.02', title: 'AI for Recruitment & Talent Acquisition', price6: 1800 },
+    { code: 'A009.10', title: 'Building an AI-Powered HR Strategy', price6: 1800 }
+  ],
+  education: [
+    { code: 'A010.01', title: 'AI Fundamentals for Education', price6: 1800 },
+    { code: 'A010.02', title: 'AI for Lesson & Course Design', price6: 1800 },
+    { code: 'A010.10', title: 'Building an AI-Powered Education Strategy', price6: 1800 }
+  ]
+};
+
+function localLevelScore(value){
+  const map={A:0,B:1,C:2,D:3,E:4};
+  return map[value] ?? 0;
+}
+
+function calculateLocalAssessment(a){
+  const keys=['foundations','genai','productivity','data','developers','rag','agents','governance','transformation','leaders','marketing','finance','hr','education'];
+  const s=Object.fromEntries(keys.map(k=>[k,0]));
+  const add=(k,v)=>{s[k]=(s[k]||0)+v};
+  const q=n=>a[`q${n}`];
+  const qarr=n=>Array.isArray(q(n))?q(n):[];
+
+  if(q(1)==='A'||q(1)==='B'){add('leaders',4);add('transformation',2)}
+  if(q(1)==='C')add('hr',5);
+  if(q(1)==='D'){add('developers',4);add('data',3)}
+  if(q(1)==='E')add('marketing',5);
+  if(q(1)==='F')add('finance',5);
+  if(q(1)==='G')add('education',5);
+
+  const currentUse=localLevelScore(q(3)), literacy=localLevelScore(q(4));
+  if(currentUse<=1||literacy<=1)add('foundations',6);
+  if(currentUse>=2)add('productivity',2);
+  if(currentUse>=3){add('governance',2);add('transformation',2)}
+
+  const mainMap={A:'productivity',B:'agents',C:'data',D:'developers',E:'marketing',F:'transformation',G:'governance'};
+  if(mainMap[q(5)])add(mainMap[q(5)],7);
+
+  const outcomeMap={A:'productivity',B:'productivity',C:'marketing',D:'data',E:'agents',F:'marketing',G:'developers',H:'leaders',I:'governance',J:'developers'};
+  qarr(6).forEach(v=>outcomeMap[v]&&add(outcomeMap[v],3));
+
+  const teamMap={A:'leaders',B:'marketing',C:'finance',D:'hr',E:'education',F:'developers',G:'data',H:'productivity'};
+  qarr(7).forEach(v=>teamMap[v]&&add(teamMap[v],5));
+  if(qarr(7).includes('I')){add('foundations',4);add('productivity',4);add('transformation',4)}
+
+  add('genai',localLevelScore(q(8))*2);
+  const useTools=localLevelScore(q(9));
+  if(useTools<=1)add('genai',3);
+  if(useTools>=2)add('productivity',3);
+  if(useTools>=3)add('developers',2);
+  if(useTools>=4)add('agents',3);
+
+  add('productivity',localLevelScore(q(10))*2);
+  add('data',localLevelScore(q(11))*2);
+  add('developers',localLevelScore(q(12))*2);
+  add('rag',localLevelScore(q(13))*2.5);
+  add('agents',localLevelScore(q(14))*2.5);
+
+  const strategy=localLevelScore(q(15));
+  if(strategy<=1){add('leaders',4);add('transformation',4)}
+  else{add('transformation',strategy);add('governance',Math.max(0,strategy-1))}
+
+  const riskPreparedness=localLevelScore(q(16)), sensitivity=localLevelScore(q(17));
+  add('governance',(4-riskPreparedness)*1.5+sensitivity*2);
+
+  const capabilityMap={A:['foundations'],B:['productivity','genai'],C:['productivity','genai','agents'],D:['developers','rag','agents'],E:['transformation','leaders','governance']};
+  (capabilityMap[q(18)]||[]).forEach(k=>add(k,5));
+
+  if(q(19)==='A')add('leaders',4);
+  if(q(19)==='B')add('productivity',2);
+  if(q(19)==='C')add('developers',4);
+  if(q(19)==='D'||q(19)==='E'){add('transformation',4);add('governance',2)}
+
+  if(q(20)==='A')add('productivity',3);
+  if(q(20)==='B'){add('genai',2);add('productivity',2)}
+  if(q(20)==='C'){add('transformation',2);add('developers',1)}
+  if(q(20)==='D'){add('transformation',6);add('governance',3)}
+
+  const maturityRaw=Math.round(((currentUse+literacy+strategy+riskPreparedness)/16)*100);
+  const maturityScore=Math.max(5,Math.min(95,maturityRaw));
+  const maturityLabel=maturityScore<30?'Exploring':maturityScore<55?'Developing':maturityScore<75?'Scaling':'Advanced';
+  const labels={
+    foundations:'AI Foundations',genai:'Generative AI & Prompting',productivity:'AI Productivity',data:'Data & Analytics',
+    developers:'AI Development',rag:'RAG & Enterprise Knowledge',agents:'AI Agents & Automation',
+    governance:'Responsible AI, Governance & Security',transformation:'AI Transformation',leaders:'AI for Leaders',
+    marketing:'AI for Marketing',finance:'AI for Finance',hr:'AI for HR',education:'AI for Education'
+  };
+  const ranked=Object.entries(s).sort((x,y)=>y[1]-x[1]);
+  const focusAreas=ranked.slice(0,5).map(([key,score])=>({key,score,label:labels[key]}));
+
+  const chosen=[], seen=new Set();
+  const addCourse=c=>{if(c&&!seen.has(c.code)){seen.add(c.code);chosen.push(c)}};
+  if(maturityScore<45)addCourse(recommendationCourses.foundations[1]);
+  ranked.slice(0,7).forEach(([key])=>addCourse(recommendationCourses[key]?.[0]));
+  ranked.slice(0,5).forEach(([key])=>addCourse(recommendationCourses[key]?.[1]));
+  ranked.slice(0,3).forEach(([key])=>addCourse(recommendationCourses[key]?.[2]));
+  [recommendationCourses.productivity[0],recommendationCourses.genai[1],recommendationCourses.governance[0],recommendationCourses.transformation[0],recommendationCourses.leaders[0]].forEach(addCourse);
+
+  const plans={plan3:chosen.slice(0,3),plan5:chosen.slice(0,5),plan7:chosen.slice(0,7)};
+  const quotePlan=plan=>{
+    const subtotal=plan.reduce((sum,c)=>sum+c.price6,0);
+    const discount=plan.length>=6?.20:plan.length>=5?.15:plan.length>=3?.10:0;
+    return {participants:'Up to 6 participants',subtotalCHFHT:subtotal,discountPercent:Math.round(discount*100),estimatedTotalCHFHT:Math.round(subtotal*(1-discount))}
+  };
+  return {
+    assessmentId:null,
+    maturityScore,
+    maturityLabel,
+    strongestOpportunity:focusAreas[0]?.label||'AI Capability Building',
+    focusAreas,
+    plans,
+    quote:{plan3:quotePlan(plans.plan3),plan5:quotePlan(plans.plan5),plan7:quotePlan(plans.plan7)},
+    saved:false
+  };
+}
+
+function renderLead(){
+ document.getElementById('sideProgress').style.width='100%'; document.getElementById('sideLabel').textContent='Assessment complete'; foot.style.display='none';
+ body.innerHTML=`<div class="lead-box"><div class="mono" style="color:var(--blue);margin-bottom:15px">Assessment complete</div><h2>Your AI Path is ready.</h2><p>Enter your details to generate and display your personalized 3, 5 and 7-course recommendations, with an indicative quotation. Your assessment and recommendations will be saved so your team can follow up with you.</p><form class="form-grid" id="leadForm"><div class="field"><label>Full name *</label><input name="fullName" required autocomplete="name"></div><div class="field"><label>Company *</label><input name="company" required autocomplete="organization"></div><div class="field"><label>Professional email *</label><input name="email" type="email" required autocomplete="email"></div><label class="consent"><input type="checkbox" required> I agree that EduCut.ai may store my assessment and contact details to provide my personalized training recommendation and quotation.</label><button class="btn btn-lime btn-lg" type="submit">Generate my free AI Plan →</button><div class="mono" style="color:#777">Free · No commitment · Personalized for your company</div><div id="formError" class="error"></div></form></div>`;
+ document.getElementById('leadForm').onsubmit=submitAssessment; body.scrollTop=0;
+}
+
+async function submitAssessment(e){
+ e.preventDefault();
+ const form=e.currentTarget;
+ const f=new FormData(form);
+ const btn=form.querySelector('button[type=submit]');
+ const errorBox=document.getElementById('formError');
+ errorBox.textContent='';
+ btn.disabled=true;
+ btn.textContent='Generating your plan…';
+
+ const payload={fullName:f.get('fullName'),company:f.get('company'),email:f.get('email'),answers};
+
+ // Always calculate a valid recommendation locally first so the button works
+ // even when the HTML file is opened directly without the Node server.
+ const localResult=calculateLocalAssessment(answers);
+
+ try{
+   if(location.protocol==='file:'){
+     renderResults(localResult,f.get('email'));
+     return;
+   }
+
+   const r=await fetch('/api/assessment',{
+     method:'POST',
+     headers:{'Content-Type':'application/json'},
+     body:JSON.stringify(payload)
+   });
+
+   let data=null;
+   const contentType=r.headers.get('content-type')||'';
+   if(contentType.includes('application/json')) data=await r.json();
+   else throw new Error('The assessment API did not return JSON.');
+
+   if(!r.ok) throw new Error(data.error||'Unable to save assessment.');
+   data.saved=true;
+   renderResults(data,f.get('email'));
+ }catch(err){
+   console.error('Assessment API fallback:',err);
+   // Do not block the user from seeing their path because of a deployment/API issue.
+   localResult.apiError=err.message;
+   renderResults(localResult,f.get('email'));
+ }
+}
+function money(n){return new Intl.NumberFormat('en-CH').format(n)+' CHF HT'}
+
+function buildCompanyDNA(d){
+  const labels=(d.focusAreas||[]).map(x=>x.label);
+  const primary=labels[0]||d.strongestOpportunity||'AI capability building';
+  const secondary=labels[1]||'responsible adoption';
+  const score=Number(d.maturityScore)||0;
+
+  let stage;
+  if(score<30) stage='is at an exploration stage and needs a clear, practical foundation before scaling AI adoption';
+  else if(score<55) stage='has started its AI journey and now needs to turn experimentation into structured, repeatable business capabilities';
+  else if(score<75) stage='shows solid AI readiness and is ready to connect existing initiatives into more scalable, governed workflows';
+  else stage='shows advanced AI readiness and can focus on scaling, specialization and enterprise-wide transformation';
+
+  return `Your company ${stage}. Your AI DNA points most strongly toward <b>${primary}</b>, supported by <b>${secondary}</b> — so the recommended path balances immediate business value with the capabilities needed to adopt AI sustainably.`;
+}
+
+function renderResults(d,email){
+ const planBlock=(title,tag,plan,quote)=>`<div class="result-plan"><div class="result-plan-head"><h3>${title} · ${plan.length} courses</h3><div class="price">${money(quote.estimatedTotalCHFHT)}</div></div><div class="mono" style="color:var(--blue);margin:5px 0 3px">${tag} · ${quote.discountPercent}% package discount</div>${plan.map(c=>`<div class="course-row"><span class="course-code">${c.code}</span><span>${c.title}</span></div>`).join('')}</div>`;
+ const storageMessage=d.saved!==false && d.assessmentId
+   ? `Assessment #${d.assessmentId} has been securely saved in the database. The record can be connected to your email/CRM workflow to send the result, catalogue and formal quotation to <b>${email}</b>.`
+   : `Your AI Path has been generated successfully. <b>Preview mode:</b> this page was opened without a reachable backend, so this result has not been stored in the database. Run the full project with <span class="mono">npm install</span> and <span class="mono">npm start</span> to enable database storage.`;
+
+ body.innerHTML=`<div class="results">
+   <div class="mono" style="color:var(--blue);margin-bottom:12px">Personalized company assessment</div>
+   <h2>Your AI Path.</h2>
+   <div class="score-wrap"><div class="score">${d.maturityScore}<small>/100</small></div><div><div class="mono">AI readiness</div><h3 style="font-size:25px;margin:5px 0 8px">${d.maturityLabel}</h3><div style="color:#666">Strongest opportunity: <b>${d.strongestOpportunity}</b></div></div></div>
+   <div class="dna-summary"><div class="mono">YOUR COMPANY AI DNA</div><p>${buildCompanyDNA(d)}</p></div>
+
+   <div class="results-next">
+     <div class="mono">Recommended next step</div>
+     <h3>Turn your assessment into an actionable learning plan.</h3>
+     <p>Book a free one-hour consultation to review your needs with EduCut.ai, or request the full Academy catalogue directly by business email.</p>
+     <div class="results-next-actions">
+       <button type="button" class="btn btn-lime" id="resultBookConsult">Book a free consultation →</button>
+       <button type="button" class="btn btn-outline-light" id="resultCatalogue">Request full catalogue</button>
+     </div>
+   </div>
+
+   <div class="mono" style="margin:26px 0 10px">Priority focus areas</div>
+   <div class="focus-chips">${d.focusAreas.map(x=>`<span class="chip">${x.label}</span>`).join('')}</div>
+   <h3 style="font-size:24px;margin:30px 0 12px">Recommended learning paths</h3>
+   <div class="result-plans">${planBlock('Essential','Quick capability',d.plans.plan3,d.quote.plan3)}${planBlock('Accelerate','Operational capability',d.plans.plan5,d.quote.plan5)}${planBlock('Transform','Strategic capability',d.plans.plan7,d.quote.plan7)}</div>
+   <div class="saved">${storageMessage}</div>
+   <div class="results-close-row">
+     <button type="button" class="btn" id="closeResultsBtn">Close assessment</button>
+     <span class="results-close-note mono">You can reopen the consultation from the website at any time.</span>
+   </div>
+ </div>`;
+ const closeAssessment=()=>{
+   modal.classList.remove('open');
+   modal.setAttribute('aria-hidden','true');
+   document.body.style.overflow='';
+ };
+ const closeBtn=document.getElementById('closeResultsBtn');
+ if(closeBtn) closeBtn.addEventListener('click',closeAssessment);
+
+ const bookBtn=document.getElementById('resultBookConsult');
+ if(bookBtn) bookBtn.addEventListener('click',()=>{
+   closeAssessment();
+   setTimeout(()=>openConsult('consultation'),120);
+ });
+
+ const catalogueBtn=document.getElementById('resultCatalogue');
+ if(catalogueBtn) catalogueBtn.addEventListener('click',()=>{
+   closeAssessment();
+   setTimeout(()=>openConsult('catalogue'),120);
+ });
+
+ // Always show results from the top, and make the modal itself scrollable.
+ try{ modal.scrollTo({top:0,behavior:'instant'}); }catch(_){ modal.scrollTop=0; }
+ body.scrollTop=0;
+}
+
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Escape') return;
+  if(consultModal && consultModal.classList.contains('open')) closeConsult();
+  else if(modal && modal.classList.contains('open')){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+});
+
+</script>
+</body>
+</html>
