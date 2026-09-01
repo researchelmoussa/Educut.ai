@@ -1,1 +1,0 @@
-# Educut.ai
