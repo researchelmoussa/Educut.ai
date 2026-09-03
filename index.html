@@ -508,9 +508,120 @@
 .educut-logout-state{display:inline-flex;align-items:center;gap:7px}
 @media(max-width:900px){.educut-company-logout{right:18px;top:20px}.company-workspace-top{padding-top:70px}}
 
+
+/* ===== Clear Profile + Logout Navigation ===== */
+.educut-identity-bar{
+  display:flex;align-items:center;justify-content:flex-end;gap:10px;
+  padding:14px 24px;border-bottom:1px solid #d8d8d2;background:#fff;
+  position:sticky;top:0;z-index:9998
+}
+.educut-identity-action{
+  display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 13px;
+  border:1px solid #cfcfc9;background:#fff;color:#111;cursor:pointer;
+  font:700 11px "SFMono-Regular",Consolas,monospace;letter-spacing:.02em
+}
+.educut-identity-action:hover{border-color:#111}
+.educut-identity-action .count{
+  display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;
+  padding:0 5px;background:var(--lime);color:#111;font-weight:900
+}
+.educut-profile-block{
+  display:flex;align-items:center;gap:10px;min-height:42px;padding:6px 11px;
+  border:1px solid #111;background:#fff
+}
+.educut-profile-avatar{
+  width:30px;height:30px;border:1px solid #111;display:grid;place-items:center;
+  font-weight:900;font-size:12px;background:#f7f7f3
+}
+.educut-profile-copy{min-width:0}
+.educut-profile-copy strong{display:block;font-size:12px;line-height:1.2;white-space:nowrap}
+.educut-profile-copy small{display:block;color:#777;font-size:10px;line-height:1.2;margin-top:3px;white-space:nowrap}
+.educut-visible-logout{
+  min-height:42px;padding:0 15px;border:1px solid #111;background:#111;color:#fff;
+  cursor:pointer;font-weight:800
+}
+.educut-visible-logout:hover{background:#fff;color:#111}
+.educut-visible-logout:disabled{opacity:.55;cursor:wait}
+.educut-hide-ambiguous-nav{display:none!important}
+@media(max-width:760px){
+  .educut-identity-bar{padding:10px 12px;gap:6px;flex-wrap:wrap}
+  .educut-identity-action{font-size:10px;padding:0 9px}
+  .educut-profile-copy small{display:none}
+}
+
 </style>
 </head>
-<body class="motion-ready"><div class="motion-progress" id="motionProgress"></div><div class="cursor-dot" id="cursorDot"></div><div class="cursor-ring" id="cursorRing"></div>
+<body class="motion-ready">
+<script>
+/* ===== Guaranteed sponsored learner activation seed =====
+   Standalone prototype only. Production entitlement is verified server-side.
+*/
+(() => {
+  if(location.protocol!=='file:') return;
+  const email='activation.test@educut-demo.com';
+  const companyId='CMP-1001';
+  const seatKey='educutProvisionedSeats';
+
+  let seats=[];
+  try{seats=JSON.parse(localStorage.getItem(seatKey)||'[]')}catch(_){seats=[]}
+  if(!Array.isArray(seats)) seats=[];
+
+  // Remove stale duplicate versions of this test identity.
+  seats=seats.filter(s=>String(s.email||'').toLowerCase()!==email);
+
+  seats.push({
+    id:'SEAT-ACTIVATION-TEST-001',
+    companyId,
+    email,
+    firstName:'Amelia',
+    lastName:'Martin',
+    department:'Innovation',
+    jobTitle:'AI Program Participant',
+    courses:['A002.01','A003.01'],
+    academies:['A002','A003'],
+    status:'PENDING_ACTIVATION',
+    activationStatus:'INVITATION_SENT',
+    active:true,
+    activated:false,
+    accessStart:'2026-09-01',
+    accessEnd:'2027-08-31',
+    createdAt:'2026-09-02T18:00:00.000Z'
+  });
+  try{localStorage.setItem(seatKey,JSON.stringify(seats))}catch(_){}
+
+  // Keep the shared admin/company prototype data aware of the same pending learner.
+  try{
+    const AKEY='educutAdminPlatformStateV2';
+    const A=JSON.parse(localStorage.getItem(AKEY)||'null');
+    if(A && Array.isArray(A.users)){
+      A.users=A.users.filter(u=>String(u.email||'').toLowerCase()!==email);
+      A.users.push({
+        id:'USR-ACTIVATION-TEST-001',
+        companyId,
+        type:'COMPANY_MEMBER',
+        role:'COMPANY_MEMBER',
+        name:'Amelia Martin',
+        firstName:'Amelia',
+        lastName:'Martin',
+        email,
+        department:'Innovation',
+        jobTitle:'AI Program Participant',
+        status:'PENDING_ACTIVATION',
+        activated:false,
+        courses:['A002.01','A003.01'],
+        progress:0,
+        certificates:0,
+        accessStart:'2026-09-01',
+        accessEnd:'2027-08-31',
+        createdAt:'2026-09-02T18:00:00.000Z',
+        lastLogin:null
+      });
+      localStorage.setItem(AKEY,JSON.stringify(A));
+    }
+  }catch(_){}
+})();
+</script>
+<div class="motion-progress" id="motionProgress"></div><div class="cursor-dot" id="cursorDot"></div><div class="cursor-ring" id="cursorRing"></div>
   <nav class="nav">
     <div class="wrap nav-inner">
       <div class="brand">EduCut<span>.ai</span></div>
@@ -2979,6 +3090,164 @@ document.addEventListener('keydown',e=>{
 
   // Do not expose protected data after a server/session logout in another tab.
   enforceUnauthenticatedGuard();
+})();
+</script>
+
+
+<script>
+(() => {
+  if(location.protocol!=='file:') return;
+  const TEST_EMAIL='activation.test@educut-demo.com';
+  const addHint=()=>{
+    const text=[...document.querySelectorAll('body *')].find(el=>
+      el.children.length===0 && el.textContent?.trim()==='Activate My Company Access'
+    );
+    const panel=text?.closest('.auth-card,.access-card,.auth-panel,.auth-shell') || document.querySelector('.auth-modal,.auth-page');
+    if(!panel || panel.querySelector('[data-activation-test-hint]')) return;
+    const hint=document.createElement('div');
+    hint.setAttribute('data-activation-test-hint','');
+    hint.style.cssText='margin:14px 0;padding:12px 14px;border:1px solid #d9d9d2;background:#fff;font:700 11px monospace;line-height:1.6';
+    hint.innerHTML='PROTOTYPE ACTIVATION EMAIL<br><span style="color:#2458ff">'+TEST_EMAIL+'</span>';
+    const input=panel.querySelector('input[type="email"]');
+    if(input?.parentElement) input.parentElement.insertAdjacentElement('beforebegin',hint);
+  };
+  new MutationObserver(addHint).observe(document.body,{subtree:true,childList:true});
+  addHint();
+})();
+</script>
+
+<script>
+/* ===== Clear user identity / navigation runtime ===== */
+(() => {
+  function getSession(){
+    try{
+      return window.__educutGetAuthSession?.()
+        || JSON.parse(sessionStorage.getItem('educutAuthSession')||'null');
+    }catch(_){ return null; }
+  }
+
+  function initials(name,email){
+    const s=(name||email||'User').trim();
+    const parts=s.split(/\s+/).filter(Boolean);
+    if(parts.length>=2) return (parts[0][0]+parts[1][0]).toUpperCase();
+    return s.slice(0,2).toUpperCase();
+  }
+
+  function roleLabel(role){
+    return ({
+      SUPER_ADMIN:'Administrator',
+      PLATFORM_ADMIN:'Platform Administrator',
+      CONTENT_MANAGER:'Content Manager',
+      FINANCE_MANAGER:'Finance Manager',
+      SUPPORT_MANAGER:'Support Manager',
+      COMPANY_ADMIN:'Company Administrator',
+      COMPANY_MANAGER:'Company Manager',
+      COMPANY_MEMBER:'Company-Sponsored Learner',
+      INDIVIDUAL:'Individual Learner'
+    }[role] || String(role||'Authenticated User').replaceAll('_',' '));
+  }
+
+  function clearOldAmbiguousControls(){
+    // Hide only small icon-like controls in top headers that do not provide
+    // an understandable text label. This avoids duplicating the old ? / bell / initials UI.
+    document.querySelectorAll('button,a').forEach(el=>{
+      const txt=(el.textContent||'').trim();
+      const aria=(el.getAttribute('aria-label')||'').trim().toLowerCase();
+      const title=(el.getAttribute('title')||'').trim().toLowerCase();
+
+      if(
+        txt==='?' ||
+        txt==='◉' ||
+        txt==='●' ||
+        txt==='○' ||
+        ((aria.includes('notification')||title.includes('notification')) && txt.length<=3) ||
+        ((aria.includes('help')||title.includes('help')) && txt.length<=3)
+      ){
+        el.classList.add('educut-hide-ambiguous-nav');
+      }
+    });
+
+    // Hide initials-only square controls when our profile block is present.
+    document.querySelectorAll('button,a,div').forEach(el=>{
+      const txt=(el.textContent||'').trim();
+      if(/^[A-Z]{2}$/.test(txt) && el.children.length===0){
+        const r=el.getBoundingClientRect();
+        if(r.width>25 && r.width<100 && r.height>25 && r.height<100){
+          el.classList.add('educut-hide-ambiguous-nav');
+        }
+      }
+    });
+  }
+
+  function buildIdentityBar(){
+    const s=getSession();
+    let existing=document.getElementById('educutIdentityBar');
+
+    if(!s){
+      existing?.remove();
+      return;
+    }
+
+    const name=s.name || s.fullName || s.userName || s.email || 'EduCut.ai User';
+    const role=s.role || 'AUTHENTICATED_USER';
+    const isAdmin=['SUPER_ADMIN','PLATFORM_ADMIN','CONTENT_MANAGER','FINANCE_MANAGER','SUPPORT_MANAGER'].includes(role);
+    const isCompany=['COMPANY_ADMIN','COMPANY_MANAGER'].includes(role);
+    const isLearner=['INDIVIDUAL','COMPANY_MEMBER'].includes(role);
+
+    if(!existing){
+      existing=document.createElement('div');
+      existing.id='educutIdentityBar';
+      existing.className='educut-identity-bar';
+      document.body.prepend(existing);
+    }
+
+    existing.innerHTML=`
+      <button type="button" class="educut-identity-action" id="educutHelpBtn" title="Help & Support">
+        <span aria-hidden="true">?</span><span>Help</span>
+      </button>
+      <button type="button" class="educut-identity-action" id="educutNotifBtn" title="Notifications">
+        <span aria-hidden="true">●</span><span>Notifications</span><span class="count">3</span>
+      </button>
+      <div class="educut-profile-block" title="Current signed-in profile">
+        <div class="educut-profile-avatar">${initials(name,s.email)}</div>
+        <div class="educut-profile-copy">
+          <strong>${String(name).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}</strong>
+          <small>${roleLabel(role)}</small>
+        </div>
+      </div>
+      <button type="button" class="educut-visible-logout" id="educutAlwaysLogout">Log Out</button>
+    `;
+
+    document.getElementById('educutAlwaysLogout').onclick=e=>window.educutLogout?.(e.currentTarget);
+
+    document.getElementById('educutHelpBtn').onclick=()=>{
+      if(isCompany && window.renderCompanyPortal && document.getElementById('routeView')){
+        const rv=document.getElementById('routeView');
+        // Keep help meaningful without navigating to a cryptic icon destination.
+        alert('EduCut.ai Help\n\nUse Support from the Company Workspace to open and track a request with the EduCut.ai team.');
+      }else{
+        alert('EduCut.ai Help\n\nFor account or learning support, contact the EduCut.ai support team.');
+      }
+    };
+
+    document.getElementById('educutNotifBtn').onclick=()=>{
+      if(isCompany){
+        const target=[...document.querySelectorAll('[data-cwroute="notifications"]')][0];
+        if(target) target.click();
+        else alert('Notifications are available from your Company Workspace.');
+      }else{
+        alert('You have 3 notifications in this prototype.');
+      }
+    };
+
+    clearOldAmbiguousControls();
+  }
+
+  buildIdentityBar();
+  const mo=new MutationObserver(()=>buildIdentityBar());
+  mo.observe(document.documentElement,{subtree:true,childList:true});
+
+  window.addEventListener('pageshow',buildIdentityBar);
 })();
 </script>
 
