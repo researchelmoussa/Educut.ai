@@ -500,7 +500,7 @@
 
 /* ===== Universal Logout ===== */
 .educut-logout-btn{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 13px;cursor:pointer;font:700 10px "SFMono-Regular",Consolas,monospace;letter-spacing:.04em;white-space:nowrap}
-.educut-logout-btn:hover{background:var(--ink);color:#fff}
+.educut-logout-btn:hover{background:#f1f1ed;color:#000}
 .educut-logout-btn:disabled{opacity:.55;cursor:wait}
 .educut-company-logout{position:absolute;right:34px;top:34px;z-index:5}
 .educut-admin-sidebar-logout{margin:18px 12px 24px;width:calc(100% - 24px);color:#fff;border-color:#555}
@@ -548,6 +548,93 @@
   .educut-identity-action{font-size:10px;padding:0 9px}
   .educut-profile-copy small{display:none}
 }
+
+
+/* ===== EduCut.ai shared authenticated header — notification + profile refinement ===== */
+.educut-identity-bar{
+  display:flex;align-items:center;justify-content:flex-end;gap:10px;
+  padding:12px 24px;border-bottom:1px solid var(--line);background:#fff;
+  position:sticky;top:0;z-index:9998
+}
+.educut-bell-btn,.educut-profile-trigger{
+  border:1px solid var(--line);background:#fff;color:#000;cursor:pointer;
+  height:42px;display:inline-flex;align-items:center;justify-content:center
+}
+.educut-bell-btn{width:42px;position:relative;padding:0}
+.educut-bell-btn:hover,.educut-profile-trigger:hover{border-color:#000}
+.educut-bell-icon{width:18px;height:18px;display:block}
+.educut-unread-dot{
+  position:absolute;top:7px;right:7px;width:7px;height:7px;
+  background:#E53935;border:1px solid #fff;border-radius:50%;
+}
+.educut-profile-wrap{position:relative}
+.educut-profile-trigger{
+  min-width:42px;padding:0 6px;border-color:#111
+}
+.educut-profile-avatar{
+  width:30px;height:30px;border-radius:999px;border:1px solid #111;
+  display:grid;place-items:center;overflow:hidden;background:#f1f1ed;
+  color:#000;font-weight:800;font-size:11px;letter-spacing:.02em
+}
+.educut-profile-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.educut-notification-panel,.educut-profile-menu{
+  position:absolute;right:0;top:calc(100% + 9px);background:#fff;color:#000;
+  border:1px solid #111;box-shadow:0 18px 45px rgba(0,0,0,.12);
+  display:none;z-index:10020
+}
+.educut-notification-panel.open,.educut-profile-menu.open{display:block}
+.educut-notification-panel{width:min(380px,calc(100vw - 28px));max-height:480px;overflow:auto}
+.educut-panel-head{padding:14px 15px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.educut-panel-head strong{font-size:13px}
+.educut-panel-head .mono{color:var(--blue);font-size:9px}
+.educut-notification-item{
+  width:100%;border:0;border-bottom:1px solid var(--line);background:#fff;color:#000;
+  text-align:left;padding:13px 15px;cursor:pointer;display:block
+}
+.educut-notification-item:hover{background:var(--paper)}
+.educut-notification-item.unread{box-shadow:inset 4px 0 0 var(--blue)}
+.educut-notification-item strong{display:block;font-size:12px;margin-bottom:4px}
+.educut-notification-item span{display:block;color:#666;font-size:11px;line-height:1.45}
+.educut-notification-item time{display:block;color:#92928d;font:9px "SFMono-Regular",Consolas,monospace;margin-top:7px;text-transform:uppercase;letter-spacing:.07em}
+.educut-empty-notifications{padding:22px 15px;color:#777;font-size:12px}
+.educut-profile-menu{width:290px}
+.educut-profile-identity{padding:16px;border-bottom:1px solid var(--line)}
+.educut-profile-identity strong{display:block;font-size:13px}
+.educut-profile-identity span,.educut-profile-identity small{display:block;color:#777;font-size:11px;margin-top:3px;word-break:break-word}
+.educut-profile-menu-action{
+  width:100%;border:0;border-bottom:1px solid var(--line);background:#fff;color:#000;
+  padding:12px 15px;text-align:left;cursor:pointer;font-size:12px
+}
+.educut-profile-menu-action:hover{background:var(--paper)}
+.educut-profile-menu-action.logout{
+  color:#000!important;font-weight:800;border-bottom:0
+}
+.educut-profile-menu-action.logout:hover{background:#f1f1ed;color:#000!important}
+.educut-profile-editor{padding:15px;border-top:1px solid #111;background:var(--paper)}
+.educut-profile-editor .mono{color:var(--blue);margin-bottom:9px}
+.educut-profile-editor p{font-size:11px;color:#666;margin:0 0 10px}
+.educut-profile-editor-actions{display:flex;gap:7px;flex-wrap:wrap}
+.educut-profile-editor-btn{
+  border:1px solid #111;background:#fff;color:#000;padding:8px 10px;cursor:pointer;
+  font:700 9px "SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.06em
+}
+.educut-profile-editor-btn:hover{background:#111;color:#fff}
+.educut-profile-editor-btn.remove{border-color:#c9c9c3}
+.educut-profile-error{font-size:10px;color:#b00020;margin-top:8px}
+.educut-visible-logout{color:#000!important;background:#fff!important;border-color:#111!important}
+.educut-visible-logout:hover{color:#000!important;background:#f1f1ed!important}
+.educut-logout-btn{color:#000!important;background:#fff!important}
+.educut-logout-btn:hover{color:#000!important;background:#f1f1ed!important}
+.educut-admin-sidebar-logout{color:#000!important;background:#fff!important;border-color:#fff!important}
+.educut-admin-sidebar-logout:hover{color:#000!important;background:#f1f1ed!important}
+@media(max-width:760px){
+  .educut-identity-bar{padding:10px 12px;gap:7px}
+  .educut-notification-panel,.educut-profile-menu{position:fixed;right:12px;top:62px}
+}
+
+
+/* Authenticated identity bar must never appear over the public landing page. */
+body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!important}
 
 </style>
 </head>
@@ -3117,8 +3204,15 @@ document.addEventListener('keydown',e=>{
 </script>
 
 <script>
-/* ===== Clear user identity / navigation runtime ===== */
+/* ===== Shared authenticated header: notifications + profile avatar/menu ===== */
 (() => {
+  const PROFILE_KEY='educutProfilePictureByUserV1';
+  const NOTIF_KEY='educutSharedNotificationsV1';
+
+  const esc=(value)=>String(value??'').replace(/[&<>"']/g,m=>({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[m]));
+
   function getSession(){
     try{
       return window.__educutGetAuthSession?.()
@@ -3126,11 +3220,41 @@ document.addEventListener('keydown',e=>{
     }catch(_){ return null; }
   }
 
-  function initials(name,email){
-    const s=(name||email||'User').trim();
-    const parts=s.split(/\s+/).filter(Boolean);
-    if(parts.length>=2) return (parts[0][0]+parts[1][0]).toUpperCase();
-    return s.slice(0,2).toUpperCase();
+  function sessionId(s){
+    return String(s?.userId || s?.id || s?.email || s?.name || 'authenticated-user').toLowerCase();
+  }
+
+  function splitName(s){
+    const first=String(s?.firstName||'').trim();
+    const last=String(s?.lastName||'').trim();
+    if(first || last) return {first,last};
+
+    const full=String(s?.name || s?.fullName || s?.userName || '').trim();
+    const parts=full.split(/\s+/).filter(Boolean);
+    return {
+      first:parts[0]||'',
+      last:parts.length>1 ? parts.slice(1).join(' ') : ''
+    };
+  }
+
+  function initialsFor(s){
+    const {first,last}=splitName(s);
+    const firstInitial=(first.trim()[0]||'').toUpperCase();
+    const lastParts=last.trim().split(/\s+/).filter(Boolean);
+    const lastInitial=(lastParts.length ? lastParts[lastParts.length-1][0] : '').toUpperCase();
+
+    if(firstInitial && lastInitial) return firstInitial+lastInitial;
+
+    const full=String(s?.name || s?.fullName || s?.email || 'User').trim();
+    const parts=full.split(/\s+/).filter(Boolean);
+    if(parts.length>1) return (parts[0][0]+parts[parts.length-1][0]).toUpperCase();
+    return full.slice(0,2).toUpperCase();
+  }
+
+  function displayName(s){
+    return s?.name || s?.fullName || s?.userName ||
+      [s?.firstName,s?.lastName].filter(Boolean).join(' ') ||
+      s?.email || 'EduCut.ai User';
   }
 
   function roleLabel(role){
@@ -3147,107 +3271,286 @@ document.addEventListener('keydown',e=>{
     }[role] || String(role||'Authenticated User').replaceAll('_',' '));
   }
 
-  function clearOldAmbiguousControls(){
-    // Hide only small icon-like controls in top headers that do not provide
-    // an understandable text label. This avoids duplicating the old ? / bell / initials UI.
-    document.querySelectorAll('button,a').forEach(el=>{
-      const txt=(el.textContent||'').trim();
-      const aria=(el.getAttribute('aria-label')||'').trim().toLowerCase();
-      const title=(el.getAttribute('title')||'').trim().toLowerCase();
+  function readProfileMap(){
+    try{return JSON.parse(localStorage.getItem(PROFILE_KEY)||'{}')||{}}catch(_){return{}}
+  }
+  function writeProfileMap(v){try{localStorage.setItem(PROFILE_KEY,JSON.stringify(v))}catch(_){}}
 
-      if(
-        txt==='?' ||
-        txt==='◉' ||
-        txt==='●' ||
-        txt==='○' ||
-        ((aria.includes('notification')||title.includes('notification')) && txt.length<=3) ||
-        ((aria.includes('help')||title.includes('help')) && txt.length<=3)
-      ){
-        el.classList.add('educut-hide-ambiguous-nav');
-      }
-    });
+  function profilePicture(s){
+    return readProfileMap()[sessionId(s)] || s?.profilePictureUrl || s?.profile_picture_url || null;
+  }
 
-    // Hide initials-only square controls when our profile block is present.
-    document.querySelectorAll('button,a,div').forEach(el=>{
-      const txt=(el.textContent||'').trim();
-      if(/^[A-Z]{2}$/.test(txt) && el.children.length===0){
-        const r=el.getBoundingClientRect();
-        if(r.width>25 && r.width<100 && r.height>25 && r.height<100){
-          el.classList.add('educut-hide-ambiguous-nav');
-        }
-      }
+  function defaultNotifications(s){
+    const role=String(s?.role||'');
+    if(role.startsWith('COMPANY_')){
+      return [
+        {id:'company-ticket',title:'Support replied to your ticket',text:'A support response is available in your company workspace.',time:'2 minutes ago',read:false},
+        {id:'company-invoice',title:'Invoice payment confirmed',text:'Your latest invoice status has been updated.',time:'Yesterday',read:true}
+      ];
+    }
+    if(role==='INDIVIDUAL'){
+      return [
+        {id:'learner-certificate',title:'New certificate issued',text:'A course certificate is now available in your learning space.',time:'1 hour ago',read:false}
+      ];
+    }
+    return [
+      {id:'admin-ticket',title:'New support ticket',text:'A company has opened a support request.',time:'2 minutes ago',read:false},
+      {id:'admin-course',title:'Course awaiting review',text:'A course update is ready for administrator review.',time:'1 hour ago',read:false},
+      {id:'admin-payment',title:'Payment status updated',text:'An invoice payment status changed.',time:'Yesterday',read:true}
+    ];
+  }
+
+  function readNotifications(s){
+    const key=sessionId(s);
+    let all={};
+    try{all=JSON.parse(localStorage.getItem(NOTIF_KEY)||'{}')||{}}catch(_){}
+    if(!Array.isArray(all[key])){
+      all[key]=defaultNotifications(s);
+      try{localStorage.setItem(NOTIF_KEY,JSON.stringify(all))}catch(_){}
+    }
+    return all[key];
+  }
+
+  function saveNotifications(s,list){
+    const key=sessionId(s);
+    let all={};
+    try{all=JSON.parse(localStorage.getItem(NOTIF_KEY)||'{}')||{}}catch(_){}
+    all[key]=list;
+    try{localStorage.setItem(NOTIF_KEY,JSON.stringify(all))}catch(_){}
+  }
+
+  function bellSvg(){
+    return `<svg class="educut-bell-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter">
+      <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+      <path d="M10 21h4"></path>
+    </svg>`;
+  }
+
+  function avatarMarkup(s){
+    const picture=profilePicture(s);
+    if(picture){
+      return `<img src="${esc(picture)}" alt="${esc(displayName(s))} profile picture">`;
+    }
+    return `<span aria-hidden="true">${esc(initialsFor(s))}</span><span class="auth-sr">${esc(displayName(s))}</span>`;
+  }
+
+  function closeMenus(except){
+    document.querySelectorAll('.educut-notification-panel.open,.educut-profile-menu.open').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
     });
+  }
+
+  function markRead(s,id){
+    const list=readNotifications(s).map(n=>n.id===id?{...n,read:true,readAt:new Date().toISOString()}:n);
+    saveNotifications(s,list);
+    render();
+  }
+
+  function uploadPhoto(s,file,errorEl){
+    errorEl.textContent='';
+    if(!file) return;
+    const allowed=['image/jpeg','image/png','image/webp'];
+    if(!allowed.includes(file.type)){
+      errorEl.textContent='Use JPG, JPEG, PNG or WEBP.';
+      return;
+    }
+    if(file.size>5*1024*1024){
+      errorEl.textContent='Profile picture must be 5 MB or smaller.';
+      return;
+    }
+    const reader=new FileReader();
+    reader.onload=()=>{
+      const map=readProfileMap();
+      map[sessionId(s)]=reader.result;
+      writeProfileMap(map);
+      render();
+    };
+    reader.onerror=()=>{errorEl.textContent='Could not read this image.'};
+    reader.readAsDataURL(file);
+  }
+
+  function removePhoto(s){
+    const map=readProfileMap();
+    delete map[sessionId(s)];
+    writeProfileMap(map);
+    render();
   }
 
   function buildIdentityBar(){
     const s=getSession();
-    let existing=document.getElementById('educutIdentityBar');
+    let bar=document.getElementById('educutIdentityBar');
 
     if(!s){
-      existing?.remove();
+      bar?.remove();
       return;
     }
 
-    const name=s.name || s.fullName || s.userName || s.email || 'EduCut.ai User';
-    const role=s.role || 'AUTHENTICATED_USER';
-    const isAdmin=['SUPER_ADMIN','PLATFORM_ADMIN','CONTENT_MANAGER','FINANCE_MANAGER','SUPPORT_MANAGER'].includes(role);
-    const isCompany=['COMPANY_ADMIN','COMPANY_MANAGER'].includes(role);
-    const isLearner=['INDIVIDUAL','COMPANY_MEMBER'].includes(role);
-
-    if(!existing){
-      existing=document.createElement('div');
-      existing.id='educutIdentityBar';
-      existing.className='educut-identity-bar';
-      document.body.prepend(existing);
+    if(!bar){
+      bar=document.createElement('div');
+      bar.id='educutIdentityBar';
+      bar.className='educut-identity-bar';
+      document.body.prepend(bar);
     }
 
-    existing.innerHTML=`
-      <button type="button" class="educut-identity-action" id="educutHelpBtn" title="Help & Support">
-        <span aria-hidden="true">?</span><span>Help</span>
-      </button>
-      <button type="button" class="educut-identity-action" id="educutNotifBtn" title="Notifications">
-        <span aria-hidden="true">●</span><span>Notifications</span><span class="count">3</span>
-      </button>
-      <div class="educut-profile-block" title="Current signed-in profile">
-        <div class="educut-profile-avatar">${initials(name,s.email)}</div>
-        <div class="educut-profile-copy">
-          <strong>${String(name).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}</strong>
-          <small>${roleLabel(role)}</small>
+    const notifications=readNotifications(s);
+    const unread=notifications.filter(n=>!n.read).length;
+    const name=displayName(s);
+    const role=roleLabel(s.role);
+    const email=s.email||'';
+
+    bar.innerHTML=`
+      <div style="position:relative">
+        <button type="button" class="educut-bell-btn" id="educutNotifBtn" aria-label="Notifications" title="Notifications" aria-expanded="false">
+          ${bellSvg()}
+          ${unread>0?'<span class="educut-unread-dot" aria-hidden="true"></span>':''}
+        </button>
+        <div class="educut-notification-panel" id="educutNotifPanel" role="dialog" aria-label="Notifications">
+          <div class="educut-panel-head">
+            <strong>Notifications</strong>
+            <span class="mono">${unread} unread</span>
+          </div>
+          ${notifications.length ? notifications.map(n=>`
+            <button type="button" class="educut-notification-item ${n.read?'':'unread'}" data-notification-id="${esc(n.id)}">
+              <strong>${esc(n.title)}</strong>
+              <span>${esc(n.text||'')}</span>
+              <time>${esc(n.time||'')}</time>
+            </button>
+          `).join('') : '<div class="educut-empty-notifications">No notifications.</div>'}
         </div>
       </div>
-      <button type="button" class="educut-visible-logout" id="educutAlwaysLogout">Log Out</button>
+
+      <div class="educut-profile-wrap">
+        <button type="button" class="educut-profile-trigger" id="educutProfileBtn" aria-label="Open profile menu" aria-expanded="false">
+          <span class="educut-profile-avatar">${avatarMarkup(s)}</span>
+        </button>
+        <div class="educut-profile-menu" id="educutProfileMenu" role="menu">
+          <div class="educut-profile-identity">
+            <strong>${esc(name)}</strong>
+            <span>${esc(role)}</span>
+            ${email?`<small>${esc(email)}</small>`:''}
+          </div>
+          <button class="educut-profile-menu-action" type="button" data-profile-action="profile">My Profile</button>
+          <button class="educut-profile-menu-action" type="button" data-profile-action="settings">Account Settings</button>
+          <button class="educut-profile-menu-action" type="button" data-profile-action="security">Security</button>
+          <div class="educut-profile-editor">
+            <div class="mono">Profile picture</div>
+            <p>JPG, PNG or WEBP · maximum 5 MB</p>
+            <div class="educut-profile-editor-actions">
+              <button type="button" class="educut-profile-editor-btn" id="educutUploadPhoto">Upload photo</button>
+              ${profilePicture(s)?'<button type="button" class="educut-profile-editor-btn remove" id="educutRemovePhoto">Remove photo</button>':''}
+            </div>
+            <input type="file" id="educutPhotoInput" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" hidden>
+            <div class="educut-profile-error" id="educutProfileError" aria-live="polite"></div>
+          </div>
+          <button class="educut-profile-menu-action logout" type="button" id="educutMenuLogout" data-educut-logout>Log Out</button>
+        </div>
+      </div>
     `;
 
-    document.getElementById('educutAlwaysLogout').onclick=e=>window.educutLogout?.(e.currentTarget);
+    const notifBtn=bar.querySelector('#educutNotifBtn');
+    const notifPanel=bar.querySelector('#educutNotifPanel');
+    const profileBtn=bar.querySelector('#educutProfileBtn');
+    const profileMenu=bar.querySelector('#educutProfileMenu');
 
-    document.getElementById('educutHelpBtn').onclick=()=>{
-      if(isCompany && window.renderCompanyPortal && document.getElementById('routeView')){
-        const rv=document.getElementById('routeView');
-        // Keep help meaningful without navigating to a cryptic icon destination.
-        alert('EduCut.ai Help\n\nUse Support from the Company Workspace to open and track a request with the EduCut.ai team.');
-      }else{
-        alert('EduCut.ai Help\n\nFor account or learning support, contact the EduCut.ai support team.');
-      }
+    notifBtn.onclick=(e)=>{
+      e.stopPropagation();
+      const willOpen=!notifPanel.classList.contains('open');
+      closeMenus(notifPanel);
+      notifPanel.classList.toggle('open',willOpen);
+      notifBtn.setAttribute('aria-expanded',String(willOpen));
     };
 
-    document.getElementById('educutNotifBtn').onclick=()=>{
-      if(isCompany){
-        const target=[...document.querySelectorAll('[data-cwroute="notifications"]')][0];
-        if(target) target.click();
-        else alert('Notifications are available from your Company Workspace.');
-      }else{
-        alert('You have 3 notifications in this prototype.');
-      }
+    profileBtn.onclick=(e)=>{
+      e.stopPropagation();
+      const willOpen=!profileMenu.classList.contains('open');
+      closeMenus(profileMenu);
+      profileMenu.classList.toggle('open',willOpen);
+      profileBtn.setAttribute('aria-expanded',String(willOpen));
     };
 
-    clearOldAmbiguousControls();
+    bar.querySelectorAll('[data-notification-id]').forEach(btn=>{
+      btn.onclick=()=>markRead(s,btn.dataset.notificationId);
+    });
+
+    const fileInput=bar.querySelector('#educutPhotoInput');
+    const errorEl=bar.querySelector('#educutProfileError');
+    bar.querySelector('#educutUploadPhoto').onclick=()=>fileInput.click();
+    fileInput.onchange=()=>uploadPhoto(s,fileInput.files?.[0],errorEl);
+    bar.querySelector('#educutRemovePhoto')?.addEventListener('click',()=>removePhoto(s));
+
+    bar.querySelectorAll('[data-profile-action]').forEach(btn=>{
+      btn.onclick=()=>{
+        const label=btn.textContent.trim();
+        alert(`${label}\n\nThis prototype keeps the existing platform navigation unchanged. Connect this action to the corresponding production account page.`);
+      };
+    });
+
+    bar.querySelector('#educutMenuLogout').onclick=e=>window.educutLogout?.(e.currentTarget);
+
+    // Remove older duplicate top-level profile/notification/logout controls.
+    document.querySelectorAll('.educut-visible-logout,.educut-company-logout,.educut-admin-sidebar-logout').forEach(el=>{
+      if(!bar.contains(el)) el.style.display='none';
+    });
   }
 
-  buildIdentityBar();
-  const mo=new MutationObserver(()=>buildIdentityBar());
-  mo.observe(document.documentElement,{subtree:true,childList:true});
+  function isAuthenticatedPlatformVisible(){
+    const s=getSession();
+    if(!s) return false;
 
-  window.addEventListener('pageshow',buildIdentityBar);
+    // Only show the authenticated identity controls once the user has entered
+    // an authenticated platform/dashboard. Never render them on the public landing page.
+    const visibleSelectors = [
+      '.route-view.open',
+      '.admin-app',
+      '.company-app',
+      '.learner-app',
+      '[data-authenticated-view="true"]',
+      '[data-platform-authenticated="true"]'
+    ];
+
+    return visibleSelectors.some(sel=>{
+      const el=document.querySelector(sel);
+      if(!el) return false;
+      const cs=getComputedStyle(el);
+      return cs.display!=='none' && cs.visibility!=='hidden';
+    });
+  }
+
+  function render(){
+    const bar=document.getElementById('educutIdentityBar');
+
+    if(!isAuthenticatedPlatformVisible()){
+      bar?.remove();
+      return;
+    }
+
+    buildIdentityBar();
+  }
+
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('#educutIdentityBar')) closeMenus();
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape') closeMenus();
+  });
+
+  // Re-evaluate after sign-in, route changes, and dashboard rendering.
+  // The bar is intentionally NOT injected on initial landing-page load.
+  const mo=new MutationObserver(()=>render());
+  mo.observe(document.documentElement,{
+    subtree:true,
+    childList:true,
+    attributes:true,
+    attributeFilter:['class','style','aria-hidden']
+  });
+
+  window.addEventListener('pageshow',render);
+  window.addEventListener('storage',render);
+  window.addEventListener('popstate',render);
+  window.addEventListener('hashchange',render);
+
+  // Initial pass only removes stale authenticated UI if present.
+  render();
 })();
 </script>
 
