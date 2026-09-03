@@ -636,6 +636,190 @@
 /* Authenticated identity bar must never appear over the public landing page. */
 body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!important}
 
+
+/* ===== Company Workspace — aligned to Administrator Console ===== */
+.company-workspace-editorial .company-app{
+  grid-template-columns:250px minmax(0,1fr)!important;
+  background:var(--paper);
+}
+.company-workspace-editorial .company-sidebar{
+  display:block!important;
+  background:var(--ink)!important;
+  color:#fff!important;
+  border-right:1px solid #2a2a2a!important;
+  position:sticky;
+  top:0;
+  height:100vh;
+  overflow:auto;
+}
+.company-workspace-editorial .company-sidebar-head{
+  height:76px;
+  padding:0 24px;
+  border-bottom:1px solid #333!important;
+  background:var(--ink);
+}
+.company-workspace-editorial .company-company-tag{
+  padding:18px 22px 14px;
+  border-bottom:1px solid #292929!important;
+  background:var(--ink);
+}
+.company-workspace-editorial .company-company-tag .mono{
+  color:#74746f!important;
+}
+.company-workspace-editorial .company-company-tag strong{
+  color:#fff;
+  font-size:14px;
+  margin-top:6px;
+}
+.company-workspace-editorial .company-company-tag small{
+  color:#777;
+  display:block;
+  margin-top:4px;
+  font:9px "SFMono-Regular",Consolas,monospace;
+  letter-spacing:.08em;
+}
+.company-workspace-editorial .company-nav{
+  display:block!important;
+  padding:10px 12px 30px!important;
+}
+.company-workspace-editorial .company-nav-group{
+  margin:18px 0 7px;
+  padding:0 8px;
+  color:#71716d;
+  font:10px "SFMono-Regular",Consolas,monospace;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.company-workspace-editorial .company-nav-btn{
+  width:100%;
+  min-height:38px;
+  border:0;
+  border-left:3px solid transparent;
+  background:transparent;
+  color:#bdbdb8;
+  text-align:left;
+  padding:10px 10px;
+  cursor:pointer;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  font-size:12px;
+  font-weight:400;
+}
+.company-workspace-editorial .company-nav-btn:hover{
+  background:#151515!important;
+  color:#fff!important;
+}
+.company-workspace-editorial .company-nav-btn.active{
+  background:#171717!important;
+  color:#fff!important;
+  border-left-color:var(--lime)!important;
+  font-weight:600;
+}
+.company-workspace-editorial .company-nav-btn.active .company-nav-code{
+  color:var(--lime)!important;
+}
+.company-workspace-editorial .company-nav-code{
+  font-family:"SFMono-Regular",Consolas,monospace;
+  color:#6f80ff;
+  font-size:9px;
+  letter-spacing:.1em;
+  width:25px;
+  flex:0 0 25px;
+}
+.company-workspace-editorial .company-sidebar-logout{
+  width:calc(100% - 24px);
+  margin:8px 12px 24px;
+  border:1px solid #444;
+  background:#111;
+  color:#fff;
+  text-align:left;
+  padding:11px 12px;
+  cursor:pointer;
+  font-size:12px;
+}
+.company-workspace-editorial .company-sidebar-logout:hover{
+  border-color:#fff;
+  background:#fff;
+  color:#000;
+}
+.company-workspace-editorial .company-main{
+  min-width:0;
+  background:var(--paper);
+}
+.company-workspace-editorial .company-workspace-top{
+  padding:30px 30px 25px!important;
+  border-bottom:1px solid var(--ink)!important;
+  background:var(--paper)!important;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:50px;
+  align-items:end;
+}
+.company-workspace-editorial .company-workspace-heading-left{
+  min-width:0;
+}
+.company-workspace-editorial .company-workspace-breadcrumb{
+  color:#84847f;
+  margin-bottom:13px;
+}
+.company-workspace-editorial .company-workspace-route{
+  color:var(--blue)!important;
+  margin-bottom:7px;
+}
+.company-workspace-editorial .company-workspace-title{
+  font-size:clamp(38px,5vw,64px)!important;
+  line-height:.93!important;
+  letter-spacing:-.06em!important;
+  margin:5px 0 0!important;
+}
+.company-workspace-editorial .company-workspace-meta{
+  min-width:0;
+  padding-bottom:2px;
+}
+.company-workspace-editorial .company-workspace-sub{
+  color:#666!important;
+  font-size:15px!important;
+  max-width:610px!important;
+  margin:0!important;
+}
+.company-workspace-editorial .company-workspace-company{
+  margin-top:10px!important;
+  font-weight:700;
+  font-size:13px;
+}
+.company-workspace-editorial .company-page-shell{
+  padding:24px 30px 70px!important;
+  max-width:1600px;
+  margin:auto;
+}
+.company-workspace-editorial .company-exec-grid{
+  margin:0 0 26px!important;
+}
+.company-workspace-editorial .company-module-grid{
+  margin:0 0 26px!important;
+}
+.company-workspace-editorial .company-alerts-wrap{
+  margin:0 0 28px!important;
+}
+@media(max-width:900px){
+  .company-workspace-editorial .company-app{grid-template-columns:1fr!important}
+  .company-workspace-editorial .company-sidebar{
+    position:fixed!important;
+    left:-270px;
+    width:250px;
+    z-index:121;
+    transition:left .25s;
+  }
+  .company-workspace-editorial .company-sidebar.open{left:0}
+  .company-workspace-editorial .company-workspace-top{
+    grid-template-columns:1fr;
+    gap:18px;
+    padding:24px 18px!important;
+  }
+  .company-workspace-editorial .company-page-shell{padding:22px 18px 55px!important}
+}
+
 </style>
 </head>
 <body class="motion-ready">
@@ -2989,18 +3173,102 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
   const original=window.renderCompanyPortal;
   if(!original)return;
+  function companySidebarMarkup(session){
+    const x=ctx(session);
+    const item=(code,label,route)=>`<button type="button" class="company-nav-btn" data-cwside="${route}"><span class="company-nav-code">${code}</span><span>${label}</span></button>`;
+    return `<div class="company-sidebar-head"><div class="brand">EduCut<span>.ai</span></div></div>
+      <div class="company-company-tag">
+        <div class="mono">Company Workspace</div>
+        <strong>${esc(x.company?.name||'Company')}</strong>
+        <small>${esc(x.company?.id||'')}</small>
+      </div>
+      <nav class="company-nav" aria-label="Company workspace navigation">
+        ${item('00','Dashboard','workspace')}
+        <div class="company-nav-group">Organization</div>
+        ${item('01','Employees','employees')}
+        ${item('02','Company Account','account')}
+        <div class="company-nav-group">Learning</div>
+        ${item('03','Team Learning','employees')}
+        ${item('04','Courses','courses')}
+        ${item('05','Subscription & Seats','subscription')}
+        <div class="company-nav-group">Intelligence</div>
+        ${item('06','Analytics','analytics')}
+        ${item('07','Certificates','employees')}
+        <div class="company-nav-group">Support</div>
+        ${item('08','Support Tickets','support')}
+        ${item('09','Notifications','notifications')}
+        <div class="company-nav-group">Commercial</div>
+        ${item('10','Billing','billing')}
+        ${item('11','Contracts','contracts')}
+        <div class="company-nav-group">Governance</div>
+        ${item('12','Company Settings','account')}
+      </nav>
+      <button type="button" class="company-sidebar-logout" data-educut-logout>↪ &nbsp; Log Out</button>`;
+  }
+
+  function wireCompanySidebar(root,session){
+    const sidebar=root.querySelector('.company-sidebar');
+    if(!sidebar) return;
+    sidebar.innerHTML=companySidebarMarkup(session);
+    sidebar.querySelectorAll('[data-cwside]').forEach(btn=>{
+      btn.onclick=()=>{
+        routeTo(root,session,btn.dataset.cwside);
+        sidebar.classList.remove('open');
+        root.querySelector('#companyOverlay')?.classList.remove('open');
+      };
+    });
+    sidebar.querySelector('[data-educut-logout]')?.addEventListener('click',e=>window.educutLogout?.(e.currentTarget));
+  }
+
+  function setCompanySidebarActive(route=''){
+    const root=document.getElementById('routeView');
+    if(!root) return;
+    let key='workspace';
+    const r=String(route).toUpperCase();
+    if(r.includes('EMPLOYEE')) key='employees';
+    else if(r.includes('ANALYTIC')) key='analytics';
+    else if(r.includes('COURSE')) key='courses';
+    else if(r.includes('SUPPORT')) key='support';
+    else if(r.includes('SUBSCRIPTION')) key='subscription';
+    else if(r.includes('BILLING')||r.includes('INVOICE')) key='billing';
+    else if(r.includes('CONTRACT')) key='contracts';
+    else if(r.includes('ACCOUNT')) key='account';
+    else if(r.includes('NOTIFICATION')) key='notifications';
+    root.querySelectorAll('.company-nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.cwside===key));
+  }
+
   window.renderCompanyPortal=(root,session)=>{
     original(root,session);
     root.classList.add('company-workspace-editorial');
-    const nav=document.querySelector('.company-nav'); if(nav){nav.style.display='none';}
-    const sidebar=document.querySelector('.company-sidebar'); if(sidebar){sidebar.style.display='none';}
-    const app=document.querySelector('.company-app'); if(app){app.style.gridTemplateColumns='1fr';}
-    const top=document.querySelector('.company-topbar'); if(top){top.style.display='none';}
+    const app=root.querySelector('.company-app');
+    if(app) app.style.gridTemplateColumns='';
+    const sidebar=root.querySelector('.company-sidebar');
+    if(sidebar) sidebar.style.display='';
+    const nav=root.querySelector('.company-nav');
+    if(nav) nav.style.display='';
+    const top=root.querySelector('.company-topbar');
+    if(top) top.style.display='none';
+    wireCompanySidebar(root,session);
     renderWorkspace(root,session);
   };
 
   function routeTo(root,session,kind,id){if(kind==='workspace')return renderWorkspace(root,session);if(kind==='employees')return renderEmployees(root,session);if(kind==='analytics')return renderAnalytics(root,session);if(kind==='courses')return renderCourses(root,session);if(kind==='support')return renderSupport(root,session,id);if(kind==='subscription')return renderSubscription(root,session);if(kind==='billing')return id?renderInvoice(root,session,id):renderBilling(root,session);if(kind==='contracts')return renderContracts(root,session);if(kind==='account')return renderAccount(root,session);if(kind==='notifications')return renderNotifications(root,session)}
-  function shell(root,route,title,sub,companyName,body,back=false){const main=root.querySelector('.company-main')||root;main.innerHTML=`<div class="company-workspace-top"><div class="company-workspace-route">${esc(route)}</div><h1 class="company-workspace-title">${esc(title)}</h1><p class="company-workspace-sub">${esc(sub)}</p><div class="company-workspace-company">${esc(companyName||'')}</div>${back?'<div style="margin-top:16px"><button class="btn btn-outline" id="cwBack">← Company Workspace</button></div>':''}</div><div class="company-page-shell">${body}</div>`}
+  function shell(root,route,title,sub,companyName,body,back=false){
+    const main=root.querySelector('.company-main')||root;
+    main.innerHTML=`<div class="company-workspace-top">
+      <div class="company-workspace-heading-left">
+        <div class="company-workspace-breadcrumb mono">COMPANY / ${esc(route)}</div>
+        <div class="company-workspace-route">${esc(route)}</div>
+        <h1 class="company-workspace-title">${esc(title)}</h1>
+      </div>
+      <div class="company-workspace-meta">
+        <p class="company-workspace-sub">${esc(sub)}</p>
+        <div class="company-workspace-company">${esc(companyName||'')}</div>
+        ${back?'<div style="margin-top:14px"><button class="btn btn-outline" id="cwBack">← Company Workspace</button></div>':''}
+      </div>
+    </div><div class="company-page-shell">${body}</div>`;
+    setCompanySidebarActive(route);
+  }
   function renderWorkspace(root,session){
     const x=ctx(session),e=x.employees,active=e.filter(u=>u.status==='ACTIVE').length,pending=e.filter(u=>u.status==='PENDING_ACTIVATION').length,avg=e.length?Math.round(e.reduce((a,b)=>a+(b.progress||0),0)/e.length):0,completed=e.reduce((a,b)=>a+(b.courseProgress||[]).filter(c=>c.progress>=100).length,0),cert=e.reduce((a,b)=>a+(b.certificates||0),0),alloc=x.seats.filter(s=>!['EXPIRED','REVOKED'].includes(s.status)).length,avail=Math.max(0,(x.sub?.seats||0)-alloc),open=x.requests.filter(r=>!['RESOLVED','REJECTED','CLOSED'].includes(r.status)).length,out=x.invoices.filter(i=>['PENDING','OVERDUE'].includes(i.status)).reduce((a,b)=>a+b.amount,0);
     const modules=[
