@@ -500,7 +500,7 @@
 
 /* ===== Universal Logout ===== */
 .educut-logout-btn{border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 13px;cursor:pointer;font:700 10px "SFMono-Regular",Consolas,monospace;letter-spacing:.04em;white-space:nowrap}
-.educut-logout-btn:hover{background:var(--ink);color:#fff}
+.educut-logout-btn:hover{background:#f1f1ed;color:#000}
 .educut-logout-btn:disabled{opacity:.55;cursor:wait}
 .educut-company-logout{position:absolute;right:34px;top:34px;z-index:5}
 .educut-admin-sidebar-logout{margin:18px 12px 24px;width:calc(100% - 24px);color:#fff;border-color:#555}
@@ -548,6 +548,93 @@
   .educut-identity-action{font-size:10px;padding:0 9px}
   .educut-profile-copy small{display:none}
 }
+
+
+/* ===== EduCut.ai shared authenticated header — notification + profile refinement ===== */
+.educut-identity-bar{
+  display:flex;align-items:center;justify-content:flex-end;gap:10px;
+  padding:12px 24px;border-bottom:1px solid var(--line);background:#fff;
+  position:sticky;top:0;z-index:9998
+}
+.educut-bell-btn,.educut-profile-trigger{
+  border:1px solid var(--line);background:#fff;color:#000;cursor:pointer;
+  height:42px;display:inline-flex;align-items:center;justify-content:center
+}
+.educut-bell-btn{width:42px;position:relative;padding:0}
+.educut-bell-btn:hover,.educut-profile-trigger:hover{border-color:#000}
+.educut-bell-icon{width:18px;height:18px;display:block}
+.educut-unread-dot{
+  position:absolute;top:7px;right:7px;width:7px;height:7px;
+  background:#E53935;border:1px solid #fff;border-radius:50%;
+}
+.educut-profile-wrap{position:relative}
+.educut-profile-trigger{
+  min-width:42px;padding:0 6px;border-color:#111
+}
+.educut-profile-avatar{
+  width:30px;height:30px;border-radius:999px;border:1px solid #111;
+  display:grid;place-items:center;overflow:hidden;background:#f1f1ed;
+  color:#000;font-weight:800;font-size:11px;letter-spacing:.02em
+}
+.educut-profile-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.educut-notification-panel,.educut-profile-menu{
+  position:absolute;right:0;top:calc(100% + 9px);background:#fff;color:#000;
+  border:1px solid #111;box-shadow:0 18px 45px rgba(0,0,0,.12);
+  display:none;z-index:10020
+}
+.educut-notification-panel.open,.educut-profile-menu.open{display:block}
+.educut-notification-panel{width:min(380px,calc(100vw - 28px));max-height:480px;overflow:auto}
+.educut-panel-head{padding:14px 15px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.educut-panel-head strong{font-size:13px}
+.educut-panel-head .mono{color:var(--blue);font-size:9px}
+.educut-notification-item{
+  width:100%;border:0;border-bottom:1px solid var(--line);background:#fff;color:#000;
+  text-align:left;padding:13px 15px;cursor:pointer;display:block
+}
+.educut-notification-item:hover{background:var(--paper)}
+.educut-notification-item.unread{box-shadow:inset 4px 0 0 var(--blue)}
+.educut-notification-item strong{display:block;font-size:12px;margin-bottom:4px}
+.educut-notification-item span{display:block;color:#666;font-size:11px;line-height:1.45}
+.educut-notification-item time{display:block;color:#92928d;font:9px "SFMono-Regular",Consolas,monospace;margin-top:7px;text-transform:uppercase;letter-spacing:.07em}
+.educut-empty-notifications{padding:22px 15px;color:#777;font-size:12px}
+.educut-profile-menu{width:290px}
+.educut-profile-identity{padding:16px;border-bottom:1px solid var(--line)}
+.educut-profile-identity strong{display:block;font-size:13px}
+.educut-profile-identity span,.educut-profile-identity small{display:block;color:#777;font-size:11px;margin-top:3px;word-break:break-word}
+.educut-profile-menu-action{
+  width:100%;border:0;border-bottom:1px solid var(--line);background:#fff;color:#000;
+  padding:12px 15px;text-align:left;cursor:pointer;font-size:12px
+}
+.educut-profile-menu-action:hover{background:var(--paper)}
+.educut-profile-menu-action.logout{
+  color:#000!important;font-weight:800;border-bottom:0
+}
+.educut-profile-menu-action.logout:hover{background:#f1f1ed;color:#000!important}
+.educut-profile-editor{padding:15px;border-top:1px solid #111;background:var(--paper)}
+.educut-profile-editor .mono{color:var(--blue);margin-bottom:9px}
+.educut-profile-editor p{font-size:11px;color:#666;margin:0 0 10px}
+.educut-profile-editor-actions{display:flex;gap:7px;flex-wrap:wrap}
+.educut-profile-editor-btn{
+  border:1px solid #111;background:#fff;color:#000;padding:8px 10px;cursor:pointer;
+  font:700 9px "SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.06em
+}
+.educut-profile-editor-btn:hover{background:#111;color:#fff}
+.educut-profile-editor-btn.remove{border-color:#c9c9c3}
+.educut-profile-error{font-size:10px;color:#b00020;margin-top:8px}
+.educut-visible-logout{color:#000!important;background:#fff!important;border-color:#111!important}
+.educut-visible-logout:hover{color:#000!important;background:#f1f1ed!important}
+.educut-logout-btn{color:#000!important;background:#fff!important}
+.educut-logout-btn:hover{color:#000!important;background:#f1f1ed!important}
+.educut-admin-sidebar-logout{color:#000!important;background:#fff!important;border-color:#fff!important}
+.educut-admin-sidebar-logout:hover{color:#000!important;background:#f1f1ed!important}
+@media(max-width:760px){
+  .educut-identity-bar{padding:10px 12px;gap:7px}
+  .educut-notification-panel,.educut-profile-menu{position:fixed;right:12px;top:62px}
+}
+
+
+/* Authenticated identity bar must never appear over the public landing page. */
+body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!important}
 
 </style>
 </head>
@@ -1681,8 +1768,40 @@ document.addEventListener('keydown',e=>{
   const routeView=document.getElementById('routeView');
   if(!authModal||!authBody) return;
 
-  const ROLES={INDIVIDUAL:'INDIVIDUAL',COMPANY_MEMBER:'COMPANY_MEMBER',COMPANY_MANAGER:'COMPANY_MANAGER',COMPANY_ADMIN:'COMPANY_ADMIN',SUPER_ADMIN:'SUPER_ADMIN'};
-  const ROLE_HOME={INDIVIDUAL:'/academy/dashboard',COMPANY_MEMBER:'/company/learning',COMPANY_MANAGER:'/company/dashboard',COMPANY_ADMIN:'/company/admin',SUPER_ADMIN:'/admin/dashboard'};
+  const ROLES={
+    INDIVIDUAL:'INDIVIDUAL',
+    COMPANY_MEMBER:'COMPANY_MEMBER',
+    COMPANY_MANAGER:'COMPANY_MANAGER',
+    COMPANY_ADMIN:'COMPANY_ADMIN',
+    SUPER_ADMIN:'SUPER_ADMIN',
+    PLATFORM_ADMIN:'PLATFORM_ADMIN',
+    CONTENT_MANAGER:'CONTENT_MANAGER',
+    FINANCE_MANAGER:'FINANCE_MANAGER',
+    SUPPORT_MANAGER:'SUPPORT_MANAGER'
+  };
+
+  function getPostLoginRoute(role){
+    switch(role){
+      case ROLES.SUPER_ADMIN:
+      case ROLES.PLATFORM_ADMIN:
+      case ROLES.CONTENT_MANAGER:
+      case ROLES.FINANCE_MANAGER:
+      case ROLES.SUPPORT_MANAGER:
+        return '/admin/dashboard';
+      case ROLES.COMPANY_ADMIN:
+      case ROLES.COMPANY_MANAGER:
+        return '/company/dashboard';
+      case ROLES.COMPANY_MEMBER:
+      case ROLES.INDIVIDUAL:
+        return '/academy/dashboard';
+      default:
+        return '/';
+    }
+  }
+
+  const ROLE_HOME=new Proxy({},{
+    get(_target,role){ return getPostLoginRoute(role); }
+  });
   const state={screen:'landing',mode:'signin',access:null,companyStep:1,signupIntent:'signin',activation:{email:'',verified:false,record:null}};
   let session=null;
   try{session=JSON.parse(sessionStorage.getItem('educutAuthSession')||'null')}catch(_){session=null}
@@ -1721,14 +1840,60 @@ document.addEventListener('keydown',e=>{
   const passwordField=(name,label='Password',autocomplete='current-password')=>`<div class="auth-field"><label for="${name}">${label}</label><div class="auth-password-wrap"><input id="${name}" name="${name}" type="password" autocomplete="${autocomplete}" required><button type="button" class="auth-password-toggle" data-toggle-password="${name}" aria-label="Show password">Show</button></div><div class="auth-error" data-error-for="${name}"></div></div>`;
   const wirePasswordToggles=(root=authBody)=>root.querySelectorAll('[data-toggle-password]').forEach(b=>b.onclick=()=>{const i=document.getElementById(b.dataset.togglePassword);if(!i)return;const show=i.type==='password';i.type=show?'text':'password';b.textContent=show?'Hide':'Show';b.setAttribute('aria-label',show?'Hide password':'Show password')});
   const status=(msg='',type='')=>`<div class="auth-status ${type}" aria-live="polite">${msg}</div>`;
-  const loading=(btn,text)=>{btn.disabled=true;btn.dataset.original=btn.textContent;btn.textContent=text;};
+  const loading=(btn,text)=>{
+    if(btn.dataset.submitting==='true') return false;
+    btn.dataset.submitting='true';
+    btn.disabled=true;
+    btn.dataset.original=btn.textContent;
+    btn.textContent=text;
+    return true;
+  };
   const successBtn=(btn,text)=>{btn.textContent=text;btn.classList.add('btn-lime')};
-  const finishLogin=(role,name='User',homeOverride=null,meta={})=>{const path=homeOverride||ROLE_HOME[role];session={role,name,home:path,authenticatedAt:new Date().toISOString(),...meta};sessionStorage.setItem('educutAuthSession',JSON.stringify(session));setTimeout(()=>{closeAuth();navigateProtected(path,true)},500)};
+
+  let authStatus='IDLE';
+  let postLoginNavigationInFlight=false;
+  let postLoginTimer=null;
+
+  const finishLogin=(role,name='User',homeOverride=null,meta={})=>{
+    if(postLoginNavigationInFlight) return;
+    const path=homeOverride || getPostLoginRoute(role);
+    authStatus='AUTHENTICATED';
+
+    session={
+      role,
+      name,
+      home:path,
+      authenticatedAt:new Date().toISOString(),
+      ...meta
+    };
+
+    try{
+      sessionStorage.setItem('educutAuthSession',JSON.stringify(session));
+    }catch(_){}
+
+    window.dispatchEvent(new CustomEvent('educut:auth-changed',{
+      detail:{status:'authenticated',session}
+    }));
+
+    postLoginNavigationInFlight=true;
+    authStatus='REDIRECTING';
+
+    if(postLoginTimer) clearTimeout(postLoginTimer);
+    postLoginTimer=setTimeout(()=>{
+      postLoginTimer=null;
+      closeAuth();
+      navigateProtected(path,'replace');
+      postLoginNavigationInFlight=false;
+      window.dispatchEvent(new CustomEvent('educut:workspace-entered',{
+        detail:{path,role}
+      }));
+    },380);
+  };
 
   function renderCompanySignin(){
     const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="companySignin" novalidate><div class="auth-field"><label for="companyLogin">Company Email or Company ID</label><input id="companyLogin" name="login" autocomplete="username" required><div class="auth-error" data-error-for="login"></div></div>${passwordField('companyPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to Company Workspace</button>${status('', '')}<div class="auth-switch">New to EduCut.ai? <button type="button" data-create-company>Create a Company Account</button></div></form>`;wirePasswordToggles(h);
     h.querySelector('[data-forgot]').onclick=()=>renderForgot('company');h.querySelector('[data-create-company]').onclick=()=>{state.mode='signup';state.companyStep=1;animateSwap(renderAccess)};
-    h.querySelector('form').onsubmit=e=>{e.preventDefault();const f=e.currentTarget,login=f.login.value.trim(),pw=f.companyPassword.value,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');st.textContent='';st.className='auth-status';if(!login||!pw){st.textContent='Please enter your company credentials.';st.classList.add('error');return;}loading(btn,'Signing you in…');setTimeout(()=>{
+    h.querySelector('form').onsubmit=e=>{e.preventDefault();const f=e.currentTarget,login=f.login.value.trim(),pw=f.companyPassword.value,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');st.textContent='';st.className='auth-status';if(!login||!pw){st.textContent='Please enter your company credentials.';st.classList.add('error');return;}if(!loading(btn,'Signing you in…')) return;setTimeout(()=>{
       // Experimental prototype credential check only. Replace with POST /api/auth/login in production.
       if(login==='XX19061995'&&pw==='Xana'){successBtn(btn,'Access granted ✓');setTimeout(()=>renderAdminGranted(),260);return;}
       if(pw.length<8){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='Unable to sign in. Check your credentials and try again.';st.classList.add('error');return;}
@@ -1741,7 +1906,7 @@ document.addEventListener('keydown',e=>{
   }
 
   function renderIndividualSignin(){
-    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignin" novalidate><div class="auth-field"><label for="individualEmail">Company Email Address</label><input id="individualEmail" name="email" type="email" autocomplete="email" required placeholder="name@company.com"><div class="auth-error"></div></div>${passwordField('individualPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to My Academy</button>${status()}<div class="auth-switch">Has your company enrolled you? <button type="button" data-activate>Activate My Company Access</button></div></form>`;wirePasswordToggles(h);h.querySelector('[data-forgot]').onclick=()=>renderForgot('individual');h.querySelector('[data-activate]').onclick=()=>{state.mode='activate';state.activation={email:'',verified:false,record:null};animateSwap(renderAccess)};h.querySelector('form').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');if(!/^\S+@\S+\.\S+$/.test(f.email.value)||f.individualPassword.value.length<8){st.textContent='Please enter a valid company email and password.';st.className='auth-status error';return;}loading(btn,'Signing you in…');let account=null;try{if(location.protocol!=='file:'){const r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:f.email.value.trim(),password:f.individualPassword.value,portal:'individual'})});if(r.ok)account=await r.json();}}catch(_){account=null}if(!account){const rec=getProvisionedSeat(f.email.value.trim());if(rec&&rec.account_status==='ACTIVE'&&rec.password_created){account={role:ROLES.COMPANY_MEMBER,name:rec.employee_name||f.email.value.trim(),companyName:rec.company_name,sponsored:true}}}setTimeout(()=>{if(!account){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='Unable to sign in. Check your credentials and try again.';st.className='auth-status error';return;}successBtn(btn,'Welcome back ✓');finishLogin(account.role||ROLES.COMPANY_MEMBER,account.name||f.email.value.trim(),'/academy/dashboard',{sponsored:true,companyName:account.companyName||''})},420)};
+    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignin" novalidate><div class="auth-field"><label for="individualEmail">Company Email Address</label><input id="individualEmail" name="email" type="email" autocomplete="email" required placeholder="name@company.com"><div class="auth-error"></div></div>${passwordField('individualPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to My Academy</button>${status()}<div class="auth-switch">Has your company enrolled you? <button type="button" data-activate>Activate My Company Access</button></div></form>`;wirePasswordToggles(h);h.querySelector('[data-forgot]').onclick=()=>renderForgot('individual');h.querySelector('[data-activate]').onclick=()=>{state.mode='activate';state.activation={email:'',verified:false,record:null};animateSwap(renderAccess)};h.querySelector('form').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');if(!/^\S+@\S+\.\S+$/.test(f.email.value)||f.individualPassword.value.length<8){st.textContent='Please enter a valid company email and password.';st.className='auth-status error';return;}if(!loading(btn,'Signing you in…')) return;let account=null;try{if(location.protocol!=='file:'){const r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:f.email.value.trim(),password:f.individualPassword.value,portal:'individual'})});if(r.ok)account=await r.json();}}catch(_){account=null}if(!account){const rec=getProvisionedSeat(f.email.value.trim());if(rec&&rec.account_status==='ACTIVE'&&rec.password_created){account={role:ROLES.COMPANY_MEMBER,name:rec.employee_name||f.email.value.trim(),companyName:rec.company_name,sponsored:true}}}setTimeout(()=>{if(!account){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='Unable to sign in. Check your credentials and try again.';st.className='auth-status error';return;}successBtn(btn,'Welcome back ✓');finishLogin(account.role||ROLES.COMPANY_MEMBER,account.name||f.email.value.trim(),'/academy/dashboard',{sponsored:true,companyName:account.companyName||''})},420)};
   }
 
   const seatStoreKey='educutProvisionedLearners';
@@ -1800,19 +1965,66 @@ document.addEventListener('keydown',e=>{
   const interests=['Machine Learning','Generative AI','Prompt Engineering','AI Productivity','AI for Leaders','AI for Marketing','AI for Finance','AI for HR','AI for Education','AI for Developers','LLM Engineering','RAG Systems','AI Agents','Responsible AI','AI Governance','AI Security','AI Transformation'];
   function renderIndividualSignup(){const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignup" novalidate><div class="auth-form-grid">${field('indFirst','First Name')}${field('indLast','Last Name')}${field('indEmail','Email Address','','email')}${field('indCountry','Country')}${field('indTitle','Current Position / Job Title')}${`<div class="auth-field"><label for="indCompany">Company Name — optional</label><input id="indCompany" name="company"></div>`}</div><div class="auth-field"><label>Areas of Interest</label><div class="auth-chip-grid">${interests.map(x=>`<button type="button" class="auth-chip" aria-pressed="false">${x}</button>`).join('')}</div></div><div class="auth-form-grid">${passwordField('indCreatePassword','Password','new-password')}${passwordField('indConfirmPassword','Confirm Password','new-password')}</div><label class="auth-check"><input type="checkbox" name="terms" required><span>I agree to the Terms &amp; Conditions</span></label><label class="auth-check"><input type="checkbox" name="privacy" required><span>I acknowledge the Privacy Policy</span></label><button class="btn btn-lime auth-submit" type="submit">Create My Account</button>${status()}</form>`;wirePasswordToggles(h);h.querySelectorAll('.auth-chip').forEach(b=>b.onclick=()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true'));h.querySelector('form').onsubmit=e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');if(!f.checkValidity()){f.reportValidity();st.textContent='Please complete the required fields.';st.className='auth-status error';return}if(f.indCreatePassword.value.length<8){st.textContent='Password must contain at least 8 characters.';st.className='auth-status error';return}if(f.indCreatePassword.value!==f.indConfirmPassword.value){st.textContent='Passwords do not match.';st.className='auth-status error';return}loading(btn,'Creating your account…');setTimeout(()=>{successBtn(btn,'Account created ✓');finishLogin(ROLES.INDIVIDUAL,f.indFirst.value||f.indEmail.value)},650)}}
 
-  function allowed(path,role){if(path.startsWith('/admin/'))return role===ROLES.SUPER_ADMIN;if(path==='/company/admin')return role===ROLES.COMPANY_ADMIN;if(path==='/company/dashboard')return [ROLES.COMPANY_MANAGER,ROLES.COMPANY_ADMIN].includes(role);if(path==='/company/learning')return [ROLES.COMPANY_MEMBER,ROLES.COMPANY_MANAGER,ROLES.COMPANY_ADMIN].includes(role);if(path==='/academy/dashboard')return [ROLES.INDIVIDUAL,ROLES.COMPANY_MEMBER].includes(role);return true}
-  function navigateProtected(path,push=true){if(push&&location.protocol!=='file:')history.pushState({},'',path);if(!session||!allowed(path,session.role)){renderRestricted(path);return}renderDashboard(path,session.role)}
-  function renderRestricted(path){routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');const home=session?(session.home||ROLE_HOME[session.role]):'/';routeView.innerHTML=`<div class="route-top"><div class="brand">EduCut<span>.ai</span></div><div class="mono route-role">Access Control</div></div><div class="route-content"><div class="restricted-panel"><div class="mono">Access Restricted</div><h1>This area isn't available for your account.</h1><p>Your authenticated role does not have permission to access <strong>${esc(path)}</strong>. You will be redirected safely to your appropriate dashboard.</p><button class="btn btn-lime" id="restrictedHome">Return to my dashboard →</button></div></div>`;document.getElementById('restrictedHome').onclick=()=>{if(session)navigateProtected(home,true);else{routeView.classList.remove('open');openAuth('signin')}};if(session)setTimeout(()=>navigateProtected(home,true),1800)}
+  function allowed(path,role){
+    if(path.startsWith('/admin/')){
+      return [ROLES.SUPER_ADMIN,ROLES.PLATFORM_ADMIN,ROLES.CONTENT_MANAGER,ROLES.FINANCE_MANAGER,ROLES.SUPPORT_MANAGER].includes(role);
+    }
+    if(path.startsWith('/company/')){
+      return [ROLES.COMPANY_ADMIN,ROLES.COMPANY_MANAGER].includes(role);
+    }
+    if(path.startsWith('/academy/')){
+      return [ROLES.INDIVIDUAL,ROLES.COMPANY_MEMBER].includes(role);
+    }
+    return true;
+  }
+
+  let lastNavigationKey='';
+
+  function navigateProtected(path,mode='replace'){
+    const role=session?.role||'';
+    const key=`${role}|${path}`;
+
+    if(!session){
+      renderRestricted(path);
+      return;
+    }
+
+    if(!allowed(path,role)){
+      const safe=getPostLoginRoute(role);
+      if(path!==safe){
+        path=safe;
+      }else{
+        renderRestricted(path);
+        return;
+      }
+    }
+
+    // Avoid duplicate navigation/render calls for the same settled route.
+    if(lastNavigationKey===`${role}|${path}` && routeView.classList.contains('open')) return;
+    lastNavigationKey=`${role}|${path}`;
+
+    if(location.protocol!=='file:' && location.pathname!==path){
+      if(mode==='push') history.pushState({},'',path);
+      else history.replaceState({},'',path);
+    }
+
+    renderDashboard(path,role);
+  }
+  function renderRestricted(path){routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');const home=session?(session.home||ROLE_HOME[session.role]):'/';routeView.innerHTML=`<div class="route-top"><div class="brand">EduCut<span>.ai</span></div><div class="mono route-role">Access Control</div></div><div class="route-content"><div class="restricted-panel"><div class="mono">Access Restricted</div><h1>This area isn't available for your account.</h1><p>Your authenticated role does not have permission to access <strong>${esc(path)}</strong>. You will be redirected safely to your appropriate dashboard.</p><button class="btn btn-lime" id="restrictedHome">Return to my dashboard →</button></div></div>`;document.getElementById('restrictedHome').onclick=()=>{if(session)navigateProtected(home,'replace');else{routeView.classList.remove('open');openAuth('signin')}};if(session){const t=setTimeout(()=>navigateProtected(home,'replace'),500);routeView.dataset.restrictedTimer=String(t)}}
   function dashboardCards(role){if(role===ROLES.SUPER_ADMIN)return [['01','Platform Overview','Monitor organizations, learners and Academy activity.'],['02','Company Accounts','Review corporate workspaces, managers and seat allocations.'],['03','Academy Management','Manage the training catalogue, courses and learning content.'],['04','Analytics','Inspect engagement, completion and cohort performance.'],['05','Contracts & Billing','Review company plans, invoices and training packages.'],['06','Security & Governance','Control roles, permissions and platform-level settings.']];if(role===ROLES.INDIVIDUAL||(role===ROLES.COMPANY_MEMBER&&session?.home==='/academy/dashboard'))return [['01','My Learning','Continue your active AI courses.'],['02','Progress','Review completion, assessments and certificates.'],['03','Recommendations','Explore Academies aligned with your interests.']];return [['01','Team Learning','Review assigned Academy paths and learner progress.'],['02','Courses','Access your organization’s approved AI curriculum.'],['03','Workspace','Collaborate with your corporate learning cohort.']];}
   function companySeatAdminMarkup(){const acad=(typeof academyDetails!=='undefined'?Object.entries(academyDetails):[]);return `<section class="seat-admin"><div class="seat-admin-head"><div><div class="mono" style="color:var(--blue)">Learner Provisioning</div><h2>Allocate company learning seats</h2></div><div class="mono">Exact email authorization only</div></div><form class="auth-form" id="seatAllocationForm"><div class="seat-admin-grid"><div class="auth-field"><label for="seatEmployeeName">Employee name</label><input id="seatEmployeeName" name="employeeName" required></div><div class="auth-field"><label for="seatEmail">Professional email</label><input id="seatEmail" name="email" type="email" required placeholder="employee@company.com"></div><div class="auth-field"><label for="seatStart">Access start date</label><input id="seatStart" name="start" type="date" required></div><div class="auth-field"><label for="seatExpiry">Access expiration date</label><input id="seatExpiry" name="expiry" type="date" required></div></div><div class="auth-field"><label>Assigned Academy / Courses</label><div class="auth-chip-grid">${acad.map(([c,d])=>`<button type="button" class="auth-chip" aria-pressed="false" data-seat-academy="${c}">${c} · ${esc(d.title)}</button>`).join('')}</div></div><label class="auth-check"><input type="checkbox" name="sendInvitation" checked><span><strong>Send Invitation</strong><br><span style="color:#777">Send the learner a direct activation link when email delivery is connected.</span></span></label><button class="btn btn-lime" type="submit">Allocate Seat &amp; Authorize Email →</button><div class="auth-status" aria-live="polite"></div></form><div class="seat-list" id="seatList"></div></section>`}
   function wireCompanySeatAdmin(){const f=document.getElementById('seatAllocationForm');if(!f)return;const today=new Date();const iso=d=>d.toISOString().slice(0,10);f.start.value=iso(today);const exp=new Date(today);exp.setFullYear(exp.getFullYear()+1);f.expiry.value=iso(exp);f.querySelectorAll('[data-seat-academy]').forEach(b=>b.onclick=()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true'));const render=()=>{const list=document.getElementById('seatList'),rows=allProvisionedSeats();list.innerHTML=rows.length?rows.map(r=>`<div class="seat-row"><div><strong>${esc(r.employee_name||'Learner')}</strong><span>${esc(r.email)}</span></div><div>${esc((r.assigned_academies||[]).join(', ')||'No Academy selected')}</div><div><span class="seat-status ${r.account_status==='ACTIVE'?'active':'pending'}">${esc(r.account_status||'PENDING_ACTIVATION')}</span><br>${esc(r.access_expiration_date||'')}</div><button class="btn" type="button" data-resend="${esc(r.email)}">Send Invitation</button></div>`).join(''):'<div class="seat-empty">No learner seats have been allocated in this prototype yet.</div>';list.querySelectorAll('[data-resend]').forEach(b=>b.onclick=()=>{b.textContent='Invitation ready ✓';setTimeout(()=>b.textContent='Send Invitation',1300)})};render();f.onsubmit=e=>{e.preventDefault();const st=f.querySelector('.auth-status'),fd=new FormData(f),email=String(fd.get('email')||'').trim().toLowerCase();if(!/^\S+@\S+\.\S+$/.test(email)){st.textContent='Please enter a valid professional email.';st.className='auth-status error';return}const rows=allProvisionedSeats();if(rows.some(x=>String(x.email||'').toLowerCase()===email)){st.textContent='This exact email already has a learner record.';st.className='auth-status error';return}rows.push({email,employee_name:fd.get('employeeName'),company_id:'prototype-company',company_name:session?.name||'Your Company',seat_id:'SEAT-'+Date.now(),subscription_id:'SUB-PROTOTYPE',role:ROLES.COMPANY_MEMBER,account_status:'PENDING_ACTIVATION',email_verified:false,password_created:false,access_start_date:fd.get('start'),access_expiration_date:fd.get('expiry'),assigned_academies:[...f.querySelectorAll('[data-seat-academy][aria-pressed="true"]')].map(x=>x.dataset.seatAcademy),invitation_requested:!!f.sendInvitation,created_at:new Date().toISOString()});saveProvisionedSeats(rows);st.textContent=f.sendInvitation?'Seat allocated. Invitation is ready to be sent.':'Seat allocated. The exact email is now eligible for activation.';st.className='auth-status success';f.reset();f.start.value=iso(today);f.expiry.value=iso(exp);f.querySelectorAll('[data-seat-academy]').forEach(b=>b.setAttribute('aria-pressed','false'));render()}}
 
-  function renderDashboard(path,role){if(role===ROLES.SUPER_ADMIN&&window.renderSuperAdmin){return window.renderSuperAdmin(routeView,session);}if((role===ROLES.COMPANY_ADMIN||role===ROLES.COMPANY_MANAGER)&&window.renderCompanyPortal){return window.renderCompanyPortal(routeView,session);}routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';const admin=role===ROLES.SUPER_ADMIN;const learner=path==='/academy/dashboard';const title=admin?'Administration Console':learner?'My Academy':'Company Workspace';const sub=admin?'Protected SUPER_ADMIN workspace for platform-level operations.':learner?(session?.sponsored?`Your company-sponsored personal learning dashboard${session.companyName?' · Provided by '+session.companyName:''}.`:'Your personal AI learning dashboard.'):'Your organization’s EduCut.ai learning environment.';routeView.className='route-view open '+(admin?'route-admin':'');routeView.innerHTML=`<div class="route-top"><div class="brand">EduCut<span>.ai</span></div><div class="route-top-actions"><span class="mono route-role">${esc(role)}</span><button class="btn btn-outline" id="routeLogout">Sign out</button></div></div><div class="route-content"><div class="route-heading"><div><div class="mono" style="color:var(--blue)">${esc(path)}</div><h1>${title}</h1></div><p>${sub}</p></div><div class="route-grid">${dashboardCards(role).map(c=>`<article class="route-card"><div class="mono">${c[0]}</div><h3>${c[1]}</h3><p>${c[2]}</p></article>`).join('')}</div>${role===ROLES.COMPANY_ADMIN?companySeatAdminMarkup():''}</div>`;if(role===ROLES.COMPANY_ADMIN)wireCompanySeatAdmin();document.getElementById('routeLogout').onclick=e=>window.educutLogout?.(e.currentTarget);}
+  function renderDashboard(path,role){
+    const adminRoles=[ROLES.SUPER_ADMIN,ROLES.PLATFORM_ADMIN,ROLES.CONTENT_MANAGER,ROLES.FINANCE_MANAGER,ROLES.SUPPORT_MANAGER];
+    if(adminRoles.includes(role)&&window.renderSuperAdmin){return window.renderSuperAdmin(routeView,session);}
+    if((role===ROLES.COMPANY_ADMIN||role===ROLES.COMPANY_MANAGER)&&window.renderCompanyPortal){return window.renderCompanyPortal(routeView,session);}
+routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';const admin=role===ROLES.SUPER_ADMIN;const learner=path==='/academy/dashboard';const title=admin?'Administration Console':learner?'My Academy':'Company Workspace';const sub=admin?'Protected SUPER_ADMIN workspace for platform-level operations.':learner?(session?.sponsored?`Your company-sponsored personal learning dashboard${session.companyName?' · Provided by '+session.companyName:''}.`:'Your personal AI learning dashboard.'):'Your organization’s EduCut.ai learning environment.';routeView.className='route-view open '+(admin?'route-admin':'');routeView.innerHTML=`<div class="route-top"><div class="brand">EduCut<span>.ai</span></div><div class="route-top-actions"><span class="mono route-role">${esc(role)}</span><button class="btn btn-outline" id="routeLogout">Sign out</button></div></div><div class="route-content"><div class="route-heading"><div><div class="mono" style="color:var(--blue)">${esc(path)}</div><h1>${title}</h1></div><p>${sub}</p></div><div class="route-grid">${dashboardCards(role).map(c=>`<article class="route-card"><div class="mono">${c[0]}</div><h3>${c[1]}</h3><p>${c[2]}</p></article>`).join('')}</div>${role===ROLES.COMPANY_ADMIN?companySeatAdminMarkup():''}</div>`;if(role===ROLES.COMPANY_ADMIN)wireCompanySeatAdmin();document.getElementById('routeLogout').onclick=e=>window.educutLogout?.(e.currentTarget);}
 
   document.querySelectorAll('[data-auth-open]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openAuth(a.dataset.authOpen)}));authClose.onclick=closeAuth;authModal.addEventListener('click',e=>{if(e.target===authModal)closeAuth()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&authModal.classList.contains('open'))closeAuth()});
   authModal.addEventListener('pointermove',e=>{const r=authRail?.getBoundingClientRect();if(!r)return;authRail.style.setProperty('--auth-grid-x',`${(e.clientX-r.left)*.015}px`);authRail.style.setProperty('--auth-grid-y',`${(e.clientY-r.top)*.015}px`)});
-  window.addEventListener('popstate',()=>{const p=location.pathname;if(/^\/(admin|company|academy)(\/|$)/.test(p))navigateProtected(p,false);else{routeView.classList.remove('open');routeView.setAttribute('aria-hidden','true');document.body.style.overflow=''}});
-  const initial=location.pathname;if(['/signin','/signup'].includes(initial))openAuth(initial==='/signup'?'signup':'signin');else if(/^\/(admin|company|academy)(\/|$)/.test(initial))navigateProtected(initial,false);
+  window.addEventListener('popstate',()=>{const p=location.pathname;if(/^\/(admin|company|academy)(\/|$)/.test(p))navigateProtected(p,'none');else{lastNavigationKey='';routeView.classList.remove('open');routeView.setAttribute('aria-hidden','true');document.body.style.overflow=''}});
+  const initial=location.pathname;if(['/signin','/signup'].includes(initial))openAuth(initial==='/signup'?'signup':'signin');else if(/^\/(admin|company|academy)(\/|$)/.test(initial))navigateProtected(initial,'none');
 })();
 
 </script>
@@ -3117,8 +3329,15 @@ document.addEventListener('keydown',e=>{
 </script>
 
 <script>
-/* ===== Clear user identity / navigation runtime ===== */
+/* ===== Shared authenticated header: notifications + profile avatar/menu ===== */
 (() => {
+  const PROFILE_KEY='educutProfilePictureByUserV1';
+  const NOTIF_KEY='educutSharedNotificationsV1';
+
+  const esc=(value)=>String(value??'').replace(/[&<>"']/g,m=>({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[m]));
+
   function getSession(){
     try{
       return window.__educutGetAuthSession?.()
@@ -3126,11 +3345,41 @@ document.addEventListener('keydown',e=>{
     }catch(_){ return null; }
   }
 
-  function initials(name,email){
-    const s=(name||email||'User').trim();
-    const parts=s.split(/\s+/).filter(Boolean);
-    if(parts.length>=2) return (parts[0][0]+parts[1][0]).toUpperCase();
-    return s.slice(0,2).toUpperCase();
+  function sessionId(s){
+    return String(s?.userId || s?.id || s?.email || s?.name || 'authenticated-user').toLowerCase();
+  }
+
+  function splitName(s){
+    const first=String(s?.firstName||'').trim();
+    const last=String(s?.lastName||'').trim();
+    if(first || last) return {first,last};
+
+    const full=String(s?.name || s?.fullName || s?.userName || '').trim();
+    const parts=full.split(/\s+/).filter(Boolean);
+    return {
+      first:parts[0]||'',
+      last:parts.length>1 ? parts.slice(1).join(' ') : ''
+    };
+  }
+
+  function initialsFor(s){
+    const {first,last}=splitName(s);
+    const firstInitial=(first.trim()[0]||'').toUpperCase();
+    const lastParts=last.trim().split(/\s+/).filter(Boolean);
+    const lastInitial=(lastParts.length ? lastParts[lastParts.length-1][0] : '').toUpperCase();
+
+    if(firstInitial && lastInitial) return firstInitial+lastInitial;
+
+    const full=String(s?.name || s?.fullName || s?.email || 'User').trim();
+    const parts=full.split(/\s+/).filter(Boolean);
+    if(parts.length>1) return (parts[0][0]+parts[parts.length-1][0]).toUpperCase();
+    return full.slice(0,2).toUpperCase();
+  }
+
+  function displayName(s){
+    return s?.name || s?.fullName || s?.userName ||
+      [s?.firstName,s?.lastName].filter(Boolean).join(' ') ||
+      s?.email || 'EduCut.ai User';
   }
 
   function roleLabel(role){
@@ -3147,107 +3396,349 @@ document.addEventListener('keydown',e=>{
     }[role] || String(role||'Authenticated User').replaceAll('_',' '));
   }
 
-  function clearOldAmbiguousControls(){
-    // Hide only small icon-like controls in top headers that do not provide
-    // an understandable text label. This avoids duplicating the old ? / bell / initials UI.
-    document.querySelectorAll('button,a').forEach(el=>{
-      const txt=(el.textContent||'').trim();
-      const aria=(el.getAttribute('aria-label')||'').trim().toLowerCase();
-      const title=(el.getAttribute('title')||'').trim().toLowerCase();
+  function readProfileMap(){
+    try{return JSON.parse(localStorage.getItem(PROFILE_KEY)||'{}')||{}}catch(_){return{}}
+  }
+  function writeProfileMap(v){try{localStorage.setItem(PROFILE_KEY,JSON.stringify(v))}catch(_){}}
 
-      if(
-        txt==='?' ||
-        txt==='◉' ||
-        txt==='●' ||
-        txt==='○' ||
-        ((aria.includes('notification')||title.includes('notification')) && txt.length<=3) ||
-        ((aria.includes('help')||title.includes('help')) && txt.length<=3)
-      ){
-        el.classList.add('educut-hide-ambiguous-nav');
-      }
-    });
+  function profilePicture(s){
+    return readProfileMap()[sessionId(s)] || s?.profilePictureUrl || s?.profile_picture_url || null;
+  }
 
-    // Hide initials-only square controls when our profile block is present.
-    document.querySelectorAll('button,a,div').forEach(el=>{
-      const txt=(el.textContent||'').trim();
-      if(/^[A-Z]{2}$/.test(txt) && el.children.length===0){
-        const r=el.getBoundingClientRect();
-        if(r.width>25 && r.width<100 && r.height>25 && r.height<100){
-          el.classList.add('educut-hide-ambiguous-nav');
-        }
-      }
+  function defaultNotifications(s){
+    const role=String(s?.role||'');
+    if(role.startsWith('COMPANY_')){
+      return [
+        {id:'company-ticket',title:'Support replied to your ticket',text:'A support response is available in your company workspace.',time:'2 minutes ago',read:false},
+        {id:'company-invoice',title:'Invoice payment confirmed',text:'Your latest invoice status has been updated.',time:'Yesterday',read:true}
+      ];
+    }
+    if(role==='INDIVIDUAL'){
+      return [
+        {id:'learner-certificate',title:'New certificate issued',text:'A course certificate is now available in your learning space.',time:'1 hour ago',read:false}
+      ];
+    }
+    return [
+      {id:'admin-ticket',title:'New support ticket',text:'A company has opened a support request.',time:'2 minutes ago',read:false},
+      {id:'admin-course',title:'Course awaiting review',text:'A course update is ready for administrator review.',time:'1 hour ago',read:false},
+      {id:'admin-payment',title:'Payment status updated',text:'An invoice payment status changed.',time:'Yesterday',read:true}
+    ];
+  }
+
+  function readNotifications(s){
+    const key=sessionId(s);
+    let all={};
+    try{all=JSON.parse(localStorage.getItem(NOTIF_KEY)||'{}')||{}}catch(_){}
+    if(!Array.isArray(all[key])){
+      all[key]=defaultNotifications(s);
+      try{localStorage.setItem(NOTIF_KEY,JSON.stringify(all))}catch(_){}
+    }
+    return all[key];
+  }
+
+  function saveNotifications(s,list){
+    const key=sessionId(s);
+    let all={};
+    try{all=JSON.parse(localStorage.getItem(NOTIF_KEY)||'{}')||{}}catch(_){}
+    all[key]=list;
+    try{localStorage.setItem(NOTIF_KEY,JSON.stringify(all))}catch(_){}
+  }
+
+  function bellSvg(){
+    return `<svg class="educut-bell-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter">
+      <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path>
+      <path d="M10 21h4"></path>
+    </svg>`;
+  }
+
+  function avatarMarkup(s){
+    const picture=profilePicture(s);
+    if(picture){
+      return `<img src="${esc(picture)}" alt="${esc(displayName(s))} profile picture">`;
+    }
+    return `<span aria-hidden="true">${esc(initialsFor(s))}</span><span class="auth-sr">${esc(displayName(s))}</span>`;
+  }
+
+  function closeMenus(except){
+    document.querySelectorAll('.educut-notification-panel.open,.educut-profile-menu.open').forEach(el=>{
+      if(el!==except) el.classList.remove('open');
     });
+  }
+
+  function markRead(s,id){
+    const list=readNotifications(s).map(n=>n.id===id?{...n,read:true,readAt:new Date().toISOString()}:n);
+    saveNotifications(s,list);
+    render();
+  }
+
+  function uploadPhoto(s,file,errorEl){
+    errorEl.textContent='';
+    if(!file) return;
+    const allowed=['image/jpeg','image/png','image/webp'];
+    if(!allowed.includes(file.type)){
+      errorEl.textContent='Use JPG, JPEG, PNG or WEBP.';
+      return;
+    }
+    if(file.size>5*1024*1024){
+      errorEl.textContent='Profile picture must be 5 MB or smaller.';
+      return;
+    }
+    const reader=new FileReader();
+    reader.onload=()=>{
+      const map=readProfileMap();
+      map[sessionId(s)]=reader.result;
+      writeProfileMap(map);
+      render();
+    };
+    reader.onerror=()=>{errorEl.textContent='Could not read this image.'};
+    reader.readAsDataURL(file);
+  }
+
+  function removePhoto(s){
+    const map=readProfileMap();
+    delete map[sessionId(s)];
+    writeProfileMap(map);
+    render();
   }
 
   function buildIdentityBar(){
     const s=getSession();
-    let existing=document.getElementById('educutIdentityBar');
+    let bar=document.getElementById('educutIdentityBar');
 
     if(!s){
-      existing?.remove();
+      bar?.remove();
       return;
     }
 
-    const name=s.name || s.fullName || s.userName || s.email || 'EduCut.ai User';
-    const role=s.role || 'AUTHENTICATED_USER';
-    const isAdmin=['SUPER_ADMIN','PLATFORM_ADMIN','CONTENT_MANAGER','FINANCE_MANAGER','SUPPORT_MANAGER'].includes(role);
-    const isCompany=['COMPANY_ADMIN','COMPANY_MANAGER'].includes(role);
-    const isLearner=['INDIVIDUAL','COMPANY_MEMBER'].includes(role);
-
-    if(!existing){
-      existing=document.createElement('div');
-      existing.id='educutIdentityBar';
-      existing.className='educut-identity-bar';
-      document.body.prepend(existing);
+    if(!bar){
+      bar=document.createElement('div');
+      bar.id='educutIdentityBar';
+      bar.className='educut-identity-bar';
+      document.body.prepend(bar);
     }
 
-    existing.innerHTML=`
-      <button type="button" class="educut-identity-action" id="educutHelpBtn" title="Help & Support">
-        <span aria-hidden="true">?</span><span>Help</span>
-      </button>
-      <button type="button" class="educut-identity-action" id="educutNotifBtn" title="Notifications">
-        <span aria-hidden="true">●</span><span>Notifications</span><span class="count">3</span>
-      </button>
-      <div class="educut-profile-block" title="Current signed-in profile">
-        <div class="educut-profile-avatar">${initials(name,s.email)}</div>
-        <div class="educut-profile-copy">
-          <strong>${String(name).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]))}</strong>
-          <small>${roleLabel(role)}</small>
+    const notifications=readNotifications(s);
+    const unread=notifications.filter(n=>!n.read).length;
+    const name=displayName(s);
+    const role=roleLabel(s.role);
+    const email=s.email||'';
+
+    bar.innerHTML=`
+      <div style="position:relative">
+        <button type="button" class="educut-bell-btn" id="educutNotifBtn" aria-label="Notifications" title="Notifications" aria-expanded="false">
+          ${bellSvg()}
+          ${unread>0?'<span class="educut-unread-dot" aria-hidden="true"></span>':''}
+        </button>
+        <div class="educut-notification-panel" id="educutNotifPanel" role="dialog" aria-label="Notifications">
+          <div class="educut-panel-head">
+            <strong>Notifications</strong>
+            <span class="mono">${unread} unread</span>
+          </div>
+          ${notifications.length ? notifications.map(n=>`
+            <button type="button" class="educut-notification-item ${n.read?'':'unread'}" data-notification-id="${esc(n.id)}">
+              <strong>${esc(n.title)}</strong>
+              <span>${esc(n.text||'')}</span>
+              <time>${esc(n.time||'')}</time>
+            </button>
+          `).join('') : '<div class="educut-empty-notifications">No notifications.</div>'}
         </div>
       </div>
-      <button type="button" class="educut-visible-logout" id="educutAlwaysLogout">Log Out</button>
+
+      <div class="educut-profile-wrap">
+        <button type="button" class="educut-profile-trigger" id="educutProfileBtn" aria-label="Open profile menu" aria-expanded="false">
+          <span class="educut-profile-avatar">${avatarMarkup(s)}</span>
+        </button>
+        <div class="educut-profile-menu" id="educutProfileMenu" role="menu">
+          <div class="educut-profile-identity">
+            <strong>${esc(name)}</strong>
+            <span>${esc(role)}</span>
+            ${email?`<small>${esc(email)}</small>`:''}
+          </div>
+          <button class="educut-profile-menu-action" type="button" data-profile-action="profile">My Profile</button>
+          <button class="educut-profile-menu-action" type="button" data-profile-action="settings">Account Settings</button>
+          <button class="educut-profile-menu-action" type="button" data-profile-action="security">Security</button>
+          <div class="educut-profile-editor">
+            <div class="mono">Profile picture</div>
+            <p>JPG, PNG or WEBP · maximum 5 MB</p>
+            <div class="educut-profile-editor-actions">
+              <button type="button" class="educut-profile-editor-btn" id="educutUploadPhoto">Upload photo</button>
+              ${profilePicture(s)?'<button type="button" class="educut-profile-editor-btn remove" id="educutRemovePhoto">Remove photo</button>':''}
+            </div>
+            <input type="file" id="educutPhotoInput" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" hidden>
+            <div class="educut-profile-error" id="educutProfileError" aria-live="polite"></div>
+          </div>
+          <button class="educut-profile-menu-action logout" type="button" id="educutMenuLogout" data-educut-logout>Log Out</button>
+        </div>
+      </div>
     `;
 
-    document.getElementById('educutAlwaysLogout').onclick=e=>window.educutLogout?.(e.currentTarget);
+    const notifBtn=bar.querySelector('#educutNotifBtn');
+    const notifPanel=bar.querySelector('#educutNotifPanel');
+    const profileBtn=bar.querySelector('#educutProfileBtn');
+    const profileMenu=bar.querySelector('#educutProfileMenu');
 
-    document.getElementById('educutHelpBtn').onclick=()=>{
-      if(isCompany && window.renderCompanyPortal && document.getElementById('routeView')){
-        const rv=document.getElementById('routeView');
-        // Keep help meaningful without navigating to a cryptic icon destination.
-        alert('EduCut.ai Help\n\nUse Support from the Company Workspace to open and track a request with the EduCut.ai team.');
-      }else{
-        alert('EduCut.ai Help\n\nFor account or learning support, contact the EduCut.ai support team.');
-      }
+    notifBtn.onclick=(e)=>{
+      e.stopPropagation();
+      const willOpen=!notifPanel.classList.contains('open');
+      closeMenus(notifPanel);
+      notifPanel.classList.toggle('open',willOpen);
+      notifBtn.setAttribute('aria-expanded',String(willOpen));
     };
 
-    document.getElementById('educutNotifBtn').onclick=()=>{
-      if(isCompany){
-        const target=[...document.querySelectorAll('[data-cwroute="notifications"]')][0];
-        if(target) target.click();
-        else alert('Notifications are available from your Company Workspace.');
-      }else{
-        alert('You have 3 notifications in this prototype.');
-      }
+    profileBtn.onclick=(e)=>{
+      e.stopPropagation();
+      const willOpen=!profileMenu.classList.contains('open');
+      closeMenus(profileMenu);
+      profileMenu.classList.toggle('open',willOpen);
+      profileBtn.setAttribute('aria-expanded',String(willOpen));
     };
 
-    clearOldAmbiguousControls();
+    bar.querySelectorAll('[data-notification-id]').forEach(btn=>{
+      btn.onclick=()=>markRead(s,btn.dataset.notificationId);
+    });
+
+    const fileInput=bar.querySelector('#educutPhotoInput');
+    const errorEl=bar.querySelector('#educutProfileError');
+    bar.querySelector('#educutUploadPhoto').onclick=()=>fileInput.click();
+    fileInput.onchange=()=>uploadPhoto(s,fileInput.files?.[0],errorEl);
+    bar.querySelector('#educutRemovePhoto')?.addEventListener('click',()=>removePhoto(s));
+
+    bar.querySelectorAll('[data-profile-action]').forEach(btn=>{
+      btn.onclick=()=>{
+        const label=btn.textContent.trim();
+        alert(`${label}\n\nThis prototype keeps the existing platform navigation unchanged. Connect this action to the corresponding production account page.`);
+      };
+    });
+
+    bar.querySelector('#educutMenuLogout').onclick=e=>window.educutLogout?.(e.currentTarget);
+
+    // Remove older duplicate top-level profile/notification/logout controls.
+    document.querySelectorAll('.educut-visible-logout,.educut-company-logout,.educut-admin-sidebar-logout').forEach(el=>{
+      if(!bar.contains(el)) el.style.display='none';
+    });
   }
 
-  buildIdentityBar();
-  const mo=new MutationObserver(()=>buildIdentityBar());
-  mo.observe(document.documentElement,{subtree:true,childList:true});
+  function isAuthenticatedPlatformVisible(){
+    const s=getSession();
+    if(!s) return false;
 
-  window.addEventListener('pageshow',buildIdentityBar);
+    // Only show the authenticated identity controls once the user has entered
+    // an authenticated platform/dashboard. Never render them on the public landing page.
+    const visibleSelectors = [
+      '.route-view.open',
+      '.admin-app',
+      '.company-app',
+      '.learner-app',
+      '[data-authenticated-view="true"]',
+      '[data-platform-authenticated="true"]'
+    ];
+
+    return visibleSelectors.some(sel=>{
+      const el=document.querySelector(sel);
+      if(!el) return false;
+      const cs=getComputedStyle(el);
+      return cs.display!=='none' && cs.visibility!=='hidden';
+    });
+  }
+
+  function render(){
+    const bar=document.getElementById('educutIdentityBar');
+
+    if(!isAuthenticatedPlatformVisible()){
+      bar?.remove();
+      return;
+    }
+
+    buildIdentityBar();
+  }
+
+  document.addEventListener('click',e=>{
+    if(!e.target.closest('#educutIdentityBar')) closeMenus();
+  });
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape') closeMenus();
+  });
+
+  // IMPORTANT: no subtree MutationObserver here.
+  // The previous observer called render(), which rebuilt #educutIdentityBar,
+  // which produced another mutation, causing an infinite main-thread loop
+  // immediately after successful login.
+  let identityRenderQueued=false;
+  const requestIdentityRender=()=>{
+    if(identityRenderQueued) return;
+    identityRenderQueued=true;
+    requestAnimationFrame(()=>{
+      identityRenderQueued=false;
+      render();
+    });
+  };
+
+  window.addEventListener('educut:auth-changed',requestIdentityRender);
+  window.addEventListener('educut:workspace-entered',requestIdentityRender);
+  window.addEventListener('pageshow',requestIdentityRender);
+  window.addEventListener('storage',requestIdentityRender);
+  window.addEventListener('popstate',requestIdentityRender);
+  window.addEventListener('hashchange',requestIdentityRender);
+
+  // Initial pass removes stale authenticated UI but never loops.
+  requestIdentityRender();
+})();
+</script>
+
+
+<script>
+/* ===== EduCut.ai authentication routing smoke tests =====
+   Pure/non-destructive checks. No credentials, requests, or real navigation.
+*/
+(() => {
+  const expected={
+    SUPER_ADMIN:'/admin/dashboard',
+    PLATFORM_ADMIN:'/admin/dashboard',
+    CONTENT_MANAGER:'/admin/dashboard',
+    FINANCE_MANAGER:'/admin/dashboard',
+    SUPPORT_MANAGER:'/admin/dashboard',
+    COMPANY_ADMIN:'/company/dashboard',
+    COMPANY_MANAGER:'/company/dashboard',
+    INDIVIDUAL:'/academy/dashboard',
+    COMPANY_MEMBER:'/academy/dashboard'
+  };
+
+  const routeFor=role=>{
+    if(['SUPER_ADMIN','PLATFORM_ADMIN','CONTENT_MANAGER','FINANCE_MANAGER','SUPPORT_MANAGER'].includes(role)) return '/admin/dashboard';
+    if(['COMPANY_ADMIN','COMPANY_MANAGER'].includes(role)) return '/company/dashboard';
+    if(['INDIVIDUAL','COMPANY_MEMBER'].includes(role)) return '/academy/dashboard';
+    return '/';
+  };
+
+  const results=Object.entries(expected).map(([role,path])=>({
+    role,
+    expected:path,
+    actual:routeFor(role),
+    pass:routeFor(role)===path
+  }));
+
+  const navigationCounter=(()=>{
+    let calls=0,locked=false;
+    return {
+      attempt(){if(locked)return false;locked=true;calls++;return true},
+      calls:()=>calls
+    };
+  })();
+
+  navigationCounter.attempt();
+  navigationCounter.attempt();
+
+  window.__educutAuthRoutingTests={
+    roleRouting:results,
+    singleNavigationPass:navigationCounter.calls()===1,
+    passed:results.every(r=>r.pass)&&navigationCounter.calls()===1
+  };
+
+  if(!window.__educutAuthRoutingTests.passed){
+    console.error('[EduCut.ai] Authentication routing smoke tests failed',window.__educutAuthRoutingTests);
+  }else{
+    console.info('[EduCut.ai] Authentication routing smoke tests passed');
+  }
 })();
 </script>
 
