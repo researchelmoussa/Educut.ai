@@ -148,14 +148,39 @@
 
     if (!id.includes('@')) {
       const r = await rpc('email_for_username', { p_username: id });
-      if (!r.ok || !r.data) return { ok: false, error: 'Invalid credentials.' };
+
+      // Distinguish "the database isn't ready" from "wrong credentials".
+      // Both used to surface as one message, which made setup problems
+      // look like typos.
+      if (r.status === 0) {
+        return { ok: false, error: 'Cannot reach the database. Check your connection.',
+                 detail: 'network unreachable' };
+      }
+      if (r.status === 404) {
+        return { ok: false, error: 'The database is not set up yet. Run: node setup.mjs',
+                 detail: 'email_for_username() does not exist — migrations have not been applied' };
+      }
+      if (!r.ok) {
+        return { ok: false, error: 'Sign-in is unavailable right now.',
+                 detail: 'email_for_username returned ' + r.status };
+      }
+      if (!r.data) {
+        return { ok: false, error: 'Invalid credentials.',
+                 detail: 'no account with username "' + id + '"' };
+      }
       email = r.data;
     }
 
     const r = await post('/auth/v1/token?grant_type=password',
                          { email, password }, null, false);
     if (!r.ok || !r.data || !r.data.access_token) {
-      return { ok: false, error: 'Invalid credentials.' };
+      const msg = (r.data && (r.data.error_description || r.data.msg || r.data.message)) || '';
+      if (r.status === 0) {
+        return { ok: false, error: 'Cannot reach the database. Check your connection.',
+                 detail: 'network unreachable' };
+      }
+      return { ok: false, error: 'Invalid credentials.',
+               detail: 'auth rejected for ' + email + (msg ? ' — ' + msg : ' (status ' + r.status + ')') };
     }
 
     storeToken(r.data);
@@ -321,6 +346,66 @@
   }
 
   api.flush = push;
+
+  /**
+   * Run educutSupabase.diagnose() in the browser console to find out
+   * which step is failing. Checks each layer in order and stops at the
+   * first thing that is actually broken.
+   */
+  api.diagnose = async function (username, password) {
+    const out = (label, ok, note) =>
+      console.log('%c' + (ok ? '  OK  ' : ' FAIL ') + '%c ' + label + (note ? '  —  ' + note : ''),
+                  'background:' + (ok ? '#2e7d32' : '#c62828') + ';color:#fff',
+                  'color:inherit');
+
+    console.log('EduCut.ai — Supabase diagnostic');
+    console.log('project: ' + SUPABASE_URL);
+
+    // 1. project reachable
+    let r = await fetch(SUPABASE_URL.replace(/\/+$/, '') + '/rest/v1/',
+                        { headers: { apikey: SUPABASE_ANON_KEY } })
+      .then((x) => ({ ok: x.ok, status: x.status }))
+      .catch((e) => ({ ok: false, status: 0, error: e.message }));
+    out('project reachable', r.ok || r.status === 400, r.status === 0
+        ? 'no response — wrong URL, or offline'
+        : 'HTTP ' + r.status);
+    if (r.status === 0) return;
+
+    // 2. migrations applied
+    const fn = await rpc('email_for_username', { p_username: '__probe__' });
+    const migrated = fn.status !== 404;
+    out('migrations applied', migrated, migrated
+        ? 'RPCs present'
+        : 'email_for_username() missing — run: node setup.mjs');
+    if (!migrated) return;
+
+    // 3. the account exists
+    if (username) {
+      const look = await rpc('email_for_username', { p_username: String(username).trim() });
+      out('account "' + username + '" exists', Boolean(look.data), look.data
+          ? 'resolves to ' + look.data
+          : 'no profile row with that username');
+      if (!look.data) return;
+
+      // 4. the password is accepted
+      if (password) {
+        const tok = await post('/auth/v1/token?grant_type=password',
+                               { email: look.data, password }, null, false);
+        const msg = (tok.data && (tok.data.error_description || tok.data.msg)) || '';
+        out('password accepted', tok.ok, tok.ok ? 'signed in' : (msg || 'HTTP ' + tok.status));
+        if (!tok.ok) return;
+
+        storeToken(tok.data);
+        const boot = await rpc('app_bootstrap');
+        out('bootstrap', boot.ok, boot.ok
+            ? 'loaded ' + ((boot.data.admin && boot.data.admin.users) || []).length + ' users, role ' +
+              (boot.data.me && boot.data.me.role)
+            : 'HTTP ' + boot.status);
+      }
+    } else {
+      console.log('Pass credentials to test them: educutSupabase.diagnose("XX19061995","Xana01")');
+    }
+  };
 
   // Intercept writes to the two state keys.
   const nativeSetItem = Storage.prototype.setItem;
