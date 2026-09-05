@@ -5,6 +5,361 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="EduCut.ai — Professional AI & Digital Transformation Training. Take the 3-minute assessment and receive a personalized 3, 5 or 7-course AI learning path for your company." />
   <title>EduCut.ai — Build Your Company's AI Path</title>
+  <script>
+/* ===================================================================
+   EduCut.ai — Supabase integration layer
+   ===================================================================
+
+   Injected as the FIRST script in index.html, before every app module.
+
+   The prototype keeps all its state in two localStorage keys and reads
+   them synchronously as each module parses. This layer sits underneath
+   that:
+
+     boot   one synchronous request to app_bootstrap() fills both keys
+            before any app module runs, so the existing render code is
+            untouched and simply finds real data where it expected seed
+     write  localStorage.setItem on those keys is intercepted, diffed
+            against the last known state, and pushed to app_persist()
+
+   Talks to PostgREST and GoTrue over plain fetch/XHR. No CDN, no
+   library, nothing to keep in sync with a version number.
+
+   Offline: if the config below is blank, or the network is unreachable,
+   everything falls through to the original localStorage behaviour and
+   the prototype works exactly as it did before.
+   =================================================================== */
+(function () {
+  'use strict';
+
+  // =================================================================
+  // CONFIG — paste your two values here
+  // =================================================================
+  const SUPABASE_URL      = 'https://jgcyaqdmdzthwiehjzdd.supabase.co';
+  const SUPABASE_ANON_KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpnY3lhcWRtZHp0aHdpZWhqemRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2MDk4MDAsImV4cCI6MjEwNDE4NTgwMH0.TEC7YPj7s07P0gaf7z2CF4JLAbhtbPd1wQBE084Dqkg';
+
+  // The anon key is meant to be public and ships in every Supabase web
+  // app; RLS is what protects the data. Never put the service_role key
+  // here — it bypasses RLS entirely and belongs only in setup.mjs.
+  // =================================================================
+
+  const AKEY       = 'educutAdminPlatformStateV2';
+  const CKEY       = 'educutCompanyPortalStateV1';
+  const SESSION    = 'educutSbSession';
+  const SNAPSHOT   = 'educutSbSnapshot';
+  const configured = Boolean(SUPABASE_URL && SUPABASE_ANON_KEY);
+
+  const api = {
+    connected: false,
+    reason: configured ? 'not signed in' : 'not configured',
+    me: null,
+  };
+  window.educutSupabase = api;
+
+  if (!configured) {
+    console.info('[educut] Supabase not configured — running on local state.');
+    return;
+  }
+
+  // -----------------------------------------------------------------
+  // Session storage
+  // -----------------------------------------------------------------
+  const readSession = () => {
+    try { return JSON.parse(localStorage.getItem(SESSION) || 'null'); }
+    catch (_) { return null; }
+  };
+  const writeSession = (s) => {
+    try {
+      if (s) localStorage.setItem(SESSION, JSON.stringify(s));
+      else localStorage.removeItem(SESSION);
+    } catch (_) {}
+  };
+
+  // -----------------------------------------------------------------
+  // Transport
+  // -----------------------------------------------------------------
+  function post(path, body, token, sync) {
+    const url = SUPABASE_URL.replace(/\/+$/, '') + path;
+    const headers = {
+      'Content-Type': 'application/json',
+      apikey: SUPABASE_ANON_KEY,
+      Authorization: 'Bearer ' + (token || SUPABASE_ANON_KEY),
+    };
+
+    // Synchronous only at boot, so the app's modules find hydrated state
+    // when they parse. Every later call is async.
+    if (sync) {
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', url, false);
+      Object.entries(headers).forEach(([k, v]) => xhr.setRequestHeader(k, v));
+      try { xhr.send(JSON.stringify(body)); }
+      catch (e) { return { ok: false, status: 0, data: null, error: e.message }; }
+      let data = null;
+      try { data = JSON.parse(xhr.responseText); } catch (_) {}
+      return { ok: xhr.status >= 200 && xhr.status < 300, status: xhr.status, data };
+    }
+
+    return fetch(url, { method: 'POST', headers, body: JSON.stringify(body) })
+      .then(async (r) => {
+        let data = null;
+        try { data = await r.json(); } catch (_) {}
+        return { ok: r.ok, status: r.status, data };
+      })
+      .catch((e) => ({ ok: false, status: 0, data: null, error: e.message }));
+  }
+
+  const rpc      = (fn, args, sync) => post('/rest/v1/rpc/' + fn, args || {}, currentToken(), sync);
+  const isExpired = (s) => !s || !s.expires_at || Date.now() > (s.expires_at - 60) * 1000;
+
+  function currentToken() {
+    const s = readSession();
+    return s ? s.access_token : null;
+  }
+
+  function storeToken(payload) {
+    if (!payload || !payload.access_token) return null;
+    const s = {
+      access_token: payload.access_token,
+      refresh_token: payload.refresh_token,
+      expires_at: payload.expires_at ||
+                  Math.floor(Date.now() / 1000) + (payload.expires_in || 3600),
+    };
+    writeSession(s);
+    return s;
+  }
+
+  function refreshSync() {
+    const s = readSession();
+    if (!s || !s.refresh_token) return null;
+    const r = post('/auth/v1/token?grant_type=refresh_token',
+                   { refresh_token: s.refresh_token }, null, true);
+    if (!r.ok) { writeSession(null); return null; }
+    return storeToken(r.data);
+  }
+
+  // -----------------------------------------------------------------
+  // Auth
+  // -----------------------------------------------------------------
+
+  /** Sign in with either a username (XX19061995) or an email address. */
+  api.signIn = async function (identifier, password) {
+    const id = String(identifier || '').trim();
+    let email = id;
+
+    if (!id.includes('@')) {
+      const r = await rpc('email_for_username', { p_username: id });
+      if (!r.ok || !r.data) return { ok: false, error: 'Invalid credentials.' };
+      email = r.data;
+    }
+
+    const r = await post('/auth/v1/token?grant_type=password',
+                         { email, password }, null, false);
+    if (!r.ok || !r.data || !r.data.access_token) {
+      return { ok: false, error: 'Invalid credentials.' };
+    }
+
+    storeToken(r.data);
+    const boot = await rpc('app_bootstrap');
+    if (!boot.ok || !boot.data) {
+      writeSession(null);
+      return { ok: false, error: 'Signed in, but your profile could not be loaded.' };
+    }
+
+    hydrate(boot.data);
+    rpc('app_touch_login');
+    api.connected = true;
+    api.reason = 'connected';
+    api.me = boot.data.me;
+    return { ok: true, me: boot.data.me };
+  };
+
+  api.signOut = async function () {
+    const token = currentToken();
+    if (token) await post('/auth/v1/logout', {}, token, false);
+    writeSession(null);
+    try {
+      localStorage.removeItem(AKEY);
+      localStorage.removeItem(CKEY);
+      localStorage.removeItem(SNAPSHOT);
+    } catch (_) {}
+    api.connected = false;
+    api.me = null;
+  };
+
+  api.refresh = async function () {
+    const boot = await rpc('app_bootstrap');
+    if (boot.ok && boot.data) { hydrate(boot.data); return true; }
+    return false;
+  };
+
+  /** Route a signed-in user to the workspace their role belongs to. */
+  api.homeFor = function (role) {
+    if (['SUPER_ADMIN','PLATFORM_ADMIN','CONTENT_MANAGER','FINANCE_MANAGER','SUPPORT_MANAGER'].includes(role))
+      return '/admin/dashboard';
+    if (['COMPANY_ADMIN','COMPANY_MANAGER'].includes(role)) return '/company/dashboard';
+    return '/academy/dashboard';
+  };
+
+  // -----------------------------------------------------------------
+  // Hydration: database -> the two state keys
+  // -----------------------------------------------------------------
+  let writingInternally = false;
+
+  function hydrate(boot) {
+    const admin = boot.admin || {};
+    const company = boot.company || {};
+
+    // Keep any locally-held keys the RPC doesn't own.
+    let existingA = {};
+    try { existingA = JSON.parse(localStorage.getItem(AKEY) || '{}') || {}; } catch (_) {}
+
+    const A = Object.assign({}, existingA, admin);
+    const C = {
+      requests: company.requests || [],
+      notifications: company.notifications || [],
+      activity: company.activity || [],
+      settings: (existingA.companySettings) || {},
+    };
+
+    writingInternally = true;
+    try {
+      localStorage.setItem(AKEY, JSON.stringify(A));
+      localStorage.setItem(CKEY, JSON.stringify(C));
+      localStorage.setItem(SNAPSHOT, JSON.stringify({ A, C }));
+    } catch (_) {} finally { writingInternally = false; }
+
+    api.me = boot.me;
+  }
+
+  // -----------------------------------------------------------------
+  // Write-back: the two state keys -> database
+  //
+  // Only rows that actually changed are sent. Rows the caller may not
+  // touch are rejected server-side by RLS, so a bad diff cannot damage
+  // another tenant's data — app_persist just reports zero applied.
+  // -----------------------------------------------------------------
+  const KEYED = {
+    companies: 'id', users: 'id', admins: 'id', academies: 'code',
+    courses: 'code', seats: 'id', subscriptions: 'id', contracts: 'id',
+    invoices: 'id', certificates: 'id', audit: 'id', notifications: 'id',
+  };
+
+  function changedRows(next, prev, key) {
+    if (!Array.isArray(next)) return [];
+    const before = new Map((prev || []).map((r) => [r && r[key], JSON.stringify(r)]));
+    return next.filter((r) => r && before.get(r[key]) !== JSON.stringify(r));
+  }
+
+  function buildPayload(A, C, snap) {
+    const prevA = (snap && snap.A) || {};
+    const prevC = (snap && snap.C) || {};
+    const payload = {};
+
+    for (const [coll, key] of Object.entries(KEYED)) {
+      const rows = changedRows(A[coll], prevA[coll], key);
+      if (rows.length) payload[coll] = rows;
+    }
+
+    // Course structure is rebuilt wholesale, matching how the builder
+    // screen treats it: reorder, add and remove land as one edit.
+    const structural = (A.courses || []).filter((c) => {
+      const was = (prevA.courses || []).find((x) => x.code === c.code);
+      return JSON.stringify(c.modules || []) !== JSON.stringify((was && was.modules) || []);
+    });
+    if (structural.length) {
+      payload.courseStructure = structural.map((c) => ({ code: c.code, modules: c.modules || [] }));
+    }
+
+    const reqs = changedRows(C.requests, prevC.requests, 'id');
+    if (reqs.length) payload.requests = reqs;
+
+    const cnotifs = changedRows(C.notifications, prevC.notifications, 'id');
+    if (cnotifs.length) {
+      payload.notifications = (payload.notifications || []).concat(cnotifs);
+    }
+
+    return payload;
+  }
+
+  let pushTimer = null;
+  let pushing = false;
+
+  function schedulePush() {
+    if (pushTimer) clearTimeout(pushTimer);
+    pushTimer = setTimeout(push, 400);   // debounce bursts of setItem
+  }
+
+  async function push() {
+    pushTimer = null;
+    if (pushing || !currentToken()) return;
+
+    let A = {}, C = {}, snap = null;
+    try {
+      A = JSON.parse(localStorage.getItem(AKEY) || '{}') || {};
+      C = JSON.parse(localStorage.getItem(CKEY) || '{}') || {};
+      snap = JSON.parse(localStorage.getItem(SNAPSHOT) || 'null');
+    } catch (_) { return; }
+
+    const payload = buildPayload(A, C, snap);
+    if (!Object.keys(payload).length) return;
+
+    pushing = true;
+    api.lastPush = { at: new Date().toISOString(), sent: Object.keys(payload) };
+    const r = await rpc('app_persist', { payload });
+    pushing = false;
+
+    if (r.ok && r.data && r.data.ok) {
+      api.lastPush.applied = r.data.applied;
+      try { localStorage.setItem(SNAPSHOT, JSON.stringify({ A, C })); } catch (_) {}
+      window.dispatchEvent(new CustomEvent('educut:synced', { detail: r.data.applied }));
+    } else {
+      // Snapshot is deliberately left alone so the next write retries.
+      api.lastPush.error = (r.data && r.data.message) || r.status;
+      console.warn('[educut] sync failed, will retry on next change', api.lastPush.error);
+      window.dispatchEvent(new CustomEvent('educut:sync-failed', { detail: api.lastPush }));
+    }
+  }
+
+  api.flush = push;
+
+  // Intercept writes to the two state keys.
+  const nativeSetItem = Storage.prototype.setItem;
+  Storage.prototype.setItem = function (key, value) {
+    nativeSetItem.call(this, key, value);
+    if (!writingInternally && this === window.localStorage && (key === AKEY || key === CKEY)) {
+      schedulePush();
+    }
+  };
+
+  // Last chance to flush before the tab closes.
+  window.addEventListener('beforeunload', () => {
+    if (pushTimer) { clearTimeout(pushTimer); push(); }
+  });
+
+  // -----------------------------------------------------------------
+  // Boot
+  // -----------------------------------------------------------------
+  (function boot() {
+    let s = readSession();
+    if (!s) return;                       // signed out; nothing to hydrate
+    if (isExpired(s)) s = refreshSync();
+    if (!s) return;
+
+    const r = rpc('app_bootstrap', {}, true);
+    if (!r.ok || !r.data) {
+      console.warn('[educut] bootstrap failed (' + r.status + ') — using local state.');
+      api.reason = 'bootstrap failed';
+      return;
+    }
+
+    hydrate(r.data);
+    api.connected = true;
+    api.reason = 'connected';
+    console.info('[educut] connected as ' + (r.data.me && r.data.me.username));
+  })();
+})();
+
+  </script>
   <style>
     :root{
       --ink:#0b0b0c; --paper:#f5f5f2; --white:#fff; --muted:#8d8d88;
@@ -2077,20 +2432,46 @@ document.addEventListener('keydown',e=>{
   function renderCompanySignin(){
     const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="companySignin" novalidate><div class="auth-field"><label for="companyLogin">Company Email or Company ID</label><input id="companyLogin" name="login" autocomplete="username" required><div class="auth-error" data-error-for="login"></div></div>${passwordField('companyPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to Company Workspace</button>${status('', '')}<div class="auth-switch">New to EduCut.ai? <button type="button" data-create-company>Create a Company Account</button></div></form>`;wirePasswordToggles(h);
     h.querySelector('[data-forgot]').onclick=()=>renderForgot('company');h.querySelector('[data-create-company]').onclick=()=>{state.mode='signup';state.companyStep=1;animateSwap(renderAccess)};
-    h.querySelector('form').onsubmit=e=>{e.preventDefault();const f=e.currentTarget,login=f.login.value.trim(),pw=f.companyPassword.value,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');st.textContent='';st.className='auth-status';if(!login||!pw){st.textContent='Please enter your company credentials.';st.classList.add('error');return;}if(!loading(btn,'Signing you in…')) return;setTimeout(()=>{
-      // Experimental prototype credential check only. Replace with POST /api/auth/login in production.
-      if(login==='XX19061995'&&pw==='Xana'){successBtn(btn,'Access granted ✓');setTimeout(()=>renderAdminGranted(),260);return;}
-      if(pw.length<8){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='Unable to sign in. Check your credentials and try again.';st.classList.add('error');return;}
-      successBtn(btn,'Welcome back ✓');finishLogin(ROLES.COMPANY_ADMIN,login,'/company/dashboard',{companyPortal:true});
-    },650)};
+    h.querySelector('form').onsubmit=e=>{e.preventDefault();const f=e.currentTarget,login=f.login.value.trim(),pw=f.companyPassword.value,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');st.textContent='';st.className='auth-status';if(!login||!pw){st.textContent='Please enter your company credentials.';st.classList.add('error');return;}if(!loading(btn,'Signing you in…')) return;(async ()=>{
+      const sb=window.educutSupabase;
+      const fail=m=>{btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent=m||'Unable to sign in. Check your credentials and try again.';st.classList.add('error')};
+
+      if(sb&&sb.signIn){
+        const res=await sb.signIn(login,pw);
+        if(!res.ok) return fail(res.error);
+        const me=res.me||{};
+        if(me.role==='SUPER_ADMIN'||me.role==='PLATFORM_ADMIN'||me.role==='CONTENT_MANAGER'||me.role==='FINANCE_MANAGER'||me.role==='SUPPORT_MANAGER'){
+          successBtn(btn,'Access granted ✓');
+          setTimeout(()=>renderAdminGranted(me.name),260);
+          return;
+        }
+        successBtn(btn,'Welcome back ✓');
+        finishLogin(me.role||ROLES.COMPANY_ADMIN,me.name||login,sb.homeFor(me.role),{companyPortal:true,companyName:me.companyName||''});
+        return;
+      }
+
+      // No Supabase configured — original offline prototype behaviour.
+      setTimeout(()=>{
+        if(pw.length<8) return fail();
+        successBtn(btn,'Welcome back ✓');
+        finishLogin(ROLES.COMPANY_ADMIN,login,'/company/dashboard',{companyPortal:true});
+      },650);
+    })()};
   }
 
-  function renderAdminGranted(){
-    authTopLabel.textContent='Secure Access';setBack(false);authBody.innerHTML=`<div class="auth-success-panel admin-granted" role="status" aria-live="polite"><div class="auth-success-mark">✓</div><div class="mono" style="color:var(--lime);margin-bottom:12px">Authentication verified</div><h2>Administrator Access Granted</h2><p>Welcome to the EduCut.ai Administration Console</p><div class="mono" style="margin-top:20px;color:#777">Redirecting to /admin/dashboard…</div></div>`;finishLogin(ROLES.SUPER_ADMIN,'Super Administrator');
+  function renderAdminGranted(adminName){
+    authTopLabel.textContent='Secure Access';setBack(false);authBody.innerHTML=`<div class="auth-success-panel admin-granted" role="status" aria-live="polite"><div class="auth-success-mark">✓</div><div class="mono" style="color:var(--lime);margin-bottom:12px">Authentication verified</div><h2>Administrator Access Granted</h2><p>Welcome to the EduCut.ai Administration Console</p><div class="mono" style="margin-top:20px;color:#777">Redirecting to /admin/dashboard…</div></div>`;finishLogin((window.educutSupabase&&window.educutSupabase.me&&window.educutSupabase.me.role)||ROLES.SUPER_ADMIN,adminName||'Super Administrator');
   }
 
   function renderIndividualSignin(){
-    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignin" novalidate><div class="auth-field"><label for="individualEmail">Company Email Address</label><input id="individualEmail" name="email" type="email" autocomplete="email" required placeholder="name@company.com"><div class="auth-error"></div></div>${passwordField('individualPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to My Academy</button>${status()}<div class="auth-switch">Has your company enrolled you? <button type="button" data-activate>Activate My Company Access</button></div></form>`;wirePasswordToggles(h);h.querySelector('[data-forgot]').onclick=()=>renderForgot('individual');h.querySelector('[data-activate]').onclick=()=>{state.mode='activate';state.activation={email:'',verified:false,record:null};animateSwap(renderAccess)};h.querySelector('form').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');if(!/^\S+@\S+\.\S+$/.test(f.email.value)||f.individualPassword.value.length<8){st.textContent='Please enter a valid company email and password.';st.className='auth-status error';return;}if(!loading(btn,'Signing you in…')) return;let account=null;try{if(location.protocol!=='file:'){const r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:f.email.value.trim(),password:f.individualPassword.value,portal:'individual'})});if(r.ok)account=await r.json();}}catch(_){account=null}if(!account){const rec=getProvisionedSeat(f.email.value.trim());if(rec&&rec.account_status==='ACTIVE'&&rec.password_created){account={role:ROLES.COMPANY_MEMBER,name:rec.employee_name||f.email.value.trim(),companyName:rec.company_name,sponsored:true}}}setTimeout(()=>{if(!account){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='Unable to sign in. Check your credentials and try again.';st.className='auth-status error';return;}successBtn(btn,'Welcome back ✓');finishLogin(account.role||ROLES.COMPANY_MEMBER,account.name||f.email.value.trim(),'/academy/dashboard',{sponsored:true,companyName:account.companyName||''})},420)};
+    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignin" novalidate><div class="auth-field"><label for="individualEmail">Company Email Address</label><input id="individualEmail" name="email" type="email" autocomplete="email" required placeholder="name@company.com"><div class="auth-error"></div></div>${passwordField('individualPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to My Academy</button>${status()}<div class="auth-switch">Has your company enrolled you? <button type="button" data-activate>Activate My Company Access</button></div></form>`;wirePasswordToggles(h);h.querySelector('[data-forgot]').onclick=()=>renderForgot('individual');h.querySelector('[data-activate]').onclick=()=>{state.mode='activate';state.activation={email:'',verified:false,record:null};animateSwap(renderAccess)};h.querySelector('form').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');if(!/^\S+@\S+\.\S+$/.test(f.email.value)&&!f.email.value.trim()){st.textContent='Please enter a valid company email and password.';st.className='auth-status error';return;}if(!loading(btn,'Signing you in…')) return;
+      const _sb=window.educutSupabase;
+      if(_sb&&_sb.signIn){
+        const res=await _sb.signIn(f.email.value.trim(),f.individualPassword.value);
+        if(res.ok){const me=res.me||{};successBtn(btn,'Welcome back ✓');finishLogin(me.role||ROLES.INDIVIDUAL,me.name||me.email,_sb.homeFor(me.role),{companyName:me.companyName||''});return;}
+        btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent=res.error||'Unable to sign in.';st.className='auth-status error';return;
+      }
+      let account=null;try{if(location.protocol!=='file:'){const r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:f.email.value.trim(),password:f.individualPassword.value,portal:'individual'})});if(r.ok)account=await r.json();}}catch(_){account=null}if(!account){const rec=getProvisionedSeat(f.email.value.trim());if(rec&&rec.account_status==='ACTIVE'&&rec.password_created){account={role:ROLES.COMPANY_MEMBER,name:rec.employee_name||f.email.value.trim(),companyName:rec.company_name,sponsored:true}}}setTimeout(()=>{if(!account){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='Unable to sign in. Check your credentials and try again.';st.className='auth-status error';return;}successBtn(btn,'Welcome back ✓');finishLogin(account.role||ROLES.COMPANY_MEMBER,account.name||f.email.value.trim(),'/academy/dashboard',{sponsored:true,companyName:account.companyName||''})},420)};
   }
 
   const seatStoreKey='educutProvisionedLearners';
@@ -3431,6 +3812,10 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   }
 
   function terminateClientSession(doBroadcast=true){
+    // Revoke the Supabase session server-side and drop the cached state,
+    // so signing out actually ends database access rather than just
+    // hiding the interface.
+    try{ window.educutSupabase?.signOut?.(); }catch(_){}
     clearPrivateApplicationState();
     hideProtectedUI();
     if(doBroadcast) broadcastLogout();
