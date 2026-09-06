@@ -1478,6 +1478,14 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 .cons-pill-open{background:#eef0f4;color:#666}
 .cons-pill-closed{background:#f0e0c8;color:#7a5320}
 .cons-pill-past{background:#e6e6ee;color:#55556b}
+.pros-tags{display:flex;flex-wrap:wrap;gap:4px}
+.pros-tag{font:600 9.5px/1.6 ui-monospace,monospace;letter-spacing:.05em;padding:1px 6px;border-radius:2px;background:#eef0f4;color:#666}
+.pros-tag.on-cat{background:#dfe7ff;color:#1b3fae}
+.pros-tag.on-con{background:var(--lime,#c3f53c);color:#111}
+.pros-tag.on-asm{background:#e7dfff;color:#4a1bae}
+.pros-tag.on-del{background:#f4d4d4;color:#7a2020}
+.pros-sel{font:600 10px/1 ui-monospace,monospace;padding:5px 7px;border:1px solid #d0d0d0;background:#fff;cursor:pointer}
+
 .cons-legend{display:flex;gap:16px;align-items:center;margin-top:12px;font:600 11px/1 ui-monospace,monospace;color:#777}
 .cons-status{font:600 10px/1.6 ui-monospace,monospace;letter-spacing:.05em;padding:2px 8px;border-radius:2px;background:#eef0f4;color:#444}
 .cons-status.s-CONFIRMED{background:var(--lime,#c3f53c);color:#111}
@@ -3200,7 +3208,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   // The route is the record of which page is open, so a refresh lands
   // back on it instead of resetting to the dashboard.
   const ADMIN_PAGES=['dashboard','companies','company-learners','individuals','academies',
-    'courses','enrollments','consultations','catalogue','subscriptions','contracts',
+    'courses','enrollments','prospects','consultations','catalogue','subscriptions','contracts',
     'analytics','certificates','security','settings'];
   let adminMounted=false;
   function adminPageFromRoute(){
@@ -3258,16 +3266,17 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         ${navBtn('courses','05','Courses')}
         ${navBtn('enrollments','06','Enrollments & Seats')}
         <div class="admin-nav-group mono">Commercial</div>
-        ${navBtn('consultations','07','Consultations')}
-        ${navBtn('catalogue','08','Catalogue Requests')}
-        ${navBtn('subscriptions','09','Subscriptions')}
-        ${navBtn('contracts','10','Contracts & Billing')}
+        ${navBtn('prospects','07','Prospect Database')}
+        ${navBtn('consultations','08','Consultations')}
+        ${navBtn('catalogue','09','Catalogue Requests')}
+        ${navBtn('subscriptions','10','Subscriptions')}
+        ${navBtn('contracts','11','Contracts & Billing')}
         <div class="admin-nav-group mono">Intelligence</div>
-        ${navBtn('analytics','11','Analytics')}
-        ${navBtn('certificates','12','Certificates')}
+        ${navBtn('analytics','12','Analytics')}
+        ${navBtn('certificates','13','Certificates')}
         <div class="admin-nav-group mono">Governance</div>
-        ${navBtn('security','13','Security & Roles')}
-        ${navBtn('settings','14','Platform Settings')}
+        ${navBtn('security','14','Security & Roles')}
+        ${navBtn('settings','15','Platform Settings')}
       </nav></aside>
       <main class="admin-main"><header class="admin-topbar">
         <button class="admin-icon-btn admin-menu-toggle" id="adminMenu">☰</button>
@@ -3302,7 +3311,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
   function renderPage(){
     const P=document.getElementById('adminPage'); if(!P)return;
-    const map={dashboard:renderDashboard,consultations:renderConsultations,catalogue:renderCatalogueRequests,companies:renderCompanies,'company-learners':renderCompanyLearners,individuals:renderIndividuals,academies:renderAcademies,courses:renderCourses,enrollments:renderEnrollments,subscriptions:renderSubscriptions,contracts:renderContracts,analytics:renderAnalytics,certificates:renderCertificates,security:renderSecurity,settings:renderSettings};
+    const map={dashboard:renderDashboard,consultations:renderConsultations,catalogue:renderCatalogueRequests,prospects:renderProspects,companies:renderCompanies,'company-learners':renderCompanyLearners,individuals:renderIndividuals,academies:renderAcademies,courses:renderCourses,enrollments:renderEnrollments,subscriptions:renderSubscriptions,contracts:renderContracts,analytics:renderAnalytics,certificates:renderCertificates,security:renderSecurity,settings:renderSettings};
     (map[app.page]||renderDashboard)(P);
   }
 
@@ -3492,6 +3501,125 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       }
       return {ok:true};
     }catch(e){ return {ok:false,error:'Upload failed. Check your connection.'}; }
+  }
+
+  const prosState={rows:[],loaded:false,error:'',filter:'all'};
+
+  async function prosLoad(){
+    prosState.error='';
+    try{
+      const sb=window.educutSupabase;
+      if(!sb||typeof sb.rpc!=='function'){prosState.error='Not connected to the database.';prosState.loaded=true;return}
+      const r=await sb.rpc('admin_prospects');
+      prosState.rows=(r.ok&&Array.isArray(r.data))?r.data:[];
+      if(!r.ok) prosState.error='Prospects could not be loaded.';
+    }catch(_){ prosState.error='Prospects could not be loaded.'; }
+    prosState.loaded=true;
+  }
+
+  function renderProspects(P){
+    P.innerHTML=pageHead('/ADMIN/PROSPECTS','Prospect Database',
+      'Everyone who has given us their details through the landing page — catalogue requests, consultation bookings and assessments. A prospect is kept even if the booking behind it is deleted.')+
+      `<div id="prosBoard"><div class="admin-neutral-panel"><p>Loading prospects…</p></div></div>`;
+    prosLoad().then(()=>prosPaint());
+  }
+
+  function prosMatches(r){
+    switch(prosState.filter){
+      case 'catalogue':    return r.catalogue.requested;
+      case 'consultation': return r.consultation.requested;
+      case 'assessment':   return r.assessment.completed || r.assessment.count>0;
+      case 'deleted':      return r.consultation.deleted>0;
+      default:             return true;
+    }
+  }
+
+  function prosPaint(){
+    const board=document.getElementById('prosBoard'); if(!board)return;
+    const all=prosState.rows;
+    const rows=all.filter(prosMatches).filter(r=>{
+      const q=(app.query||'').toLowerCase(); if(!q) return true;
+      return [r.fullName,r.email,r.company,r.phone].some(v=>String(v||'').toLowerCase().includes(q));
+    });
+
+    const kpis=[['Total prospects',all.length],
+                ['Requested catalogue',all.filter(r=>r.catalogue.requested).length],
+                ['Booked a consultation',all.filter(r=>r.consultation.requested).length],
+                ['Completed assessment',all.filter(r=>r.assessment.completed||r.assessment.count>0).length],
+                ['Bookings deleted',all.filter(r=>r.consultation.deleted>0).length]];
+
+    const filters=[['all','Everyone'],['catalogue','Catalogue'],['consultation','Consultation'],
+                   ['assessment','Assessment'],['deleted','Deleted booking']]
+      .map(f=>`<button class="admin-mini-btn ${prosState.filter===f[0]?'active':''}" data-pros-filter="${f[0]}">${f[1]}</button>`).join('');
+
+    const LEAD_STATUSES=['NEW','CONTACTED','QUALIFIED','CONVERTED','CLOSED'];
+
+    board.innerHTML=`
+    ${prosState.error?`<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 #c33"><strong>${esc(prosState.error)}</strong></div>`:''}
+    <div class="admin-kpis">${kpis.map((x,i)=>`<div class="admin-kpi"><div class="mono">${String(i+1).padStart(2,'0')} · ${esc(x[0])}</div><strong>${x[1]}</strong></div>`).join('')}</div>
+
+    <section class="admin-section">
+      <div class="admin-section-head">
+        <div><div class="mono" style="color:var(--blue)">Pipeline</div><h2>Prospects</h2></div>
+        <div class="admin-head-actions">${filters}</div>
+      </div>
+      <div class="admin-toolbar"><input class="admin-list-search" placeholder="Search name, email, company or phone…" value="${esc(app.query||'')}"><div class="admin-toolbar-spacer"></div><button class="admin-mini-btn" data-pros-export>Export CSV</button></div>
+      ${rows.length?`<div class="admin-table-wrap"><table class="admin-table">
+        <thead><tr><th>Prospect</th><th>Company</th><th>Asked for</th><th>Consultation</th><th>Catalogue</th><th>First seen</th><th>Stage</th></tr></thead>
+        <tbody>${rows.map(r=>`<tr data-pros-row="${esc(r.id)}">
+          <td><strong>${esc(r.fullName||'—')}</strong><br><small><a href="mailto:${esc(r.email)}">${esc(r.email)}</a></small>${r.phone?`<br><small><a href="tel:${esc(r.phone)}">${esc(r.phone)}</a></small>`:''}</td>
+          <td>${esc(r.company||'—')}${r.country?`<br><small>${esc(r.country)}</small>`:''}</td>
+          <td><div class="pros-tags">
+            ${r.catalogue.requested?'<span class="pros-tag on-cat">CATALOGUE</span>':''}
+            ${r.consultation.requested?'<span class="pros-tag on-con">CONSULTATION</span>':''}
+            ${(r.assessment.completed||r.assessment.count>0)?'<span class="pros-tag on-asm">ASSESSMENT</span>':''}
+            ${r.consultation.deleted>0?`<span class="pros-tag on-del">${r.consultation.deleted} DELETED</span>`:''}
+          </div><small>via ${esc(r.firstSource||'—')}</small></td>
+          <td>${r.consultation.ref
+                ? `<span class="cons-status s-${esc(r.consultation.status||'')}">${esc(r.consultation.status||'—')}</span>
+                   <br><small>${esc(r.consultation.ref)}${r.consultation.date?` · ${esc(new Date(r.consultation.date+'T12:00:00').toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}))}`:''}</small>
+                   ${r.consultation.wasDeleted?'<br><small style="color:#7a2020">record deleted</small>':''}`
+                : '—'}</td>
+          <td>${r.catalogue.requested
+                ? `<span class="cons-status s-${esc(r.catalogue.status||'')}">${esc(r.catalogue.status||'REQUESTED')}</span><br><small>${r.catalogue.downloads||0} download${r.catalogue.downloads===1?'':'s'}</small>`
+                : '—'}</td>
+          <td>${esc(new Date(r.createdAt).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}))}</td>
+          <td><select class="pros-sel" data-pros-status="${esc(r.id)}">
+            ${LEAD_STATUSES.map(s=>`<option value="${s}" ${r.status===s?'selected':''}>${s}</option>`).join('')}
+          </select></td>
+        </tr>`).join('')}</tbody></table></div>`
+        :`<div class="admin-empty"><p>No prospects match this view.</p></div>`}
+    </section>`;
+
+    board.querySelectorAll('[data-pros-filter]').forEach(b=>b.onclick=()=>{
+      prosState.filter=b.dataset.prosFilter; prosPaint();
+    });
+    board.querySelector('.admin-list-search')?.addEventListener('input',e=>{
+      app.query=e.target.value; prosPaint();
+      board.querySelector('.admin-list-search')?.focus();
+    });
+    board.querySelectorAll('[data-pros-status]').forEach(sel=>sel.onchange=async()=>{
+      const prev=prosState.rows.find(x=>x.id===sel.dataset.prosStatus)?.status;
+      sel.disabled=true;
+      const r=await window.educutSupabase.rpc('admin_set_lead_status',
+              {p_id:sel.dataset.prosStatus,p_status:sel.value});
+      sel.disabled=false;
+      if(!r.ok){ toast('Could not update this prospect.'); if(prev) sel.value=prev; return; }
+      toast('Prospect moved to '+sel.value+'.');
+      await prosLoad(); prosPaint();
+    });
+    board.querySelector('[data-pros-export]')?.addEventListener('click',()=>{
+      const head=['Name','Email','Company','Phone','Country','Catalogue','Consultation','Assessment',
+                  'Consultation ref','Consultation status','Deleted bookings','Stage','First seen'];
+      const csv=[head.join(',')].concat(rows.map(r=>[
+        r.fullName,r.email,r.company,r.phone,r.country,
+        r.catalogue.requested?'yes':'no', r.consultation.requested?'yes':'no',
+        (r.assessment.completed||r.assessment.count>0)?'yes':'no',
+        r.consultation.ref, r.consultation.status, r.consultation.deleted,
+        r.status, r.createdAt
+      ].map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(','))).join('\n');
+      download('educut-prospects.csv',csv,'text/csv');
+    });
   }
 
   function renderCatalogueRequests(P){
