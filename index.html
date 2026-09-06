@@ -58,7 +58,10 @@
   // Exposed so the landing-page layer shares one transport, one URL
   // and one key, and inherits the session token when signed in.
   api.rpc = (fn, args, sync) => rpc(fn, args || {}, sync);
-  api.config = { url: SUPABASE_URL };
+  api.config = { url: SUPABASE_URL, key: SUPABASE_ANON_KEY };
+  // Storage uploads are authorised by the caller's own JWT, so RLS
+  // decides. No service key ever reaches the browser.
+  api.token = () => currentToken();
 
   if (!configured) {
     console.info('[educut] Supabase not configured — running on local state.');
@@ -3210,11 +3213,57 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     catState.loaded=true;
   }
 
+  const catAsset={info:null,loaded:false,busy:false,msg:'',err:''};
+
+  async function catLoadAsset(){
+    try{
+      const sb=window.educutSupabase;
+      const r=await sb.rpc('admin_catalogue_asset');
+      catAsset.info=(r.ok&&r.data&&r.data.name)?r.data:null;
+    }catch(_){ catAsset.info=null; }
+    catAsset.loaded=true;
+  }
+
+  function catBytes(n){
+    if(!n&&n!==0) return '—';
+    if(n<1024) return n+' B';
+    if(n<1048576) return (n/1024).toFixed(0)+' KB';
+    return (n/1048576).toFixed(1)+' MB';
+  }
+
+  // Upsert to a fixed object name. Every issued download token points at
+  // EduCut_Catalogue.pdf, so replacing the file updates what every past
+  // requester receives — which is the behaviour you want for a catalogue.
+  async function catUpload(file){
+    const sb=window.educutSupabase;
+    const token=sb&&typeof sb.token==='function'?sb.token():null;
+    if(!token) return {ok:false,error:'Your session has expired. Sign in again.'};
+    if(file.type!=='application/pdf'&&!/\.pdf$/i.test(file.name))
+      return {ok:false,error:'The catalogue must be a PDF.'};
+    if(file.size>50*1024*1024)
+      return {ok:false,error:'That file is larger than the 50 MB bucket limit.'};
+
+    const url=sb.config.url.replace(/\/+$/,'')+'/storage/v1/object/catalogue/EduCut_Catalogue.pdf';
+    try{
+      const r=await fetch(url,{method:'POST',
+        headers:{apikey:sb.config.key,Authorization:'Bearer '+token,
+                 'Content-Type':'application/pdf','x-upsert':'true'},
+        body:file});
+      if(!r.ok){
+        const t=await r.text();
+        if(r.status===403||r.status===401)
+          return {ok:false,error:'You do not have permission to upload the catalogue.'};
+        return {ok:false,error:'Upload failed ('+r.status+'). '+t.slice(0,160)};
+      }
+      return {ok:true};
+    }catch(e){ return {ok:false,error:'Upload failed. Check your connection.'}; }
+  }
+
   function renderCatalogueRequests(P){
     P.innerHTML=pageHead('/ADMIN/CATALOGUE','Catalogue Requests',
       'Everyone who asked for the catalogue PDF, with how many times they actually downloaded it. A request is stored the moment the form is submitted; the download is gated by a per-request token.')+
       `<div id="catBoard"><div class="admin-neutral-panel"><p>Loading requests…</p></div></div>`;
-    catLoad().then(()=>catPaint());
+    Promise.all([catLoad(),catLoadAsset()]).then(()=>catPaint());
   }
 
   function catPaint(){
@@ -3230,6 +3279,29 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     ${catState.error?`<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 #c33"><strong>${esc(catState.error)}</strong></div>`:''}
     <div class="admin-kpis">${kpis.map((x,i)=>`<div class="admin-kpi"><div class="mono">${String(i+1).padStart(2,'0')} · ${esc(x[0])}</div><strong>${x[1]}</strong></div>`).join('')}</div>
     <section class="admin-section">
+      <div class="admin-section-head">
+        <div><div class="mono" style="color:var(--blue)">Asset</div><h2>Catalogue PDF</h2></div>
+        <div class="admin-head-actions">
+          <button class="btn btn-lime" id="catPick" ${catAsset.busy?'disabled':''}>${catAsset.info?'Replace PDF':'Upload PDF'}</button>
+          ${catAsset.info?`<button class="admin-mini-btn" id="catPreview">Preview</button>`:''}
+          <input type="file" id="catFile" accept="application/pdf,.pdf" style="display:none">
+        </div>
+      </div>
+      ${catAsset.busy?`<div class="admin-neutral-panel"><strong>Uploading…</strong><p>Large files can take a moment. Do not close this page.</p></div>`:''}
+      ${catAsset.msg?`<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 var(--lime)"><strong>${esc(catAsset.msg)}</strong></div>`:''}
+      ${catAsset.err?`<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 #c33"><strong>${esc(catAsset.err)}</strong></div>`:''}
+      ${catAsset.info
+        ? `<div class="admin-detail-grid">
+             <div class="admin-detail-item"><div class="mono">File</div><strong>${esc(catAsset.info.name)}</strong></div>
+             <div class="admin-detail-item"><div class="mono">Size</div><strong>${esc(catBytes(catAsset.info.sizeBytes))}</strong></div>
+             <div class="admin-detail-item"><div class="mono">Last updated</div><strong>${esc(new Date(catAsset.info.updatedAt).toLocaleString('en-GB'))}</strong></div>
+             <div class="admin-detail-item"><div class="mono">Visibility</div><strong>Private · token-gated</strong></div>
+           </div>
+           <p style="color:#666;margin-top:12px">Everyone who has already requested the catalogue receives this file. Replacing it updates their download immediately.</p>`
+        : `<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 #c33"><strong>No catalogue uploaded yet.</strong><p>Until a PDF is stored here, anyone who completes the form is told the catalogue is being prepared. Their request is still recorded, so nothing is lost.</p></div>`}
+    </section>
+
+    <section class="admin-section">
       <div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Pipeline</div><h2>Catalogue requests</h2></div></div>
       ${rows.length?`<div class="admin-table-wrap"><table class="admin-table">
         <thead><tr><th>Contact</th><th>Company</th><th>Phone</th><th>Requested</th><th>Downloads</th><th>Status</th></tr></thead>
@@ -3243,6 +3315,40 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         </tr>`).join('')}</tbody></table></div>`
         :`<div class="admin-empty"><p>No catalogue requests yet.</p></div>`}
     </section>`;
+
+    const pick=document.getElementById('catPick');
+    const input=document.getElementById('catFile');
+    if(pick&&input){
+      pick.onclick=()=>input.click();
+      input.onchange=async()=>{
+        const file=input.files&&input.files[0]; if(!file)return;
+        catAsset.busy=true; catAsset.msg=''; catAsset.err=''; catPaint();
+        const res=await catUpload(file);
+        catAsset.busy=false;
+        if(res.ok){
+          catAsset.msg='Catalogue stored. Every requester can download it now.';
+          log('CATALOGUE_ASSET_UPLOADED','Catalogue','EduCut_Catalogue.pdf');
+        } else { catAsset.err=res.error; }
+        await catLoadAsset(); catPaint();
+      };
+    }
+
+    // Staff read the object directly under their own policy rather than
+    // burning a customer download token, so previewing never shows up in
+    // anyone's download count.
+    document.getElementById('catPreview')?.addEventListener('click',async()=>{
+      const sb=window.educutSupabase;
+      const tok=sb&&typeof sb.token==='function'?sb.token():null;
+      if(!tok){ toast('Your session has expired.'); return; }
+      try{
+        const r=await fetch(sb.config.url.replace(/\/+$/,'')+'/storage/v1/object/catalogue/EduCut_Catalogue.pdf',
+          {headers:{apikey:sb.config.key,Authorization:'Bearer '+tok}});
+        if(!r.ok){ toast('Could not open the catalogue ('+r.status+').'); return; }
+        const url=URL.createObjectURL(await r.blob());
+        window.open(url,'_blank','noopener');
+        setTimeout(()=>URL.revokeObjectURL(url),60000);
+      }catch(_){ toast('Could not open the catalogue.'); }
+    });
   }
 
   function renderConsultations(P){
