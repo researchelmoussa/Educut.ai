@@ -1516,6 +1516,16 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
       return (PROTECTED.test(path) || AUTH.indexOf(path) !== -1) ? path : '/';
     },
 
+    // Second segment: the page inside the workspace.
+    page: function () {
+      var parts = R.current().split('/');
+      return parts[2] || '';
+    },
+    workspace: function () {
+      var parts = R.current().split('/');
+      return parts[1] || '';
+    },
+
     isProtected: function (p) { return PROTECTED.test(p || R.current()); },
     isAuth: function (p) { return AUTH.indexOf(p || R.current()) !== -1; },
 
@@ -3044,7 +3054,7 @@ document.addEventListener('keydown',e=>{
     const adminRoles=[ROLES.SUPER_ADMIN,ROLES.PLATFORM_ADMIN,ROLES.CONTENT_MANAGER,ROLES.FINANCE_MANAGER,ROLES.SUPPORT_MANAGER];
     if(adminRoles.includes(role)&&window.renderSuperAdmin){return window.renderSuperAdmin(routeView,session);}
     if((role===ROLES.COMPANY_ADMIN||role===ROLES.COMPANY_MANAGER)&&window.renderCompanyPortal){return window.renderCompanyPortal(routeView,session);}
-routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';const admin=role===ROLES.SUPER_ADMIN;const learner=path==='/academy/dashboard';const title=admin?'Administration Console':learner?'My Academy':'Company Workspace';const sub=admin?'Protected SUPER_ADMIN workspace for platform-level operations.':learner?(session?.sponsored?`Your company-sponsored personal learning dashboard${session.companyName?' · Provided by '+session.companyName:''}.`:'Your personal AI learning dashboard.'):'Your organization’s EduCut.ai learning environment.';routeView.className='route-view open '+(admin?'route-admin':'');routeView.innerHTML=`<div class="route-top"><div class="brand">EduCut<span>.ai</span></div><div class="route-top-actions"><span class="mono route-role">${esc(role)}</span><button class="btn btn-outline" id="routeLogout">Sign out</button></div></div><div class="route-content"><div class="route-heading"><div><div class="mono" style="color:var(--blue)">${esc(path)}</div><h1>${title}</h1></div><p>${sub}</p></div><div class="route-grid">${dashboardCards(role).map(c=>`<article class="route-card"><div class="mono">${c[0]}</div><h3>${c[1]}</h3><p>${c[2]}</p></article>`).join('')}</div>${role===ROLES.COMPANY_ADMIN?companySeatAdminMarkup():''}</div>`;if(role===ROLES.COMPANY_ADMIN)wireCompanySeatAdmin();document.getElementById('routeLogout').onclick=e=>window.educutLogout?.(e.currentTarget);}
+routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';const admin=role===ROLES.SUPER_ADMIN;const learner=/^\/academy(\/|$)/.test(path);const title=admin?'Administration Console':learner?'My Academy':'Company Workspace';const sub=admin?'Protected SUPER_ADMIN workspace for platform-level operations.':learner?(session?.sponsored?`Your company-sponsored personal learning dashboard${session.companyName?' · Provided by '+session.companyName:''}.`:'Your personal AI learning dashboard.'):'Your organization’s EduCut.ai learning environment.';routeView.className='route-view open '+(admin?'route-admin':'');routeView.innerHTML=`<div class="route-top"><div class="brand">EduCut<span>.ai</span></div><div class="route-top-actions"><span class="mono route-role">${esc(role)}</span><button class="btn btn-outline" id="routeLogout">Sign out</button></div></div><div class="route-content"><div class="route-heading"><div><div class="mono" style="color:var(--blue)">${esc(path)}</div><h1>${title}</h1></div><p>${sub}</p></div><div class="route-grid">${dashboardCards(role).map(c=>`<article class="route-card"><div class="mono">${c[0]}</div><h3>${c[1]}</h3><p>${c[2]}</p></article>`).join('')}</div>${role===ROLES.COMPANY_ADMIN?companySeatAdminMarkup():''}</div>`;if(role===ROLES.COMPANY_ADMIN)wireCompanySeatAdmin();document.getElementById('routeLogout').onclick=e=>window.educutLogout?.(e.currentTarget);}
 
   document.querySelectorAll('[data-auth-open]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openAuth(a.dataset.authOpen)}));authClose.onclick=closeAuth;authModal.addEventListener('click',e=>{if(e.target===authModal)closeAuth()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&authModal.classList.contains('open'))closeAuth()});
   authModal.addEventListener('pointermove',e=>{const r=authRail?.getBoundingClientRect();if(!r)return;authRail.style.setProperty('--auth-grid-x',`${(e.clientX-r.left)*.015}px`);authRail.style.setProperty('--auth-grid-y',`${(e.clientY-r.top)*.015}px`)});
@@ -3159,6 +3169,29 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(_){}};
   const app={root:null,page:'dashboard',detail:null,tab:'Overview',query:'',sortKey:null,sortDir:1,pageNum:1,pageSize:12,selected:new Set(),courseSelection:null};
 
+  // The route is the record of which page is open, so a refresh lands
+  // back on it instead of resetting to the dashboard.
+  const ADMIN_PAGES=['dashboard','companies','company-learners','individuals','academies',
+    'courses','enrollments','consultations','catalogue','subscriptions','contracts',
+    'analytics','certificates','security','settings'];
+  let adminMounted=false;
+  function adminPageFromRoute(){
+    if(!window.educutRoute) return null;
+    if(window.educutRoute.workspace()!=='admin') return null;
+    const seg=window.educutRoute.page();
+    return ADMIN_PAGES.includes(seg)?seg:null;
+  }
+  function adminAdoptRoute(){
+    const seg=adminPageFromRoute();
+    if(seg && seg!==app.page){ app.page=seg; app.detail=null; return true; }
+    return false;
+  }
+  function adminWriteRoute(){
+    // replace, not push: re-renders must not stack history entries.
+    if(window.educutRoute && window.educutRoute.workspace()==='admin')
+      window.educutRoute.go('/admin/'+app.page,'replace');
+  }
+
   function company(id){return S.companies.find(x=>x.id===id)}
   function user(id){return S.users.find(x=>x.id===id)}
   function courseByCode(code){return S.courses.find(x=>x.code===code)}
@@ -3181,6 +3214,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
   window.renderSuperAdmin=(root,session)=>{
     app.root=root;
+    if(!adminMounted){ adminAdoptRoute(); adminMounted=true; }
     root.className='route-view open route-admin';
     root.setAttribute('aria-hidden','false');
     document.body.style.overflow='hidden';
@@ -3213,7 +3247,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         <div class="admin-top-actions"><button class="admin-icon-btn admin-help" title="Help">?</button><button class="admin-icon-btn" id="adminNotifications" title="Notifications">◉<span class="admin-badge">${S.notifications.filter(n=>!n.read).length}</span></button><button class="admin-icon-btn" id="adminProfile" title="Administrator profile">SA</button><button class="btn btn-outline" id="adminSignOut">Sign out</button></div>
         <div class="admin-notif-menu" id="adminNotifMenu">${S.notifications.map(n=>`<div class="admin-notif"><strong>${esc(n.title)}</strong><p>${esc(n.text)}</p></div>`).join('')}</div>
       </header><div class="admin-page" id="adminPage"></div></main></div>`;
-    wireShell(); renderPage();
+    wireShell(); renderPage(); adminWriteRoute();
   };
 
   function wireShell(){
@@ -3743,6 +3777,19 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   const save=()=>{try{localStorage.setItem(CKEY,JSON.stringify(C))}catch(_){}};
   const app={root:null,page:'dashboard',detail:null,query:'',companyId:null,role:'COMPANY_ADMIN'};
 
+  const COMPANY_PAGES=['dashboard','learners','courses','subscription','contracts',
+    'billing','requests','support','analytics','notifications','account','settings'];
+  let companyMounted=false;
+  function companyAdoptRoute(){
+    if(!window.educutRoute || window.educutRoute.workspace()!=='company') return;
+    const seg=window.educutRoute.page();
+    if(COMPANY_PAGES.includes(seg) && seg!==app.page){ app.page=seg; app.detail=null; }
+  }
+  function companyWriteRoute(){
+    if(window.educutRoute && window.educutRoute.workspace()==='company')
+      window.educutRoute.go('/company/'+app.page,'replace');
+  }
+
   function A(){return getAdmin()}
   function company(){const a=A();return (a.companies||[]).find(x=>x.id===app.companyId)||(a.companies||[])[0]}
   function companyUsers(){const a=A();return (a.users||[]).filter(x=>x.companyId===app.companyId)}
@@ -3773,6 +3820,8 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   function openReq(id){app.page='requests';app.detail=id;render()}
 
   window.renderCompanyPortal=(root,session)=>{
+    if(!companyMounted){ companyAdoptRoute(); companyMounted=true; }
+    setTimeout(companyWriteRoute,0);
     app.root=root;app.role=session?.role||'COMPANY_ADMIN';
     const a=A();const email=session?.email||'';const u=(a.users||[]).find(x=>x.email===email&&['COMPANY_ADMIN','COMPANY_MANAGER'].includes(x.type));app.companyId=u?.companyId||C.selectedCompanyId||(a.companies||[])[0]?.id;
     C.selectedCompanyId=app.companyId;save();
