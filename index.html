@@ -1482,6 +1482,28 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 .cons-status.s-CANCELLED{background:#f4d4d4;color:#7a2020}
 .cons-status.s-COMPLETED,.cons-status.s-SENT{background:#dfe7ff;color:#1b3fae}
 .cons-status.s-FAILED{background:#f4d4d4;color:#7a2020}
+.cons-hover{position:fixed;z-index:9999;max-width:340px;background:#fff;border:1px solid #d8d8d8;
+  box-shadow:0 12px 34px rgba(0,0,0,.16);padding:14px 16px;pointer-events:none;opacity:0;
+  transform:translateY(4px);transition:opacity .12s,transform .12s}
+.cons-hover.show{opacity:1;transform:translateY(0)}
+.cons-hover h4{margin:0 0 2px;font-size:15px;line-height:1.3}
+.cons-hover .cons-hover-ref{font:600 10px/1.6 ui-monospace,monospace;letter-spacing:.06em;color:var(--blue,#1b3fae)}
+.cons-hover dl{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;margin:10px 0 0}
+.cons-hover dt{font:600 10px/1.6 ui-monospace,monospace;letter-spacing:.05em;color:#888;text-transform:uppercase}
+.cons-hover dd{margin:0;font-size:12.5px;line-height:1.5;color:#222;overflow-wrap:anywhere}
+.cons-hover .cons-hover-note{margin-top:10px;padding-top:9px;border-top:1px solid #ececec;font-size:12px;color:#555;white-space:pre-wrap}
+.cons-slots{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.cons-slot{display:flex;flex-direction:column;gap:3px;border:1px solid #e0e0e0;background:#fff;padding:8px 11px;min-width:104px}
+.cons-slot .t{font:600 13px/1.2 ui-monospace,monospace}
+.cons-slot .s{font:600 9.5px/1.5 ui-monospace,monospace;letter-spacing:.06em;color:#888}
+.cons-slot.st-OPEN{border-color:#cfe0cf}
+.cons-slot.st-BOOKED{border-color:var(--blue,#1b3fae);background:#f4f7ff}
+.cons-slot.st-CLOSED{background:#f4f4f4;color:#aaa}
+.cons-slot.st-HELD{border-color:#e0d0b0;background:#fdf8ef}
+.cons-slot button{margin-top:5px;font:600 10px/1 ui-monospace,monospace;letter-spacing:.05em;
+  border:1px solid #d0d0d0;background:#fff;padding:4px 7px;cursor:pointer}
+.cons-slot button:hover{border-color:#111}
+
 .cons-status.s-NO_SHOW{background:#f0e0c8;color:#7a5320}
 @media(max-width:760px){.cons-day{min-height:56px}}
 </style>
@@ -3310,6 +3332,59 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     consState.loaded=true;
   }
 
+  // Hover snapshot. One reused node rather than a card per row, kept
+  // clear of the cursor and flipped when it would run off the viewport.
+  let consHoverEl=null;
+  function consHoverNode(){
+    if(!consHoverEl){
+      consHoverEl=document.createElement('div');
+      consHoverEl.className='cons-hover';
+      document.body.appendChild(consHoverEl);
+    }
+    return consHoverEl;
+  }
+  function consHoverHide(){ if(consHoverEl) consHoverEl.classList.remove('show'); }
+
+  function consHoverHtml(r){
+    const when=new Date(r.date+'T12:00:00').toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+    const rows=[
+      ['When', `${esc(when)}<br>${esc(r.startTime)}–${esc(r.endTime)} · ${esc(r.timezone)}`],
+      ['Company', esc(r.company||'—')],
+      ['Email', esc(r.email||'—')],
+      ['Phone', esc(r.phone||'—')],
+      ['Status', esc(r.status)],
+      ['Catalogue', r.catalogue?'Requested':'No'],
+      ['Booked', esc(new Date(r.createdAt).toLocaleString('en-GB'))]
+    ];
+    return `<div class="cons-hover-ref">${esc(r.ref||'')}</div>
+      <h4>${esc(r.fullName)}</h4>
+      <dl>${rows.map(x=>`<dt>${x[0]}</dt><dd>${x[1]}</dd>`).join('')}</dl>
+      ${r.notes?`<div class="cons-hover-note">${esc(r.notes)}</div>`:''}`;
+  }
+
+  function consWireHover(board, rows){
+    const byId={}; rows.forEach(r=>{byId[r.id]=r});
+    board.querySelectorAll('[data-cons-row]').forEach(tr=>{
+      const r=byId[tr.dataset.consRow]; if(!r) return;
+      tr.addEventListener('mouseenter',()=>{
+        const el=consHoverNode();
+        el.innerHTML=consHoverHtml(r);
+        el.classList.add('show');
+      });
+      tr.addEventListener('mousemove',e=>{
+        const el=consHoverNode(); if(!el.classList.contains('show')) return;
+        const b=el.getBoundingClientRect();
+        let x=e.clientX+18, y=e.clientY+18;
+        if(x+b.width  > window.innerWidth  - 12) x=e.clientX-b.width-18;
+        if(y+b.height > window.innerHeight - 12) y=Math.max(12,e.clientY-b.height-18);
+        el.style.left=x+'px'; el.style.top=y+'px';
+      });
+      tr.addEventListener('mouseleave',consHoverHide);
+    });
+    // A card left floating after the table re-renders would be a ghost.
+    window.addEventListener('scroll',consHoverHide,{passive:true});
+  }
+
   const catState={rows:[],loaded:false,error:''};
 
   async function catLoad(){
@@ -3462,6 +3537,36 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     });
   }
 
+  const slotState={date:null,rows:[],busy:false,err:''};
+
+  async function slotLoad(date){
+    slotState.date=date; slotState.rows=[]; slotState.err='';
+    if(!date) return;
+    try{
+      const r=await window.educutSupabase.rpc('admin_day_slots',{p_date:date});
+      slotState.rows=(r.ok&&Array.isArray(r.data))?r.data:[];
+      if(!r.ok) slotState.err='Slots could not be loaded.';
+    }catch(_){ slotState.err='Slots could not be loaded.'; }
+  }
+
+  async function slotAction(fn,args,okMsg){
+    slotState.busy=true; consPaint();
+    let out;
+    try{ out=await window.educutSupabase.rpc(fn,args); }
+    catch(_){ out={ok:false}; }
+    slotState.busy=false;
+    if(!out.ok){
+      const raw=(out.data&&(out.data.message||out.data.hint))||'';
+      toast(/SLOT_HAS_BOOKING/.test(raw)
+        ? 'Cancel the booking on that slot first.'
+        : 'That change could not be applied.');
+    } else if(okMsg) toast(okMsg);
+    // Re-read everything: closing a slot changes the month counts too.
+    await Promise.all([consLoad(), slotLoad(slotState.date)]);
+    consPaint();
+    return out.ok;
+  }
+
   function renderConsultations(P){
     P.innerHTML=pageHead('/ADMIN/CONSULTATIONS','Consultations',
       'Every consultation booked from the landing page. Bookings are managed here — the client receives a confirmation on the site, and the meeting is not pushed to an external calendar.')+
@@ -3523,14 +3628,32 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         </div>
       </div>
       <div class="cons-cal">${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d=>`<div class="cons-cal-head">${d}</div>`).join('')}${cells}</div>
-      <div class="cons-legend"><span><span class="cons-pill cons-pill-booked">booked</span> consultations</span><span><span class="cons-pill cons-pill-open">open</span> free slots</span></div>
+      <div class="cons-legend"><span><span class="cons-pill cons-pill-booked">booked</span> consultations</span><span><span class="cons-pill cons-pill-open">open</span> free slots</span><span>select a day to manage its slots</span></div>
+      ${consState.day?`
+        <div class="admin-section-head" style="margin-top:22px">
+          <div><div class="mono" style="color:var(--blue)">Slots</div>
+          <h2 style="font-size:20px">${esc(new Date(consState.day+'T12:00:00').toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long'}))}</h2></div>
+        </div>
+        ${slotState.err?`<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 #c33"><strong>${esc(slotState.err)}</strong></div>`:''}
+        <div class="cons-slots" ${slotState.busy?'style="opacity:.5"':''}>
+          ${slotState.rows.length?slotState.rows.map(s=>`
+            <div class="cons-slot st-${esc(s.state)}">
+              <span class="t">${esc(s.startTime)}</span>
+              <span class="s">${esc(s.state)}</span>
+              ${s.state==='BOOKED'?`<span class="s" style="color:#444">${esc(s.bookedBy||'')}</span>`:''}
+              ${s.state==='OPEN'?`<button data-slot-close="${esc(s.slotId)}">Remove</button>`:''}
+              ${s.state==='CLOSED'?`<button data-slot-open="${esc(s.slotId)}">Reopen</button>`:''}
+              ${s.state==='HELD'?`<button data-slot-release="${esc(s.slotId)}">Release</button>`:''}
+            </div>`).join('')
+            :`<div class="admin-empty"><p>No slots generated for this date.</p></div>`}
+        </div>`:''}
     </section>
 
     <section class="admin-section">
       <div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Bookings</div><h2>${esc(listTitle)}</h2></div></div>
       ${listRows.length?`<div class="admin-table-wrap"><table class="admin-table">
         <thead><tr><th>Reference</th><th>When</th><th>Contact</th><th>Company</th><th>Phone</th><th>Status</th><th>Actions</th></tr></thead>
-        <tbody>${listRows.map(r=>`<tr>
+        <tbody>${listRows.map(r=>`<tr data-cons-row="${esc(r.id)}">
           <td><strong>${esc(r.ref||'—')}</strong><br><small>${esc(r.source||'')}</small></td>
           <td>${esc(new Date(r.date+'T12:00:00').toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}))}<br><small>${esc(r.startTime)}–${esc(r.endTime)} ${esc(r.timezone)}</small></td>
           <td>${esc(r.fullName)}<br><small><a href="mailto:${esc(r.email)}">${esc(r.email)}</a></small></td>
@@ -3541,12 +3664,15 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
             ${r.status==='REQUESTED'?`<button class="admin-mini-btn" data-cons-set="CONFIRMED" data-cons-id="${esc(r.id)}">Confirm</button>`:''}
             ${['REQUESTED','CONFIRMED'].includes(r.status)?`<button class="admin-mini-btn" data-cons-set="COMPLETED" data-cons-id="${esc(r.id)}">Completed</button>`:''}
             ${['REQUESTED','CONFIRMED'].includes(r.status)?`<button class="admin-mini-btn" data-cons-set="NO_SHOW" data-cons-id="${esc(r.id)}">No-show</button>`:''}
+            ${['REQUESTED','CONFIRMED'].includes(r.status)?`<button class="admin-mini-btn" data-cons-cancel="${esc(r.id)}">Cancel</button>`:''}
+            <button class="admin-mini-btn" data-cons-delete="${esc(r.id)}" data-cons-ref="${esc(r.ref||'')}">Delete</button>
           </div></td></tr>`).join('')}</tbody></table></div>`
         :`<div class="admin-empty"><p>No consultations ${consState.day?'on this date':'in this month'}.</p></div>`}
     </section>`;
 
-    board.querySelectorAll('[data-cons-day]').forEach(b=>b.onclick=()=>{
+    board.querySelectorAll('[data-cons-day]').forEach(b=>b.onclick=async()=>{
       consState.day = consState.day===b.dataset.consDay ? null : b.dataset.consDay;
+      await slotLoad(consState.day);
       consPaint();
     });
     const move=n=>{consState.month=new Date(consState.month.getFullYear(),consState.month.getMonth()+n,1);consState.day=null;
@@ -3555,6 +3681,34 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     board.querySelector('[data-cons-next]').onclick=()=>move(1);
     board.querySelector('[data-cons-today]').onclick=()=>{consState.month=consMonthStart(new Date());consState.day=null;consLoad().then(()=>consPaint())};
     board.querySelector('[data-cons-clear]')?.addEventListener('click',()=>{consState.day=null;consPaint()});
+
+    board.querySelectorAll('[data-slot-close]').forEach(b=>b.onclick=()=>
+      slotAction('admin_set_slot_available',{p_slot_id:b.dataset.slotClose,p_available:false},'Slot removed from availability.'));
+    board.querySelectorAll('[data-slot-open]').forEach(b=>b.onclick=()=>
+      slotAction('admin_set_slot_available',{p_slot_id:b.dataset.slotOpen,p_available:true},'Slot reopened.'));
+    board.querySelectorAll('[data-slot-release]').forEach(b=>b.onclick=()=>
+      slotAction('admin_release_slot',{p_slot_id:b.dataset.slotRelease},'Slot released.'));
+
+    board.querySelectorAll('[data-cons-cancel]').forEach(b=>b.onclick=async()=>{
+      b.disabled=true;
+      const r=await window.educutSupabase.rpc('cancel_consultation',{p_id:b.dataset.consCancel});
+      if(!r.ok){ b.disabled=false; toast('Could not cancel this booking.'); return; }
+      toast('Booking cancelled and the slot released.');
+      await Promise.all([consLoad(), slotLoad(slotState.date)]); consPaint();
+    });
+
+    // Destructive, so it asks. Cancelling keeps the record; this does not.
+    board.querySelectorAll('[data-cons-delete]').forEach(b=>b.onclick=async()=>{
+      const ref=b.dataset.consRef||'this booking';
+      if(!window.confirm(`Permanently delete ${ref}?\n\nThe record is removed and the slot becomes bookable again. Cancelling instead keeps the booking for your records.`)) return;
+      b.disabled=true;
+      const r=await window.educutSupabase.rpc('admin_delete_consultation',{p_id:b.dataset.consDelete});
+      if(!r.ok){ b.disabled=false; toast('Could not delete this booking.'); return; }
+      toast('Booking deleted.');
+      await Promise.all([consLoad(), slotLoad(slotState.date)]); consPaint();
+    });
+
+    consWireHover(board, listRows);
 
     board.querySelectorAll('[data-cons-set]').forEach(b=>b.onclick=async()=>{
       b.disabled=true; const was=b.textContent; b.textContent='…';
