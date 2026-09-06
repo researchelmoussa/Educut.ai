@@ -55,6 +55,9 @@
     me: null,
   };
   window.educutSupabase = api;
+  // Exposed so the landing-page layer shares one transport, one URL
+  // and one key, and inherits the session token when signed in.
+  api.rpc = (fn, args, sync) => rpc(fn, args || {}, sync);
 
   if (!configured) {
     console.info('[educut] Supabase not configured — running on local state.');
@@ -192,6 +195,7 @@
 
     hydrate(boot.data);
     rpc('app_touch_login');
+    rpc('link_my_assessments');   // claim anything left anonymous
     api.connected = true;
     api.reason = 'connected';
     api.me = boot.data.me;
@@ -445,6 +449,189 @@
 })();
 
   </script>
+<script>
+/* ===================================================================
+   EduCutAPI — landing page data layer.
+
+   Sits on top of window.educutSupabase (the admin/auth layer above) and
+   reuses its transport, so the anon key and the URL have one home and a
+   signed-in visitor's token is applied automatically.
+
+   Every call degrades: if the network is unreachable the page falls
+   back to the catalogue it cached last time, and failing that to the
+   hardcoded copy further down. Nothing here can leave the page blank.
+   =================================================================== */
+(function () {
+  'use strict';
+
+  const CACHE_KEY = 'educutCatalogueV1';
+
+  function transport() {
+    const s = window.educutSupabase;
+    return (s && typeof s.rpc === 'function') ? s : null;
+  }
+
+  function call(fn, args, sync) {
+    const dead = { ok: false, status: 0, data: null };
+    const s = transport();
+    if (!s) return sync ? dead : Promise.resolve(dead);
+    try {
+      return s.rpc(fn, args || {}, sync);
+    } catch (e) {
+      const r = { ok: false, status: 0, data: null, error: String(e) };
+      return sync ? r : Promise.resolve(r);
+    }
+  }
+
+  // Postgres raises named exceptions; turn the ones a visitor can
+  // actually cause into something worth reading. Anything else stays
+  // generic rather than leaking a database message onto the page.
+  function messageFor(r) {
+    const raw = (r && r.data && (r.data.message || r.data.hint || r.data.details)) ||
+                (r && r.error) || '';
+    if (/SLOT_TAKEN|23505/.test(raw))       return 'That time was booked a moment ago. Please pick another slot.';
+    if (/SLOT_UNAVAILABLE/.test(raw))       return 'That slot is no longer available. Please pick another.';
+    if (/SLOT_NOT_FOUND/.test(raw))         return 'That slot no longer exists. Please reload and try again.';
+    if (/NO_COURSES_AVAILABLE/.test(raw))   return 'We could not match your answers to published courses. Please contact us directly.';
+    if (/INVALID_EMAIL/.test(raw))          return 'That email address does not look valid.';
+    if (!r || !r.status)                    return 'We could not reach the server. Check your connection and try again.';
+    return 'Something went wrong on our side. Please try again.';
+  }
+
+  // One key per submission, held for the life of the tab and reused
+  // across retries. A double click, a refresh mid-request or a browser
+  // retry replays into the same row instead of creating a second lead.
+  // Disabling the button only hides the second click.
+  function idem(name) {
+    const k = 'educutIdem:' + name;
+    try {
+      let v = sessionStorage.getItem(k);
+      if (!v) {
+        v = name + ':' + (window.crypto && crypto.randomUUID
+              ? crypto.randomUUID()
+              : Date.now() + '-' + Math.random().toString(16).slice(2));
+        sessionStorage.setItem(k, v);
+      }
+      return v;
+    } catch (_) {
+      return name + ':' + Date.now();
+    }
+  }
+  function clearIdem(name) {
+    try { sessionStorage.removeItem('educutIdem:' + name); } catch (_) {}
+  }
+
+  const API = { catalogue: null, ready: false, source: 'none' };
+
+  // Boot the catalogue synchronously, the same way the admin layer
+  // hydrates, so the academy grid renders real data first time instead
+  // of showing the hardcoded copy and swapping it a frame later.
+  try {
+    const r = call('public_catalogue', {}, true);
+    if (r && r.ok && r.data && r.data.academies) {
+      API.catalogue = r.data;
+      API.ready = true;
+      API.source = 'database';
+      try { localStorage.setItem(CACHE_KEY, JSON.stringify(r.data)); } catch (_) {}
+    } else {
+      const cached = localStorage.getItem(CACHE_KEY);
+      if (cached) { API.catalogue = JSON.parse(cached); API.ready = true; API.source = 'cache'; }
+    }
+  } catch (_) {}
+
+  API.academyDetails = function () {
+    if (!API.catalogue || !Array.isArray(API.catalogue.academies)) return null;
+    const out = {};
+    API.catalogue.academies.forEach(function (a) {
+      out[a.code] = {
+        title:    a.name,
+        summary:  a.summary,
+        topics:   a.topics || [],
+        audience: a.audience,
+        count:    (a.courseCount || 0) + ' course' + (a.courseCount === 1 ? '' : 's')
+      };
+    });
+    return Object.keys(out).length ? out : null;
+  };
+
+  API.courses      = function () { return (API.catalogue && API.catalogue.courses) || []; };
+  API.courseByCode = function (code) {
+    return API.courses().filter(function (c) { return c.code === code; })[0] || null;
+  };
+
+  // The server hands back course codes. Resolve them against the
+  // catalogue the page loaded, so every title and price on screen comes
+  // from a real course row rather than anything the browser invented.
+  API.resolvePlan = function (codes) {
+    return (codes || []).map(function (code) {
+      const c = API.courseByCode(code);
+      if (!c) return { code: code, title: code, price6: 0, price12: 0 };
+      return {
+        code: c.code, title: c.title, level: c.level,
+        price6: Number(c.price6) || 0, price12: Number(c.price12) || 0,
+        durationHours: c.durationHours, academyCode: c.academyCode
+      };
+    });
+  };
+
+  API.availability = function (days) {
+    return call('consultation_availability', { p_days: days || 30 }).then(function (r) {
+      return (r.ok && Array.isArray(r.data)) ? r.data : [];
+    });
+  };
+
+  API.book = function (p) {
+    return call('book_consultation', {
+      p_slot_id:         p.slotId,
+      p_full_name:       p.fullName,
+      p_company_name:    p.company || null,
+      p_email:           p.email,
+      p_phone:           p.phone || null,
+      p_notes:           p.notes || null,
+      p_catalogue:       !!p.catalogue,
+      p_idempotency_key: idem('book')
+    }).then(function (r) {
+      if (r.ok && r.data) { clearIdem('book'); return { ok: true, data: r.data }; }
+      return { ok: false, error: messageFor(r) };
+    });
+  };
+
+  API.requestCatalogue = function (p) {
+    return call('request_catalogue', {
+      p_full_name:       p.fullName,
+      p_company_name:    p.company || null,
+      p_email:           p.email,
+      p_phone:           p.phone || null,
+      p_source:          p.source || 'LANDING_PAGE',
+      p_idempotency_key: idem('catalogue')
+    }).then(function (r) {
+      if (r.ok && r.data) { clearIdem('catalogue'); return { ok: true, data: r.data }; }
+      return { ok: false, error: messageFor(r) };
+    });
+  };
+
+  API.assessment = function (p) {
+    return call('submit_assessment', {
+      p_answers:         p.answers,
+      p_focus_keys:      p.focusKeys,
+      p_maturity_score:  p.maturityScore,
+      p_maturity_label:  p.maturityLabel,
+      p_focus_areas:     p.focusAreas,
+      p_full_name:       p.fullName,
+      p_company_name:    p.company || null,
+      p_email:           p.email,
+      p_session_id:      null,
+      p_idempotency_key: idem('assessment')
+    }).then(function (r) {
+      if (r.ok && r.data) { clearIdem('assessment'); return { ok: true, data: r.data }; }
+      return { ok: false, error: messageFor(r) };
+    });
+  };
+
+  window.EduCutAPI = API;
+})();
+</script>
+
   <style>
     :root{
       --ink:#0b0b0c; --paper:#f5f5f2; --white:#fff; --muted:#8d8d88;
@@ -1733,19 +1920,55 @@ function nextBusinessDays(count=8){
 function isoLocalDate(d){
   return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 }
-const consultDayOptions=nextBusinessDays(10);
-const consultTimeOptions=['09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00'];
+// Availability is data now. nextBusinessDays() and isoLocalDate() are
+// left in place as the offline fallback and for date formatting.
+let consultSlots=[];            // [{slotId,date,startTime,endTime,timezone}]
+let consultSlotsLoaded=false;
+let consultLoadError='';
+const consultDatesOpen=()=>[...new Set(consultSlots.map(s=>s.date))];
+const consultTimesFor=d=>consultSlots.filter(s=>s.date===d);
+const consultSlotFor=(d,t)=>consultSlots.find(s=>s.date===d&&s.startTime===t)||null;
+
+async function loadConsultSlots(force){
+  if(consultSlotsLoaded && !force) return;
+  consultLoadError='';
+  try{ consultSlots = window.EduCutAPI ? await window.EduCutAPI.availability(30) : []; }
+  catch(_){ consultSlots=[]; consultLoadError='Availability could not be loaded.'; }
+  consultSlotsLoaded=true;
+  const dates=consultDatesOpen();
+  if(!dates.includes(selectedConsultDate)){ selectedConsultDate=dates[0]||''; selectedConsultTime=''; }
+  const times=consultTimesFor(selectedConsultDate);
+  if(!times.some(s=>s.startTime===selectedConsultTime))
+    selectedConsultTime = times.length ? times[0].startTime : '';
+  renderConsultDates(); renderConsultTimes();
+}
 
 function renderConsultDates(){
-  consultDates.innerHTML=consultDayOptions.map((d,i)=>{
-    const id=isoLocalDate(d);
+  if(!consultSlotsLoaded){
+    consultDates.innerHTML='<div class="mono" style="color:#777;padding:10px 2px">Loading availability…</div>';
+    return;
+  }
+  const open=consultDatesOpen();
+  if(!open.length){
+    consultDates.innerHTML='<div class="mono" style="color:#777;padding:10px 2px">'+
+      (consultLoadError||'No consultation slots are open right now. Request the catalogue and we will contact you.')+'</div>';
+    return;
+  }
+  consultDates.innerHTML=open.map(id=>{
+    const d=new Date(id+'T12:00:00');
     const label=d.toLocaleDateString('en-GB',{weekday:'short'});
     const date=d.toLocaleDateString('en-GB',{day:'2-digit',month:'short'});
     return `<button type="button" class="date-btn ${selectedConsultDate===id?'active':''}" data-date="${id}"><span class="day">${label}</span><span class="date">${date}</span></button>`;
   }).join('');
 }
 function renderConsultTimes(){
-  consultTimes.innerHTML=consultTimeOptions.map(t=>`<button type="button" class="time-btn ${selectedConsultTime===t?'active':''}" data-time="${t}">${t}</button>`).join('');
+  const times=consultTimesFor(selectedConsultDate);
+  if(!times.length){
+    consultTimes.innerHTML = consultSlotsLoaded && consultDatesOpen().length
+      ? '<div class="mono" style="color:#777;padding:10px 2px">No times left on this date.</div>' : '';
+    return;
+  }
+  consultTimes.innerHTML=times.map(s=>`<button type="button" class="time-btn ${selectedConsultTime===s.startTime?'active':''}" data-time="${s.startTime}">${s.startTime}</button>`).join('');
 }
 function openConsult(mode='consultation'){
   contactMode=mode;
@@ -1756,11 +1979,10 @@ function openConsult(mode='consultation'){
   bookingBlock.style.display=mode==='consultation'?'block':'none';
   catalogueEmail.checked=true;
   consultSubmit.textContent=mode==='consultation'?'Request free consultation →':'Email me the free catalogue →';
-  if(mode==='consultation' && !selectedConsultDate){
-    selectedConsultDate=isoLocalDate(consultDayOptions[0]);
-    selectedConsultTime='10:00';
-  }
   renderConsultDates(); renderConsultTimes();
+  // Re-read on every open: a slot taken while the page sat idle must
+  // not still look bookable.
+  if(mode==='consultation') loadConsultSlots(true);
 }
 function closeConsult(){
   consultModal.classList.remove('open');
@@ -1782,22 +2004,22 @@ document.querySelectorAll('[data-contact-mode]').forEach(b=>b.addEventListener('
 
 consultDates.addEventListener('click',e=>{
   const b=e.target.closest('[data-date]'); if(!b)return;
-  selectedConsultDate=b.dataset.date; renderConsultDates();
+  selectedConsultDate=b.dataset.date;
+  const t=consultTimesFor(selectedConsultDate);
+  if(!t.some(s=>s.startTime===selectedConsultTime))
+    selectedConsultTime = t.length ? t[0].startTime : '';
+  renderConsultDates(); renderConsultTimes();
 });
 consultTimes.addEventListener('click',e=>{
   const b=e.target.closest('[data-time]'); if(!b)return;
   selectedConsultTime=b.dataset.time; renderConsultTimes();
 });
 
-consultForm.addEventListener('submit',e=>{
+consultForm.addEventListener('submit',async e=>{
   e.preventDefault();
   const fd=new FormData(consultForm);
   const error=document.getElementById('consultError');
   error.textContent='';
-  if(contactMode==='consultation' && (!selectedConsultDate || !selectedConsultTime)){
-    error.textContent='Please select both a date and a one-hour time slot.';
-    return;
-  }
 
   const catalogueRequested=catalogueEmail.checked || contactMode==='catalogue';
   const name=fd.get('fullName');
@@ -1805,25 +2027,46 @@ consultForm.addEventListener('submit',e=>{
   const email=fd.get('email');
   const phone=fd.get('phone');
 
-  // Front-end prototype: keep the full booking request in the browser.
-  // A production deployment can POST this object to CRM/calendar/email services.
-  const request={
-    type:contactMode,
-    fullName:name,
-    company,
-    businessEmail:email,
-    phone,
-    date:contactMode==='consultation'?selectedConsultDate:null,
-    time:contactMode==='consultation'?selectedConsultTime:null,
-    catalogueRequested,
-    createdAt:new Date().toISOString()
-  };
-  try{
-    const previous=JSON.parse(localStorage.getItem('educutConsultationRequests')||'[]');
-    previous.push(request);
-    localStorage.setItem('educutConsultationRequests',JSON.stringify(previous));
-  }catch(_){}
+  let slot=null;
+  if(contactMode==='consultation'){
+    if(!selectedConsultDate || !selectedConsultTime){
+      error.textContent='Please select both a date and a one-hour time slot.';
+      return;
+    }
+    // The slot UUID goes to the server, not the date and time. The server
+    // locks that row, so two visitors submitting the same minute cannot
+    // both win it.
+    slot=consultSlotFor(selectedConsultDate,selectedConsultTime);
+    if(!slot){
+      error.textContent='That slot is no longer available. Please pick another.';
+      await loadConsultSlots(true);
+      return;
+    }
+  }
 
+  const original=consultSubmit.textContent;
+  consultSubmit.disabled=true;
+  consultSubmit.textContent='Sending…';
+
+  let result;
+  try{
+    result = contactMode==='consultation'
+      ? await window.EduCutAPI.book({slotId:slot.slotId,fullName:name,company,email,phone,catalogue:catalogueRequested})
+      : await window.EduCutAPI.requestCatalogue({fullName:name,company,email,phone,source:'LANDING_PAGE'});
+  }catch(err){
+    result={ok:false,error:'We could not reach the server. Please try again.'};
+  }
+
+  consultSubmit.disabled=false;
+  consultSubmit.textContent=original;
+
+  if(!result || !result.ok){
+    error.textContent=(result&&result.error)||'Something went wrong. Please try again.';
+    if(contactMode==='consultation') await loadConsultSlots(true);
+    return;
+  }
+
+  const ref=result.data.reference||result.data.requestId||'';
   consultForm.style.display='none';
   const success=document.getElementById('consultSuccess');
   const dateText=contactMode==='consultation'
@@ -1831,34 +2074,39 @@ consultForm.addEventListener('submit',e=>{
     : '';
   success.style.display='block';
   success.innerHTML=`<div class="consult-success">
-    <div class="mono" style="color:var(--blue);margin-bottom:10px">Request received</div>
-    <h3>${contactMode==='consultation'?'Your consultation request is ready.':'Your catalogue request is ready.'}</h3>
+    <div class="mono" style="color:var(--blue);margin-bottom:10px">${contactMode==='consultation'?'Booking confirmed':'Request received'}</div>
+    <h3>${contactMode==='consultation'?'Your consultation is booked.':'Your catalogue is on its way.'}</h3>
     <p>${contactMode==='consultation'
-      ? `You selected <strong>${dateText}</strong> at <strong>${selectedConsultTime}</strong>. We will use <strong>${email}</strong> and <strong>${phone}</strong> to contact you.`
-      : `The complete EduCut.ai catalogue will be requested for <strong>${email}</strong>.`
-    } ${catalogueRequested && contactMode==='consultation'?'We will also send the full catalogue to your business email.':''}</p>
+      ? `<strong>${dateText}</strong> at <strong>${selectedConsultTime}</strong> (${slot.timezone}). A calendar invitation is being sent to <strong>${email}</strong>. We will also use <strong>${phone}</strong> if we need to reach you.`
+      : `The complete EduCut.ai catalogue will be sent to <strong>${email}</strong>.`
+    } ${catalogueRequested && contactMode==='consultation'?'The full catalogue will follow by email.':''}</p>
+    ${ref?`<p class="mono" style="color:#777;margin-top:8px">Reference ${ref}</p>`:''}
     <button type="button" class="btn btn-lime" style="margin-top:20px" id="consultDone">Done</button>
   </div>`;
-  document.getElementById('consultDone').onclick=()=>{
+  document.getElementById('consultDone').onclick=async()=>{
     closeConsult();
     consultForm.reset();
     consultForm.style.display='block';
     success.style.display='none';
     contactMode='consultation';
-    selectedConsultDate=isoLocalDate(consultDayOptions[0]);
-    selectedConsultTime='10:00';
     catalogueEmail.checked=true;
     document.querySelectorAll('[data-contact-mode]').forEach(b=>b.classList.toggle('active',b.dataset.contactMode==='consultation'));
     bookingBlock.style.display='block';
     consultSubmit.textContent='Request free consultation →';
-    renderConsultDates();renderConsultTimes();
+    // The slot just taken is gone from the next read.
+    await loadConsultSlots(true);
   };
 });
 renderConsultDates();
 renderConsultTimes();
+loadConsultSlots();
 
-const academyDetails = {"A001": {"title": "AI Foundations", "summary": "Build a rigorous understanding of the core disciplines behind modern AI — from machine learning and deep learning to NLP, computer vision, reasoning, safety and AI systems.", "topics": ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Reasoning", "AI Safety"], "audience": "Professionals and technical teams who want a strong, structured foundation across the major fields of Artificial Intelligence.", "count": "24 courses"}, "A002": {"title": "Generative AI", "summary": "Understand how generative AI works and how to use it effectively across professional workflows, from foundation models and multimodal systems to practical business applications.", "topics": ["Generative AI", "Foundation Models", "Multimodal AI", "Business Applications", "Responsible Use"], "audience": "Professionals and organizations that want to understand and adopt the technologies powering today's generative AI systems.", "count": "Specialized courses"}, "A003": {"title": "Prompt Engineering", "summary": "Learn to design reliable prompts for everyday work, data analysis, software development, research, multimodal AI and advanced agentic or RAG-based applications.", "topics": ["Prompt Design", "Advanced Prompting", "Workplace Productivity", "Data Analysis", "Multimodal", "Agents & RAG"], "audience": "Professionals and teams using generative AI to create, analyze, automate or structure business tasks.", "count": "10 courses"}, "A004": {"title": "AI Productivity", "summary": "Turn AI into a practical productivity layer for daily work — improving communication, documents, meetings, research, spreadsheets, planning and repeatable workflows.", "topics": ["Email & Communication", "Documents", "Meetings", "Research", "Excel & Data", "Automation"], "audience": "Business professionals who want measurable productivity gains from AI in their everyday work.", "count": "10 courses"}, "A005": {"title": "Data Analytics", "summary": "Strengthen the statistical, mathematical and analytical foundations needed to interpret data, build reliable analyses and support better evidence-based decisions.", "topics": ["Statistics", "Mathematics", "Data Analysis", "Interpretation", "Decision Support"], "audience": "Professionals and teams who need stronger analytical foundations for data-driven and AI-enabled work.", "count": "Specialized courses"}, "A006": {"title": "AI for Leaders", "summary": "Equip leaders to identify valuable AI opportunities, make informed investment decisions, lead adoption, govern risk and build an AI-ready organization.", "topics": ["AI Strategy", "Use Cases", "Decision-Making", "Transformation", "ROI", "Governance"], "audience": "Executives, managers and decision-makers responsible for AI strategy, investment and organizational change.", "count": "10 courses"}, "A007": {"title": "AI for Marketing", "summary": "Apply AI across the marketing lifecycle — from strategy, content and social media to SEO, advertising, customer insight, analytics, personalization and automation.", "topics": ["Strategy", "Content", "Social Media", "SEO", "Advertising", "Analytics & Automation"], "audience": "Marketing, communication, acquisition and customer-experience professionals.", "count": "10 courses"}, "A008": {"title": "AI for Finance", "summary": "Use AI to enhance financial analysis, reporting, forecasting, accounting, modeling, risk management, investment analysis and finance-team automation.", "topics": ["Financial Analysis", "Forecasting", "Accounting", "Financial Modeling", "Risk", "FP&A & Automation"], "audience": "Finance professionals, analysts, FP&A teams, controllers and finance leaders.", "count": "10 courses"}, "A009": {"title": "AI for HR", "summary": "Apply AI across the employee lifecycle — recruitment, onboarding, learning, performance, engagement, workforce planning, people analytics and responsible HR transformation.", "topics": ["Recruitment", "Onboarding", "L&D", "Performance", "People Analytics", "Workforce Planning"], "audience": "HR professionals, talent leaders, L&D teams, people analytics professionals and managers.", "count": "10 courses"}, "A010": {"title": "AI for Education", "summary": "Integrate AI into teaching and learning — from course design and classroom engagement to personalization, assessment, content creation, research and academic integrity.", "topics": ["Course Design", "Teaching", "Personalized Learning", "Assessment", "Content Creation", "Academic Integrity"], "audience": "Teachers, trainers, academic leaders, researchers and education professionals.", "count": "10 courses"}, "A011": {"title": "AI for Developers", "summary": "Help software teams use AI across the development lifecycle and build AI-powered applications using prompting, APIs, RAG, agents, testing, automation and secure production practices.", "topics": ["AI-Assisted Coding", "LLM APIs", "RAG", "Agents", "Testing", "Production AI"], "audience": "Developers, software engineers and technical teams integrating AI into products and engineering workflows.", "count": "10 courses"}, "A012": {"title": "LLM Engineering", "summary": "Move from LLM fundamentals to production systems — covering context engineering, APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, security and LLMOps.", "topics": ["LLM APIs", "Embeddings", "RAG", "Fine-Tuning", "Evaluation", "LLMOps"], "audience": "Developers, software engineers, AI engineers and technical professionals building LLM applications.", "count": "10 courses"}, "A013": {"title": "RAG Systems", "summary": "Design reliable knowledge-powered AI systems by mastering document ingestion, chunking, embeddings, retrieval, context engineering, advanced RAG, evaluation, security and RAGOps.", "topics": ["Document Ingestion", "Embeddings", "Retrieval", "Context Engineering", "Advanced RAG", "RAGOps"], "audience": "Developers and AI engineers building assistants and applications grounded in enterprise or domain knowledge.", "count": "10 courses"}, "A014": {"title": "AI Agents", "summary": "Learn how to design AI systems that can plan, use tools, manage memory and state, access knowledge, collaborate with other agents and operate safely in production.", "topics": ["Agent Architecture", "Tool Use", "Memory", "Planning", "Multi-Agent Systems", "AgentOps"], "audience": "Developers, AI engineers and advanced professionals building autonomous or semi-autonomous AI workflows.", "count": "10 courses"}, "A015": {"title": "Responsible AI", "summary": "Build AI that is trustworthy and accountable by addressing ethics, fairness, transparency, privacy, safety, governance, regulation and responsible use of generative and agentic AI.", "topics": ["Ethics", "Fairness", "Explainability", "Privacy", "Safety", "Responsible GenAI"], "audience": "Professionals, leaders and teams responsible for designing, using or overseeing AI responsibly.", "count": "10 courses"}, "A016": {"title": "AI Governance", "summary": "Create the organizational controls needed to govern AI at scale — policies, risk assessment, lifecycle governance, compliance, vendor oversight, auditability and enterprise governance programs.", "topics": ["Regulation", "Risk Management", "Policies", "Lifecycle Governance", "Vendor Governance", "Audit"], "audience": "Governance, compliance, risk, legal, security and management teams overseeing organizational AI.", "count": "10 courses"}, "A017": {"title": "AI Security", "summary": "Protect AI systems across their lifecycle — from threat modeling and prompt injection to RAG and agent security, model supply chains, red teaming, monitoring and incident response.", "topics": ["Threat Modeling", "Prompt Injection", "RAG Security", "Agent Security", "Red Teaming", "Incident Response"], "audience": "Security, risk, compliance and technical teams responsible for the safe deployment of AI systems.", "count": "10 courses"}, "A018": {"title": "AI Transformation", "summary": "Turn AI ambition into enterprise execution — assess readiness, define strategy, prioritize use cases, redesign processes, develop skills, govern risk, measure ROI and scale transformation.", "topics": ["AI Readiness", "Strategy", "Use Cases", "Operating Model", "Change Management", "ROI & Scale"], "audience": "Executives, managers, transformation leaders and decision-makers leading organization-wide AI initiatives.", "count": "10 courses"}};
+const academyDetailsFallback = {"A001": {"title": "AI Foundations", "summary": "Build a rigorous understanding of the core disciplines behind modern AI — from machine learning and deep learning to NLP, computer vision, reasoning, safety and AI systems.", "topics": ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Reasoning", "AI Safety"], "audience": "Professionals and technical teams who want a strong, structured foundation across the major fields of Artificial Intelligence.", "count": "24 courses"}, "A002": {"title": "Generative AI", "summary": "Understand how generative AI works and how to use it effectively across professional workflows, from foundation models and multimodal systems to practical business applications.", "topics": ["Generative AI", "Foundation Models", "Multimodal AI", "Business Applications", "Responsible Use"], "audience": "Professionals and organizations that want to understand and adopt the technologies powering today's generative AI systems.", "count": "Specialized courses"}, "A003": {"title": "Prompt Engineering", "summary": "Learn to design reliable prompts for everyday work, data analysis, software development, research, multimodal AI and advanced agentic or RAG-based applications.", "topics": ["Prompt Design", "Advanced Prompting", "Workplace Productivity", "Data Analysis", "Multimodal", "Agents & RAG"], "audience": "Professionals and teams using generative AI to create, analyze, automate or structure business tasks.", "count": "10 courses"}, "A004": {"title": "AI Productivity", "summary": "Turn AI into a practical productivity layer for daily work — improving communication, documents, meetings, research, spreadsheets, planning and repeatable workflows.", "topics": ["Email & Communication", "Documents", "Meetings", "Research", "Excel & Data", "Automation"], "audience": "Business professionals who want measurable productivity gains from AI in their everyday work.", "count": "10 courses"}, "A005": {"title": "Data Analytics", "summary": "Strengthen the statistical, mathematical and analytical foundations needed to interpret data, build reliable analyses and support better evidence-based decisions.", "topics": ["Statistics", "Mathematics", "Data Analysis", "Interpretation", "Decision Support"], "audience": "Professionals and teams who need stronger analytical foundations for data-driven and AI-enabled work.", "count": "Specialized courses"}, "A006": {"title": "AI for Leaders", "summary": "Equip leaders to identify valuable AI opportunities, make informed investment decisions, lead adoption, govern risk and build an AI-ready organization.", "topics": ["AI Strategy", "Use Cases", "Decision-Making", "Transformation", "ROI", "Governance"], "audience": "Executives, managers and decision-makers responsible for AI strategy, investment and organizational change.", "count": "10 courses"}, "A007": {"title": "AI for Marketing", "summary": "Apply AI across the marketing lifecycle — from strategy, content and social media to SEO, advertising, customer insight, analytics, personalization and automation.", "topics": ["Strategy", "Content", "Social Media", "SEO", "Advertising", "Analytics & Automation"], "audience": "Marketing, communication, acquisition and customer-experience professionals.", "count": "10 courses"}, "A008": {"title": "AI for Finance", "summary": "Use AI to enhance financial analysis, reporting, forecasting, accounting, modeling, risk management, investment analysis and finance-team automation.", "topics": ["Financial Analysis", "Forecasting", "Accounting", "Financial Modeling", "Risk", "FP&A & Automation"], "audience": "Finance professionals, analysts, FP&A teams, controllers and finance leaders.", "count": "10 courses"}, "A009": {"title": "AI for HR", "summary": "Apply AI across the employee lifecycle — recruitment, onboarding, learning, performance, engagement, workforce planning, people analytics and responsible HR transformation.", "topics": ["Recruitment", "Onboarding", "L&D", "Performance", "People Analytics", "Workforce Planning"], "audience": "HR professionals, talent leaders, L&D teams, people analytics professionals and managers.", "count": "10 courses"}, "A010": {"title": "AI for Education", "summary": "Integrate AI into teaching and learning — from course design and classroom engagement to personalization, assessment, content creation, research and academic integrity.", "topics": ["Course Design", "Teaching", "Personalized Learning", "Assessment", "Content Creation", "Academic Integrity"], "audience": "Teachers, trainers, academic leaders, researchers and education professionals.", "count": "10 courses"}, "A011": {"title": "AI for Developers", "summary": "Help software teams use AI across the development lifecycle and build AI-powered applications using prompting, APIs, RAG, agents, testing, automation and secure production practices.", "topics": ["AI-Assisted Coding", "LLM APIs", "RAG", "Agents", "Testing", "Production AI"], "audience": "Developers, software engineers and technical teams integrating AI into products and engineering workflows.", "count": "10 courses"}, "A012": {"title": "LLM Engineering", "summary": "Move from LLM fundamentals to production systems — covering context engineering, APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, security and LLMOps.", "topics": ["LLM APIs", "Embeddings", "RAG", "Fine-Tuning", "Evaluation", "LLMOps"], "audience": "Developers, software engineers, AI engineers and technical professionals building LLM applications.", "count": "10 courses"}, "A013": {"title": "RAG Systems", "summary": "Design reliable knowledge-powered AI systems by mastering document ingestion, chunking, embeddings, retrieval, context engineering, advanced RAG, evaluation, security and RAGOps.", "topics": ["Document Ingestion", "Embeddings", "Retrieval", "Context Engineering", "Advanced RAG", "RAGOps"], "audience": "Developers and AI engineers building assistants and applications grounded in enterprise or domain knowledge.", "count": "10 courses"}, "A014": {"title": "AI Agents", "summary": "Learn how to design AI systems that can plan, use tools, manage memory and state, access knowledge, collaborate with other agents and operate safely in production.", "topics": ["Agent Architecture", "Tool Use", "Memory", "Planning", "Multi-Agent Systems", "AgentOps"], "audience": "Developers, AI engineers and advanced professionals building autonomous or semi-autonomous AI workflows.", "count": "10 courses"}, "A015": {"title": "Responsible AI", "summary": "Build AI that is trustworthy and accountable by addressing ethics, fairness, transparency, privacy, safety, governance, regulation and responsible use of generative and agentic AI.", "topics": ["Ethics", "Fairness", "Explainability", "Privacy", "Safety", "Responsible GenAI"], "audience": "Professionals, leaders and teams responsible for designing, using or overseeing AI responsibly.", "count": "10 courses"}, "A016": {"title": "AI Governance", "summary": "Create the organizational controls needed to govern AI at scale — policies, risk assessment, lifecycle governance, compliance, vendor oversight, auditability and enterprise governance programs.", "topics": ["Regulation", "Risk Management", "Policies", "Lifecycle Governance", "Vendor Governance", "Audit"], "audience": "Governance, compliance, risk, legal, security and management teams overseeing organizational AI.", "count": "10 courses"}, "A017": {"title": "AI Security", "summary": "Protect AI systems across their lifecycle — from threat modeling and prompt injection to RAG and agent security, model supply chains, red teaming, monitoring and incident response.", "topics": ["Threat Modeling", "Prompt Injection", "RAG Security", "Agent Security", "Red Teaming", "Incident Response"], "audience": "Security, risk, compliance and technical teams responsible for the safe deployment of AI systems.", "count": "10 courses"}, "A018": {"title": "AI Transformation", "summary": "Turn AI ambition into enterprise execution — assess readiness, define strategy, prioritize use cases, redesign processes, develop skills, govern risk, measure ROI and scale transformation.", "topics": ["AI Readiness", "Strategy", "Use Cases", "Operating Model", "Change Management", "ROI & Scale"], "audience": "Executives, managers, transformation leaders and decision-makers leading organization-wide AI initiatives.", "count": "10 courses"}};
 
+// Edit an academy in the Administrator Workspace and it appears here on
+// the next load. The hardcoded object above is only used when the
+// catalogue could not be read at all.
+const academyDetails = (window.EduCutAPI && window.EduCutAPI.academyDetails()) || academyDetailsFallback;
 const academies = Object.entries(academyDetails).map(([code,d]) => [code,d.title]);
 const academyGrid = document.getElementById('academyGrid');
 const academyExplorer = document.getElementById('academyExplorer');
@@ -2259,35 +2507,53 @@ async function submitAssessment(e){
  btn.disabled=true;
  btn.textContent='Generating your plan…';
 
- const payload={fullName:f.get('fullName'),company:f.get('company'),email:f.get('email'),answers};
-
- // Always calculate a valid recommendation locally first so the button works
- // even when the HTML file is opened directly without the Node server.
+ // Scoring stays in the browser: those weights are marketing logic, not a
+ // security boundary, and a visitor who drops connection still sees a
+ // result instead of losing twenty answers. What the browser is not
+ // trusted with is which courses exist or what they cost.
  const localResult=calculateLocalAssessment(answers);
 
  try{
-   if(location.protocol==='file:'){
+   if(location.protocol==='file:' || !window.EduCutAPI){
      renderResults(localResult,f.get('email'));
      return;
    }
 
-   const r=await fetch('/api/assessment',{
-     method:'POST',
-     headers:{'Content-Type':'application/json'},
-     body:JSON.stringify(payload)
+   const res=await window.EduCutAPI.assessment({
+     answers,
+     focusKeys:(localResult.focusAreas||[]).map(x=>x.key),
+     maturityScore:localResult.maturityScore,
+     maturityLabel:localResult.maturityLabel,
+     focusAreas:localResult.focusAreas,
+     fullName:f.get('fullName'),
+     company:f.get('company'),
+     email:f.get('email')
    });
 
-   let data=null;
-   const contentType=r.headers.get('content-type')||'';
-   if(contentType.includes('application/json')) data=await r.json();
-   else throw new Error('The assessment API did not return JSON.');
+   if(!res.ok) throw new Error(res.error);
 
-   if(!r.ok) throw new Error(data.error||'Unable to save assessment.');
-   data.saved=true;
+   // The server returns course codes it resolved against published rows.
+   // Resolve them against the catalogue for display, so every title and
+   // price on screen traces back to a real course record.
+   const R=window.EduCutAPI.resolvePlan.bind(window.EduCutAPI);
+   const plans={plan3:R(res.data.plan3),plan5:R(res.data.plan5),plan7:R(res.data.plan7)};
+   const quotePlan=plan=>{
+     const subtotal=plan.reduce((sum,c)=>sum+(Number(c.price6)||0),0);
+     const discount=plan.length>=6?.20:plan.length>=5?.15:plan.length>=3?.10:0;
+     return {participants:'Up to 6 participants',subtotalCHFHT:subtotal,discountPercent:Math.round(discount*100),estimatedTotalCHFHT:Math.round(subtotal*(1-discount))};
+   };
+
+   const data=Object.assign({},localResult,{
+     assessmentId:res.data.assessmentId,
+     plans,
+     quote:{plan3:quotePlan(plans.plan3),plan5:quotePlan(plans.plan5),plan7:quotePlan(plans.plan7)},
+     serverQuotation:res.data.quotation||null,
+     saved:true
+   });
    renderResults(data,f.get('email'));
  }catch(err){
-   console.error('Assessment API fallback:',err);
-   // Do not block the user from seeing their path because of a deployment/API issue.
+   console.error('Assessment save failed:',err);
+   // Never block someone from seeing their path because of our outage.
    localResult.apiError=err.message;
    renderResults(localResult,f.get('email'));
  }
