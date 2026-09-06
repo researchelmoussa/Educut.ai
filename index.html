@@ -1485,6 +1485,74 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 .cons-status.s-NO_SHOW{background:#f0e0c8;color:#7a5320}
 @media(max-width:760px){.cons-day{min-height:56px}}
 </style>
+
+<script>
+/* ===================================================================
+   Route location.
+
+   The workspaces are client-side routes in a single file. Written as
+   real paths they cannot survive a refresh: the browser asks the server
+   for /admin/dashboard and there is nothing there. Carrying the route in
+   the fragment keeps it entirely client-side, so reload, Back and a
+   pasted link all work with no rewrite rule on any host.
+
+   Legacy /admin/... links still resolve — they are upgraded to the
+   fragment form on arrival.
+   =================================================================== */
+(function () {
+  'use strict';
+  var PROTECTED = /^\/(admin|company|academy)(\/|$)/;
+  var AUTH = ['/signin', '/signup'];
+
+  var R = {
+    // The route the app should act on, wherever it currently lives.
+    current: function () {
+      var h = location.hash || '';
+      if (h.length > 1) {
+        var p = h.slice(1);
+        return p.charAt(0) === '/' ? p : '/' + p;
+      }
+      var path = location.pathname || '/';
+      return (PROTECTED.test(path) || AUTH.indexOf(path) !== -1) ? path : '/';
+    },
+
+    isProtected: function (p) { return PROTECTED.test(p || R.current()); },
+    isAuth: function (p) { return AUTH.indexOf(p || R.current()) !== -1; },
+
+    // Write a route without ever asking the server for it.
+    go: function (path, mode) {
+      if (!path) return;
+      var target = '#' + path;
+      if (location.hash === target) return;
+      try {
+        if (mode === 'push') location.hash = target;
+        else history.replaceState({}, '', location.pathname + location.search + target);
+      } catch (_) { location.hash = target; }
+    },
+
+    // Back to the public landing page, without a server round trip that
+    // would 404 on a static host.
+    landing: function () {
+      try {
+        history.replaceState({}, '', location.pathname + location.search);
+      } catch (_) {}
+      if (location.hash) location.hash = '';
+    }
+  };
+
+  // A bookmarked or emailed /admin/dashboard arrives as a real path. If the
+  // host served index.html for it, convert it to the fragment form so the
+  // next refresh is safe too.
+  try {
+    var p = location.pathname || '/';
+    if (!location.hash && (PROTECTED.test(p) || AUTH.indexOf(p) !== -1)) {
+      history.replaceState({}, '', '/' + '#' + p);
+    }
+  } catch (_) {}
+
+  window.educutRoute = R;
+})();
+</script>
 </head>
 <body class="motion-ready">
 <script>
@@ -2961,10 +3029,9 @@ document.addEventListener('keydown',e=>{
     if(lastNavigationKey===`${role}|${path}` && routeView.classList.contains('open')) return;
     lastNavigationKey=`${role}|${path}`;
 
-    if(location.protocol!=='file:' && location.pathname!==path){
-      if(mode==='push') history.pushState({},'',path);
-      else history.replaceState({},'',path);
-    }
+    // Fragment, not path: a real path cannot survive a refresh on a
+    // static host, which is what produced the 404s.
+    if(mode!=='none' || !location.hash) window.educutRoute.go(path, mode);
 
     renderDashboard(path,role);
   }
@@ -2981,8 +3048,18 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
   document.querySelectorAll('[data-auth-open]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openAuth(a.dataset.authOpen)}));authClose.onclick=closeAuth;authModal.addEventListener('click',e=>{if(e.target===authModal)closeAuth()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&authModal.classList.contains('open'))closeAuth()});
   authModal.addEventListener('pointermove',e=>{const r=authRail?.getBoundingClientRect();if(!r)return;authRail.style.setProperty('--auth-grid-x',`${(e.clientX-r.left)*.015}px`);authRail.style.setProperty('--auth-grid-y',`${(e.clientY-r.top)*.015}px`)});
-  window.addEventListener('popstate',()=>{const p=location.pathname;if(/^\/(admin|company|academy)(\/|$)/.test(p))navigateProtected(p,'none');else{lastNavigationKey='';routeView.classList.remove('open');routeView.setAttribute('aria-hidden','true');document.body.style.overflow=''}});
-  const initial=location.pathname;if(['/signin','/signup'].includes(initial))openAuth(initial==='/signup'?'signup':'signin');else if(/^\/(admin|company|academy)(\/|$)/.test(initial))navigateProtected(initial,'none');
+  function onRouteChange(){
+    const p=window.educutRoute.current();
+    if(window.educutRoute.isProtected(p)) navigateProtected(p,'none');
+    else{lastNavigationKey='';routeView.classList.remove('open');routeView.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+  }
+  window.addEventListener('popstate',onRouteChange);
+  window.addEventListener('hashchange',onRouteChange);
+  // Reopen whatever workspace the URL names. This is what makes a
+  // refresh land back where you were instead of on a 404.
+  const initial=window.educutRoute.current();
+  if(window.educutRoute.isAuth(initial)) openAuth(initial==='/signup'?'signup':'signin');
+  else if(window.educutRoute.isProtected(initial)) navigateProtected(initial,'none');
 })();
 
 </script>
@@ -4475,13 +4552,10 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   }
 
   function redirectPublicLanding(){
-    if(location.protocol==='file:'){
-      // A local HTML prototype has no server root "/". Reloading the same file
-      // after clearing the session produces the public landing state.
-      location.replace(location.pathname);
-      return;
-    }
-    window.location.replace('/');
+    // Clearing the fragment is enough and works identically on a static
+    // host, behind a rewrite, and on file:// — no request is made.
+    window.educutRoute.landing();
+    location.reload();
   }
 
   function broadcastLogout(){
@@ -4569,21 +4643,21 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   };
 
   function protectedPath(){
-    return /^\/(admin|company|academy)(\/|$)/.test(location.pathname);
+    return window.educutRoute.isProtected();
   }
 
   function enforceUnauthenticatedGuard(){
     if(!protectedPath()) return;
     if(!currentSession()){
       hideProtectedUI();
-      if(location.protocol==='file:') location.replace(location.pathname);
-      else location.replace('/');
+      window.educutRoute.landing();
     }
   }
 
   // Recheck after bfcache restore / browser Back.
   window.addEventListener('pageshow',e=>{ if(e.persisted || protectedPath()) enforceUnauthenticatedGuard(); });
   window.addEventListener('popstate',()=>setTimeout(enforceUnauthenticatedGuard,0));
+  window.addEventListener('hashchange',()=>setTimeout(enforceUnauthenticatedGuard,0));
   window.addEventListener('focus',enforceUnauthenticatedGuard);
 
   function wireLogoutControls(){
