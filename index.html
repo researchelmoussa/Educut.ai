@@ -1476,6 +1476,8 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 .cons-pill{font:600 10px/1.6 ui-monospace,monospace;letter-spacing:.04em;padding:1px 6px;border-radius:2px;align-self:flex-start}
 .cons-pill-booked{background:var(--lime,#c3f53c);color:#111}
 .cons-pill-open{background:#eef0f4;color:#666}
+.cons-pill-closed{background:#f0e0c8;color:#7a5320}
+.cons-pill-past{background:#e6e6ee;color:#55556b}
 .cons-legend{display:flex;gap:16px;align-items:center;margin-top:12px;font:600 11px/1 ui-monospace,monospace;color:#777}
 .cons-status{font:600 10px/1.6 ui-monospace,monospace;letter-spacing:.05em;padding:2px 8px;border-radius:2px;background:#eef0f4;color:#444}
 .cons-status.s-CONFIRMED{background:var(--lime,#c3f53c);color:#111}
@@ -1492,6 +1494,10 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 .cons-hover dt{font:600 10px/1.6 ui-monospace,monospace;letter-spacing:.05em;color:#888;text-transform:uppercase}
 .cons-hover dd{margin:0;font-size:12.5px;line-height:1.5;color:#222;overflow-wrap:anywhere}
 .cons-hover .cons-hover-note{margin-top:10px;padding-top:9px;border-top:1px solid #ececec;font-size:12px;color:#555;white-space:pre-wrap}
+.cons-hover-line{display:flex;align-items:center;gap:8px;padding:3px 0;font-size:12px;line-height:1.4}
+.cons-hover-time{font:600 11px/1 ui-monospace,monospace;color:#111;min-width:38px}
+.cons-hover-line>span:nth-child(2){flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cons-hover-more{font:600 10px/1.6 ui-monospace,monospace;color:#888;padding-top:4px}
 .cons-slots{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .cons-slot{display:flex;flex-direction:column;gap:3px;border:1px solid #e0e0e0;background:#fff;padding:8px 11px;min-width:104px}
 .cons-slot .t{font:600 13px/1.2 ui-monospace,monospace}
@@ -3362,6 +3368,56 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       ${r.notes?`<div class="cons-hover-note">${esc(r.notes)}</div>`:''}`;
   }
 
+  function consHoverDayHtml(iso, dayRows, sum){
+    const when=new Date(iso+'T12:00:00').toLocaleDateString('en-GB',
+      {weekday:'long',day:'numeric',month:'long',year:'numeric'});
+    const s=sum||{open:0,booked:0,closed:0,total:0};
+
+    // Live bookings first — they are what an administrator is looking for.
+    const order={REQUESTED:0,CONFIRMED:1,COMPLETED:2,NO_SHOW:3,CANCELLED:4};
+    const sorted=(dayRows||[]).slice().sort((a,b)=>
+      (order[a.status]??9)-(order[b.status]??9) || a.startTime.localeCompare(b.startTime));
+    const shown=sorted.slice(0,5);
+
+    const lines=shown.map(r=>`<div class="cons-hover-line">
+        <span class="cons-hover-time">${esc(r.startTime)}</span>
+        <span>${esc(r.fullName)}${r.company?` · ${esc(r.company)}`:''}</span>
+        <span class="cons-status s-${esc(r.status)}">${esc(r.status)}</span>
+      </div>`).join('');
+
+    return `<div class="cons-hover-ref">${esc(iso)}</div>
+      <h4>${esc(when)}</h4>
+      <dl>
+        <dt>Slots</dt><dd>${s.open} open · ${s.booked} booked${s.closed?` · ${s.closed} closed`:''}${s.total?` of ${s.total}`:''}</dd>
+        <dt>Bookings</dt><dd>${sorted.length||'None'}</dd>
+      </dl>
+      ${lines?`<div class="cons-hover-note" style="white-space:normal">${lines}
+        ${sorted.length>shown.length?`<div class="cons-hover-more">+${sorted.length-shown.length} more</div>`:''}</div>`:''}`;
+  }
+
+  function consWireDayHover(board, byDate, slotBy){
+    board.querySelectorAll('[data-cons-day]').forEach(cell=>{
+      const iso=cell.dataset.consDay;
+      cell.addEventListener('mouseenter',()=>{
+        const el=consHoverNode();
+        el.innerHTML=consHoverDayHtml(iso, byDate[iso]||[], slotBy[iso]);
+        el.classList.add('show');
+      });
+      cell.addEventListener('mousemove',e=>consHoverTrack(e));
+      cell.addEventListener('mouseleave',consHoverHide);
+    });
+  }
+
+  // Shared positioning: keep clear of the cursor, flip near an edge.
+  function consHoverTrack(e){
+    const el=consHoverNode(); if(!el.classList.contains('show')) return;
+    const b=el.getBoundingClientRect();
+    let x=e.clientX+18, y=e.clientY+18;
+    if(x+b.width  > window.innerWidth  - 12) x=e.clientX-b.width-18;
+    if(y+b.height > window.innerHeight - 12) y=Math.max(12,e.clientY-b.height-18);
+    el.style.left=x+'px'; el.style.top=y+'px';
+  }
+
   function consWireHover(board, rows){
     const byId={}; rows.forEach(r=>{byId[r.id]=r});
     board.querySelectorAll('[data-cons-row]').forEach(tr=>{
@@ -3371,14 +3427,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         el.innerHTML=consHoverHtml(r);
         el.classList.add('show');
       });
-      tr.addEventListener('mousemove',e=>{
-        const el=consHoverNode(); if(!el.classList.contains('show')) return;
-        const b=el.getBoundingClientRect();
-        let x=e.clientX+18, y=e.clientY+18;
-        if(x+b.width  > window.innerWidth  - 12) x=e.clientX-b.width-18;
-        if(y+b.height > window.innerHeight - 12) y=Math.max(12,e.clientY-b.height-18);
-        el.style.left=x+'px'; el.style.top=y+'px';
-      });
+      tr.addEventListener('mousemove',consHoverTrack);
       tr.addEventListener('mouseleave',consHoverHide);
     });
     // A card left floating after the table re-renders would be a ghost.
@@ -3599,12 +3648,17 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     for(let i=0;i<lead;i++) cells+=`<div class="cons-day cons-muted"></div>`;
     for(let d=1;d<=days;d++){
       const iso=consIso(new Date(m.getFullYear(),m.getMonth(),d));
-      const n=(byDate[iso]||[]).filter(r=>r.status!=='CANCELLED').length;
-      const open=slotBy[iso]?slotBy[iso].open:0;
+      const sum=slotBy[iso]||{open:0,booked:0,closed:0,total:0};
+      // Bookings that no longer hold a slot (completed, no-show, cancelled)
+      // drop out of the occupancy buckets; surface them so a day with
+      // history does not look untouched.
+      const past=Math.max(0,(byDate[iso]||[]).length-sum.booked);
       cells+=`<button type="button" class="cons-day ${consState.day===iso?'cons-active':''} ${iso===todayIso?'cons-today':''}" data-cons-day="${iso}">
         <span class="cons-daynum">${String(d).padStart(2,'0')}</span>
-        ${n?`<span class="cons-pill cons-pill-booked">${n} booked</span>`:''}
-        ${open?`<span class="cons-pill cons-pill-open">${open} open</span>`:''}
+        ${sum.booked?`<span class="cons-pill cons-pill-booked">${sum.booked} booked</span>`:''}
+        ${sum.open?`<span class="cons-pill cons-pill-open">${sum.open} open</span>`:''}
+        ${sum.closed?`<span class="cons-pill cons-pill-closed">${sum.closed} closed</span>`:''}
+        ${past?`<span class="cons-pill cons-pill-past">${past} past</span>`:''}
       </button>`;
     }
 
@@ -3628,7 +3682,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         </div>
       </div>
       <div class="cons-cal">${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d=>`<div class="cons-cal-head">${d}</div>`).join('')}${cells}</div>
-      <div class="cons-legend"><span><span class="cons-pill cons-pill-booked">booked</span> consultations</span><span><span class="cons-pill cons-pill-open">open</span> free slots</span><span>select a day to manage its slots</span></div>
+      <div class="cons-legend"><span><span class="cons-pill cons-pill-booked">booked</span> consultations</span><span><span class="cons-pill cons-pill-open">open</span> free slots</span><span><span class="cons-pill cons-pill-closed">closed</span> withdrawn</span><span><span class="cons-pill cons-pill-past">past</span> no longer held</span><span>hover a day for detail · click to manage its slots</span></div>
       ${consState.day?`
         <div class="admin-section-head" style="margin-top:22px">
           <div><div class="mono" style="color:var(--blue)">Slots</div>
@@ -3709,6 +3763,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     });
 
     consWireHover(board, listRows);
+    consWireDayHover(board, byDate, slotBy);
 
     board.querySelectorAll('[data-cons-set]').forEach(b=>b.onclick=async()=>{
       b.disabled=true; const was=b.textContent; b.textContent='…';
