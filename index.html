@@ -58,6 +58,7 @@
   // Exposed so the landing-page layer shares one transport, one URL
   // and one key, and inherits the session token when signed in.
   api.rpc = (fn, args, sync) => rpc(fn, args || {}, sync);
+  api.config = { url: SUPABASE_URL };
 
   if (!configured) {
     console.info('[educut] Supabase not configured — running on local state.');
@@ -626,6 +627,17 @@
       if (r.ok && r.data) { clearIdem('assessment'); return { ok: true, data: r.data }; }
       return { ok: false, error: messageFor(r) };
     });
+  };
+
+  // The token is the credential. It only exists because the form was
+  // completed, the bucket behind it is private, and the endpoint mints
+  // a 60-second signed URL per download.
+  API.catalogueUrl = function (token) {
+    if (!token) return null;
+    const s = window.educutSupabase;
+    const base = (s && s.config && s.config.url) || '';
+    return base ? base.replace(/\/+$/, '') +
+      '/functions/v1/catalogue-download?token=' + encodeURIComponent(token) : null;
   };
 
   window.EduCutAPI = API;
@@ -1448,6 +1460,28 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 }
 
 </style>
+
+<style>
+.cons-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:14px}
+.cons-cal-head{font:600 11px/1.4 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:#777;padding:4px 2px;text-align:center}
+.cons-day{min-height:74px;border:1px solid #e4e4e4;background:#fff;padding:7px 8px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:5px;transition:border-color .12s,background .12s}
+.cons-day:hover{border-color:var(--blue,#1b3fae)}
+.cons-day.cons-muted{background:#fafafa;color:#bbb;cursor:default}
+.cons-day.cons-active{border-color:var(--blue,#1b3fae);box-shadow:inset 3px 0 0 var(--lime,#c3f53c)}
+.cons-day.cons-today .cons-daynum{color:var(--blue,#1b3fae);font-weight:700}
+.cons-daynum{font:600 13px/1 ui-monospace,monospace}
+.cons-pill{font:600 10px/1.6 ui-monospace,monospace;letter-spacing:.04em;padding:1px 6px;border-radius:2px;align-self:flex-start}
+.cons-pill-booked{background:var(--lime,#c3f53c);color:#111}
+.cons-pill-open{background:#eef0f4;color:#666}
+.cons-legend{display:flex;gap:16px;align-items:center;margin-top:12px;font:600 11px/1 ui-monospace,monospace;color:#777}
+.cons-status{font:600 10px/1.6 ui-monospace,monospace;letter-spacing:.05em;padding:2px 8px;border-radius:2px;background:#eef0f4;color:#444}
+.cons-status.s-CONFIRMED{background:var(--lime,#c3f53c);color:#111}
+.cons-status.s-CANCELLED{background:#f4d4d4;color:#7a2020}
+.cons-status.s-COMPLETED,.cons-status.s-SENT{background:#dfe7ff;color:#1b3fae}
+.cons-status.s-FAILED{background:#f4d4d4;color:#7a2020}
+.cons-status.s-NO_SHOW{background:#f0e0c8;color:#7a5320}
+@media(max-width:760px){.cons-day{min-height:56px}}
+</style>
 </head>
 <body class="motion-ready">
 <script>
@@ -2067,6 +2101,10 @@ consultForm.addEventListener('submit',async e=>{
   }
 
   const ref=result.data.reference||result.data.requestId||'';
+  // A consultation with the catalogue box ticked queues the PDF too, but
+  // only request_catalogue() returns a token, so offer the button when
+  // we actually have one.
+  const dlUrl=window.EduCutAPI.catalogueUrl(result.data.downloadToken);
   consultForm.style.display='none';
   const success=document.getElementById('consultSuccess');
   const dateText=contactMode==='consultation'
@@ -2077,11 +2115,12 @@ consultForm.addEventListener('submit',async e=>{
     <div class="mono" style="color:var(--blue);margin-bottom:10px">${contactMode==='consultation'?'Booking confirmed':'Request received'}</div>
     <h3>${contactMode==='consultation'?'Your consultation is booked.':'Your catalogue is on its way.'}</h3>
     <p>${contactMode==='consultation'
-      ? `<strong>${dateText}</strong> at <strong>${selectedConsultTime}</strong> (${slot.timezone}). A calendar invitation is being sent to <strong>${email}</strong>. We will also use <strong>${phone}</strong> if we need to reach you.`
-      : `The complete EduCut.ai catalogue will be sent to <strong>${email}</strong>.`
-    } ${catalogueRequested && contactMode==='consultation'?'The full catalogue will follow by email.':''}</p>
+      ? `<strong>${dateText}</strong> at <strong>${selectedConsultTime}</strong> (${slot.timezone}). Our team will confirm by email at <strong>${email}</strong> and send the meeting link. We will also use <strong>${phone}</strong> if we need to reach you.`
+      : `Your catalogue is ready to download, and a copy will also be sent to <strong>${email}</strong>.`
+    } ${catalogueRequested && contactMode==='consultation'?'The full catalogue is available below and will also follow by email.':''}</p>
     ${ref?`<p class="mono" style="color:#777;margin-top:8px">Reference ${ref}</p>`:''}
-    <button type="button" class="btn btn-lime" style="margin-top:20px" id="consultDone">Done</button>
+    ${dlUrl?`<a class="btn btn-lime" style="margin-top:20px;display:inline-block" href="${dlUrl}" target="_blank" rel="noopener" id="catalogueDownload">Download the catalogue (PDF) →</a>`:''}
+    <button type="button" class="btn ${dlUrl?'btn-outline':'btn-lime'}" style="margin-top:20px${dlUrl?';margin-left:10px':''}" id="consultDone">Done</button>
   </div>`;
   document.getElementById('consultDone').onclick=async()=>{
     closeConsult();
@@ -3077,14 +3116,16 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         ${navBtn('courses','05','Courses')}
         ${navBtn('enrollments','06','Enrollments & Seats')}
         <div class="admin-nav-group mono">Commercial</div>
-        ${navBtn('subscriptions','07','Subscriptions')}
-        ${navBtn('contracts','08','Contracts & Billing')}
+        ${navBtn('consultations','07','Consultations')}
+        ${navBtn('catalogue','08','Catalogue Requests')}
+        ${navBtn('subscriptions','09','Subscriptions')}
+        ${navBtn('contracts','10','Contracts & Billing')}
         <div class="admin-nav-group mono">Intelligence</div>
-        ${navBtn('analytics','09','Analytics')}
-        ${navBtn('certificates','10','Certificates')}
+        ${navBtn('analytics','11','Analytics')}
+        ${navBtn('certificates','12','Certificates')}
         <div class="admin-nav-group mono">Governance</div>
-        ${navBtn('security','11','Security & Roles')}
-        ${navBtn('settings','12','Platform Settings')}
+        ${navBtn('security','13','Security & Roles')}
+        ${navBtn('settings','14','Platform Settings')}
       </nav></aside>
       <main class="admin-main"><header class="admin-topbar">
         <button class="admin-icon-btn admin-menu-toggle" id="adminMenu">☰</button>
@@ -3119,8 +3160,192 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
   function renderPage(){
     const P=document.getElementById('adminPage'); if(!P)return;
-    const map={dashboard:renderDashboard,companies:renderCompanies,'company-learners':renderCompanyLearners,individuals:renderIndividuals,academies:renderAcademies,courses:renderCourses,enrollments:renderEnrollments,subscriptions:renderSubscriptions,contracts:renderContracts,analytics:renderAnalytics,certificates:renderCertificates,security:renderSecurity,settings:renderSettings};
+    const map={dashboard:renderDashboard,consultations:renderConsultations,catalogue:renderCatalogueRequests,companies:renderCompanies,'company-learners':renderCompanyLearners,individuals:renderIndividuals,academies:renderAcademies,courses:renderCourses,enrollments:renderEnrollments,subscriptions:renderSubscriptions,contracts:renderContracts,analytics:renderAnalytics,certificates:renderCertificates,security:renderSecurity,settings:renderSettings};
     (map[app.page]||renderDashboard)(P);
+  }
+
+
+  // -------------------------------------------------------------------
+  // CONSULTATIONS
+  //
+  // Bookings are worked here rather than pushed to anyone's personal
+  // calendar. That keeps the whole flow inside the platform: no Google
+  // credential in the path, and nothing to break when a token expires.
+  // -------------------------------------------------------------------
+  const consState={month:null,day:null,rows:[],slots:[],loaded:false,error:''};
+
+  function consMonthStart(d){return new Date(d.getFullYear(),d.getMonth(),1)}
+  function consIso(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+
+  async function consLoad(){
+    if(!consState.month) consState.month=consMonthStart(new Date());
+    const from=consState.month;
+    const to=new Date(from.getFullYear(),from.getMonth()+1,0);
+    consState.error='';
+    try{
+      const sb=window.educutSupabase;
+      if(!sb||typeof sb.rpc!=='function'){consState.error='Not connected to the database.';consState.loaded=true;return}
+      const [a,b]=await Promise.all([
+        sb.rpc('admin_consultations',{p_from:consIso(from),p_to:consIso(to)}),
+        sb.rpc('admin_slot_overview',{p_from:consIso(from),p_to:consIso(to)})
+      ]);
+      consState.rows  = (a.ok&&Array.isArray(a.data))?a.data:[];
+      consState.slots = (b.ok&&Array.isArray(b.data))?b.data:[];
+      if(!a.ok) consState.error='Consultations could not be loaded'+(a.status===401||a.status===403?' — your session may have expired.':'.');
+    }catch(err){ consState.error='Consultations could not be loaded.'; }
+    consState.loaded=true;
+  }
+
+  const catState={rows:[],loaded:false,error:''};
+
+  async function catLoad(){
+    catState.error='';
+    try{
+      const sb=window.educutSupabase;
+      if(!sb||typeof sb.rpc!=='function'){catState.error='Not connected to the database.';catState.loaded=true;return}
+      const r=await sb.rpc('admin_catalogue_requests');
+      catState.rows=(r.ok&&Array.isArray(r.data))?r.data:[];
+      if(!r.ok) catState.error='Catalogue requests could not be loaded.';
+    }catch(_){ catState.error='Catalogue requests could not be loaded.'; }
+    catState.loaded=true;
+  }
+
+  function renderCatalogueRequests(P){
+    P.innerHTML=pageHead('/ADMIN/CATALOGUE','Catalogue Requests',
+      'Everyone who asked for the catalogue PDF, with how many times they actually downloaded it. A request is stored the moment the form is submitted; the download is gated by a per-request token.')+
+      `<div id="catBoard"><div class="admin-neutral-panel"><p>Loading requests…</p></div></div>`;
+    catLoad().then(()=>catPaint());
+  }
+
+  function catPaint(){
+    const board=document.getElementById('catBoard'); if(!board)return;
+    const rows=catState.rows;
+    const downloaded=rows.filter(r=>r.downloadCount>0).length;
+    const kpis=[['Total requests',rows.length],
+                ['Downloaded',downloaded],
+                ['Requested, never downloaded',rows.length-downloaded],
+                ['Total downloads',rows.reduce((a,b)=>a+(b.downloadCount||0),0)]];
+
+    board.innerHTML=`
+    ${catState.error?`<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 #c33"><strong>${esc(catState.error)}</strong></div>`:''}
+    <div class="admin-kpis">${kpis.map((x,i)=>`<div class="admin-kpi"><div class="mono">${String(i+1).padStart(2,'0')} · ${esc(x[0])}</div><strong>${x[1]}</strong></div>`).join('')}</div>
+    <section class="admin-section">
+      <div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Pipeline</div><h2>Catalogue requests</h2></div></div>
+      ${rows.length?`<div class="admin-table-wrap"><table class="admin-table">
+        <thead><tr><th>Contact</th><th>Company</th><th>Phone</th><th>Requested</th><th>Downloads</th><th>Status</th></tr></thead>
+        <tbody>${rows.map(r=>`<tr>
+          <td><strong>${esc(r.fullName)}</strong><br><small><a href="mailto:${esc(r.email)}">${esc(r.email)}</a></small></td>
+          <td>${esc(r.company||'—')}<br><small>${esc(r.source||'')}</small></td>
+          <td>${r.phone?`<a href="tel:${esc(r.phone)}">${esc(r.phone)}</a>`:'—'}</td>
+          <td>${esc(new Date(r.requestedAt).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}))}<br><small>${esc(new Date(r.requestedAt).toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}))}</small></td>
+          <td>${r.downloadCount||0}${r.lastDownloadedAt?`<br><small>last ${esc(new Date(r.lastDownloadedAt).toLocaleDateString('en-GB',{day:'2-digit',month:'short'}))}</small>`:''}</td>
+          <td><span class="cons-status s-${esc(r.status)}">${esc(r.status)}</span></td>
+        </tr>`).join('')}</tbody></table></div>`
+        :`<div class="admin-empty"><p>No catalogue requests yet.</p></div>`}
+    </section>`;
+  }
+
+  function renderConsultations(P){
+    P.innerHTML=pageHead('/ADMIN/CONSULTATIONS','Consultations',
+      'Every consultation booked from the landing page. Bookings are managed here — the client receives a confirmation on the site, and the meeting is not pushed to an external calendar.')+
+      `<div id="consBoard"><div class="admin-neutral-panel"><p>Loading consultations…</p></div></div>`;
+    consLoad().then(()=>consPaint());
+  }
+
+  function consPaint(){
+    const board=document.getElementById('consBoard'); if(!board)return;
+    const m=consState.month, rows=consState.rows;
+    const monthLabel=m.toLocaleDateString('en-GB',{month:'long',year:'numeric'});
+
+    const byDate={}; rows.forEach(r=>{(byDate[r.date]=byDate[r.date]||[]).push(r)});
+    const slotBy={}; consState.slots.forEach(s=>{slotBy[s.date]=s});
+
+    const active=rows.filter(r=>r.status!=='CANCELLED');
+    const kpis=[['Bookings this month',rows.length],
+                ['Awaiting confirmation',rows.filter(r=>r.status==='REQUESTED').length],
+                ['Confirmed',rows.filter(r=>r.status==='CONFIRMED').length],
+                ['Cancelled',rows.filter(r=>r.status==='CANCELLED').length],
+                ['Catalogue also requested',active.filter(r=>r.catalogue).length]];
+
+    // Monday-first grid.
+    const first=new Date(m.getFullYear(),m.getMonth(),1);
+    const lead=(first.getDay()+6)%7;
+    const days=new Date(m.getFullYear(),m.getMonth()+1,0).getDate();
+    const todayIso=consIso(new Date());
+
+    let cells='';
+    for(let i=0;i<lead;i++) cells+=`<div class="cons-day cons-muted"></div>`;
+    for(let d=1;d<=days;d++){
+      const iso=consIso(new Date(m.getFullYear(),m.getMonth(),d));
+      const n=(byDate[iso]||[]).filter(r=>r.status!=='CANCELLED').length;
+      const open=slotBy[iso]?slotBy[iso].open:0;
+      cells+=`<button type="button" class="cons-day ${consState.day===iso?'cons-active':''} ${iso===todayIso?'cons-today':''}" data-cons-day="${iso}">
+        <span class="cons-daynum">${String(d).padStart(2,'0')}</span>
+        ${n?`<span class="cons-pill cons-pill-booked">${n} booked</span>`:''}
+        ${open?`<span class="cons-pill cons-pill-open">${open} open</span>`:''}
+      </button>`;
+    }
+
+    const listRows = consState.day ? (byDate[consState.day]||[]) : rows;
+    const listTitle = consState.day
+      ? new Date(consState.day+'T12:00:00').toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'})
+      : 'All bookings in '+monthLabel;
+
+    board.innerHTML=`
+    ${consState.error?`<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 #c33"><strong>${esc(consState.error)}</strong></div>`:''}
+    <div class="admin-kpis">${kpis.map((x,i)=>`<div class="admin-kpi"><div class="mono">${String(i+1).padStart(2,'0')} · ${esc(x[0])}</div><strong>${x[1]}</strong></div>`).join('')}</div>
+
+    <section class="admin-section">
+      <div class="admin-section-head">
+        <div><div class="mono" style="color:var(--blue)">Slot calendar</div><h2>${esc(monthLabel)}</h2></div>
+        <div class="admin-head-actions">
+          <button class="admin-mini-btn" data-cons-prev>← Previous</button>
+          <button class="admin-mini-btn" data-cons-today>This month</button>
+          <button class="admin-mini-btn" data-cons-next>Next →</button>
+          ${consState.day?`<button class="admin-mini-btn" data-cons-clear>Clear day filter</button>`:''}
+        </div>
+      </div>
+      <div class="cons-cal">${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d=>`<div class="cons-cal-head">${d}</div>`).join('')}${cells}</div>
+      <div class="cons-legend"><span><span class="cons-pill cons-pill-booked">booked</span> consultations</span><span><span class="cons-pill cons-pill-open">open</span> free slots</span></div>
+    </section>
+
+    <section class="admin-section">
+      <div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Bookings</div><h2>${esc(listTitle)}</h2></div></div>
+      ${listRows.length?`<div class="admin-table-wrap"><table class="admin-table">
+        <thead><tr><th>Reference</th><th>When</th><th>Contact</th><th>Company</th><th>Phone</th><th>Status</th><th>Actions</th></tr></thead>
+        <tbody>${listRows.map(r=>`<tr>
+          <td><strong>${esc(r.ref||'—')}</strong><br><small>${esc(r.source||'')}</small></td>
+          <td>${esc(new Date(r.date+'T12:00:00').toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}))}<br><small>${esc(r.startTime)}–${esc(r.endTime)} ${esc(r.timezone)}</small></td>
+          <td>${esc(r.fullName)}<br><small><a href="mailto:${esc(r.email)}">${esc(r.email)}</a></small></td>
+          <td>${esc(r.company||'—')}${r.catalogue?'<br><small>catalogue requested</small>':''}</td>
+          <td>${r.phone?`<a href="tel:${esc(r.phone)}">${esc(r.phone)}</a>`:'—'}</td>
+          <td><span class="cons-status s-${esc(r.status)}">${esc(r.status)}</span></td>
+          <td><div class="admin-row-actions">
+            ${r.status==='REQUESTED'?`<button class="admin-mini-btn" data-cons-set="CONFIRMED" data-cons-id="${esc(r.id)}">Confirm</button>`:''}
+            ${['REQUESTED','CONFIRMED'].includes(r.status)?`<button class="admin-mini-btn" data-cons-set="COMPLETED" data-cons-id="${esc(r.id)}">Completed</button>`:''}
+            ${['REQUESTED','CONFIRMED'].includes(r.status)?`<button class="admin-mini-btn" data-cons-set="NO_SHOW" data-cons-id="${esc(r.id)}">No-show</button>`:''}
+          </div></td></tr>`).join('')}</tbody></table></div>`
+        :`<div class="admin-empty"><p>No consultations ${consState.day?'on this date':'in this month'}.</p></div>`}
+    </section>`;
+
+    board.querySelectorAll('[data-cons-day]').forEach(b=>b.onclick=()=>{
+      consState.day = consState.day===b.dataset.consDay ? null : b.dataset.consDay;
+      consPaint();
+    });
+    const move=n=>{consState.month=new Date(consState.month.getFullYear(),consState.month.getMonth()+n,1);consState.day=null;
+                   consLoad().then(()=>consPaint())};
+    board.querySelector('[data-cons-prev]').onclick=()=>move(-1);
+    board.querySelector('[data-cons-next]').onclick=()=>move(1);
+    board.querySelector('[data-cons-today]').onclick=()=>{consState.month=consMonthStart(new Date());consState.day=null;consLoad().then(()=>consPaint())};
+    board.querySelector('[data-cons-clear]')?.addEventListener('click',()=>{consState.day=null;consPaint()});
+
+    board.querySelectorAll('[data-cons-set]').forEach(b=>b.onclick=async()=>{
+      b.disabled=true; const was=b.textContent; b.textContent='…';
+      const r=await window.educutSupabase.rpc('admin_set_consultation_status',
+                {p_id:b.dataset.consId,p_status:b.dataset.consSet});
+      if(!r.ok){ b.disabled=false; b.textContent=was; toast('Could not update this booking.'); return; }
+      await consLoad(); consPaint();
+    });
   }
 
   function renderDashboard(P){
