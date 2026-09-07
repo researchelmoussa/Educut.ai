@@ -1479,11 +1479,25 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 .cons-pill-closed{background:#f0e0c8;color:#7a5320}
 .cons-pill-past{background:#e6e6ee;color:#55556b}
 .pros-tags{display:flex;flex-wrap:wrap;gap:4px}
-.pros-tag{font:600 9.5px/1.6 ui-monospace,monospace;letter-spacing:.05em;padding:1px 6px;border-radius:2px;background:#eef0f4;color:#666}
+.pros-tag{font:600 9.5px/1.6 ui-monospace,monospace;letter-spacing:.05em;padding:1px 6px;border-radius:2px;background:#eef0f4;color:#666;border:0}
 .pros-tag.on-cat{background:#dfe7ff;color:#1b3fae}
 .pros-tag.on-con{background:var(--lime,#c3f53c);color:#111}
-.pros-tag.on-asm{background:#e7dfff;color:#4a1bae}
+.pros-tag.on-asm{background:#e7dfff;color:#4a1bae;cursor:pointer}
+.pros-tag.on-asm:hover{background:#d6c9ff}
 .pros-tag.on-del{background:#f4d4d4;color:#7a2020}
+.assess-detail{max-width:640px}
+.assess-score-row{display:flex;gap:20px;align-items:center;margin-bottom:16px}
+.assess-score-row .num{font-size:40px;font-weight:800;letter-spacing:-.04em}
+.assess-score-row .num small{font-size:15px;color:#999;font-weight:600}
+.assess-dna{color:#444;line-height:1.5;margin:0 0 18px;padding:14px;background:#f7f7f4;border-left:3px solid var(--blue,#3357ff)}
+.assess-plans{display:grid;gap:10px;margin-top:8px}
+.assess-plan{border:1px solid var(--line,#d7d7d1);padding:12px 14px}
+.assess-plan-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.assess-plan-head h4{margin:0;font-size:15px}
+.assess-plan-head .q{font-weight:700;font-size:13px;color:#666}
+.assess-course-row{display:flex;gap:10px;padding:6px 0;border-top:1px solid #eee;font-size:12px}
+.assess-course-row:first-of-type{margin-top:8px}
+.assess-course-row .c{color:var(--blue,#3357ff);font-family:monospace;min-width:64px}
 .pros-sel{font:600 10px/1 ui-monospace,monospace;padding:5px 7px;border:1px solid #d0d0d0;background:#fff;cursor:pointer}
 
 .cons-legend{display:flex;gap:16px;align-items:center;margin-top:12px;font:600 11px/1 ui-monospace,monospace;color:#777}
@@ -3567,7 +3581,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
           <td><div class="pros-tags">
             ${r.catalogue.requested?'<span class="pros-tag on-cat">CATALOGUE</span>':''}
             ${r.consultation.requested?'<span class="pros-tag on-con">CONSULTATION</span>':''}
-            ${(r.assessment.completed||r.assessment.count>0)?'<span class="pros-tag on-asm">ASSESSMENT</span>':''}
+            ${(r.assessment.completed||r.assessment.count>0)?`<button type="button" class="pros-tag on-asm" data-pros-assessment="${esc(r.id)}">ASSESSMENT</button>`:''}
             ${r.consultation.deleted>0?`<span class="pros-tag on-del">${r.consultation.deleted} DELETED</span>`:''}
           </div><small>via ${esc(r.firstSource||'—')}</small></td>
           <td>${r.consultation.ref
@@ -3603,6 +3617,10 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       toast('Prospect moved to '+sel.value+'.');
       await prosLoad(); prosPaint();
     });
+    board.querySelectorAll('[data-pros-assessment]').forEach(b=>b.onclick=()=>{
+      const row=prosState.rows.find(x=>x.id===b.dataset.prosAssessment);
+      if(row) openProspectAssessment(row);
+    });
     board.querySelector('[data-pros-export]')?.addEventListener('click',()=>{
       const head=['Name','Email','Company','Phone','Country','Catalogue','Consultation','Assessment',
                   'Consultation ref','Consultation status','Deleted bookings','Stage','First seen'];
@@ -3615,6 +3633,43 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       ].map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(','))).join('\n');
       download('educut-prospects.csv',csv,'text/csv');
     });
+  }
+
+  function assessmentDNA(d){
+    const labels=(d.focusAreas||[]).map(x=>x.label);
+    const primary=labels[0]||d.strongestOpportunity||'AI capability building';
+    const secondary=labels[1]||'responsible adoption';
+    const score=Number(d.maturityScore)||0;
+    let stage;
+    if(score<30) stage='is at an exploration stage and needs a clear, practical foundation before scaling AI adoption';
+    else if(score<55) stage='has started its AI journey and now needs to turn experimentation into structured, repeatable business capabilities';
+    else if(score<75) stage='shows solid AI readiness and is ready to connect existing initiatives into more scalable, governed workflows';
+    else stage='shows advanced AI readiness and can focus on scaling, specialization and enterprise-wide transformation';
+    return `This company ${stage}. Its AI DNA points most strongly toward <b>${esc(primary)}</b>, supported by <b>${esc(secondary)}</b> — so the recommended path balances immediate business value with the capabilities needed to adopt AI sustainably.`;
+  }
+
+  async function openProspectAssessment(row){
+    modal('Assessment — '+(row.company||row.fullName||''),'<p style="color:#666">Loading assessment result…</p>');
+    const r=await window.educutSupabase.rpc('admin_lead_assessment',{p_lead_id:row.id});
+    if(!r.ok||!r.data){
+      document.getElementById('adminModalBody').innerHTML='<p style="color:#7a2020">This assessment result could not be loaded.</p>';
+      return;
+    }
+    const d=r.data;
+    const planBlock=(title,tag,plan)=>`<div class="assess-plan"><div class="assess-plan-head"><h4>${esc(title)} · ${(plan||[]).length} courses</h4></div><div class="mono" style="color:var(--blue);margin:4px 0 2px">${esc(tag)}</div>${(plan||[]).map(c=>`<div class="assess-course-row"><span class="c">${esc(c.code)}</span><span>${esc(c.title)}</span></div>`).join('')}</div>`;
+    const completed=d.completedAt?new Date(d.completedAt).toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}):'—';
+    document.getElementById('adminModalBody').innerHTML=`<div class="assess-detail">
+      <div class="mono" style="color:var(--blue);margin-bottom:12px">Completed ${completed}</div>
+      <div class="assess-score-row">
+        <div class="num">${d.maturityScore ?? '—'}<small>/100</small></div>
+        <div><div class="mono">AI readiness</div><strong style="font-size:18px">${esc(d.maturityLabel||'—')}</strong></div>
+      </div>
+      <div class="assess-dna">${assessmentDNA(d)}</div>
+      <div class="mono" style="margin:0 0 8px">Priority focus areas</div>
+      <div class="focus-chips">${(d.focusAreas||[]).map(x=>`<span class="chip">${esc(x.label)}</span>`).join('')||'<span style="color:#999">—</span>'}</div>
+      <div class="mono" style="margin:20px 0 8px">Recommended learning paths</div>
+      <div class="assess-plans">${planBlock('Essential','Quick capability',d.plans&&d.plans.plan3)}${planBlock('Accelerate','Operational capability',d.plans&&d.plans.plan5)}${planBlock('Transform','Strategic capability',d.plans&&d.plans.plan7)}</div>
+    </div>`;
   }
 
   function renderCatalogueRequests(P){
