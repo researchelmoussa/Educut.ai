@@ -937,8 +937,8 @@
     .results-next h3{font-size:25px;line-height:1.05;margin:0 0 8px;letter-spacing:-.03em}
     .results-next p{color:#aaa;margin:0 0 16px;max-width:700px}
     .results-next-actions{display:flex;gap:10px;flex-wrap:wrap}
-    .results-next .btn-outline-light{background:transparent;color:#fff;border-color:#666}
-    .results-next .btn-outline-light:hover{border-color:#fff}
+    .btn-outline-light{background:transparent;color:#fff;border-color:#666}
+    .btn-outline-light:hover{border-color:#fff}
     .results-close-row{
       display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
       margin-top:18px;padding-top:18px;border-top:1px solid var(--line)
@@ -1707,7 +1707,7 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
         <div class="mono eyebrow">Bridging AI with Education</div>
         <h1>Build the right<br><span class="outline">AI path</span> for your company.</h1>
         <p class="hero-copy">Focused, business-oriented AI learning that connects cutting-edge technology with the capabilities professionals actually need. Take our 3-minute assessment and receive a personalized 3, 5 and 7-course learning path.</p>
-        <div class="hero-actions"><button class="btn btn-lime btn-lg" data-start>Build my free AI Path →</button><a class="btn btn-outline btn-lg" href="#academy">Explore the Academy</a></div>
+        <div class="hero-actions"><button class="btn btn-lime btn-lg" data-start>Build my free AI Path →</button><a class="btn btn-outline-light btn-lg" href="#academy">Explore the Academy</a></div>
         <div class="trust"><span>20 questions</span><span>≈ 3 minutes</span><span>Free recommendation</span><span>No commitment</span></div>
       </div>
       <div class="assessment-card">
@@ -2257,9 +2257,9 @@ consultForm.addEventListener('submit',async e=>{
     } ${catalogueRequested && contactMode==='consultation'?'The full catalogue is available below and will also follow by email.':''}</p>
     ${ref?`<p class="mono" style="color:#777;margin-top:8px">Reference ${ref}</p>`:''}
     ${dlUrl?`<a class="btn btn-lime" style="margin-top:20px;display:inline-block" href="${dlUrl}" target="_blank" rel="noopener" id="catalogueDownload">Download the catalogue (PDF) →</a>`:''}
-    <button type="button" class="btn ${dlUrl?'btn-outline':'btn-lime'}" style="margin-top:20px${dlUrl?';margin-left:10px':''}" id="consultDone">Done</button>
+    ${dlUrl?'':`<button type="button" class="btn btn-lime" style="margin-top:20px" id="consultDone">Done</button>`}
   </div>`;
-  document.getElementById('consultDone').onclick=async()=>{
+  const finishConsult=async()=>{
     closeConsult();
     consultForm.reset();
     consultForm.style.display='block';
@@ -2272,6 +2272,11 @@ consultForm.addEventListener('submit',async e=>{
     // The slot just taken is gone from the next read.
     await loadConsultSlots(true);
   };
+  document.getElementById('consultDone')?.addEventListener('click',finishConsult);
+  // The download itself opens in a new tab via the anchor's own
+  // navigation, so closing right after the click doesn't interrupt it —
+  // just give the browser a moment to actually start the download.
+  document.getElementById('catalogueDownload')?.addEventListener('click',()=>{ setTimeout(finishConsult,600); });
 });
 renderConsultDates();
 renderConsultTimes();
