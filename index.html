@@ -3610,8 +3610,10 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       prosState.filter=b.dataset.prosFilter; prosPaint();
     });
     board.querySelector('.admin-list-search')?.addEventListener('input',e=>{
+      const pos=e.target.selectionStart;
       app.query=e.target.value; prosPaint();
-      board.querySelector('.admin-list-search')?.focus();
+      const next=board.querySelector('.admin-list-search');
+      if(next){ next.focus(); next.setSelectionRange(pos,pos); }
     });
     board.querySelectorAll('[data-pros-status]').forEach(sel=>sel.onchange=async()=>{
       const prev=prosState.rows.find(x=>x.id===sel.dataset.prosStatus)?.status;
@@ -4011,7 +4013,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   function barChart(values,labels){const max=Math.max(...values,1);return `<div class="admin-chart">${values.map((v,i)=>`<div class="admin-chart-col" title="${v}"><div class="admin-chart-bar" style="height:${Math.round(v/max*92)}%"></div><div class="admin-chart-label">${labels[i]||i+1}</div></div>`).join('')}</div>`}
   function go(page){app.page=page;app.detail=null;app.tab='Overview';app.pageNum=1;window.renderSuperAdmin(app.root)}
   function toolbar(ph,filters='',extra=''){return `<div class="admin-toolbar"><input class="admin-list-search" placeholder="${esc(ph)}" value="${esc(app.query)}">${filters}<div class="admin-toolbar-spacer"></div>${extra}<button class="admin-mini-btn" data-export>Export CSV</button></div>`}
-  function wireSearch(render){document.querySelector('.admin-list-search')?.addEventListener('input',e=>{app.query=e.target.value;app.pageNum=1;render(document.getElementById('adminPage'))})}
+  function wireSearch(render){const input=document.querySelector('.admin-list-search');if(!input)return;input.addEventListener('input',e=>{const pos=e.target.selectionStart;app.query=e.target.value;app.pageNum=1;render(document.getElementById('adminPage'));const next=document.querySelector('.admin-list-search');if(next){next.focus();next.setSelectionRange(pos,pos)}})}
   function paginate(rows){const start=(app.pageNum-1)*app.pageSize;return {rows:rows.slice(start,start+app.pageSize),total:rows.length,pages:Math.max(1,Math.ceil(rows.length/app.pageSize))}}
   function pager(total,pages){return `<div class="admin-pagination"><span>${total} records · Page ${app.pageNum} / ${pages}</span><div class="admin-pagination-actions"><button class="admin-mini-btn" data-prev ${app.pageNum<=1?'disabled':''}>← Prev</button><button class="admin-mini-btn" data-next ${app.pageNum>=pages?'disabled':''}>Next →</button></div></div>`}
   function wirePager(render,pages){document.querySelector('[data-prev]')?.addEventListener('click',()=>{app.pageNum=Math.max(1,app.pageNum-1);render(document.getElementById('adminPage'))});document.querySelector('[data-next]')?.addEventListener('click',()=>{app.pageNum=Math.min(pages,app.pageNum+1);render(document.getElementById('adminPage'))})}
