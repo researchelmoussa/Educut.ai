@@ -4344,6 +4344,14 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   }
   function extNav(){
     const nav=document.querySelector('.admin-nav'); if(!nav||nav.querySelector('[data-admin-ext="requests"]'))return;
+    // Clicking back into a normal section must drop out of the Requests/
+    // Support inbox, or the wrapper below keeps re-showing it forever.
+    // Capture phase on the nav container runs before the button's own
+    // onclick (bound in wireShell), so extPage is cleared before that
+    // handler re-renders the page.
+    nav.addEventListener('click',e=>{
+      if(e.target.closest('[data-page]')){ extPage=null; extDetail=null; }
+    },true);
     const anchor=[...nav.querySelectorAll('.admin-nav-btn')].find(b=>b.dataset.page==='subscriptions');
     const wrap=document.createElement('div');
     wrap.innerHTML=`<button class="admin-nav-btn ${extPage==='requests'?'active':''}" data-admin-ext="requests"><span class="admin-nav-code">07B</span><span>Company Requests</span></button>
