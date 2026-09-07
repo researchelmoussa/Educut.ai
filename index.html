@@ -4384,7 +4384,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     original(root,session);
     extNav();
     if(extPage){const P=document.getElementById('adminPage'); extPage==='support'?renderInbox(P,true):renderInbox(P,false)}
-    else dashboardEnhance();
+    else if(document.querySelector('.admin-nav-btn.active')?.dataset.page==='dashboard') dashboardEnhance();
   };
 
   function pageHead(code,title,desc,actions=''){return `<div class="admin-breadcrumb mono">ADMIN / ${esc(code)}</div><div class="admin-page-head"><div><div class="mono" style="color:var(--blue)">${esc(code)}</div><h1>${esc(title)}</h1></div><div><p>${esc(desc)}</p>${actions?`<div class="admin-head-actions" style="margin-top:14px">${actions}</div>`:''}</div></div>`}
