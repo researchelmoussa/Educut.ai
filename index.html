@@ -1481,9 +1481,15 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 .pros-tags{display:flex;flex-wrap:wrap;gap:4px}
 .pros-tag{font:600 9.5px/1.6 ui-monospace,monospace;letter-spacing:.05em;padding:1px 6px;border-radius:2px;background:#eef0f4;color:#666;border:0}
 .pros-tag.on-cat{background:#dfe7ff;color:#1b3fae}
-.pros-tag.on-con{background:var(--lime,#c3f53c);color:#111}
+.pros-tag.on-con{background:var(--lime,#c3f53c);color:#111;cursor:pointer}
+.pros-tag.on-con:hover{background:#95c916}
 .pros-tag.on-asm{background:#e7dfff;color:#4a1bae;cursor:pointer}
 .pros-tag.on-asm:hover{background:#d6c9ff}
+.assess-cons-row{border:1px solid var(--line,#d7d7d1);padding:12px 14px;margin-bottom:10px}
+.assess-cons-row:last-child{margin-bottom:0}
+.assess-cons-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.assess-cons-head strong{font-size:15px}
+.assess-cons-meta{color:#666;font-size:12px;margin-top:6px;line-height:1.6}
 .pros-tag.on-del{background:#f4d4d4;color:#7a2020}
 .assess-detail{max-width:640px}
 .assess-score-row{display:flex;gap:20px;align-items:center;margin-bottom:16px}
@@ -3580,7 +3586,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
           <td>${esc(r.company||'—')}${r.country?`<br><small>${esc(r.country)}</small>`:''}</td>
           <td><div class="pros-tags">
             ${r.catalogue.requested?'<span class="pros-tag on-cat">CATALOGUE</span>':''}
-            ${r.consultation.requested?'<span class="pros-tag on-con">CONSULTATION</span>':''}
+            ${r.consultation.requested?`<button type="button" class="pros-tag on-con" data-pros-consultation="${esc(r.id)}">CONSULTATION</button>`:''}
             ${(r.assessment.completed||r.assessment.count>0)?`<button type="button" class="pros-tag on-asm" data-pros-assessment="${esc(r.id)}">ASSESSMENT</button>`:''}
             ${r.consultation.deleted>0?`<span class="pros-tag on-del">${r.consultation.deleted} DELETED</span>`:''}
           </div><small>via ${esc(r.firstSource||'—')}</small></td>
@@ -3620,6 +3626,10 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     board.querySelectorAll('[data-pros-assessment]').forEach(b=>b.onclick=()=>{
       const row=prosState.rows.find(x=>x.id===b.dataset.prosAssessment);
       if(row) openProspectAssessment(row);
+    });
+    board.querySelectorAll('[data-pros-consultation]').forEach(b=>b.onclick=()=>{
+      const row=prosState.rows.find(x=>x.id===b.dataset.prosConsultation);
+      if(row) openProspectConsultations(row);
     });
     board.querySelector('[data-pros-export]')?.addEventListener('click',()=>{
       const head=['Name','Email','Company','Phone','Country','Catalogue','Consultation','Assessment',
@@ -3670,6 +3680,34 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       <div class="mono" style="margin:20px 0 8px">Recommended learning paths</div>
       <div class="assess-plans">${planBlock('Essential','Quick capability',d.plans&&d.plans.plan3)}${planBlock('Accelerate','Operational capability',d.plans&&d.plans.plan5)}${planBlock('Transform','Strategic capability',d.plans&&d.plans.plan7)}</div>
     </div>`;
+  }
+
+  async function openProspectConsultations(row){
+    modal('Consultations — '+(row.company||row.fullName||''),'<p style="color:#666">Loading consultation bookings…</p>');
+    const r=await window.educutSupabase.rpc('admin_lead_consultations',{p_lead_id:row.id});
+    if(!r.ok){
+      document.getElementById('adminModalBody').innerHTML='<p style="color:#7a2020">Consultation bookings could not be loaded.</p>';
+      return;
+    }
+    const rows=Array.isArray(r.data)?r.data:[];
+    const fmtDate=d=>d?new Date(d+'T12:00:00').toLocaleDateString('en-GB',{weekday:'short',day:'2-digit',month:'short',year:'numeric'}):'—';
+    const body=rows.length
+      ? rows.map(c=>`<div class="assess-cons-row">
+          <div class="assess-cons-head">
+            <strong>${esc(fmtDate(c.date))} · ${esc(c.startTime||'')}–${esc(c.endTime||'')} ${esc(c.timezone||'')}</strong>
+            <span class="cons-status s-${esc(c.status||'')}">${esc(c.status||'—')}</span>
+          </div>
+          <div class="assess-cons-meta">
+            ${esc(c.ref||'')}<br>
+            ${esc(c.fullName||'—')} · ${esc(c.company||'—')}<br>
+            <a href="mailto:${esc(c.email||'')}">${esc(c.email||'—')}</a>${c.phone?` · <a href="tel:${esc(c.phone)}">${esc(c.phone)}</a>`:''}<br>
+            ${c.catalogue?'Catalogue requested at booking · ':''}via ${esc(c.source||'—')}
+            ${c.notes?`<br><span style="color:#333">"${esc(c.notes)}"</span>`:''}
+          </div>
+        </div>`).join('')
+      : `<p style="color:#666">No active consultation booking${row.consultation&&row.consultation.wasDeleted?' — the last booking on record was deleted':''}.</p>
+         ${row.consultation&&row.consultation.ref?`<div class="assess-cons-meta">Last known: ${esc(row.consultation.ref)} · ${esc(row.consultation.status||'')} · ${esc(fmtDate(row.consultation.date))}</div>`:''}`;
+    document.getElementById('adminModalBody').innerHTML=`<div class="assess-detail">${body}</div>`;
   }
 
   function renderCatalogueRequests(P){
