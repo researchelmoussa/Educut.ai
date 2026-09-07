@@ -2733,10 +2733,6 @@ function buildCompanyDNA(d){
 
 function renderResults(d,email){
  const planBlock=(title,tag,plan,quote)=>`<div class="result-plan"><div class="result-plan-head"><h3>${title} · ${plan.length} courses</h3><div class="price price-tbr">TO BE REQUESTED</div></div><div class="mono" style="color:var(--blue);margin:5px 0 3px">${tag}</div>${plan.map(c=>`<div class="course-row"><span class="course-code">${c.code}</span><span>${c.title}</span></div>`).join('')}</div>`;
- const storageMessage=d.saved!==false && d.assessmentId
-   ? `Assessment #${d.assessmentId} has been securely saved in the database. The record can be connected to your email/CRM workflow to send the result, catalogue and formal quotation to <b>${email}</b>.`
-   : `Your AI Path has been generated successfully. <b>Preview mode:</b> this page was opened without a reachable backend, so this result has not been stored in the database. Run the full project with <span class="mono">npm install</span> and <span class="mono">npm start</span> to enable database storage.`;
-
  body.innerHTML=`<div class="results">
    <div class="mono" style="color:var(--blue);margin-bottom:12px">Personalized company assessment</div>
    <h2>Your AI Path.</h2>
@@ -2757,7 +2753,6 @@ function renderResults(d,email){
    <div class="focus-chips">${d.focusAreas.map(x=>`<span class="chip">${x.label}</span>`).join('')}</div>
    <h3 style="font-size:24px;margin:30px 0 12px">Recommended learning paths</h3>
    <div class="result-plans">${planBlock('Essential','Quick capability',d.plans.plan3,d.quote.plan3)}${planBlock('Accelerate','Operational capability',d.plans.plan5,d.quote.plan5)}${planBlock('Transform','Strategic capability',d.plans.plan7,d.quote.plan7)}</div>
-   <div class="saved">${storageMessage}</div>
    <div class="results-close-row">
      <button type="button" class="btn" id="closeResultsBtn">Close assessment</button>
      <span class="results-close-note mono">You can reopen the consultation from the website at any time.</span>
