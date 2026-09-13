@@ -3802,7 +3802,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       value:c.value!=null?Number(c.value):0,currency:c.currency||'CHF',seats:c.seats||0,
       scope:c.scope||'',start:(c.start_date||'').slice(0,10),end:(c.end_date||'').slice(0,10),
       status:c.status||'DRAFT',document:c.document_path||'',quotationId:c.quotation_id||null,
-      language:c.language||'EN',createdAt:c.created_at,updatedAt:c.updated_at
+      invoiceId:c.invoice_id||null,language:c.language||'EN',createdAt:c.created_at,updatedAt:c.updated_at
     };
   }
   function localContractToDb(c,companyDbId){
@@ -3810,7 +3810,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       company_id:companyDbId||null,value:Number(c.value)||0,currency:c.currency||'CHF',
       seats:Number(c.seats)||0,scope:c.scope||null,start_date:c.start||null,end_date:c.end||null,
       status:c.status||'DRAFT',document_path:c.document||null,quotation_id:c.quotationId||null,
-      language:c.language||'EN'
+      invoice_id:c.invoiceId||null,language:c.language||'EN'
     };
   }
   function dbInvoiceToLocal(i,refByCompanyId){
@@ -4992,6 +4992,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   function openSubscriptionForm(s=null){modal(s?'Edit Subscription':'Create Subscription',`<form id="subscriptionForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}" ${c.id===s?.companyId?'selected':''}>${esc(c.name)}</option>`).join('')}</select></div>${field('Plan','plan',s?.plan||'Professional','','required')}${field('Seats','seats',s?.seats||25,'number','min="1" required')}${field('Price','price',s?.price||0,'number','min="0"')}${field('Start Date','start',s?.start||new Date().toISOString().slice(0,10),'date')}${field('Expiration Date','end',s?.end||'2027-08-31','date')}${selectField('Payment Status','paymentStatus',['PENDING','PAID','OVERDUE'],s?.paymentStatus||'PENDING')}${selectField('Status','status',['PENDING','TRIAL','ACTIVE','EXPIRED','SUSPENDED','CANCELLED'],s?.status||'PENDING')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime">Save Subscription</button></div></form>`);document.getElementById('subscriptionForm').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.currentTarget).entries()),obj={...f,seats:Number(f.seats),price:Number(f.price),currency:'CHF',academies:company(f.companyId)?.academies||[],renewal:'OPEN'};if(s)Object.assign(s,obj);else S.subscriptions.push({id:uid('SUB'),...obj});save();log(s?'SUBSCRIPTION_UPDATED':'SUBSCRIPTION_CREATED','Subscription',s?.id||S.subscriptions.at(-1).id);closeModal();renderPage();toast('Subscription saved.')}}
   function renderContracts(P){
     if(!liveCatalogueGuard(P))return;
+    if(!quotesGuard(P))return;
     if(!billingGuard(P))return;
     P.innerHTML=pageHead('08 / BILLING & CONTRACT','Billing & Contract','Manage commercial agreements, invoices, due dates and payment status. Validated quotations generate these automatically.','<button class="btn btn-outline" id="newContract">+ Upload Contract</button><button class="btn btn-lime" id="newInvoice">+ Generate Invoice</button>')+`<div class="admin-grid-2"><section><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Contracts</div><h2>Commercial agreements</h2></div></div>${contractsTable(S.contracts)}</section><section><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Billing</div><h2>Invoices</h2></div></div>${invoicesTable(S.invoices)}</section></div>`;
     document.getElementById('newContract').onclick=()=>openContractForm();
@@ -5006,14 +5007,14 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     document.querySelectorAll('[data-contract-pdf]').forEach(b=>b.onclick=()=>printContract(S.contracts.find(x=>x.id===b.dataset.contractPdf)));
     document.querySelectorAll('[data-invoice-pdf]').forEach(b=>b.onclick=()=>printInvoice(S.invoices.find(x=>x.id===b.dataset.invoicePdf)));
   }
-  function contractsTable(rows){if(!rows.length)return '<div class="admin-empty"><h3>No contracts yet</h3><p>Contracts are created manually or generated automatically when a quotation is validated.</p></div>';return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Value</th><th>Seats</th><th>Scope</th><th>Start</th><th>End</th><th>Status</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(c=>`<tr><td class="mono">${esc(c.ref)}</td><td>${esc(company(c.companyId)?.name||'—')}</td><td>${money(c.value,c.currency)}</td><td>${c.seats}</td><td>${esc(c.scope)}</td><td>${fmt(c.start)}</td><td>${fmt(c.end)}</td><td>${status(c.status)}</td><td class="mono">${esc(c.language)}</td><td><button class="admin-mini-btn" data-contract-pdf="${c.id}">PDF</button></td></tr>`).join('')}</tbody></table></div>`}
-  function invoicesTable(rows){if(!rows.length)return '<div class="admin-empty"><h3>No invoices yet</h3><p>Invoices are created manually or generated automatically when a quotation is validated.</p></div>';return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Amount</th><th>Issue</th><th>Due</th><th>Status</th><th>Payment Date</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(i=>`<tr><td class="mono">${esc(i.ref)}</td><td>${esc(company(i.companyId)?.name||'—')}</td><td>${money(i.amount,i.currency)}</td><td>${fmt(i.issue)}</td><td>${fmt(i.due)}</td><td>${status(i.status)}</td><td>${fmt(i.paymentDate)}</td><td class="mono">${esc(i.language)}</td><td><div class="admin-row-actions">${i.status!=='PAID'?`<button class="admin-mini-btn" data-invoice-paid="${i.id}">Mark Paid</button>`:'<span class="mono">SETTLED</span>'}<button class="admin-mini-btn" data-invoice-pdf="${i.id}">PDF</button></div></td></tr>`).join('')}</tbody></table></div>`}
+  function contractsTable(rows){if(!rows.length)return '<div class="admin-empty"><h3>No contracts yet</h3><p>Contracts are created manually or generated automatically when a quotation is validated.</p></div>';return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Value</th><th>Seats</th><th>Scope</th><th>Start</th><th>End</th><th>Status</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(c=>{const inv=c.invoiceId?S.invoices.find(x=>x.id===c.invoiceId):null;return `<tr><td class="mono">${esc(c.ref)}${inv?`<br><small style="color:#777">Invoice: ${esc(inv.ref)}</small>`:''}</td><td>${esc(company(c.companyId)?.name||'—')}</td><td>${money(c.value,c.currency)}</td><td>${c.seats}</td><td>${esc(c.scope)}</td><td>${fmt(c.start)}</td><td>${fmt(c.end)}</td><td>${status(c.status)}</td><td class="mono">${esc(c.language)}</td><td><button class="admin-mini-btn" data-contract-pdf="${c.id}">PDF</button></td></tr>`}).join('')}</tbody></table></div>`}
+  function invoicesTable(rows){if(!rows.length)return '<div class="admin-empty"><h3>No invoices yet</h3><p>Invoices are created manually or generated automatically when a quotation is validated.</p></div>';return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Amount</th><th>Issue</th><th>Due</th><th>Status</th><th>Payment Date</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(i=>{const q=i.quotationId?S.quotes.find(x=>x.id===i.quotationId):null;return `<tr><td class="mono">${esc(i.ref)}${q?`<br><small style="color:#777">Quote: ${esc(q.reference)}</small>`:''}</td><td>${esc(company(i.companyId)?.name||'—')}</td><td>${money(i.amount,i.currency)}</td><td>${fmt(i.issue)}</td><td>${fmt(i.due)}</td><td>${status(i.status)}</td><td>${fmt(i.paymentDate)}</td><td class="mono">${esc(i.language)}</td><td><div class="admin-row-actions">${i.status!=='PAID'?`<button class="admin-mini-btn" data-invoice-paid="${i.id}">Mark Paid</button>`:'<span class="mono">SETTLED</span>'}<button class="admin-mini-btn" data-invoice-pdf="${i.id}">PDF</button></div></td></tr>`}).join('')}</tbody></table></div>`}
   function openContractForm(){
-    modal('Upload Contract',`<form id="contractForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Contract Value','value',0,'number')}${field('Seats','seats',25,'number')}${field('Courses / Academies','scope','A002')}${field('Start','start',new Date().toISOString().slice(0,10),'date')}${field('End','end','2027-08-31','date')}${selectField('Status','status',['DRAFT','SIGNED','ACTIVE','EXPIRED','TERMINATED'],'DRAFT')}${selectField('Language','language',['EN','FR','AR'],'EN')}<div class="admin-field"><label>Signed Contract PDF</label><input name="document" type="file" accept=".pdf"></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">Save Contract</button></div></form>`);
+    modal('Upload Contract',`<form id="contractForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Contract Value','value',0,'number')}${field('Seats','seats',25,'number')}${field('Courses / Academies','scope','A002')}${field('Start','start',new Date().toISOString().slice(0,10),'date')}${field('End','end','2027-08-31','date')}${selectField('Status','status',['DRAFT','SIGNED','ACTIVE','EXPIRED','TERMINATED'],'DRAFT')}${selectField('Language','language',['EN','FR','AR'],'EN')}<div class="admin-field"><label>Related Invoice (optional)</label><select name="invoiceId"><option value="">— No related invoice —</option>${S.invoices.map(i=>`<option value="${i.id}">${esc(i.ref)}</option>`).join('')}</select></div><div class="admin-field"><label>Signed Contract PDF</label><input name="document" type="file" accept=".pdf"></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">Save Contract</button></div></form>`);
     document.getElementById('contractForm').onsubmit=async e=>{
       e.preventDefault();
       const f=Object.fromEntries(new FormData(e.currentTarget).entries());
-      const c={companyId:f.companyId,value:Number(f.value),currency:'CHF',seats:Number(f.seats),scope:f.scope,start:f.start,end:f.end,status:f.status,document:f.document?.name||'',language:f.language,quotationId:null};
+      const c={companyId:f.companyId,value:Number(f.value),currency:'CHF',seats:Number(f.seats),scope:f.scope,start:f.start,end:f.end,status:f.status,document:f.document?.name||'',language:f.language,quotationId:null,invoiceId:f.invoiceId||null};
       const btn=e.currentTarget.querySelector('button[type=submit]');btn.disabled=true;
       const companyDbId=await resolveCompanyDbId(c.companyId);
       if(!companyDbId){btn.disabled=false;toast('Could not resolve this company in the database.');return}
@@ -5025,11 +5026,11 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     };
   }
   function openInvoiceForm(){
-    modal('Generate Invoice',`<form id="invoiceForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Amount excl. VAT','amount',0,'number','min="0"')}${field('VAT / Tax amount','taxAmount',0,'number','min="0"')}${field('Issue Date','issue',new Date().toISOString().slice(0,10),'date')}${field('Due Date','due','2026-10-01','date')}${selectField('Payment Status','status',['PENDING','PAID','OVERDUE','CANCELLED','REFUNDED'],'PENDING')}${selectField('Language','language',['EN','FR','AR'],'EN')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">Create Invoice</button></div></form>`);
+    modal('Generate Invoice',`<form id="invoiceForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Amount excl. VAT','amount',0,'number','min="0"')}${field('VAT / Tax amount','taxAmount',0,'number','min="0"')}${field('Issue Date','issue',new Date().toISOString().slice(0,10),'date')}${field('Due Date','due','2026-10-01','date')}${selectField('Payment Status','status',['PENDING','PAID','OVERDUE','CANCELLED','REFUNDED'],'PENDING')}${selectField('Language','language',['EN','FR','AR'],'EN')}<div class="admin-field"><label>Related Quotation (optional)</label><select name="quotationId"><option value="">— No related quotation —</option>${S.quotes.map(q=>`<option value="${q.id}">${esc(q.reference)}</option>`).join('')}</select></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">Create Invoice</button></div></form>`);
     document.getElementById('invoiceForm').onsubmit=async e=>{
       e.preventDefault();
       const f=Object.fromEntries(new FormData(e.currentTarget).entries());
-      const i={companyId:f.companyId,amount:Number(f.amount),taxAmount:Number(f.taxAmount),currency:'CHF',issue:f.issue,due:f.due,status:f.status,paymentDate:null,description:'',language:f.language,quotationId:null,contractId:null};
+      const i={companyId:f.companyId,amount:Number(f.amount),taxAmount:Number(f.taxAmount),currency:'CHF',issue:f.issue,due:f.due,status:f.status,paymentDate:null,description:'',language:f.language,quotationId:f.quotationId||null,contractId:null};
       const btn=e.currentTarget.querySelector('button[type=submit]');btn.disabled=true;
       const companyDbId=await resolveCompanyDbId(i.companyId);
       if(!companyDbId){btn.disabled=false;toast('Could not resolve this company in the database.');return}
@@ -5430,18 +5431,20 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       issue_date:issueDate,due_date:addDaysISO(issueDate,30),status:'PENDING',
       description:`Invoice for quotation ${d.reference}`,quotation_id:d.id,language:d.language||'EN'
     };
+    // The invoice is created first so the Commercial Agreement can carry
+    // its real invoice_id — a contract always references the invoice it
+    // was billed under, never the other way around.
+    const refByCompanyId={[companyDbId]:d.companyId};
+    const invRes=await supaTable('invoices',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([invoicePayload])});
+    if(!invRes.ok) return {ok:false,error:invRes.error||'Could not create the invoice.'};
+    const invoice=dbInvoiceToLocal(invRes.data[0],refByCompanyId);
     const contractPayload={
       company_id:companyDbId,value:t.totalHT,currency:'CHF',seats:totalSeats,scope,
       start_date:issueDate,end_date:addDaysISO(issueDate,365),status:'DRAFT',document_path:null,
-      quotation_id:d.id,language:d.language||'EN'
+      quotation_id:d.id,invoice_id:invoice.id,language:d.language||'EN'
     };
-    const [invRes,ctrRes]=await Promise.all([
-      supaTable('invoices',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([invoicePayload])}),
-      supaTable('contracts',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([contractPayload])})
-    ]);
-    if(!invRes.ok||!ctrRes.ok) return {ok:false,error:invRes.error||ctrRes.error||'Could not create billing documents.'};
-    const refByCompanyId={[companyDbId]:d.companyId};
-    const invoice=dbInvoiceToLocal(invRes.data[0],refByCompanyId);
+    const ctrRes=await supaTable('contracts',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([contractPayload])});
+    if(!ctrRes.ok) return {ok:false,error:ctrRes.error||'Could not create the commercial agreement.'};
     const contract=dbContractToLocal(ctrRes.data[0],refByCompanyId);
     S.invoices.unshift(invoice);
     S.contracts.unshift(contract);
@@ -5456,7 +5459,8 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   // translated and prints exactly as entered/catalogued.
   const DOC_I18N={
     EN:{quotationTitle:'Quotation',invoiceTitle:'Invoice',contractTitle:'Commercial Agreement',
-      reference:'Reference',issueDate:'Issue date',dueDate:'Due date',startDate:'Start date',endDate:'End date',status:'Status',
+      reference:'Reference',quotationRef:'Quotation reference',invoiceRef:'Invoice reference',
+      issueDate:'Issue date',dueDate:'Due date',startDate:'Start date',endDate:'End date',status:'Status',
       billedTo:'Billed to',issuedBy:'Issued by',financialDept:'Financial Department',company:'Company',
       notes:'Notes / special conditions',
       validity:'This quotation is issued by EduCut.ai and remains valid for 30 days from the issue date unless otherwise agreed.',
@@ -5468,7 +5472,8 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       agreementSignoff:'Both parties agree to the terms set out in the corresponding validated quotation.',
       flatUpTo6:'flat · up to 6',flatUpTo12:'flat · up to 12',negotiated:'Negotiated',perSeat:'/ seat'},
     FR:{quotationTitle:'Devis',invoiceTitle:'Facture',contractTitle:'Accord Commercial',
-      reference:'Référence',issueDate:"Date d'émission",dueDate:"Date d'échéance",startDate:'Date de début',endDate:'Date de fin',status:'Statut',
+      reference:'Référence',quotationRef:'Référence du devis',invoiceRef:'Référence de la facture',
+      issueDate:"Date d'émission",dueDate:"Date d'échéance",startDate:'Date de début',endDate:'Date de fin',status:'Statut',
       billedTo:'Facturé à',issuedBy:'Émis par',financialDept:'Département Financier',company:'Entreprise',
       notes:'Remarques / conditions particulières',
       validity:"Ce devis est émis par EduCut.ai et reste valable 30 jours à compter de la date d'émission, sauf accord contraire.",
@@ -5480,7 +5485,8 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       agreementSignoff:'Les deux parties acceptent les conditions énoncées dans le devis validé correspondant.',
       flatUpTo6:'forfait · jusqu’à 6',flatUpTo12:'forfait · jusqu’à 12',negotiated:'Négocié',perSeat:'/ place'},
     AR:{quotationTitle:'عرض سعر',invoiceTitle:'فاتورة',contractTitle:'اتفاقية تجارية',
-      reference:'المرجع',issueDate:'تاريخ الإصدار',dueDate:'تاريخ الاستحقاق',startDate:'تاريخ البدء',endDate:'تاريخ الانتهاء',status:'الحالة',
+      reference:'المرجع',quotationRef:'مرجع عرض السعر',invoiceRef:'مرجع الفاتورة',
+      issueDate:'تاريخ الإصدار',dueDate:'تاريخ الاستحقاق',startDate:'تاريخ البدء',endDate:'تاريخ الانتهاء',status:'الحالة',
       billedTo:'الفاتورة إلى',issuedBy:'صادرة عن',financialDept:'الإدارة المالية',company:'الشركة',
       notes:'ملاحظات / شروط خاصة',
       validity:'يصدر هذا العرض من قبل EduCut.ai ويبقى ساريًا لمدة 30 يومًا من تاريخ الإصدار ما لم يُتفق على خلاف ذلك.',
@@ -5574,7 +5580,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       :`<tr><td colspan="3">${esc(inv.description||L.invoiceTitle)}</td><td class="num">${money(inv.amount,inv.currency)}</td></tr>`;
     const body=`<div class="doc-head">
         <div><div class="brand">EduCut<span>.ai</span></div><h1>${L.invoiceTitle}</h1></div>
-        <div class="doc-meta"><strong>${esc(inv.ref)}</strong>${L.issueDate}: ${fmt(inv.issue)}<br>${L.dueDate}: ${fmt(inv.due)}<br>${L.status}: ${esc(inv.status)}</div>
+        <div class="doc-meta"><strong>${esc(inv.ref)}</strong>${L.issueDate}: ${fmt(inv.issue)}<br>${L.dueDate}: ${fmt(inv.due)}<br>${L.status}: ${esc(inv.status)}${q?`<br>${L.quotationRef}: ${esc(q.reference)}`:''}</div>
       </div>
       <div class="parties">
         <div><h3>${L.billedTo}</h3><p><strong>${esc(company(inv.companyId)?.name||'—')}</strong></p></div>
@@ -5597,12 +5603,13 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   function printContract(ctr){
     const lang=ctr.language||'EN',L=DOC_I18N[lang]||DOC_I18N.EN;
     const q=ctr.quotationId?S.quotes.find(x=>x.id===ctr.quotationId):null;
+    const inv=ctr.invoiceId?S.invoices.find(x=>x.id===ctr.invoiceId):null;
     const t=q?quoteTotals(q):null;
     const rows=t?t.items.map(it=>`<tr><td>${esc(it.code)}</td><td>${esc(it.name)}</td><td class="num">${it.seats}</td></tr>`).join('')
       :`<tr><td colspan="2">${esc(ctr.scope||'—')}</td><td class="num">${ctr.seats}</td></tr>`;
     const body=`<div class="doc-head">
         <div><div class="brand">EduCut<span>.ai</span></div><h1>${L.contractTitle}</h1></div>
-        <div class="doc-meta"><strong>${esc(ctr.ref)}</strong>${L.startDate}: ${fmt(ctr.start)}<br>${L.endDate}: ${fmt(ctr.end)}<br>${L.status}: ${esc(ctr.status)}</div>
+        <div class="doc-meta"><strong>${esc(ctr.ref)}</strong>${L.startDate}: ${fmt(ctr.start)}<br>${L.endDate}: ${fmt(ctr.end)}<br>${L.status}: ${esc(ctr.status)}${inv?`<br>${L.invoiceRef}: ${esc(inv.ref)}`:''}</div>
       </div>
       <div class="parties">
         <div><h3>${L.company}</h3><p><strong>${esc(company(ctr.companyId)?.name||'—')}</strong></p></div>
