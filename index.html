@@ -1041,7 +1041,7 @@
 .admin-panel{background:#fff;border:1px solid var(--line);padding:20px}.admin-panel-accent{box-shadow:inset 6px 0 0 var(--lime)}
 .admin-action-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.admin-quick{border:1px solid var(--line);background:#fff;text-align:left;padding:16px;cursor:pointer;min-height:92px}.admin-quick:hover{border-color:var(--ink);transform:translateY(-1px)}.admin-quick .mono{color:var(--blue)}.admin-quick strong{display:block;margin-top:18px}
 .admin-toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 0}.admin-toolbar input,.admin-toolbar select{border:1px solid var(--line);background:#fff;padding:10px 11px;min-height:40px;outline:none}.admin-toolbar input{min-width:260px}.admin-toolbar input:focus,.admin-toolbar select:focus{border-color:var(--ink)}.admin-toolbar-spacer{flex:1}
-.admin-table-wrap{border:1px solid var(--line);background:#fff;overflow:auto;max-width:100%}.admin-table{width:100%;border-collapse:collapse;min-width:920px;font-size:12px}.admin-table th{position:sticky;top:0;background:#f1f1ed;z-index:2;text-align:left;padding:11px 12px;border-bottom:1px solid var(--ink);font:600 9px "SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.09em;white-space:nowrap;cursor:pointer}.admin-table td{padding:12px;border-bottom:1px solid #e8e8e3;vertical-align:top}.admin-table tr:hover td{background:#fbfbf8}.admin-table tr:last-child td{border-bottom:0}.admin-table a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}.admin-row-actions{display:flex;gap:5px;white-space:nowrap}.admin-mini-btn{border:1px solid var(--line);background:#fff;padding:6px 8px;font-size:10px;cursor:pointer}.admin-mini-btn:hover{border-color:var(--ink)}.admin-mini-btn.danger{color:#a5001d}.admin-status{display:inline-block;padding:5px 7px;border:1px solid var(--line);font:700 9px monospace;letter-spacing:.06em}.admin-status.ACTIVE,.admin-status.PUBLISHED,.admin-status.SIGNED,.admin-status.VALIDATED{background:#e9f8cb;border-color:#b9df72;color:#365d00}.admin-status.PENDING,.admin-status.REVIEW,.admin-status.INVITED,.admin-status.SENT{color:var(--blue);border-color:#b7c0ff}.admin-status.EXPIRED,.admin-status.SUSPENDED,.admin-status.CANCELLED,.admin-status.ARCHIVED,.admin-status.ABORTED,.admin-status.TERMINATED{color:#8b0018;border-color:#e4b4bd}.admin-status.DRAFT,.admin-status.TRIAL{color:#725000;border-color:#e5d38f}
+.admin-table-wrap{border:1px solid var(--line);background:#fff;overflow:auto;max-width:100%}.admin-table{width:100%;border-collapse:collapse;min-width:920px;font-size:12px}.admin-table th{position:sticky;top:0;background:#f1f1ed;z-index:2;text-align:left;padding:11px 12px;border-bottom:1px solid var(--ink);font:600 9px "SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.09em;white-space:nowrap;cursor:pointer}.admin-table td{padding:12px;border-bottom:1px solid #e8e8e3;vertical-align:top}.admin-table tr:hover td{background:#fbfbf8}.admin-table tr:last-child td{border-bottom:0}.admin-table a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}.admin-row-actions{display:flex;gap:5px;white-space:nowrap}.admin-mini-btn{border:1px solid var(--line);background:#fff;padding:6px 8px;font-size:10px;cursor:pointer}.admin-mini-btn:hover{border-color:var(--ink)}.admin-mini-btn.danger{color:#a5001d}.admin-status{display:inline-block;padding:5px 7px;border:1px solid var(--line);font:700 9px monospace;letter-spacing:.06em}.admin-status.ACTIVE,.admin-status.PUBLISHED,.admin-status.SIGNED,.admin-status.VALIDATED{background:#e9f8cb;border-color:#b9df72;color:#365d00}.admin-status.PENDING,.admin-status.REVIEW,.admin-status.INVITED,.admin-status.SENT{color:var(--blue);border-color:#b7c0ff}.admin-status.EXPIRED,.admin-status.SUSPENDED,.admin-status.CANCELLED,.admin-status.ARCHIVED,.admin-status.ABORTED,.admin-status.TERMINATED{color:#8b0018;border-color:#e4b4bd}.admin-status.DRAFT,.admin-status.TRIAL{color:#725000;border-color:#e5d38f}.admin-status-select{appearance:none;-webkit-appearance:none;background-color:#fff;cursor:pointer;font-family:inherit}
 .admin-pagination{display:flex;justify-content:space-between;align-items:center;padding:12px;border-top:1px solid var(--line);font-size:11px}.admin-pagination-actions{display:flex;gap:5px}
 .admin-empty{border:1px dashed #bdbdb6;background:#fff;padding:44px;text-align:center;color:#777}.admin-empty h3{color:var(--ink);font-size:22px;margin:0 0 6px}
 .admin-activity{border-top:1px solid var(--line)}.admin-activity-row{display:grid;grid-template-columns:90px 1.3fr 1fr 150px;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:12px}.admin-activity-row .evt{font-weight:700}.admin-activity-row .who,.admin-activity-row .when{color:#777}
@@ -5119,10 +5119,26 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         S.quotes=S.quotes.filter(x=>x.id!==quote.id);save();log('QUOTE_DELETED','Quote',quote.reference);renderQuotes(P);toast('Quotation deleted.');
       },'Delete Quote');
     });
+    document.querySelectorAll('[data-quote-status]').forEach(sel=>sel.onchange=e=>{
+      const quote=S.quotes.find(x=>x.id===sel.dataset.quoteStatus),newStatus=e.target.value,prevStatus=quote.status;
+      const apply=async()=>{
+        toast('Updating status…');
+        const res=await setQuoteStatus(quote,newStatus,false);
+        if(!res.ok){e.target.value=prevStatus;toast(res.error);return}
+        toast(newStatus==='VALIDATED'?`Quotation validated. Invoice ${res.invoice.ref} and Commercial Agreement ${res.contract.ref} created under Billing & Contract.`:'Status updated.');
+        renderQuotes(P);
+      };
+      if(newStatus==='ABORTED'){
+        e.target.value=prevStatus;
+        confirmAction('Abort this quotation?','It will be marked as aborted. This does not delete it.',apply,'Abort Quote');
+      }else{
+        apply();
+      }
+    });
   }
   function quotesTable(rows){
     if(!rows.length)return '<div class="admin-empty"><h3>No quotations yet</h3><p>Create your first customer quotation from the training catalogue.</p></div>';
-    return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Customer</th><th>Company</th><th>Courses</th><th>Total incl. VAT</th><th>Status</th><th>Issue Date</th><th>Actions</th></tr></thead><tbody>${rows.map(x=>{const t=quoteTotals(x);return `<tr><td class="mono">${esc(x.reference)}</td><td>${esc(x.customer?.name||'—')}</td><td>${esc(company(x.companyId)?.name||'—')}</td><td>${t.courseCount}</td><td>${money(t.totalTTC)}</td><td>${status(x.status)}</td><td>${fmt(x.issueDate)}</td><td><div class="admin-row-actions"><button class="admin-mini-btn" data-quote-open="${x.id}">Edit</button><button class="admin-mini-btn" data-quote-duplicate="${x.id}">Duplicate</button><button class="admin-mini-btn" data-quote-pdf="${x.id}">PDF</button><button class="admin-mini-btn danger" data-quote-delete="${x.id}">Delete</button></div></td></tr>`}).join('')}</tbody></table></div>`;
+    return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Customer</th><th>Company</th><th>Courses</th><th>Total incl. VAT</th><th>Status</th><th>Issue Date</th><th>Actions</th></tr></thead><tbody>${rows.map(x=>{const t=quoteTotals(x);return `<tr><td class="mono">${esc(x.reference)}</td><td>${esc(x.customer?.name||'—')}</td><td>${esc(company(x.companyId)?.name||'—')}</td><td>${t.courseCount}</td><td>${money(t.totalTTC)}</td><td><select class="admin-status-select admin-status ${esc(x.status)}" data-quote-status="${x.id}">${['DRAFT','SENT','VALIDATED','ABORTED'].map(s=>`<option value="${s}" ${x.status===s?'selected':''}>${s}</option>`).join('')}</select></td><td>${fmt(x.issueDate)}</td><td><div class="admin-row-actions"><button class="admin-mini-btn" data-quote-open="${x.id}">Edit</button><button class="admin-mini-btn" data-quote-duplicate="${x.id}">Duplicate</button><button class="admin-mini-btn" data-quote-pdf="${x.id}">PDF</button><button class="admin-mini-btn danger" data-quote-delete="${x.id}">Delete</button></div></td></tr>`}).join('')}</tbody></table></div>`;
   }
   async function duplicateQuote(id){
     const copy=deep(S.quotes.find(x=>x.id===id));
@@ -5136,18 +5152,11 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   function renderQuoteBuilderPage(P){
     const d=app.quoteDraft,t=quoteTotals(d),isNew=app.detail==='new';
     d.status=d.status||'DRAFT';d.language=d.language||'EN';
-    // Draft -> Sent -> Validated/Aborted. Validated/Aborted are terminal —
-    // the status badge already says so, no further action buttons needed.
-    const nextActions=
-      d.status==='DRAFT'?'<button class="btn btn-lime" id="markSent">Mark as Sent</button>'
-      :d.status==='SENT'?'<button class="btn btn-lime" id="validateQuote">Validate Quote</button><button class="btn btn-outline" id="abortQuote">Abort Quote</button>'
-      :'';
     P.innerHTML=pageHead(`11B / QUOTE BUILDER / ${esc(d.reference)}`,isNew?'New Quotation':'Edit Quotation','Select courses from the catalogue, set seats and pricing, and generate a professional quotation PDF.',
-      `<span class="admin-status ${esc(d.status)}" style="align-self:center">${esc(d.status)}</span>`
+      `<select id="quoteStatusSelect" class="admin-status-select admin-status ${esc(d.status)}" style="align-self:center">${['DRAFT','SENT','VALIDATED','ABORTED'].map(s=>`<option value="${s}" ${d.status===s?'selected':''}>${s}</option>`).join('')}</select>`
       +(isNew?'':'<button class="btn btn-outline" id="duplicateQuoteBtn">Duplicate</button>')
       +'<button class="btn btn-outline" id="generatePdf">Generate PDF</button>'
       +`<button class="btn btn-outline" id="saveQuote">${d.status==='DRAFT'?'Save Draft':'Save'}</button>`
-      +nextActions
       +'<button class="btn btn-outline" id="backQuotes">← Quote Builder</button>')
       +`<div class="admin-grid-2">
           <section class="admin-panel">
@@ -5203,11 +5212,27 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     document.getElementById('addCourses').onclick=()=>{syncQuoteForm(d);addCoursesModal(d,P)};
     document.getElementById('generatePdf').onclick=()=>{syncQuoteForm(d);printQuote(d)};
     document.getElementById('saveQuote').onclick=()=>saveQuoteDraft(P);
-    document.getElementById('markSent')?.addEventListener('click',()=>{syncQuoteForm(d);d.status='SENT';saveQuoteDraft(P)});
-    document.getElementById('validateQuote')?.addEventListener('click',()=>validateQuoteAndGenerate(P));
-    document.getElementById('abortQuote')?.addEventListener('click',()=>{
-      confirmAction('Abort this quotation?','It will be marked as aborted. This does not delete it.',()=>abortQuote(P),'Abort Quote');
-    });
+    document.getElementById('quoteStatusSelect').onchange=e=>{
+      const newStatus=e.target.value,prevStatus=d.status;
+      const apply=async()=>{
+        syncQuoteForm(d);
+        toast('Updating status…');
+        const res=await setQuoteStatus(d,newStatus,isNew);
+        if(!res.ok){e.target.value=prevStatus;toast(res.error);return}
+        toast(newStatus==='VALIDATED'?`Quotation validated. Invoice ${res.invoice.ref} and Commercial Agreement ${res.contract.ref} created under Billing & Contract.`:'Status updated.');
+        app.detail=d.id;
+        renderPage();
+      };
+      if(newStatus==='ABORTED'){
+        // Revert the visible selection right away — a confirmed abort
+        // re-renders with the real new status; a cancelled one leaves the
+        // dropdown showing what it already showed, with nothing left to undo.
+        e.target.value=prevStatus;
+        confirmAction('Abort this quotation?','It will be marked as aborted. This does not delete it.',apply,'Abort Quote');
+      }else{
+        apply();
+      }
+    };
     document.getElementById('promoMode').onchange=e=>{d.promoMode=e.target.value;rerender()};
     document.getElementById('vatRate').onchange=e=>{d.vatRate=Number(e.target.value)||0;rerender()};
     document.querySelectorAll('[data-item-seats]').forEach(inp=>inp.onchange=()=>{
@@ -5362,40 +5387,33 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     app.detail=d.id;
     renderPage();
   }
-  async function validateQuoteAndGenerate(P){
-    const d=app.quoteDraft;
-    syncQuoteForm(d);
-    if(!d.companyId){toast('Link a company to this quotation before validating — the Invoice and Commercial Agreement need one.');return}
-    if(!d.customer.name){toast('Company name is required.');return}
-    if(!d.items.length){toast('Add at least one course before validating.');return}
+  // Single entry point for every status transition (Draft/Sent/Validated/
+  // Aborted) — used by both the Quote Builder's status dropdown and the
+  // Quote Builder list's inline status dropdown, so a status change is
+  // always persisted to Supabase the same way regardless of where it was
+  // made. Validating for the first time triggers Billing & Contract
+  // generation; re-selecting Validated on an already-validated quote does
+  // not create duplicate documents.
+  async function setQuoteStatus(d,newStatus,wasNew){
+    if(newStatus==='VALIDATED'){
+      if(!d.companyId) return {ok:false,error:'Link a company to this quotation before validating — the Invoice and Commercial Agreement need one.'};
+      if(!d.customer.name) return {ok:false,error:'Company name is required.'};
+      if(!d.items.length) return {ok:false,error:'Add at least one course before validating.'};
+    }
     const prevStatus=d.status;
-    d.status='VALIDATED';
-    toast('Validating quotation…');
-    const res=await persistQuote(d,app.detail==='new');
-    if(!res.ok){d.status=prevStatus;toast(res.error);return}
+    d.status=newStatus;
+    const res=await persistQuote(d,wasNew);
+    if(!res.ok){d.status=prevStatus;return {ok:false,error:res.error}}
     const existing=S.quotes.find(x=>x.id===d.id);
     if(existing)Object.assign(existing,deep(d));else S.quotes.unshift(deep(d));
     save();
-    log('QUOTE_VALIDATED','Quote',d.reference);
-    app.detail=d.id;
-    const genRes=await generateBillingFromQuotation(d);
-    if(!genRes.ok){toast('Quotation validated, but billing documents failed: '+genRes.error);renderPage();return}
-    toast(`Quotation validated. Invoice ${genRes.invoice.ref} and Commercial Agreement ${genRes.contract.ref} created under Billing & Contract.`);
-    renderPage();
-  }
-  async function abortQuote(P){
-    const d=app.quoteDraft;
-    syncQuoteForm(d);
-    const prevStatus=d.status;
-    d.status='ABORTED';
-    const res=await persistQuote(d,app.detail==='new');
-    if(!res.ok){d.status=prevStatus;toast(res.error);return}
-    const existing=S.quotes.find(x=>x.id===d.id);
-    if(existing)Object.assign(existing,deep(d));else S.quotes.unshift(deep(d));
-    save();log('QUOTE_ABORTED','Quote',d.reference);
-    app.detail=d.id;
-    toast('Quotation aborted.');
-    renderPage();
+    log(newStatus==='VALIDATED'?'QUOTE_VALIDATED':newStatus==='ABORTED'?'QUOTE_ABORTED':newStatus==='SENT'?'QUOTE_SENT':'QUOTE_UPDATED','Quote',d.reference);
+    if(newStatus==='VALIDATED'&&prevStatus!=='VALIDATED'){
+      const genRes=await generateBillingFromQuotation(d);
+      if(!genRes.ok) return {ok:false,error:'Quotation validated, but billing documents failed: '+genRes.error};
+      return {ok:true,invoice:genRes.invoice,contract:genRes.contract};
+    }
+    return {ok:true};
   }
   // Validation is the single trigger for Billing & Contract: a validated
   // quotation is the source of truth for both the Invoice (amount/tax from
