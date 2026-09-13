@@ -5059,31 +5059,40 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
           ${quoteItemsTable(t.items)}
         </section>`;
 
+    // Any of these redraw the whole page from `d`, including the Customer
+    // form — which is a plain uncontrolled form, never written back into
+    // `d` until syncQuoteForm runs. Without syncing first, typing customer
+    // info and then touching anything else (adding courses, changing
+    // seats/promo/VAT) would silently wipe it back to the last-saved value.
+    const rerender=()=>{syncQuoteForm(d);renderQuoteBuilderPage(P)};
     document.getElementById('backQuotes').onclick=()=>{app.detail=null;app.quoteDraft=null;renderQuotes(P)};
-    document.getElementById('duplicateQuoteBtn')?.addEventListener('click',()=>duplicateQuote(d.id));
-    document.getElementById('addCourses').onclick=()=>addCoursesModal(d,P);
+    document.getElementById('duplicateQuoteBtn')?.addEventListener('click',()=>{syncQuoteForm(d);duplicateQuote(d.id)});
+    document.getElementById('addCourses').onclick=()=>{syncQuoteForm(d);addCoursesModal(d,P)};
     document.getElementById('generatePdf').onclick=()=>{syncQuoteForm(d);printQuote(d)};
     document.getElementById('saveQuote').onclick=()=>saveQuoteDraft(P);
     document.getElementById('validateQuote').onclick=()=>{d.status='VALIDATED';saveQuoteDraft(P);};
-    document.getElementById('promoMode').onchange=e=>{d.promoMode=e.target.value;renderQuoteBuilderPage(P)};
-    document.getElementById('vatRate').onchange=e=>{d.vatRate=Number(e.target.value)||0;renderQuoteBuilderPage(P)};
+    document.getElementById('promoMode').onchange=e=>{d.promoMode=e.target.value;rerender()};
+    document.getElementById('vatRate').onchange=e=>{d.vatRate=Number(e.target.value)||0;rerender()};
     document.querySelectorAll('[data-item-seats]').forEach(inp=>inp.onchange=()=>{
       const it=d.items.find(x=>x.code===inp.dataset.itemSeats),seats=Math.max(1,Math.round(Number(inp.value)||1));
       it.seats=seats;
-      if(seats<=12&&(it.price6==null||it.price12==null)){const cat=courseByCode(it.code);it.unitPriceHT=cat?Number(cat.priceHT)||0:it.unitPriceHT}
-      renderQuoteBuilderPage(P);
+      if(it.price6!=null&&it.price12!=null){
+        if(seats>12&&!it.customTotalManual)it.customTotal=Math.round((it.price6/6)*seats*100)/100;
+      }else if(seats<=12){const cat=courseByCode(it.code);it.unitPriceHT=cat?Number(cat.priceHT)||0:it.unitPriceHT}
+      rerender();
     });
     document.querySelectorAll('[data-item-price]').forEach(inp=>inp.onchange=()=>{
       const it=d.items.find(x=>x.code===inp.dataset.itemPrice);
       it.unitPriceHT=Math.max(0,Number(inp.value)||0);
-      renderQuoteBuilderPage(P);
+      rerender();
     });
     document.querySelectorAll('[data-item-customtotal]').forEach(inp=>inp.onchange=()=>{
       const it=d.items.find(x=>x.code===inp.dataset.itemCustomtotal);
       it.customTotal=Math.max(0,Number(inp.value)||0);
-      renderQuoteBuilderPage(P);
+      it.customTotalManual=true;
+      rerender();
     });
-    document.querySelectorAll('[data-item-remove]').forEach(b=>b.onclick=()=>{d.items=d.items.filter(x=>x.code!==b.dataset.itemRemove);renderQuoteBuilderPage(P)});
+    document.querySelectorAll('[data-item-remove]').forEach(b=>b.onclick=()=>{d.items=d.items.filter(x=>x.code!==b.dataset.itemRemove);rerender()});
   }
   function quoteItemsTable(items){
     if(!items.length)return '<div class="admin-empty"><h3>No courses selected</h3><p>Use “+ Add Courses” to select one or more courses from the catalogue.</p></div>';
@@ -5091,7 +5100,8 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       if(it.price6!=null&&it.price12!=null){
         if(it.priceMode==='tier6') return `${money(it.price6)} <span class="quote-custom-tag">flat · up to 6</span>`;
         if(it.priceMode==='tier12') return `${money(it.price12)} <span class="quote-custom-tag">flat · up to 12</span>`;
-        return `<input type="number" min="0" step="1" value="${it.customTotal||''}" placeholder="Negotiated total" data-item-customtotal="${esc(it.code)}" style="width:130px"> <span class="quote-custom-tag">negotiated total</span>`;
+        const refUnit=Math.round((it.price6/6)*100)/100;
+        return `<input type="number" min="0" step="1" value="${it.customTotal||''}" placeholder="Negotiated total" data-item-customtotal="${esc(it.code)}" style="width:130px"> <span class="quote-custom-tag">ref. ${money(refUnit)}/seat (/6) × ${it.seats} — adjust as needed</span>`;
       }
       return it.priceMode==='custom'
         ?`<input type="number" min="0" step="1" value="${it.unitPriceHT}" data-item-price="${esc(it.code)}" style="width:110px"> <span class="quote-custom-tag">negotiated / seat</span>`
