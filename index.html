@@ -1708,7 +1708,7 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
         <h1>Build the right<br><span class="outline">AI path</span> for your company.</h1>
         <p class="hero-copy">Focused, business-oriented AI learning that connects cutting-edge technology with the capabilities professionals actually need. Take our 3-minute assessment and receive a personalized 3, 5 and 7-course learning path.</p>
         <div class="hero-actions"><button class="btn btn-lime btn-lg" data-start>Build my free AI Path →</button><a class="btn btn-outline-light btn-lg" href="#academy">Explore the Academy</a></div>
-        <div class="trust"><span>18 questions</span><span>≈ 3 minutes</span><span>Free recommendation</span><span>No commitment</span></div>
+        <div class="trust"><span>20 questions</span><span>≈ 3 minutes</span><span>Free recommendation</span><span>No commitment</span></div>
       </div>
       <div class="assessment-card">
         <div class="mono">Free company assessment</div>
@@ -1750,8 +1750,8 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
   </div></section>
 
   <section class="how" id="how"><div class="wrap">
-    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--lime);margin-bottom:14px">3-minute assessment</div><h2>Tell us where you are.<br>We'll map where to go.</h2></div><p>Eighteen concise questions help us understand what your organization actually needs, so we can recommend a focused path instead of sending you through a broad, generic course library.</p></div>
-    <div class="steps"><div class="step"><span class="n mono">01</span><h3>Assess</h3><p>Answer 18 focused multiple-choice questions.</p></div><div class="step"><span class="n mono">02</span><h3>Map</h3><p>Our scoring model identifies your highest-priority AI capabilities.</p></div><div class="step"><span class="n mono">03</span><h3>Recommend</h3><p>Receive 3, 5 and 7-course paths using exact EduCut.ai courses.</p></div><div class="step"><span class="n mono">04</span><h3>Plan</h3><p>Receive your results, catalogue and indicative quotation free of charge.</p></div></div>
+    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--lime);margin-bottom:14px">3-minute assessment</div><h2>Tell us where you are.<br>We'll map where to go.</h2></div><p>Twenty concise questions help us understand what your organization actually needs, so we can recommend a focused path instead of sending you through a broad, generic course library.</p></div>
+    <div class="steps"><div class="step"><span class="n mono">01</span><h3>Assess</h3><p>Answer 20 focused multiple-choice questions.</p></div><div class="step"><span class="n mono">02</span><h3>Map</h3><p>Our scoring model identifies your highest-priority AI capabilities.</p></div><div class="step"><span class="n mono">03</span><h3>Recommend</h3><p>Receive 3, 5 and 7-course paths using exact EduCut.ai courses.</p></div><div class="step"><span class="n mono">04</span><h3>Plan</h3><p>Receive your results, catalogue and indicative quotation free of charge.</p></div></div>
   </div></section>
 
 
@@ -1896,7 +1896,7 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 
   <div class="modal quiz-modal" id="quizModal" aria-hidden="true">
     <div class="quiz-shell" role="dialog" aria-modal="true" aria-label="EduCut.ai AI Path Assessment">
-      <aside class="quiz-side"><div class="brand">EduCut<span>.ai</span></div><h3>AI Path<br>Assessment</h3><p>18 questions · ≈ 3 minutes<br>Personalized for your company</p><div class="side-bottom"><div class="mini-line"><span id="sideProgress"></span></div><div class="mono" id="sideLabel">Question 01 / 18</div></div></aside>
+      <aside class="quiz-side"><div class="brand">EduCut<span>.ai</span></div><h3>AI Path<br>Assessment</h3><p>20 questions · ≈ 3 minutes<br>Personalized for your company</p><div class="side-bottom"><div class="mini-line"><span id="sideProgress"></span></div><div class="mono" id="sideLabel">Question 01 / 20</div></div></aside>
       <main class="quiz-main">
         <div class="quiz-top"><div class="mono">AI Readiness & Learning Path Assessment</div><button id="closeQuiz" aria-label="Close">×</button></div>
         <div class="quiz-body" id="quizBody"></div>
@@ -2380,7 +2380,9 @@ const questions = [
  {q:'How prepared is your organization to manage AI-related risks?', note:'Consider privacy, bias, security, responsible use, regulations and human oversight.', o:['We have not addressed these topics yet','We are beginning to discuss them','Some policies or controls exist','We have formal AI governance processes','We have mature enterprise AI governance']},
  {q:'How sensitive is the information your employees may use with AI?', o:['Mostly public information','Internal business information','Confidential company information','Personal / customer / employee information','Highly regulated or business-critical information']},
  {q:'What level of AI capability do you ultimately want to build?', o:['AI Awareness — Employees understand AI and use it responsibly','AI Users — Teams use AI effectively in everyday work','AI Power Users — Teams build sophisticated AI workflows','AI Builders — Technical teams develop AI applications','AI-Driven Organization — AI becomes part of our strategy and operating model']},
- {q:'How comprehensive should your recommended AI learning path be?', note:'This tells us how much depth to recommend — you will still see all three options.', o:['Quick start — a focused 3-course path on our top priority','Balanced — a 5-course path across our top priorities','Comprehensive — a 7-course path for broad organizational coverage','Not sure — recommend the right depth for us']}
+ {q:'Which statement best describes your AI strategy today?', o:['We do not have an AI strategy','We are exploring opportunities','Individual departments are experimenting independently','We have identified AI priorities or projects','We have a structured organization-wide AI strategy']},
+ {q:'Who should initially participate in the training?', o:['Executive / leadership team','One specialized department','Technical / data team','Several departments','Organization-wide cohort']},
+ {q:'What is your preferred AI transformation horizon?', o:['Start now — Build essential capability quickly','Next 3–6 months — Develop structured team capabilities','6–12 months — Build several specialized capabilities','Long-term — Develop an organization-wide AI transformation program','We are not sure — recommend the best approach for us']}
 ];
 const letters='ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 let step=0, answers={}, transitioning=false;
@@ -2574,10 +2576,10 @@ function localLevelScore(value){
 // same 14-category vector through one explicit table (instead of scattered
 // if/add() rules), so each weight can be inspected and tuned in one place.
 // Q2 (company size) is now wired into scoring — previously collected but
-// never used. Q18 is new: it lets the visitor state how comprehensive their
-// path should be, and that choice drives which of the three plans is
-// highlighted as the recommendation, rather than the plan size being purely
-// a fixed truncation of the same ranked list.
+// never used. The visitor never picks their own plan depth: which of the
+// 3/5/7-course plans gets highlighted is inferred from their answers
+// (maturity, strategy formality and company size), the same way every
+// other recommendation in this model is derived.
 function calculateLocalAssessment(a){
   const keys=['foundations','genai','productivity','data','developers','rag','agents','governance','transformation','leaders','marketing','finance','hr','education'];
   const s=Object.fromEntries(keys.map(k=>[k,0]));
@@ -2599,10 +2601,9 @@ function calculateLocalAssessment(a){
   add('transformation',sizeLevel*1.1);
 
   const currentUse=localLevelScore(q(3)), literacy=localLevelScore(q(4));
-  if(currentUse<=1)add('foundations',6);
+  if(currentUse<=1||literacy<=1)add('foundations',6);
   if(currentUse>=2)add('productivity',2);
-  if(currentUse>=3){add('governance',3);add('transformation',4)}
-  if(literacy<=1)add('foundations',4);
+  if(currentUse>=3){add('governance',2);add('transformation',2)}
   add('genai',literacy*1.5);
 
   const mainMap={A:'productivity',B:'agents',C:'data',D:'developers',E:'marketing',F:'transformation',G:'governance'};
@@ -2643,14 +2644,24 @@ function calculateLocalAssessment(a){
   const capabilityMap={A:['foundations'],B:['productivity','genai'],C:['productivity','genai','agents'],D:['developers','rag','agents'],E:['transformation','leaders','governance']};
   (capabilityMap[q(17)]||[]).forEach(k=>add(k,5));
 
-  // Depth preference: doesn't just add points — it decides which plan gets
-  // highlighted below.
-  const depthMap={A:'quick',B:'balanced',C:'comprehensive',D:'auto'};
-  const depthPreference=depthMap[q(18)]||'auto';
-  if(depthPreference==='comprehensive'){add('transformation',3);add('governance',2)}
-  if(depthPreference==='auto')add('transformation',2);
+  // Q18 — AI strategy formality (distinct from Q3's adoption-usage signal)
+  const strategy=localLevelScore(q(18));
+  if(strategy<=1){add('leaders',4);add('transformation',4)}
+  else{add('transformation',strategy);add('governance',Math.max(0,strategy-1))}
 
-  const maturityRaw=Math.round(((currentUse+literacy+riskPreparedness)/12)*100);
+  // Q19 — who participates first
+  if(q(19)==='A')add('leaders',4);
+  if(q(19)==='B')add('productivity',2);
+  if(q(19)==='C')add('developers',4);
+  if(q(19)==='D'||q(19)==='E'){add('transformation',4);add('governance',2)}
+
+  // Q20 — transformation horizon
+  if(q(20)==='A')add('productivity',3);
+  if(q(20)==='B'){add('genai',2);add('productivity',2)}
+  if(q(20)==='C'){add('transformation',2);add('developers',1)}
+  if(q(20)==='D'){add('transformation',6);add('governance',3)}
+
+  const maturityRaw=Math.round(((currentUse+literacy+strategy+riskPreparedness)/16)*100);
   const maturityScore=Math.max(5,Math.min(95,maturityRaw));
   const maturityLabel=maturityScore<30?'Exploring':maturityScore<55?'Developing':maturityScore<75?'Scaling':'Advanced';
   const labels={
@@ -2677,13 +2688,11 @@ function calculateLocalAssessment(a){
     return {participants:'Up to 6 participants',subtotalCHFHT:subtotal,discountPercent:Math.round(discount*100),estimatedTotalCHFHT:Math.round(subtotal*(1-discount))}
   };
 
-  // Which plan is presented as "recommended": the visitor's stated depth
-  // preference wins; "not sure" falls back to company size + maturity.
-  let recommendedPlan='plan5';
-  if(depthPreference==='quick')recommendedPlan='plan3';
-  else if(depthPreference==='balanced')recommendedPlan='plan5';
-  else if(depthPreference==='comprehensive')recommendedPlan='plan7';
-  else recommendedPlan=(sizeLevel>=3||maturityScore>=60)?'plan7':(sizeLevel<=1&&maturityScore<40)?'plan3':'plan5';
+  // Which plan is presented as "recommended" — inferred from company size,
+  // maturity and strategy formality, never chosen by the visitor.
+  const recommendedPlan=(sizeLevel>=3||strategy>=3||maturityScore>=60)?'plan7'
+    :(sizeLevel<=1&&strategy<=1&&maturityScore<40)?'plan3'
+    :'plan5';
 
   return {
     assessmentId:null,
