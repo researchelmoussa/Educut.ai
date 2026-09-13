@@ -5106,6 +5106,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     const academyCodes=new Set(catalogue.map(c=>c.academy));
     const academies=S.academies.filter(a=>academyCodes.has(a.code)).sort((a,b)=>a.code.localeCompare(b.code));
     const staged=new Set();
+    const skippedPrereqs=new Set();
     const coursesForAcademy=code=>catalogue.filter(c=>c.academy===code).sort((a,b)=>a.code.localeCompare(b.code));
     const courseOptionsMarkup=code=>{
       if(!code)return '<option value="">— Select an academy first —</option>';
@@ -5120,6 +5121,30 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       if(!staged.size)return '<p style="color:#777;margin:12px 0">No courses selected yet.</p>';
       return `<div class="admin-table-wrap" style="margin:12px 0"><table class="admin-table"><thead><tr><th>Code</th><th>Course Name</th><th>Price</th><th></th></tr></thead><tbody>${[...staged].map(code=>{const c=courseByCode(code);return `<tr><td class="mono">${esc(c.code)}</td><td>${esc(c.name)}</td><td>${priceTag(c)}</td><td><button type="button" class="admin-mini-btn danger" data-unstage="${esc(c.code)}">Remove</button></td></tr>`}).join('')}</tbody></table></div>`;
     };
+    // Any prerequisite of a staged course that isn't already in the quote,
+    // already staged, or already dismissed this session gets suggested —
+    // keyed by prerequisite code so one prerequisite shared by several
+    // staged courses is only suggested once.
+    const missingPrereqs=()=>{
+      const needs=new Map();
+      staged.forEach(code=>{
+        (courseByCode(code)?.prerequisites||[]).forEach(pCode=>{
+          if(pCode===code||already.has(pCode)||staged.has(pCode)||skippedPrereqs.has(pCode))return;
+          if(!courseByCode(pCode))return;
+          if(!needs.has(pCode))needs.set(pCode,new Set());
+          needs.get(pCode).add(code);
+        });
+      });
+      return needs;
+    };
+    const suggestionsMarkup=()=>{
+      const needs=missingPrereqs();
+      if(!needs.size)return '';
+      return `<div class="admin-neutral-panel" style="margin:12px 0;box-shadow:inset 6px 0 0 var(--blue)">${[...needs.entries()].map(([code,reqBy])=>{
+        const p=courseByCode(code);
+        return `<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:6px 0"><span><strong>${esc(code)}</strong> · ${esc(p.name)} <span style="color:#777">— prerequisite of ${esc([...reqBy].join(', '))}</span></span><span style="display:flex;gap:6px;flex-shrink:0"><button type="button" class="admin-mini-btn" data-suggest-add="${esc(code)}">Add</button><button type="button" class="admin-mini-btn" data-suggest-skip="${esc(code)}">Skip</button></span></div>`;
+      }).join('')}</div>`;
+    };
     modal('Add Courses from Catalogue',`<p style="color:#666;margin:0 0 16px">Pick an academy, then a course from that academy, and add it to your selection. Repeat for each course, then confirm.</p>
       <div class="admin-form-grid" style="margin-bottom:8px">
         <div class="admin-field"><label>Academy</label><select id="addCourseAcademy"><option value="">— Select an academy —</option>${academies.map(a=>`<option value="${esc(a.code)}">${esc(a.code)} · ${esc(a.name)}</option>`).join('')}</select></div>
@@ -5127,27 +5152,33 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       </div>
       <div style="margin-bottom:8px"><button type="button" class="btn btn-outline" id="stageAddCourse" disabled>+ Add to selection</button></div>
       <div id="stagedCoursesWrap">${stagedRowsMarkup()}</div>
+      <div id="suggestionsWrap">${suggestionsMarkup()}</div>
       <div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" id="confirmAddCourses">Add Selected Courses</button></div>`);
     const academySel=document.getElementById('addCourseAcademy');
     const courseSel=document.getElementById('addCourseSelect');
     const stageBtn=document.getElementById('stageAddCourse');
-    const wireUnstage=()=>document.querySelectorAll('[data-unstage]').forEach(b=>b.onclick=()=>{
-      staged.delete(b.dataset.unstage);
+    const wireSuggestions=()=>{
+      document.querySelectorAll('[data-suggest-add]').forEach(b=>b.onclick=()=>{staged.add(b.dataset.suggestAdd);refreshAll()});
+      document.querySelectorAll('[data-suggest-skip]').forEach(b=>b.onclick=()=>{skippedPrereqs.add(b.dataset.suggestSkip);refreshAll()});
+    };
+    const wireUnstage=()=>document.querySelectorAll('[data-unstage]').forEach(b=>b.onclick=()=>{staged.delete(b.dataset.unstage);refreshAll()});
+    const refreshCourseOptions=()=>{courseSel.innerHTML=courseOptionsMarkup(academySel.value);courseSel.disabled=!academySel.value;stageBtn.disabled=true};
+    const refreshAll=()=>{
       refreshCourseOptions();
       document.getElementById('stagedCoursesWrap').innerHTML=stagedRowsMarkup();
+      document.getElementById('suggestionsWrap').innerHTML=suggestionsMarkup();
       wireUnstage();
-    });
-    const refreshCourseOptions=()=>{courseSel.innerHTML=courseOptionsMarkup(academySel.value);courseSel.disabled=!academySel.value;stageBtn.disabled=true};
+      wireSuggestions();
+    };
     academySel.onchange=refreshCourseOptions;
     courseSel.onchange=()=>{stageBtn.disabled=!courseSel.value};
     stageBtn.onclick=()=>{
       if(!courseSel.value)return;
       staged.add(courseSel.value);
-      refreshCourseOptions();
-      document.getElementById('stagedCoursesWrap').innerHTML=stagedRowsMarkup();
-      wireUnstage();
+      refreshAll();
     };
     wireUnstage();
+    wireSuggestions();
     document.getElementById('confirmAddCourses').onclick=()=>{
       staged.forEach(code=>{if(d.items.some(x=>x.code===code))return;const c=courseByCode(code);d.items.push({code:c.code,name:c.name,seats:1,unitPriceHT:Number(c.priceHT)||0,price6:c.price6??null,price12:c.price12??null})});
       closeModal();renderQuoteBuilderPage(P);
