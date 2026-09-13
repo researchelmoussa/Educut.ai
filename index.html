@@ -3600,7 +3600,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   // a number — every course this app imports quotes ">12 = price on
   // request", so it's always written as ON_REQUEST; a course wanting a
   // fixed >12 rate is a manual edit directly in Supabase, out of scope here.
-  function dbCourseToLocal(c){
+  function dbCourseToLocal(c,prereqCodes){
     return {
       id:c.id,code:c.code,academy:c.academy_code,name:c.name,description:c.description||'',objectives:c.objectives||'',
       level:c.level||'Foundation',duration:c.duration_hours||0,language:c.language||'English',instructor:c.instructor||'',
@@ -3608,7 +3608,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       priceHT:c.price_6_learners!=null?Math.round(Number(c.price_6_learners)/6):0,
       price6:c.price_6_learners!=null?Number(c.price_6_learners):null,
       price12:c.price_12_learners!=null?Number(c.price_12_learners):null,
-      prerequisites:[],modules:[],publicVisibility:!!c.public_visibility
+      prerequisites:prereqCodes||[],modules:[],publicVisibility:!!c.public_visibility
     };
   }
   function localCourseToDb(c){
@@ -3619,6 +3619,19 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       price_above_12:'ON_REQUEST'
     };
   }
+  // course_prerequisites is a real join table (course_id, prerequisite_course_id
+  // uuids, composite PK, ON DELETE CASCADE both ways) — replace-all rather
+  // than diff, since a course only ever has a handful of prerequisites.
+  async function persistCoursePrerequisites(courseDbId,prereqCodes){
+    const prereqIds=[...new Set((prereqCodes||[]).map(code=>courseByCode(code)?.id).filter(Boolean))].filter(id=>id!==courseDbId);
+    const delRes=await supaTable(`course_prerequisites?course_id=eq.${courseDbId}`,{method:'DELETE'});
+    if(!delRes.ok) return {ok:false,error:delRes.error||'Could not update prerequisites.'};
+    if(!prereqIds.length) return {ok:true};
+    const rows=prereqIds.map(pid=>({course_id:courseDbId,prerequisite_course_id:pid}));
+    const insRes=await supaTable('course_prerequisites',{method:'POST',headers:{Prefer:'return=minimal'},body:JSON.stringify(rows)});
+    if(!insRes.ok) return {ok:false,error:insRes.error||'Could not save prerequisites.'};
+    return {ok:true};
+  }
 
   // Academies/Courses/Quotes/Catalogue Requests all need the real data —
   // loaded once per admin session, lazily, on whichever of those pages is
@@ -3628,17 +3641,25 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   async function ensureLiveCatalogue(){
     if(catalogueLive.loaded||catalogueLive.loading) return;
     catalogueLive.loading=true;
-    const [aRes,cRes]=await Promise.all([
+    const [aRes,cRes,pRes]=await Promise.all([
       supaTable('academies?select=*&order=code',{method:'GET'}),
-      supaTable('courses?select=*&order=code',{method:'GET'})
+      supaTable('courses?select=*&order=code',{method:'GET'}),
+      supaTable('course_prerequisites?select=course_id,prerequisite_course_id',{method:'GET'})
     ]);
     catalogueLive.loading=false;
-    if(aRes.ok&&cRes.ok){
+    if(aRes.ok&&cRes.ok&&pRes.ok){
+      const codeById={};
+      (cRes.data||[]).forEach(c=>{codeById[c.id]=c.code});
+      const prereqCodesByCourseId={};
+      (pRes.data||[]).forEach(r=>{
+        const list=prereqCodesByCourseId[r.course_id]||(prereqCodesByCourseId[r.course_id]=[]);
+        list.push(codeById[r.prerequisite_course_id]||r.prerequisite_course_id);
+      });
       S.academies=(aRes.data||[]).map(dbAcademyToLocal);
-      S.courses=(cRes.data||[]).map(dbCourseToLocal);
+      S.courses=(cRes.data||[]).map(c=>dbCourseToLocal(c,prereqCodesByCourseId[c.id]));
       catalogueLive.loaded=true; catalogueLive.error='';
     } else {
-      catalogueLive.error=aRes.error||cRes.error||'Could not load the live catalogue.';
+      catalogueLive.error=aRes.error||cRes.error||pRes.error||'Could not load the live catalogue.';
     }
   }
   function liveCatalogueGuard(P){
@@ -4851,7 +4872,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   function simpleCourseTable(rows,removable=false,u=null,withActions=false){return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Course Code</th><th>Course Name</th><th>Academy</th><th>Level</th><th>Duration</th><th>Learners</th><th>Completion</th><th>Status</th><th>Last Updated</th><th>Actions</th></tr></thead><tbody>${rows.map(c=>{const learners=S.users.filter(u=>(u.courses||[]).includes(c.code));const completion=learners.length?Math.round(learners.reduce((a,b)=>a+(b.progress||0),0)/learners.length):0;return `<tr><td><a href="#" data-course="${c.id}">${c.code}</a></td><td>${esc(c.name)}</td><td>${esc(c.academy)}</td><td>${esc(c.level)}</td><td>${c.duration}h</td><td>${learners.length}</td><td>${progress(completion)}</td><td>${status(c.status)}</td><td>${fmt(c.updatedAt)}</td><td><div class="admin-row-actions">${withActions?`<button class="admin-mini-btn" data-course="${c.id}">Open</button><button class="admin-mini-btn" data-edit-course="${c.id}">Edit</button>`:''}${removable?`<button class="admin-mini-btn danger" data-remove-course="${c.code}">Remove</button>`:''}</div></td></tr>`}).join('')}</tbody></table></div>`}
   function openCourse(id){app.page='courses';app.detail=id;app.courseSelection=null;window.renderSuperAdmin(app.root)}
   function renderCourseDetail(P,id){const c=S.courses.find(x=>x.id===id);if(!c){app.detail=null;return renderCourses(P)}P.innerHTML=pageHead(`05 / COURSES / ${c.code}`,c.name,`${c.academy} · ${c.level} · ${c.duration} hours`,`<button class="btn btn-outline" id="backCourses">← Courses</button><button class="btn btn-outline" id="previewCourse">Preview Course</button><button class="btn btn-lime" id="publishCourse">${c.status==='PUBLISHED'?'Unpublish':'Publish'}</button>`)+courseBuilder(c);document.getElementById('backCourses').onclick=()=>{app.detail=null;renderCourses(P)};document.getElementById('previewCourse').onclick=()=>previewCourse(c);document.getElementById('publishCourse').onclick=async()=>{const prev=c.status;c.status=c.status==='PUBLISHED'?'REVIEW':'PUBLISHED';const res=await supaTable('courses',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify([localCourseToDb(c)])});if(!res.ok){c.status=prev;toast('Could not update status: '+res.error);return}c.updatedAt=new Date().toISOString().slice(0,10);save();log('COURSE_STATUS_CHANGED','Course',c.code,prev,c.status);renderCourseDetail(P,id);toast(`Course ${c.status.toLowerCase()}.`)};wireBuilder(c,P)}
-  function openCourseForm(c=null,academy=''){modal(c?'Edit Course':'Create Course',`<form class="admin-form" id="courseForm"><div class="admin-form-grid">${field('Course Code','code',c?.code||`${academy||S.academies[0]?.code||'A001'}.${String(S.courses.filter(x=>x.academy===(academy||S.academies[0]?.code)).length+1).padStart(2,'0')}`,'text','required')}${field('Course Name','name',c?.name||'','','required')}${selectField('Academy','academy',S.academies.map(a=>a.code),c?.academy||academy||S.academies[0]?.code)}${selectField('Level','level',['Foundation','Level I','Level II','Advanced'],c?.level||'Foundation')}${field('Duration (hours)','duration',c?.duration||9,'number','min="1" required')}${field('Language','language',c?.language||'English')}${field('Instructor','instructor',c?.instructor||'EduCut.ai Faculty')}${field('Price excl. VAT / seat (CHF)','priceHT',c?.priceHT||0,'number','min="0" step="1"')}${field('Flat price · up to 6 (CHF, optional)','price6',c?.price6??'','number','min="0" step="1"')}${field('Flat price · up to 12 (CHF, optional)','price12',c?.price12??'','number','min="0" step="1"')}<div class="admin-field full"><label>Short / Full Description</label><textarea name="description">${esc(c?.description||'')}</textarea></div><div class="admin-field full"><label>Learning Objectives</label><textarea name="objectives">${esc(c?.objectives||'')}</textarea></div><div class="admin-field full"><label>Prerequisites (course codes, comma-separated)</label><input name="prerequisites" value="${esc((c?.prerequisites||[]).join(', '))}"></div>${selectField('Publishing Status','status',['DRAFT','REVIEW','PUBLISHED','ARCHIVED'],c?.status||'DRAFT')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">${c?'Save Changes':'Create Course'}</button></div></form>`);document.getElementById('courseForm').onsubmit=async e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.currentTarget).entries()),data={...f,duration:Number(f.duration),priceHT:Number(f.priceHT)||0,price6:f.price6!==''?Number(f.price6):null,price12:f.price12!==''?Number(f.price12):null,prerequisites:f.prerequisites.split(',').map(x=>x.trim()).filter(Boolean)};const btn=e.currentTarget.querySelector('button[type=submit]');btn.disabled=true;const res=await supaTable('courses?on_conflict=code',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify([localCourseToDb(data)])});btn.disabled=false;if(!res.ok){toast('Could not save the course: '+res.error);return}const saved=Object.assign(dbCourseToLocal((res.data&&res.data[0])||{...localCourseToDb(data),id:c?.id}),{prerequisites:data.prerequisites,modules:c?.modules||[]});if(c)Object.assign(c,saved);else S.courses.push(saved);save();log(c?'COURSE_UPDATED':'COURSE_CREATED','Course',data.code);closeModal();renderPage();toast('Course saved.')}}
+  function openCourseForm(c=null,academy=''){modal(c?'Edit Course':'Create Course',`<form class="admin-form" id="courseForm"><div class="admin-form-grid">${field('Course Code','code',c?.code||`${academy||S.academies[0]?.code||'A001'}.${String(S.courses.filter(x=>x.academy===(academy||S.academies[0]?.code)).length+1).padStart(2,'0')}`,'text','required')}${field('Course Name','name',c?.name||'','','required')}${selectField('Academy','academy',S.academies.map(a=>a.code),c?.academy||academy||S.academies[0]?.code)}${selectField('Level','level',['Foundation','Level I','Level II','Advanced'],c?.level||'Foundation')}${field('Duration (hours)','duration',c?.duration||9,'number','min="1" required')}${field('Language','language',c?.language||'English')}${field('Instructor','instructor',c?.instructor||'EduCut.ai Faculty')}${field('Price excl. VAT / seat (CHF)','priceHT',c?.priceHT||0,'number','min="0" step="1"')}${field('Flat price · up to 6 (CHF, optional)','price6',c?.price6??'','number','min="0" step="1"')}${field('Flat price · up to 12 (CHF, optional)','price12',c?.price12??'','number','min="0" step="1"')}<div class="admin-field full"><label>Short / Full Description</label><textarea name="description">${esc(c?.description||'')}</textarea></div><div class="admin-field full"><label>Learning Objectives</label><textarea name="objectives">${esc(c?.objectives||'')}</textarea></div><div class="admin-field full"><label>Prerequisites (course codes, comma-separated)</label><input name="prerequisites" value="${esc((c?.prerequisites||[]).join(', '))}"></div>${selectField('Publishing Status','status',['DRAFT','REVIEW','PUBLISHED','ARCHIVED'],c?.status||'DRAFT')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">${c?'Save Changes':'Create Course'}</button></div></form>`);document.getElementById('courseForm').onsubmit=async e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.currentTarget).entries()),data={...f,duration:Number(f.duration),priceHT:Number(f.priceHT)||0,price6:f.price6!==''?Number(f.price6):null,price12:f.price12!==''?Number(f.price12):null,prerequisites:f.prerequisites.split(',').map(x=>x.trim()).filter(Boolean)};const btn=e.currentTarget.querySelector('button[type=submit]');btn.disabled=true;const res=await supaTable('courses?on_conflict=code',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify([localCourseToDb(data)])});if(!res.ok){btn.disabled=false;toast('Could not save the course: '+res.error);return}const saved=Object.assign(dbCourseToLocal((res.data&&res.data[0])||{...localCourseToDb(data),id:c?.id}),{prerequisites:data.prerequisites,modules:c?.modules||[]});const prereqRes=await persistCoursePrerequisites(saved.id,data.prerequisites);btn.disabled=false;if(c)Object.assign(c,saved);else S.courses.push(saved);save();log(c?'COURSE_UPDATED':'COURSE_CREATED','Course',data.code);closeModal();renderPage();toast(prereqRes.ok?'Course saved.':'Course saved, but prerequisites failed to save: '+prereqRes.error)}}
   function courseBuilder(c){const mods=c.modules||[];const sel=app.courseSelection||{kind:'course'};return `<div class="admin-course-builder"><aside class="admin-builder-tree"><div class="admin-builder-tree-head"><div><div class="mono" style="color:var(--lime)">Course Structure</div><strong>${c.code}</strong></div><span class="admin-save-state">Saved</span></div><div class="admin-tree-item ${sel.kind==='course'?'active':''}" data-tree-kind="course"><strong>General Information</strong><small>Course metadata & prerequisites</small></div>${mods.map((m,mi)=>`<div class="admin-tree-item ${sel.kind==='module'&&sel.mi===mi?'active':''}" data-tree-kind="module" data-mi="${mi}"><strong>${mi+1}. ${esc(m.title)}</strong><small>Module · ${(m.lessons||[]).length} lessons</small></div>${(m.lessons||[]).map((l,li)=>`<div class="admin-tree-item admin-tree-lesson ${sel.kind==='lesson'&&sel.mi===mi&&sel.li===li?'active':''}" data-tree-kind="lesson" data-mi="${mi}" data-li="${li}"><strong>${mi+1}.${li+1} ${esc(l.title)}</strong><small>${esc(l.type)} · ${l.duration||0} min</small></div>`).join('')}`).join('')}<div class="admin-builder-actions"><button class="admin-mini-btn" id="addModule">+ Module</button><button class="admin-mini-btn" id="addLesson" ${mods.length?'':'disabled'}>+ Lesson</button></div></aside><section class="admin-builder-editor" id="builderEditor">${builderEditor(c,sel)}</section></div>`}
   function builderEditor(c,sel){if(sel.kind==='course'){
     const prereqCodes=c.prerequisites||[];
@@ -4869,12 +4890,13 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       c.prerequisites=f.get('prerequisites').split(',').map(x=>x.trim()).filter(Boolean);
       const btn=e.currentTarget.querySelector('button[type=submit]');btn.disabled=true;
       const res=await supaTable('courses?on_conflict=code',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify([localCourseToDb(c)])});
+      if(!res.ok){btn.disabled=false;Object.assign(c,prev);toast('Could not save the course: '+res.error);return}
+      const prereqRes=await persistCoursePrerequisites(c.id,c.prerequisites);
       btn.disabled=false;
-      if(!res.ok){Object.assign(c,prev);toast('Could not save the course: '+res.error);return}
       c.updatedAt=new Date().toISOString().slice(0,10);
       save();log('COURSE_UPDATED','Course',c.code);
       renderCourseDetail(P,c.id);
-      toast('Course saved.');
+      toast(prereqRes.ok?'Course saved.':'Course saved, but prerequisites failed to save: '+prereqRes.error);
     });
     document.getElementById('builderModuleForm')?.addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget),m=c.modules[app.courseSelection.mi];m.title=f.get('title');m.description=f.get('description');save();log('MODULE_UPDATED','Course',c.code);toast('Saved.')});
     document.getElementById('builderLessonForm')?.addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.currentTarget),l=c.modules[app.courseSelection.mi].lessons[app.courseSelection.li];Object.assign(l,{title:f.get('title'),type:f.get('type'),duration:Number(f.get('duration')),required:f.get('required')==='Required',content:f.get('content'),criteria:f.get('criteria')});save();log('LESSON_UPDATED','Course',c.code);toast('Saved.')});
