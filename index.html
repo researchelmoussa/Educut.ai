@@ -3768,8 +3768,37 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   // only ever creates or updates records — never deletes one, so a
   // course an old quote still references never disappears from under it.
   // -------------------------------------------------------------------
+  const CATALOGUE_ALL_HEADERS=['Academy Code','Academy Name','Academy Description','Academy Audience','Course Code','Course Name','Level','Language','Duration (hours)','Price HT / Seat (CHF)','Status'];
   const CATALOGUE_REQUIRED_HEADERS=['Academy Code','Academy Name','Course Code','Course Name','Duration (hours)','Price HT / Seat (CHF)'];
   const catalogueImport={busy:false,fileName:'',rows:null,errors:[],diff:null};
+
+  // Shared by the CSV and PDF paths: both end up with one plain object per
+  // row, keyed by the exact header label ({'Academy Code':'A001', ...}) —
+  // this is where required-field and number validation actually happens,
+  // once, so the two input formats can never enforce different rules.
+  function buildCatalogueRows(records){
+    const errors=[]; const seenCourseCodes=new Set();
+    const rows=records.map((rec,i)=>{
+      const line=i+2;
+      const get=name=>String(rec[name]||'').trim();
+      const academyCode=get('Academy Code'), courseCode=get('Course Code');
+      const priceRaw=get('Price HT / Seat (CHF)'), durationRaw=get('Duration (hours)');
+      const price=Number(priceRaw), duration=Number(durationRaw);
+      if(!academyCode) errors.push(`Row ${line}: missing Academy Code.`);
+      if(!courseCode) errors.push(`Row ${line}: missing Course Code.`);
+      else if(seenCourseCodes.has(courseCode)) errors.push(`Row ${line}: duplicate Course Code "${courseCode}" in this file.`);
+      seenCourseCodes.add(courseCode);
+      if(!get('Course Name')) errors.push(`Row ${line}: missing Course Name.`);
+      if(priceRaw!==''&&!Number.isFinite(price)) errors.push(`Row ${line}: "${priceRaw}" is not a valid price.`);
+      if(durationRaw!==''&&!Number.isFinite(duration)) errors.push(`Row ${line}: "${durationRaw}" is not a valid duration.`);
+      return {
+        academyCode, academyName:get('Academy Name'), academyDescription:get('Academy Description'), academyAudience:get('Academy Audience'),
+        courseCode, courseName:get('Course Name'), level:get('Level')||'Foundation', language:get('Language')||'English',
+        duration:Number.isFinite(duration)?duration:0, priceHT:Number.isFinite(price)?price:0, status:get('Status')||'PUBLISHED'
+      };
+    });
+    return {errors,rows};
+  }
 
   function parseCSV(text){
     const rows=[]; let row=[]; let field=''; let inQuotes=false;
@@ -3794,29 +3823,149 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     const headers=rows[0].map(h=>h.trim());
     const missing=CATALOGUE_REQUIRED_HEADERS.filter(h=>!headers.includes(h));
     if(missing.length) return {errors:['Missing required column(s): '+missing.join(', ')],rows:[]};
-    const idx=name=>headers.indexOf(name);
-    const get=(r,name)=>{const j=idx(name);return j>=0?(r[j]||'').trim():''};
     const dataRows=rows.slice(1).filter(r=>r.some(c=>(c||'').trim()!==''));
-    const errors=[]; const seenCourseCodes=new Set();
-    const parsed=dataRows.map((r,i)=>{
-      const line=i+2;
-      const academyCode=get(r,'Academy Code'), courseCode=get(r,'Course Code');
-      const priceRaw=get(r,'Price HT / Seat (CHF)'), durationRaw=get(r,'Duration (hours)');
-      const price=Number(priceRaw), duration=Number(durationRaw);
-      if(!academyCode) errors.push(`Row ${line}: missing Academy Code.`);
-      if(!courseCode) errors.push(`Row ${line}: missing Course Code.`);
-      else if(seenCourseCodes.has(courseCode)) errors.push(`Row ${line}: duplicate Course Code "${courseCode}" in this file.`);
-      seenCourseCodes.add(courseCode);
-      if(!get(r,'Course Name')) errors.push(`Row ${line}: missing Course Name.`);
-      if(priceRaw!==''&&!Number.isFinite(price)) errors.push(`Row ${line}: "${priceRaw}" is not a valid price.`);
-      if(durationRaw!==''&&!Number.isFinite(duration)) errors.push(`Row ${line}: "${durationRaw}" is not a valid duration.`);
-      return {
-        academyCode, academyName:get(r,'Academy Name'), academyDescription:get(r,'Academy Description'), academyAudience:get(r,'Academy Audience'),
-        courseCode, courseName:get(r,'Course Name'), level:get(r,'Level')||'Foundation', language:get(r,'Language')||'English',
-        duration:Number.isFinite(duration)?duration:0, priceHT:Number.isFinite(price)?price:0, status:get(r,'Status')||'PUBLISHED'
-      };
+    const records=dataRows.map(r=>{
+      const rec={}; headers.forEach((h,i)=>{ rec[h]=r[i]||''; }); return rec;
     });
-    return {errors,rows:parsed};
+    return buildCatalogueRows(records);
+  }
+
+  // ---- PDF path -------------------------------------------------------
+  // pdf.js only gives positioned text runs, not table cells, so the header
+  // row's x-positions become the column boundaries: build them the same
+  // way parseCatalogueCSV builds header->value records, then hand off to
+  // the exact same buildCatalogueRows() validation. Works for a simple,
+  // single table per page in the same column order as the CSV template —
+  // not for scanned pages (no text layer) or multi-column layouts.
+  const PDFJS_VERSION='2.16.105';
+  let pdfJsLoadPromise=null;
+  function ensurePdfJs(){
+    if(window.pdfjsLib) return Promise.resolve(window.pdfjsLib);
+    if(pdfJsLoadPromise) return pdfJsLoadPromise;
+    pdfJsLoadPromise=new Promise((resolve,reject)=>{
+      const s=document.createElement('script');
+      s.src=`https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${PDFJS_VERSION}/pdf.min.js`;
+      s.onload=()=>{
+        if(!window.pdfjsLib){ reject(new Error('The PDF reader loaded but is not available (pdfjsLib missing).')); return; }
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc=`https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${PDFJS_VERSION}/pdf.worker.min.js`;
+        resolve(window.pdfjsLib);
+      };
+      s.onerror=()=>reject(new Error('Could not load the PDF reader from the CDN. Check your connection, or use the CSV upload instead.'));
+      document.head.appendChild(s);
+    });
+    return pdfJsLoadPromise;
+  }
+  function normColKey(s){ return String(s||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
+  const CATALOGUE_COLUMN_KEYS=CATALOGUE_ALL_HEADERS.map(normColKey);
+
+  // items: [{text,x}] for one text line, sorted by x ascending. Walks the
+  // expected columns in order, consuming items into each until the
+  // concatenation matches exactly; a column whose text isn't found simply
+  // isn't there (optional columns can be skipped) and the cursor doesn't
+  // move, so the next expected column is tried from the same spot.
+  function detectHeaderColumns(items){
+    const cols=[]; let i=0;
+    for(let k=0;k<CATALOGUE_ALL_HEADERS.length;k++){
+      if(i>=items.length) break;
+      const key=CATALOGUE_COLUMN_KEYS[k];
+      let acc=''; let j=i;
+      while(j<items.length && acc.length<key.length){ acc+=normColKey(items[j].text); j++; if(acc===key) break; }
+      if(acc===key){ cols.push({label:CATALOGUE_ALL_HEADERS[k],x:items[i].x}); i=j; }
+    }
+    return cols;
+  }
+
+  async function extractPdfLines(file){
+    const pdfjsLib=await ensurePdfJs();
+    const buf=await file.arrayBuffer();
+    const doc=await pdfjsLib.getDocument({data:buf}).promise;
+    const lines=[];
+    for(let p=1;p<=doc.numPages;p++){
+      const page=await doc.getPage(p);
+      const content=await page.getTextContent();
+      const items=content.items.map(it=>({text:it.str,x:it.transform[4],y:Math.round(it.transform[5])})).filter(it=>it.text.trim()!=='');
+      items.sort((a,b)=>b.y-a.y||a.x-b.x);
+      const pageLines=[];
+      items.forEach(it=>{
+        let line=pageLines.find(l=>Math.abs(l.y-it.y)<=3);
+        if(!line){ line={y:it.y,items:[]}; pageLines.push(line); }
+        line.items.push(it);
+      });
+      pageLines.forEach(l=>l.items.sort((a,b)=>a.x-b.x));
+      lines.push(...pageLines);
+    }
+    return lines;
+  }
+
+  function pdfLinesToRecords(lines){
+    let headerCols=null;
+    const records=[];
+    for(const line of lines){
+      if(!headerCols){
+        const cols=detectHeaderColumns(line.items);
+        const foundRequired=CATALOGUE_REQUIRED_HEADERS.every(h=>cols.some(c=>c.label===h));
+        if(foundRequired){ headerCols=cols; }
+        continue;
+      }
+      // A column owns every x from its own anchor up to the next column's
+      // anchor — not "nearest anchor" — so a long cell value (a long
+      // course name, say) that runs past the midpoint to the next column
+      // still lands in the right bucket, as long as it stays left of
+      // where that next column actually starts.
+      const bucket={};
+      line.items.forEach(it=>{
+        let best=headerCols[0];
+        for(const c of headerCols){ if(c.x<=it.x+0.5) best=c; else break; }
+        bucket[best.label]=(bucket[best.label]?bucket[best.label]+' ':'')+it.text;
+      });
+      const joined=normColKey(Object.values(bucket).join(''));
+      const looksLikeHeaderAgain=CATALOGUE_REQUIRED_HEADERS.filter(h=>joined.includes(normColKey(h))).length>=CATALOGUE_REQUIRED_HEADERS.length-1;
+      if(looksLikeHeaderAgain) continue; // repeated header row on a later page
+      if(Object.values(bucket).some(v=>v.trim()!=='')) records.push(bucket);
+    }
+    return {headerCols,records};
+  }
+
+  // Builds the template as an HTML table and hands it to the browser's own
+  // print-to-PDF, the same way printQuote() does — so a catalogue saved
+  // from this template is text pdf.js can actually read back, unlike a
+  // scanned page.
+  function downloadCataloguePdfTemplate(){
+    const sample=[
+      {['Academy Code']:'A001',['Academy Name']:'Machine Learning',['Course Code']:'A001.01',['Course Name']:'Machine Learning — Foundations & Methods I',Level:'Foundation',Language:'English',['Duration (hours)']:12,['Price HT / Seat (CHF)']:400,Status:'PUBLISHED'},
+      {['Academy Code']:'A004',['Academy Name']:'AI Productivity',['Course Code']:'A004.01',['Course Name']:'AI Productivity Fundamentals',Level:'Foundation',Language:'English',['Duration (hours)']:9,['Price HT / Seat (CHF)']:300,Status:'PUBLISHED'}
+    ];
+    const headers=Object.keys(sample[0]);
+    const w=window.open('','_blank','width=900,height=700');
+    if(!w){ toast('Please allow pop-ups to generate the PDF template.'); return; }
+    w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>EduCut.ai Priced Catalogue Template</title>
+    <style>
+      body{font-family:Inter,Arial,Helvetica,sans-serif;color:#0b0b0c;margin:0;padding:36px}
+      h1{font-size:20px;margin:0 0 6px}
+      p{color:#555;font-size:12px;margin:0 0 18px}
+      table{border-collapse:collapse;width:100%}
+      th,td{border:1px solid #ccc;padding:6px 8px;font-size:11px;text-align:left;white-space:nowrap}
+      th{background:#f1f1ed}
+    </style></head><body>
+      <h1>EduCut.ai — Priced Catalogue Template</h1>
+      <p>Replace these two example rows with your own. Keep the header row exactly as-is and in this column order, then use your browser's Print → Save as PDF, and upload the result on the Catalogue Requests page.</p>
+      <table><thead><tr>${headers.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${sample.map(r=>`<tr>${headers.map(h=>`<td>${esc(r[h])}</td>`).join('')}</tr>`).join('')}</tbody></table>
+    </body></html>`);
+    w.document.close();
+    w.focus();
+    setTimeout(()=>w.print(),300);
+  }
+
+  async function parseCataloguePdf(file){
+    let lines;
+    try{ lines=await extractPdfLines(file); }
+    catch(e){ return {errors:[e.message||'Could not read that PDF.'],rows:[]}; }
+    const {headerCols,records}=pdfLinesToRecords(lines);
+    if(!headerCols){
+      return {errors:['Could not find a header row with the required columns ('+CATALOGUE_REQUIRED_HEADERS.join(', ')+'). The PDF must contain one simple table using the same column headers as the CSV template, in the same left-to-right order.'],rows:[]};
+    }
+    if(!records.length) return {errors:['No data rows were found under the header row.'],rows:[]};
+    return buildCatalogueRows(records);
   }
 
   function diffCatalogue(rows){
@@ -3904,14 +4053,15 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         {['Academy Code']:'A001',['Academy Name']:'Machine Learning',['Academy Description']:'Foundations and methods for modern machine learning.',['Academy Audience']:'Technical professionals and data teams.',['Course Code']:'A001.01',['Course Name']:'Machine Learning — Foundations & Methods I',Level:'Foundation',Language:'English',['Duration (hours)']:12,['Price HT / Seat (CHF)']:400,Status:'PUBLISHED'},
         {['Academy Code']:'A004',['Academy Name']:'AI Productivity',['Academy Description']:'AI-assisted workflows for everyday productivity.',['Academy Audience']:'Business teams.',['Course Code']:'A004.01',['Course Name']:'AI Productivity Fundamentals',Level:'Foundation',Language:'English',['Duration (hours)']:9,['Price HT / Seat (CHF)']:300,Status:'PUBLISHED'}
       ]));
+    document.getElementById('cataloguePdfTemplate').onclick=()=>downloadCataloguePdfTemplate();
     const pick=document.getElementById('cataloguePick');
     const input=document.getElementById('catalogueFile');
     pick.onclick=()=>input.click();
     input.onchange=async()=>{
       const file=input.files&&input.files[0]; if(!file)return;
       catalogueImport.busy=true; catalogueImport.fileName=file.name; catalogueImport.errors=[]; catalogueImport.diff=null; catPaint();
-      const text=await file.text();
-      const {errors,rows}=parseCatalogueCSV(text);
+      const isPdf=file.type==='application/pdf'||/\.pdf$/i.test(file.name);
+      const {errors,rows}=isPdf?await parseCataloguePdf(file):parseCatalogueCSV(await file.text());
       catalogueImport.rows=rows;
       catalogueImport.errors=errors.length?errors:[];
       catalogueImport.diff=errors.length?null:diffCatalogue(rows);
@@ -3987,11 +4137,12 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
     <section class="admin-section" style="box-shadow:inset 6px 0 0 var(--blue);padding-left:16px">
       <div class="admin-section-head">
-        <div><div class="mono" style="color:var(--blue)">Internal — Quote Builder only</div><h2>Priced Course Catalogue</h2><p>Upload the priced catalogue (CSV) to create and update Academies, Courses, course details and per-seat pricing in one pass. Real prices live here and nowhere else — this is what the Quote Builder reads from. Nothing on this page touches the marketing PDF above, and nothing public-facing ever reads this table's prices (see the public preview below).</p></div>
+        <div><div class="mono" style="color:var(--blue)">Internal — Quote Builder only</div><h2>Priced Course Catalogue</h2><p>Upload the priced catalogue as CSV or PDF to create and update Academies, Courses, course details and per-seat pricing in one pass. Real prices live here and nowhere else — this is what the Quote Builder reads from. Nothing on this page touches the marketing PDF above, and nothing public-facing ever reads this table's prices (see the public preview below). PDF extraction needs a simple one-table file using the template's column order — the CSV upload is the more reliable path for anything more complex.</p></div>
         <div class="admin-head-actions">
           <button class="admin-mini-btn" id="catalogueTemplate">Download CSV Template</button>
+          <button class="admin-mini-btn" id="cataloguePdfTemplate">Download PDF Template</button>
           <button class="btn btn-lime" id="cataloguePick" ${catalogueImport.busy?'disabled':''}>Upload Priced Catalogue</button>
-          <input type="file" id="catalogueFile" accept=".csv,text/csv" style="display:none">
+          <input type="file" id="catalogueFile" accept=".csv,text/csv,.pdf,application/pdf" style="display:none">
         </div>
       </div>
       <div class="admin-kpis">
