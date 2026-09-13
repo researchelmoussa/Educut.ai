@@ -3262,6 +3262,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   let S;
   try{S=JSON.parse(localStorage.getItem(KEY))||deep(seed)}catch(_){S=deep(seed)}
   S.quotes=S.quotes||[];
+  S.settings.pricingTiers=S.settings.pricingTiers||[{minCourses:3,percent:10},{minCourses:5,percent:15},{minCourses:7,percent:20}];
   const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(_){}};
   const app={root:null,page:'dashboard',detail:null,tab:'Overview',query:'',sortKey:null,sortDir:1,pageNum:1,pageSize:12,selected:new Set(),courseSelection:null,quoteDraft:null};
 
@@ -3758,6 +3759,190 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     document.getElementById('adminModalBody').innerHTML=`<div class="assess-detail">${body}</div>`;
   }
 
+  // -------------------------------------------------------------------
+  // PRICED CATALOGUE IMPORT
+  //
+  // Local-first, like the rest of Academies/Courses/Quotes: this never
+  // touches Supabase, it reads a CSV, diffs it against S.academies/
+  // S.courses by their natural keys (Academy Code / Course Code), and
+  // only ever creates or updates records — never deletes one, so a
+  // course an old quote still references never disappears from under it.
+  // -------------------------------------------------------------------
+  const CATALOGUE_REQUIRED_HEADERS=['Academy Code','Academy Name','Course Code','Course Name','Duration (hours)','Price HT / Seat (CHF)'];
+  const catalogueImport={busy:false,fileName:'',rows:null,errors:[],diff:null};
+
+  function parseCSV(text){
+    const rows=[]; let row=[]; let field=''; let inQuotes=false;
+    for(let i=0;i<text.length;i++){
+      const c=text[i];
+      if(inQuotes){
+        if(c==='"'){ if(text[i+1]==='"'){ field+='"'; i++; } else inQuotes=false; }
+        else field+=c;
+      } else if(c==='"') inQuotes=true;
+      else if(c===','){ row.push(field); field=''; }
+      else if(c==='\r'){ /* ignore, \n below closes the row */ }
+      else if(c==='\n'){ row.push(field); rows.push(row); row=[]; field=''; }
+      else field+=c;
+    }
+    if(field.length||row.length){ row.push(field); rows.push(row); }
+    return rows.filter(r=>!(r.length===1&&r[0].trim()===''));
+  }
+
+  function parseCatalogueCSV(text){
+    const rows=parseCSV(text);
+    if(!rows.length) return {errors:['The file is empty.'],rows:[]};
+    const headers=rows[0].map(h=>h.trim());
+    const missing=CATALOGUE_REQUIRED_HEADERS.filter(h=>!headers.includes(h));
+    if(missing.length) return {errors:['Missing required column(s): '+missing.join(', ')],rows:[]};
+    const idx=name=>headers.indexOf(name);
+    const get=(r,name)=>{const j=idx(name);return j>=0?(r[j]||'').trim():''};
+    const dataRows=rows.slice(1).filter(r=>r.some(c=>(c||'').trim()!==''));
+    const errors=[]; const seenCourseCodes=new Set();
+    const parsed=dataRows.map((r,i)=>{
+      const line=i+2;
+      const academyCode=get(r,'Academy Code'), courseCode=get(r,'Course Code');
+      const priceRaw=get(r,'Price HT / Seat (CHF)'), durationRaw=get(r,'Duration (hours)');
+      const price=Number(priceRaw), duration=Number(durationRaw);
+      if(!academyCode) errors.push(`Row ${line}: missing Academy Code.`);
+      if(!courseCode) errors.push(`Row ${line}: missing Course Code.`);
+      else if(seenCourseCodes.has(courseCode)) errors.push(`Row ${line}: duplicate Course Code "${courseCode}" in this file.`);
+      seenCourseCodes.add(courseCode);
+      if(!get(r,'Course Name')) errors.push(`Row ${line}: missing Course Name.`);
+      if(priceRaw!==''&&!Number.isFinite(price)) errors.push(`Row ${line}: "${priceRaw}" is not a valid price.`);
+      if(durationRaw!==''&&!Number.isFinite(duration)) errors.push(`Row ${line}: "${durationRaw}" is not a valid duration.`);
+      return {
+        academyCode, academyName:get(r,'Academy Name'), academyDescription:get(r,'Academy Description'), academyAudience:get(r,'Academy Audience'),
+        courseCode, courseName:get(r,'Course Name'), level:get(r,'Level')||'Foundation', language:get(r,'Language')||'English',
+        duration:Number.isFinite(duration)?duration:0, priceHT:Number.isFinite(price)?price:0, status:get(r,'Status')||'PUBLISHED'
+      };
+    });
+    return {errors,rows:parsed};
+  }
+
+  function diffCatalogue(rows){
+    const valid=rows.filter(r=>r.academyCode&&r.courseCode&&r.courseName);
+    const academyMap=new Map();
+    valid.forEach(r=>{ if(!academyMap.has(r.academyCode)) academyMap.set(r.academyCode,r); });
+    const newAcademies=[], updatedAcademies=[];
+    academyMap.forEach(r=>{
+      const existing=S.academies.find(x=>x.code===r.academyCode);
+      if(!existing) newAcademies.push(r.academyCode);
+      else if((r.academyName&&existing.name!==r.academyName)||(r.academyDescription&&existing.description!==r.academyDescription)||(r.academyAudience&&existing.audience!==r.academyAudience)) updatedAcademies.push(r.academyCode);
+    });
+    const newCourses=[], updatedCourses=[], priceChanges=[];
+    valid.forEach(r=>{
+      const existing=S.courses.find(x=>x.code===r.courseCode);
+      if(!existing){ newCourses.push(r.courseCode); return; }
+      if(existing.priceHT!==r.priceHT) priceChanges.push({code:r.courseCode,from:existing.priceHT,to:r.priceHT});
+      const changed=existing.name!==r.courseName||existing.academy!==r.academyCode||existing.duration!==r.duration||existing.priceHT!==r.priceHT||existing.level!==r.level||existing.language!==r.language;
+      if(changed) updatedCourses.push(r.courseCode);
+    });
+    const fileCourseCodes=new Set(valid.map(r=>r.courseCode));
+    const untouchedCourses=S.courses.filter(c=>!fileCourseCodes.has(c.code)).map(c=>c.code);
+    return {valid,newAcademies,updatedAcademies,newCourses,updatedCourses,priceChanges,untouchedCourses};
+  }
+
+  function applyCatalogueImport(validRows){
+    const today=new Date().toISOString().slice(0,10);
+    validRows.forEach(r=>{
+      let academy=S.academies.find(x=>x.code===r.academyCode);
+      if(!academy){
+        academy={code:r.academyCode,name:r.academyName||r.academyCode,description:r.academyDescription||'',audience:r.academyAudience||'',status:'ACTIVE',updatedAt:today};
+        S.academies.push(academy);
+      } else {
+        if(r.academyName) academy.name=r.academyName;
+        if(r.academyDescription) academy.description=r.academyDescription;
+        if(r.academyAudience) academy.audience=r.academyAudience;
+        academy.updatedAt=today;
+      }
+    });
+    validRows.forEach(r=>{
+      let course=S.courses.find(x=>x.code===r.courseCode);
+      if(!course){
+        course={id:uid('CRS'),code:r.courseCode,name:r.courseName,academy:r.academyCode,level:r.level,duration:r.duration,status:r.status,updatedAt:today,objectives:'',prerequisites:[],language:r.language,instructor:'EduCut.ai Faculty',description:'',priceHT:r.priceHT,modules:[]};
+        S.courses.push(course);
+      } else {
+        course.name=r.courseName||course.name;
+        course.academy=r.academyCode||course.academy;
+        course.level=r.level||course.level;
+        course.duration=r.duration||course.duration;
+        course.language=r.language||course.language;
+        course.priceHT=r.priceHT;
+        course.status=r.status||course.status;
+        course.updatedAt=today;
+      }
+    });
+    S.settings.catalogueImportedAt=new Date().toISOString();
+    save();
+  }
+
+  function catalogueImportPreviewMarkup(){
+    if(catalogueImport.busy) return `<div class="admin-neutral-panel"><strong>Reading catalogue…</strong></div>`;
+    if(catalogueImport.errors.length) return `<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 #c33"><strong>${esc(catalogueImport.fileName)} could not be imported.</strong><ul style="margin:10px 0 0;padding-left:18px;color:#a5001d">${catalogueImport.errors.slice(0,12).map(e=>`<li>${esc(e)}</li>`).join('')}</ul>${catalogueImport.errors.length>12?`<p style="color:#a5001d">…and ${catalogueImport.errors.length-12} more.</p>`:''}</div>`;
+    if(!catalogueImport.diff) return '';
+    const d=catalogueImport.diff;
+    return `<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 var(--lime)">
+      <strong>${esc(catalogueImport.fileName)} — ready to import</strong>
+      <div class="admin-kpis" style="margin:14px 0 4px">
+        <div class="admin-kpi"><div class="mono">New Academies</div><strong>${d.newAcademies.length}</strong></div>
+        <div class="admin-kpi"><div class="mono">Updated Academies</div><strong>${d.updatedAcademies.length}</strong></div>
+        <div class="admin-kpi"><div class="mono">New Courses</div><strong>${d.newCourses.length}</strong></div>
+        <div class="admin-kpi"><div class="mono">Updated Courses</div><strong>${d.updatedCourses.length}</strong></div>
+      </div>
+      <p style="color:#666;margin:10px 0 0">${d.priceChanges.length?`${d.priceChanges.length} price change(s): ${d.priceChanges.slice(0,6).map(p=>`${esc(p.code)} ${money(p.from)}→${money(p.to)}`).join(', ')}${d.priceChanges.length>6?'…':''}`:'No price changes.'}</p>
+      ${d.untouchedCourses.length?`<p style="color:#666;margin:6px 0 0">${d.untouchedCourses.length} existing course(s) are not in this file and will be left untouched: ${d.untouchedCourses.slice(0,8).join(', ')}${d.untouchedCourses.length>8?'…':''}.</p>`:''}
+      <div class="admin-modal-actions" style="justify-content:flex-start;border-top:0;padding-top:12px">
+        <button class="btn btn-lime" id="confirmCatalogueImport">Confirm Import</button>
+        <button class="btn btn-outline" id="cancelCatalogueImport">Cancel</button>
+      </div>
+    </div>`;
+  }
+
+  function wireCatalogueImport(){
+    document.getElementById('catalogueTemplate').onclick=()=>download('EduCut_Priced_Catalogue_Template.csv',
+      csv([
+        {['Academy Code']:'A001',['Academy Name']:'Machine Learning',['Academy Description']:'Foundations and methods for modern machine learning.',['Academy Audience']:'Technical professionals and data teams.',['Course Code']:'A001.01',['Course Name']:'Machine Learning — Foundations & Methods I',Level:'Foundation',Language:'English',['Duration (hours)']:12,['Price HT / Seat (CHF)']:400,Status:'PUBLISHED'},
+        {['Academy Code']:'A004',['Academy Name']:'AI Productivity',['Academy Description']:'AI-assisted workflows for everyday productivity.',['Academy Audience']:'Business teams.',['Course Code']:'A004.01',['Course Name']:'AI Productivity Fundamentals',Level:'Foundation',Language:'English',['Duration (hours)']:9,['Price HT / Seat (CHF)']:300,Status:'PUBLISHED'}
+      ]));
+    const pick=document.getElementById('cataloguePick');
+    const input=document.getElementById('catalogueFile');
+    pick.onclick=()=>input.click();
+    input.onchange=async()=>{
+      const file=input.files&&input.files[0]; if(!file)return;
+      catalogueImport.busy=true; catalogueImport.fileName=file.name; catalogueImport.errors=[]; catalogueImport.diff=null; catPaint();
+      const text=await file.text();
+      const {errors,rows}=parseCatalogueCSV(text);
+      catalogueImport.rows=rows;
+      catalogueImport.errors=errors.length?errors:[];
+      catalogueImport.diff=errors.length?null:diffCatalogue(rows);
+      catalogueImport.busy=false;
+      input.value='';
+      catPaint();
+    };
+    document.getElementById('confirmCatalogueImport')?.addEventListener('click',()=>{
+      const d=catalogueImport.diff;
+      applyCatalogueImport(d.valid);
+      log('CATALOGUE_IMPORTED','Catalogue',catalogueImport.fileName,'',`${d.newCourses.length} new, ${d.updatedCourses.length} updated courses`);
+      toast(`Catalogue imported: ${d.newAcademies.length+d.updatedAcademies.length} Academies, ${d.newCourses.length+d.updatedCourses.length} Courses.`);
+      catalogueImport.fileName=''; catalogueImport.rows=null; catalogueImport.errors=[]; catalogueImport.diff=null;
+      renderPage();
+    });
+    document.getElementById('cancelCatalogueImport')?.addEventListener('click',()=>{
+      catalogueImport.fileName=''; catalogueImport.rows=null; catalogueImport.errors=[]; catalogueImport.diff=null;
+      catPaint();
+    });
+  }
+
+  // Read-only mirror of the internal catalogue with every price replaced —
+  // there is no separate "public" table to keep in sync; this just proves
+  // what would be safe to expose, straight from the same S.academies/
+  // S.courses the internal panel above edits.
+  function publicCataloguePreviewTable(){
+    const rows=S.courses.filter(c=>c.status==='PUBLISHED').slice().sort((a,b)=>a.code.localeCompare(b.code));
+    if(!rows.length) return '<div class="admin-empty"><h3>No published courses yet</h3><p>Only PUBLISHED courses would ever be shown publicly.</p></div>';
+    return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Academy</th><th>Course Code</th><th>Course Name</th><th>Duration</th><th>Price</th></tr></thead><tbody>${rows.map(c=>`<tr><td>${esc(S.academies.find(a=>a.code===c.academy)?.name||c.academy)}</td><td class="mono">${esc(c.code)}</td><td>${esc(c.name)}</td><td>${c.duration}h</td><td class="price-tbr">TO BE REQUESTED</td></tr>`).join('')}</tbody></table></div>`;
+  }
+
   function renderCatalogueRequests(P){
     P.innerHTML=pageHead('/ADMIN/CATALOGUE','Catalogue Requests',
       'Everyone who asked for the catalogue PDF, with how many times they actually downloaded it. A request is stored the moment the form is submitted; the download is gated by a per-request token.')+
@@ -3798,6 +3983,38 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
            </div>
            <p style="color:#666;margin-top:12px">Everyone who has already requested the catalogue receives this file. Replacing it updates their download immediately.</p>`
         : `<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 #c33"><strong>No catalogue uploaded yet.</strong><p>Until a PDF is stored here, anyone who completes the form is told the catalogue is being prepared. Their request is still recorded, so nothing is lost.</p></div>`}
+    </section>
+
+    <section class="admin-section" style="box-shadow:inset 6px 0 0 var(--blue);padding-left:16px">
+      <div class="admin-section-head">
+        <div><div class="mono" style="color:var(--blue)">Internal — Quote Builder only</div><h2>Priced Course Catalogue</h2><p>Upload the priced catalogue (CSV) to create and update Academies, Courses, course details and per-seat pricing in one pass. Real prices live here and nowhere else — this is what the Quote Builder reads from. Nothing on this page touches the marketing PDF above, and nothing public-facing ever reads this table's prices (see the public preview below).</p></div>
+        <div class="admin-head-actions">
+          <button class="admin-mini-btn" id="catalogueTemplate">Download CSV Template</button>
+          <button class="btn btn-lime" id="cataloguePick" ${catalogueImport.busy?'disabled':''}>Upload Priced Catalogue</button>
+          <input type="file" id="catalogueFile" accept=".csv,text/csv" style="display:none">
+        </div>
+      </div>
+      <div class="admin-kpis">
+        <div class="admin-kpi"><div class="mono">Academies</div><strong>${S.academies.length}</strong></div>
+        <div class="admin-kpi"><div class="mono">Courses</div><strong>${S.courses.length}</strong></div>
+        <div class="admin-kpi"><div class="mono">Courses without a price</div><strong>${S.courses.filter(c=>!c.priceHT).length}</strong></div>
+        <div class="admin-kpi"><div class="mono">Last import</div><strong style="font-size:16px">${S.settings.catalogueImportedAt?fmt(S.settings.catalogueImportedAt):'Never'}</strong></div>
+      </div>
+      <div id="catalogueImportBody">${catalogueImportPreviewMarkup()}</div>
+      <div class="admin-section" style="margin-top:22px">
+        <div class="admin-section-head"><div><h3 style="margin:0;font-size:18px">Discount tiers</h3><p>Drives the promotion selector in the Quote Builder — the same tiers apply to every quotation.</p></div></div>
+        <form class="admin-form-grid" id="pricingTiersForm">
+          ${(S.settings.pricingTiers||[]).map((t,i)=>`<div class="admin-field"><label>${t.minCourses}+ courses — discount %</label><input type="number" min="0" max="100" step="1" name="tier${i}" value="${t.percent}"></div>`).join('')}
+          <div class="admin-field" style="align-self:end"><button class="btn btn-outline" type="submit">Save Tiers</button></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="admin-section" style="box-shadow:inset 6px 0 0 var(--lime);padding-left:16px">
+      <div class="admin-section-head">
+        <div><div class="mono" style="color:#477300">Public preview — price hidden</div><h2>Public Catalogue Preview</h2><p>What a prospect would see if this were shown outside the admin workspace: the same Academies and published Courses, every price replaced with "To be requested." Use this to check what's safe to expose before anything public ever points at this catalogue.</p></div>
+      </div>
+      ${publicCataloguePreviewTable()}
     </section>
 
     <section class="admin-section">
@@ -3848,6 +4065,17 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         setTimeout(()=>URL.revokeObjectURL(url),60000);
       }catch(_){ toast('Could not open the catalogue.'); }
     });
+
+    wireCatalogueImport();
+    document.getElementById('pricingTiersForm').onsubmit=e=>{
+      e.preventDefault();
+      const f=new FormData(e.currentTarget);
+      S.settings.pricingTiers=(S.settings.pricingTiers||[]).map((t,i)=>({minCourses:t.minCourses,percent:Math.max(0,Math.min(100,Number(f.get('tier'+i))||0))}));
+      save();
+      log('PRICING_TIERS_UPDATED','Settings','pricingTiers');
+      toast('Discount tiers saved.');
+      catPaint();
+    };
   }
 
   const slotState={date:null,rows:[],busy:false,err:''};
@@ -4204,14 +4432,21 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     const n=S.quotes.filter(q=>(q.reference||'').startsWith('QUO-'+year)).length+1;
     return `QUO-${year}-${String(n).padStart(4,'0')}`;
   }
+  // Local calendar date, not toISOString().slice(0,10) — that reads UTC, which
+  // shows the wrong day for anyone west/east of it near midnight.
+  function todayLocal(){
+    const d=new Date();
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  }
   function newQuoteDraft(){
-    return {id:uid('QUO'),reference:quoteRef(),status:'DRAFT',companyId:'',customer:{name:'',contact:'',email:'',address:''},issueDate:new Date().toISOString().slice(0,10),items:[],promoMode:'auto',vatRate:8.1,notes:'',createdAt:nowISO(),updatedAt:nowISO()};
+    return {id:uid('QUO'),reference:quoteRef(),status:'DRAFT',companyId:'',customer:{name:'',contact:'',email:'',address:''},issueDate:todayLocal(),items:[],promoMode:'auto',vatRate:8.1,notes:'',createdAt:nowISO(),updatedAt:nowISO()};
   }
   function quoteTotals(q){
     const items=(q.items||[]).map(it=>({...it,lineTotal:Math.round((Number(it.seats)||0)*(Number(it.unitPriceHT)||0)*100)/100}));
     const subtotal=Math.round(items.reduce((a,b)=>a+b.lineTotal,0)*100)/100;
     const courseCount=items.length;
-    const autoPct=courseCount>=7?20:courseCount>=5?15:courseCount>=3?10:0;
+    const tiers=(S.settings.pricingTiers||[]).slice().sort((a,b)=>a.minCourses-b.minCourses);
+    let autoPct=0; tiers.forEach(t=>{ if(courseCount>=t.minCourses) autoPct=t.percent; });
     const pct=q.promoMode==='none'?0:q.promoMode==='auto'?autoPct:(Number(q.promoMode)||0);
     const discount=Math.round(subtotal*pct)/100;
     const totalHT=Math.round((subtotal-discount)*100)/100;
@@ -4282,9 +4517,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
               <div class="admin-field"><label>Promotion</label><select id="promoMode">
                 <option value="auto" ${d.promoMode==='auto'?'selected':''}>Auto — based on course count (currently ${t.autoPct}%)</option>
                 <option value="none" ${d.promoMode==='none'?'selected':''}>No promotion</option>
-                <option value="10" ${d.promoMode==='10'?'selected':''}>10% — 3+ courses</option>
-                <option value="15" ${d.promoMode==='15'?'selected':''}>15% — 5+ courses</option>
-                <option value="20" ${d.promoMode==='20'?'selected':''}>20% — 7+ courses</option>
+                ${(S.settings.pricingTiers||[]).slice().sort((a,b)=>a.minCourses-b.minCourses).map(tier=>`<option value="${tier.percent}" ${d.promoMode===String(tier.percent)?'selected':''}>${tier.percent}% — ${tier.minCourses}+ courses</option>`).join('')}
               </select></div>
               <div class="admin-field"><label>VAT rate (%)</label><input id="vatRate" type="number" min="0" step="0.1" value="${t.vatRate}"></div>
             </div>
@@ -4387,6 +4620,9 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       .notes h3{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#3357ff;margin:0 0 8px}
       .foot{margin-top:56px;padding-top:16px;border-top:1px solid #d7d7d1;font-size:12px;color:#555;display:flex;justify-content:space-between;gap:24px}
       .foot strong{display:block;color:#0b0b0c}
+      .foot .sign-off{text-align:right}
+      .foot .sig-block{display:flex;flex-direction:column;align-items:flex-end;gap:4px;margin-bottom:10px}
+      .foot .sig-block svg{display:block}
       @media print{ body{padding:24px 32px} }
     </style></head><body>
       <div class="doc-head">
@@ -4406,7 +4642,48 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         <div class="grand"><span>Total incl. VAT</span><strong>${money(t.totalTTC)}</strong></div>
       </div>
       ${q.notes?`<div class="notes"><h3>Notes / special conditions</h3><p>${esc(q.notes).replace(/\n/g,'<br>')}</p></div>`:''}
-      <div class="foot"><div>This quotation is issued by EduCut.ai and remains valid for 30 days from the issue date unless otherwise agreed.</div><div style="text-align:right"><strong>Financial Department</strong>EduCut.ai</div></div>
+      <div class="foot">
+        <div>This quotation is issued by EduCut.ai and remains valid for 30 days from the issue date unless otherwise agreed.</div>
+        <div class="sign-off">
+          <div class="sig-block">
+            <svg width="130" height="72" viewBox="0 0 200 110" aria-hidden="true">
+              <g fill="none" stroke="#c81e1e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M118,14 C150,2 172,22 156,34 C142,44 120,40 108,50 C86,70 60,92 40,100"/>
+                <path d="M70,72 C58,64 40,70 42,84 C44,96 62,96 68,86 C72,80 66,74 70,72 Z"/>
+                <path d="M96,86 C100,90 104,90 104,84"/>
+              </g>
+              <circle cx="112" cy="92" r="2.6" fill="#c81e1e"/>
+            </svg>
+            <svg width="64" height="72" viewBox="0 0 140 158" aria-hidden="true">
+              <defs><clipPath id="crestClip"><path d="M70,4 C95,4 118,16 118,16 L118,78 C118,112 70,138 70,138 C70,138 22,112 22,78 L22,16 C22,16 45,4 70,4 Z"/></clipPath></defs>
+              <g fill="none" stroke="#3357ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M70,4 C95,4 118,16 118,16 L118,78 C118,112 70,138 70,138 C70,138 22,112 22,78 L22,16 C22,16 45,4 70,4 Z"/>
+                <g clip-path="url(#crestClip)">
+                  <line x1="70" y1="4" x2="70" y2="138"/>
+                  <line x1="22" y1="60" x2="118" y2="60"/>
+                  <circle cx="42" cy="33" r="9"/>
+                  <circle cx="53" cy="33" r="9"/>
+                  <line x1="60" y1="24" x2="66" y2="24"/><circle cx="68" cy="24" r="1.4" fill="#3357ff"/>
+                  <line x1="60" y1="42" x2="66" y2="42"/><circle cx="68" cy="42" r="1.4" fill="#3357ff"/>
+                  <line x1="80" y1="20" x2="106" y2="20"/>
+                  <line x1="80" y1="30" x2="96" y2="30"/>
+                  <line x1="86" y1="42" x2="110" y2="42"/>
+                  <line x1="80" y1="50" x2="100" y2="50"/>
+                  <circle cx="46" cy="90" r="12"/>
+                  <path d="M46,80 L52,90 L46,100 L40,90 Z"/>
+                  <line x1="46" y1="72" x2="46" y2="76"/>
+                  <path d="M84,80 C90,77 96,77 96,80 L96,101 C96,98 90,98 84,101 Z"/>
+                  <path d="M96,80 C102,77 108,77 108,80 L108,101 C108,98 102,98 96,101 Z"/>
+                  <line x1="112" y1="72" x2="98" y2="83"/>
+                </g>
+              </g>
+              <path d="M28,132 L112,132 L104,144 L112,156 L70,150 L28,156 L36,144 Z" fill="none" stroke="#3357ff" stroke-width="1.6" stroke-linejoin="round"/>
+              <text x="70" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" letter-spacing="1.5" fill="#3357ff">EDUCARE</text>
+            </svg>
+          </div>
+          <strong>Financial Department</strong>EduCut.ai
+        </div>
+      </div>
     </body></html>`);
     w.document.close();
     w.focus();
