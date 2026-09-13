@@ -4940,11 +4940,53 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     const already=new Set(d.items.map(x=>x.code));
     const catalogue=S.courses.filter(c=>c.status!=='ARCHIVED');
     const priceTag=c=>c.price6!=null&&c.price12!=null?`${money(c.price6)} up to 6 / ${money(c.price12)} up to 12`:money(c.priceHT||0)+'/seat';
-    modal('Add Courses from Catalogue',`<div class="auth-chip-grid">${catalogue.map(c=>`<button type="button" class="auth-chip" data-add-course="${c.code}" aria-pressed="${already.has(c.code)?'true':'false'}">${c.code} · ${esc(c.name)} · ${priceTag(c)}</button>`).join('')||'<p style="color:#777">No courses in the catalogue yet.</p>'}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" id="confirmAddCourses">Add Selected Courses</button></div>`);
-    document.querySelectorAll('[data-add-course]').forEach(b=>b.onclick=()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true'));
+    const academyCodes=new Set(catalogue.map(c=>c.academy));
+    const academies=S.academies.filter(a=>academyCodes.has(a.code)).sort((a,b)=>a.code.localeCompare(b.code));
+    const staged=new Set();
+    const coursesForAcademy=code=>catalogue.filter(c=>c.academy===code).sort((a,b)=>a.code.localeCompare(b.code));
+    const courseOptionsMarkup=code=>{
+      if(!code)return '<option value="">— Select an academy first —</option>';
+      const list=coursesForAcademy(code);
+      if(!list.length)return '<option value="">No courses in this academy</option>';
+      return '<option value="">— Select a course —</option>'+list.map(c=>{
+        const taken=already.has(c.code)||staged.has(c.code);
+        return `<option value="${esc(c.code)}" ${taken?'disabled':''}>${esc(c.code)} · ${esc(c.name)} · ${priceTag(c)}${taken?' (already added)':''}</option>`;
+      }).join('');
+    };
+    const stagedRowsMarkup=()=>{
+      if(!staged.size)return '<p style="color:#777;margin:12px 0">No courses selected yet.</p>';
+      return `<div class="admin-table-wrap" style="margin:12px 0"><table class="admin-table"><thead><tr><th>Code</th><th>Course Name</th><th>Price</th><th></th></tr></thead><tbody>${[...staged].map(code=>{const c=courseByCode(code);return `<tr><td class="mono">${esc(c.code)}</td><td>${esc(c.name)}</td><td>${priceTag(c)}</td><td><button type="button" class="admin-mini-btn danger" data-unstage="${esc(c.code)}">Remove</button></td></tr>`}).join('')}</tbody></table></div>`;
+    };
+    modal('Add Courses from Catalogue',`<p style="color:#666;margin:0 0 16px">Pick an academy, then a course from that academy, and add it to your selection. Repeat for each course, then confirm.</p>
+      <div class="admin-form-grid" style="margin-bottom:8px">
+        <div class="admin-field"><label>Academy</label><select id="addCourseAcademy"><option value="">— Select an academy —</option>${academies.map(a=>`<option value="${esc(a.code)}">${esc(a.code)} · ${esc(a.name)}</option>`).join('')}</select></div>
+        <div class="admin-field"><label>Course</label><select id="addCourseSelect" disabled>${courseOptionsMarkup('')}</select></div>
+      </div>
+      <div style="margin-bottom:8px"><button type="button" class="btn btn-outline" id="stageAddCourse" disabled>+ Add to selection</button></div>
+      <div id="stagedCoursesWrap">${stagedRowsMarkup()}</div>
+      <div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" id="confirmAddCourses">Add Selected Courses</button></div>`);
+    const academySel=document.getElementById('addCourseAcademy');
+    const courseSel=document.getElementById('addCourseSelect');
+    const stageBtn=document.getElementById('stageAddCourse');
+    const wireUnstage=()=>document.querySelectorAll('[data-unstage]').forEach(b=>b.onclick=()=>{
+      staged.delete(b.dataset.unstage);
+      refreshCourseOptions();
+      document.getElementById('stagedCoursesWrap').innerHTML=stagedRowsMarkup();
+      wireUnstage();
+    });
+    const refreshCourseOptions=()=>{courseSel.innerHTML=courseOptionsMarkup(academySel.value);courseSel.disabled=!academySel.value;stageBtn.disabled=true};
+    academySel.onchange=refreshCourseOptions;
+    courseSel.onchange=()=>{stageBtn.disabled=!courseSel.value};
+    stageBtn.onclick=()=>{
+      if(!courseSel.value)return;
+      staged.add(courseSel.value);
+      refreshCourseOptions();
+      document.getElementById('stagedCoursesWrap').innerHTML=stagedRowsMarkup();
+      wireUnstage();
+    };
+    wireUnstage();
     document.getElementById('confirmAddCourses').onclick=()=>{
-      const codes=[...document.querySelectorAll('[data-add-course][aria-pressed="true"]')].map(x=>x.dataset.addCourse);
-      codes.forEach(code=>{if(d.items.some(x=>x.code===code))return;const c=courseByCode(code);d.items.push({code:c.code,name:c.name,seats:1,unitPriceHT:Number(c.priceHT)||0,price6:c.price6??null,price12:c.price12??null})});
+      staged.forEach(code=>{if(d.items.some(x=>x.code===code))return;const c=courseByCode(code);d.items.push({code:c.code,name:c.name,seats:1,unitPriceHT:Number(c.priceHT)||0,price6:c.price6??null,price12:c.price12??null})});
       closeModal();renderQuoteBuilderPage(P);
     };
   }
