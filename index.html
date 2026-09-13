@@ -854,7 +854,7 @@
     .options{display:grid;gap:9px}.multi-status{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:14px 0 0;color:#6f6f6a;font-size:12px}.multi-status strong{color:var(--ink)}.multi-continue{margin-top:16px;width:100%}.option{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);background:white;padding:15px 16px;cursor:pointer;text-align:left;width:100%;transition:.15s}.option:hover{border-color:#8c8c88}.option.selected{border-color:var(--ink);box-shadow:inset 4px 0 0 var(--lime)}.letter{font-family:monospace;color:var(--blue);width:19px;flex:0 0 19px}.quiz-foot{padding:18px 32px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.quiz-foot button:disabled{opacity:.3;cursor:not-allowed;transform:none}
     .lead-box{max-width:560px}.lead-box h2{font-size:42px;letter-spacing:-.05em;line-height:1;margin:0 0 12px}.lead-box p{color:#666}.form-grid{display:grid;gap:12px;margin-top:25px}.field label{display:block;font-size:10px;letter-spacing:.14em;color:#777;text-transform:uppercase;margin-bottom:6px}.field input{width:100%;padding:14px 13px;border:1px solid var(--line);background:white;outline:none}.field input:focus{border-color:var(--ink)}.consent{font-size:11px;color:#777}.error{color:#b00020;font-size:12px;margin-top:8px}
     .results h2{font-size:42px;letter-spacing:-.05em;margin:0}.score-wrap{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center;margin:24px 0 30px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.score{font-size:56px;letter-spacing:-.06em}.score small{font-size:18px;color:#999}.focus-chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid var(--line);padding:8px 10px;background:white;font-size:12px}
-    .result-plans{display:grid;gap:10px}.result-plan{background:white;border:1px solid var(--line);padding:16px}.result-plan-head{display:flex;justify-content:space-between;align-items:baseline;gap:15px}.result-plan h3{margin:0;font-size:18px}.price{font-weight:800}.price-tbr{color:var(--lime);font-size:13px;letter-spacing:.04em}.course-row{display:flex;gap:12px;padding:9px 0;border-top:1px solid #eee;font-size:12px}.course-row:first-of-type{margin-top:12px}.course-row .course-code{color:var(--blue);font-family:monospace;min-width:64px}.saved{background:#e9f9ce;border-left:4px solid var(--lime);padding:10px 12px;margin-top:18px;font-size:12px}
+    .result-plans{display:grid;gap:10px}.result-plan{background:white;border:1px solid var(--line);padding:16px;position:relative}.result-plan.reco{border-color:var(--lime);box-shadow:0 0 0 1px var(--lime) inset}.reco-badge{position:absolute;top:-11px;left:14px;background:var(--lime);color:var(--ink);font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 10px}.result-plan-head{display:flex;justify-content:space-between;align-items:baseline;gap:15px}.result-plan h3{margin:0;font-size:18px}.price{font-weight:800}.price-tbr{color:var(--lime);font-size:13px;letter-spacing:.04em}.course-row{display:flex;gap:12px;padding:9px 0;border-top:1px solid #eee;font-size:12px}.course-row:first-of-type{margin-top:12px}.course-row .course-code{color:var(--blue);font-family:monospace;min-width:64px}.saved{background:#e9f9ce;border-left:4px solid var(--lime);padding:10px 12px;margin-top:18px;font-size:12px}
     @media(max-width:900px){.hero-grid,.section-head{grid-template-columns:1fr}.hero{padding-top:60px}.stats-grid,.plans,.academies,.steps{grid-template-columns:1fr 1fr}.quiz-shell{grid-template-columns:1fr}.quiz-side{display:none}.cta-grid{align-items:flex-start;flex-direction:column}}
     @media(max-width:600px){.wrap{width:min(100% - 28px,var(--max))}.nav-links a:not(.btn){display:none}.hero h1{font-size:52px}.stats-grid,.plans,.academies,.steps{grid-template-columns:1fr}.stat{padding:20px!important;border-right:0;border-bottom:1px solid var(--line)}.section-head h2,.cta h2{font-size:40px}.quiz-body{padding:30px 20px}.quiz-top,.quiz-foot{padding-left:20px;padding-right:20px}.q-title{font-size:25px}}
   
@@ -1708,7 +1708,7 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
         <h1>Build the right<br><span class="outline">AI path</span> for your company.</h1>
         <p class="hero-copy">Focused, business-oriented AI learning that connects cutting-edge technology with the capabilities professionals actually need. Take our 3-minute assessment and receive a personalized 3, 5 and 7-course learning path.</p>
         <div class="hero-actions"><button class="btn btn-lime btn-lg" data-start>Build my free AI Path →</button><a class="btn btn-outline-light btn-lg" href="#academy">Explore the Academy</a></div>
-        <div class="trust"><span>20 questions</span><span>≈ 3 minutes</span><span>Free recommendation</span><span>No commitment</span></div>
+        <div class="trust"><span>18 questions</span><span>≈ 3 minutes</span><span>Free recommendation</span><span>No commitment</span></div>
       </div>
       <div class="assessment-card">
         <div class="mono">Free company assessment</div>
@@ -1750,8 +1750,8 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
   </div></section>
 
   <section class="how" id="how"><div class="wrap">
-    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--lime);margin-bottom:14px">3-minute assessment</div><h2>Tell us where you are.<br>We'll map where to go.</h2></div><p>Twenty concise questions help us understand what your organization actually needs, so we can recommend a focused path instead of sending you through a broad, generic course library.</p></div>
-    <div class="steps"><div class="step"><span class="n mono">01</span><h3>Assess</h3><p>Answer 20 focused multiple-choice questions.</p></div><div class="step"><span class="n mono">02</span><h3>Map</h3><p>Our scoring model identifies your highest-priority AI capabilities.</p></div><div class="step"><span class="n mono">03</span><h3>Recommend</h3><p>Receive 3, 5 and 7-course paths using exact EduCut.ai courses.</p></div><div class="step"><span class="n mono">04</span><h3>Plan</h3><p>Receive your results, catalogue and indicative quotation free of charge.</p></div></div>
+    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--lime);margin-bottom:14px">3-minute assessment</div><h2>Tell us where you are.<br>We'll map where to go.</h2></div><p>Eighteen concise questions help us understand what your organization actually needs, so we can recommend a focused path instead of sending you through a broad, generic course library.</p></div>
+    <div class="steps"><div class="step"><span class="n mono">01</span><h3>Assess</h3><p>Answer 18 focused multiple-choice questions.</p></div><div class="step"><span class="n mono">02</span><h3>Map</h3><p>Our scoring model identifies your highest-priority AI capabilities.</p></div><div class="step"><span class="n mono">03</span><h3>Recommend</h3><p>Receive 3, 5 and 7-course paths using exact EduCut.ai courses.</p></div><div class="step"><span class="n mono">04</span><h3>Plan</h3><p>Receive your results, catalogue and indicative quotation free of charge.</p></div></div>
   </div></section>
 
 
@@ -1896,7 +1896,7 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 
   <div class="modal quiz-modal" id="quizModal" aria-hidden="true">
     <div class="quiz-shell" role="dialog" aria-modal="true" aria-label="EduCut.ai AI Path Assessment">
-      <aside class="quiz-side"><div class="brand">EduCut<span>.ai</span></div><h3>AI Path<br>Assessment</h3><p>20 questions · ≈ 3 minutes<br>Personalized for your company</p><div class="side-bottom"><div class="mini-line"><span id="sideProgress"></span></div><div class="mono" id="sideLabel">Question 01 / 20</div></div></aside>
+      <aside class="quiz-side"><div class="brand">EduCut<span>.ai</span></div><h3>AI Path<br>Assessment</h3><p>18 questions · ≈ 3 minutes<br>Personalized for your company</p><div class="side-bottom"><div class="mini-line"><span id="sideProgress"></span></div><div class="mono" id="sideLabel">Question 01 / 18</div></div></aside>
       <main class="quiz-main">
         <div class="quiz-top"><div class="mono">AI Readiness & Learning Path Assessment</div><button id="closeQuiz" aria-label="Close">×</button></div>
         <div class="quiz-body" id="quizBody"></div>
@@ -2377,12 +2377,10 @@ const questions = [
  {q:'Does your organization want to create its own AI-powered applications?', o:['No','Maybe in the future','Yes, using existing AI platforms/tools','Yes, by integrating AI models and APIs','Yes, we want advanced production AI systems']},
  {q:"How important is using your company's own documents and knowledge with AI?", note:'Examples: internal policies, contracts, manuals, reports, databases or knowledge bases.', o:['Not relevant','Interesting, but not currently planned','We want employees to search/query internal knowledge with AI','We are planning AI assistants connected to company information','This is already a strategic technical project']},
  {q:'How interested are you in AI agents and workflow automation?', note:'AI agents can perform multi-step tasks, use tools and interact with business processes.', o:['Not currently relevant','We want to understand the possibilities','We want to automate some workflows','We want to build AI agents for specific teams','Agents are a strategic technology priority']},
- {q:'Which statement best describes your AI strategy today?', o:['We do not have an AI strategy','We are exploring opportunities','Individual departments are experimenting independently','We have identified AI priorities or projects','We have a structured organization-wide AI strategy']},
  {q:'How prepared is your organization to manage AI-related risks?', note:'Consider privacy, bias, security, responsible use, regulations and human oversight.', o:['We have not addressed these topics yet','We are beginning to discuss them','Some policies or controls exist','We have formal AI governance processes','We have mature enterprise AI governance']},
  {q:'How sensitive is the information your employees may use with AI?', o:['Mostly public information','Internal business information','Confidential company information','Personal / customer / employee information','Highly regulated or business-critical information']},
  {q:'What level of AI capability do you ultimately want to build?', o:['AI Awareness — Employees understand AI and use it responsibly','AI Users — Teams use AI effectively in everyday work','AI Power Users — Teams build sophisticated AI workflows','AI Builders — Technical teams develop AI applications','AI-Driven Organization — AI becomes part of our strategy and operating model']},
- {q:'Who should initially participate in the training?', o:['Executive / leadership team','One specialized department','Technical / data team','Several departments','Organization-wide cohort']},
- {q:'What is your preferred AI transformation horizon?', o:['Start now — Build essential capability quickly','Next 3–6 months — Develop structured team capabilities','6–12 months — Build several specialized capabilities','Long-term — Develop an organization-wide AI transformation program','We are not sure — recommend the best approach for us']}
+ {q:'How comprehensive should your recommended AI learning path be?', note:'This tells us how much depth to recommend — you will still see all three options.', o:['Quick start — a focused 3-course path on our top priority','Balanced — a 5-course path across our top priorities','Comprehensive — a 7-course path for broad organizational coverage','Not sure — recommend the right depth for us']}
 ];
 const letters='ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 let step=0, answers={}, transitioning=false;
@@ -2429,9 +2427,9 @@ function render(){
  const q=questions[step]; 
  const val=answers[key()];
  const selectedCount=Array.isArray(val)?val.length:0;
- document.getElementById('sideProgress').style.width=`${((step+1)/20)*100}%`;
- document.getElementById('sideLabel').textContent=`Question ${String(step+1).padStart(2,'0')} / 20`;
- body.innerHTML=`<div class="q-count mono">Question ${String(step+1).padStart(2,'0')} / 20</div>
+ document.getElementById('sideProgress').style.width=`${((step+1)/questions.length)*100}%`;
+ document.getElementById('sideLabel').textContent=`Question ${String(step+1).padStart(2,'0')} / ${questions.length}`;
+ body.innerHTML=`<div class="q-count mono">Question ${String(step+1).padStart(2,'0')} / ${questions.length}</div>
  <h2 class="q-title">${q.q}</h2>
  ${q.note?`<div class="q-note">${q.note}</div>`:''}
  <div class="options">${q.o.map((label,i)=>{const v=letters[i];const selected=q.multi?(Array.isArray(val)&&val.includes(v)):val===v;return `<button type="button" class="option ${selected?'selected':''}" data-v="${v}"><span class="letter">${v}</span><span>${label}</span></button>`}).join('')}</div>
@@ -2440,7 +2438,7 @@ function render(){
  const multiContinue=body.querySelector('#multiContinue');
  if(multiContinue) multiContinue.addEventListener('click',advanceFromQuestion);
  back.style.visibility=step===0?'hidden':'visible';
- next.textContent=step===19?'Build my AI Path →':'Continue →';
+ next.textContent=step===questions.length-1?'Build my AI Path →':'Continue →';
  updateNext();
  foot.style.display='flex';
  body.scrollTop=0;
@@ -2572,6 +2570,14 @@ function localLevelScore(value){
   return map[value] ?? 0;
 }
 
+// Weighted-vector recommendation model. Every question contributes to the
+// same 14-category vector through one explicit table (instead of scattered
+// if/add() rules), so each weight can be inspected and tuned in one place.
+// Q2 (company size) is now wired into scoring — previously collected but
+// never used. Q18 is new: it lets the visitor state how comprehensive their
+// path should be, and that choice drives which of the three plans is
+// highlighted as the recommendation, rather than the plan size being purely
+// a fixed truncation of the same ranked list.
 function calculateLocalAssessment(a){
   const keys=['foundations','genai','productivity','data','developers','rag','agents','governance','transformation','leaders','marketing','finance','hr','education'];
   const s=Object.fromEntries(keys.map(k=>[k,0]));
@@ -2579,17 +2585,25 @@ function calculateLocalAssessment(a){
   const q=n=>a[`q${n}`];
   const qarr=n=>Array.isArray(q(n))?q(n):[];
 
-  if(q(1)==='A'||q(1)==='B'){add('leaders',4);add('transformation',2)}
-  if(q(1)==='C')add('hr',5);
-  if(q(1)==='D'){add('developers',4);add('data',3)}
-  if(q(1)==='E')add('marketing',5);
-  if(q(1)==='F')add('finance',5);
-  if(q(1)==='G')add('education',5);
+  const roleMap={
+    A:[['leaders',3],['transformation',1]], B:[['leaders',3],['transformation',1]],
+    C:[['hr',4]], D:[['developers',3],['data',1.5]], E:[['marketing',4]],
+    F:[['finance',4]], G:[['education',4]], H:[['foundations',1]]
+  };
+  (roleMap[q(1)]||[]).forEach(([k,v])=>add(k,v));
+
+  // Company size: previously unused. Larger organizations skew toward
+  // governance and transformation needs.
+  const sizeLevel=localLevelScore(q(2));
+  add('governance',sizeLevel*1.3);
+  add('transformation',sizeLevel*1.1);
 
   const currentUse=localLevelScore(q(3)), literacy=localLevelScore(q(4));
-  if(currentUse<=1||literacy<=1)add('foundations',6);
+  if(currentUse<=1)add('foundations',6);
   if(currentUse>=2)add('productivity',2);
-  if(currentUse>=3){add('governance',2);add('transformation',2)}
+  if(currentUse>=3){add('governance',3);add('transformation',4)}
+  if(literacy<=1)add('foundations',4);
+  add('genai',literacy*1.5);
 
   const mainMap={A:'productivity',B:'agents',C:'data',D:'developers',E:'marketing',F:'transformation',G:'governance'};
   if(mainMap[q(5)])add(mainMap[q(5)],7);
@@ -2597,11 +2611,17 @@ function calculateLocalAssessment(a){
   const outcomeMap={A:'productivity',B:'productivity',C:'marketing',D:'data',E:'agents',F:'marketing',G:'developers',H:'leaders',I:'governance',J:'developers'};
   qarr(6).forEach(v=>outcomeMap[v]&&add(outcomeMap[v],3));
 
+  // Teams: weight raised from 5 to 7 so marketing/finance/HR/education
+  // aren't structurally outweighed by categories nearly every question
+  // touches (productivity, genai, transformation).
   const teamMap={A:'leaders',B:'marketing',C:'finance',D:'hr',E:'education',F:'developers',G:'data',H:'productivity'};
-  qarr(7).forEach(v=>teamMap[v]&&add(teamMap[v],5));
-  if(qarr(7).includes('I')){add('foundations',4);add('productivity',4);add('transformation',4)}
+  qarr(7).forEach(v=>teamMap[v]&&add(teamMap[v],7));
+  if(qarr(7).includes('I')){
+    add('foundations',4);add('productivity',4);add('transformation',4);
+    ['marketing','finance','hr','education','developers','data','leaders'].forEach(k=>add(k,1));
+  }
 
-  add('genai',localLevelScore(q(8))*2);
+  add('genai',localLevelScore(q(8))*2.5);
   const useTools=localLevelScore(q(9));
   if(useTools<=1)add('genai',3);
   if(useTools>=2)add('productivity',3);
@@ -2609,32 +2629,28 @@ function calculateLocalAssessment(a){
   if(useTools>=4)add('agents',3);
 
   add('productivity',localLevelScore(q(10))*2);
-  add('data',localLevelScore(q(11))*2);
-  add('developers',localLevelScore(q(12))*2);
+  add('data',localLevelScore(q(11))*2.5);
+  add('developers',localLevelScore(q(12))*2.5);
   add('rag',localLevelScore(q(13))*2.5);
   add('agents',localLevelScore(q(14))*2.5);
 
-  const strategy=localLevelScore(q(15));
-  if(strategy<=1){add('leaders',4);add('transformation',4)}
-  else{add('transformation',strategy);add('governance',Math.max(0,strategy-1))}
+  const riskPreparedness=localLevelScore(q(15));
+  add('governance',(4-riskPreparedness)*1.5);
 
-  const riskPreparedness=localLevelScore(q(16)), sensitivity=localLevelScore(q(17));
-  add('governance',(4-riskPreparedness)*1.5+sensitivity*2);
+  const sensitivity=localLevelScore(q(16));
+  add('governance',sensitivity*2);
 
   const capabilityMap={A:['foundations'],B:['productivity','genai'],C:['productivity','genai','agents'],D:['developers','rag','agents'],E:['transformation','leaders','governance']};
-  (capabilityMap[q(18)]||[]).forEach(k=>add(k,5));
+  (capabilityMap[q(17)]||[]).forEach(k=>add(k,5));
 
-  if(q(19)==='A')add('leaders',4);
-  if(q(19)==='B')add('productivity',2);
-  if(q(19)==='C')add('developers',4);
-  if(q(19)==='D'||q(19)==='E'){add('transformation',4);add('governance',2)}
+  // Depth preference: doesn't just add points — it decides which plan gets
+  // highlighted below.
+  const depthMap={A:'quick',B:'balanced',C:'comprehensive',D:'auto'};
+  const depthPreference=depthMap[q(18)]||'auto';
+  if(depthPreference==='comprehensive'){add('transformation',3);add('governance',2)}
+  if(depthPreference==='auto')add('transformation',2);
 
-  if(q(20)==='A')add('productivity',3);
-  if(q(20)==='B'){add('genai',2);add('productivity',2)}
-  if(q(20)==='C'){add('transformation',2);add('developers',1)}
-  if(q(20)==='D'){add('transformation',6);add('governance',3)}
-
-  const maturityRaw=Math.round(((currentUse+literacy+strategy+riskPreparedness)/16)*100);
+  const maturityRaw=Math.round(((currentUse+literacy+riskPreparedness)/12)*100);
   const maturityScore=Math.max(5,Math.min(95,maturityRaw));
   const maturityLabel=maturityScore<30?'Exploring':maturityScore<55?'Developing':maturityScore<75?'Scaling':'Advanced';
   const labels={
@@ -2660,6 +2676,15 @@ function calculateLocalAssessment(a){
     const discount=plan.length>=6?.20:plan.length>=5?.15:plan.length>=3?.10:0;
     return {participants:'Up to 6 participants',subtotalCHFHT:subtotal,discountPercent:Math.round(discount*100),estimatedTotalCHFHT:Math.round(subtotal*(1-discount))}
   };
+
+  // Which plan is presented as "recommended": the visitor's stated depth
+  // preference wins; "not sure" falls back to company size + maturity.
+  let recommendedPlan='plan5';
+  if(depthPreference==='quick')recommendedPlan='plan3';
+  else if(depthPreference==='balanced')recommendedPlan='plan5';
+  else if(depthPreference==='comprehensive')recommendedPlan='plan7';
+  else recommendedPlan=(sizeLevel>=3||maturityScore>=60)?'plan7':(sizeLevel<=1&&maturityScore<40)?'plan3':'plan5';
+
   return {
     assessmentId:null,
     maturityScore,
@@ -2667,6 +2692,7 @@ function calculateLocalAssessment(a){
     strongestOpportunity:focusAreas[0]?.label||'AI Capability Building',
     focusAreas,
     plans,
+    recommendedPlan,
     quote:{plan3:quotePlan(plans.plan3),plan5:quotePlan(plans.plan5),plan7:quotePlan(plans.plan7)},
     saved:false
   };
@@ -2757,7 +2783,7 @@ function buildCompanyDNA(d){
 }
 
 function renderResults(d,email){
- const planBlock=(title,tag,plan,quote)=>`<div class="result-plan"><div class="result-plan-head"><h3>${title} · ${plan.length} courses</h3><div class="price price-tbr">TO BE REQUESTED</div></div><div class="mono" style="color:var(--blue);margin:5px 0 3px">${tag}</div>${plan.map(c=>`<div class="course-row"><span class="course-code">${c.code}</span><span>${c.title}</span></div>`).join('')}</div>`;
+ const planBlock=(key,title,tag,plan,quote)=>`<div class="result-plan${d.recommendedPlan===key?' reco':''}">${d.recommendedPlan===key?'<div class="reco-badge">Recommended for you</div>':''}<div class="result-plan-head"><h3>${title} · ${plan.length} courses</h3><div class="price price-tbr">TO BE REQUESTED</div></div><div class="mono" style="color:var(--blue);margin:5px 0 3px">${tag}</div>${plan.map(c=>`<div class="course-row"><span class="course-code">${c.code}</span><span>${c.title}</span></div>`).join('')}</div>`;
  body.innerHTML=`<div class="results">
    <div class="mono" style="color:var(--blue);margin-bottom:12px">Personalized company assessment</div>
    <h2>Your AI Path.</h2>
@@ -2777,7 +2803,7 @@ function renderResults(d,email){
    <div class="mono" style="margin:26px 0 10px">Priority focus areas</div>
    <div class="focus-chips">${d.focusAreas.map(x=>`<span class="chip">${x.label}</span>`).join('')}</div>
    <h3 style="font-size:24px;margin:30px 0 12px">Recommended learning paths</h3>
-   <div class="result-plans">${planBlock('Essential','Quick capability',d.plans.plan3,d.quote.plan3)}${planBlock('Accelerate','Operational capability',d.plans.plan5,d.quote.plan5)}${planBlock('Transform','Strategic capability',d.plans.plan7,d.quote.plan7)}</div>
+   <div class="result-plans">${planBlock('plan3','Essential','Quick capability',d.plans.plan3,d.quote.plan3)}${planBlock('plan5','Accelerate','Operational capability',d.plans.plan5,d.quote.plan5)}${planBlock('plan7','Transform','Strategic capability',d.plans.plan7,d.quote.plan7)}</div>
    <div class="results-close-row">
      <button type="button" class="btn" id="closeResultsBtn">Close assessment</button>
      <span class="results-close-note mono">You can reopen the consultation from the website at any time.</span>
