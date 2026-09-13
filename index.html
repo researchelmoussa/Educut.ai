@@ -3565,6 +3565,97 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     }catch(e){ return {ok:false,error:'Upload failed. Check your connection.'}; }
   }
 
+  // -------------------------------------------------------------------
+  // LIVE ACADEMIES / COURSES (Supabase)
+  //
+  // public.academies / public.courses are the real tables the public
+  // site's public_catalogue RPC reads from — RLS lets any signed-in staff
+  // with has_permission('manage_courses') read and write both directly
+  // (policies academies_write / courses_write), so this goes straight to
+  // PostgREST rather than through a bespoke RPC.
+  // -------------------------------------------------------------------
+  async function supaTable(path,opts){
+    const sb=window.educutSupabase;
+    const token=sb&&typeof sb.token==='function'?sb.token():null;
+    if(!token) return {ok:false,status:0,error:'Your session has expired. Sign in again.'};
+    const url=sb.config.url.replace(/\/+$/,'')+'/rest/v1/'+path;
+    try{
+      const r=await fetch(url,{...opts,headers:{apikey:sb.config.key,Authorization:'Bearer '+token,'Content-Type':'application/json',...((opts&&opts.headers)||{})}});
+      if(!r.ok){
+        let msg=''; try{ msg=(await r.json()).message||''; }catch(_){}
+        return {ok:false,status:r.status,error:msg||('Request failed ('+r.status+').')};
+      }
+      let data=null; try{ data=await r.json(); }catch(_){}
+      return {ok:true,status:r.status,data};
+    }catch(e){ return {ok:false,status:0,error:'Could not reach the database.'}; }
+  }
+
+  function dbAcademyToLocal(a){
+    return {code:a.code,name:a.name,description:a.description||'',audience:a.audience||'',status:a.status||'DRAFT',updatedAt:(a.updated_at||'').slice(0,10),publicVisibility:!!a.public_visibility};
+  }
+  function localAcademyToDb(a){
+    return {code:a.code,name:a.name,description:a.description||null,audience:a.audience||null,status:a.status||'DRAFT'};
+  }
+  // price_above_12 is a fixed ON_REQUEST/FIXED flag in the real schema, not
+  // a number — every course this app imports quotes ">12 = price on
+  // request", so it's always written as ON_REQUEST; a course wanting a
+  // fixed >12 rate is a manual edit directly in Supabase, out of scope here.
+  function dbCourseToLocal(c){
+    return {
+      id:c.id,code:c.code,academy:c.academy_code,name:c.name,description:c.description||'',objectives:c.objectives||'',
+      level:c.level||'Foundation',duration:c.duration_hours||0,language:c.language||'English',instructor:c.instructor||'',
+      status:c.status||'DRAFT',updatedAt:(c.updated_at||'').slice(0,10),
+      priceHT:c.price_6_learners!=null?Math.round(Number(c.price_6_learners)/6):0,
+      price6:c.price_6_learners!=null?Number(c.price_6_learners):null,
+      price12:c.price_12_learners!=null?Number(c.price_12_learners):null,
+      prerequisites:[],modules:[],publicVisibility:!!c.public_visibility
+    };
+  }
+  function localCourseToDb(c){
+    return {
+      code:c.code,academy_code:c.academy,name:c.name,description:c.description||null,objectives:c.objectives||null,
+      level:c.level||null,duration_hours:Number(c.duration)||0,language:c.language||'English',instructor:c.instructor||null,
+      status:c.status||'DRAFT',price_6_learners:c.price6!=null?c.price6:null,price_12_learners:c.price12!=null?c.price12:null,
+      price_above_12:'ON_REQUEST'
+    };
+  }
+
+  // Academies/Courses/Quotes/Catalogue Requests all need the real data —
+  // loaded once per admin session, lazily, on whichever of those pages is
+  // opened first, and reused everywhere else in the admin app afterwards
+  // (S.academies/S.courses become the live copy, not the local seed).
+  const catalogueLive={loaded:false,loading:false,error:''};
+  async function ensureLiveCatalogue(){
+    if(catalogueLive.loaded||catalogueLive.loading) return;
+    catalogueLive.loading=true;
+    const [aRes,cRes]=await Promise.all([
+      supaTable('academies?select=*&order=code',{method:'GET'}),
+      supaTable('courses?select=*&order=code',{method:'GET'})
+    ]);
+    catalogueLive.loading=false;
+    if(aRes.ok&&cRes.ok){
+      S.academies=(aRes.data||[]).map(dbAcademyToLocal);
+      S.courses=(cRes.data||[]).map(dbCourseToLocal);
+      catalogueLive.loaded=true; catalogueLive.error='';
+    } else {
+      catalogueLive.error=aRes.error||cRes.error||'Could not load the live catalogue.';
+    }
+  }
+  function liveCatalogueGuard(P){
+    if(catalogueLive.loaded) return true;
+    if(catalogueLive.error){
+      P.innerHTML=pageHead('LIVE CATALOGUE','Could not load the catalogue','Academies and Courses could not be read from the database.')
+        +`<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 #c33"><strong>${esc(catalogueLive.error)}</strong></div>
+         <div class="admin-head-actions" style="margin-top:16px"><button class="btn btn-lime" id="retryLiveCatalogue">Retry</button><button class="btn btn-outline" id="useLocalFallback">Continue with local demo data</button></div>`;
+      document.getElementById('retryLiveCatalogue').onclick=()=>{catalogueLive.error='';renderPage()};
+      document.getElementById('useLocalFallback').onclick=()=>{catalogueLive.loaded=true;catalogueLive.error='';renderPage()};
+      return false;
+    }
+    P.innerHTML=`<div class="admin-neutral-panel"><strong>Loading catalogue…</strong><p>Reading Academies and Courses from the database.</p></div>`;
+    if(!catalogueLive.loading) ensureLiveCatalogue().then(()=>renderPage());
+    return false;
+  }
+
   const prosState={rows:[],loaded:false,error:'',filter:'all'};
 
   async function prosLoad(){
@@ -3923,6 +4014,18 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   // line and the next is that course's own block, searched for its
   // DURATION and PRICE (tiered: up to 6 / up to 12) figures. Validated
   // against a real 126-page/212-course EduCut.ai catalogue export.
+  // This catalogue's section labels (FORMAT, DURATION, PRICE, DIFFICULTY
+  // LEVEL...) are set in letter-tracked caps — "D I F F I C U L T Y  L E
+  // V E L" — so a plain "DIFFICULTY LEVEL" substring never matches. Only
+  // the labels whose *value* line has its own distinctive anchor (HOURS,
+  // CHF HT) could be found by matching the value instead of the label;
+  // DIFFICULTY LEVEL's value ("Foundation"/"Intermediate"/…) has no such
+  // anchor, so the label itself has to be matched letter-by-letter.
+  function trackedLabelRe(label){
+    return label.split('').map(ch=>ch===' '?'\\s*':ch.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\s*').join('');
+  }
+  const DIFFICULTY_LEVEL_RE=new RegExp(trackedLabelRe('DIFFICULTY LEVEL')+'\\n(\\w+)','i');
+
   function extractPdfCatalogueProfiles(pages){
     const fullText=pages.map(lines=>lines.map(l=>l.items.map(it=>it.text).join(' ').replace(/\s+/g,' ').trim()).join('\n')).join('\n');
     const academyNames={};
@@ -3947,7 +4050,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       const mp=block.match(/([\d,]+)\s*CHF\s*HT\s*\nUp to 6 participants\s*\n([\d,]+)\s*CHF\s*HT\s*[^\n]*Up to 12 participants/i);
       const price6=mp?Number(mp[1].replace(/,/g,'')):null;
       const price12=mp?Number(mp[2].replace(/,/g,'')):null;
-      const ml=block.match(/DIFFICULTY\s*LEVEL\s*\n(\w+)/i);
+      const ml=block.match(DIFFICULTY_LEVEL_RE);
       if(duration==null||price6==null||price12==null) continue;
       if(seen.has(code)) continue;
       seen.add(code);
@@ -4071,43 +4174,47 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     return {valid,newAcademies,updatedAcademies,newCourses,updatedCourses,priceChanges,untouchedCourses};
   }
 
-  function applyCatalogueImport(validRows){
-    const today=new Date().toISOString().slice(0,10);
+  // Batches every academy into one upsert and every course into another —
+  // 212 individual REST calls would work but there's no reason to make
+  // them when PostgREST accepts an array body for bulk insert/upsert.
+  async function applyCatalogueImport(validRows){
+    const academyRecords=[]; const seenAcademies=new Set();
     validRows.forEach(r=>{
-      let academy=S.academies.find(x=>x.code===r.academyCode);
-      if(!academy){
-        academy={code:r.academyCode,name:r.academyName||r.academyCode,description:r.academyDescription||'',audience:r.academyAudience||'',status:'ACTIVE',updatedAt:today};
-        S.academies.push(academy);
-      } else {
-        if(r.academyName) academy.name=r.academyName;
-        if(r.academyDescription) academy.description=r.academyDescription;
-        if(r.academyAudience) academy.audience=r.academyAudience;
-        academy.updatedAt=today;
-      }
+      if(seenAcademies.has(r.academyCode)) return; seenAcademies.add(r.academyCode);
+      const existing=S.academies.find(x=>x.code===r.academyCode);
+      academyRecords.push(existing
+        ?{...existing,name:r.academyName||existing.name,description:r.academyDescription||existing.description,audience:r.academyAudience||existing.audience}
+        :{code:r.academyCode,name:r.academyName||r.academyCode,description:r.academyDescription||'',audience:r.academyAudience||'',status:'ACTIVE'});
     });
-    validRows.forEach(r=>{
-      let course=S.courses.find(x=>x.code===r.courseCode);
-      if(!course){
-        course={id:uid('CRS'),code:r.courseCode,name:r.courseName,academy:r.academyCode,level:r.level,duration:r.duration,status:r.status,updatedAt:today,objectives:'',prerequisites:[],language:r.language,instructor:'EduCut.ai Faculty',description:'',priceHT:r.priceHT,price6:r.price6,price12:r.price12,modules:[]};
-        S.courses.push(course);
-      } else {
-        course.name=r.courseName||course.name;
-        course.academy=r.academyCode||course.academy;
-        course.level=r.level||course.level;
-        course.duration=r.duration||course.duration;
-        course.language=r.language||course.language;
-        course.priceHT=r.priceHT;
-        // Preserve existing tier pricing on an update that doesn't carry
-        // Price 6 / Price 12 columns — a plain CSV re-import must not
-        // silently wipe tiers a PDF import previously set.
-        course.price6=r.price6!=null?r.price6:course.price6;
-        course.price12=r.price12!=null?r.price12:course.price12;
-        course.status=r.status||course.status;
-        course.updatedAt=today;
-      }
+    const courseRecords=validRows.map(r=>{
+      const existing=S.courses.find(x=>x.code===r.courseCode);
+      if(!existing) return {code:r.courseCode,name:r.courseName,academy:r.academyCode,level:r.level,duration:r.duration,status:r.status,language:r.language,instructor:'EduCut.ai Faculty',description:'',priceHT:r.priceHT,price6:r.price6,price12:r.price12};
+      // Preserve existing tier pricing on an update that doesn't carry
+      // Price 6 / Price 12 columns — a plain CSV re-import must not
+      // silently wipe tiers a PDF import previously set.
+      return {...existing,name:r.courseName||existing.name,academy:r.academyCode||existing.academy,level:r.level||existing.level,
+        duration:r.duration||existing.duration,language:r.language||existing.language,priceHT:r.priceHT,
+        price6:r.price6!=null?r.price6:existing.price6,price12:r.price12!=null?r.price12:existing.price12,status:r.status||existing.status};
+    });
+
+    const [aRes,cRes]=await Promise.all([
+      academyRecords.length?supaTable('academies',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify(academyRecords.map(localAcademyToDb))}):Promise.resolve({ok:true,data:[]}),
+      courseRecords.length?supaTable('courses?on_conflict=code',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify(courseRecords.map(localCourseToDb))}):Promise.resolve({ok:true,data:[]})
+    ]);
+    if(!aRes.ok||!cRes.ok) return {ok:false,error:aRes.error||cRes.error};
+
+    (aRes.data||[]).forEach(row=>{
+      const local=dbAcademyToLocal(row), existing=S.academies.find(x=>x.code===local.code);
+      if(existing) Object.assign(existing,local); else S.academies.push(local);
+    });
+    (cRes.data||[]).forEach(row=>{
+      const local=dbCourseToLocal(row), existing=S.courses.find(x=>x.code===local.code);
+      if(existing) Object.assign(existing,local,{prerequisites:existing.prerequisites,modules:existing.modules});
+      else S.courses.push({...local,prerequisites:[],modules:[]});
     });
     S.settings.catalogueImportedAt=new Date().toISOString();
     save();
+    return {ok:true};
   }
 
   function catalogueImportPreviewMarkup(){
@@ -4154,9 +4261,11 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       input.value='';
       catPaint();
     };
-    document.getElementById('confirmCatalogueImport')?.addEventListener('click',()=>{
+    document.getElementById('confirmCatalogueImport')?.addEventListener('click',async e=>{
       const d=catalogueImport.diff;
-      applyCatalogueImport(d.valid);
+      const btn=e.currentTarget; btn.disabled=true; btn.textContent='Importing…';
+      const res=await applyCatalogueImport(d.valid);
+      if(!res.ok){ btn.disabled=false; btn.textContent='Confirm Import'; toast('Import failed: '+res.error); return; }
       log('CATALOGUE_IMPORTED','Catalogue',catalogueImport.fileName,'',`${d.newCourses.length} new, ${d.updatedCourses.length} updated courses`);
       toast(`Catalogue imported: ${d.newAcademies.length+d.updatedAcademies.length} Academies, ${d.newCourses.length+d.updatedCourses.length} Courses.`);
       catalogueImport.fileName=''; catalogueImport.rows=null; catalogueImport.errors=[]; catalogueImport.diff=null;
@@ -4179,6 +4288,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   }
 
   function renderCatalogueRequests(P){
+    if(!liveCatalogueGuard(P))return;
     P.innerHTML=pageHead('/ADMIN/CATALOGUE','Catalogue Requests',
       'Everyone who asked for the catalogue PDF, with how many times they actually downloaded it. A request is stored the moment the form is submitted; the download is gated by a per-request token.')+
       `<div id="catBoard"><div class="admin-neutral-panel"><p>Loading requests…</p></div></div>`;
@@ -4613,22 +4723,22 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     document.getElementById('learnerImportFile').onchange=async e=>{const file=e.target.files[0];if(!file)return;const box=document.getElementById('importPreview');if(file.name.toLowerCase().endsWith('.xlsx')){box.innerHTML='<div class="admin-neutral-panel" style="margin-top:14px"><h3>XLSX selected</h3><p>This single-file prototype validates CSV locally. In production, XLSX is parsed by the backend import endpoint using the same schema and confirmation step.</p></div>';return}const text=await file.text(),lines=text.split(/\r?\n/).filter(Boolean),headers=lines[0].split(',').map(x=>x.trim()),required=['First Name','Last Name','Company Email'];const missing=required.filter(x=>!headers.includes(x));const rows=lines.slice(1).map(l=>l.split(',').map(x=>x.trim()));const emailIdx=headers.indexOf('Company Email');const duplicates=rows.filter((r,i)=>rows.findIndex(x=>x[emailIdx]===r[emailIdx])!==i).length;box.innerHTML=`<div class="admin-kpis" style="margin-top:14px"><div class="admin-kpi"><div class="mono">Rows</div><strong>${rows.length}</strong></div><div class="admin-kpi"><div class="mono">Missing columns</div><strong>${missing.length}</strong></div><div class="admin-kpi"><div class="mono">Duplicate emails</div><strong>${duplicates}</strong></div><div class="admin-kpi"><div class="mono">Validation</div><strong>${missing.length?'FAIL':'READY'}</strong></div></div>${missing.length?'':`<button class="btn btn-lime" id="confirmImport">Confirm Import</button>`}`;document.getElementById('confirmImport')?.addEventListener('click',()=>{rows.forEach(r=>{const email=r[emailIdx]?.toLowerCase();if(!email||S.users.some(u=>u.email===email))return;const comp=S.companies[0];S.users.push({id:uid('USR'),type:'COMPANY_MEMBER',companyId:comp.id,name:`${r[headers.indexOf('First Name')]} ${r[headers.indexOf('Last Name')]}`,email,country:comp.country,jobTitle:r[headers.indexOf('Job Title')]||'',department:r[headers.indexOf('Department')]||'',status:'INVITED',activated:false,lastLogin:null,createdAt:new Date().toISOString().slice(0,10),progress:0,certificates:0,courses:r[headers.indexOf('Assigned Course')]?[r[headers.indexOf('Assigned Course')]]:[],accessStart:r[headers.indexOf('Access Start')]||new Date().toISOString().slice(0,10),accessEnd:r[headers.indexOf('Access End')]||comp.contractEnd})});save();log('BULK_LEARNER_IMPORT','Users',String(rows.length));closeModal();renderPage();toast('Learner import completed.')})};
   }
 
-  function renderAcademies(P){if(app.detail){renderAcademyDetail(P,app.detail);return}const q=app.query.toLowerCase();let rows=S.academies.filter(a=>!q||[a.code,a.name,a.description].some(v=>String(v).toLowerCase().includes(q)));P.innerHTML=pageHead('04 / ACADEMIES','Academy Management','Create, edit, organize and archive EduCut.ai Academies while preserving their course relationships.','<button class="btn btn-lime" id="createAcademy">+ Create Academy</button>')+toolbar('Search Academy code or name…')+`<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Academy Code</th><th>Academy Name</th><th>Courses</th><th>Learners</th><th>Status</th><th>Last Updated</th><th>Actions</th></tr></thead><tbody>${rows.map(a=>`<tr><td><a href="#" data-academy="${a.code}">${a.code}</a></td><td>${esc(a.name)}</td><td>${S.courses.filter(c=>c.academy===a.code).length}</td><td>${S.users.filter(u=>(u.courses||[]).some(c=>c.startsWith(a.code))).length}</td><td>${status(a.status)}</td><td>${fmt(a.updatedAt)}</td><td><div class="admin-row-actions"><button class="admin-mini-btn" data-academy="${a.code}">View</button><button class="admin-mini-btn" data-edit-academy="${a.code}">Edit</button><button class="admin-mini-btn" data-duplicate-academy="${a.code}">Duplicate</button></div></td></tr>`).join('')}</tbody></table></div>`;
-    wireSearch(renderAcademies);document.querySelector('[data-export]').onclick=()=>download('educut-academies.csv',csv(rows));document.getElementById('createAcademy').onclick=()=>openAcademyForm();document.querySelectorAll('[data-academy]').forEach(x=>x.onclick=e=>{e.preventDefault();openAcademy(x.dataset.academy)});document.querySelectorAll('[data-edit-academy]').forEach(x=>x.onclick=()=>openAcademyForm(S.academies.find(a=>a.code===x.dataset.editAcademy)));document.querySelectorAll('[data-duplicate-academy]').forEach(x=>x.onclick=()=>{const a=deep(S.academies.find(v=>v.code===x.dataset.duplicateAcademy));a.code='A'+String(Math.max(...S.academies.map(y=>Number(y.code.slice(1))))+1).padStart(3,'0');a.name+=' Copy';S.academies.push(a);save();log('ACADEMY_DUPLICATED','Academy',a.code);renderAcademies(P)});
+  function renderAcademies(P){if(!liveCatalogueGuard(P))return;if(app.detail){renderAcademyDetail(P,app.detail);return}const q=app.query.toLowerCase();let rows=S.academies.filter(a=>!q||[a.code,a.name,a.description].some(v=>String(v).toLowerCase().includes(q)));P.innerHTML=pageHead('04 / ACADEMIES','Academy Management','Create, edit, organize and archive EduCut.ai Academies while preserving their course relationships.','<button class="btn btn-lime" id="createAcademy">+ Create Academy</button>')+toolbar('Search Academy code or name…')+`<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Academy Code</th><th>Academy Name</th><th>Courses</th><th>Learners</th><th>Status</th><th>Last Updated</th><th>Actions</th></tr></thead><tbody>${rows.map(a=>`<tr><td><a href="#" data-academy="${a.code}">${a.code}</a></td><td>${esc(a.name)}</td><td>${S.courses.filter(c=>c.academy===a.code).length}</td><td>${S.users.filter(u=>(u.courses||[]).some(c=>c.startsWith(a.code))).length}</td><td>${status(a.status)}</td><td>${fmt(a.updatedAt)}</td><td><div class="admin-row-actions"><button class="admin-mini-btn" data-academy="${a.code}">View</button><button class="admin-mini-btn" data-edit-academy="${a.code}">Edit</button><button class="admin-mini-btn" data-duplicate-academy="${a.code}">Duplicate</button></div></td></tr>`).join('')}</tbody></table></div>`;
+    wireSearch(renderAcademies);document.querySelector('[data-export]').onclick=()=>download('educut-academies.csv',csv(rows));document.getElementById('createAcademy').onclick=()=>openAcademyForm();document.querySelectorAll('[data-academy]').forEach(x=>x.onclick=e=>{e.preventDefault();openAcademy(x.dataset.academy)});document.querySelectorAll('[data-edit-academy]').forEach(x=>x.onclick=()=>openAcademyForm(S.academies.find(a=>a.code===x.dataset.editAcademy)));document.querySelectorAll('[data-duplicate-academy]').forEach(x=>x.onclick=async()=>{const a=deep(S.academies.find(v=>v.code===x.dataset.duplicateAcademy));a.code='A'+String(Math.max(...S.academies.map(y=>Number(y.code.slice(1))))+1).padStart(3,'0');a.name+=' Copy';const res=await supaTable('academies',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify([localAcademyToDb(a)])});if(!res.ok){toast('Could not duplicate: '+res.error);return}S.academies.push(dbAcademyToLocal((res.data&&res.data[0])||a));save();log('ACADEMY_DUPLICATED','Academy',a.code);renderAcademies(P)});
   }
   function openAcademy(code){app.detail=code;window.renderSuperAdmin(app.root)}
   function renderAcademyDetail(P,code){const a=S.academies.find(x=>x.code===code);if(!a){app.detail=null;return renderAcademies(P)}const courses=S.courses.filter(c=>c.academy===code);P.innerHTML=pageHead(`04 / ACADEMIES / ${code}`,`${code} — ${a.name}`,a.description,`<button class="btn btn-outline" id="backAcademies">← Academies</button><button class="btn btn-lime" id="editAcademy">Edit Academy</button>`)+`<div class="admin-detail-grid">${[['Academy Code',a.code],['Academy Name',a.name],['Target Audience',a.audience],['Number of Courses',courses.length],['Status',a.status],['Last Updated',fmt(a.updatedAt)]].map(x=>`<div class="admin-detail-item"><div class="mono">${x[0]}</div><strong>${esc(x[1])}</strong></div>`).join('')}</div><section class="admin-section"><div class="admin-section-head"><div><h2>Associated Courses</h2><p>Use ↑ / ↓ to reorder courses in this prototype.</p></div><div><button class="btn btn-outline" id="addExistingCourse">Add Existing Course</button> <button class="btn btn-lime" id="createCourseAcademy">Create New Course</button></div></div><div class="admin-table-wrap"><table class="admin-table"><tbody>${courses.map((c,i)=>`<tr><td class="mono">${c.code}</td><td>${esc(c.name)}</td><td>${status(c.status)}</td><td><button class="admin-mini-btn" data-move-course="${c.id}" data-dir="-1">↑</button> <button class="admin-mini-btn" data-move-course="${c.id}" data-dir="1">↓</button></td></tr>`).join('')}</tbody></table></div></section><div class="admin-head-actions" style="margin-top:18px"><button class="btn btn-outline" id="archiveAcademy">Archive Academy</button><button class="btn" id="deleteAcademy">Delete Academy</button></div>`;
     document.getElementById('backAcademies').onclick=()=>{app.detail=null;renderAcademies(P)};document.getElementById('editAcademy').onclick=()=>openAcademyForm(a);document.getElementById('createCourseAcademy').onclick=()=>openCourseForm(null,a.code);document.getElementById('addExistingCourse').onclick=()=>toast('Select a course from Course Management and change its Academy assignment.');
     document.querySelectorAll('[data-move-course]').forEach(b=>b.onclick=()=>toast('Course order saved for this Academy.'));
-    document.getElementById('archiveAcademy').onclick=()=>{a.status='ARCHIVED';a.updatedAt=new Date().toISOString().slice(0,10);save();log('ACADEMY_ARCHIVED','Academy',a.code);renderAcademyDetail(P,code)};
-    document.getElementById('deleteAcademy').onclick=()=>confirmAction('Delete this Academy?','Courses and learner history will not be erased. Prefer archiving for production.',()=>{S.academies=S.academies.filter(x=>x.code!==code);save();log('ACADEMY_DELETED','Academy',code);app.detail=null;renderAcademies(P)},'Delete Academy');
+    document.getElementById('archiveAcademy').onclick=async()=>{const prev=a.status;a.status='ARCHIVED';const res=await supaTable('academies',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify([localAcademyToDb(a)])});if(!res.ok){a.status=prev;toast('Could not archive: '+res.error);return}a.updatedAt=new Date().toISOString().slice(0,10);save();log('ACADEMY_ARCHIVED','Academy',a.code);renderAcademyDetail(P,code)};
+    document.getElementById('deleteAcademy').onclick=()=>confirmAction('Delete this Academy?','Courses and learner history will not be erased. Prefer archiving for production.',async()=>{const res=await supaTable('academies?code=eq.'+encodeURIComponent(code),{method:'DELETE'});if(!res.ok){toast('Could not delete: '+res.error);return}S.academies=S.academies.filter(x=>x.code!==code);save();log('ACADEMY_DELETED','Academy',code);app.detail=null;renderAcademies(P)},'Delete Academy');
   }
-  function openAcademyForm(a=null){modal(a?'Edit Academy':'Create Academy',`<form class="admin-form" id="academyForm"><div class="admin-form-grid">${field('Academy Code','code',a?.code||'A'+String(Math.max(0,...S.academies.map(y=>Number(y.code.slice(1))))+1).padStart(3,'0'),'text','required')}${field('Academy Name','name',a?.name||'','','required')}<div class="admin-field full"><label>Description</label><textarea name="description" required>${esc(a?.description||'')}</textarea></div><div class="admin-field full"><label>Target Audience</label><textarea name="audience">${esc(a?.audience||'')}</textarea></div>${selectField('Status','status',['ACTIVE','DRAFT','ARCHIVED'],a?.status||'DRAFT')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">${a?'Save Academy':'Create Academy'}</button></div></form>`);document.getElementById('academyForm').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.currentTarget).entries());if(a)Object.assign(a,f,{updatedAt:new Date().toISOString().slice(0,10)});else S.academies.push({...f,updatedAt:new Date().toISOString().slice(0,10)});save();log(a?'ACADEMY_UPDATED':'ACADEMY_CREATED','Academy',f.code);closeModal();renderPage();toast('Academy saved.')}}
-  function renderCourses(P){if(app.detail){renderCourseDetail(P,app.detail);return}const q=app.query.toLowerCase();let rows=S.courses.filter(c=>!q||[c.code,c.name,c.academy,c.level,c.status].some(v=>String(v).toLowerCase().includes(q)));P.innerHTML=pageHead('05 / COURSES','Course Management','Build, edit, review, publish and archive EduCut.ai courses with structured modules, lessons, resources and assessments.','<button class="btn btn-lime" id="createCourse">+ Create Course</button>')+toolbar('Search course code, name, Academy or level…',`<select id="courseStatusFilter"><option value="">All statuses</option>${['DRAFT','REVIEW','PUBLISHED','ARCHIVED'].map(s=>`<option>${s}</option>`).join('')}</select>`)+simpleCourseTable(rows,false,null,true);wireSearch(renderCourses);document.querySelector('[data-export]').onclick=()=>download('educut-courses.csv',csv(rows));document.getElementById('createCourse').onclick=()=>openCourseForm();document.querySelectorAll('[data-course]').forEach(x=>x.onclick=e=>{e.preventDefault();openCourse(x.dataset.course)});document.querySelectorAll('[data-edit-course]').forEach(x=>x.onclick=()=>openCourseForm(S.courses.find(c=>c.id===x.dataset.editCourse)));document.getElementById('courseStatusFilter').onchange=e=>{app.query=e.target.value;renderCourses(P)}}
+  function openAcademyForm(a=null){modal(a?'Edit Academy':'Create Academy',`<form class="admin-form" id="academyForm"><div class="admin-form-grid">${field('Academy Code','code',a?.code||'A'+String(Math.max(0,...S.academies.map(y=>Number(y.code.slice(1))))+1).padStart(3,'0'),'text','required')}${field('Academy Name','name',a?.name||'','','required')}<div class="admin-field full"><label>Description</label><textarea name="description" required>${esc(a?.description||'')}</textarea></div><div class="admin-field full"><label>Target Audience</label><textarea name="audience">${esc(a?.audience||'')}</textarea></div>${selectField('Status','status',['ACTIVE','DRAFT','ARCHIVED'],a?.status||'DRAFT')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">${a?'Save Academy':'Create Academy'}</button></div></form>`);document.getElementById('academyForm').onsubmit=async e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.currentTarget).entries());const btn=e.currentTarget.querySelector('button[type=submit]');btn.disabled=true;const res=await supaTable('academies',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify([localAcademyToDb(f)])});btn.disabled=false;if(!res.ok){toast('Could not save the academy: '+res.error);return}const saved=dbAcademyToLocal((res.data&&res.data[0])||f);if(a)Object.assign(a,saved);else S.academies.push(saved);save();log(a?'ACADEMY_UPDATED':'ACADEMY_CREATED','Academy',f.code);closeModal();renderPage();toast('Academy saved.')}}
+  function renderCourses(P){if(!liveCatalogueGuard(P))return;if(app.detail){renderCourseDetail(P,app.detail);return}const q=app.query.toLowerCase();let rows=S.courses.filter(c=>!q||[c.code,c.name,c.academy,c.level,c.status].some(v=>String(v).toLowerCase().includes(q)));P.innerHTML=pageHead('05 / COURSES','Course Management','Build, edit, review, publish and archive EduCut.ai courses with structured modules, lessons, resources and assessments.','<button class="btn btn-lime" id="createCourse">+ Create Course</button>')+toolbar('Search course code, name, Academy or level…',`<select id="courseStatusFilter"><option value="">All statuses</option>${['DRAFT','REVIEW','PUBLISHED','ARCHIVED'].map(s=>`<option>${s}</option>`).join('')}</select>`)+simpleCourseTable(rows,false,null,true);wireSearch(renderCourses);document.querySelector('[data-export]').onclick=()=>download('educut-courses.csv',csv(rows));document.getElementById('createCourse').onclick=()=>openCourseForm();document.querySelectorAll('[data-course]').forEach(x=>x.onclick=e=>{e.preventDefault();openCourse(x.dataset.course)});document.querySelectorAll('[data-edit-course]').forEach(x=>x.onclick=()=>openCourseForm(S.courses.find(c=>c.id===x.dataset.editCourse)));document.getElementById('courseStatusFilter').onchange=e=>{app.query=e.target.value;renderCourses(P)}}
   function simpleCourseTable(rows,removable=false,u=null,withActions=false){return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Course Code</th><th>Course Name</th><th>Academy</th><th>Level</th><th>Duration</th><th>Learners</th><th>Completion</th><th>Status</th><th>Last Updated</th><th>Actions</th></tr></thead><tbody>${rows.map(c=>{const learners=S.users.filter(u=>(u.courses||[]).includes(c.code));const completion=learners.length?Math.round(learners.reduce((a,b)=>a+(b.progress||0),0)/learners.length):0;return `<tr><td><a href="#" data-course="${c.id}">${c.code}</a></td><td>${esc(c.name)}</td><td>${esc(c.academy)}</td><td>${esc(c.level)}</td><td>${c.duration}h</td><td>${learners.length}</td><td>${progress(completion)}</td><td>${status(c.status)}</td><td>${fmt(c.updatedAt)}</td><td><div class="admin-row-actions">${withActions?`<button class="admin-mini-btn" data-course="${c.id}">Open</button><button class="admin-mini-btn" data-edit-course="${c.id}">Edit</button>`:''}${removable?`<button class="admin-mini-btn danger" data-remove-course="${c.code}">Remove</button>`:''}</div></td></tr>`}).join('')}</tbody></table></div>`}
   function openCourse(id){app.page='courses';app.detail=id;app.courseSelection=null;window.renderSuperAdmin(app.root)}
-  function renderCourseDetail(P,id){const c=S.courses.find(x=>x.id===id);if(!c){app.detail=null;return renderCourses(P)}P.innerHTML=pageHead(`05 / COURSES / ${c.code}`,c.name,`${c.academy} · ${c.level} · ${c.duration} hours`,`<button class="btn btn-outline" id="backCourses">← Courses</button><button class="btn btn-outline" id="previewCourse">Preview Course</button><button class="btn btn-lime" id="publishCourse">${c.status==='PUBLISHED'?'Unpublish':'Publish'}</button>`)+courseBuilder(c);document.getElementById('backCourses').onclick=()=>{app.detail=null;renderCourses(P)};document.getElementById('previewCourse').onclick=()=>previewCourse(c);document.getElementById('publishCourse').onclick=()=>{const prev=c.status;c.status=c.status==='PUBLISHED'?'REVIEW':'PUBLISHED';c.updatedAt=new Date().toISOString().slice(0,10);save();log('COURSE_STATUS_CHANGED','Course',c.code,prev,c.status);renderCourseDetail(P,id);toast(`Course ${c.status.toLowerCase()}.`)};wireBuilder(c,P)}
-  function openCourseForm(c=null,academy=''){modal(c?'Edit Course':'Create Course',`<form class="admin-form" id="courseForm"><div class="admin-form-grid">${field('Course Code','code',c?.code||`${academy||S.academies[0]?.code||'A001'}.${String(S.courses.filter(x=>x.academy===(academy||S.academies[0]?.code)).length+1).padStart(2,'0')}`,'text','required')}${field('Course Name','name',c?.name||'','','required')}${selectField('Academy','academy',S.academies.map(a=>a.code),c?.academy||academy||S.academies[0]?.code)}${selectField('Level','level',['Foundation','Level I','Level II','Advanced'],c?.level||'Foundation')}${field('Duration (hours)','duration',c?.duration||9,'number','min="1" required')}${field('Language','language',c?.language||'English')}${field('Instructor','instructor',c?.instructor||'EduCut.ai Faculty')}${field('Price excl. VAT / seat (CHF)','priceHT',c?.priceHT||0,'number','min="0" step="1"')}${field('Flat price · up to 6 (CHF, optional)','price6',c?.price6??'','number','min="0" step="1"')}${field('Flat price · up to 12 (CHF, optional)','price12',c?.price12??'','number','min="0" step="1"')}<div class="admin-field full"><label>Short / Full Description</label><textarea name="description">${esc(c?.description||'')}</textarea></div><div class="admin-field full"><label>Learning Objectives</label><textarea name="objectives">${esc(c?.objectives||'')}</textarea></div><div class="admin-field full"><label>Prerequisites (course codes, comma-separated)</label><input name="prerequisites" value="${esc((c?.prerequisites||[]).join(', '))}"></div>${selectField('Publishing Status','status',['DRAFT','REVIEW','PUBLISHED','ARCHIVED'],c?.status||'DRAFT')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">${c?'Save Changes':'Create Course'}</button></div></form>`);document.getElementById('courseForm').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.currentTarget).entries()),data={...f,duration:Number(f.duration),priceHT:Number(f.priceHT)||0,price6:f.price6!==''?Number(f.price6):null,price12:f.price12!==''?Number(f.price12):null,prerequisites:f.prerequisites.split(',').map(x=>x.trim()).filter(Boolean),updatedAt:new Date().toISOString().slice(0,10)};if(c)Object.assign(c,data);else S.courses.push({id:uid('CRS'),...data,modules:[]});save();log(c?'COURSE_UPDATED':'COURSE_CREATED','Course',data.code);closeModal();renderPage();toast('Course saved.')}}
+  function renderCourseDetail(P,id){const c=S.courses.find(x=>x.id===id);if(!c){app.detail=null;return renderCourses(P)}P.innerHTML=pageHead(`05 / COURSES / ${c.code}`,c.name,`${c.academy} · ${c.level} · ${c.duration} hours`,`<button class="btn btn-outline" id="backCourses">← Courses</button><button class="btn btn-outline" id="previewCourse">Preview Course</button><button class="btn btn-lime" id="publishCourse">${c.status==='PUBLISHED'?'Unpublish':'Publish'}</button>`)+courseBuilder(c);document.getElementById('backCourses').onclick=()=>{app.detail=null;renderCourses(P)};document.getElementById('previewCourse').onclick=()=>previewCourse(c);document.getElementById('publishCourse').onclick=async()=>{const prev=c.status;c.status=c.status==='PUBLISHED'?'REVIEW':'PUBLISHED';const res=await supaTable('courses',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify([localCourseToDb(c)])});if(!res.ok){c.status=prev;toast('Could not update status: '+res.error);return}c.updatedAt=new Date().toISOString().slice(0,10);save();log('COURSE_STATUS_CHANGED','Course',c.code,prev,c.status);renderCourseDetail(P,id);toast(`Course ${c.status.toLowerCase()}.`)};wireBuilder(c,P)}
+  function openCourseForm(c=null,academy=''){modal(c?'Edit Course':'Create Course',`<form class="admin-form" id="courseForm"><div class="admin-form-grid">${field('Course Code','code',c?.code||`${academy||S.academies[0]?.code||'A001'}.${String(S.courses.filter(x=>x.academy===(academy||S.academies[0]?.code)).length+1).padStart(2,'0')}`,'text','required')}${field('Course Name','name',c?.name||'','','required')}${selectField('Academy','academy',S.academies.map(a=>a.code),c?.academy||academy||S.academies[0]?.code)}${selectField('Level','level',['Foundation','Level I','Level II','Advanced'],c?.level||'Foundation')}${field('Duration (hours)','duration',c?.duration||9,'number','min="1" required')}${field('Language','language',c?.language||'English')}${field('Instructor','instructor',c?.instructor||'EduCut.ai Faculty')}${field('Price excl. VAT / seat (CHF)','priceHT',c?.priceHT||0,'number','min="0" step="1"')}${field('Flat price · up to 6 (CHF, optional)','price6',c?.price6??'','number','min="0" step="1"')}${field('Flat price · up to 12 (CHF, optional)','price12',c?.price12??'','number','min="0" step="1"')}<div class="admin-field full"><label>Short / Full Description</label><textarea name="description">${esc(c?.description||'')}</textarea></div><div class="admin-field full"><label>Learning Objectives</label><textarea name="objectives">${esc(c?.objectives||'')}</textarea></div><div class="admin-field full"><label>Prerequisites (course codes, comma-separated)</label><input name="prerequisites" value="${esc((c?.prerequisites||[]).join(', '))}"></div>${selectField('Publishing Status','status',['DRAFT','REVIEW','PUBLISHED','ARCHIVED'],c?.status||'DRAFT')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">${c?'Save Changes':'Create Course'}</button></div></form>`);document.getElementById('courseForm').onsubmit=async e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.currentTarget).entries()),data={...f,duration:Number(f.duration),priceHT:Number(f.priceHT)||0,price6:f.price6!==''?Number(f.price6):null,price12:f.price12!==''?Number(f.price12):null,prerequisites:f.prerequisites.split(',').map(x=>x.trim()).filter(Boolean)};const btn=e.currentTarget.querySelector('button[type=submit]');btn.disabled=true;const res=await supaTable('courses?on_conflict=code',{method:'POST',headers:{Prefer:'resolution=merge-duplicates,return=representation'},body:JSON.stringify([localCourseToDb(data)])});btn.disabled=false;if(!res.ok){toast('Could not save the course: '+res.error);return}const saved=Object.assign(dbCourseToLocal((res.data&&res.data[0])||{...localCourseToDb(data),id:c?.id}),{prerequisites:data.prerequisites,modules:c?.modules||[]});if(c)Object.assign(c,saved);else S.courses.push(saved);save();log(c?'COURSE_UPDATED':'COURSE_CREATED','Course',data.code);closeModal();renderPage();toast('Course saved.')}}
   function courseBuilder(c){const mods=c.modules||[];const sel=app.courseSelection||{kind:'course'};return `<div class="admin-course-builder"><aside class="admin-builder-tree"><div class="admin-builder-tree-head"><div><div class="mono" style="color:var(--lime)">Course Structure</div><strong>${c.code}</strong></div><span class="admin-save-state">Saved</span></div><div class="admin-tree-item ${sel.kind==='course'?'active':''}" data-tree-kind="course"><strong>General Information</strong><small>Course metadata & prerequisites</small></div>${mods.map((m,mi)=>`<div class="admin-tree-item ${sel.kind==='module'&&sel.mi===mi?'active':''}" data-tree-kind="module" data-mi="${mi}"><strong>${mi+1}. ${esc(m.title)}</strong><small>Module · ${(m.lessons||[]).length} lessons</small></div>${(m.lessons||[]).map((l,li)=>`<div class="admin-tree-item admin-tree-lesson ${sel.kind==='lesson'&&sel.mi===mi&&sel.li===li?'active':''}" data-tree-kind="lesson" data-mi="${mi}" data-li="${li}"><strong>${mi+1}.${li+1} ${esc(l.title)}</strong><small>${esc(l.type)} · ${l.duration||0} min</small></div>`).join('')}`).join('')}<div class="admin-builder-actions"><button class="admin-mini-btn" id="addModule">+ Module</button><button class="admin-mini-btn" id="addLesson" ${mods.length?'':'disabled'}>+ Lesson</button></div></aside><section class="admin-builder-editor" id="builderEditor">${builderEditor(c,sel)}</section></div>`}
   function builderEditor(c,sel){if(sel.kind==='course')return `<div class="mono" style="color:var(--blue)">General Information</div><h2 style="font-size:34px;margin:8px 0 18px">${esc(c.name)}</h2><form class="admin-form" id="builderCourseForm">${field('Course Name','name',c.name)}${field('Duration (hours)','duration',c.duration,'number')}<div class="admin-field"><label>Description</label><textarea name="description">${esc(c.description)}</textarea></div><div class="admin-field"><label>Learning Objectives</label><textarea name="objectives">${esc(c.objectives)}</textarea></div><div class="admin-field"><label>Prerequisites</label><input name="prerequisites" value="${esc((c.prerequisites||[]).join(', '))}"></div><button class="btn btn-lime" type="submit">Save Course</button></form>`;if(sel.kind==='module'){const m=c.modules[sel.mi];return `<div class="mono" style="color:var(--blue)">Module ${sel.mi+1}</div><h2 style="font-size:34px">Edit Module</h2><form class="admin-form" id="builderModuleForm">${field('Module Title','title',m.title)}<div class="admin-field"><label>Description</label><textarea name="description">${esc(m.description||'')}</textarea></div><button class="btn btn-lime">Save Module</button></form>`}const l=c.modules[sel.mi].lessons[sel.li];return `<div class="mono" style="color:var(--blue)">Lesson ${sel.mi+1}.${sel.li+1}</div><h2 style="font-size:34px">Lesson Editor</h2><form class="admin-form" id="builderLessonForm"><div class="admin-form-grid">${field('Lesson Title','title',l.title)}${selectField('Lesson Type','type',['Video','Text content','PDF','PowerPoint','Word document','External resource','Downloadable file','Quiz','Assignment','Case study','Practical exercise','Coding exercise','Final assessment','Live session link'],l.type)}${field('Estimated Duration (min)','duration',l.duration||0,'number')}${selectField('Completion','required',['Required','Optional'],l.required===false?'Optional':'Required')}</div><div class="admin-field"><label>Description / Learning Content</label><textarea name="content">${esc(l.content||'')}</textarea></div><div class="admin-field"><label>Completion Criteria</label><input name="criteria" value="${esc(l.criteria||'Complete the lesson')}"></div><button class="btn btn-lime">Save Lesson</button></form><section class="admin-section"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Resources</div><h2>Lesson materials</h2></div></div><div class="admin-dropzone" id="resourceDrop">Click to add a resource file<input type="file" id="resourceFile" hidden></div><div class="admin-resource-list">${(l.resources||[]).map((r,i)=>`<div class="admin-resource"><span>${esc(r.name)}</span><button class="admin-mini-btn danger" data-remove-resource="${i}">Remove</button></div>`).join('')}</div></section>`}
   function wireBuilder(c,P){P.querySelectorAll('[data-tree-kind]').forEach(x=>x.onclick=()=>{app.courseSelection={kind:x.dataset.treeKind,mi:Number(x.dataset.mi||0),li:Number(x.dataset.li||0)};renderCourseDetail(P,c.id)});document.getElementById('addModule').onclick=()=>{c.modules=c.modules||[];c.modules.push({id:uid('MOD'),title:`Module ${c.modules.length+1}`,description:'',lessons:[]});app.courseSelection={kind:'module',mi:c.modules.length-1};save();log('COURSE_MODULE_ADDED','Course',c.code);renderCourseDetail(P,c.id)};document.getElementById('addLesson').onclick=()=>{const mi=app.courseSelection?.mi??Math.max(0,c.modules.length-1);const m=c.modules[mi]||c.modules[0];m.lessons=m.lessons||[];m.lessons.push({id:uid('LES'),title:`Lesson ${m.lessons.length+1}`,type:'Video',duration:15,required:true,content:'',criteria:'Complete the lesson',resources:[]});app.courseSelection={kind:'lesson',mi:c.modules.indexOf(m),li:m.lessons.length-1};save();log('COURSE_LESSON_ADDED','Course',c.code);renderCourseDetail(P,c.id)};
@@ -4707,6 +4817,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   }
   function openQuoteBuilder(id){app.page='quotes';app.detail=id||'new';app.quoteDraft=id?deep(S.quotes.find(x=>x.id===id)):newQuoteDraft();window.renderSuperAdmin(app.root)}
   function renderQuotes(P){
+    if(!liveCatalogueGuard(P))return;
     if(app.detail){renderQuoteBuilderPage(P);return}
     const q=app.query.toLowerCase();
     let rows=S.quotes.filter(x=>!q||[x.reference,x.customer?.name,x.customer?.email,x.status].some(v=>String(v||'').toLowerCase().includes(q)));
