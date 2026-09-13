@@ -4994,9 +4994,18 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     if(!liveCatalogueGuard(P))return;
     if(!quotesGuard(P))return;
     if(!billingGuard(P))return;
+    const q=app.query.toLowerCase();
+    const contractRows=S.contracts.filter(c=>!q||[c.ref,company(c.companyId)?.name,c.scope,c.status].some(v=>String(v||'').toLowerCase().includes(q)));
+    const invoiceRows=S.invoices.filter(i=>!q||[i.ref,company(i.companyId)?.name,i.status].some(v=>String(v||'').toLowerCase().includes(q)));
     P.innerHTML=pageHead('08 / BILLING & CONTRACT','Billing & Contract','Manage commercial agreements, invoices, due dates and payment status. Validated quotations generate these automatically.','<button class="btn btn-outline" id="newContract">+ Upload Contract</button><button class="btn btn-lime" id="newInvoice">+ Generate Invoice</button>')
-      +`<section class="admin-section"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Contracts</div><h2>Commercial agreements</h2></div></div>${contractsTable(S.contracts)}</section>`
-      +`<section class="admin-section"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Billing</div><h2>Invoices</h2></div></div>${invoicesTable(S.invoices)}</section>`;
+      +toolbar('Search reference, company, scope or status…')
+      +`<section class="admin-section"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Contracts</div><h2>Commercial agreements</h2></div></div>${contractsTable(contractRows)}</section>`
+      +`<section class="admin-section"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Billing</div><h2>Invoices</h2></div></div>${invoicesTable(invoiceRows)}</section>`;
+    wireSearch(renderContracts);
+    document.querySelector('[data-export]').onclick=()=>download('educut-billing.csv',csv([
+      ...contractRows.map(c=>({type:'Contract',reference:c.ref,company:company(c.companyId)?.name||'',amount:c.value,status:c.status,relatedInvoice:c.invoiceId?(S.invoices.find(x=>x.id===c.invoiceId)?.ref||''):''})),
+      ...invoiceRows.map(i=>({type:'Invoice',reference:i.ref,company:company(i.companyId)?.name||'',amount:i.amount,status:i.status,relatedQuotation:i.quotationId?(S.quotes.find(x=>x.id===i.quotationId)?.reference||''):''}))
+    ]));
     document.getElementById('newContract').onclick=()=>openContractForm();
     document.getElementById('newInvoice').onclick=()=>openInvoiceForm();
     document.querySelectorAll('[data-invoice-paid]').forEach(b=>b.onclick=async()=>{
@@ -5008,39 +5017,86 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     });
     document.querySelectorAll('[data-contract-pdf]').forEach(b=>b.onclick=()=>printContract(S.contracts.find(x=>x.id===b.dataset.contractPdf)));
     document.querySelectorAll('[data-invoice-pdf]').forEach(b=>b.onclick=()=>printInvoice(S.invoices.find(x=>x.id===b.dataset.invoicePdf)));
+    document.querySelectorAll('[data-contract-edit]').forEach(b=>b.onclick=()=>openContractForm(S.contracts.find(x=>x.id===b.dataset.contractEdit)));
+    document.querySelectorAll('[data-invoice-edit]').forEach(b=>b.onclick=()=>openInvoiceForm(S.invoices.find(x=>x.id===b.dataset.invoiceEdit)));
+    document.querySelectorAll('[data-contract-delete]').forEach(b=>b.onclick=()=>{
+      const c=S.contracts.find(x=>x.id===b.dataset.contractDelete);
+      confirmAction('Delete this contract?',`${c.ref} will be permanently removed.`,async()=>{
+        const res=await supaTable(`contracts?id=eq.${c.id}`,{method:'DELETE'});
+        if(!res.ok){toast(res.error||'Could not delete the contract.');return}
+        S.contracts=S.contracts.filter(x=>x.id!==c.id);
+        S.invoices.filter(x=>x.contractId===c.id).forEach(x=>x.contractId=null);
+        save();log('CONTRACT_DELETED','Contract',c.ref);renderContracts(P);toast('Contract deleted.');
+      },'Delete Contract');
+    });
+    document.querySelectorAll('[data-invoice-delete]').forEach(b=>b.onclick=()=>{
+      const i=S.invoices.find(x=>x.id===b.dataset.invoiceDelete);
+      confirmAction('Delete this invoice?',`${i.ref} will be permanently removed.`,async()=>{
+        const res=await supaTable(`invoices?id=eq.${i.id}`,{method:'DELETE'});
+        if(!res.ok){toast(res.error||'Could not delete the invoice.');return}
+        // The database already SET NULLs contracts.invoice_id via the FK;
+        // keep the local cache in step with that.
+        S.invoices=S.invoices.filter(x=>x.id!==i.id);
+        S.contracts.filter(x=>x.invoiceId===i.id).forEach(x=>x.invoiceId=null);
+        save();log('INVOICE_DELETED','Invoice',i.ref);renderContracts(P);toast('Invoice deleted.');
+      },'Delete Invoice');
+    });
+    document.querySelectorAll('[data-open-invoice]').forEach(a=>a.onclick=e=>{e.preventDefault();openInvoiceForm(S.invoices.find(x=>x.id===a.dataset.openInvoice))});
+    document.querySelectorAll('[data-open-contract]').forEach(a=>a.onclick=e=>{e.preventDefault();openContractForm(S.contracts.find(x=>x.id===a.dataset.openContract))});
+    document.querySelectorAll('[data-open-quote]').forEach(a=>a.onclick=e=>{e.preventDefault();openQuoteBuilder(a.dataset.openQuote)});
   }
-  function contractsTable(rows){if(!rows.length)return '<div class="admin-empty"><h3>No contracts yet</h3><p>Contracts are created manually or generated automatically when a quotation is validated.</p></div>';return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Value</th><th>Seats</th><th>Scope</th><th>Start</th><th>End</th><th>Status</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(c=>{const inv=c.invoiceId?S.invoices.find(x=>x.id===c.invoiceId):null;return `<tr><td class="mono">${esc(c.ref)}${inv?`<br><small style="color:#777">Invoice: ${esc(inv.ref)}</small>`:''}</td><td>${esc(company(c.companyId)?.name||'—')}</td><td>${money(c.value,c.currency)}</td><td>${c.seats}</td><td>${esc(c.scope)}</td><td>${fmt(c.start)}</td><td>${fmt(c.end)}</td><td>${status(c.status)}</td><td class="mono">${esc(c.language)}</td><td><button class="admin-mini-btn" data-contract-pdf="${c.id}">PDF</button></td></tr>`}).join('')}</tbody></table></div>`}
-  function invoicesTable(rows){if(!rows.length)return '<div class="admin-empty"><h3>No invoices yet</h3><p>Invoices are created manually or generated automatically when a quotation is validated.</p></div>';return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Amount</th><th>Issue</th><th>Due</th><th>Status</th><th>Payment Date</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(i=>{const q=i.quotationId?S.quotes.find(x=>x.id===i.quotationId):null;return `<tr><td class="mono">${esc(i.ref)}${q?`<br><small style="color:#777">Quote: ${esc(q.reference)}</small>`:''}</td><td>${esc(company(i.companyId)?.name||'—')}</td><td>${money(i.amount,i.currency)}</td><td>${fmt(i.issue)}</td><td>${fmt(i.due)}</td><td>${status(i.status)}</td><td>${fmt(i.paymentDate)}</td><td class="mono">${esc(i.language)}</td><td><div class="admin-row-actions">${i.status!=='PAID'?`<button class="admin-mini-btn" data-invoice-paid="${i.id}">Mark Paid</button>`:'<span class="mono">SETTLED</span>'}<button class="admin-mini-btn" data-invoice-pdf="${i.id}">PDF</button></div></td></tr>`}).join('')}</tbody></table></div>`}
-  function openContractForm(){
-    modal('Upload Contract',`<form id="contractForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Contract Value','value',0,'number')}${field('Seats','seats',25,'number')}${field('Courses / Academies','scope','A002')}${field('Start','start',new Date().toISOString().slice(0,10),'date')}${field('End','end','2027-08-31','date')}${selectField('Status','status',['DRAFT','SIGNED','ACTIVE','EXPIRED','TERMINATED'],'DRAFT')}${selectField('Language','language',['EN','FR','AR'],'EN')}<div class="admin-field"><label>Related Invoice (optional)</label><select name="invoiceId"><option value="">— No related invoice —</option>${S.invoices.map(i=>`<option value="${i.id}">${esc(i.ref)}</option>`).join('')}</select></div><div class="admin-field"><label>Signed Contract PDF</label><input name="document" type="file" accept=".pdf"></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">Save Contract</button></div></form>`);
+  function contractsTable(rows){
+    if(!rows.length)return '<div class="admin-empty"><h3>No contracts yet</h3><p>Contracts are created manually or generated automatically when a quotation is validated.</p></div>';
+    return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Value</th><th>Seats</th><th>Scope</th><th>Start</th><th>End</th><th>Status</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(c=>{
+      const inv=c.invoiceId?S.invoices.find(x=>x.id===c.invoiceId):null;
+      return `<tr><td class="mono">${esc(c.ref)}${inv?`<br><small style="color:#777">Invoice: <a href="#" data-open-invoice="${inv.id}">${esc(inv.ref)}</a></small>`:''}</td><td>${esc(company(c.companyId)?.name||'—')}</td><td>${money(c.value,c.currency)}</td><td>${c.seats}</td><td>${esc(c.scope)}</td><td>${fmt(c.start)}</td><td>${fmt(c.end)}</td><td>${status(c.status)}</td><td class="mono">${esc(c.language)}</td><td><div class="admin-row-actions"><button class="admin-mini-btn" data-contract-edit="${c.id}">Edit</button><button class="admin-mini-btn" data-contract-pdf="${c.id}">PDF</button><button class="admin-mini-btn danger" data-contract-delete="${c.id}">Delete</button></div></td></tr>`;
+    }).join('')}</tbody></table></div>`;
+  }
+  function invoicesTable(rows){
+    if(!rows.length)return '<div class="admin-empty"><h3>No invoices yet</h3><p>Invoices are created manually or generated automatically when a quotation is validated.</p></div>';
+    return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Amount</th><th>Issue</th><th>Due</th><th>Status</th><th>Payment Date</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(i=>{
+      const q=i.quotationId?S.quotes.find(x=>x.id===i.quotationId):null;
+      const ctr=i.contractId?S.contracts.find(x=>x.id===i.contractId):null;
+      const refs=[q?`Quote: <a href="#" data-open-quote="${q.id}">${esc(q.reference)}</a>`:'',ctr?`Contract: <a href="#" data-open-contract="${ctr.id}">${esc(ctr.ref)}</a>`:''].filter(Boolean).join(' · ');
+      return `<tr><td class="mono">${esc(i.ref)}${refs?`<br><small style="color:#777">${refs}</small>`:''}</td><td>${esc(company(i.companyId)?.name||'—')}</td><td>${money(i.amount,i.currency)}</td><td>${fmt(i.issue)}</td><td>${fmt(i.due)}</td><td>${status(i.status)}</td><td>${fmt(i.paymentDate)}</td><td class="mono">${esc(i.language)}</td><td><div class="admin-row-actions">${i.status!=='PAID'?`<button class="admin-mini-btn" data-invoice-paid="${i.id}">Mark Paid</button>`:'<span class="mono">SETTLED</span>'}<button class="admin-mini-btn" data-invoice-edit="${i.id}">Edit</button><button class="admin-mini-btn" data-invoice-pdf="${i.id}">PDF</button><button class="admin-mini-btn danger" data-invoice-delete="${i.id}">Delete</button></div></td></tr>`;
+    }).join('')}</tbody></table></div>`;
+  }
+  function openContractForm(c=null){
+    modal(c?'Edit Contract':'Upload Contract',`<form id="contractForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(x=>`<option value="${x.id}" ${x.id===c?.companyId?'selected':''}>${esc(x.name)}</option>`).join('')}</select></div>${field('Contract Value','value',c?.value??0,'number')}${field('Seats','seats',c?.seats??25,'number')}${field('Courses / Academies','scope',c?.scope||'A002')}${field('Start','start',c?.start||new Date().toISOString().slice(0,10),'date')}${field('End','end',c?.end||'2027-08-31','date')}${selectField('Status','status',['DRAFT','SIGNED','ACTIVE','EXPIRED','TERMINATED'],c?.status||'DRAFT')}${selectField('Language','language',['EN','FR','AR'],c?.language||'EN')}<div class="admin-field"><label>Related Invoice (optional)</label><select name="invoiceId"><option value="">— No related invoice —</option>${S.invoices.map(x=>`<option value="${x.id}" ${x.id===c?.invoiceId?'selected':''}>${esc(x.ref)}</option>`).join('')}</select></div><div class="admin-field"><label>Signed Contract PDF</label><input name="document" type="file" accept=".pdf"></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">${c?'Save Changes':'Save Contract'}</button></div></form>`);
     document.getElementById('contractForm').onsubmit=async e=>{
       e.preventDefault();
       const f=Object.fromEntries(new FormData(e.currentTarget).entries());
-      const c={companyId:f.companyId,value:Number(f.value),currency:'CHF',seats:Number(f.seats),scope:f.scope,start:f.start,end:f.end,status:f.status,document:f.document?.name||'',language:f.language,quotationId:null,invoiceId:f.invoiceId||null};
+      const data={companyId:f.companyId,value:Number(f.value),currency:'CHF',seats:Number(f.seats),scope:f.scope,start:f.start,end:f.end,status:f.status,document:f.document?.name||c?.document||'',language:f.language,quotationId:c?.quotationId||null,invoiceId:f.invoiceId||null};
       const btn=e.currentTarget.querySelector('button[type=submit]');btn.disabled=true;
-      const companyDbId=await resolveCompanyDbId(c.companyId);
+      const companyDbId=await resolveCompanyDbId(data.companyId);
       if(!companyDbId){btn.disabled=false;toast('Could not resolve this company in the database.');return}
-      const res=await supaTable('contracts',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([localContractToDb(c,companyDbId)])});
+      const res=c
+        ?await supaTable(`contracts?id=eq.${c.id}`,{method:'PATCH',headers:{Prefer:'return=representation'},body:JSON.stringify(localContractToDb(data,companyDbId))})
+        :await supaTable('contracts',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([localContractToDb(data,companyDbId)])});
       btn.disabled=false;
       if(!res.ok){toast('Could not save the contract: '+res.error);return}
-      const saved=dbContractToLocal(res.data[0],{[companyDbId]:c.companyId});
-      S.contracts.unshift(saved);save();log('CONTRACT_CREATED','Contract',saved.ref);closeModal();renderPage();toast('Contract saved.');
+      const saved=dbContractToLocal(res.data[0],{[companyDbId]:data.companyId});
+      if(c)Object.assign(c,saved);else S.contracts.unshift(saved);
+      save();log(c?'CONTRACT_UPDATED':'CONTRACT_CREATED','Contract',saved.ref);closeModal();renderPage();toast(c?'Contract updated.':'Contract saved.');
     };
   }
-  function openInvoiceForm(){
-    modal('Generate Invoice',`<form id="invoiceForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Amount excl. VAT','amount',0,'number','min="0"')}${field('VAT / Tax amount','taxAmount',0,'number','min="0"')}${field('Issue Date','issue',new Date().toISOString().slice(0,10),'date')}${field('Due Date','due','2026-10-01','date')}${selectField('Payment Status','status',['PENDING','PAID','OVERDUE','CANCELLED','REFUNDED'],'PENDING')}${selectField('Language','language',['EN','FR','AR'],'EN')}<div class="admin-field"><label>Related Quotation (optional)</label><select name="quotationId"><option value="">— No related quotation —</option>${S.quotes.map(q=>`<option value="${q.id}">${esc(q.reference)}</option>`).join('')}</select></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">Create Invoice</button></div></form>`);
+  function openInvoiceForm(i=null){
+    modal(i?'Edit Invoice':'Generate Invoice',`<form id="invoiceForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}" ${c.id===i?.companyId?'selected':''}>${esc(c.name)}</option>`).join('')}</select></div>${field('Amount excl. VAT','amount',i?.amount??0,'number','min="0"')}${field('VAT / Tax amount','taxAmount',i?.taxAmount??0,'number','min="0"')}${field('Issue Date','issue',i?.issue||new Date().toISOString().slice(0,10),'date')}${field('Due Date','due',i?.due||'2026-10-01','date')}${selectField('Payment Status','status',['PENDING','PAID','OVERDUE','CANCELLED','REFUNDED'],i?.status||'PENDING')}${selectField('Language','language',['EN','FR','AR'],i?.language||'EN')}<div class="admin-field"><label>Related Quotation (optional)</label><select name="quotationId"><option value="">— No related quotation —</option>${S.quotes.map(q=>`<option value="${q.id}" ${q.id===i?.quotationId?'selected':''}>${esc(q.reference)}</option>`).join('')}</select></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">${i?'Save Changes':'Create Invoice'}</button></div></form>`);
     document.getElementById('invoiceForm').onsubmit=async e=>{
       e.preventDefault();
       const f=Object.fromEntries(new FormData(e.currentTarget).entries());
-      const i={companyId:f.companyId,amount:Number(f.amount),taxAmount:Number(f.taxAmount),currency:'CHF',issue:f.issue,due:f.due,status:f.status,paymentDate:null,description:'',language:f.language,quotationId:f.quotationId||null,contractId:null};
+      const data={companyId:f.companyId,amount:Number(f.amount),taxAmount:Number(f.taxAmount),currency:'CHF',issue:f.issue,due:f.due,status:f.status,paymentDate:i?.paymentDate||null,description:i?.description||'',language:f.language,quotationId:f.quotationId||null,contractId:i?.contractId||null};
       const btn=e.currentTarget.querySelector('button[type=submit]');btn.disabled=true;
-      const companyDbId=await resolveCompanyDbId(i.companyId);
+      const companyDbId=await resolveCompanyDbId(data.companyId);
       if(!companyDbId){btn.disabled=false;toast('Could not resolve this company in the database.');return}
-      const res=await supaTable('invoices',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([localInvoiceToDb(i,companyDbId)])});
+      const res=i
+        ?await supaTable(`invoices?id=eq.${i.id}`,{method:'PATCH',headers:{Prefer:'return=representation'},body:JSON.stringify(localInvoiceToDb(data,companyDbId))})
+        :await supaTable('invoices',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([localInvoiceToDb(data,companyDbId)])});
       btn.disabled=false;
       if(!res.ok){toast('Could not save the invoice: '+res.error);return}
-      const saved=dbInvoiceToLocal(res.data[0],{[companyDbId]:i.companyId});
-      S.invoices.unshift(saved);save();log('INVOICE_CREATED','Invoice',saved.ref);closeModal();renderPage();toast('Invoice created.');
+      const saved=dbInvoiceToLocal(res.data[0],{[companyDbId]:data.companyId});
+      if(i)Object.assign(i,saved);else S.invoices.unshift(saved);
+      save();log(i?'INVOICE_UPDATED':'INVOICE_CREATED','Invoice',saved.ref);closeModal();renderPage();toast(i?'Invoice updated.':'Invoice created.');
     };
   }
   // -------------------------------------------------------------------
@@ -5492,6 +5548,10 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     const ctrRes=await supaTable('contracts',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([contractPayload])});
     if(!ctrRes.ok) return {ok:false,error:ctrRes.error||'Could not create the commercial agreement.'};
     const contract=dbContractToLocal(ctrRes.data[0],refByCompanyId);
+    // Complete the bidirectional link now that the contract's real id
+    // exists — the invoice couldn't know it before this point.
+    const linkRes=await supaTable(`invoices?id=eq.${invoice.id}`,{method:'PATCH',body:JSON.stringify({contract_id:contract.id})});
+    if(linkRes.ok) invoice.contractId=contract.id;
     S.invoices.unshift(invoice);
     S.contracts.unshift(contract);
     save();
