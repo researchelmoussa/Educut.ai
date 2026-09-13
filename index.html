@@ -1041,7 +1041,7 @@
 .admin-panel{background:#fff;border:1px solid var(--line);padding:20px}.admin-panel-accent{box-shadow:inset 6px 0 0 var(--lime)}
 .admin-action-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.admin-quick{border:1px solid var(--line);background:#fff;text-align:left;padding:16px;cursor:pointer;min-height:92px}.admin-quick:hover{border-color:var(--ink);transform:translateY(-1px)}.admin-quick .mono{color:var(--blue)}.admin-quick strong{display:block;margin-top:18px}
 .admin-toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 0}.admin-toolbar input,.admin-toolbar select{border:1px solid var(--line);background:#fff;padding:10px 11px;min-height:40px;outline:none}.admin-toolbar input{min-width:260px}.admin-toolbar input:focus,.admin-toolbar select:focus{border-color:var(--ink)}.admin-toolbar-spacer{flex:1}
-.admin-table-wrap{border:1px solid var(--line);background:#fff;overflow:auto;max-width:100%}.admin-table{width:100%;border-collapse:collapse;min-width:920px;font-size:12px}.admin-table th{position:sticky;top:0;background:#f1f1ed;z-index:2;text-align:left;padding:11px 12px;border-bottom:1px solid var(--ink);font:600 9px "SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.09em;white-space:nowrap;cursor:pointer}.admin-table td{padding:12px;border-bottom:1px solid #e8e8e3;vertical-align:top}.admin-table tr:hover td{background:#fbfbf8}.admin-table tr:last-child td{border-bottom:0}.admin-table a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}.admin-row-actions{display:flex;gap:5px;white-space:nowrap}.admin-mini-btn{border:1px solid var(--line);background:#fff;padding:6px 8px;font-size:10px;cursor:pointer}.admin-mini-btn:hover{border-color:var(--ink)}.admin-mini-btn.danger{color:#a5001d}.admin-status{display:inline-block;padding:5px 7px;border:1px solid var(--line);font:700 9px monospace;letter-spacing:.06em}.admin-status.ACTIVE,.admin-status.PUBLISHED,.admin-status.SIGNED{background:#e9f8cb;border-color:#b9df72;color:#365d00}.admin-status.PENDING,.admin-status.REVIEW,.admin-status.INVITED{color:var(--blue);border-color:#b7c0ff}.admin-status.EXPIRED,.admin-status.SUSPENDED,.admin-status.CANCELLED,.admin-status.ARCHIVED{color:#8b0018;border-color:#e4b4bd}.admin-status.DRAFT,.admin-status.TRIAL{color:#725000;border-color:#e5d38f}
+.admin-table-wrap{border:1px solid var(--line);background:#fff;overflow:auto;max-width:100%}.admin-table{width:100%;border-collapse:collapse;min-width:920px;font-size:12px}.admin-table th{position:sticky;top:0;background:#f1f1ed;z-index:2;text-align:left;padding:11px 12px;border-bottom:1px solid var(--ink);font:600 9px "SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.09em;white-space:nowrap;cursor:pointer}.admin-table td{padding:12px;border-bottom:1px solid #e8e8e3;vertical-align:top}.admin-table tr:hover td{background:#fbfbf8}.admin-table tr:last-child td{border-bottom:0}.admin-table a{color:var(--blue);text-decoration:underline;text-underline-offset:2px}.admin-row-actions{display:flex;gap:5px;white-space:nowrap}.admin-mini-btn{border:1px solid var(--line);background:#fff;padding:6px 8px;font-size:10px;cursor:pointer}.admin-mini-btn:hover{border-color:var(--ink)}.admin-mini-btn.danger{color:#a5001d}.admin-status{display:inline-block;padding:5px 7px;border:1px solid var(--line);font:700 9px monospace;letter-spacing:.06em}.admin-status.ACTIVE,.admin-status.PUBLISHED,.admin-status.SIGNED,.admin-status.VALIDATED{background:#e9f8cb;border-color:#b9df72;color:#365d00}.admin-status.PENDING,.admin-status.REVIEW,.admin-status.INVITED,.admin-status.SENT{color:var(--blue);border-color:#b7c0ff}.admin-status.EXPIRED,.admin-status.SUSPENDED,.admin-status.CANCELLED,.admin-status.ARCHIVED,.admin-status.ABORTED,.admin-status.TERMINATED{color:#8b0018;border-color:#e4b4bd}.admin-status.DRAFT,.admin-status.TRIAL{color:#725000;border-color:#e5d38f}
 .admin-pagination{display:flex;justify-content:space-between;align-items:center;padding:12px;border-top:1px solid var(--line);font-size:11px}.admin-pagination-actions{display:flex;gap:5px}
 .admin-empty{border:1px dashed #bdbdb6;background:#fff;padding:44px;text-align:center;color:#777}.admin-empty h3{color:var(--ink);font-size:22px;margin:0 0 6px}
 .admin-activity{border-top:1px solid var(--line)}.admin-activity-row{display:grid;grid-template-columns:90px 1.3fr 1fr 150px;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:12px}.admin-activity-row .evt{font-weight:700}.admin-activity-row .who,.admin-activity-row .when{color:#777}
@@ -3331,7 +3331,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         ${navBtn('consultations','08','Consultations')}
         ${navBtn('catalogue','09','Catalogue Requests')}
         ${navBtn('subscriptions','10','Subscriptions')}
-        ${navBtn('contracts','11','Contracts & Billing')}
+        ${navBtn('contracts','11','Billing & Contract')}
         ${navBtn('quotes','11B','Quote Builder')}
         <div class="admin-nav-group mono">Intelligence</div>
         ${navBtn('analytics','12','Analytics')}
@@ -3366,7 +3366,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     S.users.filter(x=>[x.name,x.email,x.type].some(v=>String(v).toLowerCase().includes(q))).slice(0,5).forEach(x=>items.push({type:x.type,title:x.name,sub:x.email,go:()=>openUser(x.id)}));
     S.courses.filter(x=>[x.code,x.name].some(v=>String(v).toLowerCase().includes(q))).slice(0,4).forEach(x=>items.push({type:'Course',title:`${x.code} · ${x.name}`,sub:x.status,go:()=>openCourse(x.id)}));
     S.academies.filter(x=>[x.code,x.name].some(v=>String(v).toLowerCase().includes(q))).slice(0,3).forEach(x=>items.push({type:'Academy',title:`${x.code} · ${x.name}`,sub:x.status,go:()=>openAcademy(x.code)}));
-    [...S.contracts,...S.invoices].filter(x=>String(x.id).toLowerCase().includes(q)).slice(0,3).forEach(x=>items.push({type:x.id.startsWith('CTR')?'Contract':'Invoice',title:x.id,sub:company(x.companyId)?.name||'',go:()=>{app.page='contracts';app.detail=null;renderSuperAdmin(app.root)}}));
+    [...S.contracts.map(x=>({...x,_kind:'Contract'})),...S.invoices.map(x=>({...x,_kind:'Invoice'}))].filter(x=>String(x.ref||x.id).toLowerCase().includes(q)).slice(0,3).forEach(x=>items.push({type:x._kind,title:x.ref||x.id,sub:company(x.companyId)?.name||'',go:()=>{app.page='contracts';app.detail=null;renderSuperAdmin(app.root)}}));
     box.innerHTML=items.length?items.map((x,i)=>`<div class="admin-search-item" data-sidx="${i}"><strong>${esc(x.title)}</strong><span>${esc(x.type)} · ${esc(x.sub)}</span></div>`).join(''):`<div class="admin-search-item"><strong>No result</strong><span>Try another identifier or email.</span></div>`;
     box.classList.add('open');box.querySelectorAll('[data-sidx]').forEach(el=>el.onclick=()=>{box.classList.remove('open');items[Number(el.dataset.sidx)].go()});
   }
@@ -3697,7 +3697,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       customer:{name:q.customer_name||'',contact:q.customer_contact||'',email:q.customer_email||'',address:q.customer_address||''},
       issueDate:(q.issue_date||'').slice(0,10),items,
       promoMode:q.promo_mode||'auto',vatRate:q.vat_rate!=null?Number(q.vat_rate):8.1,
-      notes:q.notes||'',createdAt:q.created_at,updatedAt:q.updated_at
+      notes:q.notes||'',language:q.language||'EN',createdAt:q.created_at,updatedAt:q.updated_at
     };
   }
   function localQuoteToDb(d,t,companyDbId){
@@ -3708,7 +3708,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       issue_date:d.issueDate,status:d.status,promo_mode:String(d.promoMode),
       vat_rate:Number(d.vatRate)||0,subtotal:t.subtotal,discount_percent:t.pct,
       discount_amount:t.discount,total_ht:t.totalHT,vat_amount:t.vatAmount,total_ttc:t.totalTTC,
-      notes:d.notes||null
+      notes:d.notes||null,language:d.language||'EN'
     };
   }
   function localQuoteItemToDb(it,quotationId,position){
@@ -3728,6 +3728,16 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     const dbId=res.ok&&res.data&&res.data[0]?res.data[0].id:null;
     companyDbIdCache[localCompanyId]=dbId;
     return dbId;
+  }
+  // Reverse of resolveCompanyDbId: given real company uuids (as seen on a
+  // fetched row's company_id), look up their ref-style local ids in bulk.
+  async function companyRefsByIds(ids){
+    const uniqueIds=[...new Set((ids||[]).filter(Boolean))];
+    if(!uniqueIds.length) return {};
+    const res=await supaTable(`companies?select=id,ref&id=in.(${uniqueIds.join(',')})`,{method:'GET'});
+    const map={};
+    if(res.ok)(res.data||[]).forEach(c=>{map[c.id]=c.ref});
+    return map;
   }
   // Replaces (delete + reinsert) a quotation's line items rather than
   // diffing them — quotations only ever hold a handful of lines, and this
@@ -3762,15 +3772,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       quotesLive.loading=false; quotesLive.error=res.error||'Could not load quotations.';
       return;
     }
-    // company_id on the row is the real company uuid — map it back to the
-    // ref-style id (e.g. "CMP-1001") S.companies is still keyed by, since
-    // Companies themselves aren't migrated to Supabase yet.
-    const companyIds=[...new Set((res.data||[]).map(q=>q.company_id).filter(Boolean))];
-    let refByCompanyId={};
-    if(companyIds.length){
-      const cRes=await supaTable(`companies?select=id,ref&id=in.(${companyIds.join(',')})`,{method:'GET'});
-      if(cRes.ok)(cRes.data||[]).forEach(c=>{refByCompanyId[c.id]=c.ref});
-    }
+    const refByCompanyId=await companyRefsByIds((res.data||[]).map(x=>x.company_id));
     S.quotes=(res.data||[]).map(q=>dbQuotationToLocal(q,refByCompanyId));
     quotesLive.loading=false;
     quotesLive.loaded=true; quotesLive.error='';
@@ -3787,6 +3789,79 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     }
     P.innerHTML=`<div class="admin-neutral-panel"><strong>Loading quotations…</strong><p>Reading saved quotations from the database.</p></div>`;
     if(!quotesLive.loading) ensureLiveQuotes().then(()=>renderPage());
+    return false;
+  }
+
+  // Contracts (Commercial Agreements) and Invoices under Billing & Contract —
+  // same real-data pattern as Quotations. company_id on each row is the real
+  // company uuid, mapped back to the ref-style id (e.g. "CMP-1001") that
+  // S.companies is still keyed by, since Companies aren't migrated yet.
+  function dbContractToLocal(c,refByCompanyId){
+    return {
+      id:c.id,ref:c.ref,companyId:c.company_id?((refByCompanyId||{})[c.company_id]||''):'',
+      value:c.value!=null?Number(c.value):0,currency:c.currency||'CHF',seats:c.seats||0,
+      scope:c.scope||'',start:(c.start_date||'').slice(0,10),end:(c.end_date||'').slice(0,10),
+      status:c.status||'DRAFT',document:c.document_path||'',quotationId:c.quotation_id||null,
+      language:c.language||'EN',createdAt:c.created_at,updatedAt:c.updated_at
+    };
+  }
+  function localContractToDb(c,companyDbId){
+    return {
+      company_id:companyDbId||null,value:Number(c.value)||0,currency:c.currency||'CHF',
+      seats:Number(c.seats)||0,scope:c.scope||null,start_date:c.start||null,end_date:c.end||null,
+      status:c.status||'DRAFT',document_path:c.document||null,quotation_id:c.quotationId||null,
+      language:c.language||'EN'
+    };
+  }
+  function dbInvoiceToLocal(i,refByCompanyId){
+    return {
+      id:i.id,ref:i.ref,companyId:i.company_id?((refByCompanyId||{})[i.company_id]||''):'',
+      amount:i.amount!=null?Number(i.amount):0,taxAmount:i.tax_amount!=null?Number(i.tax_amount):0,
+      currency:i.currency||'CHF',issue:(i.issue_date||'').slice(0,10),due:(i.due_date||'').slice(0,10),
+      status:i.status||'PENDING',paymentDate:i.payment_date?String(i.payment_date).slice(0,10):null,
+      description:i.description||'',quotationId:i.quotation_id||null,contractId:i.contract_id||null,
+      language:i.language||'EN',createdAt:i.created_at,updatedAt:i.updated_at
+    };
+  }
+  function localInvoiceToDb(i,companyDbId){
+    return {
+      company_id:companyDbId||null,amount:Number(i.amount)||0,tax_amount:Number(i.taxAmount)||0,
+      currency:i.currency||'CHF',issue_date:i.issue||null,due_date:i.due||null,status:i.status||'PENDING',
+      payment_date:i.paymentDate||null,description:i.description||null,
+      quotation_id:i.quotationId||null,contract_id:i.contractId||null,language:i.language||'EN'
+    };
+  }
+  const billingLive={loaded:false,loading:false,error:''};
+  async function ensureLiveBilling(){
+    if(billingLive.loaded||billingLive.loading) return;
+    billingLive.loading=true;
+    const [cRes,iRes]=await Promise.all([
+      supaTable('contracts?select=*&order=created_at.desc',{method:'GET'}),
+      supaTable('invoices?select=*&order=created_at.desc',{method:'GET'})
+    ]);
+    if(!cRes.ok||!iRes.ok){
+      billingLive.loading=false;
+      billingLive.error=cRes.error||iRes.error||'Could not load contracts/invoices.';
+      return;
+    }
+    const refByCompanyId=await companyRefsByIds([...(cRes.data||[]).map(x=>x.company_id),...(iRes.data||[]).map(x=>x.company_id)]);
+    S.contracts=(cRes.data||[]).map(c=>dbContractToLocal(c,refByCompanyId));
+    S.invoices=(iRes.data||[]).map(i=>dbInvoiceToLocal(i,refByCompanyId));
+    billingLive.loading=false;
+    billingLive.loaded=true; billingLive.error='';
+  }
+  function billingGuard(P){
+    if(billingLive.loaded) return true;
+    if(billingLive.error){
+      P.innerHTML=pageHead('08 / BILLING & CONTRACT','Could not load billing data','Contracts and Invoices could not be read from the database.')
+        +`<div class="admin-neutral-panel" style="box-shadow:inset 6px 0 0 #c33"><strong>${esc(billingLive.error)}</strong></div>
+         <div class="admin-head-actions" style="margin-top:16px"><button class="btn btn-lime" id="retryLiveBilling">Retry</button><button class="btn btn-outline" id="useLocalBillingFallback">Continue with local demo data</button></div>`;
+      document.getElementById('retryLiveBilling').onclick=()=>{billingLive.error='';renderPage()};
+      document.getElementById('useLocalBillingFallback').onclick=()=>{billingLive.loaded=true;billingLive.error='';renderPage()};
+      return false;
+    }
+    P.innerHTML=`<div class="admin-neutral-panel"><strong>Loading billing data…</strong><p>Reading Contracts and Invoices from the database.</p></div>`;
+    if(!billingLive.loading) ensureLiveBilling().then(()=>renderPage());
     return false;
   }
 
@@ -4759,7 +4834,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       <section class="admin-panel admin-panel-accent"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Recent Platform Activity</div><h2>Latest events</h2></div></div><div class="admin-activity">${S.activities.slice(0,8).map(a=>`<div class="admin-activity-row"><div class="mono">${esc(a.id)}</div><div class="evt">${esc(a.event)}</div><div class="who">${esc(a.entity)}<br><small>${esc(a.admin)}</small></div><div class="when">${fmtTime(a.at)}</div></div>`).join('')}</div></section>
       <section class="admin-panel"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Learning activity</div><h2>Monthly active learners</h2></div></div>${barChart([42,58,66,72,88,103,120,136,149,168,184,201],['O','N','D','J','F','M','A','M','J','J','A','S'])}</section>
     </div>
-    <section class="admin-section"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Operational Areas</div><h2>Centralized administration</h2></div></div><div class="route-grid">${[['01','Platform Overview','Monitor companies, learners, revenue and Academy activity.','dashboard'],['02','Company Accounts','Create and manage organizations, administrators, learners and seats.','companies'],['03','User Management','Manage individual learners and company-sponsored learners.','company-learners'],['04','Academy & Course Management','Build, edit, publish and organize EduCut.ai learning content.','courses'],['05','Contracts & Billing','Manage subscriptions, contracts, invoices and payments.','contracts'],['06','Analytics','Monitor learning engagement and commercial performance.','analytics'],['07','Certificates','Issue and manage learner certification.','certificates'],['08','Security & Governance','Manage roles, permissions, administrators and audit logs.','security']].map(c=>`<article class="route-card" data-card-page="${c[3]}" style="cursor:pointer"><div class="mono">${c[0]}</div><h3>${c[1]}</h3><p>${c[2]}</p></article>`).join('')}</div></section>`;
+    <section class="admin-section"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Operational Areas</div><h2>Centralized administration</h2></div></div><div class="route-grid">${[['01','Platform Overview','Monitor companies, learners, revenue and Academy activity.','dashboard'],['02','Company Accounts','Create and manage organizations, administrators, learners and seats.','companies'],['03','User Management','Manage individual learners and company-sponsored learners.','company-learners'],['04','Academy & Course Management','Build, edit, publish and organize EduCut.ai learning content.','courses'],['05','Billing & Contract','Manage subscriptions, contracts, invoices and payments.','contracts'],['06','Analytics','Monitor learning engagement and commercial performance.','analytics'],['07','Certificates','Issue and manage learner certification.','certificates'],['08','Security & Governance','Manage roles, permissions, administrators and audit logs.','security']].map(c=>`<article class="route-card" data-card-page="${c[3]}" style="cursor:pointer"><div class="mono">${c[0]}</div><h3>${c[1]}</h3><p>${c[2]}</p></article>`).join('')}</div></section>`;
     P.querySelectorAll('[data-card-page]').forEach(x=>x.onclick=()=>go(x.dataset.cardPage));
     P.querySelectorAll('[data-quick]').forEach(x=>x.onclick=()=>{const p=x.dataset.quick;go(p);setTimeout(()=>{if(p==='companies')openCompanyForm();else if(p==='company-learners')openLearnerForm();else if(p==='courses')openCourseForm();else if(p==='academies')openAcademyForm();else if(p==='subscriptions')openSubscriptionForm();else if(p==='contracts')openContractForm()},20)});
   }
@@ -4798,9 +4873,9 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     if(app.tab==='Seats')T.innerHTML=`<div class="admin-section-head"><div><h2>Seat allocation</h2><p>${seats.length} allocated of ${c.purchasedSeats} purchased.</p></div><button class="btn btn-lime" id="allocateSeat">Allocate Seat</button></div>${seatsTable(seats)}`;
     if(app.tab==='Courses'){const codes=[...new Set(learners.flatMap(u=>u.courses||[]))];T.innerHTML=`<div class="admin-section-head"><div><h2>Assigned learning content</h2></div><button class="btn btn-lime" id="assignCourseCompany">Assign Course</button></div>${simpleCourseTable(S.courses.filter(x=>codes.includes(x.code)||c.academies.includes(x.academy)))}`}
     if(app.tab==='Subscription')T.innerHTML=subscriptionsTable(subs);
-    if(app.tab==='Contracts')T.innerHTML=contractsTable(contracts);
+    if(app.tab==='Contracts'){T.innerHTML=contractsTable(contracts);T.querySelectorAll('[data-contract-pdf]').forEach(b=>b.onclick=()=>printContract(S.contracts.find(x=>x.id===b.dataset.contractPdf)))}
     if(app.tab==='Analytics')T.innerHTML=companyAnalytics(c,learners,seats);
-    if(app.tab==='Billing')T.innerHTML=invoicesTable(inv);
+    if(app.tab==='Billing'){T.innerHTML=invoicesTable(inv);T.querySelectorAll('[data-invoice-pdf]').forEach(b=>b.onclick=()=>printInvoice(S.invoices.find(x=>x.id===b.dataset.invoicePdf)));T.querySelectorAll('[data-invoice-paid]').forEach(b=>b.onclick=async()=>{const i=S.invoices.find(x=>x.id===b.dataset.invoicePaid),prev={status:i.status,paymentDate:i.paymentDate};i.status='PAID';i.paymentDate=new Date().toISOString().slice(0,10);const res=await supaTable(`invoices?id=eq.${i.id}`,{method:'PATCH',body:JSON.stringify({status:'PAID',payment_date:i.paymentDate})});if(!res.ok){Object.assign(i,prev);toast('Could not update the invoice: '+res.error);return}save();log('INVOICE_MARKED_PAID','Invoice',i.ref);renderCompanyDetail(P,id);toast('Invoice marked as paid.')})}
     if(app.tab==='Activity')T.innerHTML=`<div class="admin-activity">${S.activities.filter(a=>a.entity.includes(c.name)||a.entity.includes(c.id)).map(a=>`<div class="admin-activity-row"><div class="mono">${esc(a.id)}</div><div class="evt">${esc(a.event)}</div><div class="who">${esc(a.entity)}<br><small>${esc(a.admin)}</small></div><div class="when">${fmtTime(a.at)}</div></div>`).join('')||'<div class="admin-empty">No recorded activity.</div>'}</div>`;
     document.getElementById('suspendCompany')?.addEventListener('click',()=>{const next=c.status==='SUSPENDED'?'ACTIVE':'SUSPENDED';confirmAction(`${next==='SUSPENDED'?'Suspend':'Reactivate'} company?`,`This will change ${c.name} to ${next}.`,()=>{const prev=c.status;c.status=next;save();log('COMPANY_STATUS_CHANGED','Company',c.id,prev,next);renderCompanyDetail(P,id);toast('Company status updated.')},next)});
     document.getElementById('deleteCompany')?.addEventListener('click',()=>confirmAction('Delete this company?','This action removes the company account. Historical learner records will be preserved where possible.',()=>{S.companies=S.companies.filter(x=>x.id!==id);save();log('COMPANY_DELETED','Company',id);app.detail=null;renderCompanies(P);toast('Company deleted.')},'Delete Company'));
@@ -4915,11 +4990,56 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   function renderSubscriptions(P){const q=app.query.toLowerCase();let rows=S.subscriptions.filter(s=>!q||[s.id,s.plan,company(s.companyId)?.name,s.status].some(v=>String(v||'').toLowerCase().includes(q)));P.innerHTML=pageHead('07 / SUBSCRIPTIONS','Subscription Management','Create, modify, extend, renew, suspend and cancel company learning subscriptions.','<button class="btn btn-lime" id="createSubscription">+ Create Subscription</button>')+toolbar('Search company, plan or subscription ID…')+subscriptionsTable(rows);wireSearch(renderSubscriptions);document.getElementById('createSubscription').onclick=()=>openSubscriptionForm();document.querySelector('[data-export]').onclick=()=>download('educut-subscriptions.csv',csv(rows));document.querySelectorAll('[data-sub-edit]').forEach(b=>b.onclick=()=>openSubscriptionForm(S.subscriptions.find(s=>s.id===b.dataset.subEdit)));document.querySelectorAll('[data-sub-action]').forEach(b=>b.onclick=()=>{const s=S.subscriptions.find(x=>x.id===b.dataset.subAction),prev=s.status;s.status=s.status==='SUSPENDED'?'ACTIVE':'SUSPENDED';save();log('SUBSCRIPTION_STATUS_CHANGED','Subscription',s.id,prev,s.status);renderSubscriptions(P)})}
   function subscriptionsTable(rows){return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Company</th><th>Plan</th><th>Seats</th><th>Academies</th><th>Start</th><th>Expiration</th><th>Price</th><th>Payment</th><th>Renewal</th><th>Status</th><th>Actions</th></tr></thead><tbody>${rows.map(s=>`<tr><td>${esc(company(s.companyId)?.name||'—')}</td><td>${esc(s.plan)}</td><td>${s.seats}</td><td>${esc(s.academies.join(', '))}</td><td>${fmt(s.start)}</td><td>${fmt(s.end)}</td><td>${money(s.price,s.currency)}</td><td>${status(s.paymentStatus)}</td><td>${esc(s.renewal)}</td><td>${status(s.status)}</td><td><div class="admin-row-actions"><button class="admin-mini-btn" data-sub-edit="${s.id}">Edit</button><button class="admin-mini-btn" data-sub-action="${s.id}">${s.status==='SUSPENDED'?'Reactivate':'Suspend'}</button></div></td></tr>`).join('')}</tbody></table></div>`}
   function openSubscriptionForm(s=null){modal(s?'Edit Subscription':'Create Subscription',`<form id="subscriptionForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}" ${c.id===s?.companyId?'selected':''}>${esc(c.name)}</option>`).join('')}</select></div>${field('Plan','plan',s?.plan||'Professional','','required')}${field('Seats','seats',s?.seats||25,'number','min="1" required')}${field('Price','price',s?.price||0,'number','min="0"')}${field('Start Date','start',s?.start||new Date().toISOString().slice(0,10),'date')}${field('Expiration Date','end',s?.end||'2027-08-31','date')}${selectField('Payment Status','paymentStatus',['PENDING','PAID','OVERDUE'],s?.paymentStatus||'PENDING')}${selectField('Status','status',['PENDING','TRIAL','ACTIVE','EXPIRED','SUSPENDED','CANCELLED'],s?.status||'PENDING')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime">Save Subscription</button></div></form>`);document.getElementById('subscriptionForm').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.currentTarget).entries()),obj={...f,seats:Number(f.seats),price:Number(f.price),currency:'CHF',academies:company(f.companyId)?.academies||[],renewal:'OPEN'};if(s)Object.assign(s,obj);else S.subscriptions.push({id:uid('SUB'),...obj});save();log(s?'SUBSCRIPTION_UPDATED':'SUBSCRIPTION_CREATED','Subscription',s?.id||S.subscriptions.at(-1).id);closeModal();renderPage();toast('Subscription saved.')}}
-  function renderContracts(P){P.innerHTML=pageHead('08 / CONTRACTS & BILLING','Contracts & Billing','Manage commercial agreements, signed documents, invoices, due dates and payment status.','<button class="btn btn-outline" id="newContract">+ Upload Contract</button><button class="btn btn-lime" id="newInvoice">+ Generate Invoice</button>')+`<div class="admin-grid-2"><section><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Contracts</div><h2>Commercial agreements</h2></div></div>${contractsTable(S.contracts)}</section><section><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Billing</div><h2>Invoices</h2></div></div>${invoicesTable(S.invoices)}</section></div>`;document.getElementById('newContract').onclick=()=>openContractForm();document.getElementById('newInvoice').onclick=()=>openInvoiceForm();document.querySelectorAll('[data-invoice-paid]').forEach(b=>b.onclick=()=>{const i=S.invoices.find(x=>x.id===b.dataset.invoicePaid);i.status='PAID';i.paymentDate=new Date().toISOString().slice(0,10);save();log('INVOICE_MARKED_PAID','Invoice',i.id);renderContracts(P);toast('Invoice marked as paid.')})}
-  function contractsTable(rows){return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Contract ID</th><th>Company</th><th>Value</th><th>Seats</th><th>Scope</th><th>Start</th><th>End</th><th>Status</th><th>Document</th></tr></thead><tbody>${rows.map(c=>`<tr><td>${c.id}</td><td>${esc(company(c.companyId)?.name||'—')}</td><td>${money(c.value,c.currency)}</td><td>${c.seats}</td><td>${esc(c.scope)}</td><td>${fmt(c.start)}</td><td>${fmt(c.end)}</td><td>${status(c.status)}</td><td>${esc(c.document||'—')}</td></tr>`).join('')}</tbody></table></div>`}
-  function invoicesTable(rows){return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Invoice</th><th>Company</th><th>Amount</th><th>Issue</th><th>Due</th><th>Status</th><th>Payment Date</th><th>Actions</th></tr></thead><tbody>${rows.map(i=>`<tr><td>${i.id}</td><td>${esc(company(i.companyId)?.name||'—')}</td><td>${money(i.amount,i.currency)}</td><td>${fmt(i.issue)}</td><td>${fmt(i.due)}</td><td>${status(i.status)}</td><td>${fmt(i.paymentDate)}</td><td>${i.status!=='PAID'?`<button class="admin-mini-btn" data-invoice-paid="${i.id}">Mark Paid</button>`:'<span class="mono">SETTLED</span>'}</td></tr>`).join('')}</tbody></table></div>`}
-  function openContractForm(){modal('Upload Contract',`<form id="contractForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Contract Value','value',0,'number')}${field('Seats','seats',25,'number')}${field('Courses / Academies','scope','A002')}${field('Start','start',new Date().toISOString().slice(0,10),'date')}${field('End','end','2027-08-31','date')}${selectField('Status','status',['DRAFT','SENT','SIGNED','ACTIVE','EXPIRED','CANCELLED'],'DRAFT')}<div class="admin-field"><label>Signed Contract PDF</label><input name="document" type="file" accept=".pdf"></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime">Save Contract</button></div></form>`);document.getElementById('contractForm').onsubmit=e=>{e.preventDefault();const f=new FormData(e.currentTarget);const c={id:uid('CTR'),companyId:f.get('companyId'),value:Number(f.get('value')),currency:'CHF',seats:Number(f.get('seats')),scope:f.get('scope'),start:f.get('start'),end:f.get('end'),status:f.get('status'),document:f.get('document')?.name||''};S.contracts.push(c);save();log('CONTRACT_CREATED','Contract',c.id);closeModal();renderPage();toast('Contract saved.')}}
-  function openInvoiceForm(){modal('Generate Invoice',`<form id="invoiceForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Amount','amount',0,'number','min="0"')}${field('Issue Date','issue',new Date().toISOString().slice(0,10),'date')}${field('Due Date','due','2026-10-01','date')}${selectField('Payment Status','status',['PENDING','PAID','OVERDUE'],'PENDING')}<div class="admin-field"><label>Invoice PDF</label><input name="pdf" type="file" accept=".pdf"></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime">Create Invoice</button></div></form>`);document.getElementById('invoiceForm').onsubmit=e=>{e.preventDefault();const f=new FormData(e.currentTarget),i={id:uid('INV'),companyId:f.get('companyId'),amount:Number(f.get('amount')),currency:'CHF',issue:f.get('issue'),due:f.get('due'),status:f.get('status'),paymentDate:null,document:f.get('pdf')?.name||''};S.invoices.push(i);save();log('INVOICE_CREATED','Invoice',i.id);closeModal();renderPage();toast('Invoice created.')}}
+  function renderContracts(P){
+    if(!liveCatalogueGuard(P))return;
+    if(!billingGuard(P))return;
+    P.innerHTML=pageHead('08 / BILLING & CONTRACT','Billing & Contract','Manage commercial agreements, invoices, due dates and payment status. Validated quotations generate these automatically.','<button class="btn btn-outline" id="newContract">+ Upload Contract</button><button class="btn btn-lime" id="newInvoice">+ Generate Invoice</button>')+`<div class="admin-grid-2"><section><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Contracts</div><h2>Commercial agreements</h2></div></div>${contractsTable(S.contracts)}</section><section><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Billing</div><h2>Invoices</h2></div></div>${invoicesTable(S.invoices)}</section></div>`;
+    document.getElementById('newContract').onclick=()=>openContractForm();
+    document.getElementById('newInvoice').onclick=()=>openInvoiceForm();
+    document.querySelectorAll('[data-invoice-paid]').forEach(b=>b.onclick=async()=>{
+      const i=S.invoices.find(x=>x.id===b.dataset.invoicePaid),prev={status:i.status,paymentDate:i.paymentDate};
+      i.status='PAID';i.paymentDate=new Date().toISOString().slice(0,10);
+      const res=await supaTable(`invoices?id=eq.${i.id}`,{method:'PATCH',body:JSON.stringify({status:'PAID',payment_date:i.paymentDate})});
+      if(!res.ok){Object.assign(i,prev);toast('Could not update the invoice: '+res.error);return}
+      save();log('INVOICE_MARKED_PAID','Invoice',i.ref);renderContracts(P);toast('Invoice marked as paid.');
+    });
+    document.querySelectorAll('[data-contract-pdf]').forEach(b=>b.onclick=()=>printContract(S.contracts.find(x=>x.id===b.dataset.contractPdf)));
+    document.querySelectorAll('[data-invoice-pdf]').forEach(b=>b.onclick=()=>printInvoice(S.invoices.find(x=>x.id===b.dataset.invoicePdf)));
+  }
+  function contractsTable(rows){if(!rows.length)return '<div class="admin-empty"><h3>No contracts yet</h3><p>Contracts are created manually or generated automatically when a quotation is validated.</p></div>';return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Value</th><th>Seats</th><th>Scope</th><th>Start</th><th>End</th><th>Status</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(c=>`<tr><td class="mono">${esc(c.ref)}</td><td>${esc(company(c.companyId)?.name||'—')}</td><td>${money(c.value,c.currency)}</td><td>${c.seats}</td><td>${esc(c.scope)}</td><td>${fmt(c.start)}</td><td>${fmt(c.end)}</td><td>${status(c.status)}</td><td class="mono">${esc(c.language)}</td><td><button class="admin-mini-btn" data-contract-pdf="${c.id}">PDF</button></td></tr>`).join('')}</tbody></table></div>`}
+  function invoicesTable(rows){if(!rows.length)return '<div class="admin-empty"><h3>No invoices yet</h3><p>Invoices are created manually or generated automatically when a quotation is validated.</p></div>';return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Amount</th><th>Issue</th><th>Due</th><th>Status</th><th>Payment Date</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(i=>`<tr><td class="mono">${esc(i.ref)}</td><td>${esc(company(i.companyId)?.name||'—')}</td><td>${money(i.amount,i.currency)}</td><td>${fmt(i.issue)}</td><td>${fmt(i.due)}</td><td>${status(i.status)}</td><td>${fmt(i.paymentDate)}</td><td class="mono">${esc(i.language)}</td><td><div class="admin-row-actions">${i.status!=='PAID'?`<button class="admin-mini-btn" data-invoice-paid="${i.id}">Mark Paid</button>`:'<span class="mono">SETTLED</span>'}<button class="admin-mini-btn" data-invoice-pdf="${i.id}">PDF</button></div></td></tr>`).join('')}</tbody></table></div>`}
+  function openContractForm(){
+    modal('Upload Contract',`<form id="contractForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Contract Value','value',0,'number')}${field('Seats','seats',25,'number')}${field('Courses / Academies','scope','A002')}${field('Start','start',new Date().toISOString().slice(0,10),'date')}${field('End','end','2027-08-31','date')}${selectField('Status','status',['DRAFT','SIGNED','ACTIVE','EXPIRED','TERMINATED'],'DRAFT')}${selectField('Language','language',['EN','FR','AR'],'EN')}<div class="admin-field"><label>Signed Contract PDF</label><input name="document" type="file" accept=".pdf"></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">Save Contract</button></div></form>`);
+    document.getElementById('contractForm').onsubmit=async e=>{
+      e.preventDefault();
+      const f=Object.fromEntries(new FormData(e.currentTarget).entries());
+      const c={companyId:f.companyId,value:Number(f.value),currency:'CHF',seats:Number(f.seats),scope:f.scope,start:f.start,end:f.end,status:f.status,document:f.document?.name||'',language:f.language,quotationId:null};
+      const btn=e.currentTarget.querySelector('button[type=submit]');btn.disabled=true;
+      const companyDbId=await resolveCompanyDbId(c.companyId);
+      if(!companyDbId){btn.disabled=false;toast('Could not resolve this company in the database.');return}
+      const res=await supaTable('contracts',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([localContractToDb(c,companyDbId)])});
+      btn.disabled=false;
+      if(!res.ok){toast('Could not save the contract: '+res.error);return}
+      const saved=dbContractToLocal(res.data[0],{[companyDbId]:c.companyId});
+      S.contracts.unshift(saved);save();log('CONTRACT_CREATED','Contract',saved.ref);closeModal();renderPage();toast('Contract saved.');
+    };
+  }
+  function openInvoiceForm(){
+    modal('Generate Invoice',`<form id="invoiceForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Amount excl. VAT','amount',0,'number','min="0"')}${field('VAT / Tax amount','taxAmount',0,'number','min="0"')}${field('Issue Date','issue',new Date().toISOString().slice(0,10),'date')}${field('Due Date','due','2026-10-01','date')}${selectField('Payment Status','status',['PENDING','PAID','OVERDUE','CANCELLED','REFUNDED'],'PENDING')}${selectField('Language','language',['EN','FR','AR'],'EN')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">Create Invoice</button></div></form>`);
+    document.getElementById('invoiceForm').onsubmit=async e=>{
+      e.preventDefault();
+      const f=Object.fromEntries(new FormData(e.currentTarget).entries());
+      const i={companyId:f.companyId,amount:Number(f.amount),taxAmount:Number(f.taxAmount),currency:'CHF',issue:f.issue,due:f.due,status:f.status,paymentDate:null,description:'',language:f.language,quotationId:null,contractId:null};
+      const btn=e.currentTarget.querySelector('button[type=submit]');btn.disabled=true;
+      const companyDbId=await resolveCompanyDbId(i.companyId);
+      if(!companyDbId){btn.disabled=false;toast('Could not resolve this company in the database.');return}
+      const res=await supaTable('invoices',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([localInvoiceToDb(i,companyDbId)])});
+      btn.disabled=false;
+      if(!res.ok){toast('Could not save the invoice: '+res.error);return}
+      const saved=dbInvoiceToLocal(res.data[0],{[companyDbId]:i.companyId});
+      S.invoices.unshift(saved);save();log('INVOICE_CREATED','Invoice',saved.ref);closeModal();renderPage();toast('Invoice created.');
+    };
+  }
   // -------------------------------------------------------------------
   // QUOTE BUILDER
   //
@@ -4939,8 +5059,13 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     const d=new Date();
     return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
   }
+  function addDaysISO(dateStr,days){
+    const dt=new Date((dateStr||todayLocal())+'T00:00:00');
+    dt.setDate(dt.getDate()+days);
+    return dt.toISOString().slice(0,10);
+  }
   function newQuoteDraft(){
-    return {id:uid('QUO'),reference:quoteRef(),status:'DRAFT',companyId:'',customer:{name:'',contact:'',email:'',address:''},issueDate:todayLocal(),items:[],promoMode:'auto',vatRate:8.1,notes:'',createdAt:nowISO(),updatedAt:nowISO()};
+    return {id:uid('QUO'),reference:quoteRef(),status:'DRAFT',companyId:'',customer:{name:'',contact:'',email:'',address:''},issueDate:todayLocal(),items:[],promoMode:'auto',vatRate:8.1,notes:'',language:'EN',createdAt:nowISO(),updatedAt:nowISO()};
   }
   // A tiered course (price6 + price12, straight from the priced catalogue)
   // is a flat group fee — up to 6 seats costs price6 regardless of the
@@ -5010,12 +5135,19 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   }
   function renderQuoteBuilderPage(P){
     const d=app.quoteDraft,t=quoteTotals(d),isNew=app.detail==='new';
+    d.status=d.status||'DRAFT';d.language=d.language||'EN';
+    // Draft -> Sent -> Validated/Aborted. Validated/Aborted are terminal —
+    // the status badge already says so, no further action buttons needed.
+    const nextActions=
+      d.status==='DRAFT'?'<button class="btn btn-lime" id="markSent">Mark as Sent</button>'
+      :d.status==='SENT'?'<button class="btn btn-lime" id="validateQuote">Validate Quote</button><button class="btn btn-outline" id="abortQuote">Abort Quote</button>'
+      :'';
     P.innerHTML=pageHead(`11B / QUOTE BUILDER / ${esc(d.reference)}`,isNew?'New Quotation':'Edit Quotation','Select courses from the catalogue, set seats and pricing, and generate a professional quotation PDF.',
       `<span class="admin-status ${esc(d.status)}" style="align-self:center">${esc(d.status)}</span>`
       +(isNew?'':'<button class="btn btn-outline" id="duplicateQuoteBtn">Duplicate</button>')
       +'<button class="btn btn-outline" id="generatePdf">Generate PDF</button>'
-      +'<button class="btn btn-outline" id="saveQuote">Save Draft</button>'
-      +`<button class="btn btn-lime" id="validateQuote">${d.status==='VALIDATED'?'✓ Validated':'Validate Quote'}</button>`
+      +`<button class="btn btn-outline" id="saveQuote">${d.status==='DRAFT'?'Save Draft':'Save'}</button>`
+      +nextActions
       +'<button class="btn btn-outline" id="backQuotes">← Quote Builder</button>')
       +`<div class="admin-grid-2">
           <section class="admin-panel">
@@ -5029,6 +5161,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
                 ${field('Contact Person','customerContact',d.customer.contact)}
                 ${field('Email','customerEmail',d.customer.email,'email')}
                 ${field('Issue Date','issueDate',d.issueDate,'date','required')}
+                ${selectField('Document Language','language',['EN','FR','AR'],d.language)}
                 <div class="admin-field full"><label>Address</label><textarea name="customerAddress">${esc(d.customer.address)}</textarea></div>
                 <div class="admin-field full"><label>Notes / special conditions</label><textarea name="notes">${esc(d.notes)}</textarea></div>
               </div>
@@ -5070,7 +5203,11 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     document.getElementById('addCourses').onclick=()=>{syncQuoteForm(d);addCoursesModal(d,P)};
     document.getElementById('generatePdf').onclick=()=>{syncQuoteForm(d);printQuote(d)};
     document.getElementById('saveQuote').onclick=()=>saveQuoteDraft(P);
-    document.getElementById('validateQuote').onclick=()=>{d.status='VALIDATED';saveQuoteDraft(P);};
+    document.getElementById('markSent')?.addEventListener('click',()=>{syncQuoteForm(d);d.status='SENT';saveQuoteDraft(P)});
+    document.getElementById('validateQuote')?.addEventListener('click',()=>validateQuoteAndGenerate(P));
+    document.getElementById('abortQuote')?.addEventListener('click',()=>{
+      confirmAction('Abort this quotation?','It will be marked as aborted. This does not delete it.',()=>abortQuote(P),'Abort Quote');
+    });
     document.getElementById('promoMode').onchange=e=>{d.promoMode=e.target.value;rerender()};
     document.getElementById('vatRate').onchange=e=>{d.vatRate=Number(e.target.value)||0;rerender()};
     document.querySelectorAll('[data-item-seats]').forEach(inp=>inp.onchange=()=>{
@@ -5206,6 +5343,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     d.customer={name:f.get('customerName')||'',contact:f.get('customerContact')||'',email:f.get('customerEmail')||'',address:f.get('customerAddress')||''};
     d.issueDate=f.get('issueDate')||d.issueDate;
     d.notes=f.get('notes')||'';
+    d.language=f.get('language')||d.language||'EN';
   }
   async function saveQuoteDraft(P){
     const wasNew=app.detail==='new';
@@ -5224,69 +5362,245 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     app.detail=d.id;
     renderPage();
   }
-  function printQuote(q){
-    const t=quoteTotals(q);
-    const w=window.open('','_blank','width=860,height=1120');
-    if(!w){toast('Please allow pop-ups to generate the PDF.');return}
-    const priceLabel=it=>{
-      if(it.price6!=null&&it.price12!=null) return it.priceMode==='tier6'?'Flat · up to 6':it.priceMode==='tier12'?'Flat · up to 12':'Negotiated';
-      return it.priceMode==='custom'?'Negotiated / seat':money(it.unitPriceHT)+' / seat';
+  async function validateQuoteAndGenerate(P){
+    const d=app.quoteDraft;
+    syncQuoteForm(d);
+    if(!d.companyId){toast('Link a company to this quotation before validating — the Invoice and Commercial Agreement need one.');return}
+    if(!d.customer.name){toast('Company name is required.');return}
+    if(!d.items.length){toast('Add at least one course before validating.');return}
+    const prevStatus=d.status;
+    d.status='VALIDATED';
+    toast('Validating quotation…');
+    const res=await persistQuote(d,app.detail==='new');
+    if(!res.ok){d.status=prevStatus;toast(res.error);return}
+    const existing=S.quotes.find(x=>x.id===d.id);
+    if(existing)Object.assign(existing,deep(d));else S.quotes.unshift(deep(d));
+    save();
+    log('QUOTE_VALIDATED','Quote',d.reference);
+    app.detail=d.id;
+    const genRes=await generateBillingFromQuotation(d);
+    if(!genRes.ok){toast('Quotation validated, but billing documents failed: '+genRes.error);renderPage();return}
+    toast(`Quotation validated. Invoice ${genRes.invoice.ref} and Commercial Agreement ${genRes.contract.ref} created under Billing & Contract.`);
+    renderPage();
+  }
+  async function abortQuote(P){
+    const d=app.quoteDraft;
+    syncQuoteForm(d);
+    const prevStatus=d.status;
+    d.status='ABORTED';
+    const res=await persistQuote(d,app.detail==='new');
+    if(!res.ok){d.status=prevStatus;toast(res.error);return}
+    const existing=S.quotes.find(x=>x.id===d.id);
+    if(existing)Object.assign(existing,deep(d));else S.quotes.unshift(deep(d));
+    save();log('QUOTE_ABORTED','Quote',d.reference);
+    app.detail=d.id;
+    toast('Quotation aborted.');
+    renderPage();
+  }
+  // Validation is the single trigger for Billing & Contract: a validated
+  // quotation is the source of truth for both the Invoice (amount/tax from
+  // its totals) and the Commercial Agreement (seats/scope from its lines).
+  async function generateBillingFromQuotation(d){
+    const t=quoteTotals(d);
+    const companyDbId=await resolveCompanyDbId(d.companyId);
+    if(!companyDbId) return {ok:false,error:'Could not resolve the linked company in the database.'};
+    const scope=t.items.map(it=>it.code).join(', ');
+    const totalSeats=t.items.reduce((a,b)=>a+(Number(b.seats)||0),0);
+    const issueDate=d.issueDate||todayLocal();
+    const invoicePayload={
+      company_id:companyDbId,amount:t.totalHT,tax_amount:t.vatAmount,currency:'CHF',
+      issue_date:issueDate,due_date:addDaysISO(issueDate,30),status:'PENDING',
+      description:`Invoice for quotation ${d.reference}`,quotation_id:d.id,language:d.language||'EN'
     };
-    const rows=t.items.map(it=>`<tr><td>${esc(it.code)}</td><td>${esc(it.name)}</td><td class="num">${it.seats}</td><td class="num">${priceLabel(it)}</td><td class="num">${money(it.lineTotal)}</td></tr>`).join('');
-    w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>${esc(q.reference)} — EduCut.ai Quotation</title>
-    <style>
-      *{box-sizing:border-box}
-      body{font-family:Inter,Arial,Helvetica,sans-serif;color:#0b0b0c;margin:0;padding:48px 56px;background:#fff}
+    const contractPayload={
+      company_id:companyDbId,value:t.totalHT,currency:'CHF',seats:totalSeats,scope,
+      start_date:issueDate,end_date:addDaysISO(issueDate,365),status:'DRAFT',document_path:null,
+      quotation_id:d.id,language:d.language||'EN'
+    };
+    const [invRes,ctrRes]=await Promise.all([
+      supaTable('invoices',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([invoicePayload])}),
+      supaTable('contracts',{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify([contractPayload])})
+    ]);
+    if(!invRes.ok||!ctrRes.ok) return {ok:false,error:invRes.error||ctrRes.error||'Could not create billing documents.'};
+    const refByCompanyId={[companyDbId]:d.companyId};
+    const invoice=dbInvoiceToLocal(invRes.data[0],refByCompanyId);
+    const contract=dbContractToLocal(ctrRes.data[0],refByCompanyId);
+    S.invoices.unshift(invoice);
+    S.contracts.unshift(contract);
+    save();
+    log('INVOICE_CREATED','Invoice',invoice.ref);
+    log('CONTRACT_CREATED','Contract',contract.ref);
+    return {ok:true,invoice,contract};
+  }
+  // Trilingual document chrome for the Quotation, Invoice and Commercial
+  // Agreement PDFs. Only the fixed labels/legal text are translated — the
+  // customer's own data (names, notes, course names) is never machine
+  // translated and prints exactly as entered/catalogued.
+  const DOC_I18N={
+    EN:{quotationTitle:'Quotation',invoiceTitle:'Invoice',contractTitle:'Commercial Agreement',
+      reference:'Reference',issueDate:'Issue date',dueDate:'Due date',startDate:'Start date',endDate:'End date',status:'Status',
+      billedTo:'Billed to',issuedBy:'Issued by',financialDept:'Financial Department',company:'Company',
+      notes:'Notes / special conditions',
+      validity:'This quotation is issued by EduCut.ai and remains valid for 30 days from the issue date unless otherwise agreed.',
+      code:'Code',course:'Course',seats:'Seats',pricing:'Pricing',totalExclVat:'Total excl. VAT',
+      subtotalExclVat:'Subtotal excl. VAT',discount:'Discount',vat:'VAT',totalInclVat:'Total incl. VAT',
+      amountExclVat:'Amount excl. VAT',taxAmount:'Tax amount',
+      contractValue:'Contract value',seatsCovered:'Seats covered',scopeOfCourses:'Scope of courses',
+      agreementIntro:'This Commercial Agreement is issued by EduCut.ai based on validated quotation',
+      agreementSignoff:'Both parties agree to the terms set out in the corresponding validated quotation.',
+      flatUpTo6:'flat · up to 6',flatUpTo12:'flat · up to 12',negotiated:'Negotiated',perSeat:'/ seat'},
+    FR:{quotationTitle:'Devis',invoiceTitle:'Facture',contractTitle:'Accord Commercial',
+      reference:'Référence',issueDate:"Date d'émission",dueDate:"Date d'échéance",startDate:'Date de début',endDate:'Date de fin',status:'Statut',
+      billedTo:'Facturé à',issuedBy:'Émis par',financialDept:'Département Financier',company:'Entreprise',
+      notes:'Remarques / conditions particulières',
+      validity:"Ce devis est émis par EduCut.ai et reste valable 30 jours à compter de la date d'émission, sauf accord contraire.",
+      code:'Code',course:'Formation',seats:'Places',pricing:'Tarification',totalExclVat:'Total HT',
+      subtotalExclVat:'Sous-total HT',discount:'Remise',vat:'TVA',totalInclVat:'Total TTC',
+      amountExclVat:'Montant HT',taxAmount:'Montant de la TVA',
+      contractValue:'Valeur du contrat',seatsCovered:'Places couvertes',scopeOfCourses:'Périmètre des formations',
+      agreementIntro:'Cet accord commercial est émis par EduCut.ai sur la base du devis validé',
+      agreementSignoff:'Les deux parties acceptent les conditions énoncées dans le devis validé correspondant.',
+      flatUpTo6:'forfait · jusqu’à 6',flatUpTo12:'forfait · jusqu’à 12',negotiated:'Négocié',perSeat:'/ place'},
+    AR:{quotationTitle:'عرض سعر',invoiceTitle:'فاتورة',contractTitle:'اتفاقية تجارية',
+      reference:'المرجع',issueDate:'تاريخ الإصدار',dueDate:'تاريخ الاستحقاق',startDate:'تاريخ البدء',endDate:'تاريخ الانتهاء',status:'الحالة',
+      billedTo:'الفاتورة إلى',issuedBy:'صادرة عن',financialDept:'الإدارة المالية',company:'الشركة',
+      notes:'ملاحظات / شروط خاصة',
+      validity:'يصدر هذا العرض من قبل EduCut.ai ويبقى ساريًا لمدة 30 يومًا من تاريخ الإصدار ما لم يُتفق على خلاف ذلك.',
+      code:'الرمز',course:'الدورة',seats:'المقاعد',pricing:'التسعير',totalExclVat:'الإجمالي غير شامل الضريبة',
+      subtotalExclVat:'المجموع الفرعي غير شامل الضريبة',discount:'الخصم',vat:'ضريبة القيمة المضافة',totalInclVat:'الإجمالي شامل الضريبة',
+      amountExclVat:'المبلغ غير شامل الضريبة',taxAmount:'مبلغ الضريبة',
+      contractValue:'قيمة العقد',seatsCovered:'عدد المقاعد المشمولة',scopeOfCourses:'نطاق الدورات',
+      agreementIntro:'تصدر هذه الاتفاقية التجارية من قبل EduCut.ai بناءً على عرض السعر المعتمد',
+      agreementSignoff:'يوافق الطرفان على الشروط الواردة في عرض السعر المعتمد المقابل.',
+      flatUpTo6:'سعر ثابت · حتى 6',flatUpTo12:'سعر ثابت · حتى 12',negotiated:'قابل للتفاوض',perSeat:'/ مقعد'}
+  };
+  // text-align:end/margin-inline-start are logical properties that flip
+  // automatically under dir="rtl" — the same stylesheet mirrors correctly
+  // for Arabic without a separate RTL rule set.
+  function docBaseStyles(lang){
+    const arabic=lang==='AR';
+    return `*{box-sizing:border-box}
+      body{font-family:${arabic?"'Segoe UI',Tahoma,Arial,sans-serif":'Inter,Arial,Helvetica,sans-serif'};color:#0b0b0c;margin:0;padding:48px 56px;background:#fff}
       .brand{font-weight:800;letter-spacing:-.04em;font-size:26px}
       .brand span{color:#a8ef31}
       .doc-head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid #0b0b0c;padding-bottom:18px;margin-bottom:24px}
       .doc-head h1{font-size:28px;margin:6px 0 0;letter-spacing:-.03em}
-      .doc-meta{text-align:right;font-size:12px;color:#555}
+      .doc-meta{text-align:end;font-size:12px;color:#555}
       .doc-meta strong{display:block;color:#0b0b0c;font-size:14px}
       .parties{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px}
       .parties h3{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#3357ff;margin:0 0 8px}
       .parties p{margin:0;font-size:13px;line-height:1.6}
       table{width:100%;border-collapse:collapse;margin-bottom:6px}
-      th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#555;border-bottom:1px solid #0b0b0c;padding:8px 6px}
+      th{text-align:start;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#555;border-bottom:1px solid #0b0b0c;padding:8px 6px}
       td{padding:9px 6px;border-bottom:1px solid #e5e5e0;font-size:13px}
-      .num{text-align:right;font-variant-numeric:tabular-nums}
-      .totals{width:320px;margin-left:auto;margin-top:16px;font-size:13px}
+      .num{text-align:end;font-variant-numeric:tabular-nums}
+      .totals{width:320px;margin-inline-start:auto;margin-top:16px;font-size:13px}
       .totals div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #e5e5e0}
       .totals .grand{border-top:2px solid #0b0b0c;border-bottom:none;font-size:16px;font-weight:800;margin-top:6px;padding-top:10px}
       .notes{margin-top:28px;font-size:12px;color:#333}
       .notes h3{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#3357ff;margin:0 0 8px}
       .foot{margin-top:56px;padding-top:16px;border-top:1px solid #d7d7d1;font-size:12px;color:#555;display:flex;justify-content:space-between;gap:24px}
       .foot strong{display:block;color:#0b0b0c}
-      .foot .sign-off{text-align:right}
-      @media print{ body{padding:24px 32px} }
-    </style></head><body>
-      <div class="doc-head">
-        <div><div class="brand">EduCut<span>.ai</span></div><h1>Quotation</h1></div>
-        <div class="doc-meta"><strong>${esc(q.reference)}</strong>Issue date: ${fmt(q.issueDate)}<br>Status: ${esc(q.status)}</div>
-      </div>
-      <div class="parties">
-        <div><h3>Billed to</h3><p><strong>${esc(q.customer.name||'—')}</strong><br>${esc(q.customer.contact||'')}<br>${esc(q.customer.email||'')}<br>${esc(q.customer.address||'').replace(/\n/g,'<br>')}</p></div>
-        <div><h3>Issued by</h3><p><strong>EduCut.ai</strong><br>Financial Department<br>learning@educut.ai</p></div>
-      </div>
-      <table><thead><tr><th>Code</th><th>Course</th><th class="num">Seats</th><th class="num">Pricing</th><th class="num">Total excl. VAT</th></tr></thead><tbody>${rows}</tbody></table>
-      <div class="totals">
-        <div><span>Subtotal excl. VAT</span><strong>${money(t.subtotal)}</strong></div>
-        <div><span>Discount (${t.pct}%)</span><strong>−${money(t.discount)}</strong></div>
-        <div><span>Total excl. VAT</span><strong>${money(t.totalHT)}</strong></div>
-        <div><span>VAT (${t.vatRate}%)</span><strong>${money(t.vatAmount)}</strong></div>
-        <div class="grand"><span>Total incl. VAT</span><strong>${money(t.totalTTC)}</strong></div>
-      </div>
-      ${q.notes?`<div class="notes"><h3>Notes / special conditions</h3><p>${esc(q.notes).replace(/\n/g,'<br>')}</p></div>`:''}
-      <div class="foot">
-        <div>This quotation is issued by EduCut.ai and remains valid for 30 days from the issue date unless otherwise agreed.</div>
-        <div class="sign-off">
-          <strong>Financial Department</strong>EduCut.ai
-        </div>
-      </div>
-    </body></html>`);
+      .foot .sign-off{text-align:end}
+      @media print{ body{padding:24px 32px} }`;
+  }
+  function openDocWindow(lang,titleText,bodyHtml){
+    const w=window.open('','_blank','width=860,height=1120');
+    if(!w){toast('Please allow pop-ups to generate the PDF.');return null}
+    w.document.write(`<!doctype html><html lang="${lang.toLowerCase()}" dir="${lang==='AR'?'rtl':'ltr'}"><head><meta charset="utf-8"><title>${esc(titleText)}</title><style>${docBaseStyles(lang)}</style></head><body>${bodyHtml}</body></html>`);
     w.document.close();
     w.focus();
     setTimeout(()=>w.print(),300);
+    return w;
+  }
+  function printQuote(q){
+    const lang=q.language||'EN',L=DOC_I18N[lang]||DOC_I18N.EN;
+    const t=quoteTotals(q);
+    const priceLabel=it=>{
+      if(it.price6!=null&&it.price12!=null) return it.priceMode==='tier6'?L.flatUpTo6:it.priceMode==='tier12'?L.flatUpTo12:L.negotiated;
+      return it.priceMode==='custom'?`${L.negotiated} ${L.perSeat}`:`${money(it.unitPriceHT)} ${L.perSeat}`;
+    };
+    const rows=t.items.map(it=>`<tr><td>${esc(it.code)}</td><td>${esc(it.name)}</td><td class="num">${it.seats}</td><td class="num">${priceLabel(it)}</td><td class="num">${money(it.lineTotal)}</td></tr>`).join('');
+    const body=`<div class="doc-head">
+        <div><div class="brand">EduCut<span>.ai</span></div><h1>${L.quotationTitle}</h1></div>
+        <div class="doc-meta"><strong>${esc(q.reference)}</strong>${L.issueDate}: ${fmt(q.issueDate)}<br>${L.status}: ${esc(q.status)}</div>
+      </div>
+      <div class="parties">
+        <div><h3>${L.billedTo}</h3><p><strong>${esc(q.customer.name||'—')}</strong><br>${esc(q.customer.contact||'')}<br>${esc(q.customer.email||'')}<br>${esc(q.customer.address||'').replace(/\n/g,'<br>')}</p></div>
+        <div><h3>${L.issuedBy}</h3><p><strong>EduCut.ai</strong><br>${L.financialDept}<br>learning@educut.ai</p></div>
+      </div>
+      <table><thead><tr><th>${L.code}</th><th>${L.course}</th><th class="num">${L.seats}</th><th class="num">${L.pricing}</th><th class="num">${L.totalExclVat}</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="totals">
+        <div><span>${L.subtotalExclVat}</span><strong>${money(t.subtotal)}</strong></div>
+        <div><span>${L.discount} (${t.pct}%)</span><strong>−${money(t.discount)}</strong></div>
+        <div><span>${L.totalExclVat}</span><strong>${money(t.totalHT)}</strong></div>
+        <div><span>${L.vat} (${t.vatRate}%)</span><strong>${money(t.vatAmount)}</strong></div>
+        <div class="grand"><span>${L.totalInclVat}</span><strong>${money(t.totalTTC)}</strong></div>
+      </div>
+      ${q.notes?`<div class="notes"><h3>${L.notes}</h3><p>${esc(q.notes).replace(/\n/g,'<br>')}</p></div>`:''}
+      <div class="foot">
+        <div>${L.validity}</div>
+        <div class="sign-off"><strong>${L.financialDept}</strong>EduCut.ai</div>
+      </div>`;
+    openDocWindow(lang,`${q.reference} — EduCut.ai ${L.quotationTitle}`,body);
+  }
+  // The Invoice always renders the validated quotation's own course lines
+  // when it has one (quotationId) — the quotation is the source of truth,
+  // never a re-typed summary — falling back to a single description line
+  // only for an invoice created manually with no linked quotation.
+  function printInvoice(inv){
+    const lang=inv.language||'EN',L=DOC_I18N[lang]||DOC_I18N.EN;
+    const q=inv.quotationId?S.quotes.find(x=>x.id===inv.quotationId):null;
+    const t=q?quoteTotals(q):null;
+    const rows=t?t.items.map(it=>`<tr><td>${esc(it.code)}</td><td>${esc(it.name)}</td><td class="num">${it.seats}</td><td class="num">${money(it.lineTotal)}</td></tr>`).join('')
+      :`<tr><td colspan="3">${esc(inv.description||L.invoiceTitle)}</td><td class="num">${money(inv.amount,inv.currency)}</td></tr>`;
+    const body=`<div class="doc-head">
+        <div><div class="brand">EduCut<span>.ai</span></div><h1>${L.invoiceTitle}</h1></div>
+        <div class="doc-meta"><strong>${esc(inv.ref)}</strong>${L.issueDate}: ${fmt(inv.issue)}<br>${L.dueDate}: ${fmt(inv.due)}<br>${L.status}: ${esc(inv.status)}</div>
+      </div>
+      <div class="parties">
+        <div><h3>${L.billedTo}</h3><p><strong>${esc(company(inv.companyId)?.name||'—')}</strong></p></div>
+        <div><h3>${L.issuedBy}</h3><p><strong>EduCut.ai</strong><br>${L.financialDept}<br>learning@educut.ai</p></div>
+      </div>
+      <table><thead><tr><th>${L.code}</th><th>${L.course}</th><th class="num">${L.seats}</th><th class="num">${L.totalExclVat}</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="totals">
+        <div><span>${L.amountExclVat}</span><strong>${money(inv.amount,inv.currency)}</strong></div>
+        <div><span>${L.taxAmount}</span><strong>${money(inv.taxAmount,inv.currency)}</strong></div>
+        <div class="grand"><span>${L.totalInclVat}</span><strong>${money(inv.amount+inv.taxAmount,inv.currency)}</strong></div>
+      </div>
+      <div class="foot">
+        <div>${esc(inv.description||'')}</div>
+        <div class="sign-off"><strong>${L.financialDept}</strong>EduCut.ai</div>
+      </div>`;
+    openDocWindow(lang,`${inv.ref} — EduCut.ai ${L.invoiceTitle}`,body);
+  }
+  // Same source-of-truth rule as the Invoice: the Commercial Agreement's
+  // course lines come from the validated quotation whenever it has one.
+  function printContract(ctr){
+    const lang=ctr.language||'EN',L=DOC_I18N[lang]||DOC_I18N.EN;
+    const q=ctr.quotationId?S.quotes.find(x=>x.id===ctr.quotationId):null;
+    const t=q?quoteTotals(q):null;
+    const rows=t?t.items.map(it=>`<tr><td>${esc(it.code)}</td><td>${esc(it.name)}</td><td class="num">${it.seats}</td></tr>`).join('')
+      :`<tr><td colspan="2">${esc(ctr.scope||'—')}</td><td class="num">${ctr.seats}</td></tr>`;
+    const body=`<div class="doc-head">
+        <div><div class="brand">EduCut<span>.ai</span></div><h1>${L.contractTitle}</h1></div>
+        <div class="doc-meta"><strong>${esc(ctr.ref)}</strong>${L.startDate}: ${fmt(ctr.start)}<br>${L.endDate}: ${fmt(ctr.end)}<br>${L.status}: ${esc(ctr.status)}</div>
+      </div>
+      <div class="parties">
+        <div><h3>${L.company}</h3><p><strong>${esc(company(ctr.companyId)?.name||'—')}</strong></p></div>
+        <div><h3>${L.issuedBy}</h3><p><strong>EduCut.ai</strong><br>${L.financialDept}<br>learning@educut.ai</p></div>
+      </div>
+      <table><thead><tr><th>${L.code}</th><th>${L.course}</th><th class="num">${L.seats}</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="totals">
+        <div><span>${L.contractValue}</span><strong>${money(ctr.value,ctr.currency)}</strong></div>
+        <div><span>${L.seatsCovered}</span><strong>${ctr.seats}</strong></div>
+      </div>
+      <div class="notes"><h3>${L.scopeOfCourses}</h3><p>${esc(ctr.scope||'—')}</p></div>
+      <div class="foot">
+        <div>${q?`${L.agreementIntro} ${esc(q.reference)}. ${L.agreementSignoff}`:L.agreementSignoff}</div>
+        <div class="sign-off"><strong>${L.financialDept}</strong>EduCut.ai</div>
+      </div>`;
+    openDocWindow(lang,`${ctr.ref} — EduCut.ai ${L.contractTitle}`,body);
   }
   function companyAnalytics(c,learners,seats){const avg=learners.length?Math.round(learners.reduce((a,b)=>a+b.progress,0)/learners.length):0;return `<div class="admin-kpis"><div class="admin-kpi"><div class="mono">Total Learners</div><strong>${learners.length}</strong></div><div class="admin-kpi"><div class="mono">Active Learners</div><strong>${learners.filter(x=>x.status==='ACTIVE').length}</strong></div><div class="admin-kpi"><div class="mono">Seat Utilization</div><strong>${Math.round(seats.length/c.purchasedSeats*100)||0}%</strong></div><div class="admin-kpi"><div class="mono">Average Progress</div><strong>${avg}%</strong></div></div><div class="admin-grid-2"><div class="admin-panel"><h2>Course completion</h2>${barChart(learners.map(x=>x.progress),learners.map((_,i)=>String(i+1)))}</div><div class="admin-panel"><h2>Top learners</h2>${usersTable([...learners].sort((a,b)=>b.progress-a.progress).slice(0,5))}</div></div>`}
   function renderAnalytics(P){const learners=S.users.filter(u=>['INDIVIDUAL','COMPANY_MEMBER'].includes(u.type)),active=learners.filter(u=>u.status==='ACTIVE'),avg=learners.length?Math.round(learners.reduce((a,b)=>a+b.progress,0)/learners.length):0,revenue=S.invoices.filter(i=>i.status==='PAID').reduce((a,b)=>a+b.amount,0);P.innerHTML=pageHead('09 / ANALYTICS','Platform Analytics','Filter learning engagement and commercial performance across companies, Academies, courses, countries and learner types.')+`<div class="admin-toolbar"><select><option>Date Range · Last 12 months</option></select><select><option>All Companies</option>${S.companies.map(c=>`<option>${esc(c.name)}</option>`).join('')}</select><select><option>All Academies</option>${S.academies.map(a=>`<option>${a.code} · ${esc(a.name)}</option>`).join('')}</select><select><option>All Learner Types</option><option>INDIVIDUAL</option><option>COMPANY_MEMBER</option></select><div class="admin-toolbar-spacer"></div><button class="admin-mini-btn" id="analyticsCSV">CSV</button><button class="admin-mini-btn" id="analyticsXLSX">XLSX</button><button class="admin-mini-btn" id="analyticsPDF">PDF</button></div><div class="admin-kpis">${[['Total Learners',learners.length],['Active Learners',active.length],['Course Enrollments',learners.reduce((a,b)=>a+(b.courses||[]).length,0)],['Completion Rate',avg+'%'],['Certificates',S.certificates.length],['Companies',S.companies.length],['Revenue',money(revenue)],['Average Quiz Score','78%']].map(x=>`<div class="admin-kpi"><div class="mono">${x[0]}</div><strong>${x[1]}</strong></div>`).join('')}</div><div class="admin-grid-2"><div class="admin-panel"><div class="mono" style="color:var(--blue)">Monthly learner growth</div><h2>Active learners</h2>${barChart([52,61,69,73,89,97,106,121,136,152,175,201],['O','N','D','J','F','M','A','M','J','J','A','S'])}</div><div class="admin-panel"><div class="mono" style="color:var(--blue)">Monthly company growth</div><h2>Organizations</h2>${barChart([3,3,4,5,6,6,7,8,9,10,12,14],['O','N','D','J','F','M','A','M','J','J','A','S'])}</div></div><div class="admin-grid-2 admin-section"><div class="admin-panel"><h2>Most popular Academies</h2>${S.academies.map(a=>{const n=learners.filter(u=>(u.courses||[]).some(c=>c.startsWith(a.code))).length;return `<div class="admin-resource"><span>${a.code} · ${esc(a.name)}</span><strong>${n}</strong></div>`}).join('')}</div><div class="admin-panel"><h2>Company engagement ranking</h2>${S.companies.map(c=>{const us=learners.filter(u=>u.companyId===c.id),v=us.length?Math.round(us.reduce((a,b)=>a+b.progress,0)/us.length):0;return `<div class="admin-resource"><span>${esc(c.name)}</span><strong>${v}%</strong></div>`}).join('')}</div></div>`;
