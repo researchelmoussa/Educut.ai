@@ -4994,7 +4994,9 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     if(!liveCatalogueGuard(P))return;
     if(!quotesGuard(P))return;
     if(!billingGuard(P))return;
-    P.innerHTML=pageHead('08 / BILLING & CONTRACT','Billing & Contract','Manage commercial agreements, invoices, due dates and payment status. Validated quotations generate these automatically.','<button class="btn btn-outline" id="newContract">+ Upload Contract</button><button class="btn btn-lime" id="newInvoice">+ Generate Invoice</button>')+`<div class="admin-grid-2"><section><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Contracts</div><h2>Commercial agreements</h2></div></div>${contractsTable(S.contracts)}</section><section><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Billing</div><h2>Invoices</h2></div></div>${invoicesTable(S.invoices)}</section></div>`;
+    P.innerHTML=pageHead('08 / BILLING & CONTRACT','Billing & Contract','Manage commercial agreements, invoices, due dates and payment status. Validated quotations generate these automatically.','<button class="btn btn-outline" id="newContract">+ Upload Contract</button><button class="btn btn-lime" id="newInvoice">+ Generate Invoice</button>')
+      +`<section class="admin-section"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Contracts</div><h2>Commercial agreements</h2></div></div>${contractsTable(S.contracts)}</section>`
+      +`<section class="admin-section"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Billing</div><h2>Invoices</h2></div></div>${invoicesTable(S.invoices)}</section>`;
     document.getElementById('newContract').onclick=()=>openContractForm();
     document.getElementById('newInvoice').onclick=()=>openInvoiceForm();
     document.querySelectorAll('[data-invoice-paid]').forEach(b=>b.onclick=async()=>{
@@ -5114,10 +5116,19 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     document.querySelectorAll('[data-quote-pdf]').forEach(b=>b.onclick=()=>printQuote(S.quotes.find(x=>x.id===b.dataset.quotePdf)));
     document.querySelectorAll('[data-quote-delete]').forEach(b=>b.onclick=()=>{
       const quote=S.quotes.find(x=>x.id===b.dataset.quoteDelete);
-      confirmAction('Delete this quotation?',`${quote.reference} will be permanently removed.`,async()=>{
+      const linkedInvoice=S.invoices.find(x=>x.quotationId===quote.id);
+      const linkedContract=S.contracts.find(x=>x.quotationId===quote.id);
+      const warning=(linkedInvoice||linkedContract)?` Its Invoice${linkedInvoice?` (${linkedInvoice.ref})`:''} and Commercial Agreement${linkedContract?` (${linkedContract.ref})`:''} under Billing & Contract will be deleted as well.`:'';
+      confirmAction('Delete this quotation?',`${quote.reference} will be permanently removed.${warning}`,async()=>{
+        // The database cascades quotation_id on invoices/contracts, so
+        // deleting the quotation already deletes any documents it
+        // generated — this just keeps the local cache in step with that.
         const res=await supaTable(`quotations?id=eq.${quote.id}`,{method:'DELETE'});
         if(!res.ok){toast(res.error||'Could not delete the quotation.');return}
-        S.quotes=S.quotes.filter(x=>x.id!==quote.id);save();log('QUOTE_DELETED','Quote',quote.reference);renderQuotes(P);toast('Quotation deleted.');
+        S.quotes=S.quotes.filter(x=>x.id!==quote.id);
+        S.invoices=S.invoices.filter(x=>x.quotationId!==quote.id);
+        S.contracts=S.contracts.filter(x=>x.quotationId!==quote.id);
+        save();log('QUOTE_DELETED','Quote',quote.reference);renderQuotes(P);toast('Quotation deleted.');
       },'Delete Quote');
     });
     document.querySelectorAll('[data-quote-status]').forEach(sel=>sel.onchange=e=>{
@@ -5384,9 +5395,44 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     if(existing)Object.assign(existing,deep(d));else S.quotes.unshift(deep(d));
     save();
     log(wasNew?'QUOTE_CREATED':'QUOTE_UPDATED','Quote',d.reference);
+    if(d.status==='VALIDATED'){
+      const syncRes=await syncBillingFromQuotation(d);
+      if(!syncRes.ok){toast('Quotation saved, but: '+syncRes.error);app.detail=d.id;renderPage();return}
+    }
     toast('Quotation saved.');
     app.detail=d.id;
     renderPage();
+  }
+  // A validated quotation's linked Invoice/Commercial Agreement need to
+  // stay current if the quotation is edited afterwards — looked up live by
+  // quotation_id (not from S.invoices/S.contracts, which may not be loaded
+  // in the Quote Builder context) so this works regardless of whether
+  // Billing & Contract has been visited this session.
+  async function syncBillingFromQuotation(d){
+    const t=quoteTotals(d);
+    const scope=t.items.map(it=>it.code).join(', ');
+    const totalSeats=t.items.reduce((a,b)=>a+(Number(b.seats)||0),0);
+    const [invLookup,ctrLookup]=await Promise.all([
+      supaTable(`invoices?quotation_id=eq.${d.id}&select=id`,{method:'GET'}),
+      supaTable(`contracts?quotation_id=eq.${d.id}&select=id`,{method:'GET'})
+    ]);
+    let error='';
+    if(invLookup.ok&&invLookup.data&&invLookup.data[0]){
+      const invId=invLookup.data[0].id;
+      const patch={amount:t.totalHT,tax_amount:t.vatAmount,description:`Invoice for quotation ${d.reference}`,language:d.language||'EN'};
+      const res=await supaTable(`invoices?id=eq.${invId}`,{method:'PATCH',body:JSON.stringify(patch)});
+      if(!res.ok) error=res.error||'Could not update the linked invoice.';
+      else{const existing=S.invoices.find(x=>x.id===invId);if(existing)Object.assign(existing,{amount:patch.amount,taxAmount:patch.tax_amount,description:patch.description,language:patch.language})}
+    }
+    if(ctrLookup.ok&&ctrLookup.data&&ctrLookup.data[0]){
+      const ctrId=ctrLookup.data[0].id;
+      const patch={value:t.totalHT,seats:totalSeats,scope,language:d.language||'EN'};
+      const res=await supaTable(`contracts?id=eq.${ctrId}`,{method:'PATCH',body:JSON.stringify(patch)});
+      if(!res.ok) error=error||res.error||'Could not update the linked commercial agreement.';
+      else{const existing=S.contracts.find(x=>x.id===ctrId);if(existing)Object.assign(existing,{value:patch.value,seats:patch.seats,scope:patch.scope,language:patch.language})}
+    }
+    if(!error) save();
+    return {ok:!error,error};
   }
   // Single entry point for every status transition (Draft/Sent/Validated/
   // Aborted) — used by both the Quote Builder's status dropdown and the
