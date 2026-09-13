@@ -1058,6 +1058,7 @@
 .admin-permissions{overflow:auto;border:1px solid var(--line);background:#fff}.admin-permissions table{border-collapse:collapse;width:100%;min-width:980px}.admin-permissions th,.admin-permissions td{padding:10px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-size:11px;text-align:center}.admin-permissions th:first-child,.admin-permissions td:first-child{text-align:left;position:sticky;left:0;background:#fff}.admin-permissions input{accent-color:#111}
 .admin-notif-menu{position:absolute;right:90px;top:66px;width:360px;max-height:430px;overflow:auto;background:#fff;border:1px solid var(--ink);box-shadow:0 20px 55px rgba(0,0,0,.2);display:none;z-index:80}.admin-notif-menu.open{display:block}.admin-notif{padding:13px;border-bottom:1px solid var(--line)}.admin-notif strong{font-size:12px}.admin-notif p{font-size:11px;color:#777;margin:5px 0 0}
 .admin-mobile-overlay{display:none}
+.quote-totals{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}.quote-totals div{display:flex;justify-content:space-between;padding:6px 0;font-size:13px;border-bottom:1px solid #eee}.quote-totals .quote-grand-total{border-top:2px solid var(--ink);border-bottom:none;font-size:16px;font-weight:800;margin-top:6px;padding-top:10px}.quote-custom-tag{font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);margin-left:4px}
 @media(max-width:1180px){.admin-kpis{grid-template-columns:repeat(3,1fr)}.admin-action-grid{grid-template-columns:repeat(3,1fr)}.admin-detail-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:900px){.admin-app{grid-template-columns:1fr}.admin-sidebar{position:fixed;left:-270px;top:0;width:250px;z-index:101;height:100vh;transition:left .25s}.admin-sidebar.open{left:0}.admin-mobile-overlay.open{display:block;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100}.admin-menu-toggle{display:inline-grid;place-items:center}.admin-kpis{grid-template-columns:1fr 1fr}.admin-grid-2,.admin-grid-3{grid-template-columns:1fr}.admin-course-builder{grid-template-columns:1fr}.admin-builder-tree{max-height:320px}.admin-page{padding:24px 18px 55px}.admin-page-head{align-items:flex-start;flex-direction:column}.admin-action-grid{grid-template-columns:1fr 1fr}.admin-detail-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.admin-topbar{padding:0 12px}.admin-global-search{max-width:none}.admin-top-actions .admin-help{display:none}.admin-page-head h1{font-size:42px}.admin-kpis,.admin-action-grid,.admin-detail-grid{grid-template-columns:1fr}.admin-form-grid{grid-template-columns:1fr}.admin-field.full{grid-column:auto}.admin-activity-row{grid-template-columns:1fr 1fr}.admin-activity-row .evt{grid-column:1/-1}.admin-notif-menu{right:10px;left:10px;width:auto}.admin-toolbar input{min-width:100%;width:100%}}
@@ -3203,11 +3204,11 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       {code:'A016',name:'AI Governance',description:'Risk, policy and enterprise AI governance.',audience:'Leaders, legal, compliance and risk teams.',status:'ACTIVE',updatedAt:'2026-08-31'}
     ],
     courses:[
-      {id:'CRS-4001',code:'A001.01',name:'Machine Learning — Foundations & Methods I',academy:'A001',level:'Foundation',duration:12,status:'PUBLISHED',updatedAt:'2026-08-20',objectives:'Understand core ML concepts and methods.',prerequisites:[],language:'English',instructor:'EduCut.ai Faculty',description:'A rigorous introduction to machine learning.',modules:[{id:'M1',title:'Foundations',lessons:[{id:'L1',title:'What is Machine Learning?',type:'Video',duration:25,required:true,content:'Introduction to core ML concepts.',resources:[]}]}]},
-      {id:'CRS-4002',code:'A002.01',name:'Generative AI Foundations',academy:'A002',level:'Foundation',duration:12,status:'PUBLISHED',updatedAt:'2026-08-28',objectives:'Understand generative AI systems and use cases.',prerequisites:[],language:'English',instructor:'EduCut.ai Faculty',description:'Foundations of generative AI for professionals.',modules:[{id:'M1',title:'Generative AI',lessons:[{id:'L1',title:'Foundations',type:'Text',duration:35,required:true,content:'Generative AI foundations.',resources:[]}]}]},
-      {id:'CRS-4003',code:'A003.01',name:'Prompt Engineering Foundations',academy:'A003',level:'Foundation',duration:9,status:'PUBLISHED',updatedAt:'2026-08-29',objectives:'Create reliable prompts for professional tasks.',prerequisites:[],language:'English',instructor:'EduCut.ai Faculty',description:'Prompt structures, context and iterative refinement.',modules:[]},
-      {id:'CRS-4004',code:'A004.01',name:'AI Productivity Foundations',academy:'A004',level:'Foundation',duration:9,status:'REVIEW',updatedAt:'2026-09-01',objectives:'Apply AI to everyday work.',prerequisites:[],language:'English',instructor:'EduCut.ai Faculty',description:'Practical productivity workflows.',modules:[]},
-      {id:'CRS-4005',code:'A005.01',name:'Data Analytics Foundations',academy:'A005',level:'Foundation',duration:12,status:'PUBLISHED',updatedAt:'2026-08-17',objectives:'Build statistical foundations for analytics.',prerequisites:[],language:'English',instructor:'EduCut.ai Faculty',description:'Statistics and analytics foundations.',modules:[]}
+      {id:'CRS-4001',code:'A001.01',name:'Machine Learning — Foundations & Methods I',academy:'A001',level:'Foundation',duration:12,status:'PUBLISHED',updatedAt:'2026-08-20',objectives:'Understand core ML concepts and methods.',prerequisites:[],language:'English',instructor:'EduCut.ai Faculty',description:'A rigorous introduction to machine learning.',priceHT:400,modules:[{id:'M1',title:'Foundations',lessons:[{id:'L1',title:'What is Machine Learning?',type:'Video',duration:25,required:true,content:'Introduction to core ML concepts.',resources:[]}]}]},
+      {id:'CRS-4002',code:'A002.01',name:'Generative AI Foundations',academy:'A002',level:'Foundation',duration:12,status:'PUBLISHED',updatedAt:'2026-08-28',objectives:'Understand generative AI systems and use cases.',prerequisites:[],language:'English',instructor:'EduCut.ai Faculty',description:'Foundations of generative AI for professionals.',priceHT:400,modules:[{id:'M1',title:'Generative AI',lessons:[{id:'L1',title:'Foundations',type:'Text',duration:35,required:true,content:'Generative AI foundations.',resources:[]}]}]},
+      {id:'CRS-4003',code:'A003.01',name:'Prompt Engineering Foundations',academy:'A003',level:'Foundation',duration:9,status:'PUBLISHED',updatedAt:'2026-08-29',objectives:'Create reliable prompts for professional tasks.',prerequisites:[],language:'English',instructor:'EduCut.ai Faculty',description:'Prompt structures, context and iterative refinement.',priceHT:300,modules:[]},
+      {id:'CRS-4004',code:'A004.01',name:'AI Productivity Foundations',academy:'A004',level:'Foundation',duration:9,status:'REVIEW',updatedAt:'2026-09-01',objectives:'Apply AI to everyday work.',prerequisites:[],language:'English',instructor:'EduCut.ai Faculty',description:'Practical productivity workflows.',priceHT:300,modules:[]},
+      {id:'CRS-4005',code:'A005.01',name:'Data Analytics Foundations',academy:'A005',level:'Foundation',duration:12,status:'PUBLISHED',updatedAt:'2026-08-17',objectives:'Build statistical foundations for analytics.',prerequisites:[],language:'English',instructor:'EduCut.ai Faculty',description:'Statistics and analytics foundations.',priceHT:400,modules:[]}
     ],
     seats:[
       {id:'SEA-3001',companyId:'CMP-1001',email:'emma.keller@helvetia.example',status:'ACTIVE',start:'2026-01-12',end:'2026-12-31',history:[{at:'2026-01-12',action:'ALLOCATED'}]},
@@ -3227,6 +3228,9 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       {id:'INV-7001',companyId:'CMP-1001',amount:26000,currency:'CHF',issue:'2026-01-05',due:'2026-02-05',status:'PAID',paymentDate:'2026-01-24'},
       {id:'INV-7002',companyId:'CMP-1002',amount:34000,currency:'CHF',issue:'2026-03-02',due:'2026-04-02',status:'PAID',paymentDate:'2026-03-19'},
       {id:'INV-7003',companyId:'CMP-1003',amount:8500,currency:'CHF',issue:'2026-08-16',due:'2026-09-16',status:'PENDING',paymentDate:null}
+    ],
+    quotes:[
+      {id:'QUO-9001',reference:'QUO-2026-0001',status:'DRAFT',companyId:'CMP-1003',customer:{name:'Nexa Education',contact:'Maya Rahman',email:'ai@nexa.example',address:'Dubai, United Arab Emirates'},issueDate:'2026-09-05',items:[{code:'A001.01',name:'Machine Learning — Foundations & Methods I',seats:10,unitPriceHT:400},{code:'A003.01',name:'Prompt Engineering Foundations',seats:10,unitPriceHT:300}],promoMode:'auto',vatRate:8.1,notes:'Pilot cohort pricing — subject to renewal after the trial period.',createdAt:'2026-09-05T09:00:00Z',updatedAt:'2026-09-05T09:00:00Z'}
     ],
     certificates:[
       {id:'CERT-8001',userId:'USR-2101',courseCode:'A002.01',issued:'2026-07-12',status:'ACTIVE',verificationId:'EC-2AP8-F7KM'},
@@ -3257,14 +3261,15 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
   let S;
   try{S=JSON.parse(localStorage.getItem(KEY))||deep(seed)}catch(_){S=deep(seed)}
+  S.quotes=S.quotes||[];
   const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(_){}};
-  const app={root:null,page:'dashboard',detail:null,tab:'Overview',query:'',sortKey:null,sortDir:1,pageNum:1,pageSize:12,selected:new Set(),courseSelection:null};
+  const app={root:null,page:'dashboard',detail:null,tab:'Overview',query:'',sortKey:null,sortDir:1,pageNum:1,pageSize:12,selected:new Set(),courseSelection:null,quoteDraft:null};
 
   // The route is the record of which page is open, so a refresh lands
   // back on it instead of resetting to the dashboard.
   const ADMIN_PAGES=['dashboard','companies','company-learners','individuals','academies',
     'courses','enrollments','prospects','consultations','catalogue','subscriptions','contracts',
-    'analytics','certificates','security','settings'];
+    'quotes','analytics','certificates','security','settings'];
   let adminMounted=false;
   function adminPageFromRoute(){
     if(!window.educutRoute) return null;
@@ -3326,6 +3331,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         ${navBtn('catalogue','09','Catalogue Requests')}
         ${navBtn('subscriptions','10','Subscriptions')}
         ${navBtn('contracts','11','Contracts & Billing')}
+        ${navBtn('quotes','11B','Quote Builder')}
         <div class="admin-nav-group mono">Intelligence</div>
         ${navBtn('analytics','12','Analytics')}
         ${navBtn('certificates','13','Certificates')}
@@ -3366,7 +3372,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
   function renderPage(){
     const P=document.getElementById('adminPage'); if(!P)return;
-    const map={dashboard:renderDashboard,consultations:renderConsultations,catalogue:renderCatalogueRequests,prospects:renderProspects,companies:renderCompanies,'company-learners':renderCompanyLearners,individuals:renderIndividuals,academies:renderAcademies,courses:renderCourses,enrollments:renderEnrollments,subscriptions:renderSubscriptions,contracts:renderContracts,analytics:renderAnalytics,certificates:renderCertificates,security:renderSecurity,settings:renderSettings};
+    const map={dashboard:renderDashboard,consultations:renderConsultations,catalogue:renderCatalogueRequests,prospects:renderProspects,companies:renderCompanies,'company-learners':renderCompanyLearners,individuals:renderIndividuals,academies:renderAcademies,courses:renderCourses,enrollments:renderEnrollments,subscriptions:renderSubscriptions,contracts:renderContracts,quotes:renderQuotes,analytics:renderAnalytics,certificates:renderCertificates,security:renderSecurity,settings:renderSettings};
     (map[app.page]||renderDashboard)(P);
   }
 
@@ -4158,7 +4164,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   function simpleCourseTable(rows,removable=false,u=null,withActions=false){return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Course Code</th><th>Course Name</th><th>Academy</th><th>Level</th><th>Duration</th><th>Learners</th><th>Completion</th><th>Status</th><th>Last Updated</th><th>Actions</th></tr></thead><tbody>${rows.map(c=>{const learners=S.users.filter(u=>(u.courses||[]).includes(c.code));const completion=learners.length?Math.round(learners.reduce((a,b)=>a+(b.progress||0),0)/learners.length):0;return `<tr><td><a href="#" data-course="${c.id}">${c.code}</a></td><td>${esc(c.name)}</td><td>${esc(c.academy)}</td><td>${esc(c.level)}</td><td>${c.duration}h</td><td>${learners.length}</td><td>${progress(completion)}</td><td>${status(c.status)}</td><td>${fmt(c.updatedAt)}</td><td><div class="admin-row-actions">${withActions?`<button class="admin-mini-btn" data-course="${c.id}">Open</button><button class="admin-mini-btn" data-edit-course="${c.id}">Edit</button>`:''}${removable?`<button class="admin-mini-btn danger" data-remove-course="${c.code}">Remove</button>`:''}</div></td></tr>`}).join('')}</tbody></table></div>`}
   function openCourse(id){app.page='courses';app.detail=id;app.courseSelection=null;window.renderSuperAdmin(app.root)}
   function renderCourseDetail(P,id){const c=S.courses.find(x=>x.id===id);if(!c){app.detail=null;return renderCourses(P)}P.innerHTML=pageHead(`05 / COURSES / ${c.code}`,c.name,`${c.academy} · ${c.level} · ${c.duration} hours`,`<button class="btn btn-outline" id="backCourses">← Courses</button><button class="btn btn-outline" id="previewCourse">Preview Course</button><button class="btn btn-lime" id="publishCourse">${c.status==='PUBLISHED'?'Unpublish':'Publish'}</button>`)+courseBuilder(c);document.getElementById('backCourses').onclick=()=>{app.detail=null;renderCourses(P)};document.getElementById('previewCourse').onclick=()=>previewCourse(c);document.getElementById('publishCourse').onclick=()=>{const prev=c.status;c.status=c.status==='PUBLISHED'?'REVIEW':'PUBLISHED';c.updatedAt=new Date().toISOString().slice(0,10);save();log('COURSE_STATUS_CHANGED','Course',c.code,prev,c.status);renderCourseDetail(P,id);toast(`Course ${c.status.toLowerCase()}.`)};wireBuilder(c,P)}
-  function openCourseForm(c=null,academy=''){modal(c?'Edit Course':'Create Course',`<form class="admin-form" id="courseForm"><div class="admin-form-grid">${field('Course Code','code',c?.code||`${academy||S.academies[0]?.code||'A001'}.${String(S.courses.filter(x=>x.academy===(academy||S.academies[0]?.code)).length+1).padStart(2,'0')}`,'text','required')}${field('Course Name','name',c?.name||'','','required')}${selectField('Academy','academy',S.academies.map(a=>a.code),c?.academy||academy||S.academies[0]?.code)}${selectField('Level','level',['Foundation','Level I','Level II','Advanced'],c?.level||'Foundation')}${field('Duration (hours)','duration',c?.duration||9,'number','min="1" required')}${field('Language','language',c?.language||'English')}${field('Instructor','instructor',c?.instructor||'EduCut.ai Faculty')}<div class="admin-field full"><label>Short / Full Description</label><textarea name="description">${esc(c?.description||'')}</textarea></div><div class="admin-field full"><label>Learning Objectives</label><textarea name="objectives">${esc(c?.objectives||'')}</textarea></div><div class="admin-field full"><label>Prerequisites (course codes, comma-separated)</label><input name="prerequisites" value="${esc((c?.prerequisites||[]).join(', '))}"></div>${selectField('Publishing Status','status',['DRAFT','REVIEW','PUBLISHED','ARCHIVED'],c?.status||'DRAFT')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">${c?'Save Changes':'Create Course'}</button></div></form>`);document.getElementById('courseForm').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.currentTarget).entries()),data={...f,duration:Number(f.duration),prerequisites:f.prerequisites.split(',').map(x=>x.trim()).filter(Boolean),updatedAt:new Date().toISOString().slice(0,10)};if(c)Object.assign(c,data);else S.courses.push({id:uid('CRS'),...data,modules:[]});save();log(c?'COURSE_UPDATED':'COURSE_CREATED','Course',data.code);closeModal();renderPage();toast('Course saved.')}}
+  function openCourseForm(c=null,academy=''){modal(c?'Edit Course':'Create Course',`<form class="admin-form" id="courseForm"><div class="admin-form-grid">${field('Course Code','code',c?.code||`${academy||S.academies[0]?.code||'A001'}.${String(S.courses.filter(x=>x.academy===(academy||S.academies[0]?.code)).length+1).padStart(2,'0')}`,'text','required')}${field('Course Name','name',c?.name||'','','required')}${selectField('Academy','academy',S.academies.map(a=>a.code),c?.academy||academy||S.academies[0]?.code)}${selectField('Level','level',['Foundation','Level I','Level II','Advanced'],c?.level||'Foundation')}${field('Duration (hours)','duration',c?.duration||9,'number','min="1" required')}${field('Language','language',c?.language||'English')}${field('Instructor','instructor',c?.instructor||'EduCut.ai Faculty')}${field('Price excl. VAT / seat (CHF)','priceHT',c?.priceHT||0,'number','min="0" step="1"')}<div class="admin-field full"><label>Short / Full Description</label><textarea name="description">${esc(c?.description||'')}</textarea></div><div class="admin-field full"><label>Learning Objectives</label><textarea name="objectives">${esc(c?.objectives||'')}</textarea></div><div class="admin-field full"><label>Prerequisites (course codes, comma-separated)</label><input name="prerequisites" value="${esc((c?.prerequisites||[]).join(', '))}"></div>${selectField('Publishing Status','status',['DRAFT','REVIEW','PUBLISHED','ARCHIVED'],c?.status||'DRAFT')}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" type="submit">${c?'Save Changes':'Create Course'}</button></div></form>`);document.getElementById('courseForm').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.currentTarget).entries()),data={...f,duration:Number(f.duration),priceHT:Number(f.priceHT)||0,prerequisites:f.prerequisites.split(',').map(x=>x.trim()).filter(Boolean),updatedAt:new Date().toISOString().slice(0,10)};if(c)Object.assign(c,data);else S.courses.push({id:uid('CRS'),...data,modules:[]});save();log(c?'COURSE_UPDATED':'COURSE_CREATED','Course',data.code);closeModal();renderPage();toast('Course saved.')}}
   function courseBuilder(c){const mods=c.modules||[];const sel=app.courseSelection||{kind:'course'};return `<div class="admin-course-builder"><aside class="admin-builder-tree"><div class="admin-builder-tree-head"><div><div class="mono" style="color:var(--lime)">Course Structure</div><strong>${c.code}</strong></div><span class="admin-save-state">Saved</span></div><div class="admin-tree-item ${sel.kind==='course'?'active':''}" data-tree-kind="course"><strong>General Information</strong><small>Course metadata & prerequisites</small></div>${mods.map((m,mi)=>`<div class="admin-tree-item ${sel.kind==='module'&&sel.mi===mi?'active':''}" data-tree-kind="module" data-mi="${mi}"><strong>${mi+1}. ${esc(m.title)}</strong><small>Module · ${(m.lessons||[]).length} lessons</small></div>${(m.lessons||[]).map((l,li)=>`<div class="admin-tree-item admin-tree-lesson ${sel.kind==='lesson'&&sel.mi===mi&&sel.li===li?'active':''}" data-tree-kind="lesson" data-mi="${mi}" data-li="${li}"><strong>${mi+1}.${li+1} ${esc(l.title)}</strong><small>${esc(l.type)} · ${l.duration||0} min</small></div>`).join('')}`).join('')}<div class="admin-builder-actions"><button class="admin-mini-btn" id="addModule">+ Module</button><button class="admin-mini-btn" id="addLesson" ${mods.length?'':'disabled'}>+ Lesson</button></div></aside><section class="admin-builder-editor" id="builderEditor">${builderEditor(c,sel)}</section></div>`}
   function builderEditor(c,sel){if(sel.kind==='course')return `<div class="mono" style="color:var(--blue)">General Information</div><h2 style="font-size:34px;margin:8px 0 18px">${esc(c.name)}</h2><form class="admin-form" id="builderCourseForm">${field('Course Name','name',c.name)}${field('Duration (hours)','duration',c.duration,'number')}<div class="admin-field"><label>Description</label><textarea name="description">${esc(c.description)}</textarea></div><div class="admin-field"><label>Learning Objectives</label><textarea name="objectives">${esc(c.objectives)}</textarea></div><div class="admin-field"><label>Prerequisites</label><input name="prerequisites" value="${esc((c.prerequisites||[]).join(', '))}"></div><button class="btn btn-lime" type="submit">Save Course</button></form>`;if(sel.kind==='module'){const m=c.modules[sel.mi];return `<div class="mono" style="color:var(--blue)">Module ${sel.mi+1}</div><h2 style="font-size:34px">Edit Module</h2><form class="admin-form" id="builderModuleForm">${field('Module Title','title',m.title)}<div class="admin-field"><label>Description</label><textarea name="description">${esc(m.description||'')}</textarea></div><button class="btn btn-lime">Save Module</button></form>`}const l=c.modules[sel.mi].lessons[sel.li];return `<div class="mono" style="color:var(--blue)">Lesson ${sel.mi+1}.${sel.li+1}</div><h2 style="font-size:34px">Lesson Editor</h2><form class="admin-form" id="builderLessonForm"><div class="admin-form-grid">${field('Lesson Title','title',l.title)}${selectField('Lesson Type','type',['Video','Text content','PDF','PowerPoint','Word document','External resource','Downloadable file','Quiz','Assignment','Case study','Practical exercise','Coding exercise','Final assessment','Live session link'],l.type)}${field('Estimated Duration (min)','duration',l.duration||0,'number')}${selectField('Completion','required',['Required','Optional'],l.required===false?'Optional':'Required')}</div><div class="admin-field"><label>Description / Learning Content</label><textarea name="content">${esc(l.content||'')}</textarea></div><div class="admin-field"><label>Completion Criteria</label><input name="criteria" value="${esc(l.criteria||'Complete the lesson')}"></div><button class="btn btn-lime">Save Lesson</button></form><section class="admin-section"><div class="admin-section-head"><div><div class="mono" style="color:var(--blue)">Resources</div><h2>Lesson materials</h2></div></div><div class="admin-dropzone" id="resourceDrop">Click to add a resource file<input type="file" id="resourceFile" hidden></div><div class="admin-resource-list">${(l.resources||[]).map((r,i)=>`<div class="admin-resource"><span>${esc(r.name)}</span><button class="admin-mini-btn danger" data-remove-resource="${i}">Remove</button></div>`).join('')}</div></section>`}
   function wireBuilder(c,P){P.querySelectorAll('[data-tree-kind]').forEach(x=>x.onclick=()=>{app.courseSelection={kind:x.dataset.treeKind,mi:Number(x.dataset.mi||0),li:Number(x.dataset.li||0)};renderCourseDetail(P,c.id)});document.getElementById('addModule').onclick=()=>{c.modules=c.modules||[];c.modules.push({id:uid('MOD'),title:`Module ${c.modules.length+1}`,description:'',lessons:[]});app.courseSelection={kind:'module',mi:c.modules.length-1};save();log('COURSE_MODULE_ADDED','Course',c.code);renderCourseDetail(P,c.id)};document.getElementById('addLesson').onclick=()=>{const mi=app.courseSelection?.mi??Math.max(0,c.modules.length-1);const m=c.modules[mi]||c.modules[0];m.lessons=m.lessons||[];m.lessons.push({id:uid('LES'),title:`Lesson ${m.lessons.length+1}`,type:'Video',duration:15,required:true,content:'',criteria:'Complete the lesson',resources:[]});app.courseSelection={kind:'lesson',mi:c.modules.indexOf(m),li:m.lessons.length-1};save();log('COURSE_LESSON_ADDED','Course',c.code);renderCourseDetail(P,c.id)};
@@ -4185,6 +4191,227 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   function invoicesTable(rows){return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Invoice</th><th>Company</th><th>Amount</th><th>Issue</th><th>Due</th><th>Status</th><th>Payment Date</th><th>Actions</th></tr></thead><tbody>${rows.map(i=>`<tr><td>${i.id}</td><td>${esc(company(i.companyId)?.name||'—')}</td><td>${money(i.amount,i.currency)}</td><td>${fmt(i.issue)}</td><td>${fmt(i.due)}</td><td>${status(i.status)}</td><td>${fmt(i.paymentDate)}</td><td>${i.status!=='PAID'?`<button class="admin-mini-btn" data-invoice-paid="${i.id}">Mark Paid</button>`:'<span class="mono">SETTLED</span>'}</td></tr>`).join('')}</tbody></table></div>`}
   function openContractForm(){modal('Upload Contract',`<form id="contractForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Contract Value','value',0,'number')}${field('Seats','seats',25,'number')}${field('Courses / Academies','scope','A002')}${field('Start','start',new Date().toISOString().slice(0,10),'date')}${field('End','end','2027-08-31','date')}${selectField('Status','status',['DRAFT','SENT','SIGNED','ACTIVE','EXPIRED','CANCELLED'],'DRAFT')}<div class="admin-field"><label>Signed Contract PDF</label><input name="document" type="file" accept=".pdf"></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime">Save Contract</button></div></form>`);document.getElementById('contractForm').onsubmit=e=>{e.preventDefault();const f=new FormData(e.currentTarget);const c={id:uid('CTR'),companyId:f.get('companyId'),value:Number(f.get('value')),currency:'CHF',seats:Number(f.get('seats')),scope:f.get('scope'),start:f.get('start'),end:f.get('end'),status:f.get('status'),document:f.get('document')?.name||''};S.contracts.push(c);save();log('CONTRACT_CREATED','Contract',c.id);closeModal();renderPage();toast('Contract saved.')}}
   function openInvoiceForm(){modal('Generate Invoice',`<form id="invoiceForm" class="admin-form"><div class="admin-form-grid"><div class="admin-field"><label>Company</label><select name="companyId">${S.companies.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>${field('Amount','amount',0,'number','min="0"')}${field('Issue Date','issue',new Date().toISOString().slice(0,10),'date')}${field('Due Date','due','2026-10-01','date')}${selectField('Payment Status','status',['PENDING','PAID','OVERDUE'],'PENDING')}<div class="admin-field"><label>Invoice PDF</label><input name="pdf" type="file" accept=".pdf"></div></div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime">Create Invoice</button></div></form>`);document.getElementById('invoiceForm').onsubmit=e=>{e.preventDefault();const f=new FormData(e.currentTarget),i={id:uid('INV'),companyId:f.get('companyId'),amount:Number(f.get('amount')),currency:'CHF',issue:f.get('issue'),due:f.get('due'),status:f.get('status'),paymentDate:null,document:f.get('pdf')?.name||''};S.invoices.push(i);save();log('INVOICE_CREATED','Invoice',i.id);closeModal();renderPage();toast('Invoice created.')}}
+  // -------------------------------------------------------------------
+  // QUOTE BUILDER
+  //
+  // Pricing lives on the course record itself (priceHT, CHF per seat,
+  // excl. VAT), so a quote line is never priced independently of the
+  // catalogue — except the negotiated-price override past 12 seats,
+  // which the admin enters explicitly.
+  // -------------------------------------------------------------------
+  function quoteRef(){
+    const year=new Date().getFullYear();
+    const n=S.quotes.filter(q=>(q.reference||'').startsWith('QUO-'+year)).length+1;
+    return `QUO-${year}-${String(n).padStart(4,'0')}`;
+  }
+  function newQuoteDraft(){
+    return {id:uid('QUO'),reference:quoteRef(),status:'DRAFT',companyId:'',customer:{name:'',contact:'',email:'',address:''},issueDate:new Date().toISOString().slice(0,10),items:[],promoMode:'auto',vatRate:8.1,notes:'',createdAt:nowISO(),updatedAt:nowISO()};
+  }
+  function quoteTotals(q){
+    const items=(q.items||[]).map(it=>({...it,lineTotal:Math.round((Number(it.seats)||0)*(Number(it.unitPriceHT)||0)*100)/100}));
+    const subtotal=Math.round(items.reduce((a,b)=>a+b.lineTotal,0)*100)/100;
+    const courseCount=items.length;
+    const autoPct=courseCount>=7?20:courseCount>=5?15:courseCount>=3?10:0;
+    const pct=q.promoMode==='none'?0:q.promoMode==='auto'?autoPct:(Number(q.promoMode)||0);
+    const discount=Math.round(subtotal*pct)/100;
+    const totalHT=Math.round((subtotal-discount)*100)/100;
+    const vatRate=Number(q.vatRate)||0;
+    const vatAmount=Math.round(totalHT*vatRate)/100;
+    const totalTTC=Math.round((totalHT+vatAmount)*100)/100;
+    return {items,subtotal,courseCount,autoPct,pct,discount,totalHT,vatRate,vatAmount,totalTTC};
+  }
+  function openQuoteBuilder(id){app.page='quotes';app.detail=id||'new';app.quoteDraft=id?deep(S.quotes.find(x=>x.id===id)):newQuoteDraft();window.renderSuperAdmin(app.root)}
+  function renderQuotes(P){
+    if(app.detail){renderQuoteBuilderPage(P);return}
+    const q=app.query.toLowerCase();
+    let rows=S.quotes.filter(x=>!q||[x.reference,x.customer?.name,x.customer?.email,x.status].some(v=>String(v||'').toLowerCase().includes(q)));
+    P.innerHTML=pageHead('11B / QUOTE BUILDER','Quote Builder','Build, edit, duplicate and reissue professional customer quotations from the EduCut.ai training catalogue.','<button class="btn btn-lime" id="newQuote">+ New Quote</button>')
+      +toolbar('Search reference, company or email…')
+      +quotesTable(rows);
+    wireSearch(renderQuotes);
+    document.querySelector('[data-export]').onclick=()=>download('educut-quotes.csv',csv(rows.map(x=>{const t=quoteTotals(x);return {reference:x.reference,customer:x.customer?.name||'',email:x.customer?.email||'',courses:t.courseCount,totalTTC:t.totalTTC,status:x.status,issueDate:x.issueDate}})));
+    document.getElementById('newQuote').onclick=()=>openQuoteBuilder(null);
+    document.querySelectorAll('[data-quote-open]').forEach(b=>b.onclick=()=>openQuoteBuilder(b.dataset.quoteOpen));
+    document.querySelectorAll('[data-quote-duplicate]').forEach(b=>b.onclick=()=>duplicateQuote(b.dataset.quoteDuplicate));
+    document.querySelectorAll('[data-quote-pdf]').forEach(b=>b.onclick=()=>printQuote(S.quotes.find(x=>x.id===b.dataset.quotePdf)));
+    document.querySelectorAll('[data-quote-delete]').forEach(b=>b.onclick=()=>{
+      const quote=S.quotes.find(x=>x.id===b.dataset.quoteDelete);
+      confirmAction('Delete this quotation?',`${quote.reference} will be permanently removed.`,()=>{S.quotes=S.quotes.filter(x=>x.id!==quote.id);save();log('QUOTE_DELETED','Quote',quote.reference);renderQuotes(P);toast('Quotation deleted.')},'Delete Quote');
+    });
+  }
+  function quotesTable(rows){
+    if(!rows.length)return '<div class="admin-empty"><h3>No quotations yet</h3><p>Create your first customer quotation from the training catalogue.</p></div>';
+    return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Customer</th><th>Company</th><th>Courses</th><th>Total incl. VAT</th><th>Status</th><th>Issue Date</th><th>Actions</th></tr></thead><tbody>${rows.map(x=>{const t=quoteTotals(x);return `<tr><td class="mono">${esc(x.reference)}</td><td>${esc(x.customer?.name||'—')}</td><td>${esc(company(x.companyId)?.name||'—')}</td><td>${t.courseCount}</td><td>${money(t.totalTTC)}</td><td>${status(x.status)}</td><td>${fmt(x.issueDate)}</td><td><div class="admin-row-actions"><button class="admin-mini-btn" data-quote-open="${x.id}">Edit</button><button class="admin-mini-btn" data-quote-duplicate="${x.id}">Duplicate</button><button class="admin-mini-btn" data-quote-pdf="${x.id}">PDF</button><button class="admin-mini-btn danger" data-quote-delete="${x.id}">Delete</button></div></td></tr>`}).join('')}</tbody></table></div>`;
+  }
+  function duplicateQuote(id){
+    const copy=deep(S.quotes.find(x=>x.id===id));
+    copy.id=uid('QUO');copy.reference=quoteRef();copy.status='DRAFT';copy.createdAt=nowISO();copy.updatedAt=nowISO();
+    S.quotes.push(copy);save();log('QUOTE_DUPLICATED','Quote',copy.reference);toast('Quotation duplicated.');
+    openQuoteBuilder(copy.id);
+  }
+  function renderQuoteBuilderPage(P){
+    const d=app.quoteDraft,t=quoteTotals(d),isNew=app.detail==='new';
+    P.innerHTML=pageHead(`11B / QUOTE BUILDER / ${esc(d.reference)}`,isNew?'New Quotation':'Edit Quotation','Select courses from the catalogue, set seats and pricing, and generate a professional quotation PDF.',
+      `<span class="admin-status ${esc(d.status)}" style="align-self:center">${esc(d.status)}</span>`
+      +(isNew?'':'<button class="btn btn-outline" id="duplicateQuoteBtn">Duplicate</button>')
+      +'<button class="btn btn-outline" id="generatePdf">Generate PDF</button>'
+      +'<button class="btn btn-outline" id="saveQuote">Save Draft</button>'
+      +`<button class="btn btn-lime" id="validateQuote">${d.status==='VALIDATED'?'✓ Validated':'Validate Quote'}</button>`
+      +'<button class="btn btn-outline" id="backQuotes">← Quote Builder</button>')
+      +`<div class="admin-grid-2">
+          <section class="admin-panel">
+            <div class="mono" style="color:var(--blue)">Customer</div>
+            <h2 style="margin:6px 0 16px">Customer &amp; quote information</h2>
+            <form class="admin-form" id="quoteInfoForm">
+              <div class="admin-form-grid">
+                <div class="admin-field"><label>Company (optional link)</label><select name="companyId"><option value="">— No linked company —</option>${S.companies.map(c=>`<option value="${c.id}" ${c.id===d.companyId?'selected':''}>${esc(c.name)}</option>`).join('')}</select></div>
+                ${field('Quote Reference','reference',d.reference,'text','required')}
+                ${field('Company Name','customerName',d.customer.name,'text','required')}
+                ${field('Contact Person','customerContact',d.customer.contact)}
+                ${field('Email','customerEmail',d.customer.email,'email')}
+                ${field('Issue Date','issueDate',d.issueDate,'date','required')}
+                <div class="admin-field full"><label>Address</label><textarea name="customerAddress">${esc(d.customer.address)}</textarea></div>
+                <div class="admin-field full"><label>Notes / special conditions</label><textarea name="notes">${esc(d.notes)}</textarea></div>
+              </div>
+            </form>
+          </section>
+          <section class="admin-panel">
+            <div class="mono" style="color:var(--blue)">Pricing</div>
+            <h2 style="margin:6px 0 16px">Promotion &amp; VAT</h2>
+            <div class="admin-form-grid">
+              <div class="admin-field"><label>Promotion</label><select id="promoMode">
+                <option value="auto" ${d.promoMode==='auto'?'selected':''}>Auto — based on course count (currently ${t.autoPct}%)</option>
+                <option value="none" ${d.promoMode==='none'?'selected':''}>No promotion</option>
+                <option value="10" ${d.promoMode==='10'?'selected':''}>10% — 3+ courses</option>
+                <option value="15" ${d.promoMode==='15'?'selected':''}>15% — 5+ courses</option>
+                <option value="20" ${d.promoMode==='20'?'selected':''}>20% — 7+ courses</option>
+              </select></div>
+              <div class="admin-field"><label>VAT rate (%)</label><input id="vatRate" type="number" min="0" step="0.1" value="${t.vatRate}"></div>
+            </div>
+            <div class="quote-totals">
+              <div><span>Subtotal excl. VAT</span><strong>${money(t.subtotal)}</strong></div>
+              <div><span>Discount (${t.pct}%)</span><strong>−${money(t.discount)}</strong></div>
+              <div><span>Total excl. VAT</span><strong>${money(t.totalHT)}</strong></div>
+              <div><span>VAT (${t.vatRate}%)</span><strong>${money(t.vatAmount)}</strong></div>
+              <div class="quote-grand-total"><span>Total incl. VAT</span><strong>${money(t.totalTTC)}</strong></div>
+            </div>
+          </section>
+        </div>
+        <section class="admin-section">
+          <div class="admin-section-head"><div><h2>Courses</h2><p>Seats above 12 unlock a negotiated price per seat.</p></div><button class="btn btn-outline" id="addCourses">+ Add Courses</button></div>
+          ${quoteItemsTable(t.items)}
+        </section>`;
+
+    document.getElementById('backQuotes').onclick=()=>{app.detail=null;app.quoteDraft=null;renderQuotes(P)};
+    document.getElementById('duplicateQuoteBtn')?.addEventListener('click',()=>duplicateQuote(d.id));
+    document.getElementById('addCourses').onclick=()=>addCoursesModal(d,P);
+    document.getElementById('generatePdf').onclick=()=>printQuote(d);
+    document.getElementById('saveQuote').onclick=()=>saveQuoteDraft(P);
+    document.getElementById('validateQuote').onclick=()=>{d.status='VALIDATED';saveQuoteDraft(P);};
+    document.getElementById('promoMode').onchange=e=>{d.promoMode=e.target.value;renderQuoteBuilderPage(P)};
+    document.getElementById('vatRate').onchange=e=>{d.vatRate=Number(e.target.value)||0;renderQuoteBuilderPage(P)};
+    document.querySelectorAll('[data-item-seats]').forEach(inp=>inp.onchange=()=>{
+      const it=d.items.find(x=>x.code===inp.dataset.itemSeats),seats=Math.max(1,Math.round(Number(inp.value)||1));
+      it.seats=seats;
+      if(seats<=12){const cat=courseByCode(it.code);it.unitPriceHT=cat?Number(cat.priceHT)||0:it.unitPriceHT}
+      renderQuoteBuilderPage(P);
+    });
+    document.querySelectorAll('[data-item-price]').forEach(inp=>inp.onchange=()=>{
+      const it=d.items.find(x=>x.code===inp.dataset.itemPrice);
+      it.unitPriceHT=Math.max(0,Number(inp.value)||0);
+      renderQuoteBuilderPage(P);
+    });
+    document.querySelectorAll('[data-item-remove]').forEach(b=>b.onclick=()=>{d.items=d.items.filter(x=>x.code!==b.dataset.itemRemove);renderQuoteBuilderPage(P)});
+  }
+  function quoteItemsTable(items){
+    if(!items.length)return '<div class="admin-empty"><h3>No courses selected</h3><p>Use “+ Add Courses” to select one or more courses from the catalogue.</p></div>';
+    return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Course Code</th><th>Course Name</th><th>Seats</th><th>Price excl. VAT / seat</th><th>Total excl. VAT</th><th>Actions</th></tr></thead><tbody>${items.map(it=>`<tr><td class="mono">${esc(it.code)}</td><td>${esc(it.name)}</td><td><input type="number" min="1" step="1" value="${it.seats}" data-item-seats="${esc(it.code)}" style="width:80px"></td><td>${it.seats>12?`<input type="number" min="0" step="1" value="${it.unitPriceHT}" data-item-price="${esc(it.code)}" style="width:110px"><span class="quote-custom-tag">negotiated</span>`:money(it.unitPriceHT)}</td><td>${money(it.lineTotal)}</td><td><button class="admin-mini-btn danger" data-item-remove="${esc(it.code)}">Remove</button></td></tr>`).join('')}</tbody></table></div>`;
+  }
+  function addCoursesModal(d,P){
+    const already=new Set(d.items.map(x=>x.code));
+    const catalogue=S.courses.filter(c=>c.status!=='ARCHIVED');
+    modal('Add Courses from Catalogue',`<div class="auth-chip-grid">${catalogue.map(c=>`<button type="button" class="auth-chip" data-add-course="${c.code}" aria-pressed="${already.has(c.code)?'true':'false'}">${c.code} · ${esc(c.name)} · ${money(c.priceHT||0)}</button>`).join('')||'<p style="color:#777">No courses in the catalogue yet.</p>'}</div><div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button class="btn btn-lime" id="confirmAddCourses">Add Selected Courses</button></div>`);
+    document.querySelectorAll('[data-add-course]').forEach(b=>b.onclick=()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true'));
+    document.getElementById('confirmAddCourses').onclick=()=>{
+      const codes=[...document.querySelectorAll('[data-add-course][aria-pressed="true"]')].map(x=>x.dataset.addCourse);
+      codes.forEach(code=>{if(d.items.some(x=>x.code===code))return;const c=courseByCode(code);d.items.push({code:c.code,name:c.name,seats:1,unitPriceHT:Number(c.priceHT)||0})});
+      closeModal();renderQuoteBuilderPage(P);
+    };
+  }
+  function saveQuoteDraft(P){
+    const wasNew=app.detail==='new';
+    const f=new FormData(document.getElementById('quoteInfoForm'));
+    const d=app.quoteDraft;
+    d.reference=f.get('reference')||d.reference;
+    d.companyId=f.get('companyId')||'';
+    d.customer={name:f.get('customerName')||'',contact:f.get('customerContact')||'',email:f.get('customerEmail')||'',address:f.get('customerAddress')||''};
+    d.issueDate=f.get('issueDate')||d.issueDate;
+    d.notes=f.get('notes')||'';
+    if(!d.customer.name){toast('Company name is required.');return}
+    if(!d.items.length){toast('Add at least one course before saving.');return}
+    d.updatedAt=nowISO();
+    const existing=S.quotes.find(x=>x.id===d.id);
+    if(existing)Object.assign(existing,deep(d));else S.quotes.push(deep(d));
+    save();
+    log(wasNew?'QUOTE_CREATED':'QUOTE_UPDATED','Quote',d.reference);
+    toast('Quotation saved.');
+    app.detail=d.id;
+    renderPage();
+  }
+  function printQuote(q){
+    const t=quoteTotals(q);
+    const w=window.open('','_blank','width=860,height=1120');
+    if(!w){toast('Please allow pop-ups to generate the PDF.');return}
+    const rows=t.items.map(it=>`<tr><td>${esc(it.code)}</td><td>${esc(it.name)}</td><td class="num">${it.seats}</td><td class="num">${money(it.unitPriceHT)}</td><td class="num">${money(it.lineTotal)}</td></tr>`).join('');
+    w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>${esc(q.reference)} — EduCut.ai Quotation</title>
+    <style>
+      *{box-sizing:border-box}
+      body{font-family:Inter,Arial,Helvetica,sans-serif;color:#0b0b0c;margin:0;padding:48px 56px;background:#fff}
+      .brand{font-weight:800;letter-spacing:-.04em;font-size:26px}
+      .brand span{color:#a8ef31}
+      .doc-head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid #0b0b0c;padding-bottom:18px;margin-bottom:24px}
+      .doc-head h1{font-size:28px;margin:6px 0 0;letter-spacing:-.03em}
+      .doc-meta{text-align:right;font-size:12px;color:#555}
+      .doc-meta strong{display:block;color:#0b0b0c;font-size:14px}
+      .parties{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px}
+      .parties h3{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#3357ff;margin:0 0 8px}
+      .parties p{margin:0;font-size:13px;line-height:1.6}
+      table{width:100%;border-collapse:collapse;margin-bottom:6px}
+      th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#555;border-bottom:1px solid #0b0b0c;padding:8px 6px}
+      td{padding:9px 6px;border-bottom:1px solid #e5e5e0;font-size:13px}
+      .num{text-align:right;font-variant-numeric:tabular-nums}
+      .totals{width:320px;margin-left:auto;margin-top:16px;font-size:13px}
+      .totals div{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #e5e5e0}
+      .totals .grand{border-top:2px solid #0b0b0c;border-bottom:none;font-size:16px;font-weight:800;margin-top:6px;padding-top:10px}
+      .notes{margin-top:28px;font-size:12px;color:#333}
+      .notes h3{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#3357ff;margin:0 0 8px}
+      .foot{margin-top:56px;padding-top:16px;border-top:1px solid #d7d7d1;font-size:12px;color:#555;display:flex;justify-content:space-between;gap:24px}
+      .foot strong{display:block;color:#0b0b0c}
+      @media print{ body{padding:24px 32px} }
+    </style></head><body>
+      <div class="doc-head">
+        <div><div class="brand">EduCut<span>.ai</span></div><h1>Quotation</h1></div>
+        <div class="doc-meta"><strong>${esc(q.reference)}</strong>Issue date: ${fmt(q.issueDate)}<br>Status: ${esc(q.status)}</div>
+      </div>
+      <div class="parties">
+        <div><h3>Billed to</h3><p><strong>${esc(q.customer.name||'—')}</strong><br>${esc(q.customer.contact||'')}<br>${esc(q.customer.email||'')}<br>${esc(q.customer.address||'').replace(/\n/g,'<br>')}</p></div>
+        <div><h3>Issued by</h3><p><strong>EduCut.ai</strong><br>Financial Department<br>learning@educut.ai</p></div>
+      </div>
+      <table><thead><tr><th>Code</th><th>Course</th><th class="num">Seats</th><th class="num">Price / seat excl. VAT</th><th class="num">Total excl. VAT</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="totals">
+        <div><span>Subtotal excl. VAT</span><strong>${money(t.subtotal)}</strong></div>
+        <div><span>Discount (${t.pct}%)</span><strong>−${money(t.discount)}</strong></div>
+        <div><span>Total excl. VAT</span><strong>${money(t.totalHT)}</strong></div>
+        <div><span>VAT (${t.vatRate}%)</span><strong>${money(t.vatAmount)}</strong></div>
+        <div class="grand"><span>Total incl. VAT</span><strong>${money(t.totalTTC)}</strong></div>
+      </div>
+      ${q.notes?`<div class="notes"><h3>Notes / special conditions</h3><p>${esc(q.notes).replace(/\n/g,'<br>')}</p></div>`:''}
+      <div class="foot"><div>This quotation is issued by EduCut.ai and remains valid for 30 days from the issue date unless otherwise agreed.</div><div style="text-align:right"><strong>Financial Department</strong>EduCut.ai</div></div>
+    </body></html>`);
+    w.document.close();
+    w.focus();
+    setTimeout(()=>w.print(),300);
+  }
   function companyAnalytics(c,learners,seats){const avg=learners.length?Math.round(learners.reduce((a,b)=>a+b.progress,0)/learners.length):0;return `<div class="admin-kpis"><div class="admin-kpi"><div class="mono">Total Learners</div><strong>${learners.length}</strong></div><div class="admin-kpi"><div class="mono">Active Learners</div><strong>${learners.filter(x=>x.status==='ACTIVE').length}</strong></div><div class="admin-kpi"><div class="mono">Seat Utilization</div><strong>${Math.round(seats.length/c.purchasedSeats*100)||0}%</strong></div><div class="admin-kpi"><div class="mono">Average Progress</div><strong>${avg}%</strong></div></div><div class="admin-grid-2"><div class="admin-panel"><h2>Course completion</h2>${barChart(learners.map(x=>x.progress),learners.map((_,i)=>String(i+1)))}</div><div class="admin-panel"><h2>Top learners</h2>${usersTable([...learners].sort((a,b)=>b.progress-a.progress).slice(0,5))}</div></div>`}
   function renderAnalytics(P){const learners=S.users.filter(u=>['INDIVIDUAL','COMPANY_MEMBER'].includes(u.type)),active=learners.filter(u=>u.status==='ACTIVE'),avg=learners.length?Math.round(learners.reduce((a,b)=>a+b.progress,0)/learners.length):0,revenue=S.invoices.filter(i=>i.status==='PAID').reduce((a,b)=>a+b.amount,0);P.innerHTML=pageHead('09 / ANALYTICS','Platform Analytics','Filter learning engagement and commercial performance across companies, Academies, courses, countries and learner types.')+`<div class="admin-toolbar"><select><option>Date Range · Last 12 months</option></select><select><option>All Companies</option>${S.companies.map(c=>`<option>${esc(c.name)}</option>`).join('')}</select><select><option>All Academies</option>${S.academies.map(a=>`<option>${a.code} · ${esc(a.name)}</option>`).join('')}</select><select><option>All Learner Types</option><option>INDIVIDUAL</option><option>COMPANY_MEMBER</option></select><div class="admin-toolbar-spacer"></div><button class="admin-mini-btn" id="analyticsCSV">CSV</button><button class="admin-mini-btn" id="analyticsXLSX">XLSX</button><button class="admin-mini-btn" id="analyticsPDF">PDF</button></div><div class="admin-kpis">${[['Total Learners',learners.length],['Active Learners',active.length],['Course Enrollments',learners.reduce((a,b)=>a+(b.courses||[]).length,0)],['Completion Rate',avg+'%'],['Certificates',S.certificates.length],['Companies',S.companies.length],['Revenue',money(revenue)],['Average Quiz Score','78%']].map(x=>`<div class="admin-kpi"><div class="mono">${x[0]}</div><strong>${x[1]}</strong></div>`).join('')}</div><div class="admin-grid-2"><div class="admin-panel"><div class="mono" style="color:var(--blue)">Monthly learner growth</div><h2>Active learners</h2>${barChart([52,61,69,73,89,97,106,121,136,152,175,201],['O','N','D','J','F','M','A','M','J','J','A','S'])}</div><div class="admin-panel"><div class="mono" style="color:var(--blue)">Monthly company growth</div><h2>Organizations</h2>${barChart([3,3,4,5,6,6,7,8,9,10,12,14],['O','N','D','J','F','M','A','M','J','J','A','S'])}</div></div><div class="admin-grid-2 admin-section"><div class="admin-panel"><h2>Most popular Academies</h2>${S.academies.map(a=>{const n=learners.filter(u=>(u.courses||[]).some(c=>c.startsWith(a.code))).length;return `<div class="admin-resource"><span>${a.code} · ${esc(a.name)}</span><strong>${n}</strong></div>`}).join('')}</div><div class="admin-panel"><h2>Company engagement ranking</h2>${S.companies.map(c=>{const us=learners.filter(u=>u.companyId===c.id),v=us.length?Math.round(us.reduce((a,b)=>a+b.progress,0)/us.length):0;return `<div class="admin-resource"><span>${esc(c.name)}</span><strong>${v}%</strong></div>`}).join('')}</div></div>`;
     document.getElementById('analyticsCSV').onclick=()=>download('educut-analytics.csv',csv(learners.map(u=>({name:u.name,email:u.email,type:u.type,progress:u.progress,courses:(u.courses||[]).length}))));
