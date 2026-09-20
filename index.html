@@ -996,6 +996,20 @@
       .trusted-label{padding:0 22px 15px;border-right:0;border-bottom:1px solid #333;margin-bottom:15px}
       .trusted-country{font-size:15px;padding:0 22px}
     }
+
+    /* Contact band */
+    .contact-band{background:var(--ink);color:#fff;border-top:1px solid #2b2b2b;padding:46px 0}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#2b2b2b;border:1px solid #2b2b2b}
+    .contact-card{background:var(--ink);padding:22px 26px;min-height:128px}
+    .contact-card .mono{color:var(--lime);font-size:10px}
+    .contact-card strong{display:block;font-size:16px;font-weight:650;letter-spacing:-.01em;margin:12px 0 10px}
+    .contact-card a{color:var(--blue);font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;font-size:13px;text-decoration:none;border-bottom:1px solid transparent}
+    .contact-card a:hover{border-bottom-color:var(--blue)}
+    @media(max-width:700px){
+      .contact-band{padding:28px 0}
+      .contact-grid{grid-template-columns:1fr}
+      .contact-card{min-height:auto;padding:20px 22px}
+    }
     @media(prefers-reduced-motion:reduce){
       .trusted-track{animation:none;transform:none}
       .trusted-marquee{overflow-x:auto}
@@ -1808,6 +1822,28 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
             <span class="trusted-country">Senegal</span>
             <span class="trusted-country">United States</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-band" aria-label="Contact EduCut.ai">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="mono">B2B Partners · Universities · Companies</div>
+          <strong>Explore a partnership</strong>
+          <a href="mailto:partners@educutai.com">partners@educutai.com</a>
+        </div>
+        <div class="contact-card">
+          <div class="mono">Already a collaborator</div>
+          <strong>Need help with the platform</strong>
+          <a href="mailto:support@educutai.com">support@educutai.com</a>
+        </div>
+        <div class="contact-card">
+          <div class="mono">General enquiries</div>
+          <strong>You have a question</strong>
+          <a href="mailto:contact@educutai.com">contact@educutai.com</a>
         </div>
       </div>
     </div>
