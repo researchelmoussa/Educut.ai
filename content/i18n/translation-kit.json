@@ -1,0 +1,2624 @@
+{
+  "note": "Source strings for translation. Phase 1 = core pages and academies; phase 2 = course programmes. Translate meaning and search terms, not word for word.",
+  "exported": "2026-09-23",
+  "phase1": {
+    "pages": [
+      {
+        "path": "/",
+        "title": "AI Training for Companies — Build Your AI Path | EduCut.ai",
+        "description": "Business-focused AI training for companies: 18 academies, 212 courses. Take the free 3-minute assessment and get a 3, 5 or 7-course AI learning path.",
+        "h1": "Build the right AI path for your company."
+      },
+      {
+        "path": "/academies/",
+        "title": "AI Training Courses — 18 Academies, 212 Courses | EduCut.ai",
+        "description": "Browse 212 AI training courses in 18 academies: AI foundations, prompt engineering, AI for business functions, LLMs, RAG, agents, governance and security.",
+        "h1": "The EduCut.ai Academy: AI training courses"
+      },
+      {
+        "path": "/academies/ai-foundations/",
+        "title": "AI Fundamentals Courses — ML, Deep Learning, NLP | EduCut.ai",
+        "description": "24 AI fundamentals courses: machine learning, deep learning, NLP, computer vision, reasoning, AI safety and AI systems. Foundation to intermediate level.",
+        "h1": "AI Foundations courses"
+      },
+      {
+        "path": "/academies/generative-ai/",
+        "title": "Generative AI Course — How Generative AI Works | EduCut.ai",
+        "description": "20 generative AI courses on how models are built and used: architecture, pre-training, alignment, prompting, agents, evaluation and multimodal generation.",
+        "h1": "Generative AI courses"
+      },
+      {
+        "path": "/academies/prompt-engineering/",
+        "title": "Prompt Engineering Course for Teams | EduCut.ai",
+        "description": "10 prompt engineering courses, from writing effective prompts to prompting for data analysis, software development, research, AI agents and RAG.",
+        "h1": "Prompt Engineering courses"
+      },
+      {
+        "path": "/academies/ai-productivity/",
+        "title": "AI Productivity Training — Email, Docs, Excel | EduCut.ai",
+        "description": "10 AI productivity courses: AI for email, documents, meetings, research, Excel and planning, plus personal AI workflows and no-code automation.",
+        "h1": "AI Productivity courses"
+      },
+      {
+        "path": "/academies/data-analytics/",
+        "title": "Data Analytics & Statistics Courses for AI | EduCut.ai",
+        "description": "18 data analytics courses: statistics, predictive modelling, big data, data preparation, visualisation and responsible analytics for AI-enabled teams.",
+        "h1": "Data Analytics courses"
+      },
+      {
+        "path": "/academies/ai-for-leaders/",
+        "title": "AI for Executives — AI Leadership Training | EduCut.ai",
+        "description": "10 AI courses for executives and managers: AI strategy, use cases, AI-driven decisions, ROI, governance and building an AI-ready organization.",
+        "h1": "AI for Leaders courses"
+      },
+      {
+        "path": "/academies/ai-for-marketing/",
+        "title": "AI for Marketing Course — Content, SEO, Ads | EduCut.ai",
+        "description": "10 AI for marketing courses: strategy, content and copywriting, social media, SEO, advertising, customer insights, analytics and marketing automation.",
+        "h1": "AI for Marketing courses"
+      },
+      {
+        "path": "/academies/ai-for-finance/",
+        "title": "AI for Finance Course — FP&A, Forecasting | EduCut.ai",
+        "description": "10 AI for finance courses: financial analysis, budgeting and forecasting, accounting, Excel modelling, fraud detection, FP&A and finance automation.",
+        "h1": "AI for Finance courses"
+      },
+      {
+        "path": "/academies/ai-for-hr/",
+        "title": "AI for HR Training — Recruitment to Analytics | EduCut.ai",
+        "description": "10 AI for HR courses: recruitment, onboarding, L&D, performance, people analytics, workforce planning and responsible AI in HR.",
+        "h1": "AI for HR courses"
+      },
+      {
+        "path": "/academies/ai-for-education/",
+        "title": "AI for Educators — Teaching, Assessment | EduCut.ai",
+        "description": "10 AI courses for teachers and academic leaders: course design, classroom engagement, adaptive learning, assessment, research and academic integrity.",
+        "h1": "AI for Education courses"
+      },
+      {
+        "path": "/academies/ai-for-developers/",
+        "title": "AI for Developers Course — Coding to Production | EduCut.ai",
+        "description": "10 AI courses for developers: AI-assisted coding, testing and debugging, LLM APIs, RAG, AI agents, DevOps automation and production AI systems.",
+        "h1": "AI for Developers courses"
+      },
+      {
+        "path": "/academies/llm-engineering/",
+        "title": "LLM Engineering Course — Fine-Tuning to LLMOps | EduCut.ai",
+        "description": "10 LLM engineering courses: LLM APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, guardrails and production LLMOps.",
+        "h1": "LLM Engineering courses"
+      },
+      {
+        "path": "/academies/rag-systems/",
+        "title": "RAG Course — Retrieval-Augmented Generation | EduCut.ai",
+        "description": "10 RAG courses: ingestion and chunking, vector search, retrieval and context engineering, agentic and graph RAG, evaluation, security and RAGOps.",
+        "h1": "RAG Systems courses"
+      },
+      {
+        "path": "/academies/ai-agents/",
+        "title": "AI Agents Course — Agentic AI & Multi-Agent | EduCut.ai",
+        "description": "10 AI agents courses: agent architecture, tool use and function calling, memory, planning, agentic RAG, multi-agent systems, security and AgentOps.",
+        "h1": "AI Agents courses"
+      },
+      {
+        "path": "/academies/responsible-ai/",
+        "title": "Responsible AI Training — Ethics & Fairness | EduCut.ai",
+        "description": "10 responsible AI courses: AI ethics, bias and fairness, explainability, privacy, safety, regulation and building a responsible AI program.",
+        "h1": "Responsible AI courses"
+      },
+      {
+        "path": "/academies/ai-governance/",
+        "title": "AI Governance Training — EU AI Act & Risk | EduCut.ai",
+        "description": "10 AI governance courses: EU AI Act and global compliance, AI risk and impact assessment, policies, vendor governance, audit and enterprise programs.",
+        "h1": "AI Governance courses"
+      },
+      {
+        "path": "/academies/ai-security/",
+        "title": "AI Security Training — Prompt Injection | EduCut.ai",
+        "description": "10 AI security courses: threat modeling, prompt injection and jailbreaks, RAG and agent security, supply chain, AI red teaming and incident response.",
+        "h1": "AI Security courses"
+      },
+      {
+        "path": "/academies/ai-transformation/",
+        "title": "AI Transformation Program for Organizations | EduCut.ai",
+        "description": "10 AI transformation courses: readiness assessment, strategy roadmaps, use cases, operating model redesign, change management, governance and ROI.",
+        "h1": "AI Transformation courses"
+      },
+      {
+        "path": "/ai-learning-paths/",
+        "title": "Free AI Readiness Assessment for Companies | EduCut.ai",
+        "description": "Answer 20 questions in about 3 minutes. Get your AI readiness score and Essential, Accelerate and Transform learning paths of 3, 5 and 7 courses.",
+        "h1": "Free AI readiness assessment & learning paths"
+      },
+      {
+        "path": "/contact/",
+        "title": "Contact EduCut.ai — Free AI Training Consultation",
+        "description": "Book a free one-hour consultation, request the full AI course catalogue by email, or contact our partnerships, support and general enquiries teams.",
+        "h1": "Contact EduCut.ai"
+      }
+    ],
+    "academies": [
+      {
+        "code": "A001",
+        "name": "AI Foundations",
+        "summary": "Build a rigorous understanding of the core disciplines behind modern AI — from machine learning and deep learning to NLP, computer vision, reasoning, safety and AI systems.",
+        "audience": "Professionals and technical teams who want a strong, structured foundation across the major fields of Artificial Intelligence.",
+        "topics": [
+          "Machine Learning",
+          "Deep Learning",
+          "NLP",
+          "Computer Vision",
+          "Reasoning",
+          "AI Safety"
+        ]
+      },
+      {
+        "code": "A002",
+        "name": "Generative AI",
+        "summary": "Understand how generative AI works and how to use it effectively across professional workflows, from foundation models and multimodal systems to practical business applications.",
+        "audience": "Professionals and organizations that want to understand and adopt the technologies powering today's generative AI systems.",
+        "topics": [
+          "Generative AI",
+          "Foundation Models",
+          "Multimodal AI",
+          "Business Applications",
+          "Responsible Use"
+        ]
+      },
+      {
+        "code": "A003",
+        "name": "Prompt Engineering",
+        "summary": "Learn to design reliable prompts for everyday work, data analysis, software development, research, multimodal AI and advanced agentic or RAG-based applications.",
+        "audience": "Professionals and teams using generative AI to create, analyze, automate or structure business tasks.",
+        "topics": [
+          "Prompt Design",
+          "Advanced Prompting",
+          "Workplace Productivity",
+          "Data Analysis",
+          "Multimodal",
+          "Agents & RAG"
+        ]
+      },
+      {
+        "code": "A004",
+        "name": "AI Productivity",
+        "summary": "Turn AI into a practical productivity layer for daily work — improving communication, documents, meetings, research, spreadsheets, planning and repeatable workflows.",
+        "audience": "Business professionals who want measurable productivity gains from AI in their everyday work.",
+        "topics": [
+          "Email & Communication",
+          "Documents",
+          "Meetings",
+          "Research",
+          "Excel & Data",
+          "Automation"
+        ]
+      },
+      {
+        "code": "A005",
+        "name": "Data Analytics",
+        "summary": "Strengthen the statistical, mathematical and analytical foundations needed to interpret data, build reliable analyses and support better evidence-based decisions.",
+        "audience": "Professionals and teams who need stronger analytical foundations for data-driven and AI-enabled work.",
+        "topics": [
+          "Statistics",
+          "Mathematics",
+          "Data Analysis",
+          "Interpretation",
+          "Decision Support"
+        ]
+      },
+      {
+        "code": "A006",
+        "name": "AI for Leaders",
+        "summary": "Equip leaders to identify valuable AI opportunities, make informed investment decisions, lead adoption, govern risk and build an AI-ready organization.",
+        "audience": "Executives, managers and decision-makers responsible for AI strategy, investment and organizational change.",
+        "topics": [
+          "AI Strategy",
+          "Use Cases",
+          "Decision-Making",
+          "Transformation",
+          "ROI",
+          "Governance"
+        ]
+      },
+      {
+        "code": "A007",
+        "name": "AI for Marketing",
+        "summary": "Apply AI across the marketing lifecycle — from strategy, content and social media to SEO, advertising, customer insight, analytics, personalization and automation.",
+        "audience": "Marketing, communication, acquisition and customer-experience professionals.",
+        "topics": [
+          "Strategy",
+          "Content",
+          "Social Media",
+          "SEO",
+          "Advertising",
+          "Analytics & Automation"
+        ]
+      },
+      {
+        "code": "A008",
+        "name": "AI for Finance",
+        "summary": "Use AI to enhance financial analysis, reporting, forecasting, accounting, modeling, risk management, investment analysis and finance-team automation.",
+        "audience": "Finance professionals, analysts, FP&A teams, controllers and finance leaders.",
+        "topics": [
+          "Financial Analysis",
+          "Forecasting",
+          "Accounting",
+          "Financial Modeling",
+          "Risk",
+          "FP&A & Automation"
+        ]
+      },
+      {
+        "code": "A009",
+        "name": "AI for HR",
+        "summary": "Apply AI across the employee lifecycle — recruitment, onboarding, learning, performance, engagement, workforce planning, people analytics and responsible HR transformation.",
+        "audience": "HR professionals, talent leaders, L&D teams, people analytics professionals and managers.",
+        "topics": [
+          "Recruitment",
+          "Onboarding",
+          "L&D",
+          "Performance",
+          "People Analytics",
+          "Workforce Planning"
+        ]
+      },
+      {
+        "code": "A010",
+        "name": "AI for Education",
+        "summary": "Integrate AI into teaching and learning — from course design and classroom engagement to personalization, assessment, content creation, research and academic integrity.",
+        "audience": "Teachers, trainers, academic leaders, researchers and education professionals.",
+        "topics": [
+          "Course Design",
+          "Teaching",
+          "Personalized Learning",
+          "Assessment",
+          "Content Creation",
+          "Academic Integrity"
+        ]
+      },
+      {
+        "code": "A011",
+        "name": "AI for Developers",
+        "summary": "Help software teams use AI across the development lifecycle and build AI-powered applications using prompting, APIs, RAG, agents, testing, automation and secure production practices.",
+        "audience": "Developers, software engineers and technical teams integrating AI into products and engineering workflows.",
+        "topics": [
+          "AI-Assisted Coding",
+          "LLM APIs",
+          "RAG",
+          "Agents",
+          "Testing",
+          "Production AI"
+        ]
+      },
+      {
+        "code": "A012",
+        "name": "LLM Engineering",
+        "summary": "Move from LLM fundamentals to production systems — covering context engineering, APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, security and LLMOps.",
+        "audience": "Developers, software engineers, AI engineers and technical professionals building LLM applications.",
+        "topics": [
+          "LLM APIs",
+          "Embeddings",
+          "RAG",
+          "Fine-Tuning",
+          "Evaluation",
+          "LLMOps"
+        ]
+      },
+      {
+        "code": "A013",
+        "name": "RAG Systems",
+        "summary": "Design reliable knowledge-powered AI systems by mastering document ingestion, chunking, embeddings, retrieval, context engineering, advanced RAG, evaluation, security and RAGOps.",
+        "audience": "Developers and AI engineers building assistants and applications grounded in enterprise or domain knowledge.",
+        "topics": [
+          "Document Ingestion",
+          "Embeddings",
+          "Retrieval",
+          "Context Engineering",
+          "Advanced RAG",
+          "RAGOps"
+        ]
+      },
+      {
+        "code": "A014",
+        "name": "AI Agents",
+        "summary": "Learn how to design AI systems that can plan, use tools, manage memory and state, access knowledge, collaborate with other agents and operate safely in production.",
+        "audience": "Developers, AI engineers and advanced professionals building autonomous or semi-autonomous AI workflows.",
+        "topics": [
+          "Agent Architecture",
+          "Tool Use",
+          "Memory",
+          "Planning",
+          "Multi-Agent Systems",
+          "AgentOps"
+        ]
+      },
+      {
+        "code": "A015",
+        "name": "Responsible AI",
+        "summary": "Build AI that is trustworthy and accountable by addressing ethics, fairness, transparency, privacy, safety, governance, regulation and responsible use of generative and agentic AI.",
+        "audience": "Professionals, leaders and teams responsible for designing, using or overseeing AI responsibly.",
+        "topics": [
+          "Ethics",
+          "Fairness",
+          "Explainability",
+          "Privacy",
+          "Safety",
+          "Responsible GenAI"
+        ]
+      },
+      {
+        "code": "A016",
+        "name": "AI Governance",
+        "summary": "Create the organizational controls needed to govern AI at scale — policies, risk assessment, lifecycle governance, compliance, vendor oversight, auditability and enterprise governance programs.",
+        "audience": "Governance, compliance, risk, legal, security and management teams overseeing organizational AI.",
+        "topics": [
+          "Regulation",
+          "Risk Management",
+          "Policies",
+          "Lifecycle Governance",
+          "Vendor Governance",
+          "Audit"
+        ]
+      },
+      {
+        "code": "A017",
+        "name": "AI Security",
+        "summary": "Protect AI systems across their lifecycle — from threat modeling and prompt injection to RAG and agent security, model supply chains, red teaming, monitoring and incident response.",
+        "audience": "Security, risk, compliance and technical teams responsible for the safe deployment of AI systems.",
+        "topics": [
+          "Threat Modeling",
+          "Prompt Injection",
+          "RAG Security",
+          "Agent Security",
+          "Red Teaming",
+          "Incident Response"
+        ]
+      },
+      {
+        "code": "A018",
+        "name": "AI Transformation",
+        "summary": "Turn AI ambition into enterprise execution — assess readiness, define strategy, prioritize use cases, redesign processes, develop skills, govern risk, measure ROI and scale transformation.",
+        "audience": "Executives, managers, transformation leaders and decision-makers leading organization-wide AI initiatives.",
+        "topics": [
+          "AI Readiness",
+          "Strategy",
+          "Use Cases",
+          "Operating Model",
+          "Change Management",
+          "ROI & Scale"
+        ]
+      }
+    ],
+    "faqs": {
+      "/academies/": [
+        {
+          "q": "How many courses does EduCut.ai offer?",
+          "a": "212 courses, organized into 18 specialized academies — from AI foundations and generative AI to AI for business functions, LLM engineering, RAG, AI agents, responsible AI, governance, security and transformation."
+        },
+        {
+          "q": "What levels are the courses?",
+          "a": "Courses are offered at foundation (53 courses), intermediate (106 courses) and advanced (53 courses) level."
+        },
+        {
+          "q": "How long is a course?",
+          "a": "150 courses take 9 hours (6 h online + 3 h personal work) and 62 courses take 12 hours (8 h online + 4 h personal work)."
+        },
+        {
+          "q": "How are the courses delivered?",
+          "a": "Blended: instructor-led online sessions combined with self-paced personal work."
+        },
+        {
+          "q": "Do the courses include a certificate?",
+          "a": "Yes. Certificate awarded upon completion."
+        },
+        {
+          "q": "In which language are the courses taught?",
+          "a": "English, and translation is available."
+        },
+        {
+          "q": "How do I choose the right courses?",
+          "a": "Take the free 3-minute assessment to receive personalized 3, 5 and 7-course paths, or <a href=\"/contact/\">book a free one-hour consultation</a> with EduCut.ai."
+        },
+        {
+          "q": "How can I get the full catalogue?",
+          "a": "Request the complete EduCut.ai catalogue by business email from the <a href=\"/contact/\">contact page</a>."
+        }
+      ],
+      "/ai-learning-paths/": [
+        {
+          "q": "How long does the EduCut.ai assessment take?",
+          "a": "About 3 minutes. It has 20 focused multiple-choice questions."
+        },
+        {
+          "q": "Is the assessment free?",
+          "a": "Yes. The recommendation is free and there is no commitment."
+        },
+        {
+          "q": "What do I receive?",
+          "a": "An AI readiness score and maturity level, your strongest opportunity, and three learning paths — Essential (3 courses), Accelerate (5 courses) and Transform (7 courses) — together with the catalogue and an indicative quotation, free of charge."
+        },
+        {
+          "q": "How are the courses chosen?",
+          "a": "Your answers are scored across 14 focus areas, such as AI productivity, RAG & enterprise knowledge or responsible AI, governance & security. The paths are built from the exact EduCut.ai courses mapped to your highest-priority areas (<a href=\"#focus-areas\">see the full list</a>)."
+        },
+        {
+          "q": "What happens after the assessment?",
+          "a": "You can book a free one-hour consultation to review your needs with EduCut.ai, or request the full academy catalogue by business email."
+        }
+      ]
+    },
+    "comparisons": [
+      {
+        "title": "Building AI applications",
+        "rows": [
+          [
+            "A011",
+            "Using AI across everyday software development",
+            "you write software and want AI-assisted coding, testing, debugging and DevOps automation"
+          ],
+          [
+            "A012",
+            "Building LLM applications end to end",
+            "you build products on large language models: APIs, embeddings, fine-tuning, evaluation and LLMOps"
+          ],
+          [
+            "A013",
+            "Grounding AI in your organization's knowledge",
+            "your assistants must answer from your own documents and data with reliable retrieval"
+          ],
+          [
+            "A014",
+            "AI systems that plan and act with tools",
+            "you build agents that use tools, keep memory and run multi-step or multi-agent workflows"
+          ]
+        ]
+      },
+      {
+        "title": "Trustworthy AI",
+        "rows": [
+          [
+            "A015",
+            "Principles: ethics, fairness, transparency, privacy",
+            "you need a shared understanding of how to design and use AI responsibly"
+          ],
+          [
+            "A016",
+            "Organizational controls and compliance",
+            "you own AI policies, risk and impact assessment, EU AI Act compliance, vendors or audit"
+          ],
+          [
+            "A017",
+            "Protecting AI systems against attacks",
+            "you secure AI applications against prompt injection, data leakage and misuse, and run red teaming"
+          ]
+        ]
+      },
+      {
+        "title": "Leading with AI",
+        "rows": [
+          [
+            "A006",
+            "The individual executive",
+            "you are a leader who must set AI strategy, choose use cases, justify ROI and lead people"
+          ],
+          [
+            "A018",
+            "The organization-wide program",
+            "you run an enterprise AI program: readiness, roadmap, operating model, change and value measurement"
+          ]
+        ]
+      }
+    ]
+  },
+  "phase2": {
+    "courses": [
+      {
+        "code": "A001.01",
+        "name": "Machine Learning - Foundations & Methods I",
+        "programme": [
+          "Supervised learning: classification, regression, decision trees, SVMs, ensemble methods",
+          "Unsupervised learning: clustering (k-means, DBSCAN), dimensionality reduction (PCA, t-SNE, UMAP)",
+          "Semi-supervised and self-supervised learning: leveraging unlabelled data at scale",
+          "Reinforcement learning (RL): Q-learning, policy gradients, actor-critic, RLHF"
+        ]
+      },
+      {
+        "code": "A001.02",
+        "name": "Machine Learning - Foundations & Methods II",
+        "programme": [
+          "Transfer learning and domain adaptation: reusing knowledge across tasks",
+          "Meta-learning and few-shot learning: learning to learn from limited examples",
+          "Federated learning: distributed training while preserving data privacy",
+          "AutoML: automated model selection, hyperparameter optimisation, neural architecture search (NAS)"
+        ]
+      },
+      {
+        "code": "A001.03",
+        "name": "Deep Learning & Neural Architectures I",
+        "programme": [
+          "Convolutional Neural Networks (CNNs): image recognition, object detection, segmentation",
+          "Recurrent Neural Networks (RNNs), LSTMs, GRUs: sequence modelling, time series",
+          "Transformer architecture (2017): self-attention; backbone of all modern LLMs and vision models",
+          "Graph Neural Networks (GNNs): learning on relational and network data"
+        ]
+      },
+      {
+        "code": "A001.04",
+        "name": "Deep Learning & Neural Architectures II",
+        "programme": [
+          "Generative models: GANs (2014), VAEs, Normalising Flows, Diffusion Models (2020+)",
+          "Mixture of Experts (MoE): sparse activation for efficient large-scale models",
+          "Multimodal architectures: combining text, image, audio, video (CLIP, Flamingo, GPT-4V)",
+          "Neural scaling laws: predicting model performance from compute, data, and parameters"
+        ]
+      },
+      {
+        "code": "A001.05",
+        "name": "Natural Language Processing (NLP) I",
+        "programme": [
+          "Statistical NLP (pre-2012): n-gram models, HMMs, CRFs for parsing and tagging",
+          "Word embeddings: Word2Vec (2013), GloVe - dense distributed representations",
+          "Pre-trained language models: ELMo, BERT (2018), RoBERTa, XLNet",
+          "Large Language Models (LLMs): GPT-3/4, PaLM, Claude, LLaMA - few-shot learners"
+        ]
+      },
+      {
+        "code": "A001.06",
+        "name": "Natural Language Processing (NLP) II",
+        "programme": [
+          "Machine translation: seq2seq, attention, Transformer-based (Google Translate, DeepL)",
+          "Information retrieval and question answering: RAG, open-domain QA",
+          "Text summarisation, sentiment analysis, named entity recognition",
+          "Multilingual and cross-lingual NLP: low-resource languages, mBERT, XLM-R"
+        ]
+      },
+      {
+        "code": "A001.07",
+        "name": "Computer Vision I",
+        "programme": [
+          "Image classification: AlexNet (2012), VGG, ResNet, EfficientNet milestones",
+          "Object detection: YOLO, R-CNN family, DETR (Transformer-based detection)",
+          "Image segmentation: semantic, instance, panoptic (Mask R-CNN, SAM)",
+          "Generative image models: GANs (StyleGAN), Stable Diffusion, DALL-E, Midjourney"
+        ]
+      },
+      {
+        "code": "A001.08",
+        "name": "Computer Vision II",
+        "programme": [
+          "Video understanding: action recognition, temporal modelling, video generation (Sora)",
+          "3D vision: point cloud processing, NeRF (Neural Radiance Fields), Gaussian splatting",
+          "Medical imaging: AI-assisted radiology, pathology, ophthalmology (DeepMind, Google)",
+          "Vision-Language Models (VLMs): CLIP, Flamingo, LLaVA - joint vision-text understanding"
+        ]
+      },
+      {
+        "code": "A001.09",
+        "name": "Robotics & Autonomous Systems I",
+        "programme": [
+          "Robot perception: sensor fusion, SLAM (simultaneous localisation and mapping)",
+          "Motion planning and control: trajectory optimisation, model-predictive control",
+          "Manipulation: dexterous grasping, object interaction, learning from demonstration",
+          "Autonomous vehicles: self-driving car perception, prediction, and planning"
+        ]
+      },
+      {
+        "code": "A001.10",
+        "name": "Robotics & Autonomous Systems II",
+        "programme": [
+          "Drone and UAV autonomy: navigation without GPS, multi-agent coordination",
+          "Human-robot interaction (HRI): collaborative robots (cobots), social robots",
+          "Sim-to-real transfer: training in simulation, deploying in the physical world",
+          "Foundation models for robotics: RT-2, PaLM-E - language-conditioned robot policies"
+        ]
+      },
+      {
+        "code": "A001.11",
+        "name": "Knowledge Representation & Reasoning I",
+        "programme": [
+          "Knowledge graphs: Freebase, Wikidata, Google Knowledge Graph - structured world knowledge",
+          "Ontologies and semantic web: OWL, RDF, SPARQL for machine-readable knowledge",
+          "Automated planning and scheduling: STRIPS, PDDL, hierarchical task networks",
+          "Constraint satisfaction and optimisation: SAT solvers, integer programming"
+        ]
+      },
+      {
+        "code": "A001.12",
+        "name": "Knowledge Representation & Reasoning II",
+        "programme": [
+          "Commonsense reasoning: ConceptNet, reasoning benchmarks (WinoGrad, ARC)",
+          "Neuro-symbolic AI: combining neural networks with symbolic logic",
+          "Causal reasoning and causal inference: beyond correlation in AI systems",
+          "Temporal and probabilistic reasoning: Bayesian networks, Markov models"
+        ]
+      },
+      {
+        "code": "A001.13",
+        "name": "AI Planning, Search & Game Playing I",
+        "programme": [
+          "Classical search: A*, heuristic search, constraint propagation",
+          "Monte Carlo Tree Search (MCTS): planning under uncertainty",
+          "Game-playing AI milestones: Deep Blue (chess), Watson (Jeopardy!), AlphaGo/Zero (Go), AlphaStar (StarCraft)"
+        ]
+      },
+      {
+        "code": "A001.14",
+        "name": "AI Planning, Search & Game Playing II",
+        "programme": [
+          "Multi-agent systems: cooperative, competitive, and mixed-motive settings",
+          "Mechanism design and computational game theory: incentive-aligned AI systems",
+          "Real-world planning: logistics, supply chain, scheduling applications"
+        ]
+      },
+      {
+        "code": "A001.15",
+        "name": "Explainability, Interpretability & Trustworthy AI I",
+        "programme": [
+          "Explainable AI (XAI): LIME, SHAP, attention visualisation, saliency maps",
+          "Mechanistic interpretability: understanding circuits and features inside neural networks",
+          "Fairness and bias detection: demographic parity, equalised odds, counterfactual fairness",
+          "Robustness and adversarial examples: attacking and defending AI models"
+        ]
+      },
+      {
+        "code": "A001.16",
+        "name": "Explainability, Interpretability & Trustworthy AI II",
+        "programme": [
+          "Uncertainty quantification: Bayesian deep learning, conformal prediction",
+          "Model auditing and AI governance frameworks: IEEE, NIST AI RMF, EU AI Act",
+          "Human-in-the-loop AI: active learning, human oversight in high-stakes decisions"
+        ]
+      },
+      {
+        "code": "A001.17",
+        "name": "AI Safety & Alignment I",
+        "programme": [
+          "Value alignment: ensuring AI systems act in accordance with human values and intentions",
+          "Reinforcement Learning from Human Feedback (RLHF): aligning LLMs to human preferences",
+          "Constitutional AI and self-critique methods (Anthropic)",
+          "Scalable oversight: supervising AI systems that surpass human capabilities"
+        ]
+      },
+      {
+        "code": "A001.18",
+        "name": "AI Safety & Alignment II",
+        "programme": [
+          "Red-teaming and adversarial safety evaluation of foundation models",
+          "Corrigibility, shutdown problem, and utility-function misspecification",
+          "Long-term and existential risk: AI systems with misaligned goals at scale",
+          "AI governance and policy: EU AI Act (2024), US AI Executive Orders, international regulation"
+        ]
+      },
+      {
+        "code": "A001.19",
+        "name": "AI Infrastructure, Hardware & Systems I",
+        "programme": [
+          "GPU computing: CUDA ecosystem; NVIDIA dominance in AI training hardware",
+          "TPUs (Tensor Processing Units): Google's custom ASIC for ML workloads",
+          "Specialised AI chips: Groq, Cerebras, Graphcore, Intel Gaudi",
+          "Distributed training: data parallelism, model parallelism, pipeline parallelism"
+        ]
+      },
+      {
+        "code": "A001.20",
+        "name": "AI Infrastructure, Hardware & Systems II",
+        "programme": [
+          "Efficient inference: quantisation, pruning, distillation, speculative decoding",
+          "MLOps: model deployment, monitoring, versioning, drift detection in production",
+          "Edge AI: running models on-device (phones, IoT sensors) without cloud dependency",
+          "Energy and sustainability: carbon footprint of training; green AI research"
+        ]
+      },
+      {
+        "code": "A001.21",
+        "name": "Domain Applications of AI I",
+        "programme": [
+          "Healthcare: diagnostic imaging, drug discovery, genomics, clinical decision support",
+          "Finance: algorithmic trading, credit scoring, fraud detection, risk modelling",
+          "Legal: contract analysis, case law search, regulatory compliance, AI liability",
+          "Education: intelligent tutoring systems, adaptive learning, automated assessment",
+          "Scientific discovery: protein folding (AlphaFold), materials science, climate modelling"
+        ]
+      },
+      {
+        "code": "A001.22",
+        "name": "Domain Applications of AI II",
+        "programme": [
+          "Manufacturing & supply chain: predictive maintenance, quality control, demand forecasting",
+          "Agriculture: precision farming, crop disease detection, yield prediction",
+          "Creative AI: music generation, art, writing assistance, video production",
+          "Cybersecurity: intrusion detection, malware classification, adversarial ML",
+          "Government & public sector: policy analysis, public service automation, defence AI"
+        ]
+      },
+      {
+        "code": "A001.23",
+        "name": "Human-Computer Interaction & Social AI I",
+        "programme": [
+          "Conversational AI and chatbots: from ELIZA (1960s) to ChatGPT (2022)",
+          "Affective computing: emotion recognition, sentiment-aware systems",
+          "Personalisation and recommendation systems: collaborative filtering, content-based, hybrid"
+        ]
+      },
+      {
+        "code": "A001.24",
+        "name": "Human-Computer Interaction & Social AI II",
+        "programme": [
+          "Accessibility AI: speech-to-text, screen readers, sign language recognition",
+          "Social media analysis: misinformation detection, community detection, opinion dynamics",
+          "Human-AI collaboration: teaming, trust calibration, appropriate reliance on AI"
+        ]
+      },
+      {
+        "code": "A002.01",
+        "name": "Model Architecture & Scaling I",
+        "programme": [
+          "Transformer architecture and its variants: encoder-only, decoder-only, and encoder-decoder",
+          "Scaling laws: relationships between model size, data, compute, and performance",
+          "Mixture of Experts (MoE) architectures for efficient scaling",
+          "Long-context modelling: extending context windows beyond 128K tokens"
+        ]
+      },
+      {
+        "code": "A002.02",
+        "name": "Model Architecture & Scaling II",
+        "programme": [
+          "Sparse attention and efficient Transformers: Linformer, FlashAttention, Mamba",
+          "Small Language Models (SLMs) and model compression: distillation, quantisation, pruning",
+          "State-space models as Transformer alternatives: Mamba, RWKV"
+        ]
+      },
+      {
+        "code": "A002.03",
+        "name": "Pre-training & Data I",
+        "programme": [
+          "Web-scale data collection, curation, and deduplication: Common Crawl, C4, RedPajama",
+          "Tokenisation strategies: BPE, SentencePiece, character-level models",
+          "Multimodal pre-training: combining text, image, audio, and video"
+        ]
+      },
+      {
+        "code": "A002.04",
+        "name": "Pre-training & Data II",
+        "programme": [
+          "Synthetic data generation for pre-training and mid-training",
+          "Domain-specific and multilingual pre-training",
+          "Mid-training: specialised continued pre-training between general pre-training and fine-tuning",
+          "Data contamination detection and benchmark integrity"
+        ]
+      },
+      {
+        "code": "A002.05",
+        "name": "Post-training & Alignment I",
+        "programme": [
+          "Supervised Fine-Tuning (SFT) on instruction-following datasets",
+          "Reinforcement Learning from Human Feedback (RLHF) and Proximal Policy Optimisation (PPO)",
+          "Direct Preference Optimisation (DPO) and RLVR (Reinforcement Learning with Verifiable Rewards)",
+          "Constitutional AI and self-critique methods"
+        ]
+      },
+      {
+        "code": "A002.06",
+        "name": "Post-training & Alignment II",
+        "programme": [
+          "Red-teaming, adversarial testing, and safety evaluation",
+          "Value alignment: ensuring models follow human intentions and societal norms",
+          "Process Reward Models (PRMs) and outcome-based reward modelling"
+        ]
+      },
+      {
+        "code": "A002.07",
+        "name": "Inference & Prompting I",
+        "programme": [
+          "Zero-shot, few-shot, and in-context learning",
+          "Chain-of-Thought (CoT) prompting and reasoning traces",
+          "Prompt engineering and prompt optimisation",
+          "Retrieval-Augmented Generation (RAG): grounding LLMs with external knowledge"
+        ]
+      },
+      {
+        "code": "A002.08",
+        "name": "Inference & Prompting II",
+        "programme": [
+          "Test-time compute scaling: inference-time search and reasoning",
+          "Tool use, function calling, and API integration",
+          "Structured output and constrained generation"
+        ]
+      },
+      {
+        "code": "A002.09",
+        "name": "Agentic AI & Multi-Agent Systems I",
+        "programme": [
+          "LLM-based autonomous agents: ReAct, AutoGPT, BabyAGI paradigms",
+          "Multi-agent frameworks and agent orchestration: LangGraph, AutoGen, CrewAI",
+          "Planning, memory, and self-reflection in agents",
+          "Computer use and browser-based agents"
+        ]
+      },
+      {
+        "code": "A002.10",
+        "name": "Agentic AI & Multi-Agent Systems II",
+        "programme": [
+          "Tool-augmented agents: code execution, web search, API calls",
+          "Human-in-the-loop oversight and agentic safety",
+          "Agentic workflows in enterprise automation"
+        ]
+      },
+      {
+        "code": "A002.11",
+        "name": "Evaluation & Benchmarking I",
+        "programme": [
+          "NLP benchmarks: GLUE, SuperGLUE, BIG-Bench, MMLU, HellaSwag",
+          "Reasoning benchmarks: GSM8K, MATH, HumanEval, ARC",
+          "Human preference evaluation: Chatbot Arena and Elo-based ranking",
+          "Safety and alignment benchmarks: TruthfulQA, HarmBench"
+        ]
+      },
+      {
+        "code": "A002.12",
+        "name": "Evaluation & Benchmarking II",
+        "programme": [
+          "Multimodal evaluation: MMBench, VQA",
+          "Benchmark saturation and the need for harder evaluation sets",
+          "LLM-as-judge evaluation methodology"
+        ]
+      },
+      {
+        "code": "A002.13",
+        "name": "Generative AI - Image, Audio & Video I",
+        "programme": [
+          "Diffusion models for image generation: Stable Diffusion, DALL-E, Midjourney, Flux",
+          "GAN-based generation and their decline in favour of diffusion",
+          "Text-to-video generation: Sora, Runway, Kling",
+          "Text-to-speech and voice cloning: ElevenLabs, Whisper, VALL-E"
+        ]
+      },
+      {
+        "code": "A002.14",
+        "name": "Generative AI - Image, Audio & Video II",
+        "programme": [
+          "Music generation: MusicGen, Suno, Udio",
+          "Multimodal generation: any-to-any models",
+          "Controllable generation: LoRA, ControlNet, IP-Adapter for personalised outputs"
+        ]
+      },
+      {
+        "code": "A002.15",
+        "name": "Interpretability & Mechanistic Understanding I",
+        "programme": [
+          "Attention mechanism analysis and visualisation",
+          "Mechanistic interpretability: circuits, features, and superposition",
+          "Probing classifiers and representation analysis"
+        ]
+      },
+      {
+        "code": "A002.16",
+        "name": "Interpretability & Mechanistic Understanding II",
+        "programme": [
+          "Knowledge localisation and knowledge editing in LLMs: ROME, MEMIT",
+          "Emergent abilities: when and why capabilities appear at scale",
+          "Grokking: delayed generalisation in neural networks"
+        ]
+      },
+      {
+        "code": "A002.17",
+        "name": "Safety, Ethics & Societal Impact I",
+        "programme": [
+          "Hallucination: factuality and faithfulness failures; taxonomy and mitigation",
+          "Bias, stereotypes, and discriminatory outputs from training data",
+          "Jailbreaking, prompt injection, and adversarial attacks on LLMs",
+          "Misinformation, deepfakes, and synthetic media detection"
+        ]
+      },
+      {
+        "code": "A002.18",
+        "name": "Safety, Ethics & Societal Impact II",
+        "programme": [
+          "AI-generated content detection and watermarking",
+          "Copyright, intellectual property, and training data rights",
+          "Environmental impact: carbon cost of training and inference at scale",
+          "Regulation: EU AI Act, US Executive Orders, and global AI governance"
+        ]
+      },
+      {
+        "code": "A002.19",
+        "name": "Domain Applications of Generative AI I",
+        "programme": [
+          "LLMs in healthcare: clinical notes, diagnosis assistance, drug discovery",
+          "Legal AI: contract analysis, case law search, regulatory compliance",
+          "Code generation and software engineering: Copilot, Cursor, Devin",
+          "Scientific discovery: LLM-as-scientist, hypothesis generation, lab automation"
+        ]
+      },
+      {
+        "code": "A002.20",
+        "name": "Domain Applications of Generative AI II",
+        "programme": [
+          "Education: AI tutoring, adaptive learning, assessment",
+          "Finance: earnings analysis, risk assessment, automated reporting",
+          "Customer service and conversational AI"
+        ]
+      },
+      {
+        "code": "A003.01",
+        "name": "Introduction to Prompt Engineering",
+        "programme": [
+          "Understand how large language models process prompts, generate responses, and use tokens to represent text.",
+          "Learn how context windows influence what an AI system can consider when producing an answer.",
+          "Distinguish between instructions, contextual information, examples, and user-provided data within a prompt.",
+          "Recognize the principal limitations of LLM-based systems, including hallucinations, ambiguity, incomplete context, and sensitivity to prompt formulation."
+        ]
+      },
+      {
+        "code": "A003.02",
+        "name": "Writing Effective Prompts",
+        "programme": [
+          "Formulate clear and specific instructions that communicate the intended task and expected outcome to an AI system.",
+          "Provide relevant context and background information so that generated responses are aligned with the user's objective.",
+          "Use constraints, roles, examples, and explicit requirements to control the scope, tone, depth, and behavior of a response.",
+          "Define structured output formats such as tables, lists, templates, schemas, and step-by-step responses to obtain more consistent results."
+        ]
+      },
+      {
+        "code": "A003.03",
+        "name": "Advanced Prompting Techniques",
+        "programme": [
+          "Apply few-shot prompting by providing representative examples that demonstrate the desired reasoning pattern, style, or output.",
+          "Decompose complex tasks into smaller and more manageable subtasks to improve reliability and reduce ambiguity.",
+          "Use structured reasoning approaches to guide models through multi-stage analysis while keeping the requested output clear and verifiable.",
+          "Apply self-critique, review, and iterative refinement techniques to identify weaknesses in an initial response and progressively improve its quality."
+        ]
+      },
+      {
+        "code": "A003.04",
+        "name": "Prompt Engineering for Workplace Productivity",
+        "programme": [
+          "Design prompts for drafting, rewriting, and improving professional emails, reports, proposals, presentations, and other workplace documents.",
+          "Use AI to prepare meeting agendas, summarize discussions, extract action items, and transform notes into structured follow-up material.",
+          "Develop prompting workflows for research, summarization, comparison, analysis, brainstorming, and routine knowledge-work activities.",
+          "Create reusable prompt templates that standardize recurring business tasks and improve consistency across everyday workflows."
+        ]
+      },
+      {
+        "code": "A003.05",
+        "name": "Prompt Engineering for Data Analysis",
+        "programme": [
+          "Construct prompts that help AI systems interpret tables, spreadsheets, structured datasets, and descriptive business information.",
+          "Extract relevant facts, categories, patterns, trends, anomalies, and relationships from structured or semi-structured data.",
+          "Generate analytical insights while clearly separating observations supported by the supplied data from assumptions or interpretations.",
+          "Request structured analytical outputs such as summaries, comparison tables, KPI explanations, recommendations, and decision-oriented reports."
+        ]
+      },
+      {
+        "code": "A003.06",
+        "name": "Prompt Engineering for Software Development",
+        "programme": [
+          "Use prompting techniques to generate code from functional requirements while specifying programming language, constraints, dependencies, and expected behavior.",
+          "Design prompts for debugging by providing error messages, execution context, relevant code, and reproducible information.",
+          "Use AI to propose unit tests, test cases, edge cases, documentation, comments, and technical explanations for software artifacts.",
+          "Apply structured prompts to code review and refactoring tasks in order to assess readability, maintainability, correctness, and potential improvements."
+        ]
+      },
+      {
+        "code": "A003.07",
+        "name": "Prompt Engineering for Research & Knowledge Work",
+        "programme": [
+          "Design prompts for reviewing literature, identifying themes, extracting research information, and comparing findings across multiple sources.",
+          "Transform documents and research material into structured representations such as evidence tables, summaries, taxonomies, and thematic syntheses.",
+          "Use iterative prompting workflows to move from broad exploration to focused analysis, synthesis, and research-oriented outputs.",
+          "Apply citation-aware prompting practices that require the model to distinguish source-supported claims from interpretation and to preserve traceability to provided material."
+        ]
+      },
+      {
+        "code": "A003.08",
+        "name": "Multimodal Prompt Engineering",
+        "programme": [
+          "Design prompts that combine textual instructions with images, documents, screenshots, diagrams, and other visual information.",
+          "Formulate questions that guide multimodal AI systems to extract, compare, interpret, summarize, or reason about information contained in different media.",
+          "Develop prompting strategies for document analysis, including requests involving tables, figures, layouts, and mixed textual-visual content.",
+          "Understand how audio and other multimodal inputs can be incorporated into AI workflows and how instructions should be adapted to the capabilities and limitations of each modality."
+        ]
+      },
+      {
+        "code": "A003.09",
+        "name": "Prompt Engineering for AI Agents & RAG",
+        "programme": [
+          "Write precise system and task instructions for AI agents that must plan actions, use tools, and complete multi-step workflows.",
+          "Design prompts for Retrieval-Augmented Generation systems so that responses remain grounded in retrieved documents and external knowledge.",
+          "Apply context-engineering principles to determine which instructions, retrieved information, history, and task state should be presented to the model.",
+          "Structure agent memory, tool-use instructions, intermediate checks, and completion criteria to improve reliability in complex workflows."
+        ]
+      },
+      {
+        "code": "A003.10",
+        "name": "Enterprise Prompt Engineering: Evaluation, Security",
+        "programme": [
+          "Evaluate prompts systematically using criteria such as accuracy, relevance, consistency, completeness, robustness, and adherence to required formats.",
+          "Identify hallucinations and unsupported outputs, and design prompting and verification strategies that reduce their impact in enterprise workflows.",
+          "Understand prompt-injection and instruction-conflict risks and apply appropriate separation, validation, and guardrail principles when working with untrusted content.",
+          "Address privacy, confidentiality, reliability, and governance requirements when prompts contain organizational or sensitive business information.",
+          "Develop reusable enterprise prompt standards, testing procedures, versioning practices, and approval processes that support safe and consistent AI adoption."
+        ]
+      },
+      {
+        "code": "A004.01",
+        "name": "AI Productivity Fundamentals",
+        "programme": [
+          "Understand how generative AI can support everyday professional activities and where it can improve speed, quality, and consistency.",
+          "Identify workplace tasks that are suitable for AI assistance, including writing, summarization, analysis, planning, research, and information organization.",
+          "Select appropriate AI tools according to the task, expected output, available information, and professional context.",
+          "Develop effective human-AI working habits that combine AI assistance with human judgment, verification, and accountability."
+        ]
+      },
+      {
+        "code": "A004.02",
+        "name": "AI for Email & Professional Communication",
+        "programme": [
+          "Use AI to draft, revise, and respond to professional emails while preserving the intended message and communication objective.",
+          "Adapt tone, style, length, level of formality, and language according to different audiences and professional situations.",
+          "Summarize email threads and conversations to identify key information, decisions, requests, deadlines, and follow-up actions.",
+          "Create reusable AI-assisted communication workflows and templates for recurring professional correspondence."
+        ]
+      },
+      {
+        "code": "A004.03",
+        "name": "AI for Documents, Reports & Presentations",
+        "programme": [
+          "Use AI to create and improve reports, proposals, executive summaries, briefs, and other professional documents.",
+          "Transform rough ideas, notes, and source materials into coherent structures with appropriate sections, arguments, and supporting information.",
+          "Generate presentation outlines, slide content, key messages, and speaker notes adapted to a specific audience and purpose.",
+          "Review AI-generated documents for clarity, consistency, accuracy, tone, structure, and overall professional quality."
+        ]
+      },
+      {
+        "code": "A004.04",
+        "name": "AI for Meetings & Team Collaboration",
+        "programme": [
+          "Use AI to prepare meeting agendas, discussion questions, briefing materials, and background information before collaborative sessions.",
+          "Transform meeting notes or transcripts into concise summaries that capture decisions, responsibilities, action items, and deadlines.",
+          "Apply AI-assisted brainstorming techniques to generate, organize, compare, and refine ideas during collaborative problem-solving.",
+          "Design workflows that automate meeting follow-ups, distribute knowledge, and help teams maintain continuity between discussions."
+        ]
+      },
+      {
+        "code": "A004.05",
+        "name": "AI for Research & Information Synthesis",
+        "programme": [
+          "Use AI to explore, organize, and structure information collected from multiple documents or professional sources.",
+          "Summarize long or complex materials while preserving the main arguments, evidence, conclusions, and important contextual details.",
+          "Compare sources, viewpoints, approaches, products, or alternatives using explicit criteria and structured analytical frameworks.",
+          "Transform complex information into research briefs, comparison matrices, executive summaries, and actionable recommendations."
+        ]
+      },
+      {
+        "code": "A004.06",
+        "name": "AI for Excel, Data Analysis & Visualization",
+        "programme": [
+          "Use AI to generate, explain, troubleshoot, and improve spreadsheet formulas for common business analysis tasks.",
+          "Support the cleaning, transformation, categorization, and exploration of business datasets using AI-assisted methods.",
+          "Identify trends, patterns, anomalies, relationships, and relevant key performance indicators while distinguishing evidence from interpretation.",
+          "Create appropriate visualizations and use AI to communicate data-driven findings through concise explanations, summaries, and decision-oriented insights."
+        ]
+      },
+      {
+        "code": "A004.07",
+        "name": "AI for Planning, Projects & Decision-Making",
+        "programme": [
+          "Transform strategic objectives and business requirements into structured project plans, milestones, tasks, responsibilities, and deliverables.",
+          "Use AI to prioritize activities and identify dependencies, risks, resource constraints, bottlenecks, and potential implementation challenges.",
+          "Compare alternatives and explore scenarios by defining decision criteria, assumptions, trade-offs, opportunities, and possible consequences.",
+          "Use structured AI-assisted analysis to support professional decision-making while retaining human responsibility for final judgments."
+        ]
+      },
+      {
+        "code": "A004.08",
+        "name": "Building Personal AI Workflows",
+        "programme": [
+          "Identify repetitive or time-consuming professional tasks that can be redesigned through systematic use of AI.",
+          "Combine prompts, reusable templates, documents, contextual information, and AI tools into repeatable workflows for specific tasks.",
+          "Create personalized AI working systems adapted to an individual's role, responsibilities, recurring activities, and preferred outputs.",
+          "Reduce manual effort while introducing verification steps, quality standards, and human review to maintain reliable and consistent results."
+        ]
+      },
+      {
+        "code": "A004.09",
+        "name": "AI Automation & No-Code Workflows",
+        "programme": [
+          "Understand the principles of AI-enabled automation and how information can move between AI systems and common business applications.",
+          "Design trigger-based workflows that initiate actions automatically when defined events, conditions, or inputs occur.",
+          "Connect AI capabilities with productivity and no-code tools to automate repetitive activities such as classification, summarization, routing, drafting, and reporting.",
+          "Develop end-to-end automation scenarios for realistic workplace processes while incorporating validation, exception handling, and human oversight where necessary."
+        ]
+      },
+      {
+        "code": "A004.10",
+        "name": "Building Your AI-Powered Workplace",
+        "programme": [
+          "Identify and prioritize high-impact opportunities for AI adoption across teams, functions, and organizational processes.",
+          "Redesign workflows around effective human-AI collaboration by determining which activities should be automated, augmented, reviewed, or retained by people.",
+          "Address privacy, responsible AI use, governance, security, adoption, and change-management considerations when introducing AI into workplace processes.",
+          "Develop an AI transformation roadmap with priorities, implementation stages, success indicators, and methods for measuring productivity gains and business impact."
+        ]
+      },
+      {
+        "code": "A005.01",
+        "name": "Statistical & Mathematical Foundations I",
+        "programme": [
+          "Build a practical foundation in descriptive statistics by summarizing datasets, examining distributions, and interpreting measures of central tendency.",
+          "Apply inferential statistical methods, including hypothesis testing, confidence intervals, and analysis of variance (ANOVA), to draw conclusions from samples.",
+          "Introduce Bayesian statistics and probabilistic modelling as approaches for representing uncertainty and updating analytical conclusions as new evidence becomes available.",
+          "Develop the ability to select and interpret statistical summaries and inferential methods according to the analytical question and characteristics of the available data."
+        ]
+      },
+      {
+        "code": "A005.02",
+        "name": "Statistical & Mathematical Foundations II",
+        "programme": [
+          "Analyze time-dependent data using time-series approaches such as ARIMA, state-space models, and spectral methods.",
+          "Apply causal inference and experimental-design principles through A/B testing, randomized controlled trials, and quasi-experimental approaches to distinguish correlation from causal effects.",
+          "Use survival analysis and reliability modelling to study time-to-event outcomes, duration, failure, and risk over time.",
+          "Apply multivariate methods, including principal component analysis, factor analysis, cluster analysis, and discriminant analysis, to explore complex relationships across multiple variables."
+        ]
+      },
+      {
+        "code": "A005.03",
+        "name": "Machine Learning & Predictive Modelling I",
+        "programme": [
+          "Build supervised learning models for regression and classification using methods such as support vector machines, random forests, and gradient boosting.",
+          "Apply unsupervised learning techniques, including clustering and dimensionality reduction, to discover structure in data without predefined labels.",
+          "Understand how deep learning architectures such as CNNs, RNNs, and Transformers can be applied to tabular and time-series analytics problems.",
+          "Compare predictive approaches according to the structure of the data, the analytical objective, and the assumptions of the modelling method."
+        ]
+      },
+      {
+        "code": "A005.04",
+        "name": "Machine Learning & Predictive Modelling II",
+        "programme": [
+          "Use AutoML and hyperparameter-optimisation approaches to automate parts of model selection and configuration.",
+          "Combine multiple predictive models through ensemble methods and model stacking to improve robustness and predictive performance.",
+          "Evaluate models using appropriate validation strategies, cross-validation procedures, and generalisation principles to reduce overfitting and obtain credible performance estimates.",
+          "Apply transfer-learning and few-shot-learning concepts when analytics tasks have limited labelled data or can benefit from knowledge learned in related domains."
+        ]
+      },
+      {
+        "code": "A005.05",
+        "name": "Big Data Engineering & Processing I",
+        "programme": [
+          "Understand distributed data processing with Hadoop MapReduce, Apache Spark, and Flink for analytical workloads that exceed the capacity of a single machine.",
+          "Design streaming and real-time analytics workflows using technologies such as Apache Kafka, Flink, and Spark Streaming.",
+          "Orchestrate repeatable data pipelines with tools such as Airflow, Prefect, and Dagster to coordinate ingestion, transformation, analysis, and downstream processing.",
+          "Relate batch, streaming, and orchestration patterns to the latency, scale, reliability, and operational requirements of analytics systems."
+        ]
+      },
+      {
+        "code": "A005.06",
+        "name": "Big Data Engineering & Processing II",
+        "programme": [
+          "Understand data lake and lakehouse architectures and the role of technologies such as Delta Lake, Apache Iceberg, and Apache Hudi in modern analytical platforms.",
+          "Compare NoSQL and NewSQL database approaches for analytical workloads with different scale, consistency, and access requirements.",
+          "Use in-memory computing concepts and columnar storage formats such as Parquet and ORC to improve analytical processing efficiency.",
+          "Design scalable analytical storage and processing architectures by matching data formats, database technologies, and compute patterns to business requirements."
+        ]
+      },
+      {
+        "code": "A005.07",
+        "name": "Data Preparation & Quality I",
+        "programme": [
+          "Clean analytical datasets by addressing missing values, inconsistent records, duplicate information, and other common data-quality problems.",
+          "Apply imputation and outlier-detection methods while considering how data-cleaning decisions can affect subsequent analysis and modelling.",
+          "Engineer and select useful features that represent relevant information for statistical and machine-learning models.",
+          "Assess data quality before modelling and document the transformations applied to preserve analytical traceability."
+        ]
+      },
+      {
+        "code": "A005.08",
+        "name": "Data Preparation & Quality II",
+        "programme": [
+          "Integrate heterogeneous data sources through data matching, schema alignment, and transformation into analytically usable structures.",
+          "Apply data profiling and metadata-management practices to understand dataset structure, provenance, completeness, and quality.",
+          "Use synthetic-data generation approaches where additional training data or privacy-preserving alternatives are required.",
+          "Understand active-learning and human-in-the-loop annotation strategies for efficiently improving labelled datasets and analytical systems."
+        ]
+      },
+      {
+        "code": "A005.09",
+        "name": "Text, Image & Multimodal Analytics I",
+        "programme": [
+          "Apply natural language processing techniques such as sentiment analysis, named-entity recognition, and topic modelling to extract information from textual data.",
+          "Understand how large language models can support text classification, generation, and other analytics tasks involving unstructured language data.",
+          "Use computer-vision approaches for business analytics scenarios such as defect detection and document image analysis.",
+          "Apply speech analytics and audio data-mining concepts to derive information from spoken and acoustic data."
+        ]
+      },
+      {
+        "code": "A005.10",
+        "name": "Text, Image & Multimodal Analytics II",
+        "programme": [
+          "Combine text, image, and structured information through multimodal data-fusion approaches to support richer analytical tasks.",
+          "Use knowledge graphs and semantic analytics to represent entities, relationships, and contextual knowledge across heterogeneous information sources.",
+          "Design analytical workflows that integrate structured and unstructured enterprise data rather than treating each modality in isolation.",
+          "Assess the opportunities and technical challenges involved in combining multiple modalities within practical analytics systems."
+        ]
+      },
+      {
+        "code": "A005.11",
+        "name": "Data Visualisation & Communication I",
+        "programme": [
+          "Perform exploratory data analysis and use visual analytics to investigate distributions, relationships, patterns, and anomalies before formal modelling.",
+          "Design interactive dashboards that organize key metrics and analytical information around a clear decision-making objective.",
+          "Use data storytelling principles to connect visual evidence with a coherent analytical narrative for business and technical audiences.",
+          "Apply geospatial analytics and cartographic visualisation to communicate patterns associated with locations, regions, and spatial relationships."
+        ]
+      },
+      {
+        "code": "A005.12",
+        "name": "Data Visualisation & Communication II",
+        "programme": [
+          "Visualize networks and graphs to communicate relationships, connectivity, and structural patterns within complex systems.",
+          "Represent uncertainty and model confidence in ways that help audiences interpret analytical results without overstating precision.",
+          "Use narrative analytics to transform analytical findings into explanations that connect evidence, context, and implications.",
+          "Understand automated report generation as a method for producing repeatable analytical summaries while maintaining human review of meaning and accuracy."
+        ]
+      },
+      {
+        "code": "A005.13",
+        "name": "Ethics, Privacy & Responsible Analytics I",
+        "programme": [
+          "Identify algorithmic fairness problems and assess how bias can enter datasets, analytical methods, and model outputs.",
+          "Apply explainability and interpretability concepts, including approaches such as SHAP, LIME, and attention-based analysis, to communicate how models reach predictions.",
+          "Understand privacy-preserving analytics techniques such as differential privacy, federated learning, and secure computation.",
+          "Balance analytical performance with fairness, transparency, and privacy requirements when designing data-driven systems."
+        ]
+      },
+      {
+        "code": "A005.14",
+        "name": "Ethics, Privacy & Responsible Analytics II",
+        "programme": [
+          "Understand how GDPR, CCPA, and related regulatory requirements affect the collection, processing, storage, and use of data in analytical pipelines.",
+          "Build auditability and reproducibility into analytics workflows through documentation, traceability, repeatable procedures, and scientific-integrity practices.",
+          "Assess the environmental cost of large-scale analytics, including the compute and energy implications of model training and inference.",
+          "Integrate governance, compliance, reproducibility, and sustainability considerations into responsible analytics practice."
+        ]
+      },
+      {
+        "code": "A005.15",
+        "name": "Domain-Specific Analytics I",
+        "programme": [
+          "Explore healthcare and clinical analytics applications involving electronic health records, genomics, and epidemiological data.",
+          "Apply analytics concepts to finance through risk modelling, fraud detection, and algorithmic trading use cases.",
+          "Understand marketing analytics through customer segmentation, attribution modelling, and customer lifetime value analysis.",
+          "Use domain context to determine appropriate data, methods, evaluation criteria, and interpretations for applied analytics projects."
+        ]
+      },
+      {
+        "code": "A005.16",
+        "name": "Domain-Specific Analytics II",
+        "programme": [
+          "Apply analytics to supply-chain and operations problems such as demand forecasting and optimisation.",
+          "Explore HR and people analytics applications including talent acquisition, attrition prediction, and diversity, equity, and inclusion metrics.",
+          "Understand sports analytics and performance modelling as examples of data-driven evaluation and prediction in specialized domains.",
+          "Apply environmental and climate data analytics to investigate complex patterns, trends, and decision-support questions in environmental systems."
+        ]
+      },
+      {
+        "code": "A005.17",
+        "name": "Organisational & Sociotechnical Dimensions I",
+        "programme": [
+          "Develop data literacy as an organisational capability that enables a broader workforce to understand, question, and use analytical information.",
+          "Examine the democratisation of analytics and how self-service tools can expand access to data-driven decision-making beyond specialist teams.",
+          "Understand analytics adoption and change-management challenges through perspectives such as the Technology Acceptance Model and Technology-Organization-Environment frameworks.",
+          "Explore how data-driven culture and organisational learning influence whether analytics capabilities produce sustained business value."
+        ]
+      },
+      {
+        "code": "A005.18",
+        "name": "Organisational & Sociotechnical Dimensions II",
+        "programme": [
+          "Understand DataOps and the operationalisation of analytics pipelines, including their relationship with MLOps and LLMOps practices.",
+          "Use analytics maturity models, including approaches associated with Gartner and TDWI, to assess organisational capabilities and identify development priorities.",
+          "Examine the role of the Chief Data Officer and the importance of data strategy in aligning analytics investments with organisational objectives.",
+          "Connect technology, people, governance, operating models, and strategy when planning the long-term development of enterprise analytics capabilities."
+        ]
+      },
+      {
+        "code": "A006.01",
+        "name": "AI Essentials for Leaders",
+        "programme": [
+          "Understand artificial intelligence, generative AI, large language models, AI agents, and the core technologies currently reshaping business and organizational work.",
+          "Distinguish the capabilities and limitations of modern AI systems while recognizing common misconceptions that can lead to unrealistic expectations or poor strategic decisions.",
+          "Examine how AI is transforming industries, organizational structures, products, services, and competitive dynamics.",
+          "Develop the vocabulary and conceptual foundations required to confidently participate in and lead AI-related discussions, investments, and decisions."
+        ]
+      },
+      {
+        "code": "A006.02",
+        "name": "AI Strategy & Competitive Advantage",
+        "programme": [
+          "Connect AI opportunities with business strategy, organizational priorities, and long-term strategic objectives.",
+          "Identify where AI can generate competitive differentiation, operational efficiency, revenue growth, improved customer value, or entirely new business models.",
+          "Analyze competitors, market developments, and industry transformation through an AI-focused strategic lens.",
+          "Build the foundations of a practical AI strategy that aligns technology initiatives with measurable business objectives and organizational capabilities."
+        ]
+      },
+      {
+        "code": "A006.03",
+        "name": "Identifying & Prioritizing AI Use Cases",
+        "programme": [
+          "Discover high-value AI opportunities across business functions, products, customer journeys, and operational processes.",
+          "Evaluate potential AI use cases according to expected value, technical feasibility, implementation cost, organizational readiness, risk, and strategic relevance.",
+          "Distinguish short-term quick wins from larger strategic AI investments that require longer implementation horizons and organizational change.",
+          "Build, compare, and prioritize an actionable portfolio of AI initiatives using transparent business and implementation criteria."
+        ]
+      },
+      {
+        "code": "A006.04",
+        "name": "Leading AI Transformation",
+        "programme": [
+          "Understand how AI transformation differs from traditional digital transformation and why AI introduces new organizational, technological, and governance challenges.",
+          "Redesign processes, roles, responsibilities, and ways of working around effective collaboration between employees and AI systems.",
+          "Identify sources of organizational resistance and develop leadership approaches that encourage experimentation, trust, adoption, and responsible use across teams.",
+          "Develop a structured transformation roadmap that moves the organization from isolated AI experiments toward scalable and organization-wide adoption."
+        ]
+      },
+      {
+        "code": "A006.05",
+        "name": "AI-Driven Decision Making",
+        "programme": [
+          "Use AI to support strategic analysis, forecasting, scenario exploration, information synthesis, and executive decision-making.",
+          "Combine human judgment and domain expertise with AI-generated insights while avoiding inappropriate dependence on automated recommendations.",
+          "Recognize uncertainty, bias, hallucinations, incomplete information, and other limitations that can affect the reliability of AI-supported decisions.",
+          "Design effective executive workflows in which AI assists analysis and exploration while accountability and final decision authority remain clearly defined."
+        ]
+      },
+      {
+        "code": "A006.06",
+        "name": "Leading People in the Age of AI",
+        "programme": [
+          "Understand how AI is changing jobs, professional skills, responsibilities, team structures, and the distribution of work across organizations.",
+          "Identify opportunities to augment employee capabilities with AI rather than approaching AI adoption primarily as workforce replacement.",
+          "Develop reskilling and upskilling strategies that prepare employees and managers to work effectively in increasingly AI-enabled environments.",
+          "Create an organizational culture in which employees can experiment with, adopt, question, and responsibly collaborate with AI systems."
+        ]
+      },
+      {
+        "code": "A006.07",
+        "name": "Responsible AI, Ethics & Governance",
+        "programme": [
+          "Understand the major ethical, legal, privacy, security, operational, and reputational risks associated with organizational AI adoption.",
+          "Examine bias, fairness, transparency, accountability, explainability, human oversight, and other principles associated with responsible AI.",
+          "Define governance structures, decision rights, responsibilities, policies, approval mechanisms, and escalation processes for AI initiatives.",
+          "Balance innovation and experimentation with appropriate organizational controls so that AI systems can be deployed responsibly and sustainably."
+        ]
+      },
+      {
+        "code": "A006.08",
+        "name": "AI Investment, ROI & Business Value",
+        "programme": [
+          "Evaluate the financial, operational, and strategic value of proposed AI initiatives before committing organizational resources.",
+          "Understand the full cost structure of AI adoption, including technology, infrastructure, data, talent, integration, change management, governance, maintenance, and ongoing operations.",
+          "Define meaningful KPIs for productivity, revenue growth, cost reduction, quality, customer experience, risk reduction, and other business outcomes.",
+          "Build compelling AI business cases and establish measurement approaches that evaluate return on investment beyond the initial deployment stage."
+        ]
+      },
+      {
+        "code": "A006.09",
+        "name": "Building an AI-Ready Organization",
+        "programme": [
+          "Assess organizational readiness across strategy, leadership, people, processes, technology, data, governance, culture, and operating capabilities.",
+          "Define the roles, competencies, organizational capabilities, and decision structures required to scale AI successfully.",
+          "Establish effective collaboration between executive leadership, business functions, IT, data teams, legal, compliance, HR, and other relevant stakeholders.",
+          "Design an operating model that supports sustainable AI innovation, responsible experimentation, governance, knowledge sharing, and organization-wide scaling."
+        ]
+      },
+      {
+        "code": "A006.10",
+        "name": "Executive AI Roadmap & Transformation Lab",
+        "programme": [
+          "Integrate strategy, prioritized use cases, people, governance, technology, data, and investment decisions into a coherent executive AI roadmap.",
+          "Prioritize AI initiatives across short-, medium-, and long-term horizons while considering dependencies, organizational readiness, expected value, and implementation complexity.",
+          "Define ownership, resources, KPIs, risks, governance requirements, implementation milestones, and success criteria for priority initiatives.",
+          "Produce a practical AI transformation plan that leaders can take back to their organization and use to guide execution, monitoring, and continuous improvement."
+        ]
+      },
+      {
+        "code": "A007.01",
+        "name": "AI Fundamentals for Marketing",
+        "programme": [
+          "Understand how generative AI and predictive AI are transforming modern marketing practices, capabilities, and customer engagement.",
+          "Explore major AI applications across the customer journey and marketing funnel, from awareness and acquisition to conversion, retention, and loyalty.",
+          "Identify marketing activities that can be augmented or automated with AI while determining where human creativity, judgment, and oversight remain essential.",
+          "Build the conceptual and practical foundations required to integrate AI responsibly into everyday marketing activities."
+        ]
+      },
+      {
+        "code": "A007.02",
+        "name": "AI for Marketing Strategy & Planning",
+        "programme": [
+          "Use AI to analyze markets, competitors, emerging trends, customer expectations, and changing business conditions.",
+          "Develop and refine customer personas, positioning statements, value propositions, marketing objectives, and strategic messaging with AI assistance.",
+          "Generate, compare, and evaluate campaign concepts, market-entry ideas, and go-to-market strategies using structured AI-supported analysis.",
+          "Translate business objectives into coherent AI-assisted marketing plans with priorities, audiences, channels, activities, and measurable outcomes."
+        ]
+      },
+      {
+        "code": "A007.03",
+        "name": "AI for Content Marketing & Copywriting",
+        "programme": [
+          "Use AI to develop blogs, landing pages, newsletters, product descriptions, campaign copy, and other marketing content from structured briefs.",
+          "Adapt content to different customer segments, communication channels, tones of voice, stages of the customer journey, and organizational brand guidelines.",
+          "Repurpose existing material efficiently across formats and channels while preserving the original message and strategic intent.",
+          "Establish human review and editorial workflows that protect originality, factual accuracy, quality, legal compliance, and brand consistency."
+        ]
+      },
+      {
+        "code": "A007.04",
+        "name": "AI for Social Media Marketing",
+        "programme": [
+          "Generate platform-specific social media concepts, captions, hooks, calls to action, campaign ideas, and creative variations with AI.",
+          "Build AI-assisted content calendars and publishing strategies aligned with campaign objectives, audience behavior, and channel requirements.",
+          "Analyze audience engagement, social conversations, feedback, and emerging trends to identify opportunities for relevant and timely communication.",
+          "Use AI-supported insights to strengthen community engagement and continuously improve social media performance."
+        ]
+      },
+      {
+        "code": "A007.05",
+        "name": "AI for SEO & Digital Visibility",
+        "programme": [
+          "Use AI to support keyword research, search-intent analysis, topic discovery, content clustering, and SEO-oriented editorial planning.",
+          "Create and optimize search-focused content while maintaining usefulness, originality, relevance, readability, and alignment with audience needs.",
+          "Analyze competitors, content gaps, search themes, and opportunities that can contribute to sustainable organic visibility and growth.",
+          "Understand how generative and AI-powered search experiences are changing traditional SEO practices, content discovery, and online visibility."
+        ]
+      },
+      {
+        "code": "A007.06",
+        "name": "AI for Advertising & Campaign Optimization",
+        "programme": [
+          "Use AI to develop campaign concepts, advertising copy, creative variations, audience hypotheses, and messaging alternatives across paid channels.",
+          "Apply AI to support audience targeting, segmentation, experimentation, and A/B testing while maintaining appropriate human oversight.",
+          "Analyze campaign results to identify performance patterns, weaknesses, opportunities, and potential optimization actions.",
+          "Connect AI-generated insights with marketing KPIs and business objectives to improve advertising efficiency and campaign effectiveness."
+        ]
+      },
+      {
+        "code": "A007.07",
+        "name": "AI for Customer Insights & Personalization",
+        "programme": [
+          "Use AI to analyze customer data, reviews, survey responses, feedback, conversations, and behavioral signals in order to identify meaningful insights.",
+          "Develop customer segments and uncover recurring needs, preferences, motivations, frustrations, and pain points.",
+          "Design personalized messages, offers, recommendations, content, and customer experiences adapted to relevant customer contexts and lifecycle stages.",
+          "Balance personalization opportunities with privacy, transparency, consent, fairness, and responsible use of customer data."
+        ]
+      },
+      {
+        "code": "A007.08",
+        "name": "AI for Marketing Analytics & Performance",
+        "programme": [
+          "Use AI to interpret marketing datasets, dashboards, funnels, channel metrics, and campaign results through natural-language analytical workflows.",
+          "Identify trends, anomalies, conversion opportunities, performance drivers, and potential causes of changes in marketing outcomes.",
+          "Generate actionable insights from complex marketing information while distinguishing observed evidence from assumptions and AI-generated interpretation.",
+          "Transform analytical findings into clear recommendations and decision-oriented narratives for marketing teams, managers, and executive stakeholders."
+        ]
+      },
+      {
+        "code": "A007.09",
+        "name": "AI Marketing Automation & Customer Journeys",
+        "programme": [
+          "Design AI-powered workflows across email marketing, CRM systems, lead nurturing, customer engagement, and lifecycle management.",
+          "Automate repetitive marketing activities while defining appropriate checkpoints for human review, approval, exception handling, and quality control.",
+          "Build personalized customer journeys that adapt communications and actions according to behaviors, segments, interactions, and lifecycle stages.",
+          "Connect AI capabilities, automation tools, customer data, and marketing platforms into scalable end-to-end workflows."
+        ]
+      },
+      {
+        "code": "A007.10",
+        "name": "Building an AI-Powered Marketing Strategy",
+        "programme": [
+          "Integrate AI strategically across content marketing, social media, SEO, advertising, customer insights, analytics, personalization, and automation.",
+          "Identify, evaluate, and prioritize high-value AI marketing use cases according to expected impact, feasibility, cost, risk, and organizational readiness.",
+          "Define KPIs, governance mechanisms, workflows, responsibilities, review processes, and measurement frameworks for responsible AI-enabled marketing.",
+          "Develop a complete AI marketing transformation roadmap focused on sustainable growth, operational efficiency, customer value, and measurable return on investment."
+        ]
+      },
+      {
+        "code": "A008.01",
+        "name": "AI Fundamentals for Finance",
+        "programme": [
+          "Understand how artificial intelligence, machine learning, and generative AI are transforming modern finance and changing the way financial professionals analyze information, execute processes, and support business decisions.",
+          "Explore practical AI applications across accounting, Financial Planning & Analysis (FP&A), banking, investment activities, and corporate finance.",
+          "Identify financial activities that can be augmented or automated with AI while recognizing tasks that continue to require professional judgment, validation, and accountability.",
+          "Understand the opportunities, limitations, and risks associated with applying AI to financial information, particularly where accuracy, confidentiality, traceability, and decision quality are critical."
+        ]
+      },
+      {
+        "code": "A008.02",
+        "name": "AI for Financial Analysis & Reporting",
+        "programme": [
+          "Use AI to support the analysis of income statements, balance sheets, cash-flow statements, management accounts, and other financial reports.",
+          "Extract relevant financial indicators and use AI-assisted analysis to identify trends, relationships, anomalies, and significant changes in financial performance.",
+          "Transform complex financial data into concise management summaries, financial narratives, explanations, and performance commentaries.",
+          "Communicate financial information through clear, decision-oriented insights adapted to executives, managers, investors, and other organizational stakeholders."
+        ]
+      },
+      {
+        "code": "A008.03",
+        "name": "AI for Budgeting & Forecasting",
+        "programme": [
+          "Apply AI-assisted methods to budgeting, revenue forecasting, expense planning, cash-flow projections, and recurring financial planning activities.",
+          "Build and compare financial scenarios by combining historical information, operational drivers, assumptions, and alternative business conditions.",
+          "Identify and explain deviations between actual and expected financial performance and use AI to support variance investigation.",
+          "Use AI-assisted forecasting outputs as decision-support inputs while preserving human validation of assumptions, uncertainty, and business context."
+        ]
+      },
+      {
+        "code": "A008.04",
+        "name": "AI for Accounting & Financial Operations",
+        "programme": [
+          "Use AI to streamline invoice processing, expense management, reconciliations, transaction classification, and other repetitive accounting and financial operations.",
+          "Extract structured financial information from invoices, receipts, reports, contracts, and other document-based or unstructured sources.",
+          "Identify opportunities for automation across routine finance processes and determine where AI can reduce manual work, delays, and operational friction.",
+          "Design human-in-the-loop workflows that maintain accuracy, traceability, approval requirements, segregation of duties, and appropriate financial controls."
+        ]
+      },
+      {
+        "code": "A008.05",
+        "name": "AI for Excel & Financial Modeling",
+        "programme": [
+          "Use AI to generate, explain, troubleshoot, validate, and optimize spreadsheet formulas and components of financial models.",
+          "Accelerate data cleaning, transformation, calculation, reconciliation, and exploratory financial analysis within spreadsheet-based workflows.",
+          "Develop scenario, sensitivity, profitability, break-even, and cash-flow analyses more efficiently with AI assistance.",
+          "Apply AI while maintaining explicit assumptions, transparent calculation logic, model documentation, and the auditability required for professional financial models."
+        ]
+      },
+      {
+        "code": "A008.06",
+        "name": "AI for Risk Management & Fraud Detection",
+        "programme": [
+          "Explore how AI can identify unusual transactions, behavioral patterns, anomalies, and indicators associated with potential financial fraud.",
+          "Apply AI-assisted approaches to credit, operational, liquidity, and broader financial risk analysis using relevant financial and business information.",
+          "Use scenario analysis, monitoring techniques, and early-warning indicators to identify and investigate emerging financial risks.",
+          "Understand why explainability, validation, governance, and human oversight are particularly important when AI contributes to high-stakes financial or risk-related decisions."
+        ]
+      },
+      {
+        "code": "A008.07",
+        "name": "AI for Investment & Market Analysis",
+        "programme": [
+          "Use AI to organize and analyze information about companies, industries, financial performance, and relevant market developments.",
+          "Extract and synthesize insights from earnings reports, financial disclosures, market news, and large volumes of investment-related information.",
+          "Compare companies, financial indicators, market scenarios, and investment alternatives using structured analytical criteria.",
+          "Recognize the uncertainty, hallucination risks, data limitations, and forecasting limitations associated with AI-generated investment analysis and predictions."
+        ]
+      },
+      {
+        "code": "A008.08",
+        "name": "AI for FP&A & Strategic Decision-Making",
+        "programme": [
+          "Integrate AI into Financial Planning & Analysis workflows to strengthen business planning, performance management, and strategic decision support.",
+          "Analyze profitability, margins, cost structures, operational drivers, and financial performance across products, services, departments, or business units.",
+          "Develop what-if analyses and structured scenarios to evaluate the potential financial consequences of strategic choices and changing business conditions.",
+          "Translate financial analysis into concise, actionable recommendations that support senior management in evaluating priorities, trade-offs, and strategic options."
+        ]
+      },
+      {
+        "code": "A008.09",
+        "name": "AI Automation for Finance Teams",
+        "programme": [
+          "Design AI-powered workflows that connect spreadsheets, financial systems, business documents, and other organizational applications.",
+          "Automate recurring reporting, information extraction, reconciliation, monitoring, classification, and analytical activities where automation can deliver reliable efficiency gains.",
+          "Introduce AI agents and workflow automation into appropriate finance processes while clearly defining their scope, permissions, and expected actions.",
+          "Build scalable automation workflows that preserve approvals, controls, traceability, auditability, exception handling, and meaningful human oversight."
+        ]
+      },
+      {
+        "code": "A008.10",
+        "name": "AI Governance & Transformation for Finance",
+        "programme": [
+          "Develop a structured roadmap for integrating AI across finance functions while protecting sensitive financial, customer, employee, and organizational information.",
+          "Address governance, regulatory compliance, model risk, privacy, cybersecurity, explainability, accountability, and control requirements associated with financial AI use.",
+          "Define KPIs for measuring productivity improvement, cost reduction, processing speed, analytical quality, accuracy, risk reduction, and broader business value.",
+          "Design a responsible AI operating model that defines ownership, policies, controls, capabilities, and transformation priorities for scaling AI across the finance function."
+        ]
+      },
+      {
+        "code": "A009.01",
+        "name": "AI Fundamentals for Human Resources",
+        "programme": [
+          "Understand how artificial intelligence and generative AI are transforming modern human resources and changing how HR teams deliver services, support employees, and make workforce decisions.",
+          "Explore practical AI applications across recruitment, talent management, learning and development, employee engagement, workforce planning, and HR operations.",
+          "Identify HR activities that can be augmented or automated with AI while recognizing where empathy, professional judgment, and human accountability remain essential.",
+          "Understand the opportunities, limitations, organizational implications, and human consequences associated with adopting AI across the employee lifecycle."
+        ]
+      },
+      {
+        "code": "A009.02",
+        "name": "AI for Recruitment & Talent Acquisition",
+        "programme": [
+          "Use AI to develop job descriptions, sourcing strategies, interview questions, candidate communications, and other recruitment materials aligned with role requirements.",
+          "Explore AI-assisted candidate screening, matching, sourcing, and recruitment workflows while understanding the appropriate boundaries of automated support.",
+          "Improve consistency, efficiency, and information management throughout the hiring process without removing meaningful recruiter and hiring-manager judgment.",
+          "Recognize and mitigate risks related to bias, discrimination, unfair screening, opacity, and inappropriate automated decision-making in recruitment."
+        ]
+      },
+      {
+        "code": "A009.03",
+        "name": "AI for Employee Onboarding & Experience",
+        "programme": [
+          "Design personalized onboarding journeys supported by AI assistants, adaptive guidance, and intelligent content tailored to employee roles and needs.",
+          "Automate repetitive employee questions, documentation requests, administrative interactions, and routine onboarding communications where appropriate.",
+          "Use AI to improve employee access to organizational knowledge, policies, procedures, benefits information, and HR services.",
+          "Create more responsive and personalized employee experiences across onboarding and the broader employment lifecycle while maintaining appropriate human support."
+        ]
+      },
+      {
+        "code": "A009.04",
+        "name": "AI for Learning, Training & Skills Development",
+        "programme": [
+          "Use AI-assisted analysis to identify current skill gaps, emerging capability requirements, and development priorities across individuals, teams, and the organization.",
+          "Create personalized learning paths, training materials, assessments, exercises, and learning activities adapted to different roles and competency levels.",
+          "Recommend relevant development opportunities based on employee roles, existing skills, career objectives, and evolving organizational requirements.",
+          "Build continuous learning and reskilling strategies that prepare employees for changing responsibilities and AI-driven workplace transformation."
+        ]
+      },
+      {
+        "code": "A009.05",
+        "name": "AI for Performance & Talent Management",
+        "programme": [
+          "Use AI to support goal setting, performance-review preparation, competency analysis, feedback organization, and employee development planning.",
+          "Analyze relevant performance information to identify strengths, development needs, recurring patterns, and potential talent opportunities.",
+          "Support managers with more structured, evidence-informed preparation for performance and development conversations while avoiding automated judgments about employees.",
+          "Maintain meaningful human judgment, contextual interpretation, transparency, and managerial accountability whenever AI contributes to employee-related decisions."
+        ]
+      },
+      {
+        "code": "A009.06",
+        "name": "AI for Employee Engagement & People Analytics",
+        "programme": [
+          "Use AI to analyze employee surveys, qualitative feedback, workforce information, and other organizational signals to better understand engagement and employee experience.",
+          "Identify patterns related to satisfaction, collaboration, organizational sentiment, retention, workplace concerns, and other relevant people indicators.",
+          "Transform HR and workforce data into meaningful dashboards, summaries, insights, and recommendations for HR and organizational leaders.",
+          "Apply people analytics responsibly by protecting employee privacy, confidentiality, data minimization, and appropriate limits on workforce monitoring."
+        ]
+      },
+      {
+        "code": "A009.07",
+        "name": "AI for Workforce Planning & Skills Intelligence",
+        "programme": [
+          "Use AI to analyze workforce capacity, skills inventories, organizational roles, talent supply, and future capability requirements.",
+          "Identify emerging skill gaps and examine how automation and AI augmentation may change existing jobs, tasks, and competency requirements.",
+          "Support headcount planning, succession, internal mobility, workforce development, and reskilling decisions with structured data-driven insights.",
+          "Develop workforce scenarios aligned with future organizational strategy, expected technological change, and evolving talent requirements."
+        ]
+      },
+      {
+        "code": "A009.08",
+        "name": "AI for HR Productivity & Automation",
+        "programme": [
+          "Automate repetitive HR activities such as documentation, employee requests, reporting, internal communications, information classification, and routine administrative work.",
+          "Design AI-assisted workflows that connect HR systems, organizational documents, knowledge sources, and workplace applications.",
+          "Build reusable HR assistants and workflows that support common employee and manager needs while providing consistent access to approved information.",
+          "Reduce administrative workload while preserving human review, exception handling, accountability, data protection, and appropriate escalation mechanisms."
+        ]
+      },
+      {
+        "code": "A009.09",
+        "name": "Responsible AI, Ethics & Governance in HR",
+        "programme": [
+          "Understand bias, fairness, transparency, privacy, explainability, accountability, and human oversight requirements in AI-supported HR processes.",
+          "Identify high-risk AI applications involving recruitment, employee evaluation, promotion, workforce monitoring, disciplinary processes, and other consequential employment decisions.",
+          "Establish governance principles, decision rights, review procedures, documentation requirements, and human oversight mechanisms for responsible AI use in HR.",
+          "Balance innovation and efficiency with employee rights, organizational trust, regulatory requirements, ethical responsibilities, and the organization's values."
+        ]
+      },
+      {
+        "code": "A009.10",
+        "name": "Building an AI-Powered HR Strategy",
+        "programme": [
+          "Identify and prioritize high-value AI opportunities across recruitment, onboarding, learning, performance, engagement, workforce planning, and HR operations.",
+          "Integrate AI initiatives across the complete employee lifecycle while ensuring that technology supports rather than undermines human-centered HR practices.",
+          "Define adoption plans, governance structures, responsibilities, KPIs, implementation priorities, and success measures for AI-enabled HR transformation.",
+          "Develop a practical AI transformation roadmap for building a more strategic, efficient, data-informed, responsible, and human-centered HR function."
+        ]
+      },
+      {
+        "code": "A010.01",
+        "name": "AI Fundamentals for Education",
+        "programme": [
+          "Understand artificial intelligence, generative AI, large language models, and their evolving role across modern educational environments.",
+          "Explore practical opportunities for AI across teaching, learning, assessment, student support, research, and academic administration.",
+          "Identify educational activities that can be enhanced through AI while recognizing where educator expertise, pedagogical judgment, and human interaction remain essential.",
+          "Understand the capabilities, limitations, risks, and principles of responsible AI use in schools, universities, training organizations, and other learning environments."
+        ]
+      },
+      {
+        "code": "A010.02",
+        "name": "AI for Lesson & Course Design",
+        "programme": [
+          "Use AI to develop learning objectives, lesson plans, course structures, teaching sequences, and instructional materials aligned with defined educational goals.",
+          "Align AI-generated learning content with curriculum requirements, competency frameworks, assessment expectations, and intended learning outcomes.",
+          "Create differentiated activities, explanations, exercises, and learning resources adapted to different learner levels, abilities, and educational needs.",
+          "Accelerate course preparation and instructional design while maintaining pedagogical coherence, content quality, and meaningful instructor oversight."
+        ]
+      },
+      {
+        "code": "A010.03",
+        "name": "AI for Teaching & Classroom Engagement",
+        "programme": [
+          "Integrate AI appropriately into lectures, classroom activities, discussions, workshops, and collaborative learning experiences.",
+          "Generate examples, explanations, case studies, simulations, discussion prompts, and interactive exercises that reinforce specific learning objectives.",
+          "Use AI to explain difficult concepts through alternative representations, examples, analogies, and levels of complexity adapted to different learners.",
+          "Design engaging human-AI learning experiences that encourage active participation, questioning, reflection, collaboration, and critical thinking."
+        ]
+      },
+      {
+        "code": "A010.04",
+        "name": "AI for Personalized & Adaptive Learning",
+        "programme": [
+          "Use AI to personalize educational content and learning support according to learner knowledge, progress, objectives, performance, and individual needs.",
+          "Create differentiated learning pathways, remediation activities, enrichment opportunities, and targeted support for learners with different competency profiles.",
+          "Explore AI tutors, adaptive learning systems, personalized recommendations, and feedback mechanisms that can support individualized learning experiences.",
+          "Balance personalization with learner autonomy, fairness, transparency, accessibility, data protection, and appropriate teacher supervision."
+        ]
+      },
+      {
+        "code": "A010.05",
+        "name": "AI for Assessment & Feedback",
+        "programme": [
+          "Use AI to support the creation of quizzes, assignments, rubrics, examinations, formative assessments, and other evaluation activities aligned with learning outcomes.",
+          "Generate personalized, constructive, and actionable feedback that helps learners understand their performance and identify concrete areas for improvement.",
+          "Analyze student responses and learning evidence to identify misconceptions, knowledge gaps, recurring difficulties, and patterns of learning progress.",
+          "Maintain fairness, reliability, transparency, assessment validity, and meaningful educator oversight whenever AI contributes to evaluation or feedback."
+        ]
+      },
+      {
+        "code": "A010.06",
+        "name": "AI for Educational Content Creation",
+        "programme": [
+          "Create educational texts, presentations, exercises, case studies, visual materials, examples, and multimedia learning resources with AI assistance.",
+          "Adapt existing educational materials for different ages, competency levels, languages, accessibility requirements, and learning contexts.",
+          "Transform complex or technical information into accessible, structured, and engaging educational content without losing essential meaning.",
+          "Evaluate AI-generated educational materials for factual accuracy, quality, inclusiveness, accessibility, bias, copyright considerations, and pedagogical relevance."
+        ]
+      },
+      {
+        "code": "A010.07",
+        "name": "AI for Research & Academic Productivity",
+        "programme": [
+          "Use AI to support literature exploration, academic reading, information organization, research planning, and knowledge synthesis.",
+          "Summarize and compare scholarly materials while identifying recurring themes, methodological differences, arguments, findings, limitations, and potential research gaps.",
+          "Improve academic workflows involving writing support, data exploration, note organization, document analysis, and research knowledge management.",
+          "Apply responsible practices for verification, attribution, citation awareness, confidentiality, and academic integrity when using AI in research activities."
+        ]
+      },
+      {
+        "code": "A010.08",
+        "name": "AI for Student Support & Educational Administration",
+        "programme": [
+          "Use AI to improve student guidance, frequently asked questions, academic support, service navigation, and access to institutional information.",
+          "Automate appropriate repetitive administrative activities involving communication, scheduling, documentation, information retrieval, and routine service requests.",
+          "Design AI assistants that help students, faculty, and staff access approved institutional knowledge and services more efficiently.",
+          "Improve operational efficiency while maintaining privacy, accessibility, information accuracy, escalation mechanisms, and meaningful human support for complex or sensitive situations."
+        ]
+      },
+      {
+        "code": "A010.09",
+        "name": "Academic Integrity, Ethics & Responsible AI",
+        "programme": [
+          "Address academic and ethical challenges associated with plagiarism, AI-generated assignments, hallucinations, bias, privacy, copyright, authorship, and responsible AI use.",
+          "Redesign assessment approaches for educational environments in which learners have routine access to generative AI and other intelligent tools.",
+          "Develop transparent institutional or course-level policies that define acceptable, restricted, and unacceptable uses of AI in teaching, learning, assessment, and research.",
+          "Promote AI literacy, verification, critical thinking, transparency, responsible authorship, and sound academic practices among educators and learners."
+        ]
+      },
+      {
+        "code": "A010.10",
+        "name": "Building an AI-Powered Education Strategy",
+        "programme": [
+          "Identify and prioritize high-impact AI opportunities across teaching, learning, assessment, research, student services, and educational administration.",
+          "Evaluate institutional readiness across leadership, people, skills, technology, data, policies, governance, infrastructure, and pedagogical practices.",
+          "Define governance structures, professional development, adoption mechanisms, evaluation methods, responsibilities, and success frameworks for educational AI initiatives.",
+          "Develop a practical roadmap for responsible, inclusive, measurable, and sustainable AI transformation across an educational institution."
+        ]
+      },
+      {
+        "code": "A011.01",
+        "name": "AI Fundamentals for Developers",
+        "programme": [
+          "Understand generative AI, large language models, tokens, embeddings, context windows, and the architectural concepts that underpin modern AI-powered software systems.",
+          "Explore how AI models are integrated into software applications through APIs and SDKs, and understand the role of model endpoints, requests, responses, and application-side orchestration.",
+          "Evaluate the strengths and limitations of AI-generated code, including correctness, maintainability, security, hallucination risks, and the need for developer verification.",
+          "Build the technical foundation required to design, develop, and evaluate AI-powered applications within modern software engineering environments."
+        ]
+      },
+      {
+        "code": "A011.02",
+        "name": "AI-Assisted Coding & Developer Productivity",
+        "programme": [
+          "Use AI coding assistants to generate, complete, explain, refactor, document, and improve code across common software development tasks.",
+          "Transform requirements, user stories, and natural-language specifications into implementation plans, technical components, and initial code structures.",
+          "Accelerate repetitive development activities while applying appropriate review practices to preserve correctness, readability, maintainability, and engineering quality.",
+          "Develop effective AI-assisted workflows across requirements analysis, implementation, documentation, testing, review, maintenance, and other stages of the software development lifecycle."
+        ]
+      },
+      {
+        "code": "A011.03",
+        "name": "Prompt & Context Engineering for Developers",
+        "programme": [
+          "Design reliable prompts, system instructions, and application-level directives that clearly define the expected behavior of AI-powered software components.",
+          "Apply structured prompting, examples, constraints, role definitions, and output schemas to improve consistency and control model responses.",
+          "Manage context effectively by combining application data, conversation history, retrieved information, user state, and external knowledge without unnecessarily consuming the context window.",
+          "Create reusable prompt and context-engineering patterns suitable for production applications, including versioning, testing, fallback behavior, and structured response handling."
+        ]
+      },
+      {
+        "code": "A011.04",
+        "name": "AI for Debugging, Testing & Code Quality",
+        "programme": [
+          "Use AI to identify potential defects, interpret failures, explain unexpected behavior, and propose targeted corrections based on code and execution context.",
+          "Generate unit, integration, regression, boundary, and edge-case tests that strengthen software coverage and help expose failure conditions.",
+          "Analyze logs, stack traces, error messages, runtime behavior, and related technical evidence to accelerate troubleshooting and root-cause investigation.",
+          "Integrate AI-assisted debugging, testing, code review, and quality analysis into engineering workflows while preserving developer validation and reliable quality controls."
+        ]
+      },
+      {
+        "code": "A011.05",
+        "name": "Building Applications with LLM APIs",
+        "programme": [
+          "Integrate large language models into web, mobile, backend, and service-oriented applications using appropriate APIs, SDKs, and application architectures.",
+          "Implement structured outputs, streaming responses, conversation state, model configuration, and other interaction patterns required by modern LLM applications.",
+          "Design robust application logic around probabilistic AI responses by introducing validation, retries, fallback mechanisms, error handling, and deterministic software controls.",
+          "Manage latency, token consumption, model selection, reliability, rate limits, and API costs when operating AI capabilities in real applications."
+        ]
+      },
+      {
+        "code": "A011.06",
+        "name": "Building RAG & Knowledge-Powered Applications",
+        "programme": [
+          "Understand embeddings, vector representations, semantic search, retrieval, chunking strategies, indexing, and the architecture of Retrieval-Augmented Generation systems.",
+          "Connect large language models with documents, databases, enterprise repositories, and organizational knowledge sources to provide relevant external context.",
+          "Build applications that retrieve appropriate information before generation so that responses are grounded in available evidence rather than relying exclusively on model knowledge.",
+          "Evaluate retrieval quality, answer accuracy, source attribution, citation behavior, context relevance, and hallucination risks across RAG pipelines."
+        ]
+      },
+      {
+        "code": "A011.07",
+        "name": "Building AI Agents & Tool-Using Systems",
+        "programme": [
+          "Understand agentic AI concepts including tool calling, planning, memory, state management, iterative execution, and multi-step task completion.",
+          "Build agents capable of interacting with APIs, databases, software applications, code execution environments, and other external tools through controlled interfaces.",
+          "Design single-agent and multi-agent workflows that coordinate specialized capabilities to complete complex software and business tasks.",
+          "Implement permissions, validation, execution limits, observability, approval checkpoints, and human oversight mechanisms that improve the reliability and safety of agent behavior."
+        ]
+      },
+      {
+        "code": "A011.08",
+        "name": "AI Automation for DevOps & Software Engineering",
+        "programme": [
+          "Apply AI across CI/CD pipelines, technical documentation, code review, issue management, monitoring, incident response, and other software engineering operations.",
+          "Automate repetitive engineering workflows using AI-powered tools and agents while clearly defining the boundaries between automated actions and developer-controlled decisions.",
+          "Analyze logs, system behavior, operational metrics, alerts, and technical evidence with AI to accelerate troubleshooting and incident investigation.",
+          "Integrate AI into DevOps workflows while preserving reliability, traceability, reproducibility, security, approval mechanisms, and engineering control."
+        ]
+      },
+      {
+        "code": "A011.09",
+        "name": "AI Security, Evaluation & Responsible Development",
+        "programme": [
+          "Understand prompt injection, data leakage, insecure model outputs, hallucinations, excessive permissions, unsafe tool use, and other vulnerabilities specific to AI-enabled applications.",
+          "Design systematic evaluations that measure accuracy, reliability, robustness, safety, task completion, and application-level performance under realistic conditions.",
+          "Implement guardrails, input and output validation, monitoring, access controls, human-in-the-loop mechanisms, and other safeguards appropriate to application risk.",
+          "Apply responsible development practices that support secure, observable, testable, and trustworthy AI applications suitable for production environments."
+        ]
+      },
+      {
+        "code": "A011.10",
+        "name": "Designing & Deploying Production-Ready AI Systems",
+        "programme": [
+          "Design complete AI system architectures that combine foundation models, Retrieval-Augmented Generation, agents, APIs, databases, application services, and user-facing components.",
+          "Evaluate trade-offs between prompting, retrieval, fine-tuning, agentic approaches, deterministic software, and traditional machine-learning techniques according to the problem being solved.",
+          "Optimize AI systems for scalability, latency, cost, observability, security, reliability, maintainability, and operational performance.",
+          "Build and deploy an end-to-end AI application using production engineering practices that address testing, monitoring, versioning, failure handling, governance, and continuous improvement."
+        ]
+      },
+      {
+        "code": "A012.01",
+        "name": "Large Language Model Fundamentals",
+        "programme": [
+          "Understand Transformers, attention mechanisms, tokens, embeddings, context windows, and the core architectural foundations that enable modern large language models.",
+          "Explore how large language models are pretrained on large-scale data, instruction-tuned for downstream tasks, and aligned to better follow human intentions and application requirements.",
+          "Compare open and proprietary model families according to their capabilities, deployment options, accessibility, customization possibilities, and engineering constraints.",
+          "Understand hallucinations, reasoning limitations, context constraints, latency, inference cost, and other technical trade-offs that influence the selection and use of LLMs in real applications."
+        ]
+      },
+      {
+        "code": "A012.02",
+        "name": "Prompt & Context Engineering for LLM Applications",
+        "programme": [
+          "Design system prompts, instructions, few-shot examples, constraints, and structured output requirements that guide LLMs toward more reliable and predictable behavior.",
+          "Build and manage context using conversation history, documents, user information, application state, retrieved knowledge, and other relevant runtime information.",
+          "Apply prompt templates, task decomposition, dynamic context construction, and reusable prompting patterns to support maintainable LLM application development.",
+          "Evaluate and iteratively optimize prompts and context strategies for accuracy, consistency, robustness, token efficiency, operational cost, and long-term maintainability."
+        ]
+      },
+      {
+        "code": "A012.03",
+        "name": "Building Applications with LLM APIs",
+        "programme": [
+          "Integrate large language models into software applications through APIs, SDKs, and model-serving interfaces while understanding the responsibilities of the surrounding application layer.",
+          "Implement streaming responses, structured outputs, tool calling, conversation state, model configuration, and robust error-handling patterns.",
+          "Design model-routing, fallback, retry, timeout, and caching strategies that improve application resilience and enable appropriate use of different models.",
+          "Build reliable LLM application layers while monitoring and controlling latency, token consumption, rate limits, availability, and operational costs."
+        ]
+      },
+      {
+        "code": "A012.04",
+        "name": "Embeddings, Vector Databases & Semantic Search",
+        "programme": [
+          "Understand embeddings and how semantic vector representations enable similarity-based retrieval beyond traditional keyword matching.",
+          "Build document ingestion, cleaning, chunking, embedding, indexing, and metadata pipelines that prepare organizational knowledge for semantic retrieval.",
+          "Implement semantic and hybrid search using vector databases, metadata filtering, lexical retrieval, and reranking techniques to improve result relevance.",
+          "Evaluate retrieval quality using appropriate test queries and metrics, and optimize search pipelines for downstream LLM and knowledge-powered applications."
+        ]
+      },
+      {
+        "code": "A012.05",
+        "name": "Retrieval-Augmented Generation (RAG) Engineering",
+        "programme": [
+          "Design end-to-end Retrieval-Augmented Generation architectures that connect large language models with external, current, private, or enterprise knowledge sources.",
+          "Implement advanced retrieval techniques including query transformation, filtering, reranking, multi-stage retrieval, and context construction strategies.",
+          "Build grounded generation workflows that support citations, source attribution, evidence traceability, and transparent connections between answers and retrieved information.",
+          "Diagnose retrieval and generation failures systematically and improve answer relevance, groundedness, faithfulness, completeness, and factual accuracy."
+        ]
+      },
+      {
+        "code": "A012.06",
+        "name": "Fine-Tuning & LLM Adaptation",
+        "programme": [
+          "Understand when prompting, Retrieval-Augmented Generation, fine-tuning, or combinations of these approaches are appropriate for different LLM application requirements.",
+          "Prepare, clean, curate, structure, and validate high-quality datasets for model adaptation, domain specialization, and instruction tuning.",
+          "Explore supervised fine-tuning and parameter-efficient adaptation techniques such as LoRA and QLoRA, including their practical benefits and engineering considerations.",
+          "Evaluate adapted models against strong baseline systems to determine whether fine-tuning produces measurable improvements in quality, reliability, specialization, or operational performance."
+        ]
+      },
+      {
+        "code": "A012.07",
+        "name": "LLM Agents, Tools & Agentic Systems",
+        "programme": [
+          "Build LLM-powered systems capable of selecting tools, interacting with APIs, retrieving information, maintaining state, and executing multi-step tasks.",
+          "Explore planning, memory, state management, orchestration, reflection, and other mechanisms used to coordinate agentic workflows.",
+          "Design single-agent and multi-agent architectures that distribute responsibilities and capabilities across complex application workflows.",
+          "Implement boundaries, permissions, validation mechanisms, execution limits, monitoring, and human approval checkpoints to support reliable and controlled autonomous execution."
+        ]
+      },
+      {
+        "code": "A012.08",
+        "name": "LLM Evaluation, Observability & Optimization",
+        "programme": [
+          "Design representative evaluation datasets and metrics for measuring correctness, relevance, groundedness, hallucination, instruction following, and task completion.",
+          "Combine automated evaluation, model-based evaluation, deterministic checks, and human assessment to obtain a more complete view of LLM application quality.",
+          "Trace prompts, retrieved context, tool calls, model outputs, latency, failures, token consumption, and other operational signals in production systems.",
+          "Continuously optimize model selection, prompts, retrieval strategies, application logic, response quality, execution speed, reliability, and operational cost using evaluation evidence."
+        ]
+      },
+      {
+        "code": "A012.09",
+        "name": "LLM Security, Guardrails & Responsible AI",
+        "programme": [
+          "Understand prompt injection, jailbreaks, sensitive-data leakage, insecure model outputs, unsafe tool use, adversarial manipulation, and other security risks affecting LLM applications.",
+          "Implement input and output validation, authentication and authorization controls, content safeguards, permission boundaries, and secure tool-execution mechanisms.",
+          "Address privacy, bias, explainability, responsible data handling, transparency, and other governance considerations throughout the LLM application lifecycle.",
+          "Build layered security, monitoring, governance, and human-oversight mechanisms appropriate for enterprise-grade LLM systems and their associated risk levels."
+        ]
+      },
+      {
+        "code": "A012.10",
+        "name": "Production LLM Systems & LLMOps",
+        "programme": [
+          "Architect complete production systems that combine large language models, Retrieval-Augmented Generation, agents, databases, APIs, evaluation components, monitoring, and user-facing applications.",
+          "Design for scalability, reliability, caching, concurrency, latency, operational cost, fault tolerance, and resilience to changes or outages across model providers.",
+          "Implement deployment, versioning, testing, monitoring, feedback collection, incident analysis, and continuous-improvement pipelines for LLM-powered applications.",
+          "Deliver an end-to-end production-ready LLM application using modern LLM engineering and LLMOps practices for maintainability, observability, security, quality, and sustainable operation."
+        ]
+      },
+      {
+        "code": "A013.01",
+        "name": "RAG Fundamentals & Architecture",
+        "programme": [
+          "Understand Retrieval-Augmented Generation (RAG) and how retrieval can improve knowledge-intensive large language model applications by grounding generation in relevant external information.",
+          "Explore the complete RAG pipeline from knowledge ingestion, indexing, and retrieval through context augmentation and final response generation.",
+          "Compare RAG with prompting, fine-tuning, and long-context approaches, and identify the situations in which each strategy or combination of strategies is most appropriate.",
+          "Design foundational RAG architectures for real-world applications by connecting knowledge sources, retrieval components, context construction, and language-model generation."
+        ]
+      },
+      {
+        "code": "A013.02",
+        "name": "Document Processing, Chunking & Data Ingestion",
+        "programme": [
+          "Build ingestion pipelines for PDFs, webpages, databases, office documents, and other enterprise knowledge sources that must be made available to RAG applications.",
+          "Apply parsing, cleaning, chunking, metadata enrichment, document transformation, and normalization strategies to prepare heterogeneous information for retrieval.",
+          "Understand how document structure, semantic boundaries, overlap, chunk size, and metadata choices influence retrieval relevance and downstream answer quality.",
+          "Prepare reliable and scalable knowledge bases with repeatable ingestion processes that can support evolving organizational information and production RAG systems."
+        ]
+      },
+      {
+        "code": "A013.03",
+        "name": "Embeddings, Vector Databases & Semantic Search",
+        "programme": [
+          "Understand embeddings, similarity measures, vector representations, and the principles that enable semantic retrieval based on meaning rather than exact keyword matching.",
+          "Create, store, index, update, and query embeddings using vector databases and appropriate metadata structures.",
+          "Compare dense, sparse, semantic, keyword, and hybrid retrieval approaches and understand the advantages and limitations of each method.",
+          "Optimize indexing and search strategies for relevance, retrieval speed, scalability, infrastructure requirements, and operational cost."
+        ]
+      },
+      {
+        "code": "A013.04",
+        "name": "Retrieval Engineering & Query Optimization",
+        "programme": [
+          "Design effective retrieval pipelines using query rewriting, expansion, decomposition, filtering, routing, and other techniques that improve the quality of information retrieved for a user request.",
+          "Apply metadata filtering, hybrid search, reranking, and multi-stage retrieval to improve precision and surface the most relevant evidence.",
+          "Handle ambiguous, complex, multi-part, and domain-specific queries by transforming them into retrieval operations that better reflect the user's information need.",
+          "Diagnose retrieval failures systematically and improve document relevance, ranking, recall, and coverage using evaluation evidence."
+        ]
+      },
+      {
+        "code": "A013.05",
+        "name": "Context Engineering for RAG Systems",
+        "programme": [
+          "Transform retrieved information into high-quality context that large language models can interpret effectively when generating grounded responses.",
+          "Apply context selection, compression, ordering, deduplication, grouping, and token-budget management to maximize the usefulness of retrieved evidence.",
+          "Design prompts and context structures that encourage grounded generation, appropriate source usage, transparent uncertainty, and adherence to retrieved information.",
+          "Balance context completeness and relevance against context-window limits, generation latency, model performance, and operational cost."
+        ]
+      },
+      {
+        "code": "A013.06",
+        "name": "Advanced & Agentic RAG Architectures",
+        "programme": [
+          "Move beyond basic retrieve-and-generate pipelines by exploring adaptive, corrective, iterative, multi-step, and other advanced RAG architectures.",
+          "Build systems that dynamically determine whether retrieval is required and decide what information to retrieve, where to retrieve it from, and how retrieval should evolve during task execution.",
+          "Combine retrieval with tools, agents, planning, memory, state management, and iterative reasoning workflows to address more complex information needs.",
+          "Select and design advanced RAG architectures according to application complexity, knowledge characteristics, reliability requirements, and expected user workflows."
+        ]
+      },
+      {
+        "code": "A013.07",
+        "name": "Multimodal & Knowledge Graph RAG",
+        "programme": [
+          "Extend RAG beyond plain text by retrieving and reasoning over tables, images, diagrams, structured records, and other multimodal document elements.",
+          "Combine vector retrieval with knowledge graphs, relational databases, structured repositories, and other information sources to support richer knowledge access.",
+          "Explore Graph RAG approaches for representing entities, relationships, connected knowledge, communities, and complex information structures that are difficult to capture through isolated chunks.",
+          "Design hybrid retrieval architectures that combine multiple knowledge representations and retrieval methods to answer complex questions across heterogeneous organizational information."
+        ]
+      },
+      {
+        "code": "A013.08",
+        "name": "RAG Evaluation & Quality Assurance",
+        "programme": [
+          "Evaluate retrieval quality using relevance, recall, precision, ranking, coverage, and context-quality measures that reflect the information needs of the target application.",
+          "Measure generation quality through groundedness, faithfulness, factual correctness, completeness, relevance, citation accuracy, and other application-specific criteria.",
+          "Build representative evaluation datasets, test cases, automated evaluation pipelines, and regression tests that support systematic RAG quality assurance.",
+          "Diagnose whether application failures originate from ingestion, the knowledge base, retrieval, ranking, context construction, prompting, or final generation so that improvements target the correct component."
+        ]
+      },
+      {
+        "code": "A013.09",
+        "name": "RAG Security, Privacy & Access Control",
+        "programme": [
+          "Understand prompt injection through retrieved content, malicious documents, data leakage, retrieval poisoning, unauthorized knowledge access, and other security threats affecting RAG systems.",
+          "Implement document permissions, identity-aware retrieval, metadata-based access controls, filtering, authorization checks, and secure retrieval mechanisms.",
+          "Protect sensitive enterprise knowledge throughout ingestion, storage, indexing, retrieval, context construction, generation, logging, and monitoring.",
+          "Build traceable and governed RAG systems with appropriate access control, auditability, source tracking, security monitoring, and human oversight for security-sensitive environments."
+        ]
+      },
+      {
+        "code": "A013.10",
+        "name": "Production RAG Systems & RAGOps",
+        "programme": [
+          "Architect end-to-end production RAG systems that integrate data ingestion, processing, indexing, retrieval, context construction, generation, evaluation, monitoring, and application interfaces.",
+          "Optimize latency, scalability, caching, concurrency, reliability, infrastructure utilization, model usage, and operational cost across the complete RAG pipeline.",
+          "Manage knowledge updates, incremental ingestion, re-indexing, versioning, observability, evaluation, incident investigation, and continuous quality improvement as organizational information changes.",
+          "Build and deploy a production-ready RAG application designed to evolve safely and reliably with changing knowledge sources, application requirements, and user needs."
+        ]
+      },
+      {
+        "code": "A014.01",
+        "name": "AI Agent Fundamentals & Architectures",
+        "programme": [
+          "Understand what AI agents are and how agentic systems differ from traditional LLM applications, conversational chatbots, and rule-based or workflow automation systems.",
+          "Explore the core components of agentic systems, including models, goals, instructions, tools, memory, state, environments, and mechanisms for interacting with external systems.",
+          "Understand agent execution loops in which the system interprets a goal, reasons about the next action, executes an action, observes the result, and iterates until a completion condition is reached.",
+          "Compare common agent architectures and identify when agentic AI is appropriate relative to simpler deterministic workflows or conventional LLM applications."
+        ]
+      },
+      {
+        "code": "A014.02",
+        "name": "Designing & Building Your First AI Agent",
+        "programme": [
+          "Build complete AI agents capable of receiving goals, interpreting tasks, selecting appropriate actions, and progressing toward defined outcomes.",
+          "Design clear system instructions, agent roles, behavioral constraints, operating boundaries, and explicit task-completion criteria.",
+          "Implement foundational agent loops, execution flows, state management, and mechanisms for handling intermediate results across multi-step tasks.",
+          "Develop practical agents for research, productivity, information processing, and business workflows while maintaining appropriate human control."
+        ]
+      },
+      {
+        "code": "A014.03",
+        "name": "Tool Use, Function Calling & API Integration",
+        "programme": [
+          "Enable AI agents to interact with APIs, databases, search systems, enterprise applications, and external services so that they can perform actions beyond text generation.",
+          "Design reliable tool schemas, function definitions, parameters, structured inputs, and structured responses that agents can interpret and use consistently.",
+          "Implement tool selection, execution validation, error handling, retries, fallback strategies, and mechanisms for recovering from failed or incomplete tool calls.",
+          "Build agents capable of performing real-world actions safely by combining model reasoning with controlled, validated, and permission-aware tool execution."
+        ]
+      },
+      {
+        "code": "A014.04",
+        "name": "Memory, Context & State Management for Agents",
+        "programme": [
+          "Design short-term, long-term, episodic, and semantic memory mechanisms that allow agentic applications to retain and reuse information across interactions.",
+          "Manage conversation history, user context, application state, task progress, and persistent knowledge efficiently throughout agent execution.",
+          "Combine agent memory with retrieval systems, vector databases, and external knowledge stores when persistent or semantically searchable information is required.",
+          "Control context growth, information relevance, privacy, token consumption, retention policies, and memory quality during long-running or repeated agent interactions."
+        ]
+      },
+      {
+        "code": "A014.05",
+        "name": "Planning, Reasoning & Task Decomposition",
+        "programme": [
+          "Design agents that transform complex user goals into structured plans, manageable subtasks, dependencies, and executable actions.",
+          "Explore planning, reflection, routing, iteration, dynamic task decomposition, and related techniques used to organize complex agent execution.",
+          "Build agents capable of revising or adapting their plans in response to intermediate results, failures, new information, and changing execution conditions.",
+          "Balance model-driven autonomy with deterministic workflows, explicit rules, checkpoints, and constraints to achieve more reliable task execution."
+        ]
+      },
+      {
+        "code": "A014.06",
+        "name": "Agentic RAG & Knowledge-Powered Agents",
+        "programme": [
+          "Combine AI agents with Retrieval-Augmented Generation systems, enterprise documents, databases, structured information, and external knowledge sources.",
+          "Enable agents to determine dynamically when retrieval is necessary, which knowledge source should be consulted, what query should be issued, and how retrieved evidence should influence subsequent actions.",
+          "Build iterative retrieval, investigation, and research workflows in which agents gather and refine information across multiple steps before producing an outcome.",
+          "Improve groundedness, factual reliability, source attribution, and evidence traceability in knowledge-intensive agent-generated outputs."
+        ]
+      },
+      {
+        "code": "A014.07",
+        "name": "Multi-Agent Systems & Agent Collaboration",
+        "programme": [
+          "Design systems in which specialized agents collaborate, delegate tasks, exchange information, coordinate actions, and contribute toward shared objectives.",
+          "Explore supervisor, hierarchical, sequential, parallel, and peer-to-peer multi-agent architectures and understand how each pattern organizes responsibilities and execution.",
+          "Define specialized agent roles, communication protocols, task-routing mechanisms, shared state, coordination rules, and conflict-resolution strategies.",
+          "Evaluate when multi-agent systems provide meaningful advantages in specialization, parallelism, or coordination and when simpler single-agent architectures are more reliable and efficient."
+        ]
+      },
+      {
+        "code": "A014.08",
+        "name": "AI Agent Evaluation, Testing & Observability",
+        "programme": [
+          "Evaluate AI agents across task completion, decision quality, tool selection, execution reliability, latency, resource consumption, and operational cost.",
+          "Build representative test scenarios covering expected workflows, edge cases, tool failures, incomplete information, adversarial conditions, and unexpected agent behavior.",
+          "Trace agent decisions, actions, tool calls, state transitions, intermediate outputs, failures, and complete execution paths to understand system behavior.",
+          "Use evaluation, testing, tracing, and observability pipelines to diagnose weaknesses systematically and continuously improve agent performance and reliability."
+        ]
+      },
+      {
+        "code": "A014.09",
+        "name": "AI Agent Security, Safety & Governance",
+        "programme": [
+          "Understand prompt injection, excessive agency, insecure tool use, sensitive-data leakage, permission escalation, malicious inputs, and other risks specific to agentic systems.",
+          "Implement authentication, authorization, permissions, sandboxing, input and output validation, execution constraints, guardrails, and human approval mechanisms.",
+          "Define explicit boundaries governing which information agents may access and which decisions, transactions, or actions they may perform autonomously.",
+          "Build auditable and governed agentic systems with traceability, monitoring, escalation mechanisms, accountability, and appropriate human oversight for enterprise environments."
+        ]
+      },
+      {
+        "code": "A014.10",
+        "name": "Production Agentic Systems & AgentOps",
+        "programme": [
+          "Architect production-grade agentic systems that combine foundation models, tools, memory, Retrieval-Augmented Generation, workflows, APIs, databases, and application infrastructure.",
+          "Design for scalability, reliability, fault tolerance, concurrency, latency, operational cost, long-running execution, and recovery from partial or failed agent actions.",
+          "Implement monitoring, evaluation, versioning, tracing, deployment, incident analysis, feedback collection, and continuous-improvement practices for production agents.",
+          "Build and deploy an end-to-end AI agent capable of reliably executing complex real-world workflows using modern AgentOps and production engineering practices."
+        ]
+      },
+      {
+        "code": "A015.01",
+        "name": "Responsible AI Fundamentals",
+        "programme": [
+          "Understand the principles of responsible, trustworthy, and human-centered AI and how they guide the development, deployment, procurement, and use of AI systems.",
+          "Explore fairness, transparency, accountability, privacy, safety, reliability, and meaningful human oversight as interconnected dimensions of responsible AI.",
+          "Identify ethical, technical, organizational, and societal risks that can emerge throughout the AI lifecycle, from data collection and model development to deployment and retirement.",
+          "Understand the responsibilities of organizations and stakeholders that develop, deploy, manage, procure, or use AI systems in professional environments."
+        ]
+      },
+      {
+        "code": "A015.02",
+        "name": "AI Ethics & Human-Centered AI",
+        "programme": [
+          "Explore ethical challenges created by automated and AI-assisted decision-making, including questions of autonomy, responsibility, proportionality, and acceptable use.",
+          "Analyze how AI systems can affect individuals, employees, customers, organizations, communities, and society through both intended and unintended consequences.",
+          "Apply human-centered principles to the design, evaluation, deployment, and governance of AI systems so that technology remains aligned with legitimate human needs and values.",
+          "Balance innovation and business objectives with human rights, autonomy, dignity, inclusion, accessibility, and broader societal well-being."
+        ]
+      },
+      {
+        "code": "A015.03",
+        "name": "AI Bias, Fairness & Non-Discrimination",
+        "programme": [
+          "Understand how bias can originate from datasets, sampling practices, labels, algorithms, model objectives, human decisions, organizational processes, and deployment environments.",
+          "Identify and measure potentially unfair outcomes across relevant populations, groups, contexts, and use cases using appropriate qualitative and quantitative approaches.",
+          "Apply techniques and organizational practices for detecting, mitigating, documenting, and continuously monitoring bias throughout the AI lifecycle.",
+          "Design AI systems and decision processes that promote equitable, explainable, consistent, and defensible outcomes while recognizing that fairness can involve competing definitions and trade-offs."
+        ]
+      },
+      {
+        "code": "A015.04",
+        "name": "AI Transparency, Explainability & Accountability",
+        "programme": [
+          "Understand why transparency and explainability are important for building trustworthy AI systems and enabling informed use, oversight, challenge, and decision-making.",
+          "Explore approaches for communicating model behavior, outputs, evidence, uncertainty, limitations, and decision processes to technical teams, users, managers, regulators, and affected stakeholders.",
+          "Establish clear accountability across AI developers, system owners, operators, managers, reviewers, and decision-makers throughout the AI lifecycle.",
+          "Design documentation, logging, traceability, model information, decision records, and other mechanisms that support responsible and auditable AI decisions."
+        ]
+      },
+      {
+        "code": "A015.05",
+        "name": "AI Privacy, Data Protection & Responsible Data Use",
+        "programme": [
+          "Understand privacy and data-protection risks associated with training data, prompts, user information, retrieved knowledge, model outputs, logs, and AI-enabled applications.",
+          "Apply principles such as data minimization, purpose limitation, appropriate consent, access restriction, retention control, and privacy-by-design when developing or using AI.",
+          "Identify risks involving sensitive information, unintended disclosure, data leakage, excessive retention, secondary use, and information shared with third-party AI services.",
+          "Establish responsible data practices across data collection, preparation, model development, deployment, monitoring, user interaction, storage, and eventual system retirement."
+        ]
+      },
+      {
+        "code": "A015.06",
+        "name": "AI Safety, Security & Risk Management",
+        "programme": [
+          "Identify technical and operational AI risks including hallucinations, adversarial manipulation, prompt injection, misuse, insecure integrations, unexpected model behavior, and inappropriate automation.",
+          "Assess AI risks according to factors such as likelihood, severity, exposure, affected stakeholders, reversibility, and potential business or societal impact.",
+          "Implement guardrails, evaluations, testing, monitoring, access controls, validation, escalation mechanisms, and human-in-the-loop processes appropriate to system risk.",
+          "Build structured processes for identifying, recording, prioritizing, mitigating, accepting, monitoring, communicating, and escalating AI risks throughout the system lifecycle."
+        ]
+      },
+      {
+        "code": "A015.07",
+        "name": "AI Governance, Policies & Organizational Controls",
+        "programme": [
+          "Design governance structures that define how AI systems and use cases are proposed, assessed, approved, developed, procured, deployed, monitored, modified, and retired.",
+          "Establish organizational AI policies, decision rights, roles, responsibilities, approval processes, review mechanisms, escalation paths, and oversight structures.",
+          "Create and maintain AI inventories and classify systems according to their purpose, level of autonomy, affected stakeholders, business criticality, and risk.",
+          "Integrate responsible AI governance with existing enterprise risk management, information security, privacy, legal, compliance, procurement, audit, and technology governance frameworks."
+        ]
+      },
+      {
+        "code": "A015.08",
+        "name": "AI Regulation, Compliance & Standards",
+        "programme": [
+          "Understand the evolving regulatory landscape governing artificial intelligence across jurisdictions and industries and recognize how obligations can vary according to context and risk.",
+          "Explore risk-based regulatory approaches, documentation expectations, impact assessments, transparency requirements, governance obligations, and other compliance considerations.",
+          "Examine major frameworks and standards for trustworthy and responsible AI and understand how they can support organizational governance and assurance activities.",
+          "Translate applicable regulatory, policy, and standards requirements into practical organizational controls, responsibilities, documentation, evidence, testing, and monitoring processes."
+        ]
+      },
+      {
+        "code": "A015.09",
+        "name": "Responsible Generative AI & AI Agents",
+        "programme": [
+          "Address risks specific to generative AI, large language models, Retrieval-Augmented Generation systems, and autonomous or semi-autonomous AI agents.",
+          "Examine hallucinations, harmful or inappropriate outputs, copyright concerns, sensitive-data leakage, prompt injection, retrieval attacks, excessive agency, and insecure tool use.",
+          "Design guardrails, permissions, evaluations, monitoring, access controls, execution limits, validation, and human approval mechanisms for generative and agentic systems.",
+          "Establish clear boundaries for AI autonomy and determine which actions require human review, confirmation, escalation, or prohibition in high-impact environments."
+        ]
+      },
+      {
+        "code": "A015.10",
+        "name": "Building a Responsible AI Program",
+        "programme": [
+          "Integrate ethics, fairness, transparency, privacy, security, safety, governance, compliance, accountability, and human oversight into a unified organizational Responsible AI program.",
+          "Define policies, governance committees, ownership structures, AI inventories, risk assessments, approval processes, controls, documentation requirements, monitoring practices, and escalation procedures.",
+          "Establish measurable Responsible AI indicators and review mechanisms that allow the organization to evaluate implementation quality, risk trends, compliance, incidents, and continuous improvement.",
+          "Build a practical Responsible AI operating model and implementation roadmap that embeds responsible practices across the complete AI lifecycle while enabling sustainable innovation at organizational scale."
+        ]
+      },
+      {
+        "code": "A016.01",
+        "name": "AI Governance Fundamentals",
+        "programme": [
+          "Understand AI governance and why organizations need structured oversight to manage the development, procurement, deployment, use, monitoring, and retirement of AI systems.",
+          "Explore accountability, transparency, fairness, safety, privacy, security, and meaningful human oversight as core principles of effective AI governance.",
+          "Understand the complementary responsibilities of executive leadership, business functions, technical teams, legal, compliance, risk, security, privacy, and other organizational stakeholders.",
+          "Build the foundations of an organization-wide AI governance framework that supports responsible innovation while maintaining clear ownership, oversight, and control."
+        ]
+      },
+      {
+        "code": "A016.02",
+        "name": "AI Regulations, Laws & Global Compliance",
+        "programme": [
+          "Understand the evolving international regulatory landscape for artificial intelligence and how emerging legal requirements can affect organizations operating across different jurisdictions.",
+          "Explore major regulatory approaches, including the EU AI Act and other risk-based frameworks that establish obligations according to the characteristics and potential impact of AI systems.",
+          "Identify governance and compliance obligations according to system type, organizational role, industry, jurisdiction, intended purpose, affected stakeholders, and level of risk.",
+          "Translate applicable legal and regulatory requirements into practical governance activities, organizational responsibilities, documentation, controls, assessments, and evidence."
+        ]
+      },
+      {
+        "code": "A016.03",
+        "name": "AI Risk Management & Impact Assessment",
+        "programme": [
+          "Identify technical, ethical, legal, operational, financial, security, privacy, and reputational risks associated with the development and use of AI systems.",
+          "Classify AI use cases according to factors such as potential impact, level of autonomy, data sensitivity, affected stakeholders, business criticality, and likelihood of harm.",
+          "Conduct structured AI risk and impact assessments throughout the system lifecycle to identify risks before deployment and reassess them as systems or operating conditions change.",
+          "Define mitigation measures, control requirements, escalation mechanisms, residual-risk decisions, and risk-acceptance criteria appropriate to the organization's risk appetite."
+        ]
+      },
+      {
+        "code": "A016.04",
+        "name": "AI Policies, Standards & Internal Controls",
+        "programme": [
+          "Develop organizational policies that establish acceptable, restricted, and prohibited uses of AI for employees, business functions, technical teams, and external providers.",
+          "Establish standards governing AI development, procurement, testing, deployment, monitoring, data use, security, documentation, and employee interaction with AI systems.",
+          "Translate high-level governance principles into practical procedures, checklists, control requirements, approval gates, review criteria, and operational guidance.",
+          "Create consistent organizational rules that enable responsible experimentation and innovation while maintaining appropriate control, accountability, and risk management."
+        ]
+      },
+      {
+        "code": "A016.05",
+        "name": "AI Inventory, Classification & Lifecycle Governance",
+        "programme": [
+          "Build and maintain a centralized inventory of AI models, applications, vendors, services, and use cases so that the organization can understand where and how AI is being used.",
+          "Classify AI systems according to their purpose, data sensitivity, level of autonomy, affected stakeholders, business impact, regulatory relevance, and overall risk.",
+          "Establish governance checkpoints from initial ideation and assessment through development or procurement, testing, approval, deployment, monitoring, modification, and retirement.",
+          "Create clear traceability and ownership across the complete AI lifecycle by documenting system owners, responsible teams, dependencies, approvals, controls, and material changes."
+        ]
+      },
+      {
+        "code": "A016.06",
+        "name": "Data, Privacy & Security Governance for AI",
+        "programme": [
+          "Govern the collection, processing, storage, access, sharing, retention, and use of data across AI models, applications, and supporting infrastructure.",
+          "Address privacy, confidential information, intellectual property, data quality, provenance, third-party data, and other information risks associated with AI systems.",
+          "Establish access controls, security requirements, retention policies, data-classification rules, and responsible data practices appropriate to AI use cases and organizational risk.",
+          "Integrate AI-specific data, privacy, and security governance with existing cybersecurity, privacy-management, information-governance, and enterprise data-governance frameworks."
+        ]
+      },
+      {
+        "code": "A016.07",
+        "name": "AI Vendor & Third-Party Governance",
+        "programme": [
+          "Evaluate external AI models, platforms, APIs, cloud services, software products, and technology providers before adoption or integration into organizational processes.",
+          "Assess vendor risks involving security, privacy, data usage, intellectual property, model transparency, reliability, service continuity, subcontractors, and regulatory compliance.",
+          "Define contractual requirements, due-diligence procedures, assurance expectations, monitoring obligations, incident responsibilities, data-handling conditions, and exit strategies.",
+          "Build a structured third-party AI governance process that manages vendor risk from initial selection and approval through ongoing monitoring, renewal, replacement, and termination."
+        ]
+      },
+      {
+        "code": "A016.08",
+        "name": "Generative AI & Agentic AI Governance",
+        "programme": [
+          "Address governance challenges specific to large language models, generative AI, Retrieval-Augmented Generation systems, copilots, AI assistants, and autonomous or semi-autonomous agents.",
+          "Govern risks involving hallucinations, prompt injection, sensitive-data exposure, retrieval vulnerabilities, tool access, persistent memory, insecure actions, and excessive autonomy.",
+          "Define permissions, guardrails, validation requirements, monitoring, human approval points, escalation rules, and acceptable levels of agent autonomy according to use-case risk.",
+          "Establish adaptable governance controls that can manage rapidly evolving generative and agentic AI capabilities without unnecessarily preventing responsible experimentation and innovation."
+        ]
+      },
+      {
+        "code": "A016.09",
+        "name": "AI Audit, Monitoring & Governance Evidence",
+        "programme": [
+          "Design processes for continuously monitoring AI performance, risk, compliance status, incidents, control effectiveness, and material changes after deployment.",
+          "Establish documentation practices including model and system records, decision logs, test results, risk assessments, approvals, monitoring evidence, and audit trails.",
+          "Define governance KPIs, risk indicators, thresholds, incident-reporting requirements, review frequencies, escalation procedures, and management reporting mechanisms.",
+          "Prepare AI systems and governance processes for internal assurance reviews, external audits, customer or partner assessments, and regulatory scrutiny through consistent and traceable evidence."
+        ]
+      },
+      {
+        "code": "A016.10",
+        "name": "Building an Enterprise AI Governance Program",
+        "programme": [
+          "Design an end-to-end AI governance operating model that connects executive leadership, business functions, technology teams, data, risk, legal, privacy, security, compliance, procurement, and internal assurance.",
+          "Establish governance committees, ownership models, decision rights, approval workflows, organizational policies, risk frameworks, lifecycle controls, and monitoring structures.",
+          "Define governance maturity levels, KPIs, reporting mechanisms, assurance activities, review cycles, and continuous-improvement processes that allow governance capabilities to evolve with organizational AI adoption.",
+          "Build a practical enterprise roadmap for scaling AI responsibly while maintaining innovation, regulatory compliance, risk control, transparency, and clear organizational accountability."
+        ]
+      },
+      {
+        "code": "A017.01",
+        "name": "AI Security Fundamentals",
+        "programme": [
+          "Understand the security landscape of machine learning, generative AI, large language models, Retrieval-Augmented Generation systems, and AI agents, including how their security requirements differ from conventional software systems.",
+          "Explore how AI introduces new attack surfaces across data, models, prompts, applications, infrastructure, integrations, external tools, and users.",
+          "Identify common AI threats, vulnerabilities, misuse patterns, and security failures that can compromise confidentiality, integrity, availability, reliability, or organizational trust.",
+          "Build a foundational framework for securing AI systems throughout their lifecycle, from design and development through deployment, operation, monitoring, and retirement."
+        ]
+      },
+      {
+        "code": "A017.02",
+        "name": "Threat Modeling for AI Systems",
+        "programme": [
+          "Learn how to systematically identify and analyze threats across AI architectures, workflows, integrations, and operational environments before they become exploitable weaknesses.",
+          "Map critical assets, trust boundaries, data flows, models, APIs, tools, identities, infrastructure components, and external dependencies within an AI system.",
+          "Analyze realistic attack scenarios involving models, users, applications, retrieved content, external services, and third-party components.",
+          "Build practical AI threat models and prioritize preventive, detective, and corrective security controls according to likelihood, impact, exposure, and business risk."
+        ]
+      },
+      {
+        "code": "A017.03",
+        "name": "Prompt Injection, Jailbreaks & LLM Attacks",
+        "programme": [
+          "Understand direct and indirect prompt injection, jailbreaks, instruction manipulation, adversarial inputs, and other techniques used to influence or bypass intended LLM behavior.",
+          "Analyze how attackers can exploit system prompts, external content, retrieved documents, user inputs, conversation context, and application instructions to manipulate model behavior.",
+          "Test LLM applications against representative attack patterns, control bypasses, unexpected model behaviors, and malicious contextual inputs.",
+          "Implement layered defenses using isolation, validation, permissions, least privilege, content handling controls, monitoring, and secure application architecture rather than relying on prompts alone."
+        ]
+      },
+      {
+        "code": "A017.04",
+        "name": "Securing RAG & Knowledge Systems",
+        "programme": [
+          "Identify security risks across document ingestion, transformation, embeddings, vector databases, indexing, retrieval, context construction, and generation in RAG systems.",
+          "Understand knowledge-base poisoning, malicious documents, unauthorized retrieval, retrieval manipulation, sensitive-information leakage, and compromised source provenance.",
+          "Implement document-level permissions, identity-aware access, metadata filtering, authorization checks, secure ingestion, and controlled retrieval strategies.",
+          "Build RAG architectures that preserve confidentiality, integrity, provenance, access boundaries, and trust throughout the complete knowledge-to-generation pipeline."
+        ]
+      },
+      {
+        "code": "A017.05",
+        "name": "AI Agent & Tool-Use Security",
+        "programme": [
+          "Understand the security implications of giving AI agents access to APIs, databases, enterprise applications, files, code execution, communication systems, and other external tools.",
+          "Address excessive agency, insecure tool execution, permission escalation, unintended actions, unsafe chaining of capabilities, and exploitation of agent decision-making.",
+          "Implement least privilege, authentication, authorization, sandboxing, execution constraints, validation, transaction controls, and human approval mechanisms.",
+          "Design agent architectures that remain controlled, observable, and recoverable even when model behavior is probabilistic, unexpected, or influenced by malicious inputs."
+        ]
+      },
+      {
+        "code": "A017.06",
+        "name": "AI Data, Model & Supply Chain Security",
+        "programme": [
+          "Protect training, fine-tuning, evaluation, retrieval, and inference data against poisoning, manipulation, leakage, corruption, and unauthorized access.",
+          "Understand model theft, tampering, malicious or compromised models, unsafe dependencies, vulnerable libraries, poisoned datasets, and untrusted artifacts.",
+          "Assess security risks associated with open-source models, third-party APIs, external datasets, software libraries, model repositories, cloud services, and AI providers.",
+          "Establish security controls across the complete AI development and supply-chain lifecycle, including provenance, integrity verification, access management, dependency governance, and vendor assurance."
+        ]
+      },
+      {
+        "code": "A017.07",
+        "name": "AI Red Teaming & Adversarial Testing",
+        "programme": [
+          "Design systematic security assessments that simulate realistic adversarial behavior against AI models, applications, retrieval systems, agents, and supporting infrastructure.",
+          "Evaluate systems for prompt injection, jailbreaks, sensitive-data exposure, harmful behavior, tool misuse, authorization bypasses, control failures, and other application-specific attack scenarios.",
+          "Build repeatable adversarial test suites and structured red-team scenarios that cover normal operation, edge cases, malicious inputs, and chained attacks.",
+          "Transform discovered vulnerabilities into prioritized remediation actions, regression tests, measurable security requirements, and continuous adversarial testing processes."
+        ]
+      },
+      {
+        "code": "A017.08",
+        "name": "Secure AI Engineering & DevSecOps",
+        "programme": [
+          "Integrate security into AI engineering from architecture and implementation through model integration, testing, deployment, operation, and continuous improvement.",
+          "Establish secure coding, model-access controls, secrets management, dependency management, artifact integrity, environment isolation, and secure deployment practices.",
+          "Introduce AI-specific security checks, adversarial tests, policy validation, dependency scanning, and control verification into CI/CD, MLOps, and LLMOps pipelines.",
+          "Build secure-by-design development processes that continuously identify, prioritize, remediate, and prevent AI vulnerabilities throughout rapid development cycles."
+        ]
+      },
+      {
+        "code": "A017.09",
+        "name": "AI Security Monitoring & Incident Response",
+        "programme": [
+          "Monitor prompts, outputs, retrieval activity, tool calls, model behavior, identities, permissions, application events, and infrastructure signals for suspicious or abnormal patterns.",
+          "Define security indicators, detection logic, thresholds, and alerts for AI-specific attacks, misuse, data exposure, anomalies, policy violations, and control failures.",
+          "Build incident-response procedures for compromised AI applications, malicious interactions, unsafe autonomous actions, information leakage, and unexpected model behavior.",
+          "Establish logging, traceability, investigation, containment, recovery, evidence preservation, root-cause analysis, and post-incident improvement processes for AI security events."
+        ]
+      },
+      {
+        "code": "A017.10",
+        "name": "Enterprise AI Security Architecture & Governance",
+        "programme": [
+          "Design an end-to-end enterprise security architecture covering AI models, applications, RAG systems, agents, data, infrastructure, APIs, identities, integrations, vendors, and users.",
+          "Establish security policies, ownership, control requirements, risk assessments, architecture reviews, approval processes, exception handling, and assurance mechanisms for enterprise AI.",
+          "Align AI security with cybersecurity, privacy, data governance, enterprise risk management, software security, incident response, and broader AI governance programs.",
+          "Build a scalable AI security roadmap that enables organizations to expand AI adoption while maintaining resilience, appropriate control, regulatory readiness, and stakeholder trust."
+        ]
+      },
+      {
+        "code": "A018.01",
+        "name": "AI Transformation Fundamentals",
+        "programme": [
+          "Understand how artificial intelligence is reshaping organizations, industries, operating models, customer expectations, and competitive landscapes, and recognize the strategic implications of these changes.",
+          "Distinguish enterprise AI transformation from traditional digital transformation, isolated automation initiatives, and individual AI experiments by examining the organizational capabilities required for transformation at scale.",
+          "Identify where AI can create measurable value through efficiency, productivity, growth, innovation, improved decision-making, enhanced customer experiences, and new products or business models.",
+          "Build a shared organizational vision and vocabulary for AI transformation that enables leaders and cross-functional teams to align around objectives, opportunities, responsibilities, and expected outcomes."
+        ]
+      },
+      {
+        "code": "A018.02",
+        "name": "AI Readiness & Maturity Assessment",
+        "programme": [
+          "Assess organizational readiness for AI across strategy, leadership, people, skills, processes, data, technology, governance, risk management, and organizational culture.",
+          "Identify capability gaps, structural constraints, dependencies, and adoption barriers that could limit the successful implementation and scaling of AI initiatives.",
+          "Evaluate existing AI initiatives and capabilities to determine current maturity levels and understand where the organization is positioned along its transformation journey.",
+          "Translate readiness and maturity assessment findings into clear transformation priorities, capability-building actions, investment needs, and practical recommendations."
+        ]
+      },
+      {
+        "code": "A018.03",
+        "name": "AI Strategy & Transformation Roadmapping",
+        "programme": [
+          "Align AI transformation initiatives with organizational strategy, business priorities, competitive objectives, customer needs, and measurable enterprise outcomes.",
+          "Define a coherent AI vision and strategic transformation pillars that connect technology adoption with business-model, operating-model, workforce, and capability changes.",
+          "Prioritize transformation initiatives according to expected business value, feasibility, organizational readiness, dependencies, investment requirements, and risk.",
+          "Build a phased AI transformation roadmap that connects near-term quick wins and experimentation with medium-and long-term enterprise transformation goals."
+        ]
+      },
+      {
+        "code": "A018.04",
+        "name": "AI Use Cases & Business Value Discovery",
+        "programme": [
+          "Identify high-impact AI opportunities across business functions, products, services, internal operations, decision processes, and customer journeys.",
+          "Structure AI use cases around clearly defined business problems, user needs, process constraints, and measurable outcomes rather than beginning with technology alone.",
+          "Evaluate potential initiatives according to expected value, feasibility, implementation cost, data availability, technical requirements, organizational readiness, and risk.",
+          "Build and prioritize an enterprise portfolio of AI initiatives that balances quick wins, strategic opportunities, experimentation, dependencies, and transformation objectives."
+        ]
+      },
+      {
+        "code": "A018.05",
+        "name": "AI-Powered Process & Operating Model Redesign",
+        "programme": [
+          "Analyze existing business processes to identify opportunities for AI-enabled augmentation, automation, intelligent decision support, and redesign rather than simply digitizing current workflows.",
+          "Redesign workflows around effective collaboration among employees, AI copilots, automation technologies, decision-support systems, and autonomous or semi-autonomous agents.",
+          "Define new responsibilities, decision rights, handoffs, exception paths, controls, accountability mechanisms, and human oversight points within AI-enabled processes.",
+          "Build future-state operating models capable of integrating and scaling AI across teams, functions, services, and organizational boundaries while maintaining effective control."
+        ]
+      },
+      {
+        "code": "A018.06",
+        "name": "People, Skills & Change Management for AI",
+        "programme": [
+          "Understand how AI transformation changes jobs, tasks, skills, responsibilities, collaboration patterns, management practices, and established ways of working.",
+          "Assess workforce capability gaps and develop targeted upskilling, reskilling, role-transition, and AI-literacy strategies aligned with transformation priorities.",
+          "Manage resistance, uncertainty, communication, stakeholder expectations, employee engagement, and adoption challenges throughout the AI transformation process.",
+          "Build an organizational culture that supports responsible experimentation, continuous learning, knowledge sharing, adaptability, and productive human-AI collaboration."
+        ]
+      },
+      {
+        "code": "A018.07",
+        "name": "Data & Technology Foundations for AI Transformation",
+        "programme": [
+          "Understand the data, infrastructure, platforms, models, integrations, APIs, security capabilities, and enterprise architecture required to support and scale AI adoption.",
+          "Assess whether existing data and technology ecosystems provide sufficient quality, accessibility, interoperability, governance, performance, and scalability for priority AI initiatives.",
+          "Evaluate build-versus-buy decisions and the roles of cloud platforms, APIs, foundation models, LLMs, RAG, automation, agents, and enterprise technology providers within the transformation architecture.",
+          "Develop a scalable and adaptable technology foundation aligned with business priorities, governance requirements, implementation sequencing, and long-term transformation objectives."
+        ]
+      },
+      {
+        "code": "A018.08",
+        "name": "AI Governance, Risk & Responsible Transformation",
+        "programme": [
+          "Integrate AI governance, ethics, security, privacy, compliance, safety, and enterprise risk management into the transformation journey from experimentation through scaled deployment.",
+          "Establish policies, ownership structures, approval processes, lifecycle controls, documentation requirements, monitoring mechanisms, and meaningful human oversight for AI initiatives.",
+          "Classify AI use cases according to impact, autonomy, sensitivity, regulatory relevance, and risk, and define proportionate governance requirements for each category.",
+          "Enable rapid and responsible AI innovation while maintaining organizational accountability, regulatory alignment, risk visibility, stakeholder confidence, and trust."
+        ]
+      },
+      {
+        "code": "A018.09",
+        "name": "AI Transformation ROI & Performance Measurement",
+        "programme": [
+          "Build business cases that connect AI investments with measurable financial, operational, strategic, workforce, and customer outcomes while accounting for implementation and ongoing operating costs.",
+          "Define KPIs for productivity, efficiency, cost reduction, revenue growth, quality, customer experience, innovation, adoption, risk reduction, and other transformation objectives.",
+          "Measure realized value against expected benefits and transformation targets using appropriate baselines, adoption indicators, performance evidence, and benefit-tracking mechanisms.",
+          "Use performance insights to prioritize future investment, scale successful initiatives, redesign underperforming solutions, and discontinue experiments that do not generate sufficient value."
+        ]
+      },
+      {
+        "code": "A018.10",
+        "name": "Leading Enterprise AI Transformation",
+        "programme": [
+          "Integrate strategy, use-case portfolios, technology, data, people, skills, governance, investment, change management, and operating-model decisions into a coordinated enterprise transformation program.",
+          "Establish executive sponsorship, transformation governance, ownership, funding mechanisms, decision rights, accountability, and cross-functional collaboration across business and technology functions.",
+          "Move AI initiatives systematically from exploration and experimentation through pilots, production deployment, organizational adoption, value realization, and enterprise-wide scaling.",
+          "Build an actionable multi-year AI transformation roadmap with milestones, dependencies, KPIs, investment priorities, risks, governance checkpoints, and continuous-improvement mechanisms."
+        ]
+      }
+    ]
+  }
+}

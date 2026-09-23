@@ -1,0 +1,149 @@
+/* EduCut.ai public pages — components used by the static pages only.
+   Base tokens, nav, buttons, sections, plans, steps, CTA, consultation and
+   contact styles come from site.css, which scripts/build-pages.mjs extracts
+   from index.html so both share one source of truth. */
+
+.nav-links a[aria-current="page"]{color:#fff}
+/* The CTA is a link here (a button on the homepage); keep its dark text. */
+.nav-links a.btn-lime,.nav-links a.btn-lime:hover{color:var(--ink)}
+.btn-outline-light{background:transparent;border-color:#555;color:#fff}
+
+/* Page hero */
+.page-hero{background:var(--ink);color:#fff;padding:64px 0 70px}
+.page-hero h1{font-size:clamp(44px,6vw,80px);line-height:.94;letter-spacing:-.06em;margin:18px 0 24px;max-width:900px}
+.page-hero .lead{font-size:19px;line-height:1.5;color:#c9c9c6;max-width:760px;margin:0 0 30px}
+.page-hero .kicker{color:var(--lime)}
+.page-hero .audience{max-width:760px;margin:0 0 32px;padding:16px 18px;border-left:4px solid var(--lime);background:#151515;color:#c9c9c6;font-size:15px;line-height:1.55}
+.page-hero .audience strong{display:block;color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.page-hero .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.breadcrumb{display:flex;flex-wrap:wrap;gap:8px;color:#8e8e8b}
+.breadcrumb a{color:#c7c7c7}.breadcrumb a:hover{color:var(--lime)}
+.breadcrumb span[aria-current]{color:var(--lime)}
+
+/* Facts table: base styles live in index.html (shared via site.css). */
+
+/* Topic chips on light backgrounds */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{border:1px solid var(--ink);padding:10px 13px;font-size:13px;background:#fff}
+
+.page-section{padding:72px 0}
+.page-section.alt{background:#fff}
+.page-section h2{font-size:40px;line-height:1;letter-spacing:-.045em;margin:0 0 14px}
+.page-section .section-intro{color:#5f5f5a;font-size:16px;line-height:1.55;max-width:760px;margin:0 0 34px}
+
+/* Course list */
+.level-group{margin-top:40px}
+.level-group h3{display:flex;align-items:baseline;gap:14px;font-size:24px;letter-spacing:-.03em;margin:0 0 14px;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.level-group h3 .mono{color:var(--blue)}
+.course{border-bottom:1px solid var(--line);background:#fff}
+.course summary{display:grid;grid-template-columns:96px 1fr auto;gap:18px;align-items:center;padding:18px 20px;cursor:pointer;list-style:none}
+.course summary::-webkit-details-marker{display:none}
+.course summary:after{content:"+";font-size:22px;color:var(--blue);line-height:1}
+.course[open] summary:after{content:"−"}
+.course summary:hover{background:#f7f7f3}
+.course .code{color:var(--blue)}
+.course h4{font-size:17px;margin:0;letter-spacing:-.01em}
+.course .course-meta{grid-column:2;color:#6f6f6a;font-size:13px;margin-top:-10px}
+.course-body{padding:4px 20px 24px 134px}
+.course-body .mono{color:#858580;margin-bottom:10px}
+.course-body ul{margin:0;padding-left:18px}
+.course-body li{margin:0 0 8px;line-height:1.55;color:#333}
+
+/* Contextual links */
+.section-intro a,.see-also a{color:var(--blue);font-weight:700;border-bottom:1px solid currentColor}
+.section-intro a:hover,.see-also a:hover{color:var(--ink)}
+.see-also{margin:14px 0 0;font-size:14px;color:#5f5f5a}
+.lead-links{color:#8e8e8b;font-size:15px;margin:-10px 0 0}
+.lead-links a{color:var(--lime);border-bottom:1px solid currentColor}.lead-links a:hover{color:#fff}
+.focus-table th{width:36%}
+.focus-table td{line-height:1.9}
+.focus-table td a{font-weight:600}
+.focus-table .mono{color:#8d8d88;margin-left:6px;font-size:10px}
+/* Keep anchored targets clear of the sticky nav. */
+.group-block,h2[id],.course,section[id]{scroll-margin-top:96px}
+
+/* Definition paragraph that opens an academy's "at a glance" section */
+.definition{font-size:18px;line-height:1.6;max-width:900px;margin:0 0 28px;color:#222}
+.updated{color:#8d8d88;margin:14px 0 0}
+
+/* FAQ — questions and answers fully visible */
+.faq{max-width:900px}
+.faq-item{border-top:1px solid var(--line);padding:22px 0}
+.faq-item:last-child{border-bottom:1px solid var(--line)}
+.faq-item h3{font-size:20px;letter-spacing:-.02em;margin:0 0 8px}
+.faq-item p{margin:0;color:#444;font-size:16px;line-height:1.6}
+.faq-item a{color:var(--blue);font-weight:700;border-bottom:1px solid currentColor}
+
+/* Academy comparison */
+.compare-group{margin-top:40px}.compare-group:first-of-type{margin-top:0}
+.compare-group h3{font-size:22px;letter-spacing:-.03em;margin:0 0 14px}
+.compare{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+.compare th,.compare td{text-align:left;vertical-align:top;padding:14px 18px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5}
+.compare thead th{background:var(--ink);color:#fff;font-family:"SFMono-Regular",Consolas,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
+.compare tbody th{width:22%}
+.compare tbody th a{color:var(--blue);font-weight:700;border-bottom:1px solid currentColor}
+@media(max-width:760px){
+  .compare thead{display:none}
+  .compare tr{display:block;border-bottom:1px solid var(--line)}
+  .compare th,.compare td{display:block;width:100%!important;border:0;padding:8px 16px}
+  .compare tbody th{padding-top:16px}
+  .compare td[data-label]:before{content:attr(data-label);display:block;color:#8d8d88;font-family:"SFMono-Regular",Consolas,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px}
+}
+
+/* Guides */
+.draft-banner{background:#fff3c4;border-bottom:1px solid #e0c96a;color:#4a3b00;font-size:14px;padding:12px 0}
+.review-note{background:#fff3c4;border:1px dashed #c9a800;padding:1px 4px;color:#4a3b00;font-size:.92em}
+.byline{color:#c9c9c6;font-size:14px;margin:0}.byline strong{color:#fff}
+.byline.mono{color:#8e8e8b}
+.article{max-width:820px}
+.article h2{font-size:30px;letter-spacing:-.035em;margin:44px 0 14px}.article h2:first-child{margin-top:0}
+.article p,.article li{font-size:17px;line-height:1.65;color:#262626}
+.article ul,.article ol{padding-left:22px}.article li{margin-bottom:8px}
+.article a{color:var(--blue);font-weight:600;border-bottom:1px solid currentColor}.article a:hover{color:var(--ink)}
+.article .facts,.article .compare{margin:18px 0 8px}
+.article .facts td,.article .facts th{font-size:15px}
+.notice{border-left:4px solid var(--blue);background:#fff;padding:14px 18px;margin:0 0 30px;font-size:15px;line-height:1.55;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.guide-cards{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--line)}
+.guides-heading{font-size:20px;letter-spacing:-.02em;margin:40px 0 12px}
+.guide-links{margin:0;padding-left:20px}.guide-links li{margin:0 0 8px}
+.guide-links a{color:var(--blue);font-weight:700;border-bottom:1px solid currentColor}
+@media(max-width:900px){.guide-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.guide-cards{grid-template-columns:1fr}.article h2{font-size:25px}.article p,.article li{font-size:16px}}
+
+/* Academy cards */
+.academy-cards{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--line)}
+.academy-card{display:flex;flex-direction:column;gap:10px;padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;transition:background .2s}
+.academy-card:hover{background:#f7f7f3}
+.academy-card .code{color:var(--blue)}
+.academy-card h3{font-size:22px;letter-spacing:-.03em;margin:4px 0 0}
+.academy-card p{margin:0;color:#5f5f5a;font-size:14px;line-height:1.5}
+.academy-card .more{margin-top:auto;padding-top:8px;font-weight:700;font-size:13px}
+.academy-card:hover .more{color:var(--blue)}
+.group-block{margin-top:56px}.group-block:first-of-type{margin-top:0}
+.group-block h2{font-size:32px}
+
+@media(max-width:900px){
+  .academy-cards{grid-template-columns:1fr 1fr}
+  .course summary{grid-template-columns:80px 1fr auto}
+  .course-body{padding-left:118px}
+}
+@media(max-width:600px){
+  .page-hero{padding:44px 0 50px}
+  .page-section{padding:52px 0}
+  .page-section h2{font-size:32px}
+  .academy-cards{grid-template-columns:1fr}
+  .course summary{grid-template-columns:1fr auto;gap:6px 12px;padding:16px}
+  .course summary .code{grid-column:1}
+  .course h4{grid-column:1}
+  .course summary:after{grid-row:1/3;grid-column:2}
+  .course .course-meta{grid-column:1;margin-top:0}
+  .course-body{padding:0 16px 20px}
+}
+
+/* About: faculty */
+.faculty{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.faculty-card{background:#fff;padding:24px}.faculty-card h3{margin:0 0 6px;font-size:20px}
+.faculty-card .mono{color:var(--blue);margin:0 0 12px}.faculty-card p{margin:0 0 10px;font-size:14px;line-height:1.55;color:#444}
+.faculty-card .credentials{color:#6f6f6a}.faculty-card a{color:var(--blue);font-weight:700;font-size:13px}
+@media(max-width:900px){.faculty{grid-template-columns:1fr}}
