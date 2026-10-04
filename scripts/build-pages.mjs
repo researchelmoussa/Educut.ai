@@ -1159,6 +1159,8 @@ const fallback = Object.fromEntries(academies.map((a) => [a.code, {
   ...(JSON.parse(fallbackMatch[1])[a.code] || {}),
   title: a.name, summary: a.summary, topics: a.topics, audience: a.audience,
   count: plural(a.courses.length, 'course'),
+  n: a.courses.length,
+  levels: LEVELS.filter((l) => a.courses.some((c) => c.level === l)),
 }]));
 index = index.replace(FALLBACK_RE, () => `const academyDetailsFallback = ${JSON.stringify(fallback)};\n`);
 
