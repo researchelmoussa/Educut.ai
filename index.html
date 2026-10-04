@@ -625,7 +625,11 @@
         summary:  a.summary,
         topics:   a.topics || [],
         audience: a.audience,
-        count:    (a.courseCount || 0) + ' course' + (a.courseCount === 1 ? '' : 's')
+        count:    (a.courseCount || 0) + ' course' + (a.courseCount === 1 ? '' : 's'),
+        n:        a.courseCount || 0,
+        levels:   ['Foundation', 'Intermediate', 'Advanced'].filter(function (l) {
+          return API.courses().some(function (c) { return c.academyCode === a.code && c.level === l; });
+        })
       };
     });
     return Object.keys(out).length ? out : null;
@@ -768,6 +772,37 @@
     .how-cta .note{color:#8d8d88;font-size:13px}
     @media(max-width:900px){.journey{grid-template-columns:1fr;gap:0}.journey::before{left:27px;right:auto;top:28px;bottom:28px;width:2px;height:auto;background:linear-gradient(180deg,var(--lime),var(--blue))}
     .jstep{flex-direction:row;align-items:flex-start;text-align:left;gap:16px;padding-bottom:18px}.jnode{flex:none}.jcard{margin-top:0;align-items:flex-start}.jviz{justify-content:start;place-items:start;height:auto}.how-cta{flex-direction:column}}
+    .ath{display:grid;grid-template-columns:260px 1fr;gap:28px;padding:30px 0;border-top:1px solid var(--line)}
+    .ath:first-child{border-top:2px solid var(--ink)}
+    .ath-l .mono{color:var(--blue);margin-bottom:10px}.ath-l h3{font-size:26px;line-height:1.05;letter-spacing:-.04em;margin:0 0 10px}.ath-l p{font-size:14px;color:#69696a;line-height:1.5;margin:0}
+    .ath-g{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .academy-card{position:relative;background:var(--paper);padding:20px 20px 18px;display:flex;flex-direction:column;min-height:186px;cursor:pointer;transition:background .25s,color .25s,transform .25s}
+    .academy-card:hover,.academy-card:focus-visible{background:var(--ink);color:#fff;transform:translateY(-3px);outline:none}
+    .academy-card.active{background:var(--ink);color:#fff}
+    .ac-top{display:flex;justify-content:space-between;align-items:flex-start}
+    .ac-code{font:600 11px "SFMono-Regular",Consolas,"Liberation Mono",monospace;letter-spacing:.14em;color:var(--blue)}
+    .ac-n{text-align:right;line-height:1}.ac-n b{display:block;font-size:34px;letter-spacing:-.05em}.ac-n small{font:600 10px "SFMono-Regular",Consolas,"Liberation Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:#8d8d88}
+    .academy-card h4{font-size:20px;letter-spacing:-.025em;margin:14px 0 6px}
+    .academy-card p{font-size:13px;line-height:1.5;color:#69696a;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .ac-foot{margin-top:auto;padding-top:14px;display:flex;align-items:center;justify-content:space-between}
+    .ac-lv{display:flex;align-items:center}.ac-lv i{width:22px;height:4px;background:#d7d7d1;margin-right:5px}.ac-lv i.on{background:var(--ink)}
+    .ac-lv span{white-space:nowrap;font:600 10px "SFMono-Regular",Consolas,"Liberation Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:#8d8d88;margin-left:3px}
+    .ac-go{font-size:18px;color:var(--blue);transition:transform .2s}
+    .ac-start{display:inline-block;margin-top:8px;font:600 10px "SFMono-Regular",Consolas,"Liberation Mono",monospace;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--lime);padding:4px 7px}
+    .academy-card.pillar{background:var(--lime)}.academy-card.pillar .ac-code,.academy-card.pillar .ac-go{color:var(--ink)}.academy-card.pillar p,.academy-card.pillar .ac-n small,.academy-card.pillar .ac-lv span{color:#36400f}.academy-card.pillar .ac-lv i{background:rgba(11,11,12,.18)}.academy-card.pillar .ac-lv i.on{background:var(--ink)}
+    .academy-card:is(:hover,:focus-visible,.active) .ac-code,.academy-card:is(:hover,:focus-visible,.active) .ac-go{color:var(--lime)}
+    .academy-card:is(:hover,:focus-visible,.active) p{color:#b5b5b0}
+    .academy-card:is(:hover,:focus-visible,.active) .ac-n small,.academy-card:is(:hover,:focus-visible,.active) .ac-lv span{color:#8d8d88}
+    .academy-card:is(:hover,:focus-visible,.active) .ac-lv i{background:#3a3a3a}.academy-card:is(:hover,:focus-visible,.active) .ac-lv i.on{background:var(--lime)}
+    .academy-card:hover .ac-go{transform:translate(3px,-3px)}
+    .academy-card.active .ac-go{transform:rotate(45deg)}
+    .ath-g.n5 .pillar{grid-row:span 2}.ath-g.n5 .pillar h4{font-size:26px;margin-top:auto}.ath-g.n5 .pillar p{-webkit-line-clamp:5}
+    .ath-g.n4 .academy-card:last-child{grid-column:1/-1;min-height:150px}.ath-g.n4 .academy-card:last-child p{-webkit-line-clamp:1;max-width:620px}
+    .academy-themes .academy-explorer{margin-bottom:12px}
+    .academy-card.academy-enter{opacity:0;transform:translateY(20px)}
+    .academy-card.academy-visible{opacity:1;transition:opacity .58s cubic-bezier(.16,1,.3,1),transform .58s cubic-bezier(.16,1,.3,1),background .25s,color .25s}
+    @media(max-width:900px){.ath{grid-template-columns:1fr;gap:16px}.ath-g{grid-template-columns:1fr 1fr}.ath-g.n4 .academy-card:last-child{grid-column:auto}.ath-g.n5 .pillar{grid-row:auto}.ath-g.n5 .pillar h4{margin-top:14px}}
+    @media(max-width:600px){.ath-g{grid-template-columns:1fr}}
     .academy-section{background:#fff}.academies{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--line)}
     .academy{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:128px}.academy .code{color:var(--blue)}.academy h4{font-size:18px;margin:20px 0 0}
     .how{background:var(--ink);color:white}.how .section-head p{color:#aaa}.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #444}.step{padding:28px;border-right:1px solid #333}.step:last-child{border-right:0}.step .n{color:var(--lime);font-size:12px}.step h3{font-size:22px;margin:40px 0 10px}.step p{color:#9e9e9a;font-size:14px}
@@ -1908,13 +1943,13 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
   <section class="academy-section" id="academy"><div class="wrap">
     <div class="section-head" data-reveal><div><div class="mono" style="color:var(--blue);margin-bottom:14px">EduCut.ai Academy</div><h2>From foundations<br>to transformation.</h2></div><p>A focused AI-only portfolio built around precise professional needs, from productivity and business functions to LLMs, RAG, agents, governance, security and enterprise transformation. Courses are continuously updated and expanded as AI evolves.</p></div>
     <div class="academy-hint mono">Click an Academy to discover its focus →</div>
-    <div class="academies" id="academyGrid"></div>
+    <div class="academy-themes" id="academyGrid"></div>
     <div class="academy-explorer" id="academyExplorer" aria-live="polite"></div>
     <p class="section-more"><a href="/academies/">Browse all 18 academies and their courses →</a></p>
   </div></section>
 
   <section class="how" id="how"><div class="wrap">
-    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--lime);margin-bottom:14px">3-minute assessment</div><h2>Tell us where you are.<br>We'll map where to go.</h2></div><p>Twenty concise questions help us understand what your organization actually needs, so we can recommend a focused path instead of sending you through a broad, generic course library.</p></div>
+    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--lime);margin-bottom:14px">3-minute assessment</div><h2>Tell us where you are.<br>We'll map where to go.</h2></div><p>Twenty quick questions reveal what you really need. For businesses, the skills your teams are missing. For universities, the AI expertise your programs should offer. For professionals, the next step in your career. The result is a focused AI path, not a generic course library.</p></div>
   <div class="journey" data-reveal>
     <div class="jstep"><div class="jnode">01</div><div class="jcard">
       <div class="jviz" aria-hidden="true"><svg width="150" height="100" viewBox="0 0 150 100" fill="none">
@@ -2212,7 +2247,7 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
   revealEls.forEach(el => revealObserver.observe(el));
 
   // Academies: stagger in as a kinetic grid.
-  const academyEls = [...document.querySelectorAll('.academy')];
+  const academyEls = [...document.querySelectorAll('.academy-card')];
   const academyGrid = document.getElementById('academyGrid');
   if (academyGrid && academyEls.length) {
     const academyObserver = new IntersectionObserver(entries => {
@@ -2284,7 +2319,7 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
       if(dot) dot.style.opacity='.9';
       if(ring) ring.style.opacity='1';
     },{passive:true});
-    document.querySelectorAll('a,button,.academy,input').forEach(el=>{
+    document.querySelectorAll('a,button,.academy-card,input').forEach(el=>{
       el.addEventListener('pointerenter',()=>ring&&ring.classList.add('active'));
       el.addEventListener('pointerleave',()=>ring&&ring.classList.remove('active'));
     });
@@ -2293,7 +2328,7 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 
   // Small kinetic response when an Academy is opened.
   document.addEventListener('click', e => {
-    const card = e.target.closest && e.target.closest('.academy');
+    const card = e.target.closest && e.target.closest('.academy-card');
     if (!card) return;
     animate(card,
       [{transform:'scale(1)'},{transform:'scale(.975)'},{transform:'scale(1)'}],
@@ -2528,25 +2563,51 @@ renderConsultDates();
 renderConsultTimes();
 loadConsultSlots();
 
-const academyDetailsFallback = {"A001":{"title":"AI Foundations","summary":"Build a rigorous understanding of the core disciplines behind modern AI, from machine learning and deep learning to NLP, computer vision, reasoning, safety and AI systems.","topics":["Machine Learning","Deep Learning","NLP","Computer Vision","Reasoning","AI Safety"],"audience":"Professionals and technical teams who want a strong, structured foundation across the major fields of Artificial Intelligence.","count":"24 courses"},"A002":{"title":"Generative AI","summary":"Understand how generative AI works and how to use it effectively across professional workflows, from foundation models and multimodal systems to practical business applications.","topics":["Generative AI","Foundation Models","Multimodal AI","Business Applications","Responsible Use"],"audience":"Professionals and organizations that want to understand and adopt the technologies powering today's generative AI systems.","count":"20 courses"},"A003":{"title":"Prompt Engineering","summary":"Learn to design reliable prompts for everyday work, data analysis, software development, research, multimodal AI and advanced agentic or RAG-based applications.","topics":["Prompt Design","Advanced Prompting","Workplace Productivity","Data Analysis","Multimodal","Agents & RAG"],"audience":"Professionals and teams using generative AI to create, analyze, automate or structure business tasks.","count":"10 courses"},"A004":{"title":"AI Productivity","summary":"Turn AI into a practical productivity layer for daily work, improving communication, documents, meetings, research, spreadsheets, planning and repeatable workflows.","topics":["Email & Communication","Documents","Meetings","Research","Excel & Data","Automation"],"audience":"Business professionals who want measurable productivity gains from AI in their everyday work.","count":"10 courses"},"A005":{"title":"Data Analytics","summary":"Strengthen the statistical, mathematical and analytical foundations needed to interpret data, build reliable analyses and support better evidence-based decisions.","topics":["Statistics","Mathematics","Data Analysis","Interpretation","Decision Support"],"audience":"Professionals and teams who need stronger analytical foundations for data-driven and AI-enabled work.","count":"18 courses"},"A006":{"title":"AI for Leaders","summary":"Equip leaders to identify valuable AI opportunities, make informed investment decisions, lead adoption, govern risk and build an AI-ready organization.","topics":["AI Strategy","Use Cases","Decision-Making","Transformation","ROI","Governance"],"audience":"Executives, managers and decision-makers responsible for AI strategy, investment and organizational change.","count":"10 courses"},"A007":{"title":"AI for Marketing","summary":"Apply AI across the marketing lifecycle, from strategy, content and social media to SEO, advertising, customer insight, analytics, personalization and automation.","topics":["Strategy","Content","Social Media","SEO","Advertising","Analytics & Automation"],"audience":"Marketing, communication, acquisition and customer-experience professionals.","count":"10 courses"},"A008":{"title":"AI for Finance","summary":"Use AI to enhance financial analysis, reporting, forecasting, accounting, modeling, risk management, investment analysis and finance-team automation.","topics":["Financial Analysis","Forecasting","Accounting","Financial Modeling","Risk","FP&A & Automation"],"audience":"Finance professionals, analysts, FP&A teams, controllers and finance leaders.","count":"10 courses"},"A009":{"title":"AI for HR","summary":"Apply AI across the employee lifecycle: recruitment, onboarding, learning, performance, engagement, workforce planning, people analytics and responsible HR transformation.","topics":["Recruitment","Onboarding","L&D","Performance","People Analytics","Workforce Planning"],"audience":"HR professionals, talent leaders, L&D teams, people analytics professionals and managers.","count":"10 courses"},"A010":{"title":"AI for Education","summary":"Integrate AI into teaching and learning, from course design and classroom engagement to personalization, assessment, content creation, research and academic integrity.","topics":["Course Design","Teaching","Personalized Learning","Assessment","Content Creation","Academic Integrity"],"audience":"Teachers, trainers, academic leaders, researchers and education professionals.","count":"10 courses"},"A011":{"title":"AI for Developers","summary":"Help software teams use AI across the development lifecycle and build AI-powered applications using prompting, APIs, RAG, agents, testing, automation and secure production practices.","topics":["AI-Assisted Coding","LLM APIs","RAG","Agents","Testing","Production AI"],"audience":"Developers, software engineers and technical teams integrating AI into products and engineering workflows.","count":"10 courses"},"A012":{"title":"LLM Engineering","summary":"Move from LLM fundamentals to production systems, covering context engineering, APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, security and LLMOps.","topics":["LLM APIs","Embeddings","RAG","Fine-Tuning","Evaluation","LLMOps"],"audience":"Developers, software engineers, AI engineers and technical professionals building LLM applications.","count":"10 courses"},"A013":{"title":"RAG Systems","summary":"Design reliable knowledge-powered AI systems by mastering document ingestion, chunking, embeddings, retrieval, context engineering, advanced RAG, evaluation, security and RAGOps.","topics":["Document Ingestion","Embeddings","Retrieval","Context Engineering","Advanced RAG","RAGOps"],"audience":"Developers and AI engineers building assistants and applications grounded in enterprise or domain knowledge.","count":"10 courses"},"A014":{"title":"AI Agents","summary":"Learn how to design AI systems that can plan, use tools, manage memory and state, access knowledge, collaborate with other agents and operate safely in production.","topics":["Agent Architecture","Tool Use","Memory","Planning","Multi-Agent Systems","AgentOps"],"audience":"Developers, AI engineers and advanced professionals building autonomous or semi-autonomous AI workflows.","count":"10 courses"},"A015":{"title":"Responsible AI","summary":"Build AI that is trustworthy and accountable by addressing ethics, fairness, transparency, privacy, safety, governance, regulation and responsible use of generative and agentic AI.","topics":["Ethics","Fairness","Explainability","Privacy","Safety","Responsible GenAI"],"audience":"Professionals, leaders and teams responsible for designing, using or overseeing AI responsibly.","count":"10 courses"},"A016":{"title":"AI Governance","summary":"Create the organizational controls needed to govern AI at scale: policies, risk assessment, lifecycle governance, compliance, vendor oversight, auditability and enterprise governance programs.","topics":["Regulation","Risk Management","Policies","Lifecycle Governance","Vendor Governance","Audit"],"audience":"Governance, compliance, risk, legal, security and management teams overseeing organizational AI.","count":"10 courses"},"A017":{"title":"AI Security","summary":"Protect AI systems across their lifecycle, from threat modeling and prompt injection to RAG and agent security, model supply chains, red teaming, monitoring and incident response.","topics":["Threat Modeling","Prompt Injection","RAG Security","Agent Security","Red Teaming","Incident Response"],"audience":"Security, risk, compliance and technical teams responsible for the safe deployment of AI systems.","count":"10 courses"},"A018":{"title":"AI Transformation","summary":"Turn AI ambition into enterprise execution: assess readiness, define strategy, prioritize use cases, redesign processes, develop skills, govern risk, measure ROI and scale transformation.","topics":["AI Readiness","Strategy","Use Cases","Operating Model","Change Management","ROI & Scale"],"audience":"Executives, managers, transformation leaders and decision-makers leading organization-wide AI initiatives.","count":"10 courses"}};
+const academyDetailsFallback = {"A001":{"title":"AI Foundations","summary":"Build a rigorous understanding of the core disciplines behind modern AI, from machine learning and deep learning to NLP, computer vision, reasoning, safety and AI systems.","topics":["Machine Learning","Deep Learning","NLP","Computer Vision","Reasoning","AI Safety"],"audience":"Professionals and technical teams who want a strong, structured foundation across the major fields of Artificial Intelligence.","count":"24 courses","n":24,"levels":["Foundation","Intermediate"]},"A002":{"title":"Generative AI","summary":"Understand how generative AI works and how to use it effectively across professional workflows, from foundation models and multimodal systems to practical business applications.","topics":["Generative AI","Foundation Models","Multimodal AI","Business Applications","Responsible Use"],"audience":"Professionals and organizations that want to understand and adopt the technologies powering today's generative AI systems.","count":"20 courses","n":20,"levels":["Foundation","Intermediate"]},"A003":{"title":"Prompt Engineering","summary":"Learn to design reliable prompts for everyday work, data analysis, software development, research, multimodal AI and advanced agentic or RAG-based applications.","topics":["Prompt Design","Advanced Prompting","Workplace Productivity","Data Analysis","Multimodal","Agents & RAG"],"audience":"Professionals and teams using generative AI to create, analyze, automate or structure business tasks.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A004":{"title":"AI Productivity","summary":"Turn AI into a practical productivity layer for daily work, improving communication, documents, meetings, research, spreadsheets, planning and repeatable workflows.","topics":["Email & Communication","Documents","Meetings","Research","Excel & Data","Automation"],"audience":"Business professionals who want measurable productivity gains from AI in their everyday work.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A005":{"title":"Data Analytics","summary":"Strengthen the statistical, mathematical and analytical foundations needed to interpret data, build reliable analyses and support better evidence-based decisions.","topics":["Statistics","Mathematics","Data Analysis","Interpretation","Decision Support"],"audience":"Professionals and teams who need stronger analytical foundations for data-driven and AI-enabled work.","count":"18 courses","n":18,"levels":["Intermediate"]},"A006":{"title":"AI for Leaders","summary":"Equip leaders to identify valuable AI opportunities, make informed investment decisions, lead adoption, govern risk and build an AI-ready organization.","topics":["AI Strategy","Use Cases","Decision-Making","Transformation","ROI","Governance"],"audience":"Executives, managers and decision-makers responsible for AI strategy, investment and organizational change.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A007":{"title":"AI for Marketing","summary":"Apply AI across the marketing lifecycle, from strategy, content and social media to SEO, advertising, customer insight, analytics, personalization and automation.","topics":["Strategy","Content","Social Media","SEO","Advertising","Analytics & Automation"],"audience":"Marketing, communication, acquisition and customer-experience professionals.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A008":{"title":"AI for Finance","summary":"Use AI to enhance financial analysis, reporting, forecasting, accounting, modeling, risk management, investment analysis and finance-team automation.","topics":["Financial Analysis","Forecasting","Accounting","Financial Modeling","Risk","FP&A & Automation"],"audience":"Finance professionals, analysts, FP&A teams, controllers and finance leaders.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A009":{"title":"AI for HR","summary":"Apply AI across the employee lifecycle: recruitment, onboarding, learning, performance, engagement, workforce planning, people analytics and responsible HR transformation.","topics":["Recruitment","Onboarding","L&D","Performance","People Analytics","Workforce Planning"],"audience":"HR professionals, talent leaders, L&D teams, people analytics professionals and managers.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A010":{"title":"AI for Education","summary":"Integrate AI into teaching and learning, from course design and classroom engagement to personalization, assessment, content creation, research and academic integrity.","topics":["Course Design","Teaching","Personalized Learning","Assessment","Content Creation","Academic Integrity"],"audience":"Teachers, trainers, academic leaders, researchers and education professionals.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A011":{"title":"AI for Developers","summary":"Help software teams use AI across the development lifecycle and build AI-powered applications using prompting, APIs, RAG, agents, testing, automation and secure production practices.","topics":["AI-Assisted Coding","LLM APIs","RAG","Agents","Testing","Production AI"],"audience":"Developers, software engineers and technical teams integrating AI into products and engineering workflows.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A012":{"title":"LLM Engineering","summary":"Move from LLM fundamentals to production systems, covering context engineering, APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, security and LLMOps.","topics":["LLM APIs","Embeddings","RAG","Fine-Tuning","Evaluation","LLMOps"],"audience":"Developers, software engineers, AI engineers and technical professionals building LLM applications.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A013":{"title":"RAG Systems","summary":"Design reliable knowledge-powered AI systems by mastering document ingestion, chunking, embeddings, retrieval, context engineering, advanced RAG, evaluation, security and RAGOps.","topics":["Document Ingestion","Embeddings","Retrieval","Context Engineering","Advanced RAG","RAGOps"],"audience":"Developers and AI engineers building assistants and applications grounded in enterprise or domain knowledge.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A014":{"title":"AI Agents","summary":"Learn how to design AI systems that can plan, use tools, manage memory and state, access knowledge, collaborate with other agents and operate safely in production.","topics":["Agent Architecture","Tool Use","Memory","Planning","Multi-Agent Systems","AgentOps"],"audience":"Developers, AI engineers and advanced professionals building autonomous or semi-autonomous AI workflows.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A015":{"title":"Responsible AI","summary":"Build AI that is trustworthy and accountable by addressing ethics, fairness, transparency, privacy, safety, governance, regulation and responsible use of generative and agentic AI.","topics":["Ethics","Fairness","Explainability","Privacy","Safety","Responsible GenAI"],"audience":"Professionals, leaders and teams responsible for designing, using or overseeing AI responsibly.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A016":{"title":"AI Governance","summary":"Create the organizational controls needed to govern AI at scale: policies, risk assessment, lifecycle governance, compliance, vendor oversight, auditability and enterprise governance programs.","topics":["Regulation","Risk Management","Policies","Lifecycle Governance","Vendor Governance","Audit"],"audience":"Governance, compliance, risk, legal, security and management teams overseeing organizational AI.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A017":{"title":"AI Security","summary":"Protect AI systems across their lifecycle, from threat modeling and prompt injection to RAG and agent security, model supply chains, red teaming, monitoring and incident response.","topics":["Threat Modeling","Prompt Injection","RAG Security","Agent Security","Red Teaming","Incident Response"],"audience":"Security, risk, compliance and technical teams responsible for the safe deployment of AI systems.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]},"A018":{"title":"AI Transformation","summary":"Turn AI ambition into enterprise execution: assess readiness, define strategy, prioritize use cases, redesign processes, develop skills, govern risk, measure ROI and scale transformation.","topics":["AI Readiness","Strategy","Use Cases","Operating Model","Change Management","ROI & Scale"],"audience":"Executives, managers, transformation leaders and decision-makers leading organization-wide AI initiatives.","count":"10 courses","n":10,"levels":["Foundation","Intermediate","Advanced"]}};
 
 // Edit an academy in the Administrator Workspace and it appears here on
 // the next load. The hardcoded object above is only used when the
 // catalogue could not be read at all.
 const academyDetails = (window.EduCutAPI && window.EduCutAPI.academyDetails()) || academyDetailsFallback;
-const academies = Object.entries(academyDetails).map(([code,d]) => [code,d.title]);
+// Academies grouped by theme. Same groups and lead academies as CLUSTERS in
+// scripts/build-pages.mjs; an academy in no group is listed at the end.
+const ACADEMY_THEMES = [
+  ['AI & data foundations','Understand how AI, generative AI and data really work.','A001',['A001','A002','A005']],
+  ['Strategy & transformation','Lead adoption, boost productivity and scale AI across the organization.','A018',['A018','A006','A004']],
+  ['AI for business functions','Apply AI where your teams work every day.',null,['A007','A008','A009','A010']],
+  ['Building with LLMs','Design, build and run production AI systems.','A012',['A012','A013','A014','A011','A003']],
+  ['Trustworthy AI','Govern, secure and use AI responsibly.','A016',['A016','A015','A017']],
+];
+const themed = new Set(ACADEMY_THEMES.flatMap(t=>t[3]));
+const otherAcademies = Object.keys(academyDetails).filter(c=>!themed.has(c));
+const academyThemes = ACADEMY_THEMES.map(t=>[t[0],t[1],t[2],t[3].filter(c=>academyDetails[c])])
+  .concat(otherAcademies.length?[['More academies','New additions to the catalogue.',null,otherAcademies]]:[])
+  .filter(t=>t[3].length);
 const academyGrid = document.getElementById('academyGrid');
 const academyExplorer = document.getElementById('academyExplorer');
 let activeAcademy = null;
 
-academyGrid.innerHTML = academies.map(a=>`
-  <div class="academy" role="button" tabindex="0" data-academy="${a[0]}" aria-expanded="false">
-    <div class="mono code">${a[0]}</div>
-    <h4>${a[1]}</h4>
-  </div>`).join('');
+const ACADEMY_LEVELS = ['Foundation','Intermediate','Advanced'];
+function academyLevels(d){
+  const on = ACADEMY_LEVELS.filter(l=>(d.levels||[]).includes(l));
+  const label = on.length===3 ? 'All levels' : on.length===1 ? on[0] : on.length ? `${on[0]} to ${on[on.length-1].slice(0,5)}.` : '';
+  return `<span class="ac-lv">${ACADEMY_LEVELS.map(l=>`<i class="${on.includes(l)?'on':''}"></i>`).join('')}<span>${label}</span></span>`;
+}
+function academyCard(code, pillar){
+  const d = academyDetails[code];
+  const n = d.n ?? parseInt(d.count,10) ?? 0;
+  return `<div class="academy-card${pillar?' pillar':''}" role="button" tabindex="0" data-academy="${code}" aria-expanded="false">
+      <div class="ac-top"><div><span class="ac-code">${code}</span>${pillar?'<br><span class="ac-start">Start here</span>':''}</div><div class="ac-n"><b>${n}</b><small>course${n===1?'':'s'}</small></div></div>
+      <h4>${d.title}</h4><p>${d.summary||''}</p>
+      <div class="ac-foot">${academyLevels(d)}<span class="ac-go" aria-hidden="true">↗</span></div>
+    </div>`;
+}
+academyGrid.innerHTML = academyThemes.map(([title,promise,pillar,codes],i)=>`
+  <div class="ath"><div class="ath-l"><div class="mono">Theme ${String(i+1).padStart(2,'0')} · ${codes.length} academ${codes.length===1?'y':'ies'}</div><h3>${title}</h3><p>${promise}</p></div>
+    <div class="ath-g n${codes.length}">${codes.map(c=>academyCard(c, c===pillar)).join('')}</div></div>`).join('');
 
 // Cards are created dynamically, so animate them only after insertion.
-const renderedAcademyCards=[...academyGrid.querySelectorAll('.academy')];
+const renderedAcademyCards=[...academyGrid.querySelectorAll('.academy-card')];
 if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   renderedAcademyCards.forEach((card,i)=>{
     card.classList.add('academy-enter');
@@ -2564,7 +2625,7 @@ function academySlug(name){
 
 function renderAcademyDetail(code){
   const d = academyDetails[code];
-  const cards = [...academyGrid.querySelectorAll('.academy')];
+  const cards = [...academyGrid.querySelectorAll('.academy-card')];
 
   if(activeAcademy === code){
     activeAcademy = null;
@@ -2598,16 +2659,18 @@ function renderAcademyDetail(code){
         <a class="academy-detail-link" href="/academies/${academySlug(d.title)}/">See all ${d.title} courses →</a>
       </div>
     </div>`;
+  const theme = academyGrid.querySelector(`[data-academy="${code}"]`)?.closest('.ath');
+  if(theme && theme.nextElementSibling!==academyExplorer) theme.after(academyExplorer);
   academyExplorer.classList.add('open');
   academyExplorer.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
 academyGrid.addEventListener('click', e=>{
-  const card = e.target.closest('.academy');
+  const card = e.target.closest('.academy-card');
   if(card) renderAcademyDetail(card.dataset.academy);
 });
 academyGrid.addEventListener('keydown', e=>{
-  const card = e.target.closest('.academy');
+  const card = e.target.closest('.academy-card');
   if(card && (e.key === 'Enter' || e.key === ' ')){
     e.preventDefault();
     renderAcademyDetail(card.dataset.academy);
