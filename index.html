@@ -803,6 +803,35 @@
     .academy-card.academy-visible{opacity:1;transition:opacity .58s cubic-bezier(.16,1,.3,1),transform .58s cubic-bezier(.16,1,.3,1),background .25s,color .25s}
     @media(max-width:900px){.ath{grid-template-columns:1fr;gap:16px}.ath-g{grid-template-columns:1fr 1fr}.ath-g.n4 .academy-card:last-child{grid-column:auto}.ath-g.n5 .pillar{grid-row:auto}.ath-g.n5 .pillar h4{margin-top:14px}}
     @media(max-width:600px){.ath-g{grid-template-columns:1fr}}
+    .pw{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:end}
+    .pc{position:relative;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;padding:28px 28px 26px;transition:transform .25s,box-shadow .25s}
+    .pc:hover{transform:translateY(-6px);box-shadow:0 24px 50px -30px rgba(11,11,12,.45)}
+    .pc:nth-child(1){min-height:540px}.pc:nth-child(2){min-height:590px}.pc:nth-child(3){min-height:640px;background:var(--ink);color:#fff;border-color:var(--ink)}
+    .pc-lv{display:flex;justify-content:space-between;align-items:center}
+    .pc-lv .mono{color:var(--blue)}.pc:nth-child(3) .pc-lv .mono{color:var(--lime)}
+    .pc-step{font:600 10px "SFMono-Regular",Consolas,"Liberation Mono",monospace;letter-spacing:.12em;text-transform:uppercase;border:1px solid currentColor;padding:4px 7px;color:#8d8d88}
+    .pc-num{display:flex;align-items:flex-end;gap:12px;margin:22px 0 6px}
+    .pc-num b{font-size:96px;line-height:.82;letter-spacing:-.08em}
+    .pc-num span{font:600 11px "SFMono-Regular",Consolas,"Liberation Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:#8d8d88;padding-bottom:6px}
+    .dots{display:flex;gap:6px;margin:16px 0 22px}
+    .dots i{width:100%;max-width:34px;height:34px;background:var(--lime);display:block}
+    .dots i.off{background:transparent;border:1px dashed #cfcfc8}
+    .pc:nth-child(3) .dots i.off{border-color:#3a3a3a}
+    .pc h3{font-size:26px;letter-spacing:-.035em;margin:0 0 8px}
+    .pc p.d{color:#69696a;font-size:15px;line-height:1.5;margin:0}.pc:nth-child(3) p.d{color:#b5b5b0}
+    .pc ul{list-style:none;padding:0;margin:20px 0 0}
+    .pc li{display:flex;gap:10px;align-items:center;padding:9px 0;border-top:1px solid var(--line);font-size:14px}
+    .pc:nth-child(3) li{border-color:#2a2a2d}
+    .pc li::before{content:"";width:8px;height:8px;background:var(--blue);flex:none}.pc:nth-child(3) li::before{background:var(--lime)}
+    .flow{margin-top:auto;padding-top:22px;display:flex;align-items:center;gap:0}
+    .flow span{font:600 10px "SFMono-Regular",Consolas,"Liberation Mono",monospace;letter-spacing:.1em;text-transform:uppercase;padding:7px 9px;background:var(--paper);white-space:nowrap}
+    .pc:nth-child(3) .flow span{background:#1b1b1e}
+    .flow i{flex:1;height:1px;background:var(--line);min-width:8px}.pc:nth-child(3) .flow i{background:#3a3a3a}
+    .pc .flow span:last-child{background:var(--lime);color:var(--ink)}
+    .p-axis{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font:600 11px "SFMono-Regular",Consolas,"Liberation Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:#8d8d88}
+    .p-axis i{flex:1;height:2px;margin:0 14px;background:linear-gradient(90deg,var(--line),var(--ink))}
+    .p-cta{display:flex;align-items:center;gap:22px;margin-top:34px}.p-cta .section-more{margin:0}
+    @media(max-width:900px){.pw{grid-template-columns:1fr}.pc:nth-child(n){min-height:0}.p-axis{display:none}.p-cta{flex-direction:column;align-items:flex-start}}
     .academy-section{background:#fff}.academies{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--line)}
     .academy{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:128px}.academy .code{color:var(--blue)}.academy h4{font-size:18px;margin:20px 0 0}
     .how{background:var(--ink);color:white}.how .section-head p{color:#aaa}.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #444}.step{padding:28px;border-right:1px solid #333}.step:last-child{border-right:0}.step .n{color:var(--lime);font-size:12px}.step h3{font-size:22px;margin:40px 0 10px}.step p{color:#9e9e9a;font-size:14px}
@@ -1903,13 +1932,29 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
   <div class="vision-strap"><div class="wrap"><strong>AI learning built for business, not a generic course library.</strong><span>Specialized courses that evolve as AI evolves.</span><span class="vision-words">Focused • Relevant • Evolving</span></div></div>
 
   <section id="paths"><div class="wrap">
-    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--blue);margin-bottom:14px">Your learning architecture</div><h2>One assessment.<br>Three ways forward.</h2></div><p>We don't label companies simply “beginner” or “advanced.” Your recommendation combines organizational maturity, business priorities, target teams, technical ambition and governance needs. You receive three paths with increasing depth.</p></div>
-    <div class="plans">
-      <article class="plan"><div class="mono">Level 01 · Essential</div><div class="num">03</div><h3>Quick capability</h3><p>Build shared understanding and activate your first high-value AI use cases.</p><ul><li>Core AI literacy</li><li>Immediate business application</li><li>One prioritized capability</li></ul><div class="mono tag">Understand → Apply → Quick win</div></article>
-      <article class="plan"><div class="mono">Level 02 · Accelerate</div><div class="num">05</div><h3>Operational capability</h3><p>Build repeatable workflows and stronger team-level AI capabilities.</p><ul><li>Foundations + specialization</li><li>Workflow acceleration</li><li>Responsible adoption</li></ul><div class="mono tag">Apply → Automate → Specialize</div></article>
-      <article class="plan"><div class="mono">Level 03 · Transform</div><div class="num">07</div><h3>Strategic capability</h3><p>Connect skills, technology, governance and business transformation.</p><ul><li>Cross-functional capability</li><li>Governance & risk</li><li>Scale and transformation</li></ul><div class="mono tag">Strategy → Govern → Scale</div></article>
+    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--blue);margin-bottom:14px">Your learning architecture</div><h2>One assessment.<br>Three ways forward.</h2></div><p>We don't label anyone simply “beginner” or “advanced.” Your recommendation reflects your goals, your context and your ambition, whether you're a business, a university or a professional. You receive three paths with increasing depth.</p></div>
+    <div class="pw" data-reveal>
+      <article class="pc"><div class="pc-lv"><div class="mono">Level 01 · Essential</div><span class="pc-step">Start</span></div>
+        <div class="pc-num"><b>03</b><span>courses</span></div>
+        <div class="dots"><i></i><i></i><i></i><i class="off"></i><i class="off"></i><i class="off"></i><i class="off"></i></div>
+        <h3>Quick capability</h3><p class="d">Build shared understanding and activate your first high-value AI use cases.</p>
+        <ul><li>Core AI literacy</li><li>Immediate business application</li><li>One prioritized capability</li></ul>
+        <div class="flow"><span>Understand</span><i></i><span>Apply</span><i></i><span>Quick win</span></div></article>
+      <article class="pc"><div class="pc-lv"><div class="mono">Level 02 · Accelerate</div><span class="pc-step">Grow</span></div>
+        <div class="pc-num"><b>05</b><span>courses</span></div>
+        <div class="dots"><i></i><i></i><i></i><i></i><i></i><i class="off"></i><i class="off"></i></div>
+        <h3>Operational capability</h3><p class="d">Build repeatable workflows and stronger team-level AI capabilities.</p>
+        <ul><li>Foundations + specialization</li><li>Workflow acceleration</li><li>Responsible adoption</li></ul>
+        <div class="flow"><span>Apply</span><i></i><span>Automate</span><i></i><span>Specialize</span></div></article>
+      <article class="pc"><div class="pc-lv"><div class="mono">Level 03 · Transform</div><span class="pc-step">Lead</span></div>
+        <div class="pc-num"><b>07</b><span>courses</span></div>
+        <div class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <h3>Strategic capability</h3><p class="d">Connect skills, technology, governance and business transformation.</p>
+        <ul><li>Cross-functional capability</li><li>Governance &amp; risk</li><li>Scale and transformation</li></ul>
+        <div class="flow"><span>Strategy</span><i></i><span>Govern</span><i></i><span>Scale</span></div></article>
     </div>
-    <p class="section-more"><a href="/ai-learning-paths/">See how the paths work →</a></p>
+    <div class="p-axis"><span>Quick start</span><i></i><span>Increasing depth and impact</span><i></i><span>Full transformation</span></div>
+    <div class="p-cta"><button class="btn btn-lime btn-lg" data-start>Find my path in 3 minutes →</button><p class="section-more"><a href="/ai-learning-paths/">See how the paths work →</a></p></div>
   </div></section>
 
   <!-- about-block:start (generated by scripts/build-pages.mjs - edit the script, not this block) -->
