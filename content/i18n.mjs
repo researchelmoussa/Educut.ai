@@ -14,7 +14,7 @@
         path to the French path in ALTERNATES below.
 
    hreflang tags (and sitemap alternates) are emitted only for pages mapped
-   here, and the build checks that every mapped page exists — so the site
+   here, and the build checks that every mapped page exists - so the site
    never points search engines at a missing or unreviewed translation.
    =================================================================== */
 

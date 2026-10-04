@@ -10,10 +10,10 @@ Supabase catalogue.
 | URL | Source |
 | --- | --- |
 | `/` | `index.html` |
-| `/academies/` | generated — academy hub |
-| `/academies/<slug>/` | generated — one page per academy, with its courses |
-| `/ai-learning-paths/` | generated — learning paths + how the assessment works |
-| `/contact/` | generated — consultation, catalogue request, contact emails |
+| `/academies/` | generated - academy hub |
+| `/academies/<slug>/` | generated - one page per academy, with its courses |
+| `/ai-learning-paths/` | generated - learning paths + how the assessment works |
+| `/contact/` | generated - consultation, catalogue request, contact emails |
 
 Private areas stay inside `index.html` as fragment routes
 (`/#/admin/…`, `/#/company/…`, `/#/academy/…`) and are not separate pages.

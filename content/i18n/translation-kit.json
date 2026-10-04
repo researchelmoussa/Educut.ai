@@ -1,29 +1,29 @@
 {
   "note": "Source strings for translation. Phase 1 = core pages and academies; phase 2 = course programmes. Translate meaning and search terms, not word for word.",
-  "exported": "2026-09-23",
+  "exported": "2026-10-04",
   "phase1": {
     "pages": [
       {
         "path": "/",
-        "title": "AI Training for Companies — Build Your AI Path | EduCut.ai",
+        "title": "AI Training for Companies: Build Your AI Path | EduCut.ai",
         "description": "Business-focused AI training for companies: 18 academies, 212 courses. Take the free 3-minute assessment and get a 3, 5 or 7-course AI learning path.",
         "h1": "Build the right AI path for your company."
       },
       {
         "path": "/academies/",
-        "title": "AI Training Courses — 18 Academies, 212 Courses | EduCut.ai",
+        "title": "AI Training Courses: 18 Academies, 212 Courses | EduCut.ai",
         "description": "Browse 212 AI training courses in 18 academies: AI foundations, prompt engineering, AI for business functions, LLMs, RAG, agents, governance and security.",
         "h1": "The EduCut.ai Academy: AI training courses"
       },
       {
         "path": "/academies/ai-foundations/",
-        "title": "AI Fundamentals Courses — ML, Deep Learning, NLP | EduCut.ai",
+        "title": "AI Fundamentals Courses: ML, Deep Learning, NLP | EduCut.ai",
         "description": "24 AI fundamentals courses: machine learning, deep learning, NLP, computer vision, reasoning, AI safety and AI systems. Foundation to intermediate level.",
         "h1": "AI Foundations courses"
       },
       {
         "path": "/academies/generative-ai/",
-        "title": "Generative AI Course — How Generative AI Works | EduCut.ai",
+        "title": "Generative AI Course: How Generative AI Works | EduCut.ai",
         "description": "20 generative AI courses on how models are built and used: architecture, pre-training, alignment, prompting, agents, evaluation and multimodal generation.",
         "h1": "Generative AI courses"
       },
@@ -35,7 +35,7 @@
       },
       {
         "path": "/academies/ai-productivity/",
-        "title": "AI Productivity Training — Email, Docs, Excel | EduCut.ai",
+        "title": "AI Productivity Training: Email, Docs, Excel | EduCut.ai",
         "description": "10 AI productivity courses: AI for email, documents, meetings, research, Excel and planning, plus personal AI workflows and no-code automation.",
         "h1": "AI Productivity courses"
       },
@@ -47,73 +47,73 @@
       },
       {
         "path": "/academies/ai-for-leaders/",
-        "title": "AI for Executives — AI Leadership Training | EduCut.ai",
+        "title": "AI for Executives: AI Leadership Training | EduCut.ai",
         "description": "10 AI courses for executives and managers: AI strategy, use cases, AI-driven decisions, ROI, governance and building an AI-ready organization.",
         "h1": "AI for Leaders courses"
       },
       {
         "path": "/academies/ai-for-marketing/",
-        "title": "AI for Marketing Course — Content, SEO, Ads | EduCut.ai",
+        "title": "AI for Marketing Course: Content, SEO, Ads | EduCut.ai",
         "description": "10 AI for marketing courses: strategy, content and copywriting, social media, SEO, advertising, customer insights, analytics and marketing automation.",
         "h1": "AI for Marketing courses"
       },
       {
         "path": "/academies/ai-for-finance/",
-        "title": "AI for Finance Course — FP&A, Forecasting | EduCut.ai",
+        "title": "AI for Finance Course: FP&A, Forecasting | EduCut.ai",
         "description": "10 AI for finance courses: financial analysis, budgeting and forecasting, accounting, Excel modelling, fraud detection, FP&A and finance automation.",
         "h1": "AI for Finance courses"
       },
       {
         "path": "/academies/ai-for-hr/",
-        "title": "AI for HR Training — Recruitment to Analytics | EduCut.ai",
+        "title": "AI for HR Training: Recruitment to Analytics | EduCut.ai",
         "description": "10 AI for HR courses: recruitment, onboarding, L&D, performance, people analytics, workforce planning and responsible AI in HR.",
         "h1": "AI for HR courses"
       },
       {
         "path": "/academies/ai-for-education/",
-        "title": "AI for Educators — Teaching, Assessment | EduCut.ai",
+        "title": "AI for Educators: Teaching, Assessment | EduCut.ai",
         "description": "10 AI courses for teachers and academic leaders: course design, classroom engagement, adaptive learning, assessment, research and academic integrity.",
         "h1": "AI for Education courses"
       },
       {
         "path": "/academies/ai-for-developers/",
-        "title": "AI for Developers Course — Coding to Production | EduCut.ai",
+        "title": "AI for Developers Course: Coding to Production | EduCut.ai",
         "description": "10 AI courses for developers: AI-assisted coding, testing and debugging, LLM APIs, RAG, AI agents, DevOps automation and production AI systems.",
         "h1": "AI for Developers courses"
       },
       {
         "path": "/academies/llm-engineering/",
-        "title": "LLM Engineering Course — Fine-Tuning to LLMOps | EduCut.ai",
+        "title": "LLM Engineering Course: Fine-Tuning to LLMOps | EduCut.ai",
         "description": "10 LLM engineering courses: LLM APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, guardrails and production LLMOps.",
         "h1": "LLM Engineering courses"
       },
       {
         "path": "/academies/rag-systems/",
-        "title": "RAG Course — Retrieval-Augmented Generation | EduCut.ai",
+        "title": "RAG Course: Retrieval-Augmented Generation | EduCut.ai",
         "description": "10 RAG courses: ingestion and chunking, vector search, retrieval and context engineering, agentic and graph RAG, evaluation, security and RAGOps.",
         "h1": "RAG Systems courses"
       },
       {
         "path": "/academies/ai-agents/",
-        "title": "AI Agents Course — Agentic AI & Multi-Agent | EduCut.ai",
+        "title": "AI Agents Course: Agentic AI & Multi-Agent | EduCut.ai",
         "description": "10 AI agents courses: agent architecture, tool use and function calling, memory, planning, agentic RAG, multi-agent systems, security and AgentOps.",
         "h1": "AI Agents courses"
       },
       {
         "path": "/academies/responsible-ai/",
-        "title": "Responsible AI Training — Ethics & Fairness | EduCut.ai",
+        "title": "Responsible AI Training: Ethics & Fairness | EduCut.ai",
         "description": "10 responsible AI courses: AI ethics, bias and fairness, explainability, privacy, safety, regulation and building a responsible AI program.",
         "h1": "Responsible AI courses"
       },
       {
         "path": "/academies/ai-governance/",
-        "title": "AI Governance Training — EU AI Act & Risk | EduCut.ai",
+        "title": "AI Governance Training: EU AI Act & Risk | EduCut.ai",
         "description": "10 AI governance courses: EU AI Act and global compliance, AI risk and impact assessment, policies, vendor governance, audit and enterprise programs.",
         "h1": "AI Governance courses"
       },
       {
         "path": "/academies/ai-security/",
-        "title": "AI Security Training — Prompt Injection | EduCut.ai",
+        "title": "AI Security Training: Prompt Injection | EduCut.ai",
         "description": "10 AI security courses: threat modeling, prompt injection and jailbreaks, RAG and agent security, supply chain, AI red teaming and incident response.",
         "h1": "AI Security courses"
       },
@@ -131,7 +131,7 @@
       },
       {
         "path": "/contact/",
-        "title": "Contact EduCut.ai — Free AI Training Consultation",
+        "title": "Contact EduCut.ai: Free AI Training Consultation",
         "description": "Book a free one-hour consultation, request the full AI course catalogue by email, or contact our partnerships, support and general enquiries teams.",
         "h1": "Contact EduCut.ai"
       }
@@ -140,7 +140,7 @@
       {
         "code": "A001",
         "name": "AI Foundations",
-        "summary": "Build a rigorous understanding of the core disciplines behind modern AI — from machine learning and deep learning to NLP, computer vision, reasoning, safety and AI systems.",
+        "summary": "Build a rigorous understanding of the core disciplines behind modern AI, from machine learning and deep learning to NLP, computer vision, reasoning, safety and AI systems.",
         "audience": "Professionals and technical teams who want a strong, structured foundation across the major fields of Artificial Intelligence.",
         "topics": [
           "Machine Learning",
@@ -181,7 +181,7 @@
       {
         "code": "A004",
         "name": "AI Productivity",
-        "summary": "Turn AI into a practical productivity layer for daily work — improving communication, documents, meetings, research, spreadsheets, planning and repeatable workflows.",
+        "summary": "Turn AI into a practical productivity layer for daily work, improving communication, documents, meetings, research, spreadsheets, planning and repeatable workflows.",
         "audience": "Business professionals who want measurable productivity gains from AI in their everyday work.",
         "topics": [
           "Email & Communication",
@@ -222,7 +222,7 @@
       {
         "code": "A007",
         "name": "AI for Marketing",
-        "summary": "Apply AI across the marketing lifecycle — from strategy, content and social media to SEO, advertising, customer insight, analytics, personalization and automation.",
+        "summary": "Apply AI across the marketing lifecycle, from strategy, content and social media to SEO, advertising, customer insight, analytics, personalization and automation.",
         "audience": "Marketing, communication, acquisition and customer-experience professionals.",
         "topics": [
           "Strategy",
@@ -250,7 +250,7 @@
       {
         "code": "A009",
         "name": "AI for HR",
-        "summary": "Apply AI across the employee lifecycle — recruitment, onboarding, learning, performance, engagement, workforce planning, people analytics and responsible HR transformation.",
+        "summary": "Apply AI across the employee lifecycle: recruitment, onboarding, learning, performance, engagement, workforce planning, people analytics and responsible HR transformation.",
         "audience": "HR professionals, talent leaders, L&D teams, people analytics professionals and managers.",
         "topics": [
           "Recruitment",
@@ -264,7 +264,7 @@
       {
         "code": "A010",
         "name": "AI for Education",
-        "summary": "Integrate AI into teaching and learning — from course design and classroom engagement to personalization, assessment, content creation, research and academic integrity.",
+        "summary": "Integrate AI into teaching and learning, from course design and classroom engagement to personalization, assessment, content creation, research and academic integrity.",
         "audience": "Teachers, trainers, academic leaders, researchers and education professionals.",
         "topics": [
           "Course Design",
@@ -292,7 +292,7 @@
       {
         "code": "A012",
         "name": "LLM Engineering",
-        "summary": "Move from LLM fundamentals to production systems — covering context engineering, APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, security and LLMOps.",
+        "summary": "Move from LLM fundamentals to production systems, covering context engineering, APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, security and LLMOps.",
         "audience": "Developers, software engineers, AI engineers and technical professionals building LLM applications.",
         "topics": [
           "LLM APIs",
@@ -348,7 +348,7 @@
       {
         "code": "A016",
         "name": "AI Governance",
-        "summary": "Create the organizational controls needed to govern AI at scale — policies, risk assessment, lifecycle governance, compliance, vendor oversight, auditability and enterprise governance programs.",
+        "summary": "Create the organizational controls needed to govern AI at scale: policies, risk assessment, lifecycle governance, compliance, vendor oversight, auditability and enterprise governance programs.",
         "audience": "Governance, compliance, risk, legal, security and management teams overseeing organizational AI.",
         "topics": [
           "Regulation",
@@ -362,7 +362,7 @@
       {
         "code": "A017",
         "name": "AI Security",
-        "summary": "Protect AI systems across their lifecycle — from threat modeling and prompt injection to RAG and agent security, model supply chains, red teaming, monitoring and incident response.",
+        "summary": "Protect AI systems across their lifecycle, from threat modeling and prompt injection to RAG and agent security, model supply chains, red teaming, monitoring and incident response.",
         "audience": "Security, risk, compliance and technical teams responsible for the safe deployment of AI systems.",
         "topics": [
           "Threat Modeling",
@@ -376,7 +376,7 @@
       {
         "code": "A018",
         "name": "AI Transformation",
-        "summary": "Turn AI ambition into enterprise execution — assess readiness, define strategy, prioritize use cases, redesign processes, develop skills, govern risk, measure ROI and scale transformation.",
+        "summary": "Turn AI ambition into enterprise execution: assess readiness, define strategy, prioritize use cases, redesign processes, develop skills, govern risk, measure ROI and scale transformation.",
         "audience": "Executives, managers, transformation leaders and decision-makers leading organization-wide AI initiatives.",
         "topics": [
           "AI Readiness",
@@ -392,7 +392,7 @@
       "/academies/": [
         {
           "q": "How many courses does EduCut.ai offer?",
-          "a": "212 courses, organized into 18 specialized academies — from AI foundations and generative AI to AI for business functions, LLM engineering, RAG, AI agents, responsible AI, governance, security and transformation."
+          "a": "212 courses, organized into 18 specialized academies, from AI foundations and generative AI to AI for business functions, LLM engineering, RAG, AI agents, responsible AI, governance, security and transformation."
         },
         {
           "q": "What levels are the courses?",
@@ -434,7 +434,7 @@
         },
         {
           "q": "What do I receive?",
-          "a": "An AI readiness score and maturity level, your strongest opportunity, and three learning paths — Essential (3 courses), Accelerate (5 courses) and Transform (7 courses) — together with the catalogue and an indicative quotation, free of charge."
+          "a": "An AI readiness score and maturity level, your strongest opportunity, and three learning paths (Essential: 3 courses, Accelerate: 5 courses, Transform: 7 courses), together with the catalogue and an indicative quotation, free of charge."
         },
         {
           "q": "How are the courses chosen?",

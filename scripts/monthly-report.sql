@@ -1,4 +1,4 @@
--- EduCut.ai — monthly conversion report (SEO/GEO monitoring, see MONITORING.md)
+-- EduCut.ai - monthly conversion report (SEO/GEO monitoring, see MONITORING.md)
 --
 -- Read-only: every statement is a SELECT. Run each query in the Supabase
 -- SQL editor on the first working day of the month and copy the results into
