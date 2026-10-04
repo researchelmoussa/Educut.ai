@@ -1123,23 +1123,23 @@ const ABOUT_BLOCK = `<section class="about-section" id="about" aria-labelledby="
     <p class="about-lead">EduCut.ai is an AI training provider for companies, universities and professionals. Its catalogue of ${totalCourses} courses is organized into ${academies.length} specialized academies, from AI foundations, generative AI and prompt engineering to AI for business functions, LLM engineering, RAG, AI agents, responsible AI, governance, security and transformation. A free 3-minute assessment recommends Essential, Accelerate and Transform learning paths of 3, 5 and 7 courses.</p></div>
     <h3 class="gains-title">What you gain with EduCut.ai</h3>
     <div class="gains">
-      <article class="gain"><div class="mono" style="color:var(--blue)">For Businesses</div><h3>Your people, ready for AI.</h3><p class="gain-lead">Your strategy, delivered.</p>
+      <article class="gain"><h3>Businesses</h3><p class="gain-lead">AI-ready teams, aligned with your goals.</p>
         <ol>
-          <li><strong>A personalized upskilling path for every team.</strong>A free 3-minute assessment maps where your employees stand and builds the path that closes the gap, without generic courses.</li>
-          <li><strong>Learning that keeps pace with AI.</strong>Our courses evolve as AI evolves, so your teams stay current on the new tools, risks and opportunities as they emerge.</li>
-          <li><strong>Aligned with your business needs.</strong>Every course connects to the challenges your teams actually face, from marketing and HR to operations, governance and security.</li>
+          <li><strong>Tailored upskilling paths.</strong>A free 3-minute assessment shows where each team stands and builds the path that closes the gap. No generic courses, only what your people need.</li>
+          <li><strong>Always up to date.</strong>Our courses evolve as fast as AI does, so your teams stay ahead of new tools, risks and opportunities as they emerge.</li>
+          <li><strong>Business first.</strong>Every course targets the real challenges of your teams, from marketing, HR and finance to operations, governance and security.</li>
         </ol></article>
-      <article class="gain"><div class="mono" style="color:var(--blue)">For Universities</div><h3>The AI curriculum your students expect.</h3><p class="gain-lead">Ready to plug in today.</p>
+      <article class="gain"><h3>Universities</h3><p class="gain-lead">Add AI expertise. Attract more students.</p>
         <ol>
-          <li><strong>Close the AI gap in your curriculum.</strong>Add the specialized AI courses students are looking for, from generative AI to LLMs, agents and AI governance. Without them, programs lose attractiveness and fall behind.</li>
-          <li><strong>No hiring and no curriculum overhaul.</strong>You don't need to recruit specialized faculty or redesign your programs. Our ${totalCourses} courses across ${academies.length} academies complement what you already teach.</li>
-          <li><strong>Plugged into your institution, fully online.</strong>We integrate with your organization from day one, so your students get certified, up-to-date AI expertise starting now.</li>
+          <li><strong>Fill the AI gap.</strong>Offer the specialized AI courses students now look for, from generative AI to LLMs, agents and governance, and keep your programs competitive.</li>
+          <li><strong>No hiring, no rewrite.</strong>You don't need to recruit new faculty or redesign your programs. Our ${totalCourses} courses across ${academies.length} academies plug in alongside what you already teach.</li>
+          <li><strong>Plug in now.</strong>Fully online and ready from day one, with certified, up-to-date AI expertise for your students starting now.</li>
         </ol></article>
-      <article class="gain"><div class="mono" style="color:var(--blue)">For Professionals</div><h3>Stand out with the AI skills your field is asking for.</h3>
+      <article class="gain"><h3>Professionals</h3><p class="gain-lead">Your AI edge, at your own pace.</p>
         <ol>
-          <li><strong>Upskill with the latest AI technologies.</strong>Master the tools and methods that are reshaping your profession, and build a profile that sets you apart.</li>
-          <li><strong>Learn from people who work in AI today.</strong>Our instructors are practitioners in the latest AI fields, and every course is tailored to your profession.</li>
-          <li><strong>At your pace, from home.</strong>Live online sessions plus self-paced work, with a certificate for every course you complete.</li>
+          <li><strong>Master the latest AI.</strong>Learn the tools and methods reshaping your profession, and build a profile that stands out.</li>
+          <li><strong>Learn from practitioners.</strong>Our instructors work in the latest AI fields, and every course is tied to your profession and its real use cases.</li>
+          <li><strong>From home, on your schedule.</strong>Live online sessions plus self-paced work, with a certificate for every course you complete.</li>
         </ol></article>
     </div>
   </div></section>`;
