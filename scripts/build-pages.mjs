@@ -533,27 +533,21 @@ function academyPage(a) {
   const unknown = a.courses.filter((c) => !LEVELS.includes(c.level));
   if (unknown.length) throw new Error(`${a.code}: unexpected level ${unknown[0].level}`);
 
-  // Values are HTML; plain text is escaped here.
-  const facts = [
-    ['Academy code', esc(a.code)],
-    ['Courses', String(a.courses.length)],
-    ['Levels', esc(levels.map((g) => `${g.level} (${g.courses.length})`).join(' · '))],
-    ['Course duration', esc(durationText(a.courses))],
-    ['Language', esc(`${CATALOGUE_FACTS.language}${CATALOGUE_FACTS.translationAvailable ? ' (translation available)' : ''}`)],
-    ['Certification', esc(CATALOGUE_FACTS.certification)],
-    ['Format', esc(CATALOGUE_FACTS.format)],
-    ['Catalogue updated', `<time datetime="${CATALOGUE_DATE}">${CATALOGUE_DATE_TEXT}</time>`],
-  ];
+  const kinds = [...new Map(a.courses.map((c) => [`${c.hours}|${c.online}|${c.personal}`, c])).values()];
+  const levelRange = levels.length === 1 ? levels[0].level : `${levels[0].level} to ${levels[levels.length - 1].level}`;
 
   // One self-contained sentence pair that can be quoted on its own.
   const codes = a.courses.map((c) => c.code).sort();
   const audience = a.audience.replace(/\.$/, '').replace(/^([A-Z])(?=[a-z])/, (m) => m.toLowerCase());
   const definition = `The ${a.name} Academy is a set of ${a.courses.length} EduCut.ai courses (${codes[0]}–${codes[codes.length - 1]}) designed for ${audience}. `
-    + `It covers ${listText(a.topics)}, from ${levels[0].level.toLowerCase()} to ${levels[levels.length - 1].level.toLowerCase()} level. `
+    + `It covers ${listText(a.topics)}, ${levels.length === 1 ? `at ${levels[0].level.toLowerCase()}` : `from ${levels[0].level.toLowerCase()} to ${levels[levels.length - 1].level.toLowerCase()}`} level. `
     + `Each course takes ${durationText(a.courses).replace(' per course', '')} and combines instructor-led online sessions with self-paced personal work.`;
   const focus = focusAreas.filter((f) => f.courses.some((c) => c.academy.code === a.code));
-  if (focus.length) facts.push(['Free assessment focus area',
-    `${focus.map((f) => esc(f.label)).join(' · ')}: <a href="/ai-learning-paths/#focus-areas">see how the assessment recommends courses</a>`]);
+  const focusBanner = focus.length
+    ? `<div><div class="mono">Free assessment focus area</div><strong>${esc(focus.map((f) => f.label).join(' · '))}</strong><p>Answer 20 questions and see where ${esc(a.name)} courses fit in your path.</p></div>
+          <a class="btn btn-lime" href="/ai-learning-paths/#focus-areas">See how the assessment recommends courses →</a>`
+    : `<div><div class="mono">Free AI assessment</div><strong>Find your path in 3 minutes</strong><p>Answer 20 questions and get Essential, Accelerate and Transform paths built from EduCut.ai courses.</p></div>
+          <a class="btn btn-lime" href="/#start-assessment">Build my free AI Path →</a>`;
 
   const seeAlso = (c) => {
     const target = SEE_ALSO[c.code];
@@ -609,11 +603,36 @@ function academyPage(a) {
 
     <section class="page-section alt" aria-labelledby="glance">
       <div class="wrap">
+        <div class="mono gl-kicker">Academy ${esc(a.code)} · at a glance</div>
         <h2 id="glance">${esc(a.name)} at a glance</h2>
         <p class="definition">${esc(definition)}</p>
-        <table class="facts"><tbody>
-          ${facts.map(([k, v]) => `<tr><th scope="row">${esc(k)}</th><td>${v}</td></tr>`).join('\n          ')}
-        </tbody></table>
+        <dl class="gl-stats">
+          <div class="gl-stat"><dt>Courses</dt><dd><b>${a.courses.length}</b><span>${esc(codes[0])} to ${esc(codes[codes.length - 1])}</span></dd></div>
+          <div class="gl-stat"><dt>Course duration</dt><dd><b>${kinds.map((c) => c.hours).join(' or ')} h</b><span>${esc(kinds.map((c) => `${c.online} h online + ${c.personal} h personal work`).join('; '))}</span></dd></div>
+          <div class="gl-stat"><dt>Levels</dt><dd><b>${levels.length}</b><span>${esc(levelRange)}</span></dd></div>
+          <div class="gl-stat lime"><dt>Certification</dt><dd><b aria-hidden="true">✓</b><span>${esc(CATALOGUE_FACTS.certification)}</span></dd></div>
+        </dl>
+        <div class="gl-row">
+          <div class="gl-card">
+            <div class="mono gl-label">Level mix</div>
+            <div class="gl-bar" role="img" aria-label="${esc(levels.map((g) => `${g.level} ${g.courses.length}`).join(', '))}">${levels.map((g) => `<i class="lv-${g.level.toLowerCase()}" style="flex:${g.courses.length}"></i>`).join('')}</div>
+            <dl class="gl-legend">${levels.map((g) => `
+              <div><dt><span class="sw lv-${g.level.toLowerCase()}"></span>${esc(g.level)}</dt><dd>${plural(g.courses.length, 'course')}</dd></div>`).join('')}
+            </dl>
+          </div>
+          <div class="gl-card">
+            <div class="mono gl-label">Details</div>
+            <dl class="gl-details">
+              <div><dt>Format</dt><dd>${esc(CATALOGUE_FACTS.format)}</dd></div>
+              <div><dt>Language</dt><dd>${esc(`${CATALOGUE_FACTS.language}${CATALOGUE_FACTS.translationAvailable ? ' (translation available)' : ''}`)}</dd></div>
+              <div><dt>Academy code</dt><dd>${esc(a.code)}</dd></div>
+              <div><dt>Catalogue updated</dt><dd><time datetime="${CATALOGUE_DATE}">${CATALOGUE_DATE_TEXT}</time></dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="gl-focus">
+          ${focusBanner}
+        </div>
       </div>
     </section>
 
@@ -627,7 +646,7 @@ function academyPage(a) {
     <section class="page-section alt" aria-labelledby="courses">
       <div class="wrap">
         <h2 id="courses">Courses in the ${esc(a.name)} Academy</h2>
-        <p class="section-intro">${plural(a.courses.length, 'course')}, from ${esc(levels[0].level.toLowerCase())} to ${esc(levels[levels.length - 1].level.toLowerCase())} level. Open a course to see its programme.</p>
+        <p class="section-intro">${plural(a.courses.length, 'course')}, ${levels.length === 1 ? `all at ${esc(levels[0].level.toLowerCase())}` : `from ${esc(levels[0].level.toLowerCase())} to ${esc(levels[levels.length - 1].level.toLowerCase())}`} level. Open a course to see its programme.</p>
         ${courseHtml}
       </div>
     </section>

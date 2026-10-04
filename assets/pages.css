@@ -147,3 +147,25 @@
 .faculty-card .mono{color:var(--blue);margin:0 0 12px}.faculty-card p{margin:0 0 10px;font-size:14px;line-height:1.55;color:#444}
 .faculty-card .credentials{color:#6f6f6a}.faculty-card a{color:var(--blue);font-weight:700;font-size:13px}
 @media(max-width:900px){.faculty{grid-template-columns:1fr}}
+
+/* Academy "at a glance": stat tiles, level mix, details, assessment banner */
+.gl-kicker{color:var(--blue);margin-bottom:12px}
+.gl-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:34px 0 12px}
+.gl-stat{background:#fff;border:1px solid var(--line);padding:22px 22px 20px;margin:0}
+.gl-stat dt{font:600 11px "SFMono-Regular",Consolas,"Liberation Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:#8d8d88}
+.gl-stat dd{margin:14px 0 0}.gl-stat b{display:block;font-size:52px;line-height:.9;letter-spacing:-.06em}.gl-stat span{display:block;margin-top:10px;font-size:13px;color:#69696a}
+.gl-stat.lime{background:var(--lime);border-color:var(--lime)}.gl-stat.lime dt,.gl-stat.lime span{color:#36400f}
+.gl-row{display:grid;grid-template-columns:1fr 1.4fr;gap:12px}
+.gl-card{background:#fff;border:1px solid var(--line);padding:22px}
+.gl-label{color:var(--blue);margin-bottom:16px}
+.gl-bar{display:flex;gap:3px;height:14px}.gl-bar i{display:block}
+.lv-foundation{background:var(--lime)}.lv-intermediate{background:var(--blue)}.lv-advanced{background:var(--ink)}
+.gl-legend{margin:18px 0 0}.gl-legend div,.gl-details div{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid var(--line)}
+.gl-legend dt{display:flex;align-items:center;gap:10px;font-size:14px}.gl-legend dd{margin:0;font-weight:700;font-size:14px}
+.gl-legend .sw{width:12px;height:12px;display:inline-block}
+.gl-details dt{font-size:14px;font-weight:700;flex:none;width:150px}.gl-details dd{margin:0;font-size:14px;color:#4a4a47;text-align:right}
+.gl-focus{margin-top:12px;background:var(--ink);color:#fff;padding:26px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.gl-focus .mono{color:var(--lime);margin-bottom:8px}.gl-focus strong{font-size:22px;letter-spacing:-.02em}.gl-focus p{margin:6px 0 0;color:#a5a5a0;font-size:14px}
+.gl-focus .btn{white-space:nowrap}
+@media(max-width:900px){.gl-stats{grid-template-columns:1fr 1fr}.gl-row{grid-template-columns:1fr}.gl-focus{flex-direction:column;align-items:flex-start}.gl-focus .btn{white-space:normal}}
+@media(max-width:600px){.gl-stat b{font-size:40px}.gl-details div{flex-direction:column;gap:4px}.gl-details dd{text-align:left}}
