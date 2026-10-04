@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ===================================================================
-   IndexNow — tell Bing (and other IndexNow engines) which pages changed.
+   IndexNow - tell Bing (and other IndexNow engines) which pages changed.
 
    Run after each deployment, once the new files are live:
 
@@ -61,7 +61,7 @@ const res = await fetch(ENDPOINT, {
 const meaning = {
   200: 'accepted', 202: 'accepted, key validation pending',
   400: 'bad request', 403: 'key not valid (is the key file deployed?)',
-  422: 'URLs do not belong to the host or key mismatch', 429: 'too many requests — try later',
+  422: 'URLs do not belong to the host or key mismatch', 429: 'too many requests - try later',
 }[res.status] || 'unexpected response';
-console.log(`IndexNow: ${res.status} ${meaning} — ${urlList.length} URL(s).`);
+console.log(`IndexNow: ${res.status} ${meaning} - ${urlList.length} URL(s).`);
 process.exit(res.ok ? 0 : 1);

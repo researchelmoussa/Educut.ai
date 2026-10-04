@@ -1,4 +1,4 @@
-/* EduCut.ai public pages — components used by the static pages only.
+/* EduCut.ai public pages - components used by the static pages only.
    Base tokens, nav, buttons, sections, plans, steps, CTA, consultation and
    contact styles come from site.css, which scripts/build-pages.mjs extracts
    from index.html so both share one source of truth. */
@@ -67,7 +67,7 @@
 .definition{font-size:18px;line-height:1.6;max-width:900px;margin:0 0 28px;color:#222}
 .updated{color:#8d8d88;margin:14px 0 0}
 
-/* FAQ — questions and answers fully visible */
+/* FAQ - questions and answers fully visible */
 .faq{max-width:900px}
 .faq-item{border-top:1px solid var(--line);padding:22px 0}
 .faq-item:last-child{border-bottom:1px solid var(--line)}

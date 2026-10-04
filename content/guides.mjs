@@ -8,8 +8,8 @@
 
    To publish a guide, set:
      status: 'published'
-     author: { name, jobTitle }            — a real person at EduCut.ai
-     reviewer: { name, jobTitle } | null   — optional second expert
+     author: { name, jobTitle }            - a real person at EduCut.ai
+     reviewer: { name, jobTitle } | null   - optional second expert
      datePublished: 'YYYY-MM-DD'
    The build refuses to publish a guide without an author and a date.
 
@@ -41,7 +41,7 @@ export const GUIDES = [
   <tr><th scope="row">Current use of AI</th><td>From “we have barely started using AI” to “AI systems are already integrated into business processes”.</td></tr>
   <tr><th scope="row">AI literacy</th><td>Employees’ general understanding of AI, from “very limited” to “advanced”.</td></tr>
   <tr><th scope="row">AI strategy</th><td>From “we do not have an AI strategy” to “we have a structured organization-wide AI strategy”.</td></tr>
-  <tr><th scope="row">Risk preparedness</th><td>How prepared the organization is to manage privacy, bias, security, responsible use, regulation and human oversight — from “not addressed yet” to “mature enterprise AI governance”.</td></tr>
+  <tr><th scope="row">Risk preparedness</th><td>How prepared the organization is to manage privacy, bias, security, responsible use, regulation and human oversight, from “not addressed yet” to “mature enterprise AI governance”.</td></tr>
 </tbody></table>
 <p>Together, these four answers give an AI readiness score out of 100.</p>
 
@@ -57,11 +57,11 @@ export const GUIDES = [
 <h2>Beyond maturity: what your organization needs</h2>
 <p>Two organizations with the same maturity can need very different training. The assessment therefore also asks about:</p>
 <ul>
-  <li><strong>Goals</strong> — the main reason for investing in AI training, and up to three other outcomes that matter.</li>
-  <li><strong>People</strong> — which teams should benefit most, and who should take part first.</li>
-  <li><strong>Technical ambition</strong> — use of generative AI, analytics, building your own AI applications, using your own documents and knowledge with AI, and AI agents.</li>
-  <li><strong>Risk context</strong> — how sensitive the information employees may use with AI is.</li>
-  <li><strong>Target and horizon</strong> — the level of AI capability you ultimately want (from AI awareness to an AI-driven organization) and how quickly you want to get there.</li>
+  <li><strong>Goals</strong>: the main reason for investing in AI training, and up to three other outcomes that matter.</li>
+  <li><strong>People</strong>: which teams should benefit most, and who should take part first.</li>
+  <li><strong>Technical ambition</strong>: use of generative AI, analytics, building your own AI applications, using your own documents and knowledge with AI, and AI agents.</li>
+  <li><strong>Risk context</strong>: how sensitive the information employees may use with AI is.</li>
+  <li><strong>Target and horizon</strong>: the level of AI capability you ultimately want (from AI awareness to an AI-driven organization) and how quickly you want to get there.</li>
 </ul>
 
 <h2>From readiness to learning priorities</h2>
@@ -71,7 +71,7 @@ export const GUIDES = [
 <h2>How to run your own readiness check</h2>
 <ol>
   <li><strong>Involve the right people.</strong> Answer together with someone who knows how teams actually use AI today, not only the official strategy.</li>
-  <li><strong>Be honest about current use.</strong> Informal use of public AI tools counts — and matters for risk.</li>
+  <li><strong>Be honest about current use.</strong> Informal use of public AI tools counts, and it matters for risk.</li>
   <li><strong>Separate ambition from reality.</strong> Your target capability and your current maturity are different questions.</li>
   <li><strong>Turn the result into a plan.</strong> Start with the highest-priority capability, then broaden.</li>
 </ol>
@@ -93,7 +93,7 @@ export const GUIDES = [
     dateModified: null,
     title: 'Building an AI training plan for your company: the 3-5-7 model',
     seoTitle: 'AI Training Plan for Companies: the 3-5-7 Model',
-    description: 'How to build a focused AI training plan for your company with three paths of 3, 5 and 7 courses — Essential, Accelerate and Transform — chosen from your priorities.',
+    description: 'How to build a focused AI training plan for your company with three paths of 3, 5 and 7 courses (Essential, Accelerate and Transform), chosen from your priorities.',
     lead: 'Most AI training fails in one of two ways: a generic course library nobody finishes, or a single workshop that changes nothing. A focused plan starts from your priorities and grows in clear steps. This guide explains the 3-5-7 model EduCut.ai uses.',
     related: ['A004', 'A018', 'A006'],
     body: `
@@ -103,9 +103,9 @@ export const GUIDES = [
 
 <h2>Three paths with increasing depth</h2>
 <table class="facts"><tbody>
-  <tr><th scope="row">Essential — 3 courses</th><td><strong>Quick capability.</strong> Build shared understanding and activate your first high-value AI use cases: core AI literacy, immediate business application, one prioritized capability. <em>Understand → Apply → Quick win.</em></td></tr>
-  <tr><th scope="row">Accelerate — 5 courses</th><td><strong>Operational capability.</strong> Build repeatable workflows and stronger team-level AI capabilities: foundations plus specialization, workflow acceleration, responsible adoption. <em>Apply → Automate → Specialize.</em></td></tr>
-  <tr><th scope="row">Transform — 7 courses</th><td><strong>Strategic capability.</strong> Connect skills, technology, governance and business transformation: cross-functional capability, governance and risk, scale and transformation. <em>Strategy → Govern → Scale.</em></td></tr>
+  <tr><th scope="row">Essential: 3 courses</th><td><strong>Quick capability.</strong> Build shared understanding and activate your first high-value AI use cases: core AI literacy, immediate business application, one prioritized capability. <em>Understand → Apply → Quick win.</em></td></tr>
+  <tr><th scope="row">Accelerate: 5 courses</th><td><strong>Operational capability.</strong> Build repeatable workflows and stronger team-level AI capabilities: foundations plus specialization, workflow acceleration, responsible adoption. <em>Apply → Automate → Specialize.</em></td></tr>
+  <tr><th scope="row">Transform: 7 courses</th><td><strong>Strategic capability.</strong> Connect skills, technology, governance and business transformation: cross-functional capability, governance and risk, scale and transformation. <em>Strategy → Govern → Scale.</em></td></tr>
 </tbody></table>
 
 <h2>How the courses are chosen</h2>
@@ -126,13 +126,13 @@ export const GUIDES = [
 
 <h2>Choosing teams and scope</h2>
 <ul>
-  <li><strong>Start where value is clearest.</strong> A leadership team, one specialized department, the technical team, several departments or an organization-wide cohort all make sense — for different goals.</li>
+  <li><strong>Start where value is clearest.</strong> A leadership team, one specialized department, the technical team, several departments or an organization-wide cohort all make sense, for different goals.</li>
   <li><strong>Match the horizon.</strong> Essential fits “start now”; Accelerate fits a 3–6 month plan; Transform fits a 6–12 month or longer program.</li>
   <li><strong>Mix levels deliberately.</strong> The catalogue runs from foundation to advanced level, so the same plan can serve beginners and specialists.</li>
 </ul>
 
 <h2>How the training is delivered</h2>
-<p>Courses are blended: instructor-led online sessions combined with self-paced personal work — typically 9 hours per course (6 hours online and 3 hours of personal work), or 12 hours (8 hours online and 4 hours of personal work) for the AI Foundations, Generative AI and Data Analytics academies. Each course ends with a certificate. Courses are taught in English, and translation is available.</p>
+<p>Courses are blended: instructor-led online sessions combined with self-paced personal work, typically 9 hours per course (6 hours online and 3 hours of personal work), or 12 hours (8 hours online and 4 hours of personal work) for the AI Foundations, Generative AI and Data Analytics academies. Each course ends with a certificate. Courses are taught in English, and translation is available.</p>
 
 <h2>Next steps</h2>
 <p><a href="/#start-assessment">Take the free assessment</a> to receive your three paths, or <a href="/contact/">book a free one-hour consultation</a> to build the plan together.</p>
@@ -153,7 +153,7 @@ export const GUIDES = [
     dateModified: null,
     title: 'EU AI Act: what your teams need to learn',
     seoTitle: 'EU AI Act Training: What Your Teams Need to Learn',
-    description: 'What the EU AI Act means for organizations, the AI literacy duty, and which roles need which knowledge — with a training map to the relevant EduCut.ai courses.',
+    description: 'What the EU AI Act means for organizations, the AI literacy duty, and which roles need which knowledge, with a training map to the relevant EduCut.ai courses.',
     lead: 'The EU AI Act makes AI knowledge a compliance topic, not only a productivity one. This guide summarizes what the regulation expects from organizations that use or build AI, and maps the knowledge each role needs.',
     related: ['A016', 'A015', 'A017'],
     body: `
@@ -162,10 +162,10 @@ export const GUIDES = [
 <h2>The EU AI Act in brief</h2>
 <p>The EU Artificial Intelligence Act (Regulation (EU) 2024/1689) entered into force on 1 August 2024. It regulates AI according to risk:</p>
 <ul>
-  <li><strong>Prohibited practices</strong> — AI uses considered an unacceptable risk.</li>
-  <li><strong>High-risk AI systems</strong> — subject to requirements such as risk management, data governance, documentation, human oversight, accuracy and security.</li>
-  <li><strong>Transparency obligations</strong> — for example, informing people when they interact with an AI system or when content is AI-generated.</li>
-  <li><strong>General-purpose AI models</strong> — specific obligations for their providers.</li>
+  <li><strong>Prohibited practices</strong>: AI uses considered an unacceptable risk.</li>
+  <li><strong>High-risk AI systems</strong>: subject to requirements such as risk management, data governance, documentation, human oversight, accuracy and security.</li>
+  <li><strong>Transparency obligations</strong>: for example, informing people when they interact with an AI system or when content is AI-generated.</li>
+  <li><strong>General-purpose AI models</strong>: specific obligations for their providers.</li>
 </ul>
 <p>It applies to organizations that provide or deploy AI systems in the EU, and can also apply to organizations outside the EU when their AI systems or outputs are used in the EU.</p>
 <p>[[Reviewer: confirm the scope summary and the application dates below against the current official text. The European Commission proposed changes to the timeline for high-risk obligations in November 2025; check whether they have been adopted.]]</p>
@@ -179,7 +179,7 @@ export const GUIDES = [
 </tbody></table>
 
 <h2>The AI literacy duty</h2>
-<p>Article 4 requires providers and deployers of AI systems to take measures to ensure, to their best extent, a sufficient level of AI literacy among their staff and other people dealing with AI systems on their behalf — taking into account their technical knowledge, experience, education and training, and the context in which the systems are used. In practice, this makes role-appropriate AI training part of compliance.</p>
+<p>Article 4 requires providers and deployers of AI systems to take measures to ensure, to their best extent, a sufficient level of AI literacy among their staff and other people dealing with AI systems on their behalf, taking into account their technical knowledge, experience, education and training, and the context in which the systems are used. In practice, this makes role-appropriate AI training part of compliance.</p>
 
 <h2>Who needs to learn what</h2>
 <table class="compare">
@@ -206,7 +206,7 @@ export const GUIDES = [
     faq: [
       ['When did the EU AI Act enter into force?', 'On 1 August 2024. Its provisions apply in stages; the AI literacy obligation and the prohibited practices have applied since 2 February 2025.'],
       ['What is the AI literacy obligation?', 'Article 4 requires providers and deployers of AI systems to take measures to ensure, to their best extent, a sufficient level of AI literacy among staff and others dealing with AI systems on their behalf, taking into account their knowledge, experience and the context of use.'],
-      ['Does training make an organization compliant with the EU AI Act?', 'No. Training supports compliance — and AI literacy is itself an obligation — but compliance depends on the organization’s AI systems, role and controls. Seek qualified legal advice for specific obligations.'],
+      ['Does training make an organization compliant with the EU AI Act?', 'No. Training supports compliance (and AI literacy is itself an obligation), but compliance depends on the organization’s AI systems, role and controls. Seek qualified legal advice for specific obligations.'],
     ],
   },
 ];

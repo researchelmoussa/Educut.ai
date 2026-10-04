@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ===================================================================
-   EduCut.ai — static public pages generator
+   EduCut.ai - static public pages generator
 
    Writes crawlable HTML for the public site structure approved in the
    SEO plan (Step 1):
@@ -13,7 +13,7 @@
    It also refreshes the shared footer inside index.html (between the
    site-footer markers) so the homepage links to every public page.
 
-   Sources — nothing on these pages is written by hand:
+   Sources - nothing on these pages is written by hand:
      data/academies.txt, data/courses.txt,
      data/assessment-focus.txt              Supabase export (see
                                             scripts/export-catalogue.sql)
@@ -125,25 +125,25 @@ const SEE_ALSO = {
 
 // Search titles and descriptions (SEO plan, Steps 3–4). One primary topic
 // per academy; {n} is replaced with the live course count. Keep titles
-// under ~60 characters and descriptions under ~155 — the build warns.
+// under ~60 characters and descriptions under ~155 - the build warns.
 const ACADEMY_SEO = {
-  A001: ['AI Fundamentals Courses — ML, Deep Learning, NLP', '{n} AI fundamentals courses: machine learning, deep learning, NLP, computer vision, reasoning, AI safety and AI systems. Foundation to intermediate level.'],
-  A002: ['Generative AI Course — How Generative AI Works', '{n} generative AI courses on how models are built and used: architecture, pre-training, alignment, prompting, agents, evaluation and multimodal generation.'],
+  A001: ['AI Fundamentals Courses: ML, Deep Learning, NLP', '{n} AI fundamentals courses: machine learning, deep learning, NLP, computer vision, reasoning, AI safety and AI systems. Foundation to intermediate level.'],
+  A002: ['Generative AI Course: How Generative AI Works', '{n} generative AI courses on how models are built and used: architecture, pre-training, alignment, prompting, agents, evaluation and multimodal generation.'],
   A003: ['Prompt Engineering Course for Teams', '{n} prompt engineering courses, from writing effective prompts to prompting for data analysis, software development, research, AI agents and RAG.'],
-  A004: ['AI Productivity Training — Email, Docs, Excel', '{n} AI productivity courses: AI for email, documents, meetings, research, Excel and planning, plus personal AI workflows and no-code automation.'],
+  A004: ['AI Productivity Training: Email, Docs, Excel', '{n} AI productivity courses: AI for email, documents, meetings, research, Excel and planning, plus personal AI workflows and no-code automation.'],
   A005: ['Data Analytics & Statistics Courses for AI', '{n} data analytics courses: statistics, predictive modelling, big data, data preparation, visualisation and responsible analytics for AI-enabled teams.'],
-  A006: ['AI for Executives — AI Leadership Training', '{n} AI courses for executives and managers: AI strategy, use cases, AI-driven decisions, ROI, governance and building an AI-ready organization.'],
-  A007: ['AI for Marketing Course — Content, SEO, Ads', '{n} AI for marketing courses: strategy, content and copywriting, social media, SEO, advertising, customer insights, analytics and marketing automation.'],
-  A008: ['AI for Finance Course — FP&A, Forecasting', '{n} AI for finance courses: financial analysis, budgeting and forecasting, accounting, Excel modelling, fraud detection, FP&A and finance automation.'],
-  A009: ['AI for HR Training — Recruitment to Analytics', '{n} AI for HR courses: recruitment, onboarding, L&D, performance, people analytics, workforce planning and responsible AI in HR.'],
-  A010: ['AI for Educators — Teaching, Assessment', '{n} AI courses for teachers and academic leaders: course design, classroom engagement, adaptive learning, assessment, research and academic integrity.'],
-  A011: ['AI for Developers Course — Coding to Production', '{n} AI courses for developers: AI-assisted coding, testing and debugging, LLM APIs, RAG, AI agents, DevOps automation and production AI systems.'],
-  A012: ['LLM Engineering Course — Fine-Tuning to LLMOps', '{n} LLM engineering courses: LLM APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, guardrails and production LLMOps.'],
-  A013: ['RAG Course — Retrieval-Augmented Generation', '{n} RAG courses: ingestion and chunking, vector search, retrieval and context engineering, agentic and graph RAG, evaluation, security and RAGOps.'],
-  A014: ['AI Agents Course — Agentic AI & Multi-Agent', '{n} AI agents courses: agent architecture, tool use and function calling, memory, planning, agentic RAG, multi-agent systems, security and AgentOps.'],
-  A015: ['Responsible AI Training — Ethics & Fairness', '{n} responsible AI courses: AI ethics, bias and fairness, explainability, privacy, safety, regulation and building a responsible AI program.'],
-  A016: ['AI Governance Training — EU AI Act & Risk', '{n} AI governance courses: EU AI Act and global compliance, AI risk and impact assessment, policies, vendor governance, audit and enterprise programs.'],
-  A017: ['AI Security Training — Prompt Injection', '{n} AI security courses: threat modeling, prompt injection and jailbreaks, RAG and agent security, supply chain, AI red teaming and incident response.'],
+  A006: ['AI for Executives: AI Leadership Training', '{n} AI courses for executives and managers: AI strategy, use cases, AI-driven decisions, ROI, governance and building an AI-ready organization.'],
+  A007: ['AI for Marketing Course: Content, SEO, Ads', '{n} AI for marketing courses: strategy, content and copywriting, social media, SEO, advertising, customer insights, analytics and marketing automation.'],
+  A008: ['AI for Finance Course: FP&A, Forecasting', '{n} AI for finance courses: financial analysis, budgeting and forecasting, accounting, Excel modelling, fraud detection, FP&A and finance automation.'],
+  A009: ['AI for HR Training: Recruitment to Analytics', '{n} AI for HR courses: recruitment, onboarding, L&D, performance, people analytics, workforce planning and responsible AI in HR.'],
+  A010: ['AI for Educators: Teaching, Assessment', '{n} AI courses for teachers and academic leaders: course design, classroom engagement, adaptive learning, assessment, research and academic integrity.'],
+  A011: ['AI for Developers Course: Coding to Production', '{n} AI courses for developers: AI-assisted coding, testing and debugging, LLM APIs, RAG, AI agents, DevOps automation and production AI systems.'],
+  A012: ['LLM Engineering Course: Fine-Tuning to LLMOps', '{n} LLM engineering courses: LLM APIs, embeddings, vector search, RAG, fine-tuning, agents, evaluation, guardrails and production LLMOps.'],
+  A013: ['RAG Course: Retrieval-Augmented Generation', '{n} RAG courses: ingestion and chunking, vector search, retrieval and context engineering, agentic and graph RAG, evaluation, security and RAGOps.'],
+  A014: ['AI Agents Course: Agentic AI & Multi-Agent', '{n} AI agents courses: agent architecture, tool use and function calling, memory, planning, agentic RAG, multi-agent systems, security and AgentOps.'],
+  A015: ['Responsible AI Training: Ethics & Fairness', '{n} responsible AI courses: AI ethics, bias and fairness, explainability, privacy, safety, regulation and building a responsible AI program.'],
+  A016: ['AI Governance Training: EU AI Act & Risk', '{n} AI governance courses: EU AI Act and global compliance, AI risk and impact assessment, policies, vendor governance, audit and enterprise programs.'],
+  A017: ['AI Security Training: Prompt Injection', '{n} AI security courses: threat modeling, prompt injection and jailbreaks, RAG and agent security, supply chain, AI red teaming and incident response.'],
   A018: ['AI Transformation Program for Organizations', '{n} AI transformation courses: readiness assessment, strategy roadmaps, use cases, operating model redesign, change management, governance and ROI.'],
 };
 const BRAND = ' | EduCut.ai';
@@ -153,7 +153,7 @@ const BRAND = ' | EduCut.ai';
 const SITE_URL = 'https://educutai.com';
 
 const HOME_SEO = {
-  title: 'AI Training for Companies — Build Your AI Path' + BRAND,
+  title: 'AI Training for Companies: Build Your AI Path' + BRAND,
   description: 'Business-focused AI training for companies: {a} academies, {n} courses. Take the free 3-minute assessment and get a 3, 5 or 7-course AI learning path.',
 };
 
@@ -431,7 +431,7 @@ if (!HERO_COPY || !ACADEMY_INTRO) throw new Error('index.html: hero or academy i
 const styleStart = index.indexOf('<style>') + '<style>'.length;
 const styleStop = index.indexOf('/* =========================================================\n   EduCut.ai authentication');
 if (styleStart < 7 || styleStop < styleStart) throw new Error('index.html: landing CSS boundaries not found');
-write('assets/site.css', '/* Generated by scripts/build-pages.mjs from index.html — do not edit. */\n' + index.slice(styleStart, styleStop).trim() + '\n');
+write('assets/site.css', '/* Generated by scripts/build-pages.mjs from index.html - do not edit. */\n' + index.slice(styleStart, styleStop).trim() + '\n');
 
 /* ---------------- Layout ---------------- */
 
@@ -475,7 +475,7 @@ function footer() {
         <ul>${academyLinks}</ul>
       </div>
     </div>
-    <div class="footer-row"><div>EDUCUT.AI — BRIDGING AI WITH EDUCATION</div><div>FOCUSED • RELEVANT • CONTINUOUSLY EVOLVING</div></div>
+    <div class="footer-row"><div>EDUCUT.AI · BRIDGING AI WITH EDUCATION</div><div>FOCUSED • RELEVANT • CONTINUOUSLY EVOLVING</div></div>
   </div>
 </footer>`;
 }
@@ -553,7 +553,7 @@ function academyPage(a) {
     + `Each course takes ${durationText(a.courses).replace(' per course', '')} and combines instructor-led online sessions with self-paced personal work.`;
   const focus = focusAreas.filter((f) => f.courses.some((c) => c.academy.code === a.code));
   if (focus.length) facts.push(['Free assessment focus area',
-    `${focus.map((f) => esc(f.label)).join(' · ')} — <a href="/ai-learning-paths/#focus-areas">see how the assessment recommends courses</a>`]);
+    `${focus.map((f) => esc(f.label)).join(' · ')}: <a href="/ai-learning-paths/#focus-areas">see how the assessment recommends courses</a>`]);
 
   const seeAlso = (c) => {
     const target = SEE_ALSO[c.code];
@@ -683,7 +683,7 @@ function card(a) {
 
 // Answers use only catalogue data and statements already on the site.
 const HUB_FAQ = [
-  ['How many courses does EduCut.ai offer?', `${totalCourses} courses, organized into ${academies.length} specialized academies — from AI foundations and generative AI to AI for business functions, LLM engineering, RAG, AI agents, responsible AI, governance, security and transformation.`],
+  ['How many courses does EduCut.ai offer?', `${totalCourses} courses, organized into ${academies.length} specialized academies, from AI foundations and generative AI to AI for business functions, LLM engineering, RAG, AI agents, responsible AI, governance, security and transformation.`],
   ['What levels are the courses?', `Courses are offered at ${listText(levelTotals.filter(([, n]) => n).map(([l, n]) => `${l.toLowerCase()} (${n} courses)`))} level.`],
   ['How long is a course?', `${durationSummary}.`],
   ['How are the courses delivered?', `${CATALOGUE_FACTS.format}.`],
@@ -696,7 +696,7 @@ const HUB_FAQ = [
 const PATHS_FAQ = [
   ['How long does the EduCut.ai assessment take?', 'About 3 minutes. It has 20 focused multiple-choice questions.'],
   ['Is the assessment free?', 'Yes. The recommendation is free and there is no commitment.'],
-  ['What do I receive?', 'An AI readiness score and maturity level, your strongest opportunity, and three learning paths — Essential (3 courses), Accelerate (5 courses) and Transform (7 courses) — together with the catalogue and an indicative quotation, free of charge.'],
+  ['What do I receive?', 'An AI readiness score and maturity level, your strongest opportunity, and three learning paths (Essential: 3 courses, Accelerate: 5 courses, Transform: 7 courses), together with the catalogue and an indicative quotation, free of charge.'],
   ['How are the courses chosen?', `Your answers are scored across ${focusAreas.length} focus areas, such as AI productivity, RAG & enterprise knowledge or responsible AI, governance & security. The paths are built from the exact EduCut.ai courses mapped to your highest-priority areas (<a href="#focus-areas">see the full list</a>).`],
   ['What happens after the assessment?', 'You can book a free one-hour consultation to review your needs with EduCut.ai, or request the full academy catalogue by business email.'],
 ];
@@ -751,7 +751,7 @@ function hubPage() {
 
   return page({
     path: '/academies/',
-    title: `AI Training Courses — ${academies.length} Academies, ${totalCourses} Courses${BRAND}`,
+    title: `AI Training Courses: ${academies.length} Academies, ${totalCourses} Courses${BRAND}`,
     description: `Browse ${totalCourses} AI training courses in ${academies.length} academies: AI foundations, prompt engineering, AI for business functions, LLMs, RAG, agents, governance and security.`,
     body,
     crumbs,
@@ -833,7 +833,7 @@ function contactPage() {
 
   return page({
     path: '/contact/',
-    title: 'Contact EduCut.ai — Free AI Training Consultation',
+    title: 'Contact EduCut.ai: Free AI Training Consultation',
     description: 'Book a free one-hour consultation, request the full AI course catalogue by email, or contact our partnerships, support and general enquiries teams.',
     body,
     crumbs,
@@ -871,7 +871,7 @@ function guidePage(g) {
     ? '<p class="byline mono">Author and expert reviewer to be confirmed</p>'
     : `<p class="byline">By <strong>${esc(g.author.name)}</strong>, ${esc(g.author.jobTitle)}${g.reviewer ? ` · Reviewed by <strong>${esc(g.reviewer.name)}</strong>, ${esc(g.reviewer.jobTitle)}` : ''} · Published <time datetime="${g.datePublished}">${fmtDate(g.datePublished)}</time>${g.dateModified ? ` · Updated <time datetime="${g.dateModified}">${fmtDate(g.dateModified)}</time>` : ''}</p>`;
   const body = `
-    ${draft ? '<div class="draft-banner"><div class="wrap"><strong>DRAFT — pending expert review.</strong> Not published: hidden from search engines and not linked from the site. Highlighted notes are for the reviewer.</div></div>' : ''}
+    ${draft ? '<div class="draft-banner"><div class="wrap"><strong>DRAFT: pending expert review.</strong> Not published: hidden from search engines and not linked from the site. Highlighted notes are for the reviewer.</div></div>' : ''}
     <header class="page-hero">
       <div class="wrap">
         ${breadcrumb(crumbs)}
@@ -959,7 +959,7 @@ function aboutPage() {
     ['Contact', 'contact@educutai.com (general enquiries) · partners@educutai.com (partnerships, universities, companies) · support@educutai.com (platform support)'],
   ];
   const body = `
-    ${draft ? '<div class="draft-banner"><div class="wrap"><strong>DRAFT — waiting for company information.</strong> Hidden from search engines and not linked from the site until the legal name and company story are provided.</div></div>' : ''}
+    ${draft ? '<div class="draft-banner"><div class="wrap"><strong>DRAFT: waiting for company information.</strong> Hidden from search engines and not linked from the site until the legal name and company story are provided.</div></div>' : ''}
     <header class="page-hero">
       <div class="wrap">
         ${breadcrumb(crumbs)}
@@ -974,7 +974,7 @@ function aboutPage() {
         <h2 id="story">Our story</h2>
         ${COMPANY.story ? `<p>${COMPANY.story}</p>` : missing('who founded EduCut.ai, when, and why (2–4 sentences).')}
         <h2>Our approach</h2>
-        <p>EduCut.ai offers AI learning built for business — not a generic course library. The catalogue is AI-only and organized around precise professional needs, from productivity and business functions to LLMs, RAG, agents, governance, security and enterprise transformation, and courses are updated and expanded as AI evolves. Instead of labelling organizations simply “beginner” or “advanced”, a short assessment combines organizational maturity, business priorities, target teams, technical ambition and governance needs into three paths of increasing depth.</p>
+        <p>EduCut.ai offers AI learning built for business, not a generic course library. The catalogue is AI-only and organized around precise professional needs, from productivity and business functions to LLMs, RAG, agents, governance, security and enterprise transformation, and courses are updated and expanded as AI evolves. Instead of labelling organizations simply “beginner” or “advanced”, a short assessment combines organizational maturity, business priorities, target teams, technical ambition and governance needs into three paths of increasing depth.</p>
       </div>
     </section>
 
@@ -982,7 +982,7 @@ function aboutPage() {
       <div class="wrap">
         <h2 id="offer">What EduCut.ai offers</h2>
         <p class="section-intro">${academies.length} academies in five topic areas:</p>
-        <ul class="guide-links">${CLUSTERS.map((g) => `<li><a href="/academies/#${g.id}">${esc(g.title)}</a> — ${listText(g.codes.map((c) => esc(byCode[c].name)))}</li>`).join('')}</ul>
+        <ul class="guide-links">${CLUSTERS.map((g) => `<li><a href="/academies/#${g.id}">${esc(g.title)}</a>: ${listText(g.codes.map((c) => esc(byCode[c].name)))}</li>`).join('')}</ul>
       </div>
     </section>
 
@@ -990,7 +990,7 @@ function aboutPage() {
       <div class="wrap">
         <h2 id="faculty">Faculty and experts</h2>
         ${FACULTY.length ? `<div class="faculty">${FACULTY.map((f) => `
-          <div class="faculty-card"><h3>${esc(f.name)}</h3><p class="mono">${esc(f.role)}</p><p>${esc(f.expertise)}</p>${f.credentials ? `<p class="credentials">${esc(f.credentials)}</p>` : ''}${f.profileUrl ? `<a href="${esc(f.profileUrl)}" rel="me noopener">Profile →</a>` : ''}</div>`).join('')}</div>` : missing('the experts who teach, author or review — name, role, expertise, credentials.')}
+          <div class="faculty-card"><h3>${esc(f.name)}</h3><p class="mono">${esc(f.role)}</p><p>${esc(f.expertise)}</p>${f.credentials ? `<p class="credentials">${esc(f.credentials)}</p>` : ''}${f.profileUrl ? `<a href="${esc(f.profileUrl)}" rel="me noopener">Profile →</a>` : ''}</div>`).join('')}</div>` : missing('the experts who teach, author or review - name, role, expertise, credentials.')}
       </div>
     </section>
 
@@ -1009,7 +1009,7 @@ function aboutPage() {
     worksFor: { '@id': ORG_ID }, ...(f.profileUrl ? { sameAs: [f.profileUrl] } : {}),
   }));
   return page({
-    path: '/about/', nav: '', title: 'About EduCut.ai — AI Training Provider in Switzerland',
+    path: '/about/', nav: '', title: 'About EduCut.ai: AI Training Provider in Switzerland',
     description: `EduCut.ai is an AI training provider based in ${COMPANY.country}: ${totalCourses} courses in ${academies.length} academies for companies, universities and professionals.`,
     body, crumbs, type: 'AboutPage', noindex: draft,
     mainEntity: people.length ? { '@type': 'ItemList', name: 'EduCut.ai faculty', itemListElement: people.map((item, i) => ({ '@type': 'ListItem', position: i + 1, item })) } : undefined,
@@ -1035,7 +1035,7 @@ const PUBLIC_PATHS = ['/', '/academies/', ...academies.map((a) => `/academies/${
   ...(publishedGuides.length ? ['/guides/', ...publishedGuides.map((g) => `/guides/${g.slug}/`)] : []),
   ...(ABOUT_PUBLISHED ? ['/about/'] : []), ...LEGAL_PAGES.map(([k]) => `/${k}/`)];
 
-const ROBOTS = `# EduCut.ai — generated by scripts/build-pages.mjs
+const ROBOTS = `# EduCut.ai - generated by scripts/build-pages.mjs
 # All public pages are open to search engines and AI crawlers.
 User-agent: *
 Allow: /
@@ -1116,23 +1116,32 @@ const homeHead = seoHead({
   title: HOME_SEO.title,
   description: HOME_SEO.description.replace('{a}', academies.length).replace('{n}', totalCourses),
 });
-// Homepage "What is EduCut.ai?" block: a self-contained definition and a
-// facts table AI systems can quote. Lives between the about-block markers.
+// Homepage "What is EduCut.ai?" block: a self-contained definition and
+// what businesses, universities and professionals gain. Lives between the about-block markers.
 const ABOUT_BLOCK = `<section class="about-section" id="about" aria-labelledby="about-title"><div class="wrap">
     <div class="section-head"><div><div class="mono" style="color:var(--blue);margin-bottom:14px">EduCut.ai at a glance</div><h2 id="about-title">What is EduCut.ai?</h2></div>
-    <p class="about-lead">EduCut.ai is an AI training provider for companies, universities and professionals. Its catalogue of ${totalCourses} courses is organized into ${academies.length} specialized academies — from AI foundations, generative AI and prompt engineering to AI for business functions, LLM engineering, RAG, AI agents, responsible AI, governance, security and transformation. A free 3-minute assessment recommends Essential, Accelerate and Transform learning paths of 3, 5 and 7 courses.</p></div>
-    <table class="facts"><tbody>
-      <tr><th scope="row">Catalogue</th><td>${totalCourses} courses in ${academies.length} academies — <a href="/academies/">browse the academies</a></td></tr>
-      <tr><th scope="row">Levels</th><td>${esc(levelTotals.filter(([, n]) => n).map(([l, n]) => `${l} (${n})`).join(' · '))}</td></tr>
-      <tr><th scope="row">Course length</th><td>${esc(durationSummary)}</td></tr>
-      <tr><th scope="row">Format</th><td>${esc(CATALOGUE_FACTS.format)}</td></tr>
-      <tr><th scope="row">Language</th><td>${esc(CATALOGUE_FACTS.language)}${CATALOGUE_FACTS.translationAvailable ? ' (translation available)' : ''}</td></tr>
-      <tr><th scope="row">Certification</th><td>${esc(CATALOGUE_FACTS.certification)}</td></tr>
-      <tr><th scope="row">Free assessment</th><td>20 questions, about 3 minutes: AI readiness score and 3, 5 and 7-course paths — <a href="/ai-learning-paths/">how it works</a></td></tr>
-      <tr><th scope="row">Free consultation</th><td>One-hour call, or the full catalogue by email — <a href="/contact/">contact EduCut.ai</a></td></tr>
-      <tr><th scope="row">Based in</th><td>${esc(COMPANY.country)}</td></tr>
-      <tr><th scope="row">Contact</th><td>partners@educutai.com (partnerships, universities, companies) · support@educutai.com (platform support) · contact@educutai.com (general enquiries)</td></tr>
-    </tbody></table>
+    <p class="about-lead">EduCut.ai is an AI training provider for companies, universities and professionals. Its catalogue of ${totalCourses} courses is organized into ${academies.length} specialized academies, from AI foundations, generative AI and prompt engineering to AI for business functions, LLM engineering, RAG, AI agents, responsible AI, governance, security and transformation. A free 3-minute assessment recommends Essential, Accelerate and Transform learning paths of 3, 5 and 7 courses.</p></div>
+    <h3 class="gains-title">What you gain with EduCut.ai</h3>
+    <div class="gains">
+      <article class="gain"><div class="mono" style="color:var(--blue)">For Businesses</div><h3>Your people, ready for AI.</h3><p class="gain-lead">Your strategy, delivered.</p>
+        <ol>
+          <li><strong>A personalized upskilling path for every team.</strong>A free 3-minute assessment maps where your employees stand and builds the path that closes the gap, without generic courses.</li>
+          <li><strong>Learning that keeps pace with AI.</strong>Our courses evolve as AI evolves, so your teams stay current on the new tools, risks and opportunities as they emerge.</li>
+          <li><strong>Aligned with your business needs.</strong>Every course connects to the challenges your teams actually face, from marketing and HR to operations, governance and security.</li>
+        </ol></article>
+      <article class="gain"><div class="mono" style="color:var(--blue)">For Universities</div><h3>The AI curriculum your students expect.</h3><p class="gain-lead">Ready to plug in today.</p>
+        <ol>
+          <li><strong>Close the AI gap in your curriculum.</strong>Add the specialized AI courses students are looking for, from generative AI to LLMs, agents and AI governance. Without them, programs lose attractiveness and fall behind.</li>
+          <li><strong>No hiring and no curriculum overhaul.</strong>You don't need to recruit specialized faculty or redesign your programs. Our ${totalCourses} courses across ${academies.length} academies complement what you already teach.</li>
+          <li><strong>Plugged into your institution, fully online.</strong>We integrate with your organization from day one, so your students get certified, up-to-date AI expertise starting now.</li>
+        </ol></article>
+      <article class="gain"><div class="mono" style="color:var(--blue)">For Professionals</div><h3>Stand out with the AI skills your field is asking for.</h3>
+        <ol>
+          <li><strong>Upskill with the latest AI technologies.</strong>Master the tools and methods that are reshaping your profession, and build a profile that sets you apart.</li>
+          <li><strong>Learn from people who work in AI today.</strong>Our instructors are practitioners in the latest AI fields, and every course is tailored to your profession.</li>
+          <li><strong>At your pace, from home.</strong>Live online sessions plus self-paced work, with a certificate for every course you complete.</li>
+        </ol></article>
+    </div>
   </div></section>`;
 
 const AB_START = /<!-- about-block:start[^>]*-->/;
