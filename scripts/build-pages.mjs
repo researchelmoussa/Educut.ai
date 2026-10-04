@@ -646,7 +646,7 @@ function academyPage(a) {
     <section class="page-section alt" aria-labelledby="courses">
       <div class="wrap">
         <h2 id="courses">Courses in the ${esc(a.name)} Academy</h2>
-        <p class="section-intro">${plural(a.courses.length, 'course')}, from ${esc(levels[0].level.toLowerCase())} to ${esc(levels[levels.length - 1].level.toLowerCase())} level. Open a course to see its programme.</p>
+        <p class="section-intro">${plural(a.courses.length, 'course')}, ${levels.length === 1 ? `all at ${esc(levels[0].level.toLowerCase())}` : `from ${esc(levels[0].level.toLowerCase())} to ${esc(levels[levels.length - 1].level.toLowerCase())}`} level. Open a course to see its programme.</p>
         ${courseHtml}
       </div>
     </section>
