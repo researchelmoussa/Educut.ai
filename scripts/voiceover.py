@@ -43,6 +43,8 @@ ap.add_argument("--models", help="kokoro model folder")
 ap.add_argument("--audio-out", help="also write the narration alone to this file (.mp3/.wav)")
 ap.add_argument("--take", help="one recorded/exported take of all lines in cue order (e.g. ElevenLabs MP3); "
                                "it is cut at its longest pauses instead of synthesising")
+ap.add_argument("--denoise", action="store_true",
+                help="with --take: clean a home recording first (rumble high-pass, FFT denoise, gentle gate)")
 ap.add_argument("--cuts", help="with --take: comma-separated cut times in seconds (one fewer than lines), "
                                "overriding the automatic choice")
 args = ap.parse_args()
@@ -69,6 +71,11 @@ def split_take(path, texts):
     with a bonus for longer pauses. Pauses inside a line are shortened to
     INNER_PAUSE and silence around each line is trimmed.
     """
+    if args.denoise:
+        clean = os.path.join(tmp, "clean.wav")
+        ffmpeg("-i", path, "-af", "highpass=f=80,afftdn=nr=18:nf=-60:tn=1,"
+               "agate=threshold=0.004:ratio=3:attack=5:release=180:range=0.12", clean)
+        path = clean
     audio = read_wav(path)
     hop = SR // 100  # 10 ms frames
     rms = np.sqrt(np.convolve(audio ** 2, np.ones(hop) / hop, "same")[::hop])
