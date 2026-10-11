@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EduCut Cast Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FBFBF9;
+    --stage: #F4F4EF;
+    --ink: #0B0B0B;
+    --cobalt: #3256FE;
+    --acid: #A6ED2F;
+    --grey: #8A8A85;
+    --rule: #D6D6D1;
+    --sans: "Helvetica Neue", "Inter", Helvetica, Arial, sans-serif;
+    --mono: "IBM Plex Mono", "Liberation Mono", "DejaVu Sans Mono", monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); }
+  .board { width: 2000px; padding: 48px 50px 40px; }
+  .mono { font-family: var(--mono); letter-spacing: .14em; text-transform: uppercase; }
+  .label { font-family: var(--mono); font-size: 15px; letter-spacing: .2em; text-transform: uppercase; color: #6d6d68; padding-bottom: 12px; border-bottom: 1px solid var(--rule); margin-bottom: 18px; }
+
+  /* header */
+  header { display: grid; grid-template-columns: 160px 630px 1fr 160px; align-items: end; padding-bottom: 22px; border-bottom: 2px solid var(--ink); }
+  .num { font-family: var(--mono); font-size: 20px; padding-bottom: 6px; }
+  h1 { font-size: 86px; font-weight: 800; letter-spacing: -.04em; line-height: .9; }
+  .kicker { font-size: 17px; color: #555; margin-top: 18px; line-height: 1.35; }
+  .intro { font-size: 25px; line-height: 1.45; padding: 0 40px 4px 30px; }
+  .tags { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; }
+  .tag { font-family: var(--mono); font-size: 15px; letter-spacing: .16em; padding: 8px 14px; border: 2px solid transparent; }
+  .tag.k { background: var(--ink); color: #fff; }
+  .tag.c { border-color: var(--cobalt); color: var(--cobalt); }
+  .tag.a { background: var(--acid); }
+
+  .grid { display: grid; grid-template-columns: 1390px 1fr; gap: 0 46px; margin-top: 26px; }
+  .main { border-right: 1px solid var(--rule); padding-right: 46px; }
+
+  /* line-up */
+  .lineup { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+  .card { padding: 16px 18px 20px; border-left: 1px solid var(--rule); }
+  .card:first-child { border-left: 0; padding-left: 0; }
+  .card .code { display: flex; justify-content: space-between; font-size: 14px; }
+  .card .code b { color: var(--cobalt); font-weight: 500; }
+  .card .code span { color: #6d6d68; }
+  .stage { height: 330px; margin: 14px 0 16px; background: var(--stage); display: flex; align-items: flex-end; justify-content: center; padding-bottom: 18px; position: relative; }
+  .stage img { height: 280px; }
+  .stage .ground { position: absolute; left: 14px; right: 14px; bottom: 18px; height: 0; border-top: 1px solid var(--rule); }
+  .card.lead .stage { background: var(--acid); }
+  .card.lead .stage .ground { border-color: rgba(0,0,0,.15); }
+  .card h2 { white-space: nowrap; font-size: 28px; font-weight: 800; letter-spacing: -.02em; line-height: 1.05; }
+  .card .line { font-size: 18px; color: #444; margin-top: 6px; min-height: 72px; line-height: 1.3; }
+  .meta { margin-top: 14px; }
+  .meta div { padding: 9px 0; border-top: 1px solid var(--rule); font-size: 16px; line-height: 1.35; }
+  .meta dt { font-family: var(--mono); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #6d6d68; margin-bottom: 3px; }
+  .chip { display: inline-block; width: 12px; height: 12px; border: 1.5px solid var(--ink); vertical-align: -1px; margin-right: 6px; }
+
+  /* states */
+  .states { display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; margin-top: 34px; }
+  .pair { display: grid; grid-template-columns: 1fr 34px 1fr; align-items: stretch; }
+  .pair .frame { background: var(--stage); height: 290px; display: flex; align-items: center; justify-content: center; padding: 16px; position: relative; }
+  .pair .frame img { max-height: 240px; max-width: 100%; }
+  .pair .frame .cap { position: absolute; left: 12px; bottom: 9px; font-family: var(--mono); font-size: 12px; letter-spacing: .16em; color: #6d6d68; }
+  .pair .arrow { display: flex; align-items: center; justify-content: center; font-size: 26px; }
+  .pair .note { grid-column: 1 / -1; font-size: 17px; line-height: 1.4; color: #333; margin-top: 12px; }
+  .pair .note b { font-family: var(--mono); font-weight: 500; color: var(--cobalt); letter-spacing: .1em; margin-right: 6px; }
+
+  /* side column */
+  .side section { margin-bottom: 28px; }
+  .swatches { display: grid; grid-template-columns: repeat(6, 1fr); height: 120px; border: 1px solid var(--rule); }
+  .swatches div { border-left: 1px solid var(--rule); }
+  .hexes { display: grid; grid-template-columns: repeat(6, 1fr); font-family: var(--mono); font-size: 12.5px; letter-spacing: .06em; color: #6d6d68; margin-top: 8px; }
+  .side p { font-size: 18px; line-height: 1.45; color: #222; margin-top: 12px; }
+  .rules { list-style: none; }
+  .rules li { display: grid; grid-template-columns: 38px 1fr; padding: 9px 0; border-bottom: 1px solid var(--rule); font-size: 17px; line-height: 1.35; }
+  .rules li b { font-family: var(--mono); font-weight: 400; color: var(--cobalt); }
+  .anatomy { display: grid; grid-template-columns: 150px 1fr; gap: 18px; align-items: center; }
+  .anatomy svg { width: 150px; height: 190px; }
+  .scenes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .scenes figure { background: var(--stage); height: 170px; display: flex; align-items: center; justify-content: center; padding: 10px 10px 26px; position: relative; }
+  .scenes img { max-height: 120px; max-width: 100%; }
+  .scenes figcaption { position: absolute; left: 8px; bottom: 5px; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; color: #6d6d68; }
+  .donts li { list-style: none; font-size: 17px; line-height: 1.35; padding: 7px 0 7px 26px; position: relative; border-bottom: 1px solid var(--rule); }
+  .donts li::before { content: "×"; position: absolute; left: 2px; font-family: var(--mono); color: var(--ink); }
+  .donts li.do::before { content: "→"; color: var(--cobalt); }
+
+  /* footer */
+  .casting { display: grid; grid-template-columns: 300px repeat(5, 1fr); gap: 0 30px; margin-top: 30px; padding-top: 18px; border-top: 2px solid var(--ink); align-items: start; }
+  .casting .label { border: 0; margin: 0; padding: 4px 0 0; }
+  .cast { border-top: 4px solid var(--ink); padding-top: 10px; font-family: var(--mono); font-size: 15px; letter-spacing: .14em; }
+  .cast span { color: #6d6d68; }
+  .cast.acid { border-color: var(--acid); }
+  .cast.cobalt { border-color: var(--cobalt); }
+  .cast.hair { border-top-width: 1px; padding-top: 13px; }
+  .foot { display: flex; justify-content: space-between; margin-top: 30px; font-family: var(--mono); font-size: 15px; letter-spacing: .2em; color: #555; }
+</style>
+</head>
+<body>
+<div class="board">
+
+  <header>
+    <div class="num">14</div>
+    <div>
+      <h1>Cast</h1>
+      <div class="kicker mono">Kern × Dossier — recurring personas<br>for every EduCut video</div>
+    </div>
+    <p class="intro">Five stick figures carry every EduCut film. One outline, one face, one signature each — so the viewer recognises the audience before the caption lands, from the first video to the fiftieth.</p>
+    <div class="tags">
+      <span class="tag k">RECURRING</span>
+      <span class="tag c">RECOGNISABLE</span>
+      <span class="tag a">REUSABLE</span>
+    </div>
+  </header>
+
+  <div class="grid">
+    <div class="main">
+      <div class="label">1 — Cast line-up · final frame, 1:1 scale</div>
+      <div class="lineup">
+
+        <article class="card lead">
+          <div class="code mono"><b>P01</b><span>Every video</span></div>
+          <div class="stage"><div class="ground"></div><img src="personas/p01-lead.png" alt="P01 The Lead"></div>
+          <h2>The Lead</h2>
+          <p class="line">You. The viewer's stand-in who goes from lost to leading.</p>
+          <dl class="meta">
+            <div><dt>Signature</dt>Curly tuft, white shirt, cobalt tie</div>
+            <div><dt>Accent</dt><span class="chip" style="background:var(--cobalt)"></span>Cobalt — tie only</div>
+            <div><dt>Use in</dt>Hook, transformation, sign-off</div>
+          </dl>
+        </article>
+
+        <article class="card">
+          <div class="code mono"><b>P02</b><span>Businesses</span></div>
+          <div class="stage"><div class="ground"></div><img src="personas/p02-manager.png" alt="P02 The Manager"></div>
+          <h2>The Manager</h2>
+          <p class="line">Builds AI-ready teams. Talks in results.</p>
+          <dl class="meta">
+            <div><dt>Signature</dt>Ponytail, black suit, V lapels, skirt</div>
+            <div><dt>Accent</dt><span class="chip"></span>None on body — props carry it</div>
+            <div><dt>Prop</dt>Rising bar chart, acid dots</div>
+          </dl>
+        </article>
+
+        <article class="card">
+          <div class="code mono"><b>P03</b><span>Universities</span></div>
+          <div class="stage"><div class="ground"></div><img src="personas/p03-graduate.png" alt="P03 The Graduate"></div>
+          <h2>The Graduate</h2>
+          <p class="line">Runs programmes students choose first.</p>
+          <dl class="meta">
+            <div><dt>Signature</dt>Mortarboard, round glasses, long hair, gown</div>
+            <div><dt>Accent</dt><span class="chip" style="background:var(--acid)"></span>Acid — tassel + gown stripes</div>
+            <div><dt>Prop</dt>AI hall, cohort of mini learners</div>
+          </dl>
+        </article>
+
+        <article class="card">
+          <div class="code mono"><b>P04</b><span>Professionals</span></div>
+          <div class="stage"><div class="ground"></div><img src="personas/p04-professional.png" alt="P04 The Professional"></div>
+          <h2>The Professional</h2>
+          <p class="line">A career impossible to ignore. Works from anywhere.</p>
+          <dl class="meta">
+            <div><dt>Signature</dt>Bare round head, cape, coloured shoes</div>
+            <div><dt>Accent</dt><span class="chip" style="background:var(--acid)"></span>Acid on paper · <span class="chip" style="background:var(--cobalt)"></span>cobalt on acid</div>
+            <div><dt>Prop</dt>Laptop desk, home icon, sparkles</div>
+          </dl>
+        </article>
+
+        <article class="card">
+          <div class="code mono"><b>P05</b><span>Learners</span></div>
+          <div class="stage"><div class="ground"></div><img src="personas/p05-learner.png" alt="P05 The Learner"></div>
+          <h2>The Learner</h2>
+          <p class="line">Joins the path. Anchors every group shot.</p>
+          <dl class="meta">
+            <div><dt>Signature</dt>Hijab framing the face, plain body</div>
+            <div><dt>Accent</dt><span class="chip" style="background:var(--cobalt)"></span>Cobalt — hijab only</div>
+            <div><dt>Use in</dt>Cohorts, crowds, finale line-up</div>
+          </dl>
+        </article>
+
+      </div>
+
+      <div class="label" style="margin-top:34px">2 — States · the only two arcs a persona may play</div>
+      <div class="states" style="margin-top:0">
+        <div class="pair">
+          <div class="frame"><img src="personas/p01-lead-overwhelmed.png" alt=""><span class="cap">P01 · BEFORE</span></div>
+          <div class="arrow">→</div>
+          <div class="frame"><img src="personas/p01-lead.png" alt="" style="max-height:220px"><span class="cap">P01 · AFTER</span></div>
+          <p class="note"><b>A</b>Buried under jargon pills → upright, waving, standing on the acid path line. Pills: white, cobalt or acid, 2 px ink outline.</p>
+        </div>
+        <div class="pair">
+          <div class="frame"><img src="personas/p04-professional-neutral.png" alt=""><span class="cap">P04 · BEFORE</span></div>
+          <div class="arrow">→</div>
+          <div class="frame"><img src="personas/p04-professional-empowered.png" alt=""><span class="cap">P04 · AFTER</span></div>
+          <p class="note"><b>B</b>Flat mouth, arms down → smile, arms up, cape and sparkles. The cape is earned: it only appears after the change.</p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="side">
+      <section>
+        <div class="label">3 — Palette · sampled from the film</div>
+        <div class="swatches">
+          <div style="background:#F4F4EF;border-left:0"></div>
+          <div style="background:#0B0B0B"></div>
+          <div style="background:#FFFFFF"></div>
+          <div style="background:#3256FE"></div>
+          <div style="background:#A6ED2F"></div>
+          <div style="background:#D6D6D1"></div>
+        </div>
+        <div class="hexes"><span>F4F4EF</span><span>0B0B0B</span><span>FFFFFF</span><span>3256FE</span><span>A6ED2F</span><span>D6D6D1</span></div>
+        <p>Ink outlines, white bodies, paper stage. Cobalt and acid are signatures, never skin. Swap the stage to acid for finales — then acid details on a persona turn cobalt.</p>
+      </section>
+
+      <section>
+        <div class="label">4 — Construction</div>
+        <div class="anatomy">
+          <svg viewBox="0 0 150 190" fill="none" stroke="#0B0B0B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="75" cy="42" r="30" fill="#fff"/>
+            <circle cx="64" cy="38" r="3" fill="#0B0B0B" stroke="none"/>
+            <circle cx="86" cy="38" r="3" fill="#0B0B0B" stroke="none"/>
+            <path d="M64 52 q11 9 22 0"/>
+            <rect x="57" y="74" width="36" height="58" rx="16" fill="#fff"/>
+            <path d="M57 92 L22 104"/><circle cx="17" cy="106" r="6" fill="#fff"/>
+            <path d="M93 92 L128 104"/><circle cx="133" cy="106" r="6" fill="#fff"/>
+            <path d="M66 132 L64 176 h-10 M84 132 L86 176 h10"/>
+          </svg>
+          <ul class="rules">
+            <li><b>01</b>One ink stroke, round joins — 6 px at 1080p</li>
+            <li><b>02</b>Head ≈ ⅓ of height, white fill</li>
+            <li><b>03</b>Hands are open rings, feet are flat ticks</li>
+            <li><b>04</b>Face = two dots + arc; a flat line means "not yet"</li>
+            <li><b>05</b>One signature per persona — never two</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="label">5 — Scenes · persona + prop</div>
+        <div class="scenes">
+          <figure><img src="personas/p02-manager-scene.png" alt=""><figcaption>P02 · CHART</figcaption></figure>
+          <figure><img src="personas/p03-graduate-scene.png" alt=""><figcaption>P03 · AI HALL</figcaption></figure>
+        </div>
+      </section>
+
+      <section>
+        <div class="label">6 — Rules of reuse</div>
+        <ul class="donts">
+          <li class="do">Same five, same order in line-ups: P02 P03 P01 P04 P05</li>
+          <li class="do">Redraw only from these cutouts — scale, never restyle</li>
+          <li>No shading, gradients, shadows or skin tones</li>
+          <li>No swapping signatures between personas</li>
+          <li>No new persona without a board entry here</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+
+  <div class="casting">
+    <div class="label">7 — Casting</div>
+    <div class="cast acid">P01 <span>EVERY VIDEO</span></div>
+    <div class="cast cobalt">P02 <span>BUSINESSES</span></div>
+    <div class="cast hair">P03 <span>UNIVERSITIES</span></div>
+    <div class="cast hair">P04 <span>PROFESSIONALS</span></div>
+    <div class="cast hair">P05 <span>LEARNERS</span></div>
+  </div>
+
+  <div class="foot"><span>EDUCUT.AI — VIDEO CAST STUDY</span><span>BOARD 14 — CAST</span></div>
+</div>
+</body>
+</html>
