@@ -1,0 +1,17 @@
+# ElevenLabs take for ai-eligibility.html (30 s)
+# Voice: Quentin – Narrator and Educator · Model: Multilingual v2 or Flash v2.5
+# Speed 1.15 · Stability ~50% · Similarity ~75%
+# Paste everything below the dashed line as ONE generation, download the MP3, then:
+#   python3 scripts/voiceover.py assets/brand/videos/ai-eligibility.vo.txt \
+#       assets/video/educut-ai-eligibility-30s.mp4 out.mp4 --take take.mp3
+# Breaks between lines (0.8 s) must stay longer than breaks inside a line (≤ 0.3 s):
+# the take is cut at its 7 longest pauses and each line is placed on its cue.
+# ----------------------------------------------------------------------------
+A single mother of two applies for social assistance.<break time="0.8s" />
+An AI system scores her file. <break time="0.3s" /> Rejected.<break time="0.8s" />
+Even the officer can't explain why.<break time="0.8s" />
+Who is responsible? <break time="0.3s" /> The developer, the administration, the authorities, the officer… <break time="0.3s" /> or the machine?<break time="0.8s" />
+Can a machine be morally responsible at all?<break time="0.8s" />
+Responsible AI starts with three questions: <break time="0.2s" /> transparency, interpretability, explainability.<break time="0.8s" />
+Being able to decide doesn't mean being allowed to.<break time="0.8s" />
+Join EduCut AI. <break time="0.2s" /> Start with the Responsible AI Academy.

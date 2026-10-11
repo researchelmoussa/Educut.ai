@@ -7,6 +7,9 @@ Cue sheet lines: "start-seconds | max-seconds | text". Each line is spoken,
 sped up just enough (pitch kept) to fit its max-seconds slot, and placed at
 its start time.
 
+Or pass --take with one exported take of all lines (e.g. from ElevenLabs);
+it is cut at its pauses and each line is placed on its cue.
+
 Engines:
   festival  offline, apt packages: festival festvox-us2 (MBROLA us2, male).
             Default; works without any model download.
@@ -35,6 +38,8 @@ ap.add_argument("--engine", choices=["festival", "kokoro"], default="festival")
 ap.add_argument("--voice", help="festival: us2_mbrola (default) · kokoro: am_michael (default)")
 ap.add_argument("--models", help="kokoro model folder")
 ap.add_argument("--audio-out", help="also write the narration alone to this file (.mp3/.wav)")
+ap.add_argument("--take", help="one recorded/exported take of all lines in cue order (e.g. ElevenLabs MP3); "
+                               "it is cut at its longest pauses instead of synthesising")
 args = ap.parse_args()
 tmp = tempfile.mkdtemp()
 
@@ -50,7 +55,38 @@ def read_wav(path):
     return np.frombuffer(raw, np.float32).copy()
 
 
-if args.engine == "kokoro":
+def split_take(path, n):
+    """Cut one take into n lines at its n-1 longest pauses, trimming silence around each line."""
+    audio = read_wav(path)
+    hop = SR // 100  # 10 ms frames
+    rms = np.sqrt(np.convolve(audio ** 2, np.ones(hop) / hop, "same")[::hop])
+    quiet = rms < rms.max() * 10 ** (-38 / 20)
+    runs, i = [], 0
+    while i < len(quiet):  # (start, end) of every quiet run, in frames
+        if quiet[i]:
+            j = i
+            while j < len(quiet) and quiet[j]:
+                j += 1
+            runs.append((i, j))
+            i = j
+        else:
+            i += 1
+    inner = [r for r in runs if r[0] > 0 and r[1] < len(quiet)]
+    cuts = sorted(sorted(inner, key=lambda r: r[0] - r[1])[: n - 1])
+    if len(cuts) < n - 1:
+        raise SystemExit(f"take has only {len(cuts) + 1} pauses-separated parts, cue sheet has {n} lines")
+    bounds = [0] + [(a + b) // 2 for a, b in cuts] + [len(quiet)]
+    lines = []
+    for a, b in zip(bounds, bounds[1:]):
+        loud = np.flatnonzero(~quiet[a:b])
+        lo, hi = a + loud[0], a + loud[-1] + 1
+        lines.append(audio[max(0, lo - 3) * hop:(hi + 3) * hop])  # keep 30 ms of breath either side
+    return lines
+
+
+if args.take:
+    pass
+elif args.engine == "kokoro":
     import soundfile as sf
     from kokoro_onnx import Kokoro
 
@@ -102,8 +138,9 @@ for line in open(args.cues, encoding="utf-8"):
 dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                      "-of", "csv=p=0", args.video]))
 track = np.zeros(int(dur * SR) + 5 * SR, np.float32)
-for start, room, text in cues:
-    audio, tempo = fit(speak(text), room)
+taken = split_take(args.take, len(cues)) if args.take else None
+for k, (start, room, text) in enumerate(cues):
+    audio, tempo = fit(taken[k] if taken else speak(text), room)
     i = int(start * SR)
     track[i:i + len(audio)] += audio
     print(f"{start:5.1f}s  {len(audio) / SR:4.1f}s/{room}s  x{tempo:.2f}  {text}")
