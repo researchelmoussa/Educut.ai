@@ -24,6 +24,7 @@ import glob
 import os
 import subprocess
 import tempfile
+import unicodedata
 
 import numpy as np
 
@@ -42,6 +43,8 @@ ap.add_argument("--models", help="kokoro model folder")
 ap.add_argument("--audio-out", help="also write the narration alone to this file (.mp3/.wav)")
 ap.add_argument("--take", help="one recorded/exported take of all lines in cue order (e.g. ElevenLabs MP3); "
                                "it is cut at its longest pauses instead of synthesising")
+ap.add_argument("--cuts", help="with --take: comma-separated cut times in seconds (one fewer than lines), "
+                               "overriding the automatic choice")
 args = ap.parse_args()
 tmp = tempfile.mkdtemp()
 
@@ -69,7 +72,9 @@ def split_take(path, texts):
     audio = read_wav(path)
     hop = SR // 100  # 10 ms frames
     rms = np.sqrt(np.convolve(audio ** 2, np.ones(hop) / hop, "same")[::hop])
-    quiet = rms < rms.max() * 10 ** (-38 / 20)
+    # quiet = 38 dB under the peak, or just above the noise floor for recordings with room hiss
+    floor = np.percentile(rms, 10)
+    quiet = rms < max(rms.max() * 10 ** (-38 / 20), floor * 10 ** (8 / 20))
     runs, i = [], 0
     while i < len(quiet):  # (start, end) of every quiet run, in frames
         if quiet[i]:
@@ -86,7 +91,11 @@ def split_take(path, texts):
         raise SystemExit(f"take has only {len(runs) + 1} pause-separated parts, cue sheet has {n} lines")
     voiced = np.flatnonzero(~quiet)
     first, last = voiced[0], voiced[-1] + 1
-    chars = np.array([len(t) for t in texts], float)
+    def weight(t):
+        # spoken length ~ letters (not diacritics or spaces) + a pause per comma, colon or ellipsis
+        letters = sum(1 for ch in t if ch.isalnum() and not unicodedata.combining(ch))
+        return letters + 5 * sum(t.count(m) for m in ",،:…?؟")
+    chars = np.array([weight(t) for t in texts], float)
     expect = (last - first) * chars / chars.sum()  # frames each line should take
 
     # dynamic programme over (line k ends at pause p)
@@ -113,6 +122,11 @@ def split_take(path, texts):
     picks = picks[::-1]
 
     bounds = [0] + [int(mids[p]) for p in picks] + [len(quiet)]
+    if args.cuts:
+        bounds = [0] + [int(float(c) * 100) for c in args.cuts.split(",")] + [len(quiet)]
+        if len(bounds) != n + 1:
+            raise SystemExit(f"--cuts needs {n - 1} times, got {len(bounds) - 2}")
+    print("take cut at", ", ".join(f"{b / 100:.2f}s" for b in bounds[1:-1]))
     lines = []
     for a, b in zip(bounds, bounds[1:]):
         loud = np.flatnonzero(~quiet[a:b])
