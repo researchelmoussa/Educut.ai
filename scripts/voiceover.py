@@ -29,6 +29,8 @@ import numpy as np
 
 SR = 24000
 MAX_TEMPO = 1.45  # faster than this starts to sound rushed
+TAKE_TEMPO = 1.25  # natural voices tolerate less speed-up
+INNER_PAUSE = 20   # frames (200 ms): longest pause kept inside a line of a take
 
 ap = argparse.ArgumentParser()
 ap.add_argument("cues")
@@ -55,8 +57,15 @@ def read_wav(path):
     return np.frombuffer(raw, np.float32).copy()
 
 
-def split_take(path, n):
-    """Cut one take into n lines at its n-1 longest pauses, trimming silence around each line."""
+def split_take(path, texts):
+    """Cut one take into its lines.
+
+    Narration engines do not always honour pause lengths, so a pause between
+    lines can be shorter than one inside a line. Cut points are chosen among
+    all pauses so each segment's length best matches its share of the text,
+    with a bonus for longer pauses. Pauses inside a line are shortened to
+    INNER_PAUSE and silence around each line is trimmed.
+    """
     audio = read_wav(path)
     hop = SR // 100  # 10 ms frames
     rms = np.sqrt(np.convolve(audio ** 2, np.ones(hop) / hop, "same")[::hop])
@@ -67,20 +76,53 @@ def split_take(path, n):
             j = i
             while j < len(quiet) and quiet[j]:
                 j += 1
-            runs.append((i, j))
+            if i > 0 and j < len(quiet) and j - i >= 12:  # >= 120 ms counts as a pause
+                runs.append((i, j))
             i = j
         else:
             i += 1
-    inner = [r for r in runs if r[0] > 0 and r[1] < len(quiet)]
-    cuts = sorted(sorted(inner, key=lambda r: r[0] - r[1])[: n - 1])
-    if len(cuts) < n - 1:
-        raise SystemExit(f"take has only {len(cuts) + 1} pauses-separated parts, cue sheet has {n} lines")
-    bounds = [0] + [(a + b) // 2 for a, b in cuts] + [len(quiet)]
+    n = len(texts)
+    if len(runs) < n - 1:
+        raise SystemExit(f"take has only {len(runs) + 1} pause-separated parts, cue sheet has {n} lines")
+    voiced = np.flatnonzero(~quiet)
+    first, last = voiced[0], voiced[-1] + 1
+    chars = np.array([len(t) for t in texts], float)
+    expect = (last - first) * chars / chars.sum()  # frames each line should take
+
+    # dynamic programme over (line k ends at pause p)
+    mids = [(a + b) / 2 for a, b in runs]
+    longest = max(b - a for a, b in runs)
+    INF = float("inf")
+    best = [[INF] * len(runs) for _ in range(n - 1)]
+    back = [[-1] * len(runs) for _ in range(n - 1)]
+    def cost(k, seg, p):
+        return np.log(max(seg, 1) / expect[k]) ** 2 - 0.5 * (runs[p][1] - runs[p][0]) / longest
+    for p in range(len(runs)):
+        best[0][p] = cost(0, mids[p] - first, p)
+    for k in range(1, n - 1):
+        for p in range(k, len(runs)):
+            for q in range(k - 1, p):
+                c = best[k - 1][q] + cost(k, mids[p] - mids[q], p)
+                if c < best[k][p]:
+                    best[k][p], back[k][p] = c, q
+    end = min(range(n - 2, len(runs)),
+              key=lambda p: best[n - 2][p] + np.log(max(last - mids[p], 1) / expect[n - 1]) ** 2)
+    picks = [end]
+    for k in range(n - 2, 0, -1):
+        picks.append(back[k][picks[-1]])
+    picks = picks[::-1]
+
+    bounds = [0] + [int(mids[p]) for p in picks] + [len(quiet)]
     lines = []
     for a, b in zip(bounds, bounds[1:]):
         loud = np.flatnonzero(~quiet[a:b])
         lo, hi = a + loud[0], a + loud[-1] + 1
-        lines.append(audio[max(0, lo - 3) * hop:(hi + 3) * hop])  # keep 30 ms of breath either side
+        keep = np.ones(len(quiet), bool)
+        for ra, rb in runs:  # shorten pauses inside the line
+            if lo < ra and rb < hi and rb - ra > INNER_PAUSE:
+                keep[ra + INNER_PAUSE // 2: rb - INNER_PAUSE // 2] = False
+        frames = [f for f in range(max(0, lo - 3), min(len(quiet), hi + 3)) if keep[f]]
+        lines.append(np.concatenate([audio[f * hop:(f + 1) * hop] for f in frames]))
     return lines
 
 
@@ -119,8 +161,8 @@ else:
 
 
 def fit(audio, room):
-    """Speed a line up (pitch kept) until it fits its slot, capped at MAX_TEMPO."""
-    tempo = min(MAX_TEMPO, max(1.0, len(audio) / SR / room))
+    """Speed a line up (pitch kept) until it fits its slot, capped at MAX_TEMPO / TAKE_TEMPO."""
+    tempo = min(TAKE_TEMPO if args.take else MAX_TEMPO, max(1.0, len(audio) / SR / room))
     if tempo <= 1.0:
         return audio, 1.0
     src, dst = os.path.join(tmp, "in.raw"), os.path.join(tmp, "fit.wav")
@@ -137,15 +179,21 @@ for line in open(args.cues, encoding="utf-8"):
 
 dur = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                      "-of", "csv=p=0", args.video]))
-track = np.zeros(int(dur * SR) + 5 * SR, np.float32)
-taken = split_take(args.take, len(cues)) if args.take else None
+track = np.zeros(int(dur * SR) + 10 * SR, np.float32)
+taken = split_take(args.take, [c[2] for c in cues]) if args.take else None
+free = 0.0  # a line that overruns its slot pushes the next one back
 for k, (start, room, text) in enumerate(cues):
     audio, tempo = fit(taken[k] if taken else speak(text), room)
+    start = max(start, free)
     i = int(start * SR)
     track[i:i + len(audio)] += audio
-    print(f"{start:5.1f}s  {len(audio) / SR:4.1f}s/{room}s  x{tempo:.2f}  {text}")
+    free = start + len(audio) / SR + 0.15
+    print(f"{start:5.2f}s  {len(audio) / SR:4.1f}s/{room}s  x{tempo:.2f}  {text}")
 
-track = track[: int(dur * SR)]
+hold = max(0.0, free + 0.35 - dur)  # hold the last frame if the narration runs past the film
+if hold:
+    print(f"narration runs past the film: holding the last frame {hold:.2f}s longer")
+track = track[: int((dur + hold) * SR)]
 track *= 0.89 / max(1e-6, np.abs(track).max())
 raw = os.path.join(tmp, "vo.raw")
 track.tofile(raw)
@@ -154,6 +202,8 @@ vo = os.path.join(tmp, "vo.wav")
 ffmpeg("-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", raw, "-af", voice_chain, "-ar", "48000", vo)
 if args.audio_out:
     ffmpeg("-i", vo, *(["-b:a", "192k"] if args.audio_out.endswith(".mp3") else []), args.audio_out)
-ffmpeg("-i", args.video, "-i", vo, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+video = ["-c:v", "copy"] if not hold else [
+    "-vf", f"tpad=stop_mode=clone:stop_duration={hold:.2f}", "-c:v", "libx264", "-crf", "18", "-pix_fmt", "yuv420p"]
+ffmpeg("-i", args.video, "-i", vo, "-map", "0:v", "-map", "1:a", *video, "-c:a", "aac", "-b:a", "192k",
        "-shortest", "-movflags", "+faststart", args.out)
 print("wrote", args.out)
