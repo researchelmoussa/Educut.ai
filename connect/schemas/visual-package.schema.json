@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://educutai.com/connect/schemas/visual-package.schema.json",
+  "title": "VisualPackage",
+  "description": "Branded LinkedIn visual produced by the Visual Designer from one OpportunityRecord. `rendered_text` and `qc` are written by `cli.mjs render` from the rendered page, never typed by the agent.",
+  "type": "object",
+  "required": ["opportunity_id", "record_content_hash", "outputs", "rendered_text", "alt_text", "assets_used", "qc", "capability_missing"],
+  "additionalProperties": false,
+  "properties": {
+    "opportunity_id": { "type": "string", "pattern": "^opp_[0-9a-f]{16}$" },
+    "record_content_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "outputs": {
+      "type": "object",
+      "required": ["png_portrait", "source_html", "spec_json"],
+      "additionalProperties": false,
+      "properties": {
+        "png_portrait": { "type": ["string", "null"] },
+        "png_square": { "type": ["string", "null"] },
+        "source_html": { "type": "string" },
+        "spec_json": { "type": "string" }
+      }
+    },
+    "rendered_text": {
+      "type": "object",
+      "required": ["title", "institution", "location", "field", "deadline"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string" },
+        "institution": { "type": "string" },
+        "location": { "type": "string" },
+        "field": { "type": "string" },
+        "deadline": { "type": "string" }
+      }
+    },
+    "alt_text": { "type": "string", "minLength": 20 },
+    "assets_used": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["role", "path", "license"],
+        "additionalProperties": false,
+        "properties": {
+          "role": { "type": "string" },
+          "path": { "type": "string" },
+          "license": { "type": "string" },
+          "attribution": { "type": ["string", "null"] },
+          "source_url": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "qc": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["check", "pass", "detail"],
+        "additionalProperties": false,
+        "properties": {
+          "check": { "type": "string" },
+          "pass": { "type": "boolean" },
+          "detail": { "type": "string" }
+        }
+      }
+    },
+    "capability_missing": { "type": "array", "items": { "type": "string" } }
+  }
+}
