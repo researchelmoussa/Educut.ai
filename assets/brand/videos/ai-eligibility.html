@@ -154,11 +154,11 @@
   <div class="a qcard c2" style="left:1436px;top:480px;transform-origin:50% 100%"><div class="n">03</div><h3>Explainability</h3><hr><p>Can we explain why <em>she</em> was refused?</p><div class="bar"></div></div>
 </div>
 
-<!-- 7 · able to decide is not allowed to decide -->
+<!-- 7 · able to automate is not allowed to be unaccountable -->
 <div class="scene" id="human">
   <div class="kicker">HUMAN-CENTERED AI</div>
-  <h1>Able to decide</h1>
-  <h1 style="top:300px">≠ allowed to decide.</h1>
+  <h1 style="font-size:88px">Able to automate a decision</h1>
+  <h1 style="top:290px;font-size:88px">≠ allowed to not be responsible.</h1>
   <div class="ground" style="left:140px;right:140px;top:962px"></div>
   <div class="a p" id="lead2" style="left:520px;top:558px"><img src="../personas/p01-lead.png" width="270" height="404" alt=""></div>
   <div class="a box" id="hbox" style="left:800px;top:640px;width:300px;height:300px;transform-origin:50% 100%">
@@ -225,7 +225,8 @@ function rise(el, t, a, outAt) {
 const vis = (el, t, a, b, f = .3) => { el.style.opacity = Math.min(pr(t, a, a + f), b == null ? 1 : 1 - pr(t, b - f, b)); };
 const sad = (el, x) => { el.querySelectorAll('.smile').forEach(s => s.style.opacity = 1 - x); el.querySelectorAll('.flat').forEach(s => s.style.opacity = x); };
 
-function seek(t) {
+function seek(T) {
+  const t = T;
   // ---------- scene 1-3: the case (0 - 10 s)
   vis($('#case'), t, -1, 10.05, .3);
   rise($('#h1a'), t, .15, 2.85); rise($('#h1b'), t, 3.1, 6.85); rise($('#h1c'), t, 7.1);
@@ -261,19 +262,29 @@ function seek(t) {
   $('#mbox').style.setProperty('--r', Math.sin(Math.max(0, t - 15.9) * 2.2) * 3 + 'deg');
   for (let i = 0; i < 3; i++) rise($(`#moral .m${i}`), t, 16.2 + i * .4);
 
-  // ---------- scene 6: three questions (18 - 24 s)
-  vis($('#pillars'), t, 17.95, 24.05, .3);
+  // ---------- scene 6: three questions (18 - 24 s), then one axis at a time (24 - 34.5 s)
+  vis($('#pillars'), t, 17.95, 34.55, .3);
   rise($('#pillars h1'), t, 18.15); rise($('#pillars .kicker'), t, 18.05);
   pop($('#lead'), t, 18.35);
   for (let i = 0; i < 3; i++) {
     const a = 18.7 + i * 1.75;
     pop($(`#pillars .c${i}`), t, a);
-    const on = pr(t, a + .35, a + .7) * (i < 2 ? 1 - pr(t, a + 1.75, a + 2) : 1);
-    $(`#pillars .c${i} .bar`).style.transform = `scaleX(${out3(on)})`;
+    const on = pr(t, a + .35, a + .7) * (1 - pr(t, i < 2 ? a + 1.75 : 23.6, i < 2 ? a + 2 : 23.9));
+    const ax = 24 + i * 3.5;  // this card's question is asked
+    const f = inout(pr(t, ax, ax + .4) * (1 - pr(t, ax + 3.2, ax + 3.5)));
+    const others = [0, 1, 2].filter(j => j !== i).map(j => inout(pr(t, 24 + j * 3.5, 24.4 + j * 3.5) * (1 - pr(t, 27.2 + j * 3.5, 27.5 + j * 3.5))));
+    const card = $(`#pillars .c${i}`);
+    set(card, { '--dy': -34 * f + 'px', '--s': 1 + .07 * f });
+    card.style.opacity = Math.min(card.style.opacity, 1 - .7 * Math.max(...others));
+    card.style.zIndex = f > 0 ? 2 : 1;
+    card.style.borderColor = f > .5 ? 'var(--cobalt)' : 'var(--ink)';
+    card.querySelector('p').style.color = f > .5 ? 'var(--cobalt)' : 'var(--ink)';
+    $(`#pillars .c${i} .bar`).style.transform = `scaleX(${out3(Math.max(on, f))})`;
   }
 
-  // ---------- scene 7: able to decide != allowed to decide (24 - 27 s)
-  vis($('#human'), t, 23.95, 27.05, .3);
+  // ---------- scene 7: able to decide != allowed to decide (34.5 - 38.5 s)
+  vis($('#human'), t, 34.45, 38.55, .3);
+  { const t = T - 10.5;
   rise($('#human .kicker'), t, 24.05); rise($$('#human h1')[0], t, 24.15); rise($$('#human h1')[1], t, 24.45);
   pop($('#hbox'), t, 24.35); pop($('#lead2'), t, 24.6);
   const h = pr(t, 25.25, 25.55);
@@ -282,14 +293,17 @@ function seek(t) {
   $('#hlbl').style.opacity = 1 - h; $('#hlbl2').style.opacity = h;
   pop($('#ok'), t, 25.6);
   pop($('#kidC'), t, 25.9); pop($('#mom2'), t, 26.0); pop($('#kidD'), t, 26.1);
+  }
 
-  // ---------- scene 8: end card (27 - 30 s), same as the intro film
-  vis($('#end'), t, 26.95, null, .25);
+  // ---------- scene 8: end card (38.5 - 42.5 s), same as the intro film
+  vis($('#end'), t, 38.45, null, .25);
+  { const t = T - 11.5;
   pop($('#logo'), t, 27.1); pop($('#e1'), t, 27.2); pop($('#e2'), t, 27.35); rise($('#e3'), t, 27.6);
   pop($('#e4'), t, 27.75); rise($('#e5'), t, 27.9);
   for (let i = 0; i < 5; i++) {
     const p = back(pr(t, 27.85 + i * .09, 28.35 + i * .09));
     set($(`#end .l${i}`), { '--dy': (1 - p) * 420 + 'px', opacity: pr(t, 27.85 + i * .09, 27.95 + i * .09) });
+  }
   }
 }
 window.seek = seek;

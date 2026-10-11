@@ -1,7 +1,7 @@
 """Generate a voice-over from a cue sheet and mix it onto a silent film.
 
     python3 scripts/voiceover.py assets/brand/videos/ai-eligibility.vo.txt \
-        assets/video/educut-ai-eligibility-30s.mp4 out.mp4 [--engine festival|kokoro]
+        assets/video/educut-ai-eligibility.mp4 out.mp4 [--engine festival|kokoro]
 
 Cue sheet lines: "start-seconds | max-seconds | text". Each line is spoken,
 sped up just enough (pitch kept) to fit its max-seconds slot, and placed at
