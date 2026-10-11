@@ -1,12 +1,11 @@
 # Sound effects for ai-eligibility.html (same timeline in every language).
 # second | sound [| pitch multiplier]
-# sounds: pop, whoosh, tick, stamp, sad, chime, ding, boom, riser
+# sounds: pop, tick, stamp, sad, chime, ding (whoosh, boom, riser also available)
 0.30  | pop   | 0.8
 0.55  | pop   | 1.1
 0.70  | pop   | 1.2
 1.10  | pop   | 1.0
 2.95  | pop   | 0.7
-3.30  | whoosh
 4.20  | tick
 4.45  | tick
 4.70  | tick
@@ -17,11 +16,9 @@
 5.50  | tick  | 1.3
 5.70  | stamp
 6.00  | sad
-6.95  | whoosh
 7.15  | pop   | 0.8
 7.85  | pop   | 1.0
 8.60  | pop   | 1.3
-9.90  | whoosh
 10.45 | pop   | 0.8
 10.95 | pop   | 0.9
 11.45 | pop   | 1.0
@@ -32,9 +29,6 @@
 11.70 | tick  | 1.6
 12.20 | tick  | 1.6
 12.70 | tick  | 1.6
-14.95 | boom
-17.20 | riser
-17.95 | whoosh
 18.35 | pop   | 0.9
 18.70 | pop   | 1.0
 20.45 | pop   | 1.12
@@ -42,7 +36,6 @@
 24.00 | chime | 1.0
 27.50 | chime | 1.12
 31.00 | chime | 1.26
-34.45 | whoosh
 34.85 | pop   | 0.8
 35.10 | pop   | 1.0
 35.75 | chime | 1.5
@@ -50,7 +43,6 @@
 36.40 | pop   | 1.2
 36.50 | pop   | 0.9
 36.60 | pop   | 1.3
-38.45 | whoosh
 38.60 | chime | 1.0
 39.35 | pop   | 0.9
 39.44 | pop   | 1.0
