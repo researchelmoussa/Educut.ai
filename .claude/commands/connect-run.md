@@ -74,9 +74,9 @@ For each offer: `node connect/cli.mjs validate <id> --run $RUN_DIR`.
 3. Otherwise use the Google Drive connector:
    - Create `Communication/<date>/` and one `Offer_NNN/` folder per validated offer.
    - Upload `linkedin_post.txt` and `post_details.txt` as text (`disableConversionToGoogleType: true`).
-   - Upload `card.png` as base64 (`base64 -w0 <file>`). Run `optimize-png` on a copy (`card_upload.png`)
-     first to keep it small, then check the result visually. Delegate each offer's uploads to its own
-     general-purpose subagent in parallel, so large base64 payloads stay out of the main conversation.
+   - Do **not** push images through the connector: large base64 payloads arrive truncated or are refused.
+     Instead send `card.png` (and `city.jpg` if present) to the administrator with SendUserFile and say the
+     images are not in Drive until the GDRIVE_* secrets are configured.
    - Upload `00_Review_<date>.md` and the run log to `Scrawling/<date>/`.
    - For the registry, create the new `Registry/registry.json`, then trash the previous one.
    Only report a file as stored when its `create_file` call returned an id.
