@@ -23,7 +23,7 @@ import {
 // Behind an HTTPS proxy (cloud sessions), Node's fetch only uses it when NODE_USE_ENV_PROXY is set:
 // re-run ourselves with it so crawling, Commons and Drive requests go through the proxy.
 if ((process.env.HTTPS_PROXY || process.env.https_proxy) && !process.env.NODE_USE_ENV_PROXY) {
-  const r = spawnSync(process.execPath, ['--no-warnings', ...process.argv.slice(1)], { stdio: 'inherit', env: { ...process.env, NODE_USE_ENV_PROXY: '1' } });
+  const r = spawnSync(process.execPath, ['--no-warnings', ...process.argv.slice(1)], { stdio: 'inherit', env: { ...process.env, NODE_USE_ENV_PROXY: '1', NODE_NO_WARNINGS: '1' } });
   process.exit(r.status ?? 1);
 }
 
