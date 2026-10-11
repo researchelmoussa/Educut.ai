@@ -62,6 +62,7 @@ export class PoliteFetcher {
     this.log = log;
     this.cacheDir = cacheDir;
     this.robots = new Map(); // origin -> group | 'DISALLOW_ALL'
+    this.robotsWhy = new Map(); // origin -> why everything is disallowed
     this.nextSlot = new Map(); // host -> timestamp
     this.failures = new Map(); // host -> consecutive failures
     if (cacheDir) mkdirSync(cacheDir, { recursive: true });
@@ -74,11 +75,15 @@ export class PoliteFetcher {
       const res = await this.#raw(`${origin}/robots.txt`, { robots: true });
       if (res.status >= 200 && res.status < 300) group = parseRobots(res.body, this.ua);
       else if (res.status >= 400 && res.status < 500) group = { agents: [], rules: [], delay: null };
-      else group = 'DISALLOW_ALL';
+      else {
+        group = 'DISALLOW_ALL';
+        this.robotsWhy.set(origin, `robots.txt returned HTTP ${res.status}; site treated as off-limits`);
+      }
       this.log('robots', { origin, status: res.status, rules: group === 'DISALLOW_ALL' ? 'disallow_all' : group.rules.length, crawl_delay: group.delay ?? null });
     } catch (e) {
       group = 'DISALLOW_ALL';
-      this.log('robots', { origin, error: String(e.message ?? e), rules: 'disallow_all' });
+      this.robotsWhy.set(origin, `site unreachable from this environment (${e.cause?.code || e.cause?.message || e.message}); check network access`);
+      this.log('robots', { origin, error: String(e.cause?.code ?? e.message ?? e), rules: 'disallow_all' });
     }
     this.robots.set(origin, group);
     return group;
@@ -125,8 +130,9 @@ export class PoliteFetcher {
     }
     const group = await this.#robotsFor(u.origin);
     if (group === 'DISALLOW_ALL' || !robotsAllows(group, u.pathname + u.search)) {
-      this.log('fetch.blocked', { url, reason: 'robots.txt' });
-      return { ok: false, url, blocked: true, reason: 'disallowed by robots.txt' };
+      const reason = this.robotsWhy.get(u.origin) ?? 'disallowed by robots.txt';
+      this.log('fetch.blocked', { url, reason });
+      return { ok: false, url, blocked: true, reason };
     }
 
     const cacheFile = this.cacheDir && join(this.cacheDir, createHash('sha256').update(url).digest('hex').slice(0, 24) + '.json');
