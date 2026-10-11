@@ -39,6 +39,8 @@ JOBS = {
     "p03-graduate-scene": ("t14.png", (660, 380, 1260, 780), PAPER),
     "p04-professional-neutral": ("t9.5.png", (1460, 400, 1900, 780), PAPER),
     "p04-professional-empowered": ("t14.png", (1410, 370, 1900, 790), PAPER),
+    # props
+    "prop-ai-hall": ("t9.5.png", (975, 455, 1250, 770), PAPER),
 }
 
 TOL = 150.0  # distance at which a pixel is considered fully foreground
@@ -85,12 +87,13 @@ def cut(frame, box, bg, lineup, keep=None):
                 a[ndimage.binary_dilation(solid == k, iterations=3)] = 0
     out = np.dstack([col, a * 255]).astype(np.uint8)
     img = Image.fromarray(out, "RGBA")
-    return img.crop(img.getbbox())
+    bb = img.getbbox()
+    return img.crop(bb), (box[0] + bb[0], box[1] + bb[1])
 
 
 KEEP = {"p03-graduate": (804, 745, 824, 775)}
 
 for name, (frame, box, bg) in JOBS.items():
-    im = cut(frame, box, bg, bg is LIME, KEEP.get(name))
+    im, at = cut(frame, box, bg, bg is LIME, KEEP.get(name))
     im.save(f"{OUT}/{name}.png", optimize=True)
-    print(name, im.size)
+    print(name, "size", im.size, "at", at)  # position in the source frame

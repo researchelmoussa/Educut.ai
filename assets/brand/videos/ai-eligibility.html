@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Who Decided — EduCut</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<!--
+  30 s case-study film, 1920x1080. Every frame is a pure function of time:
+  seek(t) poses the whole stage, so scripts/render-video.cjs can capture
+  frame by frame. Personas come from ../personas (see the Cast board).
+-->
+<style>
+  :root { --paper:#F4F4EF; --ink:#0B0B0B; --cobalt:#3256FE; --acid:#A6ED2F; --rule:#D6D6D1;
+          --sans:"Inter","Helvetica Neue",Arial,sans-serif; --mono:"IBM Plex Mono","Liberation Mono",monospace; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { width:1920px; height:1080px; overflow:hidden; background:var(--paper); }
+  body { font-family:var(--sans); color:var(--ink); }
+  .scene, .fill { position:absolute; inset:0; }
+  .a { position:absolute; transform-origin:50% 100%;
+       transform:translate(var(--dx,0px),var(--dy,0px)) rotate(var(--r,0deg)) scale(calc(var(--s,1) * var(--k,1))); }
+  .kicker { position:absolute; left:140px; top:150px; font:600 24px var(--mono); letter-spacing:.2em; color:var(--cobalt); }
+  h1 { position:absolute; left:134px; top:186px; font-weight:800; font-size:104px; letter-spacing:-.045em; line-height:1; white-space:nowrap; transform-origin:0 50%; }
+  .mono { font-family:var(--mono); letter-spacing:.16em; text-transform:uppercase; }
+
+  /* persona wrapper: img at native size, overlays in the same pixel space */
+  .p img { display:block; }
+  .p .face { position:absolute; opacity:var(--sad,0); }
+
+  .card { width:180px; height:126px; background:#fff; border:5px solid var(--ink); border-radius:14px; padding:14px 16px; transform-origin:50% 50%; }
+  .card i { display:block; height:8px; border-radius:4px; background:var(--rule); margin-top:10px; }
+  .card i.c { background:var(--cobalt); width:60%; margin-top:6px; }
+  .card i:nth-child(3) { width:85%; } .card i:nth-child(4) { width:70%; }
+
+  .box { width:300px; height:300px; background:var(--cobalt); border:6px solid var(--ink); border-radius:30px; transform-origin:50% 50%; }
+  .box .lbl { position:absolute; left:22px; top:18px; font:600 21px var(--mono); letter-spacing:.18em; color:#fff; }
+  .box .lbl.h { color:var(--ink); }
+  .box .dots { position:absolute; left:0; right:0; top:50%; display:flex; justify-content:center; gap:22px; transform:translateY(-50%); }
+  .box .dots b { width:26px; height:26px; border-radius:50%; background:#fff; border:4px solid var(--ink); }
+  .box .ok { position:absolute; right:-26px; top:-26px; width:72px; height:72px; border-radius:50%; background:var(--ink); color:var(--acid);
+             font:800 44px var(--sans); display:flex; align-items:center; justify-content:center; transform-origin:50% 50%; }
+
+  .pill { background:#fff; border:5px solid var(--ink); border-radius:999px; padding:16px 34px; white-space:nowrap; transform-origin:50% 100%; }
+  .score { font:600 26px var(--mono); letter-spacing:.12em; display:flex; gap:18px; align-items:center; }
+  .score b { font:800 44px var(--sans); letter-spacing:-.02em; }
+  .stamp { background:var(--ink); color:#fff; font:800 58px var(--sans); letter-spacing:.06em; padding:10px 30px; transform-origin:50% 50%; }
+  .say { font:700 40px var(--sans); letter-spacing:-.02em; }
+  .say::after { content:""; position:absolute; left:70px; bottom:-26px; width:30px; height:30px; background:#fff;
+                border-right:5px solid var(--ink); border-bottom:5px solid var(--ink); transform:rotate(45deg) skew(10deg,10deg); }
+  .q { width:76px; height:76px; border-radius:50%; background:var(--cobalt); border:5px solid var(--ink); color:#fff;
+       font:800 46px var(--sans); display:flex; align-items:center; justify-content:center; transform-origin:50% 100%; }
+  .tag { font:600 22px var(--mono); letter-spacing:.18em; text-transform:uppercase; text-align:center; transform-origin:50% 0; }
+  .ground { position:absolute; height:0; border-top:2px solid var(--rule); }
+
+  .qcard { width:420px; height:410px; background:#fff; border:5px solid var(--ink); border-radius:18px; padding:30px 30px 0; overflow:hidden; }
+  .qcard .n { font:600 30px var(--mono); color:var(--cobalt); letter-spacing:.1em; }
+  .qcard h3 { font-weight:800; font-size:46px; letter-spacing:-.035em; margin-top:16px; }
+  .qcard hr { border:0; border-top:2px solid var(--rule); margin:22px 0; }
+  .qcard p { font-size:31px; line-height:1.3; font-weight:500; }
+  .qcard .bar { position:absolute; left:0; right:0; bottom:0; height:18px; background:var(--acid); border-top:5px solid var(--ink); transform-origin:0 50%; }
+
+  .center { text-align:center; left:0; right:0; }
+  .end .logo { left:108px; top:74px; width:304px; height:92px; border-radius:46px; background:var(--ink); color:#fff;
+               font:800 56px var(--sans); letter-spacing:-.04em; display:flex; align-items:center; justify-content:center; transform-origin:0 50%; }
+  .end .logo span { color:var(--acid); }
+</style>
+</head>
+<body>
+
+<!-- 1-3 · the case: application, score, officer -->
+<div class="scene" id="case">
+  <div class="kicker">CASE STUDY · AI IN PUBLIC SERVICES</div>
+  <h1 id="h1a">She asked for help.</h1>
+  <h1 id="h1b">An algorithm said no.</h1>
+  <h1 id="h1c">No one can say why.</h1>
+  <div class="ground" style="left:140px;right:140px;top:962px"></div>
+
+  <div class="a" id="kidA" style="left:330px;top:742px"></div>
+  <div class="a" id="kidB" style="left:890px;top:742px"></div>
+  <div class="a p" id="mom" style="left:560px;top:582px;--s:1.25;transform-origin:50% 100%">
+    <img src="../personas/p05-learner.png" width="232" height="380" alt="">
+    <svg class="face" style="left:104px;top:112px" width="68" height="36" viewBox="0 0 68 36">
+      <rect x="0" y="0" width="68" height="36" fill="#fff"/><path d="M18 18 h32" stroke="#0B0B0B" stroke-width="7" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="a card" id="card" style="left:420px;top:657px;--r:-6deg">
+    <div class="mono" style="font-size:13px;font-weight:600">Aid request</div><i class="c"></i><i></i><i></i>
+  </div>
+
+  <div class="a box" id="box" style="left:1300px;top:330px"><div class="lbl">ALGORITHM</div><div class="dots"><b></b><b></b><b></b></div></div>
+  <div class="a pill score" id="score" style="left:1222px;top:680px"><span>ELIGIBILITY</span><b id="scoreN">0.99</b></div>
+  <div class="a stamp" id="stamp" style="left:1268px;top:810px;--r:-7deg">REJECTED</div>
+
+  <div class="a p" id="officer" style="left:1150px;top:596px;--s:1.25">
+    <img src="../personas/p02-manager.png" width="242" height="366" alt="">
+    <svg class="face" style="left:106px;top:100px;opacity:1" width="64" height="32" viewBox="0 0 64 32">
+      <rect width="64" height="32" fill="#fff"/><path d="M16 15 h32" stroke="#0B0B0B" stroke-width="7" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <svg class="a" id="desk" style="left:1500px;top:700px" width="280" height="262" viewBox="0 0 280 262" fill="none" stroke="#0B0B0B" stroke-width="6" stroke-linejoin="round">
+    <path d="M70 18 h120 l-14 86 h-120 z" fill="#fff"/><circle cx="125" cy="58" r="10" fill="#3256FE" stroke="none"/>
+    <rect x="6" y="104" width="268" height="18" fill="#0B0B0B"/><path d="M26 122 v138 M254 122 v138"/>
+  </svg>
+  <div class="a pill say" id="say" style="left:1020px;top:392px">“The score decided.”</div>
+  <div class="a q" id="momQ" style="left:665px;top:400px">?</div>
+</div>
+
+<!-- 4 · who is responsible -->
+<div class="scene" id="who">
+  <div class="kicker">QUESTION 1 · ACCOUNTABILITY</div>
+  <h1>Who is responsible?</h1>
+  <div class="ground" style="left:110px;right:110px;top:902px"></div>
+  <div class="a p s0" style="left:100px;top:550px;--s:.9"><img src="../personas/p04-professional-neutral.png" width="410" height="352" alt=""></div>
+  <div class="a p s1" style="left:560px;top:596px;--s:.95"><img src="../personas/prop-ai-hall.png" width="273" height="306" alt=""></div>
+  <div class="a p s2" style="left:900px;top:502px;--s:.85"><img src="../personas/p03-graduate.png" width="246" height="400" alt=""></div>
+  <div class="a p s3" style="left:1180px;top:536px;--s:.9">
+    <img src="../personas/p02-manager.png" width="242" height="366" alt="">
+    <svg class="face" style="left:106px;top:100px;opacity:1" width="64" height="32" viewBox="0 0 64 32">
+      <rect width="64" height="32" fill="#fff"/><path d="M16 15 h32" stroke="#0B0B0B" stroke-width="7" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="a box s4" style="left:1500px;top:676px;width:226px;height:226px;transform-origin:50% 100%"><div class="lbl" style="font-size:17px">ALGORITHM</div><div class="dots" style="gap:16px"><b style="width:20px;height:20px"></b><b style="width:20px;height:20px"></b><b style="width:20px;height:20px"></b></div></div>
+  <div class="a tag t0" style="left:135px;width:340px;top:930px">The developer</div>
+  <div class="a tag t1" style="left:526px;width:340px;top:930px">The administration</div>
+  <div class="a tag t2" style="left:853px;width:340px;top:930px">The authorities</div>
+  <div class="a tag t3" style="left:1131px;width:340px;top:930px">The officer</div>
+  <div class="a tag t4" style="left:1443px;width:340px;top:930px">The AI itself</div>
+  <div class="a q q0" style="left:192px;top:478px">?</div>
+  <div class="a q q1" style="left:658px;top:520px">?</div>
+  <div class="a q q2" style="left:985px;top:470px">?</div>
+  <div class="a q q3" style="left:1276px;top:496px">?</div>
+  <div class="a q q4" style="left:1575px;top:581px">?</div>
+</div>
+
+<!-- 5 · can a machine be morally responsible -->
+<div class="scene" id="moral">
+  <div class="fill" style="background:var(--ink)"></div>
+  <div class="kicker" style="left:0;right:0;text-align:center;top:118px">QUESTION 2 · MORAL RESPONSIBILITY</div>
+  <h1 class="center" style="left:0;top:170px;color:#fff;text-align:center;font-size:96px;line-height:1.05;transform-origin:50% 50%">Can a machine be<br>morally responsible?</h1>
+  <div class="a box" id="mbox" style="left:810px;top:460px;border-color:#fff"><div class="lbl">ALGORITHM</div><div class="dots"><b style="border-color:var(--cobalt)"></b><b style="border-color:var(--cobalt)"></b><b style="border-color:var(--cobalt)"></b></div></div>
+  <div class="a tag m0" style="left:210px;width:500px;top:860px;color:#fff">No moral consciousness</div>
+  <div class="a tag m1" style="left:710px;width:500px;top:860px;color:#fff">No sense of consequences</div>
+  <div class="a tag m2" style="left:1210px;width:500px;top:860px;color:#fff">No accountability</div>
+</div>
+
+<!-- 6 · three questions -->
+<div class="scene" id="pillars">
+  <div class="kicker">QUESTION 3 · RESPONSIBLE AI</div>
+  <h1 style="font-size:92px">Three questions every AI must answer.</h1>
+  <div class="ground" style="left:110px;right:110px;top:962px"></div>
+  <div class="a p" id="lead" style="left:120px;top:558px;--s:1.15"><img src="../personas/p01-lead.png" width="270" height="404" alt=""></div>
+  <div class="a qcard c0" style="left:520px;top:480px;transform-origin:50% 100%"><div class="n">01</div><h3>Transparency</h3><hr><p>Did she know an AI was judging her file?</p><div class="bar"></div></div>
+  <div class="a qcard c1" style="left:978px;top:480px;transform-origin:50% 100%"><div class="n">02</div><h3>Interpretability</h3><hr><p>Do we understand how the model works?</p><div class="bar"></div></div>
+  <div class="a qcard c2" style="left:1436px;top:480px;transform-origin:50% 100%"><div class="n">03</div><h3>Explainability</h3><hr><p>Can we explain why <em>she</em> was refused?</p><div class="bar"></div></div>
+</div>
+
+<!-- 7 · able to decide is not allowed to decide -->
+<div class="scene" id="human">
+  <div class="kicker">HUMAN-CENTERED AI</div>
+  <h1>Able to decide</h1>
+  <h1 style="top:300px">≠ allowed to decide.</h1>
+  <div class="ground" style="left:140px;right:140px;top:962px"></div>
+  <div class="a p" id="lead2" style="left:520px;top:558px"><img src="../personas/p01-lead.png" width="270" height="404" alt=""></div>
+  <div class="a box" id="hbox" style="left:800px;top:640px;width:300px;height:300px;transform-origin:50% 100%">
+    <div class="lbl" id="hlbl">ALGORITHM</div><div class="lbl h" id="hlbl2" style="opacity:0">HUMAN REVIEW</div>
+    <div class="dots"><b></b><b></b><b></b></div><div class="ok" id="ok">✓</div>
+  </div>
+  <div class="a" id="kidC" style="left:1230px;top:742px"></div>
+  <div class="a p" id="mom2" style="left:1370px;top:582px"><img src="../personas/p05-learner.png" width="232" height="380" alt=""></div>
+  <div class="a" id="kidD" style="left:1620px;top:742px"></div>
+</div>
+
+<!-- 8 · end card, same as the intro film -->
+<div class="scene end" id="end">
+  <div class="fill" style="background:var(--acid)"></div>
+  <div class="a logo" id="logo">EduCut<span>.ai</span></div>
+  <div class="a center" id="e1" style="top:150px;font-weight:800;font-size:50px;letter-spacing:-.03em;transform-origin:50% 50%">Your AI journey starts with us, now.</div>
+  <div class="a center" id="e2" style="top:200px;font-weight:900;font-size:136px;letter-spacing:-.06em;transform-origin:50% 60%">Join us!</div>
+  <div class="a center" id="e3" style="top:356px;font-weight:600;font-size:34px;letter-spacing:-.01em;transform-origin:50% 50%">Learn the Transparency, Interpretability &amp; Explainability of AI.</div>
+  <div class="a" id="e4" style="left:580px;top:420px;width:760px;height:112px;border-radius:56px;background:var(--ink);color:var(--acid);font:800 46px var(--sans);letter-spacing:-.03em;display:flex;align-items:center;justify-content:center;transform-origin:50% 50%">Start your free assessment&nbsp;→</div>
+  <div class="a center mono" id="e5" style="top:566px;font-weight:600;font-size:28px;letter-spacing:.24em">EDUCUTAI.COM</div>
+  <div class="a p l0" style="left:382px;top:684px"><img src="../personas/p02-manager.png" width="242" height="366" alt=""></div>
+  <div class="a p l1" style="left:612px;top:650px"><img src="../personas/p03-graduate.png" width="246" height="400" alt=""></div>
+  <div class="a p l2" style="left:815px;top:646px"><img src="../personas/p01-lead.png" width="270" height="404" alt=""></div>
+  <div class="a p l3" style="left:1040px;top:686px"><img src="../personas/p04-professional.png" width="222" height="376" alt=""></div>
+  <div class="a p l4" style="left:1262px;top:670px"><img src="../personas/p05-learner.png" width="232" height="380" alt=""></div>
+</div>
+
+<script>
+// Child figure drawn to the Cast construction rules (ink stroke, ring hands, flat-tick feet).
+function kid(pigtails) {
+  return `<svg width="124" height="222" viewBox="0 0 124 222" fill="none" stroke="#0B0B0B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    ${pigtails ? '<ellipse cx="22" cy="40" rx="12" ry="18" fill="#0B0B0B"/><ellipse cx="102" cy="40" rx="12" ry="18" fill="#0B0B0B"/>' : ''}
+    <circle cx="62" cy="50" r="40" fill="#fff"/>
+    ${pigtails ? '<path d="M24 40 q38 -38 76 0 q-10 -30 -38 -30 q-28 0 -38 30z" fill="#0B0B0B"/>' : '<path d="M44 14 q6 -8 12 0 q6 -8 12 0 q6 -8 12 0"/>'}
+    <circle cx="48" cy="48" r="5" fill="#0B0B0B" stroke="none"/><circle cx="76" cy="48" r="5" fill="#0B0B0B" stroke="none"/>
+    <path class="smile" d="M46 66 q16 12 32 0"/><path class="flat" d="M48 70 h28" style="opacity:0"/>
+    <rect x="42" y="92" width="40" height="64" rx="20" fill="#fff"/>
+    <path d="M42 112 L14 126 M82 112 L110 126"/><circle cx="9" cy="128" r="7" fill="#fff"/><circle cx="115" cy="128" r="7" fill="#fff"/>
+    <path d="M54 156 L52 212 h-12 M70 156 L72 212 h12"/></svg>`;
+}
+for (const [id, pig] of [['kidA', 1], ['kidB', 0], ['kidC', 1], ['kidD', 0]]) document.getElementById(id).innerHTML = kid(pig);
+
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const cl = x => Math.max(0, Math.min(1, x));
+const pr = (t, a, b) => cl((t - a) / (b - a));
+const out3 = x => 1 - Math.pow(1 - x, 3);
+const inout = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const back = x => { const c = 1.9; return x <= 0 ? 0 : 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const set = (el, v) => { for (const k in v) el.style.setProperty(k, v[k]); };
+
+// pop in with overshoot (and optional pop out)
+function pop(el, t, a, outAt) {
+  const k = back(pr(t, a, a + .45)) * (outAt ? 1 - inout(pr(t, outAt, outAt + .3)) : 1);
+  set(el, { '--k': k, opacity: pr(t, a, a + .12) * (outAt ? 1 - pr(t, outAt + .1, outAt + .3) : 1) });
+}
+// slide text up into place, optionally fade away
+function rise(el, t, a, outAt) {
+  const p = out3(pr(t, a, a + .5));
+  const o = outAt ? 1 - pr(t, outAt, outAt + .25) : 1;
+  set(el, { opacity: p * o, '--dy': (1 - p) * 40 + 'px' });
+  if (el.tagName === 'H1') el.style.transform = `translateY(${(1 - p) * 40 - (1 - o) * 20}px)`;
+}
+const vis = (el, t, a, b, f = .3) => { el.style.opacity = Math.min(pr(t, a, a + f), b == null ? 1 : 1 - pr(t, b - f, b)); };
+const sad = (el, x) => { el.querySelectorAll('.smile').forEach(s => s.style.opacity = 1 - x); el.querySelectorAll('.flat').forEach(s => s.style.opacity = x); };
+
+function seek(t) {
+  // ---------- scene 1-3: the case (0 - 10 s)
+  vis($('#case'), t, -1, 10.05, .3);
+  rise($('#h1a'), t, .15, 2.85); rise($('#h1b'), t, 3.1, 6.85); rise($('#h1c'), t, 7.1);
+  pop($('#mom'), t, .3); pop($('#kidA'), t, .55); pop($('#kidB'), t, .7);
+  // card: appears in hand, then flies into the algorithm and is absorbed
+  const fly = inout(pr(t, 3.3, 4.3));
+  set($('#card'), { '--k': back(pr(t, 1.1, 1.55)) * (1 - .6 * fly), opacity: pr(t, 1.1, 1.2) * (1 - pr(t, 4.1, 4.3)),
+                    '--dx': fly * 960 + 'px', '--dy': (fly * -120 - Math.sin(fly * Math.PI) * 160) + 'px', '--r': (-6 + fly * 20) + 'deg' });
+  pop($('#box'), t, 2.95, 6.9);
+  $$('#box .dots b').forEach((b, i) => b.style.transform = `translateY(${t > 4.2 && t < 5 ? -Math.max(0, Math.sin((t - 4.2) * 12 - i * 1.2)) * 18 : 0}px)`);
+  pop($('#score'), t, 4.75, 6.9);
+  $('#scoreN').textContent = (0.99 - .58 * out3(pr(t, 4.9, 5.6))).toFixed(2);
+  const st = pr(t, 5.7, 5.95);
+  set($('#stamp'), { '--k': t < 5.7 ? 0 : 1.7 - .7 * out3(st), opacity: st * (1 - pr(t, 6.9, 7.2)) });
+  const s = pr(t, 6.0, 6.25);
+  $('#mom').style.setProperty('--sad', s); sad($('#kidA'), s); sad($('#kidB'), s);
+  pop($('#officer'), t, 7.15); pop($('#desk'), t, 7.35); pop($('#say'), t, 7.85); pop($('#momQ'), t, 8.6);
+  $('#momQ').style.setProperty('--r', Math.sin(Math.max(0, t - 8.9) * 6) * 8 * (t > 8.9 ? 1 : 0) + 'deg');
+
+  // ---------- scene 4: who is responsible (10 - 15 s)
+  vis($('#who'), t, 9.95, 15.05, .3);
+  rise($('#who h1'), t, 10.15); rise($('#who .kicker'), t, 10.05);
+  for (let i = 0; i < 5; i++) {
+    const a = 10.45 + i * .5;
+    pop($(`#who .s${i}`), t, a); rise($(`#who .t${i}`), t, a + .1); pop($(`#who .q${i}`), t, a + .25);
+    $(`#who .q${i}`).style.setProperty('--r', (t > 13.4 ? Math.sin((t - 13.4) * 7 + i) * 10 : 0) + 'deg');
+  }
+
+  // ---------- scene 5: moral responsibility (15 - 18 s)
+  vis($('#moral'), t, 14.95, 18.05, .3);
+  rise($('#moral h1'), t, 15.25); rise($('#moral .kicker'), t, 15.15);
+  pop($('#mbox'), t, 15.5);
+  $('#mbox').style.setProperty('--r', Math.sin(Math.max(0, t - 15.9) * 2.2) * 3 + 'deg');
+  for (let i = 0; i < 3; i++) rise($(`#moral .m${i}`), t, 16.2 + i * .4);
+
+  // ---------- scene 6: three questions (18 - 24 s)
+  vis($('#pillars'), t, 17.95, 24.05, .3);
+  rise($('#pillars h1'), t, 18.15); rise($('#pillars .kicker'), t, 18.05);
+  pop($('#lead'), t, 18.35);
+  for (let i = 0; i < 3; i++) {
+    const a = 18.7 + i * 1.75;
+    pop($(`#pillars .c${i}`), t, a);
+    const on = pr(t, a + .35, a + .7) * (i < 2 ? 1 - pr(t, a + 1.75, a + 2) : 1);
+    $(`#pillars .c${i} .bar`).style.transform = `scaleX(${out3(on)})`;
+  }
+
+  // ---------- scene 7: able to decide != allowed to decide (24 - 27 s)
+  vis($('#human'), t, 23.95, 27.05, .3);
+  rise($('#human .kicker'), t, 24.05); rise($$('#human h1')[0], t, 24.15); rise($$('#human h1')[1], t, 24.45);
+  pop($('#hbox'), t, 24.35); pop($('#lead2'), t, 24.6);
+  const h = pr(t, 25.25, 25.55);
+  $('#hbox').style.background = h < .5 ? 'var(--cobalt)' : 'var(--acid)';
+  $('#hbox').style.setProperty('--k', ($('#hbox').style.getPropertyValue('--k') || 1) * (1 + .08 * Math.sin(h * Math.PI)));
+  $('#hlbl').style.opacity = 1 - h; $('#hlbl2').style.opacity = h;
+  pop($('#ok'), t, 25.6);
+  pop($('#kidC'), t, 25.9); pop($('#mom2'), t, 26.0); pop($('#kidD'), t, 26.1);
+
+  // ---------- scene 8: end card (27 - 30 s), same as the intro film
+  vis($('#end'), t, 26.95, null, .25);
+  pop($('#logo'), t, 27.1); pop($('#e1'), t, 27.2); pop($('#e2'), t, 27.35); rise($('#e3'), t, 27.6);
+  pop($('#e4'), t, 27.75); rise($('#e5'), t, 27.9);
+  for (let i = 0; i < 5; i++) {
+    const p = back(pr(t, 27.85 + i * .09, 28.35 + i * .09));
+    set($(`#end .l${i}`), { '--dy': (1 - p) * 420 + 'px', opacity: pr(t, 27.85 + i * .09, 27.95 + i * .09) });
+  }
+}
+window.seek = seek;
+seek(0);
+</script>
+</body>
+</html>
