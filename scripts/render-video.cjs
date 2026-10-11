@@ -2,6 +2,10 @@
 //
 //   node scripts/render-video.cjs assets/brand/videos/ai-eligibility.html out.mp4 [seconds=30] [fps=30]
 //   node scripts/render-video.cjs page.html stills/ --stills 2,5,9     # PNG stills for review
+//   node scripts/render-video.cjs "page.html?fmt=916" out.mp4 43 30 --captions cues.vo.txt
+//
+// ?fmt=916 renders 1080x1920; --captions feeds a cue sheet ("start | max | text")
+// to the page's window.setCaptions.
 //
 // Needs Playwright (Chromium) and ffmpeg on PATH.
 const { chromium } = require('playwright');
@@ -10,14 +14,24 @@ const path = require('path');
 const fs = require('fs');
 
 (async () => {
-  const [src, out, ...rest] = process.argv.slice(2);
-  const stillsAt = rest[0] === '--stills' ? rest[1].split(',').map(Number) : null;
-  const seconds = stillsAt ? 0 : Number(rest[0] || 30);
-  const fps = Number(rest[1] || 30);
+  const argv = process.argv.slice(2);
+  const flag = name => { const i = argv.indexOf(name); return i < 0 ? null : argv.splice(i, 2)[1]; };
+  const stills = flag('--stills');
+  const captions = flag('--captions');
+  const [src, out, secs, rate] = argv;
+  const stillsAt = stills ? stills.split(',').map(Number) : null;
+  const seconds = Number(secs || 30);
+  const fps = Number(rate || 30);
+  const portrait = /[?&]fmt=916/.test(src);
 
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
+  const page = await browser.newPage({ viewport: portrait ? { width: 1080, height: 1920 } : { width: 1920, height: 1080 } });
   await page.goto('file://' + path.resolve(src), { waitUntil: 'networkidle' });
+  if (captions) {
+    const cues = fs.readFileSync(captions, 'utf8').split('\n').filter(l => l.trim() && !l.startsWith('#'))
+      .map(l => { const [t, , ...text] = l.split('|'); return { t: Number(t), text: text.join('|').trim() }; });
+    await page.evaluate(c => window.setCaptions(c), cues);
+  }
   await page.evaluate(() => document.fonts.ready);
   await page.evaluate(() => Promise.all([...document.images].map(i => i.decode())));
 

@@ -9,6 +9,9 @@
   30 s case-study film, 1920x1080. Every frame is a pure function of time:
   seek(t) poses the whole stage, so scripts/render-video.cjs can capture
   frame by frame. Personas come from ../personas (see the Cast board).
+  Add ?fmt=916 for the 9:16 portrait cut (1080x1920: headline on top, stage
+  in the middle, narration captions below; captions come from the cue sheet
+  via window.setCaptions, see scripts/render-video.cjs --captions).
   Open with ?lang=ar for the Arabic version (text swapped by the AR table at
   the end of the script; layout rules under html[lang=ar] below).
 -->
@@ -87,6 +90,36 @@
   html[lang=ar] #hbox .lbl { top:auto; bottom:18px; }
   html[lang=ar] #e1 { top:150px !important; line-height:1.2; }
   html[lang=ar] #e2 { top:200px !important; line-height:1.15; font-size:120px !important; }
+  /* ---------- 9:16 portrait (?fmt=916). #stage holds the 1920x1080 scenes at 0.5625 scale,
+     so everything below is in stage units (1 stage px = 0.5625 screen px). */
+  html.p916, html.p916 body { width:1080px; height:1920px; }
+  html.p916 #stage { position:absolute; left:0; top:600px; width:1920px; height:1080px; transform:scale(.5625); transform-origin:0 0; }
+  html.p916 .fill { top:-1200px; bottom:-1300px; }
+  html.p916 .kicker { top:-830px !important; left:100px; right:100px; font-size:46px; text-align:left; }
+  html.p916 h1 { top:-760px !important; left:94px !important; width:1730px; white-space:normal; font-size:150px !important; line-height:1.04 !important; text-align:left !important; }
+  html.p916 #moral .kicker { text-align:center; }
+  html.p916 #moral h1 { text-align:center !important; }
+  html.p916 #human h1 { font-size:132px !important; }
+  html.p916 #human h1 + h1 { top:-585px !important; }
+  html.p916 .tag { font-size:30px; letter-spacing:.06em; }
+  html.p916 #logo { left:808px !important; right:auto !important; top:-900px !important; --s:1.6; transform-origin:50% 50% !important; }
+  html.p916 #e1 { top:-640px !important; font-size:84px !important; }
+  html.p916 #e2 { top:-540px !important; font-size:270px !important; }
+  html.p916 #e4 { left:100px !important; width:1720px !important; top:-150px !important; height:200px !important; border-radius:100px !important; font-size:74px !important; }
+  html.p916 #e5 { top:120px !important; font-size:52px !important; }
+  html.p916 #end .p { --s:1.3; }
+  html.p916[lang=ar] .kicker { left:100px; right:100px; text-align:right; }
+  html.p916[lang=ar] h1 { left:auto !important; right:94px; text-align:right !important; line-height:1.3 !important; }
+  html.p916[lang=ar] #moral h1 { right:94px !important; text-align:center !important; top:-740px !important; line-height:1.35 !important; }
+  html.p916[lang=ar] #human h1 + h1 { top:-560px !important; }
+  html.p916[lang=ar] #e2 { font-size:240px !important; top:-560px !important; }
+  html.p916[lang=ar] #e4 { left:100px !important; width:1720px !important; font-size:66px !important; }
+  #cap { position:absolute; left:60px; right:60px; top:1300px; text-align:center; display:none; }
+  html.p916 #cap { display:block; }
+  #cap span { display:inline; background:#fff; border:4px solid var(--ink); border-radius:18px; padding:6px 18px;
+              font:700 50px/1.55 var(--sans); box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+  html[lang=ar] #cap span { font-size:52px; line-height:1.7; }
+
   html[lang=ar] #e4 { left:300px !important; width:1320px !important; font-size:42px !important; font-weight:800; white-space:nowrap; padding-bottom:8px; }
 </style>
 </head>
@@ -210,6 +243,8 @@
   <div class="a p l4" style="left:1262px;top:670px"><img src="../personas/p05-learner.png" width="232" height="380" alt=""></div>
 </div>
 
+<div id="cap"><span></span></div>
+
 <script>
 // Child figure drawn to the Cast construction rules (ink stroke, ring hands, flat-tick feet).
 function kid(pigtails) {
@@ -258,6 +293,27 @@ const AR = {
   '#e2': 'انضمّ إلينا!',
   '#e4': '<span style="color:#fff">تعلّم المزيد مع&nbsp;</span>أكاديمية الذكاء الاصطناعي المسؤول&nbsp;←',
 };
+// 9:16: scenes move into a scaled stage; captions are fed by the renderer
+if (new URLSearchParams(location.search).get('fmt') === '916') {
+  document.documentElement.classList.add('p916');
+  const stage = document.createElement('div');
+  stage.id = 'stage';
+  document.querySelectorAll('body > .scene').forEach(sc => stage.appendChild(sc));
+  document.body.insertBefore(stage, document.getElementById('cap'));
+}
+let CAPS = [];
+window.setCaptions = cues => { CAPS = cues; };
+function caption(t) {
+  const span = $('#cap span');
+  let k = -1;
+  CAPS.forEach((c, i) => { if (t >= c.t) k = i; });
+  const end = k >= 0 && k + 1 < CAPS.length ? CAPS[k + 1].t - .1 : Infinity;
+  if (k < 0 || t > end) { span.style.opacity = 0; return; }
+  if (span.dataset.k !== String(k)) { span.textContent = CAPS[k].text; span.dataset.k = k; }
+  span.parentElement.dir = document.documentElement.lang === 'ar' ? 'rtl' : 'ltr';
+  span.style.opacity = Math.min(pr(t, CAPS[k].t, CAPS[k].t + .15), 1 - pr(t, end - .15, end));
+}
+
 if (new URLSearchParams(location.search).get('lang') === 'ar') {
   document.documentElement.lang = 'ar';
   for (const [sel, html] of Object.entries(AR)) {
@@ -296,6 +352,7 @@ const sad = (el, x) => { el.querySelectorAll('.smile').forEach(s => s.style.opac
 
 function seek(T) {
   const t = T;
+  caption(T);
   // ---------- scene 1-3: the case (0 - 10 s)
   vis($('#case'), t, -1, 10.05, .3);
   rise($('#h1a'), t, .15, 2.85); rise($('#h1b'), t, 3.1, 6.85); rise($('#h1c'), t, 7.1);
