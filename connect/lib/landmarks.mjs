@@ -2,7 +2,7 @@
 // of the opportunity's city (e.g. Geneva -> Jet d'Eau). Photos come from Wikimedia Commons with a
 // free licence and are credited on the card; the library is cached in connect/assets/landmarks/.
 // When nothing suitable is found the card falls back to the neutral band; nothing is invented.
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { CONNECT_DIR, normText, readJson, writeJson } from './util.mjs';
 
@@ -36,6 +36,23 @@ export function findLandmark(city, countryCode) {
 }
 
 const strip = (html) => String(html ?? '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+
+// Register a photo supplied by the administrator (e.g. downloaded from Drive "EduCut Connect/Landmarks").
+export function addLandmark(city, countryCode, file, { landmark, credit, license, sourceUrl }) {
+  mkdirSync(DIR, { recursive: true });
+  const ext = file.toLowerCase().endsWith('.png') ? 'png' : 'jpg';
+  const name = `${key(city, countryCode)}.${ext}`;
+  writeFileSync(join(DIR, name), readFileSync(file));
+  const entry = {
+    key: key(city, countryCode), city, country_code: countryCode, landmark: landmark ?? null, file: name,
+    license: license ?? 'Provided by EduCut (rights confirmed by administrator)', license_url: null,
+    credit: credit ?? null, source_url: sourceUrl ?? null, kind: 'photo', added_at: new Date().toISOString(),
+  };
+  const idx = loadIndex();
+  idx.entries = idx.entries.filter((e) => e.key !== entry.key).concat(entry);
+  writeJson(INDEX, idx);
+  return { ...entry, path: join(DIR, name) };
+}
 
 // Search Wikimedia Commons for a freely licensed landscape photo, download it, add it to the library.
 export async function fetchLandmark(city, countryCode, { query, userAgent }) {

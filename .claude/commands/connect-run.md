@@ -13,7 +13,8 @@ EduCut Connect/
   Logos/                          official brand files
   Scrawling/<YYYY-MM-DD>/run-log.jsonl
   Communication/<YYYY-MM-DD>/00_Review_<date>.md
-  Communication/<YYYY-MM-DD>/Offer_NNN/   card.png, card-square.png, linkedin_post.txt, post_details.txt, card.html, record.json, qc-report.json
+  Communication/<YYYY-MM-DD>/Offer_NNN/   card.png, city.jpg, card-square.png, linkedin_post.txt, post_details.txt, card.html, record.json, qc-report.json
+  Landmarks/                      city photos supplied by the administrator (Geneva.jpg, Cambridge-GB.jpg, …)
   Registry/registry.json          every opportunity ever seen (dedup + status history)
 ```
 
@@ -44,6 +45,13 @@ Wait for its JSON. If `new_verified` is empty, skip to step 6 and report why (no
 sources, network).
 
 ## 4. Content (Agents 2 + 3 in parallel)
+City photos: for each offer's city, look in Drive `EduCut Connect/Landmarks/` for a photo named
+`<City>.jpg|png` or `<City>-<CC>.jpg|png` (e.g. `Geneva.jpg`, `Cambridge-GB.jpg`). If found, download it with the
+connector into `$RUN_DIR/landmarks/` and register it:
+`node connect/cli.mjs landmark-add "<City>" <CC> <file> --landmark "<what it shows>" --credit "<credit if given>" --run $RUN_DIR`.
+The designer's `landmark` step then uses it (otherwise it tries Wikimedia Commons). The renderer copies the
+photo into the offer folder as `city.jpg`, and it is uploaded with the card.
+
 For each id in `new_verified`:
 1. `node connect/cli.mjs prepare <id> --run $RUN_DIR` → `offer_dir` (Offer_NNN).
 2. In **one message**, launch **visual-designer** and **communications** for that offer (RUN_DIR, OFFER_DIR,

@@ -43,7 +43,7 @@ export function cardHtml(spec, format = 'portrait') {
   const photo = spec.landmark?.path
     ? `<figure class="band photo">
          <img src="${dataUri(spec.landmark.path)}" alt="">
-         <figcaption class="mono credit" data-field="credit">${esc(spec.landmark.credit ?? '')}</figcaption>
+         ${spec.landmark.credit ? `<figcaption class="mono credit" data-field="credit">${esc(spec.landmark.credit)}</figcaption>` : ''}
        </figure>`
     : `<figure class="band neutral">
          <div class="neutral-label mono">${flag ? `<img class="flag-lg" src="${dataUri(flag)}" alt="">` : ''}<span>${esc(location.toUpperCase() || 'LOCATION NOT SPECIFIED')}</span></div>

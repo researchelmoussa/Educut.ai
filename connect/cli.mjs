@@ -10,7 +10,7 @@ import { driveAvailable, ensureFolder, upload, findChild, download } from './lib
 import { feedItems, jobPostings, links, logoCandidates, looksLikeFeed, pageText, pageTitle } from './lib/extract.mjs';
 import { PoliteFetcher } from './lib/fetch.mjs';
 import { parseLinks } from './lib/sources.mjs';
-import { fetchLandmark, findLandmark } from './lib/landmarks.mjs';
+import { addLandmark, fetchLandmark, findLandmark } from './lib/landmarks.mjs';
 import { Registry, deadlineEnd, emptyRegistry } from './lib/registry.mjs';
 import { renderCard } from './lib/render.mjs';
 import { validateSchema } from './lib/schema.mjs';
@@ -71,6 +71,8 @@ const commands = {
   courses <record.json>               Shortlist Academy courses by requirement overlap
   check-course <code>                 Verify a course exists and its page anchor is live
   landmark <city> <CC> [--query q]    Find/download a licensed landmark photo (Wikimedia Commons) for the city
+  landmark-add <city> <CC> <file> [--landmark n] [--credit c] [--license l]
+                                      Register an administrator-supplied city photo (Drive Landmarks folder)
   render <spec.json> [--square]       Render card.png (+ square) and write visual-package.json
   post-text <id>                      Write linkedin_post.txt and post_details.txt from comms-package.json
   validate <id>                       Cross-check record, image and caption; advance to UNDER_REVIEW on pass
@@ -215,6 +217,12 @@ const commands = {
     }
   },
 
+  'landmark-add'() {
+    const [city, cc, file] = args;
+    if (!city || !cc || !file) fail('landmark-add <city> <CC> <file>');
+    out(addLandmark(city, cc, file, { landmark: flags.landmark, credit: flags.credit, license: flags.license, sourceUrl: flags.source }));
+  },
+
   'check-course'() {
     const r = checkCourse(args[0] ?? fail('check-course <code>'));
     out(r.ok ? { ok: true, code: r.course.code, name: r.course.name, academy: r.course.academy, url: r.course.url } : r);
@@ -241,6 +249,9 @@ const commands = {
       landmark: spec.landmark ?? findLandmark(rec.location.city, rec.location.country_code),
     };
     writeJson(join(dir, 'spec.json'), card);
+    if (card.landmark?.path && existsSync(card.landmark.path)) {
+      copyFileSync(card.landmark.path, join(dir, `city${card.landmark.path.slice(card.landmark.path.lastIndexOf('.'))}`));
+    }
     const formats = flags.square ? ['portrait', 'square'] : ['portrait'];
     const results = {};
     for (const f of formats) results[f] = await renderCard(card, { outDir: dir, format: f });
@@ -419,7 +430,7 @@ const commands = {
       const qc = readJson(join(dir, 'qc-report.json'), null);
       if (!qc || qc.status === 'FAIL') continue; // only validated packages reach Drive
       const folder = await ensureFolder(comm.id, name);
-      for (const [f, mime] of [['card.png', 'image/png'], ['card-square.png', 'image/png'], ['linkedin_post.txt', 'text/plain'], ['post_details.txt', 'text/plain'], ['card.html', 'text/html'], ['record.json', 'application/json'], ['qc-report.json', 'application/json']]) {
+      for (const [f, mime] of [['card.png', 'image/png'], ['city.jpg', 'image/jpeg'], ['city.png', 'image/png'], ['card-square.png', 'image/png'], ['linkedin_post.txt', 'text/plain'], ['post_details.txt', 'text/plain'], ['card.html', 'text/html'], ['record.json', 'application/json'], ['qc-report.json', 'application/json']]) {
         if (existsSync(join(dir, f))) uploaded.push({ offer: name, file: f, ...(await upload(folder.id, join(dir, f), mime)) });
       }
     }
