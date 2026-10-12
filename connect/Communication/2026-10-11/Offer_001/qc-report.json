@@ -1,0 +1,296 @@
+{
+  "opportunity_id": "opp_8fc9fa0bd2be2658",
+  "at": "2026-10-11T19:40:42.395Z",
+  "status": "PASS_WITH_FLAGS",
+  "failures": [],
+  "warnings": [
+    {
+      "check": "application portal independently confirmed",
+      "pass": false,
+      "detail": "OPEN_LIKELY: verify the application portal manually before approval",
+      "owner": "opportunity-scout",
+      "severity": "warn"
+    }
+  ],
+  "checks": [
+    {
+      "check": "record unchanged since content was made",
+      "pass": true,
+      "detail": "sha256:94a9f2a6f3dcda7baa04ce1e1fdb6728eb2877e5cea271a3d8f38197ea548d55",
+      "owner": "opportunity-scout"
+    },
+    {
+      "check": "record matches opportunity.schema.json",
+      "pass": true,
+      "detail": "ok",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "stable id",
+      "pass": true,
+      "detail": "expected opp_8fc9fa0bd2be2658",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "content hash current",
+      "pass": true,
+      "detail": "recompute with `cli.mjs finalize`",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "eligible application status",
+      "pass": true,
+      "detail": "OPEN_LIKELY",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "description ≤ 45 words",
+      "pass": true,
+      "detail": "28 words",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "deadline in the future",
+      "pass": true,
+      "detail": "2026-11-30",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "application portal independently confirmed",
+      "pass": false,
+      "detail": "OPEN_LIKELY: verify the application portal manually before approval",
+      "owner": "opportunity-scout",
+      "severity": "warn"
+    },
+    {
+      "check": "official application URL present",
+      "pass": true,
+      "detail": "https://cddrl.fsi.stanford.edu/cddrl-pre-doctoral-and-postdoctoral-fellowships",
+      "owner": "opportunity-scout",
+      "severity": "warn"
+    },
+    {
+      "check": "package matches visual-package.schema.json",
+      "pass": true,
+      "detail": "ok",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "built from current record",
+      "pass": true,
+      "detail": "sha256:94a9f2a6f3dcda7baa04ce1e1fdb6728eb2877e5cea271a3d8f38197ea548d55",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "title on image identical to record",
+      "pass": true,
+      "detail": "image: \"CDDRL Pre-doctoral and Postdoctoral Fellowships\"",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "institution on image identical to record",
+      "pass": true,
+      "detail": "image: \"Center on Democracy, Development and the Rule of Law, Stanford University\"",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "location on image matches record",
+      "pass": true,
+      "detail": "image: \"Stanford, United States\"",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "deadline on image is the verified date",
+      "pass": true,
+      "detail": "spec.deadline_source=2026-11-30 record=2026-11-30",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "portrait PNG exists at 1080×1350",
+      "pass": true,
+      "detail": "/home/user/Educut.ai/connect/runs/2026-10-11/offers/Offer_001/card.png",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "render QC passed",
+      "pass": true,
+      "detail": "ok",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "alt text names title and institution",
+      "pass": true,
+      "detail": "alt text",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "package matches comms-package.schema.json",
+      "pass": true,
+      "detail": "ok",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "built from current record",
+      "pass": true,
+      "detail": "sha256:94a9f2a6f3dcda7baa04ce1e1fdb6728eb2877e5cea271a3d8f38197ea548d55",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "exact job title in caption",
+      "pass": true,
+      "detail": "CDDRL Pre-doctoral and Postdoctoral Fellowships",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "institution name in caption",
+      "pass": true,
+      "detail": "Center on Democracy, Development and the Rule of Law, Stanford University",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "city in caption",
+      "pass": true,
+      "detail": "Stanford",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "caption length 70–150 words",
+      "pass": true,
+      "detail": "129 words",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "caption length ideally 80–130 words",
+      "pass": true,
+      "detail": "129 words",
+      "owner": "communications",
+      "severity": "warn"
+    },
+    {
+      "check": "at most 3 emojis",
+      "pass": true,
+      "detail": "2 emoji(s)",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "4–7 hashtags",
+      "pass": true,
+      "detail": "6: #Fellowship #Postdoc #PhD #RuleOfLaw #EduCutAI #EduCutConnect",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "required hashtags",
+      "pass": true,
+      "detail": "#EduCutAI #EduCutConnect",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "no repeated hashtags",
+      "pass": true,
+      "detail": "#Fellowship #Postdoc #PhD #RuleOfLaw #EduCutAI #EduCutConnect",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "hashtags field matches caption",
+      "pass": true,
+      "detail": "hashtags[] must list the caption hashtags in order",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "EduCut website CTA",
+      "pass": true,
+      "detail": "https://educutai.com",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "CTA says it is not the application link",
+      "pass": true,
+      "detail": "caption must say educutai.com is EduCut’s site, not the application page",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "official application URL carried",
+      "pass": true,
+      "detail": "https://cddrl.fsi.stanford.edu/cddrl-pre-doctoral-and-postdoctoral-fellowships",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "no banned / unsupported claims",
+      "pass": true,
+      "detail": "none",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "no salary claimed",
+      "pass": true,
+      "detail": "record has no stated compensation",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "course exists and its page anchor is live",
+      "pass": true,
+      "detail": "https://educutai.com/academies/ai-for-education/#a010-07",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "course name matches catalog",
+      "pass": true,
+      "detail": "AI for Research & Academic Productivity",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "course URL matches catalog",
+      "pass": true,
+      "detail": "https://educutai.com/academies/ai-for-education/#a010-07",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "course URL in caption",
+      "pass": true,
+      "detail": "https://educutai.com/academies/ai-for-education/#a010-07",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "no employment guarantee",
+      "pass": true,
+      "detail": "courses never promise selection",
+      "owner": "communications",
+      "severity": "fail"
+    }
+  ]
+}
