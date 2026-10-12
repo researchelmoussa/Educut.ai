@@ -1,6 +1,6 @@
 {
   "opportunity_id": "opp_931d3c4c4492eb10",
-  "at": "2026-10-12T21:17:07.441Z",
+  "at": "2026-10-12T21:23:20.100Z",
   "status": "PASS_WITH_FLAGS",
   "failures": [],
   "warnings": [
@@ -120,7 +120,7 @@
     {
       "check": "portrait PNG exists at 1080×1350",
       "pass": true,
-      "detail": "/tmp/claude-0/-home-user-Educut-ai/41318edf-83a9-5dde-8ee5-343c982a40a6/scratchpad/landmark-test/offers/Offer_006/card.png",
+      "detail": "/home/user/Educut.ai/connect/runs/2026-10-12/offers/Offer_006/card.png",
       "owner": "visual-designer",
       "severity": "fail"
     },
@@ -141,7 +141,7 @@
     {
       "check": "landmark image licensed",
       "pass": true,
-      "detail": "supplied by administrator (test only) · Photo: Jet d'Eau, Geneva · supplied by EduCut (test)",
+      "detail": "supplied by administrator",
       "owner": "visual-designer",
       "severity": "fail"
     },
