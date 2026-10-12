@@ -42,8 +42,12 @@ Commands: `node connect/cli.mjs <cmd> … --run $RUN_DIR`.
 4. **Render:** `render $OFFER_DIR/design-input.json --square`. It writes `card.png`, `card-square.png`,
    the editable `card.html`, `spec.json` and `visual-package.json` with the text read back from the
    rendered page and the QC checks.
+   The card model comes from `visual.variant` in `connect/config/connect.config.json` (datasheet, obsidian,
+   split, plate, column); set `"variant"` in design-input.json only if the administrator asked for a
+   different one for this offer. Photo credits are never printed on the card: they go to post_details.txt.
 5. Open `card.png` (Read the image). Check it yourself: title prominent and identical, institution clearly
-   distinct from EduCut Connect, readable at phone size, landmark secondary to the text, credit visible.
+   distinct from EduCut Connect, readable at phone size, landmark recognisable but secondary to the text,
+   and the landmark not cropped out (if it is, set `--focus-x` style focus by choosing another photo/query).
    If a QC check failed (e.g. clipped text), fix the input (a shorter `field`, a shorter `type_label`) and
    render again. Never shorten the title or institution.
 

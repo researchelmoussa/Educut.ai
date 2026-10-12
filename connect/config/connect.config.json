@@ -43,6 +43,9 @@
     "course_min_score": 6
   },
   "visual": {
+    "variant": "datasheet",
+    "variants_available": ["datasheet", "obsidian", "split", "plate", "column"],
+    "photo_credit_on_card": false,
     "portrait": [1080, 1350],
     "square": [1200, 1200],
     "third_party_logos": "allowlist_only",

@@ -17,6 +17,10 @@ const dataUri = (p) => `data:${MIME[extname(p).toLowerCase()] ?? 'application/oc
 
 export const FORMATS = { portrait: [1080, 1350], square: [1200, 1200] };
 
+// Card models. All follow the Datum board: off-white / obsidian, cobalt for structure, acid on the action only,
+// hairlines, no radius, no shadow, no gradient. They differ in where the photo sits and which ground carries the text.
+export const VARIANTS = ['datasheet', 'obsidian', 'split', 'plate', 'column'];
+
 export function flagPath(countryCode) {
   if (!countryCode) return null;
   const p = join(CONNECT_DIR, 'node_modules', 'flag-icons', 'flags', '4x3', `${countryCode.toLowerCase()}.svg`);
@@ -39,11 +43,13 @@ export function cardHtml(spec, format = 'portrait') {
   const square = format === 'square';
   const flag = flagPath(spec.country_code);
   const location = [spec.city, spec.country].filter(Boolean).join(', ');
+  const variant = VARIANTS.includes(spec.variant) ? spec.variant : 'datasheet';
+  const darkTop = variant === 'obsidian';
+  const darkBottom = variant === 'obsidian' || variant === 'split';
 
   const photo = spec.landmark?.path
     ? `<figure class="band photo">
          <img src="${dataUri(spec.landmark.path)}" alt="">
-         ${spec.landmark.credit ? `<figcaption class="mono credit" data-field="credit">${esc(spec.landmark.credit)}</figcaption>` : ''}
        </figure>`
     : `<figure class="band neutral">
          <div class="neutral-label mono">${flag ? `<img class="flag-lg" src="${dataUri(flag)}" alt="">` : ''}<span>${esc(location.toUpperCase() || 'LOCATION NOT SPECIFIED')}</span></div>
@@ -60,7 +66,8 @@ export function cardHtml(spec, format = 'portrait') {
 <style>
 ${fontFaces()}
 :root{--paper:${c.offwhite};--ink:${c.obsidian};--cobalt:${c.cobalt};--acid:${c.acid};--grey:${c.grey};--hair:${c.hairline};
-  --sans:${t.typography.sans};--mono:${t.typography.mono};}
+  --sans:${t.typography.sans};--mono:${t.typography.mono};
+  --muted:#55554F;--muted-dark:#B9B9B3;--rule-dark:#34342F;--pad:${square ? 56 : 64}px;}
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:${W}px;height:${H}px;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
 .card{width:${W}px;height:${H}px;padding:${square ? 56 : 64}px;display:flex;flex-direction:column}
@@ -72,7 +79,6 @@ header{display:flex;justify-content:space-between;align-items:flex-start;padding
 .meta .grey{color:var(--grey)}
 .band{margin-top:28px;position:relative;overflow:hidden;flex:1 1 auto;min-height:160px;border:1px solid var(--hair)}
 .photo img{width:100%;height:100%;object-fit:cover;display:block}
-.credit{position:absolute;right:0;bottom:0;background:var(--paper);color:var(--grey);font-size:11px;letter-spacing:.06em;padding:4px 8px;text-transform:none;max-width:80%}
 .neutral{background:repeating-linear-gradient(90deg,var(--paper) 0 28px,#EEEEEA 28px 56px)}
 .neutral-label{position:absolute;left:24px;bottom:22px;display:flex;align-items:center;gap:16px;font-size:20px;color:var(--ink)}
 .flag-lg{height:36px;width:auto;border:1px solid var(--hair)}
@@ -91,11 +97,58 @@ h1{font-weight:700;letter-spacing:-.035em;line-height:1.04;margin-top:16px;font-
 .cta .arrow{color:var(--acid);font-size:34px}
 footer{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:18px;flex:none}
 .educut-logo{height:58px;width:auto;flex:none}
-.disclaimer{font-size:12px;line-height:1.5;color:var(--grey);text-align:right;letter-spacing:.08em}
+.disclaimer{font-size:13px;line-height:1.5;color:var(--muted);text-align:right;letter-spacing:.08em}
+.lower{display:flex;flex-direction:column;flex:none}
+/* Contrast: secondary text uses --muted (7:1 on off-white) instead of the 3.4:1 grey. */
+.label,.f .k,.meta .grey{color:var(--muted)}
+
+/* 1 Datasheet: photo bleeds to the card edges, text on off-white. */
+.v-datasheet .band{margin:28px calc(-1 * var(--pad)) 0;border:0}
+
+/* 2 Obsidian: whole card on black, white type, acid action. */
+.v-obsidian,.v-obsidian body{background:var(--ink);color:var(--paper)}
+.v-obsidian header{border-bottom-color:var(--paper)}
+.v-obsidian .band{border-color:var(--rule-dark)}
+.v-obsidian .label{border-bottom-color:var(--rule-dark);color:var(--muted-dark)}
+.v-obsidian .label b,.v-obsidian .meta .code{color:var(--paper)}
+.v-obsidian .fields{border-color:var(--paper)}
+.v-obsidian .f+.f{border-left-color:var(--rule-dark)}
+.v-obsidian .f .k,.v-obsidian .meta .grey,.v-obsidian .disclaimer{color:var(--muted-dark)}
+.v-obsidian .cta,.v-split .cta{background:var(--acid);color:var(--ink)}
+.v-obsidian .cta .arrow,.v-split .cta .arrow{color:var(--ink)}
+
+/* 3 Split: off-white header, full-bleed photo, black lower panel. */
+.v-split .band{margin:28px calc(-1 * var(--pad)) 0;border:0}
+.v-split .lower{background:var(--ink);color:var(--paper);margin:0 calc(-1 * var(--pad)) calc(-1 * var(--pad));padding:8px var(--pad) var(--pad)}
+.v-split .label{border-bottom-color:var(--rule-dark);color:var(--muted-dark)}
+.v-split .label b{color:var(--paper)}
+.v-split .fields{border-color:var(--paper)}
+.v-split .f+.f{border-left-color:var(--rule-dark)}
+.v-split .f .k,.v-split .disclaimer{color:var(--muted-dark)}
+
+/* 4 Plate: photo fills the card, text on a solid off-white plate (Swiss datasheet on a photograph). */
+.v-plate .card{position:relative}
+.v-plate .band{position:absolute;inset:0;margin:0;border:0;z-index:0}
+.v-plate .band img{object-position:50% 25%}
+.v-plate header{position:relative;z-index:1;background:var(--paper);padding:18px 24px;border-bottom:0;align-self:stretch}
+.v-plate .lower{position:relative;z-index:1;margin-top:auto;background:var(--paper);padding:6px 32px 28px}
+.v-plate .lower .label{margin-top:22px}
+
+/* 5 Column: photo as a full-height left column, text column on off-white. */
+.v-column .card{position:relative;padding-left:calc(38% + 48px)}
+.v-column .band{position:absolute;left:0;top:0;bottom:0;width:38%;margin:0;border:0}
+/* Landmarks are rarely centred in landscape photos: aim the crop slightly right of centre. */
+.v-column .band img{object-position:var(--focus-x, 62%) 50%}
+.v-column .lower{flex:1;justify-content:flex-end}
+.v-column .fields{grid-template-columns:1fr}
+.v-column .f+.f{padding-left:0;border-left:0;border-top:1px solid var(--hair)}
+.v-column .connect-logo{height:${square ? 80 : 88}px}
+.v-column footer{flex-direction:column;align-items:flex-start;gap:10px}
+.v-column .disclaimer{text-align:left}
 </style></head>
-<body><div class="card">
+<body class="v-${variant}"><div class="card">
   <header>
-    <img class="connect-logo" src="${dataUri(join(BRAND, t.logos.connect_on_light))}" alt="EduCut Connect">
+    <img class="connect-logo" src="${dataUri(join(BRAND, darkTop ? t.logos.connect_on_dark : t.logos.connect_on_light))}" alt="EduCut Connect">
     <div class="meta mono">
       <div class="code" data-field="offer">${esc(spec.offer_label ?? '')}</div>
       <div data-field="type">${esc(spec.type_label ?? '')}</div>
@@ -103,6 +156,7 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:24px;ma
     </div>
   </header>
   ${photo}
+  <div class="lower">
   <div class="label mono"><b>01</b> — Opportunity</div>
   <h1 data-field="title">${esc(spec.title)}</h1>
   <div class="inst">${instLogo}<span data-field="institution">${esc(spec.institution)}</span></div>
@@ -113,9 +167,10 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:24px;ma
   </div>
   <div class="cta"><span>Explore it on educutai.com</span><span class="arrow">→</span></div>
   <footer>
-    <img class="educut-logo" src="${dataUri(join(BRAND, t.logos.educut_on_light))}" alt="EduCut AI">
+    <img class="educut-logo" src="${dataUri(join(BRAND, darkBottom ? t.logos.educut_on_dark : t.logos.educut_on_light))}" alt="EduCut AI">
     <div class="disclaimer mono" data-field="disclaimer">Shared by EduCut Connect · Not affiliated with<br>${esc(spec.institution)} · Apply via the official link</div>
   </footer>
+  </div>
 </div>
 <script>
   // Shrink the title until it fits in three lines; the renderer reports anything that still overflows.

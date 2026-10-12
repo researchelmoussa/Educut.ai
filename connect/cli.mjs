@@ -252,6 +252,7 @@ const commands = {
       deadline_label: rec.deadline ? spec.deadline_label : null,
       institution_logo: rec.institution.logo.permission === 'allowed' ? spec.institution_logo ?? null : null,
       landmark: spec.landmark ?? findLandmark(rec.location.city, rec.location.country_code) ?? findLandmark(rec.location.country, rec.location.country_code),
+      variant: spec.variant ?? config.visual.variant,
     };
     writeJson(join(dir, 'spec.json'), card);
     if (card.landmark?.path && existsSync(card.landmark.path)) {
@@ -313,6 +314,11 @@ const commands = {
         m ? `${m.name} (${m.code ?? m.url_type}) — ${m.url}\nWhy: ${m.rationale.join(' | ')}` : 'No course recommended (no genuine match in the catalog).',
         '',
         `HASHTAGS: ${pkg.hashtags.join(' ')}`,
+        ...(() => {
+          const vp = readJson(join(dir, 'visual-package.json'), null);
+          const photo = vp?.assets_used?.find((a) => a.role === 'landmark');
+          return photo ? ['', 'PHOTO CREDIT (not shown on the card; add to the first comment if the licence requires attribution)', `${photo.attribution ?? 'not recorded'} · ${photo.license}${photo.source_url ? ` · ${photo.source_url}` : ''}`] : [];
+        })(),
         `FACT CHECK: ${pkg.fact_check.status}${pkg.fact_check.flags.length ? ` — ${pkg.fact_check.flags.join('; ')}` : ''}`,
         '',
       ].join('\n'),
