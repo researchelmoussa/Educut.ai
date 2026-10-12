@@ -177,7 +177,8 @@ const commands = {
     const run = readJson(join(runDir, 'run.json'));
     const reg = new Registry(registryFile, log);
     const r = reg.register(rec);
-    if (r.action === 'new') run.new_count = (run.new_count ?? 0) + 1;
+    // Only new opportunities that can become content use up the daily cap.
+    if (r.action === 'new' && r.pipeline_status === 'VERIFIED') run.new_count = (run.new_count ?? 0) + 1;
     reg.save();
     writeJson(join(runDir, 'run.json'), run);
     writeJson(join(runDir, 'records', `${r.id}.json`), rec);
