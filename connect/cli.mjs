@@ -48,6 +48,9 @@ const fail = (msg, code = 1) => {
   process.exit(code);
 };
 const offersDir = join(runDir, 'offers');
+// Palette-quantise a PNG in place (about 60% smaller for the flat card design). Needs python3 + Pillow.
+const optimizePng = (file) =>
+  execFileSync('python3', ['-I', '-c', 'import sys\nfrom PIL import Image\nim=Image.open(sys.argv[1]).convert("RGB")\nim.quantize(colors=128,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE).save(sys.argv[1],optimize=True)', file]);
 const findOffer = (id) => {
   if (!existsSync(offersDir)) return null;
   for (const d of readdirSync(offersDir)) {
@@ -80,6 +83,7 @@ const commands = {
   approve <id> --by <name> | reject <id> --reason <text> | revise <id> --note <text>
   mark-published <id> --url <post-url>
   status                              Registry counts by status
+  export [--dest dir]                 Copy validated offers to <dest>/<date>/Offer_NNN/ (default connect/Communication)
   drive-sync                          Upload offers, review and registry to Drive (needs GDRIVE_* secrets)
   drive-pull-registry                 Download Registry/registry.json from Drive into the run
   optimize-png <file>                 Shrink a PNG (palette) for connector uploads`);
@@ -247,7 +251,7 @@ const commands = {
       deadline_source: rec.deadline?.value ?? null,
       deadline_label: rec.deadline ? spec.deadline_label : null,
       institution_logo: rec.institution.logo.permission === 'allowed' ? spec.institution_logo ?? null : null,
-      landmark: spec.landmark ?? findLandmark(rec.location.city, rec.location.country_code),
+      landmark: spec.landmark ?? findLandmark(rec.location.city, rec.location.country_code) ?? findLandmark(rec.location.country, rec.location.country_code),
     };
     writeJson(join(dir, 'spec.json'), card);
     if (card.landmark?.path && existsSync(card.landmark.path)) {
@@ -421,6 +425,37 @@ const commands = {
     out({ registry: registryFile, total: Object.keys(reg.data.opportunities).length, last_offer_number: reg.data.last_offer_number ?? 0, counts });
   },
 
+  // Mirror of the Drive layout for GitHub: Communication/<date>/Offer_NNN/ with images and texts.
+  export() {
+    const day = basename(runDir);
+    const dest = join(resolve(flags.dest ?? join(CONNECT_DIR, 'Communication')), day);
+    const copied = [];
+    for (const name of existsSync(offersDir) ? readdirSync(offersDir).sort() : []) {
+      const dir = join(offersDir, name);
+      const qc = readJson(join(dir, 'qc-report.json'), null);
+      if (!qc || qc.status === 'FAIL') continue; // only validated packages are published for review
+      mkdirSync(join(dest, name), { recursive: true });
+      for (const f of ['card.png', 'card-square.png', 'city.jpg', 'city.png', 'linkedin_post.txt', 'post_details.txt', 'record.json', 'qc-report.json']) {
+        if (existsSync(join(dir, f))) {
+          copyFileSync(join(dir, f), join(dest, name, f));
+          if (f.startsWith('card') && f.endsWith('.png')) {
+            try {
+              optimizePng(join(dest, name, f));
+            } catch {
+              /* Pillow missing: keep the full-size PNG */
+            }
+          }
+          copied.push(`${name}/${f}`);
+        }
+      }
+    }
+    if (existsSync(join(runDir, 'review.md'))) {
+      copyFileSync(join(runDir, 'review.md'), join(dest, `00_Review_${day}.md`));
+      copied.push(`00_Review_${day}.md`);
+    }
+    out({ dest, files: copied.length, offers: new Set(copied.filter((c) => c.startsWith('Offer_')).map((c) => c.split('/')[0])).size });
+  },
+
   async 'drive-sync'() {
     if (!driveAvailable()) fail('GDRIVE_CLIENT_ID / GDRIVE_CLIENT_SECRET / GDRIVE_REFRESH_TOKEN not set; use the Google Drive connector fallback', 4);
     const d = config.drive;
@@ -459,7 +494,7 @@ const commands = {
     const file = args[0] ?? fail('optimize-png <file>');
     const before = readFileSync(file).length;
     try {
-      execFileSync('python3', ['-I', '-c', 'import sys\nfrom PIL import Image\nim=Image.open(sys.argv[1]).convert("RGB")\nim.quantize(colors=128,method=Image.Quantize.MEDIANCUT,dither=Image.Dither.NONE).save(sys.argv[1],optimize=True)', file]);
+      optimizePng(file);
     } catch (e) {
       fail(`PIL not available: ${e.message}`);
     }

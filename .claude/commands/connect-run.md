@@ -46,7 +46,8 @@ sources, network).
 
 ## 4. Content (Agents 2 + 3 in parallel)
 City photos: for each offer's city, look in Drive `EduCut Connect/Landmarks/` for a photo named
-`<City>.jpg|png` or `<City>-<CC>.jpg|png` (e.g. `Geneva.jpg`, `Cambridge-GB.jpg`). If found, download it with the
+`<City>.jpg|png` or `<City>-<CC>.jpg|png` (e.g. `Geneva.jpg`, `Cambridge-GB.jpg`); when the offer has no
+city, look for `<Country>.jpg|png` (e.g. `Germany.jpg`) and register it with the country name as the city. If found, download it with the
 connector into `$RUN_DIR/landmarks/` and register it:
 `node connect/cli.mjs landmark-add "<City>" <CC> <file> --landmark "<what it shows>" --credit "<credit if given>" --run $RUN_DIR`.
 The designer's `landmark` step then uses it (otherwise it tries Wikimedia Commons). The renderer copies the
@@ -80,6 +81,20 @@ For each offer: `node connect/cli.mjs validate <id> --run $RUN_DIR`.
    - Upload `00_Review_<date>.md` and the run log to `Scrawling/<date>/`.
    - For the registry, create the new `Registry/registry.json`, then trash the previous one.
    Only report a file as stored when its `create_file` call returned an id.
+
+## 6b. Store in GitHub (main): the complete copy, images included
+The administrator chose `main` as the permanent home of the Communication folder.
+```
+W=$(mktemp -d)/main && git fetch origin main && git worktree add --detach "$W" origin/main
+node connect/cli.mjs export --run $RUN_DIR --dest "$W/connect/Communication"
+cd "$W" && git add connect/Communication && git commit -m "EduCut Connect: Communication outputs for <date>" && git push origin HEAD:main
+cd - && git worktree remove "$W"
+```
+This writes `connect/Communication/<date>/Offer_NNN/` (card.png, card-square.png, city.jpg if any,
+linkedin_post.txt, post_details.txt, record.json, qc-report.json) plus `00_Review_<date>.md`.
+Only validated offers are exported. If the push is rejected because main moved, fetch, re-create the
+worktree and retry once. Give the administrator the GitHub link to the day folder:
+https://github.com/researchelmoussa/Educut.ai/tree/main/connect/Communication/<date>
 
 ## 7. Hand-off to the administrator
 Reply with a short summary:
