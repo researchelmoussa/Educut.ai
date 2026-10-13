@@ -164,7 +164,7 @@ test('full pipeline on a fixture site', { timeout: 120_000 }, () => {
 
   const ap = sh('approve', fin.id, '--by', 'Test Admin');
   assert.equal(ap.pipeline_status, 'READY_TO_PUBLISH');
-  assert.equal(ap.publishing_enabled, false);
+  assert.equal(ap.publishing_enabled, true); // posting is done by the LinkedIn publisher Action, never by approve
 
   // Website developer: entry -> site-add -> site-build, in a scratch site root with the site chrome.
   const siteRoot = mkdtempSync(join(tmpdir(), 'connect-site-'));

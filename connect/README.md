@@ -17,6 +17,7 @@ approval, and publishing itself stays manual.
 | 5 | Orchestrator (`/connect-run`) | Stores each offer in Drive `Communication/<date>/Offer_NNN/` (image + post text) and asks for approval |
 | 6 | Administrator (`/connect-approve`) | approve → READY_TO_PUBLISH (after re-checking the deadline); reject; revise; mark published |
 | 7 | **website-developer** | On approval, adds the offer to https://educutai.com/educut-connect/ (clickable card in the listing + an offer page with a short description, the official application link and the Academy link) |
+| 8 | **linkedin** | Writes one post per newly listed offer (card + question + title + facts + offer page link + Academy link) and schedules them within 24 h on the "EduCut Connect" page; `.github/workflows/linkedin-publish.yml` publishes them (`LINKEDIN_ACCESS_TOKEN`, `LINKEDIN_ORGANIZATION_ID` secrets) |
 
 Statuses: `DISCOVERED → VERIFIED → CONTENT_GENERATED → UNDER_REVIEW → APPROVED → READY_TO_PUBLISH → PUBLISHED`,
 plus `CLOSED`, `EXPIRED`, `REJECTED`, `NEEDS_REVIEW`. Every change is recorded with time, actor and reason
@@ -73,7 +74,7 @@ offer is sent back to NEEDS_REVIEW automatically.
   card. If none is found, a neutral band is used.
 - **Courses**: only from `data/courses.txt` / `data/academies.txt`. The anchor must exist in the built
   academy page.
-- **Publishing**: `publishing.enabled` is `false`. No agent has a tool that posts.
+- **Publishing**: only approved offers that are live on the site are queued. Posts go out from the GitHub Action with the page token, one per run, and closed offers are skipped. `publishing.enabled: false` pauses everything.
 
 ## Adding sources
 

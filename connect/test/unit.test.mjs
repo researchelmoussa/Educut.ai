@@ -114,3 +114,31 @@ test('course shortlist and anchor check use the real catalog', () => {
   assert.equal(checkCourse('A001.01').course.url, 'https://educutai.com/academies/ai-foundations/#a001-01');
   assert.equal(checkCourse('A999.99').ok, false);
 });
+
+test('linkedin: slots are spaced, inside active hours and within 24 h', async () => {
+  const { planSlots } = await import('../lib/linkedin.mjs');
+  const now = new Date('2026-10-13T16:00:00Z'); // 18:00 in Zurich
+  const s = planSlots(5, { now, minGapMinutes: 45, maxGapMinutes: 180, activeHours: [7, 22], timeZone: 'Europe/Zurich' });
+  assert.equal(s.length, 5);
+  const t = s.map((x) => Date.parse(x));
+  for (let i = 1; i < t.length; i++) assert.ok(t[i] - t[i - 1] >= 45 * 60e3);
+  assert.ok(t[0] >= now.getTime() + 30 * 60e3 && t.at(-1) <= now.getTime() + 24 * 3600e3);
+  const h = (d) => Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', hour: '2-digit', hourCycle: 'h23' }).format(d));
+  assert.ok(t.every((x) => h(new Date(x)) >= 7 && h(new Date(x)) < 22));
+});
+
+test('linkedin: post layout and little-text escaping', async () => {
+  const { composePost, littleText, checkQuestion } = await import('../lib/linkedin.mjs');
+  const offer = { title: 'Research Scientist', institution: 'Example (EI)', location: 'Geneva, Switzerland', opportunity_type: 'job', deadline_label: '15 November 2099', page_url: 'https://educutai.com/educut-connect/001-research-scientist/', upskill: { kind: 'course', name: 'AI Fundamentals', url: 'https://educutai.com/academies/ai-foundations/#a001-01' } };
+  const text = composePost(offer, 'Ready for applied ML research in Geneva?', ['#ML', '#EduCutAI', '#EduCutConnect']);
+  const lines = text.split('\n');
+  assert.equal(lines[0], 'Ready for applied ML research in Geneva?');
+  assert.equal(lines[2], 'Research Scientist');
+  assert.ok(text.includes('Institution: Example (EI)') && text.includes('Deadline: 15 November 2099'));
+  assert.ok(text.indexOf(offer.page_url) < text.indexOf(offer.upskill.url));
+  const lt = littleText(text);
+  assert.ok(lt.includes('Example \\(EI\\)') && lt.includes('{hashtag|\\#|EduCutAI}') && lt.includes('#a001-01'.replace('#', '\\#')));
+  const cfg = { comms: { banned_phrases: ['dream job'] } };
+  assert.ok(checkQuestion('Ready for applied ML research in Geneva?', offer, cfg).every((c) => c.pass));
+  assert.ok(checkQuestion('Your dream job awaits? Apply now?', offer, cfg).some((c) => !c.pass));
+});

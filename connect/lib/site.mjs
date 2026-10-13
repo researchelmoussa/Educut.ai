@@ -416,8 +416,9 @@ ${DEADLINE_SCRIPT}`;
   });
 }
 
-function offerPage(o, root) {
-  const facts = [
+// The facts strip of the offer page; the LinkedIn post repeats the same lines.
+export const offerFacts = (o) =>
+  [
     ['Institution', o.institution],
     ['Location', [o.location, known(o.work_arrangement) && cap(o.work_arrangement)].filter(Boolean).join(' · ')],
     ['Type', typeLabel(o)],
@@ -425,6 +426,9 @@ function offerPage(o, root) {
     ['Level', o.level],
     ['Deadline', o.deadline_label],
   ].filter(([, v]) => v);
+
+function offerPage(o, root) {
+  const facts = offerFacts(o);
   const upskill =
     o.upskill.kind === 'website'
       ? { label: 'Strengthen your profile', name: 'Discover EduCut AI courses and AI learning paths', url: o.upskill.url }
