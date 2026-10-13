@@ -1,5 +1,6 @@
 #!/bin/sh
-# Lay the ElevenLabs voice-over onto the silent render, one chunk per scene.
+# Lay the ElevenLabs voice-over onto the silent render, one chunk per scene,
+# over the score from music.py (ducked under the voice).
 # Each row: chunk start, chunk end (cut in the read's own pauses), where its first word lands in the film.
 set -e
 cd "$(dirname "$0")"
@@ -15,7 +16,7 @@ for c in $CHUNKS; do
   F="$F[1:a]atrim=$s:$e,asetpts=PTS-STARTPTS,afade=t=in:d=0.04,areverse,afade=t=in:d=0.08,areverse,adelay=$d|$d[c$i];"
   L="$L[c$i]"; i=$((i+1))
 done
-ffmpeg -y -v error -i educut-connect-who-we-are.mp4 -i voiceover.mp3 -filter_complex \
-  "${F}${L}amix=inputs=$i:normalize=0,apad,atrim=0:64,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[a]" \
+ffmpeg -y -v error -i educut-connect-who-we-are.mp4 -i voiceover.mp3 -i music.wav -filter_complex \
+  "${F}${L}amix=inputs=$i:normalize=0,apad,atrim=0:64,aformat=channel_layouts=stereo,asplit[vo][key];[2:a]volume=-10dB[mu];[mu][key]sidechaincompress=threshold=0.02:ratio=5:attack=30:release=450:makeup=1[bed];[vo][bed]amix=inputs=2:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[a]" \
   -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -ac 2 -movflags +faststart educut-connect-who-we-are-vo.mp4
 echo wrote educut-connect-who-we-are-vo.mp4
