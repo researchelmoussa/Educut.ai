@@ -11,7 +11,11 @@ import wave
 import numpy as np
 
 SR = 44100
-DUR = 64.0
+DUR = 66.0
+# The film's reveal scene holds 2 s longer (the non-profit line): everything
+# from the bar at 32 s on lands 2 s later, and the 30-32 s bar plays twice.
+SHIFT_AT, SHIFT = 32.0, 2.0
+FORCE = False
 N = int(SR * DUR)
 rng = np.random.default_rng(7)
 L = np.zeros(N)
@@ -25,7 +29,9 @@ def hz(midi):
     return 440.0 * 2 ** ((midi - 69) / 12)
 
 
-def put(sig, t, gain=1.0, pan=0.0):
+def put(sig, t, gain=1.0, pan=0.0, raw=False):
+    if not raw and (FORCE or t >= SHIFT_AT - 1e-9):
+        t += SHIFT
     i = int(t * SR)
     if i >= N:
         return
@@ -147,11 +153,13 @@ def section(t):
 
 
 # pads + arps + bass + drums, bar by bar
-for b in range(int(DUR / BAR)):
-    t0 = b * BAR
+BARS = [b * BAR for b in range(32)]
+BARS.insert(16, 30.0)  # the repeated bar
+for bi, t0 in enumerate(BARS):
+    FORCE = bi == 16
     sec = section(t0 + 0.01)
     prog = TENSE if sec in ('crowd', 'doubt') else PROG
-    ch = chord_at(b, prog)
+    ch = chord_at(int(round(t0 / BAR)), prog)
     root = ch[0] - 12
     if sec == 'outro':
         put(pad([n + 12 for n in C], 3.0, 8), t0, 0.5)
@@ -179,6 +187,8 @@ for b in range(int(DUR / BAR)):
             put(kick(), t0 + q * BEAT, 0.55)
         put(clap(), t0 + BEAT, 0.28, -0.1); put(clap(), t0 + 3 * BEAT, 0.28, 0.1)
 
+FORCE = False
+
 # finale lead: the I-V-vi-IV melody an octave up
 mel = [76, 74, 72, 74, 76, 79, 77, 76]
 for i, n in enumerate(mel * 2):
@@ -187,8 +197,8 @@ for i, n in enumerate(mel * 2):
         put(bell(n, 1.2), tm, 0.12, 0.15)
 
 # ---------- sound effects on the animation cues ----------
-for cut in (6.5, 15.0, 31.0, 42.5):
-    put(whoosh(0.8), cut - 0.5, 0.10, 0.0)
+for cut in (6.5, 15.0, 33.0, 44.5):
+    put(whoosh(0.8), cut - 0.5, 0.10, 0.0, raw=True)
 # pills landing on the Lead (S2): drop starts at 7.3 + i*0.28, lands at 75% of 0.75 s
 for i in range(14):
     put(tok(76 + (i * 5) % 12), 7.3 + i * 0.28 + 0.56, 0.10, ((i % 5) - 2) / 3)
@@ -202,6 +212,8 @@ for j, n in enumerate((84, 84, 77, 77)):
 put(riser(1.3), 22.7, 0.11)
 put(impact(), 24.0, 0.42)
 put(bell(84), 24.9, 0.16, -0.2); put(bell(88), 25.0, 0.13, 0.2); put(bell(91), 25.1, 0.11)
+# non-profit / free service badges pop in
+put(tok(84), 27.1, 0.08, -0.2); put(tok(88), 27.4, 0.08, 0.2)
 # three-up cells pop in (S5) and the checklist strip
 for j in range(3):
     put(tok(79 + j * 4), 32.0 + j * 0.8, 0.07)

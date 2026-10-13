@@ -4,7 +4,7 @@
 # Each row: chunk start, chunk end (cut in the read's own pauses), where its first word lands in the film.
 set -e
 cd "$(dirname "$0")"
-CHUNKS="0:5.26:0.40 5.26:14.30:6.46 14.30:20.65:15.55 20.65:28.20:24.30 28.20:38.32:31.90 38.32:45.15:42.70 45.15:49.50:52.60 49.50:53.24:57.80"
+CHUNKS="0:5.26:0.40 5.26:14.30:6.46 14.30:20.65:15.55 20.65:28.20:24.30 28.20:38.32:33.90 38.32:45.15:44.70 45.15:49.50:54.60 49.50:53.24:59.80"
 F=""; L=""; i=0
 for c in $CHUNKS; do
   s=${c%%:*}; r=${c#*:}; e=${r%%:*}; at=${r#*:}
@@ -17,6 +17,6 @@ for c in $CHUNKS; do
   L="$L[c$i]"; i=$((i+1))
 done
 ffmpeg -y -v error -i educut-connect-who-we-are.mp4 -i voiceover.mp3 -i music.wav -filter_complex \
-  "${F}${L}amix=inputs=$i:normalize=0,apad,atrim=0:64,aformat=channel_layouts=stereo,asplit[vo][key];[2:a]volume=-10dB[mu];[mu][key]sidechaincompress=threshold=0.02:ratio=5:attack=30:release=450:makeup=1[bed];[vo][bed]amix=inputs=2:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[a]" \
+  "${F}${L}amix=inputs=$i:normalize=0,apad,atrim=0:66,aformat=channel_layouts=stereo,asplit[vo][key];[2:a]volume=-10dB[mu];[mu][key]sidechaincompress=threshold=0.02:ratio=5:attack=30:release=450:makeup=1[bed];[vo][bed]amix=inputs=2:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[a]" \
   -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 192k -ac 2 -movflags +faststart educut-connect-who-we-are-vo.mp4
 echo wrote educut-connect-who-we-are-vo.mp4
