@@ -14,7 +14,7 @@
 .cx-card .cx-kicker{color:var(--blue);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
 .cx-card h3{font-size:19px;line-height:1.2;letter-spacing:-.02em;margin:0}
 .cx-card .cx-inst{color:#5f5f5a;font-size:14px;line-height:1.4;margin:0}
-.cx-card .cx-count{margin-top:auto;padding-top:6px;font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--blue)}
+.cx-card .cx-count{margin-top:auto;padding-top:6px;font-weight:700;font-size:17px;letter-spacing:-.01em;color:var(--blue);font-variant-numeric:tabular-nums}
 .cx-card .cx-meta{padding-top:10px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#5f5f5a}
 .cx-card .cx-more{color:var(--ink)}
 .is-closed .cx-card img{filter:grayscale(1);opacity:.6}

@@ -72,13 +72,15 @@
   function end(d){if(!d)return NaN;return Date.parse(d.length===10?d+'T23:59:59Z':d);}
   function left(ms){var m=Math.floor(ms/60000),d=Math.floor(m/1440),h=Math.floor(m%1440/60),n=m%60;
     if(d>=2)return d+' days left';if(d===1)return '1 day '+h+' h left';if(h>=1)return h+' h '+n+' min left';return Math.max(n,1)+' min left';}
+  function pad(x){return (x<10?'0':'')+x;}
+  function dhm(ms){var m=Math.floor(ms/60000);return Math.floor(m/1440)+'d '+pad(Math.floor(m%1440/60))+'h '+pad(m%60)+'m left';}
   function tick(){var now=Date.now();
     document.querySelectorAll('[data-deadline]').forEach(function(el){
       var t=end(el.getAttribute('data-deadline')),c=el.querySelector('[data-countdown]'),suffix=el.getAttribute('data-suffix')||'';
       if(isNaN(t)){el.setAttribute('data-rank','1');if(c)c.textContent='No deadline stated';return;}
       if(t<now){el.classList.add('is-closed');el.setAttribute('data-rank','2');el.setAttribute('data-key',String(-t));if(c)c.textContent='Closed';
         var a=el.querySelector('[data-apply]');if(a&&a.hasAttribute('href')){a.removeAttribute('href');a.setAttribute('aria-disabled','true');a.textContent='Applications closed';}}
-      else{el.setAttribute('data-rank','0');el.setAttribute('data-key',String(t));if(c)c.textContent=left(t-now)+suffix;}
+      else{el.setAttribute('data-rank','0');el.setAttribute('data-key',String(t));if(c)c.textContent=(el.getAttribute('data-format')==='dhm'?dhm(t-now):left(t-now))+suffix;}
     });}
   function sort(){var list=document.querySelector('[data-offers]');if(!list)return;
     var items=[].slice.call(list.children);
@@ -90,7 +92,7 @@
     if(out)out.textContent=terms.length?shown+' of '+items.length+' opportunities match':items.length+' opportunities · most urgent first';}
   tick();sort();
   var f=document.getElementById('cx-search');if(f){f.addEventListener('submit',function(e){e.preventDefault();search();});document.getElementById('cx-q').addEventListener('input',search);search();}
-  setInterval(tick,60000);
+  setInterval(tick,15000);
 })();
 </script>
   </main>
