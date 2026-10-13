@@ -1,0 +1,54 @@
+{
+  "publishing": {
+    "enabled": false,
+    "note": "No agent may publish. PUBLISHED is set only by `cli.mjs mark-published` after a human posts."
+  },
+  "daily": {
+    "max_new_opportunities": 10,
+    "max_age_days": 21,
+    "require_source_confirmation": true
+  },
+  "crawl": {
+    "user_agent": "EduCutConnectBot/1.0 (+https://educutai.com; opportunity discovery, human-reviewed)",
+    "default_rate_limit_rps": 0.5,
+    "max_pages_per_source": 40,
+    "timeout_ms": 20000,
+    "retry": { "attempts": 3, "base_delay_ms": 2000, "max_delay_ms": 30000 },
+    "domain_failure_threshold": 5
+  },
+  "drive": {
+    "root_folder": { "name": "EduCut Connect", "id": "1HvXW4refNPz5wl8WYTUi34gT1oeHn9NB" },
+    "links_file": "links.txt",
+    "folders": {
+      "logos": { "name": "Logos", "id": "1RLy9jQlBJ1bnBNwq7gFX3RVrsaJYqp--" },
+      "communication": { "name": "Communication", "id": "1Ybjy8pB0uEx-VuuuaFas3nMt2D6tzPRj" },
+      "crawling": { "name": "Scrawling", "id": "1qwCIrL0CAEsCjX-UEFLY6tnfxlebcpY8" },
+      "registry": { "name": "Registry", "id": "1mesRbb1NCwwU6z0t0NeudU2zW8hg5lkq" },
+      "landmarks": { "name": "Landmarks", "id": "1WOU0RoPIEqhvlF0jtbN5GzcrXq-Jakau" }
+    }
+  },
+  "links": {
+    "educut_website": "https://educutai.com",
+    "academy_catalog": "https://educutai.com/academies/",
+    "site_url": "https://educutai.com"
+  },
+  "comms": {
+    "word_range": [80, 130],
+    "word_hard_range": [70, 150],
+    "max_emojis": 3,
+    "hashtag_range": [4, 7],
+    "required_hashtags": ["#EduCutAI", "#EduCutConnect"],
+    "cta_template": "Explore this opportunity through EduCut Connect: https://educutai.com",
+    "banned_phrases": ["guarantee", "guaranteed", "100%", "act now", "last chance", "hurry", "don't miss out", "dream job", "official partner", "we are hiring", "our team"],
+    "course_min_score": 6
+  },
+  "visual": {
+    "variant": "obsidian",
+    "variants_available": ["datasheet", "obsidian", "split", "plate", "column"],
+    "photo_credit_on_card": false,
+    "portrait": [1080, 1350],
+    "square": [1200, 1200],
+    "third_party_logos": "allowlist_only",
+    "logo_allowlist": []
+  }
+}
