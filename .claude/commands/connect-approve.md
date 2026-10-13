@@ -13,7 +13,13 @@ Apply the administrator's decisions in `$ARGUMENTS`, e.g. `approve Offer_003 Off
    (`--run connect/runs/<date>`):
    - approve → `node connect/cli.mjs approve <id> --by "<name>"`. This re-checks the deadline and status,
      then sets READY_TO_PUBLISH, or EXPIRED / NEEDS_REVIEW if something changed. Report the resulting status.
-   - reject → `node connect/cli.mjs reject <id> --reason "<text>" --by "<name>"`
+     When it is READY_TO_PUBLISH, put the offer on the website: launch the **website-developer** subagent with
+     the offer folder and `--approved-by "<name>"`. Its page is the link used in the LinkedIn post, so it
+     must be live before the post goes out. Then commit `educut-connect/` and `sitemap.xml` to `main` the
+     same way as `connect/Communication` (see `/connect-run` step 6b, commit message
+     "EduCut Connect: list Offer_NNN on the website") and give the administrator the page URL.
+   - reject → `node connect/cli.mjs reject <id> --reason "<text>" --by "<name>"`; if the offer is on the website,
+     `site-remove <id>` + `site-build` and commit that to `main` too.
    - revise → `node connect/cli.mjs revise <id> --note "<text>" --by "<name>"`, then rerun the responsible agent
      (visual-designer and/or communications) for that offer and `validate` again.
    - published → `node connect/cli.mjs mark-published <id> --url <post-url> --by "<name>"`. Only after a human

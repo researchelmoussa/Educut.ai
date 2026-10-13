@@ -13,6 +13,7 @@ import { parseLinks } from './lib/sources.mjs';
 import { addLandmark, fetchLandmark, findLandmark } from './lib/landmarks.mjs';
 import { Registry, deadlineEnd, emptyRegistry } from './lib/registry.mjs';
 import { renderCard } from './lib/render.mjs';
+import { addEntry, briefText, buildSite, offerSlug, pageUrl, removeEntry, webBrief } from './lib/site.mjs';
 import { validateSchema } from './lib/schema.mjs';
 import { summarize, validateComms, validateRecord, validateVisual } from './lib/validate.mjs';
 import {
@@ -77,7 +78,8 @@ const commands = {
   landmark-add <city> <CC> <file> [--landmark n] [--credit c] [--license l]
                                       Register an administrator-supplied city photo (Drive Landmarks folder)
   render <spec.json> [--square]       Render card.png (+ square) and write visual-package.json
-  post-text <id>                      Write linkedin_post.txt and post_details.txt from comms-package.json
+  page-url <id>                       EduCut Connect page URL of an offer (the link used in the post)
+  post-text <id>                      Write linkedin_post.txt, post_details.txt and web-brief.json from comms-package.json
   validate <id>                       Cross-check record, image and caption; advance to UNDER_REVIEW on pass
   review                              Write review.md for every offer in the run
   approve <id> --by <name> | reject <id> --reason <text> | revise <id> --note <text>
@@ -86,7 +88,12 @@ const commands = {
   export [--dest dir]                 Copy validated offers to <dest>/<date>/Offer_NNN/ (default connect/Communication)
   drive-sync                          Upload offers, review and registry to Drive (needs GDRIVE_* secrets)
   drive-pull-registry                 Download Registry/registry.json from Drive into the run
-  optimize-png <file>                 Shrink a PNG (palette) for connector uploads`);
+  optimize-png <file>                 Shrink a PNG (palette) for connector uploads
+  site-add <offer-dir> --approved-by <name> | --preview
+                                      Add or update an offer on /educut-connect/ from web-brief.json + site-entry.json
+  site-remove <id|slug|Offer_NNN>     Take an offer off the site
+  site-build [--include-previews]     Regenerate /educut-connect/ (listing + one page per offer) and the sitemap;
+                                      --include-previews lists unapproved offers too (review branches only, never main)`);
   },
 
   sources() {
@@ -286,6 +293,13 @@ const commands = {
     out({ offer_dir: dir, png: p.png, qc: pkg.qc, rendered_text: pkg.rendered_text });
   },
 
+  'page-url'() {
+    const id = args[0] ?? fail('page-url <id>');
+    const dir = findOffer(id) ?? fail(`no offer folder for ${id}`);
+    const slug = offerSlug(basename(dir), readJson(join(dir, 'record.json')).title.value);
+    out({ id, slug, url: pageUrl(config.links.site_url, slug) });
+  },
+
   'post-text'() {
     const id = args[0] ?? fail('post-text <id>');
     const dir = findOffer(id) ?? fail(`no offer folder for ${id}`);
@@ -293,6 +307,8 @@ const commands = {
     const pkg = readJson(join(dir, 'comms-package.json'));
     writeFileSync(join(dir, 'linkedin_post.txt'), pkg.caption.trim() + '\n');
     const m = pkg.course_match;
+    const brief = webBrief({ offerName: basename(dir), rec, pkg, visual: readJson(join(dir, 'visual-package.json'), null), siteUrl: config.links.site_url });
+    writeJson(join(dir, 'web-brief.json'), brief);
     writeFileSync(
       join(dir, 'post_details.txt'),
       [
@@ -303,6 +319,7 @@ const commands = {
         `Official application link: ${rec.application_url ?? 'not found — see source'}`,
         `Source page: ${rec.source_url}`,
         `EduCut link in post: ${pkg.educut_link.url} (${pkg.educut_link.type.replace('_', ' ')})`,
+        `Upskill link in post: ${pkg.course_match?.url ?? config.links.educut_website}`,
         '',
         'ALTERNATIVE HOOK',
         pkg.alternative_hook,
@@ -311,7 +328,7 @@ const commands = {
         pkg.first_comment,
         '',
         'ACADEMY COURSE',
-        m ? `${m.name} (${m.code ?? m.url_type}) — ${m.url}\nWhy: ${m.rationale.join(' | ')}` : 'No course recommended (no genuine match in the catalog).',
+        m ? `${m.name} (${m.code ?? m.url_type}) — ${m.url}\nWhy: ${m.rationale.join(' | ')}` : `No matching course in the catalog: the post points to the EduCut AI website (${config.links.educut_website}).`,
         '',
         `HASHTAGS: ${pkg.hashtags.join(' ')}`,
         ...(() => {
@@ -321,9 +338,11 @@ const commands = {
         })(),
         `FACT CHECK: ${pkg.fact_check.status}${pkg.fact_check.flags.length ? ` — ${pkg.fact_check.flags.join('; ')}` : ''}`,
         '',
+        briefText(brief),
+        '',
       ].join('\n'),
     );
-    out({ written: [join(dir, 'linkedin_post.txt'), join(dir, 'post_details.txt')] });
+    out({ written: [join(dir, 'linkedin_post.txt'), join(dir, 'post_details.txt'), join(dir, 'web-brief.json')] });
   },
 
   validate() {
@@ -339,7 +358,7 @@ const commands = {
     const cp = join(dir, 'comms-package.json');
     if (existsSync(vp)) checks.push(...validateVisual(rec, readJson(vp), readJson(join(dir, 'spec.json'), null)));
     else checks.push({ check: 'visual package present', pass: false, detail: 'visual-package.json missing', owner: 'visual-designer' });
-    if (existsSync(cp)) checks.push(...validateComms(rec, readJson(cp), config));
+    if (existsSync(cp)) checks.push(...validateComms(rec, readJson(cp), config, pageUrl(config.links.site_url, offerSlug(basename(dir), rec.title.value))));
     else checks.push({ check: 'comms package present', pass: false, detail: 'comms-package.json missing', owner: 'communications' });
     for (const f of ['linkedin_post.txt', 'card.png']) if (!existsSync(join(dir, f))) checks.push({ check: `${f} present`, pass: false, detail: 'missing', owner: f === 'card.png' ? 'visual-designer' : 'communications' });
 
@@ -441,7 +460,7 @@ const commands = {
       const qc = readJson(join(dir, 'qc-report.json'), null);
       if (!qc || qc.status === 'FAIL') continue; // only validated packages are published for review
       mkdirSync(join(dest, name), { recursive: true });
-      for (const f of ['card.png', 'card-square.png', 'city.jpg', 'city.png', 'linkedin_post.txt', 'post_details.txt', 'record.json', 'qc-report.json']) {
+      for (const f of ['card.png', 'card-square.png', 'city.jpg', 'city.png', 'linkedin_post.txt', 'post_details.txt', 'web-brief.json', 'site-entry.json', 'record.json', 'qc-report.json']) {
         if (existsSync(join(dir, f))) {
           copyFileSync(join(dir, f), join(dest, name, f));
           if (f.startsWith('card') && f.endsWith('.png')) {
@@ -494,6 +513,28 @@ const commands = {
     mkdirSync(runDir, { recursive: true });
     writeFileSync(registryFile, await download(file.id));
     out({ pulled: true, registry: registryFile });
+  },
+
+  // EduCut Connect pages on the public site (website-developer agent). --site points at another site
+  // root (tests); by default the repository root.
+  'site-add'() {
+    const dir = resolve(args[0] ?? fail('site-add <offer-dir> --approved-by <name> | --preview'));
+    if (!flags['approved-by'] && !flags.preview) fail('--approved-by <name> (offer approved) or --preview (page for review, kept off the listing and sitemap) is required');
+    const r = addEntry({ offerDir: dir, root: flags.site ? resolve(flags.site) : undefined, config, approvedBy: flags['approved-by'] || null, preview: Boolean(flags.preview) });
+    log('site.add', { offer: basename(dir), ok: r.ok, preview: r.preview ?? null });
+    out(r);
+    if (!r.ok) process.exitCode = 3;
+  },
+
+  'site-remove'() {
+    const key = args[0] ?? fail('site-remove <id|slug|Offer_NNN>');
+    out(removeEntry({ key, root: flags.site ? resolve(flags.site) : undefined }));
+  },
+
+  'site-build'() {
+    const r = buildSite({ root: flags.site ? resolve(flags.site) : undefined, siteUrl: config.links.site_url, includePreviews: Boolean(flags['include-previews']) });
+    log('site.build', { pages: r.pages.length, previews: r.previews.length });
+    out(r);
   },
 
   'optimize-png'() {

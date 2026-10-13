@@ -1,9 +1,9 @@
 // End-to-end pipeline against a local fixture site (fictional institution), exercising the same CLI
 // commands the agents use: discover -> extract -> finalize -> register -> prepare -> render ->
-// comms package -> post-text -> validate -> review -> approve.
+// comms package -> post-text -> validate -> review -> approve -> site-add -> site-build.
 import assert from 'node:assert/strict';
 import { execFileSync, spawn } from 'node:child_process';
-import { existsSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { after, before, test } from 'node:test';
@@ -114,6 +114,8 @@ test('full pipeline on a fixture site', { timeout: 120_000 }, () => {
 
   // Communications
   const course = sh('check-course', 'A001.01');
+  const page = sh('page-url', fin.id);
+  assert.match(page.url, /^https:\/\/educutai\.com\/educut-connect\/001-research-scientist-machine-learning\/$/);
   const caption = [
     'Machine learning researchers: a new opening in Geneva 🇨🇭',
     '',
@@ -123,7 +125,7 @@ test('full pipeline on a fixture site', { timeout: 120_000 }, () => {
     '',
     '📅 Applications close 15 November 2099 (CET).',
     '',
-    "Explore this opportunity through EduCut Connect: https://educutai.com (EduCut AI's main site; the official application link is in the first comment).",
+    `Explore this opportunity through EduCut Connect: ${page.url}`,
     '',
     `Want to strengthen your profile for opportunities like this? Explore ${course.name} at EduCut AI Academy: ${course.url}`,
     '',
@@ -139,7 +141,7 @@ test('full pipeline on a fixture site', { timeout: 120_000 }, () => {
       alternative_hook: 'Publishing in machine learning and looking at research roles in Switzerland? This one is worth a look.',
       first_comment: `Official application page: ${record.application_url}. What made the biggest difference in your research applications?`,
       hashtags: ['#MachineLearning', '#ResearchJobs', '#AIResearch', '#Geneva', '#EduCutAI', '#EduCutConnect'],
-      educut_link: { url: 'https://educutai.com', type: 'general_website' },
+      educut_link: { url: page.url, type: 'opportunity_page' },
       official_application_url: record.application_url,
       course_match: { code: course.code, name: course.name, academy: course.academy, url: course.url, url_type: 'course_anchor_verified', rationale: ["'supervised and unsupervised learning' -> objectives: supervised learning; unsupervised learning"] },
       fact_check: { status: 'PASS_WITH_FLAGS', flags: ['OPEN_LIKELY: verify the application portal manually'] },
@@ -147,6 +149,10 @@ test('full pipeline on a fixture site', { timeout: 120_000 }, () => {
   );
   sh('post-text', fin.id);
   assert.ok(readFileSync(join(prep.offer_dir, 'linkedin_post.txt'), 'utf8').startsWith('Machine learning researchers'));
+  const details = readFileSync(join(prep.offer_dir, 'post_details.txt'), 'utf8');
+  assert.match(details, /WEBSITE PAGE/);
+  assert.ok(details.includes(`Page URL: ${page.url}`));
+  assert.ok(details.includes(`Official application link: ${record.application_url}`));
 
   const v = sh('validate', fin.id);
   assert.equal(v.status, 'PASS_WITH_FLAGS', JSON.stringify(v.failures, null, 1));
@@ -159,6 +165,38 @@ test('full pipeline on a fixture site', { timeout: 120_000 }, () => {
   const ap = sh('approve', fin.id, '--by', 'Test Admin');
   assert.equal(ap.pipeline_status, 'READY_TO_PUBLISH');
   assert.equal(ap.publishing_enabled, false);
+
+  // Website developer: entry -> site-add -> site-build, in a scratch site root with the site chrome.
+  const siteRoot = mkdtempSync(join(tmpdir(), 'connect-site-'));
+  mkdirSync(join(siteRoot, 'academies'), { recursive: true });
+  copyFileSync(join(here, '..', '..', 'academies', 'index.html'), join(siteRoot, 'academies', 'index.html'));
+  writeFileSync(join(siteRoot, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset>\n  <url><loc>https://educutai.com/</loc></url>\n</urlset>\n');
+  const entry = {
+    opportunity_id: fin.id,
+    summary: 'Example Institute for Applied Science is recruiting a research scientist for its applied machine learning group in Geneva. The role combines original research with building models used by partner teams, in a hybrid arrangement based at its Geneva campus.',
+    highlights: ['PhD in Computer Science, Statistics or a related field', 'Publication record in machine learning', 'Applications close on 15 November 2099'],
+  };
+  writeFileSync(join(prep.offer_dir, 'site-entry.json'), JSON.stringify(entry));
+  const preview = sh('site-add', prep.offer_dir, '--preview', '--site', siteRoot);
+  assert.equal(preview.ok, true, JSON.stringify(preview.failures));
+  assert.equal(preview.preview, true);
+  writeFileSync(join(prep.offer_dir, 'site-entry.json'), JSON.stringify({ ...entry, summary: `${entry.summary} Salary CHF 150k, see https://example.org.` }));
+  const rejected = sh('site-add', prep.offer_dir, '--approved-by', 'Test Admin', '--site', siteRoot);
+  assert.equal(rejected.ok, false);
+  assert.ok(rejected.failures.some((f) => f.check === 'no salary claimed'));
+  writeFileSync(join(prep.offer_dir, 'site-entry.json'), JSON.stringify(entry));
+  const added = sh('site-add', prep.offer_dir, '--approved-by', 'Test Admin', '--site', siteRoot);
+  assert.equal(added.ok, true);
+  assert.equal(added.page_url, page.url);
+  sh('site-build', '--site', siteRoot);
+  const listing = readFileSync(join(siteRoot, 'educut-connect', 'index.html'), 'utf8');
+  assert.ok(listing.includes(`href="/educut-connect/${page.slug}/"`));
+  const offerHtml = readFileSync(join(siteRoot, 'educut-connect', page.slug, 'index.html'), 'utf8');
+  assert.ok(offerHtml.includes(`href="${record.application_url}"`));
+  assert.ok(offerHtml.includes(`href="${course.url}"`));
+  assert.ok(existsSync(join(siteRoot, 'educut-connect', page.slug, 'card.png')));
+  assert.ok(readFileSync(join(siteRoot, 'sitemap.xml'), 'utf8').includes(`<loc>${page.url}</loc>`));
+  assert.ok(!existsSync(join(siteRoot, 'educut-connect', 'offers.json')));
 });
 
 test('validator rejects a caption that invents a salary and drops the title', { timeout: 60_000 }, () => {

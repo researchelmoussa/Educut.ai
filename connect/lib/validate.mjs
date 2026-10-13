@@ -5,6 +5,7 @@ import { checkAcademyUrl, checkCourse } from './catalog.mjs';
 import { deadlineEnd, ELIGIBLE_APPLICATION_STATUS } from './registry.mjs';
 import { pngSize } from './render.mjs';
 import { validateSchema } from './schema.mjs';
+import { UPSKILL_LEAD } from './site.mjs';
 import { contentHash, opportunityId } from './util.mjs';
 
 const words = (s) => String(s).trim().split(/\s+/).filter(Boolean);
@@ -33,7 +34,8 @@ export function validateRecord(rec, now = new Date()) {
   return out;
 }
 
-export function validateComms(rec, pkg, config) {
+// expectedPageUrl: the offer's EduCut Connect page (lib/site.mjs), the link the post must use.
+export function validateComms(rec, pkg, config, expectedPageUrl = null) {
   const out = [];
   const add = (check, pass, detail, severity = 'fail') => out.push({ check, pass, detail, owner: 'communications', severity });
   const c = config.comms;
@@ -61,7 +63,14 @@ export function validateComms(rec, pkg, config) {
   add('hashtags field matches caption', pkg.hashtags.join(' ') === tags.join(' '), 'hashtags[] must list the caption hashtags in order');
 
   add('EduCut website CTA', cap.includes(config.links.educut_website), config.links.educut_website);
-  add('CTA says it is not the application link', /official appl|not the appl|general (EduCut|website)|EduCut AI'?s (main|general)/i.test(cap), 'caption must say educutai.com is EduCut’s site, not the application page');
+  if (expectedPageUrl) {
+    add('EduCut Connect page link', pkg.educut_link.type === 'opportunity_page' && pkg.educut_link.url === expectedPageUrl, `educut_link must be {"url":"${expectedPageUrl}","type":"opportunity_page"}`);
+    add('EduCut Connect page link in caption', cap.includes(`EduCut Connect: ${expectedPageUrl}`), `caption must contain "Explore this opportunity through EduCut Connect: ${expectedPageUrl}"`);
+  }
+  add('caption does not refer to the first comment', !/first comment/i.test(cap), 'the post no longer says where the application link is');
+  const upskill = cap.split('\n').find((l) => l.startsWith(UPSKILL_LEAD));
+  add('upskilling line present', Boolean(upskill), `a line starting "${UPSKILL_LEAD}"`);
+  if (upskill && !pkg.course_match) add('upskilling line points to the EduCut AI website', upskill.includes(config.links.educut_website), `no course matched: "${UPSKILL_LEAD} Visit EduCut AI: ${config.links.educut_website}"`);
   add('official application URL carried', pkg.official_application_url === rec.application_url, String(rec.application_url));
 
   const lower = `${cap} ${pkg.alternative_hook} ${pkg.first_comment}`.toLowerCase();

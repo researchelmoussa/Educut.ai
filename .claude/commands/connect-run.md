@@ -13,7 +13,7 @@ EduCut Connect/
   Logos/                          official brand files
   Scrawling/<YYYY-MM-DD>/run-log.jsonl
   Communication/<YYYY-MM-DD>/00_Review_<date>.md
-  Communication/<YYYY-MM-DD>/Offer_NNN/   card.png, city.jpg, card-square.png, linkedin_post.txt, post_details.txt, card.html, record.json, qc-report.json
+  Communication/<YYYY-MM-DD>/Offer_NNN/   card.png, city.jpg, card-square.png, linkedin_post.txt, post_details.txt, web-brief.json, card.html, record.json, qc-report.json
   Landmarks/                      city photos supplied by the administrator (Geneva.jpg, Cambridge-GB.jpg, …)
   Registry/registry.json          every opportunity ever seen (dedup + status history)
 ```
@@ -104,5 +104,8 @@ Reply with a short summary:
 - Offers that failed validation, and why.
 - How to decide: reply "approve Offer_003", "reject Offer_004 <reason>" or "revise Offer_005 <note>", or
   run `/connect-approve`.
+- Each post links to the offer's EduCut Connect page (`https://educutai.com/educut-connect/<slug>/`). That
+  page is created by the website-developer agent when the offer is approved, so a post is never published
+  before its page is live.
 
 Never mark anything PUBLISHED, and never post to LinkedIn: `publishing.enabled` is false.

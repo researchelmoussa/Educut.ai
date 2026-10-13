@@ -30,7 +30,8 @@
   "links": {
     "educut_website": "https://educutai.com",
     "academy_catalog": "https://educutai.com/academies/",
-    "site_url": "https://educutai.com"
+    "site_url": "https://educutai.com",
+    "connect_page": "https://educutai.com/educut-connect/"
   },
   "comms": {
     "word_range": [80, 130],
@@ -38,7 +39,9 @@
     "max_emojis": 3,
     "hashtag_range": [4, 7],
     "required_hashtags": ["#EduCutAI", "#EduCutConnect"],
-    "cta_template": "Explore this opportunity through EduCut Connect: https://educutai.com",
+    "cta_template": "Explore this opportunity through EduCut Connect: {page_url}",
+    "upskill_template": "Want to strengthen your profile for opportunities like this? Explore {course_name} at EduCut AI Academy: {course_url}",
+    "upskill_fallback": "Want to strengthen your profile for opportunities like this? Visit EduCut AI: https://educutai.com",
     "banned_phrases": ["guarantee", "guaranteed", "100%", "act now", "last chance", "hurry", "don't miss out", "dream job", "official partner", "we are hiring", "our team"],
     "course_min_score": 6
   },

@@ -12,10 +12,11 @@ approval, and publishing itself stays manual.
 | 1 | Administrator | Confirms or extends the sources in Drive `EduCut Connect/links.txt` (asked at the start of each run) |
 | 2 | **opportunity-scout** (`.claude/agents/`) | Crawls the sources politely, extracts up to **10 new** opportunities never listed before, verifies application status, registers records |
 | 3 | **visual-designer** | Card (1080×1350 PNG + 1200×1200) with a licensed photo of the city's landmark, flag, official logos |
-| 3 | **communications** | LinkedIn post (80–130 words), alt hook, first comment, hashtags, one genuinely matching Academy course |
+| 3 | **communications** | LinkedIn post (80–130 words) linking to the offer's EduCut Connect page, alt hook, first comment, hashtags, one genuinely matching Academy course (or the EduCut AI website); `post_details.txt` carries the full website brief |
 | 4 | `cli.mjs validate` | Title / institution / location identical across record, image and post; deadline verified; URLs and course anchor checked; no invented claims |
 | 5 | Orchestrator (`/connect-run`) | Stores each offer in Drive `Communication/<date>/Offer_NNN/` (image + post text) and asks for approval |
 | 6 | Administrator (`/connect-approve`) | approve → READY_TO_PUBLISH (after re-checking the deadline); reject; revise; mark published |
+| 7 | **website-developer** | On approval, adds the offer to https://educutai.com/educut-connect/ (clickable card in the listing + an offer page with a short description, the official application link and the Academy link) |
 
 Statuses: `DISCOVERED → VERIFIED → CONTENT_GENERATED → UNDER_REVIEW → APPROVED → READY_TO_PUBLISH → PUBLISHED`,
 plus `CLOSED`, `EXPIRED`, `REJECTED`, `NEEDS_REVIEW`. Every change is recorded with time, actor and reason
@@ -25,6 +26,21 @@ Agents 2 and 3 receive the same immutable record and run in parallel. Each offer
 workspace. Where Claude Code Agent Teams are enabled (`CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`), the three
 agents can run as teammates with direct messages. The files, contracts and checks stay the same, so
 nothing depends on that experimental feature.
+
+## Website: /educut-connect/
+
+`connect/lib/site.mjs` generates the EduCut Connect section of the public site from
+`connect/site/offers.json` (kept under `connect/`, which is not deployed):
+
+- `/educut-connect/`: the listing, one card per offer (square card image, title, institution, location,
+  deadline); the whole card links to the offer page. Past deadlines are greyed out in the browser.
+- `/educut-connect/<NNN-title-slug>/`: summary, key points, facts, **Apply on the official page** and the
+  **Academy upskilling link** (EduCut AI website when no course fits), plus the not-the-employer disclaimer.
+
+The website-developer agent writes only `site-entry.json` (summary + key points); `site-add` checks it
+and `site-build` renders the pages, reusing the nav, footer and stylesheets of the generated
+`/academies/` page. Offers added with `--preview` get a page (noindex) but stay off the listing and the
+sitemap until approved.
 
 ## Data contracts (`schemas/`)
 
