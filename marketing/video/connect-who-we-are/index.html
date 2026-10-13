@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>EduCut Connect — Who we are</title>
+<title>EduCut Connect: Who we are</title>
 <!--
   EduCut Connect "Who we are" film, 1920x1080.
   Cast, palette and construction follow the Marketing cast board
@@ -276,7 +276,7 @@ window.DURATION = T.end;
 let html = '';
 
 
-// S1 — hook: the Lead and the world
+// S1: hook: the Lead and the world
 html += scene(T.s1, T.s2, `
   <h1 class="abs" style="left:120px;top:300px;width:880px">${words('Looking for your next opportunity?', .4)}</h1>
   <p class="abs sub" style="left:120px;top:540px;width:760px;${anim(a('up', .6, 1.6))}">In industry or research. Anywhere in the world.</p>
@@ -284,7 +284,7 @@ html += scene(T.s1, T.s2, `
   <div class="abs" style="left:1010px;top:520px;${anim(a('up', .7, 1.0))}">${fig('lead', { w: 260, mood: 'smile', arms: 'out' })}</div>
 `);
 
-// S2 — the problem: buried under listings
+// S2: the problem: buried under listings
 html += scene(T.s2, T.s3, `
   <h1 class="abs" style="left:120px;top:300px;width:820px">${words('Too many platforms. Too many listings.', T.s2 + .2)}</h1>
   <p class="abs sub" style="left:120px;top:540px;width:700px;${anim(a('up', .6, T.s2 + 1.2))}">Offers scattered everywhere. Hours of searching. Is it even still open?</p>
@@ -298,7 +298,7 @@ html += scene(T.s2, T.s3, `
   <div class="abs" style="left:1380px;top:250px;width:1px;height:1px">${pileOfPills(0, 0, T.s2 + .8)}</div>
 `);
 
-// S3 — the doubt: does my profile match?
+// S3: the doubt: does my profile match?
 html += scene(T.s3, T.s4, `
   <h1 class="abs m" style="left:120px;top:210px;width:1700px">${words('Is my profile a match?', T.s3 + .2)} <span style="color:${C.cobalt}">${words('Do I need to upskill?', T.s3 + 1.1)}</span></h1>
   ${reqCard(120, 430, T.s3 + 1.6)}
@@ -306,7 +306,7 @@ html += scene(T.s3, T.s4, `
   <div class="abs" style="left:1280px;top:640px;${anim(a('up', .7, T.s3 + 1))}">${desk()}</div>
 `);
 
-// S4 — the reveal: EduCut Connect. Pills fall, the Lead rises on the acid path.
+// S4: the reveal: EduCut Connect. Pills fall, the Lead rises on the acid path.
 html += scene(T.s4, T.s5, `
   <svg class="abs" style="left:0;top:780px" width="1920" height="300" viewBox="0 0 1920 300">
     <path d="M-20 200 C 300 120, 520 230, 860 150 S 1500 40, 1960 120" fill="none" stroke="${C.acid}" stroke-width="16" stroke-linecap="round"
@@ -319,10 +319,10 @@ html += scene(T.s4, T.s5, `
   <div class="abs" style="left:440px;top:290px;width:1px;height:1px">${pileOfPills(0, 0, null, T.s4 + .5)}</div>
   ${sparkle(240, 470, 60, T.s4 + 1.8)}${sparkle(610, 430, 44, T.s4 + 2)}
   <img class="abs" src="educut_connect_under_cut_light_transparent.svg" style="left:900px;top:270px;width:860px;${anim(a('pop', .8, T.s4 + 2.3, { ease: 'var(--spring)' }))}">
-  <p class="abs sub" style="left:930px;top:720px;width:880px;${anim(a('up', .6, T.s4 + 3.2))}">by EduCut AI — your hub for your next opportunity in <b style="color:${C.ink}">research</b> and <b style="color:${C.ink}">industry</b>.</p>
+  <p class="abs sub" style="left:930px;top:720px;width:880px;${anim(a('up', .6, T.s4 + 3.2))}">by EduCut AI, your hub for your next opportunity in <b style="color:${C.ink}">research</b> and <b style="color:${C.ink}">industry</b>.</p>
 `);
 
-// S5 — how it works: three-up divided field
+// S5: how it works: three-up divided field
 html += scene(T.s5, T.s6, `
   <h1 class="abs m" style="left:120px;top:205px">${words('Opportunities from around the world, in one place.', T.s5 + .2, .05)}</h1>
   <div class="three" style="${anim(a('in', .4, T.s5 + .6))}">
@@ -343,7 +343,7 @@ html += scene(T.s5, T.s6, `
   </div>
 `);
 
-// S6 — upskill: the Professional earns the cape
+// S6: upskill: the Professional earns the cape
 html += scene(T.s6, T.s7, `
   <h1 class="abs m" style="left:120px;top:205px;width:1700px">${words('Missing a skill?', T.s6 + .2)} <span style="color:${C.cobalt}">${words('Close the gap.', T.s6 + .8)}</span></h1>
   ${reqCard(120, 400, T.s6 + .3, T.s6 + 3.6)}
@@ -361,7 +361,7 @@ html += scene(T.s6, T.s7, `
   <p class="abs sub" style="left:900px;top:330px;width:900px;text-align:right;${anim(a('up', .6, T.s6 + 5.2))}">Every offer links to the right course,<br>so you apply with confidence.</p>
 `);
 
-// S7 — finale on the acid stage: line-up P02 P03 P01 P04 P05, then the call to action
+// S7: finale on the acid stage: line-up P02 P03 P01 P04 P05, then the call to action
 const LINE = ['manager', 'graduate', 'lead', 'professional', 'learner'];
 html += `<section class="scene" style="background:${C.acid};${anim(a('in', .01, T.s7, { ease: 'linear' }), a('wipe', .7, T.s7, { ease: 'cubic-bezier(.7,0,.2,1)' }))}">
   <div class="abs" style="left:0;right:0;top:600px;display:flex;justify-content:center;gap:90px">

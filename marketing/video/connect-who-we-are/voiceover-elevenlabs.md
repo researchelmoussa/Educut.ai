@@ -1,4 +1,4 @@
-# EduCut Connect — "Who we are" voice-over (ElevenLabs)
+# EduCut Connect "Who we are" voice-over (ElevenLabs)
 
 Film length: 64 s. Read at a calm, confident pace (about 2.4 words per second).
 The `<break>` tags are ElevenLabs pause tags; they space each line so it lands on its scene.
