@@ -9,7 +9,8 @@ extra instructions from the administrator.
 Drive layout (IDs in `connect/config/connect.config.json` → `drive`):
 ```
 EduCut Connect/
-  links.txt                       approved sources (administrator-owned)
+  links.txt                       legacy source list (fallback only)
+  Scrawling/links                 Google Doc: approved sources, one URL per line (administrator-owned)
   Logos/                          official brand files
   Scrawling/<YYYY-MM-DD>/run-log.jsonl
   Communication/<YYYY-MM-DD>/00_Review_<date>.md
@@ -21,16 +22,18 @@ EduCut Connect/
 ```
 
 ## 1. Sources: always ask first
-1. Find `links.txt` in the EduCut Connect folder (Google Drive connector `search_files`:
-   `parentId = '<root id>' and title = 'links.txt'`), read it, and save it to `$RUN_DIR/links.txt`.
+1. The administrator keeps the sources in the Google Doc **`links`** in the `Scrawling` folder
+   (`parentId = '<crawling folder id>' and title = 'links'`). Download it as text
+   (`download_file_content`, `exportMimeType: text/plain`), strip the BOM and `\r`, and save it to
+   `$RUN_DIR/links.txt` under the header comments of the root `links.txt`. Only if that Doc is missing,
+   fall back to `links.txt` in the EduCut Connect root folder.
    Run `node connect/cli.mjs sources $RUN_DIR/links.txt` for the numbered list.
 2. Show the administrator the numbered list, then **ask with AskUserQuestion** (this is their input box):
    question "Today's EduCut Connect sources: run with these?", options
    "Run with these N sources" / "Skip today's run". They can type into "Other" to paste links to add, or
    write e.g. "remove 3".
-3. If they add or remove links, write the new full list to a new Drive file `links.txt` in the root folder,
-   keeping the header comments, then trash the old file (Drive files cannot be edited in place). Show the
-   final list. If they skip, stop.
+3. If they add or remove links, tell the administrator to update the `links` Doc (it is theirs), and use the
+   changed list for today's run. Show the final list. If they skip, stop.
 
 ## 2. Initialise
 1. `npm --prefix connect ci --no-audit --no-fund` (flag set and fonts), then `RUN_DIR=connect/runs/$(date -u +%F)`.
