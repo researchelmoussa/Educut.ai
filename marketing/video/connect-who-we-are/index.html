@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>EduCut Connect — Who we are</title>
+<!--
+  EduCut Connect "Who we are" film, 1920x1080.
+  Cast, palette and construction follow the Marketing cast board
+  (persona-moodboard.png, Board 14): five stick figures, ink outlines,
+  white bodies, paper stage, cobalt + acid as signatures only.
+  Every animation is a CSS animation on one absolute timeline (seconds);
+  render.mjs pauses them all and seeks frame by frame.
+-->
+<style>
+@font-face { font-family: "Plex Mono"; src: url(fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2"); font-weight: 400; }
+@font-face { font-family: "Plex Mono"; src: url(fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2"); font-weight: 500; }
+:root {
+  --paper: #F4F4EF; --ink: #0B0B0B; --white: #FFFFFF; --cobalt: #3256FE;
+  --acid: #A6ED2F; --grey: #8A8A85; --hair: #D6D6D1;
+  --e: cubic-bezier(.2,.8,.2,1); --spring: cubic-bezier(.34,1.56,.64,1);
+  --sans: "Inter Display", Inter, "Helvetica Neue", Arial, sans-serif;
+  --mono: "Plex Mono", "Liberation Mono", monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--paper); }
+body { font-family: var(--sans); color: var(--ink); position: relative; }
+svg { overflow: visible; display: block; }
+.abs { position: absolute; }
+.scene { position: absolute; inset: 0; opacity: 0; }
+
+h1 { font-weight: 700; font-size: 92px; line-height: 1.02; letter-spacing: -0.035em; }
+h1.m { font-size: 76px; }
+.sub { font-size: 34px; line-height: 1.3; color: #3A3A38; font-weight: 400; letter-spacing: -0.01em; }
+.label { font-family: var(--mono); font-size: 19px; letter-spacing: .14em; text-transform: uppercase; color: var(--cobalt); font-weight: 500; }
+.label.ink { color: var(--ink); }
+.w { display: inline-block; }
+.mask { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: .08em; margin-bottom: -.08em; }
+
+.pill { position: absolute; border: 3px solid var(--ink); border-radius: 999px; padding: 10px 24px;
+        font-weight: 700; font-size: 25px; letter-spacing: -0.01em; background: var(--white); white-space: nowrap; }
+.pill.c { background: var(--cobalt); color: var(--white); }
+.pill.a { background: var(--acid); }
+
+.card { position: absolute; background: var(--white); border: 3px solid var(--ink); border-radius: 22px; padding: 30px 34px; }
+.card .row { display: flex; align-items: center; gap: 20px; padding: 16px 0; border-top: 2px solid var(--hair); font-size: 30px; font-weight: 600; letter-spacing: -0.01em; }
+.ic { width: 46px; height: 46px; border-radius: 50%; border: 3px solid var(--ink); display: grid; place-items: center; font-weight: 800; font-size: 26px; flex: none; position: relative; }
+.ic.ok { background: var(--acid); }
+.ic.q { background: var(--cobalt); color: var(--white); }
+.ic > span { position: absolute; inset: -3px; border-radius: 50%; border: 3px solid var(--ink); background: var(--acid); display: grid; place-items: center; color: var(--ink); opacity: 0; }
+
+.three { position: absolute; left: 120px; right: 120px; top: 300px; height: 560px; display: grid; grid-template-columns: 1fr 1fr 1fr; border-top: 2px solid var(--ink); }
+.three .cell { position: relative; border-right: 2px solid var(--hair); padding: 26px 30px; }
+.three .cell:last-child { border-right: 0; }
+.three .tint { position: absolute; inset: 0; background: #E6F7C4; opacity: 0; }
+.three .cap { position: absolute; left: 30px; bottom: 30px; }
+.three .cap b { display: block; font-size: 36px; letter-spacing: -0.02em; margin-top: 10px; }
+
+.strip { position: absolute; left: 120px; right: 120px; top: 900px; display: flex; gap: 0; border-top: 2px solid var(--ink); }
+.strip div { flex: 1; padding-top: 22px; font-family: var(--mono); font-size: 20px; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; display: flex; gap: 14px; align-items: center; }
+.strip i { font-style: normal; width: 30px; height: 30px; border: 3px solid var(--ink); border-radius: 50%; background: var(--acid); display: grid; place-items: center; font-size: 16px; font-weight: 700; }
+
+.btn { display: inline-flex; align-items: center; gap: 14px; background: var(--ink); color: var(--acid); border-radius: 999px; padding: 22px 44px; font-size: 34px; font-weight: 700; letter-spacing: -0.01em; }
+.chip { position: absolute; background: var(--ink); color: var(--white); border-radius: 18px; padding: 20px 28px; border: 3px solid var(--ink); }
+.chip .label { color: var(--acid); }
+.chip b { display: block; font-size: 30px; margin-top: 6px; letter-spacing: -0.01em; }
+
+/* Keyframes. Positional ones read per-element custom properties. */
+@keyframes in    { from { opacity: 0 } to { opacity: 1 } }
+@keyframes out   { from { opacity: 1 } to { opacity: 0 } }
+@keyframes up    { from { opacity: 0; transform: translateY(46px) } to { opacity: 1; transform: none } }
+@keyframes wordUp{ from { transform: translateY(110%) } to { transform: none } }
+@keyframes pop   { 0% { opacity: 0; transform: scale(.5) } 70% { opacity: 1; transform: scale(1.06) } 100% { opacity: 1; transform: scale(1) } }
+@keyframes drop  { 0% { opacity: 0; transform: translate(0, -900px) rotate(var(--r0, -30deg)) } 8% { opacity: 1 } 75% { opacity: 1; transform: translate(0, 12px) rotate(var(--r)) } 100% { opacity: 1; transform: translate(0, 0) rotate(var(--r)) } }
+@keyframes fall  { from { transform: translate(0,0) rotate(var(--r)) } to { transform: translate(var(--fx, 0px), 1100px) rotate(var(--r1, 60deg)) } }
+@keyframes draw  { from { stroke-dashoffset: var(--len) } to { stroke-dashoffset: 0 } }
+@keyframes growY { from { transform: scaleY(0) } to { transform: scaleY(1) } }
+@keyframes wave  { from { transform: rotate(-14deg) } to { transform: rotate(16deg) } }
+@keyframes bob   { from { transform: translateY(0) } to { transform: translateY(-10px) } }
+@keyframes wipe  { from { clip-path: inset(100% 0 0 0) } to { clip-path: inset(0 0 0 0) } }
+@keyframes pulse { 0%,100% { transform: scale(1) } 50% { transform: scale(1.14) } }
+@keyframes spin  { from { transform: rotate(0) scale(.4); opacity: 0 } 60% { opacity: 1 } to { transform: rotate(90deg) scale(1); opacity: 1 } }
+@keyframes slideL{ from { opacity: 0; transform: translateX(160px) } to { opacity: 1; transform: none } }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<script>
+// ---------- palette & helpers ----------
+const C = { paper:'#F4F4EF', ink:'#0B0B0B', white:'#FFFFFF', cobalt:'#3256FE', acid:'#A6ED2F', hair:'#D6D6D1' };
+const SW = 'stroke="#0B0B0B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"';
+const sw = n => `stroke="#0B0B0B" stroke-width="${n}" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"`;
+// animation shorthand on the absolute timeline: a('up', .6, 3.2)
+const a = (name, dur, at, o = {}) =>
+  `${name} ${dur}s ${o.ease || 'var(--e)'} ${at}s ${o.iter || 1} ${o.dir || 'normal'} ${o.fill || 'both'}`;
+const anim = (...xs) => `animation:${xs.join(',')};`;
+// a scene visible from t0 to t1: fades out just before t1, the next fades in at t1
+const scene = (t0, t1, inner, extra = '') =>
+  `<section class="scene" style="${anim(a('in', t0 === 0 ? .01 : .45, t0, { ease: 'linear' }), a('out', .35, t1 - .35, { ease: 'linear', fill: 'forwards' }))}${extra}">${inner}</section>`;
+// headline whose words rise out of a mask, staggered
+const words = (text, at, step = .07) => text.split(' ').map((w, i) =>
+  `<span class="mask"><span class="w" style="${anim(a('wordUp', .7, at + i * step))}">${w}</span></span>`).join(' ');
+
+// ---------- personas (Board 14) ----------
+// Local box 200 x 300. One ink stroke, round joins, head ~1/3 of height,
+// open-ring hands, flat-tick feet, face = two dots + arc (flat line = "not yet").
+const ARMS = {
+  out:  [[80,140,34,166],[120,140,166,166]],
+  down: [[80,140,60,206],[120,140,140,206]],
+  up:   [[80,140,36,88],[120,140,164,88]],
+  wave: [[80,140,34,166],[120,140,164,96]],
+};
+function arm(x1, y1, x2, y2) {
+  return `<path d="M${x1} ${y1} L${x2} ${y2}" fill="none" ${SW}/><circle cx="${x2}" cy="${y2}" r="9" fill="#fff" ${SW}/>`;
+}
+function face(mood, cx = 100, cy = 68, glasses = false) {
+  const eyes = `<circle cx="${cx-14}" cy="${cy-4}" r="5" fill="${C.ink}"/><circle cx="${cx+14}" cy="${cy-4}" r="5" fill="${C.ink}"/>`;
+  const smile = `<path d="M${cx-16} ${cy+12} Q${cx} ${cy+28} ${cx+16} ${cy+12}" fill="none" ${SW}/>`;
+  const flat = `<path d="M${cx-12} ${cy+18} L${cx+12} ${cy+18}" fill="none" ${SW}/>`;
+  return eyes + (mood === 'flat' ? flat : smile);
+}
+/**
+ * fig(type, {mood, arms, stage, cape, waveAt, bobAt})
+ * type: lead | manager | graduate | professional | learner
+ * stage 'acid' turns the persona's acid details cobalt (board rule for finales).
+ */
+function fig(type, o = {}) {
+  const mood = o.mood || 'smile', pose = o.arms || 'out';
+  const acc = o.stage === 'acid' ? C.cobalt : C.acid;
+  let back = '', body = '', front = '', legs = '', torso = '';
+  const legsStd = (y0 = 198, shoes = null) =>
+    `<path d="M92 ${y0} L92 268 L80 268 M108 ${y0} L108 268 L120 268" fill="none" ${SW}/>` +
+    (shoes ? `<ellipse cx="84" cy="270" rx="15" ry="8" fill="${shoes}" ${SW}/><ellipse cx="116" cy="270" rx="15" ry="8" fill="${shoes}" ${SW}/>` : '');
+  torso = `<rect x="80" y="120" width="40" height="82" rx="20" fill="#fff" ${SW}/>`;
+  legs = legsStd();
+  if (type === 'lead') {
+    front = `<path d="M84 26 C80 10 98 8 96 22 C96 8 114 8 110 22 C112 10 126 16 118 28" fill="none" ${SW}/>`;
+    torso += `<path d="M88 122 L100 136 L112 122" fill="none" ${sw(4)}/>` +
+             `<path d="M96 134 L104 134 L108 172 L100 184 L92 172 Z" fill="${C.cobalt}" ${sw(4)}/>`;
+  }
+  if (type === 'manager') {
+    back = `<ellipse cx="150" cy="70" rx="15" ry="38" transform="rotate(18 150 70)" fill="${C.ink}" ${SW}/>`;
+    front = `<path d="M55 72 C50 30 100 8 144 42 C130 48 104 40 84 54 C72 62 62 68 55 72 Z" fill="${C.ink}" ${SW}/>`;
+    torso = `<rect x="80" y="120" width="40" height="82" rx="20" fill="${C.ink}" ${SW}/>` +
+            `<path d="M90 124 L100 152 L110 124" fill="none" stroke="#fff" stroke-width="4" vector-effect="non-scaling-stroke"/>` +
+            `<circle cx="100" cy="168" r="4" fill="#fff"/>`;
+    legs = legsStd(220) + `<path d="M82 192 L118 192 L128 226 L72 226 Z" fill="${C.ink}" ${SW}/>`;
+  }
+  if (type === 'graduate') {
+    back = `<path d="M52 70 C52 18 148 18 148 70 L154 150 L46 150 Z" fill="${C.ink}" ${SW}/>`;
+    torso = `<path d="M76 122 L124 122 L144 256 L56 256 Z" fill="${C.ink}" ${SW}/>` +
+            `<path d="M91 132 L86 250 M109 132 L114 250" fill="none" stroke="${acc}" stroke-width="7" vector-effect="non-scaling-stroke"/>`;
+    legs = `<path d="M92 252 L92 268 L80 268 M108 252 L108 268 L120 268" fill="none" ${SW}/>`;
+    front = `<circle cx="86" cy="66" r="14" fill="#fff" ${sw(5)}/><circle cx="114" cy="66" r="14" fill="#fff" ${sw(5)}/>` +
+            `<path d="M100 66 L100 66" ${SW}/>` +
+            `<path d="M70 32 L70 44 Q100 58 130 44 L130 32" fill="${C.ink}" ${SW}/>` +
+            `<path d="M38 28 L100 6 L162 28 L100 50 Z" fill="${C.ink}" ${SW}/>` +
+            `<path d="M100 27 L150 34 L150 64" fill="none" stroke="${acc}" stroke-width="6" stroke-linecap="round" vector-effect="non-scaling-stroke"/>` +
+            `<rect x="144" y="60" width="12" height="16" rx="2" fill="${acc}" ${sw(3)}/>`;
+  }
+  if (type === 'professional') {
+    if (o.cape) back = `<path d="M84 124 C50 162 38 222 46 262 L112 262 C100 222 104 172 116 124 Z" fill="${acc}" ${SW}/>`;
+    legs = legsStd(198, acc);
+  }
+  if (type === 'learner') {
+    back = `<path d="M44 74 C44 10 156 10 156 74 C156 118 134 140 100 140 C66 140 44 118 44 74 Z" fill="${C.cobalt}" ${SW}/>`;
+  }
+  const headR = type === 'learner' ? 40 : 46;
+  const head = `<circle cx="100" cy="68" r="${headR}" fill="#fff" ${SW}/>` +
+               (type === 'graduate' ? `<circle cx="86" cy="62" r="4.5" fill="${C.ink}"/><circle cx="114" cy="62" r="4.5" fill="${C.ink}"/>` +
+                 (mood === 'flat' ? `<path d="M90 90 L110 90" ${SW}/>` : `<path d="M86 84 Q100 98 114 84" fill="none" ${SW}/>`)
+                 : face(mood));
+  const A = ARMS[pose];
+  let arms;
+  if (pose === 'wave') {
+    const w = o.waveAt != null ? anim(a('wave', .5, o.waveAt, { ease: 'ease-in-out', iter: 'infinite', dir: 'alternate' })) : '';
+    arms = arm(...A[0]) + `<g style="transform-origin:120px 140px;transform-box:view-box;${w}">${arm(...A[1])}</g>`;
+  } else arms = arm(...A[0]) + arm(...A[1]);
+  return `<svg viewBox="0 0 200 300" width="${o.w || 200}" height="${(o.w || 200) * 1.5}">${back}${legs}${torso}${arms}${head}${front}</svg>`;
+}
+
+// ---------- props ----------
+function barChart(at) {
+  const bar = (x, h, f, d) => `<rect x="${x}" y="${220-h}" width="44" height="${h}" fill="${f}" ${SW} style="transform-origin:${x}px 220px;transform-box:view-box;${anim(a('growY', .7, at + d, { ease: 'var(--spring)' }))}"/>`;
+  return `<svg viewBox="0 0 240 240" width="240" height="240">
+    ${bar(44, 64, C.cobalt, 0)}${bar(104, 116, C.cobalt, .15)}${bar(164, 184, C.acid, .3)}
+    <path d="M24 16 L24 220 L232 220" fill="none" ${SW}/>
+    <path d="M150 40 L222 6 M204 6 L222 6 L218 24" fill="none" ${SW} style="${anim(a('in', .3, at + .8))}"/>
+    ${[[60,0],[96,-24],[132,-40]].map(([x,y],i)=>`<circle cx="${x-30}" cy="${y-6}" r="8" fill="${C.acid}" ${sw(4)} style="${anim(a('pop', .4, at + 1 + i*.15, {ease:'var(--spring)'}))}"/>`).join('')}
+  </svg>`;
+}
+function aiHall(at, mini = true) {
+  const cols = [44, 84, 124, 164, 204].map(x => `<rect x="${x}" y="98" width="14" height="108" fill="#fff" ${SW}/>`).join('');
+  const kids = mini ? [60, 100, 140, 180].map((x, i) =>
+    `<g style="transform-origin:${x}px 236px;transform-box:view-box;${anim(a('pop', .45, at + .5 + i * .12, { ease: 'var(--spring)' }))}">
+      <rect x="${x-9}" y="206" width="18" height="26" rx="9" fill="#fff" ${sw(4)}/><circle cx="${x}" cy="196" r="13" fill="${i===1?C.cobalt:'#fff'}" ${sw(4)}/>
+      <circle cx="${x}" cy="196" r="${i===1?9:0}" fill="#fff"/></g>`).join('') : '';
+  return `<svg viewBox="0 0 260 260" width="260" height="260">
+    <path d="M18 82 L130 22 L242 82 Z" fill="#fff" ${SW}/>
+    <rect x="110" y="48" width="40" height="26" fill="${C.acid}" ${sw(4)}/>
+    <text x="130" y="68" text-anchor="middle" font-family="Inter Display, Inter" font-weight="800" font-size="19">AI</text>
+    <rect x="26" y="82" width="208" height="16" fill="#fff" ${SW}/>${cols}
+    <rect x="14" y="206" width="232" height="18" fill="#fff" ${SW}/>${kids}
+  </svg>`;
+}
+function desk() {
+  return `<svg viewBox="0 0 300 260" width="300" height="260">
+    <path d="M60 60 L170 60 L160 150 L50 150 Z" fill="#fff" ${SW}/>
+    <circle cx="104" cy="104" r="11" fill="${C.cobalt}"/>
+    <path d="M128 92 Q140 104 128 118" fill="none" ${sw(4)}/>
+    <path d="M30 154 L270 154" fill="none" stroke="#0B0B0B" stroke-width="14" stroke-linecap="square" vector-effect="non-scaling-stroke"/>
+    <path d="M44 160 L44 258 M256 160 L256 258" fill="none" ${SW}/>
+  </svg>`;
+}
+function home(at) {
+  return `<svg viewBox="0 0 100 100" width="100" height="100" style="${anim(a('pop', .5, at, { ease: 'var(--spring)' }))}">
+    <path d="M14 46 L50 14 L86 46 L86 88 L14 88 Z" fill="#fff" ${SW}/><rect x="40" y="58" width="20" height="30" fill="${C.acid}" ${sw(5)}/></svg>`;
+}
+function sparkle(x, y, s, at, color = C.acid) {
+  return `<svg class="abs" viewBox="-50 -50 100 100" width="${s}" height="${s}" style="left:${x}px;top:${y}px;${anim(a('spin', .6, at, { ease: 'var(--spring)' }))}">
+    <path d="M0 -44 C6 -10 10 -6 44 0 C10 6 6 10 0 44 C-6 10 -10 6 -44 0 C-10 -6 -6 -10 0 -44 Z" fill="${color}" ${sw(4)}/></svg>`;
+}
+function globe(at) {
+  const pins = [[-120,-70,'Lausanne'],[60,-120,'Cambridge'],[140,10,'Tokyo'],[-60,60,'Boston'],[30,130,'Cape Town']];
+  return `<svg viewBox="-260 -260 520 520" width="520" height="520">
+    <g style="${anim(a('in', .8, at))}">
+      <circle r="230" fill="#fff" ${SW}/>
+      <ellipse rx="90" ry="230" fill="none" ${sw(3)}/><ellipse rx="170" ry="230" fill="none" ${sw(3)}/>
+      <path d="M-230 0 L230 0 M-200 -115 L200 -115 M-200 115 L200 115" fill="none" ${sw(3)}/>
+    </g>
+    <path d="M-120 -70 Q-40 -150 60 -120 Q160 -80 140 10 Q90 90 30 130 Q-40 120 -60 60 Q-120 20 -120 -70" fill="none"
+      stroke="${C.acid}" stroke-width="7" stroke-linecap="round" vector-effect="non-scaling-stroke"
+      style="--len:1300;stroke-dasharray:1300;${anim(a('draw', 2.4, at + .9, { ease: 'ease-in-out' }))}"/>
+    ${pins.map(([x, y, n], i) => `<g style="transform-origin:${x}px ${y}px;transform-box:view-box;${anim(a('pop', .5, at + .7 + i * .35, { ease: 'var(--spring)' }))}">
+      <path d="M${x} ${y} C${x-26} ${y-30} ${x-22} ${y-56} ${x} ${y-56} C${x+22} ${y-56} ${x+26} ${y-30} ${x} ${y} Z" fill="${C.acid}" ${sw(5)}/>
+      <circle cx="${x}" cy="${y-36}" r="8" fill="#fff" ${sw(4)}/>
+      <text x="${x}" y="${y+30}" text-anchor="middle" font-family="Plex Mono" font-weight="500" font-size="17" letter-spacing="2.4" fill="${C.ink}">${n.toUpperCase()}</text></g>`).join('')}
+  </svg>`;
+}
+
+// pills that bury the Lead (state A, "before")
+const PILLS = [
+  ['Job boards','',  -250, 40, -8], ['University portals','c', 40, -20, 6], ['PhD offers','a', -300, 170, 10],
+  ['Fellowships','', 110, 120, -12], ['Postdocs','c', -120, 260, 4], ['Internships','a', 150, 250, -6],
+  ['Career pages','', -330, 330, -14], ['Newsletters','', 120, 370, 9], ['Still open?','c', -170, 410, -4],
+  ['Deadline?','a', 60, 470, 12], ['Duplicate','', -320, 480, 7], ['Expired','c', 200, 520, -10],
+  ['Research labs','', -150, 560, -3], ['Summer schools','a', -20, 640, 5],
+];
+function pileOfPills(cx, cy, dropAt, fallAt) {
+  return PILLS.map(([t, k, dx, dy, r], i) => {
+    const fx = (dx > -100 ? 1 : -1) * (120 + (i * 37) % 160);
+    const s = `left:${cx + dx}px;top:${cy + dy}px;--r:${r}deg;--r0:${r * -3}deg;--fx:${fx}px;--r1:${r * 7}deg;` +
+      anim(...[dropAt != null ? a('drop', .75, dropAt + i * .28, { ease: 'cubic-bezier(.5,0,.7,1.2)' }) : null,
+               fallAt != null ? a('fall', 1.1, fallAt + (i % 5) * .06, { ease: 'cubic-bezier(.5,0,.9,.6)', fill: 'forwards' }) : null].filter(Boolean)) +
+      (dropAt == null ? `transform:rotate(${r}deg);` : '');
+    return `<span class="pill ${k}" style="${s}">${t}</span>`;
+  }).join('');
+}
+
+// requirement card for one offer
+function reqCard(x, y, at, solveAt) {
+  const row = (t, ok, i, solve) => `<div class="row" style="${anim(a('up', .5, at + .5 + i * .3))}">
+      <span class="ic ${ok ? 'ok' : 'q'}" style="${!ok && solve == null ? anim(a('pulse', .9, at + 2, { iter: 'infinite', ease: 'ease-in-out' })) : ''}">${ok ? '✓' : '?'}
+        ${solve != null ? `<span style="${anim(a('pop', .45, solve, { ease: 'var(--spring)' }))}">✓</span>` : ''}</span>${t}</div>`;
+  return `<div class="card" style="left:${x}px;top:${y}px;width:640px;${anim(a('up', .6, at))}">
+    <div class="label">Offer · Research Engineer, ML</div>
+    <div style="font-size:24px;color:#6b6b66;margin:8px 0 14px;font-weight:500">Requirements</div>
+    ${row("Master's degree", true, 0)}${row('Python', true, 1)}
+    ${row('Deep learning', false, 2, solveAt)}${row('Neural architectures', false, 3, solveAt != null ? solveAt + .25 : null)}
+  </div>`;
+}
+
+// ---------- timeline (seconds) ----------
+const T = { s1: 0, s2: 6.5, s3: 15, s4: 23.5, s5: 31, s6: 42.5, s7: 52, cta: 57.5, end: 64 };
+window.DURATION = T.end;
+
+let html = '';
+
+// persistent chrome: label, hairline, scene index
+html += `<div class="abs label ink" style="left:120px;top:58px">EduCut Connect — Who we are</div>
+<div class="abs label" id="idx" style="right:120px;top:58px">01 / 07</div>
+<div class="abs" style="left:120px;right:120px;top:100px;height:2px;background:${C.ink}"></div>`;
+
+// S1 — hook: the Lead and the world
+html += scene(T.s1, T.s2, `
+  <div class="abs label" style="left:120px;top:250px;${anim(a('in', .5, .3))}">01 — Your next move</div>
+  <h1 class="abs" style="left:120px;top:300px;width:880px">${words('Looking for your next opportunity?', .4)}</h1>
+  <p class="abs sub" style="left:120px;top:540px;width:760px;${anim(a('up', .6, 1.6))}">In industry or research. Anywhere in the world.</p>
+  <div class="abs" style="left:1180px;top:230px">${globe(.8)}</div>
+  <div class="abs" style="left:1010px;top:520px;${anim(a('up', .7, 1.0))}">${fig('lead', { w: 260, mood: 'smile', arms: 'out' })}</div>
+`);
+
+// S2 — the problem: buried under listings
+html += scene(T.s2, T.s3, `
+  <div class="abs label" style="left:120px;top:250px">02 — The problem</div>
+  <h1 class="abs" style="left:120px;top:300px;width:820px">${words('Too many platforms. Too many listings.', T.s2 + .2)}</h1>
+  <p class="abs sub" style="left:120px;top:540px;width:700px;${anim(a('up', .6, T.s2 + 1.2))}">Offers scattered everywhere. Hours of searching. Is it even still open?</p>
+  <div class="abs" style="left:120px;top:800px;${anim(a('in', .4, T.s2 + 1.5))}">
+    <div class="label ink">Tabs open</div><div id="tabs" style="font-size:120px;font-weight:700;letter-spacing:-0.04em;line-height:1">3</div>
+  </div>
+  <div class="abs" style="left:1240px;top:430px">
+    <div style="${anim(a('out', .3, T.s2 + 2.6, { fill: 'forwards' }))}">${fig('lead', { w: 280, mood: 'smile', arms: 'out' })}</div>
+    <div class="abs" style="left:0;top:0;${anim(a('in', .3, T.s2 + 2.6))}">${fig('lead', { w: 280, mood: 'flat', arms: 'down' })}</div>
+  </div>
+  <div class="abs" style="left:1380px;top:250px;width:1px;height:1px">${pileOfPills(0, 0, T.s2 + .8)}</div>
+`);
+
+// S3 — the doubt: does my profile match?
+html += scene(T.s3, T.s4, `
+  <div class="abs label" style="left:120px;top:170px">03 — The doubt</div>
+  <h1 class="abs m" style="left:120px;top:210px;width:1700px">${words('Is my profile a match?', T.s3 + .2)} <span style="color:${C.cobalt}">${words('Do I need to upskill?', T.s3 + 1.1)}</span></h1>
+  ${reqCard(120, 430, T.s3 + 1.6)}
+  <div class="abs" style="left:1040px;top:480px;${anim(a('up', .7, T.s3 + .8))}">${fig('professional', { w: 300, mood: 'flat', arms: 'down' })}</div>
+  <div class="abs" style="left:1280px;top:640px;${anim(a('up', .7, T.s3 + 1))}">${desk()}</div>
+`);
+
+// S4 — the reveal: EduCut Connect. Pills fall, the Lead rises on the acid path.
+html += scene(T.s4, T.s5, `
+  <svg class="abs" style="left:0;top:780px" width="1920" height="300" viewBox="0 0 1920 300">
+    <path d="M-20 200 C 300 120, 520 230, 860 150 S 1500 40, 1960 120" fill="none" stroke="${C.acid}" stroke-width="16" stroke-linecap="round"
+      style="--len:2300;stroke-dasharray:2300;${anim(a('draw', 1.6, T.s4 + 1.4, { ease: 'ease-in-out' }))}"/>
+  </svg>
+  <div class="abs" style="left:300px;top:470px">
+    <div style="${anim(a('out', .25, T.s4 + 1.3, { fill: 'forwards' }))}">${fig('lead', { w: 280, mood: 'flat', arms: 'down' })}</div>
+    <div class="abs" style="left:0;top:0;${anim(a('in', .25, T.s4 + 1.3), a('bob', .6, T.s4 + 1.6, { iter: 'infinite', dir: 'alternate', ease: 'ease-in-out' }))}">${fig('lead', { w: 280, mood: 'smile', arms: 'wave', waveAt: T.s4 + 1.6 })}</div>
+  </div>
+  <div class="abs" style="left:440px;top:290px;width:1px;height:1px">${pileOfPills(0, 0, null, T.s4 + .5)}</div>
+  ${sparkle(240, 470, 60, T.s4 + 1.8)}${sparkle(610, 430, 44, T.s4 + 2)}
+  <div class="abs label" style="left:930px;top:250px;${anim(a('in', .5, T.s4 + 2.2))}">04 — Meet</div>
+  <img class="abs" src="educut_connect_under_cut_light_transparent.svg" style="left:900px;top:270px;width:860px;${anim(a('pop', .8, T.s4 + 2.3, { ease: 'var(--spring)' }))}">
+  <p class="abs sub" style="left:930px;top:720px;width:880px;${anim(a('up', .6, T.s4 + 3.2))}">by EduCut AI — your hub for your next opportunity in <b style="color:${C.ink}">research</b> and <b style="color:${C.ink}">industry</b>.</p>
+`);
+
+// S5 — how it works: three-up divided field
+html += scene(T.s5, T.s6, `
+  <div class="abs label" style="left:120px;top:170px">05 — One hub, every path</div>
+  <h1 class="abs m" style="left:120px;top:205px">${words('Opportunities from around the world, in one place.', T.s5 + .2, .05)}</h1>
+  <div class="three" style="${anim(a('in', .4, T.s5 + .6))}">
+    ${[
+      ['01 · Industry', 'Jobs in industry', 'manager', barChart(T.s5 + 1.6)],
+      ['02 · Research', 'PhDs, postdocs & fellowships', 'graduate', aiHall(T.s5 + 2.4)],
+      ['03 · Early career', 'Internships & summer programs', 'learner', ''],
+    ].map(([lab, cap, who, prop], i) => `<div class="cell">
+        <div class="tint" style="${anim(a('in', .4, T.s5 + 6 + i * 1.3), a('out', .4, T.s5 + 7.2 + i * 1.3, { fill: 'forwards' }))}"></div>
+        <div class="abs" style="left:${who === 'learner' ? 190 : 40}px;top:40px;${anim(a('up', .6, T.s5 + 1 + i * .8))}">${fig(who, { w: 200, arms: who === 'learner' ? 'wave' : 'out', waveAt: T.s5 + 3 })}</div>
+        <div class="abs" style="left:250px;top:${who === 'graduate' ? 70 : 80}px">${prop}</div>
+        <div class="cap" style="${anim(a('up', .5, T.s5 + 1.3 + i * .8))}"><div class="label">${lab}</div><b>${cap}</b></div>
+      </div>`).join('')}
+  </div>
+  <div class="strip">
+    ${['Checked open', 'Official link to apply', 'Live deadline countdown'].map((t, i) =>
+      `<div style="${anim(a('up', .5, T.s5 + 4.4 + i * .4))}"><i>✓</i>${t}</div>`).join('')}
+  </div>
+`);
+
+// S6 — upskill: the Professional earns the cape
+html += scene(T.s6, T.s7, `
+  <div class="abs label" style="left:120px;top:170px">06 — Upskill</div>
+  <h1 class="abs m" style="left:120px;top:205px;width:1700px">${words('Missing a skill?', T.s6 + .2)} <span style="color:${C.cobalt}">${words('Close the gap.', T.s6 + .8)}</span></h1>
+  ${reqCard(120, 400, T.s6 + .3, T.s6 + 3.6)}
+  <div class="chip" style="left:120px;top:850px;width:640px;${anim(a('slideL', .7, T.s6 + 2.6, { ease: 'var(--spring)' }))}">
+    <div class="label">EduCut AI Academy · matched course</div><b>Deep Learning &amp; Neural Architectures I</b>
+  </div>
+  <div class="abs" style="left:1040px;top:470px">
+    <div style="${anim(a('up', .6, T.s6 + .5), a('out', .3, T.s6 + 4.2, { fill: 'forwards' }))}">${fig('professional', { w: 300, mood: 'flat', arms: 'down' })}</div>
+    <div class="abs" style="left:0;top:0;${anim(a('in', .3, T.s6 + 4.2))}">${fig('professional', { w: 300, mood: 'smile', arms: 'up', cape: true })}</div>
+  </div>
+  <div class="abs" style="left:1290px;top:630px">${desk()}</div>
+  <div class="abs" style="left:1620px;top:440px">${home(T.s6 + 4.6)}</div>
+  ${sparkle(990, 480, 64, T.s6 + 4.4)}${sparkle(1300, 450, 48, T.s6 + 4.6)}${sparkle(1000, 760, 40, T.s6 + 4.8)}${sparkle(1440, 560, 44, T.s6 + 5)}
+  <p class="abs sub" style="left:1040px;top:250px;width:0;height:0"></p>
+  <p class="abs sub" style="left:900px;top:330px;width:900px;text-align:right;${anim(a('up', .6, T.s6 + 5.2))}">Every offer links to the right course,<br>so you apply with confidence.</p>
+`);
+
+// S7 — finale on the acid stage: line-up P02 P03 P01 P04 P05, then the call to action
+const LINE = ['manager', 'graduate', 'lead', 'professional', 'learner'];
+html += `<section class="scene" style="background:${C.acid};${anim(a('in', .01, T.s7, { ease: 'linear' }), a('wipe', .7, T.s7, { ease: 'cubic-bezier(.7,0,.2,1)' }))}">
+  <div class="abs" style="left:0;right:0;top:600px;display:flex;justify-content:center;gap:90px">
+    ${LINE.map((p, i) => `<div style="${anim(a('up', .6, T.s7 + .5 + i * .15, { ease: 'var(--spring)' }))}">${fig(p, { w: 220, stage: 'acid', cape: p === 'professional', arms: p === 'lead' ? 'wave' : p === 'professional' ? 'up' : 'out', waveAt: T.s7 + 1.2 })}</div>`).join('')}
+  </div>
+  <div class="abs" style="left:0;right:0;top:170px;text-align:center;${anim(a('out', .35, T.cta, { fill: 'forwards' }))}">
+    <div class="label ink">07 — EduCut Connect</div>
+    <h1 style="margin-top:22px;font-size:120px">${words('Find. Upskill. Apply.', T.s7 + .6, .25)}</h1>
+    <p class="sub" style="color:${C.ink};margin-top:24px;${anim(a('up', .6, T.s7 + 1.8))}">Everything in one place.</p>
+  </div>
+  <div class="abs" style="left:0;right:0;top:120px;text-align:center;${anim(a('up', .6, T.cta + .3))}">
+    <img src="logo-connect-on-acid.svg" style="width:380px">
+  </div>
+  <div class="abs" style="left:0;right:0;top:330px;text-align:center">
+    <h1 style="font-size:80px">${words('Your next opportunity starts here.', T.cta + .5, .06)}</h1>
+    <div style="margin-top:34px;display:flex;justify-content:center;align-items:center;gap:36px;${anim(a('up', .6, T.cta + 1.2))}">
+      <span class="btn">Explore opportunities →</span>
+      <span class="label ink" style="font-size:22px">educutai.com/educut-connect</span>
+    </div>
+  </div>
+  <div class="abs" style="right:120px;top:40px;display:flex;align-items:center;gap:16px;${anim(a('in', .5, T.cta + 1.6))}">
+    <span class="label ink">A branch of</span><img src="logo-educut-on-acid.svg" style="height:56px">
+  </div>
+</section>`;
+
+document.getElementById('stage').innerHTML = html;
+
+// per-frame hooks that are not CSS animations
+const ease = x => 1 - Math.pow(1 - Math.min(Math.max(x, 0), 1), 3);
+window.onFrame = t => {
+  const n = 3 + Math.round(ease((t - (T.s2 + .8)) / 5.5) * 44);
+  const el = document.getElementById('tabs'); if (el) el.textContent = n;
+  const cuts = [T.s1, T.s2, T.s3, T.s4, T.s5, T.s6, T.s7];
+  const i = cuts.filter(c => t >= c).length;
+  document.getElementById('idx').textContent = `0${i} / 07`;
+};
+// seek every animation to time t (seconds)
+window.seek = t => {
+  for (const an of document.getAnimations()) { an.pause(); an.currentTime = t * 1000; }
+  window.onFrame(t);
+};
+// preview in a normal browser: play in real time
+if (!navigator.webdriver) {
+  const t0 = performance.now();
+  const loop = () => { const t = ((performance.now() - t0) / 1000) % window.DURATION; window.seek(t); requestAnimationFrame(loop); };
+  requestAnimationFrame(loop);
+}
+</script>
+</body>
+</html>
