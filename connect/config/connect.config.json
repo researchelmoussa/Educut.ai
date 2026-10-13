@@ -1,7 +1,17 @@
 {
   "publishing": {
-    "enabled": false,
-    "note": "No agent may publish. PUBLISHED is set only by `cli.mjs mark-published` after a human posts."
+    "enabled": true,
+    "note": "Only approved offers that are live on /educut-connect/ are queued (linkedin agent). Posts go out from the GitHub Action .github/workflows/linkedin-publish.yml with the page token; set false to pause all posting."
+  },
+  "linkedin": {
+    "page_name": "EduCut Connect",
+    "api_version": "202509",
+    "time_zone": "Europe/Zurich",
+    "active_hours": [7, 22],
+    "lead_minutes": 30,
+    "min_gap_minutes": 45,
+    "max_gap_minutes": 180,
+    "max_posts_per_run": 1
   },
   "daily": {
     "max_new_opportunities": 10,
