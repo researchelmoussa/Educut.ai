@@ -318,8 +318,8 @@ html += scene(T.s4, T.s5, `
   </div>
   <div class="abs" style="left:440px;top:290px;width:1px;height:1px">${pileOfPills(0, 0, null, T.s4 + .5)}</div>
   ${sparkle(240, 470, 60, T.s4 + 1.8)}${sparkle(610, 430, 44, T.s4 + 2)}
-  <img class="abs" src="educut_connect_under_cut_light_transparent.svg" style="left:900px;top:270px;width:860px;${anim(a('pop', .8, T.s4 + 2.3, { ease: 'var(--spring)' }))}">
-  <p class="abs sub" style="left:930px;top:720px;width:880px;${anim(a('up', .6, T.s4 + 3.2))}">by EduCut AI, your hub for your next opportunity in <b style="color:${C.ink}">research</b> and <b style="color:${C.ink}">industry</b>.</p>
+  <img class="abs" src="educut_connect_under_cut_light_transparent.svg" style="left:900px;top:270px;width:860px;${anim(a('pop', .8, T.s4 + 1.4, { ease: 'var(--spring)' }))}">
+  <p class="abs sub" style="left:930px;top:720px;width:880px;${anim(a('up', .6, T.s4 + 2.6))}">by EduCut AI, your hub for your next opportunity in <b style="color:${C.ink}">research</b> and <b style="color:${C.ink}">industry</b>.</p>
 `);
 
 // S5: how it works: three-up divided field
@@ -339,7 +339,7 @@ html += scene(T.s5, T.s6, `
   </div>
   <div class="strip">
     ${['Checked open', 'Official link to apply', 'Live deadline countdown'].map((t, i) =>
-      `<div style="${anim(a('up', .5, T.s5 + 4.4 + i * .4))}"><i>✓</i>${t}</div>`).join('')}
+      `<div style="${anim(a('up', .5, T.s5 + 6.2 + i * .4))}"><i>✓</i>${t}</div>`).join('')}
   </div>
 `);
 
