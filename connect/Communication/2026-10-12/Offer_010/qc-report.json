@@ -1,6 +1,6 @@
 {
   "opportunity_id": "opp_1b7c10856e39f359",
-  "at": "2026-10-13T10:34:44.641Z",
+  "at": "2026-10-13T10:43:59.726Z",
   "status": "PASS_WITH_FLAGS",
   "failures": [],
   "warnings": [
@@ -135,6 +135,13 @@
       "check": "alt text names title and institution",
       "pass": true,
       "detail": "alt text",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "landmark image licensed",
+      "pass": true,
+      "detail": "administrator-supplied · Administrator photo (Drive Landmarks/images/DEFAULT)",
       "owner": "visual-designer",
       "severity": "fail"
     },

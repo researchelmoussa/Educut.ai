@@ -51,12 +51,11 @@ sources, network).
 
 ## 4. Content (Agents 2 + 3 in parallel)
 City photos: for each offer's city, look in Drive `EduCut Connect/Landmarks/` for a photo named
-`<City>.jpg|png` or `<City>-<CC>.jpg|png` (e.g. `Geneva.jpg`, `Cambridge-GB.jpg`); when the offer has no
-city, look for `<Country>.jpg|png` (e.g. `Germany.jpg`) and register it with the country name as the city.
-When neither exists, use the country photo in `Landmarks/images/<CC>/` (download it, look at it, and
-pass what it shows as `--landmark`).
-When the place is not specified (no city and no country) or there is no photo for the country, the card
-uses the default photo: download `Landmarks/images/DEFAULT/default.jpg` once per run and register it with
+`<City>.jpg|png` or `<City>-<CC>.jpg|png` (e.g. `Geneva.jpg`, `Cambridge-GB.jpg`). When there is none, use
+the country photo in `Landmarks/images/<CC>/` and register it under the offer's city (download it, look at
+it, and pass what it shows as `--landmark`).
+When the place is not specified (no city in the record, even if the country is known) the card uses the
+default photo, never a country photo: download `Landmarks/images/DEFAULT/default.jpg` once per run and register it with
 `node connect/cli.mjs landmark-add Default DEFAULT <file> --landmark "<what it shows>"`; the renderer falls
 back to it automatically. If found, download it with the
 connector into `$RUN_DIR/landmarks/` and register it:

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-13T10:53:24.470Z",
+  "updated_at": "2026-10-13T17:23:13.891Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -995,7 +995,7 @@
       "deadline": "2026-10-15T23:59:00+09:00",
       "content_hash": "sha256:a3f0e5645b0f1ff314a26ab2baedef52e12e2a7887bd4b76bb697c8c580890bc",
       "last_verified_at": "2026-10-13T10:51:24.298Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "READY_TO_PUBLISH",
       "first_seen": "2026-10-13T10:51:29.001Z",
       "history": [
         {
@@ -1025,6 +1025,20 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-13T17:23:13.561Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (approved in chat, 2026-10-13)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-13T17:23:13.561Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 15
@@ -1043,7 +1057,7 @@
       "deadline": "2026-11-16T14:00:00+01:00",
       "content_hash": "sha256:c6061a953eaecc2916325e10c5855a8675ba2cabc782238b321109ea30c021c6",
       "last_verified_at": "2026-10-13T10:51:24.725Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "READY_TO_PUBLISH",
       "first_seen": "2026-10-13T10:51:29.207Z",
       "history": [
         {
@@ -1073,6 +1087,20 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-13T17:23:13.718Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (approved in chat, 2026-10-13)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-13T17:23:13.719Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 16
@@ -1091,7 +1119,7 @@
       "deadline": "2026-10-15T23:59:00",
       "content_hash": "sha256:057afa85c189de29656796fa6718d55bc5562d68fcc347d3430f419eb19565a5",
       "last_verified_at": "2026-10-13T10:51:25.752Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "READY_TO_PUBLISH",
       "first_seen": "2026-10-13T10:51:29.454Z",
       "history": [
         {
@@ -1121,6 +1149,20 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-13T17:23:13.891Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (approved in chat, 2026-10-13)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-13T17:23:13.891Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 17
