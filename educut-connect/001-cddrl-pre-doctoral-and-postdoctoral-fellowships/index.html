@@ -38,9 +38,10 @@
     </header>
 
     <section class="page-section alt">
-      <div class="wrap cx-offer" data-deadline="2026-11-30">
+      <div class="wrap cx-offer">
         <figure><img src="/educut-connect/001-cddrl-pre-doctoral-and-postdoctoral-fellowships/card.png" alt="EduCut Connect card: CDDRL Pre-doctoral and Postdoctoral Fellowships, Center on Democracy, Development and the Rule of Law, Stanford University, Stanford, United States." width="1080" height="1350" /></figure>
-        <div>
+        <div data-deadline="2026-11-30" data-suffix=" to apply">
+          <p class="cx-countdown"><strong data-countdown>Deadline 30 November 2026</strong><span>Deadline 30 November 2026</span></p>
           <h2>In short</h2>
           <p class="cx-summary">Nine-month residential fellowships at Stanford University, from September to June, for pre-doctoral and postdoctoral scholars working on democracy, development and the rule of law. Fellows spend the year in residence at the Center on Democracy, Development and the Rule of Law, writing and doing research. CDDRL offers two to four fully funded fellowships each academic year.</p>
           <ul class="cx-points">
@@ -56,18 +57,41 @@
             <div><dt>Type</dt><dd>Fellowship</dd></div>
             <div><dt>Field</dt><dd>Democracy, Development &amp; Rule of Law</dd></div>
             <div><dt>Level</dt><dd>Pre-doctoral / Postdoctoral</dd></div>
-            <div><dt>Deadline</dt><dd data-status>30 November 2026</dd></div>
+            <div><dt>Deadline</dt><dd>30 November 2026</dd></div>
           </dl>
           <div class="cx-actions">
-            <a class="btn btn-lime btn-lg cx-apply" data-apply href="https://cddrl.fsi.stanford.edu/cddrl-pre-doctoral-and-postdoctoral-fellowships" target="_blank" rel="noopener">Apply on the official page →</a>
             <a class="cx-upskill" href="https://educutai.com/academies/ai-for-education/#a010-07"><span class="mono">Upskill with EduCut AI Academy · A010.07</span><strong>AI for Research &amp; Academic Productivity →</strong></a>
+            <a class="cx-apply" data-apply href="https://cddrl.fsi.stanford.edu/cddrl-pre-doctoral-and-postdoctoral-fellowships" target="_blank" rel="noopener">Apply on the official page →</a>
           </div>
           <p class="cx-disclaimer">EduCut AI is not the employer, recruiter or a partner of Center on Democracy, Development and the Rule of Law, Stanford University. Details are taken from the official page; check them there before applying. EduCut AI courses build skills and do not guarantee selection.</p>
         </div>
       </div>
     </section>
 <script>
-(function(){var now=Date.now();document.querySelectorAll('[data-deadline]').forEach(function(el){var d=el.getAttribute('data-deadline');if(!d)return;var t=Date.parse(d.length===10?d+'T23:59:59Z':d);if(t&&t<now){el.classList.add('is-closed');var s=el.querySelector('[data-status]');if(s)s.textContent='Closed';var a=el.querySelector('[data-apply]');if(a){a.removeAttribute('href');a.setAttribute('aria-disabled','true');a.textContent='Applications closed';}}});})();
+(function(){
+  function end(d){if(!d)return NaN;return Date.parse(d.length===10?d+'T23:59:59Z':d);}
+  function left(ms){var m=Math.floor(ms/60000),d=Math.floor(m/1440),h=Math.floor(m%1440/60),n=m%60;
+    if(d>=2)return d+' days left';if(d===1)return '1 day '+h+' h left';if(h>=1)return h+' h '+n+' min left';return Math.max(n,1)+' min left';}
+  function tick(){var now=Date.now();
+    document.querySelectorAll('[data-deadline]').forEach(function(el){
+      var t=end(el.getAttribute('data-deadline')),c=el.querySelector('[data-countdown]'),suffix=el.getAttribute('data-suffix')||'';
+      if(isNaN(t)){el.setAttribute('data-rank','1');if(c)c.textContent='No deadline stated';return;}
+      if(t<now){el.classList.add('is-closed');el.setAttribute('data-rank','2');el.setAttribute('data-key',String(-t));if(c)c.textContent='Closed';
+        var a=el.querySelector('[data-apply]');if(a&&a.hasAttribute('href')){a.removeAttribute('href');a.setAttribute('aria-disabled','true');a.textContent='Applications closed';}}
+      else{el.setAttribute('data-rank','0');el.setAttribute('data-key',String(t));if(c)c.textContent=left(t-now)+suffix;}
+    });}
+  function sort(){var list=document.querySelector('[data-offers]');if(!list)return;
+    var items=[].slice.call(list.children);
+    items.sort(function(a,b){return (+a.getAttribute('data-rank'))-(+b.getAttribute('data-rank'))||(+a.getAttribute('data-key')||0)-(+b.getAttribute('data-key')||0);});
+    items.forEach(function(li){list.appendChild(li);});}
+  function search(){var q=document.getElementById('cx-q'),list=document.querySelector('[data-offers]'),out=document.getElementById('cx-results');if(!q||!list)return;
+    var terms=q.value.toLowerCase().split(/\s+/).filter(Boolean),shown=0,items=list.children;
+    for(var i=0;i<items.length;i++){var hay=items[i].getAttribute('data-search')||'';var ok=terms.every(function(w){return hay.indexOf(w)>-1;});items[i].hidden=!ok;if(ok)shown++;}
+    if(out)out.textContent=terms.length?shown+' of '+items.length+' opportunities match':items.length+' opportunities · most urgent first';}
+  tick();sort();
+  var f=document.getElementById('cx-search');if(f){f.addEventListener('submit',function(e){e.preventDefault();search();});document.getElementById('cx-q').addEventListener('input',search);search();}
+  setInterval(tick,60000);
+})();
 </script>
   </main>
 <footer>

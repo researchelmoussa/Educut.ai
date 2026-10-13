@@ -40,15 +40,18 @@
 
     <section class="page-section" aria-labelledby="cx-list">
       <div class="wrap">
-        <div class="cx-bar"><h2 id="cx-list">Current opportunities</h2><span class="mono">Newest first</span></div>
-      <ul class="cx-grid">
-        <li><a class="cx-card" href="/educut-connect/001-cddrl-pre-doctoral-and-postdoctoral-fellowships/" data-deadline="2026-11-30">
+        <div class="cx-bar"><h2 id="cx-list">Current opportunities</h2><span class="mono">Most urgent first</span></div>
+        <form class="cx-search" id="cx-search" role="search"><label class="sr-only" for="cx-q">Search opportunities</label><input id="cx-q" type="search" placeholder="Search by title, institution, country or field" autocomplete="off" /><button type="submit">Search</button></form>
+        <p class="mono cx-results" id="cx-results" aria-live="polite">1 opportunity · most urgent first</p>
+      <ul class="cx-grid" data-offers>
+        <li data-deadline="2026-11-30" data-search="offer 001 cddrl pre-doctoral and postdoctoral fellowships center on democracy, development and the rule of law, stanford university stanford, united states democracy, development &amp; rule of law pre-doctoral / postdoctoral fellowship fellowship onsite"><a class="cx-card" href="/educut-connect/001-cddrl-pre-doctoral-and-postdoctoral-fellowships/">
           <img class="cx-photo" src="/educut-connect/001-cddrl-pre-doctoral-and-postdoctoral-fellowships/photo.jpg" alt="New York skyline with the Statue of Liberty and the Empire State Building, United States" width="609" height="406" loading="lazy" />
           <div class="cx-body">
             <span class="mono cx-kicker">Offer 001 · Fellowship · <span class="cx-tag">Preview</span></span>
             <h3>CDDRL Pre-doctoral and Postdoctoral Fellowships</h3>
             <p class="cx-inst">Center on Democracy, Development and the Rule of Law, Stanford University<br />Stanford, United States</p>
-            <div class="mono cx-meta"><span data-status>Deadline 30 Nov 2026</span><span class="cx-more">View →</span></div>
+            <span class="cx-count" data-countdown>Deadline 30 Nov 2026</span>
+            <div class="mono cx-meta"><span>Deadline 30 Nov 2026</span><span class="cx-more">View →</span></div>
           </div>
         </a></li>
       </ul>
@@ -57,7 +60,30 @@
 
     <section class="cta"><div class="wrap cta-grid"><h2>Build the AI skills these roles ask for.</h2><a class="btn btn-lg" href="/academies/">Explore the EduCut AI Academy →</a></div></section>
 <script>
-(function(){var now=Date.now();document.querySelectorAll('[data-deadline]').forEach(function(el){var d=el.getAttribute('data-deadline');if(!d)return;var t=Date.parse(d.length===10?d+'T23:59:59Z':d);if(t&&t<now){el.classList.add('is-closed');var s=el.querySelector('[data-status]');if(s)s.textContent='Closed';var a=el.querySelector('[data-apply]');if(a){a.removeAttribute('href');a.setAttribute('aria-disabled','true');a.textContent='Applications closed';}}});})();
+(function(){
+  function end(d){if(!d)return NaN;return Date.parse(d.length===10?d+'T23:59:59Z':d);}
+  function left(ms){var m=Math.floor(ms/60000),d=Math.floor(m/1440),h=Math.floor(m%1440/60),n=m%60;
+    if(d>=2)return d+' days left';if(d===1)return '1 day '+h+' h left';if(h>=1)return h+' h '+n+' min left';return Math.max(n,1)+' min left';}
+  function tick(){var now=Date.now();
+    document.querySelectorAll('[data-deadline]').forEach(function(el){
+      var t=end(el.getAttribute('data-deadline')),c=el.querySelector('[data-countdown]'),suffix=el.getAttribute('data-suffix')||'';
+      if(isNaN(t)){el.setAttribute('data-rank','1');if(c)c.textContent='No deadline stated';return;}
+      if(t<now){el.classList.add('is-closed');el.setAttribute('data-rank','2');el.setAttribute('data-key',String(-t));if(c)c.textContent='Closed';
+        var a=el.querySelector('[data-apply]');if(a&&a.hasAttribute('href')){a.removeAttribute('href');a.setAttribute('aria-disabled','true');a.textContent='Applications closed';}}
+      else{el.setAttribute('data-rank','0');el.setAttribute('data-key',String(t));if(c)c.textContent=left(t-now)+suffix;}
+    });}
+  function sort(){var list=document.querySelector('[data-offers]');if(!list)return;
+    var items=[].slice.call(list.children);
+    items.sort(function(a,b){return (+a.getAttribute('data-rank'))-(+b.getAttribute('data-rank'))||(+a.getAttribute('data-key')||0)-(+b.getAttribute('data-key')||0);});
+    items.forEach(function(li){list.appendChild(li);});}
+  function search(){var q=document.getElementById('cx-q'),list=document.querySelector('[data-offers]'),out=document.getElementById('cx-results');if(!q||!list)return;
+    var terms=q.value.toLowerCase().split(/\s+/).filter(Boolean),shown=0,items=list.children;
+    for(var i=0;i<items.length;i++){var hay=items[i].getAttribute('data-search')||'';var ok=terms.every(function(w){return hay.indexOf(w)>-1;});items[i].hidden=!ok;if(ok)shown++;}
+    if(out)out.textContent=terms.length?shown+' of '+items.length+' opportunities match':items.length+' opportunities · most urgent first';}
+  tick();sort();
+  var f=document.getElementById('cx-search');if(f){f.addEventListener('submit',function(e){e.preventDefault();search();});document.getElementById('cx-q').addEventListener('input',search);search();}
+  setInterval(tick,60000);
+})();
 </script>
   </main>
 <footer>
