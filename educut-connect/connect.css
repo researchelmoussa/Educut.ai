@@ -8,6 +8,7 @@
 .cx-card{display:flex;flex-direction:column;height:100%;background:#fff;border:1px solid var(--line);color:var(--ink);text-decoration:none;transition:border-color .15s,transform .15s}
 .cx-card:hover,.cx-card:focus-visible{border-color:var(--ink);transform:translateY(-2px)}
 .cx-card img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;background:var(--soft);border-bottom:1px solid var(--line)}
+.cx-card img.cx-photo{aspect-ratio:3/2}
 .cx-card .cx-body{display:flex;flex-direction:column;gap:8px;padding:16px 18px 18px;flex:1}
 .cx-card .cx-kicker{color:var(--blue);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
 .cx-card h3{font-size:19px;line-height:1.2;letter-spacing:-.02em;margin:0}

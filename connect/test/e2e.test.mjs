@@ -185,12 +185,16 @@ test('full pipeline on a fixture site', { timeout: 120_000 }, () => {
   assert.equal(rejected.ok, false);
   assert.ok(rejected.failures.some((f) => f.check === 'no salary claimed'));
   writeFileSync(join(prep.offer_dir, 'site-entry.json'), JSON.stringify(entry));
-  const added = sh('site-add', prep.offer_dir, '--approved-by', 'Test Admin', '--site', siteRoot);
+  const square = join(siteRoot, 'square.jpg');
+  execFileSync('python3', ['-I', '-c', 'import sys\nfrom PIL import Image\nImage.new("RGB",(800,800),(40,80,200)).save(sys.argv[1])', square]);
+  const added = sh('site-add', prep.offer_dir, '--approved-by', 'Test Admin', '--photo', square, '--photo-alt', 'Geneva lakefront', '--site', siteRoot);
   assert.equal(added.ok, true);
+  assert.deepEqual([added.photo.width, added.photo.height], [800, 533]); // cropped to 3:2 landscape
   assert.equal(added.page_url, page.url);
   sh('site-build', '--site', siteRoot);
   const listing = readFileSync(join(siteRoot, 'educut-connect', 'index.html'), 'utf8');
   assert.ok(listing.includes(`href="/educut-connect/${page.slug}/"`));
+  assert.ok(listing.includes(`src="/educut-connect/${page.slug}/photo.jpg" alt="Geneva lakefront"`));
   const offerHtml = readFileSync(join(siteRoot, 'educut-connect', page.slug, 'index.html'), 'utf8');
   assert.ok(offerHtml.includes(`href="${record.application_url}"`));
   assert.ok(offerHtml.includes(`href="${course.url}"`));

@@ -89,8 +89,9 @@ const commands = {
   drive-sync                          Upload offers, review and registry to Drive (needs GDRIVE_* secrets)
   drive-pull-registry                 Download Registry/registry.json from Drive into the run
   optimize-png <file>                 Shrink a PNG (palette) for connector uploads
-  site-add <offer-dir> --approved-by <name> | --preview
-                                      Add or update an offer on /educut-connect/ from web-brief.json + site-entry.json
+  site-add <offer-dir> --approved-by <name> | --preview [--photo <file> --photo-alt <text>]
+                                      Add or update an offer on /educut-connect/ from web-brief.json + site-entry.json;
+                                      the photo (default: the offer's city.jpg) becomes the card's 3:2 landscape picture
   site-remove <id|slug|Offer_NNN>     Take an offer off the site
   site-build [--include-previews]     Regenerate /educut-connect/ (listing + one page per offer) and the sitemap;
                                       --include-previews lists unapproved offers too (review branches only, never main)`);
@@ -520,7 +521,7 @@ const commands = {
   'site-add'() {
     const dir = resolve(args[0] ?? fail('site-add <offer-dir> --approved-by <name> | --preview'));
     if (!flags['approved-by'] && !flags.preview) fail('--approved-by <name> (offer approved) or --preview (page for review, kept off the listing and sitemap) is required');
-    const r = addEntry({ offerDir: dir, root: flags.site ? resolve(flags.site) : undefined, config, approvedBy: flags['approved-by'] || null, preview: Boolean(flags.preview) });
+    const r = addEntry({ offerDir: dir, root: flags.site ? resolve(flags.site) : undefined, config, approvedBy: flags['approved-by'] || null, preview: Boolean(flags.preview), photo: typeof flags.photo === 'string' ? resolve(flags.photo) : null, photoAlt: typeof flags['photo-alt'] === 'string' ? flags['photo-alt'] : null });
     log('site.add', { offer: basename(dir), ok: r.ok, preview: r.preview ?? null });
     out(r);
     if (!r.ok) process.exitCode = 3;
