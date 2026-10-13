@@ -833,6 +833,7 @@
     .p-axis i{flex:1;height:2px;margin:0 14px;background:linear-gradient(90deg,var(--line),var(--ink))}
     .p-cta{display:flex;align-items:center;gap:22px;margin-top:34px}.p-cta .section-more{margin:0}
     @media(max-width:900px){.pw{grid-template-columns:1fr}.pc:nth-child(n){min-height:0}.p-axis{display:none}.p-cta{flex-direction:column;align-items:flex-start}}
+    .connect-section{background:#1B32C8;color:#fff;padding:84px 0}.connect-section h2{color:#fff}.connect-section .section-head p{color:#dfe3ff}.connect-section .connect-tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px;padding:0;list-style:none}.connect-section .connect-tags li{border:1px solid rgba(255,255,255,.55);padding:9px 12px;font-size:13px}.connect-section .connect-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.connect-section .connect-actions .mono{color:#dfe3ff}
     .academy-section{background:#fff}.academies{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--line)}
     .academy{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:128px}.academy .code{color:var(--blue)}.academy h4{font-size:18px;margin:20px 0 0}
     .how{background:var(--ink);color:white}.how .section-head p{color:#aaa}.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #444}.step{padding:28px;border-right:1px solid #333}.step:last-child{border-right:0}.step .n{color:var(--lime);font-size:12px}.step h3{font-size:22px;margin:40px 0 10px}.step p{color:#9e9e9a;font-size:14px}
@@ -1894,7 +1895,7 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
     <div class="wrap nav-inner">
       <div class="brand">EduCut<span>.ai</span></div>
       <div class="nav-links">
-        <a href="/academies/">Academies</a><a href="/ai-learning-paths/">AI Paths</a><a href="/ai-learning-paths/#how">How it works</a><a href="/contact/">Contact</a><a href="/#/signup" data-auth-open="signup">Sign up</a><a href="/#/signin" data-auth-open="signin">Sign In</a>
+        <a href="/academies/">Academies</a><a href="/ai-learning-paths/">AI Paths</a><a href="/ai-learning-paths/#how">How it works</a><a href="/educut-connect/">Connect</a><a href="/contact/">Contact</a><a href="/#/signup" data-auth-open="signup">Sign up</a><a href="/#/signin" data-auth-open="signin">Sign In</a>
         <button class="btn btn-lime" data-start>Take the 3-min test</button>
       </div>
     </div>
@@ -1990,6 +1991,12 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
     <div class="academy-themes" id="academyGrid"></div>
     <div class="academy-explorer" id="academyExplorer" aria-live="polite"></div>
     <p class="section-more"><a href="/academies/">Browse all 18 academies and their courses →</a></p>
+  </div></section>
+
+  <section class="connect-section" id="educut-connect" aria-labelledby="connect-title"><div class="wrap">
+    <div class="section-head" data-reveal><div><div class="mono" style="color:var(--lime);margin-bottom:14px">EduCut Connect</div><h2 id="connect-title">Your next opportunity<br>in Industry &amp; Research.</h2></div><p>Jobs, fellowships, scholarships and research positions worldwide, checked against their official pages. Each offer shows the time left to apply, the official application link and an EduCut AI Academy course to strengthen your profile.</p></div>
+    <ul class="connect-tags mono"><li>Jobs</li><li>Fellowships</li><li>Scholarships</li><li>PhD &amp; Postdoc</li><li>Worldwide</li></ul>
+    <div class="connect-actions"><a class="btn btn-lime btn-lg" href="/educut-connect/">Explore opportunities →</a><span class="mono">Sorted by deadline · updated as new offers are approved</span></div>
   </div></section>
 
   <section class="how" id="how"><div class="wrap">
@@ -2125,6 +2132,7 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
           <li><a href="/">Home</a></li>
           <li><a href="/academies/">All academies</a></li>
           <li><a href="/ai-learning-paths/">AI learning paths</a></li>
+          <li><a href="/educut-connect/">EduCut Connect: opportunities</a></li>
           <li><a href="/contact/">Contact &amp; consultation</a></li>
         </ul>
         <p class="footer-place">Based in Switzerland</p>

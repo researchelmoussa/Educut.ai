@@ -1,6 +1,6 @@
 {
   "opportunity_id": "opp_1b7c10856e39f359",
-  "at": "2026-10-12T21:23:21.044Z",
+  "at": "2026-10-13T10:34:44.641Z",
   "status": "PASS_WITH_FLAGS",
   "failures": [],
   "warnings": [
@@ -169,14 +169,14 @@
     {
       "check": "caption length 70–150 words",
       "pass": true,
-      "detail": "121 words",
+      "detail": "104 words",
       "owner": "communications",
       "severity": "fail"
     },
     {
       "check": "caption length ideally 80–130 words",
       "pass": true,
-      "detail": "121 words",
+      "detail": "104 words",
       "owner": "communications",
       "severity": "warn"
     },
@@ -223,9 +223,30 @@
       "severity": "fail"
     },
     {
-      "check": "CTA says it is not the application link",
+      "check": "EduCut Connect page link",
       "pass": true,
-      "detail": "caption must say educutai.com is EduCut’s site, not the application page",
+      "detail": "educut_link must be {\"url\":\"https://educutai.com/educut-connect/010-joint-master-of-arts-in-public-policy-mundus-mapp/\",\"type\":\"opportunity_page\"}",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "EduCut Connect page link in caption",
+      "pass": true,
+      "detail": "caption must contain \"Explore this opportunity through EduCut Connect: https://educutai.com/educut-connect/010-joint-master-of-arts-in-public-policy-mundus-mapp/\"",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "caption does not refer to the first comment",
+      "pass": true,
+      "detail": "the post no longer says where the application link is",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "upskilling line present",
+      "pass": true,
+      "detail": "a line starting \"Want to strengthen your profile for opportunities like this?\"",
       "owner": "communications",
       "severity": "fail"
     },

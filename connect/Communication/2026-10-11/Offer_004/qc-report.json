@@ -1,6 +1,6 @@
 {
   "opportunity_id": "opp_d8e749accb029876",
-  "at": "2026-10-12T21:23:19.429Z",
+  "at": "2026-10-13T10:34:41.792Z",
   "status": "PASS_WITH_FLAGS",
   "failures": [],
   "warnings": [
@@ -139,6 +139,13 @@
       "severity": "fail"
     },
     {
+      "check": "landmark image licensed",
+      "pass": true,
+      "detail": "administrator-supplied · Administrator photo (Drive Landmarks)",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
       "check": "package matches comms-package.schema.json",
       "pass": true,
       "detail": "ok",
@@ -176,21 +183,21 @@
     {
       "check": "caption length 70–150 words",
       "pass": true,
-      "detail": "125 words",
+      "detail": "121 words",
       "owner": "communications",
       "severity": "fail"
     },
     {
       "check": "caption length ideally 80–130 words",
       "pass": true,
-      "detail": "125 words",
+      "detail": "121 words",
       "owner": "communications",
       "severity": "warn"
     },
     {
       "check": "at most 3 emojis",
       "pass": true,
-      "detail": "1 emoji(s)",
+      "detail": "2 emoji(s)",
       "owner": "communications",
       "severity": "fail"
     },
@@ -230,9 +237,30 @@
       "severity": "fail"
     },
     {
-      "check": "CTA says it is not the application link",
+      "check": "EduCut Connect page link",
       "pass": true,
-      "detail": "caption must say educutai.com is EduCut’s site, not the application page",
+      "detail": "educut_link must be {\"url\":\"https://educutai.com/educut-connect/004-gates-cambridge-scholarship/\",\"type\":\"opportunity_page\"}",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "EduCut Connect page link in caption",
+      "pass": true,
+      "detail": "caption must contain \"Explore this opportunity through EduCut Connect: https://educutai.com/educut-connect/004-gates-cambridge-scholarship/\"",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "caption does not refer to the first comment",
+      "pass": true,
+      "detail": "the post no longer says where the application link is",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "upskilling line present",
+      "pass": true,
+      "detail": "a line starting \"Want to strengthen your profile for opportunities like this?\"",
       "owner": "communications",
       "severity": "fail"
     },

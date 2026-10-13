@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node connect/cli.mjs:*)",
+      "Bash(node --test connect/test/*)",
+      "Bash(base64 -w0 connect/runs/*)"
+    ]
+  }
+}

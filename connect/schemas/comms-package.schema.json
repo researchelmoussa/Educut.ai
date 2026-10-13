@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://educutai.com/connect/schemas/comms-package.schema.json",
+  "title": "CommsPackage",
+  "description": "LinkedIn publication package produced by the Communications agent from one OpportunityRecord.",
+  "type": "object",
+  "required": [
+    "opportunity_id", "record_content_hash", "caption", "alternative_hook", "first_comment", "hashtags",
+    "educut_link", "official_application_url", "course_match", "fact_check"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "opportunity_id": { "type": "string", "pattern": "^opp_[0-9a-f]{16}$" },
+    "record_content_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "caption": { "type": "string", "minLength": 1 },
+    "alternative_hook": { "type": "string", "minLength": 1 },
+    "first_comment": { "type": "string", "minLength": 1 },
+    "hashtags": { "type": "array", "items": { "type": "string", "pattern": "^#[A-Za-z0-9]+$" } },
+    "educut_link": {
+      "type": "object",
+      "required": ["url", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "url": { "type": "string" },
+        "type": { "enum": ["general_website", "opportunity_page"] }
+      }
+    },
+    "official_application_url": { "type": ["string", "null"] },
+    "course_match": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "required": ["code", "name", "academy", "url", "url_type", "rationale"],
+          "additionalProperties": false,
+          "properties": {
+            "code": { "type": ["string", "null"], "pattern": "^A\\d{3}\\.\\d{2}$" },
+            "name": { "type": "string" },
+            "academy": { "type": "string" },
+            "url": { "type": "string", "pattern": "^https://educutai\\.com/" },
+            "url_type": { "enum": ["course_anchor_verified", "academy_page", "catalog_page"] },
+            "rationale": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+          }
+        }
+      ]
+    },
+    "fact_check": {
+      "type": "object",
+      "required": ["status", "flags"],
+      "additionalProperties": false,
+      "properties": {
+        "status": { "enum": ["PASS", "PASS_WITH_FLAGS", "FAIL"] },
+        "flags": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

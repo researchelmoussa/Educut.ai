@@ -1,6 +1,6 @@
 {
   "opportunity_id": "opp_8fc9fa0bd2be2658",
-  "at": "2026-10-12T21:23:18.659Z",
+  "at": "2026-10-13T10:34:40.423Z",
   "status": "PASS_WITH_FLAGS",
   "failures": [],
   "warnings": [
@@ -139,6 +139,13 @@
       "severity": "fail"
     },
     {
+      "check": "landmark image licensed",
+      "pass": true,
+      "detail": "administrator-supplied · Administrator photo (Drive Landmarks/images/US)",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
       "check": "package matches comms-package.schema.json",
       "pass": true,
       "detail": "ok",
@@ -176,14 +183,14 @@
     {
       "check": "caption length 70–150 words",
       "pass": true,
-      "detail": "129 words",
+      "detail": "121 words",
       "owner": "communications",
       "severity": "fail"
     },
     {
       "check": "caption length ideally 80–130 words",
       "pass": true,
-      "detail": "129 words",
+      "detail": "121 words",
       "owner": "communications",
       "severity": "warn"
     },
@@ -197,7 +204,7 @@
     {
       "check": "4–7 hashtags",
       "pass": true,
-      "detail": "6: #Fellowship #Postdoc #PhD #RuleOfLaw #EduCutAI #EduCutConnect",
+      "detail": "7: #Fellowship #Postdoc #PhD #RuleOfLaw #Democracy #EduCutAI #EduCutConnect",
       "owner": "communications",
       "severity": "fail"
     },
@@ -211,7 +218,7 @@
     {
       "check": "no repeated hashtags",
       "pass": true,
-      "detail": "#Fellowship #Postdoc #PhD #RuleOfLaw #EduCutAI #EduCutConnect",
+      "detail": "#Fellowship #Postdoc #PhD #RuleOfLaw #Democracy #EduCutAI #EduCutConnect",
       "owner": "communications",
       "severity": "fail"
     },
@@ -230,9 +237,30 @@
       "severity": "fail"
     },
     {
-      "check": "CTA says it is not the application link",
+      "check": "EduCut Connect page link",
       "pass": true,
-      "detail": "caption must say educutai.com is EduCut’s site, not the application page",
+      "detail": "educut_link must be {\"url\":\"https://educutai.com/educut-connect/001-cddrl-pre-doctoral-and-postdoctoral-fellowships/\",\"type\":\"opportunity_page\"}",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "EduCut Connect page link in caption",
+      "pass": true,
+      "detail": "caption must contain \"Explore this opportunity through EduCut Connect: https://educutai.com/educut-connect/001-cddrl-pre-doctoral-and-postdoctoral-fellowships/\"",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "caption does not refer to the first comment",
+      "pass": true,
+      "detail": "the post no longer says where the application link is",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "upskilling line present",
+      "pass": true,
+      "detail": "a line starting \"Want to strengthen your profile for opportunities like this?\"",
       "owner": "communications",
       "severity": "fail"
     },

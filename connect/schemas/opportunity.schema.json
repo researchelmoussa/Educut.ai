@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://educutai.com/connect/schemas/opportunity.schema.json",
+  "title": "OpportunityRecord",
+  "description": "One verified opportunity produced by the Opportunity Scout and consumed by the Visual Designer and Communications agents. Any value the source does not state is null and listed in `uncertainties`.",
+  "type": "object",
+  "required": [
+    "id", "schema_version", "opportunity_type", "title", "institution", "application_url", "source_url", "source_list_url",
+    "location", "employment_type", "work_arrangement", "field", "seniority", "qualifications", "skills",
+    "description_short", "published_at", "deadline", "compensation", "application_status", "status_evidence",
+    "pipeline_status", "uncertainties", "content_hash", "fingerprint", "discovered_at", "last_verified_at"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^opp_[0-9a-f]{16}$" },
+    "schema_version": { "const": "1.0" },
+    "opportunity_type": {
+      "enum": ["job", "academic_position", "postdoc", "phd", "fellowship", "internship", "research", "scholarship", "professional_development", "other"]
+    },
+    "title": { "$ref": "#/$defs/evidencedString" },
+    "institution": {
+      "type": "object",
+      "required": ["name", "website", "logo"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "website": { "type": ["string", "null"], "pattern": "^https://" },
+        "logo": {
+          "type": "object",
+          "required": ["source_url", "local_path", "license", "permission"],
+          "additionalProperties": false,
+          "properties": {
+            "source_url": { "type": ["string", "null"] },
+            "local_path": { "type": ["string", "null"] },
+            "license": { "type": "string" },
+            "permission": { "enum": ["allowed", "not_verified", "denied"] }
+          }
+        }
+      }
+    },
+    "application_url": { "type": ["string", "null"], "pattern": "^https?://" },
+    "source_url": { "type": "string", "pattern": "^https?://" },
+    "source_list_url": { "type": "string", "pattern": "^https?://", "description": "The links.txt entry this opportunity was discovered from." },
+    "location": {
+      "type": "object",
+      "required": ["city", "country", "country_code"],
+      "additionalProperties": false,
+      "properties": {
+        "city": { "type": ["string", "null"] },
+        "country": { "type": ["string", "null"] },
+        "country_code": { "type": ["string", "null"], "pattern": "^[A-Z]{2}$" }
+      }
+    },
+    "employment_type": { "enum": ["full_time", "part_time", "contract", "temporary", "internship", "fellowship", "volunteer", "other", "unspecified"] },
+    "work_arrangement": { "enum": ["onsite", "hybrid", "remote", "unspecified"] },
+    "field": { "type": ["string", "null"] },
+    "seniority": { "type": ["string", "null"] },
+    "qualifications": { "type": "array", "items": { "type": "string" } },
+    "skills": { "type": "array", "items": { "type": "string" } },
+    "description_short": { "type": "string", "minLength": 1, "maxLength": 400, "description": "Max 45 words; checked by the validator." },
+    "published_at": { "anyOf": [{ "type": "null" }, { "$ref": "#/$defs/evidencedString" }] },
+    "deadline": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "required": ["value", "timezone", "evidence_url", "evidence_quote"],
+          "additionalProperties": false,
+          "properties": {
+            "value": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}" },
+            "timezone": { "type": ["string", "null"] },
+            "evidence_url": { "type": "string", "pattern": "^https?://" },
+            "evidence_quote": { "type": "string", "minLength": 1 }
+          }
+        }
+      ]
+    },
+    "compensation": { "anyOf": [{ "type": "null" }, { "$ref": "#/$defs/evidencedString" }] },
+    "application_status": { "enum": ["OPEN_CONFIRMED", "OPEN_LIKELY", "DEADLINE_NOT_SPECIFIED", "CLOSED", "NEEDS_REVIEW"] },
+    "status_evidence": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "pipeline_status": {
+      "enum": ["DISCOVERED", "VERIFIED", "CONTENT_GENERATED", "UNDER_REVIEW", "APPROVED", "READY_TO_PUBLISH", "PUBLISHED", "CLOSED", "EXPIRED", "REJECTED", "NEEDS_REVIEW"]
+    },
+    "uncertainties": { "type": "array", "items": { "type": "string" } },
+    "content_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "fingerprint": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+    "discovered_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T" },
+    "last_verified_at": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T" }
+  },
+  "$defs": {
+    "evidencedString": {
+      "type": "object",
+      "required": ["value", "evidence_url", "evidence_quote"],
+      "additionalProperties": false,
+      "properties": {
+        "value": { "type": "string", "minLength": 1 },
+        "evidence_url": { "type": "string", "pattern": "^https?://" },
+        "evidence_quote": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

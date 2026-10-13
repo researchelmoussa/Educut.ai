@@ -1,6 +1,6 @@
 {
   "opportunity_id": "opp_c1ef81d9749bb976",
-  "at": "2026-10-12T21:23:22.040Z",
+  "at": "2026-10-13T10:34:46.450Z",
   "status": "PASS_WITH_FLAGS",
   "failures": [],
   "warnings": [
@@ -139,6 +139,13 @@
       "severity": "fail"
     },
     {
+      "check": "landmark image licensed",
+      "pass": true,
+      "detail": "administrator-supplied · Administrator photo (Drive Landmarks)",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
       "check": "package matches comms-package.schema.json",
       "pass": true,
       "detail": "ok",
@@ -169,14 +176,14 @@
     {
       "check": "caption length 70–150 words",
       "pass": true,
-      "detail": "123 words",
+      "detail": "110 words",
       "owner": "communications",
       "severity": "fail"
     },
     {
       "check": "caption length ideally 80–130 words",
       "pass": true,
-      "detail": "123 words",
+      "detail": "110 words",
       "owner": "communications",
       "severity": "warn"
     },
@@ -223,9 +230,30 @@
       "severity": "fail"
     },
     {
-      "check": "CTA says it is not the application link",
+      "check": "EduCut Connect page link",
       "pass": true,
-      "detail": "caption must say educutai.com is EduCut’s site, not the application page",
+      "detail": "educut_link must be {\"url\":\"https://educutai.com/educut-connect/014-postdoctoral-fellowships-for-research-in-japan-standard/\",\"type\":\"opportunity_page\"}",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "EduCut Connect page link in caption",
+      "pass": true,
+      "detail": "caption must contain \"Explore this opportunity through EduCut Connect: https://educutai.com/educut-connect/014-postdoctoral-fellowships-for-research-in-japan-standard/\"",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "caption does not refer to the first comment",
+      "pass": true,
+      "detail": "the post no longer says where the application link is",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "upskilling line present",
+      "pass": true,
+      "detail": "a line starting \"Want to strengthen your profile for opportunities like this?\"",
       "owner": "communications",
       "severity": "fail"
     },
