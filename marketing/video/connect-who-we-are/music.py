@@ -213,7 +213,7 @@ put(riser(1.3), 22.7, 0.11)
 put(impact(), 24.0, 0.42)
 put(bell(84), 24.9, 0.16, -0.2); put(bell(88), 25.0, 0.13, 0.2); put(bell(91), 25.1, 0.11)
 # non-profit / free service badges pop in
-put(tok(84), 27.1, 0.08, -0.2); put(tok(88), 27.4, 0.08, 0.2)
+put(tok(84), 30.9, 0.08, -0.2); put(tok(88), 31.15, 0.08, 0.2)
 # three-up cells pop in (S5) and the checklist strip
 for j in range(3):
     put(tok(79 + j * 4), 32.0 + j * 0.8, 0.07)
