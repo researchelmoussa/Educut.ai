@@ -1,0 +1,62 @@
+{
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "MEXT Scholarship: IGP Special Quota",
+    "evidence_url": "https://altair.sci.hokudai.ac.jp/grad/igpoverview/special-quota.php",
+    "evidence_quote": "MEXT Scholarship: IGP Special Quota"
+  },
+  "institution": {
+    "name": "Hokkaido University",
+    "website": "https://www.global.hokudai.ac.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://altair.sci.hokudai.ac.jp/grad/igpoverview/special-quota.php",
+  "source_url": "https://fellowshipsguide.com/mext-igp-special-quota/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Sapporo",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Life Sciences / Science",
+  "seniority": "Master's and PhD applicants",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Japanese Government (MEXT) scholarship quota for Hokkaido University's International Graduate Program, October 2027 admission. Applicants first secure a supervisor's agreement and contact supervisors by November 10, 2026; the supervisor submits documents to the IGP office.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-10",
+    "timezone": "JST",
+    "evidence_url": "https://altair.sci.hokudai.ac.jp/grad/igpoverview/special-quota.php",
+    "evidence_quote": "Your supervisor submit documents to the IGP office by Dececmber 10, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Hokkaido IGP page: supervisor submission by December 10, 2026 (future); applicants contact supervisors by November 10, 2026",
+    "Official page labels the steps tentative; portal not confirmed"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Dates are labelled tentative on the official page",
+    "Applicant-side step (contact supervisor) due November 10, 2026, earlier than the record deadline",
+    "Number of awards for 2027 not captured",
+    "City inferred as Sapporo from institution; not stated in evidence",
+    "Time zone assumed JST",
+    "Publication date of the listing not captured"
+  ],
+  "schema_version": "1.0",
+  "id": "opp_3cf631caeabb4802",
+  "fingerprint": "cb6e55f41f70e8cb",
+  "discovered_at": "2026-10-12T07:05:03.913Z",
+  "last_verified_at": "2026-10-12T07:05:03.913Z",
+  "pipeline_status": "DISCOVERED",
+  "content_hash": "sha256:021ef0388a04d72d643688c0f04c5a1330889fe91411105f4be6b4c1139b55b9"
+}
