@@ -259,7 +259,9 @@ const commands = {
       deadline_source: rec.deadline?.value ?? null,
       deadline_label: rec.deadline ? spec.deadline_label : null,
       institution_logo: rec.institution.logo.permission === 'allowed' ? spec.institution_logo ?? null : null,
-      landmark: spec.landmark ?? findLandmark(rec.location.city, rec.location.country_code) ?? findLandmark(rec.location.country, rec.location.country_code),
+      // Last resort: the administrator's default photo (Drive Landmarks/images/DEFAULT), registered as
+      // landmark-add Default DEFAULT <file>; used when the place is not specified or has no photo.
+      landmark: spec.landmark ?? findLandmark(rec.location.city, rec.location.country_code) ?? findLandmark(rec.location.country, rec.location.country_code) ?? findLandmark('Default', 'DEFAULT'),
       variant: spec.variant ?? config.visual.variant,
     };
     writeJson(join(dir, 'spec.json'), card);

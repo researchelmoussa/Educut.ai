@@ -9,27 +9,31 @@ extra instructions from the administrator.
 Drive layout (IDs in `connect/config/connect.config.json` → `drive`):
 ```
 EduCut Connect/
-  links.txt                       approved sources (administrator-owned)
+  links.txt                       legacy source list (fallback only)
+  Scrawling/links                 Google Doc: approved sources, one URL per line (administrator-owned)
   Logos/                          official brand files
   Scrawling/<YYYY-MM-DD>/run-log.jsonl
   Communication/<YYYY-MM-DD>/00_Review_<date>.md
   Communication/<YYYY-MM-DD>/Offer_NNN/   card.png, city.jpg, card-square.png, linkedin_post.txt, post_details.txt, web-brief.json, card.html, record.json, qc-report.json
   Landmarks/                      city photos supplied by the administrator (Geneva.jpg, Cambridge-GB.jpg, …)
   Landmarks/images/<CC>/          one landscape photo per country (images/US/…, images/SA/…), used when no city photo exists
+  Landmarks/images/DEFAULT/       default photo, used when the place is not specified or has no photo
   Registry/registry.json          every opportunity ever seen (dedup + status history)
 ```
 
 ## 1. Sources: always ask first
-1. Find `links.txt` in the EduCut Connect folder (Google Drive connector `search_files`:
-   `parentId = '<root id>' and title = 'links.txt'`), read it, and save it to `$RUN_DIR/links.txt`.
+1. The administrator keeps the sources in the Google Doc **`links`** in the `Scrawling` folder
+   (`parentId = '<crawling folder id>' and title = 'links'`). Download it as text
+   (`download_file_content`, `exportMimeType: text/plain`), strip the BOM and `\r`, and save it to
+   `$RUN_DIR/links.txt` under the header comments of the root `links.txt`. Only if that Doc is missing,
+   fall back to `links.txt` in the EduCut Connect root folder.
    Run `node connect/cli.mjs sources $RUN_DIR/links.txt` for the numbered list.
 2. Show the administrator the numbered list, then **ask with AskUserQuestion** (this is their input box):
    question "Today's EduCut Connect sources: run with these?", options
    "Run with these N sources" / "Skip today's run". They can type into "Other" to paste links to add, or
    write e.g. "remove 3".
-3. If they add or remove links, write the new full list to a new Drive file `links.txt` in the root folder,
-   keeping the header comments, then trash the old file (Drive files cannot be edited in place). Show the
-   final list. If they skip, stop.
+3. If they add or remove links, tell the administrator to update the `links` Doc (it is theirs), and use the
+   changed list for today's run. Show the final list. If they skip, stop.
 
 ## 2. Initialise
 1. `npm --prefix connect ci --no-audit --no-fund` (flag set and fonts), then `RUN_DIR=connect/runs/$(date -u +%F)`.
@@ -50,7 +54,11 @@ City photos: for each offer's city, look in Drive `EduCut Connect/Landmarks/` fo
 `<City>.jpg|png` or `<City>-<CC>.jpg|png` (e.g. `Geneva.jpg`, `Cambridge-GB.jpg`); when the offer has no
 city, look for `<Country>.jpg|png` (e.g. `Germany.jpg`) and register it with the country name as the city.
 When neither exists, use the country photo in `Landmarks/images/<CC>/` (download it, look at it, and
-pass what it shows as `--landmark`). If found, download it with the
+pass what it shows as `--landmark`).
+When the place is not specified (no city and no country) or there is no photo for the country, the card
+uses the default photo: download `Landmarks/images/DEFAULT/default.jpg` once per run and register it with
+`node connect/cli.mjs landmark-add Default DEFAULT <file> --landmark "<what it shows>"`; the renderer falls
+back to it automatically. If found, download it with the
 connector into `$RUN_DIR/landmarks/` and register it:
 `node connect/cli.mjs landmark-add "<City>" <CC> <file> --landmark "<what it shows>" --credit "<credit if given>" --run $RUN_DIR`.
 The designer's `landmark` step then uses it (otherwise it tries Wikimedia Commons). The renderer copies the

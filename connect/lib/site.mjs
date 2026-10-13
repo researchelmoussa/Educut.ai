@@ -40,7 +40,9 @@ export function deadlineLabel(d) {
   return `${Number(m[3])} ${MONTHS[Number(m[2]) - 1]} ${m[1]}${t ? `, ${t[1]}:${t[2]}` : ''}${d.timezone ? ` (${d.timezone})` : ''}`;
 }
 
-const cap = (s) => (s ? s[0].toUpperCase() + s.slice(1) : s);
+const cap = (s) => (s ? (/^phd$/i.test(s) ? 'PhD' : s[0].toUpperCase() + s.slice(1)) : s);
+// 'unspecified' / 'other' carry no information for a reader: leave them out of labels.
+const known = (v) => (v && !/^(unspecified|unknown|other|n\/a)$/i.test(v) ? v : null);
 
 // Everything a website page needs, derived from the verified record and the comms package. Written by
 // `post-text` as web-brief.json and printed in post_details.txt.
@@ -87,8 +89,8 @@ export function briefText(b) {
     `Slug: ${b.slug}`,
     `Title: ${b.title}`,
     `Institution: ${b.institution}${b.institution_website ? ` (${b.institution_website})` : ''}`,
-    `Location: ${b.location ?? 'not specified'}${b.work_arrangement ? ` · ${cap(b.work_arrangement)}` : ''}`,
-    `Type: ${[b.opportunity_type, b.employment_type].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).map(cap).join(' · ') || 'not specified'}`,
+    `Location: ${b.location ?? 'not specified'}${known(b.work_arrangement) ? ` · ${cap(b.work_arrangement)}` : ''}`,
+    `Type: ${[b.opportunity_type, b.employment_type].map(known).filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).map(cap).join(' · ') || 'not specified'}`,
     `Field: ${b.field ?? 'not specified'}`,
     `Level: ${b.level ?? 'not specified'}`,
     `Deadline: ${b.deadline_label ?? 'not specified'}`,
@@ -315,7 +317,7 @@ const crumbs = (items) =>
     .map(([href, label], i) => (i === items.length - 1 ? `<span aria-current="page">${esc(label)}</span>` : `<a href="${href}">${esc(label)}</a><span aria-hidden="true">/</span>`))
     .join('')}</nav>`;
 
-const typeLabel = (o) => [o.opportunity_type, o.employment_type].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).map(cap).join(' · ');
+const typeLabel = (o) => [o.opportunity_type, o.employment_type].map(known).filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).map(cap).join(' · ');
 const shortDate = (iso) => {
   const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso ?? '');
   return m ? `${Number(m[3])} ${MONTHS[Number(m[2]) - 1].slice(0, 3)} ${m[1]}` : null;
@@ -417,7 +419,7 @@ ${DEADLINE_SCRIPT}`;
 function offerPage(o, root) {
   const facts = [
     ['Institution', o.institution],
-    ['Location', [o.location, o.work_arrangement && cap(o.work_arrangement)].filter(Boolean).join(' · ')],
+    ['Location', [o.location, known(o.work_arrangement) && cap(o.work_arrangement)].filter(Boolean).join(' · ')],
     ['Type', typeLabel(o)],
     ['Field', o.field],
     ['Level', o.level],
