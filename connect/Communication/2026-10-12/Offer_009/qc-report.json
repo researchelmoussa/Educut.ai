@@ -1,6 +1,6 @@
 {
   "opportunity_id": "opp_21e5c0705d655f77",
-  "at": "2026-10-12T21:23:20.795Z",
+  "at": "2026-10-13T10:34:44.156Z",
   "status": "PASS_WITH_FLAGS",
   "failures": [],
   "warnings": [
@@ -139,6 +139,13 @@
       "severity": "fail"
     },
     {
+      "check": "landmark image licensed",
+      "pass": true,
+      "detail": "administrator-supplied · Administrator photo (Drive Landmarks)",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
       "check": "package matches comms-package.schema.json",
       "pass": true,
       "detail": "ok",
@@ -176,14 +183,14 @@
     {
       "check": "caption length 70–150 words",
       "pass": true,
-      "detail": "126 words",
+      "detail": "105 words",
       "owner": "communications",
       "severity": "fail"
     },
     {
       "check": "caption length ideally 80–130 words",
       "pass": true,
-      "detail": "126 words",
+      "detail": "105 words",
       "owner": "communications",
       "severity": "warn"
     },
@@ -197,7 +204,7 @@
     {
       "check": "4–7 hashtags",
       "pass": true,
-      "detail": "6: #LifeSciences #SummerResearch #Internship #Switzerland #EduCutAI #EduCutConnect",
+      "detail": "6: #LifeSciences #SummerResearch #ResearchInternship #Switzerland #EduCutAI #EduCutConnect",
       "owner": "communications",
       "severity": "fail"
     },
@@ -211,7 +218,7 @@
     {
       "check": "no repeated hashtags",
       "pass": true,
-      "detail": "#LifeSciences #SummerResearch #Internship #Switzerland #EduCutAI #EduCutConnect",
+      "detail": "#LifeSciences #SummerResearch #ResearchInternship #Switzerland #EduCutAI #EduCutConnect",
       "owner": "communications",
       "severity": "fail"
     },
@@ -230,9 +237,30 @@
       "severity": "fail"
     },
     {
-      "check": "CTA says it is not the application link",
+      "check": "EduCut Connect page link",
       "pass": true,
-      "detail": "caption must say educutai.com is EduCut’s site, not the application page",
+      "detail": "educut_link must be {\"url\":\"https://educutai.com/educut-connect/009-epfl-school-of-life-sciences-summer-research-program/\",\"type\":\"opportunity_page\"}",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "EduCut Connect page link in caption",
+      "pass": true,
+      "detail": "caption must contain \"Explore this opportunity through EduCut Connect: https://educutai.com/educut-connect/009-epfl-school-of-life-sciences-summer-research-program/\"",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "caption does not refer to the first comment",
+      "pass": true,
+      "detail": "the post no longer says where the application link is",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "upskilling line present",
+      "pass": true,
+      "detail": "a line starting \"Want to strengthen your profile for opportunities like this?\"",
       "owner": "communications",
       "severity": "fail"
     },
@@ -260,28 +288,28 @@
     {
       "check": "course exists and its page anchor is live",
       "pass": true,
-      "detail": "https://educutai.com/academies/prompt-engineering/#a003-07",
+      "detail": "https://educutai.com/academies/ai-for-education/#a010-07",
       "owner": "communications",
       "severity": "fail"
     },
     {
       "check": "course name matches catalog",
       "pass": true,
-      "detail": "Prompt Engineering for Research & Knowledge Work",
+      "detail": "AI for Research & Academic Productivity",
       "owner": "communications",
       "severity": "fail"
     },
     {
       "check": "course URL matches catalog",
       "pass": true,
-      "detail": "https://educutai.com/academies/prompt-engineering/#a003-07",
+      "detail": "https://educutai.com/academies/ai-for-education/#a010-07",
       "owner": "communications",
       "severity": "fail"
     },
     {
       "check": "course URL in caption",
       "pass": true,
-      "detail": "https://educutai.com/academies/prompt-engineering/#a003-07",
+      "detail": "https://educutai.com/academies/ai-for-education/#a010-07",
       "owner": "communications",
       "severity": "fail"
     },

@@ -1,6 +1,6 @@
 {
   "opportunity_id": "opp_8d4fa8058f5bac47",
-  "at": "2026-10-12T21:23:21.546Z",
+  "at": "2026-10-13T10:34:45.571Z",
   "status": "PASS_WITH_FLAGS",
   "failures": [],
   "warnings": [
@@ -169,14 +169,14 @@
     {
       "check": "caption length 70–150 words",
       "pass": true,
-      "detail": "101 words",
+      "detail": "129 words",
       "owner": "communications",
       "severity": "fail"
     },
     {
       "check": "caption length ideally 80–130 words",
       "pass": true,
-      "detail": "101 words",
+      "detail": "129 words",
       "owner": "communications",
       "severity": "warn"
     },
@@ -223,9 +223,30 @@
       "severity": "fail"
     },
     {
-      "check": "CTA says it is not the application link",
+      "check": "EduCut Connect page link",
       "pass": true,
-      "detail": "caption must say educutai.com is EduCut’s site, not the application page",
+      "detail": "educut_link must be {\"url\":\"https://educutai.com/educut-connect/012-embo-postdoctoral-fellowships/\",\"type\":\"opportunity_page\"}",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "EduCut Connect page link in caption",
+      "pass": true,
+      "detail": "caption must contain \"Explore this opportunity through EduCut Connect: https://educutai.com/educut-connect/012-embo-postdoctoral-fellowships/\"",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "caption does not refer to the first comment",
+      "pass": true,
+      "detail": "the post no longer says where the application link is",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "upskilling line present",
+      "pass": true,
+      "detail": "a line starting \"Want to strengthen your profile for opportunities like this?\"",
       "owner": "communications",
       "severity": "fail"
     },
@@ -247,6 +268,34 @@
       "check": "no salary claimed",
       "pass": true,
       "detail": "record has no stated compensation",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "fallback Academy URL exists",
+      "pass": true,
+      "detail": "https://educutai.com/academies/ai-for-education/",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "fallback labelled as such in caption",
+      "pass": true,
+      "detail": "caption must say it links to the catalog, not a specific course",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "course URL in caption",
+      "pass": true,
+      "detail": "https://educutai.com/academies/ai-for-education/",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "no employment guarantee",
+      "pass": true,
+      "detail": "courses never promise selection",
       "owner": "communications",
       "severity": "fail"
     }
