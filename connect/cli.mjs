@@ -269,8 +269,12 @@ const commands = {
       deadline_label: rec.deadline ? spec.deadline_label : null,
       institution_logo: rec.institution.logo.permission === 'allowed' ? spec.institution_logo ?? null : null,
       // The default photo is Drive Landmarks/images/DEFAULT, registered as landmark-add Default DEFAULT <file>.
-      // No city stated → the administrator's default photo, never a country photo standing in for a place.
-      landmark: spec.landmark ?? (rec.location.city ? findLandmark(rec.location.city, rec.location.country_code) : null) ?? findLandmark('Default', 'DEFAULT'),
+      // City photo first, then the country photo (Landmarks/images/<CC>, registered under the country name),
+      // and the administrator's default photo only when neither exists.
+      landmark: spec.landmark
+        ?? (rec.location.city ? findLandmark(rec.location.city, rec.location.country_code) : null)
+        ?? (rec.location.country ? findLandmark(rec.location.country, rec.location.country_code) : null)
+        ?? findLandmark('Default', 'DEFAULT'),
       variant: spec.variant ?? config.visual.variant,
     };
     writeJson(join(dir, 'spec.json'), card);

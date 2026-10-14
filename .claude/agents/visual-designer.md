@@ -24,9 +24,9 @@ Commands: `node connect/cli.mjs <cmd> … --run $RUN_DIR`.
      pass `--query "<well-known landmark> <city>"`. Choose a landmark that really is in that city.
    - Open the downloaded image (Read the file) and confirm it shows that landmark. If it does not, run again
      with a more precise `--query`, or `--refresh`.
-   - If no city is given, do not look for a landmark: the renderer uses the administrator's default photo
-     (registered as `Default DEFAULT` from Drive `Landmarks/images/DEFAULT/`), even when the country is
-     known. Never use an image without licence data.
+   - If no city is given, the renderer uses the country photo registered under the country name (from Drive
+     `Landmarks/images/<CC>/`), and the administrator's default photo (`Default DEFAULT`) only when the
+     country has none. Describe the photo actually used in the alt text. Never use an image without licence data.
 3. **Write `OFFER_DIR/design-input.json`:**
    ```json
    {

@@ -17,7 +17,7 @@ EduCut Connect/
   Communication/<YYYY-MM-DD>/Offer_NNN/   card.png, city.jpg, card-square.png, linkedin_post.txt, post_details.txt, web-brief.json, card.html, record.json, qc-report.json
   Landmarks/                      city photos supplied by the administrator (Geneva.jpg, Cambridge-GB.jpg, …)
   Landmarks/images/<CC>/          one landscape photo per country (images/US/…, images/SA/…), used when no city photo exists
-  Landmarks/images/DEFAULT/       default photo, used when the place is not specified or has no photo
+  Landmarks/images/DEFAULT/       default photo, used only when neither the city nor the country has a photo
   Registry/registry.json          every opportunity ever seen (dedup + status history)
 ```
 
@@ -54,8 +54,10 @@ City photos: for each offer's city, look in Drive `EduCut Connect/Landmarks/` fo
 `<City>.jpg|png` or `<City>-<CC>.jpg|png` (e.g. `Geneva.jpg`, `Cambridge-GB.jpg`). When there is none, use
 the country photo in `Landmarks/images/<CC>/` and register it under the offer's city (download it, look at
 it, and pass what it shows as `--landmark`).
-When the place is not specified (no city in the record, even if the country is known) the card uses the
-default photo, never a country photo: download `Landmarks/images/DEFAULT/default.jpg` once per run and register it with
+When the record has no city but the country is known, use the country photo in `Landmarks/images/<CC>/` and
+register it under the country name (e.g. `landmark-add "Netherlands" NL <file> --landmark "Canal houses in Amsterdam"`).
+Only when the country is unknown or has no photo folder does the card use the default photo:
+download `Landmarks/images/DEFAULT/default.jpg` once per run and register it with
 `node connect/cli.mjs landmark-add Default DEFAULT <file> --landmark "<what it shows>"`; the renderer falls
 back to it automatically. If found, download it with the
 connector into `$RUN_DIR/landmarks/` and register it:
