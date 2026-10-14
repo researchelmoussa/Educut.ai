@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-13T17:23:13.891Z",
+  "updated_at": "2026-10-14T07:15:58.954Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -1364,6 +1364,360 @@
           "reason": "application_status=DEADLINE_NOT_SPECIFIED"
         }
       ]
+    },
+    "opp_024d76337193d4d1": {
+      "id": "opp_024d76337193d4d1",
+      "fingerprint": "776e39614dcbc73d",
+      "title": "4-Year PhD Programme",
+      "institution": "Wellcome Sanger Institute",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://fellowshipsguide.com/category/scholarships/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://forms.sanger.ac.uk/form/Sanger_PhD_Application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-24T09:00:00+00:00",
+      "content_hash": "sha256:dacb77eac78db01a9742e835bad7f11309f44e185df5e960b85fff16a4784bd7",
+      "last_verified_at": "2026-10-14T07:13:33.273Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-14T07:13:43.406Z",
+      "history": [
+        {
+          "at": "2026-10-14T07:13:43.406Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-14T07:13:43.407Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-14T07:15:58.072Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-14T07:15:58.072Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 18
+    },
+    "opp_efa475c968a77e13": {
+      "id": "opp_efa475c968a77e13",
+      "fingerprint": "89b8701368d5dd79",
+      "title": "Next Generation Fellow (Fixed Term)",
+      "institution": "University of Cambridge",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://fellowshipsguide.com/academic-university-of-cambridge/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.cam.ac.uk/jobs/next-generation-fellow-fixed-term-pm50284",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31T23:59:00+00:00",
+      "content_hash": "sha256:9b5d55ffcc55626da9d732e9e7032f56cf73fc57bc8c640749eccc8a0d24946f",
+      "last_verified_at": "2026-10-14T07:13:39.682Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-14T07:13:43.607Z",
+      "history": [
+        {
+          "at": "2026-10-14T07:13:43.607Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-14T07:13:43.607Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-14T07:15:58.493Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-14T07:15:58.493Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 19
+    },
+    "opp_34d9f8661fae2d1f": {
+      "id": "opp_34d9f8661fae2d1f",
+      "fingerprint": "9a0c8b2c7a2f2b89",
+      "title": "PhD position in IC Design group",
+      "institution": "University of Twente",
+      "city": null,
+      "country": "Netherlands",
+      "source_url": "https://fellowshipsguide.com/1-university-of-twente-phd-postdoc/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.utwente.nl/en/eemcs/icd/phd_vacancies/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:edb885d174421938bca5cfc207257b70363fbd38e3d0c19f4e30e9810bcb3add",
+      "last_verified_at": "2026-10-14T07:13:33.504Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-14T07:13:43.807Z",
+      "history": [
+        {
+          "at": "2026-10-14T07:13:43.807Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-14T07:13:43.807Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-14T07:15:58.954Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-14T07:15:58.954Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 20
+    },
+    "opp_627d35969c4016c3": {
+      "id": "opp_627d35969c4016c3",
+      "fingerprint": "5643b72d4837e9fa",
+      "title": "NASA TechRise Challenge",
+      "institution": "NASA",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://fellowshipsguide.com/nasa-stem-opportunities/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.futureengineers.org/nasatechrise",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-02T23:59:00-08:00",
+      "content_hash": "sha256:a15fcd01e4301f1c1c5ba49ba758ad75fde7f2a5bb1433f2450525eae4dc3067",
+      "last_verified_at": "2026-10-14T07:13:32.686Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-14T07:13:43.994Z",
+      "history": [
+        {
+          "at": "2026-10-14T07:13:43.994Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-14T07:13:43.994Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-14T07:15:48.505Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-14T07:15:48.505Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 21
+    },
+    "opp_79c6ad82cbddcbc9": {
+      "id": "opp_79c6ad82cbddcbc9",
+      "fingerprint": "17ae7ea7601dd54c",
+      "title": "Master excellence fellowships",
+      "institution": "EPFL",
+      "city": null,
+      "country": "Switzerland",
+      "source_url": "https://fellowshipsguide.com/epfl-master-excellence-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.epfl.ch/education/master/master-excellence-fellowships/how-to-apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:02f32a4d1c3b058b2f32a7cba68cbe9a9d9c605589a5708e2db5af05cd248a7e",
+      "last_verified_at": "2026-10-14T07:13:39.890Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-14T07:13:44.183Z",
+      "history": [
+        {
+          "at": "2026-10-14T07:13:44.183Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-14T07:13:44.184Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-14T07:15:48.986Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-14T07:15:48.986Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 22
+    },
+    "opp_2650c3e2fd0ca6c7": {
+      "id": "opp_2650c3e2fd0ca6c7",
+      "fingerprint": "012126c4ab34672b",
+      "title": "Scholarship for Foreign Students",
+      "institution": "Honjo International Scholarship Foundation",
+      "city": null,
+      "country": "Japan",
+      "source_url": "https://fellowshipsguide.com/hisf-japanese-ms-phd/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.hisf.or.jp/en/scholarship/foreigner/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-31",
+      "content_hash": "sha256:86a44f3bc2fc7f72e3dbe15461b847cadb4d5a789f2d4ca7085677d9b17f43f1",
+      "last_verified_at": "2026-10-14T07:13:32.439Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-14T07:13:44.378Z",
+      "history": [
+        {
+          "at": "2026-10-14T07:13:44.378Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-14T07:13:44.379Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-14T07:15:49.477Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-14T07:15:49.477Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 23
+    },
+    "opp_9d5cc5b8dba8484d": {
+      "id": "opp_9d5cc5b8dba8484d",
+      "fingerprint": "4e5cc0f70406f716",
+      "title": "FIAS CALL FOR APPLICATIONS 2027/2028",
+      "institution": "Institut d'études avancées de Paris",
+      "city": "Paris",
+      "country": "France",
+      "source_url": "https://fellowshipsguide.com/fias-fellowship-programme-2/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.paris-iea.fr/en/apply/calls-for-applications/fias-call-for-applications-2027-2028",
+      "application_status": "CLOSED",
+      "deadline": "2026-06-25T18:00:00+02:00",
+      "content_hash": "sha256:96d97f54ceab6f8bdb2be0071e3686d707ef78ab18be56558c841abea6e70453",
+      "last_verified_at": "2026-10-14T07:13:32.163Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-14T07:13:44.576Z",
+      "history": [
+        {
+          "at": "2026-10-14T07:13:44.576Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-14T07:13:44.576Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_2bdcf1a851caaf3f": {
+      "id": "opp_2bdcf1a851caaf3f",
+      "fingerprint": "a918e1ab4336ea2d",
+      "title": "Research Fellowships",
+      "institution": "Royal Academy of Engineering",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://fellowshipsguide.com/royal-academy-research-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-prizes/support-for-research/research-fellowships/eligibility",
+      "application_status": "CLOSED",
+      "deadline": "2026-06-25T17:00:00+01:00",
+      "content_hash": "sha256:816b3c3977748b5ecb39d1da00ac19122d6cf60b5ef669910300e0849ff8c19d",
+      "last_verified_at": "2026-10-14T07:13:32.993Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-14T07:13:44.769Z",
+      "history": [
+        {
+          "at": "2026-10-14T07:13:44.769Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-14T07:13:44.769Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
     }
   },
   "seen_urls": {
@@ -1417,7 +1771,23 @@
     "https://fellowshipsguide.com/2027-oist-visiting-scholars-program": "opp_ad8d8a716568cd23",
     "https://oist.jp/visiting-program/application-visiting-scholars": "opp_ad8d8a716568cd23",
     "https://fellowshipsguide.com/2027-swiss-government-excellence-scholarships": "opp_e5ca8420c0dc9bf3",
-    "https://sbfi.admin.ch/en/swiss-government-excellence-scholarships": "opp_e5ca8420c0dc9bf3"
+    "https://sbfi.admin.ch/en/swiss-government-excellence-scholarships": "opp_e5ca8420c0dc9bf3",
+    "https://fellowshipsguide.com/category/scholarships": "opp_024d76337193d4d1",
+    "https://forms.sanger.ac.uk/form/Sanger_PhD_Application": "opp_024d76337193d4d1",
+    "https://fellowshipsguide.com/academic-university-of-cambridge": "opp_efa475c968a77e13",
+    "https://cam.ac.uk/jobs/next-generation-fellow-fixed-term-pm50284": "opp_efa475c968a77e13",
+    "https://fellowshipsguide.com/1-university-of-twente-phd-postdoc": "opp_34d9f8661fae2d1f",
+    "https://utwente.nl/en/eemcs/icd/phd_vacancies": "opp_34d9f8661fae2d1f",
+    "https://fellowshipsguide.com/nasa-stem-opportunities": "opp_627d35969c4016c3",
+    "https://futureengineers.org/nasatechrise": "opp_627d35969c4016c3",
+    "https://fellowshipsguide.com/epfl-master-excellence-fellowships": "opp_79c6ad82cbddcbc9",
+    "https://epfl.ch/education/master/master-excellence-fellowships/how-to-apply": "opp_79c6ad82cbddcbc9",
+    "https://fellowshipsguide.com/hisf-japanese-ms-phd": "opp_2650c3e2fd0ca6c7",
+    "https://hisf.or.jp/en/scholarship/foreigner": "opp_2650c3e2fd0ca6c7",
+    "https://fellowshipsguide.com/fias-fellowship-programme-2": "opp_9d5cc5b8dba8484d",
+    "https://paris-iea.fr/en/apply/calls-for-applications/fias-call-for-applications-2027-2028": "opp_9d5cc5b8dba8484d",
+    "https://fellowshipsguide.com/royal-academy-research-fellowships": "opp_2bdcf1a851caaf3f",
+    "https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-prizes/support-for-research/research-fellowships/eligibility": "opp_2bdcf1a851caaf3f"
   },
-  "last_offer_number": 17
+  "last_offer_number": 23
 }
