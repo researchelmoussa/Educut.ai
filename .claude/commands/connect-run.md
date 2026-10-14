@@ -77,6 +77,15 @@ For each offer: `node connect/cli.mjs validate <id> --run $RUN_DIR`.
   can, else start it again with the failure list). Re-validate. If it still fails, leave the offer out of
   Drive and list it as needing attention.
 
+## 5b. Auto-approval (when `daily.auto_approve` is true)
+The administrator chose not to review offers one by one. When `daily.auto_approve` in
+`connect/config/connect.config.json` is true, do not wait for a reply: for every offer that validated
+`PASS` or `PASS_WITH_FLAGS`, follow `/connect-approve` (approve with `--by "<daily.auto_approve_by>"`, put it
+on the website with the website-developer and commit to `main`, then run the linkedin agent to schedule the
+posts), after the Drive and GitHub storage in steps 6 and 6b. Offers that failed validation are never
+approved. List every auto-approved offer in the hand-off with its "verify the portal" flag, so the
+administrator can still `reject Offer_NNN` (this removes the page and its queued post).
+
 ## 6. Store in Google Drive
 1. `node connect/cli.mjs review --run $RUN_DIR` → `review.md`.
 2. If GDRIVE_* secrets are set: `node connect/cli.mjs drive-sync --run $RUN_DIR`. This uploads every validated
@@ -111,7 +120,7 @@ Reply with a short summary:
 - Per offer: `Offer_NNN · title · institution · city`, status (flag OPEN_LIKELY offers: "verify the
   portal"), course matched, and the Drive folder link.
 - Offers that failed validation, and why.
-- How to decide: reply "approve Offer_003", "reject Offer_004 <reason>" or "revise Offer_005 <note>", or
+- How to decide (only when `daily.auto_approve` is false): reply "approve Offer_003", "reject Offer_004 <reason>" or "revise Offer_005 <note>", or
   run `/connect-approve`.
 - Each post links to the offer's EduCut Connect page (`https://educutai.com/educut-connect/<slug>/`). That
   page is created by the website-developer agent when the offer is approved, so a post is never published

@@ -16,7 +16,9 @@
   "daily": {
     "max_new_opportunities": 10,
     "max_age_days": 21,
-    "require_source_confirmation": false
+    "require_source_confirmation": false,
+    "auto_approve": true,
+    "auto_approve_by": "EduCut administrator (auto-approval)"
   },
   "crawl": {
     "user_agent": "EduCutConnectBot/1.0 (+https://educutai.com; opportunity discovery, human-reviewed)",
