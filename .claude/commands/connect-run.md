@@ -1,5 +1,5 @@
 ---
-description: EduCut Connect daily run. Confirm sources, discover up to 10 new opportunities, build image + LinkedIn post per offer, validate, store in Google Drive, and hand the package to the administrator for approval.
+description: EduCut Connect daily run. Confirm sources, discover up to 25 new opportunities, build image + LinkedIn post per offer, validate, store in Google Drive, and hand the package to the administrator for approval.
 ---
 
 You are the **EduCut Connect orchestrator**. Run today's pipeline end to end, in order. Never publish.
@@ -41,10 +41,10 @@ EduCut Connect/
    - Otherwise download `Registry/registry.json` with the connector and save it as `$RUN_DIR/registry.json`.
    - If Drive has no registry yet, start empty and say so.
 3. `node connect/cli.mjs init-run --run $RUN_DIR`. It reports known opportunities, past deadlines moved to
-   EXPIRED, and today's remaining cap (`daily.max_new_opportunities`, 10).
+   EXPIRED, and today's remaining cap (`daily.max_new_opportunities`, 25).
 
 ## 3. Discover (Agent 1)
-Launch the **opportunity-scout** subagent with RUN_DIR, the confirmed source list and CAP = 10 − new_today.
+Launch the **opportunity-scout** subagent with RUN_DIR, the confirmed source list and CAP = 25 − new_today.
 Wait for its JSON. If `new_verified` is empty, skip to step 6 and report why (no new items, blocked
 sources, network).
 
@@ -65,7 +65,7 @@ It copies the photo used into the offer folder as `city.jpg`, which is stored wi
 For each id in `new_verified`:
 1. `node connect/cli.mjs prepare <id> --run $RUN_DIR` → `offer_dir` (Offer_NNN).
 2. In **one message**, launch **visual-designer** and **communications** for that offer (RUN_DIR, OFFER_DIR,
-   ID). Several offers can be handled in the same message: both agents per offer, up to 5 offers at a time.
+   ID). Several offers can be handled in the same message: both agents per offer, up to 5 offers at a time (with 25 offers, work in batches of 5).
    (Where Agent Teams are enabled, run the three agents as teammates instead; the same files and commands
    apply. Communications may message the designer to align wording, and either may message the scout about a
    doubtful record.)

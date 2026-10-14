@@ -9,12 +9,12 @@
     "time_zone": "Europe/Zurich",
     "active_hours": [7, 22],
     "lead_minutes": 30,
-    "min_gap_minutes": 45,
+    "min_gap_minutes": 30,
     "max_gap_minutes": 180,
     "max_posts_per_run": 1
   },
   "daily": {
-    "max_new_opportunities": 10,
+    "max_new_opportunities": 25,
     "max_age_days": 21,
     "require_source_confirmation": false,
     "auto_approve": true,
