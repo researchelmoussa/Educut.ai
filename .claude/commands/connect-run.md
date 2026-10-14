@@ -21,19 +21,18 @@ EduCut Connect/
   Registry/registry.json          every opportunity ever seen (dedup + status history)
 ```
 
-## 1. Sources: always ask first
+## 1. Sources (no confirmation: the administrator asked not to be asked)
 1. The administrator keeps the sources in the Google Doc **`links`** in the `Scrawling` folder
    (`parentId = '<crawling folder id>' and title = 'links'`). Download it as text
    (`download_file_content`, `exportMimeType: text/plain`), strip the BOM and `\r`, and save it to
    `$RUN_DIR/links.txt` under the header comments of the root `links.txt`. Only if that Doc is missing,
    fall back to `links.txt` in the EduCut Connect root folder.
    Run `node connect/cli.mjs sources $RUN_DIR/links.txt` for the numbered list.
-2. Show the administrator the numbered list, then **ask with AskUserQuestion** (this is their input box):
-   question "Today's EduCut Connect sources: run with these?", options
-   "Run with these N sources" / "Skip today's run". They can type into "Other" to paste links to add, or
-   write e.g. "remove 3".
-3. If they add or remove links, tell the administrator to update the `links` Doc (it is theirs), and use the
-   changed list for today's run. Show the final list. If they skip, stop.
+2. `daily.require_source_confirmation` in `connect/config/connect.config.json` is **false**: the administrator
+   has said not to ask. Do not ask for confirmation or permission at any step; show the numbered list in
+   the final summary and run with it. (Only if that flag is set back to true: ask with AskUserQuestion,
+   "Today's EduCut Connect sources: run with these?", options "Run with these N sources" / "Skip today's run".)
+3. The administrator edits the `links` Doc to add or remove sources; always use its current content.
 
 ## 2. Initialise
 1. `npm --prefix connect ci --no-audit --no-fund` (flag set and fonts), then `RUN_DIR=connect/runs/$(date -u +%F)`.
