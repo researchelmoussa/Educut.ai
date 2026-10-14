@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-14T07:15:58.954Z",
+  "updated_at": "2026-10-14T07:33:24.133Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -1379,7 +1379,7 @@
       "deadline": "2026-11-24T09:00:00+00:00",
       "content_hash": "sha256:dacb77eac78db01a9742e835bad7f11309f44e185df5e960b85fff16a4784bd7",
       "last_verified_at": "2026-10-14T07:13:33.273Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "READY_TO_PUBLISH",
       "first_seen": "2026-10-14T07:13:43.406Z",
       "history": [
         {
@@ -1409,6 +1409,20 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-14T07:33:23.102Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-14T07:33:23.103Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 18
@@ -1427,7 +1441,7 @@
       "deadline": "2027-01-31T23:59:00+00:00",
       "content_hash": "sha256:9b5d55ffcc55626da9d732e9e7032f56cf73fc57bc8c640749eccc8a0d24946f",
       "last_verified_at": "2026-10-14T07:13:39.682Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "READY_TO_PUBLISH",
       "first_seen": "2026-10-14T07:13:43.607Z",
       "history": [
         {
@@ -1457,6 +1471,20 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-14T07:33:23.308Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-14T07:33:23.308Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 19
@@ -1475,7 +1503,7 @@
       "deadline": "2026-12-31",
       "content_hash": "sha256:edb885d174421938bca5cfc207257b70363fbd38e3d0c19f4e30e9810bcb3add",
       "last_verified_at": "2026-10-14T07:13:33.504Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "READY_TO_PUBLISH",
       "first_seen": "2026-10-14T07:13:43.807Z",
       "history": [
         {
@@ -1505,6 +1533,20 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-14T07:33:23.498Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-14T07:33:23.498Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 20
@@ -1523,7 +1565,7 @@
       "deadline": "2026-11-02T23:59:00-08:00",
       "content_hash": "sha256:a15fcd01e4301f1c1c5ba49ba758ad75fde7f2a5bb1433f2450525eae4dc3067",
       "last_verified_at": "2026-10-14T07:13:32.686Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "READY_TO_PUBLISH",
       "first_seen": "2026-10-14T07:13:43.994Z",
       "history": [
         {
@@ -1553,6 +1595,20 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-14T07:33:23.695Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-14T07:33:23.695Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 21
@@ -1571,7 +1627,7 @@
       "deadline": "2026-12-15",
       "content_hash": "sha256:02f32a4d1c3b058b2f32a7cba68cbe9a9d9c605589a5708e2db5af05cd248a7e",
       "last_verified_at": "2026-10-14T07:13:39.890Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "READY_TO_PUBLISH",
       "first_seen": "2026-10-14T07:13:44.183Z",
       "history": [
         {
@@ -1601,6 +1657,20 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-14T07:33:23.939Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-14T07:33:23.940Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 22
@@ -1619,7 +1689,7 @@
       "deadline": "2026-10-31",
       "content_hash": "sha256:86a44f3bc2fc7f72e3dbe15461b847cadb4d5a789f2d4ca7085677d9b17f43f1",
       "last_verified_at": "2026-10-14T07:13:32.439Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "READY_TO_PUBLISH",
       "first_seen": "2026-10-14T07:13:44.378Z",
       "history": [
         {
@@ -1649,6 +1719,20 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-14T07:33:24.133Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-14T07:33:24.133Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 23
