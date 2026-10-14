@@ -48,7 +48,8 @@ Commands: `node connect/cli.mjs <cmd> …`.
      "don't miss out"), no "we are hiring": EduCut AI only lists the opportunity.
 3. **Card photo (landscape).** Every listing card shows a landscape photo from the administrator's Google
    Drive, `EduCut Connect/Landmarks/`:
-   - the offer's `city.jpg` / `city.png` if the offer folder has one (already taken from Landmarks), else
+   - the offer's `city.jpg` / `city.png` if the offer folder has one (the renderer already chose it: country
+     photo first, default only when the country has no folder), else
    - the country photo in `Landmarks/images/<CC>/` (CC = the record's `location.country_code`, e.g. `US`):
      list that folder with the Google Drive connector (`parentId = '<folder id>'`), skip `.DS_Store` and
      other non-images, download the image (`download_file_content`; if the result is saved to a file,
