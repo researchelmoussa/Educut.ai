@@ -40,7 +40,7 @@ export function deadlineLabel(d) {
   return `${Number(m[3])} ${MONTHS[Number(m[2]) - 1]} ${m[1]}${t ? `, ${t[1]}:${t[2]}` : ''}${d.timezone ? ` (${d.timezone})` : ''}`;
 }
 
-const cap = (s) => (s ? (/^phd$/i.test(s) ? 'PhD' : s[0].toUpperCase() + s.slice(1)) : s);
+const cap = (s) => (s ? (/^phd$/i.test(s) ? 'PhD' : s[0].toUpperCase() + s.slice(1).replace(/_/g, '-')) : s);
 // 'unspecified' / 'other' carry no information for a reader: leave them out of labels.
 const known = (v) => (v && !/^(unspecified|unknown|other|n\/a)$/i.test(v) ? v : null);
 
