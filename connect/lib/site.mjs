@@ -94,7 +94,7 @@ export function briefText(b) {
     `Field: ${b.field ?? 'not specified'}`,
     `Level: ${b.level ?? 'not specified'}`,
     `Deadline: ${b.deadline_label ?? 'not specified'}`,
-    `Compensation: ${b.compensation ? JSON.stringify(b.compensation) : 'not stated (do not mention pay)'}`,
+    `Compensation: ${b.compensation ? (typeof b.compensation === 'object' && b.compensation.value ? b.compensation.value : JSON.stringify(b.compensation)) :'not stated (do not mention pay)'}`,
     `About: ${b.about ?? 'not stated'}`,
     'Requirements:',
     list(b.requirements),
