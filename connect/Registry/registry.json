@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-14T07:33:24.133Z",
+  "updated_at": "2026-10-15T02:01:25.732Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -1802,6 +1802,732 @@
           "reason": "application_status=CLOSED"
         }
       ]
+    },
+    "opp_3c0eee7287a5ed30": {
+      "id": "opp_3c0eee7287a5ed30",
+      "fingerprint": "671128a1c734327d",
+      "title": "ELLIS PhD Program: Call for Applications 2026",
+      "institution": "ELLIS (European Laboratory for Learning and Intelligent Systems)",
+      "city": null,
+      "country": null,
+      "source_url": "https://mlscientist.com/ellis-phd-network/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://ellis.eu/news/ellis-phd-program-call-for-applications-2026",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-31T23:59:00-12:00",
+      "content_hash": "sha256:1ce45846ecba1d4ce4f327eefc39bd34c38167ce94ee23c22175dd40ec6a516e",
+      "last_verified_at": "2026-10-15T01:55:28.645Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-15T01:55:28.836Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:55:28.836Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:55:28.836Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-15T02:01:02.692Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-15T02:01:02.692Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 24
+    },
+    "opp_c5da552ebbb13a91": {
+      "id": "opp_c5da552ebbb13a91",
+      "fingerprint": "bb8202d9a56eef3a",
+      "title": "ETH AI Center Doctoral Fellowships",
+      "institution": "ETH AI Center, ETH Zurich",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://mlscientist.com/eth-ai-fellowships-switzerland/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://ai.ethz.ch/research/phd-and-postdoc-programs/phd-fellowships.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-27T16:00:00+01:00",
+      "content_hash": "sha256:d82301043bb3329a0bfd3103234652d8405afc95ad01e3a3fe16ede56ad281eb",
+      "last_verified_at": "2026-10-15T01:55:29.016Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-15T01:55:29.285Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:55:29.285Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:55:29.285Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-15T02:01:03.098Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-15T02:01:03.098Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 25
+    },
+    "opp_7bc207c8da921c1c": {
+      "id": "opp_7bc207c8da921c1c",
+      "fingerprint": "75eaf3d7587b8be8",
+      "title": "ETH AI Center Postdoctoral Fellowships",
+      "institution": "ETH AI Center, ETH Zurich",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://mlscientist.com/eth-ai-fellowships-switzerland/",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://ai.ethz.ch/research/phd-and-postdoc-programs/postdoc-fellowships.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-27T16:00:00+01:00",
+      "content_hash": "sha256:f1c73dd643808c1649f8c92a498571fc57eec29c19c802d31a4ca45b61e347a1",
+      "last_verified_at": "2026-10-15T01:55:29.495Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-15T01:55:29.703Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:55:29.703Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:55:29.703Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-15T02:01:03.498Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-15T02:01:03.498Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 26
+    },
+    "opp_5b9903009e129259": {
+      "id": "opp_5b9903009e129259",
+      "fingerprint": "a597cdc64e42bc9b",
+      "title": "Ph.D. Positions at CLS",
+      "institution": "Max Planck ETH Center for Learning Systems (CLS)",
+      "city": null,
+      "country": "Switzerland",
+      "source_url": "https://mlscientist.com/category/featured/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://learning-systems.org/apply",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-02T23:59:00+01:00",
+      "content_hash": "sha256:77a1a17c4e31038c6febbacfcc75fe821696242a9abc0f0cb25a923fd381dd48",
+      "last_verified_at": "2026-10-15T01:55:29.923Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-15T01:55:30.130Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:55:30.130Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:55:30.130Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-15T02:01:03.935Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-15T02:01:03.935Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 27
+    },
+    "opp_736b21565ab5b7cf": {
+      "id": "opp_736b21565ab5b7cf",
+      "fingerprint": "b9999df685c983f4",
+      "title": "IMPRS-IS Doctoral Program 2027",
+      "institution": "International Max Planck Research School for Intelligent Systems (IMPRS-IS)",
+      "city": null,
+      "country": "Germany",
+      "source_url": "https://mlscientist.com/imprs-is-doctoral-program-2027-germany/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://imprs.is.mpg.de/application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15T23:59:00-12:00",
+      "content_hash": "sha256:0ae425b0e9460fc4cd9c1c9719a2af28b0157246505e89c415caff60d00d89e3",
+      "last_verified_at": "2026-10-15T01:55:30.345Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-15T01:55:30.565Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:55:30.566Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:55:30.566Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-15T02:01:24.535Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-15T02:01:24.535Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 28
+    },
+    "opp_a71a1ec42a4bc0ef": {
+      "id": "opp_a71a1ec42a4bc0ef",
+      "fingerprint": "6c8d540a29aa9181",
+      "title": "The AITHYRA International PhD Call in AI for Biomedicine (all genders)",
+      "institution": "AITHYRA",
+      "city": "Vienna",
+      "country": "Austria",
+      "source_url": "https://mlscientist.com/category/featured/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://aithyra.at/news/detail/default-b3c40e586a8bccef92ff41a0c785d3c6",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-01",
+      "content_hash": "sha256:7ecc3e3d25f4cc1827ba2e9d18a01569675303904c8e2c4989ce1452c765d1d5",
+      "last_verified_at": "2026-10-15T01:55:30.781Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-15T01:55:31.004Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:55:31.004Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:55:31.004Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-15T02:01:24.913Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-15T02:01:24.913Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 29
+    },
+    "opp_3fadb949c1d3eb98": {
+      "id": "opp_3fadb949c1d3eb98",
+      "fingerprint": "a5c977263ffded63",
+      "title": "NTU AI-for-X Postdoctoral Fellowship",
+      "institution": "Nanyang Technological University (NTU)",
+      "city": "Singapore",
+      "country": "Singapore",
+      "source_url": "https://mlscientist.com/ntu-ai-x-postdoc-fellowship-singapore/",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://www.ntu.edu.sg/research/research-careers/ntu-ai-for-x-postdoctoral-fellowship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-30T23:59:00+08:00",
+      "content_hash": "sha256:464348af75b71a5bd8d84864c3b20a00158afbffb87407429312c4d936654a45",
+      "last_verified_at": "2026-10-15T01:55:31.208Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-15T01:55:31.397Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:55:31.397Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:55:31.398Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-15T02:01:25.323Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-15T02:01:25.323Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 30
+    },
+    "opp_2b37d172114d800d": {
+      "id": "opp_2b37d172114d800d",
+      "fingerprint": "257ad1571a87a46f",
+      "title": "25 PhD Positions at the Max Planck School of Biomedical AI",
+      "institution": "Max Planck School of Biomedical Artificial Intelligence",
+      "city": null,
+      "country": "Germany",
+      "source_url": "https://mlscientist.com/phd-positions-biomedical-ai-germany-2/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://biomedicalai.maxplanckschools.org/3471/application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:e49926c34e5c789acdd74e70cf6d5cae4e0e4bed003a1737f663bbb1228f25eb",
+      "last_verified_at": "2026-10-15T01:55:31.622Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-15T01:55:31.812Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:55:31.812Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:55:31.812Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-15T02:01:25.732Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-15T02:01:25.732Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 31
+    },
+    "opp_008fbdb55e8270d3": {
+      "id": "opp_008fbdb55e8270d3",
+      "fingerprint": "162aa82c7049f69e",
+      "title": "EvoStar 2027",
+      "institution": "EvoStar",
+      "city": "Mainz",
+      "country": "Germany",
+      "source_url": "https://mlscientist.com/category/conference-calls/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://www.evostar.org/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-01",
+      "content_hash": "sha256:b4b6b595e45082b7c10f9478d81813f36ebe4bfb4fa916df8ad3c908b7accff3",
+      "last_verified_at": "2026-10-15T01:55:31.993Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-15T01:55:32.185Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:55:32.185Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:55:32.185Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-15T02:00:58.980Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-15T02:00:58.980Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 32
+    },
+    "opp_b0fd84bebff8922f": {
+      "id": "opp_b0fd84bebff8922f",
+      "fingerprint": "d27a3b2987eb2db3",
+      "title": "NAACL 2027 System Demonstrations",
+      "institution": "NAACL 2027 (Nations of the Americas Chapter of the Association for Computational Linguistics)",
+      "city": "San Francisco",
+      "country": "United States",
+      "source_url": "https://mlscientist.com/naacl-2027-demo-call-united-states/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://2027.naacl.org/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-04T23:59:00-12:00",
+      "content_hash": "sha256:9ad913810c1f1a8e5ad2a2fae447bd2530321d4ef8822583a0afae6659dfddb7",
+      "last_verified_at": "2026-10-15T01:55:32.376Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-15T01:55:32.555Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:55:32.555Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:55:32.555Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-15T02:00:59.410Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-15T02:00:59.410Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 33
+    },
+    "opp_445934d70ecf1b6a": {
+      "id": "opp_445934d70ecf1b6a",
+      "fingerprint": "2b705518fadaba7a",
+      "title": "L4DC 2027",
+      "institution": "Learning for Dynamics & Control Conference (L4DC)",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "source_url": "https://mlscientist.com/l4dc-2027-conference-sweden/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://l4dc2027.control.ee.ethz.ch/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-13",
+      "content_hash": "sha256:f3c73f6fdf10a3081f43b5c8f0a5e9f527e386ad1c9e6871403910597ce08011",
+      "last_verified_at": "2026-10-15T01:58:11.058Z",
+      "pipeline_status": "UNDER_REVIEW",
+      "first_seen": "2026-10-15T01:58:11.250Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:58:11.250Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:58:11.251Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-15T02:00:59.860Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-15T02:00:59.860Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        }
+      ],
+      "offer_number": 34
+    },
+    "opp_fd68f679fe38d505": {
+      "id": "opp_fd68f679fe38d505",
+      "fingerprint": "cdd5ae3616e37f0a",
+      "title": "The 26th Nordic Conference on Computational Linguistics (NoDaLiDa)",
+      "institution": "Centre for Language Technology, University of Copenhagen",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://mlscientist.com/nodalida-2027-cfp-denmark/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://eventsignup.ku.dk/nodalida-27/conference",
+      "application_status": "NEEDS_REVIEW",
+      "deadline": "2027-01-18",
+      "content_hash": "sha256:240f7f05a843d2f546b92e0bdb22f2c518e340e0c77f55b9f96c086099425c3a",
+      "last_verified_at": "2026-10-15T01:58:11.432Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-15T01:58:11.631Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:58:11.631Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:58:11.632Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_f17275aef986733f": {
+      "id": "opp_f17275aef986733f",
+      "fingerprint": "b5c7f43dc80762b9",
+      "title": "Call for Industry Track Papers",
+      "institution": "COLING 2027 (32nd International Conference on Computational Linguistics)",
+      "city": "Macau",
+      "country": null,
+      "source_url": "https://mlscientist.com/coling-2027-industry-track-china-2/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://2027.coling-iccl.org/",
+      "application_status": "NEEDS_REVIEW",
+      "deadline": null,
+      "content_hash": "sha256:e13a0840749e443fd24c92fb5897fb4638745b5744d85ebd8251d0f04eb7294f",
+      "last_verified_at": "2026-10-15T01:58:11.826Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-15T01:58:12.042Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:58:12.042Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:58:12.042Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_ab94fbbe927630e0": {
+      "id": "opp_ab94fbbe927630e0",
+      "fingerprint": "bc0dcfb071d8039f",
+      "title": "Call « FSR Post-doc 2027 » - Incoming Postdoctoral Fellowships",
+      "institution": "UCLouvain",
+      "city": null,
+      "country": "Belgium",
+      "source_url": "https://fellowshipsguide.com/uclouvain-incoming-postdoctoral-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://uclouvain.be/en/news/appel-fsr-bourses-accueil-de-post-doctorants-en-mobilite-internationale",
+      "application_status": "CLOSED",
+      "deadline": "2026-09-23T09:00:00+02:00",
+      "content_hash": "sha256:12ffe4dbd7ff0446ada2e86f4df599e89f60d18d22551e7b2035bf87b048abe0",
+      "last_verified_at": "2026-10-15T01:58:12.225Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-15T01:58:12.417Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:58:12.417Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:58:12.418Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_944cc2b06f5c3869": {
+      "id": "opp_944cc2b06f5c3869",
+      "fingerprint": "d96a76e88ee650a7",
+      "title": "McKenzie Postdoctoral Fellowships Scheme",
+      "institution": "The University of Melbourne",
+      "city": "Melbourne",
+      "country": "Australia",
+      "source_url": "https://fellowshipsguide.com/mckenzie-postdoctoral-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://sites.research.unimelb.edu.au/research-funding/researcher-development-schemes/mckenzie-fellowship",
+      "application_status": "CLOSED",
+      "deadline": "2026-05-07T15:00:00+10:00",
+      "content_hash": "sha256:8a7964bbc34038aa6456f97b4c7e494957950ba8a6181fe928643ebeb82bbe0d",
+      "last_verified_at": "2026-10-15T01:58:12.594Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-15T01:58:12.787Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:58:12.787Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:58:12.787Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_1cacca185f0bd901": {
+      "id": "opp_1cacca185f0bd901",
+      "fingerprint": "2dabb14bd1e5c236",
+      "title": "Postdoctoral Fellowships",
+      "institution": "The British Academy",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://fellowshipsguide.com/british-academy-postdoctoral-fellowship/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.thebritishacademy.ac.uk/funding/schemes/postdoctoral-fellowships/",
+      "application_status": "CLOSED",
+      "deadline": "2026-09-30T17:00:00+01:00",
+      "content_hash": "sha256:bbfc609569a51c9724021e0e1e0e71ed4460d3d1896d60821966f157b00a584c",
+      "last_verified_at": "2026-10-15T01:58:12.963Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-15T01:58:13.143Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:58:13.143Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:58:13.143Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_2c7b779518383e89": {
+      "id": "opp_2c7b779518383e89",
+      "fingerprint": "652cfdd575382f29",
+      "title": "Call PhD 2026/2027",
+      "institution": "Scuola Superiore Sant'Anna",
+      "city": "Pisa",
+      "country": "Italy",
+      "source_url": "https://fellowshipsguide.com/58-phd-at-scuola-superiore/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.santannapisa.it/en/training/call-phd",
+      "application_status": "CLOSED",
+      "deadline": "2026-05-15T12:00:00+02:00",
+      "content_hash": "sha256:3a40619c70e681bd80904c33be2ee0295ae31afc82dc203b7d1afefbcbb7776e",
+      "last_verified_at": "2026-10-15T01:58:13.319Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-15T01:58:13.508Z",
+      "history": [
+        {
+          "at": "2026-10-15T01:58:13.508Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-15T01:58:13.509Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
     }
   },
   "seen_urls": {
@@ -1871,7 +2597,39 @@
     "https://fellowshipsguide.com/fias-fellowship-programme-2": "opp_9d5cc5b8dba8484d",
     "https://paris-iea.fr/en/apply/calls-for-applications/fias-call-for-applications-2027-2028": "opp_9d5cc5b8dba8484d",
     "https://fellowshipsguide.com/royal-academy-research-fellowships": "opp_2bdcf1a851caaf3f",
-    "https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-prizes/support-for-research/research-fellowships/eligibility": "opp_2bdcf1a851caaf3f"
+    "https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-prizes/support-for-research/research-fellowships/eligibility": "opp_2bdcf1a851caaf3f",
+    "https://mlscientist.com/ellis-phd-network": "opp_3c0eee7287a5ed30",
+    "https://ellis.eu/news/ellis-phd-program-call-for-applications-2026": "opp_3c0eee7287a5ed30",
+    "https://mlscientist.com/eth-ai-fellowships-switzerland": "opp_7bc207c8da921c1c",
+    "https://ai.ethz.ch/research/phd-and-postdoc-programs/phd-fellowships.html": "opp_c5da552ebbb13a91",
+    "https://ai.ethz.ch/research/phd-and-postdoc-programs/postdoc-fellowships.html": "opp_7bc207c8da921c1c",
+    "https://mlscientist.com/category/featured": "opp_a71a1ec42a4bc0ef",
+    "https://learning-systems.org/apply": "opp_5b9903009e129259",
+    "https://mlscientist.com/imprs-is-doctoral-program-2027-germany": "opp_736b21565ab5b7cf",
+    "https://imprs.is.mpg.de/application": "opp_736b21565ab5b7cf",
+    "https://aithyra.at/news/detail/default-b3c40e586a8bccef92ff41a0c785d3c6": "opp_a71a1ec42a4bc0ef",
+    "https://mlscientist.com/ntu-ai-x-postdoc-fellowship-singapore": "opp_3fadb949c1d3eb98",
+    "https://ntu.edu.sg/research/research-careers/ntu-ai-for-x-postdoctoral-fellowship": "opp_3fadb949c1d3eb98",
+    "https://mlscientist.com/phd-positions-biomedical-ai-germany-2": "opp_2b37d172114d800d",
+    "https://biomedicalai.maxplanckschools.org/3471/application": "opp_2b37d172114d800d",
+    "https://mlscientist.com/category/conference-calls": "opp_008fbdb55e8270d3",
+    "https://evostar.org/2027": "opp_008fbdb55e8270d3",
+    "https://mlscientist.com/naacl-2027-demo-call-united-states": "opp_b0fd84bebff8922f",
+    "https://2027.naacl.org/": "opp_b0fd84bebff8922f",
+    "https://mlscientist.com/l4dc-2027-conference-sweden": "opp_445934d70ecf1b6a",
+    "https://l4dc2027.control.ee.ethz.ch/": "opp_445934d70ecf1b6a",
+    "https://mlscientist.com/nodalida-2027-cfp-denmark": "opp_fd68f679fe38d505",
+    "https://eventsignup.ku.dk/nodalida-27/conference": "opp_fd68f679fe38d505",
+    "https://mlscientist.com/coling-2027-industry-track-china-2": "opp_f17275aef986733f",
+    "https://2027.coling-iccl.org/": "opp_f17275aef986733f",
+    "https://fellowshipsguide.com/uclouvain-incoming-postdoctoral-fellowships": "opp_ab94fbbe927630e0",
+    "https://uclouvain.be/en/news/appel-fsr-bourses-accueil-de-post-doctorants-en-mobilite-internationale": "opp_ab94fbbe927630e0",
+    "https://fellowshipsguide.com/mckenzie-postdoctoral-fellowships": "opp_944cc2b06f5c3869",
+    "https://sites.research.unimelb.edu.au/research-funding/researcher-development-schemes/mckenzie-fellowship": "opp_944cc2b06f5c3869",
+    "https://fellowshipsguide.com/british-academy-postdoctoral-fellowship": "opp_1cacca185f0bd901",
+    "https://thebritishacademy.ac.uk/funding/schemes/postdoctoral-fellowships": "opp_1cacca185f0bd901",
+    "https://fellowshipsguide.com/58-phd-at-scuola-superiore": "opp_2c7b779518383e89",
+    "https://santannapisa.it/en/training/call-phd": "opp_2c7b779518383e89"
   },
-  "last_offer_number": 23
+  "last_offer_number": 34
 }

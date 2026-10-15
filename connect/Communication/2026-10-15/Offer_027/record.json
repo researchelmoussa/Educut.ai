@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Ph.D. Positions at CLS",
+    "evidence_url": "https://mlscientist.com/category/featured/",
+    "evidence_quote": "Ph.D. Positions at CLS"
+  },
+  "institution": {
+    "name": "Max Planck ETH Center for Learning Systems (CLS)",
+    "website": "https://learning-systems.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://learning-systems.org/apply",
+  "source_url": "https://mlscientist.com/category/featured/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Machine learning, robotics and computer vision",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Master's degree (Bachelor's-only applicants are not eligible)"
+  ],
+  "skills": [],
+  "description_short": "The Max Planck ETH Center for Learning Systems, a collaboration between ETH Zurich and the Max Planck Society, offers funded PhD positions starting in 2027. Applicants submit an online form, documents and 2-3 reference letters; shortlisted candidates interview in Tübingen in March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-02T23:59:00+01:00",
+    "timezone": "Europe/Zurich",
+    "evidence_url": "https://learning-systems.org/apply",
+    "evidence_quote": "November 02, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CLS application page (as shown in search results): deadline for all parts of the application, including references, is 23:59 CET on 2 November 2026 (future)",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "mlscientist.com listing seen through web-search results only (site unreachable from this environment)",
+    "Title taken from the mlscientist.com listing; the specific mlscientist post URL was not found, so source_url is the featured category page where it was seen",
+    "Program is joint between ETH Zurich (Switzerland) and Max Planck Society (Germany); country set to Switzerland per the mlscientist listing, city not stated"
+  ],
+  "id": "opp_5b9903009e129259",
+  "fingerprint": "a597cdc64e42bc9b",
+  "discovered_at": "2026-10-15T01:55:29.923Z",
+  "last_verified_at": "2026-10-15T01:55:29.923Z",
+  "content_hash": "sha256:77a1a17c4e31038c6febbacfcc75fe821696242a9abc0f0cb25a923fd381dd48"
+}

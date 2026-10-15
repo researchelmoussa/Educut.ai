@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "ELLIS PhD Program: Call for Applications 2026",
+    "evidence_url": "https://ellis.eu/news/ellis-phd-program-call-for-applications-2026",
+    "evidence_quote": "ELLIS PhD Program: Call for Applications 2026"
+  },
+  "institution": {
+    "name": "ELLIS (European Laboratory for Learning and Intelligent Systems)",
+    "website": "https://ellis.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ellis.eu/news/ellis-phd-program-call-for-applications-2026",
+  "source_url": "https://mlscientist.com/ellis-phd-network/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Machine learning and artificial intelligence",
+  "seniority": "Doctoral",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "ELLIS has opened its 2026 PhD Program call for entry in 2027. Applicants apply online through the ELLIS application portal; reference requests must be submitted before the deadline, and the network spans European AI labs with an international exchange component.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-10-31T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://ellis.eu/news/ellis-phd-program-call-for-applications-2026",
+    "evidence_quote": "31 October 2026, 23:59 AoE"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ELLIS announcement: apply online through the ELLIS application portal by 31 October 2026, 23:59 AoE (future)",
+    "ELLIS homepage, as shown in search results, says the portal is open for 2027 entrants",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "mlscientist.com listing seen through web-search results only (site unreachable from this environment)",
+    "Program spans several European countries; no single host country, so location left null",
+    "ELLIS announcement wording on the reference-request date is inconsistent (31 October vs 1 November)",
+    "mlscientist.com listing gave 15 November 2026, which the official page contradicts; official 31 October used"
+  ],
+  "id": "opp_3c0eee7287a5ed30",
+  "fingerprint": "671128a1c734327d",
+  "discovered_at": "2026-10-15T01:55:28.645Z",
+  "last_verified_at": "2026-10-15T01:55:28.645Z",
+  "content_hash": "sha256:1ce45846ecba1d4ce4f327eefc39bd34c38167ce94ee23c22175dd40ec6a516e"
+}

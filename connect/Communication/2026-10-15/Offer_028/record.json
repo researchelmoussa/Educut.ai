@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "IMPRS-IS Doctoral Program 2027",
+    "evidence_url": "https://mlscientist.com/imprs-is-doctoral-program-2027-germany/",
+    "evidence_quote": "IMPRS-IS Doctoral Program 2027"
+  },
+  "institution": {
+    "name": "International Max Planck Research School for Intelligent Systems (IMPRS-IS)",
+    "website": "https://imprs.is.mpg.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://imprs.is.mpg.de/application",
+  "source_url": "https://mlscientist.com/imprs-is-doctoral-program-2027-germany/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Intelligent systems: machine learning, robotics, computer vision, human-computer interaction",
+  "seniority": "Doctoral",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "IMPRS-IS, run by the Max Planck Institute for Intelligent Systems with the Universities of Stuttgart and Tübingen, accepts doctoral applications for starts from February 2027. Applicants submit a two-page motivational letter and three referees, whose letters are due by the deadline.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-15T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://imprs.is.mpg.de/application",
+    "evidence_quote": "November 15, 2026 (End of Day, AoE)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IMPRS-IS application page: next deadline for doctoral applications is November 15, 2026 (End of Day, AoE) (future)",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "mlscientist.com listing seen through web-search results only (site unreachable from this environment)",
+    "Host city is Stuttgart or Tübingen depending on supervisor; city left null",
+    "IMPRS-IS FAQ and application page differ slightly on when the portal opens"
+  ],
+  "id": "opp_736b21565ab5b7cf",
+  "fingerprint": "b9999df685c983f4",
+  "discovered_at": "2026-10-15T01:55:30.345Z",
+  "last_verified_at": "2026-10-15T01:55:30.345Z",
+  "content_hash": "sha256:0ae425b0e9460fc4cd9c1c9719a2af28b0157246505e89c415caff60d00d89e3"
+}
