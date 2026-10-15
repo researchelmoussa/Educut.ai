@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "NAACL 2027 System Demonstrations",
+    "evidence_url": "https://2027.naacl.org/",
+    "evidence_quote": "System Demonstrations"
+  },
+  "institution": {
+    "name": "NAACL 2027 (Nations of the Americas Chapter of the Association for Computational Linguistics)",
+    "website": "https://2027.naacl.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://2027.naacl.org/",
+  "source_url": "https://mlscientist.com/naacl-2027-demo-call-united-states/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "San Francisco",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Natural language processing",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "NAACL 2027, held June 1-5, 2027 in San Francisco, has a call for system demonstration papers. Notifications are due February 10, 2027 and camera-ready papers March 3, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-04T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://2027.naacl.org/",
+    "evidence_quote": "December 4, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NAACL 2027 site (as shown in search results): system demo submission deadline December 4, 2026, 11:59 pm UTC-12 (future)",
+    "Submission system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "mlscientist.com listing seen through web-search results only (site unreachable from this environment)",
+    "Exact demo call page URL not seen; official homepage used",
+    "Title composed from the conference name and the 'System Demonstrations' call page name on the official site; the mlscientist title was truncated in search results",
+    "This is a call for papers, not a position"
+  ],
+  "id": "opp_b0fd84bebff8922f",
+  "fingerprint": "d27a3b2987eb2db3",
+  "discovered_at": "2026-10-15T01:55:32.376Z",
+  "last_verified_at": "2026-10-15T01:55:32.376Z",
+  "content_hash": "sha256:9ad913810c1f1a8e5ad2a2fae447bd2530321d4ef8822583a0afae6659dfddb7"
+}

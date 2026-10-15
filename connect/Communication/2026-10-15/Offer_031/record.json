@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "25 PhD Positions at the Max Planck School of Biomedical AI",
+    "evidence_url": "https://ellis.eu/research/jobs/2026-12-01-25-phd-positions-at-the-max-planck-school-of-biomedical-ai",
+    "evidence_quote": "25 PhD Positions at the Max Planck School of Biomedical AI"
+  },
+  "institution": {
+    "name": "Max Planck School of Biomedical Artificial Intelligence",
+    "website": "https://biomedicalai.maxplanckschools.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://biomedicalai.maxplanckschools.org/3471/application",
+  "source_url": "https://mlscientist.com/phd-positions-biomedical-ai-germany-2/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Biomedical artificial intelligence",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Master's in computer science, mathematics, statistics, engineering, physics, or a computational life science"
+  ],
+  "skills": [],
+  "description_short": "The Max Planck School of Biomedical Artificial Intelligence offers 25 PhD positions in a structured three-year program across Germany, starting September 2027. Students are co-supervised by two fellows; applicants name up to three potential supervisors and submit a CV, motivation letter and transcripts.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": null,
+    "evidence_url": "https://biomedicalai.maxplanckschools.org/3471/application",
+    "evidence_quote": "from September 1 to December 1 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official BMAI application page: applications through the online portal from September 1 to December 1 2026 (future)",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "mlscientist.com listing seen through web-search results only (site unreachable from this environment)",
+    "Positions are spread across several German sites; city left null",
+    "Deadline time of day and timezone not stated",
+    "Title quoted from the ELLIS jobs listing of the call"
+  ],
+  "id": "opp_2b37d172114d800d",
+  "fingerprint": "257ad1571a87a46f",
+  "discovered_at": "2026-10-15T01:55:31.622Z",
+  "last_verified_at": "2026-10-15T01:55:31.622Z",
+  "content_hash": "sha256:e49926c34e5c789acdd74e70cf6d5cae4e0e4bed003a1737f663bbb1228f25eb"
+}
