@@ -49,7 +49,7 @@ const known = (v) => (v && !/^(unspecified|unknown|other|n\/a)$/i.test(v) ? v : 
 export function webBrief({ offerName, rec, pkg, visual, siteUrl }) {
   const slug = offerSlug(offerName, rec.title.value);
   const m = pkg?.course_match ?? null;
-  const loc = [rec.location?.city, rec.location?.country].filter(Boolean).join(', ');
+  const loc = [rec.location?.city, rec.location?.country].filter((v, i, a) => v && a.findIndex((x) => String(x).toLowerCase() === String(v).toLowerCase()) === i).join(', ');
   return {
     opportunity_id: rec.id,
     offer: offerName,

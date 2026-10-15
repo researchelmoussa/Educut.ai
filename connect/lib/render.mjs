@@ -42,7 +42,7 @@ export function cardHtml(spec, format = 'portrait') {
   const c = t.colors;
   const square = format === 'square';
   const flag = flagPath(spec.country_code);
-  const location = [spec.city, spec.country].filter(Boolean).join(', ');
+  const location = [spec.city, spec.country].filter((v, i, a) => v && a.findIndex((x) => String(x).toLowerCase() === String(v).toLowerCase()) === i).join(', ');
   const variant = VARIANTS.includes(spec.variant) ? spec.variant : 'datasheet';
   const darkTop = variant === 'obsidian';
   const darkBottom = variant === 'obsidian' || variant === 'split';

@@ -404,7 +404,7 @@ const commands = {
       const comms = readJson(join(dir, 'comms-package.json'), null);
       rows.push(
         `## ${d} — ${rec.title.value}\n` +
-          `**${rec.institution.name}** · ${[rec.location.city, rec.location.country].filter(Boolean).join(', ') || 'location not specified'}\n\n` +
+          `**${rec.institution.name}** · ${[rec.location.city, rec.location.country].filter((v, i, a) => v && a.findIndex((x) => String(x).toLowerCase() === String(v).toLowerCase()) === i).join(', ') || 'location not specified'}\n\n` +
           `- Status: **${reg.get(rec.id)?.pipeline_status}** · application ${rec.application_status}${rec.application_status === 'OPEN_LIKELY' ? ' ⚠️ verify the portal manually' : ''}\n` +
           `- Deadline: ${rec.deadline?.value ?? 'not specified'}\n` +
           `- Apply: ${rec.application_url ?? 'n/a'}\n- Source: ${rec.source_url}\n` +
