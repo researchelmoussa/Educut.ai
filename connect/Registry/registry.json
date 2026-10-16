@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-15T14:03:48.995Z",
+  "updated_at": "2026-10-16T02:08:20.949Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -995,7 +995,7 @@
       "deadline": "2026-10-15T23:59:00+09:00",
       "content_hash": "sha256:a3f0e5645b0f1ff314a26ab2baedef52e12e2a7887bd4b76bb697c8c580890bc",
       "last_verified_at": "2026-10-13T10:51:24.298Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-13T10:51:29.001Z",
       "history": [
         {
@@ -1039,6 +1039,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-10-16T01:50:30.924Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-15T23:59:00+09:00 passed"
         }
       ],
       "offer_number": 15
@@ -1119,7 +1126,7 @@
       "deadline": "2026-10-15T23:59:00",
       "content_hash": "sha256:057afa85c189de29656796fa6718d55bc5562d68fcc347d3430f419eb19565a5",
       "last_verified_at": "2026-10-13T10:51:25.752Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-13T10:51:29.454Z",
       "history": [
         {
@@ -1163,6 +1170,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-10-16T01:50:30.924Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-15T23:59:00 passed"
         }
       ],
       "offer_number": 17
@@ -2682,6 +2696,1971 @@
           "reason": "application_status=CLOSED"
         }
       ]
+    },
+    "opp_4999d5f961bb61b9": {
+      "id": "opp_4999d5f961bb61b9",
+      "fingerprint": "03a638ec362adb7b",
+      "title": "PhD Position in Physical AI: Adaptive Foundation Models for Robotics",
+      "institution": "Aarhus University",
+      "city": null,
+      "country": "Denmark",
+      "source_url": "https://mlscientist.com/category/denmark/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://phd.tech.au.dk/for-applicants/apply-here/saeropslag/phd-position-in-physical-ai-adaptive-foundation-models-for-robotics",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-01T23:59:00+01:00",
+      "content_hash": "sha256:21375841fbd77d301020d3828b3361a4bef71ad10e6c5d97d2a438fd59b18100",
+      "last_verified_at": "2026-10-16T01:56:35.029Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T01:56:40.339Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:40.339Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:40.339Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:28.387Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:28.388Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:19.410Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:19.411Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 38
+    },
+    "opp_2589aee0cb0d083e": {
+      "id": "opp_2589aee0cb0d083e",
+      "fingerprint": "d4991bbc6eb304d8",
+      "title": "International Fellowships",
+      "institution": "AAUW",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://fellowshipsguide.com/aauw-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.aauw.org/resources/programs/fellowships-grants/aauw-international-fellowships/",
+      "application_status": "CLOSED",
+      "deadline": "2026-09-17T17:00:00-04:00",
+      "content_hash": "sha256:e84787e21ae216ad022ae6ad04f0a2e06393f4eb1874e49c2b136d800f5c194a",
+      "last_verified_at": "2026-10-16T01:56:35.204Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T01:56:40.518Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:40.518Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:40.518Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_8eff0836a9d2b10b": {
+      "id": "opp_8eff0836a9d2b10b",
+      "fingerprint": "d93ffcee7e5e9c71",
+      "title": "Internships",
+      "institution": "Heinrich Böll Stiftung Washington, DC",
+      "city": "Washington, DC",
+      "country": "United States",
+      "source_url": "https://fellowshipsguide.com/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://us.boell.org/en/internships",
+      "application_status": "DEADLINE_NOT_SPECIFIED",
+      "deadline": null,
+      "content_hash": "sha256:69075efce06935a1c12019888a4a596a529adf68b370a3ab7e86d69b8ce3165b",
+      "last_verified_at": "2026-10-16T01:56:35.395Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-16T01:56:40.690Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:40.690Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:40.691Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=DEADLINE_NOT_SPECIFIED"
+        }
+      ]
+    },
+    "opp_88db489f065bb0e6": {
+      "id": "opp_88db489f065bb0e6",
+      "fingerprint": "e3c8d7edb5526f3a",
+      "title": "The Branco Weiss Fellowship",
+      "institution": "The Branco Weiss Fellowship",
+      "city": null,
+      "country": "Switzerland",
+      "source_url": "https://fellowshipsguide.com/branco-weiss-postdoctoral/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://brancoweissfellowship.org/who-should-apply/application/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T17:00:00+01:00",
+      "content_hash": "sha256:aa7220571c4a0addd49747c28d1f20d82db6053cde4bff84503f129c150300b0",
+      "last_verified_at": "2026-10-16T01:56:35.574Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T01:56:40.865Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:40.865Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:40.865Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:27.339Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:27.340Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:18.849Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:18.850Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 35
+    },
+    "opp_ee16a9a208747e9a": {
+      "id": "opp_ee16a9a208747e9a",
+      "fingerprint": "bc9d2cfb3738f47c",
+      "title": "Brookings Internship Program",
+      "institution": "The Brookings Institution",
+      "city": "Washington, DC",
+      "country": "United States",
+      "source_url": "https://fellowshipsguide.com/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.brookings.edu/careers/internships/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-07",
+      "content_hash": "sha256:0c52c759cf8ab701cda81156e8356ff337a5cdfcd4855b453ef3a5c585ead6cf",
+      "last_verified_at": "2026-10-16T01:56:35.746Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T01:56:41.050Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:41.050Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:41.050Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:27.682Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:27.682Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:19.047Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:19.048Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 36
+    },
+    "opp_c06c15cf262c43e0": {
+      "id": "opp_c06c15cf262c43e0",
+      "fingerprint": "5897ad68cd291105",
+      "title": "Dependable and Deployable Artificial Intelligence for Robotics - PhD",
+      "institution": "UKRI AI Centre for Doctoral Training in Dependable and Deployable AI for Robotics (CDT-D2AIR)",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "source_url": "https://mlscientist.com/ai-robotics-phd-united-kingdom/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.cdt-d2air.uk/apply",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-27",
+      "content_hash": "sha256:044a7e27c513b27cdbdf0c8b6e9a5ea04f6044200579e9698da975d477992e8c",
+      "last_verified_at": "2026-10-16T01:56:35.932Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T01:56:41.233Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:41.233Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:41.233Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:28.036Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:28.036Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:19.234Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:19.234Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 37
+    },
+    "opp_606883b648dc468f": {
+      "id": "opp_606883b648dc468f",
+      "fingerprint": "edc3ee67051c710a",
+      "title": "Postdoc in AI Alignment and Robotics",
+      "institution": "CY Cergy Paris Université",
+      "city": "Cergy-Pontoise",
+      "country": "France",
+      "source_url": "https://mlscientist.com/postdoc-ai-alignment-robotics-france/",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": null,
+      "application_status": "NEEDS_REVIEW",
+      "deadline": "2026-10-31",
+      "content_hash": "sha256:5165e2395ed48fdeea3b12574bf940e8811b8b2bf1b03ea6317a8a19d74c0fa3",
+      "last_verified_at": "2026-10-16T01:56:36.121Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-16T01:56:41.426Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:41.426Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:41.426Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_cb17929efc243255": {
+      "id": "opp_cb17929efc243255",
+      "fingerprint": "28f42fe06d82547b",
+      "title": "Government Scholarships",
+      "institution": "Ministry of Education, Youth and Sports of the Czech Republic",
+      "city": null,
+      "country": "Czech Republic",
+      "source_url": "https://fellowshipsguide.com/czech-scholarships-ms-phd/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries",
+      "application_status": "CLOSED",
+      "deadline": "2026-09-30",
+      "content_hash": "sha256:ca4bcfa3c07f26a30f16bf3973e7b463a9972a1c9bd0734e0c22b10b31f93185",
+      "last_verified_at": "2026-10-16T01:56:36.287Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T01:56:41.625Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:41.625Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:41.626Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_2a38a3719c81f2a1": {
+      "id": "opp_2a38a3719c81f2a1",
+      "fingerprint": "29b8939e7ff2e17a",
+      "title": "DGfS 2027 Poster Session",
+      "institution": "Deutsche Gesellschaft für Sprachwissenschaft (DGfS)",
+      "city": "Jena",
+      "country": "Germany",
+      "source_url": "https://mlscientist.com/dgfs-2027-poster-session-germany/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-09-30",
+      "content_hash": "sha256:50dfa453ad68296675a4f427406ca509989b966ff65123eb45ee747d6ab4d19a",
+      "last_verified_at": "2026-10-16T01:56:36.479Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T01:56:41.799Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:41.799Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:41.799Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_096c669a5e865c7c": {
+      "id": "opp_096c669a5e865c7c",
+      "fingerprint": "964658a73385aafb",
+      "title": "PhD in Cognitive Digital Twins & AI",
+      "institution": "KU Leuven",
+      "city": "Kortrijk",
+      "country": "Belgium",
+      "source_url": "https://mlscientist.com/category/belgium/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.kuleuven.be/personeel/jobsite/jobs/60759584",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-30",
+      "content_hash": "sha256:e5a11aa0886ab8651f70e66087d9a2144c932b3ca8d3e1711b2573531c55f67f",
+      "last_verified_at": "2026-10-16T01:56:36.653Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T01:56:41.973Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:41.973Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:41.973Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:21.554Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:21.554Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:19.782Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:19.782Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 40
+    },
+    "opp_4e7c73d7272a8ef1": {
+      "id": "opp_4e7c73d7272a8ef1",
+      "fingerprint": "72db7f6b628ccf22",
+      "title": "NARNiHS 2027 Call for Abstracts",
+      "institution": "North American Research Network in Historical Sociolinguistics (NARNiHS)",
+      "city": "San Francisco",
+      "country": "United States",
+      "source_url": "https://mlscientist.com/narnihs-2027-call-abstracts-united-states-2/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-08-24T23:59:00-04:00",
+      "content_hash": "sha256:10ad41feb9d4f3b0636777a96e5b07436fda968c7a13b5dc7f1abc630b2f4b75",
+      "last_verified_at": "2026-10-16T01:56:36.817Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T01:56:42.148Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:42.148Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:42.149Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_d89a799f69dd8788": {
+      "id": "opp_d89a799f69dd8788",
+      "fingerprint": "35cc9300b652c803",
+      "title": "Mellon Fellowship of Scholars in the Humanities",
+      "institution": "Stanford Humanities Center",
+      "city": "Stanford",
+      "country": "United States",
+      "source_url": "https://fellowshipsguide.com/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://shc.stanford.edu/stanford-humanities-center/fellowships/mellon-fellowship-scholars-humanities",
+      "application_status": "CLOSED",
+      "deadline": "2026-10-15T23:59:00-07:00",
+      "content_hash": "sha256:8d479ea74c6f6a0284345905d6bf8c7c03cfebfdee968c7cdeb5217de5c6d54c",
+      "last_verified_at": "2026-10-16T01:56:36.989Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T01:56:42.332Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:42.332Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:42.332Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_5806b5fae443c206": {
+      "id": "opp_5806b5fae443c206",
+      "fingerprint": "b32fe0cf058cbb1d",
+      "title": "Vector Distinguished Postdoctoral Fellowship",
+      "institution": "Vector Institute for Artificial Intelligence",
+      "city": null,
+      "country": "Canada",
+      "source_url": "https://mlscientist.com/vector-distinguished-postdoctoral-fellowship-canada/",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://vectorinstitute.ai/research-talent/research-opportunities/vector-postdoctoral-fellows/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28T23:59:00-05:00",
+      "content_hash": "sha256:d290b7ac3d0680add18b23bd731cf335fe705fb55e2da9364d2e76147821cc07",
+      "last_verified_at": "2026-10-16T01:56:37.156Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T01:56:42.519Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:42.519Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:42.519Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:21.204Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:21.204Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:19.589Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:19.589Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 39
+    },
+    "opp_def5161a6cfedac2": {
+      "id": "opp_def5161a6cfedac2",
+      "fingerprint": "c791239650324dca",
+      "title": "Western Balkans Meet Japan: A Bridge into the Future",
+      "institution": "Regional Youth Cooperation Office (RYCO)",
+      "city": null,
+      "country": "Japan",
+      "source_url": "https://fellowshipsguide.com/western-balkans-japan-exchange-program/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.rycowb.org/call-for-applications-2026-2027-western-balkans-meet-japan-a-bridge-into-the-future/",
+      "application_status": "CLOSED",
+      "deadline": "2026-08-31T23:59:00+02:00",
+      "content_hash": "sha256:d1d1eed8766a79c6fe36c2c2f3bde7453586b059537a2d1f16a53e7e3f885e1b",
+      "last_verified_at": "2026-10-16T01:56:37.321Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T01:56:42.702Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:42.702Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:42.702Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_5dbda96363dd017d": {
+      "id": "opp_5dbda96363dd017d",
+      "fingerprint": "da93a8333af3eebd",
+      "title": "White House Internship Program",
+      "institution": "The White House",
+      "city": "Washington, DC",
+      "country": "United States",
+      "source_url": "https://fellowshipsguide.com/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.whitehouse.gov/internships/apply/",
+      "application_status": "NEEDS_REVIEW",
+      "deadline": "2027-01-04",
+      "content_hash": "sha256:dd3e4b5d1ef683a73327f144399bcd46a797b05c4e30f3b70d562fdfa3c489a2",
+      "last_verified_at": "2026-10-16T01:56:37.491Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-16T01:56:42.879Z",
+      "history": [
+        {
+          "at": "2026-10-16T01:56:42.879Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T01:56:42.879Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_418bcff5d8fea4f6": {
+      "id": "opp_418bcff5d8fea4f6",
+      "fingerprint": "ea012d8801554a82",
+      "title": "PhD scholarship - RTP and DUPRS",
+      "institution": "Deakin University",
+      "city": null,
+      "country": "Australia",
+      "source_url": "https://fellowshipsguide.com/deakin-universityscholarship/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.deakin.edu.au/research/research-degrees/how-to-apply-for-a-research-degree",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-25",
+      "content_hash": "sha256:c6aec6d68ceb1653dbf9663d87b53e3299ff24664a47ae0be490dc2aec565717",
+      "last_verified_at": "2026-10-16T02:01:52.134Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T02:01:52.305Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:52.305Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:52.306Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:21.910Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:21.910Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:19.979Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:19.979Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 41
+    },
+    "opp_13e05b31612a5613": {
+      "id": "opp_13e05b31612a5613",
+      "fingerprint": "c0c4d3cff7bf7e4a",
+      "title": "Safe Haven Fellowship",
+      "institution": "NIAS-KNAW",
+      "city": null,
+      "country": "Netherlands",
+      "source_url": "https://fellowshipsguide.com/nias-fellowship/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://nias.knaw.nl/application-form-safe-haven-fellowship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-14T12:00:00+01:00",
+      "content_hash": "sha256:adbe4895b182e87973c4fe2b7babc8429926d91c763a215be1d1805504754917",
+      "last_verified_at": "2026-10-16T02:01:52.483Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T02:01:52.656Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:52.656Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:52.656Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:22.282Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:22.282Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:20.168Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:20.168Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 42
+    },
+    "opp_15f2da2a45ee23a8": {
+      "id": "opp_15f2da2a45ee23a8",
+      "fingerprint": "946084831543ebf7",
+      "title": "SemEval-2027 Task 3: Semantic Change Across Multiple Time Periods",
+      "institution": "SemEval-2027",
+      "city": null,
+      "country": null,
+      "source_url": "https://mlscientist.com/category/sweden/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://www.aclweb.org/portal/node/14588",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:262eed17c961adb615de17cea3b59fd00507b67779f9376781dbc29ff7fb81f0",
+      "last_verified_at": "2026-10-16T02:01:52.832Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T02:01:53.014Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:53.014Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:53.014Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:12.325Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:12.325Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:20.351Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:20.352Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 43
+    },
+    "opp_38cd8d3b3d550c91": {
+      "id": "opp_38cd8d3b3d550c91",
+      "fingerprint": "1431769f33263ed1",
+      "title": "Postdoc in Robot Learning for Manipulation",
+      "institution": "KTH Royal Institute of Technology",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "source_url": "https://mlscientist.com/category/sweden/",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://www.kth.se/lediga-jobb/972456?l=en",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-01",
+      "content_hash": "sha256:9ad61b431a465c9b762f6c0f2718249a409b5360ca78e6f79aa41f3282964287",
+      "last_verified_at": "2026-10-16T02:01:53.196Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T02:01:53.389Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:53.389Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:53.390Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:12.689Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:12.689Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:20.578Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:20.579Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 44
+    },
+    "opp_1165784f87328a3d": {
+      "id": "opp_1165784f87328a3d",
+      "fingerprint": "b8385d3eb039473b",
+      "title": "Doctoral student in robotic manipulation of deformable objects",
+      "institution": "KTH Royal Institute of Technology",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "source_url": "https://mlscientist.com/category/sweden/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.kth.se/lediga-jobb/973983?l=en",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-30",
+      "content_hash": "sha256:acb75ea36b320f9d229bc9482aa912844fde99b2747423c6d6acfb4590d8132a",
+      "last_verified_at": "2026-10-16T02:01:53.577Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T02:01:53.773Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:53.773Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:53.774Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:13.041Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:13.041Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:20.758Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:20.758Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 45
+    },
+    "opp_95859274d18a1534": {
+      "id": "opp_95859274d18a1534",
+      "fingerprint": "0d7af9ff276b3cbf",
+      "title": "Postdoctoral researcher in experimental robotics and AI for autonomous battery remanufacturing",
+      "institution": "Uppsala University",
+      "city": "Uppsala",
+      "country": "Sweden",
+      "source_url": "https://mlscientist.com/category/sweden/",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://www.uu.se/en/about-uu/join-us/jobs-and-vacancies/job-details?query=974043",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-29",
+      "content_hash": "sha256:929e0249e1308b6a6b15956732fbbb67eed2ce5e2adfd7d120aa4f98aa92bde2",
+      "last_verified_at": "2026-10-16T02:01:53.952Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-16T02:01:54.142Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:54.142Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:54.142Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-16T02:07:13.506Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-16T02:07:13.506Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-16T02:08:20.949Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-16T02:08:20.949Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 46
+    },
+    "opp_43156d02d4bd2dde": {
+      "id": "opp_43156d02d4bd2dde",
+      "fingerprint": "982d9b94eec7fe5d",
+      "title": "PhD Student in Trustworthy AI for Autonomous Plant Operations",
+      "institution": "EPFL",
+      "city": "Lausanne",
+      "country": "Switzerland",
+      "source_url": "https://mlscientist.com/category/featured/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://careers.epfl.ch/job/Lausanne-PhD-Student-in-Trustworthy-AI-for-Autonomous-Plant-Operations/1165540855/",
+      "application_status": "DEADLINE_NOT_SPECIFIED",
+      "deadline": null,
+      "content_hash": "sha256:a39bddb7690edbe39ca8040231ac38b4ed2030c8878456565ca8dfb73f0a4368",
+      "last_verified_at": "2026-10-16T02:01:54.321Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-16T02:01:54.500Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:54.500Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:54.501Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=DEADLINE_NOT_SPECIFIED"
+        }
+      ]
+    },
+    "opp_58c09c8902c2c9e6": {
+      "id": "opp_58c09c8902c2c9e6",
+      "fingerprint": "00b792db38747749",
+      "title": "Postdoc position at the institutes IALS and IDSIA",
+      "institution": "Università della Svizzera italiana (USI)",
+      "city": "Lugano",
+      "country": "Switzerland",
+      "source_url": "https://mlscientist.com/postdoc-nlp-usi-switzerland/",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": null,
+      "application_status": "DEADLINE_NOT_SPECIFIED",
+      "deadline": null,
+      "content_hash": "sha256:b603361e6bdc4e7ae7a3bbd5cc3ae936f603a6a956a1ff8336bfeabc1432a6ca",
+      "last_verified_at": "2026-10-16T02:01:54.674Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-16T02:01:54.849Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:54.849Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:54.850Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=DEADLINE_NOT_SPECIFIED"
+        }
+      ]
+    },
+    "opp_336041007e91378c": {
+      "id": "opp_336041007e91378c",
+      "fingerprint": "903ff28367522d45",
+      "title": "Postdoctoral - Reduced Order Modeling - Research Staff Member",
+      "institution": "Lawrence Livermore National Laboratory",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://mlscientist.com/postdoc-scientific-ml-united-states/",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://www.llnl.gov/join-our-team/careers/find-your-job/all/all/3743990015654246",
+      "application_status": "DEADLINE_NOT_SPECIFIED",
+      "deadline": null,
+      "content_hash": "sha256:82d3d1574b744a886e157b0cbf918bdee1afd423a172fe869606f8c80d6beafb",
+      "last_verified_at": "2026-10-16T02:01:55.021Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-16T02:01:55.190Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:55.190Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:55.190Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=DEADLINE_NOT_SPECIFIED"
+        }
+      ]
+    },
+    "opp_78adb4c7b202edb2": {
+      "id": "opp_78adb4c7b202edb2",
+      "fingerprint": "4816ad5772719883",
+      "title": "Safe Autonomous Systems PhD/Postdoc",
+      "institution": "University of Pennsylvania",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://mlscientist.com/safe-autonomous-systems-phd-postdoc-united-states/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "NEEDS_REVIEW",
+      "deadline": null,
+      "content_hash": "sha256:964e92e92a1eb7941b88fc7a0d37be36d0d61d2c3c523ac11f503f4ba214cdc5",
+      "last_verified_at": "2026-10-16T02:01:55.368Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-16T02:01:55.537Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:55.537Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:55.537Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_8601e7e8597aa7a0": {
+      "id": "opp_8601e7e8597aa7a0",
+      "fingerprint": "46fd30fc40524383",
+      "title": "PhD Positions in AI-Driven Medicine at University Hospital Essen",
+      "institution": "University Hospital Essen",
+      "city": "Essen",
+      "country": "Germany",
+      "source_url": "https://mlscientist.com/phd-positions-ai-driven-medicine-germany/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "NEEDS_REVIEW",
+      "deadline": "2026-10-17",
+      "content_hash": "sha256:0157645a7d3ab89a4ab9f0eae7b6e35aaf08e34821d67c75e3d6c8acb93a053e",
+      "last_verified_at": "2026-10-16T02:01:55.716Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-16T02:01:55.911Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:55.911Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:55.912Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_6a4cd559458539c7": {
+      "id": "opp_6a4cd559458539c7",
+      "fingerprint": "1f89a64775e9155e",
+      "title": "14 Fully-Funded PhD Positions in AI for Precision Medicine",
+      "institution": "MSCA MLCARE Doctoral Network",
+      "city": null,
+      "country": null,
+      "source_url": "https://mlscientist.com/14-fully-funded-phd-positions-in-ai-for-precision-medicine/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-01-01",
+      "content_hash": "sha256:4a63ae23fb29c3ef10cd4616b0a78b5faaee594dc12bca019eb48128ed93d893",
+      "last_verified_at": "2026-10-16T02:01:56.115Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:01:56.298Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:56.299Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:56.299Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_470b35db90048615": {
+      "id": "opp_470b35db90048615",
+      "fingerprint": "657c5ea211f8edf4",
+      "title": "The Einstein Fellowship 2027",
+      "institution": "Einstein Forum",
+      "city": "Caputh",
+      "country": "Germany",
+      "source_url": "https://fellowshipsguide.com/einstein-fellowship/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.einsteinforum.de/en/about/fellowship/",
+      "application_status": "CLOSED",
+      "deadline": "2026-05-15",
+      "content_hash": "sha256:62ffccc442b4c5bae72d359fe6b680343c40a9dd02f57cd0801d0bafefcdf254",
+      "last_verified_at": "2026-10-16T02:01:56.478Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:01:56.663Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:56.663Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:56.663Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_348c9a7f49185c78": {
+      "id": "opp_348c9a7f49185c78",
+      "fingerprint": "154857f83e06682b",
+      "title": "Visiting PhD Fellowship",
+      "institution": "UNU-WIDER",
+      "city": null,
+      "country": null,
+      "source_url": "https://fellowshipsguide.com/unu-visiting-phd-fellowship/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.wider.unu.edu/opportunity/visiting-phd-fellowship",
+      "application_status": "CLOSED",
+      "deadline": "2026-09-30T23:59:00+03:00",
+      "content_hash": "sha256:58dba8eecb4718764ae5460eaf4527906439a7e76adeaa41f250b07aa988076a",
+      "last_verified_at": "2026-10-16T02:01:56.881Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:01:57.054Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:57.054Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:57.055Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_cbd4b638507a87a0": {
+      "id": "opp_cbd4b638507a87a0",
+      "fingerprint": "ade21b7a53108a71",
+      "title": "UNESCO/Japan Young Researchers' Fellowships Programme",
+      "institution": "UNESCO",
+      "city": null,
+      "country": "Japan",
+      "source_url": "https://fellowshipsguide.com/unesco-fellowships-programme/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.unesco.org/en/fellowships/keizo-obuchi",
+      "application_status": "CLOSED",
+      "deadline": "2026-10-15",
+      "content_hash": "sha256:f7146eeb1a210b1bf60f62e618c0fd60f371e40ea7932ca46eceef35838e182b",
+      "last_verified_at": "2026-10-16T02:01:57.234Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:01:57.439Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:57.439Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:57.439Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_b3a701771be3581e": {
+      "id": "opp_b3a701771be3581e",
+      "fingerprint": "d37ab8ba912f5139",
+      "title": "Robust, certified, and scalable federated machine unlearning for privacy-preserving AI",
+      "institution": "University of Surrey",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://mlscientist.com/category/united-kingdom/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.surrey.ac.uk/fees-and-funding/studentships/robust-certified-and-scalable-federated-machine-unlearning-privacy-preserving-ai",
+      "application_status": "CLOSED",
+      "deadline": "2026-05-31",
+      "content_hash": "sha256:1b0db5b9f63216746bd44a9fe1c3ccbca0729dd7b96c2860efcdfebbff74ac1d",
+      "last_verified_at": "2026-10-16T02:01:57.618Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:01:57.822Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:01:57.822Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:01:57.822Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_f0e4b2555c128eff": {
+      "id": "opp_f0e4b2555c128eff",
+      "fingerprint": "058e8c7dc4fdc70a",
+      "title": "Young Professionals Programme",
+      "institution": "United Nations",
+      "city": null,
+      "country": null,
+      "source_url": "https://fellowshipsguide.com/united-nations-young-programme/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://careers.un.org/young-professionals-programme",
+      "application_status": "DEADLINE_NOT_SPECIFIED",
+      "deadline": null,
+      "content_hash": "sha256:be54fdfc44b2911ef5881159d38f5a6f76c8b899f5d0d456cdee542ea04673e6",
+      "last_verified_at": "2026-10-16T02:04:19.045Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-16T02:04:19.219Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:19.219Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:19.219Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=DEADLINE_NOT_SPECIFIED"
+        }
+      ]
+    },
+    "opp_cb0a2042383b1c11": {
+      "id": "opp_cb0a2042383b1c11",
+      "fingerprint": "30689fd607aaec63",
+      "title": "EAIM 2027 Call for Papers: AI for Music at AAAI-27",
+      "institution": "EAIM 2027 workshop organisers (AAAI-27)",
+      "city": "Montréal",
+      "country": "Canada",
+      "source_url": "https://mlscientist.com/category/conference-calls/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": null,
+      "application_status": "NEEDS_REVIEW",
+      "deadline": null,
+      "content_hash": "sha256:d2db7b634c7e57e2c07c45aed0795f5c2dd973ce9de4d7919c116306b869c57f",
+      "last_verified_at": "2026-10-16T02:04:19.408Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-16T02:04:19.587Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:19.587Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:19.587Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_eeb87afef9ec685a": {
+      "id": "opp_eeb87afef9ec685a",
+      "fingerprint": "0f47465c437345b1",
+      "title": "The Rhodes Scholarship",
+      "institution": "Rhodes Trust",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "source_url": "https://fellowshipsguide.com/the-rhodes-scholarship/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "NEEDS_REVIEW",
+      "deadline": null,
+      "content_hash": "sha256:4da1da6f6686059677ac92db25d0de1d19884c43fa71af351da92b2c6e4e4934",
+      "last_verified_at": "2026-10-16T02:04:19.767Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-16T02:04:19.955Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:19.955Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:19.956Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_c1c32f88c8d7cc48": {
+      "id": "opp_c1c32f88c8d7cc48",
+      "fingerprint": "2b1d649957b43c6a",
+      "title": "PhD Position in AI-Driven Resilient RAN Optimization for 6G and O-RAN Architectures",
+      "institution": "Ghent University",
+      "city": "Ghent",
+      "country": "Belgium",
+      "source_url": "https://mlscientist.com/phd-ai-driven-ran-optimization-belgium/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-09-30",
+      "content_hash": "sha256:bdb3f955a6000e1d5b059577239d4d37e2e2a515155ec36a896d62aacc48eccd",
+      "last_verified_at": "2026-10-16T02:04:20.137Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:20.308Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:20.308Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:20.308Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_abd2a8d52c6b755b": {
+      "id": "opp_abd2a8d52c6b755b",
+      "fingerprint": "5a0b43f7dd581608",
+      "title": "PhD Thesis Offer: CookBot",
+      "institution": "IMT Atlantique",
+      "city": null,
+      "country": "France",
+      "source_url": "https://mlscientist.com/%F0%9F%87%AB%F0%9F%87%B7-phd-thesis-offer-cookbot/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-05-15",
+      "content_hash": "sha256:1fb1b24e2012755c9c57c58e51a374915ab214da4edab3df4b62481426b23ec0",
+      "last_verified_at": "2026-10-16T02:04:20.480Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:20.647Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:20.647Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:20.647Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_e06e9fe657084d33": {
+      "id": "opp_e06e9fe657084d33",
+      "fingerprint": "73a41a0397108352",
+      "title": "PhD Thesis Positions in AI",
+      "institution": "Mohammed V University in Rabat",
+      "city": "Rabat",
+      "country": "Morocco",
+      "source_url": "https://mlscientist.com/phd-thesis-positions-ai/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-09-21",
+      "content_hash": "sha256:cda460193acbe502b01c9f09c299dcf12bc0cd861ef994b35e856e5490335221",
+      "last_verified_at": "2026-10-16T02:04:20.817Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:20.986Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:20.986Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:20.986Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_686e37b5d3e1b801": {
+      "id": "opp_686e37b5d3e1b801",
+      "fingerprint": "a563ec0d4751dd50",
+      "title": "NGO Fellowship Program 2026",
+      "institution": "Taiwan AID",
+      "city": null,
+      "country": null,
+      "source_url": "https://fellowshipsguide.com/ngo-fellowship-program/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-06-01",
+      "content_hash": "sha256:ea588cb9f1de1c3d835c12722f5fec91dc80503bb889a3e926b0057bf5504819",
+      "last_verified_at": "2026-10-16T02:04:21.158Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:21.321Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:21.321Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:21.321Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_7de0badcea80b4a5": {
+      "id": "opp_7de0badcea80b4a5",
+      "fingerprint": "52a0e3c499c7abe2",
+      "title": "Lucia Winter School on AI & Robotics 2026",
+      "institution": "Örebro University",
+      "city": "Örebro",
+      "country": "Sweden",
+      "source_url": "https://mlscientist.com/lucia-winter-school-ai-robotics-sweden-2/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-09-10",
+      "content_hash": "sha256:1a3ddcc8d3940821e496d3d90f4cc899cb550728d81e638ea623ef3c879abbe8",
+      "last_verified_at": "2026-10-16T02:04:21.502Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:21.675Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:21.675Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:21.675Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_32ef9b21fef0602a": {
+      "id": "opp_32ef9b21fef0602a",
+      "fingerprint": "c24064885b750003",
+      "title": "GeMAIHc 2027",
+      "institution": "Institute for Research Development, Training and Advice with Human Technopole",
+      "city": null,
+      "country": "Italy",
+      "source_url": "https://mlscientist.com/gemaihc-2027-italy-4/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-10-10",
+      "content_hash": "sha256:e39a530651ec465fa93fa59dd6343ea45a6f6111ca940eb73395ec8cddcf458e",
+      "last_verified_at": "2026-10-16T02:04:21.845Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:22.019Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:22.019Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:22.019Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_22350e5c2cd72e6f": {
+      "id": "opp_22350e5c2cd72e6f",
+      "fingerprint": "95f212090f36715d",
+      "title": "ComputEL-10 Workshop",
+      "institution": "ComputEL-10 organisers",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://mlscientist.com/computel-10-workshop-united-states-2/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-10-02",
+      "content_hash": "sha256:f64c2c6957160174e26f6c92e3a63deb54f20ac241577972ce5129fa9b793b3a",
+      "last_verified_at": "2026-10-16T02:04:22.194Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:22.370Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:22.370Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:22.371Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_20a8264c6662a339": {
+      "id": "opp_20a8264c6662a339",
+      "fingerprint": "cf50aecf82c00292",
+      "title": "SynRDinBAS @ IEEE/CVF WACV 2027",
+      "institution": "SynRDinBAS workshop organisers (WACV 2027)",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://mlscientist.com/synrdinbas-ieee-cvf-wacv-2027-united-states-2/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-10-05",
+      "content_hash": "sha256:3175d32a30216c152efda0956ce78a0edaa96ddba60f1d43fc2bed58bc189c6b",
+      "last_verified_at": "2026-10-16T02:04:22.542Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:22.713Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:22.713Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:22.714Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_ddc5412b90b3f547": {
+      "id": "opp_ddc5412b90b3f547",
+      "fingerprint": "f61a0623b666df9c",
+      "title": "KAIST Graduate Scholarship 2027",
+      "institution": "KAIST",
+      "city": null,
+      "country": "South Korea",
+      "source_url": "https://fellowshipsguide.com/kaist-scholarship-ms-phd/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-09-01",
+      "content_hash": "sha256:adc2703dc6819ce2c1b992a28a6c4b6a646d25e01875c84c705b15f04a3e491f",
+      "last_verified_at": "2026-10-16T02:04:22.890Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:23.064Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:23.064Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:23.064Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_cbee4ee2f1cd5407": {
+      "id": "opp_cbee4ee2f1cd5407",
+      "fingerprint": "47fcfaa2244b4019",
+      "title": "HFSP Postdoctoral Fellowships",
+      "institution": "Human Frontier Science Program",
+      "city": null,
+      "country": null,
+      "source_url": "https://fellowshipsguide.com/hfsp-postdoctoral-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-05-12",
+      "content_hash": "sha256:bb9bad551e3623e9b204a37449d18a76849b2910ee98a8150ed3792798ef151b",
+      "last_verified_at": "2026-10-16T02:04:23.244Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:23.476Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:23.476Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:23.476Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_7bb8d8e5e3a01335": {
+      "id": "opp_7bb8d8e5e3a01335",
+      "fingerprint": "2697260959741173",
+      "title": "Rowland Fellows Program",
+      "institution": "Rowland Institute at Harvard",
+      "city": "Cambridge, Massachusetts",
+      "country": "United States",
+      "source_url": "https://fellowshipsguide.com/rowland-fellows-program/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-08-01T23:59:00-04:00",
+      "content_hash": "sha256:7ceaf1402f6da52ae5aad2dfc213f09f26e426ea621cb3ad57965499486ec362",
+      "last_verified_at": "2026-10-16T02:04:23.654Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:23.838Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:23.838Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:23.838Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_ed819b4a2143dc78": {
+      "id": "opp_ed819b4a2143dc78",
+      "fingerprint": "fbac0cb070d7d4b6",
+      "title": "UK Winter Fellowship at GovAI 2027",
+      "institution": "GovAI",
+      "city": "London",
+      "country": "United Kingdom",
+      "source_url": "https://fellowshipsguide.com/uk-winter-fellowship-2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-07-12",
+      "content_hash": "sha256:be29fe99b7c42b88edce46fc64753499c51f7b8cf9502b571b49a1c4876a00f9",
+      "last_verified_at": "2026-10-16T02:04:24.066Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:24.265Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:24.265Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:24.265Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_ebc3b00b51fdb0a5": {
+      "id": "opp_ebc3b00b51fdb0a5",
+      "fingerprint": "12ba183074b4b648",
+      "title": "Cambridge ERA:AI Fellowship 2027",
+      "institution": "Cambridge ERA:AI",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://fellowshipsguide.com/eraai-fellowship-uk/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-09-13",
+      "content_hash": "sha256:513efd4172ae145b92c084ba000b49f43c9018c1fde9b60ad12341fc195f67f6",
+      "last_verified_at": "2026-10-16T02:04:24.454Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:24.655Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:24.655Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:24.655Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_e41e323c8e61c949": {
+      "id": "opp_e41e323c8e61c949",
+      "fingerprint": "badc06502f96701e",
+      "title": "Emirates Group Elevate Internship Programme 2027",
+      "institution": "The Emirates Group",
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "source_url": "https://fellowshipsguide.com/emirates-elevate-internship/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-09-28",
+      "content_hash": "sha256:1f49143742fce7116add97775686db76da8b69501c62deff207c6ca30a279de3",
+      "last_verified_at": "2026-10-16T02:04:24.834Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:25.014Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:25.014Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:25.014Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_7320653e28252a93": {
+      "id": "opp_7320653e28252a93",
+      "fingerprint": "40c3f64f431ea4fc",
+      "title": "European Commission Blue Book Traineeship 2027",
+      "institution": "European Commission",
+      "city": null,
+      "country": null,
+      "source_url": "https://fellowshipsguide.com/european-blue-traineeship/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": "2026-09-04",
+      "content_hash": "sha256:0af5767f725a92d681c4b1a689b502deedc5f5a7804d90b164d8e89e91ebb83f",
+      "last_verified_at": "2026-10-16T02:04:25.192Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-10-16T02:04:25.364Z",
+      "history": [
+        {
+          "at": "2026-10-16T02:04:25.364Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-16T02:04:25.364Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
     }
   },
   "seen_urls": {
@@ -2757,7 +4736,7 @@
     "https://mlscientist.com/eth-ai-fellowships-switzerland": "opp_7bc207c8da921c1c",
     "https://ai.ethz.ch/research/phd-and-postdoc-programs/phd-fellowships.html": "opp_c5da552ebbb13a91",
     "https://ai.ethz.ch/research/phd-and-postdoc-programs/postdoc-fellowships.html": "opp_7bc207c8da921c1c",
-    "https://mlscientist.com/category/featured": "opp_a71a1ec42a4bc0ef",
+    "https://mlscientist.com/category/featured": "opp_43156d02d4bd2dde",
     "https://learning-systems.org/apply": "opp_5b9903009e129259",
     "https://mlscientist.com/imprs-is-doctoral-program-2027-germany": "opp_736b21565ab5b7cf",
     "https://imprs.is.mpg.de/application": "opp_736b21565ab5b7cf",
@@ -2766,7 +4745,7 @@
     "https://ntu.edu.sg/research/research-careers/ntu-ai-for-x-postdoctoral-fellowship": "opp_3fadb949c1d3eb98",
     "https://mlscientist.com/phd-positions-biomedical-ai-germany-2": "opp_2b37d172114d800d",
     "https://biomedicalai.maxplanckschools.org/3471/application": "opp_2b37d172114d800d",
-    "https://mlscientist.com/category/conference-calls": "opp_008fbdb55e8270d3",
+    "https://mlscientist.com/category/conference-calls": "opp_cb0a2042383b1c11",
     "https://evostar.org/2027": "opp_008fbdb55e8270d3",
     "https://mlscientist.com/naacl-2027-demo-call-united-states": "opp_b0fd84bebff8922f",
     "https://2027.naacl.org/": "opp_b0fd84bebff8922f",
@@ -2783,7 +4762,73 @@
     "https://fellowshipsguide.com/british-academy-postdoctoral-fellowship": "opp_1cacca185f0bd901",
     "https://thebritishacademy.ac.uk/funding/schemes/postdoctoral-fellowships": "opp_1cacca185f0bd901",
     "https://fellowshipsguide.com/58-phd-at-scuola-superiore": "opp_2c7b779518383e89",
-    "https://santannapisa.it/en/training/call-phd": "opp_2c7b779518383e89"
+    "https://santannapisa.it/en/training/call-phd": "opp_2c7b779518383e89",
+    "https://mlscientist.com/category/denmark": "opp_4999d5f961bb61b9",
+    "https://phd.tech.au.dk/for-applicants/apply-here/saeropslag/phd-position-in-physical-ai-adaptive-foundation-models-for-robotics": "opp_4999d5f961bb61b9",
+    "https://fellowshipsguide.com/aauw-fellowships": "opp_2589aee0cb0d083e",
+    "https://aauw.org/resources/programs/fellowships-grants/aauw-international-fellowships": "opp_2589aee0cb0d083e",
+    "https://fellowshipsguide.com/": "opp_5dbda96363dd017d",
+    "https://us.boell.org/en/internships": "opp_8eff0836a9d2b10b",
+    "https://fellowshipsguide.com/branco-weiss-postdoctoral": "opp_88db489f065bb0e6",
+    "https://brancoweissfellowship.org/who-should-apply/application": "opp_88db489f065bb0e6",
+    "https://brookings.edu/careers/internships": "opp_ee16a9a208747e9a",
+    "https://mlscientist.com/ai-robotics-phd-united-kingdom": "opp_c06c15cf262c43e0",
+    "https://cdt-d2air.uk/apply": "opp_c06c15cf262c43e0",
+    "https://mlscientist.com/postdoc-ai-alignment-robotics-france": "opp_606883b648dc468f",
+    "https://fellowshipsguide.com/czech-scholarships-ms-phd": "opp_cb17929efc243255",
+    "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries": "opp_cb17929efc243255",
+    "https://mlscientist.com/dgfs-2027-poster-session-germany": "opp_2a38a3719c81f2a1",
+    "https://mlscientist.com/category/belgium": "opp_096c669a5e865c7c",
+    "https://kuleuven.be/personeel/jobsite/jobs/60759584": "opp_096c669a5e865c7c",
+    "https://mlscientist.com/narnihs-2027-call-abstracts-united-states-2": "opp_4e7c73d7272a8ef1",
+    "https://shc.stanford.edu/stanford-humanities-center/fellowships/mellon-fellowship-scholars-humanities": "opp_d89a799f69dd8788",
+    "https://mlscientist.com/vector-distinguished-postdoctoral-fellowship-canada": "opp_5806b5fae443c206",
+    "https://vectorinstitute.ai/research-talent/research-opportunities/vector-postdoctoral-fellows": "opp_5806b5fae443c206",
+    "https://fellowshipsguide.com/western-balkans-japan-exchange-program": "opp_def5161a6cfedac2",
+    "https://rycowb.org/call-for-applications-2026-2027-western-balkans-meet-japan-a-bridge-into-the-future": "opp_def5161a6cfedac2",
+    "https://whitehouse.gov/internships/apply": "opp_5dbda96363dd017d",
+    "https://fellowshipsguide.com/deakin-universityscholarship": "opp_418bcff5d8fea4f6",
+    "https://deakin.edu.au/research/research-degrees/how-to-apply-for-a-research-degree": "opp_418bcff5d8fea4f6",
+    "https://fellowshipsguide.com/nias-fellowship": "opp_13e05b31612a5613",
+    "https://nias.knaw.nl/application-form-safe-haven-fellowship": "opp_13e05b31612a5613",
+    "https://mlscientist.com/category/sweden": "opp_95859274d18a1534",
+    "https://aclweb.org/portal/node/14588": "opp_15f2da2a45ee23a8",
+    "https://kth.se/lediga-jobb/972456?l=en": "opp_38cd8d3b3d550c91",
+    "https://kth.se/lediga-jobb/973983?l=en": "opp_1165784f87328a3d",
+    "https://uu.se/en/about-uu/join-us/jobs-and-vacancies/job-details?query=974043": "opp_95859274d18a1534",
+    "https://careers.epfl.ch/job/Lausanne-PhD-Student-in-Trustworthy-AI-for-Autonomous-Plant-Operations/1165540855": "opp_43156d02d4bd2dde",
+    "https://mlscientist.com/postdoc-nlp-usi-switzerland": "opp_58c09c8902c2c9e6",
+    "https://mlscientist.com/postdoc-scientific-ml-united-states": "opp_336041007e91378c",
+    "https://llnl.gov/join-our-team/careers/find-your-job/all/all/3743990015654246": "opp_336041007e91378c",
+    "https://mlscientist.com/safe-autonomous-systems-phd-postdoc-united-states": "opp_78adb4c7b202edb2",
+    "https://mlscientist.com/phd-positions-ai-driven-medicine-germany": "opp_8601e7e8597aa7a0",
+    "https://mlscientist.com/14-fully-funded-phd-positions-in-ai-for-precision-medicine": "opp_6a4cd559458539c7",
+    "https://fellowshipsguide.com/einstein-fellowship": "opp_470b35db90048615",
+    "https://einsteinforum.de/en/about/fellowship": "opp_470b35db90048615",
+    "https://fellowshipsguide.com/unu-visiting-phd-fellowship": "opp_348c9a7f49185c78",
+    "https://wider.unu.edu/opportunity/visiting-phd-fellowship": "opp_348c9a7f49185c78",
+    "https://fellowshipsguide.com/unesco-fellowships-programme": "opp_cbd4b638507a87a0",
+    "https://unesco.org/en/fellowships/keizo-obuchi": "opp_cbd4b638507a87a0",
+    "https://mlscientist.com/category/united-kingdom": "opp_b3a701771be3581e",
+    "https://surrey.ac.uk/fees-and-funding/studentships/robust-certified-and-scalable-federated-machine-unlearning-privacy-preserving-ai": "opp_b3a701771be3581e",
+    "https://fellowshipsguide.com/united-nations-young-programme": "opp_f0e4b2555c128eff",
+    "https://careers.un.org/young-professionals-programme": "opp_f0e4b2555c128eff",
+    "https://fellowshipsguide.com/the-rhodes-scholarship": "opp_eeb87afef9ec685a",
+    "https://mlscientist.com/phd-ai-driven-ran-optimization-belgium": "opp_c1c32f88c8d7cc48",
+    "https://mlscientist.com/%F0%9F%87%AB%F0%9F%87%B7-phd-thesis-offer-cookbot": "opp_abd2a8d52c6b755b",
+    "https://mlscientist.com/phd-thesis-positions-ai": "opp_e06e9fe657084d33",
+    "https://fellowshipsguide.com/ngo-fellowship-program": "opp_686e37b5d3e1b801",
+    "https://mlscientist.com/lucia-winter-school-ai-robotics-sweden-2": "opp_7de0badcea80b4a5",
+    "https://mlscientist.com/gemaihc-2027-italy-4": "opp_32ef9b21fef0602a",
+    "https://mlscientist.com/computel-10-workshop-united-states-2": "opp_22350e5c2cd72e6f",
+    "https://mlscientist.com/synrdinbas-ieee-cvf-wacv-2027-united-states-2": "opp_20a8264c6662a339",
+    "https://fellowshipsguide.com/kaist-scholarship-ms-phd": "opp_ddc5412b90b3f547",
+    "https://fellowshipsguide.com/hfsp-postdoctoral-fellowships": "opp_cbee4ee2f1cd5407",
+    "https://fellowshipsguide.com/rowland-fellows-program": "opp_7bb8d8e5e3a01335",
+    "https://fellowshipsguide.com/uk-winter-fellowship-2027": "opp_ed819b4a2143dc78",
+    "https://fellowshipsguide.com/eraai-fellowship-uk": "opp_ebc3b00b51fdb0a5",
+    "https://fellowshipsguide.com/emirates-elevate-internship": "opp_e41e323c8e61c949",
+    "https://fellowshipsguide.com/european-blue-traineeship": "opp_7320653e28252a93"
   },
-  "last_offer_number": 34
+  "last_offer_number": 46
 }
