@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Brookings Internship Program",
+    "evidence_url": "https://www.brookings.edu/wp-content/uploads/2025/07/Brookings-Internship-Program-Details-2025.pdf",
+    "evidence_quote": "BROOKINGS INTERNSHIP PROGRAM OVERVIEW"
+  },
+  "institution": {
+    "name": "The Brookings Institution",
+    "website": "https://www.brookings.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.brookings.edu/careers/internships/",
+  "source_url": "https://fellowshipsguide.com/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Washington, DC",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Public policy research",
+  "seniority": "Student",
+  "qualifications": [
+    "Current undergraduate or master's student (PhD students are not eligible, per the program overview)",
+    "Recent graduates occasionally considered"
+  ],
+  "skills": [],
+  "description_short": "Paid internships for degree-seeking students across Brookings research programs and business units. Spring 2027 postings opened the week of 5 October 2026; selections on 18 December 2026; cohorts run from 19 January or 1 February to April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-07",
+    "timezone": null,
+    "evidence_url": "https://www.brookings.edu/careers/internships/",
+    "evidence_quote": "November 7, 2026"
+  },
+  "compensation": {
+    "value": "Paid internship (amount not stated)",
+    "evidence_url": "https://www.brookings.edu/careers/internships/",
+    "evidence_quote": "Brookings provides paid internships to nearly 150 degree-seeking students"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Brookings Internships page (as shown in search results): Spring 2027 application deadline 7 November 2026 (future); postings opened week of 5 October 2026",
+    "Individual internship postings not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "fellowshipsguide.com listing seen through web-search results only (site unreachable from this environment)",
+    "Fellowships Guide mentions \"Paid Brookings Internship Program for Spring 2027\" on its index pages; the specific post URL was not found, so source_url is the Fellowships Guide home page",
+    "Deadline time zone not stated",
+    "Eligibility details come from a 2025 program overview PDF and may have changed",
+    "Each internship is a separate posting; application_url is the internships overview page"
+  ],
+  "id": "opp_ee16a9a208747e9a",
+  "fingerprint": "bc9d2cfb3738f47c",
+  "discovered_at": "2026-10-16T01:56:35.746Z",
+  "last_verified_at": "2026-10-16T01:56:35.746Z",
+  "content_hash": "sha256:0c52c759cf8ab701cda81156e8356ff337a5cdfcd4855b453ef3a5c585ead6cf"
+}
