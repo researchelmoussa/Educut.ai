@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "SemEval-2027 Task 3: Semantic Change Across Multiple Time Periods",
+    "evidence_url": "https://www.aclweb.org/portal/node/14588",
+    "evidence_quote": "Call for Participation for SemEval-2027 Task 3: Semantic Change Across Multiple Time Periods"
+  },
+  "institution": {
+    "name": "SemEval-2027",
+    "website": null,
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.aclweb.org/portal/node/14588",
+  "source_url": "https://mlscientist.com/category/sweden/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Natural language processing (lexical semantic change)",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Shared task on semantic change across ten time periods, using a multilingual benchmark of about 120,000 human annotations. Evaluation runs 10-31 January 2027; system papers follow in February 2027 and the workshop in summer 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": null,
+    "evidence_url": "https://www.aclweb.org/portal/node/14588",
+    "evidence_quote": "31 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official call for participation on the ACL portal (search results): submission deadline 31 January 2027 (future); LINGUIST List repeats the date",
+    "Task registration page not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "mlscientist.com listing seen through web-search results only (site unreachable from this environment)",
+    "Seen on the mlscientist Sweden category page (specific post URL not found); location of the task organisers or workshop not stated, so location left empty",
+    "Evidence is the ACL portal announcement; the task website was not found",
+    "Deadline time zone not stated"
+  ],
+  "id": "opp_15f2da2a45ee23a8",
+  "fingerprint": "946084831543ebf7",
+  "discovered_at": "2026-10-16T02:01:52.832Z",
+  "last_verified_at": "2026-10-16T02:01:52.832Z",
+  "content_hash": "sha256:262eed17c961adb615de17cea3b59fd00507b67779f9376781dbc29ff7fb81f0"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "PhD scholarship - RTP and DUPRS",
+    "evidence_url": "https://www.deakin.edu.au/study/fees-and-scholarships/scholarships/find-a-scholarship/rtp-and-duprs",
+    "evidence_quote": "PhD scholarship - RTP and DUPRS"
+  },
+  "institution": {
+    "name": "Deakin University",
+    "website": "https://www.deakin.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.deakin.edu.au/research/research-degrees/how-to-apply-for-a-research-degree",
+  "source_url": "https://fellowshipsguide.com/deakin-universityscholarship/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": null,
+  "seniority": "Doctoral / research master's",
+  "qualifications": [
+    "2027 domestic round (the international round closed on 23 August 2026)"
+  ],
+  "skills": [],
+  "description_short": "Deakin University research degree scholarships (Research Training Program and Deakin University Postgraduate Research Scholarship) for a February 2027 intake. The 2027 domestic round opened 6 July 2026 and closes 25 October 2026; outcomes are expected 23 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-10-25",
+    "timezone": "Australia/Melbourne",
+    "evidence_url": "https://www.deakin.edu.au/study/fees-and-scholarships/scholarships/find-a-scholarship/rtp-and-duprs",
+    "evidence_quote": "2027 domestic round: opens 6 July 2026, closes 25 October 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Deakin scholarship page (search results): 2027 domestic round closes 25 October 2026 (future)",
+    "International round closed 23 August 2026",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "fellowshipsguide.com listing seen through web-search results only (site unreachable from this environment)",
+    "Only the domestic round is still open; international applicants cannot apply in this round",
+    "Deakin notes timelines may change at the Faculty's discretion",
+    "City and stipend amount not captured from the evidence seen"
+  ],
+  "id": "opp_418bcff5d8fea4f6",
+  "fingerprint": "ea012d8801554a82",
+  "discovered_at": "2026-10-16T02:01:52.134Z",
+  "last_verified_at": "2026-10-16T02:01:52.134Z",
+  "content_hash": "sha256:c6aec6d68ceb1653dbf9663d87b53e3299ff24664a47ae0be490dc2aec565717"
+}

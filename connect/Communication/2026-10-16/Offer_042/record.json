@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Safe Haven Fellowship",
+    "evidence_url": "https://nias.knaw.nl/fellowships/safe-haven-fellowship-for-scholars-at-risk/",
+    "evidence_quote": "Safe Haven Fellowship"
+  },
+  "institution": {
+    "name": "NIAS-KNAW",
+    "website": "https://nias.knaw.nl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://nias.knaw.nl/application-form-safe-haven-fellowship",
+  "source_url": "https://fellowshipsguide.com/nias-fellowship/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Scholarship, literature, journalism and the arts (scholars and cultural actors at risk)",
+  "seniority": "Senior",
+  "qualifications": [
+    "Scholarly proposals: PhD and at least three years of postdoctoral research experience",
+    "Literary, journalistic or artistic proposals: bachelor's degree and at least seven years of professional experience",
+    "Applications only through the online form"
+  ],
+  "skills": [],
+  "description_short": "Five-month NIAS fellowship for scholars and cultural actors at risk, with a monthly stipend. Applications for the first semester of 2027-2028 are accepted via the online form until 14 December 2026 at noon CET.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-14T12:00:00+01:00",
+    "timezone": "Europe/Amsterdam",
+    "evidence_url": "https://nias.knaw.nl/fellowships/safe-haven-fellowship-for-scholars-at-risk/",
+    "evidence_quote": "14 December 2026 at noon (CET)"
+  },
+  "compensation": {
+    "value": "€3,500 per month",
+    "evidence_url": "https://nias.knaw.nl/fellowships/safe-haven-fellowship-for-scholars-at-risk/",
+    "evidence_quote": "Stipend of €3,500 per month"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NIAS page and application form page (search results): applications from 21 July 2026 until 14 December 2026 at 12:00 (future)",
+    "Online form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "fellowshipsguide.com listing seen through web-search results only (site unreachable from this environment)",
+    "NIAS pages differ on scheduling: two rounds a year (June/December) vs. a continuous call in the 2026 regulations",
+    "City not stated in the evidence seen",
+    "Eligibility as an at-risk scholar is defined in the NIAS regulations, not captured here"
+  ],
+  "id": "opp_13e05b31612a5613",
+  "fingerprint": "c0c4d3cff7bf7e4a",
+  "discovered_at": "2026-10-16T02:01:52.483Z",
+  "last_verified_at": "2026-10-16T02:01:52.483Z",
+  "content_hash": "sha256:adbe4895b182e87973c4fe2b7babc8429926d91c763a215be1d1805504754917"
+}

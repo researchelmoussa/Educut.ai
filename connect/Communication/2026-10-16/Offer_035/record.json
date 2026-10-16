@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "The Branco Weiss Fellowship",
+    "evidence_url": "https://brancoweissfellowship.org/",
+    "evidence_quote": "The Branco Weiss Fellowship"
+  },
+  "institution": {
+    "name": "The Branco Weiss Fellowship",
+    "website": "https://brancoweissfellowship.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://brancoweissfellowship.org/who-should-apply/application/",
+  "source_url": "https://fellowshipsguide.com/branco-weiss-postdoctoral/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "All disciplines",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "PhD defence passed before 15 January 2027",
+    "PhD obtained no more than five years before 15 January 2027",
+    "Current or former faculty members (assistant professors or lecturers) are not eligible"
+  ],
+  "skills": [],
+  "description_short": "Postdoctoral fellowship open to researchers in all disciplines, providing up to CHF 600,000 for up to five years. Applicants submit a motivation letter, research proposal, CV, host invitation letter and three best publications. Interviews take place in Zurich in June 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15T17:00:00+01:00",
+    "timezone": "Europe/Zurich",
+    "evidence_url": "https://brancoweissfellowship.org/who-should-apply/timelines/",
+    "evidence_quote": "January 15, 2027, 5 p.m. CET"
+  },
+  "compensation": {
+    "value": "Up to CHF 600,000 for up to five years",
+    "evidence_url": "https://brancoweissfellowship.org/who-should-apply/eligibility-duration-and-funding/",
+    "evidence_quote": "max. CHF 600,000"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Branco Weiss Fellowship timelines page (as shown in search results): registration portal for the 2027 intake closes 15 January 2027, 5 p.m. CET (future)",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "fellowshipsguide.com listing seen through web-search results only (site unreachable from this environment)",
+    "Research location depends on the applicant's host institution; country set to Switzerland because the fellowship is administered by ETH Zurich (per the Fellowships Guide listing title) and interviews are held in Zurich",
+    "Funding quote is the wording shown in search results of the official eligibility page"
+  ],
+  "id": "opp_88db489f065bb0e6",
+  "fingerprint": "e3c8d7edb5526f3a",
+  "discovered_at": "2026-10-16T01:56:35.574Z",
+  "last_verified_at": "2026-10-16T01:56:35.574Z",
+  "content_hash": "sha256:aa7220571c4a0addd49747c28d1f20d82db6053cde4bff84503f129c150300b0"
+}
