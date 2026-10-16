@@ -415,7 +415,7 @@ const commands = {
           (comms ? `> ${comms.caption.replace(/\n/g, '\n> ')}\n` : ''),
       );
     }
-    const md = `# EduCut Connect — review ${today}\n\n${rows.length} offer(s) awaiting approval. Nothing is published until you approve, and publishing stays manual.\n\n${rows.join('\n')}`;
+    const md = `# EduCut Connect — review ${today}\n\n${config.daily.auto_approve ? `${rows.length} offer(s). Auto-approval is on: offers that pass validation go on the website and are scheduled on LinkedIn without waiting; reply "reject Offer_NNN" to take one down.` : `${rows.length} offer(s) awaiting approval. Nothing is published until you approve.`}\n\n${rows.join('\n')}`;
     writeFileSync(join(runDir, 'review.md'), md);
     out({ review: join(runDir, 'review.md'), offers: rows.length });
   },

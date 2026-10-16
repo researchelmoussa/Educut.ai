@@ -38,7 +38,8 @@ EduCut Connect/
 1. `npm --prefix connect ci --no-audit --no-fund` (flag set and fonts), then `RUN_DIR=connect/runs/$(date -u +%F)`.
 2. Registry:
    - If GDRIVE_* secrets are set, run `node connect/cli.mjs drive-pull-registry --run $RUN_DIR`.
-   - Otherwise download `Registry/registry.json` with the connector and save it as `$RUN_DIR/registry.json`.
+   - Otherwise copy `connect/Registry/registry.json` from `main` (the master copy, updated by every run's 6b
+     commit) to `$RUN_DIR/registry.json`. The Drive `Registry/registry.json` is a convenience copy that may lag.
    - If Drive has no registry yet, start empty and say so.
 3. `node connect/cli.mjs init-run --run $RUN_DIR`. It reports known opportunities, past deadlines moved to
    EXPIRED, and today's remaining cap (`daily.max_new_opportunities`, 25).
@@ -97,7 +98,8 @@ administrator can still `reject Offer_NNN` (this removes the page and its queued
      Instead send `card.png` (and `city.jpg` if present) to the administrator with SendUserFile and say the
      images are not in Drive until the GDRIVE_* secrets are configured.
    - Upload `00_Review_<date>.md` and the run log to `Scrawling/<date>/`.
-   - For the registry, create the new `Registry/registry.json`, then trash the previous one.
+   - For the registry, create the new `Registry/registry.json`, then trash the previous one. If it is too
+     large for one connector call (over ~100 KB), skip it and say so: the master copy is on `main`.
    Only report a file as stored when its `create_file` call returned an id.
 
 ## 6b. Store in GitHub (main): the complete copy, images included
