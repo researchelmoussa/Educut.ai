@@ -269,8 +269,13 @@ const commands = {
       deadline_label: rec.deadline ? spec.deadline_label : null,
       institution_logo: rec.institution.logo.permission === 'allowed' ? spec.institution_logo ?? null : null,
       // The default photo is Drive Landmarks/images/DEFAULT, registered as landmark-add Default DEFAULT <file>.
-      // No city stated → the administrator's default photo, never a country photo standing in for a place.
-      landmark: spec.landmark ?? (rec.location.city ? findLandmark(rec.location.city, rec.location.country_code) : null) ?? findLandmark('Default', 'DEFAULT'),
+      // Country photo first (Drive Landmarks/images/<CC>, registered under the country name), even when a
+      // city is known; a city photo only if the country has none; the default photo (Landmarks/images/DEFAULT)
+      // only when there is no country photo at all.
+      landmark: spec.landmark
+        ?? (rec.location.country ? findLandmark(rec.location.country, rec.location.country_code) : null)
+        ?? (rec.location.city ? findLandmark(rec.location.city, rec.location.country_code) : null)
+        ?? findLandmark('Default', 'DEFAULT'),
       variant: spec.variant ?? config.visual.variant,
     };
     writeJson(join(dir, 'spec.json'), card);
@@ -399,7 +404,7 @@ const commands = {
       const comms = readJson(join(dir, 'comms-package.json'), null);
       rows.push(
         `## ${d} — ${rec.title.value}\n` +
-          `**${rec.institution.name}** · ${[rec.location.city, rec.location.country].filter(Boolean).join(', ') || 'location not specified'}\n\n` +
+          `**${rec.institution.name}** · ${[rec.location.city, rec.location.country].filter((v, i, a) => v && a.findIndex((x) => String(x).toLowerCase() === String(v).toLowerCase()) === i).join(', ') || 'location not specified'}\n\n` +
           `- Status: **${reg.get(rec.id)?.pipeline_status}** · application ${rec.application_status}${rec.application_status === 'OPEN_LIKELY' ? ' ⚠️ verify the portal manually' : ''}\n` +
           `- Deadline: ${rec.deadline?.value ?? 'not specified'}\n` +
           `- Apply: ${rec.application_url ?? 'n/a'}\n- Source: ${rec.source_url}\n` +
@@ -410,7 +415,7 @@ const commands = {
           (comms ? `> ${comms.caption.replace(/\n/g, '\n> ')}\n` : ''),
       );
     }
-    const md = `# EduCut Connect — review ${today}\n\n${rows.length} offer(s) awaiting approval. Nothing is published until you approve, and publishing stays manual.\n\n${rows.join('\n')}`;
+    const md = `# EduCut Connect — review ${today}\n\n${config.daily.auto_approve ? `${rows.length} offer(s). Auto-approval is on: offers that pass validation go on the website and are scheduled on LinkedIn without waiting; reply "reject Offer_NNN" to take one down.` : `${rows.length} offer(s) awaiting approval. Nothing is published until you approve.`}\n\n${rows.join('\n')}`;
     writeFileSync(join(runDir, 'review.md'), md);
     out({ review: join(runDir, 'review.md'), offers: rows.length });
   },

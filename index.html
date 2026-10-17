@@ -1681,6 +1681,8 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
 .pros-tags{display:flex;flex-wrap:wrap;gap:4px}
 .pros-tag{font:600 9.5px/1.6 ui-monospace,monospace;letter-spacing:.05em;padding:1px 6px;border-radius:2px;background:#eef0f4;color:#666;border:0}
 .pros-tag.on-cat{background:#dfe7ff;color:#1b3fae}
+.pros-tag.on-launch{background:#1B32C8;color:#fff}
+.pros-del-btn{color:#a11d1d}
 .pros-tag.on-con{background:var(--lime,#c3f53c);color:#111;cursor:pointer}
 .pros-tag.on-con:hover{background:#95c916}
 .pros-tag.on-asm{background:#e7dfff;color:#4a1bae;cursor:pointer}
@@ -4248,7 +4250,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
   function renderProspects(P){
     P.innerHTML=pageHead('/ADMIN/PROSPECTS','Prospect Database',
-      'Everyone who has given us their details through the landing page: catalogue requests, consultation bookings and assessments. A prospect is kept even if the booking behind it is deleted.')+
+      'Everyone who has given us their details: academy launch-offer sign-ups, catalogue requests, consultation bookings and assessments. Edit a prospect or delete it from the Actions column.')+
       `<div id="prosBoard"><div class="admin-neutral-panel"><p>Loading prospects…</p></div></div>`;
     prosLoad().then(()=>prosPaint());
   }
@@ -4259,6 +4261,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       case 'consultation': return r.consultation.requested;
       case 'assessment':   return r.assessment.completed || r.assessment.count>0;
       case 'deleted':      return r.consultation.deleted>0;
+      case 'launch':       return !!r.launchOffer;
       default:             return true;
     }
   }
@@ -4268,16 +4271,17 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     const all=prosState.rows;
     const rows=all.filter(prosMatches).filter(r=>{
       const q=(app.query||'').toLowerCase(); if(!q) return true;
-      return [r.fullName,r.email,r.company,r.phone].some(v=>String(v||'').toLowerCase().includes(q));
+      return [r.fullName,r.email,r.company,r.phone,r.country,(r.academies||[]).join(' ')].some(v=>String(v||'').toLowerCase().includes(q));
     });
 
     const kpis=[['Total prospects',all.length],
+                ['Academy launch offer',all.filter(r=>r.launchOffer).length],
                 ['Requested catalogue',all.filter(r=>r.catalogue.requested).length],
                 ['Booked a consultation',all.filter(r=>r.consultation.requested).length],
                 ['Completed assessment',all.filter(r=>r.assessment.completed||r.assessment.count>0).length],
                 ['Bookings deleted',all.filter(r=>r.consultation.deleted>0).length]];
 
-    const filters=[['all','Everyone'],['catalogue','Catalogue'],['consultation','Consultation'],
+    const filters=[['all','Everyone'],['launch','Launch offer'],['catalogue','Catalogue'],['consultation','Consultation'],
                    ['assessment','Assessment'],['deleted','Deleted booking']]
       .map(f=>`<button class="admin-mini-btn ${prosState.filter===f[0]?'active':''}" data-pros-filter="${f[0]}">${f[1]}</button>`).join('');
 
@@ -4294,7 +4298,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       </div>
       <div class="admin-toolbar"><input class="admin-list-search" placeholder="Search name, email, company or phone…" value="${esc(app.query||'')}"><div class="admin-toolbar-spacer"></div><button class="admin-mini-btn" data-pros-export>Export CSV</button></div>
       ${rows.length?`<div class="admin-table-wrap"><table class="admin-table">
-        <thead><tr><th>Prospect</th><th>Company</th><th>Asked for</th><th>Consultation</th><th>Catalogue</th><th>First seen</th><th>Stage</th></tr></thead>
+        <thead><tr><th>Prospect</th><th>Company</th><th>Asked for</th><th>Consultation</th><th>Catalogue</th><th>First seen</th><th>Stage</th><th>Actions</th></tr></thead>
         <tbody>${rows.map(r=>`<tr data-pros-row="${esc(r.id)}">
           <td><strong>${esc(r.fullName||'-')}</strong><br><small><a href="mailto:${esc(r.email)}">${esc(r.email)}</a></small>${r.phone?`<br><small><a href="tel:${esc(r.phone)}">${esc(r.phone)}</a></small>`:''}</td>
           <td>${esc(r.company||'-')}${r.country?`<br><small>${esc(r.country)}</small>`:''}</td>
@@ -4303,7 +4307,8 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
             ${r.consultation.requested?`<button type="button" class="pros-tag on-con" data-pros-consultation="${esc(r.id)}">CONSULTATION</button>`:''}
             ${(r.assessment.completed||r.assessment.count>0)?`<button type="button" class="pros-tag on-asm" data-pros-assessment="${esc(r.id)}">ASSESSMENT</button>`:''}
             ${r.consultation.deleted>0?`<span class="pros-tag on-del">${r.consultation.deleted} DELETED</span>`:''}
-          </div><small>via ${esc(r.firstSource||'-')}</small></td>
+            ${r.launchOffer?'<span class="pros-tag on-launch">LAUNCH OFFER</span>':''}
+          </div>${(r.academies||[]).length?`<small>${esc(r.academies.join(', '))}</small><br>`:''}<small>via ${esc(r.firstSource||'-')}</small></td>
           <td>${r.consultation.ref
                 ? `<span class="cons-status s-${esc(r.consultation.status||'')}">${esc(r.consultation.status||'-')}</span>
                    <br><small>${esc(r.consultation.ref)}${r.consultation.date?` · ${esc(new Date(r.consultation.date+'T12:00:00').toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'}))}`:''}</small>
@@ -4316,6 +4321,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
           <td><select class="pros-sel" data-pros-status="${esc(r.id)}">
             ${LEAD_STATUSES.map(s=>`<option value="${s}" ${r.status===s?'selected':''}>${s}</option>`).join('')}
           </select></td>
+          <td style="white-space:nowrap"><button type="button" class="admin-mini-btn" data-pros-edit="${esc(r.id)}">Edit</button> <button type="button" class="admin-mini-btn pros-del-btn" data-pros-delete="${esc(r.id)}">Delete</button></td>
         </tr>`).join('')}</tbody></table></div>`
         :`<div class="admin-empty"><p>No prospects match this view.</p></div>`}
     </section>`;
@@ -4347,11 +4353,29 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       const row=prosState.rows.find(x=>x.id===b.dataset.prosConsultation);
       if(row) openProspectConsultations(row);
     });
+    board.querySelectorAll('[data-pros-edit]').forEach(b=>b.onclick=()=>{
+      const row=prosState.rows.find(x=>x.id===b.dataset.prosEdit);
+      if(row) openProspectEdit(row);
+    });
+    board.querySelectorAll('[data-pros-delete]').forEach(b=>b.onclick=()=>{
+      const row=prosState.rows.find(x=>x.id===b.dataset.prosDelete); if(!row) return;
+      const linked=[row.consultation.live?row.consultation.live+' consultation booking(s)':'',
+                    row.catalogue.count?row.catalogue.count+' catalogue request(s)':''].filter(Boolean).join(' and ');
+      confirmAction('Delete prospect',
+        `Delete ${row.fullName||row.email} from the Prospect Database? This cannot be undone.`+(linked?` Their ${linked} will be deleted too.`:''),
+        async()=>{
+          const r=await window.educutSupabase.rpc('admin_delete_prospect',{p_id:row.id});
+          if(!r.ok){ toast('Could not delete this prospect.'); return; }
+          toast('Prospect deleted.');
+          await prosLoad(); prosPaint();
+        },'Delete');
+    });
     board.querySelector('[data-pros-export]')?.addEventListener('click',()=>{
-      const head=['Name','Email','Company','Phone','Country','Catalogue','Consultation','Assessment',
+      const head=['Name','Email','Company','Phone','Country','Launch offer','Academies','Catalogue','Consultation','Assessment',
                   'Consultation ref','Consultation status','Deleted bookings','Stage','First seen'];
       const csv=[head.join(',')].concat(rows.map(r=>[
         r.fullName,r.email,r.company,r.phone,r.country,
+        r.launchOffer?'yes':'no',(r.academies||[]).join('; '),
         r.catalogue.requested?'yes':'no', r.consultation.requested?'yes':'no',
         (r.assessment.completed||r.assessment.count>0)?'yes':'no',
         r.consultation.ref, r.consultation.status, r.consultation.deleted,
@@ -4359,6 +4383,41 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       ].map(v=>`"${String(v??'').replace(/"/g,'""')}"`).join(','))).join('\n');
       download('educut-prospects.csv',csv,'text/csv');
     });
+  }
+
+  function openProspectEdit(row){
+    const LEAD_STATUSES=['NEW','CONTACTED','QUALIFIED','CONVERTED','CLOSED'];
+    modal('Edit prospect',`<form id="prosEditForm" class="admin-form">
+      ${field('Full name','full_name',row.fullName||'','text','maxlength="200"')}
+      ${field('Email','email',row.email||'','email','required maxlength="200"')}
+      ${field('Company','company_name',row.company||'','text','maxlength="200"')}
+      ${field('Phone','phone',row.phone||'','tel','maxlength="50"')}
+      ${field('Country','country',row.country||'','text','maxlength="100"')}
+      ${selectField('Stage','status',LEAD_STATUSES,row.status||'NEW')}
+      <div class="admin-field"><label>Notes</label><textarea name="message" rows="4" maxlength="2000">${esc(row.message||'')}</textarea></div>
+      <p id="prosEditErr" style="color:#a11d1d;margin:0"></p>
+      <div class="admin-modal-actions"><button type="button" class="btn btn-outline" data-modal-close>Cancel</button><button type="submit" class="btn">Save changes</button></div>
+    </form>`);
+    const form=document.getElementById('prosEditForm');
+    form.onsubmit=async e=>{
+      e.preventDefault();
+      const f=new FormData(form), err=document.getElementById('prosEditErr');
+      const email=String(f.get('email')||'').trim();
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ err.textContent='Enter a valid email address.'; return; }
+      const btn=form.querySelector('[type=submit]'); btn.disabled=true; err.textContent='';
+      const r=await window.educutSupabase.rpc('admin_update_prospect',{p_id:row.id,
+        p_full_name:String(f.get('full_name')||''),p_email:email,p_company_name:String(f.get('company_name')||''),
+        p_phone:String(f.get('phone')||''),p_country:String(f.get('country')||''),
+        p_message:String(f.get('message')||''),p_status:String(f.get('status')||'NEW')});
+      btn.disabled=false;
+      if(!r.ok){
+        const t=JSON.stringify(r.data||'');
+        err.textContent=/EMAIL_IN_USE/.test(t)?'Another prospect already uses this email.':/INVALID_EMAIL/.test(t)?'Enter a valid email address.':'Could not save this prospect.';
+        return;
+      }
+      closeModal(); toast('Prospect updated.');
+      await prosLoad(); prosPaint();
+    };
   }
 
   function assessmentDNA(d){

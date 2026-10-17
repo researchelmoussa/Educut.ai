@@ -40,7 +40,7 @@ export function deadlineLabel(d) {
   return `${Number(m[3])} ${MONTHS[Number(m[2]) - 1]} ${m[1]}${t ? `, ${t[1]}:${t[2]}` : ''}${d.timezone ? ` (${d.timezone})` : ''}`;
 }
 
-const cap = (s) => (s ? (/^phd$/i.test(s) ? 'PhD' : s[0].toUpperCase() + s.slice(1)) : s);
+const cap = (s) => (s ? (/^phd$/i.test(s) ? 'PhD' : s[0].toUpperCase() + s.slice(1).replace(/_/g, '-')) : s);
 // 'unspecified' / 'other' carry no information for a reader: leave them out of labels.
 const known = (v) => (v && !/^(unspecified|unknown|other|n\/a)$/i.test(v) ? v : null);
 
@@ -49,7 +49,7 @@ const known = (v) => (v && !/^(unspecified|unknown|other|n\/a)$/i.test(v) ? v : 
 export function webBrief({ offerName, rec, pkg, visual, siteUrl }) {
   const slug = offerSlug(offerName, rec.title.value);
   const m = pkg?.course_match ?? null;
-  const loc = [rec.location?.city, rec.location?.country].filter(Boolean).join(', ');
+  const loc = [rec.location?.city, rec.location?.country].filter((v, i, a) => v && a.findIndex((x) => String(x).toLowerCase() === String(v).toLowerCase()) === i).join(', ');
   return {
     opportunity_id: rec.id,
     offer: offerName,
@@ -94,7 +94,7 @@ export function briefText(b) {
     `Field: ${b.field ?? 'not specified'}`,
     `Level: ${b.level ?? 'not specified'}`,
     `Deadline: ${b.deadline_label ?? 'not specified'}`,
-    `Compensation: ${b.compensation ? JSON.stringify(b.compensation) : 'not stated (do not mention pay)'}`,
+    `Compensation: ${b.compensation ? (typeof b.compensation === 'object' && b.compensation.value ? b.compensation.value : JSON.stringify(b.compensation)) :'not stated (do not mention pay)'}`,
     `About: ${b.about ?? 'not stated'}`,
     'Requirements:',
     list(b.requirements),
