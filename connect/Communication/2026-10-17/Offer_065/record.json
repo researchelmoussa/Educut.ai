@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Yale World Fellows Program 2027",
+    "evidence_url": "https://worldfellows.yale.edu/the-program/application/",
+    "evidence_quote": "Yale World Fellows"
+  },
+  "institution": {
+    "name": "Yale University, Jackson School of Global Affairs (Maurice R. Greenberg World Fellows Program)",
+    "website": "https://worldfellows.yale.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://worldfellows.yale.edu/apply/",
+  "source_url": "https://fellowshipsguide.com/category/fellowships/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "New Haven",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Global leadership",
+  "seniority": "Mid-career professionals",
+  "qualifications": [
+    "CV, personal statement, three letters of recommendation and a brief video statement"
+  ],
+  "skills": [],
+  "description_short": "Leadership fellowship at Yale University running annually from mid-August to mid-December. Applicants submit a CV, personal statement, three recommendation letters and a brief video statement; a $20 application fee applies. Decisions are emailed by the end of April.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-02T14:00:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://worldfellows.yale.edu/the-program/application/",
+    "evidence_quote": "Applications close on Wednesday, 2 December at 14:00 PM Eastern Time."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Yale World Fellows application page (search results): applications close Wednesday, 2 December at 14:00 ET; 2 December 2026 is a Wednesday and is in the future",
+    "fellowshipsguide states applications are open for the 2027 programme",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "fellowshipsguide.com listing ('Applications are now open for the Yale World Fellows Program 2027') seen through web-search results only; specific post URL not identified (site unreachable from this environment)",
+    "Official quote does not state the year; 2026 inferred from weekday match and the 2027 programme cycle",
+    "Official page mentions late recommendation letters accepted only through Monday, August 3, which looks like a carry-over from an earlier cycle",
+    "Title 'Yale World Fellows Program 2027' follows the aggregator wording; official name is Maurice R. Greenberg World Fellows Program",
+    "Stipend/funding details not confirmed on the official page"
+  ],
+  "id": "opp_3dec1c892d60e931",
+  "fingerprint": "d5e62d8d6b097768",
+  "discovered_at": "2026-10-17T02:02:27.350Z",
+  "last_verified_at": "2026-10-17T02:02:27.350Z",
+  "content_hash": "sha256:1db04e4463bdd5fb0ec54f2fbaea3300d72fa6d60310fc1a22ebea6687eeb0b4"
+}
