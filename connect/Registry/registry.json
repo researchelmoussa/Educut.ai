@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-16T02:08:20.949Z",
+  "updated_at": "2026-10-17T03:15:52.938Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -305,7 +305,7 @@
       "deadline": "2026-10-16T23:59:00+02:00",
       "content_hash": "sha256:053acab5a13459413793a6d930e1bfe5817f253b442c963a73a2e645f5c6f0f3",
       "last_verified_at": "2026-10-12T07:05:02.952Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-13T10:30:33.734Z",
       "history": [
         {
@@ -349,6 +349,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-10-17T01:50:09.846Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-16T23:59:00+02:00 passed"
         }
       ],
       "offer_number": 6
@@ -4661,6 +4668,1384 @@
           "reason": "application_status=CLOSED"
         }
       ]
+    },
+    "opp_992047ce6fe5a2dd": {
+      "id": "opp_992047ce6fe5a2dd",
+      "fingerprint": "aba3df7e78f7b7b8",
+      "title": "Postdoctoral Positions in Statistics and the Mathematics of Insurance and Economics",
+      "institution": "University of Copenhagen, Department of Mathematical Sciences",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://employment.ku.dk/faculty/?show=167779",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15T23:59:00+01:00",
+      "content_hash": "sha256:543b1db345c52d31d164f6d5efcb9aef23fb0c9916058d7117699de8fd94bc9d",
+      "last_verified_at": "2026-10-17T01:55:24.672Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:55:24.862Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:55:24.862Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:55:24.863Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:43.328Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:43.328Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:48.954Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:48.954Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 47
+    },
+    "opp_4701f54d3bc5b8de": {
+      "id": "opp_4701f54d3bc5b8de",
+      "fingerprint": "cfc2f8ca4bab8d37",
+      "title": "2-year postdoctoral position in modeling of microbial soil carbon cycling",
+      "institution": "University of Copenhagen, Department of Biology",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15",
+      "content_hash": "sha256:eb677d23fb4f58ca832df5d7dfc1e6a9a96d4644f3fd93374810fa4cb61dfcd6",
+      "last_verified_at": "2026-10-17T01:55:25.033Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:55:25.220Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:55:25.220Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:55:25.220Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:43.817Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:43.817Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:49.144Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:49.144Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 48
+    },
+    "opp_e7185d79782a61da": {
+      "id": "opp_e7185d79782a61da",
+      "fingerprint": "b642730659cbdd59",
+      "title": "Postdoctoral Positions in Gravitational-Wave Science",
+      "institution": "Max Planck Institute for Gravitational Physics (Albert Einstein Institute)",
+      "city": "Potsdam",
+      "country": "Germany",
+      "source_url": "https://vacancyedu.com/2026/10/06/postdoctoral-fellowship-15-at-max-planck-institute-germany/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://jobs.aei.mpg.de/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-23",
+      "content_hash": "sha256:c0d4653044a255fef0ff1ff9932e7fa76db49baf1a18a1da770368e75d434e61",
+      "last_verified_at": "2026-10-17T01:55:25.398Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:55:25.570Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:55:25.570Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:55:25.571Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T01:57:08.586Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-10-17T01:57:25.188Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-10-17T03:15:35.525Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:15:35.525Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:49.318Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:49.318Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 49
+    },
+    "opp_e992d7aa1bbddbc1": {
+      "id": "opp_e992d7aa1bbddbc1",
+      "fingerprint": "b12c9a01c939fb85",
+      "title": "Postdoctoral Fellow - Human Biomechanics, Wearable Sensors, and Motion Capture",
+      "institution": "The University of British Columbia (UBC Okanagan)",
+      "city": "Kelowna",
+      "country": "Canada",
+      "source_url": "https://vacancyedu.com/2026/10/13/postdoctoral-fellowship-05-at-university-of-british-columbia-canada-2/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-31",
+      "content_hash": "sha256:9dede3f79b80c1af37d1eb35bfca554a662e642d86ab84c9a20d2e58814c03d9",
+      "last_verified_at": "2026-10-17T01:55:25.739Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:55:25.920Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:55:25.920Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:55:25.921Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:14:02.933Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:14:02.933Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:49.520Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:49.520Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 50
+    },
+    "opp_87055ece8762ee9f": {
+      "id": "opp_87055ece8762ee9f",
+      "fingerprint": "17adb9b3ce3bab26",
+      "title": "Postdoctoral Research Fellow - Men's Health Research Program",
+      "institution": "The University of British Columbia",
+      "city": "Vancouver",
+      "country": "Canada",
+      "source_url": "https://vacancyedu.com/2026/10/13/postdoctoral-fellowship-05-at-university-of-british-columbia-canada-2/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.postdocs.ubc.ca/positions/1332",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-19T12:00:00-08:00",
+      "content_hash": "sha256:39f942b6de692b79f4ad8e4d76d6a84d29734c6763e0c474ebb5a22cd69f183a",
+      "last_verified_at": "2026-10-17T01:55:26.113Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:55:26.296Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:55:26.296Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:55:26.296Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:14:03.380Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:14:03.380Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:49.713Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:49.713Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 51
+    },
+    "opp_4d0af7cf1b20e72a": {
+      "id": "opp_4d0af7cf1b20e72a",
+      "fingerprint": "47e781eb0c704216",
+      "title": "Postdoctoral Fellow, Digital Platforms",
+      "institution": "The University of British Columbia",
+      "city": "Vancouver",
+      "country": "Canada",
+      "source_url": "https://vacancyedu.com/2026/10/13/postdoctoral-fellowship-05-at-university-of-british-columbia-canada-2/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30T12:00:00-08:00",
+      "content_hash": "sha256:218127b94eaad3b2a56285220fd081af03e094c4e2bc09e494c4e0ba2f12cefb",
+      "last_verified_at": "2026-10-17T01:55:26.471Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:55:26.634Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:55:26.635Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:55:26.635Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:14:03.929Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:14:03.929Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:49.902Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:49.902Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 52
+    },
+    "opp_5bc83d68881b04a3": {
+      "id": "opp_5bc83d68881b04a3",
+      "fingerprint": "97cf9b83de4c0d38",
+      "title": "Postdoc positions in 'Hybrid War and Democracy'",
+      "institution": "Danish Institute for Advanced Study (DIAS), University of Southern Denmark",
+      "city": null,
+      "country": "Denmark",
+      "source_url": "https://vacancyedu.com/2026/09/30/postdoctoral-fellowship-10-at-university-of-southern-denmark-denmark/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.sdu.dk/en/forskning/dias/jobs",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-23",
+      "content_hash": "sha256:fed07602e66a8f2bdd3d04bd485ad3c2298a36382eec39e4077506f9627be216",
+      "last_verified_at": "2026-10-17T01:55:26.810Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:55:26.977Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:55:26.977Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:55:26.977Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:46.081Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:46.081Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:50.083Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:50.083Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 53
+    },
+    "opp_ec0e74e605700ecc": {
+      "id": "opp_ec0e74e605700ecc",
+      "fingerprint": "f69bde3571b23915",
+      "title": "Research Fellow (Computational Microbiome Scientist)",
+      "institution": "Monash University",
+      "city": "Box Hill (Melbourne)",
+      "country": "Australia",
+      "source_url": "https://vacancyedu.com/2026/10/09/postdoctoral-fellowship-09-at-monash-university-australia/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://careers.pageuppeople.com/513/ind/en/job/698679/research-fellow-computational-microbiome-scientist",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-06T23:55:00+11:00",
+      "content_hash": "sha256:90ee2fc62cbdf4ede3994c56e8fcf583beb2cd0a11521e333572587e206b2ed9",
+      "last_verified_at": "2026-10-17T01:57:07.573Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:57:07.779Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:57:07.779Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:57:07.779Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:46.533Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:46.533Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:50.273Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:50.273Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 54
+    },
+    "opp_aede0c4f7ead1514": {
+      "id": "opp_aede0c4f7ead1514",
+      "fingerprint": "4b15e9ca78350fc2",
+      "title": "Janeway Institute Postdoctoral Research Fellowship (Research Assistant or Research Associate) (Fixed Term)",
+      "institution": "University of Cambridge, Janeway Institute",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://vacancyedu.com/2026/10/05/postdoctoral-fellowship-34-at-university-of-cambridge-united-kingdom/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.cam.ac.uk/jobs/janeway-institute-postdoctoral-research-fellowship-research-assistant-or-research-associate-fixed-jh50885",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:313b8cc1756a361433894dba44a78e682d6a90351ef5a1a0d55f0c00678e13e4",
+      "last_verified_at": "2026-10-17T01:57:08.002Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:57:08.193Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:57:08.193Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:57:08.193Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:01.175Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:01.175Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:50.465Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:50.465Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 55
+    },
+    "opp_5af6f79eade8b4b7": {
+      "id": "opp_5af6f79eade8b4b7",
+      "fingerprint": "79f1c3b6caef412f",
+      "title": "Postdoc Position in Quantum Control of Semiconductor Qubits",
+      "institution": "QuTech, Delft University of Technology",
+      "city": "Delft",
+      "country": "Netherlands",
+      "source_url": "https://vacancyedu.com/2026/09/19/postdoctoral-fellowship-24-at-delft-university-of-technology-tu-delft-netherlands/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15",
+      "content_hash": "sha256:35a32b5d404007606bfdb458b25212ad860ca208079c47183aef9a260bb7077c",
+      "last_verified_at": "2026-10-17T01:57:08.768Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:57:08.973Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:57:08.973Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:57:08.973Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:01.571Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:01.571Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:50.654Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:50.654Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 56
+    },
+    "opp_273decbb77c4224e": {
+      "id": "opp_273decbb77c4224e",
+      "fingerprint": "b81add6008df1f45",
+      "title": "Postdoctoral positions in applications of microcombs",
+      "institution": "Chalmers University of Technology, Department of Microtechnology and Nanoscience",
+      "city": "Gothenburg",
+      "country": "Sweden",
+      "source_url": "https://vacancyedu.com/2026/10/12/postdoctoral-fellowship-11-at-chalmers-university-of-technology-gothenburg-sweden/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30",
+      "content_hash": "sha256:9f38c2954990be87fa1251c81b41aa1f16277221157f6fe72e8208ba6c5a99a6",
+      "last_verified_at": "2026-10-17T01:57:09.150Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:57:09.344Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:57:09.344Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:57:09.345Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:01.967Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:01.967Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:50.832Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:50.832Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 57
+    },
+    "opp_d63ec9f1d3b0426e": {
+      "id": "opp_d63ec9f1d3b0426e",
+      "fingerprint": "0735a5691391c961",
+      "title": "Postdoctoral positions in the Computational Relativistic Astrophysics division at the Max Planck Institute for Gravitational Physics in Potsdam",
+      "institution": "Max Planck Institute for Gravitational Physics (Albert Einstein Institute)",
+      "city": "Potsdam",
+      "country": "Germany",
+      "source_url": "https://vacancyedu.com/2026/10/06/postdoctoral-fellowship-15-at-max-planck-institute-germany/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.aei.mpg.de/1496849/cra-postdoc-2027",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-13",
+      "content_hash": "sha256:1d4c999dd1d84bf9c76c4c9738487a241ef14a7a79a09752bc61dcf915e2b272",
+      "last_verified_at": "2026-10-17T01:57:25.373Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:57:25.555Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:57:25.555Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:57:25.556Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:15:35.737Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:15:35.737Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:51.021Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:51.021Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 58
+    },
+    "opp_7db0d2c07a29b4ca": {
+      "id": "opp_7db0d2c07a29b4ca",
+      "fingerprint": "31ec1d1c500ab324",
+      "title": "Postdoctoral Research Fellowship in Ecological Stability",
+      "institution": "University of Zurich",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://vacancyedu.com/2026/09/20/postdoctoral-fellowship-09-at-university-of-zurich-switzerland/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://jobs.uzh.ch/job-vacancies/postdoctoral-research-fellowship-in-ecological-stability/e7aee6d1-eedd-4734-9f89-ff59e4538d25",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-31",
+      "content_hash": "sha256:9981f2642c40af62aa84d66ebb675fbd9710e365e34dfc669eb1f42376975e28",
+      "last_verified_at": "2026-10-17T01:58:56.703Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:58:56.885Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:58:56.885Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:58:56.885Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:11.274Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:11.274Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:51.203Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:51.203Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 59
+    },
+    "opp_8acf7b006ba28f64": {
+      "id": "opp_8acf7b006ba28f64",
+      "fingerprint": "fd025085c0e23e11",
+      "title": "Postdoc in lipidomics at the Department of Drug Design and Pharmacology",
+      "institution": "University of Copenhagen, Department of Drug Design and Pharmacology",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15",
+      "content_hash": "sha256:bf8c31a5b98c5478131b1a3c049f305451322963a84d077f12eac6ca3422a8ee",
+      "last_verified_at": "2026-10-17T01:58:57.059Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T01:58:57.230Z",
+      "history": [
+        {
+          "at": "2026-10-17T01:58:57.230Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T01:58:57.230Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:03.109Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:03.110Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:51.414Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:51.415Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 60
+    },
+    "opp_32ee80da9be3a091": {
+      "id": "opp_32ee80da9be3a091",
+      "fingerprint": "5dedbcefcaae178d",
+      "title": "Postdoctoral Research Associate (Fixed Term)",
+      "institution": "University of Cambridge, Department of Genetics",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://vacancyedu.com/2026/10/05/postdoctoral-fellowship-34-at-university-of-cambridge-united-kingdom/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.cam.ac.uk/jobs/postdoctoral-research-associate-fixed-term-pc51215",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-08",
+      "content_hash": "sha256:5ee5ff299c4e305097d45eb20e0e706381b362a251f3dd9b78ab0b55b4a2eb66",
+      "last_verified_at": "2026-10-17T02:00:21.983Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T02:00:22.154Z",
+      "history": [
+        {
+          "at": "2026-10-17T02:00:22.154Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T02:00:22.154Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:03.519Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:03.519Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:51.603Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:51.604Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 61
+    },
+    "opp_7c54e48c877e8ea6": {
+      "id": "opp_7c54e48c877e8ea6",
+      "fingerprint": "42f1e6b86c786c29",
+      "title": "Postdoctoral Research Associate (Fixed Term)",
+      "institution": "University of Cambridge, Leverhulme Centre for the Future of Intelligence",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://vacancyedu.com/2026/10/05/postdoctoral-fellowship-34-at-university-of-cambridge-united-kingdom/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.cam.ac.uk/jobs/postdoctoral-research-associate-fixed-term-go51218",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-08T23:59:00+00:00",
+      "content_hash": "sha256:b06ffe07dfe4d433830471893a58fb1fabd733b6960ac1625701ee9a15a33e3b",
+      "last_verified_at": "2026-10-17T02:00:22.319Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T02:00:22.496Z",
+      "history": [
+        {
+          "at": "2026-10-17T02:00:22.496Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T02:00:22.496Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:05.405Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:05.405Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:51.786Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:51.786Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 62
+    },
+    "opp_0d43207ad017cb8e": {
+      "id": "opp_0d43207ad017cb8e",
+      "fingerprint": "25450c03aef315d7",
+      "title": "Researcher in Philosophy of Science",
+      "institution": "Stockholm University, Department of Philosophy",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "source_url": "https://vacancyedu.com/2026/10/14/postdoctoral-fellowship-06-at-stockholm-university-sweden/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-08",
+      "content_hash": "sha256:935eb1dbf338266ba56e240af70c1a0c5c6b01e2e998cc3203ef0530647a3d45",
+      "last_verified_at": "2026-10-17T02:00:22.682Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T02:00:22.868Z",
+      "history": [
+        {
+          "at": "2026-10-17T02:00:22.868Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T02:00:22.869Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:05.870Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:05.870Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:51.967Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:51.967Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 63
+    },
+    "opp_e3fc9116c7cdbaad": {
+      "id": "opp_e3fc9116c7cdbaad",
+      "fingerprint": "3f497a1ab4391f34",
+      "title": "Research Fellow in Cardiovascular Stem Cell Research",
+      "institution": "Monash University",
+      "city": "Clayton (Melbourne)",
+      "country": "Australia",
+      "source_url": "https://vacancyedu.com/2026/10/09/postdoctoral-fellowship-09-at-monash-university-australia/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-03",
+      "content_hash": "sha256:dbdf94a47097534b458a3e1283ff1b8cc38a7ab47393c8f8da87df6df7f632b6",
+      "last_verified_at": "2026-10-17T02:02:27.020Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T02:02:27.185Z",
+      "history": [
+        {
+          "at": "2026-10-17T02:02:27.185Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T02:02:27.186Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:06.336Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:06.336Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:52.184Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:52.184Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 64
+    },
+    "opp_3dec1c892d60e931": {
+      "id": "opp_3dec1c892d60e931",
+      "fingerprint": "d5e62d8d6b097768",
+      "title": "Yale World Fellows Program 2027",
+      "institution": "Yale University, Jackson School of Global Affairs (Maurice R. Greenberg World Fellows Program)",
+      "city": "New Haven",
+      "country": "United States",
+      "source_url": "https://fellowshipsguide.com/category/fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://worldfellows.yale.edu/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-02T14:00:00-05:00",
+      "content_hash": "sha256:1db04e4463bdd5fb0ec54f2fbaea3300d72fa6d60310fc1a22ebea6687eeb0b4",
+      "last_verified_at": "2026-10-17T02:02:27.350Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T02:02:27.513Z",
+      "history": [
+        {
+          "at": "2026-10-17T02:02:27.513Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T02:02:27.513Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:14.234Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:14.234Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:52.367Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:52.367Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 65
+    },
+    "opp_a86cf62288d3a83b": {
+      "id": "opp_a86cf62288d3a83b",
+      "fingerprint": "82cfa6c5380f2548",
+      "title": "Fellowship to the 2027 Global Investigative Journalism Conference",
+      "institution": "Global Investigative Journalism Network (GIJN)",
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "source_url": "https://fellowshipsguide.com/category/fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://gijn.org/stories/gijc2027-fellowship-application/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:476424c4fe91c1ceac3e598c09233d4662b2ae4cc770ece4294802206254b92d",
+      "last_verified_at": "2026-10-17T02:02:27.676Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T02:02:27.840Z",
+      "history": [
+        {
+          "at": "2026-10-17T02:02:27.840Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T02:02:27.840Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:07.252Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:07.252Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:52.553Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:52.553Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 66
+    },
+    "opp_43c4026131e3f172": {
+      "id": "opp_43c4026131e3f172",
+      "fingerprint": "2aa2138461298bc2",
+      "title": "PostDoc on Targeted Proteomics for Protein Biomarker Standardization",
+      "institution": "Eindhoven University of Technology (TU/e), Department of Biomedical Engineering",
+      "city": "Eindhoven",
+      "country": "Netherlands",
+      "source_url": "https://vacancyedu.com/2026/10/07/postdoctoral-fellowship-04-at-eindhoven-university-of-technology-netherlands/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.tue.nl/en/working-at-tue/vacancy-overview/postdoc-on-targeted-proteomics-for-protein-biomarker-standardization",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-05",
+      "content_hash": "sha256:b472a7800662ee475d183ba4ef131595353f96c3cb325cbe9676a6a4e004c4e2",
+      "last_verified_at": "2026-10-17T02:03:52.429Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T02:03:52.602Z",
+      "history": [
+        {
+          "at": "2026-10-17T02:03:52.602Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T02:03:52.603Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:07.703Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:07.703Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:52.754Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:52.754Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 67
+    },
+    "opp_a0bd9868e88398e8": {
+      "id": "opp_a0bd9868e88398e8",
+      "fingerprint": "4b3799d7238222ce",
+      "title": "Postdoc in accurate magnetic loss measurements for electrical machines",
+      "institution": "Chalmers University of Technology, Department of Electrical Engineering",
+      "city": "Gothenburg",
+      "country": "Sweden",
+      "source_url": "https://vacancyedu.com/2026/10/12/postdoctoral-fellowship-11-at-chalmers-university-of-technology-gothenburg-sweden/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-09",
+      "content_hash": "sha256:4d2f04022feac41599246a7fc20b595e883e1f93c6a76b29b4cf0debbe51e9ad",
+      "last_verified_at": "2026-10-17T02:03:52.805Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-17T02:03:52.980Z",
+      "history": [
+        {
+          "at": "2026-10-17T02:03:52.980Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-17T02:03:52.980Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-17T03:13:08.170Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-17T03:13:08.170Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-17T03:15:52.938Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-17T03:15:52.938Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 68
     }
   },
   "seen_urls": {
@@ -4828,7 +6213,32 @@
     "https://fellowshipsguide.com/uk-winter-fellowship-2027": "opp_ed819b4a2143dc78",
     "https://fellowshipsguide.com/eraai-fellowship-uk": "opp_ebc3b00b51fdb0a5",
     "https://fellowshipsguide.com/emirates-elevate-internship": "opp_e41e323c8e61c949",
-    "https://fellowshipsguide.com/european-blue-traineeship": "opp_7320653e28252a93"
+    "https://fellowshipsguide.com/european-blue-traineeship": "opp_7320653e28252a93",
+    "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark": "opp_8acf7b006ba28f64",
+    "https://employment.ku.dk/faculty?show=167779": "opp_992047ce6fe5a2dd",
+    "https://vacancyedu.com/2026/10/06/postdoctoral-fellowship-15-at-max-planck-institute-germany": "opp_d63ec9f1d3b0426e",
+    "https://jobs.aei.mpg.de/": "opp_e7185d79782a61da",
+    "https://vacancyedu.com/2026/10/13/postdoctoral-fellowship-05-at-university-of-british-columbia-canada-2": "opp_4d0af7cf1b20e72a",
+    "https://postdocs.ubc.ca/positions/1332": "opp_87055ece8762ee9f",
+    "https://vacancyedu.com/2026/09/30/postdoctoral-fellowship-10-at-university-of-southern-denmark-denmark": "opp_5bc83d68881b04a3",
+    "https://sdu.dk/en/forskning/dias/jobs": "opp_5bc83d68881b04a3",
+    "https://vacancyedu.com/2026/10/09/postdoctoral-fellowship-09-at-monash-university-australia": "opp_e3fc9116c7cdbaad",
+    "https://careers.pageuppeople.com/513/ind/en/job/698679/research-fellow-computational-microbiome-scientist": "opp_ec0e74e605700ecc",
+    "https://vacancyedu.com/2026/10/05/postdoctoral-fellowship-34-at-university-of-cambridge-united-kingdom": "opp_7c54e48c877e8ea6",
+    "https://cam.ac.uk/jobs/janeway-institute-postdoctoral-research-fellowship-research-assistant-or-research-associate-fixed-jh50885": "opp_aede0c4f7ead1514",
+    "https://vacancyedu.com/2026/09/19/postdoctoral-fellowship-24-at-delft-university-of-technology-tu-delft-netherlands": "opp_5af6f79eade8b4b7",
+    "https://vacancyedu.com/2026/10/12/postdoctoral-fellowship-11-at-chalmers-university-of-technology-gothenburg-sweden": "opp_a0bd9868e88398e8",
+    "https://aei.mpg.de/1496849/cra-postdoc-2027": "opp_d63ec9f1d3b0426e",
+    "https://vacancyedu.com/2026/09/20/postdoctoral-fellowship-09-at-university-of-zurich-switzerland": "opp_7db0d2c07a29b4ca",
+    "https://jobs.uzh.ch/job-vacancies/postdoctoral-research-fellowship-in-ecological-stability/e7aee6d1-eedd-4734-9f89-ff59e4538d25": "opp_7db0d2c07a29b4ca",
+    "https://cam.ac.uk/jobs/postdoctoral-research-associate-fixed-term-pc51215": "opp_32ee80da9be3a091",
+    "https://cam.ac.uk/jobs/postdoctoral-research-associate-fixed-term-go51218": "opp_7c54e48c877e8ea6",
+    "https://vacancyedu.com/2026/10/14/postdoctoral-fellowship-06-at-stockholm-university-sweden": "opp_0d43207ad017cb8e",
+    "https://fellowshipsguide.com/category/fellowships": "opp_a86cf62288d3a83b",
+    "https://worldfellows.yale.edu/apply": "opp_3dec1c892d60e931",
+    "https://gijn.org/stories/gijc2027-fellowship-application": "opp_a86cf62288d3a83b",
+    "https://vacancyedu.com/2026/10/07/postdoctoral-fellowship-04-at-eindhoven-university-of-technology-netherlands": "opp_43c4026131e3f172",
+    "https://tue.nl/en/working-at-tue/vacancy-overview/postdoc-on-targeted-proteomics-for-protein-biomarker-standardization": "opp_43c4026131e3f172"
   },
-  "last_offer_number": 46
+  "last_offer_number": 68
 }
