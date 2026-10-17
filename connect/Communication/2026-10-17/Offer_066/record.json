@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Fellowship to the 2027 Global Investigative Journalism Conference",
+    "evidence_url": "https://gijn.org/stories/gijc2027-fellowship-application/",
+    "evidence_quote": "Apply Now for a Fellowship to the 2027 Global Investigative Journalism Conference"
+  },
+  "institution": {
+    "name": "Global Investigative Journalism Network (GIJN)",
+    "website": "https://gijn.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://gijn.org/stories/gijc2027-fellowship-application/",
+  "source_url": "https://fellowshipsguide.com/category/fellowships/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Rotterdam",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Investigative journalism",
+  "seniority": "Journalists",
+  "qualifications": [
+    "Application must be submitted in English"
+  ],
+  "skills": [],
+  "description_short": "GIJN fellowships for journalists to attend the 15th Global Investigative Journalism Conference (GIJC27), co-hosted by GIJN and the Dutch-Flemish Association of Investigative Journalists (VVOJ) in the Netherlands. Partial fellowships may also be offered.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": null,
+    "evidence_url": "https://gijn.org/stories/gijc2027-fellowship-application/",
+    "evidence_quote": "January 31, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official GIJN fellowship announcement (search results): application deadline January 31, 2027 (future); 'Apply Now'",
+    "Application form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "fellowshipsguide.com post (dated October 15, 2026) about the GIJC27 fellowship seen through web-search results only; specific post URL not identified (site unreachable from this environment)",
+    "Rotterdam as host city stated on one GIJN page only",
+    "What the fellowship covers (travel, accommodation, registration) not confirmed in search results",
+    "Conference dates not confirmed"
+  ],
+  "id": "opp_a86cf62288d3a83b",
+  "fingerprint": "82cfa6c5380f2548",
+  "discovered_at": "2026-10-17T02:02:27.676Z",
+  "last_verified_at": "2026-10-17T02:02:27.676Z",
+  "content_hash": "sha256:476424c4fe91c1ceac3e598c09233d4662b2ae4cc770ece4294802206254b92d"
+}
