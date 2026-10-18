@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-17T03:15:52.938Z",
+  "updated_at": "2026-10-18T02:03:57.066Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -6046,6 +6046,378 @@
         }
       ],
       "offer_number": 68
+    },
+    "opp_a2cabe02df0fc653": {
+      "id": "opp_a2cabe02df0fc653",
+      "fingerprint": "12e96dde55f80425",
+      "title": "MESPOM Erasmus Mundus Joint Master Program (2027-2029)",
+      "institution": "MESPOM consortium (Master of Science in Environmental Sciences, Policy and Management)",
+      "city": null,
+      "country": null,
+      "source_url": "https://fellowshipsguide.com/?p=7433",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.ceu.edu/admissions/master",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-07T23:59:00+01:00",
+      "content_hash": "sha256:e1cef7797959337677280989a0bb97f9535f739254b87ead288cf804e4e73135",
+      "last_verified_at": "2026-10-18T01:54:38.465Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-18T01:54:43.251Z",
+      "history": [
+        {
+          "at": "2026-10-18T01:54:43.251Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-18T01:54:43.251Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-18T02:03:45.258Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-18T02:03:45.258Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-18T02:03:55.824Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-18T02:03:55.824Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 69
+    },
+    "opp_c2ee673bc1dd14a8": {
+      "id": "opp_c2ee673bc1dd14a8",
+      "fingerprint": "ca9560836b5c4c92",
+      "title": "NOHA Master's Programme",
+      "institution": "NOHA Network on Humanitarian Action",
+      "city": null,
+      "country": null,
+      "source_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://apply.nohanet.org/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15T23:59:00+00:00",
+      "content_hash": "sha256:6e87a2a69c89fdf932db42fbf83a65345db9c5ec181c487bdb8c76ec35737d60",
+      "last_verified_at": "2026-10-18T01:54:38.683Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-18T01:54:43.504Z",
+      "history": [
+        {
+          "at": "2026-10-18T01:54:43.504Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-18T01:54:43.504Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-18T02:02:48.545Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-18T02:02:48.546Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-18T02:03:56.064Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-18T02:03:56.064Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 70
+    },
+    "opp_f96ba012dd75898b": {
+      "id": "opp_f96ba012dd75898b",
+      "fingerprint": "d8bddf39cd45b7c2",
+      "title": "Postdoctoral Research Fellow, AI-Enabled Innovation for Vanadium Flow Batteries",
+      "institution": "The University of British Columbia",
+      "city": "Vancouver",
+      "country": "Canada",
+      "source_url": "https://vacancyedu.com/2026/10/13/postdoctoral-fellowship-05-at-university-of-british-columbia-canada-2/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31T12:00:00-08:00",
+      "content_hash": "sha256:6eca267109f0a1151864723f402c714c4ab433050af5680db348c6613f669bec",
+      "last_verified_at": "2026-10-18T01:54:38.950Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-18T01:54:43.745Z",
+      "history": [
+        {
+          "at": "2026-10-18T01:54:43.745Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-18T01:54:43.745Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-18T02:03:04.528Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-18T02:03:04.528Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-18T02:03:56.310Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-18T02:03:56.310Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 71
+    },
+    "opp_0abe741670efea9d": {
+      "id": "opp_0abe741670efea9d",
+      "fingerprint": "0d1b21c7d74223fa",
+      "title": "Postdoc in Cognitive Computational Neuroscience and Human Movement Perception",
+      "institution": "University of Copenhagen, Department of Psychology",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://employment.ku.dk/all-vacancies/?show=169455",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01T23:59:00+01:00",
+      "content_hash": "sha256:13eb25a47af06fe9aa60e40362dca86c9c295a696916f1f7cb38de2b77477915",
+      "last_verified_at": "2026-10-18T01:54:39.249Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-18T01:54:43.977Z",
+      "history": [
+        {
+          "at": "2026-10-18T01:54:43.977Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-18T01:54:43.977Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-18T02:02:49.622Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-18T02:02:49.622Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-18T02:03:56.541Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-18T02:03:56.542Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 72
+    },
+    "opp_3c32aaa23efceddd": {
+      "id": "opp_3c32aaa23efceddd",
+      "fingerprint": "6f3656101f279756",
+      "title": "Doctoral student in Computer Science with a focus on Secure Coordination and Interaction in Distributed AI",
+      "institution": "Örebro University",
+      "city": "Örebro",
+      "country": "Sweden",
+      "source_url": "https://mlscientist.com/category/sweden/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-02",
+      "content_hash": "sha256:b228222be8135f522181450c960b3dda0da26062eb6081f1825f9e2f9a9232a4",
+      "last_verified_at": "2026-10-18T01:58:23.920Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-18T01:58:24.205Z",
+      "history": [
+        {
+          "at": "2026-10-18T01:58:24.206Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-18T01:58:24.206Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-18T02:02:50.281Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-18T02:02:50.281Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-18T02:03:56.808Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-18T02:03:56.808Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 73
+    },
+    "opp_01a8a42645688bb7": {
+      "id": "opp_01a8a42645688bb7",
+      "fingerprint": "670d6b889d8f003b",
+      "title": "Postdoctoral Positions in Mathematics",
+      "institution": "University of Copenhagen, Department of Mathematical Sciences",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://employment.ku.dk/faculty/?show=167780",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15T23:59:00+01:00",
+      "content_hash": "sha256:37d4054f50ab00fe52be916380e33c439944132e01938f1ec6c64b96a9107d23",
+      "last_verified_at": "2026-10-18T01:58:24.496Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-18T01:58:24.761Z",
+      "history": [
+        {
+          "at": "2026-10-18T01:58:24.761Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-18T01:58:24.761Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-18T02:02:50.789Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-18T02:02:50.789Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-18T02:03:57.065Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-18T02:03:57.066Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 74
     }
   },
   "seen_urls": {
@@ -6176,7 +6548,7 @@
     "https://deakin.edu.au/research/research-degrees/how-to-apply-for-a-research-degree": "opp_418bcff5d8fea4f6",
     "https://fellowshipsguide.com/nias-fellowship": "opp_13e05b31612a5613",
     "https://nias.knaw.nl/application-form-safe-haven-fellowship": "opp_13e05b31612a5613",
-    "https://mlscientist.com/category/sweden": "opp_95859274d18a1534",
+    "https://mlscientist.com/category/sweden": "opp_3c32aaa23efceddd",
     "https://aclweb.org/portal/node/14588": "opp_15f2da2a45ee23a8",
     "https://kth.se/lediga-jobb/972456?l=en": "opp_38cd8d3b3d550c91",
     "https://kth.se/lediga-jobb/973983?l=en": "opp_1165784f87328a3d",
@@ -6214,11 +6586,11 @@
     "https://fellowshipsguide.com/eraai-fellowship-uk": "opp_ebc3b00b51fdb0a5",
     "https://fellowshipsguide.com/emirates-elevate-internship": "opp_e41e323c8e61c949",
     "https://fellowshipsguide.com/european-blue-traineeship": "opp_7320653e28252a93",
-    "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark": "opp_8acf7b006ba28f64",
+    "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark": "opp_01a8a42645688bb7",
     "https://employment.ku.dk/faculty?show=167779": "opp_992047ce6fe5a2dd",
     "https://vacancyedu.com/2026/10/06/postdoctoral-fellowship-15-at-max-planck-institute-germany": "opp_d63ec9f1d3b0426e",
     "https://jobs.aei.mpg.de/": "opp_e7185d79782a61da",
-    "https://vacancyedu.com/2026/10/13/postdoctoral-fellowship-05-at-university-of-british-columbia-canada-2": "opp_4d0af7cf1b20e72a",
+    "https://vacancyedu.com/2026/10/13/postdoctoral-fellowship-05-at-university-of-british-columbia-canada-2": "opp_f96ba012dd75898b",
     "https://postdocs.ubc.ca/positions/1332": "opp_87055ece8762ee9f",
     "https://vacancyedu.com/2026/09/30/postdoctoral-fellowship-10-at-university-of-southern-denmark-denmark": "opp_5bc83d68881b04a3",
     "https://sdu.dk/en/forskning/dias/jobs": "opp_5bc83d68881b04a3",
@@ -6238,7 +6610,13 @@
     "https://worldfellows.yale.edu/apply": "opp_3dec1c892d60e931",
     "https://gijn.org/stories/gijc2027-fellowship-application": "opp_a86cf62288d3a83b",
     "https://vacancyedu.com/2026/10/07/postdoctoral-fellowship-04-at-eindhoven-university-of-technology-netherlands": "opp_43c4026131e3f172",
-    "https://tue.nl/en/working-at-tue/vacancy-overview/postdoc-on-targeted-proteomics-for-protein-biomarker-standardization": "opp_43c4026131e3f172"
+    "https://tue.nl/en/working-at-tue/vacancy-overview/postdoc-on-targeted-proteomics-for-protein-biomarker-standardization": "opp_43c4026131e3f172",
+    "https://fellowshipsguide.com/?p=7433": "opp_a2cabe02df0fc653",
+    "https://ceu.edu/admissions/master": "opp_a2cabe02df0fc653",
+    "https://fellowshipsguide.com/category/bs-ms-scholarships": "opp_c2ee673bc1dd14a8",
+    "https://apply.nohanet.org/": "opp_c2ee673bc1dd14a8",
+    "https://employment.ku.dk/all-vacancies?show=169455": "opp_0abe741670efea9d",
+    "https://employment.ku.dk/faculty?show=167780": "opp_01a8a42645688bb7"
   },
-  "last_offer_number": 68
+  "last_offer_number": 74
 }

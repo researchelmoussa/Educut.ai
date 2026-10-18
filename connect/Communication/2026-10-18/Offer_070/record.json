@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "NOHA Master's Programme",
+    "evidence_url": "https://www.nohanet.org/masters",
+    "evidence_quote": "NOHA Master's Programme"
+  },
+  "institution": {
+    "name": "NOHA Network on Humanitarian Action",
+    "website": "https://www.nohanet.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://apply.nohanet.org/",
+  "source_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "International humanitarian action",
+  "seniority": "Master's applicants",
+  "qualifications": [
+    "Degree studies completed by the 15 December 2026 application deadline (scholarship applicants)"
+  ],
+  "skills": [],
+  "description_short": "Erasmus Mundus joint master's programme in international humanitarian action run by the NOHA university network for the 2027-2029 cohort. Erasmus Mundus scholarship applications are accepted between 1 October and 15 December 2026; ordinary and self-funded applicants have later deadlines in 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15T23:59:00+00:00",
+    "timezone": "GMT",
+    "evidence_url": "https://www.nohanet.org/masters",
+    "evidence_quote": "15 December 2026, 23.59 GMT"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NOHA Masters page (search results): Erasmus Mundus scholarship deadline 15 December 2026, 23.59 GMT",
+    "Official joint application system (apply.nohanet.org, search results): scholarship applications only between 1 October 2026 and 15 December 2026",
+    "fellowshipsguide lists 'Erasmus Mundus NOHA Scholarship 2027-2029 (Fully Funded)' as open",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "fellowshipsguide listing seen through web-search results only; specific post URL not identified (site unreachable from this environment)",
+    "Official page text refers to both the 2026-2028 and 2027-2029 cohorts; 2027-2029 inferred from homepage ('application for the 2027-9 cohort now open')",
+    "Location: multi-country programme across NOHA consortium universities; no single city/country",
+    "Scholarship amount not confirmed on the official page",
+    "Non-scholarship deadlines (1 April / 1 July 2027) vary by applicant category"
+  ],
+  "id": "opp_c2ee673bc1dd14a8",
+  "fingerprint": "ca9560836b5c4c92",
+  "discovered_at": "2026-10-18T01:54:38.683Z",
+  "last_verified_at": "2026-10-18T01:54:38.683Z",
+  "content_hash": "sha256:6e87a2a69c89fdf932db42fbf83a65345db9c5ec181c487bdb8c76ec35737d60"
+}

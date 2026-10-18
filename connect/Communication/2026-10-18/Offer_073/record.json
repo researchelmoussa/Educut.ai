@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doctoral student in Computer Science with a focus on Secure Coordination and Interaction in Distributed AI",
+    "evidence_url": "https://www.oru.se/english/career/available-positions/",
+    "evidence_quote": "Doctoral student in Computer Science with a focus on Secure Coordination and Interaction in Distributed AI"
+  },
+  "institution": {
+    "name": "Örebro University",
+    "website": "https://www.oru.se",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://mlscientist.com/category/sweden/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Örebro",
+    "country": "Sweden",
+    "country_code": "SE"
+  },
+  "employment_type": "temporary",
+  "work_arrangement": "unspecified",
+  "field": "Computer science / distributed AI security",
+  "seniority": "Doctoral student",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Fixed-term doctoral studentship at Örebro University on secure coordination and interaction in distributed AI, linked to the RESIST cyber-resilient AI centre. Topics include interaction protocols between agents, robots and people, and safeguarding agent interactions against manipulation and unsafe behaviour.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-02",
+    "timezone": "Europe/Stockholm",
+    "evidence_url": "https://www.oru.se/english/career/available-positions/",
+    "evidence_quote": "the application deadline is 2026-11-02"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Örebro University available-positions page (search results): fixed-term doctoral studies position, application deadline 2026-11-02 (future)",
+    "mlscientist lists 'PhD in Secure Distributed AI Coordination' (Örebro) with deadline 2026-11-02, posted October 12, 2026",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "mlscientist listing seen through web-search results only; specific post URL not identified",
+    "Specific official job URL (jid) not identified; application_url unknown",
+    "An earlier posting with the same title had a 1 April 2026 deadline; this record refers to the November 2026 round",
+    "Salary (SEK 32,300/month) seen only for the earlier round; not recorded",
+    "Project description partly drawn from third-party job boards (RESIST centre, topics)"
+  ],
+  "id": "opp_3c32aaa23efceddd",
+  "fingerprint": "6f3656101f279756",
+  "discovered_at": "2026-10-18T01:58:23.920Z",
+  "last_verified_at": "2026-10-18T01:58:23.920Z",
+  "content_hash": "sha256:b228222be8135f522181450c960b3dda0da26062eb6081f1825f9e2f9a9232a4"
+}

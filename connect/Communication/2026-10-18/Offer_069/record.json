@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "MESPOM Erasmus Mundus Joint Master Program (2027-2029)",
+    "evidence_url": "https://fellowshipsguide.com/?p=7433",
+    "evidence_quote": "MESPOM Erasmus Mundus Joint Master Program (2027-2029)"
+  },
+  "institution": {
+    "name": "MESPOM consortium (Master of Science in Environmental Sciences, Policy and Management)",
+    "website": "https://mespom.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ceu.edu/admissions/master",
+  "source_url": "https://fellowshipsguide.com/?p=7433",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Environmental sciences, policy and management",
+  "seniority": "Master's applicants",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Erasmus Mundus joint master's programme in environmental sciences, policy and management, 2027-2029 intake. Applicants wishing to be considered for financial aid, including Erasmus Mundus scholarships, must apply by 7 January 2027 through Central European University's online application form.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-07T23:59:00+01:00",
+    "timezone": "CET",
+    "evidence_url": "https://mespom.eu/call-applications-2027-2029",
+    "evidence_quote": "January 7, 2027: DEADLINE for applicants who wish to be considered for financial aid"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official MESPOM 'Call for Applications 2027-2029' page (search results): January 7, 2027 deadline for applicants who wish to be considered for financial aid, before 23:59 CET",
+    "Official admissions calendar is marked '(tbc)'",
+    "CEU programme page reportedly still shows admissions 'Closed' (likely previous cycle)",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Title follows the fellowshipsguide wording; seen through web-search results only",
+    "Official admissions calendar marked tbc; dates may change",
+    "CEU programme page shows admissions closed, possibly for the older cycle",
+    "Location: multi-country consortium; no single city/country",
+    "Scholarship amount and funding level not recorded (sources disagree between full and partial funding)"
+  ],
+  "id": "opp_a2cabe02df0fc653",
+  "fingerprint": "12e96dde55f80425",
+  "discovered_at": "2026-10-18T01:54:38.465Z",
+  "last_verified_at": "2026-10-18T01:54:38.465Z",
+  "content_hash": "sha256:e1cef7797959337677280989a0bb97f9535f739254b87ead288cf804e4e73135"
+}
