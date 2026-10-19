@@ -332,7 +332,7 @@ const commands = {
         `${basename(dir)} · ${rec.title.value} · ${rec.institution.name}`,
         `Opportunity ID: ${rec.id}`,
         `Application status: ${rec.application_status}${rec.application_status === 'OPEN_LIKELY' ? '  <-- VERIFY THE APPLICATION PORTAL MANUALLY BEFORE APPROVING' : ''}`,
-        `Deadline: ${rec.deadline ? `${rec.deadline.value}${rec.deadline.timezone ? ` (${rec.deadline.timezone})` : ''}` : 'not specified'}`,
+        `Deadline: ${rec.deadline ? `${rec.deadline.value}${rec.deadline.timezone ? (/[()]/.test(rec.deadline.timezone) ? ` ${rec.deadline.timezone}` : ` (${rec.deadline.timezone})`) : ''}` : 'not specified'}`,
         `Official application link: ${rec.application_url ?? 'not found — see source'}`,
         `Source page: ${rec.source_url}`,
         `EduCut link in post: ${pkg.educut_link.url} (${pkg.educut_link.type.replace('_', ' ')})`,
