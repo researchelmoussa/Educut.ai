@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "14th Heidelberg Laureate Forum",
+    "evidence_url": "https://www.heidelberg-laureate-forum.org/young-researchers/faq/",
+    "evidence_quote": "14th Heidelberg Laureate Forum"
+  },
+  "institution": {
+    "name": "Heidelberg Laureate Forum Foundation",
+    "website": "https://www.heidelberg-laureate-forum.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://application.heidelberg-laureate-forum.org/site/index.php",
+  "source_url": "https://www.heidelberg-laureate-forum.org/young-researchers/faq/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Heidelberg",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Mathematics and computer science",
+  "seniority": "Undergraduate/pre-master, PhD and postdoc researchers",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Application for young researchers in mathematics and computer science (undergraduate/pre-master, PhD and postdoc) to attend the 14th Heidelberg Laureate Forum, 12-17 September 2027 (subject to change). The application window runs from 11 November 2026 to 11 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-11T23:59:00+01:00",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://application.heidelberg-laureate-forum.org/site/index.php",
+    "evidence_quote": "November 11, 2026 until February 11, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official HLF online application system and FAQ (search results): window November 11, 2026 until February 11, 2027, 11:59 p.m. Berlin time",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains blocked by the network proxy in this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Application window opens 11 November 2026, not yet open on 2026-10-19",
+    "Event dates listed as subject to change",
+    "Document requirements seen only for earlier cycles"
+  ],
+  "id": "opp_ede0f75f23d581b0",
+  "fingerprint": "de924913b2e50e1f",
+  "discovered_at": "2026-10-19T01:59:17.127Z",
+  "last_verified_at": "2026-10-19T01:59:17.127Z",
+  "content_hash": "sha256:8e14127920230764bb4e89e54f233df8084ea39c08c8bca18ca1add704344358"
+}

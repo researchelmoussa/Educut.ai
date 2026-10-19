@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-18T02:03:57.066Z",
+  "updated_at": "2026-10-19T02:06:05.739Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -3891,7 +3891,7 @@
       "deadline": "2026-10-17",
       "content_hash": "sha256:0157645a7d3ab89a4ab9f0eae7b6e35aaf08e34821d67c75e3d6c8acb93a053e",
       "last_verified_at": "2026-10-16T02:01:55.716Z",
-      "pipeline_status": "NEEDS_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-16T02:01:55.911Z",
       "history": [
         {
@@ -3907,6 +3907,13 @@
           "to": "NEEDS_REVIEW",
           "actor": "opportunity-scout",
           "reason": "application_status=NEEDS_REVIEW"
+        },
+        {
+          "at": "2026-10-19T01:51:54.542Z",
+          "from": "NEEDS_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-17 passed"
         }
       ]
     },
@@ -6418,6 +6425,1122 @@
         }
       ],
       "offer_number": 74
+    },
+    "opp_5867034215d57dc8": {
+      "id": "opp_5867034215d57dc8",
+      "fingerprint": "6093b53b0ba0972f",
+      "title": "Aalto University Science Institute International Summer Research Programme",
+      "institution": "Aalto University Science Institute (AScI)",
+      "city": "Espoo",
+      "country": "Finland",
+      "source_url": "https://www.aalto.fi/en/aalto-university-science-institute-asci/aalto-university-science-institute-international-summer-research-programme",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.aalto.fi/en/aalto-science-institute-asci/how-to-apply-for-the-asci-international-summer-research-programme",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31T23:59:00+02:00",
+      "content_hash": "sha256:641ba69ea44e47e9797e83aa30a54dec889d4e3f178ea2694e605234cc761257",
+      "last_verified_at": "2026-10-19T01:59:16.464Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:24.571Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:24.571Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:24.571Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:01:30.867Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:01:30.867Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:02.299Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:02.299Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 75
+    },
+    "opp_6ac640799bd70ba3": {
+      "id": "opp_6ac640799bd70ba3",
+      "fingerprint": "2fe573ac497a6948",
+      "title": "CVPR 2027 Call for Papers",
+      "institution": "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2027)",
+      "city": null,
+      "country": null,
+      "source_url": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-10T23:59:00-12:00",
+      "content_hash": "sha256:82e4730809b26a33485b7b4a7b8341c65ace46ac87be83944450dae3de0d0924",
+      "last_verified_at": "2026-10-19T01:59:16.660Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:24.779Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:24.779Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:24.779Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:02:16.633Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:02:16.633Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:02.486Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:02.487Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 76
+    },
+    "opp_22c7339ee84ffe65": {
+      "id": "opp_22c7339ee84ffe65",
+      "fingerprint": "79f91a45f7315b21",
+      "title": "RISE Germany",
+      "institution": "DAAD (German Academic Exchange Service)",
+      "city": null,
+      "country": "Germany",
+      "source_url": "https://www.daad.de/rise/en/rise-germany/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.daad.de/rise/en/rise-germany/find-an-internship/application-portal/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30T23:59:00+01:00",
+      "content_hash": "sha256:1f71f54325f0000239a2a07328a864a460eee47e8d68231aa2c7b771288be038",
+      "last_verified_at": "2026-10-19T01:59:16.935Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:24.981Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:24.981Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:24.981Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:01:41.046Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:01:41.046Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:02.700Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:02.700Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 77
+    },
+    "opp_ede0f75f23d581b0": {
+      "id": "opp_ede0f75f23d581b0",
+      "fingerprint": "de924913b2e50e1f",
+      "title": "14th Heidelberg Laureate Forum",
+      "institution": "Heidelberg Laureate Forum Foundation",
+      "city": "Heidelberg",
+      "country": "Germany",
+      "source_url": "https://www.heidelberg-laureate-forum.org/young-researchers/faq/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://application.heidelberg-laureate-forum.org/site/index.php",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-11T23:59:00+01:00",
+      "content_hash": "sha256:8e14127920230764bb4e89e54f233df8084ea39c08c8bca18ca1add704344358",
+      "last_verified_at": "2026-10-19T01:59:17.127Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:25.204Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:25.205Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:25.205Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:02:03.728Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:02:03.728Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:02.895Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:02.895Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 78
+    },
+    "opp_e50ad03a2fb3241a": {
+      "id": "opp_e50ad03a2fb3241a",
+      "fingerprint": "9c0e560480f3b554",
+      "title": "IJCAI 2027",
+      "institution": "International Joint Conferences on Artificial Intelligence (IJCAI)",
+      "city": "Kyoto",
+      "country": "Japan",
+      "source_url": "https://2027.ijcai.org/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://2027.ijcai.org/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-04T23:59:00-12:00",
+      "content_hash": "sha256:d6b4727b3b78c5f4f4d4f6244885c21fe8714a449d8d8e45cca8d6ea57bff2f1",
+      "last_verified_at": "2026-10-19T01:59:17.329Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:25.427Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:25.427Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:25.427Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:01:59.271Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:01:59.271Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:03.095Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:03.095Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 79
+    },
+    "opp_c9462e438151c2df": {
+      "id": "opp_c9462e438151c2df",
+      "fingerprint": "7ac8c71098244b9b",
+      "title": "PhD Program",
+      "institution": "Institute of Science and Technology Austria (ISTA)",
+      "city": "Klosterneuburg",
+      "country": "Austria",
+      "source_url": "https://phd.pages.ista.ac.at/apply/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://phd.pages.ista.ac.at/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08T15:00:00+01:00",
+      "content_hash": "sha256:640a3909ff473d84f777489d739a298723aa3298653422e60da0375c64e3d372",
+      "last_verified_at": "2026-10-19T01:59:17.517Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:25.651Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:25.651Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:25.652Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:02:50.183Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:02:50.183Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:03.308Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:03.308Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 80
+    },
+    "opp_2b233adc3f17e95a": {
+      "id": "opp_2b233adc3f17e95a",
+      "fingerprint": "ba9809d7b75a9472",
+      "title": "KAUST Fellowship",
+      "institution": "King Abdullah University of Science and Technology (KAUST)",
+      "city": "Thuwal",
+      "country": "Saudi Arabia",
+      "source_url": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://apply.kaust.edu.sa/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-03",
+      "content_hash": "sha256:3d2b806109a60bc22272d3341db6dbe0721bab3ddbdede91ede3d87930f4b472",
+      "last_verified_at": "2026-10-19T01:59:17.725Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:25.874Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:25.874Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:25.874Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:03:08.090Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:03:08.090Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:03.486Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:03.487Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 81
+    },
+    "opp_5d86e44b2fd2040f": {
+      "id": "opp_5d86e44b2fd2040f",
+      "fingerprint": "69acea0ad791b629",
+      "title": "Ph.D. in Computer Science",
+      "institution": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+      "city": "Abu Dhabi",
+      "country": "United Arab Emirates",
+      "source_url": "https://mbzuai.ac.ae/study/phd-programs/doctor-of-philosophy-in-computer-science/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://mbzuai.ac.ae/study/phd-programs/doctor-of-philosophy-in-computer-science/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15T17:00:00+04:00",
+      "content_hash": "sha256:9c08a67f8af086330bcbbfe2737f3236b33df34fa0593a9b142c3d7751ada09d",
+      "last_verified_at": "2026-10-19T01:59:17.941Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:26.073Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:26.073Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:26.073Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:03:00.692Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:03:00.692Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:03.694Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:03.694Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 82
+    },
+    "opp_92a793d8d141a5a5": {
+      "id": "opp_92a793d8d141a5a5",
+      "fingerprint": "e677ff4e7b18ed43",
+      "title": "Medical Imaging with Deep Learning 2027",
+      "institution": "MIDL 2027 (Medical Imaging with Deep Learning)",
+      "city": "Porto",
+      "country": "Portugal",
+      "source_url": "https://2027.midl.io/important-dates",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://2027.midl.io/call-for-papers",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30T23:59:00-12:00",
+      "content_hash": "sha256:077ae4f39383d2c6aabcde37dcc6e094665fe7e5fe464b06a2a6cd0c89f792e3",
+      "last_verified_at": "2026-10-19T01:59:18.124Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:26.272Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:26.272Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:26.272Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:02:57.992Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:02:57.992Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:03.877Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:03.878Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 83
+    },
+    "opp_54f54504a28027ed": {
+      "id": "opp_54f54504a28027ed",
+      "fingerprint": "d4e1f18436d7a5fc",
+      "title": "Supervision Requests",
+      "institution": "Mila - Quebec Artificial Intelligence Institute",
+      "city": "Montreal",
+      "country": "Canada",
+      "source_url": "https://mila.quebec/en/prospective-students-and-postdocs/research-programs/request-supervisor",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://mila.quebec/en/prospective-students-and-postdocs/research-programs/request-supervisor",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:0a461033d142bedc34226c1306112552761bb59074bbd407f1a0aa069110282a",
+      "last_verified_at": "2026-10-19T01:59:18.330Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:26.468Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:26.468Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:26.468Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:03:04.968Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:03:04.968Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:04.081Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:04.082Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 84
+    },
+    "opp_56db4082fe3da357": {
+      "id": "opp_56db4082fe3da357",
+      "fingerprint": "afa83536d6e22d5b",
+      "title": "Postdoctoral Fellowships at Massachusetts Institute of Technology",
+      "institution": "Novo Nordisk Foundation",
+      "city": "Cambridge",
+      "country": "United States",
+      "source_url": "https://novonordiskfonden.dk/en/grant/postdoctoral-fellowships-at-massachusetts-institute-of-technology-2026/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://novonordiskfonden.dk/en/grant/postdoctoral-fellowships-at-massachusetts-institute-of-technology-2026/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-29T14:00:00+01:00",
+      "content_hash": "sha256:ad3c5d337901ac9b09035eaeedcb0d9eff1fdcd1e7914eb7d26c96fa5f481369",
+      "last_verified_at": "2026-10-19T01:59:18.526Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:26.716Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:26.716Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:26.716Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:04:19.961Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:04:19.961Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:04.305Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:04.305Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 85
+    },
+    "opp_e7331323d5ad4014": {
+      "id": "opp_e7331323d5ad4014",
+      "fingerprint": "614531652d53232f",
+      "title": "Postdoctoral Fellowships at Uppsala University - 2027",
+      "institution": "Novo Nordisk Foundation",
+      "city": "Uppsala",
+      "country": "Sweden",
+      "source_url": "https://fellowshipsguide.com/uppsala-postdoctoral-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://novonordiskfonden.dk/en/grant/postdoctoral-fellowships-at-uppsala-university-2026/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-29T14:00:00+01:00",
+      "content_hash": "sha256:aa895fddb63a74bafbed23b648ca599839087b3fed3db64c92467090ddca4985",
+      "last_verified_at": "2026-10-19T01:59:18.731Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:26.932Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:26.932Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:26.932Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:04:16.394Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:04:16.394Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:04.521Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:04.521Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 86
+    },
+    "opp_db05e48681bfcdfc": {
+      "id": "opp_db05e48681bfcdfc",
+      "fingerprint": "ae0a1a514a618e89",
+      "title": "PhD Program",
+      "institution": "Okinawa Institute of Science and Technology Graduate University (OIST)",
+      "city": "Onna, Okinawa",
+      "country": "Japan",
+      "source_url": "https://www.oist.jp/admissions/phd-program/apply-phd",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.oist.jp/admissions/phd-program/apply-phd",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15T23:59:00+09:00",
+      "content_hash": "sha256:4ed48a5559ffd3d6707f3942e68d926b72d6331b695244ef339f436183bcca28",
+      "last_verified_at": "2026-10-19T01:59:18.922Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:27.160Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:27.160Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:27.160Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:04:21.248Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:04:21.248Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:04.736Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:04.736Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 87
+    },
+    "opp_a0ccaa5dccc402f3": {
+      "id": "opp_a0ccaa5dccc402f3",
+      "fingerprint": "a7a0e6ad6b78f1ab",
+      "title": "Autonomous Intelligent Machines and Systems (EPSRC CDT)",
+      "institution": "University of Oxford",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "source_url": "https://www.ox.ac.uk/admissions/graduate/courses/cdt-autonomous-intelligent-machines-and-systems",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.ox.ac.uk/admissions/graduate/courses/cdt-autonomous-intelligent-machines-and-systems",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-27T12:00:00+00:00",
+      "content_hash": "sha256:cbb4ac3ae83ec8c28437e0d9522c85333f3f45d5bc5369a12eaf5ceb7e3aa811",
+      "last_verified_at": "2026-10-19T01:59:19.113Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:27.401Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:27.401Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:27.401Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:04:12.803Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:04:12.803Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:04.940Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:04.940Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 88
+    },
+    "opp_c93a8b4a57c843a8": {
+      "id": "opp_c93a8b4a57c843a8",
+      "fingerprint": "273ddbeebf6d43bf",
+      "title": "Robotics: Science and Systems",
+      "institution": "Robotics: Science and Systems (RSS 2027)",
+      "city": "Athens",
+      "country": "Greece",
+      "source_url": "https://roboticsconference.org/information/cfp/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://roboticsconference.org/information/cfp/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-04T23:59:00-12:00",
+      "content_hash": "sha256:821a8a234ecf4bb54d26b9cbee99d6d5dfbd03606ea47fc714526c05ca50db8a",
+      "last_verified_at": "2026-10-19T01:59:19.324Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:27.600Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:27.600Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:27.600Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:04:16.754Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:04:16.754Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:05.135Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:05.135Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 89
+    },
+    "opp_92bfb28150285dc0": {
+      "id": "opp_92bfb28150285dc0",
+      "fingerprint": "4a51ecc1ab8d0556",
+      "title": "Simons Institute Research Fellowships",
+      "institution": "Simons Institute for the Theory of Computing, UC Berkeley",
+      "city": "Berkeley",
+      "country": "United States",
+      "source_url": "https://simons.berkeley.edu/research-fellowship-call-applications",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://simons.berkeley.edu/simons-institute-program-fellowship-application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:182494ea00ab3f087b8c33c24f5fc4d341ba3315e96d40a616daaa5c2e00a351",
+      "last_verified_at": "2026-10-19T01:59:19.548Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:27.804Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:27.805Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:27.805Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:05:06.350Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:05:06.350Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:05.330Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:05.330Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 90
+    },
+    "opp_048aba64f3f2ddb7": {
+      "id": "opp_048aba64f3f2ddb7",
+      "fingerprint": "04bbaf0852ffb5fc",
+      "title": "Postdoc.Mobility",
+      "institution": "Swiss National Science Foundation (SNSF)",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.snf.ch/en/XIZpfY3iVS5KRRoD/funding/careers/postdoc-mobility",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.snf.ch/en/XIZpfY3iVS5KRRoD/funding/careers/postdoc-mobility",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-02T17:00:00+01:00",
+      "content_hash": "sha256:735fb4a2e94e6784937f6bb33b6d7ee7069675ecff0cdd17e95dae087bc1af5c",
+      "last_verified_at": "2026-10-19T01:59:19.765Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:27.997Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:27.997Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:27.997Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:05:15.956Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:05:15.956Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:05.529Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:05.529Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 91
+    },
+    "opp_8c40b6e36f090b88": {
+      "id": "opp_8c40b6e36f090b88",
+      "fingerprint": "94140bc2c5878f57",
+      "title": "Summer@EPFL",
+      "institution": "EPFL School of Computer and Communication Sciences (IC)",
+      "city": "Lausanne",
+      "country": "Switzerland",
+      "source_url": "https://summer.epfl.ch/apply.html",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://summer.epfl.ch/apply.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-29",
+      "content_hash": "sha256:d6acdfbe56fcf3c737b651748bdef969a0f7b2538ddd2f3fc65dbcd36f694fda",
+      "last_verified_at": "2026-10-19T01:59:19.956Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-19T01:59:28.196Z",
+      "history": [
+        {
+          "at": "2026-10-19T01:59:28.196Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-19T01:59:28.197Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-19T02:05:36.412Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-19T02:05:36.412Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-19T02:06:05.739Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-19T02:06:05.739Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 92
     }
   },
   "seen_urls": {
@@ -6616,7 +7739,32 @@
     "https://fellowshipsguide.com/category/bs-ms-scholarships": "opp_c2ee673bc1dd14a8",
     "https://apply.nohanet.org/": "opp_c2ee673bc1dd14a8",
     "https://employment.ku.dk/all-vacancies?show=169455": "opp_0abe741670efea9d",
-    "https://employment.ku.dk/faculty?show=167780": "opp_01a8a42645688bb7"
+    "https://employment.ku.dk/faculty?show=167780": "opp_01a8a42645688bb7",
+    "https://aalto.fi/en/aalto-university-science-institute-asci/aalto-university-science-institute-international-summer-research-programme": "opp_5867034215d57dc8",
+    "https://aalto.fi/en/aalto-science-institute-asci/how-to-apply-for-the-asci-international-summer-research-programme": "opp_5867034215d57dc8",
+    "https://cvpr.thecvf.com/Conferences/2027/CallForPapers": "opp_6ac640799bd70ba3",
+    "https://daad.de/rise/en/rise-germany": "opp_22c7339ee84ffe65",
+    "https://daad.de/rise/en/rise-germany/find-an-internship/application-portal": "opp_22c7339ee84ffe65",
+    "https://heidelberg-laureate-forum.org/young-researchers/faq": "opp_ede0f75f23d581b0",
+    "https://application.heidelberg-laureate-forum.org/site/index.php": "opp_ede0f75f23d581b0",
+    "https://2027.ijcai.org/": "opp_e50ad03a2fb3241a",
+    "https://phd.pages.ista.ac.at/apply": "opp_c9462e438151c2df",
+    "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines": "opp_2b233adc3f17e95a",
+    "https://apply.kaust.edu.sa/apply": "opp_2b233adc3f17e95a",
+    "https://mbzuai.ac.ae/study/phd-programs/doctor-of-philosophy-in-computer-science": "opp_5d86e44b2fd2040f",
+    "https://2027.midl.io/important-dates": "opp_92a793d8d141a5a5",
+    "https://2027.midl.io/call-for-papers": "opp_92a793d8d141a5a5",
+    "https://mila.quebec/en/prospective-students-and-postdocs/research-programs/request-supervisor": "opp_54f54504a28027ed",
+    "https://novonordiskfonden.dk/en/grant/postdoctoral-fellowships-at-massachusetts-institute-of-technology-2026": "opp_56db4082fe3da357",
+    "https://fellowshipsguide.com/uppsala-postdoctoral-fellowships": "opp_e7331323d5ad4014",
+    "https://novonordiskfonden.dk/en/grant/postdoctoral-fellowships-at-uppsala-university-2026": "opp_e7331323d5ad4014",
+    "https://oist.jp/admissions/phd-program/apply-phd": "opp_db05e48681bfcdfc",
+    "https://ox.ac.uk/admissions/graduate/courses/cdt-autonomous-intelligent-machines-and-systems": "opp_a0ccaa5dccc402f3",
+    "https://roboticsconference.org/information/cfp": "opp_c93a8b4a57c843a8",
+    "https://simons.berkeley.edu/research-fellowship-call-applications": "opp_92bfb28150285dc0",
+    "https://simons.berkeley.edu/simons-institute-program-fellowship-application": "opp_92bfb28150285dc0",
+    "https://snf.ch/en/XIZpfY3iVS5KRRoD/funding/careers/postdoc-mobility": "opp_048aba64f3f2ddb7",
+    "https://summer.epfl.ch/apply.html": "opp_8c40b6e36f090b88"
   },
-  "last_offer_number": 74
+  "last_offer_number": 92
 }

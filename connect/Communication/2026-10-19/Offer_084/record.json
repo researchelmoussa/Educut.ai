@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Supervision Requests",
+    "evidence_url": "https://mila.quebec/en/prospective-students-and-postdocs/research-programs/request-supervisor",
+    "evidence_quote": "Supervision Requests"
+  },
+  "institution": {
+    "name": "Mila - Quebec Artificial Intelligence Institute",
+    "website": "https://mila.quebec",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://mila.quebec/en/prospective-students-and-postdocs/research-programs/request-supervisor",
+  "source_url": "https://mila.quebec/en/prospective-students-and-postdocs/research-programs/request-supervisor",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Montreal",
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Machine learning / artificial intelligence",
+  "seniority": "Research master's and PhD applicants",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Mila's annual supervision request process for research master's and PhD applicants, submitted on the MyMila portal alongside an application to the supervisor's affiliated university. Results usually come in February or March. An accepted request does not guarantee university admission.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": null,
+    "evidence_url": "https://mila.quebec/en/prospective-students-and-postdocs/research-programs/request-supervisor",
+    "evidence_quote": "runs from October 15 to December 1 each year"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Mila supervision request page (search results): annual process runs from October 15 to December 1 each year",
+    "Today (2026-10-19) falls inside the stated annual window",
+    "Application portal not independently fetched (official domains blocked by the network proxy in this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Deadline date inferred from the stated annual window; no 2026-specific announcement seen",
+    "An older Mila news article cites 15 December",
+    "Time of day and time zone not stated"
+  ],
+  "id": "opp_54f54504a28027ed",
+  "fingerprint": "d4e1f18436d7a5fc",
+  "discovered_at": "2026-10-19T01:59:18.330Z",
+  "last_verified_at": "2026-10-19T01:59:18.330Z",
+  "content_hash": "sha256:0a461033d142bedc34226c1306112552761bb59074bbd407f1a0aa069110282a"
+}

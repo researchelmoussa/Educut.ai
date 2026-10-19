@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD Program",
+    "evidence_url": "https://www.oist.jp/admissions/phd-program/apply-phd",
+    "evidence_quote": "Apply to PhD"
+  },
+  "institution": {
+    "name": "Okinawa Institute of Science and Technology Graduate University (OIST)",
+    "website": "https://www.oist.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.oist.jp/admissions/phd-program/apply-phd",
+  "source_url": "https://www.oist.jp/admissions/phd-program/apply-phd",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Onna, Okinawa",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Interdisciplinary science",
+  "seniority": "PhD applicants",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "OIST PhD program admissions: application period July 31 to November 15, 2026, followed by the online Admissions Workshop 2027 and interviews 18 January to 7 February 2027. Possible start dates: 1 May 2027, 1 September 2027 or 1 January 2028.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-15T23:59:00+09:00",
+    "timezone": "JST (UTC+9)",
+    "evidence_url": "https://www.oist.jp/admissions/phd-program/apply-phd",
+    "evidence_quote": "NOV 15, 2026 23:59 (JST UTC+9)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official OIST admissions page (search results): PhD application period July 31, 2026 - November 15, 2026",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains blocked by the network proxy in this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Title shown on official page as \"Apply to PhD\"; programme referred to as the OIST PhD Program"
+  ],
+  "id": "opp_db05e48681bfcdfc",
+  "fingerprint": "ae0a1a514a618e89",
+  "discovered_at": "2026-10-19T01:59:18.922Z",
+  "last_verified_at": "2026-10-19T01:59:18.922Z",
+  "content_hash": "sha256:4ed48a5559ffd3d6707f3942e68d926b72d6331b695244ef339f436183bcca28"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Summer@EPFL",
+    "evidence_url": "https://summer.epfl.ch/apply.html",
+    "evidence_quote": "Summer@EPFL"
+  },
+  "institution": {
+    "name": "EPFL School of Computer and Communication Sciences (IC)",
+    "website": "https://www.epfl.ch",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://summer.epfl.ch/apply.html",
+  "source_url": "https://summer.epfl.ch/apply.html",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Lausanne",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Computer science, computer engineering, telecommunications, electrical engineering",
+  "seniority": "Bachelor's and master's students",
+  "qualifications": [
+    "Bachelor or master student in computer science, computer engineering, telecommunications or electrical engineering",
+    "At least first bachelor year completed; PhD students not eligible"
+  ],
+  "skills": [],
+  "description_short": "Summer@EPFL: roughly three-month research internship (usually May-September) at EPFL's School of Computer and Communication Sciences for bachelor's and master's students. Applicants submit a CV, transcripts and motivation letter and select up to three scientific domains.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-29",
+    "timezone": "AoE",
+    "evidence_url": "https://summer.epfl.ch/apply.html",
+    "evidence_quote": "next deadline is 29 November 2026 for summer 2027 internships"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Summer@EPFL apply page (search results): next deadline 29 November 2026 for summer 2027 internships",
+    "Official IC page: yearly deadline on the Sunday nearest 1 December (29 November 2026 is a Sunday)",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains blocked by the network proxy in this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Apply page reportedly still shows applications as closed; it states applications typically open only a few weeks before the deadline",
+    "Exact deadline time shown in search results as 23:39 AOE (possibly a typo for 23:59)"
+  ],
+  "id": "opp_8c40b6e36f090b88",
+  "fingerprint": "94140bc2c5878f57",
+  "discovered_at": "2026-10-19T01:59:19.956Z",
+  "last_verified_at": "2026-10-19T01:59:19.956Z",
+  "content_hash": "sha256:d6acdfbe56fcf3c737b651748bdef969a0f7b2538ddd2f3fc65dbcd36f694fda"
+}

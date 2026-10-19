@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Simons Institute Research Fellowships",
+    "evidence_url": "https://simons.berkeley.edu/research-fellowship-call-applications",
+    "evidence_quote": "Simons Institute Research Fellowships"
+  },
+  "institution": {
+    "name": "Simons Institute for the Theory of Computing, UC Berkeley",
+    "website": "https://simons.berkeley.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://simons.berkeley.edu/simons-institute-program-fellowship-application",
+  "source_url": "https://simons.berkeley.edu/research-fellowship-call-applications",
+  "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+  "location": {
+    "city": "Berkeley",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Theory of computing; diffusion generative modeling",
+  "seniority": "Early-career researchers (at most five years post-PhD)",
+  "qualifications": [
+    "At most five years post-PhD at the start of the 2027-28 academic year (graduate students only if PhD completed before the programme starts)",
+    "Cover letter, CV, research statement and three recommenders"
+  ],
+  "skills": [],
+  "description_short": "Research fellowships for early-career researchers in the Simons Institute's Fall 2027 programme on Diffusion Generative Modeling (30 August - 17 December 2027). Applications opened 1 October 2026; applicants submit a cover letter, CV, research statement and three recommenders.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": null,
+    "evidence_url": "https://simons.berkeley.edu/research-fellowship-call-applications",
+    "evidence_quote": "applications are due December 1, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Simons Institute call (search results): application period opened October 1, 2026; applications due December 1, 2026",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains blocked by the network proxy in this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Stipend amount not recorded",
+    "Time of day and time zone not stated"
+  ],
+  "id": "opp_92bfb28150285dc0",
+  "fingerprint": "4a51ecc1ab8d0556",
+  "discovered_at": "2026-10-19T01:59:19.548Z",
+  "last_verified_at": "2026-10-19T01:59:19.548Z",
+  "content_hash": "sha256:182494ea00ab3f087b8c33c24f5fc4d341ba3315e96d40a616daaa5c2e00a351"
+}
