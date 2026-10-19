@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "RISE Germany",
+    "evidence_url": "https://www.daad.de/rise/en/rise-germany/",
+    "evidence_quote": "RISE Germany"
+  },
+  "institution": {
+    "name": "DAAD (German Academic Exchange Service)",
+    "website": "https://www.daad.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.daad.de/rise/en/rise-germany/find-an-internship/application-portal/",
+  "source_url": "https://www.daad.de/rise/en/rise-germany/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Biology, chemistry, computer science, physics, earth sciences, engineering",
+  "seniority": "Undergraduate students",
+  "qualifications": [
+    "Enrolled in a bachelor's programme at a North American, British or Irish university",
+    "Field: biology, chemistry, computer science, physics, earth sciences, engineering or closely related"
+  ],
+  "skills": [],
+  "description_short": "DAAD RISE Germany 2027: three-month summer research internships at German universities and institutes for undergraduates from North American, British and Irish universities in sciences and engineering. Internships start between 15 May and 15 July 2027; reference letters due 15 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-30T23:59:00+01:00",
+    "timezone": "CET",
+    "evidence_url": "https://www.daad.de/rise/en/rise-germany/find-an-internship/what-applicants-need-to-know/",
+    "evidence_quote": "October 15 to November 30, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official DAAD RISE pages (search results): internship database open October 15 to November 30, 2026, 11:59 pm CET",
+    "Deadline is in the future; window already open per the official schedule",
+    "Application portal not independently fetched (official domains blocked by the network proxy in this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Host city depends on the chosen internship",
+    "Stipend amount not recorded"
+  ],
+  "id": "opp_22c7339ee84ffe65",
+  "fingerprint": "79f91a45f7315b21",
+  "discovered_at": "2026-10-19T01:59:16.935Z",
+  "last_verified_at": "2026-10-19T01:59:16.935Z",
+  "content_hash": "sha256:1f71f54325f0000239a2a07328a864a460eee47e8d68231aa2c7b771288be038"
+}

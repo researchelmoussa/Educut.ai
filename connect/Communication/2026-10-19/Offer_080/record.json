@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD Program",
+    "evidence_url": "https://phd.pages.ista.ac.at/phd-program-overview/",
+    "evidence_quote": "Philosophy and Objectives of the PhD Program"
+  },
+  "institution": {
+    "name": "Institute of Science and Technology Austria (ISTA)",
+    "website": "https://ista.ac.at",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://phd.pages.ista.ac.at/apply/",
+  "source_url": "https://phd.pages.ista.ac.at/apply/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Klosterneuburg",
+    "country": "Austria",
+    "country_code": "AT"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Natural sciences, mathematics and computer science",
+  "seniority": "Bachelor's or master's graduates",
+  "qualifications": [
+    "Bachelor's or master's degree (at least second year of bachelor's completed before the start date)",
+    "Three reference letters, at least two from an academic/research environment"
+  ],
+  "skills": [],
+  "description_short": "ISTA Graduate School PhD program for the 2027 intake, open to bachelor's and master's holders. No application fee; three reference letters required. Program starts 15 September 2027; the application portal opens in late October 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08T15:00:00+01:00",
+    "timezone": "CET",
+    "evidence_url": "https://phd.pages.ista.ac.at/apply/",
+    "evidence_quote": "January 8, 2027, at 3:00 PM CET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ISTA Graduate School pages (search results): application deadline January 8, 2027, 3:00 PM CET; reference letters by January 12, 2027",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains blocked by the network proxy in this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Application portal reported to open in late October 2026; not yet open on 2026-10-19",
+    "Title \"PhD Program\" taken from official page headings; no single formal programme name confirmed"
+  ],
+  "id": "opp_c9462e438151c2df",
+  "fingerprint": "7ac8c71098244b9b",
+  "discovered_at": "2026-10-19T01:59:17.517Z",
+  "last_verified_at": "2026-10-19T01:59:17.517Z",
+  "content_hash": "sha256:640a3909ff473d84f777489d739a298723aa3298653422e60da0375c64e3d372"
+}

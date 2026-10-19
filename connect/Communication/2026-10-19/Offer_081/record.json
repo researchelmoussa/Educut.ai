@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "KAUST Fellowship",
+    "evidence_url": "https://admissions.kaust.edu.sa/study/ms-phd-degree",
+    "evidence_quote": "All admitted MS and PhD students receive the fully-funded KAUST Fellowship"
+  },
+  "institution": {
+    "name": "King Abdullah University of Science and Technology (KAUST)",
+    "website": "https://www.kaust.edu.sa",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://apply.kaust.edu.sa/apply/",
+  "source_url": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Thuwal",
+    "country": "Saudi Arabia",
+    "country_code": "SA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Science, technology, engineering and mathematics",
+  "seniority": "MS, MS/PhD and PhD applicants",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Fall 2027 MS, MS/PhD and PhD admission at KAUST. All admitted MS and PhD students receive the fully funded KAUST Fellowship (tuition, housing, health insurance, relocation support). Round 2 decisions 25 February 2027; semester starts 29 August 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-03",
+    "timezone": null,
+    "evidence_url": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines",
+    "evidence_quote": "Round 2 application deadline 3 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official KAUST admission timeline (search results): Round 2 application open 28 September 2026, deadline 3 January 2027",
+    "KAUST application portal reportedly states Fall 2027 applications are open (seen via search only)",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains blocked by the network proxy in this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Official timeline states dates are tentative and may change",
+    "Some programmes marked \"Applications Opening Soon\"",
+    "Another KAUST page gives a different opening date (mid-August)",
+    "Deadline time of day and time zone not stated"
+  ],
+  "id": "opp_2b233adc3f17e95a",
+  "fingerprint": "ba9809d7b75a9472",
+  "discovered_at": "2026-10-19T01:59:17.725Z",
+  "last_verified_at": "2026-10-19T01:59:17.725Z",
+  "content_hash": "sha256:3d2b806109a60bc22272d3341db6dbe0721bab3ddbdede91ede3d87930f4b472"
+}
