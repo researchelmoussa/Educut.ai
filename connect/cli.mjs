@@ -597,6 +597,8 @@ const commands = {
     if (flags.reschedule) for (const p of q.posts) if (p.status === 'SCHEDULED' && Date.parse(p.scheduled_at) < nowD.getTime()) Object.assign(p, { status: 'DRAFT', scheduled_at: null });
     // Most urgent deadline first; offers without a deadline last.
     const dl = (p) => (p.deadline ? Date.parse(p.deadline.length === 10 ? `${p.deadline}T23:59:59Z` : p.deadline) : Infinity);
+    // A closed offer would only be skipped by the publisher: free its slot now.
+    for (const p of q.posts) if ((p.status === 'DRAFT' || p.status === 'SCHEDULED') && dl(p) < nowD.getTime()) Object.assign(p, { status: 'SKIPPED', scheduled_at: null, skipped_reason: 'deadline passed' });
     const drafts = q.posts.filter((p) => p.status === 'DRAFT').sort((a, b) => dl(a) - dl(b));
     const L = config.linkedin;
     const taken = q.posts.filter((p) => p.status === 'SCHEDULED').map((p) => p.scheduled_at);
