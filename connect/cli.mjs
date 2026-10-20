@@ -378,6 +378,9 @@ const commands = {
     if (existsSync(cp)) checks.push(...validateComms(rec, readJson(cp), config, pageUrl(config.links.site_url, offerSlug(basename(dir), rec.title.value))));
     else checks.push({ check: 'comms package present', pass: false, detail: 'comms-package.json missing', owner: 'communications' });
     for (const f of ['linkedin_post.txt', 'card.png']) if (!existsSync(join(dir, f))) checks.push({ check: `${f} present`, pass: false, detail: 'missing', owner: f === 'card.png' ? 'visual-designer' : 'communications' });
+    // post-text copies the card alt text; run before the card exists, it leaves the placeholder behind.
+    const stale = ['post_details.txt', 'web-brief.json'].filter((f) => existsSync(join(dir, f)) && readFileSync(join(dir, f), 'utf8').includes('PLACEHOLDER'));
+    if (stale.length) checks.push({ check: 'card alt text copied into the page texts', pass: false, detail: `placeholder in ${stale.join(', ')}: run post-text again now that the card exists`, owner: 'communications' });
 
     const s = summarize(checks);
     writeJson(join(dir, 'qc-report.json'), { opportunity_id: id, at: nowIso(), ...s });
