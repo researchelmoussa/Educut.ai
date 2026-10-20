@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-19T02:06:05.739Z",
+  "updated_at": "2026-10-20T02:05:54.103Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -7541,6 +7541,1308 @@
         }
       ],
       "offer_number": 92
+    },
+    "opp_d65dbb13410162c4": {
+      "id": "opp_d65dbb13410162c4",
+      "fingerprint": "c00a2b5670ca7dc2",
+      "title": "Main Conference Papers - ACL 2027",
+      "institution": "ACL 2027 (65th Annual Meeting of the Association for Computational Linguistics)",
+      "city": "Kyoto",
+      "country": "Japan",
+      "source_url": "https://2027.aclweb.org/calls/main/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://2027.aclweb.org/calls/main/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-04T23:59:00-12:00",
+      "content_hash": "sha256:b481eeee4388217979ad4e159d94e2634d13368a99e1ad85d2d5845d71f11f3b",
+      "last_verified_at": "2026-10-20T01:59:17.229Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:24.007Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:24.007Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:24.007Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:01:24.339Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:01:24.339Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:50.902Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:50.902Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 93
+    },
+    "opp_bf2bddafeaf83e67": {
+      "id": "opp_bf2bddafeaf83e67",
+      "fingerprint": "5f8e1f945e978e2a",
+      "title": "Azrieli International Postdoctoral Fellowship",
+      "institution": "The Azrieli Foundation",
+      "city": null,
+      "country": "Israel",
+      "source_url": "https://azrielifoundation.org/azrieli-fellows-news/call-for-applications-for-the-azrieli-international-postdoctoral-fellowship-2027-28/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://azrielifoundation.org/fellows/internationalpostdoctoral/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-11",
+      "content_hash": "sha256:4853ed56d3ba485e4b11106925ead5382038544a97262a44e0a9acbffc7c0c82",
+      "last_verified_at": "2026-10-20T01:59:17.424Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:24.174Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:24.174Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:24.174Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:01:33.996Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:01:33.996Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:51.064Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:51.064Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 94
+    },
+    "opp_4edc21b469925ce2": {
+      "id": "opp_4edc21b469925ce2",
+      "fingerprint": "70d63821986657cf",
+      "title": "Churchill Scholarship",
+      "institution": "Churchill Foundation",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.churchillscholarship.org/the-scholarship",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.churchillscholarship.org/the-scholarship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-02T17:00:00-05:00",
+      "content_hash": "sha256:f5fcfd96514344b42285638157c2709fa869365466a37a87178ffd2ae05aa3bf",
+      "last_verified_at": "2026-10-20T01:59:17.584Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:24.340Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:24.340Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:24.340Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:01:27.963Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:01:27.963Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:51.222Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:51.222Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 95
+    },
+    "opp_2e062681a4f19424": {
+      "id": "opp_2e062681a4f19424",
+      "fingerprint": "fa4646436f5fdf80",
+      "title": "Ph.D. Program in Machine Learning",
+      "institution": "Carnegie Mellon University, Machine Learning Department",
+      "city": "Pittsburgh",
+      "country": "United States",
+      "source_url": "https://ml.cmu.edu/academics/machine-learning-phd",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://admissions.scs.cmu.edu/portal/apply_gr",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-09T15:00:00-05:00",
+      "content_hash": "sha256:908aeab81b8e2f8bd3c1460ba9370e939b0681dc0059b3cabfe7b207ef1085b7",
+      "last_verified_at": "2026-10-20T01:59:17.820Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:24.506Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:24.507Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:24.507Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:01:37.103Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:01:37.103Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:51.380Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:51.380Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 96
+    },
+    "opp_a59b79b08e4bd1a0": {
+      "id": "opp_a59b79b08e4bd1a0",
+      "fingerprint": "877f57d7d3755046",
+      "title": "EDIC - Computer and Communication Sciences",
+      "institution": "EPFL",
+      "city": "Lausanne",
+      "country": "Switzerland",
+      "source_url": "https://www.epfl.ch/education/phd/edic-computer-and-communication-sciences/edic-for-applicants/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.epfl.ch/education/phd/edic-computer-and-communication-sciences/edic-computer-and-communication-sciences/edic-how-to-apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01T23:59:00+01:00",
+      "content_hash": "sha256:4d79c8b115cf3fa158d91f7e7f486980a1ec78623f8107b59af1377427b6672d",
+      "last_verified_at": "2026-10-20T01:59:18.015Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:24.671Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:24.671Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:24.671Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:01:54.729Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:01:54.730Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:51.544Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:51.544Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 97
+    },
+    "opp_8bd45ca5f51564b2": {
+      "id": "opp_8bd45ca5f51564b2",
+      "fingerprint": "c9ba7532771327dd",
+      "title": "ACM FAccT - 2027 CFP",
+      "institution": "ACM Conference on Fairness, Accountability, and Transparency (FAccT 2027)",
+      "city": null,
+      "country": null,
+      "source_url": "https://facctconference.org/2027/cfp.html",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://facctconference.org/2027/cfp.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-27T23:59:00-12:00",
+      "content_hash": "sha256:c31d4cba5131c9da2aa40c632847fcf9c192adc6096e6f96abbb129e75c4735e",
+      "last_verified_at": "2026-10-20T01:59:18.210Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:24.854Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:24.854Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:24.854Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:02:39.119Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:02:39.119Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:51.709Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:51.709Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 98
+    },
+    "opp_04751ca9656c5149": {
+      "id": "opp_04751ca9656c5149",
+      "fingerprint": "1f40d1fc89493875",
+      "title": "Hertz Fellowship",
+      "institution": "Hertz Foundation",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.hertzfoundation.org/news/2027-hertz-fellowship-application-now-open/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.hertzfoundation.org/hertz-fellowship/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-30",
+      "content_hash": "sha256:685d2f8f435c2650bb822611550b7564b3467a062e03f3ac2538fd7fedad06c1",
+      "last_verified_at": "2026-10-20T01:59:18.415Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:25.022Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:25.022Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:25.023Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:02:42.033Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:02:42.033Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:51.870Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:51.870Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 99
+    },
+    "opp_1609a85d2348f6ab": {
+      "id": "opp_1609a85d2348f6ab",
+      "fingerprint": "7d2d36232bb57917",
+      "title": "Hong Kong PhD Fellowship Scheme 2027/28",
+      "institution": "Research Grants Council (RGC), Hong Kong",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "source_url": "https://cerg1.ugc.edu.hk/hkpfs/apply.html",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://cerg1.ugc.edu.hk/hkpfs/apply.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01T12:00:00+08:00",
+      "content_hash": "sha256:8d19b55b442ecceebe045dafdb00e34d3ddcf41d92c344ba66b2c8e7aa3c0ad4",
+      "last_verified_at": "2026-10-20T01:59:18.581Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:25.188Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:25.188Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:25.188Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:02:44.668Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:02:44.668Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:52.028Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:52.028Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 100
+    },
+    "opp_41f92aea8ad20b87": {
+      "id": "opp_41f92aea8ad20b87",
+      "fingerprint": "d2c957a19bb663ce",
+      "title": "Ph.D. Research Program Admission",
+      "institution": "Indian Institute of Science (IISc)",
+      "city": "Bengaluru",
+      "country": "India",
+      "source_url": "https://oir.iisc.ac.in/index.php/research-m-tech-research-ph-d-program-admission-august-2025-session/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://oir.iisc.ac.in/index.php/research-m-tech-research-ph-d-program-admission-august-2025-session/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-26T23:59:00+05:30",
+      "content_hash": "sha256:cff02e8671f62337318d12e332a00e8fa14b13657d314d01037d5c0307473693",
+      "last_verified_at": "2026-10-20T01:59:18.742Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:25.357Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:25.357Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:25.357Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:02:50.248Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:02:50.249Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:52.186Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:52.186Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 101
+    },
+    "opp_38da424fea5bed86": {
+      "id": "opp_38da424fea5bed86",
+      "fingerprint": "05e5053c0ec5800d",
+      "title": "IJCNN 2027",
+      "institution": "International Joint Conference on Neural Networks (IJCNN 2027)",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "source_url": "https://ijcnn.org/2027",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://ijcnn.org/2027/authors/call-for-papers",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:13deb577ee6ceac86ff6a77eba6f509a6ba19ec6903f25c81b13373b17bbbcec",
+      "last_verified_at": "2026-10-20T01:59:18.908Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:25.526Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:25.526Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:25.526Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:02:57.092Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:02:57.092Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:52.343Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:52.343Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 102
+    },
+    "opp_c321419e7eb82b46": {
+      "id": "opp_c321419e7eb82b46",
+      "fingerprint": "98975e06161b1c7c",
+      "title": "IMPRS-BAC",
+      "institution": "International Max Planck Research School for Biology and Computation (IMPRS-BAC)",
+      "city": "Berlin",
+      "country": "Germany",
+      "source_url": "https://www.molgen.mpg.de/IMPRS/application",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.molgen.mpg.de/IMPRS/application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-07T23:59:00+01:00",
+      "content_hash": "sha256:f2bb578e80606edf95b0875c916718ad42f9dafcc57a9f81819836e55c7c5f3f",
+      "last_verified_at": "2026-10-20T01:59:19.104Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:25.734Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:25.734Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:25.735Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:03:57.791Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:03:57.791Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:52.502Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:52.503Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 103
+    },
+    "opp_4139afef97ad2f0e": {
+      "id": "opp_4139afef97ad2f0e",
+      "fingerprint": "897c480df194c15a",
+      "title": "IMPRS HD",
+      "institution": "International Max Planck Research School for Astronomy and Cosmic Physics at the University of Heidelberg (IMPRS-HD)",
+      "city": "Heidelberg",
+      "country": "Germany",
+      "source_url": "https://www.imprs-hd.mpg.de/3192/application",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.imprs-hd.mpg.de/3192/application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-03T14:00:00+01:00",
+      "content_hash": "sha256:070a469d2ed3a930f10520a738b662830f44f5b0daa4752acd8ff92bc75edce9",
+      "last_verified_at": "2026-10-20T01:59:19.295Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:25.918Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:25.918Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:25.918Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:04:25.335Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:04:25.335Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:52.661Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:52.661Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 104
+    },
+    "opp_8d780c66bb18f576": {
+      "id": "opp_8d780c66bb18f576",
+      "fingerprint": "82372c0f32dde3bc",
+      "title": "Interspeech 2027",
+      "institution": "Interspeech 2027 (International Speech Communication Association, ISCA)",
+      "city": "São Paulo",
+      "country": "Brazil",
+      "source_url": "https://interspeech2027.org/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://interspeech2027.org/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-09",
+      "content_hash": "sha256:6411e0165faaac6164ace13a2d5430482fa99b8c4424064289191bb4f5e85c47",
+      "last_verified_at": "2026-10-20T01:59:19.456Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:26.088Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:26.088Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:26.089Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:03:51.553Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:03:51.553Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:52.817Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:52.817Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 105
+    },
+    "opp_a874dd64d21ea656": {
+      "id": "opp_a874dd64d21ea656",
+      "fingerprint": "e4352401a3458b87",
+      "title": "Early Career Fellowships",
+      "institution": "The Leverhulme Trust",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://www.leverhulme.ac.uk/early-career-fellowships",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.leverhulme.ac.uk/early-career-fellowships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-18T16:00:00+00:00",
+      "content_hash": "sha256:f9f879a0fd35a98e3a673b09a681cf7b5fd2ef9f2e73754ab262b63c263e47b5",
+      "last_verified_at": "2026-10-20T01:59:19.618Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:26.253Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:26.253Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:26.253Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:03:58.546Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:03:58.546Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:52.975Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:52.975Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 106
+    },
+    "opp_ec61dd6bc8ee7f01": {
+      "id": "opp_ec61dd6bc8ee7f01",
+      "fingerprint": "ae14320f0646c694",
+      "title": "MP-AIX Ph.D. Program",
+      "institution": "Max Planck Artificial Intelligence Network (MP-AIX)",
+      "city": null,
+      "country": "Germany",
+      "source_url": "https://ai.mpg.de/phd-call-2026",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://ai.mpg.de/phd-call-2026",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-31T23:59:00+01:00",
+      "content_hash": "sha256:ec058fb24fa58135cea46e100eaaf56cfedd3adc4b99e28e8bc7504d240f9b1a",
+      "last_verified_at": "2026-10-20T01:59:19.784Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:26.443Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:26.443Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:26.443Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:04:14.095Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:04:14.095Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:53.133Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:53.133Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 107
+    },
+    "opp_f2eeba904dda4456": {
+      "id": "opp_f2eeba904dda4456",
+      "fingerprint": "0581ad4f681f6504",
+      "title": "PD Soros Fellowship",
+      "institution": "Paul & Daisy Soros Fellowships for New Americans",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://pdsoros.org/application-process/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://pdsoros.org/application-process/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-29T14:00:00-04:00",
+      "content_hash": "sha256:be48a1d7af8b0485b6f3ba9d1f9f1e611ab160eb53137a2f26b62ab2e06960a7",
+      "last_verified_at": "2026-10-20T01:59:19.983Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:26.609Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:26.609Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:26.610Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:04:55.582Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:04:55.582Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:53.289Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:53.289Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 108
+    },
+    "opp_4849f5f42b52f7fc": {
+      "id": "opp_4849f5f42b52f7fc",
+      "fingerprint": "b626b69b01326278",
+      "title": "2027-28 Fellows Program",
+      "institution": "Center for Information Technology Policy (CITP), Princeton University",
+      "city": "Princeton",
+      "country": "United States",
+      "source_url": "https://citp.princeton.edu/news/2026/2027-28-fellows-program-applications-are-now-open",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://citp.princeton.edu/programs/fellows-program",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-07T23:59:00-05:00",
+      "content_hash": "sha256:229bafd13d3b9344746a4a05364e952ab346278a864fc025e2c69ccd43674eed",
+      "last_verified_at": "2026-10-20T01:59:20.171Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:26.778Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:26.778Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:26.778Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:05:04.042Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:05:04.042Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:53.453Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:53.453Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 109
+    },
+    "opp_63712e4ac1c7ac15": {
+      "id": "opp_63712e4ac1c7ac15",
+      "fingerprint": "fde5835301f70596",
+      "title": "Shorenstein Postdoctoral Fellowship",
+      "institution": "Asia-Pacific Research Center (APARC), Stanford University",
+      "city": "Stanford",
+      "country": "United States",
+      "source_url": "https://aparc.fsi.stanford.edu/news/stanfords-asia-pacific-research-center-invites-applications-2027-2029-postdoctoral-and",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://aparc.fsi.stanford.edu/education/fellowship-and-training-opportunities/shorenstein-postdoctoral-fellowship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:94e402645002b174ad66bcb090745931334ae3955139bb579437ffb8e6d63524",
+      "last_verified_at": "2026-10-20T01:59:20.335Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:26.948Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:26.948Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:26.948Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:04:59.465Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:04:59.465Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:53.613Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:53.613Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 110
+    },
+    "opp_49dab84e910f988f": {
+      "id": "opp_49dab84e910f988f",
+      "fingerprint": "70c9bb8d8c2b9919",
+      "title": "Taiwan International Graduate Program",
+      "institution": "Academia Sinica",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "source_url": "https://tigp.apps.sinica.edu.tw/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://tigp.apps.sinica.edu.tw/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01T23:59:00+08:00",
+      "content_hash": "sha256:66df6eff5ff83a1bd34e5e603448f8f3957479e757a0dd05a12a75d9831c0a06",
+      "last_verified_at": "2026-10-20T01:59:20.491Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:27.114Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:27.114Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:27.114Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:05:23.679Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:05:23.679Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:53.773Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:53.773Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 111
+    },
+    "opp_166eeb2b19554b07": {
+      "id": "opp_166eeb2b19554b07",
+      "fingerprint": "7a3cc2f79e4b85ed",
+      "title": "Doctor of Philosophy (PhD)",
+      "institution": "University of Toronto, Department of Computer Science",
+      "city": "Toronto",
+      "country": "Canada",
+      "source_url": "https://web.cs.toronto.edu/graduate/how-to-apply",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://web.cs.toronto.edu/graduate/how-to-apply",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:b12e25c5f8cf018b025ade9202c3c43bca2420be856591fc297669c4ba3430b3",
+      "last_verified_at": "2026-10-20T01:59:20.670Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:27.303Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:27.303Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:27.304Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:05:44.145Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:05:44.145Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:53.943Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:53.943Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 112
+    },
+    "opp_7b583377e1606906": {
+      "id": "opp_7b583377e1606906",
+      "fingerprint": "3bd419702158e259",
+      "title": "Master's Program in China Studies",
+      "institution": "Yenching Academy of Peking University",
+      "city": "Beijing",
+      "country": "China",
+      "source_url": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30",
+      "content_hash": "sha256:2a96e67b5db33bf5c37a1dfa89d867870fddb56d4cf365e6810a662de2933c2b",
+      "last_verified_at": "2026-10-20T01:59:20.851Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-20T01:59:27.469Z",
+      "history": [
+        {
+          "at": "2026-10-20T01:59:27.469Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-20T01:59:27.469Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-20T02:05:11.333Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-20T02:05:11.333Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-20T02:05:54.103Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-20T02:05:54.103Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 113
     }
   },
   "seen_urls": {
@@ -7764,7 +9066,35 @@
     "https://simons.berkeley.edu/research-fellowship-call-applications": "opp_92bfb28150285dc0",
     "https://simons.berkeley.edu/simons-institute-program-fellowship-application": "opp_92bfb28150285dc0",
     "https://snf.ch/en/XIZpfY3iVS5KRRoD/funding/careers/postdoc-mobility": "opp_048aba64f3f2ddb7",
-    "https://summer.epfl.ch/apply.html": "opp_8c40b6e36f090b88"
+    "https://summer.epfl.ch/apply.html": "opp_8c40b6e36f090b88",
+    "https://2027.aclweb.org/calls/main": "opp_d65dbb13410162c4",
+    "https://azrielifoundation.org/azrieli-fellows-news/call-for-applications-for-the-azrieli-international-postdoctoral-fellowship-2027-28": "opp_bf2bddafeaf83e67",
+    "https://azrielifoundation.org/fellows/internationalpostdoctoral": "opp_bf2bddafeaf83e67",
+    "https://churchillscholarship.org/the-scholarship": "opp_4edc21b469925ce2",
+    "https://ml.cmu.edu/academics/machine-learning-phd": "opp_2e062681a4f19424",
+    "https://admissions.scs.cmu.edu/portal/apply_gr": "opp_2e062681a4f19424",
+    "https://epfl.ch/education/phd/edic-computer-and-communication-sciences/edic-for-applicants": "opp_a59b79b08e4bd1a0",
+    "https://epfl.ch/education/phd/edic-computer-and-communication-sciences/edic-computer-and-communication-sciences/edic-how-to-apply": "opp_a59b79b08e4bd1a0",
+    "https://facctconference.org/2027/cfp.html": "opp_8bd45ca5f51564b2",
+    "https://hertzfoundation.org/news/2027-hertz-fellowship-application-now-open": "opp_04751ca9656c5149",
+    "https://hertzfoundation.org/hertz-fellowship/apply": "opp_04751ca9656c5149",
+    "https://cerg1.ugc.edu.hk/hkpfs/apply.html": "opp_1609a85d2348f6ab",
+    "https://oir.iisc.ac.in/index.php/research-m-tech-research-ph-d-program-admission-august-2025-session": "opp_41f92aea8ad20b87",
+    "https://ijcnn.org/2027": "opp_38da424fea5bed86",
+    "https://ijcnn.org/2027/authors/call-for-papers": "opp_38da424fea5bed86",
+    "https://molgen.mpg.de/IMPRS/application": "opp_c321419e7eb82b46",
+    "https://imprs-hd.mpg.de/3192/application": "opp_4139afef97ad2f0e",
+    "https://interspeech2027.org/": "opp_8d780c66bb18f576",
+    "https://leverhulme.ac.uk/early-career-fellowships": "opp_a874dd64d21ea656",
+    "https://ai.mpg.de/phd-call-2026": "opp_ec61dd6bc8ee7f01",
+    "https://pdsoros.org/application-process": "opp_f2eeba904dda4456",
+    "https://citp.princeton.edu/news/2026/2027-28-fellows-program-applications-are-now-open": "opp_4849f5f42b52f7fc",
+    "https://citp.princeton.edu/programs/fellows-program": "opp_4849f5f42b52f7fc",
+    "https://aparc.fsi.stanford.edu/news/stanfords-asia-pacific-research-center-invites-applications-2027-2029-postdoctoral-and": "opp_63712e4ac1c7ac15",
+    "https://aparc.fsi.stanford.edu/education/fellowship-and-training-opportunities/shorenstein-postdoctoral-fellowship": "opp_63712e4ac1c7ac15",
+    "https://tigp.apps.sinica.edu.tw/": "opp_49dab84e910f988f",
+    "https://web.cs.toronto.edu/graduate/how-to-apply": "opp_166eeb2b19554b07",
+    "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm": "opp_7b583377e1606906"
   },
-  "last_offer_number": 92
+  "last_offer_number": 113
 }

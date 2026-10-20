@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Churchill Scholarship",
+    "evidence_url": "https://www.churchillscholarship.org/the-scholarship",
+    "evidence_quote": "The next nomination deadline for the Churchill Scholarship is: Monday, November 2, 2026, at 5pm Eastern Time"
+  },
+  "institution": {
+    "name": "Churchill Foundation",
+    "website": "https://www.churchillscholarship.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.churchillscholarship.org/the-scholarship",
+  "source_url": "https://www.churchillscholarship.org/the-scholarship",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": null,
+  "seniority": "Graduating students",
+  "qualifications": [
+    "Citizen of the United States, native-born or naturalized",
+    "Enrolled at a participating institution",
+    "Institutions set internal deadlines weeks before the Foundation nomination deadline"
+  ],
+  "skills": [],
+  "description_short": "Churchill Scholarship for United States citizens enrolled at participating institutions, who apply through their institution. Institutions set internal deadlines before the Foundation nomination deadline; results are normally notified by late December.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-02T17:00:00-05:00",
+    "timezone": "ET",
+    "evidence_url": "https://www.churchillscholarship.org/the-scholarship",
+    "evidence_quote": "Monday, November 2, 2026, at 5pm Eastern Time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Churchill Scholarship homepage (search results): \"2026 Application Is Open\"; nomination deadline November 2, 2026, 5pm ET",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Results do not explicitly label the cycle as 2027-28",
+    "Host university, city and country of study not stated in the results",
+    "Nomination deadline applies to institutions; applicants must meet earlier internal deadlines",
+    "Field restrictions and award value not confirmed in the results"
+  ],
+  "id": "opp_4edc21b469925ce2",
+  "fingerprint": "70d63821986657cf",
+  "discovered_at": "2026-10-20T01:59:17.584Z",
+  "last_verified_at": "2026-10-20T01:59:17.584Z",
+  "content_hash": "sha256:f5fcfd96514344b42285638157c2709fa869365466a37a87178ffd2ae05aa3bf"
+}

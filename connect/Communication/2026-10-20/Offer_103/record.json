@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "IMPRS-BAC",
+    "evidence_url": "https://www.molgen.mpg.de/4205259/FAQ",
+    "evidence_quote": "Frequently Asked Questions about the IMPRS-BAC application"
+  },
+  "institution": {
+    "name": "International Max Planck Research School for Biology and Computation (IMPRS-BAC)",
+    "website": "https://www.molgen.mpg.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.molgen.mpg.de/IMPRS/application",
+  "source_url": "https://www.molgen.mpg.de/IMPRS/application",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Berlin",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Biology and computation",
+  "seniority": "PhD applicants",
+  "qualifications": [
+    "Degree obtained before October 2027"
+  ],
+  "skills": [],
+  "description_short": "PhD program of the International Max Planck Research School for Biology and Computation in Berlin. Written applications are due December 7, 2026 and reference letters December 14, 2026; shortlisted candidates are interviewed at the end of March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-07T23:59:00+01:00",
+    "timezone": "CET",
+    "evidence_url": "https://www.molgen.mpg.de/IMPRS/application",
+    "evidence_quote": "December 7th, 2026 (23:59 CET)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IMPRS-BAC application page and FAQ (search results): deadline December 7th, 2026 (23:59 CET)",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "FAQ said a new call would be announced in October 2026; the call itself not confirmed live",
+    "Funding terms not confirmed in the results"
+  ],
+  "id": "opp_c321419e7eb82b46",
+  "fingerprint": "98975e06161b1c7c",
+  "discovered_at": "2026-10-20T01:59:19.104Z",
+  "last_verified_at": "2026-10-20T01:59:19.104Z",
+  "content_hash": "sha256:f2bb578e80606edf95b0875c916718ad42f9dafcc57a9f81819836e55c7c5f3f"
+}
