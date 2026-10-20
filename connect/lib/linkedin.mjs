@@ -37,7 +37,7 @@ export function checkPost(p, offer, config) {
   const all = [p.headline, p.intro, p.cta, p.funding, p.fields, p.level].filter(Boolean).join(' ');
   const hw = words(p.headline).length;
   add('headline 4–16 words', hw >= 4 && hw <= 16, p.headline ?? '(missing)');
-  const inst = words(offer.institution).filter((w) => w.length > 3 && !/^(the|of|and|for|university|institute|school|center|centre)$/i.test(w));
+  const inst = words(String(offer.institution ?? '').replace(/[(),:;]/g, ' ')).filter((w) => w.length > 3 && !/^(the|of|and|for|university|institute|school|center|centre)$/i.test(w));
   add('headline names the institution', !inst.length || inst.some((w) => (p.headline ?? '').toLowerCase().includes(w.toLowerCase())), offer.institution);
   add('headline without "?", URL or hashtag', !/[?#]|https?:\/\//.test(p.headline ?? ''), 'the template adds the emoji, the flag and the "!"');
   const iw = words(p.intro).length;

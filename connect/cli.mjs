@@ -599,7 +599,7 @@ const commands = {
     // Only posts in the current format are timed; older drafts are listed by li-pending to be rewritten.
     const drafts = q.posts.filter((p) => p.status === 'DRAFT' && p.format === POST_FORMAT).sort((a, b) => dl(a) - dl(b));
     const L = config.linkedin;
-    const taken = q.posts.filter((p) => p.status === 'SCHEDULED').map((p) => p.scheduled_at);
+    const taken = q.posts.filter((p) => p.status === 'SCHEDULED' && p.format === POST_FORMAT).map((p) => p.scheduled_at);
     const slots = planSlots(drafts.length, { now: nowD, leadMinutes: L.lead_minutes, minGapMinutes: L.min_gap_minutes, activeHours: L.active_hours, timeZone: L.time_zone, maxPerDay: L.max_posts_per_day, taken });
     drafts.forEach((p, i) => {
       if (slots[i]) Object.assign(p, { status: 'SCHEDULED', scheduled_at: slots[i] });
