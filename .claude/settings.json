@@ -5,7 +5,18 @@
       "Bash(node --test connect/test/*)",
       "Bash(base64 -w0 connect/runs/*)",
       "mcp__microsoft-learn__microsoft_docs_search",
-      "mcp__microsoft-learn__microsoft_docs_fetch"
+      "mcp__microsoft-learn__microsoft_docs_fetch",
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep",
+      "WebSearch",
+      "WebFetch",
+      "Agent",
+      "mcp__Google_Drive",
+      "mcp__github"
     ]
   },
   "enabledMcpjsonServers": [

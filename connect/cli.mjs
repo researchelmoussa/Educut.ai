@@ -270,8 +270,13 @@ const commands = {
       deadline_label: rec.deadline ? spec.deadline_label : null,
       institution_logo: rec.institution.logo.permission === 'allowed' ? spec.institution_logo ?? null : null,
       // The default photo is Drive Landmarks/images/DEFAULT, registered as landmark-add Default DEFAULT <file>.
-      // No city stated → the administrator's default photo, never a country photo standing in for a place.
-      landmark: spec.landmark ?? (rec.location.city ? findLandmark(rec.location.city, rec.location.country_code) : null) ?? findLandmark('Default', 'DEFAULT'),
+      // Country photo first (Drive Landmarks/images/<CC>, registered under the country name), even when a
+      // city is known; a city photo only if the country has none; the default photo (Landmarks/images/DEFAULT)
+      // only when there is no country photo at all.
+      landmark: spec.landmark
+        ?? (rec.location.country ? findLandmark(rec.location.country, rec.location.country_code) : null)
+        ?? (rec.location.city ? findLandmark(rec.location.city, rec.location.country_code) : null)
+        ?? findLandmark('Default', 'DEFAULT'),
       variant: spec.variant ?? config.visual.variant,
     };
     writeJson(join(dir, 'spec.json'), card);
@@ -328,7 +333,7 @@ const commands = {
         `${basename(dir)} · ${rec.title.value} · ${rec.institution.name}`,
         `Opportunity ID: ${rec.id}`,
         `Application status: ${rec.application_status}${rec.application_status === 'OPEN_LIKELY' ? '  <-- VERIFY THE APPLICATION PORTAL MANUALLY BEFORE APPROVING' : ''}`,
-        `Deadline: ${rec.deadline ? `${rec.deadline.value}${rec.deadline.timezone ? ` (${rec.deadline.timezone})` : ''}` : 'not specified'}`,
+        `Deadline: ${rec.deadline ? `${rec.deadline.value}${rec.deadline.timezone ? (/[()]/.test(rec.deadline.timezone) ? ` ${rec.deadline.timezone}` : ` (${rec.deadline.timezone})`) : ''}` : 'not specified'}`,
         `Official application link: ${rec.application_url ?? 'not found — see source'}`,
         `Source page: ${rec.source_url}`,
         `EduCut link in post: ${pkg.educut_link.url} (${pkg.educut_link.type.replace('_', ' ')})`,
@@ -374,6 +379,9 @@ const commands = {
     if (existsSync(cp)) checks.push(...validateComms(rec, readJson(cp), config, pageUrl(config.links.site_url, offerSlug(basename(dir), rec.title.value))));
     else checks.push({ check: 'comms package present', pass: false, detail: 'comms-package.json missing', owner: 'communications' });
     for (const f of ['linkedin_post.txt', 'card.png']) if (!existsSync(join(dir, f))) checks.push({ check: `${f} present`, pass: false, detail: 'missing', owner: f === 'card.png' ? 'visual-designer' : 'communications' });
+    // post-text copies the card alt text; run before the card exists, it leaves the placeholder behind.
+    const stale = ['post_details.txt', 'web-brief.json'].filter((f) => existsSync(join(dir, f)) && readFileSync(join(dir, f), 'utf8').includes('PLACEHOLDER'));
+    if (stale.length) checks.push({ check: 'card alt text copied into the page texts', pass: false, detail: `placeholder in ${stale.join(', ')}: run post-text again now that the card exists`, owner: 'communications' });
 
     const s = summarize(checks);
     writeJson(join(dir, 'qc-report.json'), { opportunity_id: id, at: nowIso(), ...s });
@@ -400,7 +408,7 @@ const commands = {
       const comms = readJson(join(dir, 'comms-package.json'), null);
       rows.push(
         `## ${d} — ${rec.title.value}\n` +
-          `**${rec.institution.name}** · ${[rec.location.city, rec.location.country].filter(Boolean).join(', ') || 'location not specified'}\n\n` +
+          `**${rec.institution.name}** · ${[rec.location.city, rec.location.country].filter((v, i, a) => v && a.findIndex((x) => String(x).toLowerCase() === String(v).toLowerCase()) === i).join(', ') || 'location not specified'}\n\n` +
           `- Status: **${reg.get(rec.id)?.pipeline_status}** · application ${rec.application_status}${rec.application_status === 'OPEN_LIKELY' ? ' ⚠️ verify the portal manually' : ''}\n` +
           `- Deadline: ${rec.deadline?.value ?? 'not specified'}\n` +
           `- Apply: ${rec.application_url ?? 'n/a'}\n- Source: ${rec.source_url}\n` +
@@ -411,7 +419,7 @@ const commands = {
           (comms ? `> ${comms.caption.replace(/\n/g, '\n> ')}\n` : ''),
       );
     }
-    const md = `# EduCut Connect — review ${today}\n\n${rows.length} offer(s) awaiting approval. Nothing is published until you approve, and publishing stays manual.\n\n${rows.join('\n')}`;
+    const md = `# EduCut Connect — review ${today}\n\n${config.daily.auto_approve ? `${rows.length} offer(s). Auto-approval is on: offers that pass validation go on the website and are scheduled on LinkedIn without waiting; reply "reject Offer_NNN" to take one down.` : `${rows.length} offer(s) awaiting approval. Nothing is published until you approve.`}\n\n${rows.join('\n')}`;
     writeFileSync(join(runDir, 'review.md'), md);
     out({ review: join(runDir, 'review.md'), offers: rows.length });
   },
@@ -596,6 +604,8 @@ const commands = {
     if (flags.reschedule) for (const p of q.posts) if (p.status === 'SCHEDULED' && Date.parse(p.scheduled_at) < nowD.getTime()) Object.assign(p, { status: 'DRAFT', scheduled_at: null });
     // Most urgent deadline first; offers without a deadline last.
     const dl = (p) => (p.deadline ? Date.parse(p.deadline.length === 10 ? `${p.deadline}T23:59:59Z` : p.deadline) : Infinity);
+    // A closed offer would only be skipped by the publisher: free its slot now.
+    for (const p of q.posts) if ((p.status === 'DRAFT' || p.status === 'SCHEDULED') && dl(p) < nowD.getTime()) Object.assign(p, { status: 'SKIPPED', scheduled_at: null, skipped_reason: 'deadline passed' });
     // Only posts in the current format are timed; older drafts are listed by li-pending to be rewritten.
     const drafts = q.posts.filter((p) => p.status === 'DRAFT' && p.format === POST_FORMAT).sort((a, b) => dl(a) - dl(b));
     const L = config.linkedin;
