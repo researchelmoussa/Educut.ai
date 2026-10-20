@@ -9,8 +9,9 @@
     "time_zone": "Europe/Zurich",
     "active_hours": [7, 22],
     "lead_minutes": 30,
-    "min_gap_minutes": 45,
-    "max_gap_minutes": 180,
+    "min_gap_minutes": 60,
+    "max_posts_per_day": 10,
+    "hashtag_range": [5, 9],
     "max_posts_per_run": 1
   },
   "daily": {

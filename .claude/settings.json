@@ -3,7 +3,12 @@
     "allow": [
       "Bash(node connect/cli.mjs:*)",
       "Bash(node --test connect/test/*)",
-      "Bash(base64 -w0 connect/runs/*)"
+      "Bash(base64 -w0 connect/runs/*)",
+      "mcp__microsoft-learn__microsoft_docs_search",
+      "mcp__microsoft-learn__microsoft_docs_fetch"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "microsoft-learn"
+  ]
 }

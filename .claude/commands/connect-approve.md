@@ -18,9 +18,10 @@ Apply the administrator's decisions in `$ARGUMENTS`, e.g. `approve Offer_003 Off
      must be live before the post goes out. Then commit `educut-connect/` and `sitemap.xml` to `main` the
      same way as `connect/Communication` (see `/connect-run` step 6b, commit message
      "EduCut Connect: list Offer_NNN on the website") and give the administrator the page URL.
-     Then launch the **linkedin** subagent: it writes the post for each newly listed offer (card + question +
-     title + facts + offer page link + Academy link) and schedules them all within the next 24 hours on the
-     "EduCut Connect" page; the GitHub Action `linkedin-publish.yml` publishes them at those times.
+     Then launch the **linkedin** subagent: it writes the post for each newly listed offer (card image +
+     🎓🇺🇸 headline + intro + 📍🎓💰🔬📅 facts + offer page link + share line + hashtags) and schedules every
+     one of them on the "EduCut Connect" page between 07:00 and 22:00, at most 10 a day (more than 10 →
+     spread over 2 days); the GitHub Action `linkedin-publish.yml` publishes them at those times.
    - reject → `node connect/cli.mjs reject <id> --reason "<text>" --by "<name>"`; if the offer is on the website,
      `site-remove <id>` + `site-build` and commit that to `main` too.
    - revise → `node connect/cli.mjs revise <id> --note "<text>" --by "<name>"`, then rerun the responsible agent

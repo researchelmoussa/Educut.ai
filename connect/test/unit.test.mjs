@@ -115,30 +115,67 @@ test('course shortlist and anchor check use the real catalog', () => {
   assert.equal(checkCourse('A999.99').ok, false);
 });
 
-test('linkedin: slots are spaced, inside active hours and within 24 h', async () => {
-  const { planSlots } = await import('../lib/linkedin.mjs');
-  const now = new Date('2026-10-13T16:00:00Z'); // 18:00 in Zurich
-  const s = planSlots(5, { now, minGapMinutes: 45, maxGapMinutes: 180, activeHours: [7, 22], timeZone: 'Europe/Zurich' });
-  assert.equal(s.length, 5);
-  const t = s.map((x) => Date.parse(x));
-  for (let i = 1; i < t.length; i++) assert.ok(t[i] - t[i - 1] >= 45 * 60e3);
-  assert.ok(t[0] >= now.getTime() + 30 * 60e3 && t.at(-1) <= now.getTime() + 24 * 3600e3);
-  const h = (d) => Number(new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', hour: '2-digit', hourCycle: 'h23' }).format(d));
-  assert.ok(t.every((x) => h(new Date(x)) >= 7 && h(new Date(x)) < 22));
+test('linkedin: up to 10 posts a day between 07:00 and 22:00, evenly spaced', async () => {
+  const { planSlots, localDay } = await import('../lib/linkedin.mjs');
+  const tz = 'Europe/Zurich';
+  const h = (t) => Number(new Intl.DateTimeFormat('en-GB', { timeZone: tz, hour: '2-digit', hourCycle: 'h23' }).format(new Date(t)));
+  const now = new Date('2026-10-20T04:00:00Z'); // 06:00 in Zurich
+  const ten = planSlots(10, { now, timeZone: tz }).map(Date.parse);
+  assert.equal(ten.length, 10);
+  assert.equal(new Set(ten.map((t) => localDay(t, tz))).size, 1);
+  for (let i = 1; i < ten.length; i++) assert.ok(ten[i] - ten[i - 1] >= 60 * 60e3);
+  assert.ok(ten.every((t) => h(t) >= 7 && h(t) < 22));
+  assert.ok(h(ten[0]) <= 8 && h(ten.at(-1)) >= 20, 'the day is used from morning to evening');
+  const thirteen = planSlots(13, { now, timeZone: tz }).map(Date.parse);
+  const days = {};
+  for (const t of thirteen) days[localDay(t, tz)] = (days[localDay(t, tz)] ?? 0) + 1;
+  assert.deepEqual(Object.values(days), [7, 6]);
+  assert.ok(thirteen.every((t) => h(t) >= 7 && h(t) < 22));
+  // Late in the evening: the posts go to the next day; already-scheduled posts are avoided and counted.
+  const late = new Date('2026-10-20T19:50:00Z'); // 21:50
+  const taken = ['2026-10-21T08:00:00.000Z'];
+  const s = planSlots(9, { now: late, timeZone: tz, taken }).map(Date.parse);
+  assert.equal(s.length, 9);
+  assert.ok(s.every((t) => localDay(t, tz) === '2026-10-21' && Math.abs(t - Date.parse(taken[0])) >= 60 * 60e3));
+  assert.equal(planSlots(1, { now: late, timeZone: tz, taken: Array.from({ length: 10 }, (_, i) => `2026-10-21T${String(6 + i).padStart(2, '0')}:00:00.000Z`) }).map((t) => localDay(Date.parse(t), tz))[0], '2026-10-22');
 });
 
-test('linkedin: post layout and little-text escaping', async () => {
-  const { composePost, littleText, checkQuestion } = await import('../lib/linkedin.mjs');
-  const offer = { title: 'Research Scientist', institution: 'Example (EI)', location: 'Geneva, Switzerland', opportunity_type: 'job', deadline_label: '15 November 2099', page_url: 'https://educutai.com/educut-connect/001-research-scientist/', upskill: { kind: 'course', name: 'AI Fundamentals', url: 'https://educutai.com/academies/ai-foundations/#a001-01' } };
-  const text = composePost(offer, 'Ready for applied ML research in Geneva?', ['#ML', '#EduCutAI', '#EduCutConnect']);
-  const lines = text.split('\n');
-  assert.equal(lines[0], 'Ready for applied ML research in Geneva?');
-  assert.equal(lines[2], 'Research Scientist');
-  assert.ok(text.includes('Institution: Example (EI)') && text.includes('Deadline: 15 November 2099'));
-  assert.ok(text.indexOf(offer.page_url) < text.indexOf(offer.upskill.url));
-  const lt = littleText(text);
-  assert.ok(lt.includes('Example \\(EI\\)') && lt.includes('{hashtag|\\#|EduCutAI}') && lt.includes('#a001-01'.replace('#', '\\#')));
+test('linkedin: post follows the EduCut Connect format and little-text escaping', async () => {
+  const { composePost, littleText, checkPost } = await import('../lib/linkedin.mjs');
+  const offer = { title: 'Spring 2027 Internship Program', institution: 'Brookings Institution', location: 'Washington, D.C., USA', country_code: 'US', level: 'Undergraduate & Graduate Students', field: 'Economics, Public Policy', deadline: '2026-11-07', deadline_label: '7 November 2026 (America/New_York)', compensation: { value: 'Paid internship (amount not stated)' }, page_url: 'https://educutai.com/educut-connect/114-spring-2027-internship-program/', summary: 'Paid internships at Brookings.' };
+  const parts = {
+    headline: 'Paid Internship Opportunities at Brookings Institution, USA',
+    intro: 'The Brookings Institution is inviting applications for its Spring 2027 Internship Program, offering students hands-on experience in research, public policy, and global affairs.',
+    cta: 'Know someone looking for a research internship in the USA? Share this opportunity!',
+    funding: 'Paid Internships',
+  };
+  const tags = ['#InternshipOpportunities', '#PaidInternship', '#EduCutConnect', '#EduCutAI'];
+  const text = composePost(offer, parts, tags);
+  assert.equal(
+    text,
+    [
+      '🎓🇺🇸 Paid Internship Opportunities at Brookings Institution, USA!',
+      '',
+      parts.intro,
+      '',
+      '📍 Location: Washington, D.C., USA',
+      '🎓 Level: Undergraduate & Graduate Students',
+      '💰 Funding: Paid Internships',
+      '🔬 Fields: Economics, Public Policy',
+      '📅 Deadline: 7 November 2026',
+      '',
+      '🔗 Explore the opportunity and apply:',
+      offer.page_url,
+      parts.cta,
+      tags.join(' '),
+    ].join('\n'),
+  );
   const cfg = { comms: { banned_phrases: ['dream job'] } };
-  assert.ok(checkQuestion('Ready for applied ML research in Geneva?', offer, cfg).every((c) => c.pass));
-  assert.ok(checkQuestion('Your dream job awaits? Apply now?', offer, cfg).some((c) => !c.pass));
+  assert.ok(checkPost(parts, offer, cfg).every((c) => c.pass), JSON.stringify(checkPost(parts, offer, cfg).filter((c) => !c.pass)));
+  const unpaid = { ...offer, compensation: null, summary: 'Internships at Brookings.' };
+  assert.ok(checkPost(parts, unpaid, cfg).some((c) => !c.pass && /funding/.test(c.check)));
+  assert.ok(checkPost({ ...parts, cta: 'Share it now' }, offer, cfg).some((c) => !c.pass));
+  assert.ok(!composePost(unpaid, { ...parts, funding: undefined }, tags).includes('💰'));
+  const lt = littleText('At Example (EI) #EduCutAI');
+  assert.ok(lt.includes('Example \\(EI\\)') && lt.includes('{hashtag|\\#|EduCutAI}'));
 });
