@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "IMPRS HD",
+    "evidence_url": "https://www.imprs-hd.mpg.de/",
+    "evidence_quote": "IMPRS HD"
+  },
+  "institution": {
+    "name": "International Max Planck Research School for Astronomy and Cosmic Physics at the University of Heidelberg (IMPRS-HD)",
+    "website": "https://www.imprs-hd.mpg.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.imprs-hd.mpg.de/3192/application",
+  "source_url": "https://www.imprs-hd.mpg.de/3192/application",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Heidelberg",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Astronomy and astrophysics",
+  "seniority": "PhD applicants",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Doctoral program of the International Max Planck Research School for astronomy in Heidelberg. Applications for the fall 2027 term are due November 3, 2026 at 14:00 CET.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-03T14:00:00+01:00",
+    "timezone": "CET",
+    "evidence_url": "https://www.imprs-hd.mpg.de/3192/application",
+    "evidence_quote": "The deadline for next term applications (fall 2027) is November 3, 2026, 14:00 CET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IMPRS-HD application page (search results): fall 2027 deadline November 3, 2026, 14:00 CET",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Full institution name not shown verbatim in the results",
+    "Eligibility and funding terms not confirmed in the results"
+  ],
+  "id": "opp_4139afef97ad2f0e",
+  "fingerprint": "897c480df194c15a",
+  "discovered_at": "2026-10-20T01:59:19.295Z",
+  "last_verified_at": "2026-10-20T01:59:19.295Z",
+  "content_hash": "sha256:070a469d2ed3a930f10520a738b662830f44f5b0daa4752acd8ff92bc75edce9"
+}

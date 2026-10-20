@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "PD Soros Fellowship",
+    "evidence_url": "https://pdsoros.org/writers-applying-for-the-pd-soros-fellowship/",
+    "evidence_quote": "Applying for the PD Soros Fellowship"
+  },
+  "institution": {
+    "name": "Paul & Daisy Soros Fellowships for New Americans",
+    "website": "https://pdsoros.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://pdsoros.org/application-process/",
+  "source_url": "https://pdsoros.org/application-process/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Graduate and professional study (all fields)",
+  "seniority": "Prospective and early-stage graduate students",
+  "qualifications": [
+    "30 or younger as of the application deadline",
+    "Plan to be enrolled full-time in a degree-granting graduate or professional program in the United States in 2027-2028",
+    "Must not have started a third or subsequent year of graduate study as of the deadline",
+    "At least three recommendations submitted by the deadline"
+  ],
+  "skills": [],
+  "description_short": "Graduate school fellowship for New Americans. Applicants must be 30 or younger at the deadline and plan full-time graduate or professional study in the United States in 2027-2028; at least three recommendations are required by the deadline.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-10-29T14:00:00-04:00",
+    "timezone": "ET",
+    "evidence_url": "https://pdsoros.org/application-process/",
+    "evidence_quote": "October 29, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official PD Soros pages (search results): 2027 Fellowship deadline October 29, 2026 at 2:00 pm ET, no extensions",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Time of day (2:00 pm ET) from the search-result summary of the official page; only the date is quoted verbatim",
+    "Funding amount (reported as up to $90,000 over two years) not quoted verbatim, so compensation left null",
+    "Detailed \"New American\" eligibility definition not confirmed in the results"
+  ],
+  "id": "opp_f2eeba904dda4456",
+  "fingerprint": "0581ad4f681f6504",
+  "discovered_at": "2026-10-20T01:59:19.983Z",
+  "last_verified_at": "2026-10-20T01:59:19.983Z",
+  "content_hash": "sha256:be48a1d7af8b0485b6f3ba9d1f9f1e611ab160eb53137a2f26b62ab2e06960a7"
+}

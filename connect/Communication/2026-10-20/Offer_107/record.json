@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "MP-AIX Ph.D. Program",
+    "evidence_url": "https://ai.mpg.de/",
+    "evidence_quote": "Apply by 31 October 2026 to join the MP-AIX Ph.D. Program in 2027"
+  },
+  "institution": {
+    "name": "Max Planck Artificial Intelligence Network (MP-AIX)",
+    "website": "https://ai.mpg.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ai.mpg.de/phd-call-2026",
+  "source_url": "https://ai.mpg.de/phd-call-2026",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Artificial intelligence",
+  "seniority": "PhD applicants",
+  "qualifications": [
+    "Candidates already employed in a prospective advisor's group cannot receive MP-AIX funding",
+    "Reference requests must be sent through the portal before the deadline"
+  ],
+  "skills": [],
+  "description_short": "Second-cohort call of the Max Planck Artificial Intelligence Network PhD program, starting in 2027. Applications go through a joint ELLIS and MP-AIX portal; one application can be considered for either program or both.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-10-31T23:59:00+01:00",
+    "timezone": "CET",
+    "evidence_url": "https://ai.mpg.de/",
+    "evidence_quote": "Apply by 31 October 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official MP-AIX call page (search results): applications accepted until 11:59 p.m. CET on October 31, 2026; portal opened October 1",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "The homepage gives 23:59 AoE while the call page gives 23:59 CET; CET (the earlier cutoff) used",
+    "Official timeline lists interviews in early 2026, apparently a typo for 2027",
+    "Host institute/city depends on the advisor"
+  ],
+  "id": "opp_ec61dd6bc8ee7f01",
+  "fingerprint": "ae14320f0646c694",
+  "discovered_at": "2026-10-20T01:59:19.784Z",
+  "last_verified_at": "2026-10-20T01:59:19.784Z",
+  "content_hash": "sha256:ec058fb24fa58135cea46e100eaaf56cfedd3adc4b99e28e8bc7504d240f9b1a"
+}

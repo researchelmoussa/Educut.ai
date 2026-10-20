@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Taiwan International Graduate Program",
+    "evidence_url": "https://tigp.apps.sinica.edu.tw/",
+    "evidence_quote": "Taiwan International Graduate Program On-line Application"
+  },
+  "institution": {
+    "name": "Academia Sinica",
+    "website": "https://www.sinica.edu.tw",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://tigp.apps.sinica.edu.tw/",
+  "source_url": "https://tigp.apps.sinica.edu.tw/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Taipei",
+    "country": "Taiwan",
+    "country_code": "TW"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Multiple research programs",
+  "seniority": "PhD applicants",
+  "qualifications": [
+    "Applicants can apply to only one TIGP program"
+  ],
+  "skills": [],
+  "description_short": "Academia Sinica's Taiwan International Graduate Program for fall 2027 entry. Online applications run from November 1, 2026 to February 1, 2027; applicants choose one TIGP program and no application fee is required.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01T23:59:00+08:00",
+    "timezone": "GMT+8",
+    "evidence_url": "https://tigp.apps.sinica.edu.tw/",
+    "evidence_quote": "Launch 2026-11-01 00:00:00 ~ 2027-02-01 23:59:00 GMT+8"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official TIGP online application portal (search results): window 2026-11-01 to 2027-02-01 23:59 GMT+8",
+    "Deadline is in the future",
+    "Portal opens November 1, 2026 (not yet open on 2026-10-20)",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Results usually announced late June / early July",
+    "Funding terms not confirmed in the results",
+    "City given as Taipei (Academia Sinica); individual programs may involve partner universities"
+  ],
+  "id": "opp_49dab84e910f988f",
+  "fingerprint": "70c9bb8d8c2b9919",
+  "discovered_at": "2026-10-20T01:59:20.491Z",
+  "last_verified_at": "2026-10-20T01:59:20.491Z",
+  "content_hash": "sha256:66df6eff5ff83a1bd34e5e603448f8f3957479e757a0dd05a12a75d9831c0a06"
+}

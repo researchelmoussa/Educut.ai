@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Hertz Fellowship",
+    "evidence_url": "https://www.hertzfoundation.org/hertz-fellowship/apply/",
+    "evidence_quote": "Apply for the Hertz Fellowship"
+  },
+  "institution": {
+    "name": "Hertz Foundation",
+    "website": "https://www.hertzfoundation.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.hertzfoundation.org/hertz-fellowship/apply/",
+  "source_url": "https://www.hertzfoundation.org/news/2027-hertz-fellowship-application-now-open/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": null,
+  "seniority": "Graduate students (PhD)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The Hertz Foundation's 2027 Hertz Fellowship application opened on August 31, 2026. Recommender forms are due November 2, 2026; finalists are named in February 2027 and awards are announced in May 2027. Awards provide up to five years of funding.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-10-30",
+    "timezone": null,
+    "evidence_url": "https://www.hertzfoundation.org/hertz-fellowship/apply/",
+    "evidence_quote": "October 30, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Hertz Foundation news page title (search results): \"2027 Hertz Fellowship Application Now Open\"",
+    "Application deadline October 30, 2026 is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Deadline time of day not shown in the results",
+    "Award value (reported as up to $250,000) not quoted verbatim, so compensation left null",
+    "Eligibility details (citizenship, field) not confirmed in the results",
+    "City not applicable/stated"
+  ],
+  "id": "opp_04751ca9656c5149",
+  "fingerprint": "1f40d1fc89493875",
+  "discovered_at": "2026-10-20T01:59:18.415Z",
+  "last_verified_at": "2026-10-20T01:59:18.415Z",
+  "content_hash": "sha256:685d2f8f435c2650bb822611550b7564b3467a062e03f3ac2538fd7fedad06c1"
+}

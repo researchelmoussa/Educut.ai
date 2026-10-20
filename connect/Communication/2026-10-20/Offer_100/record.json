@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Hong Kong PhD Fellowship Scheme 2027/28",
+    "evidence_url": "https://cerg1.ugc.edu.hk/hkpfs/GuidanceNote.pdf",
+    "evidence_quote": "RESEARCH GRANTS COUNCIL Hong Kong PhD Fellowship Scheme 2027/28"
+  },
+  "institution": {
+    "name": "Research Grants Council (RGC), Hong Kong",
+    "website": "https://www.ugc.edu.hk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cerg1.ugc.edu.hk/hkpfs/apply.html",
+  "source_url": "https://cerg1.ugc.edu.hk/hkpfs/apply.html",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "country_code": "HK"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "All research disciplines",
+  "seniority": "PhD applicants",
+  "qualifications": [
+    "Initial application to the RGC, then a full application to each chosen participating university before its deadline"
+  ],
+  "skills": [],
+  "description_short": "Research Grants Council PhD fellowships for study at participating Hong Kong universities. The 2027/28 round offers 400 fellowships; applicants file an initial RGC application, then apply to each chosen university. Results are due in May 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01T12:00:00+08:00",
+    "timezone": "HKT",
+    "evidence_url": "https://cerg1.ugc.edu.hk/hkpfs/GuidanceNote.pdf",
+    "evidence_quote": "1 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official RGC guidance (search results): application window opened 1 September 2026; initial applications due 12:00 noon HKT, 1 December 2026",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Time of day (12:00 noon HKT) from the search-result summary; only the date is quoted verbatim",
+    "University deadlines (reported as 1 December 2026, 11:59pm HKT) may differ by university",
+    "Stipend amount not quoted, so compensation left null"
+  ],
+  "id": "opp_1609a85d2348f6ab",
+  "fingerprint": "7d2d36232bb57917",
+  "discovered_at": "2026-10-20T01:59:18.581Z",
+  "last_verified_at": "2026-10-20T01:59:18.581Z",
+  "content_hash": "sha256:8d19b55b442ecceebe045dafdb00e34d3ddcf41d92c344ba66b2c8e7aa3c0ad4"
+}
