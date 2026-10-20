@@ -67,14 +67,20 @@ on the site). It is attached to the post with its alt text by the publisher; `li
      `min_gap_minutes` (60), most urgent deadline first.
    Nothing should stay unscheduled; report `per_day`. If posts were scheduled but never went out (the token
    was missing), run `li-schedule --reschedule`.
-5. Commit `connect/linkedin/queue.json` to `main` (the publisher reads it from there):
+5. `node connect/cli.mjs li-kit` → the **posting kit** for the posts just scheduled, in
+   `connect/linkedin/kits/<date>/`: `index.html` (date, time, card, text with a copy button per post),
+   `posts.md`, and `cards/NN_<day><Mon>_<HH>h<MM>_Offer_NNN.png` in posting order. The administrator
+   schedules these posts by hand on LinkedIn, so the API publisher never touches a post that went into a kit.
+   Report `missing_images` if any.
+6. Commit the queue and the kit to `main` (the publisher reads the queue from there):
    ```
    W=$(mktemp -d)/main && git fetch origin main && git worktree add --detach "$W" origin/main
    cp connect/linkedin/queue.json "$W/connect/linkedin/queue.json"
-   cd "$W" && git add connect/linkedin/queue.json && git commit -m "EduCut Connect: LinkedIn posts scheduled for <date>" && git push origin HEAD:main
+   mkdir -p "$W/connect/linkedin/kits" && cp -r connect/linkedin/kits/<date> "$W/connect/linkedin/kits/"
+   cd "$W" && git add connect/linkedin && git commit -m "EduCut Connect: LinkedIn posts scheduled for <date>" && git push origin HEAD:main
    cd - && git worktree remove "$W"
    ```
-6. `node connect/cli.mjs li-status` and report the schedule.
+7. `node connect/cli.mjs li-status` and report the schedule.
 
 ## LinkedIn API documentation (Microsoft Learn MCP)
 The LinkedIn Marketing API (Posts API, Images API, versioning, organization access tokens) is documented
@@ -86,12 +92,14 @@ and report what the docs say must change; do not change the publisher code yours
 
 ## Rules
 - Never queue a preview, a closed offer, or an offer that is not on the site. `li-queue` refuses them.
-- Never post directly: the GitHub Action publishes due posts, one per run (every 15 minutes), and skips
+- When the administrator says posts are live (posted by hand), run `node connect/cli.mjs li-done <Offer_NNN…>`.
+- Never post directly: the GitHub Action publishes due posts that are not in a kit, one per run (every 15 minutes), and skips
   any offer that has closed or left the site in the meantime. `publishing.enabled: false` pauses it.
 - Never edit `text` in the queue by hand; re-run `li-queue` instead.
 
 ## Output (final message, JSON only)
 ```json
 {"queued": ["Offer_NNN", "…"], "schedule": [{"offer": "…", "local": "21 Oct 2026, 07:45 (Europe/Zurich)"}],
- "per_day": {"2026-10-21": 10, "2026-10-22": 3}, "unscheduled": [], "committed": true, "notes": "…"}
+ "per_day": {"2026-10-21": 10, "2026-10-22": 3}, "unscheduled": [], "kit": {"dir": "connect/linkedin/kits/<date>", "page": "…/index.html", "cards": ["…"]},
+ "committed": true, "notes": "…"}
 ```

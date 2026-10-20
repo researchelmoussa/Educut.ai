@@ -1,0 +1,693 @@
+<title>EduCut Connect posting kit, 2026-10-20</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600&display=swap">
+<style>
+/* Layout: a schedule sheet. One row per post: time column, card thumbnail, ready-to-copy text. */
+:root{--bg:#f3f5f6;--surface:#ffffff;--fg:#14212b;--muted:#5b6b77;--line:#d8dfe4;--accent:#0b6e6e;--accent-fg:#ffffff;--ok:#2f7d32;
+--display:"Fraunces",Georgia,serif;--sans:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1519;--surface:#172128;--fg:#e4ecf0;--muted:#94a5b0;--line:#2a3843;--accent:#4fc1bd;--accent-fg:#06231f;--ok:#7fcf83;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1519;--surface:#172128;--fg:#e4ecf0;--muted:#94a5b0;--line:#2a3843;--accent:#4fc1bd;--accent-fg:#06231f;--ok:#7fcf83;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--sans);margin:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+.wrap{max-width:1040px;margin:0 auto;display:grid;gap:40px}
+header{display:grid;gap:14px}
+.kicker{font:600 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font:600 clamp(28px,5vw,40px)/1.1 var(--display);margin:0;text-wrap:balance}
+header p{margin:0;max-width:68ch;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:6px 0 0;padding:0;list-style:none;counter-reset:s}
+.steps li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;counter-increment:s;font-size:14px}
+.steps li::before{content:counter(s);font:600 12px var(--mono);color:var(--accent);display:block;margin-bottom:2px}
+.progress{font:500 14px var(--mono);color:var(--muted)}
+.progress b{color:var(--fg)}
+.day{display:grid;gap:14px}
+h2{font:600 22px/1.2 var(--display);margin:0;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:8px 0;z-index:2;border-bottom:1px solid var(--line)}
+h2 span{font:400 13px var(--mono);color:var(--muted)}
+.list{display:grid;gap:14px}
+.post{display:grid;grid-template-columns:92px 150px minmax(0,1fr);gap:18px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.post.is-done{opacity:.55}
+.when{display:grid;align-content:start;gap:2px}
+.time{font:600 26px/1 var(--mono);font-variant-numeric:tabular-nums}
+.date{font:400 12px var(--mono);color:var(--muted)}
+.done{margin-top:12px;font-size:13px;display:flex;gap:6px;align-items:center;cursor:pointer}
+.img img{display:block;width:100%;height:auto;border-radius:6px;border:1px solid var(--line);background:var(--bg)}
+.body{min-width:0;display:grid;gap:10px;align-content:start}
+.meta{display:flex;gap:12px;flex-wrap:wrap;font:500 12px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.offer{color:var(--accent)}
+.file{margin:0;font-size:13px;color:var(--muted)}
+code{font:13px var(--mono);color:var(--fg);word-break:break-all}
+pre{margin:0;white-space:pre-wrap;word-break:break-word;font:14px/1.5 var(--sans);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px 14px;max-height:260px;overflow:auto}
+.actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-size:14px}
+button{font:600 14px var(--sans);background:var(--accent);color:var(--accent-fg);border:0;border-radius:6px;padding:9px 14px;cursor:pointer}
+button.ok{background:var(--ok)}
+button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+details summary{cursor:pointer;color:var(--muted)}
+details p{margin:6px 0 0;font-size:13px;color:var(--muted);max-width:60ch}
+@media (max-width:640px){.post{grid-template-columns:1fr 110px}.when{grid-column:1;grid-row:1}.img{grid-column:2;grid-row:1}.body{grid-column:1/-1}.time{font-size:22px}}
+</style>
+<div class="wrap">
+  <header>
+    <span class="kicker">EduCut Connect · LinkedIn</span>
+    <h1>EduCut Connect posting kit, 2026-10-20</h1>
+    <p>21 posts, one per offer, timed between 07:00 and 22:00 Europe/Zurich, most urgent deadline first. Schedule each one on the EduCut Connect page with LinkedIn's own scheduler.</p>
+    <ol class="steps">
+      <li>On the EduCut Connect page, click <b>Start a post</b>, then the image icon, and attach the card file named under the post (the card images are sent with this kit).</li>
+      <li>Click <b>Copy post text</b> and paste it into the post.</li>
+      <li>Click the clock icon next to <b>Post</b>, set the date and time shown here, then <b>Schedule</b>.</li>
+      <li>Tick <b>Scheduled</b> here to keep track, and tell Claude which offers are scheduled.</li>
+    </ol>
+    <div class="progress" id="progress"></div>
+  </header>
+
+  <section class="day">
+    <h2>Tuesday 20 Oct 2026 <span>3 posts</span></h2>
+    <div class="list">
+      <article class="post" id="Offer_101">
+        <div class="when">
+          <span class="time">19:00</span>
+          <span class="date">20 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_101" data-k="Offer_101"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/01_20Oct_19h00_Offer_101.png" target="_blank" rel="noopener"><img src="cards/01_20Oct_19h00_Offer_101.png" alt="Card for the Ph.D. Research Program Admission at the Indian Institute of Science (IISc), Bengaluru, India, with an application deadline of 26 Oct 2026." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 101</span><span>Deadline 2026-10-26</span></div>
+          <p class="file">Image file: <code>01_20Oct_19h00_Offer_101.png</code></p>
+          <pre id="t-Offer_101">🎓🇮🇳 PhD Research Admission at the Indian Institute of Science, India!
+
+The Indian Institute of Science (IISc) in Bengaluru is inviting applications for its mid-year research PhD admission for the session starting January 2027, with international candidates applying through the Office of International Relations.
+
+📍 Location: Bengaluru, India
+🎓 Level: PhD applicants
+🔬 Fields: Science and engineering research
+📅 Deadline: 26 October 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/101-ph-d-research-program-admission/
+Know someone looking for a science or engineering PhD in India? Share this opportunity!
+#PhDOpportunities #IISc #ResearchCareers #Engineering #StudyInIndia #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_101">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Card for the Ph.D. Research Program Admission at the Indian Institute of Science (IISc), Bengaluru, India, with an application deadline of 26 Oct 2026.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_098">
+        <div class="when">
+          <span class="time">20:15</span>
+          <span class="date">20 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_098" data-k="Offer_098"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/02_20Oct_20h15_Offer_098.png" target="_blank" rel="noopener"><img src="cards/02_20Oct_20h15_Offer_098.png" alt="EduCut Connect card for the ACM FAccT - 2027 CFP from the ACM Conference on Fairness, Accountability, and Transparency (FAccT 2027), location not specified, abstract deadline 27 Oct 2026. The photo is a generic aerial dusk view of a city skyline on a winding river, with a tall spire skyscraper at its centre." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 098</span><span>Deadline 2026-10-27</span></div>
+          <p class="file">Image file: <code>02_20Oct_20h15_Offer_098.png</code></p>
+          <pre id="t-Offer_098">🎓 Call for Papers at ACM FAccT 2027!
+
+The ACM Conference on Fairness, Accountability, and Transparency (FAccT 2027) is inviting papers for its conference from 21 to 24 June 2027, with abstracts due on 27 October and full papers on 3 November 2026.
+
+🎓 Level: Researchers
+🔬 Fields: Fairness, accountability and transparency in socio-technical systems
+📅 Deadline: 27 October 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/098-acm-facct-2027-cfp/
+Know a researcher working on fair and accountable AI? Share this opportunity!
+#CallForPapers #FAccT #ResponsibleAI #AIEthics #Research #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_098">Copy post text</button>
+            <details><summary>Image alt text</summary><p>EduCut Connect card for the ACM FAccT - 2027 CFP from the ACM Conference on Fairness, Accountability, and Transparency (FAccT 2027), location not specified, abstract deadline 27 Oct 2026. The photo is a generic aerial dusk view of a city skyline on a winding river, with a tall spire skyscraper at its centre.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_108">
+        <div class="when">
+          <span class="time">21:30</span>
+          <span class="date">20 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_108" data-k="Offer_108"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/03_20Oct_21h30_Offer_108.png" target="_blank" rel="noopener"><img src="cards/03_20Oct_21h30_Offer_108.png" alt="Card for the PD Soros Fellowship from the Paul &amp; Daisy Soros Fellowships for New Americans, United States, application deadline 29 Oct 2026. The photo shows the Statue of Liberty in front of the Manhattan skyline with the Empire State Building." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 108</span><span>Deadline 2026-10-29</span></div>
+          <p class="file">Image file: <code>03_20Oct_21h30_Offer_108.png</code></p>
+          <pre id="t-Offer_108">🎓🇺🇸 Paul &amp; Daisy Soros Fellowships for New Americans, USA!
+
+The Paul &amp; Daisy Soros Fellowships for New Americans are inviting applications from New Americans aged 30 or younger who plan full-time graduate or professional study in the United States in 2027-2028.
+
+📍 Location: United States
+🎓 Level: Prospective and early-stage graduate students
+🔬 Fields: All graduate and professional fields
+📅 Deadline: 29 October 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/108-pd-soros-fellowship/
+Know a New American heading to graduate school? Share this opportunity!
+#PDSoros #Fellowship #GraduateSchool #NewAmericans #StudyInUSA #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_108">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Card for the PD Soros Fellowship from the Paul &amp; Daisy Soros Fellowships for New Americans, United States, application deadline 29 Oct 2026. The photo shows the Statue of Liberty in front of the Manhattan skyline with the Empire State Building.</p></details>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="day">
+    <h2>Wednesday 21 Oct 2026 <span>9 posts</span></h2>
+    <div class="list">
+      <article class="post" id="Offer_099">
+        <div class="when">
+          <span class="time">07:45</span>
+          <span class="date">21 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_099" data-k="Offer_099"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/04_21Oct_07h45_Offer_099.png" target="_blank" rel="noopener"><img src="cards/04_21Oct_07h45_Offer_099.png" alt="EduCut Connect card for the Hertz Fellowship offered by the Hertz Foundation in the United States, application deadline 30 Oct 2026. The photo shows the Statue of Liberty in front of the Manhattan skyline with the Empire State Building, New York." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 099</span><span>Deadline 2026-10-30</span></div>
+          <p class="file">Image file: <code>04_21Oct_07h45_Offer_099.png</code></p>
+          <pre id="t-Offer_099">🎓🇺🇸 Hertz Fellowship from the Hertz Foundation, USA!
+
+The Hertz Foundation is inviting applications for its 2027 Hertz Fellowship, offering graduate students pursuing a PhD in the United States up to five years of funding.
+
+📍 Location: United States
+🎓 Level: Graduate students (PhD)
+💰 Funding: Up to five years of funding
+📅 Deadline: 30 October 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/099-hertz-fellowship/
+Know someone starting a PhD in the United States? Share this opportunity!
+#HertzFellowship #Fellowship #PhD #GraduateResearch #StudyInUSA #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_099">Copy post text</button>
+            <details><summary>Image alt text</summary><p>EduCut Connect card for the Hertz Fellowship offered by the Hertz Foundation in the United States, application deadline 30 Oct 2026. The photo shows the Statue of Liberty in front of the Manhattan skyline with the Empire State Building, New York.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_107">
+        <div class="when">
+          <span class="time">09:30</span>
+          <span class="date">21 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_107" data-k="Offer_107"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/05_21Oct_09h30_Offer_107.png" target="_blank" rel="noopener"><img src="cards/05_21Oct_09h30_Offer_107.png" alt="EduCut Connect card for the MP-AIX Ph.D. Program at the Max Planck Artificial Intelligence Network (MP-AIX), Germany, application deadline 31 Oct 2026. The photo shows Cologne Cathedral and the illuminated Hohenzollern Bridge over the Rhine at night under a starry sky, used as a picture of Germany only." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 107</span><span>Deadline 2026-10-31</span></div>
+          <p class="file">Image file: <code>05_21Oct_09h30_Offer_107.png</code></p>
+          <pre id="t-Offer_107">🎓🇩🇪 PhD Program in Artificial Intelligence at the Max Planck AI Network, Germany!
+
+The Max Planck Artificial Intelligence Network (MP-AIX) has opened the second-cohort call of its full-time PhD programme in Germany starting in 2027, through a joint ELLIS and MP-AIX portal.
+
+📍 Location: Germany
+🎓 Level: PhD applicants
+🔬 Fields: Artificial intelligence
+📅 Deadline: 31 October 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/107-mp-aix-ph-d-program/
+Know someone looking for an AI PhD in Germany? Share this opportunity!
+#PhDOpportunities #ArtificialIntelligence #MaxPlanck #ELLIS #StudyInGermany #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_107">Copy post text</button>
+            <details><summary>Image alt text</summary><p>EduCut Connect card for the MP-AIX Ph.D. Program at the Max Planck Artificial Intelligence Network (MP-AIX), Germany, application deadline 31 Oct 2026. The photo shows Cologne Cathedral and the illuminated Hohenzollern Bridge over the Rhine at night under a starry sky, used as a picture of Germany only.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_095">
+        <div class="when">
+          <span class="time">11:15</span>
+          <span class="date">21 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_095" data-k="Offer_095"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/06_21Oct_11h15_Offer_095.png" target="_blank" rel="noopener"><img src="cards/06_21Oct_11h15_Offer_095.png" alt="Card for the Churchill Scholarship from the Churchill Foundation, nomination deadline 2 Nov 2026; location not specified. Generic default photo of a city skyline at sunset with a tall spire tower beside a river bend (Landmark 81 and the Saigon River, Ho Chi Minh City), not the place of study." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 095</span><span>Deadline 2026-11-02</span></div>
+          <p class="file">Image file: <code>06_21Oct_11h15_Offer_095.png</code></p>
+          <pre id="t-Offer_095">🎓 Churchill Scholarship from the Churchill Foundation!
+
+The Churchill Foundation is inviting nominations for the Churchill Scholarship, open to graduating United States citizens at participating institutions, who apply through their own institution.
+
+🎓 Level: Graduating students (US citizens, via participating institutions)
+📅 Deadline: 2 November 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/095-churchill-scholarship/
+Know a graduating US student looking for a scholarship? Share this opportunity!
+#ChurchillScholarship #Scholarship #HigherEducation #StudentOpportunities #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_095">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Card for the Churchill Scholarship from the Churchill Foundation, nomination deadline 2 Nov 2026; location not specified. Generic default photo of a city skyline at sunset with a tall spire tower beside a river bend (Landmark 81 and the Saigon River, Ho Chi Minh City), not the place of study.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_104">
+        <div class="when">
+          <span class="time">12:45</span>
+          <span class="date">21 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_104" data-k="Offer_104"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/07_21Oct_12h45_Offer_104.png" target="_blank" rel="noopener"><img src="cards/07_21Oct_12h45_Offer_104.png" alt="EduCut Connect card for the IMPRS HD PhD programme at the International Max Planck Research School for Astronomy and Cosmic Physics at the University of Heidelberg (IMPRS-HD), in Heidelberg, Germany, with an application deadline of 3 Nov 2026. The photo is a general image of Germany showing Cologne Cathedral and the lit Hohenzollern Bridge under a starry night sky." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 104</span><span>Deadline 2026-11-03</span></div>
+          <p class="file">Image file: <code>07_21Oct_12h45_Offer_104.png</code></p>
+          <pre id="t-Offer_104">🎓🇩🇪 PhD Program in Astronomy at IMPRS-HD Heidelberg, Germany!
+
+The International Max Planck Research School for Astronomy and Cosmic Physics at the University of Heidelberg is inviting applications for its doctoral programme starting in fall 2027.
+
+📍 Location: Heidelberg, Germany
+🎓 Level: PhD applicants
+🔬 Fields: Astronomy, Astrophysics
+📅 Deadline: 3 November 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/104-imprs-hd/
+Know someone looking for a PhD in astronomy or astrophysics? Share this opportunity!
+#PhDOpportunities #MaxPlanck #Astronomy #Astrophysics #Heidelberg #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_104">Copy post text</button>
+            <details><summary>Image alt text</summary><p>EduCut Connect card for the IMPRS HD PhD programme at the International Max Planck Research School for Astronomy and Cosmic Physics at the University of Heidelberg (IMPRS-HD), in Heidelberg, Germany, with an application deadline of 3 Nov 2026. The photo is a general image of Germany showing Cologne Cathedral and the lit Hohenzollern Bridge under a starry night sky.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_094">
+        <div class="when">
+          <span class="time">14:30</span>
+          <span class="date">21 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_094" data-k="Offer_094"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/08_21Oct_14h30_Offer_094.png" target="_blank" rel="noopener"><img src="cards/08_21Oct_14h30_Offer_094.png" alt="Card for the Azrieli International Postdoctoral Fellowship offered by The Azrieli Foundation in Israel, application deadline 11 Nov 2026. The photo is a generic default image, not of Israel: an aerial view of a city skyline with a tall tower beside a winding river at sunset." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 094</span><span>Deadline 2026-11-11</span></div>
+          <p class="file">Image file: <code>08_21Oct_14h30_Offer_094.png</code></p>
+          <pre id="t-Offer_094">🎓🇮🇱 International Postdoctoral Fellowship at the Azrieli Foundation, Israel!
+
+The Azrieli Foundation is inviting applications for its International Postdoctoral Fellowship 2027-28 cohort, supporting postdoctoral researchers who come to Israel to carry out their research.
+
+📍 Location: Israel
+🎓 Level: Postdoctoral
+🔬 Fields: All research fields
+📅 Deadline: 11 November 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/094-azrieli-international-postdoctoral-fellowship/
+Know a new PhD graduate looking for a postdoc in Israel? Share this opportunity!
+#PostdoctoralFellowship #AzrieliFoundation #Postdoc #AcademicCareers #Israel #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_094">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Card for the Azrieli International Postdoctoral Fellowship offered by The Azrieli Foundation in Israel, application deadline 11 Nov 2026. The photo is a generic default image, not of Israel: an aerial view of a city skyline with a tall tower beside a winding river at sunset.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_113">
+        <div class="when">
+          <span class="time">16:15</span>
+          <span class="date">21 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_113" data-k="Offer_113"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/09_21Oct_16h15_Offer_113.png" target="_blank" rel="noopener"><img src="cards/09_21Oct_16h15_Offer_113.png" alt="Card for the Master's Program in China Studies at Yenching Academy of Peking University in Beijing, China, application deadline 30 Nov 2026. The photo shows a painted wooden gateway with red lanterns in a Chinese ancient town (Shuhe/Donghe, Lijiang), used as a general China image." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 113</span><span>Deadline 2026-11-30</span></div>
+          <p class="file">Image file: <code>09_21Oct_16h15_Offer_113.png</code></p>
+          <pre id="t-Offer_113">🎓🇨🇳 Master's Program in China Studies at Yenching Academy of Peking University, China!
+
+The Yenching Academy of Peking University is inviting applications for its Master's Program in China Studies in Beijing for the September 2027 intake, open to international applicants and applicants from Hong Kong, Macao and Taiwan.
+
+📍 Location: Beijing, China
+🎓 Level: Master's applicants
+🔬 Fields: China Studies
+📅 Deadline: 30 November 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/113-master-s-program-in-china-studies/
+Know someone interested in studying China in Beijing? Share this opportunity!
+#ChinaStudies #YenchingAcademy #MastersProgram #HigherEducation #StudyInChina #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_113">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Card for the Master's Program in China Studies at Yenching Academy of Peking University in Beijing, China, application deadline 30 Nov 2026. The photo shows a painted wooden gateway with red lanterns in a Chinese ancient town (Shuhe/Donghe, Lijiang), used as a general China image.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_100">
+        <div class="when">
+          <span class="time">17:45</span>
+          <span class="date">21 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_100" data-k="Offer_100"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/10_21Oct_17h45_Offer_100.png" target="_blank" rel="noopener"><img src="cards/10_21Oct_17h45_Offer_100.png" alt="Black EduCut Connect card for the Hong Kong PhD Fellowship Scheme 2027/28 from the Research Grants Council (RGC), Hong Kong, located in Hong Kong, deadline 1 Dec 2026. The photo is a generic default image, not of Hong Kong: an aerial sunset view of a riverside city skyline with one tall spire-topped tower and a long bridge." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 100</span><span>Deadline 2026-12-01</span></div>
+          <p class="file">Image file: <code>10_21Oct_17h45_Offer_100.png</code></p>
+          <pre id="t-Offer_100">🎓🇭🇰 Hong Kong PhD Fellowship Scheme 2027/28 by the Research Grants Council, Hong Kong!
+
+The Research Grants Council (RGC) is inviting applications for the Hong Kong PhD Fellowship Scheme 2027/28, offering 400 fellowships for PhD study at participating Hong Kong universities.
+
+📍 Location: Hong Kong
+🎓 Level: PhD applicants
+🔬 Fields: All research disciplines
+📅 Deadline: 1 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/100-hong-kong-phd-fellowship-scheme-2027-28/
+Know someone planning a PhD in Hong Kong? Share this opportunity!
+#HKPFS #PhDFellowship #PhD #Research #HongKong #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_100">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Black EduCut Connect card for the Hong Kong PhD Fellowship Scheme 2027/28 from the Research Grants Council (RGC), Hong Kong, located in Hong Kong, deadline 1 Dec 2026. The photo is a generic default image, not of Hong Kong: an aerial sunset view of a riverside city skyline with one tall spire-topped tower and a long bridge.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_097">
+        <div class="when">
+          <span class="time">19:30</span>
+          <span class="date">21 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_097" data-k="Offer_097"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/11_21Oct_19h30_Offer_097.png" target="_blank" rel="noopener"><img src="cards/11_21Oct_19h30_Offer_097.png" alt="EduCut Connect card for the PhD programme &quot;EDIC - Computer and Communication Sciences&quot; at EPFL (École polytechnique fédérale de Lausanne) in Lausanne, Switzerland, with an application deadline of 1 Dec 2026. The photo is a Swiss country image, not Lausanne: the Alpine village of Zermatt at dusk with the snow-capped Matterhorn behind it and a Swiss flag in the foreground." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 097</span><span>Deadline 2026-12-01</span></div>
+          <p class="file">Image file: <code>11_21Oct_19h30_Offer_097.png</code></p>
+          <pre id="t-Offer_097">🎓🇨🇭 Doctoral Program in Computer and Communication Sciences at EPFL, Switzerland!
+
+EPFL is inviting applications to EDIC, its full-time doctoral programme in Computer and Communication Sciences in Lausanne, for enrolment in September 2027.
+
+📍 Location: Lausanne, Switzerland
+🎓 Level: PhD applicants
+🔬 Fields: Computer and communication sciences
+📅 Deadline: 1 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/097-edic-computer-and-communication-sciences/
+Know someone looking for a computer science PhD in Switzerland? Share this opportunity!
+#PhDOpportunities #EPFL #ComputerScience #DoctoralResearch #StudyInSwitzerland #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_097">Copy post text</button>
+            <details><summary>Image alt text</summary><p>EduCut Connect card for the PhD programme &quot;EDIC - Computer and Communication Sciences&quot; at EPFL (École polytechnique fédérale de Lausanne) in Lausanne, Switzerland, with an application deadline of 1 Dec 2026. The photo is a Swiss country image, not Lausanne: the Alpine village of Zermatt at dusk with the snow-capped Matterhorn behind it and a Swiss flag in the foreground.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_110">
+        <div class="when">
+          <span class="time">21:15</span>
+          <span class="date">21 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_110" data-k="Offer_110"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/12_21Oct_21h15_Offer_110.png" target="_blank" rel="noopener"><img src="cards/12_21Oct_21h15_Offer_110.png" alt="Card for the Shorenstein Postdoctoral Fellowship at the Asia-Pacific Research Center (APARC), Stanford University, in Stanford, United States; applications close 01 Dec 2026." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 110</span><span>Deadline 2026-12-01</span></div>
+          <p class="file">Image file: <code>12_21Oct_21h15_Offer_110.png</code></p>
+          <pre id="t-Offer_110">🎓🇺🇸 Shorenstein Postdoctoral Fellowship at Stanford University, USA!
+
+The Asia-Pacific Research Center (APARC) at Stanford University is inviting applications for the Shorenstein Postdoctoral Fellowship 2027-2029, supporting postdoctoral research on contemporary Asia.
+
+📍 Location: Stanford, United States
+🎓 Level: Postdoctoral
+🔬 Fields: Contemporary Asia
+📅 Deadline: 1 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/110-shorenstein-postdoctoral-fellowship/
+Know a researcher working on contemporary Asia? Share this opportunity!
+#Postdoc #StanfordUniversity #AsianStudies #Fellowship #StudyInUSA #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_110">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Card for the Shorenstein Postdoctoral Fellowship at the Asia-Pacific Research Center (APARC), Stanford University, in Stanford, United States; applications close 01 Dec 2026.</p></details>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="day">
+    <h2>Thursday 22 Oct 2026 <span>9 posts</span></h2>
+    <div class="list">
+      <article class="post" id="Offer_112">
+        <div class="when">
+          <span class="time">07:45</span>
+          <span class="date">22 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_112" data-k="Offer_112"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/13_22Oct_07h45_Offer_112.png" target="_blank" rel="noopener"><img src="cards/13_22Oct_07h45_Offer_112.png" alt="EduCut Connect card for the Doctor of Philosophy (PhD) at the University of Toronto, Department of Computer Science, in Toronto, Canada, with an application deadline of 1 December 2026. The photo shows the red-brick Gooderham (Flatiron) Building in front of glass towers in downtown Toronto." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 112</span><span>Deadline 2026-12-01</span></div>
+          <p class="file">Image file: <code>13_22Oct_07h45_Offer_112.png</code></p>
+          <pre id="t-Offer_112">🎓🇨🇦 PhD in Computer Science at the University of Toronto, Canada!
+
+The University of Toronto Department of Computer Science is inviting applications for its full-time PhD programme in Toronto for Fall 2027, through the School of Graduate Studies.
+
+📍 Location: Toronto, Canada
+🎓 Level: PhD applicants
+🔬 Fields: Computer science
+📅 Deadline: 1 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/112-doctor-of-philosophy-phd/
+Know someone looking for a computer science PhD in Canada? Share this opportunity!
+#PhDOpportunities #UofT #ComputerScience #GraduateStudies #StudyInCanada #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_112">Copy post text</button>
+            <details><summary>Image alt text</summary><p>EduCut Connect card for the Doctor of Philosophy (PhD) at the University of Toronto, Department of Computer Science, in Toronto, Canada, with an application deadline of 1 December 2026. The photo shows the red-brick Gooderham (Flatiron) Building in front of glass towers in downtown Toronto.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_103">
+        <div class="when">
+          <span class="time">09:30</span>
+          <span class="date">22 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_103" data-k="Offer_103"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/14_22Oct_09h30_Offer_103.png" target="_blank" rel="noopener"><img src="cards/14_22Oct_09h30_Offer_103.png" alt="EduCut Connect card for the IMPRS-BAC PhD programme at the International Max Planck Research School for Biology and Computation (IMPRS-BAC) in Berlin, Germany, application deadline 7 Dec 2026. The photo shows Cologne Cathedral and the Hohenzollern Bridge lit up at night under a starry sky, used as a photo representing Germany." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 103</span><span>Deadline 2026-12-07</span></div>
+          <p class="file">Image file: <code>14_22Oct_09h30_Offer_103.png</code></p>
+          <pre id="t-Offer_103">🎓🇩🇪 PhD Program at the Max Planck School for Biology and Computation, Germany!
+
+The International Max Planck Research School for Biology and Computation (IMPRS-BAC) is inviting applications for its full-time doctoral programme in Berlin, with interviews for shortlisted candidates at the end of March 2027.
+
+📍 Location: Berlin, Germany
+🎓 Level: PhD applicants
+🔬 Fields: Biology and computation
+📅 Deadline: 7 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/103-imprs-bac/
+Know someone looking for a PhD at the crossroads of biology and computing? Share this opportunity!
+#PhDOpportunities #MaxPlanck #ComputationalBiology #DoctoralResearch #StudyInGermany #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_103">Copy post text</button>
+            <details><summary>Image alt text</summary><p>EduCut Connect card for the IMPRS-BAC PhD programme at the International Max Planck Research School for Biology and Computation (IMPRS-BAC) in Berlin, Germany, application deadline 7 Dec 2026. The photo shows Cologne Cathedral and the Hohenzollern Bridge lit up at night under a starry sky, used as a photo representing Germany.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_109">
+        <div class="when">
+          <span class="time">11:15</span>
+          <span class="date">22 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_109" data-k="Offer_109"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/15_22Oct_11h15_Offer_109.png" target="_blank" rel="noopener"><img src="cards/15_22Oct_11h15_Offer_109.png" alt="Card for the 2027-28 Fellows Program at the Center for Information Technology Policy (CITP), Princeton University, in Princeton, United States, with a deadline of 7 Dec 2026. The photo is a general United States image showing the Statue of Liberty in front of the Manhattan skyline and the Empire State Building in New York, not Princeton." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 109</span><span>Deadline 2026-12-07</span></div>
+          <p class="file">Image file: <code>15_22Oct_11h15_Offer_109.png</code></p>
+          <pre id="t-Offer_109">🎓🇺🇸 Postdoctoral Fellowship at Princeton University's CITP, USA!
+
+The Center for Information Technology Policy (CITP) at Princeton University is inviting applications for its 2027-28 Fellows Program, including an on-site Postdoctoral Track starting on 1 September.
+
+📍 Location: Princeton, United States
+🎓 Level: Postdoctoral (Postdoctoral Track)
+🔬 Fields: Information technology policy
+📅 Deadline: 7 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/109-2027-28-fellows-program/
+Know a researcher working on technology and public policy? Share this opportunity!
+#Postdoc #PrincetonUniversity #TechPolicy #Fellowship #StudyInUSA #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_109">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Card for the 2027-28 Fellows Program at the Center for Information Technology Policy (CITP), Princeton University, in Princeton, United States, with a deadline of 7 Dec 2026. The photo is a general United States image showing the Statue of Liberty in front of the Manhattan skyline and the Empire State Building in New York, not Princeton.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_096">
+        <div class="when">
+          <span class="time">12:45</span>
+          <span class="date">22 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_096" data-k="Offer_096"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/16_22Oct_12h45_Offer_096.png" target="_blank" rel="noopener"><img src="cards/16_22Oct_12h45_Offer_096.png" alt="Black EduCut Connect card for the Ph.D. Program in Machine Learning at Carnegie Mellon University, Machine Learning Department, in Pittsburgh, United States, with an application deadline of 9 Dec 2026. The photo is a general United States image of the Statue of Liberty in front of the Manhattan skyline and the Empire State Building in New York, not Pittsburgh." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 096</span><span>Deadline 2026-12-09</span></div>
+          <p class="file">Image file: <code>16_22Oct_12h45_Offer_096.png</code></p>
+          <pre id="t-Offer_096">🎓🇺🇸 PhD Program in Machine Learning at Carnegie Mellon University, USA!
+
+Carnegie Mellon University's Machine Learning Department is inviting applications for its full-time PhD Program in Machine Learning in Pittsburgh for Fall 2027 entry, with an early deadline on 18 November 2026.
+
+📍 Location: Pittsburgh, United States
+🎓 Level: PhD applicants
+🔬 Fields: Machine learning
+📅 Deadline: 9 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/096-ph-d-program-in-machine-learning/
+Know someone aiming for a PhD in machine learning in the USA? Share this opportunity!
+#PhDOpportunities #MachineLearning #CarnegieMellon #ArtificialIntelligence #StudyInUSA #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_096">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Black EduCut Connect card for the Ph.D. Program in Machine Learning at Carnegie Mellon University, Machine Learning Department, in Pittsburgh, United States, with an application deadline of 9 Dec 2026. The photo is a general United States image of the Statue of Liberty in front of the Manhattan skyline and the Empire State Building in New York, not Pittsburgh.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_093">
+        <div class="when">
+          <span class="time">14:30</span>
+          <span class="date">22 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_093" data-k="Offer_093"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/17_22Oct_14h30_Offer_093.png" target="_blank" rel="noopener"><img src="cards/17_22Oct_14h30_Offer_093.png" alt="Black EduCut Connect card for &quot;Main Conference Papers - ACL 2027&quot; from ACL 2027 (65th Annual Meeting of the Association for Computational Linguistics) in Kyoto, Japan, with a submission deadline of 4 Jan 2027. The photo shows the illuminated Tokyo Tower and the Tokyo skyline at sunset (a general Japan image, not Kyoto)." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 093</span><span>Deadline 2027-01-04</span></div>
+          <p class="file">Image file: <code>17_22Oct_14h30_Offer_093.png</code></p>
+          <pre id="t-Offer_093">🎓🇯🇵 Call for Papers at ACL 2027 in Kyoto, Japan!
+
+ACL 2027, the 65th Annual Meeting of the Association for Computational Linguistics, invites long and short papers for its main conference in Kyoto from 17 to 22 August 2027, reviewed through ACL Rolling Review.
+
+📍 Location: Kyoto, Japan
+🎓 Level: Researchers
+🔬 Fields: Computational Linguistics, Natural Language Processing
+📅 Deadline: 4 January 2027
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/093-main-conference-papers-acl-2027/
+Know a researcher working on NLP or computational linguistics? Share this opportunity!
+#CallForPapers #NLP #ComputationalLinguistics #ACL2027 #Japan #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_093">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Black EduCut Connect card for &quot;Main Conference Papers - ACL 2027&quot; from ACL 2027 (65th Annual Meeting of the Association for Computational Linguistics) in Kyoto, Japan, with a submission deadline of 4 Jan 2027. The photo shows the illuminated Tokyo Tower and the Tokyo skyline at sunset (a general Japan image, not Kyoto).</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_102">
+        <div class="when">
+          <span class="time">16:15</span>
+          <span class="date">22 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_102" data-k="Offer_102"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/18_22Oct_16h15_Offer_102.png" target="_blank" rel="noopener"><img src="cards/18_22Oct_16h15_Offer_102.png" alt="Card for the IJCNN 2027 call for papers from the International Joint Conference on Neural Networks (IJCNN 2027), Cape Town, South Africa, with a deadline of 31 Jan 2027. The photo shows the elephant statues and domed towers of the Palace of the Lost City at Sun City, South Africa." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 102</span><span>Deadline 2027-01-31</span></div>
+          <p class="file">Image file: <code>18_22Oct_16h15_Offer_102.png</code></p>
+          <pre id="t-Offer_102">🎓🇿🇦 Call for Papers at IJCNN 2027 in Cape Town, South Africa!
+
+The International Joint Conference on Neural Networks (IJCNN 2027) is inviting regular papers for its conference in Cape Town from 14 to 18 June 2027, with submissions opening on 1 December 2026.
+
+📍 Location: Cape Town, South Africa
+🎓 Level: Researchers
+🔬 Fields: Neural networks and machine learning
+📅 Deadline: 31 January 2027
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/102-ijcnn-2027/
+Know a researcher working on neural networks? Share this opportunity!
+#CallForPapers #IJCNN2027 #NeuralNetworks #MachineLearning #SouthAfrica #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_102">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Card for the IJCNN 2027 call for papers from the International Joint Conference on Neural Networks (IJCNN 2027), Cape Town, South Africa, with a deadline of 31 Jan 2027. The photo shows the elephant statues and domed towers of the Palace of the Lost City at Sun City, South Africa.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_111">
+        <div class="when">
+          <span class="time">17:45</span>
+          <span class="date">22 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_111" data-k="Offer_111"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/19_22Oct_17h45_Offer_111.png" target="_blank" rel="noopener"><img src="cards/19_22Oct_17h45_Offer_111.png" alt="Card for the Taiwan International Graduate Program at Academia Sinica in Taipei, Taiwan, with an application deadline of 1 Feb 2027. The photo is a generic default image, not of Taiwan: an aerial city skyline at sunset with a single tall spire tower beside a wide river, which appears to be Landmark 81 in Ho Chi Minh City." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 111</span><span>Deadline 2027-02-01</span></div>
+          <p class="file">Image file: <code>19_22Oct_17h45_Offer_111.png</code></p>
+          <pre id="t-Offer_111">🎓🇹🇼 Taiwan International Graduate Program at Academia Sinica, Taiwan!
+
+Academia Sinica is inviting applications for its Taiwan International Graduate Program (TIGP), a full-time PhD programme in Taipei for fall 2027 entry, with no application fee.
+
+📍 Location: Taipei, Taiwan
+🎓 Level: PhD applicants
+🔬 Fields: Multiple research programs
+📅 Deadline: 1 February 2027
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/111-taiwan-international-graduate-program/
+Know someone looking for an international PhD in Taiwan? Share this opportunity!
+#PhDOpportunities #AcademiaSinica #TIGP #GraduateStudies #StudyInTaiwan #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_111">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Card for the Taiwan International Graduate Program at Academia Sinica in Taipei, Taiwan, with an application deadline of 1 Feb 2027. The photo is a generic default image, not of Taiwan: an aerial city skyline at sunset with a single tall spire tower beside a wide river, which appears to be Landmark 81 in Ho Chi Minh City.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_105">
+        <div class="when">
+          <span class="time">19:30</span>
+          <span class="date">22 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_105" data-k="Offer_105"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/20_22Oct_19h30_Offer_105.png" target="_blank" rel="noopener"><img src="cards/20_22Oct_19h30_Offer_105.png" alt="Card for Interspeech 2027, organised by Interspeech 2027 (International Speech Communication Association, ISCA), in São Paulo, Brazil, with a paper deadline of 9 Feb 2027. The photo is an aerial view of Rio de Janeiro, Brazil, showing the Christ the Redeemer statue on Corcovado and Sugarloaf Mountain above Guanabara Bay." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 105</span><span>Deadline 2027-02-09</span></div>
+          <p class="file">Image file: <code>20_22Oct_19h30_Offer_105.png</code></p>
+          <pre id="t-Offer_105">🎓🇧🇷 Call for Papers at Interspeech 2027 in São Paulo, Brazil!
+
+Interspeech 2027, the conference of the International Speech Communication Association (ISCA), is inviting paper submissions for its meeting in São Paulo from 29 August to 2 September 2027.
+
+📍 Location: São Paulo, Brazil
+🎓 Level: Researchers
+🔬 Fields: Speech communication and spoken language processing
+📅 Deadline: 9 February 2027
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/105-interspeech-2027/
+Know a researcher working on speech and spoken language processing? Share this opportunity!
+#CallForPapers #Interspeech2027 #SpeechProcessing #SpokenLanguage #Brazil #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_105">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Card for Interspeech 2027, organised by Interspeech 2027 (International Speech Communication Association, ISCA), in São Paulo, Brazil, with a paper deadline of 9 Feb 2027. The photo is an aerial view of Rio de Janeiro, Brazil, showing the Christ the Redeemer statue on Corcovado and Sugarloaf Mountain above Guanabara Bay.</p></details>
+          </div>
+        </div>
+      </article>
+      <article class="post" id="Offer_106">
+        <div class="when">
+          <span class="time">21:15</span>
+          <span class="date">22 Oct 2026</span>
+          <label class="done"><input type="checkbox" id="done-Offer_106" data-k="Offer_106"> Scheduled</label>
+        </div>
+        <a class="img" href="cards/21_22Oct_21h15_Offer_106.png" target="_blank" rel="noopener"><img src="cards/21_22Oct_21h15_Offer_106.png" alt="Card for the Early Career Fellowships offered by The Leverhulme Trust in the United Kingdom, deadline 18 Feb 2027. The photo shows the Elizabeth Tower (Big Ben), the Houses of Parliament and Westminster Bridge in London under a blue sky." loading="lazy" width="1080" height="1350"></a>
+        <div class="body">
+          <div class="meta"><span class="offer">Offer 106</span><span>Deadline 2027-02-18</span></div>
+          <p class="file">Image file: <code>21_22Oct_21h15_Offer_106.png</code></p>
+          <pre id="t-Offer_106">🎓🇬🇧 Early Career Fellowships at the Leverhulme Trust, UK!
+
+The Leverhulme Trust is inviting applications for its 2027 Early Career Fellowships, supporting early-career researchers for 36 months at a UK host university, with applications submitted through the host university.
+
+📍 Location: United Kingdom
+🎓 Level: Early-career researchers
+🔬 Fields: All research disciplines
+📅 Deadline: 18 February 2027
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/106-early-career-fellowships/
+Know an early-career researcher looking for a fellowship in the UK? Share this opportunity!
+#EarlyCareerResearch #LeverhulmeTrust #Fellowship #AcademicCareers #UnitedKingdom #EduCutConnect #EduCutAI</pre>
+          <div class="actions">
+            <button type="button" class="copy" data-t="t-Offer_106">Copy post text</button>
+            <details><summary>Image alt text</summary><p>Card for the Early Career Fellowships offered by The Leverhulme Trust in the United Kingdom, deadline 18 Feb 2027. The photo shows the Elizabeth Tower (Big Ben), the Houses of Parliament and Westminster Bridge in London under a blue sky.</p></details>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+<script>
+const KEY='educut-kit-done';let done={};try{done=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const boxes=[...document.querySelectorAll('input[data-k]')];
+function paint(){let c=0;for(const b of boxes){b.checked=!!done[b.dataset.k];b.closest('.post').classList.toggle('is-done',b.checked);if(b.checked)c++}document.getElementById('progress').innerHTML='<b>'+c+'</b> of '+boxes.length+' scheduled on LinkedIn'}
+boxes.forEach(b=>b.addEventListener('change',()=>{done[b.dataset.k]=b.checked;try{localStorage.setItem(KEY,JSON.stringify(done))}catch(e){}paint()}));
+paint();
+document.querySelectorAll('button.copy').forEach(btn=>btn.addEventListener('click',()=>{const pre=document.getElementById(btn.dataset.t);
+const ok=()=>{btn.textContent='Copied';btn.classList.add('ok');setTimeout(()=>{btn.textContent='Copy post text';btn.classList.remove('ok')},1800)};
+const sel=()=>{const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected: press Ctrl/Cmd+C'};
+try{navigator.clipboard.writeText(pre.textContent).then(ok,sel)}catch(e){sel()}}));
+</script>

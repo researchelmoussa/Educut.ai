@@ -13,12 +13,13 @@ import { parseLinks } from './lib/sources.mjs';
 import { addLandmark, fetchLandmark, findLandmark } from './lib/landmarks.mjs';
 import { Registry, deadlineEnd, emptyRegistry } from './lib/registry.mjs';
 import { renderCard } from './lib/render.mjs';
+import { buildKit } from './lib/kit.mjs';
 import { POST_FORMAT, checkPost, composePost, linkedinConfigured, loadQueue, localDay, markPosted, pendingOffers, planSlots, publishPost, saveQueue } from './lib/linkedin.mjs';
 import { SITE_SECTION, addEntry, briefText, buildSite, loadOffers, offerSlug, pageUrl, removeEntry, webBrief } from './lib/site.mjs';
 import { validateSchema } from './lib/schema.mjs';
 import { summarize, validateComms, validateRecord, validateVisual } from './lib/validate.mjs';
 import {
-  CONNECT_DIR, canonicalUrl, contentHash, fingerprint, loadConfig, logger, nowIso, offerFolderName, opportunityId,
+  CONNECT_DIR, REPO_DIR, canonicalUrl, contentHash, fingerprint, loadConfig, logger, nowIso, offerFolderName, opportunityId,
   readJson, sha256, writeJson,
 } from './lib/util.mjs';
 
@@ -100,6 +101,11 @@ const commands = {
   li-schedule [--reschedule]          Give every draft a time between 07:00 and 22:00, max 10 a day (bigger
                                       batches spread over the next days), evenly spaced, most urgent first;
                                       --reschedule also re-spreads overdue posts
+  li-kit [--date YYYY-MM-DD] [--rebuild] [--out dir]
+                                      Posting kit for posting by hand: every scheduled post not yet in a kit
+                                      (index.html + posts.md + numbered card images) in connect/linkedin/kits/<date>/;
+                                      --rebuild remakes that date's kit
+  li-done <Offer_NNN…> [--url u]      Mark posts as published by hand
   li-publish-due [--dry-run] [--max n]
                                       Publish scheduled posts that are due (LinkedIn Posts API; GitHub Action)
   li-status                           Queue overview
@@ -622,6 +628,37 @@ const commands = {
     out({ scheduled: scheduled.map((p) => ({ offer: p.offer, at: p.scheduled_at, local: `${fmt(p.scheduled_at)} (${L.time_zone})` })), per_day: perDay, unscheduled: drafts.filter((p) => p.status === 'DRAFT').map((p) => p.offer), needs_rewrite: q.posts.filter((p) => ['DRAFT', 'SCHEDULED'].includes(p.status) && p.format !== POST_FORMAT).map((p) => p.offer) });
   },
 
+  // Posting kit: the posts are handed to the administrator, who schedules them by hand on LinkedIn; the
+  // API publisher then leaves them alone (see li-publish-due).
+  'li-kit'() {
+    const root = flags.site ? resolve(flags.site) : undefined;
+    const L = config.linkedin;
+    const date = typeof flags.date === 'string' ? flags.date : localDay(Date.now(), L.time_zone);
+    const q = loadQueue(root);
+    const posts = q.posts.filter((p) => p.status === 'SCHEDULED' && p.format === POST_FORMAT && (flags.rebuild ? p.kit === date : !p.kit));
+    if (!posts.length) return out({ date, posts: 0, note: flags.rebuild ? `no kit for ${date}` : 'no newly scheduled posts' });
+    const outDir = typeof flags.out === 'string' ? resolve(flags.out) : join(root ?? REPO_DIR, 'connect', 'linkedin', 'kits', date);
+    const r = buildKit(posts, { outDir, root, timeZone: L.time_zone, title: `EduCut Connect posting kit, ${date}` });
+    for (const p of posts) p.kit = date;
+    saveQueue(q, root);
+    log('li.kit', { date, posts: r.posts });
+    out({ date, ...r });
+  },
+
+  'li-done'() {
+    const root = flags.site ? resolve(flags.site) : undefined;
+    if (!args.length) fail('li-done <Offer_NNN…> [--url <post-url>]');
+    const q = loadQueue(root);
+    const done = [];
+    for (const key of args) {
+      const p = q.posts.find((x) => x.offer === key || x.slug === key || x.opportunity_id === key) ?? fail(`not in the queue: ${key}`);
+      Object.assign(p, { status: 'POSTED', posted_at: nowIso(), posted_by: 'hand', ...(typeof flags.url === 'string' ? { post_url: flags.url } : {}) });
+      done.push(p.offer);
+    }
+    saveQueue(q, root);
+    out({ posted: done });
+  },
+
   async 'li-publish-due'() {
     const root = flags.site ? resolve(flags.site) : undefined;
     const dry = Boolean(flags['dry-run']);
@@ -629,7 +666,8 @@ const commands = {
     if (!linkedinConfigured() && !dry) return out({ published: [], reason: 'LINKEDIN_ACCESS_TOKEN / LINKEDIN_ORGANIZATION_ID not set' });
     const q = loadQueue(root);
     const now = Date.now();
-    const due = q.posts.filter((p) => p.status === 'SCHEDULED' && p.format === POST_FORMAT && Date.parse(p.scheduled_at) <= now).sort((a, b) => a.scheduled_at.localeCompare(b.scheduled_at));
+    // Posts handed out in a posting kit are scheduled by hand on LinkedIn: never publish them twice.
+    const due = q.posts.filter((p) => p.status === 'SCHEDULED' && p.format === POST_FORMAT && !p.kit && Date.parse(p.scheduled_at) <= now).sort((a, b) => a.scheduled_at.localeCompare(b.scheduled_at));
     const published = [];
     for (const p of due.slice(0, Number(flags.max ?? config.linkedin.max_posts_per_run))) {
       const offer = loadOffers(root).offers.find((o) => o.opportunity_id === p.opportunity_id);

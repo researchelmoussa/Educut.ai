@@ -21,7 +21,14 @@ Apply the administrator's decisions in `$ARGUMENTS`, e.g. `approve Offer_003 Off
      Then launch the **linkedin** subagent: it writes the post for each newly listed offer (card image +
      🎓🇺🇸 headline + intro + 📍🎓💰🔬📅 facts + offer page link + share line + hashtags) and schedules every
      one of them on the "EduCut Connect" page between 07:00 and 22:00, at most 10 a day (more than 10 →
-     spread over 2 days); the GitHub Action `linkedin-publish.yml` publishes them at those times.
+     spread over 2 days), and builds the day's **posting kit** (`connect/linkedin/kits/<date>/`).
+     Hand the kit to the administrator, who posts by hand until the LinkedIn API token exists:
+     - publish `connect/linkedin/kits/<date>/index.html` with the Artifact tool, title
+       "EduCut Connect posting kit, <date>", with every `cards/*.png` passed in `files` (same relative paths);
+     - send all `cards/*.png` with SendUserFile (`display: attach`), in posting order, because images
+       cannot be saved from the artifact page;
+     - give the GitHub link https://github.com/researchelmoussa/Educut.ai/tree/main/connect/linkedin/kits/<date>
+     When the administrator says posts are scheduled or live, run `node connect/cli.mjs li-done <Offer_NNN…>`.
    - reject → `node connect/cli.mjs reject <id> --reason "<text>" --by "<name>"`; if the offer is on the website,
      `site-remove <id>` + `site-build` and commit that to `main` too.
    - revise → `node connect/cli.mjs revise <id> --note "<text>" --by "<name>"`, then rerun the responsible agent

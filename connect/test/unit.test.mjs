@@ -179,3 +179,24 @@ test('linkedin: post follows the EduCut Connect format and little-text escaping'
   const lt = littleText('At Example (EI) #EduCutAI');
   assert.ok(lt.includes('Example \\(EI\\)') && lt.includes('{hashtag|\\#|EduCutAI}'));
 });
+
+test('linkedin: posting kit lists newly scheduled posts once, in order, with numbered card files', async () => {
+  const { mkdtempSync, mkdirSync, writeFileSync, readFileSync, existsSync } = await import('node:fs');
+  const { tmpdir } = await import('node:os');
+  const { join: j } = await import('node:path');
+  const { buildKit } = await import('../lib/kit.mjs');
+  const root = mkdtempSync(j(tmpdir(), 'kit-'));
+  mkdirSync(j(root, 'educut-connect', '001-a'), { recursive: true });
+  writeFileSync(j(root, 'educut-connect', '001-a', 'card.png'), 'png');
+  const posts = [
+    { offer: 'Offer_002', slug: '002-b', scheduled_at: '2026-10-21T15:00:00.000Z', text: 'Second <post>', alt_text: 'b', deadline: '2026-11-01' },
+    { offer: 'Offer_001', slug: '001-a', scheduled_at: '2026-10-21T06:00:00.000Z', text: 'First post', alt_text: 'a', deadline: '2026-11-01' },
+  ];
+  const r = buildKit(posts, { outDir: j(root, 'kit'), root, timeZone: 'Europe/Zurich', title: 'Kit' });
+  assert.equal(r.posts, 2);
+  assert.ok(r.cards[0].endsWith('01_21Oct_08h00_Offer_001.png') && existsSync(r.cards[0]));
+  assert.deepEqual(r.missing_images, ['Offer_002']);
+  const html = readFileSync(r.page, 'utf8');
+  assert.ok(html.indexOf('Offer_001') < html.indexOf('Offer_002') && html.includes('Second &lt;post&gt;'));
+  assert.ok(readFileSync(j(root, 'kit', 'posts.md'), 'utf8').includes('### 17:00 · Offer_002'));
+});
