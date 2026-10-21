@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "2027 PhD student programme",
+    "evidence_url": "https://www.crick.ac.uk/careers-and-study/students/phd-students/phd-student-positions",
+    "evidence_quote": "Positions: 2027 PhD student programme"
+  },
+  "institution": {
+    "name": "The Francis Crick Institute",
+    "website": "https://www.crick.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.crick.ac.uk/careers-and-study/students/phd-students/how-to-apply-phd-programme",
+  "source_url": "https://www.crick.ac.uk/careers-and-study/students/phd-students/phd-student-positions",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "London",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Biomedical sciences",
+  "seniority": "Doctoral",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Francis Crick Institute 2027 PhD student programme, including computational projects. Applications close at 12:00 GMT on 3 November 2026, with references by 10 November. The programme begins on 27 September 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-03T12:00:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.crick.ac.uk/careers-and-study/students/phd-students/how-to-apply-phd-programme",
+    "evidence_quote": "The application deadline is 12:00 (midday, GMT) Tuesday 3 November 2026."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Crick pages (search results): deadline 12:00 GMT 3 November 2026; late applications not accepted",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Page age metadata in the results looked inconsistent with the 2027 cycle",
+    "City/country taken from the institution (London), not quoted from this page",
+    "Stipend not confirmed in the results"
+  ],
+  "discovered_at": "2026-10-21T01:59:18.722Z",
+  "last_verified_at": "2026-10-21T01:59:19.151Z",
+  "id": "opp_bdc29cb31994717e",
+  "fingerprint": "3adb980af603d272",
+  "content_hash": "sha256:0f79932e0e9449c6f47133c83e90262172897ef553eeacfc948a9c3172114c18"
+}

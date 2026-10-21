@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "International selection",
+    "evidence_url": "https://www.ens.psl.eu/en/une-formation-d-exception/admissions/international/international-selection",
+    "evidence_quote": "International selection"
+  },
+  "institution": {
+    "name": "École normale supérieure - PSL (ENS)",
+    "website": "https://www.ens.psl.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ens.psl.eu/en/une-formation-d-exception/admissions/international/international-selection",
+  "source_url": "https://www.ens.psl.eu/en/une-formation-d-exception/admissions/international/international-selection",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Paris",
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Sciences",
+  "seniority": "Undergraduate / Master's",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "ENS-PSL's International Selection (Sciences) for 2027 accepts applications via OnePSL30 from 16 October to 15 December 2026, 14:00 Paris time. Candidates must be under 26 and have at least one year of undergraduate study abroad.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15T14:00:00+01:00",
+    "timezone": "Europe/Paris",
+    "evidence_url": "https://www.ens.psl.eu/en/une-formation-d-exception/admissions/international/international-selection",
+    "evidence_quote": "From 16 October 2026 (14.00, Paris time) to 15 December 2026 (14.00, Paris time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ENS page (search results): application window 16 October 2026 to 15 December 2026 (14:00 Paris time)",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "The same page also shows \"16 October 2027 - 15 December 2027\", apparently a typo",
+    "Stipend/benefits not confirmed in the results",
+    "Arts & Humanities track deadline not shown"
+  ],
+  "discovered_at": "2026-10-21T01:59:18.722Z",
+  "last_verified_at": "2026-10-21T01:59:20.108Z",
+  "id": "opp_7a22e710d591a879",
+  "fingerprint": "c14d72048d6adfb0",
+  "content_hash": "sha256:85c17adf7a7c9d18b7ac01f66adc485f85d0259d33f45e2711ae649b862b4afa"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doctor of Philosophy in Computer Science (PhD)",
+    "evidence_url": "https://www.grad.ubc.ca/prospective-students/graduate-degree-programs/phd-computer-science",
+    "evidence_quote": "Doctor of Philosophy in Computer Science (PhD)"
+  },
+  "institution": {
+    "name": "The University of British Columbia, Department of Computer Science",
+    "website": "https://www.cs.ubc.ca",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cs.ubc.ca/students/grad/admissions",
+  "source_url": "https://www.grad.ubc.ca/prospective-students/graduate-degree-programs/phd-computer-science",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Vancouver",
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Doctoral",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "PhD in Computer Science at UBC Vancouver for September 2027 or January 2028 starts. The department portal opened September 15, 2026 and closes December 15, 2026; the department describes its research programs as fully funded.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": null,
+    "evidence_url": "https://www.cs.ubc.ca/students/grad/admissions",
+    "evidence_quote": "December 15, 2026, is the application deadline for programs beginning in September 2027 or January 2028."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UBC CS admissions page (search results): December 15, 2026 deadline for September 2027 / January 2028 starts",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "UBC Okanagan campus lists a different date (January 10, 2027); this record is for Vancouver",
+    "Referee deadline January 15, 2027 for Canadian applicants (Graduate Studies page)",
+    "Deadline time of day not shown"
+  ],
+  "discovered_at": "2026-10-21T01:59:18.722Z",
+  "last_verified_at": "2026-10-21T01:59:23.064Z",
+  "id": "opp_8a930a4c486937e8",
+  "fingerprint": "f5470983da3cc765",
+  "content_hash": "sha256:22a471fd8b48e4b289a4d69232f037c31de16692f7b7b47e2aa60615b5d8121a"
+}

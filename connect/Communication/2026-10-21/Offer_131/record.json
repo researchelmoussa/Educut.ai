@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Justus & Louise van Effen Excellence Scholarships",
+    "evidence_url": "https://www.tudelft.nl/onderwijs/studievoorlichting/praktische-zaken/scholarships/justus-louise-van-effen-excellence-scholarships",
+    "evidence_quote": "Justus & Louise van Effen Excellence Scholarships"
+  },
+  "institution": {
+    "name": "Delft University of Technology (TU Delft)",
+    "website": "https://www.tudelft.nl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.tudelft.nl/onderwijs/studievoorlichting/praktische-zaken/scholarships/justus-louise-van-effen-excellence-scholarships",
+  "source_url": "https://www.tudelft.nl/onderwijs/studievoorlichting/praktische-zaken/scholarships/justus-louise-van-effen-excellence-scholarships",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Delft",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": null,
+  "seniority": "Master's",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "TU Delft scholarships for international applicants (conditionally) admitted to a 2-year regular TU Delft MSc programme. At least 16 are awarded each year. The complete MSc and scholarship application is due 1 December 2026 (23:59 CET).",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01T23:59:00+01:00",
+    "timezone": "Europe/Amsterdam",
+    "evidence_url": "https://www.tudelft.nl/onderwijs/studievoorlichting/praktische-zaken/scholarships/justus-louise-van-effen-excellence-scholarships",
+    "evidence_quote": "1 December 2026 (23:59 CET)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official TU Delft page (search results): scholarship deadline 1 December 2026, 23:59 CET",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Award values in the results come from an undated page; left null",
+    "Current TU Delft bachelor students and holders of Dutch bachelor degrees are excluded"
+  ],
+  "discovered_at": "2026-10-21T01:59:18.722Z",
+  "last_verified_at": "2026-10-21T01:59:22.877Z",
+  "id": "opp_7e49aa6141cc9cc7",
+  "fingerprint": "c39c0ebd8fda1b5e",
+  "content_hash": "sha256:cd15f28b2fceb30967b9de8c8db68b7ff62acd7e7ab30a1ed59c34d2ad8549f7"
+}

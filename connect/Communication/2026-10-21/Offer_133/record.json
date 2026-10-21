@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "The Mastercard Foundation Scholars Program",
+    "evidence_url": "https://uct.ac.za/mastercardfdn/apply-mastercard-foundation-scholars-program",
+    "evidence_quote": "Apply to The Mastercard Foundation Scholars Program"
+  },
+  "institution": {
+    "name": "University of Cape Town",
+    "website": "https://uct.ac.za",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://uct.ac.za/mastercardfdn/apply-mastercard-foundation-scholars-program",
+  "source_url": "https://uct.ac.za/mastercardfdn/apply-mastercard-foundation-scholars-program",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "country_code": "ZA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": null,
+  "seniority": "Honours / Master's / Postgraduate diploma",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Mastercard Foundation Scholars Program at the University of Cape Town for the 2027 intake. Honours, master's and eligible postgraduate diploma applicants apply by 31 October 2026, after submitting an academic application to UCT.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-10-31",
+    "timezone": null,
+    "evidence_url": "https://uct.ac.za/mastercardfdn/apply-mastercard-foundation-scholars-program",
+    "evidence_quote": "For applicants to an eligible postgraduate diploma in the Faculty of Health Sciences or an honours degree or master's programme, the deadline is 31 October 2026."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UCT page (search results): postgraduate deadline 31 October 2026",
+    "Deadline is in the future",
+    "Undergraduate route for 2027 already closed (30 September 2026)",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Eligibility (nationality, need) not confirmed in the results",
+    "Deadline time of day not shown",
+    "Country taken from the institution (University of Cape Town)"
+  ],
+  "discovered_at": "2026-10-21T01:59:18.722Z",
+  "last_verified_at": "2026-10-21T01:59:23.267Z",
+  "id": "opp_e7b6e40b96d08215",
+  "fingerprint": "a53443d040df37bc",
+  "content_hash": "sha256:02856a575d5eae364b2056a8877f0aafc70db16353532af5fbf27c06d0efbaea"
+}

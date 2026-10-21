@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Outstanding Postdoctoral Program",
+    "evidence_url": "https://info.weizmann.ac.il/en/outstanding-postdoctoral-program/",
+    "evidence_quote": "Outstanding Postdoctoral Program"
+  },
+  "institution": {
+    "name": "Weizmann Institute of Science",
+    "website": "https://www.weizmann.ac.il",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://info.weizmann.ac.il/en/outstanding-postdoctoral-program/",
+  "source_url": "https://info.weizmann.ac.il/en/outstanding-postdoctoral-program/",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": null,
+    "country": "Israel",
+    "country_code": "IL"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": null,
+  "seniority": "Postdoctoral",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Weizmann Institute of Science's Outstanding Postdoctoral Program for international candidates within four years of their PhD or MD. Applications are due November 15, 2026; pre-application visits by January 1, 2027; decisions by end of January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-15",
+    "timezone": null,
+    "evidence_url": "https://info.weizmann.ac.il/en/outstanding-postdoctoral-program/",
+    "evidence_quote": "November 15, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Weizmann page (search results): application deadline November 15, 2026",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Fellowship amount mentioned in results but not quoted verbatim; left null",
+    "City not stated in the results",
+    "Deadline time of day not shown"
+  ],
+  "discovered_at": "2026-10-21T01:59:18.722Z",
+  "last_verified_at": "2026-10-21T01:59:23.447Z",
+  "id": "opp_dfadad53e085413b",
+  "fingerprint": "4de8ef4cd8754418",
+  "content_hash": "sha256:4628bb3a9d48b494a8990e62d0303bad8d6525a3372ee7bc147e2fbcf09b5225"
+}

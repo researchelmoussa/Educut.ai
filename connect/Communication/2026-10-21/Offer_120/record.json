@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Excellence Scholarship & Opportunity Programme",
+    "evidence_url": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+    "evidence_quote": "Excellence Scholarship & Opportunity Programme"
+  },
+  "institution": {
+    "name": "ETH Zurich",
+    "website": "https://ethz.ch",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+  "source_url": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Zurich",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": null,
+  "seniority": "Master's",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "ETH Zurich's Excellence Scholarship & Opportunity Programme (ESOP) supports Master's students starting in autumn 2027. Applicants apply in the first application window, 1-30 November 2026, and upload a Master's thesis pre-proposal. About 60 scholarships are planned.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-30T23:59:00+01:00",
+    "timezone": "Europe/Zurich",
+    "evidence_url": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+    "evidence_quote": "The next application window is open Nov, 1 - Nov, 30 2026, 11.59h, MEZ for a start in the Master programme in HS27."
+  },
+  "compensation": {
+    "value": "CHF 12'000 per semester, from HS27 onwards 13'500 CHF, plus a tuition fee waiver",
+    "evidence_url": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+    "evidence_quote": "CHF 12'000 per semester, from HS27 onwards 13'500 CHF, plus a tuition fee waiver"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ETH page (search results): next ESOP application window 1-30 November 2026 for a start in HS27",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Applications are submitted via eApply; the eApply link itself was not fetched",
+    "Window opens 1 November 2026; ESOP applications are only accepted in this first window",
+    "Older ETH pages show different deadlines (e.g. 15 December) for earlier cycles"
+  ],
+  "discovered_at": "2026-10-21T01:59:18.722Z",
+  "last_verified_at": "2026-10-21T01:59:20.483Z",
+  "id": "opp_52218ee1ebb780f1",
+  "fingerprint": "06c6f34834c19326",
+  "content_hash": "sha256:6126cb86ea4bd3f4187268ebcb46e2bcede1009e8c6caa10016daf83282d1b8e"
+}
