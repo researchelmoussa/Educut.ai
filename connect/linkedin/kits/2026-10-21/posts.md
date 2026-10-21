@@ -1,12 +1,433 @@
 # EduCut Connect posting kit, 2026-10-21
 
-21 posts, times in Europe/Zurich. Attach the image from `cards/`, paste the text, schedule at the time shown.
+42 posts, times in Europe/Zurich. Attach the image from `cards/`, paste the text, schedule at the time shown.
 
 ## Wednesday 21 Oct 2026
 
-### 14:00 · Offer_101
+### 13:45 · Offer_114
 
-Image: `cards/01_21Oct_14h00_Offer_101.png`
+Image: `cards/01_21Oct_13h45_Offer_114.png`
+
+```
+🎓🇬🇧 PhD Positions in Practice-Oriented AI at the University of Bristol, UK!
+
+The University of Bristol's UKRI Centre for Doctoral Training in Practice-Oriented Artificial Intelligence is recruiting PhD students for September 2027 entry, with the first recruitment round closing on 30 October 2026.
+
+📍 Location: Bristol, United Kingdom
+🎓 Level: Doctoral
+🔬 Fields: Artificial intelligence
+📅 Deadline: 30 October 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/114-ukri-centre-for-doctoral-training-in-practice-oriented/
+Know someone looking for an AI PhD in the UK? Share this opportunity!
+#PhDOpportunities #UniversityOfBristol #ArtificialIntelligence #DoctoralTraining #StudyInUK #EduCutConnect #EduCutAI
+```
+
+### 15:00 · Offer_133
+
+Image: `cards/02_21Oct_15h00_Offer_133.png`
+
+```
+🎓🇿🇦 Mastercard Foundation Scholars Program at the University of Cape Town, South Africa!
+
+The University of Cape Town is inviting applications to the Mastercard Foundation Scholars Program for its 2027 intake, open to applicants to honours, master's and eligible postgraduate diploma programmes.
+
+📍 Location: Cape Town, South Africa
+🎓 Level: Honours / Master's / Postgraduate diploma
+📅 Deadline: 31 October 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/133-the-mastercard-foundation-scholars-program/
+Know someone planning postgraduate studies in Cape Town? Share this opportunity!
+#Scholarship #MastercardFoundation #UCT #PostgraduateStudies #SouthAfrica #EduCutConnect #EduCutAI
+```
+
+### 16:00 · Offer_130
+
+Image: `cards/03_21Oct_16h00_Offer_130.png`
+
+```
+🎓🇺🇸 Call for Papers at STOC 2027 in Atlanta, USA!
+
+STOC 2027, the 59th ACM Symposium on Theory of Computing, is inviting papers for its symposium on 6-10 June 2027 in Atlanta as part of FCRC 2027, with submissions through HotCRP.
+
+📍 Location: Atlanta, United States
+🎓 Level: Researchers
+🔬 Fields: Theory of computing
+📅 Deadline: 2 November 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/130-stoc-2027-call-for-papers/
+Know a researcher working on the theory of computing? Share this opportunity!
+#CallForPapers #STOC2027 #TheoryOfComputing #ComputerScience #ACM #EduCutConnect #EduCutAI
+```
+
+### 17:00 · Offer_115
+
+Image: `cards/04_21Oct_17h00_Offer_115.png`
+
+```
+🎓🇬🇧 2027 PhD Student Programme at the Francis Crick Institute, UK!
+
+The Francis Crick Institute in London is inviting applications for its 2027 PhD student programme in biomedical sciences, which includes computational projects and begins on 27 September 2027.
+
+📍 Location: London, United Kingdom
+🎓 Level: Doctoral
+🔬 Fields: Biomedical sciences
+📅 Deadline: 3 November 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/115-2027-phd-student-programme/
+Know someone looking for a biomedical PhD in London? Share this opportunity!
+#PhDOpportunities #FrancisCrickInstitute #BiomedicalSciences #LifeSciences #StudyInUK #EduCutConnect #EduCutAI
+```
+
+### 18:15 · Offer_124
+
+Image: `cards/05_21Oct_18h15_Offer_124.png`
+
+```
+🎓🇧🇷 Summer 2027 Postdoctoral Program at IMPA, Brazil!
+
+IMPA, the Institute for Pure and Applied Mathematics, is inviting active researchers holding a PhD to its Summer 2027 Postdoctoral Program in mathematics at its Rio de Janeiro campus in January and February 2027.
+
+📍 Location: Rio de Janeiro, Brazil
+🎓 Level: Postdoctoral
+🔬 Fields: Mathematics
+📅 Deadline: 3 November 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/124-summer-2027-postdoctoral-program/
+Know a mathematician looking for a summer postdoc in Rio? Share this opportunity!
+#Postdoc #IMPA #Mathematics #AcademicResearch #Brazil #EduCutConnect #EduCutAI
+```
+
+### 19:15 · Offer_122
+
+Image: `cards/06_21Oct_19h15_Offer_122.png`
+
+```
+🎓🇬🇧 PhD Programme at the Gatsby Computational Neuroscience Unit, UCL, UK!
+
+The Gatsby Computational Neuroscience Unit at UCL is inviting applications for its four-year PhD programme in computational neuroscience and machine learning for 2027 entry, accepting up to 6 students a year.
+
+📍 Location: London, United Kingdom
+🎓 Level: Doctoral
+🔬 Fields: Computational Neuroscience, Machine Learning
+📅 Deadline: 9 November 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/122-gatsby-unit-phd-programme/
+Know someone fascinated by the brain and machine learning? Share this opportunity!
+#PhDOpportunities #GatsbyUnit #UCL #ComputationalNeuroscience #MachineLearning #EduCutConnect #EduCutAI
+```
+
+### 20:15 · Offer_121
+
+Image: `cards/07_21Oct_20h15_Offer_121.png`
+
+```
+🎓🇺🇸 Flatiron Research Fellowships at the Flatiron Institute, USA!
+
+The Flatiron Institute of the Simons Foundation is inviting applications for its Flatiron Research Fellowships at the Center for Computational Mathematics in New York, full-time postdoctoral positions.
+
+📍 Location: New York, United States
+🎓 Level: Postdoctoral
+🔬 Fields: Computational mathematics
+📅 Deadline: 15 November 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/121-flatiron-research-fellowships-frf-at-the-center-for/
+Know a researcher working in computational mathematics? Share this opportunity!
+#Postdoc #FlatironInstitute #ComputationalMathematics #ResearchFellowship #StudyInUSA #EduCutConnect #EduCutAI
+```
+
+### 21:30 · Offer_134
+
+Image: `cards/08_21Oct_21h30_Offer_134.png`
+
+```
+🎓🇮🇱 Outstanding Postdoctoral Program at the Weizmann Institute of Science, Israel!
+
+The Weizmann Institute of Science is inviting international candidates within four years of completing their PhD or MD to apply to its Outstanding Postdoctoral Program, with decisions expected by the end of January 2027.
+
+📍 Location: Israel
+🎓 Level: Postdoctoral
+🔬 Fields: All research fields
+📅 Deadline: 15 November 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/134-outstanding-postdoctoral-program/
+Know a recent PhD or MD looking for a postdoc in Israel? Share this opportunity!
+#Postdoc #WeizmannInstitute #Fellowship #ResearchCareers #Israel #EduCutConnect #EduCutAI
+```
+
+## Thursday 22 Oct 2026
+
+### 07:45 · Offer_120
+
+Image: `cards/09_22Oct_07h45_Offer_120.png`
+
+```
+🎓🇨🇭 Excellence Master's Scholarships at ETH Zurich, Switzerland!
+
+ETH Zurich is inviting applications for its Excellence Scholarship & Opportunity Programme (ESOP), supporting about 60 Master's students starting in autumn 2027 with a scholarship and a tuition fee waiver.
+
+📍 Location: Zurich, Switzerland
+🎓 Level: Master's
+💰 Funding: CHF 12,000 per semester (CHF 13,500 from HS27) plus a tuition fee waiver
+📅 Deadline: 30 November 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/120-excellence-scholarship-and-opportunity-programme/
+Know a top student planning a Master's at ETH Zurich? Share this opportunity!
+#Scholarship #ETHZurich #MastersDegree #FundedStudy #StudyInSwitzerland #EduCutConnect #EduCutAI
+```
+
+### 09:30 · Offer_131
+
+Image: `cards/10_22Oct_09h30_Offer_131.png`
+
+```
+🎓🇳🇱 Justus & Louise van Effen Excellence Scholarships at TU Delft, Netherlands!
+
+Delft University of Technology (TU Delft) is offering at least 16 Justus & Louise van Effen Excellence Scholarships each year to international applicants admitted to a 2-year regular MSc programme.
+
+📍 Location: Delft, Netherlands
+🎓 Level: Master's
+🔬 Fields: All 2-year TU Delft MSc programmes
+📅 Deadline: 1 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/131-justus-and-louise-van-effen-excellence-scholarships/
+Know an international student planning an MSc at TU Delft? Share this opportunity!
+#Scholarship #TUDelft #MastersDegree #InternationalStudents #StudyInNetherlands #EduCutConnect #EduCutAI
+```
+
+### 11:15 · Offer_125
+
+Image: `cards/11_22Oct_11h15_Offer_125.png`
+
+```
+🎓🇯🇵 Kyoto iUP International Undergraduate Program at Kyoto University, Japan!
+
+Kyoto University is inviting applications for its International Undergraduate Program (Kyoto iUP), offering 40 places for October 2027 enrollment, with no Japanese proficiency required to apply.
+
+📍 Location: Kyoto, Japan
+🎓 Level: Undergraduate
+📅 Deadline: 3 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/125-kyoto-iup-kyoto-university-international-undergraduate/
+Know a student dreaming of an undergraduate degree in Japan? Share this opportunity!
+#StudyInJapan #KyotoUniversity #UndergraduateAdmissions #InternationalStudents #HigherEducation #EduCutConnect #EduCutAI
+```
+
+### 12:45 · Offer_129
+
+Image: `cards/12_22Oct_12h45_Offer_129.png`
+
+```
+🎓🇺🇸 PhD in Data Science at the NYU Center for Data Science, USA!
+
+The NYU Center for Data Science in New York is inviting applications for its PhD in Data Science for Fall 2027 entry, with applications due online on 3 December 2026.
+
+📍 Location: New York, United States
+🎓 Level: Doctoral
+🔬 Fields: Data science
+📅 Deadline: 3 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/129-phd-in-data-science/
+Know someone looking for a data science PhD in New York? Share this opportunity!
+#PhDOpportunities #NYU #DataScience #DoctoralResearch #StudyInUSA #EduCutConnect #EduCutAI
+```
+
+### 14:30 · Offer_127
+
+Image: `cards/13_22Oct_14h30_Offer_127.png`
+
+```
+🎓🇦🇪 Master of Science in Machine Learning at MBZUAI, UAE!
+
+Mohamed bin Zayed University of Artificial Intelligence (MBZUAI) in Abu Dhabi is inviting applications for its Master of Science in Machine Learning for the fall 2027 intake, with a final deadline on 15 December 2026.
+
+📍 Location: Abu Dhabi, United Arab Emirates
+🎓 Level: Master's
+🔬 Fields: Machine learning
+📅 Deadline: 15 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/127-master-of-science-in-artificial-intelligence-machine/
+Know someone looking for a machine learning master's in the UAE? Share this opportunity!
+#MastersDegree #MBZUAI #MachineLearning #ArtificialIntelligence #StudyInUAE #EduCutConnect #EduCutAI
+```
+
+### 16:15 · Offer_118
+
+Image: `cards/14_22Oct_16h15_Offer_118.png`
+
+```
+🎓🇫🇷 International Selection in Sciences at École normale supérieure - PSL, France!
+
+École normale supérieure - PSL in Paris is inviting applications to its International Selection in sciences for 2027 admission, at undergraduate and master's level, through the OnePSL30 platform.
+
+📍 Location: Paris, France
+🎓 Level: Undergraduate / Master's
+🔬 Fields: Sciences
+📅 Deadline: 15 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/118-international-selection/
+Know a science student under 26 looking to study in Paris? Share this opportunity!
+#StudyInFrance #ENSPSL #Sciences #InternationalStudents #HigherEducation #EduCutConnect #EduCutAI
+```
+
+### 17:45 · Offer_132
+
+Image: `cards/15_22Oct_17h45_Offer_132.png`
+
+```
+🎓🇨🇦 Fully Funded PhD in Computer Science at the University of British Columbia, Canada!
+
+The University of British Columbia's Department of Computer Science is inviting applications for its PhD in Computer Science in Vancouver, for September 2027 or January 2028 starts.
+
+📍 Location: Vancouver, Canada
+🎓 Level: Doctoral
+💰 Funding: Research programs described as fully funded
+🔬 Fields: Computer science
+📅 Deadline: 15 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/132-doctor-of-philosophy-in-computer-science-phd/
+Know someone looking for a computer science PhD in Canada? Share this opportunity!
+#PhDOpportunities #UBC #ComputerScience #GraduateStudies #StudyInCanada #EduCutConnect #EduCutAI
+```
+
+### 19:30 · Offer_126
+
+Image: `cards/16_22Oct_19h30_Offer_126.png`
+
+```
+🎓 Max Planck-Weizmann Postdoctoral Programme by the Max Planck Society and Weizmann Institute!
+
+The Max Planck Society and the Weizmann Institute of Science are inviting applications for the seventh round of their joint postdoctoral programme, a four-year appointment split between Germany and Israel.
+
+🎓 Level: Postdoctoral
+🔬 Fields: All research fields
+📅 Deadline: 21 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/126-max-planck-weizmann-postdoctoral-programme/
+Know a new PhD looking for a postdoc in Germany and Israel? Share this opportunity!
+#Postdoc #MaxPlanck #WeizmannInstitute #Fellowship #ResearchCareers #EduCutConnect #EduCutAI
+```
+
+### 21:15 · Offer_128
+
+Image: `cards/17_22Oct_21h15_Offer_128.png`
+
+```
+🎓🇸🇬 PhD in Data Science at the National University of Singapore!
+
+The National University of Singapore is inviting applications for its NUS PhD (Data Science), run with the Institute of Data Science, for the August 2027 intake.
+
+📍 Location: Singapore
+🎓 Level: Doctoral
+🔬 Fields: Data science
+📅 Deadline: 31 December 2026
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/128-nus-phd-data-science/
+Know someone looking for a data science PhD in Singapore? Share this opportunity!
+#PhDOpportunities #NUS #DataScience #DoctoralResearch #StudyInSingapore #EduCutConnect #EduCutAI
+```
+
+## Friday 23 Oct 2026
+
+### 07:45 · Offer_123
+
+Image: `cards/18_23Oct_07h45_Offer_123.png`
+
+```
+🎓🇬🇧 Call for Papers at ICWSM 2027 in Edinburgh, UK!
+
+ICWSM 2027, the International AAAI Conference on Web and Social Media, is inviting full papers, posters, demos, dataset papers and workshop proposals for its conference in Edinburgh, Scotland.
+
+📍 Location: Edinburgh, United Kingdom
+🎓 Level: Researchers
+🔬 Fields: Web and social media research
+📅 Deadline: 15 January 2027
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/123-icwsm-2027/
+Know a researcher working on web and social media? Share this opportunity!
+#CallForPapers #ICWSM2027 #SocialMediaResearch #ComputationalSocialScience #Edinburgh #EduCutConnect #EduCutAI
+```
+
+### 09:30 · Offer_116
+
+Image: `cards/19_23Oct_09h30_Offer_116.png`
+
+```
+🎓🇬🇧 PhD in AI for Biomedical Innovation at the University of Edinburgh, UK!
+
+The UKRI AI Centre for Doctoral Training in Biomedical Innovation at the University of Edinburgh is inviting applications for its 2027 cohort, a PhD with Integrated Study combining artificial intelligence and biomedicine.
+
+📍 Location: Edinburgh, United Kingdom
+🎓 Level: Doctoral
+🔬 Fields: Artificial Intelligence, Biomedical Innovation
+📅 Deadline: 20 January 2027
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/116-centre-for-doctoral-training-in-artificial-intelligence-for/
+Know someone looking for a PhD in AI for biomedicine? Share this opportunity!
+#PhDOpportunities #UniversityOfEdinburgh #ArtificialIntelligence #BiomedicalInnovation #StudyInUK #EduCutConnect #EduCutAI
+```
+
+### 11:15 · Offer_119
+
+Image: `cards/20_23Oct_11h15_Offer_119.png`
+
+```
+🎓🇨🇭 Amgen Scholars Summer Research Program at ETH Zurich, Switzerland!
+
+ETH Zurich is inviting applications for the Amgen Scholars Program, a summer research programme in the life sciences for undergraduate students in Summer 2027.
+
+📍 Location: Zurich, Switzerland
+🎓 Level: Undergraduate
+🔬 Fields: Life sciences
+📅 Deadline: 1 February 2027
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/119-amgen-scholars-program/
+Know an undergraduate looking for a summer research experience in Zurich? Share this opportunity!
+#ResearchInternship #ETHZurich #AmgenScholars #LifeSciences #StudyInSwitzerland #EduCutConnect #EduCutAI
+```
+
+### 12:45 · Offer_117
+
+Image: `cards/21_23Oct_12h45_Offer_117.png`
+
+```
+🎓 EIPOD-LinC Postdoctoral Fellowships at EMBL!
+
+The European Molecular Biology Laboratory (EMBL) is opening its EIPOD-LinC postdoctoral fellowship call in interdisciplinary life sciences, running from 25 November 2026 to 1 February 2027.
+
+🎓 Level: Postdoctoral
+🔬 Fields: Interdisciplinary life sciences
+📅 Deadline: 1 February 2027
+
+🔗 Explore the opportunity and apply:
+https://educutai.com/educut-connect/117-eipod-linc-fellowship-programme/
+Know a new PhD looking for an interdisciplinary postdoc in the life sciences? Share this opportunity!
+#Postdoc #EMBL #LifeSciences #Fellowship #InterdisciplinaryResearch #EduCutConnect #EduCutAI
+```
+
+### 14:30 · Offer_101
+
+Image: `cards/22_23Oct_14h30_Offer_101.png`
 
 ```
 🎓🇮🇳 PhD Research Admission at the Indian Institute of Science, India!
@@ -24,9 +445,9 @@ Know someone looking for a science or engineering PhD in India? Share this oppor
 #PhDOpportunities #IISc #ResearchCareers #Engineering #StudyInIndia #EduCutConnect #EduCutAI
 ```
 
-### 15:15 · Offer_098
+### 16:15 · Offer_098
 
-Image: `cards/02_21Oct_15h15_Offer_098.png`
+Image: `cards/23_23Oct_16h15_Offer_098.png`
 
 ```
 🎓 Call for Papers at ACM FAccT 2027!
@@ -43,9 +464,9 @@ Know a researcher working on fair and accountable AI? Share this opportunity!
 #CallForPapers #FAccT #ResponsibleAI #AIEthics #Research #EduCutConnect #EduCutAI
 ```
 
-### 16:30 · Offer_108
+### 17:45 · Offer_108
 
-Image: `cards/03_21Oct_16h30_Offer_108.png`
+Image: `cards/24_23Oct_17h45_Offer_108.png`
 
 ```
 🎓🇺🇸 Paul & Daisy Soros Fellowships for New Americans, USA!
@@ -63,9 +484,9 @@ Know a New American heading to graduate school? Share this opportunity!
 #PDSoros #Fellowship #GraduateSchool #NewAmericans #StudyInUSA #EduCutConnect #EduCutAI
 ```
 
-### 17:45 · Offer_099
+### 19:30 · Offer_099
 
-Image: `cards/04_21Oct_17h45_Offer_099.png`
+Image: `cards/25_23Oct_19h30_Offer_099.png`
 
 ```
 🎓🇺🇸 Hertz Fellowship from the Hertz Foundation, USA!
@@ -83,9 +504,9 @@ Know someone starting a PhD in the United States? Share this opportunity!
 #HertzFellowship #Fellowship #PhD #GraduateResearch #StudyInUSA #EduCutConnect #EduCutAI
 ```
 
-### 19:00 · Offer_107
+### 21:15 · Offer_107
 
-Image: `cards/05_21Oct_19h00_Offer_107.png`
+Image: `cards/26_23Oct_21h15_Offer_107.png`
 
 ```
 🎓🇩🇪 PhD Program in Artificial Intelligence at the Max Planck AI Network, Germany!
@@ -103,9 +524,11 @@ Know someone looking for an AI PhD in Germany? Share this opportunity!
 #PhDOpportunities #ArtificialIntelligence #MaxPlanck #ELLIS #StudyInGermany #EduCutConnect #EduCutAI
 ```
 
-### 20:15 · Offer_095
+## Saturday 24 Oct 2026
 
-Image: `cards/06_21Oct_20h15_Offer_095.png`
+### 08:00 · Offer_095
+
+Image: `cards/27_24Oct_08h00_Offer_095.png`
 
 ```
 🎓 Churchill Scholarship from the Churchill Foundation!
@@ -121,9 +544,9 @@ Know a graduating US student looking for a scholarship? Share this opportunity!
 #ChurchillScholarship #Scholarship #HigherEducation #StudentOpportunities #EduCutConnect #EduCutAI
 ```
 
-### 21:30 · Offer_104
+### 09:45 · Offer_104
 
-Image: `cards/07_21Oct_21h30_Offer_104.png`
+Image: `cards/28_24Oct_09h45_Offer_104.png`
 
 ```
 🎓🇩🇪 PhD Program in Astronomy at IMPRS-HD Heidelberg, Germany!
@@ -141,11 +564,9 @@ Know someone looking for a PhD in astronomy or astrophysics? Share this opportun
 #PhDOpportunities #MaxPlanck #Astronomy #Astrophysics #Heidelberg #EduCutConnect #EduCutAI
 ```
 
-## Thursday 22 Oct 2026
+### 11:45 · Offer_094
 
-### 08:00 · Offer_094
-
-Image: `cards/08_22Oct_08h00_Offer_094.png`
+Image: `cards/29_24Oct_11h45_Offer_094.png`
 
 ```
 🎓🇮🇱 International Postdoctoral Fellowship at the Azrieli Foundation, Israel!
@@ -163,9 +584,9 @@ Know a new PhD graduate looking for a postdoc in Israel? Share this opportunity!
 #PostdoctoralFellowship #AzrieliFoundation #Postdoc #AcademicCareers #Israel #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_113
+### 13:30 · Offer_113
 
-Image: `cards/09_22Oct_10h15_Offer_113.png`
+Image: `cards/30_24Oct_13h30_Offer_113.png`
 
 ```
 🎓🇨🇳 Master's Program in China Studies at Yenching Academy of Peking University, China!
@@ -183,9 +604,9 @@ Know someone interested in studying China in Beijing? Share this opportunity!
 #ChinaStudies #YenchingAcademy #MastersProgram #HigherEducation #StudyInChina #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_100
+### 15:30 · Offer_100
 
-Image: `cards/10_22Oct_12h15_Offer_100.png`
+Image: `cards/31_24Oct_15h30_Offer_100.png`
 
 ```
 🎓🇭🇰 Hong Kong PhD Fellowship Scheme 2027/28 by the Research Grants Council, Hong Kong!
@@ -203,9 +624,9 @@ Know someone planning a PhD in Hong Kong? Share this opportunity!
 #HKPFS #PhDFellowship #PhD #Research #HongKong #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_097
+### 17:15 · Offer_097
 
-Image: `cards/11_22Oct_14h30_Offer_097.png`
+Image: `cards/32_24Oct_17h15_Offer_097.png`
 
 ```
 🎓🇨🇭 Doctoral Program in Computer and Communication Sciences at EPFL, Switzerland!
@@ -223,9 +644,9 @@ Know someone looking for a computer science PhD in Switzerland? Share this oppor
 #PhDOpportunities #EPFL #ComputerScience #DoctoralResearch #StudyInSwitzerland #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_110
+### 19:15 · Offer_110
 
-Image: `cards/12_22Oct_16h45_Offer_110.png`
+Image: `cards/33_24Oct_19h15_Offer_110.png`
 
 ```
 🎓🇺🇸 Shorenstein Postdoctoral Fellowship at Stanford University, USA!
@@ -243,9 +664,9 @@ Know a researcher working on contemporary Asia? Share this opportunity!
 #Postdoc #StanfordUniversity #AsianStudies #Fellowship #StudyInUSA #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_112
+### 21:00 · Offer_112
 
-Image: `cards/13_22Oct_18h45_Offer_112.png`
+Image: `cards/34_24Oct_21h00_Offer_112.png`
 
 ```
 🎓🇨🇦 PhD in Computer Science at the University of Toronto, Canada!
@@ -263,9 +684,11 @@ Know someone looking for a computer science PhD in Canada? Share this opportunit
 #PhDOpportunities #UofT #ComputerScience #GraduateStudies #StudyInCanada #EduCutConnect #EduCutAI
 ```
 
-### 21:00 · Offer_103
+## Sunday 25 Oct 2026
 
-Image: `cards/14_22Oct_21h00_Offer_103.png`
+### 08:00 · Offer_103
+
+Image: `cards/35_25Oct_08h00_Offer_103.png`
 
 ```
 🎓🇩🇪 PhD Program at the Max Planck School for Biology and Computation, Germany!
@@ -283,11 +706,9 @@ Know someone looking for a PhD at the crossroads of biology and computing? Share
 #PhDOpportunities #MaxPlanck #ComputationalBiology #DoctoralResearch #StudyInGermany #EduCutConnect #EduCutAI
 ```
 
-## Friday 23 Oct 2026
+### 09:45 · Offer_109
 
-### 08:00 · Offer_109
-
-Image: `cards/15_23Oct_08h00_Offer_109.png`
+Image: `cards/36_25Oct_09h45_Offer_109.png`
 
 ```
 🎓🇺🇸 Postdoctoral Fellowship at Princeton University's CITP, USA!
@@ -305,9 +726,9 @@ Know a researcher working on technology and public policy? Share this opportunit
 #Postdoc #PrincetonUniversity #TechPolicy #Fellowship #StudyInUSA #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_096
+### 11:45 · Offer_096
 
-Image: `cards/16_23Oct_10h15_Offer_096.png`
+Image: `cards/37_25Oct_11h45_Offer_096.png`
 
 ```
 🎓🇺🇸 PhD Program in Machine Learning at Carnegie Mellon University, USA!
@@ -325,9 +746,9 @@ Know someone aiming for a PhD in machine learning in the USA? Share this opportu
 #PhDOpportunities #MachineLearning #CarnegieMellon #ArtificialIntelligence #StudyInUSA #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_093
+### 13:30 · Offer_093
 
-Image: `cards/17_23Oct_12h15_Offer_093.png`
+Image: `cards/38_25Oct_13h30_Offer_093.png`
 
 ```
 🎓🇯🇵 Call for Papers at ACL 2027 in Kyoto, Japan!
@@ -345,9 +766,9 @@ Know a researcher working on NLP or computational linguistics? Share this opport
 #CallForPapers #NLP #ComputationalLinguistics #ACL2027 #Japan #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_102
+### 15:30 · Offer_102
 
-Image: `cards/18_23Oct_14h30_Offer_102.png`
+Image: `cards/39_25Oct_15h30_Offer_102.png`
 
 ```
 🎓🇿🇦 Call for Papers at IJCNN 2027 in Cape Town, South Africa!
@@ -365,9 +786,9 @@ Know a researcher working on neural networks? Share this opportunity!
 #CallForPapers #IJCNN2027 #NeuralNetworks #MachineLearning #SouthAfrica #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_111
+### 17:15 · Offer_111
 
-Image: `cards/19_23Oct_16h45_Offer_111.png`
+Image: `cards/40_25Oct_17h15_Offer_111.png`
 
 ```
 🎓🇹🇼 Taiwan International Graduate Program at Academia Sinica, Taiwan!
@@ -385,9 +806,9 @@ Know someone looking for an international PhD in Taiwan? Share this opportunity!
 #PhDOpportunities #AcademiaSinica #TIGP #GraduateStudies #StudyInTaiwan #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_105
+### 19:15 · Offer_105
 
-Image: `cards/20_23Oct_18h45_Offer_105.png`
+Image: `cards/41_25Oct_19h15_Offer_105.png`
 
 ```
 🎓🇧🇷 Call for Papers at Interspeech 2027 in São Paulo, Brazil!
@@ -407,7 +828,7 @@ Know a researcher working on speech and spoken language processing? Share this o
 
 ### 21:00 · Offer_106
 
-Image: `cards/21_23Oct_21h00_Offer_106.png`
+Image: `cards/42_25Oct_21h00_Offer_106.png`
 
 ```
 🎓🇬🇧 Early Career Fellowships at the Leverhulme Trust, UK!

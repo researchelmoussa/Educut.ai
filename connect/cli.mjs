@@ -99,7 +99,7 @@ const commands = {
   li-queue <slug|id> --headline <h> --intro <i> --cta <c> --hashtags "#a #b" [--funding f] [--fields f] [--level l]
                                       Compose the LinkedIn post for an offer (draft, not yet timed)
   li-schedule [--reschedule]          Give every draft a time between 07:00 and 22:00, max 10 a day (bigger
-                                      batches spread over the next days), evenly spaced, most urgent first;
+                                      batches spread over the next days), evenly spaced, newest offers first;
                                       --reschedule also re-spreads overdue posts
   li-kit [--date YYYY-MM-DD] [--rebuild] [--out dir]
                                       Posting kit for posting by hand: every scheduled post not yet in a kit
@@ -608,12 +608,16 @@ const commands = {
     // --reschedule: posts whose time passed without being published (e.g. before the token was set) are
     // spread again over the coming days.
     if (flags.reschedule) for (const p of q.posts) if (p.status === 'SCHEDULED' && Date.parse(p.scheduled_at) < nowD.getTime()) Object.assign(p, { status: 'DRAFT', scheduled_at: null });
-    // Most urgent deadline first; offers without a deadline last.
     const dl = (p) => (p.deadline ? Date.parse(p.deadline.length === 10 ? `${p.deadline}T23:59:59Z` : p.deadline) : Infinity);
     // A closed offer would only be skipped by the publisher: free its slot now.
     for (const p of q.posts) if ((p.status === 'DRAFT' || p.status === 'SCHEDULED') && dl(p) < nowD.getTime()) Object.assign(p, { status: 'SKIPPED', scheduled_at: null, skipped_reason: 'deadline passed' });
     // Only posts in the current format are timed; older drafts are listed by li-pending to be rewritten.
-    const drafts = q.posts.filter((p) => p.status === 'DRAFT' && p.format === POST_FORMAT).sort((a, b) => dl(a) - dl(b));
+    // Newest offers on the site first (the day's new listings go out before older ones), then the most
+    // urgent deadline; offers without a deadline last.
+    const added = new Map(loadOffers(root).offers.map((o) => [o.opportunity_id, o.added_at ?? '']));
+    const drafts = q.posts
+      .filter((p) => p.status === 'DRAFT' && p.format === POST_FORMAT)
+      .sort((a, b) => (added.get(b.opportunity_id) ?? '').slice(0, 10).localeCompare((added.get(a.opportunity_id) ?? '').slice(0, 10)) || dl(a) - dl(b));
     const L = config.linkedin;
     const taken = q.posts.filter((p) => p.status === 'SCHEDULED' && p.format === POST_FORMAT).map((p) => p.scheduled_at);
     const slots = planSlots(drafts.length, { now: nowD, leadMinutes: L.lead_minutes, minGapMinutes: L.min_gap_minutes, activeHours: L.active_hours, timeZone: L.time_zone, maxPerDay: L.max_posts_per_day, taken });

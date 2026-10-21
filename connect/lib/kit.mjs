@@ -112,7 +112,7 @@ details p{margin:6px 0 0;font-size:13px;color:var(--muted);max-width:60ch}
   <header>
     <span class="kicker">EduCut Connect · LinkedIn</span>
     <h1>${esc(title)}</h1>
-    <p>${items.length} post${items.length === 1 ? '' : 's'}, one per offer, timed between 07:00 and 22:00 ${esc(timeZone)}, most urgent deadline first. Schedule each one on the EduCut Connect page with LinkedIn's own scheduler.</p>
+    <p>${items.length} post${items.length === 1 ? '' : 's'}, one per offer, timed between 07:00 and 22:00 ${esc(timeZone)}, newest offers first. Schedule each one on the EduCut Connect page with LinkedIn's own scheduler.</p>
     <ol class="steps">
       <li>On the EduCut Connect page, click <b>Start a post</b>, then the image icon, and attach the card file named under the post (the card images are sent with this kit).</li>
       <li>Click <b>Copy post text</b> and paste it into the post.</li>

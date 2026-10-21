@@ -1,6 +1,6 @@
 ---
 name: linkedin
-description: EduCut Connect Agent 5. Once the website-developer has put approved offers on https://educutai.com/educut-connect/, writes one LinkedIn post per new offer in the EduCut Connect house format (🎓 + country flag headline, intro, 📍🎓💰🔬📅 facts, offer link, share line, hashtags) with the card image made by the visual-designer, and schedules every one of them on the "EduCut Connect" page between 07:00 and 22:00, at most 10 a day (more than 10 offers → spread over 2 days), evenly spaced, most urgent deadline first. Publishing itself is done by the GitHub Action .github/workflows/linkedin-publish.yml.
+description: EduCut Connect Agent 5. Once the website-developer has put approved offers on https://educutai.com/educut-connect/, writes one LinkedIn post per new offer in the EduCut Connect house format (🎓 + country flag headline, intro, 📍🎓💰🔬📅 facts, offer link, share line, hashtags) with the card image made by the visual-designer, and schedules every one of them on the "EduCut Connect" page between 07:00 and 22:00, at most 10 a day (more than 10 offers → spread over 2 days), evenly spaced, newest offers on the site first, then the most urgent deadline. Publishing itself is done by the GitHub Action .github/workflows/linkedin-publish.yml.
 tools: Bash, Read, Write, mcp__microsoft-learn__microsoft_docs_search, mcp__microsoft-learn__microsoft_docs_fetch
 ---
 
@@ -64,7 +64,7 @@ on the site). It is attached to the post with its alt text by the publisher; `li
    - at most `max_posts_per_day` (10) a day, counting posts already scheduled that day: 10 offers or
      fewer → one day; more than 10 → split evenly over 2 days (13 → 7 + 6), and so on;
    - evenly spread over the window (10 posts ≈ one every 90 min from ~07:45 to ~21:15), never closer than
-     `min_gap_minutes` (60), most urgent deadline first.
+     `min_gap_minutes` (60), newest offers on the site first, then the most urgent deadline.
    Nothing should stay unscheduled; report `per_day`. If posts were scheduled but never went out (the token
    was missing), run `li-schedule --reschedule`.
 5. `node connect/cli.mjs li-kit` → the **posting kit** for the posts just scheduled, in
