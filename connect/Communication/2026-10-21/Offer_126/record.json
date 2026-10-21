@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Max Planck-Weizmann Postdoctoral Programme",
+    "evidence_url": "https://www.mpg.de/20566192/max-planck-weizmann-postdoc-programme",
+    "evidence_quote": "Max Planck-Weizmann Postdoctoral Programme"
+  },
+  "institution": {
+    "name": "Max Planck Society and Weizmann Institute of Science",
+    "website": "https://www.mpg.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.weizmann.ac.il/sites/mpg-wis/application-process",
+  "source_url": "https://www.mpg.de/20566192/max-planck-weizmann-postdoc-programme",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": null,
+  "seniority": "Postdoctoral",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Seventh round of the German-Israeli Max Planck-Weizmann Postdoctoral Programme: a four-year appointment split between the Max Planck Society in Germany and the Weizmann Institute in Israel, for positions starting March-September 2027. Deadline December 21, 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-21",
+    "timezone": null,
+    "evidence_url": "https://www.mpg.de/20566192/max-planck-weizmann-postdoc-programme",
+    "evidence_quote": "the 7th round of applications for the German-Israeli 'Max Planck–Weizmann Postdoctoral Programme' will end on December 21st, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official MPG and Weizmann pages (search results): 7th round ends December 21, 2026",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Location spans Germany and Israel; single country not applicable",
+    "Eligible fields differ between official pages",
+    "PhD should be no more than 4 years old (per MPG page)",
+    "Compensation not stated in the results"
+  ],
+  "discovered_at": "2026-10-21T01:59:18.722Z",
+  "last_verified_at": "2026-10-21T01:59:21.909Z",
+  "id": "opp_2f7294c8597c2a69",
+  "fingerprint": "da14ea87ccbcb5d2",
+  "content_hash": "sha256:3be6fafa513fe66df5d3a99b5fe968a637a92e9026fd92845a44826c5886ea0f"
+}

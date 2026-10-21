@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Gatsby Unit PhD programme",
+    "evidence_url": "https://www.ucl.ac.uk/life-sciences/gatsby/study-and-work/gatsby-unit-phd-programme",
+    "evidence_quote": "Gatsby Unit PhD programme"
+  },
+  "institution": {
+    "name": "Gatsby Computational Neuroscience Unit, UCL",
+    "website": "https://www.ucl.ac.uk/life-sciences/gatsby",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ucl.ac.uk/life-sciences/gatsby/study-and-work/gatsby-unit-phd-programme",
+  "source_url": "https://www.ucl.ac.uk/life-sciences/gatsby/study-and-work/gatsby-unit-phd-programme",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "London",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computational neuroscience and machine learning",
+  "seniority": "Doctoral",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Four-year PhD programme at the Gatsby Computational Neuroscience Unit, UCL, for 2027 entry, accepting up to 6 students each year. Applications go through the Gatsby Recruitment Portal by 17:00 GMT on 9 November 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-09T17:00:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.ucl.ac.uk/life-sciences/gatsby/study-and-work/gatsby-unit-phd-programme",
+    "evidence_quote": "17:00 GMT on Monday 9 November 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Gatsby Unit page (search results): deadline 17:00 GMT Monday 9 November 2026; references by 10 November",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "An older UCL course listing says the course is closed for applications (likely stale)",
+    "City/country taken from the institution (UCL, London), not quoted from this page",
+    "Funding terms not confirmed in the results"
+  ],
+  "discovered_at": "2026-10-21T01:59:18.722Z",
+  "last_verified_at": "2026-10-21T01:59:20.877Z",
+  "id": "opp_43af5a1f99fbc0a0",
+  "fingerprint": "319035c415be373f",
+  "content_hash": "sha256:5cc0ec84b97269c0b394b4a48f40b9ce7f9521cc54f1d941d30953b82141cf03"
+}
