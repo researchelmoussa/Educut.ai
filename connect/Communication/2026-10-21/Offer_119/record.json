@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Amgen Scholars Program",
+    "evidence_url": "https://ethz.ch/en/studies/non-degree-courses/summer-offers/summer-projects/amgen-scholars.html",
+    "evidence_quote": "Amgen Scholars Program"
+  },
+  "institution": {
+    "name": "ETH Zurich",
+    "website": "https://ethz.ch",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ethz.ch/en/studies/non-degree-courses/summer-offers/summer-projects/amgen-scholars.html",
+  "source_url": "https://ethz.ch/en/studies/non-degree-courses/summer-offers/summer-projects/amgen-scholars.html",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Zurich",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Life sciences",
+  "seniority": "Undergraduate",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Amgen Scholars Program at ETH Zurich, a summer research programme. The ETH page gives 1 February 2027, 12:00 noon, as the application deadline for Summer 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01T12:00:00+01:00",
+    "timezone": "Europe/Zurich",
+    "evidence_url": "https://ethz.ch/en/studies/non-degree-courses/summer-offers/summer-projects/amgen-scholars.html",
+    "evidence_quote": "1 February - 12:00 noon: Application deadline for Summer 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ETH page (search results): Summer 2027 application deadline 1 February, 12:00 noon",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Programme dates, stipend and eligibility not confirmed in the results"
+  ],
+  "discovered_at": "2026-10-21T01:59:18.722Z",
+  "last_verified_at": "2026-10-21T01:59:20.295Z",
+  "id": "opp_20a3a89b5aad83d8",
+  "fingerprint": "7293913a579732d9",
+  "content_hash": "sha256:ac65cec18f1a6339730564efcefb9f86f036960ecbaa9882194c92978abf75b0"
+}

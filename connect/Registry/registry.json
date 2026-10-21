@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-20T02:05:54.103Z",
+  "updated_at": "2026-10-21T02:06:36.889Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -8843,6 +8843,1374 @@
         }
       ],
       "offer_number": 113
+    },
+    "opp_afba76baee2f230a": {
+      "id": "opp_afba76baee2f230a",
+      "fingerprint": "09d8e0eca4479eeb",
+      "title": "UKRI Centre for Doctoral Training in Practice-Oriented Artificial Intelligence",
+      "institution": "University of Bristol",
+      "city": "Bristol",
+      "country": "United Kingdom",
+      "source_url": "https://www.bristol.ac.uk/cdt/practice-oriented-ai/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.bristol.ac.uk/cdt/practice-oriented-ai/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-30",
+      "content_hash": "sha256:6d603d9b326cd89feeb7212ce4627761d88e4e3c2804d7c501b208d219a122df",
+      "last_verified_at": "2026-10-21T01:59:18.919Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:28.358Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:28.358Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:28.358Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:01:28.690Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:01:28.690Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:32.721Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:32.721Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 114
+    },
+    "opp_bdc29cb31994717e": {
+      "id": "opp_bdc29cb31994717e",
+      "fingerprint": "3adb980af603d272",
+      "title": "2027 PhD student programme",
+      "institution": "The Francis Crick Institute",
+      "city": "London",
+      "country": "United Kingdom",
+      "source_url": "https://www.crick.ac.uk/careers-and-study/students/phd-students/phd-student-positions",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.crick.ac.uk/careers-and-study/students/phd-students/how-to-apply-phd-programme",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-03T12:00:00+00:00",
+      "content_hash": "sha256:0f79932e0e9449c6f47133c83e90262172897ef553eeacfc948a9c3172114c18",
+      "last_verified_at": "2026-10-21T01:59:19.151Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:28.564Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:28.564Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:28.564Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:01:29.902Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:01:29.903Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:32.931Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:32.931Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 115
+    },
+    "opp_f6342ec01b22e025": {
+      "id": "opp_f6342ec01b22e025",
+      "fingerprint": "998c46da0bbc5a20",
+      "title": "Centre for Doctoral Training in Artificial Intelligence for Biomedical Innovation PhD with Integrated Study",
+      "institution": "University of Edinburgh",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "source_url": "https://study.ed.ac.uk/programmes/postgraduate-research/1117-centre-for-doctoral-training-in-artificial-intelligence-for",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://ai4bi-cdt.ed.ac.uk/join-our-cdt/how-to-apply",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-20",
+      "content_hash": "sha256:0cb6eebad71250769852a94aa84af7a73687d539f44e4876743d76eb97a7d17e",
+      "last_verified_at": "2026-10-21T01:59:19.356Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:28.761Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:28.761Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:28.762Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:01:44.286Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:01:44.286Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:33.132Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:33.133Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 116
+    },
+    "opp_fe22f1160dcbac31": {
+      "id": "opp_fe22f1160dcbac31",
+      "fingerprint": "fc81a805bc29892b",
+      "title": "Centre for Doctoral Training in Machine Learning Systems PhD with Integrated Study",
+      "institution": "University of Edinburgh",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "source_url": "https://study.ed.ac.uk/programmes/postgraduate-research/1118-centre-for-doctoral-training-in-machine-learning-systems",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://informatics.ed.ac.uk/cdt-in-machine-learning-systems/apply",
+      "application_status": "NEEDS_REVIEW",
+      "deadline": "2026-12-14T23:59:00+00:00",
+      "content_hash": "sha256:bad28cfc7e03fad6b47d3469b5eba70d242198fb812d7551433fb41e89ba5797",
+      "last_verified_at": "2026-10-21T01:59:19.596Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-21T01:59:28.956Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:28.956Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:28.956Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_9726e531c0fec6b8": {
+      "id": "opp_9726e531c0fec6b8",
+      "fingerprint": "b09b667ca8bf6311",
+      "title": "EIPOD-LinC Fellowship Programme",
+      "institution": "European Molecular Biology Laboratory (EMBL)",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.embl.org/about/info/postdoctoral-programme/eipod-linc-exploring-life-in-context/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.embl.org/about/info/postdoctoral-programme/eipod-linc-exploring-life-in-context/eipod-linc-application/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01T23:59:00+01:00",
+      "content_hash": "sha256:7b2aebc7883268391154b81efe152240ddad49a76ed1d3d49b6b3085f4ce6b25",
+      "last_verified_at": "2026-10-21T01:59:19.917Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:29.176Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:29.176Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:29.176Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:01:48.409Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:01:48.409Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:33.359Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:33.359Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 117
+    },
+    "opp_7a22e710d591a879": {
+      "id": "opp_7a22e710d591a879",
+      "fingerprint": "c14d72048d6adfb0",
+      "title": "International selection",
+      "institution": "École normale supérieure - PSL (ENS)",
+      "city": "Paris",
+      "country": "France",
+      "source_url": "https://www.ens.psl.eu/en/une-formation-d-exception/admissions/international/international-selection",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.ens.psl.eu/en/une-formation-d-exception/admissions/international/international-selection",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15T14:00:00+01:00",
+      "content_hash": "sha256:85c17adf7a7c9d18b7ac01f66adc485f85d0259d33f45e2711ae649b862b4afa",
+      "last_verified_at": "2026-10-21T01:59:20.108Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:29.402Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:29.402Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:29.403Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:01:31.080Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:01:31.080Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:33.577Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:33.577Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 118
+    },
+    "opp_20a3a89b5aad83d8": {
+      "id": "opp_20a3a89b5aad83d8",
+      "fingerprint": "7293913a579732d9",
+      "title": "Amgen Scholars Program",
+      "institution": "ETH Zurich",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://ethz.ch/en/studies/non-degree-courses/summer-offers/summer-projects/amgen-scholars.html",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://ethz.ch/en/studies/non-degree-courses/summer-offers/summer-projects/amgen-scholars.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01T12:00:00+01:00",
+      "content_hash": "sha256:ac65cec18f1a6339730564efcefb9f86f036960ecbaa9882194c92978abf75b0",
+      "last_verified_at": "2026-10-21T01:59:20.295Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:29.629Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:29.629Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:29.630Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:02:44.193Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:02:44.194Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:33.780Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:33.780Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 119
+    },
+    "opp_52218ee1ebb780f1": {
+      "id": "opp_52218ee1ebb780f1",
+      "fingerprint": "06c6f34834c19326",
+      "title": "Excellence Scholarship & Opportunity Programme",
+      "institution": "ETH Zurich",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30T23:59:00+01:00",
+      "content_hash": "sha256:6126cb86ea4bd3f4187268ebcb46e2bcede1009e8c6caa10016daf83282d1b8e",
+      "last_verified_at": "2026-10-21T01:59:20.483Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:29.836Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:29.836Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:29.837Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:02:50.976Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:02:50.976Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:33.988Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:33.989Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 120
+    },
+    "opp_99910909174fcff1": {
+      "id": "opp_99910909174fcff1",
+      "fingerprint": "a84be994e5d459b9",
+      "title": "Flatiron Research Fellowships (FRF) at the Center for Computational Mathematics (CCM)",
+      "institution": "Flatiron Institute, Simons Foundation",
+      "city": "New York",
+      "country": "United States",
+      "source_url": "https://www.simonsfoundation.org/flatiron/careers/",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://www.simonsfoundation.org/flatiron/careers/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15",
+      "content_hash": "sha256:aab87ac5101b135c0f2bb84ffbbfb8ee8e8d9bc79f14b72c41e5a06ab6541e30",
+      "last_verified_at": "2026-10-21T01:59:20.671Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:30.051Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:30.051Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:30.051Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:02:53.221Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:02:53.221Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:34.173Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:34.173Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 121
+    },
+    "opp_43af5a1f99fbc0a0": {
+      "id": "opp_43af5a1f99fbc0a0",
+      "fingerprint": "319035c415be373f",
+      "title": "Gatsby Unit PhD programme",
+      "institution": "Gatsby Computational Neuroscience Unit, UCL",
+      "city": "London",
+      "country": "United Kingdom",
+      "source_url": "https://www.ucl.ac.uk/life-sciences/gatsby/study-and-work/gatsby-unit-phd-programme",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.ucl.ac.uk/life-sciences/gatsby/study-and-work/gatsby-unit-phd-programme",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-09T17:00:00+00:00",
+      "content_hash": "sha256:5cc0ec84b97269c0b394b4a48f40b9ce7f9521cc54f1d941d30953b82141cf03",
+      "last_verified_at": "2026-10-21T01:59:20.877Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:30.260Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:30.260Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:30.260Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:02:53.393Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:02:53.393Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:34.353Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:34.353Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 122
+    },
+    "opp_dc4cbc6d36c46e9e": {
+      "id": "opp_dc4cbc6d36c46e9e",
+      "fingerprint": "a39f963538f648c2",
+      "title": "ICWSM 2027",
+      "institution": "International AAAI Conference on Web and Social Media (ICWSM 2027)",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "source_url": "https://www.icwsm.org/2027/submit/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://www.icwsm.org/2027/submit/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:00-12:00",
+      "content_hash": "sha256:5890bf8547510ec591e02ace2954048b6fef1d9cb9a86631a8fda58a7136c8df",
+      "last_verified_at": "2026-10-21T01:59:21.067Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:30.483Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:30.483Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:30.483Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:03:07.913Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:03:07.913Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:34.551Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:34.551Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 123
+    },
+    "opp_04d23baa2c583f66": {
+      "id": "opp_04d23baa2c583f66",
+      "fingerprint": "fcb6b9ce0d999649",
+      "title": "Summer 2027 Postdoctoral Program",
+      "institution": "IMPA - Institute for Pure and Applied Mathematics",
+      "city": "Rio de Janeiro",
+      "country": "Brazil",
+      "source_url": "https://impa.br/notices/impa-opens-applications-for-the-summer-2027-postdoctoral-program/?lang=en",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://impa.br/vaga/postdoctoral-program-summer-2026-2/?lang=en",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-03",
+      "content_hash": "sha256:8caba2c4119aab2b95a1b3e39a7af272dbc00a42756608e3e96fd6e5efe41222",
+      "last_verified_at": "2026-10-21T01:59:21.293Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:30.701Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:30.701Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:30.702Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:04:11.110Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:04:11.110Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:34.732Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:34.732Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 124
+    },
+    "opp_f99e577ffbc94f26": {
+      "id": "opp_f99e577ffbc94f26",
+      "fingerprint": "c82d2b0bfff64d35",
+      "title": "2026-02 June E Huh Fellow Positions in Mathematics",
+      "institution": "Korea Institute for Advanced Study (KIAS)",
+      "city": null,
+      "country": "South Korea",
+      "source_url": "https://www.kias.re.kr/kias/main/main.do",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.kias.re.kr/kias/main/contents.do?menuNo=403013",
+      "application_status": "NEEDS_REVIEW",
+      "deadline": "2026-11-16T23:59:00+09:00",
+      "content_hash": "sha256:a52e899ba0cb12fb80036466e5638fccd9f0d887d92bd69af719d060a3ad5843",
+      "last_verified_at": "2026-10-21T01:59:21.484Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-10-21T01:59:30.918Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:30.918Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:30.918Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_1a7520bd726256c5": {
+      "id": "opp_1a7520bd726256c5",
+      "fingerprint": "22e7d0a36fa5c9f6",
+      "title": "Kyoto iUP - Kyoto University International Undergraduate Program",
+      "institution": "Kyoto University",
+      "city": "Kyoto",
+      "country": "Japan",
+      "source_url": "https://www.iup.kyoto-u.ac.jp/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.iup.kyoto-u.ac.jp/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-03T17:00:00+09:00",
+      "content_hash": "sha256:aa50c3ca1dfa8d27658c17edf5e3692711c9de149a3843677ecf4b555d4fcdfe",
+      "last_verified_at": "2026-10-21T01:59:21.695Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:31.121Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:31.121Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:31.121Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:03:58.534Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:03:58.535Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:34.953Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:34.953Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 125
+    },
+    "opp_2f7294c8597c2a69": {
+      "id": "opp_2f7294c8597c2a69",
+      "fingerprint": "da14ea87ccbcb5d2",
+      "title": "Max Planck-Weizmann Postdoctoral Programme",
+      "institution": "Max Planck Society and Weizmann Institute of Science",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.mpg.de/20566192/max-planck-weizmann-postdoc-programme",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.weizmann.ac.il/sites/mpg-wis/application-process",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-21",
+      "content_hash": "sha256:3be6fafa513fe66df5d3a99b5fe968a637a92e9026fd92845a44826c5886ea0f",
+      "last_verified_at": "2026-10-21T01:59:21.909Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:31.312Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:31.313Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:31.313Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:04:12.854Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:04:12.855Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:35.146Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:35.146Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 126
+    },
+    "opp_af6d91d75cd9538e": {
+      "id": "opp_af6d91d75cd9538e",
+      "fingerprint": "f79bfa59df1b9638",
+      "title": "Master of Science in Artificial Intelligence - Machine Learning",
+      "institution": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+      "city": "Abu Dhabi",
+      "country": "United Arab Emirates",
+      "source_url": "https://mbzuai.ac.ae/study/msc-programs/master-of-science-in-machine-learning/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://mbzuai.ac.ae/admissions/graduate-masters-admissions",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15T17:00:00+04:00",
+      "content_hash": "sha256:943333beacd19f34f98f4f60d8f259bd5086d166b875df6f54ac72f07e5e333c",
+      "last_verified_at": "2026-10-21T01:59:22.104Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:31.525Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:31.525Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:31.525Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:04:11.499Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:04:11.499Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:35.363Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:35.364Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 127
+    },
+    "opp_4224ce7896773ffc": {
+      "id": "opp_4224ce7896773ffc",
+      "fingerprint": "4ae38db5747d6bb7",
+      "title": "NUS PhD (Data Science)",
+      "institution": "National University of Singapore",
+      "city": "Singapore",
+      "country": "Singapore",
+      "source_url": "https://isep.nus.edu.sg/nus-phd-data-science/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://isep.nus.edu.sg/nus-phd-data-science/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:190acca1aa9d6ee808a8213b04d06125f5ceac7450e25ea6e121507d515b88dc",
+      "last_verified_at": "2026-10-21T01:59:22.294Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:31.732Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:31.732Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:31.732Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:04:24.968Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:04:24.968Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:35.551Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:35.551Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 128
+    },
+    "opp_00b727a5835b23b3": {
+      "id": "opp_00b727a5835b23b3",
+      "fingerprint": "d76acdd82d846ace",
+      "title": "PhD in Data Science",
+      "institution": "NYU Center for Data Science",
+      "city": "New York",
+      "country": "United States",
+      "source_url": "https://cds.nyu.edu/phd-admissions-requirements/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://cds.nyu.edu/phd-admissions-requirements/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-03T17:00:00-05:00",
+      "content_hash": "sha256:4f596332c97fdec3186ce02d14de273ee35e6e14c3f120bdc3178ad3335288fe",
+      "last_verified_at": "2026-10-21T01:59:22.481Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:31.957Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:31.957Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:31.957Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:05:34.811Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:05:34.811Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:35.757Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:35.758Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 129
+    },
+    "opp_cfdf41ea73688156": {
+      "id": "opp_cfdf41ea73688156",
+      "fingerprint": "5c53f107dbed39ec",
+      "title": "STOC 2027 Call for Papers",
+      "institution": "59th ACM Symposium on Theory of Computing (STOC 2027)",
+      "city": "Atlanta",
+      "country": "United States",
+      "source_url": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-02T23:59:00-12:00",
+      "content_hash": "sha256:4b36cf9f5ce76a86a2518d7ce33b74157fe3fb2b111e9276435d02e593538133",
+      "last_verified_at": "2026-10-21T01:59:22.689Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:32.173Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:32.173Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:32.174Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:05:50.754Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:05:50.754Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:35.991Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:35.991Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 130
+    },
+    "opp_7e49aa6141cc9cc7": {
+      "id": "opp_7e49aa6141cc9cc7",
+      "fingerprint": "c39c0ebd8fda1b5e",
+      "title": "Justus & Louise van Effen Excellence Scholarships",
+      "institution": "Delft University of Technology (TU Delft)",
+      "city": "Delft",
+      "country": "Netherlands",
+      "source_url": "https://www.tudelft.nl/onderwijs/studievoorlichting/praktische-zaken/scholarships/justus-louise-van-effen-excellence-scholarships",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.tudelft.nl/onderwijs/studievoorlichting/praktische-zaken/scholarships/justus-louise-van-effen-excellence-scholarships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01T23:59:00+01:00",
+      "content_hash": "sha256:cd15f28b2fceb30967b9de8c8db68b7ff62acd7e7ab30a1ed59c34d2ad8549f7",
+      "last_verified_at": "2026-10-21T01:59:22.877Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:32.372Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:32.372Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:32.372Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:05:27.138Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:05:27.138Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:36.210Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:36.210Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 131
+    },
+    "opp_8a930a4c486937e8": {
+      "id": "opp_8a930a4c486937e8",
+      "fingerprint": "f5470983da3cc765",
+      "title": "Doctor of Philosophy in Computer Science (PhD)",
+      "institution": "The University of British Columbia, Department of Computer Science",
+      "city": "Vancouver",
+      "country": "Canada",
+      "source_url": "https://www.grad.ubc.ca/prospective-students/graduate-degree-programs/phd-computer-science",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.cs.ubc.ca/students/grad/admissions",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:22a471fd8b48e4b289a4d69232f037c31de16692f7b7b47e2aa60615b5d8121a",
+      "last_verified_at": "2026-10-21T01:59:23.064Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:32.559Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:32.559Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:32.559Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:05:40.364Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:05:40.364Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:36.438Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:36.438Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 132
+    },
+    "opp_e7b6e40b96d08215": {
+      "id": "opp_e7b6e40b96d08215",
+      "fingerprint": "a53443d040df37bc",
+      "title": "The Mastercard Foundation Scholars Program",
+      "institution": "University of Cape Town",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "source_url": "https://uct.ac.za/mastercardfdn/apply-mastercard-foundation-scholars-program",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://uct.ac.za/mastercardfdn/apply-mastercard-foundation-scholars-program",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-10-31",
+      "content_hash": "sha256:02856a575d5eae364b2056a8877f0aafc70db16353532af5fbf27c06d0efbaea",
+      "last_verified_at": "2026-10-21T01:59:23.267Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:32.748Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:32.748Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:32.749Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:05:38.406Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:05:38.407Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:36.664Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:36.665Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 133
+    },
+    "opp_dfadad53e085413b": {
+      "id": "opp_dfadad53e085413b",
+      "fingerprint": "4de8ef4cd8754418",
+      "title": "Outstanding Postdoctoral Program",
+      "institution": "Weizmann Institute of Science",
+      "city": null,
+      "country": "Israel",
+      "source_url": "https://info.weizmann.ac.il/en/outstanding-postdoctoral-program/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://info.weizmann.ac.il/en/outstanding-postdoctoral-program/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15",
+      "content_hash": "sha256:4628bb3a9d48b494a8990e62d0303bad8d6525a3372ee7bc147e2fbcf09b5225",
+      "last_verified_at": "2026-10-21T01:59:23.447Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-21T01:59:32.962Z",
+      "history": [
+        {
+          "at": "2026-10-21T01:59:32.962Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-21T01:59:32.962Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-21T02:05:58.090Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-21T02:05:58.090Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-21T02:06:36.889Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-21T02:06:36.889Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 134
     }
   },
   "seen_urls": {
@@ -9094,7 +10462,41 @@
     "https://aparc.fsi.stanford.edu/education/fellowship-and-training-opportunities/shorenstein-postdoctoral-fellowship": "opp_63712e4ac1c7ac15",
     "https://tigp.apps.sinica.edu.tw/": "opp_49dab84e910f988f",
     "https://web.cs.toronto.edu/graduate/how-to-apply": "opp_166eeb2b19554b07",
-    "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm": "opp_7b583377e1606906"
+    "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm": "opp_7b583377e1606906",
+    "https://bristol.ac.uk/cdt/practice-oriented-ai": "opp_afba76baee2f230a",
+    "https://bristol.ac.uk/cdt/practice-oriented-ai/apply": "opp_afba76baee2f230a",
+    "https://crick.ac.uk/careers-and-study/students/phd-students/phd-student-positions": "opp_bdc29cb31994717e",
+    "https://crick.ac.uk/careers-and-study/students/phd-students/how-to-apply-phd-programme": "opp_bdc29cb31994717e",
+    "https://study.ed.ac.uk/programmes/postgraduate-research/1117-centre-for-doctoral-training-in-artificial-intelligence-for": "opp_f6342ec01b22e025",
+    "https://ai4bi-cdt.ed.ac.uk/join-our-cdt/how-to-apply": "opp_f6342ec01b22e025",
+    "https://study.ed.ac.uk/programmes/postgraduate-research/1118-centre-for-doctoral-training-in-machine-learning-systems": "opp_fe22f1160dcbac31",
+    "https://informatics.ed.ac.uk/cdt-in-machine-learning-systems/apply": "opp_fe22f1160dcbac31",
+    "https://embl.org/about/info/postdoctoral-programme/eipod-linc-exploring-life-in-context": "opp_9726e531c0fec6b8",
+    "https://embl.org/about/info/postdoctoral-programme/eipod-linc-exploring-life-in-context/eipod-linc-application": "opp_9726e531c0fec6b8",
+    "https://ens.psl.eu/en/une-formation-d-exception/admissions/international/international-selection": "opp_7a22e710d591a879",
+    "https://ethz.ch/en/studies/non-degree-courses/summer-offers/summer-projects/amgen-scholars.html": "opp_20a3a89b5aad83d8",
+    "https://ethz.ch/students/en/studies/financial/scholarships/excellencescholarship.html": "opp_52218ee1ebb780f1",
+    "https://simonsfoundation.org/flatiron/careers": "opp_99910909174fcff1",
+    "https://ucl.ac.uk/life-sciences/gatsby/study-and-work/gatsby-unit-phd-programme": "opp_43af5a1f99fbc0a0",
+    "https://icwsm.org/2027/submit": "opp_dc4cbc6d36c46e9e",
+    "https://impa.br/notices/impa-opens-applications-for-the-summer-2027-postdoctoral-program?lang=en": "opp_04d23baa2c583f66",
+    "https://impa.br/vaga/postdoctoral-program-summer-2026-2?lang=en": "opp_04d23baa2c583f66",
+    "https://kias.re.kr/kias/main/main.do": "opp_f99e577ffbc94f26",
+    "https://kias.re.kr/kias/main/contents.do?menuNo=403013": "opp_f99e577ffbc94f26",
+    "https://iup.kyoto-u.ac.jp/": "opp_1a7520bd726256c5",
+    "https://iup.kyoto-u.ac.jp/apply": "opp_1a7520bd726256c5",
+    "https://mpg.de/20566192/max-planck-weizmann-postdoc-programme": "opp_2f7294c8597c2a69",
+    "https://weizmann.ac.il/sites/mpg-wis/application-process": "opp_2f7294c8597c2a69",
+    "https://mbzuai.ac.ae/study/msc-programs/master-of-science-in-machine-learning": "opp_af6d91d75cd9538e",
+    "https://mbzuai.ac.ae/admissions/graduate-masters-admissions": "opp_af6d91d75cd9538e",
+    "https://isep.nus.edu.sg/nus-phd-data-science": "opp_4224ce7896773ffc",
+    "https://cds.nyu.edu/phd-admissions-requirements": "opp_00b727a5835b23b3",
+    "https://acm-stoc.org/stoc2027/stoc2027-cfp.html": "opp_cfdf41ea73688156",
+    "https://tudelft.nl/onderwijs/studievoorlichting/praktische-zaken/scholarships/justus-louise-van-effen-excellence-scholarships": "opp_7e49aa6141cc9cc7",
+    "https://grad.ubc.ca/prospective-students/graduate-degree-programs/phd-computer-science": "opp_8a930a4c486937e8",
+    "https://cs.ubc.ca/students/grad/admissions": "opp_8a930a4c486937e8",
+    "https://uct.ac.za/mastercardfdn/apply-mastercard-foundation-scholars-program": "opp_e7b6e40b96d08215",
+    "https://info.weizmann.ac.il/en/outstanding-postdoctoral-program": "opp_dfadad53e085413b"
   },
-  "last_offer_number": 113
+  "last_offer_number": 134
 }

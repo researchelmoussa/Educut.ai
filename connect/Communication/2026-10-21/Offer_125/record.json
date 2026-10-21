@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Kyoto iUP - Kyoto University International Undergraduate Program",
+    "evidence_url": "https://www.iup.kyoto-u.ac.jp/",
+    "evidence_quote": "Kyoto iUP - Kyoto University International Undergraduate Program"
+  },
+  "institution": {
+    "name": "Kyoto University",
+    "website": "https://www.kyoto-u.ac.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.iup.kyoto-u.ac.jp/apply/",
+  "source_url": "https://www.iup.kyoto-u.ac.jp/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Kyoto",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": null,
+  "seniority": "Undergraduate",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Kyoto University International Undergraduate Program (Kyoto iUP), October 2027 enrollment, 40 places. Online applications run November 2 to December 3, 2026, 5 p.m. JST; Japanese proficiency is not required to apply. Fee JPY 9,800.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-03T17:00:00+09:00",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.iup.kyoto-u.ac.jp/apply/",
+    "evidence_quote": "December 3, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Kyoto iUP pages (search results): online application November 2 to December 3, 2026, 5 p.m. JST",
+    "Deadline is in the future",
+    "Application system opens November 2, 2026",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Publication date not shown",
+    "Compensation not stated verbatim in the results",
+    "Scholarship availability not confirmed in the results",
+    "Undergraduate course begins April 2028 after preparatory period (per results)"
+  ],
+  "discovered_at": "2026-10-21T01:59:18.722Z",
+  "last_verified_at": "2026-10-21T01:59:21.695Z",
+  "id": "opp_1a7520bd726256c5",
+  "fingerprint": "22e7d0a36fa5c9f6",
+  "content_hash": "sha256:aa50c3ca1dfa8d27658c17edf5e3692711c9de149a3843677ecf4b555d4fcdfe"
+}
