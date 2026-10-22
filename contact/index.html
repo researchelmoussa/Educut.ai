@@ -11,7 +11,11 @@
   <meta property="og:title" content="Contact EduCut.ai: Free AI Training Consultation" />
   <meta property="og:description" content="Book a free one-hour consultation, request the full AI course catalogue by email, or contact our partnerships, support and general enquiries teams." />
   <meta property="og:url" content="https://educutai.com/contact/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://educutai.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://educutai.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
   <script type="application/ld+json">{
  "@context": "https://schema.org",
@@ -62,19 +66,40 @@
   }
  ]
 }</script>
-  <link rel="stylesheet" href="/assets/site.css?v=d34ec19473" />
-  <link rel="stylesheet" href="/assets/pages.css?v=ae4ea25e1d" />
+  <link rel="stylesheet" href="/assets/site.css?v=c7759e9f4d" />
+  <link rel="stylesheet" href="/assets/pages.css?v=24e697b1c0" />
 </head>
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="/">EduCut<span>.ai</span></a>
-      <div class="nav-links">
-        <a href="/academies/">Academies</a><a href="/ai-learning-paths/">AI Paths</a><a href="/educut-connect/">Connect</a><a href="/contact/" aria-current="page">Contact</a><a href="/#/signup">Sign up</a><a href="/#/signin">Sign In</a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span class="nav-toggle-icon">☰</span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="/academies/">Academies</a><a href="/ai-learning-paths/">AI Paths</a><a href="/educut-connect/">Connect</a><a href="/about/">About</a><a href="/contact/" aria-current="page">Contact</a><a href="/#/signup">Sign up</a><a href="/#/signin">Sign In</a>
         <a class="btn btn-lime" href="/#start-assessment">Take the 3-min test</a>
       </div>
     </div>
   </nav>
+  <script>
+  (function(){
+    var t=document.getElementById('navToggle'), n=document.getElementById('navLinks');
+    if(!t || !n) return;
+    t.addEventListener('click', function(){
+      var open = n.classList.toggle('is-open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var ico = t.querySelector('.nav-toggle-icon');
+      if(ico) ico.textContent = open ? '✕' : '☰';
+    });
+    n.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        n.classList.remove('is-open');
+        t.setAttribute('aria-expanded', 'false');
+        var ico = t.querySelector('.nav-toggle-icon');
+        if(ico) ico.textContent = '☰';
+      });
+    });
+  })();
+  </script>
   <main>
 
     <header class="page-hero">
@@ -87,30 +112,125 @@
       </div>
     </header>
 
-    <section class="consult-section" id="consultation"><div class="wrap">
-    <div class="consult-box">
-      <div class="consult-copy">
-        <div class="mono" style="color:var(--blue)">Need help choosing?</div>
-        <h2>Let's identify the right AI learning path together.</h2>
-        <p>Not sure which Academy, course or learning path fits your organization? Request a free consultation with EduCut.ai, or ask us to send you the complete catalogue by email.</p>
-        <div class="consult-actions">
-          <a class="btn btn-lime btn-lg" href="/#book-consultation">Book a free consultation →</a>
-          <a class="btn btn-lg" href="/#request-catalogue">Request the free catalogue</a>
-        </div>
-      </div>
-      <div class="consult-side">
-        <div>
-          <div class="mono">Free · No commitment</div>
-          <div class="consult-points">
-            <div class="consult-point"><span>Discuss your needs</span><span>Company, teams & objectives</span></div>
-            <div class="consult-point"><span>Choose a time</span><span>Select a convenient 1-hour slot</span></div>
-            <div class="consult-point"><span>Get the catalogue</span><span>Full details by business email</span></div>
+    <section class="page-section" id="inquiry" aria-label="Direct Inquiry">
+      <div class="wrap">
+        <div class="contact-shell">
+          <div class="contact-form-box">
+            <div class="mono" style="color:var(--blue);margin-bottom:12px">DIRECT INQUIRY &amp; CONSULTATION</div>
+            <h2 style="font-size:32px;letter-spacing:-.04em;margin:0 0 14px">How can we help your organization?</h2>
+            <p style="color:#555;margin-bottom:28px">Whether you are planning an executive AI briefing, a functional department cohort, or an academic partnership, send us your details below.</p>
+            
+            <form id="directContactForm" class="form-grid">
+              <div class="inquiry-type-grid">
+                <label class="type-pill"><input type="radio" name="inquiryType" value="consultation" checked><span>1-Hour Consultation</span></label>
+                <label class="type-pill"><input type="radio" name="inquiryType" value="catalogue"><span>Full Course Catalogue</span></label>
+                <label class="type-pill"><input type="radio" name="inquiryType" value="partnership"><span>Partnership / Custom</span></label>
+              </div>
+
+              <div class="contact-dual">
+                <div class="field">
+                  <label for="cName">Full Name *</label>
+                  <input id="cName" name="fullName" required placeholder="e.g. Dr. Alex Mercer" autocomplete="name">
+                </div>
+                <div class="field">
+                  <label for="cEmail">Professional Email *</label>
+                  <input id="cEmail" name="email" type="email" required placeholder="name@company.com" autocomplete="email">
+                </div>
+              </div>
+
+              <div class="contact-dual">
+                <div class="field">
+                  <label for="cCompany">Company or University *</label>
+                  <input id="cCompany" name="company" required placeholder="Organization name" autocomplete="organization">
+                </div>
+                <div class="field">
+                  <label for="cPhone">Phone Number (Optional)</label>
+                  <input id="cPhone" name="phone" type="tel" placeholder="+41 22 000 00 00" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="cAcademy">Academy or Topic of Primary Interest</label>
+                <select id="cAcademy" name="academy" style="width:100%;padding:14px 13px;border:1px solid var(--line);background:white;outline:none">
+                  <option value="">-- Select an Academy (or Not Sure) --</option>
+                  <option value="AI Foundations">A001 · AI Foundations</option><option value="Generative AI">A002 · Generative AI</option><option value="Prompt Engineering">A003 · Prompt Engineering</option><option value="AI Productivity">A004 · AI Productivity</option><option value="Data Analytics">A005 · Data Analytics</option><option value="AI for Leaders">A006 · AI for Leaders</option><option value="AI for Marketing">A007 · AI for Marketing</option><option value="AI for Finance">A008 · AI for Finance</option><option value="AI for HR">A009 · AI for HR</option><option value="AI for Education">A010 · AI for Education</option><option value="AI for Developers">A011 · AI for Developers</option><option value="LLM Engineering">A012 · LLM Engineering</option><option value="RAG Systems">A013 · RAG Systems</option><option value="AI Agents">A014 · AI Agents</option><option value="Responsible AI">A015 · Responsible AI</option><option value="AI Governance">A016 · AI Governance</option><option value="AI Security">A017 · AI Security</option><option value="AI Transformation">A018 · AI Transformation</option>
+                  <option value="General AI Readiness & Strategy">General AI Readiness & Strategy</option>
+                  <option value="Custom Enterprise Cohort">Custom Enterprise Cohort</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="cNotes">Learning Objectives or Specific Questions</label>
+                <textarea id="cNotes" name="notes" rows="3" style="width:100%;padding:14px 13px;border:1px solid var(--line);background:white;outline:none;font-family:inherit" placeholder="Tell us about your team's background, participant count, or timeline..."></textarea>
+              </div>
+
+              <label class="consent" style="margin-top:4px">
+                <input type="checkbox" required> I agree that EduCut AI may store and use my details to contact me regarding this inquiry in accordance with the <a href="/privacy/" target="_blank" style="text-decoration:underline">Privacy Policy</a>.
+              </label>
+
+              <button class="btn btn-lime btn-lg" type="submit" id="contactSubmitBtn" style="margin-top:12px">Submit Request →</button>
+              <div id="contactFeedback" style="display:none;margin-top:16px;padding:16px;border-left:4px solid var(--lime);background:#f2fae3;font-size:14px"></div>
+            </form>
+          </div>
+
+          <div class="contact-info-panel">
+            <div class="mono" style="color:var(--blue);margin-bottom:12px">WHAT TO EXPECT</div>
+            <h3 style="font-size:22px;margin:0 0 16px">Bespoke Enterprise AI Guidance</h3>
+            <div class="consult-points" style="margin-bottom:32px">
+              <div class="consult-point"><span>1. Organizational Diagnostic</span><span>We evaluate your team's maturity level and operational focus.</span></div>
+              <div class="consult-point"><span>2. Targeted Curriculum</span><span>Select 3, 5, or 7 courses from 212 accredited curricula.</span></div>
+              <div class="consult-point"><span>3. Delivery &amp; Scheduling</span><span>Blended live online faculty sessions + hands-on labs.</span></div>
+              <div class="consult-point"><span>4. Rapid Turnaround</span><span>We respond within 24 hours on business days.</span></div>
+            </div>
+
+            <div class="direct-channels" style="border-top:1px solid var(--line);padding-top:24px">
+              <div class="mono" style="color:#777;margin-bottom:12px">DIRECT INQUIRIES</div>
+              <p style="margin:0 0 8px"><strong>Partnerships &amp; Enterprise:</strong><br><a href="mailto:partners@educutai.com" style="color:var(--blue)">partners@educutai.com</a></p>
+              <p style="margin:0 0 8px"><strong>General Enquiries:</strong><br><a href="mailto:contact@educutai.com" style="color:var(--blue)">contact@educutai.com</a></p>
+              <p style="margin:0"><strong>LinkedIn:</strong><br><a href="https://www.linkedin.com/company/educut-ai/" target="_blank" rel="noopener" style="color:var(--blue)">EduCut AI on LinkedIn →</a></p>
+            </div>
           </div>
         </div>
-        <div class="mono" style="color:#777">EduCut.ai · Bridging AI with Education</div>
       </div>
-    </div>
-  </div></section>
+    </section>
+
+    <script>
+    (function(){
+      var form = document.getElementById('directContactForm');
+      var fb = document.getElementById('contactFeedback');
+      var btn = document.getElementById('contactSubmitBtn');
+      if(!form) return;
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        btn.disabled = true;
+        btn.textContent = 'Submitting request...';
+        var fd = new FormData(form);
+        var type = fd.get('inquiryType') || 'consultation';
+        var payload = {
+          fullName: fd.get('fullName'),
+          email: fd.get('email'),
+          company: fd.get('company'),
+          phone: fd.get('phone') || null,
+          notes: '[' + type.toUpperCase() + '] ' + (fd.get('academy') ? 'Topic: ' + fd.get('academy') + '. ' : '') + (fd.get('notes') || ''),
+          source: 'CONTACT_PAGE'
+        };
+        try {
+          if (window.EduCutAPI && typeof window.EduCutAPI.requestCatalogue === 'function') {
+            await window.EduCutAPI.requestCatalogue(payload);
+          } else {
+            var saved = JSON.parse(localStorage.getItem('educutDirectInquiries') || '[]');
+            saved.push(Object.assign({}, payload, { created_at: new Date().toISOString() }));
+            localStorage.setItem('educutDirectInquiries', JSON.stringify(saved));
+          }
+        } catch(err) {
+          console.warn('Submission fallback note:', err);
+        }
+        form.style.display = 'none';
+        fb.style.display = 'block';
+        fb.innerHTML = '<strong>Thank you! Your request has been received.</strong><br>Our team of AI academics and specialists will review your requirements and follow up with you at <b>' + payload.email + '</b> within 24 hours.';
+      });
+    })();
+    </script>
 
     <section class="contact-band" aria-label="Contact EduCut.ai">
     <div class="wrap">
@@ -145,8 +265,11 @@
           <li><a href="/ai-learning-paths/">AI learning paths</a></li>
           <li><a href="/educut-connect/">EduCut Connect: opportunities</a></li>
           <li><a href="/contact/">Contact &amp; consultation</a></li>
+          <li><a href="/about/">About EduCut.ai</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms &amp; Conditions</a></li>
         </ul>
-        <p class="footer-place">Based in Switzerland</p>
+        <p class="footer-place">Based in Switzerland · <a href="mailto:partners@educutai.com" style="color:#a1a19c">partners@educutai.com</a> · <a href="https://www.linkedin.com/company/educut-ai/" target="_blank" rel="noopener noreferrer" style="color:#a1a19c">LinkedIn ↗</a></p>
       </div>
       <div class="footer-academies">
         <div class="mono">Academies</div>

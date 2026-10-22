@@ -36,7 +36,7 @@ import { COMPANY, FACULTY, LEGAL } from '../content/about.mjs';
 import { DEFAULT_LANGUAGE, LANGUAGES, ALTERNATES } from '../content/i18n.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const read = (p) => readFileSync(join(ROOT, p), 'utf8');
+const read = (p) => readFileSync(join(ROOT, p), 'utf8').replace(/\r/g, '');
 const write = (p, s) => {
   mkdirSync(dirname(join(ROOT, p)), { recursive: true });
   writeFileSync(join(ROOT, p), s);
@@ -164,6 +164,7 @@ function seoHead({ path, title, description }) {
   if (title.length > 62) console.warn(`warn: title ${title.length} chars on ${path}`);
   const icon = HAS_LOGO ? '\n  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />' : '';
   if (description.length > 158) console.warn(`warn: description ${description.length} chars on ${path}`);
+  const ogImage = `\n  <meta property="og:image" content="${SITE_URL}/assets/og-image.png" />\n  <meta property="og:image:width" content="1200" />\n  <meta property="og:image:height" content="630" />\n  <meta name="twitter:image" content="${SITE_URL}/assets/og-image.png" />`;
   return `<title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}" />
   <link rel="canonical" href="${url}" />
@@ -171,8 +172,8 @@ function seoHead({ path, title, description }) {
   <meta property="og:site_name" content="EduCut.ai" />
   <meta property="og:title" content="${esc(ogTitle)}" />
   <meta property="og:description" content="${esc(description)}" />
-  <meta property="og:url" content="${url}" />
-  <meta name="twitter:card" content="summary" />${icon}${alternatesFor(path).map(([l, u]) => `\n  <link rel="alternate" hreflang="${l}" href="${u}" />`).join('')}`;
+  <meta property="og:url" content="${url}" />${ogImage}
+  <meta name="twitter:card" content="summary_large_image" />${icon}${alternatesFor(path).map(([l, u]) => `\n  <link rel="alternate" hreflang="${l}" href="${u}" />`).join('')}`;
 }
 
 /* ---------------- Structured data (SEO plan, Step 6) ----------------
@@ -446,6 +447,7 @@ const NAV = [
   ['/academies/', 'Academies'],
   ['/ai-learning-paths/', 'AI Paths'],
   ['/educut-connect/', 'Connect'],
+  ...(ABOUT_PUBLISHED ? [['/about/', 'About']] : []),
   ['/contact/', 'Contact'],
 ];
 
@@ -455,12 +457,33 @@ function nav(current) {
   return `<nav class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="/">EduCut<span>.ai</span></a>
-      <div class="nav-links">
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span class="nav-toggle-icon">☰</span></button>
+      <div class="nav-links" id="navLinks">
         ${links}<a href="/#/signup">Sign up</a><a href="/#/signin">Sign In</a>
         <a class="btn btn-lime" href="/#start-assessment">Take the 3-min test</a>
       </div>
     </div>
-  </nav>`;
+  </nav>
+  <script>
+  (function(){
+    var t=document.getElementById('navToggle'), n=document.getElementById('navLinks');
+    if(!t || !n) return;
+    t.addEventListener('click', function(){
+      var open = n.classList.toggle('is-open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var ico = t.querySelector('.nav-toggle-icon');
+      if(ico) ico.textContent = open ? '✕' : '☰';
+    });
+    n.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        n.classList.remove('is-open');
+        t.setAttribute('aria-expanded', 'false');
+        var ico = t.querySelector('.nav-toggle-icon');
+        if(ico) ico.textContent = '☰';
+      });
+    });
+  })();
+  </script>`;
 }
 
 function footer() {
@@ -477,7 +500,7 @@ function footer() {
           <li><a href="/educut-connect/">EduCut Connect: opportunities</a></li>
           <li><a href="/contact/">Contact &amp; consultation</a></li>${publishedGuides.length ? '\n          <li><a href="/guides/">Guides</a></li>' : ''}${ABOUT_PUBLISHED ? '\n          <li><a href="/about/">About EduCut.ai</a></li>' : ''}${LEGAL_PAGES.map(([k, v]) => `\n          <li><a href="/${k}/">${esc(v.title)}</a></li>`).join('')}
         </ul>
-        <p class="footer-place">Based in ${esc(COMPANY.country)}</p>
+        <p class="footer-place">Based in ${esc(COMPANY.country)} · <a href="mailto:partners@educutai.com" style="color:#a1a19c">partners@educutai.com</a>${COMPANY.sameAs && COMPANY.sameAs.length ? ` · <a href="${esc(COMPANY.sameAs[0])}" target="_blank" rel="noopener noreferrer" style="color:#a1a19c">LinkedIn ↗</a>` : ''}</p>
       </div>
       <div class="footer-academies">
         <div class="mono">Academies</div>
@@ -855,7 +878,125 @@ function contactPage() {
       </div>
     </header>
 
-    ${SECTION_CONSULT}
+    <section class="page-section" id="inquiry" aria-label="Direct Inquiry">
+      <div class="wrap">
+        <div class="contact-shell">
+          <div class="contact-form-box">
+            <div class="mono" style="color:var(--blue);margin-bottom:12px">DIRECT INQUIRY &amp; CONSULTATION</div>
+            <h2 style="font-size:32px;letter-spacing:-.04em;margin:0 0 14px">How can we help your organization?</h2>
+            <p style="color:#555;margin-bottom:28px">Whether you are planning an executive AI briefing, a functional department cohort, or an academic partnership, send us your details below.</p>
+            
+            <form id="directContactForm" class="form-grid">
+              <div class="inquiry-type-grid">
+                <label class="type-pill"><input type="radio" name="inquiryType" value="consultation" checked><span>1-Hour Consultation</span></label>
+                <label class="type-pill"><input type="radio" name="inquiryType" value="catalogue"><span>Full Course Catalogue</span></label>
+                <label class="type-pill"><input type="radio" name="inquiryType" value="partnership"><span>Partnership / Custom</span></label>
+              </div>
+
+              <div class="contact-dual">
+                <div class="field">
+                  <label for="cName">Full Name *</label>
+                  <input id="cName" name="fullName" required placeholder="e.g. Dr. Alex Mercer" autocomplete="name">
+                </div>
+                <div class="field">
+                  <label for="cEmail">Professional Email *</label>
+                  <input id="cEmail" name="email" type="email" required placeholder="name@company.com" autocomplete="email">
+                </div>
+              </div>
+
+              <div class="contact-dual">
+                <div class="field">
+                  <label for="cCompany">Company or University *</label>
+                  <input id="cCompany" name="company" required placeholder="Organization name" autocomplete="organization">
+                </div>
+                <div class="field">
+                  <label for="cPhone">Phone Number (Optional)</label>
+                  <input id="cPhone" name="phone" type="tel" placeholder="+41 22 000 00 00" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="cAcademy">Academy or Topic of Primary Interest</label>
+                <select id="cAcademy" name="academy" style="width:100%;padding:14px 13px;border:1px solid var(--line);background:white;outline:none">
+                  <option value="">-- Select an Academy (or Not Sure) --</option>
+                  ${academies.map((a) => `<option value="${esc(a.name)}">${esc(a.code)} · ${esc(a.name)}</option>`).join('')}
+                  <option value="General AI Readiness & Strategy">General AI Readiness & Strategy</option>
+                  <option value="Custom Enterprise Cohort">Custom Enterprise Cohort</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="cNotes">Learning Objectives or Specific Questions</label>
+                <textarea id="cNotes" name="notes" rows="3" style="width:100%;padding:14px 13px;border:1px solid var(--line);background:white;outline:none;font-family:inherit" placeholder="Tell us about your team's background, participant count, or timeline..."></textarea>
+              </div>
+
+              <label class="consent" style="margin-top:4px">
+                <input type="checkbox" required> I agree that EduCut AI may store and use my details to contact me regarding this inquiry in accordance with the <a href="/privacy/" target="_blank" style="text-decoration:underline">Privacy Policy</a>.
+              </label>
+
+              <button class="btn btn-lime btn-lg" type="submit" id="contactSubmitBtn" style="margin-top:12px">Submit Request →</button>
+              <div id="contactFeedback" style="display:none;margin-top:16px;padding:16px;border-left:4px solid var(--lime);background:#f2fae3;font-size:14px"></div>
+            </form>
+          </div>
+
+          <div class="contact-info-panel">
+            <div class="mono" style="color:var(--blue);margin-bottom:12px">WHAT TO EXPECT</div>
+            <h3 style="font-size:22px;margin:0 0 16px">Bespoke Enterprise AI Guidance</h3>
+            <div class="consult-points" style="margin-bottom:32px">
+              <div class="consult-point"><span>1. Organizational Diagnostic</span><span>We evaluate your team's maturity level and operational focus.</span></div>
+              <div class="consult-point"><span>2. Targeted Curriculum</span><span>Select 3, 5, or 7 courses from 212 accredited curricula.</span></div>
+              <div class="consult-point"><span>3. Delivery &amp; Scheduling</span><span>Blended live online faculty sessions + hands-on labs.</span></div>
+              <div class="consult-point"><span>4. Rapid Turnaround</span><span>We respond within 24 hours on business days.</span></div>
+            </div>
+
+            <div class="direct-channels" style="border-top:1px solid var(--line);padding-top:24px">
+              <div class="mono" style="color:#777;margin-bottom:12px">DIRECT INQUIRIES</div>
+              <p style="margin:0 0 8px"><strong>Partnerships &amp; Enterprise:</strong><br><a href="mailto:partners@educutai.com" style="color:var(--blue)">partners@educutai.com</a></p>
+              <p style="margin:0 0 8px"><strong>General Enquiries:</strong><br><a href="mailto:contact@educutai.com" style="color:var(--blue)">contact@educutai.com</a></p>
+              <p style="margin:0"><strong>LinkedIn:</strong><br><a href="https://www.linkedin.com/company/educut-ai/" target="_blank" rel="noopener" style="color:var(--blue)">EduCut AI on LinkedIn →</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+    (function(){
+      var form = document.getElementById('directContactForm');
+      var fb = document.getElementById('contactFeedback');
+      var btn = document.getElementById('contactSubmitBtn');
+      if(!form) return;
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        btn.disabled = true;
+        btn.textContent = 'Submitting request...';
+        var fd = new FormData(form);
+        var type = fd.get('inquiryType') || 'consultation';
+        var payload = {
+          fullName: fd.get('fullName'),
+          email: fd.get('email'),
+          company: fd.get('company'),
+          phone: fd.get('phone') || null,
+          notes: '[' + type.toUpperCase() + '] ' + (fd.get('academy') ? 'Topic: ' + fd.get('academy') + '. ' : '') + (fd.get('notes') || ''),
+          source: 'CONTACT_PAGE'
+        };
+        try {
+          if (window.EduCutAPI && typeof window.EduCutAPI.requestCatalogue === 'function') {
+            await window.EduCutAPI.requestCatalogue(payload);
+          } else {
+            var saved = JSON.parse(localStorage.getItem('educutDirectInquiries') || '[]');
+            saved.push(Object.assign({}, payload, { created_at: new Date().toISOString() }));
+            localStorage.setItem('educutDirectInquiries', JSON.stringify(saved));
+          }
+        } catch(err) {
+          console.warn('Submission fallback note:', err);
+        }
+        form.style.display = 'none';
+        fb.style.display = 'block';
+        fb.innerHTML = '<strong>Thank you! Your request has been received.</strong><br>Our team of AI academics and specialists will review your requirements and follow up with you at <b>' + payload.email + '</b> within 24 hours.';
+      });
+    })();
+    </script>
 
     ${SECTION_CONTACT}`;
 
@@ -980,11 +1121,12 @@ function aboutPage() {
   const missing = (what) => draft ? `<p><mark class="review-note">To be provided by EduCut.ai: ${what}</mark></p>` : '';
   const companyRows = [
     ['Name', 'EduCut.ai'],
-    ...(COMPANY.legalName ? [['Legal name', esc(COMPANY.legalName)]] : []),
+    ...(COMPANY.legalName ? [['Legal entity', `${esc(COMPANY.legalName)} (Operating entity; incorporation in progress)`]] : []),
     ['Country', esc(COMPANY.country)],
     ...(COMPANY.streetAddress ? [['Address', esc([COMPANY.streetAddress, [COMPANY.postalCode, COMPANY.locality].filter(Boolean).join(' '), COMPANY.country].filter(Boolean).join(', '))]] : []),
     ...(COMPANY.foundingYear ? [['Founded', esc(String(COMPANY.foundingYear))]] : []),
-    ['Contact', 'contact@educutai.com (general enquiries) · partners@educutai.com (partnerships, universities, companies) · support@educutai.com (platform support)'],
+    ['Contact', '<a href="mailto:partners@educutai.com">partners@educutai.com</a> (partnerships, enterprise &amp; universities) · <a href="mailto:contact@educutai.com">contact@educutai.com</a> · <a href="mailto:support@educutai.com">support@educutai.com</a>'],
+    ...(COMPANY.sameAs && COMPANY.sameAs.length ? [['LinkedIn', COMPANY.sameAs.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(u)} ↗</a>`).join(', ')]] : []),
   ];
   const body = `
     ${draft ? '<div class="draft-banner"><div class="wrap"><strong>DRAFT: waiting for company information.</strong> Hidden from search engines and not linked from the site until the legal name and company story are provided.</div></div>' : ''}
@@ -1000,7 +1142,7 @@ function aboutPage() {
     <section class="page-section alt" aria-labelledby="story">
       <div class="wrap article">
         <h2 id="story">Our story</h2>
-        ${COMPANY.story ? `<p>${COMPANY.story}</p>` : missing('who founded EduCut.ai, when, and why (2–4 sentences).')}
+        ${COMPANY.story ? COMPANY.story.split(/\n\n+/).map(p => `<p>${esc(p.trim())}</p>`).join('\n        ') : missing('who founded EduCut.ai, when, and why (2–4 sentences).')}
         <h2>Our approach</h2>
         <p>EduCut.ai offers AI learning built for business, not a generic course library. The catalogue is AI-only and organized around precise professional needs, from productivity and business functions to LLMs, RAG, agents, governance, security and enterprise transformation, and courses are updated and expanded as AI evolves. Instead of labelling organizations simply “beginner” or “advanced”, a short assessment combines organizational maturity, business priorities, target teams, technical ambition and governance needs into three paths of increasing depth.</p>
       </div>
@@ -1018,7 +1160,7 @@ function aboutPage() {
       <div class="wrap">
         <h2 id="faculty">Faculty and experts</h2>
         ${FACULTY.length ? `<div class="faculty">${FACULTY.map((f) => `
-          <div class="faculty-card"><h3>${esc(f.name)}</h3><p class="mono">${esc(f.role)}</p><p>${esc(f.expertise)}</p>${f.credentials ? `<p class="credentials">${esc(f.credentials)}</p>` : ''}${f.profileUrl ? `<a href="${esc(f.profileUrl)}" rel="me noopener">Profile →</a>` : ''}</div>`).join('')}</div>` : missing('the experts who teach, author or review - name, role, expertise, credentials.')}
+          <div class="faculty-card"><h3>${esc(f.name)}</h3><p class="mono">${esc(f.role)}</p><p>${esc(f.expertise)}</p>${f.credentials ? `<p class="credentials">${esc(f.credentials)}</p>` : ''}${f.profileUrl ? `<a href="${esc(f.profileUrl)}" rel="me noopener">Profile →</a>` : ''}</div>`).join('')}</div>` : (draft ? missing('the experts who teach, author or review - name, role, expertise, credentials.') : `<p class="section-intro" style="font-size:16px;max-width:820px;color:#444;line-height:1.6">Our academies and curricula are authored, reviewed, and instructed by high-ranking academics, senior researchers, and university professors in the domain of Artificial Intelligence from world-class research institutions. To preserve academic neutrality and ongoing research commitments, individual faculty profiles are coordinated directly with verified client organizations during cohort planning and syllabus customization.</p>`)}
       </div>
     </section>
 

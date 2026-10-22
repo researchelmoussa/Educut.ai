@@ -11,7 +11,11 @@
   <meta property="og:title" content="AI for Finance Course: FP&amp;A, Forecasting" />
   <meta property="og:description" content="10 AI for finance courses: financial analysis, budgeting and forecasting, accounting, Excel modelling, fraud detection, FP&amp;A and finance automation." />
   <meta property="og:url" content="https://educutai.com/academies/ai-for-finance/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://educutai.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://educutai.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
   <script type="application/ld+json">{
  "@context": "https://schema.org",
@@ -396,19 +400,40 @@
   }
  ]
 }</script>
-  <link rel="stylesheet" href="/assets/site.css?v=d34ec19473" />
-  <link rel="stylesheet" href="/assets/pages.css?v=ae4ea25e1d" />
+  <link rel="stylesheet" href="/assets/site.css?v=c7759e9f4d" />
+  <link rel="stylesheet" href="/assets/pages.css?v=24e697b1c0" />
 </head>
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
       <a class="brand" href="/">EduCut<span>.ai</span></a>
-      <div class="nav-links">
-        <a href="/academies/" aria-current="page">Academies</a><a href="/ai-learning-paths/">AI Paths</a><a href="/educut-connect/">Connect</a><a href="/contact/">Contact</a><a href="/#/signup">Sign up</a><a href="/#/signin">Sign In</a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span class="nav-toggle-icon">☰</span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="/academies/" aria-current="page">Academies</a><a href="/ai-learning-paths/">AI Paths</a><a href="/educut-connect/">Connect</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/#/signup">Sign up</a><a href="/#/signin">Sign In</a>
         <a class="btn btn-lime" href="/#start-assessment">Take the 3-min test</a>
       </div>
     </div>
   </nav>
+  <script>
+  (function(){
+    var t=document.getElementById('navToggle'), n=document.getElementById('navLinks');
+    if(!t || !n) return;
+    t.addEventListener('click', function(){
+      var open = n.classList.toggle('is-open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var ico = t.querySelector('.nav-toggle-icon');
+      if(ico) ico.textContent = open ? '✕' : '☰';
+    });
+    n.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        n.classList.remove('is-open');
+        t.setAttribute('aria-expanded', 'false');
+        var ico = t.querySelector('.nav-toggle-icon');
+        if(ico) ico.textContent = '☰';
+      });
+    });
+  })();
+  </script>
   <main>
 
     <header class="page-hero">
@@ -636,8 +661,11 @@
           <li><a href="/ai-learning-paths/">AI learning paths</a></li>
           <li><a href="/educut-connect/">EduCut Connect: opportunities</a></li>
           <li><a href="/contact/">Contact &amp; consultation</a></li>
+          <li><a href="/about/">About EduCut.ai</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms &amp; Conditions</a></li>
         </ul>
-        <p class="footer-place">Based in Switzerland</p>
+        <p class="footer-place">Based in Switzerland · <a href="mailto:partners@educutai.com" style="color:#a1a19c">partners@educutai.com</a> · <a href="https://www.linkedin.com/company/educut-ai/" target="_blank" rel="noopener noreferrer" style="color:#a1a19c">LinkedIn ↗</a></p>
       </div>
       <div class="footer-academies">
         <div class="mono">Academies</div>
