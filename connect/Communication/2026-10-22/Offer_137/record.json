@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Ph.D. Program",
+    "evidence_url": "https://www.cs.washington.edu/academics/graduate/phd-program/phd-admissions/how-apply/",
+    "evidence_quote": "Ph.D. Program How to Apply - Paul G. Allen School of Computer Science & Engineering"
+  },
+  "institution": {
+    "name": "Paul G. Allen School of Computer Science & Engineering, University of Washington",
+    "website": "https://www.cs.washington.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cs.washington.edu/academics/graduate/phd-program/phd-admissions/how-apply/",
+  "source_url": "https://www.cs.washington.edu/academics/graduate/phd-program/phd-admissions/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Seattle",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer science and engineering",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "One admissions cycle per year, for autumn entry",
+    "GRE scores are not required or accepted",
+    "Materials submitted through the online portal by 11:59pm Pacific Time on the deadline"
+  ],
+  "skills": [],
+  "description_short": "Ph.D. program at the University of Washington Allen School. Applications open September 1 and are due December 15 (or the next business day if the 15th falls on a weekend), for autumn entry; GRE scores are not accepted.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": "America/Los_Angeles",
+    "evidence_url": "https://www.cs.washington.edu/academics/graduate/phd-program/phd-admissions/",
+    "evidence_quote": "December 15 (or the next business day if the 15th falls on a weekend)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Allen School admissions page (search results): annual deadline December 15, 11:59pm Pacific Time",
+    "December 15, 2026 is a Tuesday, so no weekend shift applies",
+    "Portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "The official page states the recurring date without a year; 2026-12-15 is the date that applies to the current (autumn 2027) cycle",
+    "Decision timing differs between pages (mid- vs late February)",
+    "Funding terms not stated in the results",
+    "Country not stated verbatim; inferred from Seattle, Washington",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results; ellipses mark joined fragments",
+    "Compensation not stated verbatim in the results",
+    "Title 'Ph.D. Program' as worded in the Allen School page heading"
+  ],
+  "discovered_at": "2026-10-22T02:00:17.407Z",
+  "last_verified_at": "2026-10-22T02:03:01.466Z",
+  "id": "opp_6a0d63dd2a280a26",
+  "fingerprint": "f72f1293dca6a168",
+  "content_hash": "sha256:85d16c9d513f133559a379d4afc261e1c08c6c855bb7274e0473cce33c12c39a"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Pasteur-Paris University International doctoral program (PPU)",
+    "evidence_url": "https://www.pasteur.fr/en/education/ppu",
+    "evidence_quote": "Pasteur-Paris University International doctoral program (PPU)"
+  },
+  "institution": {
+    "name": "Institut Pasteur",
+    "website": "https://www.pasteur.fr",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.pasteur.fr/en/education/ppu",
+  "source_url": "https://www.pasteur.fr/en/education/ppu",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Paris",
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "unspecified",
+  "field": "Biomedical and life sciences",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Master's degree completed by the summer before enrolment (not required at the deadline)",
+    "Candidates are first chosen by host labs, then reviewed by a selection committee",
+    "Shortlisted candidates interviewed in early February"
+  ],
+  "skills": [],
+  "description_short": "International PhD program at Institut Pasteur with Paris universities: about 15 openings a year, three-year contracts. The call for October 2027 enrolment runs October 1 to November 16, 2026; results by mid-February.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-16",
+    "timezone": "Europe/Paris",
+    "evidence_url": "https://www.pasteur.fr/en/education/ppu",
+    "evidence_quote": "October 1st to November 16th, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Institut Pasteur PPU page (search results): call for October 2027 enrolment open October 1 - November 16, 2026",
+    "A lab posting of October 7, 2026 gives the same window",
+    "Portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "The page body also says calls open in September; exact dates are to be confirmed on the current call page",
+    "Salary not stated in the results",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results; ellipses mark joined fragments",
+    "Compensation not stated verbatim in the results"
+  ],
+  "discovered_at": "2026-10-22T02:00:17.407Z",
+  "last_verified_at": "2026-10-22T02:01:01.279Z",
+  "id": "opp_8e5f2101af7d49b1",
+  "fingerprint": "4d166fc1fc2b2c7c",
+  "content_hash": "sha256:8e1a46b5574afe5b47854aef87c939fea383d32a9ddd84844d3470db4aea1e9e"
+}

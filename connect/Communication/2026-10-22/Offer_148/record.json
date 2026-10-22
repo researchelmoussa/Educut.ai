@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD in Computer Science",
+    "evidence_url": "https://www.cst.cam.ac.uk/admissions/phd",
+    "evidence_quote": "PhD in Computer Science"
+  },
+  "institution": {
+    "name": "University of Cambridge, Department of Computer Science and Technology",
+    "website": "https://www.cst.cam.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.postgraduate.study.cam.ac.uk/courses/directory/cscspdpcs",
+  "source_url": "https://www.cst.cam.ac.uk/admissions/phd",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Funding deadlines differ by applicant group (Home-fee, US-resident, rest of world)",
+    "Complete applications must be received within ten days of the listed dates to be considered for funding",
+    "General application close for October 2027 start: 13 May 2027 (applicants with external funding)"
+  ],
+  "skills": [],
+  "description_short": "PhD in Computer Science at the University of Cambridge for October 2027 entry. The department lists 8 December 2026 as the funding-competition deadline for most international (rest of world) and Home-fee applicants.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-08",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.cst.cam.ac.uk/postgraduate-admissions/getting-funding",
+    "evidence_quote": "The University Funding Competition Department Deadline is 8 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Cambridge CST pages (search results): 8 December 2026 funding deadline; course open for October 2027 entry",
+    "Portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "The CST funding page also cites 2 December 2026 for Gates/Cambridge Trust applicants abroad, conflicting with 8 December elsewhere",
+    "US-resident Gates deadline (14 October 2026) has passed",
+    "January 2027 start deadlines have passed",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results; ellipses mark joined fragments",
+    "Compensation not stated verbatim in the results"
+  ],
+  "discovered_at": "2026-10-22T02:00:17.407Z",
+  "last_verified_at": "2026-10-22T02:00:59.213Z",
+  "id": "opp_d658b6e6e3b1ab28",
+  "fingerprint": "6ed780fbcb377057",
+  "content_hash": "sha256:5e67cf4798e6686d9de1ba9deb5c84133216b56e45333f77492f18e4c5d21eed"
+}
