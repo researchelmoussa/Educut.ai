@@ -447,6 +447,7 @@ const NAV = [
   ['/academies/', 'Academies'],
   ['/ai-learning-paths/', 'AI Paths'],
   ['/educut-connect/', 'Connect'],
+  ...(publishedGuides.length ? [['/guides/', 'Guides']] : []),
   ...(ABOUT_PUBLISHED ? [['/about/', 'About']] : []),
   ['/contact/', 'Contact'],
 ];
@@ -951,9 +952,9 @@ function contactPage() {
 
             <div class="direct-channels" style="border-top:1px solid var(--line);padding-top:24px">
               <div class="mono" style="color:#777;margin-bottom:12px">DIRECT INQUIRIES</div>
-              <p style="margin:0 0 8px"><strong>Partnerships &amp; Enterprise:</strong><br><a href="mailto:partners@educutai.com" style="color:var(--blue)">partners@educutai.com</a></p>
-              <p style="margin:0 0 8px"><strong>General Enquiries:</strong><br><a href="mailto:contact@educutai.com" style="color:var(--blue)">contact@educutai.com</a></p>
-              <p style="margin:0"><strong>LinkedIn:</strong><br><a href="https://www.linkedin.com/company/educut-ai/" target="_blank" rel="noopener" style="color:var(--blue)">EduCut AI on LinkedIn →</a></p>
+              <p style="margin:0 0 8px"><strong>Partnerships &amp; Enterprise:</strong><br><a href="mailto:partners@educutai.com">partners@educutai.com</a></p>
+              <p style="margin:0 0 8px"><strong>General Enquiries:</strong><br><a href="mailto:contact@educutai.com">contact@educutai.com</a></p>
+              <p style="margin:0"><strong>LinkedIn:</strong><br><a href="https://www.linkedin.com/company/educut-ai/" target="_blank" rel="noopener">EduCut AI on LinkedIn →</a></p>
             </div>
           </div>
         </div>

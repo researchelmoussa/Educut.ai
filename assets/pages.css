@@ -73,7 +73,7 @@
 .faq-item:last-child{border-bottom:1px solid var(--line)}
 .faq-item h3{font-size:20px;letter-spacing:-.02em;margin:0 0 8px}
 .faq-item p{margin:0;color:#444;font-size:16px;line-height:1.6}
-.faq-item a{color:var(--blue);font-weight:700;border-bottom:1px solid currentColor}
+.faq-item a{color:var(--blue);font-weight:700;border-bottom:1px solid currentColor}.faq-item a:hover{color:var(--ink)}
 
 /* Academy comparison */
 .compare-group{margin-top:40px}.compare-group:first-of-type{margin-top:0}
@@ -82,7 +82,7 @@
 .compare th,.compare td{text-align:left;vertical-align:top;padding:14px 18px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5}
 .compare thead th{background:var(--ink);color:#fff;font-family:"SFMono-Regular",Consolas,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:400}
 .compare tbody th{width:22%}
-.compare tbody th a{color:var(--blue);font-weight:700;border-bottom:1px solid currentColor}
+.compare tbody th a{color:var(--blue);font-weight:700;border-bottom:1px solid currentColor}.compare tbody th a:hover{color:var(--ink)}
 @media(max-width:760px){
   .compare thead{display:none}
   .compare tr{display:block;border-bottom:1px solid var(--line)}
@@ -107,19 +107,22 @@
 .guide-cards{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--line)}
 .guides-heading{font-size:20px;letter-spacing:-.02em;margin:40px 0 12px}
 .guide-links{margin:0;padding-left:20px}.guide-links li{margin:0 0 8px}
-.guide-links a{color:var(--blue);font-weight:700;border-bottom:1px solid currentColor}
+.guide-links a{color:var(--blue);font-weight:700;border-bottom:1px solid currentColor}.guide-links a:hover{color:var(--ink)}
 @media(max-width:900px){.guide-cards{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.guide-cards{grid-template-columns:1fr}.article h2{font-size:25px}.article p,.article li{font-size:16px}}
 
 /* Academy cards */
 .academy-cards{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--line)}
-.academy-card{display:flex;flex-direction:column;gap:10px;padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;transition:background .2s}
-.academy-card:hover{background:#f7f7f3}
-.academy-card .code{color:var(--blue)}
-.academy-card h3{font-size:22px;letter-spacing:-.03em;margin:4px 0 0}
-.academy-card p{margin:0;color:#5f5f5a;font-size:14px;line-height:1.5}
-.academy-card .more{margin-top:auto;padding-top:8px;font-weight:700;font-size:13px}
-.academy-card:hover .more{color:var(--blue)}
+.academy-card{display:flex;flex-direction:column;gap:10px;padding:26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;transition:background .2s,color .2s,transform .2s,box-shadow .2s}
+.academy-card:hover,.academy-card:focus-visible{background:var(--ink)!important;color:#fff!important;transform:translateY(-3px);outline:none;box-shadow:0 12px 28px rgba(0,0,0,.18)}
+.academy-card .code{color:var(--blue);transition:color .2s}
+.academy-card:hover .code,.academy-card:focus-visible .code{color:var(--lime)!important}
+.academy-card h3{font-size:22px;letter-spacing:-.03em;margin:4px 0 0;color:var(--ink);transition:color .2s}
+.academy-card:hover h3,.academy-card:focus-visible h3{color:#fff!important}
+.academy-card p{margin:0;color:#5f5f5a;font-size:14px;line-height:1.5;transition:color .2s}
+.academy-card:hover p,.academy-card:focus-visible p{color:#c9c9c6!important}
+.academy-card .more{margin-top:auto;padding-top:8px;font-weight:700;font-size:13px;color:var(--ink);transition:color .2s,transform .2s}
+.academy-card:hover .more,.academy-card:focus-visible .more{color:var(--lime)!important;transform:translateX(3px)}
 .group-block{margin-top:56px}.group-block:first-of-type{margin-top:0}
 .group-block h2{font-size:32px}
 
@@ -145,7 +148,7 @@
 .faculty{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 .faculty-card{background:#fff;padding:24px}.faculty-card h3{margin:0 0 6px;font-size:20px}
 .faculty-card .mono{color:var(--blue);margin:0 0 12px}.faculty-card p{margin:0 0 10px;font-size:14px;line-height:1.55;color:#444}
-.faculty-card .credentials{color:#6f6f6a}.faculty-card a{color:var(--blue);font-weight:700;font-size:13px}
+.faculty-card .credentials{color:#6f6f6a}.faculty-card a{color:var(--blue);font-weight:700;font-size:13px}.faculty-card a:hover{color:var(--ink);text-decoration:underline}
 @media(max-width:900px){.faculty{grid-template-columns:1fr}}
 
 /* Academy "at a glance": stat tiles, level mix, details, assessment banner */
@@ -175,9 +178,10 @@
 .contact-form-box{background:#fff;border:1px solid var(--line);padding:40px}
 .contact-info-panel{background:transparent;padding:12px 0}
 .inquiry-type-grid{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.type-pill{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--line);background:#fafaf8;font-size:13px;font-weight:600;cursor:pointer;transition:.15s;border-radius:var(--radius)}
-.type-pill:hover{border-color:var(--ink);background:#fff}
+.type-pill{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--line);background:#fafaf8;color:var(--ink);font-size:13px;font-weight:600;cursor:pointer;transition:.15s;border-radius:var(--radius)}
+.type-pill:hover{border-color:var(--ink);background:#fff;color:var(--ink)}
 .type-pill:has(input:checked){border-color:var(--ink);background:var(--ink);color:#fff}
+.type-pill:has(input:checked):hover{background:#222226;border-color:var(--ink);color:#fff}
 .type-pill input{accent-color:var(--lime);margin:0}
 .contact-dual{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:850px){
@@ -185,4 +189,7 @@
   .contact-dual{grid-template-columns:1fr}
   .contact-form-box{padding:26px 20px}
 }
+
+.direct-channels a{color:var(--blue);font-weight:700;text-decoration:none;border-bottom:1px solid currentColor;transition:color .15s}
+.direct-channels a:hover{color:var(--ink)}
 
