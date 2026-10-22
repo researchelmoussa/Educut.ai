@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "CS PhD Program",
+    "evidence_url": "https://www.cs.stanford.edu/admissions/phd-admissions-frequently-asked-questions",
+    "evidence_quote": "if you have a PhD in CS from another institution, you cannot apply to the CS PhD program here at Stanford."
+  },
+  "institution": {
+    "name": "Stanford University, Computer Science Department",
+    "website": "https://www.cs.stanford.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cs.stanford.edu/admissions/phd-admissions",
+  "source_url": "https://www.cs.stanford.edu/admissions-graduate-application-deadlines",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Stanford",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "One admissions cycle per year, for entry in the Autumn quarter",
+    "Applications are not accepted after the deadline",
+    "English-proficiency test scores (where required) suggested by October 2026, at least six weeks before the deadline"
+  ],
+  "skills": [],
+  "description_short": "PhD in Computer Science at Stanford University for autumn 2027 entry. The department lists an application window from September 15, 2026 to December 8, 2026, with one admissions cycle per year and no late applications.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-08",
+    "timezone": null,
+    "evidence_url": "https://www.cs.stanford.edu/admissions-graduate-application-deadlines",
+    "evidence_quote": "PhD ... September 15, 2026 ... December 8, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Stanford CS graduate application deadlines page (search results): PhD application window September 15 - December 8, 2026",
+    "Deadline is in the future",
+    "Application portal not independently fetched (official domains unreachable from this environment)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Decision date shown as February 2027 in the table and March 2027 elsewhere on the site",
+    "Deadline time of day not shown",
+    "Funding terms not stated in the results",
+    "Country not stated verbatim; inferred from the Stanford, California location",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results; ellipses mark joined fragments",
+    "Compensation not stated verbatim in the results",
+    "Title taken from the wording 'CS PhD program' on the Stanford CS PhD admissions FAQ (capitalisation normalised); no longer programme name found in the evidence"
+  ],
+  "discovered_at": "2026-10-22T02:00:17.407Z",
+  "last_verified_at": "2026-10-22T02:03:00.575Z",
+  "id": "opp_a9b13bc352964ab0",
+  "fingerprint": "14cef849c3d6de72",
+  "content_hash": "sha256:ddc75e78b245615a2a282466c5b68f80a58c61707f4070cb6280d7f855dafcba"
+}

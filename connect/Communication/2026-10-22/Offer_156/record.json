@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Graduate Research Scholarships (Round 2, 2027)",
+    "evidence_url": "https://scholarships.unimelb.edu.au/awards/graduate-research-scholarships",
+    "evidence_quote": "Graduate Research Scholarships"
+  },
+  "institution": {
+    "name": "The University of Melbourne, Faculty of Medicine, Dentistry and Health Sciences",
+    "website": "https://mdhs.unimelb.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://study.unimelb.edu.au/how-to-apply/graduate-research/international-applications/applications",
+  "source_url": "https://mdhs.unimelb.edu.au/research/research-training/future-students/when-should-i-apply",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Melbourne",
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Medicine, dentistry and health sciences",
+  "seniority": "Graduate research",
+  "qualifications": [
+    "Previous degree finished with final results available",
+    "Full-time commencing PhD applicants are prioritised",
+    "Applicants are considered automatically for eligible Graduate Research Scholarships"
+  ],
+  "skills": [],
+  "description_short": "Round 2 of 2027 graduate research applications and scholarships at the University of Melbourne Faculty of Medicine, Dentistry and Health Sciences. Complete applications are due 31 January 2027; outcomes by 26 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": "Australia/Melbourne",
+    "evidence_url": "https://mdhs.unimelb.edu.au/research/research-training/future-students/when-should-i-apply",
+    "evidence_quote": "Round 2 ... 31 January 2027 ... 26 March 2027"
+  },
+  "compensation": {
+    "value": "$41,100 per year pro rata (2027 full-time rate), Melbourne Research Scholarship",
+    "evidence_url": "https://scholarships.unimelb.edu.au/awards/melbourne-research-scholarship",
+    "evidence_quote": "$41,100 per year pro rata (2027 full-time rate)"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official MDHS page (search results): Round 2 application date 31 January 2027, outcome 26 March 2027",
+    "Portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Most scholarships are awarded in the first two rounds; Round 1 closes 31 October 2026",
+    "Stipend figure is the university-wide Melbourne Research Scholarship rate, not specific to MDHS",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results; ellipses mark joined fragments",
+    "Title combines the University's 'Graduate Research Scholarships' name with the MDHS 'Round 2' application round (31 January 2027)"
+  ],
+  "discovered_at": "2026-10-22T02:00:17.407Z",
+  "last_verified_at": "2026-10-22T02:03:02.534Z",
+  "id": "opp_3c6acad2f5cba925",
+  "fingerprint": "99c2a08c10ac9a6b",
+  "content_hash": "sha256:7f6596ae021e5fd1a78c7ccd59aa32abde040e8cdc29496e66aed0da1b312e27"
+}

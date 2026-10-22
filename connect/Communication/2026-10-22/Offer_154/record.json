@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "MSc programs: Mathematics and Computer Science",
+    "evidence_url": "https://www.weizmann.ac.il/wsos/admissions/how-apply",
+    "evidence_quote": "our online system is open for applications to our MSc programs on November 29, 2026 ... Mathematics and Computer Science: March 31, 2027"
+  },
+  "institution": {
+    "name": "Weizmann Institute of Science, Weizmann School of Science",
+    "website": "https://www.weizmann.ac.il",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.weizmann.ac.il/wsos/admissions/how-apply",
+  "source_url": "https://www.weizmann.ac.il/wsos/admissions/how-apply",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Rehovot",
+    "country": "Israel",
+    "country_code": "IL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Mathematics and computer science",
+  "seniority": "Master's",
+  "qualifications": [
+    "BSc, or in the last year of studies towards a BSc",
+    "Minimum GPA of 85 or equivalent",
+    "In most cases a technical interview is a prerequisite for admission"
+  ],
+  "skills": [],
+  "description_short": "MSc programs in Mathematics and Computer Science at the Weizmann School of Science. The online application system opens November 29, 2026; the deadline for Mathematics and Computer Science is March 31, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-31",
+    "timezone": null,
+    "evidence_url": "https://www.weizmann.ac.il/wsos/admissions/how-apply",
+    "evidence_quote": "Mathematics and Computer Science: March 31, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Weizmann School of Science page (search results): Mathematics and Computer Science deadline March 31, 2027",
+    "Application system not yet open (opens November 29, 2026)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Opportunity type set to scholarship for listing purposes; this is a degree admission, funding terms not shown in the results",
+    "Particularly strong candidates may be accepted early",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results; ellipses mark joined fragments",
+    "Compensation not stated verbatim in the results",
+    "Title joins two phrases from the same page ('MSc programs' and 'Mathematics and Computer Science'); no single programme name found in the evidence"
+  ],
+  "discovered_at": "2026-10-22T02:00:17.407Z",
+  "last_verified_at": "2026-10-22T02:03:01.828Z",
+  "id": "opp_0f8444d04b15df14",
+  "fingerprint": "cd39d23a4fdcf4ba",
+  "content_hash": "sha256:1d4f606c257c665b3a49cbfdbd12b04d1fd8e20d0ee843e138debd8d411eae7d"
+}

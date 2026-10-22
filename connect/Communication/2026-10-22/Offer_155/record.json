@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Master's Program, Graduate School of Information Science and Technology (AY2027)",
+    "evidence_url": "https://www.i.u-tokyo.ac.jp/edu/entra/2027_ag_m_e.pdf",
+    "evidence_quote": "AY2027 Admission Guide: Master's Program Graduate School of Information Science and Technology"
+  },
+  "institution": {
+    "name": "The University of Tokyo, Graduate School of Information Science and Technology",
+    "website": "https://www.i.u-tokyo.ac.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.i.u-tokyo.ac.jp/edu/entra/2027_ag_m_e.pdf",
+  "source_url": "https://www.i.u-tokyo.ac.jp/edu/entra/2027_ag_m_e.pdf",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Tokyo",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Information science and technology",
+  "seniority": "Master's",
+  "qualifications": [
+    "Winter Entrance Examinations for October 2027 entry",
+    "Applications accepted November 11 - November 17, 2026, until 14:00 JST"
+  ],
+  "skills": [],
+  "description_short": "Master's programs at the University of Tokyo Graduate School of Information Science and Technology, Winter Entrance Examinations for October 2027 entry. Applications are accepted from November 11 until 14:00 JST on November 17, 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-17",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.i.u-tokyo.ac.jp/edu/entra/2027_ag_m_e.pdf",
+    "evidence_quote": "applications accepted from Wednesday, November 11, until 14:00 on Tuesday, November 17, 2026 (JST)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official AY2027 admission guide (search results): winter application window November 11-17, 2026 JST",
+    "Window not yet open"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Opportunity type set to scholarship for listing purposes; this is a degree admission",
+    "The school no longer offers the MEXT University Recommendation scholarship from AY2027",
+    "Detailed eligibility in the guide not shown in the results",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results; ellipses mark joined fragments",
+    "Compensation not stated verbatim in the results",
+    "Title rearranged from the admission guide heading"
+  ],
+  "discovered_at": "2026-10-22T02:00:17.407Z",
+  "last_verified_at": "2026-10-22T02:03:02.183Z",
+  "id": "opp_36ff6a6a0c68bdf5",
+  "fingerprint": "67aff64e061b1ef1",
+  "content_hash": "sha256:bcd549e6a5a5a289d04f7270a4d2c3018a459267861aa0e1a4d88a0628e5986e"
+}
