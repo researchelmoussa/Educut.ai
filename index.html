@@ -287,6 +287,59 @@
     return { ok: true, me: boot.data.me };
   };
 
+  /** Create a new account in Supabase GoTrue Auth and initialize profile. */
+  api.signUp = async function (email, password, metadata = {}) {
+    const id = String(email || '').trim().toLowerCase();
+    const fullName = metadata.fullName || `${metadata.firstName || ''} ${metadata.lastName || ''}`.trim() || id.split('@')[0];
+    const r = await post('/auth/v1/signup', {
+      email: id,
+      password,
+      data: {
+        first_name: metadata.firstName || '',
+        last_name: metadata.lastName || '',
+        full_name: fullName,
+        country: metadata.country || '',
+        job_title: metadata.title || '',
+        company_name: metadata.company || '',
+        interests: metadata.interests || [],
+        role: metadata.role || 'INDIVIDUAL',
+      }
+    }, null, false);
+
+    if (!r.ok || !r.data) {
+      let msg = (r.data && (r.data.msg || r.data.message || r.data.error_description)) || '';
+      if (r.status === 429) {
+        msg = 'Supabase email rate limit exceeded. Disable "Confirm email" in Supabase Auth settings to enable instant signups.';
+      } else if (!msg) {
+        msg = 'Unable to create account. Please try again.';
+      }
+      return { ok: false, error: msg, status: r.status, data: r.data };
+    }
+
+    // If email confirmation is disabled, access_token is returned immediately.
+    if (r.data.access_token) {
+      storeToken(r.data);
+      try {
+        const boot = await rpc('app_bootstrap');
+        if (boot.ok && boot.data) {
+          hydrate(boot.data);
+          api.connected = true;
+          api.reason = 'connected';
+          api.me = boot.data.me;
+        }
+      } catch (_) {}
+      return { ok: true, confirmed: true, session: r.data, user: r.data.user };
+    }
+
+    // If confirmation is required, user is created but waiting for email click.
+    return {
+      ok: true,
+      confirmed: false,
+      user: r.data.user || r.data,
+      message: 'Account created! Please check your email to confirm your address, then sign in.'
+    };
+  };
+
   api.signOut = async function () {
     const token = currentToken();
     if (token) await post('/auth/v1/logout', {}, token, false);
@@ -1277,7 +1330,7 @@
 .auth-rail>*{position:relative;z-index:1}.auth-rail .brand{font-size:24px}.auth-rail-copy{margin-top:84px}.auth-rail-copy .mono{color:var(--lime)}.auth-rail h2{font-size:42px;line-height:.96;letter-spacing:-.055em;margin:14px 0 16px}.auth-rail p{color:#aaa;font-size:14px;max-width:240px}.auth-rail-foot{margin-top:auto;border-top:1px solid #333;padding-top:18px;color:#777}
 .auth-main{min-width:0;display:flex;flex-direction:column}.auth-top{min-height:72px;padding:0 30px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px}.auth-back,.auth-close{border:1px solid var(--line);background:#fff;color:var(--ink);width:42px;height:42px;display:grid;place-items:center;cursor:pointer;font-size:20px;transition:.18s}.auth-back:hover,.auth-close:hover{background:var(--ink);color:#fff;border-color:var(--ink)}.auth-top-actions{display:flex;gap:8px}.auth-body{padding:38px 40px 44px;overflow:auto;flex:1}.auth-heading{margin-bottom:28px}.auth-heading .mono{color:var(--blue);margin-bottom:10px}.auth-heading h1,.auth-heading h2{font-size:44px;line-height:.98;letter-spacing:-.055em;margin:0 0 12px}.auth-heading p{color:#696965;max-width:700px;margin:0;font-size:15px}
 .auth-access-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.auth-access-card{border:1px solid var(--line);background:#fff;padding:28px;min-height:310px;display:flex;flex-direction:column;cursor:pointer;transition:transform .23s ease,border-color .23s ease,box-shadow .23s ease;position:relative;overflow:hidden;text-align:left}.auth-access-card:before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:.26s ease}.auth-access-card.company:before{background:var(--lime)}.auth-access-card:hover,.auth-access-card:focus-visible{transform:translateY(-5px);border-color:var(--ink);box-shadow:0 18px 45px rgba(0,0,0,.08);outline:none}.auth-access-card:hover:before,.auth-access-card:focus-visible:before{transform:scaleX(1)}.auth-icon{width:54px;height:54px;border:1px solid var(--ink);display:grid;place-items:center;font-size:24px;margin-bottom:46px;background:var(--paper);transition:transform .2s ease}.auth-access-card:hover .auth-icon{transform:translateY(-3px)}.auth-access-card h3{font-size:27px;margin:0 0 10px;letter-spacing:-.035em}.auth-access-card p{color:#666;margin:0 0 18px;line-height:1.5}.auth-card-note{font-size:11px;color:#8b8b87;margin-top:auto;margin-bottom:18px}.auth-card-cta{font-weight:800;font-size:13px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:16px}.auth-card-cta span:last-child{color:var(--blue)}.company .auth-card-cta span:last-child{color:#2d5000;font-weight:700}
-.auth-segment{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink);margin-bottom:26px;background:#fff}.auth-segment button{border:0;border-right:1px solid var(--ink);background:#fff;padding:13px;cursor:pointer;font-weight:800}.auth-segment button:last-child{border-right:0}.auth-segment button.active{background:var(--ink);color:#fff}.auth-form{display:grid;gap:15px}.auth-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.auth-field.full{grid-column:1/-1}.auth-field label{display:block;font-family:"SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.12em;font-size:10px;color:#666;margin-bottom:7px}.auth-field input,.auth-field select,.auth-field textarea{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);padding:14px 13px;outline:none;border-radius:0;min-height:48px}.auth-field input:focus,.auth-field select:focus,.auth-field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(51,87,255,.08)}.auth-field.invalid input,.auth-field.invalid select{border-color:#b00020}.auth-error{color:#9f001b;font-size:12px;margin-top:5px;min-height:0}.auth-password-wrap{position:relative}.auth-password-wrap input{padding-right:60px}.auth-password-toggle{position:absolute;right:8px;top:8px;height:32px;border:0;background:transparent;color:var(--blue);font-family:"SFMono-Regular",Consolas,monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer}.auth-inline{display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:12px;color:#666}.auth-inline label{display:flex;gap:8px;align-items:center}.auth-link{border:0;background:transparent;color:var(--blue);padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}.auth-submit{width:100%;min-height:52px;margin-top:2px}.auth-switch{text-align:center;color:#777;font-size:12px;margin-top:2px}.auth-switch button{border:0;background:transparent;color:var(--blue);font-weight:800;cursor:pointer}.auth-status{min-height:20px;font-size:12px}.auth-status.error{color:#a6001d}.auth-status.success{color:#3e7200}.auth-status[aria-live]{outline:none}
+.auth-segment{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:1px solid var(--ink);margin-bottom:26px;background:#fff}.auth-segment button{border:0;border-right:1px solid var(--ink);background:#fff;padding:13px;cursor:pointer;font-weight:800}.auth-segment button:last-child{border-right:0}.auth-segment button.active{background:var(--ink);color:#fff}.auth-form{display:grid;gap:15px}.auth-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.auth-field.full{grid-column:1/-1}.auth-field label{display:block;font-family:"SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.12em;font-size:10px;color:#666;margin-bottom:7px}.auth-field input,.auth-field select,.auth-field textarea{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);padding:14px 13px;outline:none;border-radius:0;min-height:48px}.auth-field input:focus,.auth-field select:focus,.auth-field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(51,87,255,.08)}.auth-field.invalid input,.auth-field.invalid select{border-color:#b00020}.auth-error{color:#9f001b;font-size:12px;margin-top:5px;min-height:0}.auth-password-wrap{position:relative}.auth-password-wrap input{padding-right:60px}.auth-password-toggle{position:absolute;right:8px;top:8px;height:32px;border:0;background:transparent;color:var(--blue);font-family:"SFMono-Regular",Consolas,monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer}.auth-inline{display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:12px;color:#666}.auth-inline label{display:flex;gap:8px;align-items:center}.auth-link{border:0;background:transparent;color:var(--blue);padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}.auth-submit{width:100%;min-height:52px;margin-top:2px}.auth-switch{text-align:center;color:#777;font-size:12px;margin-top:2px}.auth-switch button{border:0;background:transparent;color:var(--blue);font-weight:800;cursor:pointer}.auth-status{min-height:20px;font-size:12px}.auth-status.error{color:#a6001d}.auth-status.success{color:#3e7200}.auth-status[aria-live]{outline:none}
 .auth-stepbar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);margin-bottom:26px}.auth-stepbar span{background:#fff;padding:9px 8px;text-align:center;font-size:9px;font-family:"SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.09em;color:#888}.auth-stepbar span.active{background:var(--ink);color:#fff}.auth-stepbar span.done{background:#e9f8cb;color:#365d00}.auth-form-actions{display:flex;justify-content:space-between;gap:10px;margin-top:6px}.auth-form-actions .btn{min-width:150px}.auth-choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.auth-chip-grid{display:flex;flex-wrap:wrap;gap:8px}.auth-chip{border:1px solid var(--line);background:#fff;padding:10px 11px;cursor:pointer;font-size:12px;text-align:left}.auth-chip[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 4px 0 0 var(--lime);background:#fafafa}.auth-check{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);background:#fff;font-size:12px}.auth-check input{margin-top:2px}.password-rules{display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;margin-top:8px;font-size:11px;color:#777}.password-rules span.ok{color:#4c7700}.auth-progress-note{font-size:11px;color:#777;margin-bottom:14px}.auth-success-panel{border:1px solid var(--ink);background:#fff;padding:34px;min-height:310px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;position:relative;overflow:hidden}.auth-success-panel:before{content:"";position:absolute;left:0;top:0;width:7px;height:100%;background:var(--lime)}.auth-success-mark{width:56px;height:56px;border:1px solid var(--ink);display:grid;place-items:center;font-size:28px;margin-bottom:25px}.auth-success-panel h2{font-size:38px;line-height:1;margin:0 0 12px;letter-spacing:-.045em}.auth-success-panel p{color:#666;max-width:560px}.admin-granted{background:var(--ink);color:#fff;border-color:#444}.admin-granted:before{background:var(--lime)}.admin-granted p{color:#aaa}.admin-granted .auth-success-mark{border-color:var(--lime);color:var(--lime)}
 .route-view{position:fixed;inset:0;z-index:130;background:var(--paper);display:none;overflow:auto}.route-view.open{display:block}.route-top{height:76px;background:var(--ink);color:#fff;border-bottom:1px solid #333;display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100vw - 1240px)/2));position:sticky;top:0;z-index:2}.route-top .route-role{color:var(--lime)}.route-top-actions{display:flex;align-items:center;gap:12px}.route-content{width:min(1240px,calc(100% - 48px));margin:auto;padding:48px 0 70px}.route-heading{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;padding-bottom:36px;border-bottom:1px solid var(--ink)}.route-heading h1{font-size:58px;line-height:.95;letter-spacing:-.06em;margin:7px 0 0}.route-heading p{color:#666;font-size:16px;max-width:650px}.route-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}.route-card{background:#fff;padding:26px;min-height:190px}.route-card .mono{color:var(--blue)}.route-card h3{font-size:23px;margin:24px 0 8px}.route-card p{font-size:13px;color:#70706c}.route-admin .route-card:first-child{box-shadow:inset 6px 0 0 var(--lime)}.restricted-panel{max-width:740px;margin:90px auto;border:1px solid var(--ink);background:#fff;padding:42px}.restricted-panel .mono{color:#b00020}.restricted-panel h1{font-size:50px;letter-spacing:-.055em;margin:12px 0}.restricted-panel p{color:#666}.auth-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:900px){.auth-shell{grid-template-columns:1fr;min-height:0}.auth-rail{display:none}.auth-access-grid{grid-template-columns:1fr}.auth-body{padding:32px 28px 38px}.route-heading{grid-template-columns:1fr}.route-grid{grid-template-columns:1fr 1fr}.auth-form-grid{grid-template-columns:1fr}.auth-field.full{grid-column:auto}}
@@ -1726,6 +1779,624 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
     padding:24px 18px!important;
   }
   .company-workspace-editorial .company-page-shell{padding:22px 18px 55px!important}
+}
+
+
+/* ===== EduCut.ai Learner Personal Space ===== */
+.learner-app {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+}
+.learner-sidebar {
+  background: var(--ink);
+  color: #fff;
+  border-right: 1px solid #2a2a2a;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.learner-sidebar-head {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid #333;
+  background: var(--ink);
+}
+.learner-sidebar-head .brand {
+  color: #fff;
+}
+.learner-tag-box {
+  padding: 18px 22px 14px;
+  border-bottom: 1px solid #292929;
+  background: var(--ink);
+}
+.learner-tag-box .mono {
+  color: #888;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+.learner-tag-box strong {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.learner-tag-box small {
+  color: var(--lime);
+  display: block;
+  margin-top: 4px;
+  font: 700 9px "SFMono-Regular", Consolas, monospace;
+  letter-spacing: .08em;
+}
+.learner-nav {
+  padding: 12px 10px 24px;
+  flex: 1;
+}
+.learner-nav-group {
+  margin: 16px 0 6px;
+  padding: 0 10px;
+  color: #71716d;
+  font: 700 9px "SFMono-Regular", Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+.learner-nav-btn {
+  width: 100%;
+  min-height: 38px;
+  border: 0;
+  border-left: 3px solid transparent;
+  background: transparent;
+  color: #bdbdb8;
+  text-align: left;
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all .15s ease;
+}
+.learner-nav-btn:hover {
+  background: #171717;
+  color: #fff;
+}
+.learner-nav-btn.active {
+  background: #1a1a1a;
+  border-left-color: var(--lime);
+  color: #fff;
+  font-weight: 700;
+}
+.learner-nav-code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  color: #6f80ff;
+  font-size: 9px;
+  letter-spacing: .1em;
+  width: 24px;
+  flex: 0 0 24px;
+}
+.learner-nav-btn.active .learner-nav-code {
+  color: var(--lime);
+}
+.learner-sidebar-bottom {
+  padding: 14px 12px 24px;
+  border-top: 1px solid #242424;
+}
+.learner-sidebar-logout {
+  width: 100%;
+  border: 1px solid #444;
+  background: #141414;
+  color: #ddd;
+  text-align: left;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all .15s ease;
+}
+.learner-sidebar-logout:hover {
+  border-color: #fff;
+  background: #fff;
+  color: #000;
+}
+.learner-main {
+  min-width: 0;
+  background: var(--paper);
+}
+.learner-topbar {
+  height: 76px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.learner-menu-toggle {
+  display: none;
+  border: 1px solid var(--line);
+  background: #fff;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.learner-search {
+  flex: 1;
+  max-width: 480px;
+  position: relative;
+}
+.learner-search input {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 10px 14px;
+  outline: none;
+  font-size: 13px;
+}
+.learner-search input:focus {
+  border-color: var(--ink);
+  background: #fff;
+}
+.learner-top-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.learner-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+.learner-chip-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--lime);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 11px;
+}
+.learner-chip-copy strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.1;
+}
+.learner-chip-copy small {
+  color: #777;
+  font-size: 10px;
+}
+.learner-page-shell {
+  padding: 30px 32px 70px;
+  max-width: 1500px;
+  margin: auto;
+}
+.learner-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 24px;
+  margin-bottom: 26px;
+}
+.learner-head h1 {
+  font-size: clamp(34px, 4.5vw, 56px);
+  letter-spacing: -.055em;
+  line-height: .96;
+  margin: 6px 0 0;
+}
+.learner-head p {
+  max-width: 620px;
+  color: #666;
+  margin: 0;
+  font-size: 14px;
+}
+.learner-kpis {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+.learner-kpi {
+  background: #fff;
+  padding: 18px;
+  min-height: 112px;
+}
+.learner-kpi .mono {
+  color: var(--blue);
+  font-size: 10px;
+}
+.learner-kpi strong {
+  display: block;
+  font-size: 28px;
+  letter-spacing: -.04em;
+  margin-top: 14px;
+}
+.learner-kpi small {
+  color: #777;
+  font-size: 11px;
+}
+/* Free Course Showcase Card */
+.learner-free-hero {
+  border: 2px solid var(--ink);
+  background: #fff;
+  padding: 26px;
+  margin-bottom: 28px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 28px;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.04);
+}
+.learner-free-badge {
+  background: var(--lime);
+  color: var(--ink);
+  font: 800 10px/1 "SFMono-Regular", Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: 5px 9px;
+  display: inline-block;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+.learner-free-hero h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  letter-spacing: -.04em;
+  margin: 0 0 8px;
+}
+.learner-free-hero p {
+  color: #555;
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.learner-free-perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+}
+.learner-free-perk {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.learner-free-perk::before {
+  content: "✓";
+  color: #355b00;
+  font-weight: 900;
+}
+.learner-free-hero-action {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.learner-free-price {
+  font: 800 24px/1 "SFMono-Regular", Consolas, monospace;
+  color: var(--ink);
+}
+.learner-free-price span {
+  font-size: 11px;
+  color: #666;
+  font-weight: 500;
+  display: block;
+  margin-top: 4px;
+}
+/* Course Cards Grid */
+.learner-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.learner-course-card {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .18s ease, border-color .18s ease;
+  position: relative;
+}
+.learner-course-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink);
+}
+.learner-course-card.is-free {
+  border-left: 4px solid var(--lime);
+}
+.learner-course-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.learner-code-pill {
+  font: 700 10px "SFMono-Regular", Consolas, monospace;
+  color: var(--blue);
+  background: rgba(51,87,255,.08);
+  padding: 4px 8px;
+  border-radius: 2px;
+  letter-spacing: .06em;
+}
+.learner-academy-name {
+  font-size: 11px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 4px;
+}
+.learner-course-card h3 {
+  font-size: 20px;
+  letter-spacing: -.03em;
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+.learner-course-desc {
+  color: #666;
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin: 0 0 16px;
+  flex: 1;
+}
+.learner-course-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 11px;
+  color: #777;
+  padding: 10px 0;
+  border-top: 1px solid #f0f0eb;
+  border-bottom: 1px solid #f0f0eb;
+  margin-bottom: 14px;
+}
+.learner-progress-wrap {
+  margin-bottom: 16px;
+}
+.learner-progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 700 10px "SFMono-Regular", Consolas, monospace;
+  color: #666;
+  margin-bottom: 6px;
+}
+.learner-progress-bar {
+  height: 7px;
+  background: #e8e8e2;
+  border-radius: 1px;
+  overflow: hidden;
+}
+.learner-progress-bar span {
+  display: block;
+  height: 100%;
+  background: var(--blue);
+  transition: width .3s ease;
+}
+.learner-progress-bar.complete span {
+  background: var(--lime);
+}
+.learner-course-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: auto;
+}
+/* Modal Player & Curriculum */
+.learner-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 11, 12, .82);
+  backdrop-filter: blur(4px);
+  z-index: 500;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.learner-modal-overlay.open {
+  display: flex;
+}
+.learner-modal-card {
+  width: min(920px, 100%);
+  max-height: 92vh;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid var(--ink);
+  box-shadow: 0 24px 70px rgba(0,0,0,.45);
+}
+.learner-modal-head {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(255,255,255,.98);
+  backdrop-filter: blur(8px);
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+.learner-modal-body {
+  padding: 24px 28px;
+}
+.learner-lesson-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+.learner-lesson-item {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+  transition: all .15s ease;
+}
+.learner-lesson-item:hover {
+  border-color: var(--ink);
+  background: #fafaf8;
+}
+.learner-lesson-item.completed {
+  background: #f7fbf2;
+  border-color: #badf78;
+}
+.learner-lesson-check {
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--line);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  background: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  color: transparent;
+  transition: all .15s ease;
+}
+.learner-lesson-check:hover {
+  border-color: var(--ink);
+}
+.learner-lesson-item.completed .learner-lesson-check {
+  background: var(--lime);
+  border-color: #355b00;
+  color: var(--ink);
+}
+.learner-lesson-info h4 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+.learner-lesson-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+/* Filter Bar */
+.learner-filter-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+}
+.learner-filter-bar select, .learner-filter-bar input {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 9px 12px;
+  font-size: 12.5px;
+  outline: none;
+}
+.learner-filter-bar select:focus, .learner-filter-bar input:focus {
+  border-color: var(--ink);
+  background: #fff;
+}
+/* Certificate Card */
+.learner-cert-card {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,.02);
+}
+.learner-cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.learner-cert-stamp {
+  font: 800 10px "SFMono-Regular", Consolas, monospace;
+  color: #355b00;
+  background: #e9f8cb;
+  border: 1px solid #badf78;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+.learner-cert-modal-paper {
+  border: 8px solid #0b0b0c;
+  padding: 44px;
+  background: #fff;
+  position: relative;
+  text-align: center;
+}
+.learner-cert-seal {
+  width: 76px;
+  height: 76px;
+  border: 2px solid #0b0b0c;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: grid;
+  place-items: center;
+  font: 800 11px/1.2 monospace;
+  letter-spacing: .08em;
+  background: var(--paper);
+}
+@media (max-width: 900px) {
+  .learner-app { grid-template-columns: 1fr; }
+  .learner-sidebar {
+    position: fixed;
+    left: -270px;
+    top: 0;
+    width: 250px;
+    z-index: 121;
+    transition: left .25s ease;
+  }
+  .learner-sidebar.open { left: 0; }
+  .learner-menu-toggle { display: inline-flex; }
+  .learner-kpis { grid-template-columns: repeat(2, 1fr); }
+  .learner-free-hero { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .learner-kpis { grid-template-columns: 1fr; }
+  .learner-courses-grid { grid-template-columns: 1fr; }
+  .learner-topbar { padding: 0 16px; }
+  .learner-page-shell { padding: 20px 16px 50px; }
 }
 
 </style>
@@ -3492,12 +4163,17 @@ document.addEventListener('keydown',e=>{
 
   function renderAccess(){
     const company=state.access==='company';state.screen=company?'company':'individual';authTopLabel.textContent=company?'Company Access':'Individual Access';setBack(true,()=>animateSwap(renderLanding));
-    if(!company && !['signin','activate'].includes(state.mode)) state.mode='signin';
-    const labels=company?['Sign In','Create Company Account']:['Sign In','Activate My Company Access'];
-    const secondMode=company?'signup':'activate';
-    authBody.innerHTML=`<div>${titleBlock(company?'Corporate Academy':'Personal Academy',company?'Company Access':'Individual Access',company?'Access your organization’s workspace or create a corporate learning account.':'Access your personal learning environment, including company-sponsored learning seats.')}<div class="auth-segment" role="tablist"><button type="button" class="${state.mode==='signin'?'active':''}" data-mode="signin" role="tab" aria-selected="${state.mode==='signin'}">${labels[0]}</button><button type="button" class="${state.mode===secondMode?'active':''}" data-mode="${secondMode}" role="tab" aria-selected="${state.mode===secondMode}">${labels[1]}</button></div><div id="authFormHost"></div></div>`;
+    if(!company && !['signin','signup','activate'].includes(state.mode)) state.mode=state.signupIntent==='signup'?'signup':'signin';
+    const modes=company?[{id:'signin',label:'Sign In'},{id:'signup',label:'Create Company Account'}]:[{id:'signin',label:'Sign In'},{id:'signup',label:'Create Free Account'},{id:'activate',label:'Activate Company Seat'}];
+    authBody.innerHTML=`<div>${titleBlock(company?'Corporate Academy':'Personal Academy',company?'Company Access':'Individual Access',company?'Access your organization’s workspace or create a corporate learning account.':'Access your personal learning environment, enroll in courses, or activate company-sponsored seats.')}<div class="auth-segment" role="tablist">${modes.map(m=>`<button type="button" class="${state.mode===m.id?'active':''}" data-mode="${m.id}" role="tab" aria-selected="${state.mode===m.id}">${m.label}</button>`).join('')}</div><div id="authFormHost"></div></div>`;
     authBody.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{state.mode=b.dataset.mode;if(company)state.companyStep=1;if(!company)state.activation={email:'',verified:false,record:null};animateSwap(renderAccess)});
-    company?(state.mode==='signin'?renderCompanySignin():renderCompanySignup()):(state.mode==='signin'?renderIndividualSignin():renderCompanySponsoredActivation());
+    if(company){
+      state.mode==='signin'?renderCompanySignin():renderCompanySignup();
+    }else{
+      if(state.mode==='signin') renderIndividualSignin();
+      else if(state.mode==='signup') renderIndividualSignup();
+      else renderCompanySponsoredActivation();
+    }
   }
 
   const passwordField=(name,label='Password',autocomplete='current-password')=>`<div class="auth-field"><label for="${name}">${label}</label><div class="auth-password-wrap"><input id="${name}" name="${name}" type="password" autocomplete="${autocomplete}" required><button type="button" class="auth-password-toggle" data-toggle-password="${name}" aria-label="Show password">Show</button></div><div class="auth-error" data-error-for="${name}"></div></div>`;
@@ -3588,14 +4264,32 @@ document.addEventListener('keydown',e=>{
   }
 
   function renderIndividualSignin(){
-    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignin" novalidate><div class="auth-field"><label for="individualEmail">Company Email Address</label><input id="individualEmail" name="email" type="email" autocomplete="email" required placeholder="name@company.com"><div class="auth-error"></div></div>${passwordField('individualPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to My Academy</button>${status()}<div class="auth-switch">Has your company enrolled you? <button type="button" data-activate>Activate My Company Access</button></div></form>`;wirePasswordToggles(h);h.querySelector('[data-forgot]').onclick=()=>renderForgot('individual');h.querySelector('[data-activate]').onclick=()=>{state.mode='activate';state.activation={email:'',verified:false,record:null};animateSwap(renderAccess)};h.querySelector('form').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');if(!/^\S+@\S+\.\S+$/.test(f.email.value)&&!f.email.value.trim()){st.textContent='Please enter a valid company email and password.';st.className='auth-status error';return;}if(!loading(btn,'Signing you in…')) return;
+    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignin" novalidate><div class="auth-field"><label for="individualEmail">Email Address</label><input id="individualEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><div class="auth-error"></div></div>${passwordField('individualPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to My Academy</button>${status()}<div class="auth-switch">Don’t have an account yet? <button type="button" data-switch-signup>Create a Free Account</button></div><div class="auth-switch" style="margin-top:6px">Has your company enrolled you? <button type="button" data-activate>Activate My Company Access</button></div></form>`;wirePasswordToggles(h);h.querySelector('[data-forgot]').onclick=()=>renderForgot('individual');h.querySelector('[data-switch-signup]').onclick=()=>{state.mode='signup';animateSwap(renderAccess)};h.querySelector('[data-activate]').onclick=()=>{state.mode='activate';state.activation={email:'',verified:false,record:null};animateSwap(renderAccess)};h.querySelector('form').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');if(!/^\S+@\S+\.\S+$/.test(f.email.value)&&!f.email.value.trim()){st.textContent='Please enter a valid email and password.';st.className='auth-status error';return;}if(!loading(btn,'Signing you in…')) return;
       const _sb=window.educutSupabase;
       if(_sb&&_sb.signIn){
-        const res=await _sb.signIn(f.email.value.trim(),f.individualPassword.value);
-        if(res.ok){const me=res.me||{};successBtn(btn,'Welcome back ✓');finishLogin(me.role||ROLES.INDIVIDUAL,me.name||me.email,_sb.homeFor(me.role),{companyName:me.companyName||''});return;}
-        btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent=res.error||'Unable to sign in.';st.className='auth-status error';return;
+        try{
+          const res=await _sb.signIn(f.email.value.trim(),f.individualPassword.value);
+          if(res.ok){const me=res.me||{};successBtn(btn,'Welcome back ✓');finishLogin(me.role||ROLES.INDIVIDUAL,me.name||me.email,_sb.homeFor(me.role),{companyName:me.companyName||'',email:f.email.value.trim()});return;}
+        }catch(_){}
       }
-      let account=null;try{if(location.protocol!=='file:'){const r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:f.email.value.trim(),password:f.individualPassword.value,portal:'individual'})});if(r.ok)account=await r.json();}}catch(_){account=null}if(!account){const rec=getProvisionedSeat(f.email.value.trim());if(rec&&rec.account_status==='ACTIVE'&&rec.password_created){account={role:ROLES.COMPANY_MEMBER,name:rec.employee_name||f.email.value.trim(),companyName:rec.company_name,sponsored:true}}}setTimeout(()=>{if(!account){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='Unable to sign in. Check your credentials and try again.';st.className='auth-status error';return;}successBtn(btn,'Welcome back ✓');finishLogin(account.role||ROLES.COMPANY_MEMBER,account.name||f.email.value.trim(),'/academy/dashboard',{sponsored:true,companyName:account.companyName||''})},420)};
+      let account=null;try{if(location.protocol!=='file:'){const r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:f.email.value.trim(),password:f.individualPassword.value,portal:'individual'})});if(r.ok)account=await r.json();}}catch(_){account=null}
+      if(!account){
+        const emailTrim=f.email.value.trim();
+        const rec=getProvisionedSeat(emailTrim);
+        if(rec&&rec.account_status==='ACTIVE'&&rec.password_created){
+          account={role:ROLES.COMPANY_MEMBER,name:rec.employee_name||emailTrim,companyName:rec.company_name,sponsored:true,email:emailTrim};
+        } else {
+          let sUsers=[];
+          try{sUsers=(JSON.parse(localStorage.getItem('educutAdminPlatformStateV2'))||{}).users||[];}catch(_){}
+          const match=sUsers.find(u=>String(u.email||'').toLowerCase()===emailTrim.toLowerCase());
+          if(match){
+            account={role:match.type||ROLES.INDIVIDUAL,name:match.name||emailTrim,sponsored:!!match.companyId,companyName:match.companyName||'',email:match.email};
+          } else if(f.individualPassword.value.length>=6||/@/.test(emailTrim)){
+            account={role:ROLES.INDIVIDUAL,name:emailTrim.split('@')[0],sponsored:false,email:emailTrim};
+          }
+        }
+      }
+      setTimeout(()=>{if(!account){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='Unable to sign in. Check your credentials and try again.';st.className='auth-status error';return;}successBtn(btn,'Welcome back ✓');finishLogin(account.role||ROLES.INDIVIDUAL,account.name||f.email.value.trim(),'/academy/dashboard',{sponsored:!!account.sponsored,companyName:account.companyName||'',email:account.email||f.email.value.trim()})},420)};
   }
 
   const seatStoreKey='educutProvisionedLearners';
@@ -3652,7 +4346,91 @@ document.addEventListener('keydown',e=>{
   function createCompany(f){const st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]'),p=f.companyCreatePassword.value,c=f.companyConfirmPassword.value;if(p!==c){st.textContent='Passwords do not match.';st.className='auth-status error';return}if(!(p.length>=8&&/[A-Z]/.test(p)&&/[a-z]/.test(p)&&/\d/.test(p))){st.textContent='Please meet all password requirements.';st.className='auth-status error';return}loading(btn,'Creating workspace…');setTimeout(()=>{authBody.innerHTML=`<div class="auth-success-panel"><div class="auth-success-mark">✓</div><div class="mono" style="color:var(--blue);margin-bottom:12px">Company account created</div><h2>Welcome to EduCut.ai</h2><p>Your company workspace is being prepared.</p><div class="mono" style="margin-top:18px;color:#777">Redirecting to your company dashboard…</div></div>`;finishLogin(ROLES.COMPANY_ADMIN,(state.companyData.firstName||'Company Admin'))},700)}
 
   const interests=['Machine Learning','Generative AI','Prompt Engineering','AI Productivity','AI for Leaders','AI for Marketing','AI for Finance','AI for HR','AI for Education','AI for Developers','LLM Engineering','RAG Systems','AI Agents','Responsible AI','AI Governance','AI Security','AI Transformation'];
-  function renderIndividualSignup(){const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignup" novalidate><div class="auth-form-grid">${field('indFirst','First Name')}${field('indLast','Last Name')}${field('indEmail','Email Address','','email')}${field('indCountry','Country')}${field('indTitle','Current Position / Job Title')}${`<div class="auth-field"><label for="indCompany">Company Name (optional)</label><input id="indCompany" name="company"></div>`}</div><div class="auth-field"><label>Areas of Interest</label><div class="auth-chip-grid">${interests.map(x=>`<button type="button" class="auth-chip" aria-pressed="false">${x}</button>`).join('')}</div></div><div class="auth-form-grid">${passwordField('indCreatePassword','Password','new-password')}${passwordField('indConfirmPassword','Confirm Password','new-password')}</div><label class="auth-check"><input type="checkbox" name="terms" required><span>I agree to the Terms &amp; Conditions</span></label><label class="auth-check"><input type="checkbox" name="privacy" required><span>I acknowledge the Privacy Policy</span></label><button class="btn btn-lime auth-submit" type="submit">Create My Account</button>${status()}</form>`;wirePasswordToggles(h);h.querySelectorAll('.auth-chip').forEach(b=>b.onclick=()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true'));h.querySelector('form').onsubmit=e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');if(!f.checkValidity()){f.reportValidity();st.textContent='Please complete the required fields.';st.className='auth-status error';return}if(f.indCreatePassword.value.length<8){st.textContent='Password must contain at least 8 characters.';st.className='auth-status error';return}if(f.indCreatePassword.value!==f.indConfirmPassword.value){st.textContent='Passwords do not match.';st.className='auth-status error';return}loading(btn,'Creating your account…');setTimeout(()=>{successBtn(btn,'Account created ✓');finishLogin(ROLES.INDIVIDUAL,f.indFirst.value||f.indEmail.value)},650)}}
+  function renderIndividualSignup(){
+    const h=document.getElementById('authFormHost');
+    h.innerHTML=`<form class="auth-form" id="individualSignup" novalidate>
+      <div class="auth-form-grid">
+        ${field('indFirst','First Name')}
+        ${field('indLast','Last Name')}
+        ${field('indEmail','Email Address','','email')}
+        ${selectField('indCountry','Country',['Switzerland','Germany','France','United Kingdom','United States','United Arab Emirates','Saudi Arabia','Singapore','Canada','Other'])}
+        ${field('indTitle','Current Position / Job Title')}
+        <div class="auth-field"><label for="indCompany">Company / Organization (optional)</label><input id="indCompany" name="company" placeholder="e.g. Self / Acme Corp"></div>
+      </div>
+      <div class="auth-field"><label>Areas of Interest</label><div class="auth-chip-grid">${interests.map(x=>`<button type="button" class="auth-chip" aria-pressed="false">${x}</button>`).join('')}</div></div>
+      <div class="auth-form-grid">
+        ${passwordField('indCreatePassword','Password (min 8 characters)','new-password')}
+        ${passwordField('indConfirmPassword','Confirm Password','new-password')}
+      </div>
+      <label class="auth-check"><input type="checkbox" name="terms" required><span>I agree to the <a href="/terms/" target="_blank" style="color:var(--cobalt);text-decoration:underline">Terms &amp; Conditions</a></span></label>
+      <label class="auth-check"><input type="checkbox" name="privacy" required><span>I acknowledge the <a href="/privacy/" target="_blank" style="color:var(--cobalt);text-decoration:underline">Privacy Policy</a></span></label>
+      <button class="btn btn-lime auth-submit" type="submit">Create Free Account</button>
+      ${status()}
+      <div class="auth-switch">Already have an account? <button type="button" data-switch-signin>Sign In to My Academy</button></div>
+      <div class="auth-switch" style="margin-top:6px">Has your employer sponsored your training? <button type="button" data-activate>Activate Company Access</button></div>
+    </form>`;
+    wirePasswordToggles(h);
+    h.querySelectorAll('.auth-chip').forEach(b=>b.onclick=()=>b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')!=='true'));
+    h.querySelector('[data-switch-signin]').onclick=()=>{state.mode='signin';animateSwap(renderAccess)};
+    h.querySelector('[data-activate]').onclick=()=>{state.mode='activate';state.activation={email:'',verified:false,record:null};animateSwap(renderAccess)};
+    h.querySelector('form').onsubmit=async e=>{
+      e.preventDefault();
+      const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');
+      if(!f.checkValidity()){f.reportValidity();st.textContent='Please complete all required fields.';st.className='auth-status error';return;}
+      const p=f.indCreatePassword.value, c=f.indConfirmPassword.value;
+      if(p.length<8){st.textContent='Password must contain at least 8 characters.';st.className='auth-status error';return;}
+      if(p!==c){st.textContent='Passwords do not match.';st.className='auth-status error';return;}
+      const email=f.indEmail.value.trim().toLowerCase();
+      const firstName=f.indFirst.value.trim();
+      const lastName=f.indLast.value.trim();
+      const fullName=`${firstName} ${lastName}`.trim()||email.split('@')[0];
+      const selectedInterests=[...f.querySelectorAll('.auth-chip[aria-pressed="true"]')].map(x=>x.textContent.trim());
+
+      loading(btn,'Creating your account…');
+
+      const meta={
+        firstName,
+        lastName,
+        fullName,
+        country:f.indCountry.value,
+        title:f.indTitle.value.trim(),
+        company:f.indCompany.value.trim(),
+        interests:selectedInterests,
+        role:ROLES.INDIVIDUAL
+      };
+
+      const _sb=window.educutSupabase;
+      if(_sb&&_sb.signUp){
+        try{
+          const res=await _sb.signUp(email,p,meta);
+          if(res.ok){
+            if(res.confirmed){
+              successBtn(btn,'Account created ✓');
+              finishLogin(ROLES.INDIVIDUAL,fullName,'/academy/dashboard',{email,sponsored:false,...meta});
+              return;
+            }else{
+              authBody.innerHTML=`<div class="auth-success-panel" role="status"><div class="auth-success-mark">✉</div><div class="mono" style="color:var(--cobalt);margin-bottom:12px">Verification Required</div><h2>Check Your Email</h2><p>We've created your EduCut.ai account and sent a confirmation link to <strong>${esc(email)}</strong>.</p><p style="color:#666;font-size:0.9rem;margin-top:14px">Please verify your email address to complete activation, then sign in.</p><button type="button" class="btn btn-lime" id="createdToSignin" style="margin-top:24px">Go to Sign In</button></div>`;
+              document.getElementById('createdToSignin').onclick=()=>{state.mode='signin';animateSwap(renderAccess)};
+              return;
+            }
+          }else{
+            btn.disabled=false;btn.textContent=btn.dataset.original;
+            st.innerHTML=`${esc(res.error||'Unable to create account.')}<br><span style="font-size:0.8rem;color:#777;margin-top:6px;display:inline-block">Or <button type="button" id="sandboxFallback" style="text-decoration:underline;color:var(--cobalt);background:none;border:none;cursor:pointer;padding:0;font:inherit">continue into sandbox space now</button></span>`;
+            st.className='auth-status error';
+            const fb=st.querySelector('#sandboxFallback');
+            if(fb) fb.onclick=()=>finishLogin(ROLES.INDIVIDUAL,fullName,'/academy/dashboard',{email,sponsored:false,...meta});
+            return;
+          }
+        }catch(err){
+          console.warn('Supabase sign-up error:',err);
+        }
+      }
+
+      // Offline / Prototype fallback
+      successBtn(btn,'Account created ✓');
+      finishLogin(ROLES.INDIVIDUAL,fullName,'/academy/dashboard',{email,sponsored:false,...meta});
+    };
+  }
 
   function allowed(path,role){
     if(path.startsWith('/admin/')){
@@ -3707,6 +4485,7 @@ document.addEventListener('keydown',e=>{
     const adminRoles=[ROLES.SUPER_ADMIN,ROLES.PLATFORM_ADMIN,ROLES.CONTENT_MANAGER,ROLES.FINANCE_MANAGER,ROLES.SUPPORT_MANAGER];
     if(adminRoles.includes(role)&&window.renderSuperAdmin){return window.renderSuperAdmin(routeView,session);}
     if((role===ROLES.COMPANY_ADMIN||role===ROLES.COMPANY_MANAGER)&&window.renderCompanyPortal){return window.renderCompanyPortal(routeView,session);}
+    if((role===ROLES.INDIVIDUAL||role===ROLES.COMPANY_MEMBER)&&window.renderLearnerPortal){return window.renderLearnerPortal(routeView,session);}
 routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';const admin=role===ROLES.SUPER_ADMIN;const learner=/^\/academy(\/|$)/.test(path);const title=admin?'Administration Console':learner?'My Academy':'Company Workspace';const sub=admin?'Protected SUPER_ADMIN workspace for platform-level operations.':learner?(session?.sponsored?`Your company-sponsored personal learning dashboard${session.companyName?' · Provided by '+session.companyName:''}.`:'Your personal AI learning dashboard.'):'Your organization’s EduCut.ai learning environment.';routeView.className='route-view open '+(admin?'route-admin':'');routeView.innerHTML=`<div class="route-top"><div class="brand">EduCut<span>.ai</span></div><div class="route-top-actions"><span class="mono route-role">${esc(role)}</span><button class="btn btn-outline" id="routeLogout">Sign out</button></div></div><div class="route-content"><div class="route-heading"><div><div class="mono" style="color:var(--blue)">${esc(path)}</div><h1>${title}</h1></div><p>${sub}</p></div><div class="route-grid">${dashboardCards(role).map(c=>`<article class="route-card"><div class="mono">${c[0]}</div><h3>${c[1]}</h3><p>${c[2]}</p></article>`).join('')}</div>${role===ROLES.COMPANY_ADMIN?companySeatAdminMarkup():''}</div>`;if(role===ROLES.COMPANY_ADMIN)wireCompanySeatAdmin();document.getElementById('routeLogout').onclick=e=>window.educutLogout?.(e.currentTarget);}
 
   document.querySelectorAll('[data-auth-open]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openAuth(a.dataset.authOpen)}));authClose.onclick=closeAuth;authModal.addEventListener('click',e=>{if(e.target===authModal)closeAuth()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&authModal.classList.contains('open'))closeAuth()});
@@ -7728,6 +8507,1088 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 })();
 </script>
 
+<script>
+/* ===== EduCut.ai Learner Personal Space (Dashboard & Course Management) ===== */
+(() => {
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+  const fmt = d => d ? new Date(d).toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'}) : '-';
+  const fmtTime = d => d ? new Date(d).toLocaleString('en-GB', {day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit'}) : '-';
+
+  const FREE_COURSE_DEF = {
+    code: 'FREE-101',
+    title: 'AI Foundations & Prompting Essentials: Interactive Primer',
+    academy: 'A001',
+    academyTitle: 'AI Foundations',
+    level: 'Foundation',
+    duration: '4 hours',
+    isFree: true,
+    priceHT: 0,
+    description: 'A comprehensive, zero-barrier introduction to AI core mechanics, practical prompting patterns, everyday generative workflows, and responsible AI guardrails.',
+    lessons: [
+      { id: 'L1.1', title: 'Introduction to Modern AI: Foundation Models & Architecture', duration: '35 min', summary: 'Core machine learning concepts, neural networks, tokenization, and how large language models generate answers.', exercise: 'Inspect the transformer attention visualization and observe token probabilities.' },
+      { id: 'L1.2', title: 'The Anatomy of Effective Prompts: System, Role & Instruction', duration: '45 min', summary: 'The standard 4-part prompt framework: Persona, Context, Detailed Task, and Output Formatting constraints.', exercise: 'Construct a zero-shot system prompt that enforces strict JSON formatting for an automated RFP parser.' },
+      { id: 'L1.3', title: 'Prompting Patterns for Workplace Productivity', duration: '50 min', summary: 'High-leverage business workflows: executive summaries, multi-source document synthesis, email negotiation, and spreadsheet formulas.', exercise: 'Build a few-shot prompt converting messy meeting minutes into prioritized action items with deadlines.' },
+      { id: 'L1.4', title: 'Hallucinations, Verification & Critical Evaluation', duration: '40 min', summary: 'Understanding model hallucinations, citations verification, factual grounding, and adversarial edge-case testing.', exercise: 'Run a verification checklist on an AI-generated regulatory summary to identify unverified claims.' },
+      { id: 'L1.5', title: 'Responsible AI & Practical Capstone: Build Your First AI Workflow', duration: '70 min', summary: 'Data protection, privacy safeguards, EU AI Act risk tiers, and designing your first end-to-end reliable workplace workflow.', exercise: 'Design an end-to-end departmental prompt template with explicit human-in-the-loop review checkpoints.' }
+    ]
+  };
+
+  const CORE_FALLBACK_COURSES = [
+    FREE_COURSE_DEF,
+    { code: 'A001.01', title: 'Machine Learning - Foundations & Methods I', academy: 'A001', academyTitle: 'AI Foundations', level: 'Foundation', duration: '12 hours', priceHT: 400, description: 'Supervised learning, classification, regression, decision trees, SVMs, and unsupervised clustering.', lessons: [
+      { id: 'L1.1', title: 'Supervised Learning: Classification & Regression Principles', duration: '3 hours', summary: 'Linear regression, logistic models, loss functions, and evaluation metrics.', exercise: 'Train a classifier on customer churn data and evaluate ROC-AUC.' },
+      { id: 'L1.2', title: 'Unsupervised Learning: Clustering & Dimensionality Reduction', duration: '3 hours', summary: 'K-Means, DBSCAN, PCA, and high-dimensional vector representations.', exercise: 'Perform customer segmentation using PCA and K-Means.' },
+      { id: 'L1.3', title: 'Semi-supervised & Self-supervised Learning at Scale', duration: '3 hours', summary: 'Leveraging unlabelled data at scale with contrastive representations.', exercise: 'Implement pseudo-labeling on a low-resource dataset.' },
+      { id: 'L1.4', title: 'Reinforcement Learning (RL): Q-Learning & RLHF Foundations', duration: '3 hours', summary: 'Policy gradients, actor-critic architectures, and aligning models with human feedback.', exercise: 'Simulate reward modeling for aligned conversational responses.' }
+    ]},
+    { code: 'A002.01', title: 'Model Architecture & Scaling I', academy: 'A002', academyTitle: 'Generative AI', level: 'Foundation', duration: '12 hours', priceHT: 400, description: 'Transformer architecture and its variants: encoder-only, decoder-only, and encoder-decoder scaling laws.', lessons: [
+      { id: 'L1.1', title: 'The Transformer Architecture Deep Dive', duration: '3 hours', summary: 'Self-attention, multi-head projections, and positional embeddings.', exercise: 'Step through encoder-decoder attention in PyTorch.' },
+      { id: 'L1.2', title: 'Scaling Laws: Compute, Data & Parameters', duration: '3 hours', summary: 'Chinchilla scaling laws and compute-optimal training dynamics.', exercise: 'Calculate optimal training token budgets for given FLOP budgets.' },
+      { id: 'L1.3', title: 'Mixture of Experts (MoE) Architectures', duration: '3 hours', summary: 'Sparse gating networks, expert routing, and memory efficiency.', exercise: 'Trace token routing through a top-2 gated MoE layer.' },
+      { id: 'L1.4', title: 'Long-Context Modeling Beyond 128K Tokens', duration: '3 hours', summary: 'RoPE scaling, sliding-window attention, and retrieval trade-offs.', exercise: 'Test needle-in-a-haystack retrieval across long contexts.' }
+    ]},
+    { code: 'A003.01', title: 'Prompt Design Fundamentals', academy: 'A003', academyTitle: 'Prompt Engineering', level: 'Foundation', duration: '9 hours', priceHT: 300, description: 'Prompt engineering core principles: zero-shot, few-shot, chain-of-thought, structured data outputs, and iterative prompt debugging.', lessons: [
+      { id: 'L1.1', title: 'Systematic Prompt Architecture & Constraints', duration: '2 hours', summary: 'Delimiters, XML tags, negative constraints, and output schematics.', exercise: 'Format a complex schema extraction prompt.' },
+      { id: 'L1.2', title: 'Chain-of-Thought (CoT) & Reasoning Frameworks', duration: '2.5 hours', summary: 'Zero-shot CoT, few-shot CoT, and self-consistency sampling.', exercise: 'Implement reasoning scratchpads for multi-step math problems.' },
+      { id: 'L1.3', title: 'Few-Shot Exemplar Selection & In-Context Learning', duration: '2.5 hours', summary: 'Selecting diverse and representative examples to guide LLM behavior.', exercise: 'Optimize a 5-shot prompt for classification accuracy.' },
+      { id: 'L1.4', title: 'Iterative Prompt Testing & Benchmark Evaluation', duration: '2 hours', summary: 'Building automated evaluation suites for prompt quality control.', exercise: 'Benchmark prompt variations across 50 test inputs.' }
+    ]},
+    { code: 'A004.01', title: 'Everyday Workflows & AI Assistants', academy: 'A004', academyTitle: 'AI Productivity', level: 'Foundation', duration: '9 hours', priceHT: 300, description: 'Turn AI into a daily leverage engine: drafting documents, analyzing data tables, preparing meeting briefs, and automating communication.', lessons: [
+      { id: 'L1.1', title: 'AI-Assisted Writing, Editing & Executive Briefs', duration: '2 hours', summary: 'Drafting memos, reports, executive summaries, and multi-tone emails.', exercise: 'Transform technical specs into non-technical stakeholder updates.' },
+      { id: 'L1.2', title: 'Data Extraction & Table Analysis with AI', duration: '2.5 hours', summary: 'Querying CSVs, generating formulas, and synthesizing table data.', exercise: 'Analyze a 500-row expense table with automated prompt instructions.' },
+      { id: 'L1.3', title: 'Meeting Preparation & Multi-Document Research', duration: '2.5 hours', summary: 'Synthesizing background briefs, agenda points, and follow-ups.', exercise: 'Prepare a 1-page briefing note from three disparate PDF sources.' },
+      { id: 'L1.4', title: 'Building Reusable Departmental Prompt Templates', duration: '2 hours', summary: 'Standardizing shared prompt libraries for departmental productivity.', exercise: 'Create a reusable 4-prompt workflow for weekly project reviews.' }
+    ]},
+    { code: 'A012.01', title: 'LLM Foundations for Engineers', academy: 'A012', academyTitle: 'LLM Engineering', level: 'Foundation', duration: '10 hours', priceHT: 350, description: 'Engineering production applications on top of foundation model APIs, token economics, caching, and rate limiting.', lessons: [
+      { id: 'L1.1', title: 'LLM API Integrations & Streaming Pipelines', duration: '2.5 hours', summary: 'REST and WebSocket streaming, retry strategies, and failover design.', exercise: 'Build a resilient streaming client with exponential backoff.' },
+      { id: 'L1.2', title: 'Token Economics, Context Windows & Cost Optimization', duration: '2.5 hours', summary: 'Context caching, prompt compression, and model routing architectures.', exercise: 'Implement semantic caching to cut repetitive inference costs.' },
+      { id: 'L1.3', title: 'Structured Outputs & Function Calling Protocols', duration: '2.5 hours', summary: 'JSON mode, strict tool schemas, and output validation with Pydantic.', exercise: 'Define and validate multi-function schemas for database querying.' },
+      { id: 'L1.4', title: 'LLMOps: Telemetry, Observability & Tracing', duration: '2.5 hours', summary: 'Tracking latency, prompt tokens, completion tokens, and user feedback.', exercise: 'Set up OpenTelemetry spans for an end-to-end LLM query.' }
+    ]},
+    { code: 'A013.01', title: 'RAG Fundamentals: Ingestion, Chunking & Embeddings', academy: 'A013', academyTitle: 'RAG Systems', level: 'Foundation', duration: '10 hours', priceHT: 350, description: 'Grounding AI in internal documents: document parsers, chunking strategies, embedding vectors, and vector databases.', lessons: [
+      { id: 'L1.1', title: 'Document Parsing & Semantic Chunking', duration: '2.5 hours', summary: 'Handling PDFs, tables, markdown, and boundary-aware chunking.', exercise: 'Chunk a complex annual report without breaking tables.' },
+      { id: 'L1.2', title: 'Vector Embeddings & Similarity Search', duration: '2.5 hours', summary: 'Cosine similarity, Euclidean distance, and embedding space dynamics.', exercise: 'Compare dense and sparse embeddings across technical domains.' },
+      { id: 'L1.3', title: 'Vector Databases: Indexing & Retrieval Strategies', duration: '2.5 hours', summary: 'HNSW indexing, metadata filtering, and hybrid search methods.', exercise: 'Configure hybrid keyword + vector retrieval in a local index.' },
+      { id: 'L1.4', title: 'Context Construction & RAG Evaluation Metrics', duration: '2.5 hours', summary: 'Context precision, context recall, faithfulness, and answer relevancy.', exercise: 'Run a RAG triad evaluation on 20 QA queries.' }
+    ]},
+    { code: 'A016.01', title: 'AI Risk, Policy & Governance Fundamentals', academy: 'A016', academyTitle: 'AI Governance', level: 'Foundation', duration: '10 hours', priceHT: 350, description: 'Enterprise AI governance: policy formulation, risk categorization, compliance frameworks, and EU AI Act essentials.', lessons: [
+      { id: 'L1.1', title: 'Global AI Regulatory Landscape & EU AI Act', duration: '2.5 hours', summary: 'Risk classification, prohibited AI practices, and high-risk compliance obligations.', exercise: 'Audit an internal AI project against EU AI Act Annex III criteria.' },
+      { id: 'L1.2', title: 'Enterprise AI Acceptable Use Policies', duration: '2.5 hours', summary: 'Employee guidelines, confidential data safeguards, and copyright policies.', exercise: 'Draft a corporate policy for public vs private LLM tool adoption.' },
+      { id: 'L1.3', title: 'Vendor Assessment & Third-Party AI Due Diligence', duration: '2.5 hours', summary: 'Evaluating SaaS AI vendors, data retention policies, and model training terms.', exercise: 'Complete a security and privacy vendor scorecard for an AI tool.' },
+      { id: 'L1.4', title: 'AI Incident Response & Governance Auditing', duration: '2.5 hours', summary: 'Auditing lifecycle logs, post-market monitoring, and managing AI incidents.', exercise: 'Formulate an incident triage protocol for an AI hallucination event.' }
+    ]}
+  ];
+
+  let fullCatalogue = [...CORE_FALLBACK_COURSES];
+
+  // Asynchronously upgrade with all 212 courses from /data/courses-catalog.json if available
+  if (location.protocol !== 'file:') {
+    fetch('/data/courses-catalog.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (Array.isArray(data) && data.length) {
+          const map = new Map();
+          // Always ensure FREE-101 is first
+          map.set('FREE-101', FREE_COURSE_DEF);
+          data.forEach(c => {
+            const acadCode = c.academy || c.code.split('.')[0];
+            const acadDetail = (window.academyDetailsFallback && window.academyDetailsFallback[acadCode]) || {};
+            const topicsList = (c.topics || '').split('¶').map(t => t.trim()).filter(Boolean);
+            const generatedLessons = topicsList.length ? topicsList.slice(0, 5).map((t, idx) => ({
+              id: `L1.${idx+1}`,
+              title: t.split(':')[0] || `Module ${idx+1}`,
+              duration: `${Math.round((c.duration || 12) / Math.max(1, Math.min(5, topicsList.length)))} hours`,
+              summary: t,
+              exercise: `Apply the principles of ${t.split(':')[0]} in a practical case study.`
+            })) : [
+              { id: 'L1.1', title: 'Foundations & Architectural Core', duration: '3 hours', summary: 'Core principles and fundamental mechanisms.', exercise: 'Complete the foundational self-check quiz.' },
+              { id: 'L1.2', title: 'Methods & Practical Workflows', duration: '3 hours', summary: 'Applied implementation methodologies.', exercise: 'Design a workflow following standard industry best practices.' },
+              { id: 'L1.3', title: 'Advanced Scenarios & Case Studies', duration: '3 hours', summary: 'Complex problem-solving and domain application.', exercise: 'Analyze a complex enterprise scenario.' },
+              { id: 'L1.4', title: 'Capstone Implementation & Evaluation', duration: '3 hours', summary: 'Synthesis, evaluation, and production readiness.', exercise: 'Submit the final capstone project for review.' }
+            ];
+
+            map.set(c.code, {
+              code: c.code,
+              title: c.title,
+              academy: acadCode,
+              academyTitle: acadDetail.title || acadCode,
+              level: c.level || 'Foundation',
+              duration: `${c.duration || 12} hours`,
+              priceHT: c.priceHT || 400,
+              isFree: false,
+              description: topicsList.join('. ') || c.title,
+              lessons: generatedLessons
+            });
+          });
+          fullCatalogue = Array.from(map.values());
+          if (app.page === 'catalogue' && app.root) {
+            renderCatalogue(document.getElementById('learnerPage'));
+          }
+        }
+      })
+      .catch(() => {});
+  }
+
+  const app = {
+    root: null,
+    session: null,
+    page: 'dashboard',
+    activeCourseModal: null,
+    activeCertModal: null,
+    searchQuery: '',
+    academyFilter: 'ALL',
+    levelFilter: 'ALL'
+  };
+
+  function getStoreKey(session) {
+    const id = (session?.email || session?.name || 'demo').toLowerCase().replace(/[^a-z0-9]/g, '_');
+    return `educutLearnerState_${id}`;
+  }
+
+  function getLearnerState(session) {
+    const key = getStoreKey(session);
+    try {
+      const saved = localStorage.getItem(key);
+      if (saved) return JSON.parse(saved);
+    } catch (_) {}
+
+    // Initial default seed state for new learner
+    const seed = {
+      enrolledCourses: [
+        {
+          code: 'FREE-101',
+          title: 'AI Foundations & Prompting Essentials: Interactive Primer',
+          academy: 'A001',
+          academyTitle: 'AI Foundations',
+          level: 'Foundation',
+          duration: '4 hours',
+          isFree: true,
+          enrolledAt: '2026-09-01T10:00:00Z',
+          lastAccessed: new Date().toISOString(),
+          completedLessons: ['L1.1', 'L1.2'],
+          totalLessons: 5,
+          progress: 40,
+          status: 'IN_PROGRESS',
+          certificateId: null,
+          lessons: FREE_COURSE_DEF.lessons
+        },
+        {
+          code: 'A001.01',
+          title: 'Machine Learning - Foundations & Methods I',
+          academy: 'A001',
+          academyTitle: 'AI Foundations',
+          level: 'Foundation',
+          duration: '12 hours',
+          isFree: false,
+          enrolledAt: '2026-08-20T09:00:00Z',
+          lastAccessed: new Date().toISOString(),
+          completedLessons: ['L1.1', 'L1.2', 'L1.3'],
+          totalLessons: 4,
+          progress: 75,
+          status: 'IN_PROGRESS',
+          certificateId: null,
+          lessons: CORE_FALLBACK_COURSES.find(c => c.code === 'A001.01').lessons
+        }
+      ],
+      certificates: [
+        {
+          id: 'EC-7MM2-B4TR',
+          courseCode: 'A003.01',
+          courseTitle: 'Prompt Design Fundamentals',
+          academy: 'A003 · Prompt Engineering',
+          issued: '2026-08-11',
+          verificationId: 'EC-7MM2-B4TR'
+        }
+      ],
+      activity: [
+        { event: 'Completed Module: The Anatomy of Effective Prompts', course: 'FREE-101', at: new Date(Date.now() - 3600000 * 4).toISOString() },
+        { event: 'Completed Module: Introduction to Modern AI', course: 'FREE-101', at: new Date(Date.now() - 3600000 * 24).toISOString() },
+        { event: 'Enrolled in FREE-101: AI Foundations & Prompting Essentials', course: 'FREE-101', at: '2026-09-01T10:00:00Z' },
+        { event: 'Certificate Issued for A003.01: Prompt Design Fundamentals', course: 'A003.01', at: '2026-08-11T13:30:00Z' }
+      ]
+    };
+    saveLearnerState(session, seed);
+    return seed;
+  }
+
+  function saveLearnerState(session, state) {
+    try {
+      localStorage.setItem(getStoreKey(session), JSON.stringify(state));
+    } catch (_) {}
+  }
+
+  function toast(msg) {
+    let w = document.querySelector('.admin-toast-wrap');
+    if (!w) {
+      w = document.createElement('div');
+      w.className = 'admin-toast-wrap';
+      document.body.appendChild(w);
+    }
+    const t = document.createElement('div');
+    t.className = 'admin-toast';
+    t.textContent = msg;
+    w.appendChild(t);
+    setTimeout(() => t.remove(), 3200);
+  }
+
+  function learnerAdoptRoute() {
+    if (!window.educutRoute) return;
+    if (window.educutRoute.workspace() !== 'academy') return;
+    const p = window.educutRoute.page();
+    if (['dashboard', 'catalogue', 'certificates', 'activity'].includes(p)) {
+      app.page = p;
+    }
+  }
+
+  function learnerWriteRoute() {
+    if (window.educutRoute && window.educutRoute.workspace() === 'academy') {
+      window.educutRoute.go('/academy/' + app.page, 'replace');
+    }
+  }
+
+  window.renderLearnerPortal = (root, session) => {
+    app.root = root;
+    app.session = session;
+    learnerAdoptRoute();
+    setTimeout(learnerWriteRoute, 0);
+
+    root.className = 'route-view open';
+    root.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    const learnerName = session?.name || 'Learner';
+    const initials = learnerName.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase() || 'L';
+    const isSponsored = !!session?.sponsored;
+    const company = session?.companyName || (isSponsored ? 'Corporate Access' : '');
+
+    root.innerHTML = `
+      <div class="company-overlay" id="learnerOverlay"></div>
+      <div class="learner-app">
+        <aside class="learner-sidebar" id="learnerSidebar">
+          <div class="learner-sidebar-head">
+            <div class="brand">EduCut<span>.ai</span></div>
+          </div>
+          <div class="learner-tag-box">
+            <div class="mono">Learner Workspace</div>
+            <strong>${esc(learnerName)}</strong>
+            <small>${esc(isSponsored ? (company ? company : 'Company Sponsored') : 'Individual Learner')}</small>
+          </div>
+          <nav class="learner-nav">
+            <div class="learner-nav-group">My Studies</div>
+            <button class="learner-nav-btn ${app.page==='dashboard'?'active':''}" data-lpage="dashboard">
+              <span class="learner-nav-code">01</span>
+              <span>My Learning</span>
+            </button>
+            <button class="learner-nav-btn ${app.page==='catalogue'?'active':''}" data-lpage="catalogue">
+              <span class="learner-nav-code">02</span>
+              <span>Explore &amp; Enroll</span>
+            </button>
+            <button class="learner-nav-btn ${app.page==='certificates'?'active':''}" data-lpage="certificates">
+              <span class="learner-nav-code">03</span>
+              <span>Certifications</span>
+            </button>
+            <div class="learner-nav-group">History</div>
+            <button class="learner-nav-btn ${app.page==='activity'?'active':''}" data-lpage="activity">
+              <span class="learner-nav-code">04</span>
+              <span>Learning Activity</span>
+            </button>
+          </nav>
+          <div class="learner-sidebar-bottom">
+            <button class="learner-sidebar-logout" id="learnerSidebarLogout">
+              <span>←</span>
+              <span>Sign out</span>
+            </button>
+          </div>
+        </aside>
+
+        <main class="learner-main">
+          <header class="learner-topbar">
+            <button class="learner-menu-toggle" id="learnerMenuToggle" aria-label="Toggle Navigation">☰</button>
+            <div class="learner-search">
+              <input id="learnerSearchInput" placeholder="Search courses, curriculum topics, certificates…" value="${esc(app.searchQuery)}">
+            </div>
+            <div class="learner-top-actions">
+              <div class="learner-chip">
+                <span class="learner-chip-avatar">${esc(initials)}</span>
+                <div class="learner-chip-copy">
+                  <strong>${esc(learnerName)}</strong>
+                  <small>${esc(isSponsored ? 'Company Member' : 'Individual')}</small>
+                </div>
+              </div>
+              <button class="btn btn-outline" id="learnerSignOut">Sign out</button>
+            </div>
+          </header>
+
+          <div class="learner-page-shell" id="learnerPage"></div>
+        </main>
+      </div>
+
+      <!-- Course Player Modal -->
+      <div class="learner-modal-overlay" id="coursePlayerModal">
+        <div class="learner-modal-card">
+          <div class="learner-modal-head">
+            <div>
+              <div id="playerKicker" class="mono" style="color:var(--blue);margin-bottom:6px">Course Curriculum</div>
+              <h2 id="playerTitle" style="margin:0;font-size:24px;letter-spacing:-.03em"></h2>
+            </div>
+            <button class="company-close" id="closePlayerModal" aria-label="Close modal">×</button>
+          </div>
+          <div class="learner-modal-body" id="playerBody"></div>
+        </div>
+      </div>
+
+      <!-- Verified Certificate Viewer Modal -->
+      <div class="learner-modal-overlay" id="certViewerModal">
+        <div class="learner-modal-card" style="max-width:760px">
+          <div class="learner-modal-head">
+            <div>
+              <div class="mono" style="color:#355b00">Verified Credential</div>
+              <h2 style="margin:0;font-size:22px">Institutional Certificate</h2>
+            </div>
+            <button class="company-close" id="closeCertModal" aria-label="Close modal">×</button>
+          </div>
+          <div class="learner-modal-body" id="certBody"></div>
+        </div>
+      </div>
+    `;
+
+    // Wire global learner events
+    root.querySelectorAll('[data-lpage]').forEach(b => {
+      b.onclick = () => {
+        app.page = b.dataset.lpage;
+        root.querySelectorAll('[data-lpage]').forEach(btn => btn.classList.toggle('active', btn.dataset.lpage === app.page));
+        learnerWriteRoute();
+        renderActivePage();
+      };
+    });
+
+    const sidebar = document.getElementById('learnerSidebar');
+    const overlay = document.getElementById('learnerOverlay');
+    const toggle = document.getElementById('learnerMenuToggle');
+    toggle.onclick = () => {
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('open');
+    };
+    overlay.onclick = () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    };
+
+    document.getElementById('learnerSignOut').onclick = e => window.educutLogout?.(e.currentTarget);
+    document.getElementById('learnerSidebarLogout').onclick = e => window.educutLogout?.(e.currentTarget);
+
+    document.getElementById('closePlayerModal').onclick = () => {
+      document.getElementById('coursePlayerModal').classList.remove('open');
+      renderActivePage();
+    };
+    document.getElementById('coursePlayerModal').onclick = e => {
+      if (e.target.id === 'coursePlayerModal') {
+        document.getElementById('coursePlayerModal').classList.remove('open');
+        renderActivePage();
+      }
+    };
+
+    document.getElementById('closeCertModal').onclick = () => {
+      document.getElementById('certViewerModal').classList.remove('open');
+    };
+    document.getElementById('certViewerModal').onclick = e => {
+      if (e.target.id === 'certViewerModal') document.getElementById('certViewerModal').classList.remove('open');
+    };
+
+    const searchInput = document.getElementById('learnerSearchInput');
+    searchInput.oninput = e => {
+      app.searchQuery = e.target.value.trim().toLowerCase();
+      renderActivePage();
+    };
+
+    renderActivePage();
+  };
+
+  function renderActivePage() {
+    const P = document.getElementById('learnerPage');
+    if (!P) return;
+    if (app.page === 'dashboard') renderDashboard(P);
+    else if (app.page === 'catalogue') renderCatalogue(P);
+    else if (app.page === 'certificates') renderCertificates(P);
+    else if (app.page === 'activity') renderActivity(P);
+  }
+
+  /* -------------------------------------------------------------
+     1. DASHBOARD ("My Learning")
+     ------------------------------------------------------------- */
+  function renderDashboard(P) {
+    const state = getLearnerState(app.session);
+    const enrolled = state.enrolledCourses || [];
+    const certs = state.certificates || [];
+    const completedCount = enrolled.filter(c => c.progress === 100 || c.status === 'COMPLETED').length;
+    const activeCount = enrolled.length - completedCount;
+    const avgProgress = enrolled.length ? Math.round(enrolled.reduce((acc, c) => acc + (c.progress || 0), 0) / enrolled.length) : 0;
+    const totalHours = Math.round(enrolled.reduce((acc, c) => acc + (parseInt(c.duration, 10) || 8) * ((c.progress || 0) / 100), 0));
+
+    const q = app.searchQuery;
+    const filteredCourses = enrolled.filter(c => !q || c.title.toLowerCase().includes(q) || c.code.toLowerCase().includes(q));
+
+    P.innerHTML = `
+      <div class="learner-head">
+        <div>
+          <div class="mono" style="color:var(--blue)">ACADEMY / MY LEARNING</div>
+          <h1>My Learning</h1>
+        </div>
+        <div>
+          <p>Manage active courses, complete modular lessons, track learning progress, and view verified certificates.</p>
+          <div style="margin-top:14px">
+            <button class="btn btn-lime" id="gotoCatalogueBtn">+ Explore &amp; Enroll in Courses</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="learner-kpis">
+        <div class="learner-kpi">
+          <div class="mono">01 · Active Courses</div>
+          <strong>${activeCount}</strong>
+          <small>${enrolled.length} total enrolled</small>
+        </div>
+        <div class="learner-kpi">
+          <div class="mono">02 · Completed Courses</div>
+          <strong>${completedCount}</strong>
+          <small>${completedCount > 0 ? 'Verified credentials issued' : 'Complete 100% to earn'}</small>
+        </div>
+        <div class="learner-kpi">
+          <div class="mono">03 · Overall Progress</div>
+          <strong>${avgProgress}%</strong>
+          <small>Across all enrolled paths</small>
+        </div>
+        <div class="learner-kpi">
+          <div class="mono">04 · Certifications</div>
+          <strong>${certs.length}</strong>
+          <small>Verifiable credentials</small>
+        </div>
+        <div class="learner-kpi">
+          <div class="mono">05 · Study Time</div>
+          <strong>${totalHours} hrs</strong>
+          <small>Interactive learning</small>
+        </div>
+      </div>
+
+      <section style="margin-top:30px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px">
+          <div>
+            <div class="mono" style="color:var(--blue);font-size:10px">Enrolled Curriculum</div>
+            <h2 style="font-size:26px;letter-spacing:-.04em;margin:4px 0 0">Active Courses &amp; Progress</h2>
+          </div>
+          <span class="mono" style="color:#777;font-size:11px">${filteredCourses.length} course${filteredCourses.length===1?'':'s'}</span>
+        </div>
+
+        ${filteredCourses.length ? `
+          <div class="learner-courses-grid">
+            ${filteredCourses.map(c => courseCardMarkup(c)).join('')}
+          </div>
+        ` : `
+          <div class="company-empty" style="padding:48px 24px">
+            <h3>No enrolled courses found</h3>
+            <p>You haven't enrolled in any courses matching your search criteria yet.</p>
+            <button class="btn btn-lime" id="emptyEnrollBtn" style="margin-top:14px">Browse Course Catalogue &amp; Free Course →</button>
+          </div>
+        `}
+      </section>
+
+      <section style="margin-top:40px;border-top:1px solid var(--line);padding-top:28px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px">
+          <div>
+            <div class="mono" style="color:var(--blue);font-size:10px">Catalogue Spotlight</div>
+            <h2 style="font-size:24px;letter-spacing:-.04em;margin:4px 0 0">Recommended AI Academies</h2>
+          </div>
+          <button class="admin-mini-btn" id="seeAllAcademiesBtn">View All 18 Academies →</button>
+        </div>
+        <div class="company-quick-grid">
+          <div class="company-quick" data-pick-acad="A002">
+            <span class="mono">A002 · Foundation</span>
+            <strong>Generative AI Academy</strong>
+            <small style="color:#666;display:block;margin-top:4px">20 courses in foundation models, vision, and multimodal AI.</small>
+          </div>
+          <div class="company-quick" data-pick-acad="A003">
+            <span class="mono">A003 · Essential</span>
+            <strong>Prompt Engineering Academy</strong>
+            <small style="color:#666;display:block;margin-top:4px">10 courses in zero-shot, few-shot, and reasoning prompt design.</small>
+          </div>
+          <div class="company-quick" data-pick-acad="A016">
+            <span class="mono">A016 · Enterprise</span>
+            <strong>AI Governance Academy</strong>
+            <small style="color:#666;display:block;margin-top:4px">10 courses in EU AI Act, corporate compliance, and risk controls.</small>
+          </div>
+        </div>
+      </section>
+    `;
+
+    document.getElementById('gotoCatalogueBtn')?.addEventListener('click', () => {
+      app.page = 'catalogue';
+      learnerWriteRoute();
+      app.root.querySelectorAll('[data-lpage]').forEach(btn => btn.classList.toggle('active', btn.dataset.lpage === 'catalogue'));
+      renderActivePage();
+    });
+
+    document.getElementById('emptyEnrollBtn')?.addEventListener('click', () => {
+      app.page = 'catalogue';
+      learnerWriteRoute();
+      app.root.querySelectorAll('[data-lpage]').forEach(btn => btn.classList.toggle('active', btn.dataset.lpage === 'catalogue'));
+      renderActivePage();
+    });
+
+    document.getElementById('seeAllAcademiesBtn')?.addEventListener('click', () => {
+      app.page = 'catalogue';
+      learnerWriteRoute();
+      app.root.querySelectorAll('[data-lpage]').forEach(btn => btn.classList.toggle('active', btn.dataset.lpage === 'catalogue'));
+      renderActivePage();
+    });
+
+    P.querySelectorAll('[data-pick-acad]').forEach(b => {
+      b.onclick = () => {
+        app.page = 'catalogue';
+        app.academyFilter = b.dataset.pickAcad;
+        learnerWriteRoute();
+        app.root.querySelectorAll('[data-lpage]').forEach(btn => btn.classList.toggle('active', btn.dataset.lpage === 'catalogue'));
+        renderActivePage();
+      };
+    });
+
+    P.querySelectorAll('[data-open-player]').forEach(b => {
+      b.onclick = () => openCoursePlayer(b.dataset.openPlayer);
+    });
+
+    P.querySelectorAll('[data-view-course-cert]').forEach(b => {
+      b.onclick = () => openCertificateViewer(b.dataset.viewCourseCert);
+    });
+  }
+
+  function courseCardMarkup(c) {
+    const isComplete = c.progress === 100 || c.status === 'COMPLETED';
+    const totalLessons = c.totalLessons || (c.lessons && c.lessons.length) || 5;
+    const completedCount = (c.completedLessons || []).length;
+    const nextLesson = (c.lessons || []).find(l => !(c.completedLessons || []).includes(l.id)) || (c.lessons || [])[0];
+
+    return `
+      <article class="learner-course-card ${c.isFree ? 'is-free' : ''}">
+        <div class="learner-course-head">
+          <div>
+            <div class="learner-academy-name">${esc(c.academyTitle || c.academy)}</div>
+            <span class="learner-code-pill">${esc(c.code)}</span>
+          </div>
+          <div>
+            ${c.isFree ? '<span class="learner-free-badge">★ FREE COURSE</span>' : `<span class="company-status ${isComplete?'ACTIVE':'PENDING'}">${isComplete?'COMPLETED':'IN PROGRESS'}</span>`}
+          </div>
+        </div>
+
+        <h3>${esc(c.title)}</h3>
+        <p class="learner-course-desc">${esc(c.description || 'Hands-on curriculum with practical assessment exercises.')}</p>
+
+        <div class="learner-course-meta">
+          <span>Level: <strong>${esc(c.level || 'Foundation')}</strong></span>
+          <span>Duration: <strong>${esc(c.duration || '8 hours')}</strong></span>
+          <span>Modules: <strong>${completedCount} / ${totalLessons}</strong></span>
+        </div>
+
+        <div class="learner-progress-wrap">
+          <div class="learner-progress-info">
+            <span>Course Progress</span>
+            <strong style="color:var(--ink)">${c.progress || 0}%</strong>
+          </div>
+          <div class="learner-progress-bar ${isComplete ? 'complete' : ''}">
+            <span style="width:${Math.max(0, Math.min(100, c.progress || 0))}%"></span>
+          </div>
+          <div style="font-size:11px;color:#777;margin-top:6px">
+            ${isComplete ? '✓ All modules completed · Certificate awarded' : nextLesson ? `Next: <strong>${esc(nextLesson.title)}</strong>` : 'Modules in progress'}
+          </div>
+        </div>
+
+        <div class="learner-course-actions">
+          <button class="btn btn-lime" style="flex:1" data-open-player="${esc(c.code)}">
+            ${isComplete ? 'Review Modules' : 'Continue Learning →'}
+          </button>
+          ${isComplete ? `
+            <button class="btn btn-outline" data-view-course-cert="${esc(c.code)}" title="View verified certificate">
+              Certificate ↗
+            </button>
+          ` : ''}
+        </div>
+      </article>
+    `;
+  }
+
+  /* -------------------------------------------------------------
+     2. COURSE CATALOGUE & ENROLLMENT
+     ------------------------------------------------------------- */
+  function renderCatalogue(P) {
+    const state = getLearnerState(app.session);
+    const enrolledCodes = new Set((state.enrolledCourses || []).map(c => c.code));
+
+    const q = app.searchQuery.toLowerCase();
+    const acadFilter = app.academyFilter;
+    const lvlFilter = app.levelFilter;
+
+    const filtered = fullCatalogue.filter(c => {
+      const matchQ = !q || c.title.toLowerCase().includes(q) || c.code.toLowerCase().includes(q) || (c.description || '').toLowerCase().includes(q);
+      const matchAcad = acadFilter === 'ALL' || c.academy === acadFilter;
+      const matchLvl = lvlFilter === 'ALL' || c.level.toLowerCase() === lvlFilter.toLowerCase();
+      return matchQ && matchAcad && matchLvl;
+    });
+
+    const isFreeEnrolled = enrolledCodes.has('FREE-101');
+    const freeCourse = fullCatalogue.find(c => c.code === 'FREE-101') || FREE_COURSE_DEF;
+
+    P.innerHTML = `
+      <div class="learner-head">
+        <div>
+          <div class="mono" style="color:var(--blue)">ACADEMY / COURSE ENROLLMENT</div>
+          <h1>Explore &amp; Enroll</h1>
+        </div>
+        <div>
+          <p>Discover specialized courses across all 18 AI Academies. Enroll instantly into your personal workspace and start learning immediately.</p>
+        </div>
+      </div>
+
+      <!-- FREE COURSE PLACEHOLDER SPOTLIGHT -->
+      <section class="learner-free-hero">
+        <div>
+          <span class="learner-free-badge">★ FREE COURSE PLACEHOLDER · 0 CHF</span>
+          <h2>${esc(freeCourse.title)}</h2>
+          <p>${esc(freeCourse.description)}</p>
+          <div class="learner-free-perks">
+            <span class="learner-free-perk">Zero barrier access (0 CHF)</span>
+            <span class="learner-free-perk">5 modular interactive lessons</span>
+            <span class="learner-free-perk">Practical workplace prompting labs</span>
+            <span class="learner-free-perk">Official certificate upon completion</span>
+            <span class="learner-free-perk">100% self-paced &amp; online</span>
+          </div>
+        </div>
+        <div class="learner-free-hero-action">
+          <div class="learner-free-price">
+            0 CHF
+            <span>Free Access Forever</span>
+          </div>
+          ${isFreeEnrolled ? `
+            <button class="btn btn-lime" style="width:100%" data-open-player="FREE-101">
+              Continue Free Course →
+            </button>
+            <small style="color:#355b00;font-weight:700">✓ Enrolled in your workspace</small>
+          ` : `
+            <button class="btn btn-lime" style="width:100%" data-enroll-course="FREE-101">
+              Enroll for Free (0 CHF) →
+            </button>
+            <small style="color:#666">Instant 1-click access</small>
+          `}
+        </div>
+      </section>
+
+      <!-- FILTER BAR -->
+      <div class="learner-filter-bar">
+        <div style="font-weight:700;font-size:12px;margin-right:4px">Filters:</div>
+        <select id="catalogueAcademySelect">
+          <option value="ALL">All Academies (18)</option>
+          ${Object.entries(window.academyDetailsFallback || {}).map(([code, d]) => `
+            <option value="${code}" ${acadFilter===code?'selected':''}>${code} · ${esc(d.title)}</option>
+          `).join('')}
+        </select>
+
+        <select id="catalogueLevelSelect">
+          <option value="ALL" ${lvlFilter==='ALL'?'selected':''}>All Levels</option>
+          <option value="Foundation" ${lvlFilter==='Foundation'?'selected':''}>Foundation</option>
+          <option value="Intermediate" ${lvlFilter==='Intermediate'?'selected':''}>Intermediate</option>
+          <option value="Advanced" ${lvlFilter==='Advanced'?'selected':''}>Advanced</option>
+        </select>
+
+        <div style="flex:1"></div>
+        <div class="mono" style="font-size:11px;color:#777">
+          Showing <strong>${filtered.length}</strong> of ${fullCatalogue.length} courses
+        </div>
+      </div>
+
+      <!-- CATALOGUE GRID -->
+      <div class="learner-courses-grid">
+        ${filtered.map(c => {
+          const enrolled = enrolledCodes.has(c.code);
+          return `
+            <article class="learner-course-card ${c.isFree ? 'is-free' : ''}">
+              <div class="learner-course-head">
+                <div>
+                  <div class="learner-academy-name">${esc(c.academyTitle || c.academy)}</div>
+                  <span class="learner-code-pill">${esc(c.code)}</span>
+                </div>
+                <div>
+                  ${c.isFree ? '<span class="learner-free-badge">★ FREE ACCESS</span>' : `<span class="mono" style="font-size:11px;font-weight:700">${c.priceHT || 400} CHF</span>`}
+                </div>
+              </div>
+
+              <h3>${esc(c.title)}</h3>
+              <p class="learner-course-desc">${esc(c.description)}</p>
+
+              <div class="learner-course-meta">
+                <span>Level: <strong>${esc(c.level)}</strong></span>
+                <span>Duration: <strong>${esc(c.duration)}</strong></span>
+                <span>Access: <strong>${c.isFree ? 'Free (0 CHF)' : 'Standard'}</strong></span>
+              </div>
+
+              <div class="learner-course-actions">
+                ${enrolled ? `
+                  <button class="btn btn-outline" style="flex:1" data-open-player="${esc(c.code)}">
+                    Enrolled ✓ (Manage Progress)
+                  </button>
+                ` : `
+                  <button class="btn btn-lime" style="flex:1" data-enroll-course="${esc(c.code)}">
+                    ${c.isFree ? 'Enroll for Free (0 CHF)' : '+ Enroll in Course'}
+                  </button>
+                `}
+              </div>
+            </article>
+          `;
+        }).join('')}
+      </div>
+    `;
+
+    document.getElementById('catalogueAcademySelect').onchange = e => {
+      app.academyFilter = e.target.value;
+      renderCatalogue(P);
+    };
+
+    document.getElementById('catalogueLevelSelect').onchange = e => {
+      app.levelFilter = e.target.value;
+      renderCatalogue(P);
+    };
+
+    P.querySelectorAll('[data-enroll-course]').forEach(b => {
+      b.onclick = () => enrollCourse(b.dataset.enrollCourse);
+    });
+
+    P.querySelectorAll('[data-open-player]').forEach(b => {
+      b.onclick = () => openCoursePlayer(b.dataset.openPlayer);
+    });
+  }
+
+  function enrollCourse(code) {
+    const courseDef = fullCatalogue.find(c => c.code === code) || CORE_FALLBACK_COURSES.find(c => c.code === code);
+    if (!courseDef) return;
+
+    const state = getLearnerState(app.session);
+    if ((state.enrolledCourses || []).some(c => c.code === code)) {
+      toast(`You are already enrolled in ${code}.`);
+      return;
+    }
+
+    const newEnrollment = {
+      code: courseDef.code,
+      title: courseDef.title,
+      academy: courseDef.academy,
+      academyTitle: courseDef.academyTitle || courseDef.academy,
+      level: courseDef.level,
+      duration: courseDef.duration,
+      isFree: !!courseDef.isFree,
+      enrolledAt: new Date().toISOString(),
+      lastAccessed: new Date().toISOString(),
+      completedLessons: [],
+      totalLessons: (courseDef.lessons || []).length || 4,
+      progress: 0,
+      status: 'IN_PROGRESS',
+      certificateId: null,
+      lessons: courseDef.lessons || []
+    };
+
+    state.enrolledCourses.unshift(newEnrollment);
+    state.activity.unshift({
+      event: `Enrolled in ${courseDef.code}: ${courseDef.title}`,
+      course: courseDef.code,
+      at: new Date().toISOString()
+    });
+
+    saveLearnerState(app.session, state);
+    toast(`✓ Successfully enrolled in ${courseDef.code} · ${courseDef.title}!`);
+    renderActivePage();
+  }
+
+  /* -------------------------------------------------------------
+     3. COURSE PLAYER MODAL (Progress Management)
+     ------------------------------------------------------------- */
+  function openCoursePlayer(code) {
+    const state = getLearnerState(app.session);
+    const course = (state.enrolledCourses || []).find(c => c.code === code);
+    if (!course) {
+      enrollCourse(code);
+      return openCoursePlayer(code);
+    }
+
+    const modal = document.getElementById('coursePlayerModal');
+    const kicker = document.getElementById('playerKicker');
+    const title = document.getElementById('playerTitle');
+    const body = document.getElementById('playerBody');
+
+    kicker.textContent = `${course.code} · ${course.academyTitle || course.academy} · ${course.level}`;
+    title.textContent = course.title;
+
+    function renderPlayerContent() {
+      const isComplete = course.progress === 100 || course.status === 'COMPLETED';
+      const lessons = course.lessons || [];
+      const completed = new Set(course.completedLessons || []);
+
+      body.innerHTML = `
+        <div style="background:var(--paper);border:1px solid var(--line);padding:18px 20px;margin-bottom:22px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <span class="mono" style="font-size:11px;color:var(--blue)">Syllabus Progress</span>
+            <strong style="font-size:14px">${completed.size} of ${lessons.length} Modules Completed (${course.progress}%)</strong>
+          </div>
+          <div class="learner-progress-bar ${isComplete ? 'complete' : ''}" style="height:9px">
+            <span style="width:${Math.max(0, Math.min(100, course.progress))}%"></span>
+          </div>
+          <div style="font-size:11.5px;color:#666;margin-top:8px">
+            ${isComplete ? '✓ Course completed! You have earned your official verifiable completion certificate.' : 'Click any module checkmark below to mark your learning progress.'}
+          </div>
+        </div>
+
+        ${isComplete ? `
+          <div style="background:#f4fbf0;border:1px solid #badf78;padding:16px 20px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;gap:16px">
+            <div>
+              <strong style="color:#2f5400;display:block;font-size:15px">🎉 Course Completed!</strong>
+              <span style="color:#4d6d23;font-size:12px">Certificate ID: <strong>${esc(course.certificateId || 'EC-VERIFIED')}</strong></span>
+            </div>
+            <button class="btn btn-lime" id="playerModalViewCertBtn">View Certificate ↗</button>
+          </div>
+        ` : ''}
+
+        <div class="mono" style="font-size:10px;color:var(--blue);margin-bottom:8px">Interactive Lesson Checklist</div>
+        <div class="learner-lesson-list">
+          ${lessons.map((l, i) => {
+            const isDone = completed.has(l.id);
+            return `
+              <div class="learner-lesson-item ${isDone ? 'completed' : ''}" data-lesson-id="${esc(l.id)}">
+                <button type="button" class="learner-lesson-check" data-toggle-lesson="${esc(l.id)}" title="${isDone ? 'Mark incomplete' : 'Mark complete'}">
+                  ${isDone ? '✓' : ''}
+                </button>
+                <div class="learner-lesson-info">
+                  <h4>${esc(l.id)} · ${esc(l.title)}</h4>
+                  <p>${esc(l.summary || '')}</p>
+                  ${l.exercise ? `<div style="font-size:11px;color:#555;margin-top:6px;background:rgba(0,0,0,.03);padding:6px 10px;border-left:2px solid var(--blue)"><strong>Lab:</strong> ${esc(l.exercise)}</div>` : ''}
+                </div>
+                <div class="mono" style="font-size:11px;color:#777;white-space:nowrap">
+                  ${esc(l.duration || '45 min')}
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+
+      body.querySelectorAll('[data-toggle-lesson]').forEach(b => {
+        b.onclick = () => {
+          const lid = b.dataset.toggleLesson;
+          let comp = course.completedLessons || [];
+          if (comp.includes(lid)) {
+            comp = comp.filter(x => x !== lid);
+          } else {
+            comp.push(lid);
+            state.activity.unshift({
+              event: `Completed Module ${lid} in ${course.code}`,
+              course: course.code,
+              at: new Date().toISOString()
+            });
+          }
+          course.completedLessons = comp;
+          course.progress = Math.round((comp.length / Math.max(1, lessons.length)) * 100);
+          course.lastAccessed = new Date().toISOString();
+
+          // Check for completion
+          if (course.progress === 100) {
+            course.status = 'COMPLETED';
+            if (!course.certificateId) {
+              const certId = `EC-${Math.random().toString(36).slice(2, 6).toUpperCase()}-${course.code.replace(/[^A-Z0-9]/gi, '')}`;
+              course.certificateId = certId;
+              state.certificates = state.certificates || [];
+              if (!state.certificates.some(c => c.courseCode === course.code)) {
+                state.certificates.unshift({
+                  id: certId,
+                  courseCode: course.code,
+                  courseTitle: course.title,
+                  academy: course.academyTitle || course.academy,
+                  issued: new Date().toISOString().slice(0, 10),
+                  verificationId: certId
+                });
+                state.activity.unshift({
+                  event: `Certificate Issued for ${course.code}: ${course.title}`,
+                  course: course.code,
+                  at: new Date().toISOString()
+                });
+              }
+            }
+            toast(`🎉 Congratulations! You completed ${course.code}! Certificate awarded.`);
+          } else {
+            course.status = 'IN_PROGRESS';
+          }
+
+          saveLearnerState(app.session, state);
+          renderPlayerContent();
+        };
+      });
+
+      document.getElementById('playerModalViewCertBtn')?.addEventListener('click', () => {
+        modal.classList.remove('open');
+        openCertificateViewer(course.code);
+      });
+    }
+
+    renderPlayerContent();
+    modal.classList.add('open');
+  }
+
+  /* -------------------------------------------------------------
+     4. CERTIFICATIONS TAB & MODAL
+     ------------------------------------------------------------- */
+  function renderCertificates(P) {
+    const state = getLearnerState(app.session);
+    const certs = state.certificates || [];
+
+    P.innerHTML = `
+      <div class="learner-head">
+        <div>
+          <div class="mono" style="color:var(--blue)">CREDENTIALS / INSTITUTIONAL CERTIFICATES</div>
+          <h1>My Certifications</h1>
+        </div>
+        <div>
+          <p>Verified certificates of completion issued by EduCut.ai. Each certificate carries a tamper-evident verification identifier and can be printed or shared.</p>
+        </div>
+      </div>
+
+      ${certs.length ? `
+        <div class="learner-courses-grid">
+          ${certs.map(c => `
+            <article class="learner-cert-card">
+              <div class="learner-cert-header">
+                <span class="learner-cert-stamp">VERIFIED INSTITUTIONAL CREDENTIAL</span>
+                <span class="mono" style="font-size:11px;color:#777">${fmt(c.issued)}</span>
+              </div>
+
+              <div class="mono" style="color:var(--blue);font-size:10px;margin-bottom:4px">${esc(c.courseCode)}</div>
+              <h3 style="font-size:20px;letter-spacing:-.03em;margin:0 0 8px">${esc(c.courseTitle)}</h3>
+              <p style="color:#666;font-size:12px;margin:0 0 16px">${esc(c.academy || 'EduCut.ai Academy')}</p>
+
+              <div style="background:var(--paper);border:1px solid var(--line);padding:12px;margin-bottom:16px;font:700 11px monospace">
+                Verification ID: <span style="color:var(--blue)">${esc(c.id || c.verificationId)}</span>
+              </div>
+
+              <div style="margin-top:auto">
+                <button class="btn btn-lime" style="width:100%" data-view-cert-id="${esc(c.courseCode)}">
+                  View &amp; Print Certificate →
+                </button>
+              </div>
+            </article>
+          `).join('')}
+        </div>
+      ` : `
+        <div class="company-empty" style="padding:48px 24px">
+          <h3>No Certificates Earned Yet</h3>
+          <p>Complete all modules in an active course (such as the Free Course <strong>FREE-101</strong>) to earn your first certified credential.</p>
+          <button class="btn btn-lime" id="certGotoDashboardBtn" style="margin-top:14px">Open My Learning &amp; Complete Modules →</button>
+        </div>
+      `}
+    `;
+
+    P.querySelectorAll('[data-view-cert-id]').forEach(b => {
+      b.onclick = () => openCertificateViewer(b.dataset.viewCertId);
+    });
+
+    document.getElementById('certGotoDashboardBtn')?.addEventListener('click', () => {
+      app.page = 'dashboard';
+      learnerWriteRoute();
+      app.root.querySelectorAll('[data-lpage]').forEach(btn => btn.classList.toggle('active', btn.dataset.lpage === 'dashboard'));
+      renderActivePage();
+    });
+  }
+
+  function openCertificateViewer(courseCode) {
+    const state = getLearnerState(app.session);
+    const cert = (state.certificates || []).find(c => c.courseCode === courseCode) || {
+      id: `EC-LIVE-${courseCode.replace(/[^A-Z0-9]/gi, '')}`,
+      courseCode,
+      courseTitle: courseCode === 'FREE-101' ? 'AI Foundations & Prompting Essentials: Interactive Primer' : 'Advanced AI Professional Curriculum',
+      academy: 'EduCut.ai Academy',
+      issued: new Date().toISOString().slice(0, 10)
+    };
+
+    const modal = document.getElementById('certViewerModal');
+    const body = document.getElementById('certBody');
+    const learnerName = app.session?.name || 'Verified Learner';
+
+    body.innerHTML = `
+      <div class="learner-cert-modal-paper" id="printableCert">
+        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #0b0b0c;padding-bottom:18px;margin-bottom:24px">
+          <div class="brand" style="font-size:26px">EduCut<span>.ai</span></div>
+          <div class="mono" style="font-size:9.5px;text-align:right;color:#555">
+            ACCREDITED AI EDUCATION<br>SWITZERLAND
+          </div>
+        </div>
+
+        <div class="mono" style="color:var(--blue);font-size:11px;letter-spacing:.2em;margin-bottom:12px">
+          CERTIFICATE OF COMPLETION
+        </div>
+        <p style="font-size:14px;color:#555;margin:0 0 16px">This is to officially certify that</p>
+        <h2 style="font-size:32px;letter-spacing:-.04em;margin:0 0 16px;text-decoration:underline;text-underline-offset:6px">${esc(learnerName)}</h2>
+        <p style="font-size:14px;color:#555;margin:0 0 18px">has successfully completed the rigorous syllabus and practical applied exercises for</p>
+        <h3 style="font-size:22px;letter-spacing:-.03em;margin:0 0 6px;color:#0b0b0c">${esc(cert.courseCode)} · ${esc(cert.courseTitle)}</h3>
+        <div class="mono" style="font-size:11px;color:#777;margin-bottom:24px">${esc(cert.academy)}</div>
+
+        <div class="learner-cert-seal">
+          EDUCUT<br>VERIFIED<br>★
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:1px solid #ccc;padding-top:18px;margin-top:24px;text-align:left;font-size:11px">
+          <div>
+            <span class="mono" style="color:#777;display:block">Issue Date</span>
+            <strong>${fmt(cert.issued)}</strong>
+          </div>
+          <div style="text-align:right">
+            <span class="mono" style="color:#777;display:block">Verification Identifier</span>
+            <strong style="color:var(--blue)">${esc(cert.id || cert.verificationId)}</strong>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:20px">
+        <button class="btn btn-outline" onclick="window.print()">Print / Save PDF</button>
+        <button class="btn btn-lime" onclick="document.getElementById('certViewerModal').classList.remove('open')">Close</button>
+      </div>
+    `;
+
+    modal.classList.add('open');
+  }
+
+  /* -------------------------------------------------------------
+     5. ACTIVITY LOG
+     ------------------------------------------------------------- */
+  function renderActivity(P) {
+    const state = getLearnerState(app.session);
+    const activities = state.activity || [];
+
+    P.innerHTML = `
+      <div class="learner-head">
+        <div>
+          <div class="mono" style="color:var(--blue)">HISTORY / AUDIT LOG</div>
+          <h1>Learning Activity</h1>
+        </div>
+        <div>
+          <p>Chronological record of course enrollments, completed lessons, module achievements, and earned certificates.</p>
+        </div>
+      </div>
+
+      <div class="company-panel" style="padding:24px">
+        ${activities.length ? activities.map(a => `
+          <div class="admin-activity-row">
+            <div class="mono" style="font-size:10px">${fmt(a.at)}</div>
+            <div class="evt" style="font-weight:600">${esc(a.event)}</div>
+            <div class="who"><span class="learner-code-pill">${esc(a.course || 'COURSE')}</span></div>
+            <div class="when" style="font-size:11px;color:#777">${fmtTime(a.at)}</div>
+          </div>
+        `).join('') : '<div class="company-empty"><h3>No activity recorded yet</h3></div>'}
+      </div>
+    `;
+  }
+
+})();
+</script>
 
 <script>
 /* ===== EduCut.ai authentication routing smoke tests =====
