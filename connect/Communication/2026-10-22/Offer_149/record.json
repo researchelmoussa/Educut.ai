@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Amsterdam Merit Scholarship",
+    "evidence_url": "https://www.uva.nl/en/education/fees-and-funding/masters-scholarships-and-loans/amsterdam-merit-scholarship/amsterdam-merit-scholarship.html",
+    "evidence_quote": "Amsterdam Merit Scholarships - University of Amsterdam"
+  },
+  "institution": {
+    "name": "University of Amsterdam, Graduate School of Social and Behavioural Sciences",
+    "website": "https://www.uva.nl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.uva.nl/en/about-the-uva/organisation/faculties/faculty-of-social-and-behavioural-sciences/education/social-sciences/scholarships.html",
+  "source_url": "https://www.uva.nl/en/about-the-uva/organisation/faculties/faculty-of-social-and-behavioural-sciences/education/social-sciences/scholarships.html",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Social and behavioural sciences",
+  "seniority": "Master's",
+  "qualifications": [
+    "For applicants to Master's programmes of the Graduate School of Social and Behavioural Sciences",
+    "The 15 February 2027 deadline is final"
+  ],
+  "skills": [],
+  "description_short": "Amsterdam Merit Scholarship (AMS) for the 2027-2028 intake of Master's programmes at the UvA Graduate School of Social and Behavioural Sciences. Applications are due 15 February 2027, 23:59 CET; selection in March, results by mid-May.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-15",
+    "timezone": "Europe/Amsterdam",
+    "evidence_url": "https://www.uva.nl/en/about-the-uva/organisation/faculties/faculty-of-social-and-behavioural-sciences/education/social-sciences/scholarships.html",
+    "evidence_quote": "no later than 15 February 2027, 23:59 CET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UvA page (search results): AMS application for 2027-2028 due 15 February 2027, 23:59 CET",
+    "Portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Scholarship amount and nationality eligibility not shown in the results",
+    "Other UvA faculties use different AMS deadlines",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results; ellipses mark joined fragments",
+    "Compensation not stated verbatim in the results",
+    "Title from the UvA Amsterdam Merit Scholarships page (singular form); the deadline is from the Graduate School of Social and Behavioural Sciences page"
+  ],
+  "discovered_at": "2026-10-22T02:00:17.407Z",
+  "last_verified_at": "2026-10-22T02:03:03.211Z",
+  "id": "opp_ec94f7bb88df7d12",
+  "fingerprint": "0132c0725f69d7f6",
+  "content_hash": "sha256:7a51259cde3227b88788d80ea0a271e25f0f64591a9fb5890c9659479d17f0a7"
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Master Internship Call",
+    "evidence_url": "https://research.pasteur.fr/en/call/master-students-call/",
+    "evidence_quote": "MASTER INTERNSHIP CALL"
+  },
+  "institution": {
+    "name": "Institut Pasteur and Fondation SUEZ",
+    "website": "https://research.pasteur.fr",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://research.pasteur.fr/en/call/master-students-call/",
+  "source_url": "https://research.pasteur.fr/en/call/master-students-call/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Paris",
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Biomedical research",
+  "seniority": "Master's",
+  "qualifications": [
+    "Restricted to women",
+    "Enrolled in Master 2 or equivalent in 2026-2027",
+    "A host lab at Institut Pasteur Paris is required before applying",
+    "One application per laboratory"
+  ],
+  "skills": [],
+  "description_short": "Institut Pasteur and Fondation SUEZ programme funding six-month Master 2 internships for women in Institut Pasteur Paris labs, starting from January 2027. Six scholarships available; applications due December 4, 2026, 1pm Paris time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-04",
+    "timezone": "Europe/Paris",
+    "evidence_url": "https://research.pasteur.fr/en/call/master-students-call/",
+    "evidence_quote": "December 4th, 2026 (1pm, Paris Time)"
+  },
+  "compensation": {
+    "value": "€680 per month for six months",
+    "evidence_url": "https://research.pasteur.fr/en/call/master-students-call/",
+    "evidence_quote": "Six scholarships of €680 per month for six months"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Institut Pasteur call page (search results): deadline December 4, 2026, 1pm Paris time",
+    "Applications are sent by email (single PDF); not independently confirmed"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "A structured date field on the page shows 8:00-18:00 Paris time; the 1pm time is used",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results; ellipses mark joined fragments",
+    "Title is the page heading 'MASTER INTERNSHIP CALL' with capitalisation normalised; the programme is run with Fondation SUEZ"
+  ],
+  "discovered_at": "2026-10-22T02:00:17.407Z",
+  "last_verified_at": "2026-10-22T02:03:03.558Z",
+  "id": "opp_54f12f7abd9a8fa2",
+  "fingerprint": "efd70cab1b14f8cd",
+  "content_hash": "sha256:093b2a727c25d8800ce02cea13f8be0784ea244fc583f1476892c90651606ad8"
+}
