@@ -670,6 +670,32 @@
         if(ico) ico.textContent = '☰';
       });
     });
+    try {
+      var raw = sessionStorage.getItem('educutAuthSession') || localStorage.getItem('educutAuthSession');
+      if(raw){
+        var s = JSON.parse(raw);
+        if(s && (s.userId || s.name || s.email)){
+          var su = n.querySelector('a[href*="/#/signup"]');
+          var si = n.querySelector('a[href*="/#/signin"]');
+          if(su) su.style.display = 'none';
+          if(si) si.style.display = 'none';
+          var cta = n.querySelector('.btn-lime');
+          var role = s.role || '';
+          var target = role === 'SUPER_ADMIN' ? '/#/admin' : (role === 'COMPANY_ADMIN' || role === 'COMPANY_MEMBER') ? '/#/company' : '/#/academy/dashboard';
+          var label = role === 'SUPER_ADMIN' ? 'Admin Console' : (role === 'COMPANY_ADMIN' || role === 'COMPANY_MEMBER') ? 'Company Workspace' : 'My Academy';
+          if(cta){
+            cta.textContent = label + ' →';
+            cta.setAttribute('href', target);
+          }
+          var chip = document.createElement('a');
+          chip.href = target;
+          chip.style.cssText = 'display:inline-flex;align-items:center;gap:7px;color:#fff;font-weight:700;';
+          var initial = (s.name ? s.name.charAt(0) : 'U').toUpperCase();
+          chip.innerHTML = '<span style="width:26px;height:26px;border-radius:50%;background:#19191b;border:1px solid var(--lime);display:inline-grid;place-items:center;font-size:11px;color:var(--lime);font-weight:800;">' + initial + '</span><span>' + (s.name ? s.name.split(' ')[0] : 'Profile') + '</span>';
+          if(cta && cta.parentNode === n) n.insertBefore(chip, cta);
+        }
+      }
+    }catch(_){}
   })();
   </script>
   <main>

@@ -1322,22 +1322,28 @@
     @media(max-width:850px){.endorsements-grid{grid-template-columns:1fr}}
 
 /* =========================================================
-   EduCut.ai authentication - Swiss-grid identity extension
+   EduCut.ai authentication - Compact Swiss-grid modal
    ========================================================= */
-.auth-modal{position:fixed;inset:0;z-index:140;display:none;background:rgba(8,8,9,.88);padding:22px;overflow:auto;align-items:center;justify-content:center}
-.auth-modal.open{display:flex}.auth-shell{width:min(1120px,100%);min-height:650px;background:var(--paper);border:1px solid #303033;display:grid;grid-template-columns:320px 1fr;box-shadow:0 34px 90px rgba(0,0,0,.5);position:relative;overflow:hidden}
-.auth-rail{background:var(--ink);color:#fff;padding:34px 30px;display:flex;flex-direction:column;position:relative;overflow:hidden}.auth-rail:before{content:"";position:absolute;inset:0;opacity:.17;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:38px 38px;transform:translate3d(var(--auth-grid-x,0),var(--auth-grid-y,0),0)}
-.auth-rail>*{position:relative;z-index:1}.auth-rail .brand{font-size:24px}.auth-rail-copy{margin-top:84px}.auth-rail-copy .mono{color:var(--lime)}.auth-rail h2{font-size:42px;line-height:.96;letter-spacing:-.055em;margin:14px 0 16px}.auth-rail p{color:#aaa;font-size:14px;max-width:240px}.auth-rail-foot{margin-top:auto;border-top:1px solid #333;padding-top:18px;color:#777}
-.auth-main{min-width:0;display:flex;flex-direction:column}.auth-top{min-height:72px;padding:0 30px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px}.auth-back,.auth-close{border:1px solid var(--line);background:#fff;color:var(--ink);width:42px;height:42px;display:grid;place-items:center;cursor:pointer;font-size:20px;transition:.18s}.auth-back:hover,.auth-close:hover{background:var(--ink);color:#fff;border-color:var(--ink)}.auth-top-actions{display:flex;gap:8px}.auth-body{padding:38px 40px 44px;overflow:auto;flex:1}.auth-heading{margin-bottom:28px}.auth-heading .mono{color:var(--blue);margin-bottom:10px}.auth-heading h1,.auth-heading h2{font-size:44px;line-height:.98;letter-spacing:-.055em;margin:0 0 12px}.auth-heading p{color:#696965;max-width:700px;margin:0;font-size:15px}
-.auth-access-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.auth-access-card{border:1px solid var(--line);background:#fff;padding:28px;min-height:310px;display:flex;flex-direction:column;cursor:pointer;transition:transform .23s ease,border-color .23s ease,box-shadow .23s ease;position:relative;overflow:hidden;text-align:left}.auth-access-card:before{content:"";position:absolute;left:0;top:0;width:100%;height:5px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:.26s ease}.auth-access-card.company:before{background:var(--lime)}.auth-access-card:hover,.auth-access-card:focus-visible{transform:translateY(-5px);border-color:var(--ink);box-shadow:0 18px 45px rgba(0,0,0,.08);outline:none}.auth-access-card:hover:before,.auth-access-card:focus-visible:before{transform:scaleX(1)}.auth-icon{width:54px;height:54px;border:1px solid var(--ink);display:grid;place-items:center;font-size:24px;margin-bottom:46px;background:var(--paper);transition:transform .2s ease}.auth-access-card:hover .auth-icon{transform:translateY(-3px)}.auth-access-card h3{font-size:27px;margin:0 0 10px;letter-spacing:-.035em}.auth-access-card p{color:#666;margin:0 0 18px;line-height:1.5}.auth-card-note{font-size:11px;color:#8b8b87;margin-top:auto;margin-bottom:18px}.auth-card-cta{font-weight:800;font-size:13px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:16px}.auth-card-cta span:last-child{color:var(--blue)}.company .auth-card-cta span:last-child{color:#2d5000;font-weight:700}
-.auth-segment{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:1px solid var(--ink);margin-bottom:26px;background:#fff}.auth-segment button{border:0;border-right:1px solid var(--ink);background:#fff;padding:13px;cursor:pointer;font-weight:800}.auth-segment button:last-child{border-right:0}.auth-segment button.active{background:var(--ink);color:#fff}.auth-form{display:grid;gap:15px}.auth-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.auth-field.full{grid-column:1/-1}.auth-field label{display:block;font-family:"SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.12em;font-size:10px;color:#666;margin-bottom:7px}.auth-field input,.auth-field select,.auth-field textarea{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);padding:14px 13px;outline:none;border-radius:0;min-height:48px}.auth-field input:focus,.auth-field select:focus,.auth-field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(51,87,255,.08)}.auth-field.invalid input,.auth-field.invalid select{border-color:#b00020}.auth-error{color:#9f001b;font-size:12px;margin-top:5px;min-height:0}.auth-password-wrap{position:relative}.auth-password-wrap input{padding-right:60px}.auth-password-toggle{position:absolute;right:8px;top:8px;height:32px;border:0;background:transparent;color:var(--blue);font-family:"SFMono-Regular",Consolas,monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer}.auth-inline{display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:12px;color:#666}.auth-inline label{display:flex;gap:8px;align-items:center}.auth-link{border:0;background:transparent;color:var(--blue);padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}.auth-submit{width:100%;min-height:52px;margin-top:2px}.auth-switch{text-align:center;color:#777;font-size:12px;margin-top:2px}.auth-switch button{border:0;background:transparent;color:var(--blue);font-weight:800;cursor:pointer}.auth-status{min-height:20px;font-size:12px}.auth-status.error{color:#a6001d}.auth-status.success{color:#3e7200}.auth-status[aria-live]{outline:none}
-.auth-stepbar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);margin-bottom:26px}.auth-stepbar span{background:#fff;padding:9px 8px;text-align:center;font-size:9px;font-family:"SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.09em;color:#888}.auth-stepbar span.active{background:var(--ink);color:#fff}.auth-stepbar span.done{background:#e9f8cb;color:#365d00}.auth-form-actions{display:flex;justify-content:space-between;gap:10px;margin-top:6px}.auth-form-actions .btn{min-width:150px}.auth-choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.auth-chip-grid{display:flex;flex-wrap:wrap;gap:8px}.auth-chip{border:1px solid var(--line);background:#fff;padding:10px 11px;cursor:pointer;font-size:12px;text-align:left}.auth-chip[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 4px 0 0 var(--lime);background:#fafafa}.auth-check{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid var(--line);background:#fff;font-size:12px}.auth-check input{margin-top:2px}.password-rules{display:grid;grid-template-columns:1fr 1fr;gap:5px 12px;margin-top:8px;font-size:11px;color:#777}.password-rules span.ok{color:#4c7700}.auth-progress-note{font-size:11px;color:#777;margin-bottom:14px}.auth-success-panel{border:1px solid var(--ink);background:#fff;padding:34px;min-height:310px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;position:relative;overflow:hidden}.auth-success-panel:before{content:"";position:absolute;left:0;top:0;width:7px;height:100%;background:var(--lime)}.auth-success-mark{width:56px;height:56px;border:1px solid var(--ink);display:grid;place-items:center;font-size:28px;margin-bottom:25px}.auth-success-panel h2{font-size:38px;line-height:1;margin:0 0 12px;letter-spacing:-.045em}.auth-success-panel p{color:#666;max-width:560px}.admin-granted{background:var(--ink);color:#fff;border-color:#444}.admin-granted:before{background:var(--lime)}.admin-granted p{color:#aaa}.admin-granted .auth-success-mark{border-color:var(--lime);color:var(--lime)}
+.auth-modal{position:fixed;inset:0;z-index:140;display:none;background:rgba(8,8,9,.88);padding:24px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch;align-items:flex-start;justify-content:center}
+.auth-modal.open{display:flex}.auth-shell{width:min(880px,100%);max-height:min(720px,calc(100vh - 48px));margin:auto;background:var(--paper);border:1px solid #303033;display:grid;grid-template-columns:250px 1fr;box-shadow:0 34px 90px rgba(0,0,0,.5);position:relative;overflow:hidden}
+.auth-rail{background:var(--ink);color:#fff;padding:26px 22px;display:flex;flex-direction:column;position:relative;overflow:hidden}.auth-rail:before{content:"";position:absolute;inset:0;opacity:.17;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:38px 38px;transform:translate3d(var(--auth-grid-x,0),var(--auth-grid-y,0),0)}
+.auth-rail>*{position:relative;z-index:1}.auth-rail .brand{font-size:20px}.auth-rail-copy{margin-top:24px}.auth-rail-copy .mono{color:var(--lime);font-size:10px}.auth-rail h2{font-size:26px;line-height:1.05;letter-spacing:-.045em;margin:10px 0 12px}.auth-rail p{color:#aaa;font-size:13px;line-height:1.45;max-width:210px}.auth-rail-foot{margin-top:auto;border-top:1px solid #333;padding-top:14px;color:#777;font-size:10px}
+.auth-main{min-width:0;height:100%;max-height:min(720px,calc(100vh - 48px));display:flex;flex-direction:column;overflow:hidden}
+.auth-top{min-height:54px;height:54px;padding:0 24px;border-bottom:1px solid var(--line);background:var(--paper);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-shrink:0;position:sticky;top:0;z-index:10}
+.auth-back,.auth-close{border:1px solid var(--line);background:#fff;color:var(--ink);width:36px;height:36px;display:grid;place-items:center;cursor:pointer;font-size:18px;transition:.18s}.auth-back:hover,.auth-close:hover{background:var(--ink);color:#fff;border-color:var(--ink)}.auth-top-actions{display:flex;gap:8px}
+.auth-body{padding:24px 28px 28px;overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch}
+.auth-heading{margin-bottom:18px}.auth-heading .mono{color:var(--blue);margin-bottom:6px;font-size:10px}.auth-heading h1,.auth-heading h2{font-size:26px;line-height:1.08;letter-spacing:-.045em;margin:0 0 6px}.auth-heading p{color:#696965;max-width:620px;margin:0;font-size:13px;line-height:1.45}
+.auth-access-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.auth-access-card{border:1px solid var(--line);background:#fff;padding:20px;min-height:220px;display:flex;flex-direction:column;cursor:pointer;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;position:relative;overflow:hidden;text-align:left}.auth-access-card:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:.22s ease}.auth-access-card.company:before{background:var(--lime)}.auth-access-card:hover,.auth-access-card:focus-visible{transform:translateY(-3px);border-color:var(--ink);box-shadow:0 14px 35px rgba(0,0,0,.08);outline:none}.auth-access-card:hover:before,.auth-access-card:focus-visible:before{transform:scaleX(1)}
+.auth-icon{width:42px;height:42px;border:1px solid var(--ink);display:grid;place-items:center;font-size:20px;margin-bottom:16px;background:var(--paper);transition:transform .2s ease}.auth-access-card:hover .auth-icon{transform:translateY(-2px)}.auth-access-card h3{font-size:19px;margin:0 0 6px;letter-spacing:-.03em}.auth-access-card p{color:#666;margin:0 0 10px;font-size:12px;line-height:1.45}.auth-card-note{font-size:11px;color:#8b8b87;margin-top:auto;margin-bottom:12px}.auth-card-cta{font-weight:800;font-size:12px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:12px}.auth-card-cta span:last-child{color:var(--blue)}.company .auth-card-cta span:last-child{color:#2d5000;font-weight:700}
+.auth-segment{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:1px solid var(--ink);margin-bottom:18px;background:#fff}.auth-segment button{border:0;border-right:1px solid var(--ink);background:#fff;padding:10px 12px;cursor:pointer;font-weight:800;font-size:12px}.auth-segment button:last-child{border-right:0}.auth-segment button.active{background:var(--ink);color:#fff}
+.auth-form{display:grid;gap:11px}.auth-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.auth-field.full{grid-column:1/-1}.auth-field label{display:block;font-family:"SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.11em;font-size:9.5px;color:#666;margin-bottom:5px}.auth-field input,.auth-field select,.auth-field textarea{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);padding:10px 12px;outline:none;border-radius:0;min-height:40px;font-size:13px}.auth-field input:focus,.auth-field select:focus,.auth-field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(51,87,255,.08)}.auth-field.invalid input,.auth-field.invalid select{border-color:#b00020}.auth-error{color:#9f001b;font-size:11px;margin-top:4px;min-height:0}.auth-password-wrap{position:relative}.auth-password-wrap input{padding-right:55px}.auth-password-toggle{position:absolute;right:6px;top:6px;height:28px;border:0;background:transparent;color:var(--blue);font-family:"SFMono-Regular",Consolas,monospace;font-size:9px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer}.auth-inline{display:flex;justify-content:space-between;gap:14px;align-items:center;font-size:12px;color:#666}.auth-inline label{display:flex;gap:6px;align-items:center}.auth-link{border:0;background:transparent;color:var(--blue);padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}.auth-submit{width:100%;min-height:44px;margin-top:2px;font-size:13px}.auth-switch{text-align:center;color:#777;font-size:12px;margin-top:2px}.auth-switch button{border:0;background:transparent;color:var(--blue);font-weight:800;cursor:pointer}.auth-status{min-height:18px;font-size:12px}.auth-status.error{color:#a6001d}.auth-status.success{color:#3e7200}.auth-status[aria-live]{outline:none}
+.auth-stepbar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);margin-bottom:18px}.auth-stepbar span{background:#fff;padding:7px 5px;text-align:center;font-size:8.5px;font-family:"SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.08em;color:#888}.auth-stepbar span.active{background:var(--ink);color:#fff}.auth-stepbar span.done{background:#e9f8cb;color:#365d00}.auth-form-actions{display:flex;justify-content:space-between;gap:10px;margin-top:6px}.auth-form-actions .btn{min-width:130px;min-height:42px;padding:9px 14px}.auth-choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.auth-chip-grid{display:flex;flex-wrap:wrap;gap:7px}.auth-chip{border:1px solid var(--line);background:#fff;padding:8px 10px;cursor:pointer;font-size:11.5px;text-align:left}.auth-chip[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 4px 0 0 var(--lime);background:#fafafa}.auth-check{display:flex;gap:10px;align-items:flex-start;padding:10px;border:1px solid var(--line);background:#fff;font-size:12px}.auth-check input{margin-top:2px}.password-rules{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;margin-top:6px;font-size:10.5px;color:#777}.password-rules span.ok{color:#4c7700}.auth-progress-note{font-size:11px;color:#777;margin-bottom:12px}.auth-success-panel{border:1px solid var(--ink);background:#fff;padding:26px;min-height:240px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;position:relative;overflow:hidden}.auth-success-panel:before{content:"";position:absolute;left:0;top:0;width:6px;height:100%;background:var(--lime)}.auth-success-mark{width:48px;height:48px;border:1px solid var(--ink);display:grid;place-items:center;font-size:24px;margin-bottom:18px}.auth-success-panel h2{font-size:28px;line-height:1.05;margin:0 0 10px;letter-spacing:-.04em}.auth-success-panel p{color:#666;max-width:520px;font-size:13px}.admin-granted{background:var(--ink);color:#fff;border-color:#444}.admin-granted:before{background:var(--lime)}.admin-granted p{color:#aaa}.admin-granted .auth-success-mark{border-color:var(--lime);color:var(--lime)}
 .route-view{position:fixed;inset:0;z-index:130;background:var(--paper);display:none;overflow:auto}.route-view.open{display:block}.route-top{height:76px;background:var(--ink);color:#fff;border-bottom:1px solid #333;display:flex;align-items:center;justify-content:space-between;padding:0 max(24px,calc((100vw - 1240px)/2));position:sticky;top:0;z-index:2}.route-top .route-role{color:var(--lime)}.route-top-actions{display:flex;align-items:center;gap:12px}.route-content{width:min(1240px,calc(100% - 48px));margin:auto;padding:48px 0 70px}.route-heading{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;padding-bottom:36px;border-bottom:1px solid var(--ink)}.route-heading h1{font-size:58px;line-height:.95;letter-spacing:-.06em;margin:7px 0 0}.route-heading p{color:#666;font-size:16px;max-width:650px}.route-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}.route-card{background:#fff;padding:26px;min-height:190px}.route-card .mono{color:var(--blue)}.route-card h3{font-size:23px;margin:24px 0 8px}.route-card p{font-size:13px;color:#70706c}.route-admin .route-card:first-child{box-shadow:inset 6px 0 0 var(--lime)}.restricted-panel{max-width:740px;margin:90px auto;border:1px solid var(--ink);background:#fff;padding:42px}.restricted-panel .mono{color:#b00020}.restricted-panel h1{font-size:50px;letter-spacing:-.055em;margin:12px 0}.restricted-panel p{color:#666}.auth-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:900px){.auth-shell{grid-template-columns:1fr;min-height:0}.auth-rail{display:none}.auth-access-grid{grid-template-columns:1fr}.auth-body{padding:32px 28px 38px}.route-heading{grid-template-columns:1fr}.route-grid{grid-template-columns:1fr 1fr}.auth-form-grid{grid-template-columns:1fr}.auth-field.full{grid-column:auto}}
-
+@media(max-width:900px){.auth-shell{grid-template-columns:1fr;min-height:0;max-height:calc(100vh - 24px)}.auth-rail{display:none}.auth-access-grid{grid-template-columns:1fr}.auth-body{padding:22px 20px 28px}.route-heading{grid-template-columns:1fr}.route-grid{grid-template-columns:1fr 1fr}.auth-form-grid{grid-template-columns:1fr}.auth-field.full{grid-column:auto}}
 .auth-activation-note{border:1px solid var(--line);background:#fff;padding:16px 18px;margin-bottom:16px}.auth-activation-note strong{display:block;font-size:16px;margin-bottom:5px}.auth-activation-note p{margin:0;color:#6d6d68;font-size:13px}.auth-verified-email{border:1px solid var(--ink);background:#fff;padding:14px 15px}.auth-verified-email .mono{color:var(--blue);margin-bottom:4px}.auth-code-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}.auth-code-grid input{text-align:center;font-size:22px;font-weight:800;padding:10px 4px;min-width:0}.auth-mask-note{font-size:12px;color:#73736f;margin-top:-4px}.password-strength{height:5px;background:#e2e2dc;overflow:hidden;margin-top:8px}.password-strength span{display:block;height:100%;width:0;background:var(--blue);transition:width .2s ease}.auth-neutral-panel{border:1px solid var(--line);background:#fff;padding:22px}.auth-neutral-panel h3{margin:0 0 8px;font-size:24px;letter-spacing:-.03em}.auth-neutral-panel p{color:#666;margin:0 0 16px}.seat-admin{margin-top:34px;border-top:1px solid var(--line);padding-top:28px}.seat-admin-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:18px}.seat-admin-head h2{font-size:30px;margin:4px 0 0;letter-spacing:-.04em}.seat-admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.seat-list{margin-top:18px;border:1px solid var(--line);background:#fff}.seat-row{display:grid;grid-template-columns:1.35fr .8fr .8fr auto;gap:12px;align-items:center;padding:13px 14px;border-bottom:1px solid var(--line);font-size:12px}.seat-row:last-child{border-bottom:0}.seat-row strong{display:block;font-size:13px}.seat-status{font-family:"SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.08em;font-size:9px}.seat-status.active{color:#477300}.seat-status.pending{color:var(--blue)}.seat-empty{padding:18px;color:#777;font-size:12px}.invite-result{font-size:12px;color:#477300;margin-top:10px}.seat-admin .auth-chip-grid{max-height:130px;overflow:auto;border:1px solid var(--line);padding:8px;background:#fff}
 @media(max-width:760px){.seat-admin-grid{grid-template-columns:1fr}.seat-row{grid-template-columns:1fr 1fr}.seat-row .btn{grid-column:1/-1}.auth-code-grid{gap:4px}}
-@media(max-width:620px){.auth-modal{padding:0;align-items:flex-start}.auth-shell{width:100%;min-height:100vh;border:0}.auth-top{padding:0 18px}.auth-body{padding:26px 18px 34px}.auth-heading h1,.auth-heading h2{font-size:36px}.auth-access-card{min-height:270px;padding:22px}.auth-icon{margin-bottom:34px}.auth-inline{align-items:flex-start;flex-direction:column}.auth-stepbar span{font-size:8px;padding:9px 3px}.auth-form-actions{flex-direction:column-reverse}.auth-form-actions .btn{width:100%}.auth-choice-grid{grid-template-columns:1fr}.password-rules{grid-template-columns:1fr}.route-content{width:min(100% - 28px,1240px)}.route-heading h1{font-size:43px}.route-grid{grid-template-columns:1fr}.route-top{padding:0 14px}.route-top .mono:not(.route-role){display:none}}
+@media(max-width:620px){.auth-modal{padding:0;align-items:flex-start}.auth-shell{width:100%;height:100%;max-height:100vh;border:0}.auth-top{padding:0 16px;min-height:50px;height:50px}.auth-body{padding:20px 16px 28px}.auth-heading h1,.auth-heading h2{font-size:24px}.auth-access-card{min-height:200px;padding:18px}.auth-icon{margin-bottom:16px}.auth-inline{align-items:flex-start;flex-direction:column}.auth-stepbar span{font-size:8px;padding:7px 2px}.auth-form-actions{flex-direction:column-reverse}.auth-form-actions .btn{width:100%}.auth-choice-grid{grid-template-columns:1fr}.password-rules{grid-template-columns:1fr}.route-content{width:min(100% - 28px,1240px)}.route-heading h1{font-size:43px}.route-grid{grid-template-columns:1fr}.route-top{padding:0 14px}.route-top .mono:not(.route-role){display:none}}
 @media(prefers-reduced-motion:reduce){.auth-access-card,.auth-icon,.auth-modal *{transition:none!important;animation:none!important}}
 
 
@@ -1470,132 +1476,200 @@
 @media(max-width:900px){.educut-company-logout{right:18px;top:20px}.company-workspace-top{padding-top:70px}}
 
 
-/* ===== Clear Profile + Logout Navigation ===== */
-.educut-identity-bar{
-  display:flex;align-items:center;justify-content:flex-end;gap:10px;
-  padding:14px 24px;border-bottom:1px solid #d8d8d2;background:#fff;
-  position:sticky;top:0;z-index:9998
-}
-.educut-identity-action{
-  display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 13px;
-  border:1px solid #cfcfc9;background:#fff;color:#111;cursor:pointer;
-  font:700 11px "SFMono-Regular",Consolas,monospace;letter-spacing:.02em
-}
-.educut-identity-action:hover{border-color:#111}
-.educut-identity-action .count{
-  display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;
-  padding:0 5px;background:var(--lime);color:#111;font-weight:900
-}
-.educut-profile-block{
-  display:flex;align-items:center;gap:10px;min-height:42px;padding:6px 11px;
-  border:1px solid #111;background:#fff
-}
-.educut-profile-avatar{
-  width:30px;height:30px;border:1px solid #111;display:grid;place-items:center;
-  font-weight:900;font-size:12px;background:#f7f7f3
-}
-.educut-profile-copy{min-width:0}
-.educut-profile-copy strong{display:block;font-size:12px;line-height:1.2;white-space:nowrap}
-.educut-profile-copy small{display:block;color:#777;font-size:10px;line-height:1.2;margin-top:3px;white-space:nowrap}
-.educut-visible-logout{
-  min-height:42px;padding:0 15px;border:1px solid #111;background:#111;color:#fff;
-  cursor:pointer;font-weight:800
-}
-.educut-visible-logout:hover{background:#fff;color:#111}
-.educut-visible-logout:disabled{opacity:.55;cursor:wait}
-.educut-hide-ambiguous-nav{display:none!important}
-@media(max-width:760px){
-  .educut-identity-bar{padding:10px 12px;gap:6px;flex-wrap:wrap}
-  .educut-identity-action{font-size:10px;padding:0 9px}
-  .educut-profile-copy small{display:none}
-}
+/* =========================================================
+   EduCut.ai Navbar Authenticated Identity (Replaces top banner)
+   ========================================================= */
+#educutIdentityBar{display:none!important}
 
-
-/* ===== EduCut.ai shared authenticated header - notification + profile refinement ===== */
-.educut-identity-bar{
-  display:flex;align-items:center;justify-content:flex-end;gap:10px;
-  padding:12px 24px;border-bottom:1px solid var(--line);background:#fff;
-  position:sticky;top:0;z-index:9998
+.educut-nav-auth{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
 }
-.educut-bell-btn,.educut-profile-trigger{
-  border:1px solid var(--line);background:#fff;color:#000;cursor:pointer;
-  height:42px;display:inline-flex;align-items:center;justify-content:center
+.educut-nav-bell-btn{
+  position:relative;
+  width:38px;
+  height:38px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #38383c;
+  background:rgba(255,255,255,.05);
+  color:#fff;
+  cursor:pointer;
+  padding:0;
+  transition:border-color .15s, background .15s;
 }
-.educut-bell-btn{width:42px;position:relative;padding:0}
-.educut-bell-btn:hover,.educut-profile-trigger:hover{border-color:#000}
+.educut-nav-bell-btn:hover{
+  border-color:var(--lime);
+  background:rgba(255,255,255,.12);
+}
 .educut-bell-icon{width:18px;height:18px;display:block}
 .educut-unread-dot{
-  position:absolute;top:7px;right:7px;width:7px;height:7px;
-  background:#E53935;border:1px solid #fff;border-radius:50%;
+  position:absolute;
+  top:6px;
+  right:6px;
+  width:7px;
+  height:7px;
+  background:var(--lime);
+  border:1px solid var(--ink);
+  border-radius:50%;
 }
-.educut-profile-wrap{position:relative}
-.educut-profile-trigger{
-  min-width:42px;padding:0 6px;border-color:#111
+.educut-nav-profile-wrap{position:relative}
+.educut-nav-profile-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  height:38px;
+  padding:2px 10px 2px 4px;
+  border:1px solid #38383c;
+  background:rgba(255,255,255,.05);
+  color:#fff;
+  cursor:pointer;
+  transition:border-color .15s, background .15s;
 }
-.educut-profile-avatar{
-  width:30px;height:30px;border-radius:999px;border:1px solid #111;
-  display:grid;place-items:center;overflow:hidden;background:#f1f1ed;
-  color:#000;font-weight:800;font-size:11px;letter-spacing:.02em
+.educut-nav-profile-btn:hover{
+  border-color:var(--lime);
+  background:rgba(255,255,255,.12);
 }
-.educut-profile-avatar img{width:100%;height:100%;object-fit:cover;display:block}
-.educut-notification-panel,.educut-profile-menu{
-  position:absolute;right:0;top:calc(100% + 9px);background:#fff;color:#000;
-  border:1px solid #111;box-shadow:0 18px 45px rgba(0,0,0,.12);
-  display:none;z-index:10020
+.educut-nav-avatar{
+  width:28px;
+  height:28px;
+  border-radius:999px;
+  border:1px solid var(--lime);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:#1a1a1c;
+  color:var(--lime);
+  font-weight:800;
+  font-size:11px;
 }
-.educut-notification-panel.open,.educut-profile-menu.open{display:block}
-.educut-notification-panel{width:min(380px,calc(100vw - 28px));max-height:480px;overflow:auto}
-.educut-panel-head{padding:14px 15px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.educut-nav-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.educut-nav-username{
+  font-size:12px;
+  font-weight:700;
+  color:#eee;
+  max-width:110px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.educut-nav-chevron{font-size:9px;color:#888}
+
+.educut-notification-panel,
+.educut-profile-menu{
+  position:absolute;
+  right:0;
+  top:calc(100% + 10px);
+  background:var(--paper);
+  color:var(--ink);
+  border:1px solid #111;
+  box-shadow:0 22px 60px rgba(0,0,0,.35);
+  display:none;
+  z-index:10020;
+}
+.educut-notification-panel.open,
+.educut-profile-menu.open{display:block}
+.educut-notification-panel{width:min(380px,calc(100vw - 28px));max-height:440px;overflow:auto}
+.educut-panel-head{
+  padding:12px 15px;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  background:#fff;
+}
 .educut-panel-head strong{font-size:13px}
 .educut-panel-head .mono{color:var(--blue);font-size:9px}
 .educut-notification-item{
-  width:100%;border:0;border-bottom:1px solid var(--line);background:#fff;color:#000;
-  text-align:left;padding:13px 15px;cursor:pointer;display:block
+  width:100%;
+  border:0;
+  border-bottom:1px solid var(--line);
+  background:#fff;
+  color:#000;
+  text-align:left;
+  padding:12px 15px;
+  cursor:pointer;
+  display:block;
+  transition:background .15s;
 }
 .educut-notification-item:hover{background:var(--paper)}
 .educut-notification-item.unread{box-shadow:inset 4px 0 0 var(--blue)}
-.educut-notification-item strong{display:block;font-size:12px;margin-bottom:4px}
-.educut-notification-item span{display:block;color:#666;font-size:11px;line-height:1.45}
-.educut-notification-item time{display:block;color:#92928d;font:9px "SFMono-Regular",Consolas,monospace;margin-top:7px;text-transform:uppercase;letter-spacing:.07em}
-.educut-empty-notifications{padding:22px 15px;color:#777;font-size:12px}
+.educut-notification-item strong{display:block;font-size:12px;margin-bottom:3px}
+.educut-notification-item span{display:block;color:#666;font-size:11px;line-height:1.4}
+.educut-notification-item time{display:block;color:#92928d;font:9px "SFMono-Regular",Consolas,monospace;margin-top:6px;text-transform:uppercase;letter-spacing:.07em}
+.educut-empty-notifications{padding:22px 15px;color:#777;font-size:12px;text-align:center;background:#fff}
+
 .educut-profile-menu{width:290px}
-.educut-profile-identity{padding:16px;border-bottom:1px solid var(--line)}
+.educut-profile-identity{padding:14px 16px;border-bottom:1px solid var(--line);background:#fff}
 .educut-profile-identity strong{display:block;font-size:13px}
-.educut-profile-identity span,.educut-profile-identity small{display:block;color:#777;font-size:11px;margin-top:3px;word-break:break-word}
+.educut-profile-identity span,.educut-profile-identity small{display:block;color:#777;font-size:11px;margin-top:2px;word-break:break-word}
 .educut-profile-menu-action{
-  width:100%;border:0;border-bottom:1px solid var(--line);background:#fff;color:#000;
-  padding:12px 15px;text-align:left;cursor:pointer;font-size:12px
+  width:100%;
+  border:0;
+  border-bottom:1px solid var(--line);
+  background:#fff;
+  color:#000;
+  padding:11px 16px;
+  text-align:left;
+  cursor:pointer;
+  font-size:12px;
+  transition:background .15s;
 }
 .educut-profile-menu-action:hover{background:var(--paper)}
-.educut-profile-menu-action.logout{
-  color:#000!important;font-weight:800;border-bottom:0
+.educut-profile-menu-action.primary-action{
+  background:#f4f9ea;
+  color:#2f5400;
+  font-weight:700;
 }
-.educut-profile-menu-action.logout:hover{background:#f1f1ed;color:#000!important}
-.educut-profile-editor{padding:15px;border-top:1px solid #111;background:var(--paper)}
-.educut-profile-editor .mono{color:var(--blue);margin-bottom:9px}
-.educut-profile-editor p{font-size:11px;color:#666;margin:0 0 10px}
-.educut-profile-editor-actions{display:flex;gap:7px;flex-wrap:wrap}
+.educut-profile-menu-action.primary-action:hover{
+  background:var(--lime);
+  color:var(--ink);
+}
+.educut-profile-menu-action.logout{
+  color:#9a001a!important;
+  font-weight:700;
+  border-bottom:0;
+}
+.educut-profile-menu-action.logout:hover{background:#fdf2f4;color:#7a0014!important}
+.educut-profile-editor{padding:13px 15px;border-top:1px solid var(--line);background:#fafaf8}
+.educut-profile-editor .mono{color:var(--blue);margin-bottom:6px;font-size:9.5px}
+.educut-profile-editor p{font-size:10.5px;color:#666;margin:0 0 8px}
+.educut-profile-editor-actions{display:flex;gap:6px;flex-wrap:wrap}
 .educut-profile-editor-btn{
-  border:1px solid #111;background:#fff;color:#000;padding:8px 10px;cursor:pointer;
+  border:1px solid #111;background:#fff;color:#000;padding:6px 9px;cursor:pointer;
   font:700 9px "SFMono-Regular",Consolas,monospace;text-transform:uppercase;letter-spacing:.06em
 }
 .educut-profile-editor-btn:hover{background:#111;color:#fff}
 .educut-profile-editor-btn.remove{border-color:#c9c9c3}
-.educut-profile-error{font-size:10px;color:#b00020;margin-top:8px}
-.educut-visible-logout{color:#000!important;background:#fff!important;border-color:#111!important}
+.educut-profile-error{font-size:10px;color:#b00020;margin-top:6px}
+
+.educut-visible-logout{color:#000!important;background:#fff!important;border-color:#111!important;min-height:38px;padding:0 14px;font-weight:800;cursor:pointer}
 .educut-visible-logout:hover{color:#000!important;background:#f1f1ed!important}
 .educut-logout-btn{color:#000!important;background:#fff!important}
 .educut-logout-btn:hover{color:#000!important;background:#f1f1ed!important}
 .educut-admin-sidebar-logout{color:#000!important;background:#fff!important;border-color:#fff!important}
 .educut-admin-sidebar-logout:hover{color:#000!important;background:#f1f1ed!important}
-@media(max-width:760px){
-  .educut-identity-bar{padding:10px 12px;gap:7px}
-  .educut-notification-panel,.educut-profile-menu{position:fixed;right:12px;top:62px}
+
+@media(max-width:900px){
+  .educut-nav-auth{
+    width:100%;
+    justify-content:space-between;
+    padding:8px 0 12px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+  }
+  .educut-notification-panel,
+  .educut-profile-menu{
+    position:fixed;
+    right:14px;
+    left:14px;
+    top:84px;
+    width:auto;
+    max-width:none;
+  }
 }
-
-
-/* Authenticated identity bar must never appear over the public landing page. */
-body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!important}
 
 
 /* ===== Company Workspace - aligned to Administrator Console ===== */
@@ -2399,6 +2473,321 @@ body:not(.authenticated-platform-active) #educutIdentityBar:empty{display:none!i
   .learner-page-shell { padding: 20px 16px 50px; }
 }
 
+/* ===================================================================
+   ETHICS-101 Course Player, Interactive Slides & Certification Quiz
+   =================================================================== */
+#coursePlayerModal .learner-modal-card.ethics-modal-card {
+  width: min(1080px, 96vw);
+  max-height: 94vh;
+}
+.ethics-player-tabs {
+  display: flex;
+  gap: 2px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-bottom: 24px;
+}
+.ethics-tab-btn {
+  flex: 1;
+  background: #fff;
+  border: none;
+  padding: 13px 18px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #666;
+  transition: all .15s ease;
+}
+.ethics-tab-btn:hover {
+  background: #fafaf8;
+  color: var(--ink);
+}
+.ethics-tab-btn.active {
+  background: var(--ink);
+  color: var(--lime);
+}
+.ethics-tab-badge {
+  font: 700 10px "SFMono-Regular", Consolas, monospace;
+  background: rgba(136, 240, 18, 0.2);
+  color: var(--lime);
+  padding: 2px 7px;
+  border-radius: 2px;
+}
+.ethics-tab-btn:not(.active) .ethics-tab-badge {
+  background: #eee;
+  color: #555;
+}
+
+/* Interactive Slide Deck */
+.ethics-slide-viewport {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 32px 36px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.03);
+  position: relative;
+  min-height: 480px;
+}
+.ethics-slide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f0f0eb;
+}
+.ethics-slide-kicker {
+  font: 700 11px/1.2 "SFMono-Regular", Consolas, monospace;
+  color: var(--blue);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.ethics-slide-counter {
+  font: 700 12px "SFMono-Regular", Consolas, monospace;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  color: #444;
+}
+.ethics-slide-pills {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  scrollbar-width: thin;
+}
+.ethics-slide-pill {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 6px 11px;
+  font: 600 11px "SFMono-Regular", Consolas, monospace;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all .15s ease;
+  color: #555;
+}
+.ethics-slide-pill:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.ethics-slide-pill.active {
+  background: var(--ink);
+  color: var(--lime);
+  border-color: var(--ink);
+}
+.ethics-slide-body h3 {
+  font-size: clamp(24px, 3.2vw, 32px);
+  letter-spacing: -.035em;
+  margin: 0 0 10px;
+  line-height: 1.15;
+}
+.ethics-slide-lead {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  margin: 0 0 24px;
+  max-width: 860px;
+}
+.ethics-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+.ethics-feature-card {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 18px;
+  position: relative;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.ethics-feature-card:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+.ethics-feature-card.highlight {
+  border-left: 3px solid var(--lime);
+}
+.ethics-feature-card h4 {
+  font-size: 14.5px;
+  margin: 0 0 6px;
+  color: #0b0b0c;
+}
+.ethics-feature-card p {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.48;
+  margin: 0;
+}
+.ethics-takeaway {
+  background: #f7fbf0;
+  border: 1px solid #c0e588;
+  border-left: 4px solid #73b811;
+  padding: 16px 20px;
+  margin-top: 24px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #254000;
+}
+.ethics-takeaway strong {
+  display: block;
+  font-size: 11px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #3e6804;
+  margin-bottom: 4px;
+}
+.ethics-slide-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+/* 10-Question Certification Quiz */
+.ethics-quiz-wrap {
+  display: grid;
+  gap: 20px;
+}
+.ethics-quiz-hero {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 22px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.ethics-quiz-hero h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  letter-spacing: -.03em;
+}
+.ethics-quiz-hero p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}
+.ethics-q-card {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 24px;
+  transition: border-color .15s ease;
+}
+.ethics-q-card:focus-within {
+  border-color: var(--ink);
+}
+.ethics-q-card.is-correct {
+  border-color: #84cc16;
+  background: #fcfefc;
+}
+.ethics-q-card.is-wrong {
+  border-color: #f87171;
+  background: #fffcfc;
+}
+.ethics-q-badge {
+  font: 700 10.5px "SFMono-Regular", Consolas, monospace;
+  color: var(--blue);
+  background: rgba(51,87,255,.08);
+  padding: 3px 8px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.ethics-q-prompt {
+  font-size: 15.5px;
+  font-weight: 700;
+  line-height: 1.42;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+.ethics-options-list {
+  display: grid;
+  gap: 9px;
+}
+.ethics-opt-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid var(--line);
+  padding: 12px 16px;
+  cursor: pointer;
+  background: #fff;
+  transition: all .15s ease;
+  user-select: none;
+}
+.ethics-opt-item:hover {
+  background: #fafaf8;
+  border-color: #999;
+}
+.ethics-opt-item input[type="radio"] {
+  margin-top: 3px;
+  accent-color: var(--ink);
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.ethics-opt-item.checked {
+  background: #f7f9fe;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+.ethics-opt-item.opt-correct {
+  background: #f0fdf4 !important;
+  border-color: #86efac !important;
+  font-weight: 600;
+  color: #166534;
+}
+.ethics-opt-item.opt-wrong-picked {
+  background: #fef2f2 !important;
+  border-color: #fca5a5 !important;
+  color: #991b1b;
+}
+.ethics-opt-text {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: #222;
+}
+
+/* Assessment Results */
+.ethics-banner-pass {
+  background: #f4fbf0;
+  border: 2px solid #84cc16;
+  padding: 26px 28px;
+  margin-bottom: 24px;
+}
+.ethics-banner-fail {
+  background: #fff7ed;
+  border: 2px solid #f97316;
+  padding: 26px 28px;
+  margin-bottom: 24px;
+}
+.ethics-review-box {
+  margin-top: 14px;
+  padding: 12px 16px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  border-radius: 2px;
+}
+.ethics-review-correct {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+.ethics-review-wrong {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
 </style>
 
 <style>
@@ -4146,10 +4535,10 @@ document.addEventListener('keydown',e=>{
   const esc=(v='')=>String(v).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
   const animateSwap=(renderer)=>{
     const old=authBody.firstElementChild;
-    if(old&&old.animate){old.animate([{opacity:1,transform:'translateX(0)'},{opacity:0,transform:'translateX(-12px)'}],{duration:150,easing:'ease',fill:'forwards'}).onfinish=()=>{renderer();const n=authBody.firstElementChild;if(n?.animate)n.animate([{opacity:0,transform:'translateX(12px)'},{opacity:1,transform:'none'}],{duration:260,easing:'cubic-bezier(.16,1,.3,1)',fill:'forwards'});};}
-    else renderer();
+    if(old&&old.animate){old.animate([{opacity:1,transform:'translateX(0)'},{opacity:0,transform:'translateX(-12px)'}],{duration:150,easing:'ease',fill:'forwards'}).onfinish=()=>{renderer();if(authBody)authBody.scrollTop=0;const n=authBody.firstElementChild;if(n?.animate)n.animate([{opacity:0,transform:'translateX(12px)'},{opacity:1,transform:'none'}],{duration:260,easing:'cubic-bezier(.16,1,.3,1)',fill:'forwards'});};}
+    else {renderer();if(authBody)authBody.scrollTop=0;}
   };
-  const openAuth=(intent='signin')=>{state.screen='landing';state.signupIntent=intent;state.access=null;state.mode=intent==='signup'?'signup':'signin';authModal.classList.add('open');authModal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';renderLanding();setTimeout(()=>authClose.focus(),50)};
+  const openAuth=(intent='signin')=>{state.screen='landing';state.signupIntent=intent;state.access=null;state.mode=intent==='signup'?'signup':'signin';authModal.classList.add('open');authModal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';authModal.scrollTop=0;if(authBody)authBody.scrollTop=0;renderLanding();setTimeout(()=>authClose.focus(),50)};
   const closeAuth=()=>{authModal.classList.remove('open');authModal.setAttribute('aria-hidden','true');document.body.style.overflow='';};
   const setBack=(visible,handler)=>{authBack.style.visibility=visible?'visible':'hidden';authBack.onclick=handler||null};
   const titleBlock=(kicker,title,copy)=>`<div class="auth-heading"><div class="mono">${kicker}</div><h1 id="authTitle">${title}</h1><p>${copy}</p></div>`;
@@ -8323,21 +8712,37 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     render();
   }
 
-  function buildIdentityBar(){
+  function updateNavbarIdentity(){
+    // Ensure legacy top banner is never present
+    const oldBar=document.getElementById('educutIdentityBar');
+    if(oldBar) oldBar.remove();
+
     const s=getSession();
-    let bar=document.getElementById('educutIdentityBar');
+    const navLinks=document.getElementById('homeNavLinks')||document.querySelector('.nav-links');
+    if(!navLinks) return;
+
+    const authLinks=navLinks.querySelectorAll('[data-auth-open], a[href*="/#/signup"], a[href*="/#/signin"]');
+    const ctaBtn=navLinks.querySelector('[data-start], .btn-lime');
+    let navAuth=navLinks.querySelector('.educut-nav-auth');
 
     if(!s){
-      bar?.remove();
+      // User is logged out: restore default links
+      authLinks.forEach(el=>{ el.style.display=''; });
+      if(navAuth) navAuth.remove();
+      if(ctaBtn){
+        if(ctaBtn.tagName.toLowerCase()==='button'){
+          ctaBtn.textContent='Take the 3-min test';
+          ctaBtn.onclick=null;
+        }else if(ctaBtn.tagName.toLowerCase()==='a'){
+          ctaBtn.textContent='Take the 3-min test';
+          ctaBtn.setAttribute('href','/#start-assessment');
+        }
+      }
       return;
     }
 
-    if(!bar){
-      bar=document.createElement('div');
-      bar.id='educutIdentityBar';
-      bar.className='educut-identity-bar';
-      document.body.prepend(bar);
-    }
+    // User is logged in: hide plain login / signup buttons and display profile/notification icons
+    authLinks.forEach(el=>{ el.style.display='none'; });
 
     const notifications=readNotifications(s);
     const unread=notifications.filter(n=>!n.read).length;
@@ -8345,19 +8750,52 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     const role=roleLabel(s.role);
     const email=s.email||'';
 
-    bar.innerHTML=`
-      <div style="position:relative">
-        <button type="button" class="educut-bell-btn" id="educutNotifBtn" aria-label="Notifications" title="Notifications" aria-expanded="false">
+    let workspaceUrl='#/academy/dashboard';
+    let workspaceLabel='My Academy';
+    if(s.role==='SUPER_ADMIN'){
+      workspaceUrl='#/admin';
+      workspaceLabel='Admin Console';
+    }else if(s.role==='COMPANY_ADMIN'||s.role==='COMPANY_MEMBER'){
+      workspaceUrl='#/company';
+      workspaceLabel='Company Workspace';
+    }
+
+    // Update CTA button to quickly access workspace
+    if(ctaBtn){
+      ctaBtn.textContent=`${workspaceLabel} →`;
+      if(ctaBtn.tagName.toLowerCase()==='button'){
+        ctaBtn.onclick=(e)=>{
+          e.preventDefault();
+          window.location.hash=workspaceUrl;
+        };
+      }else if(ctaBtn.tagName.toLowerCase()==='a'){
+        ctaBtn.setAttribute('href',`/${workspaceUrl}`);
+      }
+    }
+
+    if(!navAuth){
+      navAuth=document.createElement('div');
+      navAuth.className='educut-nav-auth';
+      if(ctaBtn && ctaBtn.parentNode===navLinks){
+        navLinks.insertBefore(navAuth,ctaBtn);
+      }else{
+        navLinks.appendChild(navAuth);
+      }
+    }
+
+    navAuth.innerHTML=`
+      <div class="educut-nav-notif-wrap" style="position:relative">
+        <button type="button" class="educut-nav-bell-btn" id="educutNavNotifBtn" aria-label="Notifications" title="Notifications" aria-expanded="false">
           ${bellSvg()}
           ${unread>0?'<span class="educut-unread-dot" aria-hidden="true"></span>':''}
         </button>
-        <div class="educut-notification-panel" id="educutNotifPanel" role="dialog" aria-label="Notifications">
+        <div class="educut-notification-panel" id="educutNavNotifPanel" role="dialog" aria-label="Notifications">
           <div class="educut-panel-head">
             <strong>Notifications</strong>
             <span class="mono">${unread} unread</span>
           </div>
           ${notifications.length ? notifications.map(n=>`
-            <button type="button" class="educut-notification-item ${n.read?'':'unread'}" data-notification-id="${esc(n.id)}">
+            <button type="button" class="educut-notification-item ${n.read?'':'unread'}" data-nav-notif-id="${esc(n.id)}">
               <strong>${esc(n.title)}</strong>
               <span>${esc(n.text||'')}</span>
               <time>${esc(n.time||'')}</time>
@@ -8366,38 +8804,42 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         </div>
       </div>
 
-      <div class="educut-profile-wrap">
-        <button type="button" class="educut-profile-trigger" id="educutProfileBtn" aria-label="Open profile menu" aria-expanded="false">
-          <span class="educut-profile-avatar">${avatarMarkup(s)}</span>
+      <div class="educut-nav-profile-wrap" style="position:relative">
+        <button type="button" class="educut-nav-profile-btn" id="educutNavProfileBtn" aria-label="Open profile menu" aria-expanded="false">
+          <span class="educut-nav-avatar">${avatarMarkup(s)}</span>
+          <span class="educut-nav-username">${esc(name.split(' ')[0]||'Profile')}</span>
+          <span class="educut-nav-chevron">▾</span>
         </button>
-        <div class="educut-profile-menu" id="educutProfileMenu" role="menu">
+        <div class="educut-profile-menu" id="educutNavProfileMenu" role="menu">
           <div class="educut-profile-identity">
             <strong>${esc(name)}</strong>
             <span>${esc(role)}</span>
             ${email?`<small>${esc(email)}</small>`:''}
           </div>
+          <button class="educut-profile-menu-action primary-action" type="button" id="navGoWorkspace">
+            ${esc(workspaceLabel)} →
+          </button>
           <button class="educut-profile-menu-action" type="button" data-profile-action="profile">My Profile</button>
           <button class="educut-profile-menu-action" type="button" data-profile-action="settings">Account Settings</button>
-          <button class="educut-profile-menu-action" type="button" data-profile-action="security">Security</button>
           <div class="educut-profile-editor">
             <div class="mono">Profile picture</div>
             <p>JPG, PNG or WEBP · maximum 5 MB</p>
             <div class="educut-profile-editor-actions">
-              <button type="button" class="educut-profile-editor-btn" id="educutUploadPhoto">Upload photo</button>
-              ${profilePicture(s)?'<button type="button" class="educut-profile-editor-btn remove" id="educutRemovePhoto">Remove photo</button>':''}
+              <button type="button" class="educut-profile-editor-btn" id="educutNavUploadPhoto">Upload photo</button>
+              ${profilePicture(s)?'<button type="button" class="educut-profile-editor-btn remove" id="educutNavRemovePhoto">Remove photo</button>':''}
             </div>
-            <input type="file" id="educutPhotoInput" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" hidden>
-            <div class="educut-profile-error" id="educutProfileError" aria-live="polite"></div>
+            <input type="file" id="educutNavPhotoInput" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" hidden>
+            <div class="educut-profile-error" id="educutNavProfileError" aria-live="polite"></div>
           </div>
-          <button class="educut-profile-menu-action logout" type="button" id="educutMenuLogout" data-educut-logout>Log Out</button>
+          <button class="educut-profile-menu-action logout" type="button" id="educutNavLogout" data-educut-logout>Log Out</button>
         </div>
       </div>
     `;
 
-    const notifBtn=bar.querySelector('#educutNotifBtn');
-    const notifPanel=bar.querySelector('#educutNotifPanel');
-    const profileBtn=bar.querySelector('#educutProfileBtn');
-    const profileMenu=bar.querySelector('#educutProfileMenu');
+    const notifBtn=navAuth.querySelector('#educutNavNotifBtn');
+    const notifPanel=navAuth.querySelector('#educutNavNotifPanel');
+    const profileBtn=navAuth.querySelector('#educutNavProfileBtn');
+    const profileMenu=navAuth.querySelector('#educutNavProfileMenu');
 
     notifBtn.onclick=(e)=>{
       e.stopPropagation();
@@ -8415,67 +8857,40 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       profileBtn.setAttribute('aria-expanded',String(willOpen));
     };
 
-    bar.querySelectorAll('[data-notification-id]').forEach(btn=>{
-      btn.onclick=()=>markRead(s,btn.dataset.notificationId);
+    navAuth.querySelectorAll('[data-nav-notif-id]').forEach(btn=>{
+      btn.onclick=()=>markRead(s,btn.dataset.navNotifId);
     });
 
-    const fileInput=bar.querySelector('#educutPhotoInput');
-    const errorEl=bar.querySelector('#educutProfileError');
-    bar.querySelector('#educutUploadPhoto').onclick=()=>fileInput.click();
-    fileInput.onchange=()=>uploadPhoto(s,fileInput.files?.[0],errorEl);
-    bar.querySelector('#educutRemovePhoto')?.addEventListener('click',()=>removePhoto(s));
+    const goWorkspaceBtn=navAuth.querySelector('#navGoWorkspace');
+    if(goWorkspaceBtn){
+      goWorkspaceBtn.onclick=()=>{
+        closeMenus();
+        window.location.hash=workspaceUrl;
+      };
+    }
 
-    bar.querySelectorAll('[data-profile-action]').forEach(btn=>{
+    const fileInput=navAuth.querySelector('#educutNavPhotoInput');
+    const errorEl=navAuth.querySelector('#educutNavProfileError');
+    navAuth.querySelector('#educutNavUploadPhoto').onclick=()=>fileInput.click();
+    fileInput.onchange=()=>uploadPhoto(s,fileInput.files?.[0],errorEl);
+    navAuth.querySelector('#educutNavRemovePhoto')?.addEventListener('click',()=>removePhoto(s));
+
+    navAuth.querySelectorAll('[data-profile-action]').forEach(btn=>{
       btn.onclick=()=>{
         const label=btn.textContent.trim();
         alert(`${label}\n\nThis prototype keeps the existing platform navigation unchanged. Connect this action to the corresponding production account page.`);
       };
     });
 
-    bar.querySelector('#educutMenuLogout').onclick=e=>window.educutLogout?.(e.currentTarget);
-
-    // Remove older duplicate top-level profile/notification/logout controls.
-    document.querySelectorAll('.educut-visible-logout,.educut-company-logout,.educut-admin-sidebar-logout').forEach(el=>{
-      if(!bar.contains(el)) el.style.display='none';
-    });
-  }
-
-  function isAuthenticatedPlatformVisible(){
-    const s=getSession();
-    if(!s) return false;
-
-    // Only show the authenticated identity controls once the user has entered
-    // an authenticated platform/dashboard. Never render them on the public landing page.
-    const visibleSelectors = [
-      '.route-view.open',
-      '.admin-app',
-      '.company-app',
-      '.learner-app',
-      '[data-authenticated-view="true"]',
-      '[data-platform-authenticated="true"]'
-    ];
-
-    return visibleSelectors.some(sel=>{
-      const el=document.querySelector(sel);
-      if(!el) return false;
-      const cs=getComputedStyle(el);
-      return cs.display!=='none' && cs.visibility!=='hidden';
-    });
+    navAuth.querySelector('#educutNavLogout').onclick=e=>window.educutLogout?.(e.currentTarget);
   }
 
   function render(){
-    const bar=document.getElementById('educutIdentityBar');
-
-    if(!isAuthenticatedPlatformVisible()){
-      bar?.remove();
-      return;
-    }
-
-    buildIdentityBar();
+    updateNavbarIdentity();
   }
 
   document.addEventListener('click',e=>{
-    if(!e.target.closest('#educutIdentityBar')) closeMenus();
+    if(!e.target.closest('.educut-nav-auth')) closeMenus();
   });
   document.addEventListener('keydown',e=>{
     if(e.key==='Escape') closeMenus();
@@ -8514,6 +8929,716 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   const fmt = d => d ? new Date(d).toLocaleDateString('en-GB', {day:'2-digit', month:'short', year:'numeric'}) : '-';
   const fmtTime = d => d ? new Date(d).toLocaleString('en-GB', {day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit'}) : '-';
 
+  /* =============================================================
+     AI ETHICS COURSE (ETHICS-101) DEFINITIONS & SLIDE / QUIZ DATA
+     ============================================================= */
+  const ETHICS_COURSE_DEF = {
+    code: 'ETHICS-101',
+    title: 'Applied AI Ethics, Algorithmic Bias & Responsible Governance',
+    academy: 'A018',
+    academyTitle: 'Responsible AI & Governance',
+    level: 'Foundation to Practitioner',
+    duration: '3 hours',
+    isFree: true,
+    priceHT: 0,
+    description: 'Master the core pillars of trustworthy AI: mitigation of algorithmic bias, Kleinberg\'s fairness impossibility theorem, model explainability (SHAP & LIME), differential privacy, human-in-the-loop oversight, EU AI Act compliance, and pre-deployment verification checklists.',
+    lessons: [
+      { id: 'L1.1', title: 'Foundations of AI Ethics: 5 Trustworthy AI Pillars', duration: '25 min', summary: 'Core principles: Fairness, Transparency, Accountability, Privacy, and Safety across the AI lifecycle.' },
+      { id: 'L1.2', title: 'Algorithmic Bias: Historical, Representation & Measurement Harms', duration: '25 min', summary: 'How bias infiltrates systems, real-world case studies in hiring, credit, and computer vision.' },
+      { id: 'L1.3', title: 'Mathematical Fairness & Kleinberg\'s Impossibility Theorem', duration: '25 min', summary: 'Demographic parity vs equalized odds vs predictive parity; why metrics inherently conflict.' },
+      { id: 'L1.4', title: 'Model Explainability (XAI): SHAP, LIME & GDPR Art. 22', duration: '25 min', summary: 'Interpretable models vs post-hoc attributions, counterfactual reasoning, and legal explanation rights.' },
+      { id: 'L1.5', title: 'Privacy Safeguards, Model Inversion & Differential Privacy', duration: '20 min', summary: 'Defending against membership inference, data extraction, and implementing epsilon-differential privacy.' },
+      { id: 'L1.6', title: 'Human Oversight: HITL, HOTL & Guarding Automation Bias', duration: '20 min', summary: 'Operational supervision modes, preventing deskilling, and human-in-command frameworks.' },
+      { id: 'L1.7', title: 'Global AI Regulation & The EU AI Act Risk Tiers', duration: '20 min', summary: 'Unacceptable, High, Specific Transparency, and Minimal risk classifications and conformity audits.' },
+      { id: 'L1.8', title: 'Pre-Deployment Gate & Practitioner Certification Exam', duration: '20 min', summary: 'The 6-step pre-deployment checklist, model card documentation, followed by the 10-question exam.' }
+    ]
+  };
+
+  const ETHICS_SLIDES = [
+    {
+      kicker: "Slide 01 · Foundational Framework",
+      title: "The 5 Core Pillars of Trustworthy AI",
+      lead: "Deploying artificial intelligence responsibly requires moving beyond pure predictive accuracy to embed ethical safeguards across the entire data and model lifecycle.",
+      cards: [
+        {
+          title: "1. Fairness & Equity",
+          text: "Ensuring models do not unfairly discriminate against individuals or protected groups across race, gender, age, socioeconomic status, or disability.",
+          highlight: true
+        },
+        {
+          title: "2. Transparency & Explainability",
+          text: "Ensuring stakeholders understand model mechanics, training sources, and can receive intelligible, actionable explanations for automated decisions.",
+          highlight: false
+        },
+        {
+          title: "3. Accountability & Redress",
+          text: "Establishing clear human ownership, audit trails, post-market monitoring, and accessible appeal mechanisms for affected individuals.",
+          highlight: false
+        },
+        {
+          title: "4. Privacy & Data Governance",
+          text: "Protecting user data through minimization, informed consent, differential privacy, and rigorous defenses against model extraction attacks.",
+          highlight: false
+        },
+        {
+          title: "5. Robustness & Safety",
+          text: "Validating systems against adversarial perturbations, distribution drift, out-of-domain failures, and hallucination risks.",
+          highlight: true
+        }
+      ],
+      takeaway: "Ethical AI is not an afterthought or compliance checkbox—it is a core engineering requirement that must be architected from problem formulation through deployment."
+    },
+    {
+      kicker: "Slide 02 · Bias Vectors & Harms",
+      title: "Algorithmic Bias: Sources & Manifestations",
+      lead: "Bias is rarely intentional code; rather, it enters systems through data collection, measurement proxies, societal prejudices, and modeling assumptions.",
+      cards: [
+        {
+          title: "Historical Bias",
+          text: "Reflects existing societal inequalities captured in past ground truth data. Example: Amazon's CV tool penalized female applicants because past hiring data was 80%+ male.",
+          highlight: true
+        },
+        {
+          title: "Representation Bias",
+          text: "Under-sampling of minority subgroups in training sets. Example: Joy Buolamwini's Gender Shades study showed 34.7% error rates for darker-skinned women vs 0.8% for lighter-skinned men.",
+          highlight: true
+        },
+        {
+          title: "Measurement Bias",
+          text: "Using faulty proxies for latent traits. Example: Using healthcare spending as a proxy for healthcare need, severely under-allocating resources to low-income populations (Science 2019).",
+          highlight: false
+        },
+        {
+          title: "Aggregation Bias",
+          text: "Applying a one-size-fits-all model across diverse sub-populations with distinct distributions, masking suboptimal performance for specific groups.",
+          highlight: false
+        }
+      ],
+      takeaway: "Removing protected attributes (e.g., race, gender) does NOT eliminate bias. Modern models readily reconstruct protected attributes through collinear proxy variables (e.g., ZIP codes, browsing history, vocabulary)."
+    },
+    {
+      kicker: "Slide 03 · Mathematical Trade-offs",
+      title: "Fairness Metrics & Kleinberg's Impossibility Theorem",
+      lead: "Teams frequently ask: 'Why can't we make our model 100% fair across all metrics?' In 2016, Jon Kleinberg mathematically proved that core fairness metrics are mutually contradictory.",
+      cards: [
+        {
+          title: "Demographic Parity",
+          text: "P(Ŷ = 1 | A = 0) = P(Ŷ = 1 | A = 1). Acceptance rates must be equal across all groups, regardless of underlying base rate differences. Focuses on equality of outcomes.",
+          highlight: false
+        },
+        {
+          title: "Equal Opportunity",
+          text: "P(Ŷ = 1 | Y = 1, A = 0) = P(Ŷ = 1 | Y = 1, A = 1). Qualified applicants have equal true positive rates. Minimizes false negative disparities.",
+          highlight: true
+        },
+        {
+          title: "Predictive Parity (Calibration)",
+          text: "P(Y = 1 | Ŷ = 1, A = 0) = P(Y = 1 | Ŷ = 1, A = 1). If a model predicts 80% risk, exactly 80% in both groups must experience the outcome. Focuses on decision validity.",
+          highlight: false
+        },
+        {
+          title: "Kleinberg's Impossibility Theorem",
+          text: "Except when group base rates are identical or prediction is 100% accurate, Demographic Parity, Equal Opportunity, and Calibration CANNOT hold simultaneously.",
+          highlight: true
+        }
+      ],
+      takeaway: "Engineers and ethics officers cannot satisfy every metric simultaneously. Organizations must transparently deliberate, choose which fairness metric aligns with legal and moral priorities, and document the trade-off."
+    },
+    {
+      kicker: "Slide 04 · Transparency & Recourse",
+      title: "Explainable AI (XAI) & The Right to Explanation",
+      lead: "Deep neural networks are often described as black boxes. XAI provides mathematical methodologies to translate complex weight combinations into actionable explanations.",
+      cards: [
+        {
+          title: "Interpretable Models",
+          text: "Models that are intrinsically transparent: Linear Regression, Decision Trees, GAMs (Generalized Additive Models). Best suited for high-stakes tabular decisioning.",
+          highlight: false
+        },
+        {
+          title: "SHAP (Shapley Values)",
+          text: "Grounded in cooperative game theory (Lloyd Shapley). Computes the marginal contribution of each feature across all possible subsets, guaranteeing consistency and local accuracy.",
+          highlight: true
+        },
+        {
+          title: "LIME (Surrogate Models)",
+          text: "Local Interpretable Model-agnostic Explanations. Perturbs the input data locally and fits an interpretable linear surrogate model around the prediction.",
+          highlight: false
+        },
+        {
+          title: "GDPR Article 22 Mandate",
+          text: "Individuals have the legal right to meaningful explanations for automated decisions producing legal effects, as well as the right to contest and request human intervention.",
+          highlight: true
+        }
+      ],
+      takeaway: "An explanation must be actionable. Counterfactual explanations ('If your debt-to-income ratio were 5% lower, the loan would be approved') empower users to take concrete corrective action."
+    },
+    {
+      kicker: "Slide 05 · Privacy & Threat Vectors",
+      title: "Privacy Safeguards & Differential Privacy",
+      lead: "Models do not just learn general concepts; without proper defenses, large models can memorize training data, leading to severe confidentiality leaks.",
+      cards: [
+        {
+          title: "Membership Inference",
+          text: "Attackers query a model to determine whether a specific individual's medical or financial record was part of the training dataset based on prediction confidence.",
+          highlight: false
+        },
+        {
+          title: "Model Inversion Attacks",
+          text: "Reconstructing facial images, biometric signatures, or confidential text directly from model gradient weights or API output distributions.",
+          highlight: true
+        },
+        {
+          title: "Epsilon-Differential Privacy",
+          text: "Injects mathematically calibrated noise (Laplace or Gaussian) into model training. Guarantees that adding or removing any single record does not significantly alter outputs.",
+          highlight: true
+        },
+        {
+          title: "Federated Learning",
+          text: "Decentralized machine learning where model weights are updated on edge devices (smartphones, hospital servers) without raw sensitive data leaving the source.",
+          highlight: false
+        }
+      ],
+      takeaway: "Standard data anonymization (scrubbing names or hashing emails) is insufficient in the era of high-dimensional embeddings. Mathematical privacy guarantees (like ε-DP) are essential for sensitive datasets."
+    },
+    {
+      kicker: "Slide 06 · Human Agency & Control",
+      title: "Human Oversight & Guarding Automation Bias",
+      lead: "Automated systems must support human autonomy and decision-making rather than subvert them. Retaining meaningful human control requires structured governance modes.",
+      cards: [
+        {
+          title: "Human-in-the-Loop (HITL)",
+          text: "The AI system generates recommendations, but a human must explicitly approve or modify each decision before execution. Essential in clinical diagnostics and criminal sentencing.",
+          highlight: true
+        },
+        {
+          title: "Human-on-the-Loop (HOTL)",
+          text: "The system executes decisions autonomously within safe operating parameters, but human supervisors monitor telemetry in real time with emergency abort capabilities.",
+          highlight: false
+        },
+        {
+          title: "Human-in-Command (HIC)",
+          text: "Humans maintain strategic oversight of operational boundaries, model scope, policy constraints, and decide whether an AI system should be deployed at all.",
+          highlight: false
+        },
+        {
+          title: "Mitigating Automation Bias",
+          text: "Humans tend to unquestioningly trust automated tools. Protocols must mandate active cognitive engagement, explanation review, and regular adversarial audits.",
+          highlight: true
+        }
+      ],
+      takeaway: "Having a human 'rubber stamp' automated outputs does not satisfy ethical oversight. Meaningful human oversight requires sufficient time, training, domain authority, and psychological safety to overrule the algorithm."
+    },
+    {
+      kicker: "Slide 07 · Regulatory Frameworks",
+      title: "Global Governance & The EU AI Act Framework",
+      lead: "The regulatory landscape is transitioning from voluntary ethical guidelines to enforceable statutory legislation with severe financial and operational penalties.",
+      cards: [
+        {
+          title: "1. Unacceptable Risk (Banned)",
+          text: "Social scoring, subliminal cognitive manipulation, untargeted biometric web scraping, and emotion recognition in workplaces/schools. Strictly prohibited.",
+          highlight: true
+        },
+        {
+          title: "2. High-Risk (Strict Controls)",
+          text: "Recruitment, credit scoring, law enforcement, critical infrastructure, and biometric ID. Requires CE conformity, data governance, continuous risk audits, and human oversight.",
+          highlight: true
+        },
+        {
+          title: "3. Specific Transparency Risk",
+          text: "Customer service chatbots and synthetic content generation. Must disclose AI identity and clearly watermarked/label deepfakes.",
+          highlight: false
+        },
+        {
+          title: "4. Minimal / Low Risk",
+          text: "Spam filters, AI-enabled video games, and search optimizers. Free usage under general product safety codes.",
+          highlight: false
+        }
+      ],
+      takeaway: "Global frameworks like ISO/IEC 42001 (AI Management System) and the NIST AI RMF provide standardized operational roadmaps for international compliance across jurisdictions."
+    },
+    {
+      kicker: "Slide 08 · Practitioner Gate & Readiness",
+      title: "The Practitioner's 6-Step Responsible AI Gate",
+      lead: "Before moving any machine learning or generative AI model into production, teams must execute this 6-step pre-deployment verification checklist.",
+      cards: [
+        {
+          title: "Step 1: Data Lineage & Consent",
+          text: "Audit training corpora for copyright compliance, explicit licensing, absence of scraped PII, and balanced representation.",
+          highlight: false
+        },
+        {
+          title: "Step 2: Multi-Metric Disparity Benchmarking",
+          text: "Evaluate error rates and calibration across demographic sub-slices; explicitly document chosen fairness trade-offs.",
+          highlight: true
+        },
+        {
+          title: "Step 3: Red-Teaming & Adversarial Probing",
+          text: "Stress-test for jailbreaks, prompt injection, membership inference, edge-case failure modes, and toxic outputs.",
+          highlight: false
+        },
+        {
+          title: "Step 4: Comprehensive Model Card Documentation",
+          text: "Publish standardized documentation detailing intended domain, out-of-scope uses, limitations, and evaluation datasets.",
+          highlight: false
+        },
+        {
+          title: "Step 5: Human Oversight Escalation Protocol",
+          text: "Establish clear escalation pathways, operator training, and an accessible appeal channel for end users.",
+          highlight: false
+        },
+        {
+          title: "Step 6: Continuous Post-Market Telemetry",
+          text: "Deploy real-time drift detectors, latency monitors, and user feedback loops with automated circuit breakers.",
+          highlight: true
+        }
+      ],
+      takeaway: "You have completed the foundational study modules! Proceed to the 10-Question Certification Exam to test your mastery and earn your official verifiable credential."
+    }
+  ];
+
+  const ETHICS_QUIZ_QUESTIONS = [
+    {
+      id: 1,
+      prompt: "According to Kleinberg's Impossibility Theorem (2016), which of the following is mathematically true regarding algorithmic fairness metrics?",
+      options: [
+        "Any machine learning model can satisfy all fairness metrics if sensitive attributes are excluded from training.",
+        "Demographic Parity, Equal Opportunity, and Calibration cannot be simultaneously satisfied except under equal base rates or 100% predictive accuracy.",
+        "Neural networks inherently eliminate bias once trained with more than 100 epochs.",
+        "Fairness is purely qualitative and cannot be formulated into mathematical criteria."
+      ],
+      correctIndex: 1,
+      explanation: "Kleinberg proved that three foundational fairness criteria (Calibration, Equalized Odds, and Demographic Parity) are mathematically incompatible with each other unless base rates across demographic groups are identical or the classifier makes zero errors."
+    },
+    {
+      id: 2,
+      prompt: "In model explainability (XAI), what fundamental theoretical foundation distinguishes SHAP (Shapley Additive Explanations) from LIME?",
+      options: [
+        "SHAP is grounded in cooperative game theory (Shapley values) providing unique axiomatic efficiency and consistency guarantees, whereas LIME constructs local surrogate approximations.",
+        "SHAP is only applicable to computer vision, while LIME is strictly designed for tabular databases.",
+        "LIME requires white-box source code access, whereas SHAP cannot access gradient values.",
+        "SHAP permutes entire datasets, whereas LIME trains global decision trees."
+      ],
+      correctIndex: 0,
+      explanation: "SHAP derives feature attributions from cooperative game theory (Lloyd Shapley's theorem), guaranteeing efficiency, symmetry, and additivity. LIME creates local perturbations to fit a linear surrogate model around a single prediction without axiomatic uniqueness."
+    },
+    {
+      id: 3,
+      prompt: "Under the European Union AI Act, which of the following applications is classified as UNACCEPTABLE RISK and therefore strictly prohibited?",
+      options: [
+        "Predictive maintenance systems for high-speed train networks.",
+        "Social scoring by public authorities and cognitive behavioral manipulation causing psychological harm.",
+        "Automated optical character recognition (OCR) for invoice accounting.",
+        "Conversational customer support agents disclosing they are AI."
+      ],
+      correctIndex: 1,
+      explanation: "The EU AI Act unconditionally prohibits systems with Unacceptable Risk, including government social credit scoring, subliminal cognitive manipulation causing harm, and untargeted scraping of facial images from the internet or CCTV."
+    },
+    {
+      id: 4,
+      prompt: "What is 'Automation Bias' and why does it represent a major risk in human-in-the-loop (HITL) AI systems?",
+      options: [
+        "The tendency of software algorithms to automate routine mathematical operations.",
+        "The propensity of human operators to unreservedly trust automated decisions, ignoring contrary evidence, intuition, or training.",
+        "The cost reduction achieved by eliminating manual verification desks.",
+        "The skew introduced when deep learning models select their own learning rates."
+      ],
+      correctIndex: 1,
+      explanation: "Automation bias describes human over-reliance on algorithmic outputs. Operators become passive monitors, often rubber-stamping erroneous automated recommendations even when red flags are clearly visible."
+    },
+    {
+      id: 5,
+      prompt: "Which privacy-preserving framework mathematically bounds the probability that an adversary can determine whether a specific individual's data was present in the training set?",
+      options: [
+        "Epsilon-Differential Privacy (ε-DP).",
+        "Symmetric AES-256 block encryption at rest.",
+        "SHA-256 one-way hashing of usernames.",
+        "Removing direct name columns from a training CSV."
+      ],
+      correctIndex: 0,
+      explanation: "Differential Privacy adds calibrated noise (Laplacian or Gaussian) controlled by privacy budget ε, providing a formal mathematical proof that the presence or absence of any single individual cannot be distinguished with high confidence."
+    },
+    {
+      id: 6,
+      prompt: "Why did Amazon discard its internal experimental AI recruiting engine in 2018?",
+      options: [
+        "The model suffered from GPU memory allocation crashes.",
+        "The training data reflected a 10-year historical dominance of male applicants in tech, leading the model to systematically penalize resumes containing words like 'women\\'s'.",
+        "European GDPR regulators fined the company before launch.",
+        "The algorithm took more than 48 hours to evaluate each candidate resume."
+      ],
+      correctIndex: 1,
+      explanation: "Amazon's model was trained on 10 years of past tech hiring resumes. Because tech hiring was historically male-dominated, the AI learned that male patterns were correlated with hiring success, penalizing women's colleges and women's sports teams."
+    },
+    {
+      id: 7,
+      prompt: "What does Article 22 of the General Data Protection Regulation (GDPR) guarantee for individuals regarding automated decisions?",
+      options: [
+        "The right to obtain free access to all proprietary neural network weights.",
+        "The right not to be subject to a decision based solely on automated processing (including profiling) which produces legal or significant effects, with rights to human intervention.",
+        "A requirement that all AI software must be developed within the European Union.",
+        "An unconditional ban on all algorithmic recommender systems in retail."
+      ],
+      correctIndex: 1,
+      explanation: "GDPR Article 22 establishes that individuals have the right not to be subject to decisions based solely on automated processing which produce legal effects concerning them or similarly significantly affect them, requiring rights to human review and explanation."
+    },
+    {
+      id: 8,
+      prompt: "In a seminal 2019 study by Obermeyer et al. published in Science, how did 'Measurement Bias' introduce severe racial disparities in commercial healthcare triage algorithms?",
+      options: [
+        "The software accidentally swapped diagnostic codes during ETL database migration.",
+        "The model used healthcare expenditure as a proxy for illness severity; unequal access meant less money was historically spent on Black patients with the same illness severity, under-allocating care.",
+        "The algorithm was trained only on synthetic patient data generated by an LLM.",
+        "The hospital did not use SSL/TLS encryption for database communication."
+      ],
+      correctIndex: 1,
+      explanation: "Measurement bias occurred because past healthcare spending was used as a proxy for healthcare need. Due to systemic wealth and insurance disparities, less money was spent on Black patients who had the same chronic illness levels as white patients, severely under-predicting their need for extra care."
+    },
+    {
+      id: 9,
+      prompt: "What is the primary function of an AI 'Model Card' as pioneered by Mitchell et al. (Google Research / Partnership on AI)?",
+      options: [
+        "To serve as a cryptographic security token required to query model API endpoints.",
+        "To provide standardized documentation disclosing model performance benchmarks, intended domain, out-of-scope uses, limitations, and demographic evaluation breakdowns.",
+        "To patent machine learning algorithms in international intellectual property tribunals.",
+        "To calculate the total electricity cost and carbon emissions of server racks."
+      ],
+      correctIndex: 1,
+      explanation: "Model Cards act as nutrition labels for ML models, documenting intended use, out-of-scope applications, performance metrics disaggregated across demographics, evaluation datasets, and ethical considerations."
+    },
+    {
+      id: 10,
+      prompt: "Under the EU AI Act, what compliance obligations are required for systems classified as 'High-Risk' (e.g. CV sorting, credit scoring, biometric identification)?",
+      options: [
+        "None, as long as the source code is posted on GitHub under an MIT license.",
+        "Mandatory risk management systems, high-quality training data governance, technical logging, detailed documentation, human oversight safeguards, and CE conformity assessments.",
+        "They must be replaced entirely by human clerks without any digital assistance.",
+        "They can only operate on quantum computers approved by the European Commission."
+      ],
+      correctIndex: 1,
+      explanation: "High-risk AI systems must undergo strict conformity assessments, establish risk management and quality management systems, maintain comprehensive logging, ensure robust data governance, provide clear technical documentation, and guarantee human oversight."
+    }
+  ];
+
+  /* -------------------------------------------------------------
+     PURE CLIENT-SIDE PDF CERTIFICATE GENERATOR (PDF 1.4 Binary)
+     ------------------------------------------------------------- */
+  function buildPdfBlobFromJpeg(jpegUint8Array, width, height) {
+    const mediaWidth = 842; // A4 landscape pt
+    const mediaHeight = 595;
+
+    const contentStream = `q ${mediaWidth} 0 0 ${mediaHeight} 0 0 cm /Im1 Do Q\n`;
+    const enc = new TextEncoder();
+    const contentBytes = enc.encode(contentStream);
+
+    const header = `%PDF-1.4\n`;
+    const obj1 = `1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n`;
+    const obj2 = `2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n`;
+    const obj3 = `3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${mediaWidth} ${mediaHeight}] /Resources << /XObject << /Im1 4 0 R >> >> /Contents 5 0 R >>\nendobj\n`;
+    const obj4Head = `4 0 obj\n<< /Type /XObject /Subtype /Image /Width ${width} /Height ${height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpegUint8Array.length} >>\nstream\n`;
+    const obj4Tail = `\nendstream\nendobj\n`;
+    const obj5 = `5 0 obj\n<< /Length ${contentBytes.length} >>\nstream\n${contentStream}endstream\nendobj\n`;
+
+    const headBytes = enc.encode(header);
+    const o1Bytes = enc.encode(obj1);
+    const o2Bytes = enc.encode(obj2);
+    const o3Bytes = enc.encode(obj3);
+    const o4hBytes = enc.encode(obj4Head);
+    const o4tBytes = enc.encode(obj4Tail);
+    const o5Bytes = enc.encode(obj5);
+
+    const offsets = [];
+    let cur = headBytes.length;
+    offsets.push(cur); cur += o1Bytes.length;
+    offsets.push(cur); cur += o2Bytes.length;
+    offsets.push(cur); cur += o3Bytes.length;
+    offsets.push(cur); cur += o4hBytes.length + jpegUint8Array.length + o4tBytes.length;
+    offsets.push(cur); cur += o5Bytes.length;
+
+    const startXref = cur;
+    let xref = `xref\n0 6\n0000000000 65535 f \n`;
+    for (const off of offsets) {
+      xref += String(off).padStart(10, '0') + ` 00000 n \n`;
+    }
+    const trailer = `trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${startXref}\n%%EOF\n`;
+    const xrefBytes = enc.encode(xref);
+    const trailerBytes = enc.encode(trailer);
+
+    return new Blob([
+      headBytes,
+      o1Bytes,
+      o2Bytes,
+      o3Bytes,
+      o4hBytes,
+      jpegUint8Array,
+      o4tBytes,
+      o5Bytes,
+      xrefBytes,
+      trailerBytes
+    ], { type: 'application/pdf' });
+  }
+
+  function formatLearnerName(raw) {
+    if (!raw) return 'Verified Learner';
+    let str = typeof raw === 'object' ? (raw.name || raw.email || 'Verified Learner') : String(raw).trim();
+    if (/@/.test(str)) str = str.split('@')[0];
+    if (/[._-]/.test(str) && !/\s/.test(str)) {
+      return str.split(/[._-]+/).filter(Boolean).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+    }
+    if (/^[a-z\s]+$/.test(str)) {
+      return str.split(/\s+/).filter(Boolean).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    }
+    return str;
+  }
+
+  function generateCertificatePDF(certData) {
+    const canvas = document.createElement('canvas');
+    canvas.width = 2380;
+    canvas.height = 1684;
+    const ctx = canvas.getContext('2d');
+
+    // Background paper
+    ctx.fillStyle = '#fdfdfc';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Micro-grid dots texture
+    ctx.fillStyle = 'rgba(0,0,0,0.035)';
+    for (let x = 60; x < canvas.width - 60; x += 40) {
+      for (let y = 60; y < canvas.height - 60; y += 40) {
+        ctx.fillRect(x, y, 2.5, 2.5);
+      }
+    }
+
+    // Outer solid slate border
+    ctx.strokeStyle = '#0b0b0c';
+    ctx.lineWidth = 8;
+    ctx.strokeRect(50, 50, canvas.width - 100, canvas.height - 100);
+
+    // Inner lime accent border
+    ctx.strokeStyle = '#88f012';
+    ctx.lineWidth = 3;
+    ctx.strokeRect(66, 66, canvas.width - 132, canvas.height - 132);
+
+    // Swiss crosses in 4 corners
+    const drawSwissCross = (cx, cy) => {
+      ctx.strokeStyle = '#0b0b0c';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(cx - 14, cy); ctx.lineTo(cx + 14, cy);
+      ctx.moveTo(cx, cy - 14); ctx.lineTo(cx, cy + 14);
+      ctx.stroke();
+    };
+    drawSwissCross(90, 90);
+    drawSwissCross(canvas.width - 90, 90);
+    drawSwissCross(90, canvas.height - 90);
+    drawSwissCross(canvas.width - 90, canvas.height - 90);
+
+    // Top Brand Header
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#0b0b0c';
+    ctx.font = 'bold 52px "Inter", -apple-system, sans-serif';
+    ctx.fillText('EduCut', 140, 160);
+
+    ctx.fillStyle = '#88f012';
+    ctx.fillText('.ai', 140 + ctx.measureText('EduCut').width, 160);
+
+    ctx.fillStyle = '#666';
+    ctx.font = '600 16px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('SWISS ACCREDITED AI EDUCATION · ZURICH · GENEVA', 140, 195);
+
+    // Right Header
+    ctx.textAlign = 'right';
+    ctx.fillStyle = '#0b0b0c';
+    ctx.font = 'bold 18px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('STANDARDS: ISO/IEC 42001 & EU AI ACT', canvas.width - 140, 155);
+    ctx.fillStyle = '#666';
+    ctx.font = '15px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('VERIFIED INSTITUTIONAL CREDENTIAL REGISTRY', canvas.width - 140, 185);
+
+    // Horizontal divider
+    ctx.strokeStyle = '#0b0b0c';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(140, 230);
+    ctx.lineTo(canvas.width - 140, 230);
+    ctx.stroke();
+
+    // Kicker
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#3357ff';
+    ctx.font = 'bold 22px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('CERTIFICATE OF PROFESSIONAL MASTERY', canvas.width / 2, 330);
+
+    // Lead Text
+    ctx.fillStyle = '#555';
+    ctx.font = '24px "Inter", -apple-system, sans-serif';
+    ctx.fillText('THIS IS TO OFFICIALLY CERTIFY THAT', canvas.width / 2, 420);
+
+    // Learner Name
+    const learnerName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Verified Learner');
+    ctx.fillStyle = '#0b0b0c';
+    ctx.font = 'bold 72px "Inter", -apple-system, sans-serif';
+    ctx.fillText(learnerName, canvas.width / 2, 540);
+
+    // Accent line beneath recipient name
+    const nameWidth = ctx.measureText(learnerName).width;
+    ctx.strokeStyle = '#88f012';
+    ctx.lineWidth = 6;
+    ctx.beginPath();
+    ctx.moveTo((canvas.width - nameWidth) / 2 - 30, 570);
+    ctx.lineTo((canvas.width + nameWidth) / 2 + 30, 570);
+    ctx.stroke();
+
+    // Achievement text
+    ctx.fillStyle = '#555';
+    ctx.font = '24px "Inter", -apple-system, sans-serif';
+    ctx.fillText('has rigorously demonstrated practitioner competency and successfully completed the assessment with', canvas.width / 2, 650);
+
+    // Score Pill
+    const scoreVal = certData.score !== undefined ? certData.score : 10;
+    const scoreText = `VERIFIED EXAM SCORE: ${scoreVal}/10 (${scoreVal * 10}%) · PASSED WITH DISTINCTION`;
+    ctx.fillStyle = '#f0fdf4';
+    const pillW = 860;
+    const pillH = 54;
+    ctx.fillRect((canvas.width - pillW) / 2, 690, pillW, pillH);
+    ctx.strokeStyle = '#84cc16';
+    ctx.lineWidth = 2;
+    ctx.strokeRect((canvas.width - pillW) / 2, 690, pillW, pillH);
+
+    ctx.fillStyle = '#166534';
+    ctx.font = 'bold 22px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText(scoreText, canvas.width / 2, 725);
+
+    ctx.fillStyle = '#555';
+    ctx.font = '24px "Inter", -apple-system, sans-serif';
+    ctx.fillText('in the specialized executive curriculum:', canvas.width / 2, 800);
+
+    // Course Title
+    ctx.fillStyle = '#0b0b0c';
+    ctx.font = 'bold 44px "Inter", -apple-system, sans-serif';
+    ctx.fillText(certData.courseTitle || 'ETHICS-101: Applied AI Ethics, Algorithmic Bias & Responsible Governance', canvas.width / 2, 880);
+
+    // Academy
+    ctx.fillStyle = '#3357ff';
+    ctx.font = 'bold 24px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText(certData.academyTitle || 'ACADEMY A018 · RESPONSIBLE AI & ETHICAL GOVERNANCE', canvas.width / 2, 940);
+
+    // Topics summary
+    ctx.fillStyle = '#666';
+    ctx.font = '19px "Inter", -apple-system, sans-serif';
+    ctx.fillText('Pillars of AI Ethics · Bias Mitigation · Kleinberg\'s Theorem · XAI (SHAP & LIME) · Differential Privacy · EU AI Act', canvas.width / 2, 990);
+
+    // Circular Gold/Lime Seal
+    const sealX = canvas.width / 2;
+    const sealY = 1170;
+    ctx.strokeStyle = '#0b0b0c';
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.arc(sealX, sealY, 95, 0, Math.PI * 2);
+    ctx.stroke();
+
+    ctx.strokeStyle = '#88f012';
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.arc(sealX, sealY, 86, 0, Math.PI * 2);
+    ctx.stroke();
+
+    ctx.fillStyle = '#0b0b0c';
+    ctx.font = 'bold 15px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('EDUCUT.AI ACCREDITED', sealX, sealY - 45);
+    ctx.font = '28px sans-serif';
+    ctx.fillStyle = '#eab308';
+    ctx.fillText('★ ★ ★ ★ ★', sealX, sealY - 10);
+    ctx.fillStyle = '#0b0b0c';
+    ctx.font = 'bold 17px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('VERIFIED CREDENTIAL', sealX, sealY + 28);
+    ctx.fillStyle = '#555';
+    ctx.font = '13px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('SWITZERLAND', sealX, sealY + 54);
+
+    // Divider above footer
+    ctx.strokeStyle = '#ccc';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(140, 1370);
+    ctx.lineTo(canvas.width - 140, 1370);
+    ctx.stroke();
+
+    // Footer - Left: Signature
+    ctx.textAlign = 'left';
+    ctx.font = 'italic 34px "Times New Roman", Georgia, serif';
+    ctx.fillStyle = '#111';
+    ctx.fillText('Dr. Marc Steiner', 140, 1450);
+
+    ctx.strokeStyle = '#444';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(140, 1465); ctx.lineTo(460, 1465);
+    ctx.stroke();
+
+    ctx.fillStyle = '#0b0b0c';
+    ctx.font = 'bold 16px "Inter", -apple-system, sans-serif';
+    ctx.fillText('Dr. Marc Steiner, Ph.D.', 140, 1495);
+    ctx.fillStyle = '#666';
+    ctx.font = '14px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('Chair, AI Ethics Advisory Council', 140, 1520);
+    ctx.fillText('EduCut.ai Academic Directorate', 140, 1542);
+
+    // Footer - Center: Date & Protocol
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#666';
+    ctx.font = '14px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('ISSUE DATE', canvas.width / 2, 1445);
+    ctx.fillStyle = '#0b0b0c';
+    ctx.font = 'bold 20px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText(certData.issued || new Date().toISOString().slice(0, 10), canvas.width / 2, 1475);
+    ctx.fillStyle = '#666';
+    ctx.font = '13px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('PROTOCOL: EDU-ETHICS-2026-CH', canvas.width / 2, 1510);
+    ctx.fillText('PERMANENT AUDIT REGISTRY', canvas.width / 2, 1535);
+
+    // Footer - Right: Verification Identifier
+    ctx.textAlign = 'right';
+    ctx.fillStyle = '#666';
+    ctx.font = '14px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('VERIFICATION IDENTIFIER', canvas.width - 140, 1445);
+    ctx.fillStyle = '#3357ff';
+    ctx.font = 'bold 24px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText(certData.verificationId || 'EC-ETHICS-VERIFIED', canvas.width - 140, 1480);
+    ctx.fillStyle = '#666';
+    ctx.font = '13px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText(`VERIFY: https://educut.ai/verify/${certData.verificationId || 'EC-ETHICS-VERIFIED'}`, canvas.width - 140, 1515);
+    ctx.fillText('CRYPTOGRAPHIC HASH: VERIFIED', canvas.width - 140, 1540);
+
+    // Convert to JPEG & PDF Blob
+    const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
+    const binary = atob(dataUrl.split(',')[1]);
+    const imgBytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) imgBytes[i] = binary.charCodeAt(i);
+
+    const pdfBlob = buildPdfBlobFromJpeg(imgBytes, canvas.width, canvas.height);
+    return { pdfBlob, dataUrl };
+  }
+
+  function downloadCertificatePDF(certData) {
+    try {
+      const { pdfBlob } = generateCertificatePDF(certData);
+      const url = URL.createObjectURL(pdfBlob);
+      const safeName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Learner').replace(/[^a-zA-Z0-9_-]/g, '_');
+      const filename = `EduCut_AI_Ethics_Certificate_${safeName}.pdf`;
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 10000);
+      toast(`✓ Downloaded official certificate: ${filename}`);
+    } catch (err) {
+      console.error('Failed to generate PDF certificate:', err);
+      toast('Failed to download PDF. You can also print the certificate from the viewer.');
+    }
+  }
+
   const FREE_COURSE_DEF = {
     code: 'FREE-101',
     title: 'AI Foundations & Prompting Essentials: Interactive Primer',
@@ -8534,6 +9659,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   };
 
   const CORE_FALLBACK_COURSES = [
+    ETHICS_COURSE_DEF,
     FREE_COURSE_DEF,
     { code: 'A001.01', title: 'Machine Learning - Foundations & Methods I', academy: 'A001', academyTitle: 'AI Foundations', level: 'Foundation', duration: '12 hours', priceHT: 400, description: 'Supervised learning, classification, regression, decision trees, SVMs, and unsupervised clustering.', lessons: [
       { id: 'L1.1', title: 'Supervised Learning: Classification & Regression Principles', duration: '3 hours', summary: 'Linear regression, logistic models, loss functions, and evaluation metrics.', exercise: 'Train a classifier on customer churn data and evaluate ROC-AUC.' },
@@ -8588,7 +9714,8 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       .then(data => {
         if (Array.isArray(data) && data.length) {
           const map = new Map();
-          // Always ensure FREE-101 is first
+          // Always ensure ETHICS-101 and FREE-101 are first
+          map.set('ETHICS-101', ETHICS_COURSE_DEF);
           map.set('FREE-101', FREE_COURSE_DEF);
           data.forEach(c => {
             const acadCode = c.academy || c.code.split('.')[0];
@@ -8647,14 +9774,57 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
   function getLearnerState(session) {
     const key = getStoreKey(session);
+    let state = null;
     try {
       const saved = localStorage.getItem(key);
-      if (saved) return JSON.parse(saved);
+      if (saved) state = JSON.parse(saved);
     } catch (_) {}
+
+    if (state) {
+      if (!Array.isArray(state.enrolledCourses)) state.enrolledCourses = [];
+      if (!state.enrolledCourses.some(c => c.code === 'ETHICS-101')) {
+        state.enrolledCourses.unshift({
+          code: 'ETHICS-101',
+          title: 'Applied AI Ethics, Algorithmic Bias & Responsible Governance',
+          academy: 'A018',
+          academyTitle: 'Responsible AI & Governance',
+          level: 'Foundation to Practitioner',
+          duration: '3 hours',
+          isFree: true,
+          enrolledAt: new Date().toISOString(),
+          lastAccessed: new Date().toISOString(),
+          completedLessons: [],
+          totalLessons: 8,
+          progress: 0,
+          status: 'IN_PROGRESS',
+          certificateId: null,
+          lessons: ETHICS_COURSE_DEF.lessons
+        });
+        saveLearnerState(session, state);
+      }
+      return state;
+    }
 
     // Initial default seed state for new learner
     const seed = {
       enrolledCourses: [
+        {
+          code: 'ETHICS-101',
+          title: 'Applied AI Ethics, Algorithmic Bias & Responsible Governance',
+          academy: 'A018',
+          academyTitle: 'Responsible AI & Governance',
+          level: 'Foundation to Practitioner',
+          duration: '3 hours',
+          isFree: true,
+          enrolledAt: new Date().toISOString(),
+          lastAccessed: new Date().toISOString(),
+          completedLessons: [],
+          totalLessons: 8,
+          progress: 0,
+          status: 'IN_PROGRESS',
+          certificateId: null,
+          lessons: ETHICS_COURSE_DEF.lessons
+        },
         {
           code: 'FREE-101',
           title: 'AI Foundations & Prompting Essentials: Interactive Primer',
@@ -8701,6 +9871,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         }
       ],
       activity: [
+        { event: 'Enrolled in ETHICS-101: Applied AI Ethics, Bias & Governance', course: 'ETHICS-101', at: new Date().toISOString() },
         { event: 'Completed Module: The Anatomy of Effective Prompts', course: 'FREE-101', at: new Date(Date.now() - 3600000 * 4).toISOString() },
         { event: 'Completed Module: Introduction to Modern AI', course: 'FREE-101', at: new Date(Date.now() - 3600000 * 24).toISOString() },
         { event: 'Enrolled in FREE-101: AI Foundations & Prompting Essentials', course: 'FREE-101', at: '2026-09-01T10:00:00Z' },
@@ -8879,11 +10050,13 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
     document.getElementById('closePlayerModal').onclick = () => {
       document.getElementById('coursePlayerModal').classList.remove('open');
+      document.querySelector('#coursePlayerModal .learner-modal-card')?.classList.remove('ethics-modal-card');
       renderActivePage();
     };
     document.getElementById('coursePlayerModal').onclick = e => {
       if (e.target.id === 'coursePlayerModal') {
         document.getElementById('coursePlayerModal').classList.remove('open');
+        document.querySelector('#coursePlayerModal .learner-modal-card')?.classList.remove('ethics-modal-card');
         renderActivePage();
       }
     };
@@ -8969,6 +10142,34 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
           <small>Interactive learning</small>
         </div>
       </div>
+
+      <!-- Featured AI Ethics Course Banner -->
+      <section style="background:#fff;border:2px solid var(--ink);padding:26px 28px;margin-bottom:32px;box-shadow:0 8px 30px rgba(0,0,0,.04);display:grid;grid-template-columns:1.5fr .5fr;gap:24px;align-items:center">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+            <span class="learner-free-badge">★ NEW CERTIFICATION COURSE</span>
+            <span class="mono" style="font-size:11px;color:var(--blue)">ACADEMY A018 · RESPONSIBLE AI &amp; GOVERNANCE</span>
+          </div>
+          <h2 style="font-size:24px;letter-spacing:-.03em;margin:0 0 8px">ETHICS-101: Applied AI Ethics, Bias &amp; Responsible Governance</h2>
+          <p style="color:#555;font-size:13.5px;line-height:1.5;margin:0 0 16px;max-width:780px">
+            Explore 8 interactive Swiss-designed slides on the 5 trustworthy AI pillars, algorithmic bias mitigation, Kleinberg\'s fairness impossibility theorem, SHAP &amp; LIME explainability, and the EU AI Act. Complete the 10-question final quiz (≥70% required) to earn and instantly download your official verifiable institutional PDF certificate!
+          </p>
+          <div style="display:flex;gap:18px;flex-wrap:wrap;font-size:12px;font-weight:600;color:#333">
+            <span class="learner-free-perk">8 Interactive Modular Slides</span>
+            <span class="learner-free-perk">10-Question Certification Exam</span>
+            <span class="learner-free-perk">70% (7/10) Passing Threshold</span>
+            <span class="learner-free-perk">Instant Official PDF Certificate</span>
+          </div>
+        </div>
+        <div style="background:var(--paper);border:1px solid var(--line);padding:20px;text-align:center;display:flex;flex-direction:column;gap:12px;justify-content:center;align-items:center">
+          <div class="mono" style="font-size:11px;color:#666">Zero Barrier Access</div>
+          <div style="font:800 24px/1 monospace;color:var(--ink)">0 CHF</div>
+          <button class="btn btn-lime" style="width:100%;white-space:nowrap" data-open-player="ETHICS-101">
+            ${(enrolled.find(c => c.code === 'ETHICS-101')?.progress === 100) ? 'Review Course &amp; Download PDF →' : 'Start Course &amp; Take Quiz →'}
+          </button>
+          <small style="color:#355b00;font-weight:700">✓ Free Institutional Credential</small>
+        </div>
+      </section>
 
       <section style="margin-top:30px">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px">
@@ -9304,8 +10505,471 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   }
 
   /* -------------------------------------------------------------
-     3. COURSE PLAYER MODAL (Progress Management)
+     3. COURSE PLAYER MODAL (Progress Management & Ethics Interactive Experience)
      ------------------------------------------------------------- */
+  function openEthicsCoursePlayer(course, modal, state) {
+    const card = modal.querySelector('.learner-modal-card');
+    card.classList.add('ethics-modal-card');
+    const kicker = document.getElementById('playerKicker');
+    const title = document.getElementById('playerTitle');
+    const body = document.getElementById('playerBody');
+
+    kicker.textContent = 'ETHICS-101 · ACADEMY A018 · RESPONSIBLE AI & GOVERNANCE';
+    title.textContent = 'Applied AI Ethics, Algorithmic Bias & Responsible Governance';
+
+    let currentTab = 'slides'; // 'slides' | 'quiz'
+    let currentSlide = 0;
+    let quizAnswers = {};
+    let quizSubmitted = false;
+    let quizScore = 0;
+
+    function renderEthicsView() {
+      const isComplete = course.progress === 100 || course.status === 'COMPLETED';
+      const learnerName = formatLearnerName(app.session?.name || app.session?.email || 'Verified Learner');
+
+      body.innerHTML = `
+        <div class="ethics-player-tabs">
+          <button class="ethics-tab-btn ${currentTab==='slides'?'active':''}" id="ethicsTabSlidesBtn">
+            <span>📖 Interactive Slides</span>
+            <span class="ethics-tab-badge">8 Modules</span>
+          </button>
+          <button class="ethics-tab-btn ${currentTab==='quiz'?'active':''}" id="ethicsTabQuizBtn">
+            <span>📝 Certification Assessment</span>
+            <span class="ethics-tab-badge">10 Questions · 70% to Pass</span>
+          </button>
+        </div>
+
+        <div id="ethicsTabContent"></div>
+      `;
+
+      document.getElementById('ethicsTabSlidesBtn').onclick = () => {
+        currentTab = 'slides';
+        renderEthicsView();
+      };
+      document.getElementById('ethicsTabQuizBtn').onclick = () => {
+        currentTab = 'quiz';
+        renderEthicsView();
+      };
+
+      const container = document.getElementById('ethicsTabContent');
+      if (currentTab === 'slides') {
+        renderSlideTab(container, isComplete, learnerName);
+      } else {
+        renderQuizTab(container, isComplete, learnerName);
+      }
+    }
+
+    function renderSlideTab(container, isComplete, learnerName) {
+      const s = ETHICS_SLIDES[currentSlide];
+
+      container.innerHTML = `
+        ${isComplete ? `
+          <div style="background:#f4fbf0;border:1px solid #badf78;padding:14px 20px;margin-bottom:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+            <div>
+              <strong style="color:#2f5400;display:block;font-size:14px">🎉 Course Completed &amp; Certified!</strong>
+              <span style="color:#4d6d23;font-size:12px">Official Credential: <strong>${esc(course.certificateId || 'EC-ETHICS-VERIFIED')}</strong></span>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-lime" id="slideDownloadPdfBtn" style="padding:7px 14px;font-size:12px">Download PDF Certificate ⬇</button>
+              <button class="btn btn-outline" id="slideViewCertBtn" style="padding:7px 14px;font-size:12px">View Credential ↗</button>
+            </div>
+          </div>
+        ` : ''}
+
+        <div class="ethics-slide-viewport">
+          <div class="ethics-slide-header">
+            <div>
+              <div class="ethics-slide-kicker">${esc(s.kicker)}</div>
+            </div>
+            <div class="ethics-slide-counter">Slide ${currentSlide + 1} of ${ETHICS_SLIDES.length}</div>
+          </div>
+
+          <div class="learner-progress-bar" style="height:5px;margin-bottom:18px">
+            <span style="width:${((currentSlide + 1) / ETHICS_SLIDES.length) * 100}%"></span>
+          </div>
+
+          <div class="ethics-slide-pills">
+            ${ETHICS_SLIDES.map((item, idx) => `
+              <button class="ethics-slide-pill ${idx===currentSlide?'active':''}" data-slide-jump="${idx}">
+                ${idx+1} · ${esc(item.kicker.split('·')[1]?.trim() || `Slide ${idx+1}`)}
+              </button>
+            `).join('')}
+          </div>
+
+          <div class="ethics-slide-body">
+            <h3>${esc(s.title)}</h3>
+            <p class="ethics-slide-lead">${esc(s.lead)}</p>
+
+            <div class="ethics-cards-grid">
+              ${s.cards.map(c => `
+                <div class="ethics-feature-card ${c.highlight ? 'highlight' : ''}">
+                  <h4>${esc(c.title)}</h4>
+                  <p>${esc(c.text)}</p>
+                </div>
+              `).join('')}
+            </div>
+
+            <div class="ethics-takeaway">
+              <strong>Key Institutional Takeaway</strong>
+              ${esc(s.takeaway)}
+            </div>
+          </div>
+
+          <div class="ethics-slide-nav">
+            <button class="btn btn-outline" id="prevSlideBtn" ${currentSlide === 0 ? 'disabled style="opacity:.4;cursor:not-allowed"' : ''}>
+              ← Previous Slide
+            </button>
+            <div class="mono" style="font-size:12px;color:#666">
+              ${currentSlide + 1} / ${ETHICS_SLIDES.length}
+            </div>
+            ${currentSlide < ETHICS_SLIDES.length - 1 ? `
+              <button class="btn btn-lime" id="nextSlideBtn">
+                Next Slide →
+              </button>
+            ` : `
+              <button class="btn btn-lime" id="goToQuizFromSlideBtn">
+                Take Certification Quiz (10 Questions) →
+              </button>
+            `}
+          </div>
+        </div>
+      `;
+
+      container.querySelectorAll('[data-slide-jump]').forEach(b => {
+        b.onclick = () => {
+          currentSlide = parseInt(b.dataset.slideJump, 10);
+          renderEthicsView();
+        };
+      });
+
+      document.getElementById('prevSlideBtn')?.addEventListener('click', () => {
+        if (currentSlide > 0) {
+          currentSlide--;
+          renderEthicsView();
+        }
+      });
+
+      document.getElementById('nextSlideBtn')?.addEventListener('click', () => {
+        if (currentSlide < ETHICS_SLIDES.length - 1) {
+          currentSlide++;
+          renderEthicsView();
+        }
+      });
+
+      document.getElementById('goToQuizFromSlideBtn')?.addEventListener('click', () => {
+        currentTab = 'quiz';
+        renderEthicsView();
+      });
+
+      document.getElementById('slideDownloadPdfBtn')?.addEventListener('click', () => {
+        const cert = (state.certificates || []).find(c => c.courseCode === 'ETHICS-101') || {
+          courseTitle: course.title,
+          courseCode: 'ETHICS-101',
+          academyTitle: 'Academy A018 · Responsible AI',
+          issued: new Date().toISOString().slice(0, 10),
+          verificationId: course.certificateId || 'EC-ETHICS-VERIFIED',
+          score: 10,
+          learnerName
+        };
+        downloadCertificatePDF(cert);
+      });
+
+      document.getElementById('slideViewCertBtn')?.addEventListener('click', () => {
+        modal.classList.remove('open');
+        card.classList.remove('ethics-modal-card');
+        openCertificateViewer('ETHICS-101');
+      });
+    }
+
+    function renderQuizTab(container, isComplete, learnerName) {
+      const answeredCount = Object.keys(quizAnswers).length;
+
+      container.innerHTML = `
+        <div class="ethics-quiz-wrap">
+          ${quizSubmitted ? (quizScore >= 7 ? `
+            <div class="ethics-banner-pass">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px">
+                <div>
+                  <span class="learner-cert-stamp" style="background:#dcfce7;border-color:#86efac;color:#166534;font-size:11px">
+                    ★ OFFICIAL ASSESSMENT PASSED (≥ 70%)
+                  </span>
+                  <h3 style="font-size:26px;letter-spacing:-.03em;margin:12px 0 6px;color:#14532d">
+                    Congratulations, ${esc(learnerName)}!
+                  </h3>
+                  <p style="color:#166534;font-size:14px;margin:0 0 14px">
+                    You scored <strong>${quizScore} of 10 (${quizScore * 10}%)</strong>. You have demonstrated rigorous understanding of AI Ethics principles and met the institutional pass threshold.
+                  </p>
+                  <div class="mono" style="font-size:12px;color:#15803d">
+                    Credential ID: <strong>${esc(course.certificateId || 'EC-ETHICS-VERIFIED')}</strong>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;min-width:220px">
+                  <button class="btn btn-lime" id="downloadPdfFromResultBtn" style="padding:12px 20px;font-size:13px;font-weight:800">
+                    ⬇ Download PDF Certificate
+                  </button>
+                  <button class="btn btn-outline" id="viewCertFromResultBtn" style="padding:10px 18px;font-size:13px">
+                    👁 View Credential ↗
+                  </button>
+                  <button class="admin-mini-btn" id="retakeQuizAfterPassBtn" style="margin-top:4px">
+                    ↻ Retake Quiz
+                  </button>
+                </div>
+              </div>
+            </div>
+          ` : `
+            <div class="ethics-banner-fail">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px">
+                <div>
+                  <span class="learner-cert-stamp" style="background:#fee2e2;border-color:#fca5a5;color:#991b1b;font-size:11px">
+                    ASSESSMENT NOT PASSED (70% REQUIRED)
+                  </span>
+                  <h3 style="font-size:24px;letter-spacing:-.03em;margin:12px 0 6px;color:#7c2d12">
+                    Score: ${quizScore} of 10 (${quizScore * 10}%)
+                  </h3>
+                  <p style="color:#9a3412;font-size:14px;margin:0 0 14px">
+                    A minimum of 7 correct answers (70%) is required to earn your verified PDF certificate. You answered ${quizScore} correctly. Review the explanations below and try again.
+                  </p>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;min-width:200px">
+                  <button class="btn btn-lime" id="retakeQuizAfterFailBtn" style="padding:12px 20px;font-size:13px">
+                    ↻ Retake Quiz
+                  </button>
+                  <button class="btn btn-outline" id="reviewSlidesAfterFailBtn" style="padding:10px 18px;font-size:13px">
+                    📖 Review Course Slides
+                  </button>
+                </div>
+              </div>
+            </div>
+          `) : `
+            <div class="ethics-quiz-hero">
+              <div>
+                <span class="mono" style="font-size:11px;color:var(--blue);letter-spacing:.08em">EXECUTIVE CERTIFICATION ASSESSMENT</span>
+                <h3>ETHICS-101: 10-Question Knowledge Exam</h3>
+                <p>Answer all 10 questions. Scoring <strong>7 or more (≥70%)</strong> completes the course and generates your verified PDF certificate with your name.</p>
+              </div>
+              <div style="text-align:right">
+                <div class="mono" style="font-size:12px;font-weight:700;color:var(--ink);background:#fff;border:1px solid var(--line);padding:8px 14px">
+                  Answered: <strong>${answeredCount}</strong> / 10
+                </div>
+              </div>
+            </div>
+          `}
+
+          <!-- Question Cards -->
+          ${ETHICS_QUIZ_QUESTIONS.map((q, qIdx) => {
+            const userPick = quizAnswers[qIdx];
+            const isAnswered = userPick !== undefined;
+            const isCorrect = userPick === q.correctIndex;
+            let cardClass = '';
+            if (quizSubmitted) {
+              cardClass = isCorrect ? 'is-correct' : 'is-wrong';
+            }
+
+            return `
+              <div class="ethics-q-card ${cardClass}" id="qCard_${qIdx}">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                  <span class="ethics-q-badge">Question ${qIdx + 1} of 10</span>
+                  ${quizSubmitted ? (isCorrect ? `
+                    <span style="font-weight:700;font-size:12px;color:#15803d">✓ Correct (+1)</span>
+                  ` : `
+                    <span style="font-weight:700;font-size:12px;color:#b91c1c">✗ Missed (0)</span>
+                  `) : ''}
+                </div>
+
+                <div class="ethics-q-prompt">${esc(q.prompt)}</div>
+
+                <div class="ethics-options-list">
+                  ${q.options.map((opt, optIdx) => {
+                    const isSelected = userPick === optIdx;
+                    let optClass = isSelected ? 'checked' : '';
+                    if (quizSubmitted) {
+                      if (optIdx === q.correctIndex) optClass += ' opt-correct';
+                      else if (isSelected && !isCorrect) optClass += ' opt-wrong-picked';
+                    }
+
+                    return `
+                      <label class="ethics-opt-item ${optClass}">
+                        <input type="radio" name="ethics_q_${qIdx}" value="${optIdx}" ${isSelected ? 'checked' : ''} ${quizSubmitted ? 'disabled' : ''} data-q="${qIdx}" data-opt="${optIdx}">
+                        <span class="ethics-opt-text">${esc(opt)}</span>
+                      </label>
+                    `;
+                  }).join('')}
+                </div>
+
+                ${quizSubmitted ? `
+                  <div class="ethics-review-box ${isCorrect ? 'ethics-review-correct' : 'ethics-review-wrong'}">
+                    <strong>${isCorrect ? '✓ Correct Rationale' : '✗ Review Rationale'}:</strong>
+                    ${esc(q.explanation)}
+                  </div>
+                ` : ''}
+              </div>
+            `;
+          }).join('')}
+
+          <!-- Bottom Quiz Action Controls -->
+          ${!quizSubmitted ? `
+            <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--line);padding:20px 24px;margin-top:10px">
+              <button class="btn btn-outline" id="quizBottomBackToSlidesBtn">
+                ← Back to Slides
+              </button>
+              <div style="display:flex;align-items:center;gap:14px">
+                <span class="mono" style="font-size:12px;color:#666">
+                  ${answeredCount === 10 ? '✓ All 10 questions answered' : `${10 - answeredCount} question(s) remaining`}
+                </span>
+                <button class="btn btn-lime" id="submitAssessmentBtn" style="padding:14px 28px;font-size:14px;font-weight:700">
+                  Submit Assessment for Grading →
+                </button>
+              </div>
+            </div>
+          ` : `
+            <div style="display:flex;justify-content:flex-end;gap:12px;background:#fff;border:1px solid var(--line);padding:20px 24px;margin-top:10px">
+              ${quizScore >= 7 ? `
+                <button class="btn btn-lime" id="bottomDownloadPdfBtn">
+                  ⬇ Download PDF Certificate
+                </button>
+              ` : `
+                <button class="btn btn-lime" id="bottomRetakeQuizBtn">
+                  ↻ Retake Assessment
+                </button>
+              `}
+              <button class="btn btn-outline" id="bottomClosePlayerBtn">
+                Close
+              </button>
+            </div>
+          `}
+        </div>
+      `;
+
+      // Wire option inputs
+      if (!quizSubmitted) {
+        container.querySelectorAll('input[type="radio"]').forEach(radio => {
+          radio.onchange = e => {
+            const q = parseInt(e.target.dataset.q, 10);
+            const opt = parseInt(e.target.dataset.opt, 10);
+            quizAnswers[q] = opt;
+            renderQuizTab(container, isComplete, learnerName);
+          };
+        });
+
+        document.getElementById('submitAssessmentBtn')?.addEventListener('click', () => {
+          const count = Object.keys(quizAnswers).length;
+          if (count < 10) {
+            toast(`Please answer all 10 questions before submitting. (${count} of 10 answered).`);
+            for (let i = 0; i < 10; i++) {
+              if (quizAnswers[i] === undefined) {
+                document.getElementById(`qCard_${i}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                break;
+              }
+            }
+            return;
+          }
+
+          // Grade
+          quizScore = ETHICS_QUIZ_QUESTIONS.filter((q, i) => quizAnswers[i] === q.correctIndex).length;
+          quizSubmitted = true;
+
+          if (quizScore >= 7) {
+            // Success: mark completed & generate certificate
+            course.progress = 100;
+            course.status = 'COMPLETED';
+            course.completedLessons = ETHICS_COURSE_DEF.lessons.map(l => l.id);
+            if (!course.certificateId) {
+              course.certificateId = `EC-ETHICS-${Math.random().toString(36).slice(2, 6).toUpperCase()}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+            }
+
+            const certData = {
+              id: course.certificateId,
+              courseCode: 'ETHICS-101',
+              courseTitle: 'Applied AI Ethics, Algorithmic Bias & Responsible Governance',
+              academy: 'Academy A018 · Responsible AI',
+              issued: new Date().toISOString().slice(0, 10),
+              score: quizScore,
+              verificationId: course.certificateId,
+              learnerName
+            };
+
+            state.certificates = state.certificates || [];
+            const existIdx = state.certificates.findIndex(c => c.courseCode === 'ETHICS-101');
+            if (existIdx >= 0) state.certificates[existIdx] = certData;
+            else state.certificates.unshift(certData);
+
+            state.activity = state.activity || [];
+            state.activity.unshift({
+              event: `Passed ETHICS-101 Certification Exam (${quizScore}/10 · ${quizScore * 10}%) · Certificate Issued`,
+              course: 'ETHICS-101',
+              at: new Date().toISOString()
+            });
+
+            saveLearnerState(app.session, state);
+            toast(`🎉 Outstanding! You scored ${quizScore}/10 (≥70%) and earned your official certificate!`);
+            setTimeout(() => downloadCertificatePDF(certData), 400);
+          } else {
+            toast(`Score: ${quizScore}/10. 7 or more correct answers required to pass.`);
+          }
+
+          renderEthicsView();
+          modal.querySelector('.learner-modal-card')?.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.getElementById('quizBottomBackToSlidesBtn')?.addEventListener('click', () => {
+          currentTab = 'slides';
+          renderEthicsView();
+        });
+      } else {
+        // Wired buttons after submission
+        const certData = (state.certificates || []).find(c => c.courseCode === 'ETHICS-101') || {
+          courseTitle: course.title,
+          courseCode: 'ETHICS-101',
+          academyTitle: 'Academy A018 · Responsible AI',
+          issued: new Date().toISOString().slice(0, 10),
+          verificationId: course.certificateId || 'EC-ETHICS-VERIFIED',
+          score: quizScore,
+          learnerName
+        };
+
+        document.getElementById('downloadPdfFromResultBtn')?.addEventListener('click', () => {
+          downloadCertificatePDF(certData);
+        });
+
+        document.getElementById('bottomDownloadPdfBtn')?.addEventListener('click', () => {
+          downloadCertificatePDF(certData);
+        });
+
+        document.getElementById('viewCertFromResultBtn')?.addEventListener('click', () => {
+          modal.classList.remove('open');
+          card.classList.remove('ethics-modal-card');
+          openCertificateViewer('ETHICS-101');
+        });
+
+        const resetQuiz = () => {
+          quizAnswers = {};
+          quizSubmitted = false;
+          quizScore = 0;
+          renderEthicsView();
+          modal.querySelector('.learner-modal-card')?.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        document.getElementById('retakeQuizAfterPassBtn')?.addEventListener('click', resetQuiz);
+        document.getElementById('retakeQuizAfterFailBtn')?.addEventListener('click', resetQuiz);
+        document.getElementById('bottomRetakeQuizBtn')?.addEventListener('click', resetQuiz);
+
+        document.getElementById('reviewSlidesAfterFailBtn')?.addEventListener('click', () => {
+          currentTab = 'slides';
+          renderEthicsView();
+        });
+
+        document.getElementById('bottomClosePlayerBtn')?.addEventListener('click', () => {
+          modal.classList.remove('open');
+          card.classList.remove('ethics-modal-card');
+          renderActivePage();
+        });
+      }
+    }
+
+    renderEthicsView();
+    modal.classList.add('open');
+  }
+
   function openCoursePlayer(code) {
     const state = getLearnerState(app.session);
     const course = (state.enrolledCourses || []).find(c => c.code === code);
@@ -9315,6 +10979,10 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     }
 
     const modal = document.getElementById('coursePlayerModal');
+    if (code === 'ETHICS-101') {
+      return openEthicsCoursePlayer(course, modal, state);
+    }
+
     const kicker = document.getElementById('playerKicker');
     const title = document.getElementById('playerTitle');
     const body = document.getElementById('playerBody');
@@ -9449,7 +11117,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
           <h1>My Certifications</h1>
         </div>
         <div>
-          <p>Verified certificates of completion issued by EduCut.ai. Each certificate carries a tamper-evident verification identifier and can be printed or shared.</p>
+          <p>Verified certificates of completion issued by EduCut.ai. Each certificate carries a tamper-evident verification identifier and can be printed or downloaded as a vector PDF.</p>
         </div>
       </div>
 
@@ -9470,9 +11138,12 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
                 Verification ID: <span style="color:var(--blue)">${esc(c.id || c.verificationId)}</span>
               </div>
 
-              <div style="margin-top:auto">
-                <button class="btn btn-lime" style="width:100%" data-view-cert-id="${esc(c.courseCode)}">
-                  View &amp; Print Certificate →
+              <div style="margin-top:auto;display:flex;gap:8px">
+                <button class="btn btn-lime" style="flex:1" data-view-cert-id="${esc(c.courseCode)}">
+                  View Credential →
+                </button>
+                <button class="btn btn-outline" style="white-space:nowrap" data-download-cert-id="${esc(c.courseCode)}" title="Download PDF Certificate">
+                  PDF ⬇
                 </button>
               </div>
             </article>
@@ -9481,14 +11152,32 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       ` : `
         <div class="company-empty" style="padding:48px 24px">
           <h3>No Certificates Earned Yet</h3>
-          <p>Complete all modules in an active course (such as the Free Course <strong>FREE-101</strong>) to earn your first certified credential.</p>
-          <button class="btn btn-lime" id="certGotoDashboardBtn" style="margin-top:14px">Open My Learning &amp; Complete Modules →</button>
+          <p>Complete all modules in an active course or pass the <strong>ETHICS-101</strong> assessment (≥70%) to earn your first certified credential.</p>
+          <button class="btn btn-lime" id="certGotoDashboardBtn" style="margin-top:14px">Open My Learning &amp; Start Course →</button>
         </div>
       `}
     `;
 
     P.querySelectorAll('[data-view-cert-id]').forEach(b => {
       b.onclick = () => openCertificateViewer(b.dataset.viewCertId);
+    });
+
+    P.querySelectorAll('[data-download-cert-id]').forEach(b => {
+      b.onclick = () => {
+        const courseCode = b.dataset.downloadCertId;
+        const cert = (state.certificates || []).find(c => c.courseCode === courseCode);
+        if (cert) {
+          downloadCertificatePDF({
+            learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner'),
+            courseTitle: cert.courseTitle,
+            courseCode: cert.courseCode,
+            academyTitle: cert.academy,
+            issued: cert.issued,
+            verificationId: cert.id || cert.verificationId,
+            score: cert.score !== undefined ? cert.score : 10
+          });
+        }
+      };
     });
 
     document.getElementById('certGotoDashboardBtn')?.addEventListener('click', () => {
@@ -9504,14 +11193,15 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     const cert = (state.certificates || []).find(c => c.courseCode === courseCode) || {
       id: `EC-LIVE-${courseCode.replace(/[^A-Z0-9]/gi, '')}`,
       courseCode,
-      courseTitle: courseCode === 'FREE-101' ? 'AI Foundations & Prompting Essentials: Interactive Primer' : 'Advanced AI Professional Curriculum',
-      academy: 'EduCut.ai Academy',
-      issued: new Date().toISOString().slice(0, 10)
+      courseTitle: courseCode === 'ETHICS-101' ? 'Applied AI Ethics, Algorithmic Bias & Responsible Governance' : (courseCode === 'FREE-101' ? 'AI Foundations & Prompting Essentials: Interactive Primer' : 'Advanced AI Professional Curriculum'),
+      academy: courseCode === 'ETHICS-101' ? 'Academy A018 · Responsible AI' : 'EduCut.ai Academy',
+      issued: new Date().toISOString().slice(0, 10),
+      score: 10
     };
 
     const modal = document.getElementById('certViewerModal');
     const body = document.getElementById('certBody');
-    const learnerName = app.session?.name || 'Verified Learner';
+    const learnerName = formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner');
 
     body.innerHTML = `
       <div class="learner-cert-modal-paper" id="printableCert">
@@ -9523,11 +11213,11 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         </div>
 
         <div class="mono" style="color:var(--blue);font-size:11px;letter-spacing:.2em;margin-bottom:12px">
-          CERTIFICATE OF COMPLETION
+          CERTIFICATE OF PROFESSIONAL MASTERY
         </div>
         <p style="font-size:14px;color:#555;margin:0 0 16px">This is to officially certify that</p>
         <h2 style="font-size:32px;letter-spacing:-.04em;margin:0 0 16px;text-decoration:underline;text-underline-offset:6px">${esc(learnerName)}</h2>
-        <p style="font-size:14px;color:#555;margin:0 0 18px">has successfully completed the rigorous syllabus and practical applied exercises for</p>
+        <p style="font-size:14px;color:#555;margin:0 0 18px">has successfully passed the comprehensive assessment (${cert.score !== undefined ? `Score: ${cert.score}/10 · ${cert.score * 10}%` : 'Distinction'}) and mastered the rigorous syllabus for</p>
         <h3 style="font-size:22px;letter-spacing:-.03em;margin:0 0 6px;color:#0b0b0c">${esc(cert.courseCode)} · ${esc(cert.courseTitle)}</h3>
         <div class="mono" style="font-size:11px;color:#777;margin-bottom:24px">${esc(cert.academy)}</div>
 
@@ -9548,10 +11238,23 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       </div>
 
       <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:20px">
-        <button class="btn btn-outline" onclick="window.print()">Print / Save PDF</button>
-        <button class="btn btn-lime" onclick="document.getElementById('certViewerModal').classList.remove('open')">Close</button>
+        <button class="btn btn-outline" onclick="window.print()">Print via Browser</button>
+        <button class="btn btn-lime" id="modalDownloadPdfBtn">Download PDF Certificate ⬇</button>
+        <button class="btn btn-outline" onclick="document.getElementById('certViewerModal').classList.remove('open')">Close</button>
       </div>
     `;
+
+    document.getElementById('modalDownloadPdfBtn')?.addEventListener('click', () => {
+      downloadCertificatePDF({
+        learnerName,
+        courseTitle: cert.courseTitle,
+        courseCode: cert.courseCode,
+        academyTitle: cert.academy,
+        issued: cert.issued,
+        verificationId: cert.id || cert.verificationId,
+        score: cert.score !== undefined ? cert.score : 10
+      });
+    });
 
     modal.classList.add('open');
   }
