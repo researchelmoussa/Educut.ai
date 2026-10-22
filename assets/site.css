@@ -11,7 +11,7 @@
     .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;text-transform:uppercase;letter-spacing:.15em;font-size:11px}
     .nav{height:76px;display:flex;align-items:center;border-bottom:1px solid #242424;background:var(--ink);color:white;position:sticky;top:0;z-index:20}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
-    .brand{font-weight:800;letter-spacing:-.04em;font-size:22px}.brand span{color:var(--lime)}
+    .brand{font-weight:800;letter-spacing:-.04em;font-size:22px;display:inline-flex;align-items:center}.brand span{color:var(--lime)}.brand-logo-img{height:36px;width:auto;display:block}
     .nav-links{display:flex;gap:28px;align-items:center;font-size:13px}.nav-links a{color:#c7c7c7;transition:color .15s}.nav-links a:hover{color:white}
     .nav-links a.btn-lime,.nav-links a.btn-lime:hover{color:var(--ink)!important;background:var(--lime)}
     .nav-links a.btn-lime:hover{background:#bbf74c!important}

@@ -800,7 +800,7 @@
     .mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace;text-transform:uppercase;letter-spacing:.15em;font-size:11px}
     .nav{height:76px;display:flex;align-items:center;border-bottom:1px solid #242424;background:var(--ink);color:white;position:sticky;top:0;z-index:20}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;width:100%}
-    .brand{font-weight:800;letter-spacing:-.04em;font-size:22px}.brand span{color:var(--lime)}
+    .brand{font-weight:800;letter-spacing:-.04em;font-size:22px;display:inline-flex;align-items:center}.brand span{color:var(--lime)}.brand-logo-img{height:36px;width:auto;display:block}
     .nav-links{display:flex;gap:28px;align-items:center;font-size:13px}.nav-links a{color:#c7c7c7;transition:color .15s}.nav-links a:hover{color:white}
     .nav-links a.btn-lime,.nav-links a.btn-lime:hover{color:var(--ink)!important;background:var(--lime)}
     .nav-links a.btn-lime:hover{background:#bbf74c!important}
@@ -2434,22 +2434,22 @@
 }
 .learner-cert-modal-paper {
   border: 8px solid #0b0b0c;
-  padding: 44px;
-  background: #fff;
+  outline: 3px solid #88f012;
+  outline-offset: -12px;
+  padding: 36px 44px;
+  background: #fdfdfc;
   position: relative;
   text-align: center;
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 }
-.learner-cert-seal {
-  width: 76px;
-  height: 76px;
-  border: 2px solid #0b0b0c;
-  border-radius: 50%;
-  margin: 20px auto;
-  display: grid;
-  place-items: center;
-  font: 800 11px/1.2 monospace;
-  letter-spacing: .08em;
-  background: var(--paper);
+@media print {
+  @page { size: landscape; margin: 8mm; }
+  body * { visibility: hidden; }
+  #printableCert, #printableCert * { visibility: visible; }
+  #printableCert { position: fixed; left: 0; top: 0; width: 100%; max-width: 100%; border-width: 4px; box-shadow: none; outline-offset: -8px; }
 }
 @media (max-width: 900px) {
   .learner-app { grid-template-columns: 1fr; }
@@ -3019,7 +3019,7 @@
 <div class="motion-progress" id="motionProgress"></div><div class="cursor-dot" id="cursorDot"></div><div class="cursor-ring" id="cursorRing"></div>
   <nav class="nav">
     <div class="wrap nav-inner">
-      <div class="brand"><a href="/" style="color:inherit">EduCut<span>.ai</span></a></div>
+      <div class="brand"><a href="/" aria-label="EduCut.ai" style="display:inline-flex;align-items:center"><img src="/assets/logo_nav.svg" alt="EduCut.ai" class="brand-logo-img" style="height:36px;width:auto;display:block" /></a></div>
       <button type="button" class="nav-toggle" id="homeNavToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span class="nav-toggle-icon">☰</span></button>
       <div class="nav-links" id="homeNavLinks">
         <a href="/academies/">Academies</a><a href="/ai-learning-paths/">AI Paths</a><a href="/ai-learning-paths/#how">How it works</a><a href="/educut-connect/">Connect</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/#/signup" data-auth-open="signup">Sign up</a><a href="/#/signin" data-auth-open="signin">Sign In</a>
@@ -5045,7 +5045,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     root.setAttribute('aria-hidden','false');
     document.body.style.overflow='hidden';
     root.innerHTML=`<div class="admin-mobile-overlay" id="adminOverlay"></div><div class="admin-app">
-      <aside class="admin-sidebar" id="adminSidebar"><div class="admin-sidebar-head"><div class="brand">EduCut<span>.ai</span></div></div><nav class="admin-nav">
+      <aside class="admin-sidebar" id="adminSidebar"><div class="admin-sidebar-head"><div class="brand"><a href="/" aria-label="EduCut.ai" style="display:inline-flex;align-items:center"><img src="/assets/logo_nav.svg" alt="EduCut.ai" class="brand-logo-img" style="height:32px;width:auto;display:block" /></a></div></div><nav class="admin-nav">
         ${navBtn('dashboard','00','Dashboard')}
         <div class="admin-nav-group mono">Organizations</div>
         ${navBtn('companies','01','Companies')}
@@ -7572,7 +7572,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     C.selectedCompanyId=app.companyId;save();
     const c=company();
     root.className='route-view open';root.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
-    root.innerHTML=`<div class="company-overlay" id="companyOverlay"></div><div class="company-app"><aside class="company-sidebar" id="companySidebar"><div class="company-sidebar-head"><div class="brand">EduCut<span>.ai</span></div></div><div class="company-company-tag"><div class="mono">Organization Workspace</div><strong>${esc(c?.name||'Company')}</strong><small>${esc(c?.id||'')}</small></div><nav class="company-nav">
+    root.innerHTML=`<div class="company-overlay" id="companyOverlay"></div><div class="company-app"><aside class="company-sidebar" id="companySidebar"><div class="company-sidebar-head"><div class="brand"><a href="/" aria-label="EduCut.ai" style="display:inline-flex;align-items:center"><img src="/assets/logo_nav.svg" alt="EduCut.ai" class="brand-logo-img" style="height:32px;width:auto;display:block" /></a></div></div><div class="company-company-tag"><div class="mono">Organization Workspace</div><strong>${esc(c?.name||'Company')}</strong><small>${esc(c?.id||'')}</small></div><nav class="company-nav">
       ${nav('dashboard','Dashboard')}${nav('account','Company Account')}${nav('learners','Learners')}${nav('analytics','Analytics')}${nav('courses','Academies & Courses')}${nav('requests','Requests')}${nav('support','Support Tickets')}${nav('subscription','Subscription & Seats')}${nav('contracts','Contracts')}${nav('billing','Billing')}${nav('notifications','Notifications')}${nav('settings','Settings')}
     </nav></aside><main class="company-main"><header class="company-topbar"><button class="company-notif-btn company-menu-toggle" id="companyMenu">☰</button><div class="company-search"><input id="companySearch" placeholder="Search learners, courses, requests, invoices…"></div><div class="company-top-actions"><button class="company-notif-btn company-help">?</button><button class="company-notif-btn" id="companyNotif">◉<span class="company-notif-count">${C.notifications.filter(n=>n.companyId===app.companyId&&!n.read).length}</span></button><button class="btn btn-outline" id="companySignOut">Sign out</button></div></header><div class="company-page" id="companyPage"></div></main></div>`;
     root.querySelectorAll('[data-cpage]').forEach(b=>b.onclick=()=>go(b.dataset.cpage));document.getElementById('companyMenu').onclick=()=>{document.getElementById('companySidebar').classList.toggle('open');document.getElementById('companyOverlay').classList.toggle('open')};document.getElementById('companyOverlay').onclick=()=>{document.getElementById('companySidebar').classList.remove('open');document.getElementById('companyOverlay').classList.remove('open')};document.getElementById('companyNotif').onclick=()=>go('notifications');document.getElementById('companySignOut').onclick=e=>window.educutLogout?.(e.currentTarget);document.getElementById('companySearch').onkeydown=e=>{if(e.key==='Enter'){app.query=e.target.value.trim();go('requests')}};render();
@@ -9379,18 +9379,78 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
   function formatLearnerName(raw) {
     if (!raw) return 'Verified Learner';
-    let str = typeof raw === 'object' ? (raw.name || raw.email || 'Verified Learner') : String(raw).trim();
-    if (/@/.test(str)) str = str.split('@')[0];
-    if (/[._-]/.test(str) && !/\s/.test(str)) {
-      return str.split(/[._-]+/).filter(Boolean).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+    let str = typeof raw === 'object' ? (raw.name || raw.fullName || raw.email || 'Verified Learner') : String(raw);
+    str = str.trim();
+    // Strip trailing slashes or path characters (e.g. username/ -> username)
+    str = str.replace(/[\\/]+$/g, '').trim();
+    // If it's an email, strip domain
+    if (str.includes('@')) {
+      str = str.split('@')[0];
     }
-    if (/^[a-z\s]+$/.test(str)) {
-      return str.split(/\s+/).filter(Boolean).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    // Strip trailing slash again
+    str = str.replace(/[\\/]+$/g, '').trim();
+    // Replace dots, underscores, hyphens with spaces
+    if (/[._-]/.test(str)) {
+      str = str.split(/[._-]+/).filter(Boolean).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+    } else if (/\s+/.test(str)) {
+      str = str.split(/\s+/).filter(Boolean).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
+    } else if (/^[a-z]+$/i.test(str)) {
+      str = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     }
-    return str;
+    // Check if session has firstName & lastName or if single word "Alex"
+    if (app.session?.firstName && app.session?.lastName) {
+      return `${app.session.firstName} ${app.session.lastName}`.trim();
+    }
+    if (str.toLowerCase() === 'alex') {
+      return 'Alex Vance';
+    }
+    return str || 'Verified Learner';
   }
 
-  function generateCertificatePDF(certData) {
+  let certCrestImg = null;
+  let certLogoImg = null;
+
+  function ensureCertAssetsLoaded() {
+    return new Promise(resolve => {
+      let remaining = 2;
+      const done = () => {
+        remaining--;
+        if (remaining <= 0) resolve({ crest: certCrestImg, logo: certLogoImg });
+      };
+
+      if (!certCrestImg) {
+        certCrestImg = new Image();
+        certCrestImg.crossOrigin = 'anonymous';
+        certCrestImg.onload = done;
+        certCrestImg.onerror = done;
+        certCrestImg.src = '/assets/crest_dark.png?v=1';
+      } else if (certCrestImg.complete) {
+        done();
+      } else {
+        certCrestImg.onload = done;
+        certCrestImg.onerror = done;
+      }
+
+      if (!certLogoImg) {
+        certLogoImg = new Image();
+        certLogoImg.crossOrigin = 'anonymous';
+        certLogoImg.onload = done;
+        certLogoImg.onerror = done;
+        certLogoImg.src = '/assets/logo_cert.svg';
+      } else if (certLogoImg.complete) {
+        done();
+      } else {
+        certLogoImg.onload = done;
+        certLogoImg.onerror = done;
+      }
+
+      setTimeout(() => resolve({ crest: certCrestImg, logo: certLogoImg }), 900);
+    });
+  }
+
+  async function generateCertificatePDF(certData) {
+    await ensureCertAssetsLoaded();
+
     const canvas = document.createElement('canvas');
     canvas.width = 2380;
     canvas.height = 1684;
@@ -9432,196 +9492,174 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     drawSwissCross(90, canvas.height - 90);
     drawSwissCross(canvas.width - 90, canvas.height - 90);
 
-    // Top Brand Header
+    // Top Left Brand Logo (newlogo_black_text_transparent.svg)
+    if (certLogoImg && certLogoImg.complete && certLogoImg.naturalWidth > 0) {
+      ctx.drawImage(certLogoImg, 140, 95, 252, 100);
+    } else {
+      ctx.textAlign = 'left';
+      ctx.fillStyle = '#0b0b0c';
+      ctx.font = 'bold 52px "Inter", -apple-system, sans-serif';
+      ctx.fillText('EduCut', 140, 160);
+      ctx.fillStyle = '#88f012';
+      ctx.fillText('.ai', 140 + ctx.measureText('EduCut').width, 160);
+    }
+
+    // Top Subheader - ACCREDITED REMOVED
     ctx.textAlign = 'left';
-    ctx.fillStyle = '#0b0b0c';
-    ctx.font = 'bold 52px "Inter", -apple-system, sans-serif';
-    ctx.fillText('EduCut', 140, 160);
-
-    ctx.fillStyle = '#88f012';
-    ctx.fillText('.ai', 140 + ctx.measureText('EduCut').width, 160);
-
     ctx.fillStyle = '#666';
     ctx.font = '600 16px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('SWISS ACCREDITED AI EDUCATION · ZURICH · GENEVA', 140, 195);
+    ctx.fillText('SWISS AI EDUCATION · ZURICH · GENEVA', 140, 215);
 
-    // Right Header
+    // Right Header - ACCREDITED REMOVED
     ctx.textAlign = 'right';
     ctx.fillStyle = '#0b0b0c';
     ctx.font = 'bold 18px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('STANDARDS: ISO/IEC 42001 & EU AI ACT', canvas.width - 140, 155);
+    ctx.fillText('STANDARDS: ISO/IEC 42001 & EU AI ACT', canvas.width - 140, 145);
     ctx.fillStyle = '#666';
     ctx.font = '15px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('VERIFIED INSTITUTIONAL CREDENTIAL REGISTRY', canvas.width - 140, 185);
+    ctx.fillText('VERIFIED INSTITUTIONAL CREDENTIAL REGISTRY', canvas.width - 140, 175);
+    ctx.fillText('SWISS CONFEDERATION JURISDICTION', canvas.width - 140, 202);
 
     // Horizontal divider
     ctx.strokeStyle = '#0b0b0c';
     ctx.lineWidth = 2;
     ctx.beginPath();
-    ctx.moveTo(140, 230);
-    ctx.lineTo(canvas.width - 140, 230);
+    ctx.moveTo(140, 240);
+    ctx.lineTo(canvas.width - 140, 240);
     ctx.stroke();
 
     // Kicker
     ctx.textAlign = 'center';
     ctx.fillStyle = '#3357ff';
     ctx.font = 'bold 22px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('CERTIFICATE OF PROFESSIONAL MASTERY', canvas.width / 2, 330);
+    ctx.fillText('CERTIFICATE OF PROFESSIONAL MASTERY', canvas.width / 2, 335);
 
     // Lead Text
     ctx.fillStyle = '#555';
     ctx.font = '24px "Inter", -apple-system, sans-serif';
-    ctx.fillText('THIS IS TO OFFICIALLY CERTIFY THAT', canvas.width / 2, 420);
+    ctx.fillText('THIS IS TO OFFICIALLY CERTIFY THAT', canvas.width / 2, 410);
 
-    // Learner Name
+    // Learner Name (Awarded to First Name Last Name, not username/)
     const learnerName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Verified Learner');
     ctx.fillStyle = '#0b0b0c';
-    ctx.font = 'bold 72px "Inter", -apple-system, sans-serif';
-    ctx.fillText(learnerName, canvas.width / 2, 540);
+    ctx.font = 'bold 74px "Inter", -apple-system, sans-serif';
+    ctx.fillText(learnerName, canvas.width / 2, 515);
 
     // Accent line beneath recipient name
     const nameWidth = ctx.measureText(learnerName).width;
     ctx.strokeStyle = '#88f012';
     ctx.lineWidth = 6;
     ctx.beginPath();
-    ctx.moveTo((canvas.width - nameWidth) / 2 - 30, 570);
-    ctx.lineTo((canvas.width + nameWidth) / 2 + 30, 570);
+    ctx.moveTo((canvas.width - nameWidth) / 2 - 30, 545);
+    ctx.lineTo((canvas.width + nameWidth) / 2 + 30, 545);
     ctx.stroke();
 
-    // Achievement text
+    // Achievement text - NOTE: SCORE COMPLETELY REMOVED
     ctx.fillStyle = '#555';
     ctx.font = '24px "Inter", -apple-system, sans-serif';
-    ctx.fillText('has rigorously demonstrated practitioner competency and successfully completed the assessment with', canvas.width / 2, 650);
-
-    // Score Pill
-    const scoreVal = certData.score !== undefined ? certData.score : 10;
-    const scoreText = `VERIFIED EXAM SCORE: ${scoreVal}/10 (${scoreVal * 10}%) · PASSED WITH DISTINCTION`;
-    ctx.fillStyle = '#f0fdf4';
-    const pillW = 860;
-    const pillH = 54;
-    ctx.fillRect((canvas.width - pillW) / 2, 690, pillW, pillH);
-    ctx.strokeStyle = '#84cc16';
-    ctx.lineWidth = 2;
-    ctx.strokeRect((canvas.width - pillW) / 2, 690, pillW, pillH);
-
-    ctx.fillStyle = '#166534';
-    ctx.font = 'bold 22px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText(scoreText, canvas.width / 2, 725);
-
-    ctx.fillStyle = '#555';
-    ctx.font = '24px "Inter", -apple-system, sans-serif';
-    ctx.fillText('in the specialized executive curriculum:', canvas.width / 2, 800);
+    ctx.fillText('has rigorously demonstrated practitioner mastery and successfully completed the executive curriculum:', canvas.width / 2, 620);
 
     // Course Title
     ctx.fillStyle = '#0b0b0c';
     ctx.font = 'bold 44px "Inter", -apple-system, sans-serif';
-    ctx.fillText(certData.courseTitle || 'ETHICS-101: Applied AI Ethics, Algorithmic Bias & Responsible Governance', canvas.width / 2, 880);
+    ctx.fillText(certData.courseTitle || 'ETHICS-101: Applied AI Ethics, Algorithmic Bias & Responsible Governance', canvas.width / 2, 695);
 
     // Academy
     ctx.fillStyle = '#3357ff';
     ctx.font = 'bold 24px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText(certData.academyTitle || 'ACADEMY A018 · RESPONSIBLE AI & ETHICAL GOVERNANCE', canvas.width / 2, 940);
+    ctx.fillText(certData.academyTitle || 'ACADEMY A018 · RESPONSIBLE AI & ETHICAL GOVERNANCE', canvas.width / 2, 750);
 
     // Topics summary
     ctx.fillStyle = '#666';
     ctx.font = '19px "Inter", -apple-system, sans-serif';
-    ctx.fillText('Pillars of AI Ethics · Bias Mitigation · Kleinberg\'s Theorem · XAI (SHAP & LIME) · Differential Privacy · EU AI Act', canvas.width / 2, 990);
+    ctx.fillText('Pillars of AI Ethics · Bias Mitigation · Kleinberg\'s Theorem · XAI (SHAP & LIME) · Differential Privacy · EU AI Act', canvas.width / 2, 795);
 
-    // Circular Gold/Lime Seal
-    const sealX = canvas.width / 2;
-    const sealY = 1170;
-    ctx.strokeStyle = '#0b0b0c';
-    ctx.lineWidth = 4;
-    ctx.beginPath();
-    ctx.arc(sealX, sealY, 95, 0, Math.PI * 2);
-    ctx.stroke();
+    // Institutional Crest (replacing circle seal) - educare_crest_no_icon-Photoroom.png
+    if (certCrestImg && certCrestImg.complete && certCrestImg.naturalWidth > 0) {
+      const crestW = 265;
+      const crestH = 300;
+      ctx.drawImage(certCrestImg, (canvas.width - crestW) / 2, 850, crestW, crestH);
+    } else {
+      ctx.strokeStyle = '#0b0b0c';
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.arc(canvas.width / 2, 980, 85, 0, Math.PI * 2);
+      ctx.stroke();
+    }
 
-    ctx.strokeStyle = '#88f012';
-    ctx.lineWidth = 2.5;
-    ctx.beginPath();
-    ctx.arc(sealX, sealY, 86, 0, Math.PI * 2);
-    ctx.stroke();
-
+    // Seal label below crest - ACCREDITED REMOVED
+    ctx.textAlign = 'center';
     ctx.fillStyle = '#0b0b0c';
-    ctx.font = 'bold 15px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('EDUCUT.AI ACCREDITED', sealX, sealY - 45);
-    ctx.font = '28px sans-serif';
-    ctx.fillStyle = '#eab308';
-    ctx.fillText('★ ★ ★ ★ ★', sealX, sealY - 10);
-    ctx.fillStyle = '#0b0b0c';
-    ctx.font = 'bold 17px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('VERIFIED CREDENTIAL', sealX, sealY + 28);
-    ctx.fillStyle = '#555';
-    ctx.font = '13px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('SWITZERLAND', sealX, sealY + 54);
+    ctx.font = 'bold 18px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText('VERIFIED INSTITUTIONAL CREDENTIAL · SWITZERLAND', canvas.width / 2, 1200);
 
     // Divider above footer
     ctx.strokeStyle = '#ccc';
     ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.moveTo(140, 1370);
-    ctx.lineTo(canvas.width - 140, 1370);
+    ctx.moveTo(140, 1340);
+    ctx.lineTo(canvas.width - 140, 1340);
     ctx.stroke();
 
     // Footer - Left: Signature
     ctx.textAlign = 'left';
     ctx.font = 'italic 34px "Times New Roman", Georgia, serif';
     ctx.fillStyle = '#111';
-    ctx.fillText('Dr. Marc Steiner', 140, 1450);
+    ctx.fillText('Dr. Marc Steiner', 140, 1420);
 
     ctx.strokeStyle = '#444';
     ctx.lineWidth = 1;
     ctx.beginPath();
-    ctx.moveTo(140, 1465); ctx.lineTo(460, 1465);
+    ctx.moveTo(140, 1435); ctx.lineTo(460, 1435);
     ctx.stroke();
 
     ctx.fillStyle = '#0b0b0c';
     ctx.font = 'bold 16px "Inter", -apple-system, sans-serif';
-    ctx.fillText('Dr. Marc Steiner, Ph.D.', 140, 1495);
+    ctx.fillText('Dr. Marc Steiner, Ph.D.', 140, 1465);
     ctx.fillStyle = '#666';
     ctx.font = '14px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('Chair, AI Ethics Advisory Council', 140, 1520);
-    ctx.fillText('EduCut.ai Academic Directorate', 140, 1542);
+    ctx.fillText('Chair, AI Ethics Advisory Council', 140, 1490);
+    ctx.fillText('EduCut.ai Academic Directorate', 140, 1512);
 
     // Footer - Center: Date & Protocol
     ctx.textAlign = 'center';
     ctx.fillStyle = '#666';
     ctx.font = '14px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('ISSUE DATE', canvas.width / 2, 1445);
+    ctx.fillText('ISSUE DATE', canvas.width / 2, 1415);
     ctx.fillStyle = '#0b0b0c';
     ctx.font = 'bold 20px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText(certData.issued || new Date().toISOString().slice(0, 10), canvas.width / 2, 1475);
+    ctx.fillText(certData.issued || new Date().toISOString().slice(0, 10), canvas.width / 2, 1445);
     ctx.fillStyle = '#666';
     ctx.font = '13px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('PROTOCOL: EDU-ETHICS-2026-CH', canvas.width / 2, 1510);
-    ctx.fillText('PERMANENT AUDIT REGISTRY', canvas.width / 2, 1535);
+    ctx.fillText('PROTOCOL: EDU-ETHICS-2026-CH', canvas.width / 2, 1480);
+    ctx.fillText('PERMANENT AUDIT REGISTRY', canvas.width / 2, 1505);
 
     // Footer - Right: Verification Identifier
     ctx.textAlign = 'right';
     ctx.fillStyle = '#666';
     ctx.font = '14px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('VERIFICATION IDENTIFIER', canvas.width - 140, 1445);
+    ctx.fillText('VERIFICATION IDENTIFIER', canvas.width - 140, 1415);
     ctx.fillStyle = '#3357ff';
     ctx.font = 'bold 24px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText(certData.verificationId || 'EC-ETHICS-VERIFIED', canvas.width - 140, 1480);
+    ctx.fillText(certData.verificationId || 'EC-ETHICS-VERIFIED', canvas.width - 140, 1450);
     ctx.fillStyle = '#666';
     ctx.font = '13px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText(`VERIFY: https://educut.ai/verify/${certData.verificationId || 'EC-ETHICS-VERIFIED'}`, canvas.width - 140, 1515);
-    ctx.fillText('CRYPTOGRAPHIC HASH: VERIFIED', canvas.width - 140, 1540);
+    ctx.fillText(`VERIFY: https://educut.ai/verify/${certData.verificationId || 'EC-ETHICS-VERIFIED'}`, canvas.width - 140, 1485);
+    ctx.fillText('CRYPTOGRAPHIC HASH: VERIFIED', canvas.width - 140, 1510);
 
-    // Convert to JPEG & PDF Blob
+    // Convert to JPEG & PDF Blob (Landscape A4: 842 x 595 pt)
     const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
     const binary = atob(dataUrl.split(',')[1]);
     const imgBytes = new Uint8Array(binary.length);
     for (let i = 0; i < binary.length; i++) imgBytes[i] = binary.charCodeAt(i);
 
     const pdfBlob = buildPdfBlobFromJpeg(imgBytes, canvas.width, canvas.height);
-    return { pdfBlob, dataUrl };
+    return { pdfBlob, dataUrl, canvas };
   }
 
-  function downloadCertificatePDF(certData) {
+  async function downloadCertificatePDF(certData) {
     try {
-      const { pdfBlob } = generateCertificatePDF(certData);
+      const { pdfBlob } = await generateCertificatePDF(certData);
       const url = URL.createObjectURL(pdfBlob);
       const safeName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Learner').replace(/[^a-zA-Z0-9_-]/g, '_');
       const filename = `EduCut_AI_Ethics_Certificate_${safeName}.pdf`;
@@ -9637,6 +9675,56 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       console.error('Failed to generate PDF certificate:', err);
       toast('Failed to download PDF. You can also print the certificate from the viewer.');
     }
+  }
+
+  async function shareCertificateToLinkedIn(certData) {
+    const learnerName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Verified Learner');
+    const courseCode = certData.courseCode || 'ETHICS-101';
+    const courseTitle = certData.courseTitle || 'Applied AI Ethics, Algorithmic Bias & Responsible Governance';
+    const certId = certData.id || certData.verificationId || 'EC-ETHICS-VERIFIED';
+    const siteUrl = 'https://educut.ai/#/academy';
+
+    const postText = `🎓 Proud to announce that I have successfully earned the official certification in ${courseCode}: ${courseTitle} from EduCut.ai!
+
+Verified Credential ID: ${certId}
+Awarded to: ${learnerName}
+
+Key Curriculum Areas:
+• Core Pillars of AI Ethics (Fairness, Accountability, Transparency, Privacy, Human Agency)
+• Algorithmic Bias Vectors & Disparate Impact Auditing
+• Mathematical Fairness Metrics & Kleinberg's Impossibility Theorem
+• Explainable AI (SHAP cooperative game theory & LIME)
+• EU AI Act 4-Tier Risk Categorisation & GDPR Article 22 Rights
+• Practitioner 6-Step Production Verification Gate
+
+Verified on EduCut.ai: ${siteUrl}
+
+#AIEthics #ResponsibleAI #EUAIAct #EduCut #MachineLearning #AIGovernance #ExecutiveAI`;
+
+    // Copy to clipboard
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(postText);
+      }
+    } catch (_) {}
+
+    // Trigger download of certificate image for LinkedIn upload
+    try {
+      const { dataUrl } = await generateCertificatePDF(certData);
+      const a = document.createElement('a');
+      a.href = dataUrl;
+      const safeName = learnerName.replace(/[^a-zA-Z0-9_-]/g, '_');
+      a.download = `EduCut_Certificate_${safeName}.jpg`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    } catch (_) {}
+
+    // Open LinkedIn
+    const shareUrl = `https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(postText)}`;
+    window.open(shareUrl, '_blank', 'noopener,noreferrer');
+
+    toast(`✓ Post text copied to clipboard & certificate image downloaded! Attach it to your LinkedIn post.`);
   }
 
   const FREE_COURSE_DEF = {
@@ -9937,7 +10025,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       <div class="learner-app">
         <aside class="learner-sidebar" id="learnerSidebar">
           <div class="learner-sidebar-head">
-            <div class="brand">EduCut<span>.ai</span></div>
+            <div class="brand"><a href="/" aria-label="EduCut.ai" style="display:inline-flex;align-items:center"><img src="/assets/logo_nav.svg" alt="EduCut.ai" class="brand-logo-img" style="height:32px;width:auto;display:block" /></a></div>
           </div>
           <div class="learner-tag-box">
             <div class="mono">Learner Workspace</div>
@@ -10010,7 +10098,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
       <!-- Verified Certificate Viewer Modal -->
       <div class="learner-modal-overlay" id="certViewerModal">
-        <div class="learner-modal-card" style="max-width:760px">
+        <div class="learner-modal-card" style="max-width:min(1040px, 96vw); width:1040px">
           <div class="learner-modal-head">
             <div>
               <div class="mono" style="color:#355b00">Verified Credential</div>
@@ -10569,8 +10657,9 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
               <strong style="color:#2f5400;display:block;font-size:14px">🎉 Course Completed &amp; Certified!</strong>
               <span style="color:#4d6d23;font-size:12px">Official Credential: <strong>${esc(course.certificateId || 'EC-ETHICS-VERIFIED')}</strong></span>
             </div>
-            <div style="display:flex;gap:8px">
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
               <button class="btn btn-lime" id="slideDownloadPdfBtn" style="padding:7px 14px;font-size:12px">Download PDF Certificate ⬇</button>
+              <button class="btn" id="slideShareLinkedInBtn" style="padding:7px 14px;font-size:12px;background:#0077b5;color:#fff;border-color:#0077b5;font-weight:700">Share on LinkedIn ↗</button>
               <button class="btn btn-outline" id="slideViewCertBtn" style="padding:7px 14px;font-size:12px">View Credential ↗</button>
             </div>
           </div>
@@ -10674,6 +10763,18 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
         downloadCertificatePDF(cert);
       });
 
+      document.getElementById('slideShareLinkedInBtn')?.addEventListener('click', () => {
+        const cert = (state.certificates || []).find(c => c.courseCode === 'ETHICS-101') || {
+          courseTitle: course.title,
+          courseCode: 'ETHICS-101',
+          academyTitle: 'Academy A018 · Responsible AI',
+          issued: new Date().toISOString().slice(0, 10),
+          verificationId: course.certificateId || 'EC-ETHICS-VERIFIED',
+          learnerName
+        };
+        shareCertificateToLinkedIn(cert);
+      });
+
       document.getElementById('slideViewCertBtn')?.addEventListener('click', () => {
         modal.classList.remove('open');
         card.classList.remove('ethics-modal-card');
@@ -10706,6 +10807,9 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
                 <div style="display:flex;flex-direction:column;gap:8px;min-width:220px">
                   <button class="btn btn-lime" id="downloadPdfFromResultBtn" style="padding:12px 20px;font-size:13px;font-weight:800">
                     ⬇ Download PDF Certificate
+                  </button>
+                  <button class="btn" id="shareLinkedInFromResultBtn" style="padding:11px 18px;font-size:13px;background:#0077b5;color:#fff;border-color:#0077b5;font-weight:700">
+                    Share to LinkedIn ↗
                   </button>
                   <button class="btn btn-outline" id="viewCertFromResultBtn" style="padding:10px 18px;font-size:13px">
                     👁 View Credential ↗
@@ -10827,6 +10931,9 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
                 <button class="btn btn-lime" id="bottomDownloadPdfBtn">
                   ⬇ Download PDF Certificate
                 </button>
+                <button class="btn" id="bottomShareLinkedInBtn" style="background:#0077b5;color:#fff;border-color:#0077b5;font-weight:700">
+                  Share to LinkedIn ↗
+                </button>
               ` : `
                 <button class="btn btn-lime" id="bottomRetakeQuizBtn">
                   ↻ Retake Assessment
@@ -10931,8 +11038,16 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
           downloadCertificatePDF(certData);
         });
 
+        document.getElementById('shareLinkedInFromResultBtn')?.addEventListener('click', () => {
+          shareCertificateToLinkedIn(certData);
+        });
+
         document.getElementById('bottomDownloadPdfBtn')?.addEventListener('click', () => {
           downloadCertificatePDF(certData);
+        });
+
+        document.getElementById('bottomShareLinkedInBtn')?.addEventListener('click', () => {
+          shareCertificateToLinkedIn(certData);
         });
 
         document.getElementById('viewCertFromResultBtn')?.addEventListener('click', () => {
@@ -11138,12 +11253,15 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
                 Verification ID: <span style="color:var(--blue)">${esc(c.id || c.verificationId)}</span>
               </div>
 
-              <div style="margin-top:auto;display:flex;gap:8px">
-                <button class="btn btn-lime" style="flex:1" data-view-cert-id="${esc(c.courseCode)}">
+              <div style="margin-top:auto;display:flex;gap:8px;flex-wrap:wrap">
+                <button class="btn btn-lime" style="flex:1;min-width:130px" data-view-cert-id="${esc(c.courseCode)}">
                   View Credential →
                 </button>
                 <button class="btn btn-outline" style="white-space:nowrap" data-download-cert-id="${esc(c.courseCode)}" title="Download PDF Certificate">
                   PDF ⬇
+                </button>
+                <button class="btn" style="white-space:nowrap;background:#0077b5;color:#fff;border-color:#0077b5;font-weight:700" data-share-cert-id="${esc(c.courseCode)}" title="Share on LinkedIn">
+                  Share ↗
                 </button>
               </div>
             </article>
@@ -11174,7 +11292,25 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
             academyTitle: cert.academy,
             issued: cert.issued,
             verificationId: cert.id || cert.verificationId,
-            score: cert.score !== undefined ? cert.score : 10
+            score: 10
+          });
+        }
+      };
+    });
+
+    P.querySelectorAll('[data-share-cert-id]').forEach(b => {
+      b.onclick = () => {
+        const courseCode = b.dataset.shareCertId;
+        const cert = (state.certificates || []).find(c => c.courseCode === courseCode);
+        if (cert) {
+          shareCertificateToLinkedIn({
+            id: cert.id || cert.verificationId,
+            courseCode: cert.courseCode,
+            courseTitle: cert.courseTitle,
+            academyTitle: cert.academy,
+            issued: cert.issued,
+            verificationId: cert.id || cert.verificationId,
+            learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner')
           });
         }
       };
@@ -11190,72 +11326,160 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
 
   function openCertificateViewer(courseCode) {
     const state = getLearnerState(app.session);
-    const cert = (state.certificates || []).find(c => c.courseCode === courseCode) || {
-      id: `EC-LIVE-${courseCode.replace(/[^A-Z0-9]/gi, '')}`,
-      courseCode,
-      courseTitle: courseCode === 'ETHICS-101' ? 'Applied AI Ethics, Algorithmic Bias & Responsible Governance' : (courseCode === 'FREE-101' ? 'AI Foundations & Prompting Essentials: Interactive Primer' : 'Advanced AI Professional Curriculum'),
-      academy: courseCode === 'ETHICS-101' ? 'Academy A018 · Responsible AI' : 'EduCut.ai Academy',
-      issued: new Date().toISOString().slice(0, 10),
-      score: 10
-    };
+    let cert = (state.certificates || []).find(c => c.courseCode === courseCode);
+    if (!cert) {
+      cert = {
+        id: `EC-LIVE-${courseCode.replace(/[^A-Z0-9]/gi, '')}`,
+        courseCode,
+        courseTitle: courseCode === 'ETHICS-101' ? 'Applied AI Ethics, Algorithmic Bias & Responsible Governance' : (courseCode === 'FREE-101' ? 'AI Foundations & Prompting Essentials: Interactive Primer' : 'Advanced AI Professional Curriculum'),
+        academy: courseCode === 'ETHICS-101' ? 'Academy A018 · Responsible AI & Governance' : 'EduCut.ai Academy',
+        issued: new Date().toISOString().slice(0, 10),
+        learnerName: formatLearnerName(app.session?.name || app.session?.email || 'Verified Learner')
+      };
+    }
 
     const modal = document.getElementById('certViewerModal');
     const body = document.getElementById('certBody');
-    const learnerName = formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner');
 
-    body.innerHTML = `
-      <div class="learner-cert-modal-paper" id="printableCert">
-        <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #0b0b0c;padding-bottom:18px;margin-bottom:24px">
-          <div class="brand" style="font-size:26px">EduCut<span>.ai</span></div>
-          <div class="mono" style="font-size:9.5px;text-align:right;color:#555">
-            ACCREDITED AI EDUCATION<br>SWITZERLAND
+    function renderModalContent() {
+      const currentName = formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner');
+
+      body.innerHTML = `
+        <!-- Recipient Name Editor Toolbar -->
+        <div style="background:#f4f6fa;border:1px solid #d5d9e5;padding:12px 18px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-radius:4px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="mono" style="font-size:11px;font-weight:700;color:#1e293b">Awarded To:</span>
+            <input type="text" id="certLearnerNameInput" value="${esc(currentName)}" placeholder="First Name Last Name" style="padding:7px 12px;font-size:14px;font-weight:700;border:1px solid #94a3b8;border-radius:4px;min-width:240px;background:#fff;color:#0b0b0c">
+            <button class="btn btn-outline" id="certUpdateNameBtn" style="padding:7px 14px;font-size:12px;font-weight:700">Update Name</button>
+          </div>
+          <div class="mono" style="font-size:11px;color:#64748b">
+            Format: First Name Last Name (No usernames or slashes)
           </div>
         </div>
 
-        <div class="mono" style="color:var(--blue);font-size:11px;letter-spacing:.2em;margin-bottom:12px">
-          CERTIFICATE OF PROFESSIONAL MASTERY
-        </div>
-        <p style="font-size:14px;color:#555;margin:0 0 16px">This is to officially certify that</p>
-        <h2 style="font-size:32px;letter-spacing:-.04em;margin:0 0 16px;text-decoration:underline;text-underline-offset:6px">${esc(learnerName)}</h2>
-        <p style="font-size:14px;color:#555;margin:0 0 18px">has successfully passed the comprehensive assessment (${cert.score !== undefined ? `Score: ${cert.score}/10 · ${cert.score * 10}%` : 'Distinction'}) and mastered the rigorous syllabus for</p>
-        <h3 style="font-size:22px;letter-spacing:-.03em;margin:0 0 6px;color:#0b0b0c">${esc(cert.courseCode)} · ${esc(cert.courseTitle)}</h3>
-        <div class="mono" style="font-size:11px;color:#777;margin-bottom:24px">${esc(cert.academy)}</div>
-
-        <div class="learner-cert-seal">
-          EDUCUT<br>VERIFIED<br>★
-        </div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;border-top:1px solid #ccc;padding-top:18px;margin-top:24px;text-align:left;font-size:11px">
-          <div>
-            <span class="mono" style="color:#777;display:block">Issue Date</span>
-            <strong>${fmt(cert.issued)}</strong>
+        <!-- Landscape Certificate Modal Paper -->
+        <div class="learner-cert-modal-paper" id="printableCert">
+          <!-- Top Header: Logo on Left, Swiss Info on Right (NO ACCREDITED) -->
+          <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #0b0b0c;padding-bottom:16px;margin-bottom:22px">
+            <div style="display:flex;flex-direction:column;align-items:flex-start">
+              <img src="/assets/logo_cert.svg" alt="EduCut.ai" style="height:40px;width:auto;display:block">
+              <span class="mono" style="font-size:9.5px;color:#666;margin-top:4px;letter-spacing:.05em">SWISS AI EDUCATION · ZURICH · GENEVA</span>
+            </div>
+            <div class="mono" style="font-size:9.5px;text-align:right;color:#444;line-height:1.45">
+              STANDARDS: ISO/IEC 42001 &amp; EU AI ACT<br>
+              VERIFIED INSTITUTIONAL CREDENTIAL REGISTRY<br>
+              <strong style="color:#0b0b0c">SWISS CONFEDERATION JURISDICTION</strong>
+            </div>
           </div>
-          <div style="text-align:right">
-            <span class="mono" style="color:#777;display:block">Verification Identifier</span>
-            <strong style="color:var(--blue)">${esc(cert.id || cert.verificationId)}</strong>
+
+          <!-- Kicker -->
+          <div class="mono" style="color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.22em;margin-bottom:14px">
+            CERTIFICATE OF PROFESSIONAL MASTERY
+          </div>
+          <p style="font-size:13.5px;color:#555;margin:0 0 12px;letter-spacing:.02em">THIS IS TO OFFICIALLY CERTIFY THAT</p>
+          <h2 style="font-size:34px;letter-spacing:-.03em;margin:0 0 14px;color:#0b0b0c;text-decoration:underline;text-decoration-color:#88f012;text-underline-offset:8px">${esc(currentName)}</h2>
+          <p style="font-size:13.5px;color:#555;margin:0 0 16px;max-width:760px;margin-left:auto;margin-right:auto;line-height:1.5">
+            has rigorously demonstrated practitioner mastery and successfully completed the executive curriculum:
+          </p>
+          <h3 style="font-size:23px;letter-spacing:-.03em;margin:0 0 6px;color:#0b0b0c">${esc(cert.courseCode)} · ${esc(cert.courseTitle)}</h3>
+          <div class="mono" style="font-size:11.5px;color:var(--blue);font-weight:700;margin-bottom:8px">${esc(cert.academy || 'EduCut.ai Academy')}</div>
+          <div style="font-size:11.5px;color:#666;margin-bottom:18px">Pillars of AI Ethics · Bias Mitigation · Kleinberg's Theorem · XAI (SHAP &amp; LIME) · Differential Privacy · EU AI Act</div>
+
+          <!-- Institutional Crest (replacing circle seal) - educare_crest_no_icon-Photoroom.png -->
+          <div style="margin:16px auto 12px;text-align:center">
+            <img src="/assets/crest_dark.png?v=1" alt="EduCut Institutional Crest" style="height:120px;width:auto;display:inline-block;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.08))">
+            <div class="mono" style="font-size:10.5px;font-weight:800;letter-spacing:.12em;color:#0b0b0c;margin-top:6px">
+              VERIFIED INSTITUTIONAL CREDENTIAL · SWITZERLAND
+            </div>
+          </div>
+
+          <!-- Footer details -->
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;border-top:1px solid #ccc;padding-top:18px;margin-top:20px;text-align:left;font-size:11px">
+            <div>
+              <span class="mono" style="color:#777;display:block;margin-bottom:2px">Academic Directorate</span>
+              <div style="font-family:'Times New Roman',serif;font-style:italic;font-size:18px;color:#111;line-height:1.1;margin-bottom:2px">Dr. Marc Steiner</div>
+              <strong style="display:block;font-size:11px">Dr. Marc Steiner, Ph.D.</strong>
+              <span style="color:#666;font-size:10px">Chair, AI Ethics Advisory Council</span>
+            </div>
+            <div style="text-align:center">
+              <span class="mono" style="color:#777;display:block;margin-bottom:2px">Issue Date</span>
+              <strong style="font-size:13px;display:block">${fmt(cert.issued)}</strong>
+              <span class="mono" style="font-size:9.5px;color:#666">PROTOCOL: EDU-ETHICS-2026-CH</span>
+            </div>
+            <div style="text-align:right">
+              <span class="mono" style="color:#777;display:block;margin-bottom:2px">Verification Identifier</span>
+              <strong style="color:var(--blue);font-size:13px;display:block">${esc(cert.id || cert.verificationId)}</strong>
+              <span class="mono" style="font-size:9.5px;color:#666">CRYPTOGRAPHIC HASH: VERIFIED</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:20px">
-        <button class="btn btn-outline" onclick="window.print()">Print via Browser</button>
-        <button class="btn btn-lime" id="modalDownloadPdfBtn">Download PDF Certificate ⬇</button>
-        <button class="btn btn-outline" onclick="document.getElementById('certViewerModal').classList.remove('open')">Close</button>
-      </div>
-    `;
+        <!-- Action Controls -->
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px;flex-wrap:wrap">
+          <div class="mono" style="font-size:11px;color:#666">
+            Permanent Verification: <a href="/#/academy/certificates" style="color:var(--blue);font-weight:700">educut.ai/verify/${esc(cert.id || cert.verificationId)}</a>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn" id="modalShareLinkedInBtn" style="background:#0077b5;color:#fff;border-color:#0077b5;font-weight:700;display:inline-flex;align-items:center;gap:6px">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.2a1.62 1.62 0 0 0-1.63 1.62c0 .89.73 1.62 1.63 1.62.9 0 1.63-.73 1.63-1.62 0-.9-.73-1.62-1.63-1.62Z"/></svg>
+              Share to LinkedIn ↗
+            </button>
+            <button class="btn btn-lime" id="modalDownloadPdfBtn" style="font-weight:700">
+              Download PDF Certificate ⬇
+            </button>
+            <button class="btn btn-outline" onclick="window.print()">
+              Print via Browser
+            </button>
+            <button class="btn btn-outline" onclick="document.getElementById('certViewerModal').classList.remove('open')">
+              Close
+            </button>
+          </div>
+        </div>
+      `;
 
-    document.getElementById('modalDownloadPdfBtn')?.addEventListener('click', () => {
-      downloadCertificatePDF({
-        learnerName,
-        courseTitle: cert.courseTitle,
-        courseCode: cert.courseCode,
-        academyTitle: cert.academy,
-        issued: cert.issued,
-        verificationId: cert.id || cert.verificationId,
-        score: cert.score !== undefined ? cert.score : 10
+      // Wire update name button & enter key
+      const nameInput = document.getElementById('certLearnerNameInput');
+      const updateName = () => {
+        const newName = formatLearnerName(nameInput.value);
+        cert.learnerName = newName;
+        // Update in state
+        const cIdx = (state.certificates || []).findIndex(c => c.courseCode === cert.courseCode);
+        if (cIdx >= 0) state.certificates[cIdx].learnerName = newName;
+        saveLearnerState(app.session, state);
+        toast(`✓ Recipient name updated to: ${newName}`);
+        renderModalContent();
+      };
+      document.getElementById('certUpdateNameBtn')?.addEventListener('click', updateName);
+      nameInput?.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); updateName(); } });
+
+      // Wire share on LinkedIn
+      document.getElementById('modalShareLinkedInBtn')?.addEventListener('click', () => {
+        shareCertificateToLinkedIn({
+          id: cert.id || cert.verificationId,
+          courseCode: cert.courseCode,
+          courseTitle: cert.courseTitle,
+          academyTitle: cert.academy,
+          issued: cert.issued,
+          verificationId: cert.id || cert.verificationId,
+          learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner')
+        });
       });
-    });
 
+      // Wire download PDF
+      document.getElementById('modalDownloadPdfBtn')?.addEventListener('click', () => {
+        downloadCertificatePDF({
+          learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner'),
+          courseTitle: cert.courseTitle,
+          courseCode: cert.courseCode,
+          academyTitle: cert.academy,
+          issued: cert.issued,
+          verificationId: cert.id || cert.verificationId,
+          score: 10
+        });
+      });
+    }
+
+    renderModalContent();
     modal.classList.add('open');
   }
 

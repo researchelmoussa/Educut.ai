@@ -457,7 +457,7 @@ function nav(current) {
     `<a href="${href}"${current === href ? ' aria-current="page"' : ''}>${label}</a>`).join('');
   return `<nav class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="/">EduCut<span>.ai</span></a>
+      <a class="brand" href="/" aria-label="EduCut.ai"><img src="/assets/logo_nav.svg" alt="EduCut.ai" class="brand-logo-img" style="height:36px;width:auto;display:block" /></a>
       <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span class="nav-toggle-icon">☰</span></button>
       <div class="nav-links" id="navLinks">
         ${links}<a href="/#/signup">Sign up</a><a href="/#/signin">Sign In</a>
