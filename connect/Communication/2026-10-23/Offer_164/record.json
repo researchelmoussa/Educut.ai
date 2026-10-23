@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Call for Visiting Research Fellows",
+    "evidence_url": "https://icrc.tau.ac.il/home/call-for-fellows",
+    "evidence_quote": "Call for Visiting Research Fellows"
+  },
+  "institution": {
+    "name": "Blavatnik Interdisciplinary Cyber Research Center (ICRC), Tel Aviv University",
+    "website": "https://icrc.tau.ac.il",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://icrc.tau.ac.il/home/call-for-fellows",
+  "source_url": "https://icrc.tau.ac.il/home/call-for-fellows",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Tel Aviv",
+    "country": "Israel",
+    "country_code": "IL"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Cybersecurity, artificial intelligence",
+  "seniority": "Scholars and PhD candidates",
+  "qualifications": [
+    "Scholars and PhD candidates in cybersecurity, artificial intelligence and related fields; any scientific discipline welcome",
+    "Non-stipendiary: fellows arrange their own funding (the Center helps with external funding applications)",
+    "One PDF under 2 MB: research proposal, comprehensive CV, recommendation letter"
+  ],
+  "skills": [],
+  "description_short": "Tel Aviv University's Blavatnik Interdisciplinary Cyber Research Center offers 2027-2028 visiting research fellowships of about 4 to 9 months (October 2027 to June 2028) for scholars and PhD candidates in cybersecurity, AI and related fields. Fellows arrange their own funding.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-27",
+    "timezone": null,
+    "evidence_url": "https://icrc.tau.ac.il/home/call-for-fellows",
+    "evidence_quote": "February 27, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ICRC call page (search results): 2027-2028 call, deadline 27 February 2027, decisions 12 March 2027",
+    "Submission channel not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Fellowship is non-stipendiary",
+    "Timezone of the deadline not stated",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results"
+  ],
+  "discovered_at": "2026-10-23T01:59:43.072Z",
+  "last_verified_at": "2026-10-23T01:59:49.906Z",
+  "id": "opp_c86a7c0799d8106b",
+  "fingerprint": "e6f4c64b79844c6a",
+  "content_hash": "sha256:5dd408a2293e4ac0c0b60203e0287ba33fee07529cbf89646c2be644ee943b14"
+}

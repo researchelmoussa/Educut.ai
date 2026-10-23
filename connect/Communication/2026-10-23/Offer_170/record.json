@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Statistics and Machine Learning (EPSRC CDT)",
+    "evidence_url": "https://www.ox.ac.uk/admissions/graduate/courses/statistics-machine-learning",
+    "evidence_quote": "Statistics and Machine Learning (EPSRC CDT)"
+  },
+  "institution": {
+    "name": "StatML EPSRC Centre for Doctoral Training (Imperial College London and University of Oxford)",
+    "website": "https://statml.io",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://statml.io/admissions/applying-to-statml/",
+  "source_url": "https://statml.io/admissions/applying-to-statml/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Statistics, machine learning",
+  "seniority": "PhD",
+  "qualifications": [
+    "First-class or strong upper second-class honours degree in mathematics, statistics, physics, computer science, engineering or a closely related subject",
+    "Successful applicants usually also have a master's or research experience",
+    "Most funded studentships are for home-fee students; a limited number of scholarships for overseas applicants",
+    "Self-funded applications are not accepted; part-time study possible",
+    "Imperial applicants use course code G1703.1"
+  ],
+  "skills": [
+    "Statistics",
+    "Machine learning"
+  ],
+  "description_short": "StatML, the EPSRC Centre for Doctoral Training run by Imperial College London and the University of Oxford, is a four-year, cohort-based PhD programme in statistics and machine learning offering only fully funded places. Applications for 2027 entry close 6 January 2027, 12:00 UK time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-06",
+    "timezone": "Europe/London",
+    "evidence_url": "https://statml.io/admissions/applying-to-statml/",
+    "evidence_quote": "12:00 GMT on Wednesday 6th January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official StatML admissions page and Oxford course page (search results): 2027 entry open at both institutions, deadline 6 January 2027 midday",
+    "Application portals not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Programme runs at two sites (London and Oxford); city left null",
+    "Stipend figures conflict between StatML pages (about GBP 32,000 vs about GBP 30,000); compensation left null",
+    "Final interviews week of 8-12 February 2027",
+    "Publication date not shown"
+  ],
+  "discovered_at": "2026-10-23T01:59:43.072Z",
+  "last_verified_at": "2026-10-23T01:59:50.905Z",
+  "id": "opp_2741d4b10093bfe9",
+  "fingerprint": "064915c570237a8e",
+  "content_hash": "sha256:a42456759c62a30d5b1f93521504064701c0c0dd5248ae76c25888112a7c78c3"
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "President's PhD Scholarships",
+    "evidence_url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/",
+    "evidence_quote": "President's PhD scholarships"
+  },
+  "institution": {
+    "name": "Imperial College London",
+    "website": "https://www.imperial.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/",
+  "source_url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "London",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "All Imperial PhD disciplines",
+  "seniority": "PhD",
+  "qualifications": [
+    "First class or equivalent undergraduate/integrated Master's, or a distinction in a standalone Master's (departments may nominate special cases)",
+    "Open to new PhD applicants only; current Imperial PhD students cannot apply",
+    "No nationality restrictions; full- and part-time study",
+    "An Imperial supervisor must agree to supervise you before applying",
+    "Apply for admission through Imperial's online system and tick the scholarship option; two academic referees"
+  ],
+  "skills": [],
+  "description_short": "Imperial College London's President's PhD Scholarships fund new PhD students across disciplines, covering tuition fees and a stipend. There is no separate form: departments nominate admission applicants. Round 1 closes 2 November 2026; later rounds 11 January and 1 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-02",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/",
+    "evidence_quote": "Round 1 ... 23:59 UK time on 2 November 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Imperial scholarship page (search results): Round 1 deadline 2 November 2026; Rounds 2 and 3 on 11 January and 1 March 2027",
+    "Admissions system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Stipend differs between Imperial pages (GBP 27,036 for 2027-28 vs UKRI London rate); compensation left null",
+    "A Civil Engineering page lists an extra Round 4 (1 June 2027) not on the main page",
+    "Departments may set earlier internal deadlines",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results; ellipses mark joined fragments"
+  ],
+  "discovered_at": "2026-10-23T01:59:43.072Z",
+  "last_verified_at": "2026-10-23T01:59:49.417Z",
+  "id": "opp_c51a75ed1b5434ef",
+  "fingerprint": "e856c540bb0bff71",
+  "content_hash": "sha256:81ad7d5189cf7ec0ef2a55b77178500e28c93105b4dd18ed75f02f06b81a2aee"
+}
