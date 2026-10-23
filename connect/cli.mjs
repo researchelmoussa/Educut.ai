@@ -13,12 +13,13 @@ import { parseLinks } from './lib/sources.mjs';
 import { addLandmark, fetchLandmark, findLandmark } from './lib/landmarks.mjs';
 import { Registry, deadlineEnd, emptyRegistry } from './lib/registry.mjs';
 import { renderCard } from './lib/render.mjs';
-import { checkQuestion, composePost, linkedinConfigured, loadQueue, markPosted, pendingOffers, planSlots, publishPost, saveQueue } from './lib/linkedin.mjs';
-import { addEntry, briefText, buildSite, loadOffers, offerSlug, pageUrl, removeEntry, webBrief } from './lib/site.mjs';
+import { buildKit } from './lib/kit.mjs';
+import { POST_FORMAT, checkPost, composePost, linkedinConfigured, loadQueue, localDay, markPosted, pendingOffers, planSlots, publishPost, saveQueue } from './lib/linkedin.mjs';
+import { SITE_SECTION, addEntry, briefText, buildSite, loadOffers, offerSlug, pageUrl, removeEntry, webBrief } from './lib/site.mjs';
 import { validateSchema } from './lib/schema.mjs';
 import { summarize, validateComms, validateRecord, validateVisual } from './lib/validate.mjs';
 import {
-  CONNECT_DIR, canonicalUrl, contentHash, fingerprint, loadConfig, logger, nowIso, offerFolderName, opportunityId,
+  CONNECT_DIR, REPO_DIR, canonicalUrl, contentHash, fingerprint, loadConfig, logger, nowIso, offerFolderName, opportunityId,
   readJson, sha256, writeJson,
 } from './lib/util.mjs';
 
@@ -95,10 +96,16 @@ const commands = {
                                       the photo (default: the offer's city.jpg) becomes the card's 3:2 landscape picture
   site-remove <id|slug|Offer_NNN>     Take an offer off the site
   li-pending                          Offers live on the site, still open, not yet queued for LinkedIn
-  li-queue <slug|id> --question <q> [--hashtags "#a #b"]
+  li-queue <slug|id> --headline <h> --intro <i> --cta <c> --hashtags "#a #b" [--funding f] [--fields f] [--level l]
                                       Compose the LinkedIn post for an offer (draft, not yet timed)
-  li-schedule [--reschedule]          Give every draft a time in the next 24 h (spaced, active hours, most
-                                      urgent first); --reschedule also re-spreads overdue posts
+  li-schedule [--reschedule]          Give every draft a time between 07:00 and 22:00, max 10 a day (bigger
+                                      batches spread over the next days), evenly spaced, newest offers first;
+                                      --reschedule also re-spreads overdue posts
+  li-kit [--date YYYY-MM-DD] [--rebuild] [--out dir]
+                                      Posting kit for posting by hand: every scheduled post not yet in a kit
+                                      (index.html + posts.md + numbered card images) in connect/linkedin/kits/<date>/;
+                                      --rebuild remakes that date's kit
+  li-done <Offer_NNN…> [--url u]      Mark posts as published by hand
   li-publish-due [--dry-run] [--max n]
                                       Publish scheduled posts that are due (LinkedIn Posts API; GitHub Action)
   li-status                           Queue overview
@@ -269,8 +276,13 @@ const commands = {
       deadline_label: rec.deadline ? spec.deadline_label : null,
       institution_logo: rec.institution.logo.permission === 'allowed' ? spec.institution_logo ?? null : null,
       // The default photo is Drive Landmarks/images/DEFAULT, registered as landmark-add Default DEFAULT <file>.
-      // No city stated → the administrator's default photo, never a country photo standing in for a place.
-      landmark: spec.landmark ?? (rec.location.city ? findLandmark(rec.location.city, rec.location.country_code) : null) ?? findLandmark('Default', 'DEFAULT'),
+      // Country photo first (Drive Landmarks/images/<CC>, registered under the country name), even when a
+      // city is known; a city photo only if the country has none; the default photo (Landmarks/images/DEFAULT)
+      // only when there is no country photo at all.
+      landmark: spec.landmark
+        ?? (rec.location.country ? findLandmark(rec.location.country, rec.location.country_code) : null)
+        ?? (rec.location.city ? findLandmark(rec.location.city, rec.location.country_code) : null)
+        ?? findLandmark('Default', 'DEFAULT'),
       variant: spec.variant ?? config.visual.variant,
     };
     writeJson(join(dir, 'spec.json'), card);
@@ -327,7 +339,7 @@ const commands = {
         `${basename(dir)} · ${rec.title.value} · ${rec.institution.name}`,
         `Opportunity ID: ${rec.id}`,
         `Application status: ${rec.application_status}${rec.application_status === 'OPEN_LIKELY' ? '  <-- VERIFY THE APPLICATION PORTAL MANUALLY BEFORE APPROVING' : ''}`,
-        `Deadline: ${rec.deadline ? `${rec.deadline.value}${rec.deadline.timezone ? ` (${rec.deadline.timezone})` : ''}` : 'not specified'}`,
+        `Deadline: ${rec.deadline ? `${rec.deadline.value}${rec.deadline.timezone ? (/[()]/.test(rec.deadline.timezone) ? ` ${rec.deadline.timezone}` : ` (${rec.deadline.timezone})`) : ''}` : 'not specified'}`,
         `Official application link: ${rec.application_url ?? 'not found — see source'}`,
         `Source page: ${rec.source_url}`,
         `EduCut link in post: ${pkg.educut_link.url} (${pkg.educut_link.type.replace('_', ' ')})`,
@@ -373,6 +385,9 @@ const commands = {
     if (existsSync(cp)) checks.push(...validateComms(rec, readJson(cp), config, pageUrl(config.links.site_url, offerSlug(basename(dir), rec.title.value))));
     else checks.push({ check: 'comms package present', pass: false, detail: 'comms-package.json missing', owner: 'communications' });
     for (const f of ['linkedin_post.txt', 'card.png']) if (!existsSync(join(dir, f))) checks.push({ check: `${f} present`, pass: false, detail: 'missing', owner: f === 'card.png' ? 'visual-designer' : 'communications' });
+    // post-text copies the card alt text; run before the card exists, it leaves the placeholder behind.
+    const stale = ['post_details.txt', 'web-brief.json'].filter((f) => existsSync(join(dir, f)) && readFileSync(join(dir, f), 'utf8').includes('PLACEHOLDER'));
+    if (stale.length) checks.push({ check: 'card alt text copied into the page texts', pass: false, detail: `placeholder in ${stale.join(', ')}: run post-text again now that the card exists`, owner: 'communications' });
 
     const s = summarize(checks);
     writeJson(join(dir, 'qc-report.json'), { opportunity_id: id, at: nowIso(), ...s });
@@ -399,7 +414,7 @@ const commands = {
       const comms = readJson(join(dir, 'comms-package.json'), null);
       rows.push(
         `## ${d} — ${rec.title.value}\n` +
-          `**${rec.institution.name}** · ${[rec.location.city, rec.location.country].filter(Boolean).join(', ') || 'location not specified'}\n\n` +
+          `**${rec.institution.name}** · ${[rec.location.city, rec.location.country].filter((v, i, a) => v && a.findIndex((x) => String(x).toLowerCase() === String(v).toLowerCase()) === i).join(', ') || 'location not specified'}\n\n` +
           `- Status: **${reg.get(rec.id)?.pipeline_status}** · application ${rec.application_status}${rec.application_status === 'OPEN_LIKELY' ? ' ⚠️ verify the portal manually' : ''}\n` +
           `- Deadline: ${rec.deadline?.value ?? 'not specified'}\n` +
           `- Apply: ${rec.application_url ?? 'n/a'}\n- Source: ${rec.source_url}\n` +
@@ -410,7 +425,7 @@ const commands = {
           (comms ? `> ${comms.caption.replace(/\n/g, '\n> ')}\n` : ''),
       );
     }
-    const md = `# EduCut Connect — review ${today}\n\n${rows.length} offer(s) awaiting approval. Nothing is published until you approve, and publishing stays manual.\n\n${rows.join('\n')}`;
+    const md = `# EduCut Connect — review ${today}\n\n${config.daily.auto_approve ? `${rows.length} offer(s). Auto-approval is on: offers that pass validation go on the website and are scheduled on LinkedIn without waiting; reply "reject Offer_NNN" to take one down.` : `${rows.length} offer(s) awaiting approval. Nothing is published until you approve.`}\n\n${rows.join('\n')}`;
     writeFileSync(join(runDir, 'review.md'), md);
     out({ review: join(runDir, 'review.md'), offers: rows.length });
   },
@@ -552,21 +567,23 @@ const commands = {
   // LinkedIn agent. Queue: connect/linkedin/queue.json (committed to main; the GitHub Action reads it).
   'li-pending'() {
     const root = flags.site ? resolve(flags.site) : undefined;
-    out(pendingOffers(root).map((o) => ({ slug: o.slug, opportunity_id: o.opportunity_id, offer: o.offer, title: o.title, deadline: o.deadline, summary: o.summary })));
+    out(pendingOffers(root).map((o) => ({ slug: o.slug, opportunity_id: o.opportunity_id, offer: o.offer, title: o.title, institution: o.institution, location: o.location, country_code: o.country_code, type: o.opportunity_type, level: o.level, field: o.field, compensation: o.compensation?.value ?? null, deadline: o.deadline, summary: o.summary, highlights: o.highlights })));
   },
 
   'li-queue'() {
     const root = flags.site ? resolve(flags.site) : undefined;
-    const key = args[0] ?? fail('li-queue <slug|id> --question "<question>"');
+    const key = args[0] ?? fail('li-queue <slug|id> --headline "<h>" --intro "<i>" --cta "<c>" --hashtags "<tags>"');
     const offer = loadOffers(root).offers.find((o) => o.slug === key || o.opportunity_id === key || o.offer === key) ?? fail(`not on the site: ${key}`);
     if (offer.preview) fail(`${offer.offer} is a preview (not approved): it cannot be posted`);
-    const tags = typeof flags.hashtags === 'string' ? flags.hashtags.split(/\s+/).filter(Boolean) : [];
-    const checks = checkQuestion(flags.question, offer, config);
-    if (tags.length) {
-      checks.push({ check: `${config.comms.hashtag_range.join('–')} hashtags`, pass: tags.length >= config.comms.hashtag_range[0] && tags.length <= config.comms.hashtag_range[1], detail: tags.join(' '), owner: 'linkedin' });
-      checks.push({ check: 'required hashtags', pass: config.comms.required_hashtags.every((h) => tags.includes(h)), detail: config.comms.required_hashtags.join(' '), owner: 'linkedin' });
-      checks.push({ check: 'hashtag format', pass: tags.every((t) => /^#[A-Za-z0-9]+$/.test(t)), detail: tags.join(' '), owner: 'linkedin' });
-    }
+    const str = (k) => (typeof flags[k] === 'string' ? flags[k].trim() : undefined);
+    const parts = { headline: str('headline'), intro: str('intro'), cta: str('cta'), funding: str('funding'), fields: str('fields'), level: str('level') };
+    const tags = (str('hashtags') ?? '').split(/\s+/).filter(Boolean);
+    const L = config.linkedin;
+    const range = L.hashtag_range ?? config.comms.hashtag_range;
+    const checks = checkPost(parts, offer, config);
+    checks.push({ check: `${range.join('–')} hashtags`, pass: tags.length >= range[0] && tags.length <= range[1], detail: tags.join(' ') || '(missing)', owner: 'linkedin' });
+    checks.push({ check: 'required hashtags', pass: config.comms.required_hashtags.every((h) => tags.includes(h)), detail: config.comms.required_hashtags.join(' '), owner: 'linkedin' });
+    checks.push({ check: 'hashtag format', pass: tags.every((t) => /^#[A-Za-z0-9]+$/.test(t)), detail: tags.join(' '), owner: 'linkedin' });
     const failures = checks.filter((c) => !c.pass);
     if (failures.length) {
       out({ ok: false, failures });
@@ -576,11 +593,12 @@ const commands = {
     const q = loadQueue(root);
     if (q.posts.some((p) => p.opportunity_id === offer.opportunity_id && p.status === 'POSTED')) fail(`${offer.offer} was already posted`);
     q.posts = q.posts.filter((p) => p.opportunity_id !== offer.opportunity_id);
-    const post = { opportunity_id: offer.opportunity_id, offer: offer.offer, slug: offer.slug, page_url: offer.page_url, question: flags.question.trim(), hashtags: tags, text: composePost(offer, flags.question, tags), alt_text: offer.card_alt, deadline: offer.deadline ?? null, status: 'DRAFT', scheduled_at: null, queued_at: nowIso() };
+    const text = composePost(offer, parts, tags);
+    const post = { opportunity_id: offer.opportunity_id, offer: offer.offer, slug: offer.slug, page_url: offer.page_url, format: POST_FORMAT, ...parts, hashtags: tags, text, alt_text: offer.card_alt, deadline: offer.deadline ?? null, status: 'DRAFT', scheduled_at: null, queued_at: nowIso() };
     q.posts.push(post);
     saveQueue(q, root);
     log('li.queue', { offer: offer.offer });
-    out({ ok: true, offer: offer.offer, chars: post.text.length, text: post.text });
+    out({ ok: true, offer: offer.offer, chars: text.length, image: `${SITE_SECTION}/${offer.slug}/${offer.card}`, text });
   },
 
   'li-schedule'() {
@@ -588,20 +606,63 @@ const commands = {
     const q = loadQueue(root);
     const nowD = flags.now ? new Date(flags.now) : new Date();
     // --reschedule: posts whose time passed without being published (e.g. before the token was set) are
-    // spread again over the next 24 h.
+    // spread again over the coming days.
     if (flags.reschedule) for (const p of q.posts) if (p.status === 'SCHEDULED' && Date.parse(p.scheduled_at) < nowD.getTime()) Object.assign(p, { status: 'DRAFT', scheduled_at: null });
-    // Most urgent deadline first; offers without a deadline last.
     const dl = (p) => (p.deadline ? Date.parse(p.deadline.length === 10 ? `${p.deadline}T23:59:59Z` : p.deadline) : Infinity);
-    const drafts = q.posts.filter((p) => p.status === 'DRAFT').sort((a, b) => dl(a) - dl(b));
+    // A closed offer would only be skipped by the publisher: free its slot now.
+    for (const p of q.posts) if ((p.status === 'DRAFT' || p.status === 'SCHEDULED') && dl(p) < nowD.getTime()) Object.assign(p, { status: 'SKIPPED', scheduled_at: null, skipped_reason: 'deadline passed' });
+    // Only posts in the current format are timed; older drafts are listed by li-pending to be rewritten.
+    // Offers closing within linkedin.urgent_days go first (by deadline), so none is posted after it
+    // closes; then the newest offers on the site (the day's new listings before older ones), then the
+    // most urgent deadline; offers without a deadline last.
+    const added = new Map(loadOffers(root).offers.map((o) => [o.opportunity_id, o.added_at ?? '']));
+    const urgent = (p) => dl(p) - nowD.getTime() < (config.linkedin.urgent_days ?? 7) * 864e5;
+    const drafts = q.posts
+      .filter((p) => p.status === 'DRAFT' && p.format === POST_FORMAT)
+      .sort((a, b) => urgent(b) - urgent(a) || (urgent(a) && dl(a) - dl(b)) || (added.get(b.opportunity_id) ?? '').slice(0, 10).localeCompare((added.get(a.opportunity_id) ?? '').slice(0, 10)) || dl(a) - dl(b));
     const L = config.linkedin;
-    const taken = q.posts.filter((p) => p.status === 'SCHEDULED').map((p) => p.scheduled_at);
-    const slots = planSlots(drafts.length, { now: nowD, leadMinutes: L.lead_minutes, minGapMinutes: L.min_gap_minutes, maxGapMinutes: L.max_gap_minutes, activeHours: L.active_hours, timeZone: L.time_zone, taken });
+    const taken = q.posts.filter((p) => p.status === 'SCHEDULED' && p.format === POST_FORMAT).map((p) => p.scheduled_at);
+    const slots = planSlots(drafts.length, { now: nowD, leadMinutes: L.lead_minutes, minGapMinutes: L.min_gap_minutes, activeHours: L.active_hours, timeZone: L.time_zone, maxPerDay: L.max_posts_per_day, taken });
     drafts.forEach((p, i) => {
       if (slots[i]) Object.assign(p, { status: 'SCHEDULED', scheduled_at: slots[i] });
     });
     saveQueue(q, root);
     const fmt = (iso) => new Intl.DateTimeFormat('en-GB', { timeZone: L.time_zone, dateStyle: 'medium', timeStyle: 'short' }).format(new Date(iso));
-    out({ scheduled: drafts.filter((p) => p.status === 'SCHEDULED').map((p) => ({ offer: p.offer, at: p.scheduled_at, local: `${fmt(p.scheduled_at)} (${L.time_zone})` })), unscheduled: drafts.filter((p) => p.status === 'DRAFT').map((p) => p.offer) });
+    const scheduled = drafts.filter((p) => p.status === 'SCHEDULED').sort((a, b) => a.scheduled_at.localeCompare(b.scheduled_at));
+    const perDay = {};
+    for (const p of scheduled) perDay[localDay(Date.parse(p.scheduled_at), L.time_zone)] = (perDay[localDay(Date.parse(p.scheduled_at), L.time_zone)] ?? 0) + 1;
+    out({ scheduled: scheduled.map((p) => ({ offer: p.offer, at: p.scheduled_at, local: `${fmt(p.scheduled_at)} (${L.time_zone})` })), per_day: perDay, unscheduled: drafts.filter((p) => p.status === 'DRAFT').map((p) => p.offer), needs_rewrite: q.posts.filter((p) => ['DRAFT', 'SCHEDULED'].includes(p.status) && p.format !== POST_FORMAT).map((p) => p.offer) });
+  },
+
+  // Posting kit: the posts are handed to the administrator, who schedules them by hand on LinkedIn; the
+  // API publisher then leaves them alone (see li-publish-due).
+  'li-kit'() {
+    const root = flags.site ? resolve(flags.site) : undefined;
+    const L = config.linkedin;
+    const date = typeof flags.date === 'string' ? flags.date : localDay(Date.now(), L.time_zone);
+    const q = loadQueue(root);
+    const posts = q.posts.filter((p) => p.status === 'SCHEDULED' && p.format === POST_FORMAT && (flags.rebuild ? p.kit === date : !p.kit));
+    if (!posts.length) return out({ date, posts: 0, note: flags.rebuild ? `no kit for ${date}` : 'no newly scheduled posts' });
+    const outDir = typeof flags.out === 'string' ? resolve(flags.out) : join(root ?? REPO_DIR, 'connect', 'linkedin', 'kits', date);
+    const r = buildKit(posts, { outDir, root, timeZone: L.time_zone, title: `EduCut Connect posting kit, ${date}` });
+    for (const p of posts) p.kit = date;
+    saveQueue(q, root);
+    log('li.kit', { date, posts: r.posts });
+    out({ date, ...r });
+  },
+
+  'li-done'() {
+    const root = flags.site ? resolve(flags.site) : undefined;
+    if (!args.length) fail('li-done <Offer_NNN…> [--url <post-url>]');
+    const q = loadQueue(root);
+    const done = [];
+    for (const key of args) {
+      const p = q.posts.find((x) => x.offer === key || x.slug === key || x.opportunity_id === key) ?? fail(`not in the queue: ${key}`);
+      Object.assign(p, { status: 'POSTED', posted_at: nowIso(), posted_by: 'hand', ...(typeof flags.url === 'string' ? { post_url: flags.url } : {}) });
+      done.push(p.offer);
+    }
+    saveQueue(q, root);
+    out({ posted: done });
   },
 
   async 'li-publish-due'() {
@@ -611,7 +672,8 @@ const commands = {
     if (!linkedinConfigured() && !dry) return out({ published: [], reason: 'LINKEDIN_ACCESS_TOKEN / LINKEDIN_ORGANIZATION_ID not set' });
     const q = loadQueue(root);
     const now = Date.now();
-    const due = q.posts.filter((p) => p.status === 'SCHEDULED' && Date.parse(p.scheduled_at) <= now).sort((a, b) => a.scheduled_at.localeCompare(b.scheduled_at));
+    // Posts handed out in a posting kit are scheduled by hand on LinkedIn: never publish them twice.
+    const due = q.posts.filter((p) => p.status === 'SCHEDULED' && p.format === POST_FORMAT && !p.kit && Date.parse(p.scheduled_at) <= now).sort((a, b) => a.scheduled_at.localeCompare(b.scheduled_at));
     const published = [];
     for (const p of due.slice(0, Number(flags.max ?? config.linkedin.max_posts_per_run))) {
       const offer = loadOffers(root).offers.find((o) => o.opportunity_id === p.opportunity_id);
@@ -640,7 +702,7 @@ const commands = {
     const q = loadQueue(flags.site ? resolve(flags.site) : undefined);
     const counts = {};
     for (const p of q.posts) counts[p.status] = (counts[p.status] ?? 0) + 1;
-    out({ counts, next: q.posts.filter((p) => p.status === 'SCHEDULED').sort((a, b) => a.scheduled_at.localeCompare(b.scheduled_at)).map((p) => ({ offer: p.offer, at: p.scheduled_at })) });
+    out({ counts, needs_rewrite: q.posts.filter((p) => ['DRAFT', 'SCHEDULED'].includes(p.status) && p.format !== POST_FORMAT).length, next: q.posts.filter((p) => p.status === 'SCHEDULED').sort((a, b) => a.scheduled_at.localeCompare(b.scheduled_at)).map((p) => ({ offer: p.offer, at: p.scheduled_at })) });
   },
 
   'optimize-png'() {
