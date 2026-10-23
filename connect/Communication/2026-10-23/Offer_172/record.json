@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Beca Doctoral PUCP",
+    "evidence_url": "https://posgrado.pucp.edu.pe/becas/becas-doctoral-pucp/",
+    "evidence_quote": "Beca Doctoral PUCP - Escuela de Posgrado - PUCP"
+  },
+  "institution": {
+    "name": "Pontificia Universidad Católica del Perú (PUCP), Escuela de Posgrado",
+    "website": "https://posgrado.pucp.edu.pe",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://posgrado.pucp.edu.pe/becas/becas-doctoral-pucp/",
+  "source_url": "https://posgrado.pucp.edu.pe/becas/becas-doctoral-pucp/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Lima",
+    "country": "Peru",
+    "country_code": "PE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "PUCP doctoral programmes",
+  "seniority": "PhD",
+  "qualifications": [
+    "Master's degree and endorsement from a PUCP adviser linked to the doctoral programme",
+    "English at B2 or higher",
+    "Peruvian or foreign nationals studying with exclusive dedication; admission to the doctoral programme required",
+    "PUCP full-time faculty and full-dedication staff excluded",
+    "Documents: personal essay, research project, CV, two recommendation letters, adviser commitment letter, ethics declaration, English certificate"
+  ],
+  "skills": [],
+  "description_short": "PUCP's doctoral scholarship for the 2027-1 intake gives admitted PhD students a monthly allowance of S/ 4,000 for 12 months, renewable up to two times, with academic and enrolment fees covered. The call runs 10 August to 4 November 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-04",
+    "timezone": "America/Lima",
+    "evidence_url": "https://posgrado.pucp.edu.pe/becas/becas-doctoral-pucp/",
+    "evidence_quote": "Beca Doctoral PUCP, del 10 de agosto al 04 de noviembre del 2026"
+  },
+  "compensation": {
+    "value": "S/ 4,000 monthly allowance for 12 months (renewable up to two times); academic and enrolment fees covered",
+    "evidence_url": "https://posgrado.pucp.edu.pe/becas/becas-doctoral-pucp/",
+    "evidence_quote": "Asignación mensual de S/ 4,000"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official PUCP Escuela de Posgrado scholarship page (search results): call open 10 August - 4 November 2026",
+    "Campus Virtual application not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "A programme admission page (Ciencias de la Educación) lists 5 November 2026 for fee payment and document upload; dates differ slightly",
+    "Eligible doctoral programmes vary; confirm the target programme",
+    "Evidence quotes are the Spanish wording shown in search results",
+    "Publication date not shown"
+  ],
+  "discovered_at": "2026-10-23T01:59:43.072Z",
+  "last_verified_at": "2026-10-23T01:59:51.251Z",
+  "id": "opp_b812b0024d52eee6",
+  "fingerprint": "48eaccb2d360732e",
+  "content_hash": "sha256:25494bdff9bb84192f92fd8cdf8894688631b7a759e271e8d47d10fc7a7ae484"
+}

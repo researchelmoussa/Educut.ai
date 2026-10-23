@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Doctoral Scholarships for Candidates from the Global South - call 2027",
+    "evidence_url": "https://www.ugent.be/en/research/funding/bof/dos",
+    "evidence_quote": "Special Research Fund - Doctoral Scholarships for Candidates from the Global South - call 2027"
+  },
+  "institution": {
+    "name": "Ghent University",
+    "website": "https://www.ugent.be",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ugent.be/en/research/funding/bof/dos",
+  "source_url": "https://www.ugent.be/en/research/funding/bof/dos",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Ghent",
+    "country": "Belgium",
+    "country_code": "BE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "All disciplines",
+  "seniority": "PhD",
+  "qualifications": [
+    "Candidates must come from and hold the nationality of one of the selected Global South countries",
+    "Proposal submitted jointly by the candidate, a Ghent University supervisor and a supervisor at the partner university",
+    "Co-funding from the partner institution is mandatory",
+    "Exception requests (funding or mobility rules) due by 15 January 2027"
+  ],
+  "skills": [],
+  "description_short": "Ghent University's Special Research Fund offers PhD \"sandwich\" scholarships for Global South candidates: 24 months funded within a 48-month PhD split between Ghent and a partner institution. About 15 scholarships yearly; earliest start 1 October 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-09",
+    "timezone": "Europe/Brussels",
+    "evidence_url": "https://www.ugent.be/en/research/funding/bof/dos",
+    "evidence_quote": "The deadline for project proposals is 9 February 2027 at 23:59 (Belgian time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Ghent University call 2027 page (search results): deadline 9 February 2027, 23:59 Belgian time",
+    "Submission system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "The Special Research Fund overview page shows the Global South doctoral call as \"deadline closed\", probably referring to an earlier cycle; confirm on the call page",
+    "List of eligible countries not shown in the results",
+    "Scholarship amount not shown in the results",
+    "Publication date not shown"
+  ],
+  "discovered_at": "2026-10-23T01:59:43.072Z",
+  "last_verified_at": "2026-10-23T01:59:49.253Z",
+  "id": "opp_bdebdffb42783f6b",
+  "fingerprint": "f9593393ae2531ff",
+  "content_hash": "sha256:c7ea3662b7e2b50497a1e08b0f0a843f0bf6ed1f978b430c03ce160e84c219c4"
+}
