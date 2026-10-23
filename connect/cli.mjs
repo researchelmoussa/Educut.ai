@@ -612,12 +612,14 @@ const commands = {
     // A closed offer would only be skipped by the publisher: free its slot now.
     for (const p of q.posts) if ((p.status === 'DRAFT' || p.status === 'SCHEDULED') && dl(p) < nowD.getTime()) Object.assign(p, { status: 'SKIPPED', scheduled_at: null, skipped_reason: 'deadline passed' });
     // Only posts in the current format are timed; older drafts are listed by li-pending to be rewritten.
-    // Newest offers on the site first (the day's new listings go out before older ones), then the most
-    // urgent deadline; offers without a deadline last.
+    // Offers closing within linkedin.urgent_days go first (by deadline), so none is posted after it
+    // closes; then the newest offers on the site (the day's new listings before older ones), then the
+    // most urgent deadline; offers without a deadline last.
     const added = new Map(loadOffers(root).offers.map((o) => [o.opportunity_id, o.added_at ?? '']));
+    const urgent = (p) => dl(p) - nowD.getTime() < (config.linkedin.urgent_days ?? 7) * 864e5;
     const drafts = q.posts
       .filter((p) => p.status === 'DRAFT' && p.format === POST_FORMAT)
-      .sort((a, b) => (added.get(b.opportunity_id) ?? '').slice(0, 10).localeCompare((added.get(a.opportunity_id) ?? '').slice(0, 10)) || dl(a) - dl(b));
+      .sort((a, b) => urgent(b) - urgent(a) || (urgent(a) && dl(a) - dl(b)) || (added.get(b.opportunity_id) ?? '').slice(0, 10).localeCompare((added.get(a.opportunity_id) ?? '').slice(0, 10)) || dl(a) - dl(b));
     const L = config.linkedin;
     const taken = q.posts.filter((p) => p.status === 'SCHEDULED' && p.format === POST_FORMAT).map((p) => p.scheduled_at);
     const slots = planSlots(drafts.length, { now: nowD, leadMinutes: L.lead_minutes, minGapMinutes: L.min_gap_minutes, activeHours: L.active_hours, timeZone: L.time_zone, maxPerDay: L.max_posts_per_day, taken });
