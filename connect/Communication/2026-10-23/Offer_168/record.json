@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD in Computer Science",
+    "evidence_url": "https://computing.smu.edu.sg/phd/online-application",
+    "evidence_quote": "AY2027-28, Term 1 (August 2027) application is open from 1 August 2026 to 31 January 2027"
+  },
+  "institution": {
+    "name": "Singapore Management University, School of Computing and Information Systems",
+    "website": "https://computing.smu.edu.sg",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://computing.smu.edu.sg/phd/online-application",
+  "source_url": "https://computing.smu.edu.sg/phd/online-application",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Singapore",
+    "country": "Singapore",
+    "country_code": "SG"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Computer science",
+  "seniority": "PhD",
+  "qualifications": [
+    "Online application with a one-time non-refundable fee of S$15 (incl. GST)",
+    "Early applicants may receive an early offer"
+  ],
+  "skills": [],
+  "description_short": "Singapore Management University's School of Computing and Information Systems accepts applications to its Computer Science PhD for the August 2027 intake from 1 August 2026 to 31 January 2027. SMU research scholarships cover tuition and a monthly stipend, for up to four years.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": "Asia/Singapore",
+    "evidence_url": "https://computing.smu.edu.sg/phd/online-application",
+    "evidence_quote": "AY2027-28, Term 1 (August 2027) application is open from 1 August 2026 to 31 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SMU Computing PhD page and graduate studies admissions page (search results): August 2027 intake closes 31 January 2027",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "An SMU Business PhD page states the August 2027 portal closes 31 December; it may not apply to Computer Science",
+    "Scholarship award not automatic; stipend amount not shown in the results",
+    "Admission eligibility requirements not shown in the results",
+    "Publication date not shown"
+  ],
+  "discovered_at": "2026-10-23T01:59:43.072Z",
+  "last_verified_at": "2026-10-23T01:59:50.568Z",
+  "id": "opp_764875d63f4fb932",
+  "fingerprint": "89f9b938aa44e0e1",
+  "content_hash": "sha256:265f63f93b5b781508da49d05f527f832458b86ee0558fd82d4837e90b3dc865"
+}

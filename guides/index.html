@@ -5,24 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Training &amp; Adoption Guides | EduCut.ai</title>
   <meta name="description" content="Practical guides from EduCut.ai on assessing AI readiness, building an AI training plan and preparing teams for AI regulation." />
-  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://educutai.com/guides/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EduCut.ai" />
+  <meta property="og:title" content="AI Training &amp; Adoption Guides" />
+  <meta property="og:description" content="Practical guides from EduCut.ai on assessing AI readiness, building an AI training plan and preparing teams for AI regulation." />
+  <meta property="og:url" content="https://educutai.com/guides/" />
+  <meta property="og:image" content="https://educutai.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://educutai.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/assets/site.css?v=d34ec19473" />
-  <link rel="stylesheet" href="/assets/pages.css?v=66a1cde403" />
+  <script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://educutai.com/#organization",
+   "name": "EduCut.ai",
+   "url": "https://educutai.com/"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://educutai.com/#website",
+   "url": "https://educutai.com/",
+   "name": "EduCut.ai"
+  },
+  {
+   "@type": "CollectionPage",
+   "@id": "https://educutai.com/guides/#webpage",
+   "url": "https://educutai.com/guides/",
+   "name": "AI Training & Adoption Guides",
+   "description": "Practical guides from EduCut.ai on assessing AI readiness, building an AI training plan and preparing teams for AI regulation.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://educutai.com/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://educutai.com/guides/#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://educutai.com/guides/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://educutai.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Guides",
+     "item": "https://educutai.com/guides/"
+    }
+   ]
+  }
+ ]
+}</script>
+  <link rel="stylesheet" href="/assets/site.css?v=3ac57428d5" />
+  <link rel="stylesheet" href="/assets/pages.css?v=d9162cb412" />
 </head>
 <body>
   <nav class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="/">EduCut<span>.ai</span></a>
-      <div class="nav-links">
-        <a href="/academies/">Academies</a><a href="/ai-learning-paths/">AI Paths</a><a href="/educut-connect/">Connect</a><a href="/contact/">Contact</a><a href="/#/signup">Sign up</a><a href="/#/signin">Sign In</a>
+      <a class="brand" href="/" aria-label="EduCut.ai"><img src="/assets/logo_nav.svg" alt="EduCut.ai" class="brand-logo-img" style="height:36px;width:auto;display:block" /></a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span class="nav-toggle-icon">☰</span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="/academies/">Academies</a><a href="/ai-learning-paths/">AI Paths</a><a href="/educut-connect/">Connect</a><a href="/guides/" aria-current="page">Guides</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/#/signup">Sign up</a><a href="/#/signin">Sign In</a>
         <a class="btn btn-lime" href="/#start-assessment">Take the 3-min test</a>
       </div>
     </div>
   </nav>
+  <script>
+  (function(){
+    var t=document.getElementById('navToggle'), n=document.getElementById('navLinks');
+    if(!t || !n) return;
+    t.addEventListener('click', function(){
+      var open = n.classList.toggle('is-open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var ico = t.querySelector('.nav-toggle-icon');
+      if(ico) ico.textContent = open ? '✕' : '☰';
+    });
+    n.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        n.classList.remove('is-open');
+        t.setAttribute('aria-expanded', 'false');
+        var ico = t.querySelector('.nav-toggle-icon');
+        if(ico) ico.textContent = '☰';
+      });
+    });
+    try {
+      var raw = sessionStorage.getItem('educutAuthSession') || localStorage.getItem('educutAuthSession');
+      if(raw){
+        var s = JSON.parse(raw);
+        if(s && (s.userId || s.name || s.email)){
+          var su = n.querySelector('a[href*="/#/signup"]');
+          var si = n.querySelector('a[href*="/#/signin"]');
+          if(su) su.style.display = 'none';
+          if(si) si.style.display = 'none';
+          var cta = n.querySelector('.btn-lime');
+          var role = s.role || '';
+          var target = role === 'SUPER_ADMIN' ? '/#/admin' : (role === 'COMPANY_ADMIN' || role === 'COMPANY_MEMBER') ? '/#/company' : '/#/academy/dashboard';
+          var label = role === 'SUPER_ADMIN' ? 'Admin Console' : (role === 'COMPANY_ADMIN' || role === 'COMPANY_MEMBER') ? 'Company Workspace' : 'My Academy';
+          if(cta){
+            cta.textContent = label + ' →';
+            cta.setAttribute('href', target);
+          }
+          var chip = document.createElement('a');
+          chip.href = target;
+          chip.style.cssText = 'display:inline-flex;align-items:center;gap:7px;color:#fff;font-weight:700;';
+          var initial = (s.name ? s.name.charAt(0) : 'U').toUpperCase();
+          chip.innerHTML = '<span style="width:26px;height:26px;border-radius:50%;background:#19191b;border:1px solid var(--lime);display:inline-grid;place-items:center;font-size:11px;color:var(--lime);font-weight:800;">' + initial + '</span><span>' + (s.name ? s.name.split(' ')[0] : 'Profile') + '</span>';
+          if(cta && cta.parentNode === n) n.insertBefore(chip, cta);
+        }
+      }
+    }catch(_){}
+  })();
+  </script>
   <main>
 
-    <div class="draft-banner"><div class="wrap"><strong>No guide is published yet.</strong> This page is hidden from search engines until the first guide is reviewed and published.</div></div>
+    
     <header class="page-hero">
       <div class="wrap">
         <nav class="breadcrumb mono" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Guides</span></nav>
@@ -35,19 +141,19 @@
       <div class="wrap">
         <div class="guide-cards">
           <a class="academy-card" href="/guides/ai-readiness-assessment/">
-            <span class="mono code">Draft · pending review</span>
+            <span class="mono code">Guide · 22 October 2026</span>
             <h3>How to assess your organization’s AI readiness</h3>
             <p>What AI readiness means, the four maturity levels, the dimensions to assess and how readiness translates into concrete AI learning priorities.</p>
             <span class="more">Read the guide →</span>
           </a>
           <a class="academy-card" href="/guides/ai-training-plan/">
-            <span class="mono code">Draft · pending review</span>
+            <span class="mono code">Guide · 22 October 2026</span>
             <h3>Building an AI training plan for your company: the 3-5-7 model</h3>
-            <p>How to build a focused AI training plan for your company with three paths of 3, 5 and 7 courses (Essential, Accelerate and Transform), chosen from your priorities.</p>
+            <p>How to build a focused enterprise AI training plan with paths of 3, 5 and 7 courses (Essential, Accelerate, Transform), selected from your priorities.</p>
             <span class="more">Read the guide →</span>
           </a>
           <a class="academy-card" href="/guides/eu-ai-act-training/">
-            <span class="mono code">Draft · pending review</span>
+            <span class="mono code">Guide · 22 October 2026</span>
             <h3>EU AI Act: what your teams need to learn</h3>
             <p>What the EU AI Act means for organizations, the AI literacy duty, and which roles need which knowledge, with a training map to the relevant EduCut.ai courses.</p>
             <span class="more">Read the guide →</span>
@@ -67,8 +173,12 @@
           <li><a href="/ai-learning-paths/">AI learning paths</a></li>
           <li><a href="/educut-connect/">EduCut Connect: opportunities</a></li>
           <li><a href="/contact/">Contact &amp; consultation</a></li>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/about/">About EduCut.ai</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms &amp; Conditions</a></li>
         </ul>
-        <p class="footer-place">Based in Switzerland</p>
+        <p class="footer-place">Based in Switzerland · <a href="mailto:partners@educutai.com" style="color:#a1a19c">partners@educutai.com</a> · <a href="https://www.linkedin.com/company/educut-ai/" target="_blank" rel="noopener noreferrer" style="color:#a1a19c">LinkedIn ↗</a></p>
       </div>
       <div class="footer-academies">
         <div class="mono">Academies</div>

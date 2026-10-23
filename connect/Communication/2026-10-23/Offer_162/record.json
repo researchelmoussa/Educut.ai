@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Bolsa de PD em Inteligência Artificial",
+    "evidence_url": "https://fapesp.br/oportunidades/centro-de-ia-e-gestao-publica-(cia-gp)/9910/",
+    "evidence_quote": "Bolsa de PD em Inteligência Artificial - Fapesp Oportunidades"
+  },
+  "institution": {
+    "name": "Centro de IA e Gestão Pública (CIA-GP), Universidade de São Paulo (EACH)",
+    "website": "https://fapesp.br",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://fapesp.br/oportunidades/centro-de-ia-e-gestao-publica-(cia-gp)/9910/",
+  "source_url": "https://fapesp.br/oportunidades/centro-de-ia-e-gestao-publica-(cia-gp)/9910/",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": "São Paulo",
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Data science, AI, process mining",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "Experience in data science, process mining and machine learning; Python programming",
+    "Application by email to the principal investigator (m.fantinato@usp.br), subject \"Bolsa PD CIA-GP Edital linha 2\", PDF documents",
+    "Documents: CV in FAPESP format, updated Lattes CV, master's and doctoral transcripts, motivation letter up to 1,500 words"
+  ],
+  "skills": [
+    "Machine learning",
+    "Process mining",
+    "Python",
+    "Data visualization"
+  ],
+  "description_short": "FAPESP postdoctoral fellowship (one position) at the Center for AI and Public Governance (CIA-GP), USP-EACH, São Paulo, on predicting, optimizing and visualizing regulatory workflows with AI and process mining. Principal investigator: Marcelo Fantinato. Expected start December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-15",
+    "timezone": "America/Sao_Paulo",
+    "evidence_url": "https://fapesp.br/oportunidades/centro-de-ia-e-gestao-publica-(cia-gp)/9910/",
+    "evidence_quote": "deadline for submissions of 15/11/2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official FAPESP Oportunidades page no. 9910 (search results): submission deadline 15/11/2026",
+    "Application is by email; no portal to confirm"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Application is by email, so application_url points to the official call page",
+    "Stipend amount for this call not shown (an earlier CIA-GP call listed BRL 12,570/month); compensation left null",
+    "PhD-recency (less than seven years) and full-time-in-São-Paulo rules were reported for an earlier call; confirm for call 9910",
+    "Evidence quote is an English rendering shown in search results of a Portuguese page",
+    "Publication date not shown"
+  ],
+  "discovered_at": "2026-10-23T01:59:43.072Z",
+  "last_verified_at": "2026-10-23T01:59:49.580Z",
+  "id": "opp_dc50d7a7a7980c99",
+  "fingerprint": "bcc7f1bdd2be3403",
+  "content_hash": "sha256:afad47e4957582a23e7fc342b686e59a5267002059284845447a8ea5fe0eebac"
+}

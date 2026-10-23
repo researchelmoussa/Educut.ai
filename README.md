@@ -34,6 +34,16 @@ generated pages.
 Academy URLs are derived from academy names, so renaming an academy in the
 admin workspace changes its URL until the pages are rebuilt.
 
+## Local preview
+
+Run the zero-dependency local preview server:
+
+```bash
+node scripts/preview.mjs
+```
+
+Then open `http://localhost:3000/` in your browser. This serves the site exactly like a production web server, ensuring root-relative URLs, assets, and clean directory paths (`/about/`, `/contact/`, `/academies/`) resolve correctly.
+
 ## Hosting
 
 Every page is a folder with an `index.html`, so any static host serves the
