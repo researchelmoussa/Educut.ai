@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions | EduCut.ai</title>
+  <meta name="description" content="Terms &amp; Conditions of EduCut.ai." />
+  <link rel="canonical" href="https://educutai.com/terms/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EduCut.ai" />
+  <meta property="og:title" content="Terms &amp; Conditions" />
+  <meta property="og:description" content="Terms &amp; Conditions of EduCut.ai." />
+  <meta property="og:url" content="https://educutai.com/terms/" />
+  <meta property="og:image" content="https://educutai.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://educutai.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+  <script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://educutai.com/#organization",
+   "name": "EduCut.ai",
+   "url": "https://educutai.com/"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://educutai.com/#website",
+   "url": "https://educutai.com/",
+   "name": "EduCut.ai"
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://educutai.com/terms/#webpage",
+   "url": "https://educutai.com/terms/",
+   "name": "Terms & Conditions",
+   "description": "Terms & Conditions of EduCut.ai.",
+   "inLanguage": "en",
+   "isPartOf": {
+    "@id": "https://educutai.com/#website"
+   },
+   "breadcrumb": {
+    "@id": "https://educutai.com/terms/#breadcrumb"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://educutai.com/terms/#breadcrumb",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://educutai.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Terms & Conditions",
+     "item": "https://educutai.com/terms/"
+    }
+   ]
+  }
+ ]
+}</script>
+  <link rel="stylesheet" href="/assets/site.css?v=3ac57428d5" />
+  <link rel="stylesheet" href="/assets/pages.css?v=d9162cb412" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/" aria-label="EduCut.ai"><img src="/assets/logo_nav.svg" alt="EduCut.ai" class="brand-logo-img" style="height:36px;width:auto;display:block" /></a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"><span class="nav-toggle-icon">☰</span></button>
+      <div class="nav-links" id="navLinks">
+        <a href="/academies/">Academies</a><a href="/ai-learning-paths/">AI Paths</a><a href="/educut-connect/">Connect</a><a href="/guides/">Guides</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/#/signup">Sign up</a><a href="/#/signin">Sign In</a>
+        <a class="btn btn-lime" href="/#start-assessment">Take the 3-min test</a>
+      </div>
+    </div>
+  </nav>
+  <script>
+  (function(){
+    var t=document.getElementById('navToggle'), n=document.getElementById('navLinks');
+    if(!t || !n) return;
+    t.addEventListener('click', function(){
+      var open = n.classList.toggle('is-open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      var ico = t.querySelector('.nav-toggle-icon');
+      if(ico) ico.textContent = open ? '✕' : '☰';
+    });
+    n.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        n.classList.remove('is-open');
+        t.setAttribute('aria-expanded', 'false');
+        var ico = t.querySelector('.nav-toggle-icon');
+        if(ico) ico.textContent = '☰';
+      });
+    });
+    try {
+      var raw = sessionStorage.getItem('educutAuthSession') || localStorage.getItem('educutAuthSession');
+      if(raw){
+        var s = JSON.parse(raw);
+        if(s && (s.userId || s.name || s.email)){
+          var su = n.querySelector('a[href*="/#/signup"]');
+          var si = n.querySelector('a[href*="/#/signin"]');
+          if(su) su.style.display = 'none';
+          if(si) si.style.display = 'none';
+          var cta = n.querySelector('.btn-lime');
+          var role = s.role || '';
+          var target = role === 'SUPER_ADMIN' ? '/#/admin' : (role === 'COMPANY_ADMIN' || role === 'COMPANY_MEMBER') ? '/#/company' : '/#/academy/dashboard';
+          var label = role === 'SUPER_ADMIN' ? 'Admin Console' : (role === 'COMPANY_ADMIN' || role === 'COMPANY_MEMBER') ? 'Company Workspace' : 'My Academy';
+          if(cta){
+            cta.textContent = label + ' →';
+            cta.setAttribute('href', target);
+          }
+          var chip = document.createElement('a');
+          chip.href = target;
+          chip.style.cssText = 'display:inline-flex;align-items:center;gap:7px;color:#fff;font-weight:700;';
+          var initial = (s.name ? s.name.charAt(0) : 'U').toUpperCase();
+          chip.innerHTML = '<span style="width:26px;height:26px;border-radius:50%;background:#19191b;border:1px solid var(--lime);display:inline-grid;place-items:center;font-size:11px;color:var(--lime);font-weight:800;">' + initial + '</span><span>' + (s.name ? s.name.split(' ')[0] : 'Profile') + '</span>';
+          if(cta && cta.parentNode === n) n.insertBefore(chip, cta);
+        }
+      }
+    }catch(_){}
+  })();
+  </script>
+  <main>
+
+    <header class="page-hero">
+      <div class="wrap">
+        <nav class="breadcrumb mono" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Terms &amp; Conditions</span></nav>
+        <h1 style="margin-top:34px">Terms &amp; Conditions</h1>
+        <p class="byline">Last updated <time datetime="2026-10-22">22 October 2026</time></p>
+      </div>
+    </header>
+    <section class="page-section alt"><div class="wrap article">
+<h2>1. Agreement to Terms</h2>
+<p>These Terms and Conditions ("Terms") govern your access to and use of the EduCut AI website (educutai.com), course catalogues, AI Path Assessment, consultation booking services, and EduCut Connect platform (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms. If you disagree with any part of these Terms, you may not access or use the Services.</p>
+
+<h2>2. Nature of the Services</h2>
+<p>EduCut AI provides professional AI curriculum design, enterprise capability training, organizational AI readiness assessments, and educational upskilling paths across 18 specialized academies and 212 courses.</p>
+<p>All recommendations generated by our 3-minute AI Path Assessment, consultation advice, and curriculum outlines are designed for informational and diagnostic guidance. They represent educational recommendations based on the data you provide and do not constitute a binding operational or financial performance guarantee.</p>
+
+<h2>3. Intellectual Property Rights</h2>
+<p>All intellectual property rights in the Services, including text, graphics, course codes, syllabus curricula, assessments, diagnostic algorithms, logos, software, and website design, are owned by EduCut AI or its licensors. You may access and review our course descriptions and assessments for your organization's internal evaluation. You may not copy, reproduce, distribute, modify, create derivative works of, publicly display, or commercially exploit our proprietary curricula or software without prior written authorization.</p>
+
+<h2>4. EduCut Connect Directory Disclaimer</h2>
+<p>The EduCut Connect section (educutai.com/educut-connect/) lists academic fellowships, PhD vacancies, postdoctoral positions, scholarships, and research opportunities gathered from publicly accessible official institutional announcements.</p>
+<ul>
+  <li><strong>Not an Employer or Recruiter:</strong> EduCut AI is not the employer, recruiting agency, hiring committee, or scholarship grantor for opportunities listed on EduCut Connect.</li>
+  <li><strong>Official Applications:</strong> All applications must be submitted directly through the verified institutional page of the respective university, lab, or organization.</li>
+  <li><strong>Accuracy:</strong> While we verify listings against official sources upon publication, deadlines, eligibility criteria, and requirements remain the exclusive discretion of the hosting institution. Candidates are advised to confirm all terms directly on the official host page.</li>
+</ul>
+
+<h2>5. Course Bookings and Commercial Agreements</h2>
+<p>Consultation requests and catalogue submissions submitted through the website initiate pre-contractual discussions. Formal corporate cohorts, seat allocations, trainer assignments, and customized enterprise enterprise training paths are subject to a mutually executed Corporate Training Agreement or formal quotation issued by EduCut AI.</p>
+
+<h2>6. User Responsibilities and Acceptable Use</h2>
+<p>When utilizing our Services, you agree to:</p>
+<ul>
+  <li>Provide accurate, current, and truthful information during assessments and inquiries.</li>
+  <li>Refrain from attempting to reverse-engineer, decompile, scrape, or systematically extract data from our platform, course databases, or back-office interfaces.</li>
+  <li>Refrain from submitting malicious code, exploiting vulnerabilities, or disrupting platform availability.</li>
+</ul>
+
+<h2>7. Limitation of Liability</h2>
+<p>To the maximum extent permitted by applicable Swiss law, EduCut AI and its affiliates, directors, researchers, and partners shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, goodwill, or business interruption, arising out of or in connection with your access to or inability to use the Services.</p>
+
+<h2>8. Governing Law and Jurisdiction</h2>
+<p>These Terms and any disputes arising out of or related to them shall be governed by and construed in accordance with the substantive laws of Switzerland, excluding its conflict of law provisions. Any legal action or proceeding arising under these Terms shall be brought exclusively before the competent courts of Switzerland.</p>
+
+<h2>9. Contact Information</h2>
+<p>For questions or notices regarding these Terms, please contact our team at <a href="mailto:partners@educutai.com">partners@educutai.com</a>.</p>
+</div></section>
+  </main>
+<footer>
+  <div class="wrap">
+    <div class="footer-nav">
+      <div>
+        <div class="mono">EduCut.ai</div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/academies/">All academies</a></li>
+          <li><a href="/ai-learning-paths/">AI learning paths</a></li>
+          <li><a href="/educut-connect/">EduCut Connect: opportunities</a></li>
+          <li><a href="/contact/">Contact &amp; consultation</a></li>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/about/">About EduCut.ai</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms &amp; Conditions</a></li>
+        </ul>
+        <p class="footer-place">Based in Switzerland · <a href="mailto:partners@educutai.com" style="color:#a1a19c">partners@educutai.com</a> · <a href="https://www.linkedin.com/company/educut-ai/" target="_blank" rel="noopener noreferrer" style="color:#a1a19c">LinkedIn ↗</a></p>
+      </div>
+      <div class="footer-academies">
+        <div class="mono">Academies</div>
+        <ul><li><a href="/academies/ai-foundations/">AI Foundations</a></li><li><a href="/academies/generative-ai/">Generative AI</a></li><li><a href="/academies/prompt-engineering/">Prompt Engineering</a></li><li><a href="/academies/ai-productivity/">AI Productivity</a></li><li><a href="/academies/data-analytics/">Data Analytics</a></li><li><a href="/academies/ai-for-leaders/">AI for Leaders</a></li><li><a href="/academies/ai-for-marketing/">AI for Marketing</a></li><li><a href="/academies/ai-for-finance/">AI for Finance</a></li><li><a href="/academies/ai-for-hr/">AI for HR</a></li><li><a href="/academies/ai-for-education/">AI for Education</a></li><li><a href="/academies/ai-for-developers/">AI for Developers</a></li><li><a href="/academies/llm-engineering/">LLM Engineering</a></li><li><a href="/academies/rag-systems/">RAG Systems</a></li><li><a href="/academies/ai-agents/">AI Agents</a></li><li><a href="/academies/responsible-ai/">Responsible AI</a></li><li><a href="/academies/ai-governance/">AI Governance</a></li><li><a href="/academies/ai-security/">AI Security</a></li><li><a href="/academies/ai-transformation/">AI Transformation</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-row"><div>EDUCUT.AI · BRIDGING AI WITH EDUCATION</div><div>FOCUSED • RELEVANT • CONTINUOUSLY EVOLVING</div></div>
+  </div>
+</footer>
+</body>
+</html>
