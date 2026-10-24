@@ -2172,6 +2172,77 @@
 .btn-fav-active:hover {
   background: #fef3c7 !important;
 }
+.learner-track-pill {
+  font: 800 10px/1 "SFMono-Regular", Consolas, monospace;
+  color: var(--lime);
+  background: var(--ink);
+  letter-spacing: .06em;
+  padding: 5px 8px;
+  display: inline-block;
+  border-radius: 2px;
+}
+.learner-academy-track-banner {
+  background: #fff;
+  border: 2px solid var(--ink);
+  padding: 22px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.learner-track-step-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+.learner-step-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  transition: all .2s ease;
+}
+.learner-step-card.is-active {
+  border: 2px solid var(--ink);
+  box-shadow: 0 4px 14px rgba(0,0,0,.05);
+  background: #fcfffa;
+}
+.learner-step-card.is-completed {
+  border-left: 4px solid var(--lime);
+  background: #fff;
+}
+.learner-step-card.is-locked {
+  opacity: 0.7;
+  background: #fbfbfb;
+}
+.learner-step-badge {
+  font: 800 11px/1 "SFMono-Regular", Consolas, monospace;
+  padding: 5px 8px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: .04em;
+}
+.learner-step-badge.active {
+  background: var(--ink);
+  color: var(--lime);
+}
+.learner-step-badge.completed {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.learner-step-badge.locked {
+  background: #eeeeee;
+  color: #757575;
+}
 .learner-free-hero h2 {
   font-size: clamp(24px, 3vw, 32px);
   letter-spacing: -.04em;
@@ -4656,7 +4727,8 @@ document.addEventListener('keydown',e=>{
       accounts = JSON.parse(localStorage.getItem(ACCOUNTS_STORE_KEY) || '[]');
     } catch (_) { accounts = []; }
 
-    const defaultAccounts = [
+    const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
+    const defaultAccounts = isLocal ? [
       {
         email: 'demo@educut.ai',
         login: 'demo@educut.ai',
@@ -4702,7 +4774,7 @@ document.addEventListener('keydown',e=>{
         name: 'EduCut Administrator',
         role: ROLES.SUPER_ADMIN
       }
-    ];
+    ] : [];
 
     let changed = false;
     defaultAccounts.forEach(def => {
@@ -4738,10 +4810,8 @@ document.addEventListener('keydown',e=>{
   }
 
   function renderCompanySignin(){
-    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="companySignin" novalidate><div class="auth-field"><label for="companyLogin">Company Email or Company ID</label><input id="companyLogin" name="login" autocomplete="username" placeholder="company@educut.ai" required><div class="auth-error" data-error-for="login"></div></div>${passwordField('companyPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to Company Workspace</button>${status('', '')}<div class="mono" data-fill-demo style="font-size:0.75rem;color:#888;margin-top:10px;text-align:center;padding:7px;background:rgba(255,255,255,0.03);border-radius:6px;border:1px dashed rgba(255,255,255,0.1);cursor:pointer;" title="Click to auto-fill demo credentials">Demo: <strong>company@educut.ai</strong> · Password: <strong>Password123!</strong> <span style="color:var(--lime);margin-left:4px">(Click to fill)</span></div><div class="auth-switch">New to EduCut.ai? <button type="button" data-create-company>Create a Company Account</button></div></form>`;wirePasswordToggles(h);
+    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="companySignin" novalidate><div class="auth-field"><label for="companyLogin">Company Email or Company ID</label><input id="companyLogin" name="login" autocomplete="username" placeholder="company@domain.com or ID" required><div class="auth-error" data-error-for="login"></div></div>${passwordField('companyPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to Company Workspace</button>${status('', '')}<div class="auth-switch">New to EduCut.ai? <button type="button" data-create-company>Create a Company Account</button></div></form>`;wirePasswordToggles(h);
     const form=h.querySelector('form');
-    const demoFill=h.querySelector('[data-fill-demo]');
-    if(demoFill) demoFill.onclick=()=>{form.login.value='company@educut.ai';form.companyPassword.value='Password123!';};
     h.querySelector('[data-forgot]').onclick=()=>renderForgot('company');h.querySelector('[data-create-company]').onclick=()=>{state.mode='signup';state.companyStep=1;animateSwap(renderAccess)};
     form.onsubmit=e=>{e.preventDefault();const f=e.currentTarget,login=f.login.value.trim(),pw=f.companyPassword.value,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');st.textContent='';st.className='auth-status';if(!login){st.textContent='Please enter your company login.';st.classList.add('error');return;}if(!pw){st.textContent='Please enter your password.';st.classList.add('error');return;}if(!loading(btn,'Signing you in…')) return;(async ()=>{
       const fail=m=>{btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent=m||'Unable to sign in. Check your credentials and try again.';st.classList.add('error')};
@@ -4790,10 +4860,8 @@ document.addEventListener('keydown',e=>{
   }
 
   function renderIndividualSignin(){
-    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignin" novalidate><div class="auth-field"><label for="individualEmail">Email Address</label><input id="individualEmail" name="email" type="email" autocomplete="email" required placeholder="demo@educut.ai"><div class="auth-error"></div></div>${passwordField('individualPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to My Academy</button>${status()}<div class="mono" data-fill-demo style="font-size:0.75rem;color:#888;margin-top:10px;text-align:center;padding:7px;background:rgba(255,255,255,0.03);border-radius:6px;border:1px dashed rgba(255,255,255,0.1);cursor:pointer;" title="Click to auto-fill demo credentials">Demo: <strong>demo@educut.ai</strong> · Password: <strong>Password123!</strong> <span style="color:var(--lime);margin-left:4px">(Click to fill)</span></div><div class="auth-switch">Don’t have an account yet? <button type="button" data-switch-signup>Create a Free Account</button></div><div class="auth-switch" style="margin-top:6px">Has your company enrolled you? <button type="button" data-activate>Activate My Company Access</button></div></form>`;wirePasswordToggles(h);
+    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignin" novalidate><div class="auth-field"><label for="individualEmail">Email Address</label><input id="individualEmail" name="email" type="email" autocomplete="email" required placeholder="name@company.com"><div class="auth-error"></div></div>${passwordField('individualPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to My Academy</button>${status()}<div class="auth-switch">Don’t have an account yet? <button type="button" data-switch-signup>Create a Free Account</button></div><div class="auth-switch" style="margin-top:6px">Has your company enrolled you? <button type="button" data-activate>Activate My Company Access</button></div></form>`;wirePasswordToggles(h);
     const form=h.querySelector('form');
-    const demoFill=h.querySelector('[data-fill-demo]');
-    if(demoFill) demoFill.onclick=()=>{form.email.value='demo@educut.ai';form.individualPassword.value='Password123!';};
     h.querySelector('[data-forgot]').onclick=()=>renderForgot('individual');h.querySelector('[data-switch-signup]').onclick=()=>{state.mode='signup';animateSwap(renderAccess)};h.querySelector('[data-activate]').onclick=()=>{state.mode='activate';state.activation={email:'',verified:false,record:null};animateSwap(renderAccess)};
     form.onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');const emailTrim=f.email.value.trim().toLowerCase();const pw=f.individualPassword.value;
       if(!emailTrim){st.textContent='Please enter your email address.';st.className='auth-status error';return;}
@@ -4858,7 +4926,8 @@ document.addEventListener('keydown',e=>{
     h.querySelector('form').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]'),email=f.email.value.trim().toLowerCase();if(!/^\S+@\S+\.\S+$/.test(email)){st.textContent='Please enter a valid professional email address.';st.className='auth-status error';return;}loading(btn,'Verifying access…');const result=await verifyProvisionedEmail(email);state.activation.email=email;state.activation.record=result.record||null;if(result.status==='AUTHORIZED'){state.activation.demoCode=String(Math.floor(100000+Math.random()*900000));if(location.protocol!=='file:'){try{await fetch('/api/auth/company-access/send-code',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email})})}catch(_){}}renderActivationCode();return;}if(result.status==='ALREADY_ACTIVE'){neutralActivation('Your account is already active','Sign in using your company email and password.');return;}if(result.status==='EXPIRED'||result.status==='SUSPENDED'){neutralActivation("Your organization's EduCut.ai access is currently inactive.","Please contact your company's training administrator for more information.");return;}neutralActivation("We couldn't activate access with this email.","Please verify that you're using the same professional email address provided to your company administrator, or contact your organization's training administrator.",'Go to Sign In');};
   }
   function renderActivationCode(){
-    const email=state.activation.email;const h=document.getElementById('authFormHost');h.innerHTML=`<div>${titleBlock('Email verification','Check your company email',`We've sent a verification code to <strong>${maskEmail(email)}</strong>.`)}</div><form class="auth-form" id="activationCodeForm" novalidate><div class="auth-field"><label>6-digit verification code</label><div class="auth-code-grid" id="codeGrid">${Array.from({length:6},(_,i)=>`<input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Verification digit ${i+1}" required>`).join('')}</div></div><div class="auth-mask-note">For this standalone prototype, the code is <strong>${esc(state.activation.demoCode||'')}</strong>. In production it is sent only by email.</div><button class="btn btn-lime auth-submit" type="submit">Verify Email</button>${status()}</form>`;
+    const isLocalHost = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
+    h.innerHTML=`<div>${titleBlock('Email verification','Check your company email',`We've sent a verification code to <strong>${maskEmail(email)}</strong>.`)}</div><form class="auth-form" id="activationCodeForm" novalidate><div class="auth-field"><label>6-digit verification code</label><div class="auth-code-grid" id="codeGrid">${Array.from({length:6},(_,i)=>`<input inputmode="numeric" pattern="[0-9]*" maxlength="1" aria-label="Verification digit ${i+1}" required>`).join('')}</div></div>${isLocalHost ? `<div class="auth-mask-note">Test verification code: <strong>${esc(state.activation.demoCode||'')}</strong></div>` : ''}<button class="btn btn-lime auth-submit" type="submit">Verify Email</button>${status()}</form>`;
     const inputs=[...h.querySelectorAll('#codeGrid input')];inputs.forEach((inp,i)=>{inp.oninput=()=>{inp.value=inp.value.replace(/\D/g,'').slice(0,1);if(inp.value&&inputs[i+1])inputs[i+1].focus()};inp.onkeydown=e=>{if(e.key==='Backspace'&&!inp.value&&inputs[i-1])inputs[i-1].focus()};inp.onpaste=e=>{const digits=(e.clipboardData.getData('text')||'').replace(/\D/g,'').slice(0,6);if(digits.length){e.preventDefault();digits.split('').forEach((d,j)=>{if(inputs[j])inputs[j].value=d});inputs[Math.min(digits.length,6)-1].focus()}}});inputs[0]?.focus();h.querySelector('form').onsubmit=async e=>{e.preventDefault();const code=inputs.map(x=>x.value).join(''),st=e.currentTarget.querySelector('.auth-status'),btn=e.currentTarget.querySelector('button[type=submit]');if(code.length!==6){st.textContent='Enter the 6-digit verification code.';st.className='auth-status error';return;}loading(btn,'Verifying…');let ok=false;if(location.protocol!=='file:'){try{const r=await fetch('/api/auth/company-access/verify-code',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:state.activation.email,code})});ok=r.ok}catch(_){}}else ok=code===state.activation.demoCode;if(!ok){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='The verification code is invalid or expired.';st.className='auth-status error';return;}state.activation.verified=true;renderActivationPassword();};
   }
   function renderActivationPassword(){
@@ -9820,8 +9889,8 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     try {
       const { pdfBlob } = await generateCertificatePDF(certData);
       const url = URL.createObjectURL(pdfBlob);
-      const safeName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Alex Vance').replace(/[^a-zA-Z0-9_-]/g, '_');
-      const filename = `EduCut_AI_Ethics_Certificate_${safeName}.pdf`;
+      const safeCourse = (certData.courseCode || 'Certificate').replace(/[^a-zA-Z0-9_-]/g, '_');
+      const filename = `EduCut_${safeCourse}_Certificate_${safeName}.pdf`;
       const a = document.createElement('a');
       a.href = url;
       a.download = filename;
@@ -9960,7 +10029,7 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
       .then(data => {
         if (Array.isArray(data) && data.length) {
           const map = new Map();
-          // ETHICS-101 is the ONE and ONLY free certification course
+          // ETHICS-101 is the official free certification course
           map.set('ETHICS-101', ETHICS_COURSE_DEF);
           data.forEach(c => {
             const acadCode = c.academy || c.code.split('.')[0];
@@ -10028,8 +10097,9 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
 
     if (state) {
       if (!Array.isArray(state.enrolledCourses)) state.enrolledCourses = [];
-      // Enforce: only ETHICS-101 is free and enrollable; filter out legacy free-101 or auto-enrolled paid courses
-      state.enrolledCourses = state.enrolledCourses.filter(c => c.code === 'ETHICS-101');
+      // Filter out legacy FREE-101 only; keep ETHICS-101 and enrolled academy track courses
+      state.enrolledCourses = state.enrolledCourses.filter(c => c && c.code !== 'FREE-101');
+      if (!Array.isArray(state.enrolledAcademies)) state.enrolledAcademies = [];
       if (!Array.isArray(state.favorites)) state.favorites = [];
       if (!Array.isArray(state.certificates)) state.certificates = [];
       if (!Array.isArray(state.activity)) state.activity = [];
@@ -10078,6 +10148,7 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
           lessons: ETHICS_COURSE_DEF.lessons
         }
       ],
+      enrolledAcademies: [],
       favorites: [],
       certificates: [],
       activity: [
@@ -10326,7 +10397,7 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
         <div class="learner-kpi">
           <div class="mono">01 · Active Free Course</div>
           <strong>${activeCount}</strong>
-          <small>ETHICS-101 (Only free course)</small>
+          <small>ETHICS-101 (Free course)</small>
         </div>
         <div class="learner-kpi">
           <div class="mono">02 · Completed Courses</div>
@@ -10346,7 +10417,7 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
         <div class="learner-kpi">
           <div class="mono">05 · Saved Favorites</div>
           <strong>${favorites.length}</strong>
-          <small>Coming soon wishlist</small>
+          <small>Saved wishlists</small>
         </div>
       </div>
 
@@ -10354,7 +10425,7 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
       <section style="background:#fff;border:2px solid var(--ink);padding:26px 28px;margin-bottom:32px;box-shadow:0 8px 30px rgba(0,0,0,.04);display:grid;grid-template-columns:1.5fr .5fr;gap:24px;align-items:center">
         <div>
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-            <span class="learner-free-badge">★ ONLY FREE CERTIFICATION COURSE</span>
+            <span class="learner-free-badge">★ FREE CERTIFICATION COURSE</span>
             <span class="mono" style="font-size:11px;color:var(--blue)">ACADEMY A018 · RESPONSIBLE AI &amp; GOVERNANCE</span>
           </div>
           <h2 style="font-size:24px;letter-spacing:-.03em;margin:0 0 8px">ETHICS-101: Applied AI Ethics, Bias &amp; Responsible Governance</h2>
@@ -10377,6 +10448,101 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
           <small style="color:#355b00;font-weight:700">✓ Free Institutional Credential</small>
         </div>
       </section>
+
+      <!-- ENROLLED ACADEMY TRACKS (SEQUENTIAL PROGRESSION) -->
+      ${(state.enrolledAcademies && state.enrolledAcademies.length) ? state.enrolledAcademies.map(acad => {
+        const acadCourses = enrolled.filter(c => (c.academy === acad.code || c.academyCode === acad.code) && c.inAcademyTrack);
+        acadCourses.sort((a, b) => (a.sequenceOrder || 0) - (b.sequenceOrder || 0));
+        const doneCount = acadCourses.filter(c => c.progress === 100 || c.status === 'COMPLETED').length;
+        const trackPct = acadCourses.length ? Math.round((doneCount / acadCourses.length) * 100) : 0;
+        const activeStep = acadCourses.find(c => !c.isLocked && c.progress < 100);
+
+        return `
+          <section style="background:#fff;border:2px solid var(--ink);padding:24px 26px;margin-bottom:32px;box-shadow:0 8px 30px rgba(0,0,0,.04)">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;margin-bottom:18px;border-bottom:1px solid var(--line);padding-bottom:16px">
+              <div>
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+                  <span class="learner-step-badge active">ENROLLED ACADEMY TRACK</span>
+                  <span class="mono" style="font-size:11px;color:var(--blue)">ACADEMY ${esc(acad.code)}</span>
+                </div>
+                <h2 style="font-size:24px;letter-spacing:-.03em;margin:0 0 6px">${esc(acad.title)}</h2>
+                <p style="color:#555;font-size:13px;margin:0;max-width:760px">
+                  All ${acadCourses.length} courses in this professional track are sequenced in order. Complete each course to automatically unlock the next prerequisite step.
+                </p>
+              </div>
+              <div style="text-align:right">
+                <div class="mono" style="font-size:11px;color:#777;margin-bottom:4px">Sequential Progression</div>
+                <div style="font:800 20px/1 monospace;color:var(--ink)">${doneCount} / ${acadCourses.length} Mastered (${trackPct}%)</div>
+                ${activeStep ? `
+                  <button class="btn btn-lime" style="margin-top:10px" data-open-player="${esc(activeStep.code)}">
+                    Continue Step ${activeStep.sequenceOrder}: ${esc(activeStep.code)} →
+                  </button>
+                ` : `
+                  <span class="learner-step-badge completed" style="margin-top:10px;font-size:12px;padding:6px 12px">
+                    ✓ Complete Academy Track Mastered!
+                  </span>
+                `}
+              </div>
+            </div>
+
+            <div class="learner-track-step-list">
+              ${acadCourses.map(c => {
+                const isDone = c.progress === 100 || c.status === 'COMPLETED';
+                const isLocked = !!c.isLocked;
+                const isActive = !isDone && !isLocked;
+                return `
+                  <div class="learner-step-card ${isActive ? 'is-active' : isDone ? 'is-completed' : 'is-locked'}">
+                    <div style="display:flex;align-items:center;gap:14px;min-width:0;flex:1">
+                      <span class="learner-step-badge ${isDone ? 'completed' : isActive ? 'active' : 'locked'}">
+                        ${isDone ? '✓ STEP ' + c.sequenceOrder : isActive ? '▶ STEP ' + c.sequenceOrder : '🔒 STEP ' + c.sequenceOrder}
+                      </span>
+                      <div style="min-width:0">
+                        <strong style="font-size:14.5px;color:var(--ink);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">
+                          ${esc(c.code)}: ${esc(c.title)}
+                        </strong>
+                        <small style="color:#666;font-size:12px">
+                          ${esc(c.level || 'Foundation')} · ${esc(c.duration || '12 hours')} · ${isDone ? '100% Completed' : isActive ? `${c.progress || 0}% in progress` : `Locked · Requires ${esc(c.prerequisiteCode)}`}
+                        </small>
+                      </div>
+                    </div>
+                    <div style="display:flex;gap:8px;align-items:center;flex-shrink:0">
+                      ${isDone ? `
+                        <button class="btn btn-outline" data-open-player="${esc(c.code)}" style="font-size:12px;padding:6px 12px">
+                          Review Course
+                        </button>
+                        <button class="btn btn-outline" data-view-course-cert="${esc(c.code)}" style="font-size:12px;padding:6px 12px">
+                          Certificate ↗
+                        </button>
+                      ` : isActive ? `
+                        <button class="btn btn-lime" data-open-player="${esc(c.code)}" style="font-size:12px;padding:7px 16px;font-weight:700">
+                          ${c.progress > 0 ? 'Continue Step ' + c.sequenceOrder + ' →' : 'Start Step ' + c.sequenceOrder + ' →'}
+                        </button>
+                      ` : `
+                        <span class="mono" style="font-size:11px;color:#888;padding:6px 10px;background:#f3f3f3;border-radius:2px">
+                          🔒 Complete ${esc(c.prerequisiteCode)} first
+                        </span>
+                      `}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </section>
+        `;
+      }).join('') : `
+        <section style="margin-bottom:32px;background:#fff;border:1px dashed var(--line);padding:24px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap">
+          <div>
+            <div class="mono" style="color:var(--blue);font-size:10px;font-weight:700">STRUCTURED CAREER PATHWAYS</div>
+            <h3 style="font-size:20px;letter-spacing:-.03em;margin:4px 0 6px">Enroll in an Entire Academy Track</h3>
+            <p style="color:#666;font-size:13px;margin:0;max-width:700px">
+              Enroll in any of the 18 AI Academies to take all its courses in a curated sequential order. Courses unlock step-by-step as you complete prerequisites.
+            </p>
+          </div>
+          <button class="btn btn-lime" id="exploreAcademyTracksBtn" style="white-space:nowrap">
+            Explore Academy Tracks &amp; Enroll →
+          </button>
+        </section>
+      `}
 
       <section style="margin-top:30px">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px">
@@ -10481,6 +10647,13 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
       renderActivePage();
     });
 
+    document.getElementById('exploreAcademyTracksBtn')?.addEventListener('click', () => {
+      app.page = 'catalogue';
+      learnerWriteRoute();
+      app.root.querySelectorAll('[data-lpage]').forEach(btn => btn.classList.toggle('active', btn.dataset.lpage === 'catalogue'));
+      renderActivePage();
+    });
+
     document.getElementById('emptyEnrollBtn')?.addEventListener('click', () => {
       app.page = 'catalogue';
       learnerWriteRoute();
@@ -10520,19 +10693,21 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
 
   function courseCardMarkup(c) {
     const isComplete = c.progress === 100 || c.status === 'COMPLETED';
-    const totalLessons = c.totalLessons || (c.lessons && c.lessons.length) || 8;
+    const isLocked = !!c.isLocked;
+    const isFree = !!c.isFree;
+    const totalLessons = c.totalLessons || (c.lessons && c.lessons.length) || (isFree ? 8 : 4);
     const completedCount = (c.completedLessons || []).length;
     const nextLesson = (c.lessons || []).find(l => !(c.completedLessons || []).includes(l.id)) || (c.lessons || [])[0];
 
     return `
-      <article class="learner-course-card is-free">
+      <article class="learner-course-card ${isFree ? 'is-free' : ''} ${isLocked ? 'is-locked' : ''}">
         <div class="learner-course-head">
           <div>
             <div class="learner-academy-name">${esc(c.academyTitle || c.academy)}</div>
             <span class="learner-code-pill">${esc(c.code)}</span>
           </div>
           <div>
-            <span class="learner-free-badge">★ ONLY FREE COURSE</span>
+            ${isFree ? '<span class="learner-free-badge">★ FREE COURSE</span>' : (c.inAcademyTrack ? `<span class="learner-track-pill">STEP ${c.sequenceOrder || 1} OF ${c.totalInTrack || 10}</span>` : '')}
           </div>
         </div>
 
@@ -10542,7 +10717,7 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
         <div class="learner-course-meta">
           <span>Level: <strong>${esc(c.level || 'Foundation')}</strong></span>
           <span>Duration: <strong>${esc(c.duration || '3 hours')}</strong></span>
-          <span>Modules: <strong>${completedCount} / ${totalLessons}</strong></span>
+          <span>Status: <strong>${isComplete ? 'Completed' : (isLocked ? `Locked (Prereq: ${esc(c.prerequisiteCode)})` : 'Active')}</strong></span>
         </div>
 
         <div class="learner-progress-wrap">
@@ -10554,19 +10729,25 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
             <span style="width:${Math.max(0, Math.min(100, c.progress || 0))}%"></span>
           </div>
           <div style="font-size:11px;color:#777;margin-top:6px">
-            ${isComplete ? '✓ All modules completed · Certificate awarded' : nextLesson ? `Next: <strong>${esc(nextLesson.title)}</strong>` : 'Modules in progress'}
+            ${isComplete ? '✓ All modules completed · Certificate awarded' : (isLocked ? `🔒 Complete ${esc(c.prerequisiteCode)} first to unlock` : (nextLesson ? `Next: <strong>${esc(nextLesson.title)}</strong>` : 'Modules in progress'))}
           </div>
         </div>
 
         <div class="learner-course-actions">
-          <button class="btn btn-lime" style="flex:1" data-open-player="${esc(c.code)}">
-            ${isComplete ? 'Review Course & Download Certificate →' : 'Continue Learning →'}
-          </button>
-          ${isComplete ? `
-            <button class="btn btn-outline" data-view-course-cert="${esc(c.code)}" title="View official certificate">
-              Certificate ↗
+          ${isLocked ? `
+            <button class="btn btn-outline" style="flex:1;cursor:not-allowed;opacity:0.65" disabled>
+              🔒 Locked · Prerequisite: ${esc(c.prerequisiteCode)}
             </button>
-          ` : ''}
+          ` : `
+            <button class="btn btn-lime" style="flex:1" data-open-player="${esc(c.code)}">
+              ${isComplete ? 'Review Course & Download Certificate →' : (c.progress > 0 ? 'Continue Learning →' : 'Start Course →')}
+            </button>
+            ${isComplete ? `
+              <button class="btn btn-outline" data-view-course-cert="${esc(c.code)}" title="View official certificate">
+                Certificate ↗
+              </button>
+            ` : ''}
+          `}
         </div>
       </article>
     `;
@@ -10596,6 +10777,10 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
     const isEthicsEnrolled = enrolledCodes.has('ETHICS-101');
     const ethicsCourse = ETHICS_COURSE_DEF;
 
+    const selectedAcad = acadFilter !== 'ALL' ? (window.academyDetailsFallback && window.academyDetailsFallback[acadFilter]) : null;
+    const isEnrolledInAcad = selectedAcad && (state.enrolledAcademies || []).some(a => a.code === acadFilter);
+    const acadCoursesCount = selectedAcad ? fullCatalogue.filter(c => c.academy === acadFilter).length : 0;
+
     P.innerHTML = `
       <div class="learner-head">
         <div>
@@ -10603,7 +10788,7 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
           <h1>Explore &amp; Enroll</h1>
         </div>
         <div>
-          <p>Discover specialized courses across all 18 AI Academies. Access the official free certification course or save upcoming specialized curricula to your favorites list.</p>
+          <p>Discover specialized courses across all 18 AI Academies. Access the official free certification course or enroll in an entire Academy track in sequential order.</p>
         </div>
       </div>
 
@@ -10632,6 +10817,54 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
           <small style="color:#355b00;font-weight:700">✓ Free Institutional Credential</small>
         </div>
       </section>
+
+      <!-- FULL ACADEMY ENROLLMENT BANNER -->
+      ${selectedAcad ? `
+        <div class="learner-academy-track-banner">
+          <div style="flex:1;min-width:280px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+              <span class="learner-step-badge active">${esc(acadFilter)} TRACK</span>
+              <span class="mono" style="font-size:11px;color:var(--blue)">FULL ACADEMY CURRICULUM</span>
+            </div>
+            <h2 style="font-size:22px;letter-spacing:-.03em;margin:0 0 6px">${esc(selectedAcad.title)}</h2>
+            <p style="color:#555;font-size:13px;margin:0;line-height:1.45">
+              Enroll in this complete Academy with all ${acadCoursesCount} courses sequenced in an industry-certified order. Complete prerequisite steps to unlock advanced modules.
+            </p>
+          </div>
+          <div style="text-align:right">
+            ${isEnrolledInAcad ? `
+              <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+                <span class="learner-step-badge completed">✓ Enrolled in Full Academy Track</span>
+                <button class="btn btn-outline" id="goToDashboardTrackBtn" style="font-size:12px;padding:8px 14px">
+                  View Sequential Roadmap in Dashboard →
+                </button>
+              </div>
+            ` : `
+              <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+                <button class="btn btn-lime" id="enrollFullAcademyBtn" data-enroll-academy="${esc(acadFilter)}" style="padding:12px 22px;font-size:13.5px;font-weight:700">
+                  Enroll in Full Academy (${acadCoursesCount} Courses in Sequence) →
+                </button>
+                <small style="color:#666;font-size:11px">Sequential course progression · Step 1 unlocks immediately</small>
+              </div>
+            `}
+          </div>
+        </div>
+      ` : `
+        <div class="learner-academy-track-banner" style="background:#fcfcfc">
+          <div style="flex:1;min-width:280px">
+            <div class="mono" style="color:var(--blue);font-size:11px;font-weight:700;margin-bottom:4px">STRUCTURED LEARNING PATHS</div>
+            <h2 style="font-size:20px;letter-spacing:-.03em;margin:0 0 6px">Full Academy Track Enrollment</h2>
+            <p style="color:#555;font-size:13px;margin:0;max-width:700px">
+              Select an Academy from the filter dropdown below to enroll in the full curriculum track. All courses will be enrolled in your dashboard in sequential order.
+            </p>
+          </div>
+          <div>
+            <button class="btn btn-outline" id="quickPickA001Btn" style="font-size:12px">
+              Explore A001 AI Academy Track →
+            </button>
+          </div>
+        </div>
+      `}
 
       <!-- FILTER BAR -->
       <div class="learner-filter-bar">
@@ -10665,6 +10898,8 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
         ${filtered.map(c => {
           const isEthics = c.code === 'ETHICS-101';
           const isFav = favSet.has(c.code);
+          const trackCourse = (state.enrolledCourses || []).find(x => x.code === c.code && x.inAcademyTrack);
+
           return `
             <article class="learner-course-card ${isEthics ? 'is-free' : ''}">
               <div class="learner-course-head">
@@ -10673,7 +10908,7 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
                   <span class="learner-code-pill">${esc(c.code)}</span>
                 </div>
                 <div>
-                  ${isEthics ? '<span class="learner-free-badge">★ ONLY FREE COURSE</span>' : '<span class="learner-coming-soon-badge">COMING SOON</span>'}
+                  ${isEthics ? '<span class="learner-free-badge">★ FREE COURSE</span>' : (trackCourse ? `<span class="learner-track-pill">STEP ${trackCourse.sequenceOrder} OF ${trackCourse.totalInTrack}</span>` : '')}
                 </div>
               </div>
 
@@ -10683,7 +10918,7 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
               <div class="learner-course-meta">
                 <span>Level: <strong>${esc(c.level)}</strong></span>
                 <span>Duration: <strong>${esc(c.duration)}</strong></span>
-                <span>Access: <strong>${isEthics ? 'Free (0 CHF)' : '<span class="learner-coming-soon-pill">Coming Soon</span>'}</strong></span>
+                <span>Tuition: <strong>${isEthics ? 'Free (0 CHF)' : `${c.priceHT || 400} CHF`}</strong></span>
               </div>
 
               <div class="learner-course-actions">
@@ -10691,12 +10926,24 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
                   <button class="btn btn-lime" style="flex:1" data-open-player="ETHICS-101">
                     Start Free Course &amp; Certification →
                   </button>
+                ` : trackCourse ? `
+                  <div style="display:flex;gap:8px;align-items:center;width:100%">
+                    ${trackCourse.isLocked ? `
+                      <button class="btn btn-outline" style="flex:1;opacity:0.65;cursor:not-allowed" disabled>
+                        🔒 Step ${trackCourse.sequenceOrder} Locked · Requires ${esc(trackCourse.prerequisiteCode)}
+                      </button>
+                    ` : `
+                      <button class="btn btn-lime" style="flex:1" data-open-player="${esc(c.code)}">
+                        ${trackCourse.progress === 100 ? 'Review Step ' + trackCourse.sequenceOrder + ' →' : (trackCourse.progress > 0 ? 'Continue Step ' + trackCourse.sequenceOrder + ' →' : 'Start Step ' + trackCourse.sequenceOrder + ' →')}
+                      </button>
+                    `}
+                  </div>
                 ` : `
                   <div style="display:flex;gap:8px;align-items:center;width:100%">
                     <button class="btn ${isFav ? 'btn-fav-active' : 'btn-outline'}" style="flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px" data-toggle-fav="${esc(c.code)}" title="${isFav ? 'Remove from favorites' : 'Add to favorites'}">
                       ${isFav ? '★ Favorited' : '☆ Add to Favorites'}
                     </button>
-                    <button class="btn btn-outline" style="opacity:0.5;cursor:not-allowed;font-size:11.5px;padding:8px 10px;white-space:nowrap" disabled title="Enrollment opens soon">
+                    <button class="btn btn-outline" style="opacity:0.5;cursor:not-allowed;font-size:11.5px;padding:8px 10px;white-space:nowrap" disabled title="Enroll in the full academy to take this course in sequence">
                       Coming Soon
                     </button>
                   </div>
@@ -10723,6 +10970,22 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
       renderCatalogue(P);
     };
 
+    document.getElementById('quickPickA001Btn')?.addEventListener('click', () => {
+      app.academyFilter = 'A001';
+      renderCatalogue(P);
+    });
+
+    document.getElementById('goToDashboardTrackBtn')?.addEventListener('click', () => {
+      app.page = 'dashboard';
+      learnerWriteRoute();
+      app.root.querySelectorAll('[data-lpage]').forEach(btn => btn.classList.toggle('active', btn.dataset.lpage === 'dashboard'));
+      renderActivePage();
+    });
+
+    P.querySelectorAll('[data-enroll-academy]').forEach(b => {
+      b.onclick = () => enrollAcademy(b.dataset.enrollAcademy);
+    });
+
     P.querySelectorAll('[data-enroll-course]').forEach(b => {
       b.onclick = () => enrollCourse(b.dataset.enrollCourse);
     });
@@ -10734,6 +10997,96 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
     P.querySelectorAll('[data-toggle-fav]').forEach(b => {
       b.onclick = () => toggleFavoriteCourse(b.dataset.toggleFav);
     });
+  function enrollAcademy(academyCode) {
+    const state = getLearnerState(app.session);
+    state.enrolledAcademies = state.enrolledAcademies || [];
+    state.enrolledCourses = state.enrolledCourses || [];
+
+    if (state.enrolledAcademies.some(a => a.code === academyCode)) {
+      toast(`You are already enrolled in ${academyCode} Academy track.`);
+      return;
+    }
+
+    const acadDetail = (window.academyDetailsFallback && window.academyDetailsFallback[academyCode]) || {};
+    const acadTitle = acadDetail.title || academyCode;
+
+    // Get all courses for this academy from fullCatalogue
+    const acadCourses = fullCatalogue.filter(c => c.academy === academyCode);
+    if (!acadCourses.length) {
+      toast(`No courses found for ${academyCode}.`);
+      return;
+    }
+
+    // Sort by code (A001.01, A001.02, etc.)
+    acadCourses.sort((a, b) => a.code.localeCompare(b.code, undefined, { numeric: true }));
+
+    // Prepare courses with sequential order
+    acadCourses.forEach((c, idx) => {
+      const already = state.enrolledCourses.find(x => x.code === c.code);
+      if (!already) {
+        state.enrolledCourses.push({
+          code: c.code,
+          title: c.title,
+          academy: academyCode,
+          academyCode: academyCode,
+          academyTitle: acadTitle,
+          level: c.level || 'Foundation',
+          duration: c.duration || '12 hours',
+          isFree: false,
+          inAcademyTrack: true,
+          sequenceOrder: idx + 1,
+          totalInTrack: acadCourses.length,
+          isLocked: idx !== 0,
+          prerequisiteCode: idx > 0 ? acadCourses[idx - 1].code : null,
+          enrolledAt: new Date().toISOString(),
+          lastAccessed: new Date().toISOString(),
+          completedLessons: [],
+          totalLessons: (c.lessons && c.lessons.length) || 4,
+          progress: 0,
+          status: idx === 0 ? 'NOT_STARTED' : 'LOCKED',
+          certificateId: null,
+          lessons: c.lessons
+        });
+      }
+    });
+
+    state.enrolledAcademies.push({
+      code: academyCode,
+      title: acadTitle,
+      totalCourses: acadCourses.length,
+      enrolledAt: new Date().toISOString()
+    });
+
+    state.activity.unshift({
+      event: `Enrolled in ${academyCode} Track (${acadTitle}) · ${acadCourses.length} sequential courses`,
+      at: new Date().toISOString()
+    });
+
+    saveLearnerState(app.session, state);
+    toast(`🎉 Successfully enrolled in ${acadTitle}! Step 1 (${acadCourses[0].code}) is now unlocked.`);
+    renderActivePage();
+  }
+
+  function unlockNextCourseInTrack(courseCode, state) {
+    const course = state.enrolledCourses.find(c => c.code === courseCode);
+    if (!course || !course.inAcademyTrack) return null;
+
+    const nextCourse = state.enrolledCourses.find(c => 
+      c.academyCode === course.academyCode && 
+      c.sequenceOrder === course.sequenceOrder + 1
+    );
+
+    if (nextCourse && nextCourse.isLocked) {
+      nextCourse.isLocked = false;
+      nextCourse.status = 'NOT_STARTED';
+      state.activity.unshift({
+        event: `Unlocked Step ${nextCourse.sequenceOrder} (${nextCourse.code}: ${nextCourse.title}) in ${course.academyTitle}`,
+        course: nextCourse.code,
+        at: new Date().toISOString()
+      });
+      return nextCourse;
+    }
+    return null;
   }
 
   function enrollCourse(code) {
@@ -11291,20 +11644,242 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
   }
 
   function openCoursePlayer(code) {
-    if (code !== 'ETHICS-101') {
-      toast(`This course is coming soon. You can add it to your Favorites list!`);
+    const state = getLearnerState(app.session);
+    const modal = document.getElementById('coursePlayerModal');
+
+    if (code === 'ETHICS-101') {
+      let course = (state.enrolledCourses || []).find(c => c.code === 'ETHICS-101');
+      if (!course) {
+        enrollCourse('ETHICS-101');
+        course = (getLearnerState(app.session).enrolledCourses || []).find(c => c.code === 'ETHICS-101');
+      }
+      return openEthicsCoursePlayer(course, modal, state);
+    }
+
+    const course = (state.enrolledCourses || []).find(c => c.code === code);
+    if (!course) {
+      toast(`This course is part of an Academy track. Enroll in the full Academy to access all its sequential courses!`);
       return;
     }
 
-    const state = getLearnerState(app.session);
-    let course = (state.enrolledCourses || []).find(c => c.code === 'ETHICS-101');
-    if (!course) {
-      enrollCourse('ETHICS-101');
-      course = (getLearnerState(app.session).enrolledCourses || []).find(c => c.code === 'ETHICS-101');
+    if (course.isLocked) {
+      toast(`🔒 This course is locked. Please complete prerequisite: ${course.prerequisiteCode} first to unlock Step ${course.sequenceOrder}.`);
+      return;
     }
 
-    const modal = document.getElementById('coursePlayerModal');
-    return openEthicsCoursePlayer(course, modal, state);
+    return openTrackCoursePlayer(course, modal, state);
+  }
+
+  function openTrackCoursePlayer(course, modal, state) {
+    const card = modal.querySelector('.learner-modal-card');
+    card.classList.remove('ethics-modal-card');
+    const kicker = document.getElementById('playerKicker');
+    const title = document.getElementById('playerTitle');
+    const body = document.getElementById('playerBody');
+
+    const acadTitle = course.academyTitle || course.academyCode || 'EduCut Academy';
+    const totalLessons = (course.lessons && course.lessons.length) || 4;
+    course.completedLessons = course.completedLessons || [];
+
+    kicker.textContent = `ACADEMY ${course.academyCode || course.academy} · STEP ${course.sequenceOrder || 1} OF ${course.totalInTrack || 10} · SEQUENTIAL TRACK`;
+    title.textContent = `${course.code}: ${course.title}`;
+
+    function renderTrackView() {
+      const isComplete = course.progress === 100 || course.status === 'COMPLETED';
+      const completedCount = course.completedLessons.length;
+      const pct = Math.round((completedCount / totalLessons) * 100);
+      course.progress = isComplete ? 100 : pct;
+
+      const nextCourse = state.enrolledCourses.find(c => 
+        c.academyCode === course.academyCode && 
+        c.sequenceOrder === course.sequenceOrder + 1
+      );
+
+      body.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;background:var(--paper);border:1px solid var(--line);padding:16px 20px;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+          <div>
+            <div class="mono" style="font-size:11px;color:var(--blue)">Sequential Track Progression</div>
+            <strong style="font-size:15px;color:var(--ink)">
+              Step ${course.sequenceOrder || 1} of ${course.totalInTrack || 10} in ${esc(acadTitle)}
+            </strong>
+          </div>
+          <div style="text-align:right">
+            <span class="mono" style="font-size:11px;color:#666">Course Mastery</span>
+            <div style="font:800 18px/1 monospace;color:var(--ink);margin-top:2px">${course.progress}%</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:24px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
+            <h3 style="font-size:17px;margin:0">Modular Syllabus &amp; Learning Units</h3>
+            <span class="mono" style="font-size:11px;color:#777">${completedCount} of ${totalLessons} modules completed</span>
+          </div>
+          <p style="color:#666;font-size:13px;margin:0 0 16px">
+            Study each curriculum module thoroughly. Complete all modules and practical exercises to verify mastery and unlock the next sequential course in this Academy.
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:12px">
+            ${(course.lessons || []).map((l, idx) => {
+              const isModDone = course.completedLessons.includes(l.id);
+              return `
+                <div style="background:#fff;border:1px solid ${isModDone ? '#88f012' : 'var(--line)'};padding:16px 20px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px;box-shadow:0 2px 8px rgba(0,0,0,.02)">
+                  <div style="flex:1">
+                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+                      <span class="mono" style="font-size:11px;color:var(--blue);font-weight:700">MODULE ${idx + 1}</span>
+                      <span class="mono" style="font-size:10.5px;color:#777">⏱ ${esc(l.duration || '3 hours')}</span>
+                    </div>
+                    <h4 style="font-size:16px;margin:0 0 6px;letter-spacing:-.02em">${esc(l.title)}</h4>
+                    <p style="color:#555;font-size:13px;margin:0 0 8px;line-height:1.45">${esc(l.summary || '')}</p>
+                    <div style="background:#f8f9fa;border-left:3px solid var(--blue);padding:8px 12px;font-size:12px;color:#333">
+                      <strong>Practical Exercise:</strong> ${esc(l.exercise || 'Apply these concepts to a real-world enterprise scenario.')}
+                    </div>
+                  </div>
+                  <div style="flex-shrink:0;margin-top:4px">
+                    <button class="btn ${isModDone ? 'btn-fav-active' : 'btn-lime'}" data-toggle-module="${esc(l.id)}" style="font-size:12px;padding:8px 14px;white-space:nowrap">
+                      ${isModDone ? '✓ Completed' : 'Mark Complete ✓'}
+                    </button>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+
+        <!-- Course Completion Banner -->
+        ${isComplete ? `
+          <div style="background:#fcfffa;border:2px solid #88f012;padding:22px 24px;margin-top:20px;text-align:center">
+            <div style="font-size:28px;margin-bottom:6px">🎉</div>
+            <h3 style="font-size:20px;margin:0 0 6px;letter-spacing:-.03em">Course Successfully Completed!</h3>
+            <p style="color:#555;font-size:13.5px;margin:0 0 16px">
+              You have completed all curriculum modules for <strong>${esc(course.code)}: ${esc(course.title)}</strong>. Your official institutional certificate is verified.
+            </p>
+            <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+              <button class="btn btn-lime" id="trackDownloadCertBtn" style="font-weight:700">
+                Download Official Certificate ⬇
+              </button>
+              ${nextCourse ? `
+                <button class="btn btn-lime" id="trackNextStepBtn" style="background:var(--ink);color:var(--lime);border-color:var(--ink);font-weight:700">
+                  Proceed to Next Step: ${esc(nextCourse.code)} →
+                </button>
+              ` : `
+                <span class="learner-step-badge completed" style="font-size:13px;padding:8px 16px">
+                  🏆 You have completed the entire ${esc(acadTitle)} Track!
+                </span>
+              `}
+              <button class="btn btn-outline" id="trackClosePlayerBtn">
+                Close
+              </button>
+            </div>
+          </div>
+        ` : `
+          <div style="display:flex;justify-content:space-between;align-items:center;background:#fff;border-top:1px solid var(--line);padding-top:16px;margin-top:20px">
+            <span class="mono" style="font-size:11px;color:#777">
+              ${completedCount === totalLessons ? '✓ All modules finished! Click button to complete course.' : `${totalLessons - completedCount} module(s) remaining`}
+            </span>
+            <button class="btn btn-lime" id="claimCourseCompletionBtn" ${completedCount < totalLessons ? 'disabled style="opacity:0.6;cursor:not-allowed"' : ''}>
+              Complete Course &amp; Unlock Next Step →
+            </button>
+          </div>
+        `}
+      `;
+
+      // Wire module toggles
+      body.querySelectorAll('[data-toggle-module]').forEach(b => {
+        b.onclick = () => {
+          const modId = b.dataset.toggleModule;
+          const idx = course.completedLessons.indexOf(modId);
+          if (idx >= 0) {
+            course.completedLessons.splice(idx, 1);
+            course.status = 'IN_PROGRESS';
+            course.progress = Math.round((course.completedLessons.length / totalLessons) * 100);
+          } else {
+            course.completedLessons.push(modId);
+            course.progress = Math.round((course.completedLessons.length / totalLessons) * 100);
+            if (course.completedLessons.length === totalLessons) {
+              course.progress = 100;
+              course.status = 'COMPLETED';
+              finishTrackCourse(course, state);
+            }
+          }
+          saveLearnerState(app.session, state);
+          renderTrackView();
+        };
+      });
+
+      document.getElementById('claimCourseCompletionBtn')?.addEventListener('click', () => {
+        course.completedLessons = (course.lessons || []).map(l => l.id);
+        course.progress = 100;
+        course.status = 'COMPLETED';
+        finishTrackCourse(course, state);
+        saveLearnerState(app.session, state);
+        renderTrackView();
+      });
+
+      document.getElementById('trackDownloadCertBtn')?.addEventListener('click', () => {
+        const cert = (state.certificates || []).find(c => c.courseCode === course.code) || {
+          courseCode: course.code,
+          courseTitle: course.title,
+          academyTitle: course.academyTitle,
+          learnerName: app.session?.name || 'Alex Vance',
+          issued: new Date().toISOString().slice(0, 10),
+          verificationId: course.certificateId || `EC-${course.code.replace('.', '-')}`
+        };
+        downloadCertificatePDF(cert);
+      });
+
+      document.getElementById('trackNextStepBtn')?.addEventListener('click', () => {
+        modal.classList.remove('open');
+        renderActivePage();
+        if (nextCourse) {
+          setTimeout(() => openCoursePlayer(nextCourse.code), 250);
+        }
+      });
+
+      document.getElementById('trackClosePlayerBtn')?.addEventListener('click', () => {
+        modal.classList.remove('open');
+        renderActivePage();
+      });
+    }
+
+    renderTrackView();
+    modal.classList.add('open');
+  }
+
+  function finishTrackCourse(course, state) {
+    if (!course.certificateId) {
+      course.certificateId = `EC-${course.code.replace('.', '-')}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+    }
+
+    const learnerName = formatLearnerName(app.session?.name || app.session?.email || 'Alex Vance');
+    const certData = {
+      id: course.certificateId,
+      courseCode: course.code,
+      courseTitle: course.title,
+      academy: course.academyTitle || course.academyCode,
+      issued: new Date().toISOString().slice(0, 10),
+      score: 10,
+      verificationId: course.certificateId,
+      learnerName
+    };
+
+    state.certificates = state.certificates || [];
+    const existIdx = state.certificates.findIndex(c => c.courseCode === course.code);
+    if (existIdx >= 0) state.certificates[existIdx] = certData;
+    else state.certificates.unshift(certData);
+
+    state.activity = state.activity || [];
+    state.activity.unshift({
+      event: `Completed ${course.code}: ${course.title} (Step ${course.sequenceOrder}) · Official Certificate Awarded`,
+      course: course.code,
+      at: new Date().toISOString()
+    });
+
+    const next = unlockNextCourseInTrack(course.code, state);
+    if (next) {
+      toast(`🎉 Step ${course.sequenceOrder} Completed! Next step ${next.code} is now UNLOCKED!`);
+    } else {
+      toast(`🎉 Outstanding! Course ${course.code} completed and certificate awarded!`);
+    }
   }
 
   /* -------------------------------------------------------------
