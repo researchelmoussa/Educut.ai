@@ -9,7 +9,7 @@ Apply the administrator's decisions in `$ARGUMENTS`, e.g. `approve Offer_003 Off
 1. Find the run folder holding each Offer_NNN (`connect/runs/*/offers/Offer_NNN/record.json`) and read the
    opportunity id. If the run folder is not on disk (new session), download that offer's `record.json` and
    `Registry/registry.json` from Drive into `connect/runs/<date>/` first.
-2. Ask who is approving if no name is known, then run per offer
+2. Use "EduCut administrator" as the approver unless a name is given (do not ask), then run per offer
    (`--run connect/runs/<date>`):
    - approve → `node connect/cli.mjs approve <id> --by "<name>"`. This re-checks the deadline and status,
      then sets READY_TO_PUBLISH, or EXPIRED / NEEDS_REVIEW if something changed. Report the resulting status.

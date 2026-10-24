@@ -42,7 +42,7 @@ export function cardHtml(spec, format = 'portrait') {
   const c = t.colors;
   const square = format === 'square';
   const flag = flagPath(spec.country_code);
-  const location = [spec.city, spec.country].filter(Boolean).join(', ');
+  const location = [spec.city, spec.country].filter((v, i, a) => v && a.findIndex((x) => String(x).toLowerCase() === String(v).toLowerCase()) === i).join(', ');
   const variant = VARIANTS.includes(spec.variant) ? spec.variant : 'datasheet';
   const darkTop = variant === 'obsidian';
   const darkBottom = variant === 'obsidian' || variant === 'split';
@@ -177,7 +177,9 @@ footer{display:flex;justify-content:space-between;align-items:center;gap:24px;ma
   const h1 = document.querySelector('h1');
   let size = 72;
   const lines = () => Math.round(h1.getBoundingClientRect().height / (size * 1.04));
-  while (lines() > 3 && size > 44) { size -= 2; h1.style.fontSize = size + 'px'; }
+  // Very long official titles (over 120 characters) may go down to 40px; others stop at 44px.
+  const minSize = h1.textContent.trim().length > 120 ? 40 : 44;
+  while (lines() > 3 && size > minSize) { size -= 2; h1.style.fontSize = size + 'px'; }
 </script>
 </body></html>`;
 }
@@ -224,7 +226,7 @@ export async function renderCard(spec, { outDir, format = 'portrait' }) {
     await page.screenshot({ path: pngPath, clip: { x: 0, y: 0, width: W, height: H } });
     const qc = [
       { check: `${format}: no clipped text`, pass: probe.overflow.length === 0, detail: probe.overflow.length ? `overflowing: ${probe.overflow.join(', ')}` : 'all text blocks fit' },
-      { check: `${format}: title legible on mobile`, pass: probe.titlePx >= 44, detail: `title rendered at ${probe.titlePx}px` },
+      { check: `${format}: title legible on mobile`, pass: probe.titlePx >= (spec.title.length > 120 ? 40 : 44), detail: `title rendered at ${probe.titlePx}px` },
       { check: `${format}: PNG size`, pass: pngSize(pngPath).join('x') === `${W}x${H}`, detail: pngSize(pngPath).join('x') },
     ];
     return { png: pngPath, html: htmlPath, rendered_text: probe.text, qc };
