@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "institution": {
+    "name": "Aalto University",
+    "website": "https://www.aalto.fi",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.aalto.fi/en/aalto-university-summer-school/aalto-university-winter-school",
+  "source_url": "https://www.aalto.fi/en/aalto-university-summer-school/introduction-to-ai-and-machine-learning-winter-school",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Espoo",
+    "country": "Finland",
+    "country_code": "FI"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Artificial intelligence, machine learning, large language models",
+  "seniority": null,
+  "qualifications": [
+    "Motivation letter (150-250 words) or video (1-2 minutes) required",
+    "3 ECTS, total workload 81 h, on campus over two weeks (18-29 January 2027)",
+    "Tuition fee applies"
+  ],
+  "skills": [
+    "Machine learning",
+    "Large language models"
+  ],
+  "description_short": "Two-week, 3 ECTS on-campus winter school course at Aalto University introducing AI and machine learning with a focus on large language models, 18-29 January 2027. Applications for Winter School 2027 run 15 September-15 November 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-15",
+    "timezone": "Europe/Helsinki",
+    "evidence_url": "https://www.aalto.fi/en/aalto-university-summer-school/aalto-university-winter-school",
+    "evidence_quote": "The application period for Winter School 2027 runs from 15 September to 15 November 2026."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Aalto Winter School page (search results): application period 15 September - 15 November 2026",
+    "Application form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Tuition fee for this course not shown (another Winter School course lists EUR 1,270)",
+    "City not stated in the excerpt; Espoo taken from the university's existing registry record",
+    "Deadline time of day not shown",
+    "Publication date not shown"
+  ],
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Introduction to AI and Machine Learning Winter School",
+    "evidence_url": "https://www.aalto.fi/en/aalto-university-summer-school/introduction-to-ai-and-machine-learning-winter-school",
+    "evidence_quote": "Introduction to AI and Machine Learning Winter School"
+  },
+  "id": "opp_d8ba7b2919689c65",
+  "fingerprint": "0a1333afd0da5793",
+  "discovered_at": "2026-10-24T02:05:03.549Z",
+  "last_verified_at": "2026-10-24T02:05:03.549Z",
+  "content_hash": "sha256:2441a237889f7a37b26f6632a0c60f33b7a5386d478b57de39754303cfeefce0"
+}
