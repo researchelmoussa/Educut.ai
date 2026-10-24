@@ -2141,6 +2141,37 @@
   border-radius: 2px;
   margin-bottom: 10px;
 }
+.learner-coming-soon-badge {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  font: 800 10px/1 "SFMono-Regular", Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: 5px 9px;
+  display: inline-block;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+.learner-coming-soon-pill {
+  font: 700 11px/1 "SFMono-Regular", Consolas, monospace;
+  color: #64748b;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 7px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-fav-active {
+  background: #fffbeb !important;
+  color: #b45309 !important;
+  border-color: #f59e0b !important;
+}
+.btn-fav-active:hover {
+  background: #fef3c7 !important;
+}
 .learner-free-hero h2 {
   font-size: clamp(24px, 3vw, 32px);
   letter-spacing: -.04em;
@@ -4618,33 +4649,139 @@ document.addEventListener('keydown',e=>{
     },380);
   };
 
+  const ACCOUNTS_STORE_KEY = 'educutRegisteredAccountsV1';
+  function getRegisteredAccounts() {
+    let accounts = [];
+    try {
+      accounts = JSON.parse(localStorage.getItem(ACCOUNTS_STORE_KEY) || '[]');
+    } catch (_) { accounts = []; }
+
+    const defaultAccounts = [
+      {
+        email: 'demo@educut.ai',
+        login: 'demo@educut.ai',
+        password: 'Password123!',
+        name: 'Alex Vance',
+        firstName: 'Alex',
+        lastName: 'Vance',
+        role: ROLES.INDIVIDUAL,
+        sponsored: false
+      },
+      {
+        email: 'alex.vance@example.com',
+        login: 'alex.vance@example.com',
+        password: 'Password123!',
+        name: 'Alex Vance',
+        firstName: 'Alex',
+        lastName: 'Vance',
+        role: ROLES.INDIVIDUAL,
+        sponsored: false
+      },
+      {
+        email: 'company@educut.ai',
+        login: 'company@educut.ai',
+        password: 'Password123!',
+        name: 'Sofia Al-Mansoor',
+        role: ROLES.COMPANY_ADMIN,
+        companyName: 'Helvetia Digital AG',
+        companyPortal: true
+      },
+      {
+        email: 'sofia@helvetia.example',
+        login: 'sofia@helvetia.example',
+        password: 'Password123!',
+        name: 'Sofia Al-Mansoor',
+        role: ROLES.COMPANY_ADMIN,
+        companyName: 'Helvetia Digital AG',
+        companyPortal: true
+      },
+      {
+        email: 'admin@educut.ai',
+        login: 'admin@educut.ai',
+        password: 'Password123!',
+        name: 'EduCut Administrator',
+        role: ROLES.SUPER_ADMIN
+      }
+    ];
+
+    let changed = false;
+    defaultAccounts.forEach(def => {
+      const exists = accounts.find(a => (a.email && a.email.toLowerCase() === def.email.toLowerCase()) || (a.login && a.login.toLowerCase() === def.login.toLowerCase()));
+      if (!exists) {
+        accounts.push(def);
+        changed = true;
+      }
+    });
+    if (changed) {
+      try { localStorage.setItem(ACCOUNTS_STORE_KEY, JSON.stringify(accounts)); } catch (_) {}
+    }
+    return accounts;
+  }
+
+  function saveRegisteredAccount(acc) {
+    const list = getRegisteredAccounts();
+    const id = (acc.email || acc.login || '').trim().toLowerCase();
+    const idx = list.findIndex(a => (a.email && a.email.toLowerCase() === id) || (a.login && a.login.toLowerCase() === id));
+    if (idx >= 0) {
+      list[idx] = { ...list[idx], ...acc };
+    } else {
+      list.push(acc);
+    }
+    try { localStorage.setItem(ACCOUNTS_STORE_KEY, JSON.stringify(list)); } catch (_) {}
+  }
+
+  function findRegisteredAccount(identifier) {
+    const term = (identifier || '').trim().toLowerCase();
+    if (!term) return null;
+    const list = getRegisteredAccounts();
+    return list.find(a => (a.email && a.email.toLowerCase() === term) || (a.login && a.login.toLowerCase() === term)) || null;
+  }
+
   function renderCompanySignin(){
-    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="companySignin" novalidate><div class="auth-field"><label for="companyLogin">Company Email or Company ID</label><input id="companyLogin" name="login" autocomplete="username" required><div class="auth-error" data-error-for="login"></div></div>${passwordField('companyPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to Company Workspace</button>${status('', '')}<div class="auth-switch">New to EduCut.ai? <button type="button" data-create-company>Create a Company Account</button></div></form>`;wirePasswordToggles(h);
+    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="companySignin" novalidate><div class="auth-field"><label for="companyLogin">Company Email or Company ID</label><input id="companyLogin" name="login" autocomplete="username" placeholder="company@educut.ai" required><div class="auth-error" data-error-for="login"></div></div>${passwordField('companyPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to Company Workspace</button>${status('', '')}<div class="mono" data-fill-demo style="font-size:0.75rem;color:#888;margin-top:10px;text-align:center;padding:7px;background:rgba(255,255,255,0.03);border-radius:6px;border:1px dashed rgba(255,255,255,0.1);cursor:pointer;" title="Click to auto-fill demo credentials">Demo: <strong>company@educut.ai</strong> · Password: <strong>Password123!</strong> <span style="color:var(--lime);margin-left:4px">(Click to fill)</span></div><div class="auth-switch">New to EduCut.ai? <button type="button" data-create-company>Create a Company Account</button></div></form>`;wirePasswordToggles(h);
+    const form=h.querySelector('form');
+    const demoFill=h.querySelector('[data-fill-demo]');
+    if(demoFill) demoFill.onclick=()=>{form.login.value='company@educut.ai';form.companyPassword.value='Password123!';};
     h.querySelector('[data-forgot]').onclick=()=>renderForgot('company');h.querySelector('[data-create-company]').onclick=()=>{state.mode='signup';state.companyStep=1;animateSwap(renderAccess)};
-    h.querySelector('form').onsubmit=e=>{e.preventDefault();const f=e.currentTarget,login=f.login.value.trim(),pw=f.companyPassword.value,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');st.textContent='';st.className='auth-status';if(!login||!pw){st.textContent='Please enter your company credentials.';st.classList.add('error');return;}if(!loading(btn,'Signing you in…')) return;(async ()=>{
-      const sb=window.educutSupabase;
+    form.onsubmit=e=>{e.preventDefault();const f=e.currentTarget,login=f.login.value.trim(),pw=f.companyPassword.value,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');st.textContent='';st.className='auth-status';if(!login){st.textContent='Please enter your company login.';st.classList.add('error');return;}if(!pw){st.textContent='Please enter your password.';st.classList.add('error');return;}if(!loading(btn,'Signing you in…')) return;(async ()=>{
       const fail=m=>{btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent=m||'Unable to sign in. Check your credentials and try again.';st.classList.add('error')};
 
-      if(sb&&sb.signIn){
-        const res=await sb.signIn(login,pw);
-        if(!res.ok) return fail(res.error);
-        const me=res.me||{};
-        if(me.role==='SUPER_ADMIN'||me.role==='PLATFORM_ADMIN'||me.role==='CONTENT_MANAGER'||me.role==='FINANCE_MANAGER'||me.role==='SUPPORT_MANAGER'){
+      // 1. Check registered/demo accounts first
+      const account=findRegisteredAccount(login);
+      if(account){
+        if(account.password!==pw){
+          return fail('Incorrect password. Please verify your credentials and try again.');
+        }
+        if(account.role===ROLES.SUPER_ADMIN||account.role===ROLES.PLATFORM_ADMIN){
           successBtn(btn,'Access granted ✓');
-          setTimeout(()=>renderAdminGranted(me.name),260);
+          setTimeout(()=>renderAdminGranted(account.name),260);
           return;
         }
         successBtn(btn,'Welcome back ✓');
-        finishLogin(me.role||ROLES.COMPANY_ADMIN,me.name||login,sb.homeFor(me.role),{companyPortal:true,companyName:me.companyName||''});
+        finishLogin(account.role||ROLES.COMPANY_ADMIN,account.name||login,'/company/dashboard',{companyPortal:true,companyName:account.companyName||'Helvetia Digital AG'});
         return;
       }
 
-      // No Supabase configured - original offline prototype behaviour.
-      setTimeout(()=>{
-        if(pw.length<8) return fail();
-        successBtn(btn,'Welcome back ✓');
-        finishLogin(ROLES.COMPANY_ADMIN,login,'/company/dashboard',{companyPortal:true});
-      },650);
+      // 2. Check Supabase if configured
+      const sb=window.educutSupabase;
+      if(sb&&sb.signIn){
+        try{
+          const res=await sb.signIn(login,pw);
+          if(res.ok){
+            const me=res.me||{};
+            if(me.role==='SUPER_ADMIN'||me.role==='PLATFORM_ADMIN'||me.role==='CONTENT_MANAGER'||me.role==='FINANCE_MANAGER'||me.role==='SUPPORT_MANAGER'){
+              successBtn(btn,'Access granted ✓');
+              setTimeout(()=>renderAdminGranted(me.name),260);
+              return;
+            }
+            successBtn(btn,'Welcome back ✓');
+            finishLogin(me.role||ROLES.COMPANY_ADMIN,me.name||login,sb.homeFor(me.role),{companyPortal:true,companyName:me.companyName||''});
+            return;
+          }
+        }catch(_){}
+      }
+
+      return fail('No company account found for "'+login+'". Please verify your login or create an account.');
     })()};
   }
 
@@ -4653,32 +4790,51 @@ document.addEventListener('keydown',e=>{
   }
 
   function renderIndividualSignin(){
-    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignin" novalidate><div class="auth-field"><label for="individualEmail">Email Address</label><input id="individualEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><div class="auth-error"></div></div>${passwordField('individualPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to My Academy</button>${status()}<div class="auth-switch">Don’t have an account yet? <button type="button" data-switch-signup>Create a Free Account</button></div><div class="auth-switch" style="margin-top:6px">Has your company enrolled you? <button type="button" data-activate>Activate My Company Access</button></div></form>`;wirePasswordToggles(h);h.querySelector('[data-forgot]').onclick=()=>renderForgot('individual');h.querySelector('[data-switch-signup]').onclick=()=>{state.mode='signup';animateSwap(renderAccess)};h.querySelector('[data-activate]').onclick=()=>{state.mode='activate';state.activation={email:'',verified:false,record:null};animateSwap(renderAccess)};h.querySelector('form').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');if(!/^\S+@\S+\.\S+$/.test(f.email.value)&&!f.email.value.trim()){st.textContent='Please enter a valid email and password.';st.className='auth-status error';return;}if(!loading(btn,'Signing you in…')) return;
+    const h=document.getElementById('authFormHost');h.innerHTML=`<form class="auth-form" id="individualSignin" novalidate><div class="auth-field"><label for="individualEmail">Email Address</label><input id="individualEmail" name="email" type="email" autocomplete="email" required placeholder="demo@educut.ai"><div class="auth-error"></div></div>${passwordField('individualPassword')}<div class="auth-inline"><label><input type="checkbox" name="remember"> Remember me</label><button type="button" class="auth-link" data-forgot>Forgot password?</button></div><button class="btn btn-lime auth-submit" type="submit">Sign In to My Academy</button>${status()}<div class="mono" data-fill-demo style="font-size:0.75rem;color:#888;margin-top:10px;text-align:center;padding:7px;background:rgba(255,255,255,0.03);border-radius:6px;border:1px dashed rgba(255,255,255,0.1);cursor:pointer;" title="Click to auto-fill demo credentials">Demo: <strong>demo@educut.ai</strong> · Password: <strong>Password123!</strong> <span style="color:var(--lime);margin-left:4px">(Click to fill)</span></div><div class="auth-switch">Don’t have an account yet? <button type="button" data-switch-signup>Create a Free Account</button></div><div class="auth-switch" style="margin-top:6px">Has your company enrolled you? <button type="button" data-activate>Activate My Company Access</button></div></form>`;wirePasswordToggles(h);
+    const form=h.querySelector('form');
+    const demoFill=h.querySelector('[data-fill-demo]');
+    if(demoFill) demoFill.onclick=()=>{form.email.value='demo@educut.ai';form.individualPassword.value='Password123!';};
+    h.querySelector('[data-forgot]').onclick=()=>renderForgot('individual');h.querySelector('[data-switch-signup]').onclick=()=>{state.mode='signup';animateSwap(renderAccess)};h.querySelector('[data-activate]').onclick=()=>{state.mode='activate';state.activation={email:'',verified:false,record:null};animateSwap(renderAccess)};
+    form.onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]');const emailTrim=f.email.value.trim().toLowerCase();const pw=f.individualPassword.value;
+      if(!emailTrim){st.textContent='Please enter your email address.';st.className='auth-status error';return;}
+      if(!/^\S+@\S+\.\S+$/.test(emailTrim)){st.textContent='Please enter a valid email address.';st.className='auth-status error';return;}
+      if(!pw){st.textContent='Please enter your password.';st.className='auth-status error';return;}
+      if(!loading(btn,'Signing you in…')) return;
+      const fail=m=>{btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent=m||'Unable to sign in. Check your credentials and try again.';st.className='auth-status error';};
+
+      // 1. Check registered/demo accounts first
+      const registeredAcc=findRegisteredAccount(emailTrim);
+      if(registeredAcc){
+        if(registeredAcc.password!==pw){
+          return fail('Incorrect password. Please verify your credentials and try again.');
+        }
+        successBtn(btn,'Welcome back ✓');
+        finishLogin(registeredAcc.role||ROLES.INDIVIDUAL,registeredAcc.name||emailTrim,'/academy/dashboard',{sponsored:!!registeredAcc.sponsored,companyName:registeredAcc.companyName||'',email:registeredAcc.email||emailTrim});
+        return;
+      }
+
+      // 2. Check Supabase if configured
       const _sb=window.educutSupabase;
       if(_sb&&_sb.signIn){
         try{
-          const res=await _sb.signIn(f.email.value.trim(),f.individualPassword.value);
-          if(res.ok){const me=res.me||{};successBtn(btn,'Welcome back ✓');finishLogin(me.role||ROLES.INDIVIDUAL,me.name||me.email,_sb.homeFor(me.role),{companyName:me.companyName||'',email:f.email.value.trim()});return;}
+          const res=await _sb.signIn(emailTrim,pw);
+          if(res.ok){
+            const me=res.me||{};
+            successBtn(btn,'Welcome back ✓');
+            finishLogin(me.role||ROLES.INDIVIDUAL,me.name||me.email,_sb.homeFor(me.role),{companyName:me.companyName||'',email:emailTrim});
+            return;
+          }
         }catch(_){}
       }
-      let account=null;try{if(location.protocol!=='file:'){const r=await fetch('/api/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:f.email.value.trim(),password:f.individualPassword.value,portal:'individual'})});if(r.ok)account=await r.json();}}catch(_){account=null}
-      if(!account){
-        const emailTrim=f.email.value.trim();
-        const rec=getProvisionedSeat(emailTrim);
-        if(rec&&rec.account_status==='ACTIVE'&&rec.password_created){
-          account={role:ROLES.COMPANY_MEMBER,name:rec.employee_name||emailTrim,companyName:rec.company_name,sponsored:true,email:emailTrim};
-        } else {
-          let sUsers=[];
-          try{sUsers=(JSON.parse(localStorage.getItem('educutAdminPlatformStateV2'))||{}).users||[];}catch(_){}
-          const match=sUsers.find(u=>String(u.email||'').toLowerCase()===emailTrim.toLowerCase());
-          if(match){
-            account={role:match.type||ROLES.INDIVIDUAL,name:match.name||emailTrim,sponsored:!!match.companyId,companyName:match.companyName||'',email:match.email};
-          } else if(f.individualPassword.value.length>=6||/@/.test(emailTrim)){
-            account={role:ROLES.INDIVIDUAL,name:emailTrim.split('@')[0],sponsored:false,email:emailTrim};
-          }
-        }
+
+      // 3. Check provisioned learner seats
+      const rec=getProvisionedSeat(emailTrim);
+      if(rec&&rec.account_status!=='ACTIVE'){
+        return fail('Your company seat has not been activated yet. Please click "Activate My Company Access" below.');
       }
-      setTimeout(()=>{if(!account){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='Unable to sign in. Check your credentials and try again.';st.className='auth-status error';return;}successBtn(btn,'Welcome back ✓');finishLogin(account.role||ROLES.INDIVIDUAL,account.name||f.email.value.trim(),'/academy/dashboard',{sponsored:!!account.sponsored,companyName:account.companyName||'',email:account.email||f.email.value.trim()})},420)};
+
+      return fail('No account found with this email. Please verify your address or create an account.');
+    };
   }
 
   const seatStoreKey='educutProvisionedLearners';
@@ -4706,7 +4862,7 @@ document.addEventListener('keydown',e=>{
     const inputs=[...h.querySelectorAll('#codeGrid input')];inputs.forEach((inp,i)=>{inp.oninput=()=>{inp.value=inp.value.replace(/\D/g,'').slice(0,1);if(inp.value&&inputs[i+1])inputs[i+1].focus()};inp.onkeydown=e=>{if(e.key==='Backspace'&&!inp.value&&inputs[i-1])inputs[i-1].focus()};inp.onpaste=e=>{const digits=(e.clipboardData.getData('text')||'').replace(/\D/g,'').slice(0,6);if(digits.length){e.preventDefault();digits.split('').forEach((d,j)=>{if(inputs[j])inputs[j].value=d});inputs[Math.min(digits.length,6)-1].focus()}}});inputs[0]?.focus();h.querySelector('form').onsubmit=async e=>{e.preventDefault();const code=inputs.map(x=>x.value).join(''),st=e.currentTarget.querySelector('.auth-status'),btn=e.currentTarget.querySelector('button[type=submit]');if(code.length!==6){st.textContent='Enter the 6-digit verification code.';st.className='auth-status error';return;}loading(btn,'Verifying…');let ok=false;if(location.protocol!=='file:'){try{const r=await fetch('/api/auth/company-access/verify-code',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:state.activation.email,code})});ok=r.ok}catch(_){}}else ok=code===state.activation.demoCode;if(!ok){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='The verification code is invalid or expired.';st.className='auth-status error';return;}state.activation.verified=true;renderActivationPassword();};
   }
   function renderActivationPassword(){
-    const rec=state.activation.record||{};const h=document.getElementById('authFormHost');h.innerHTML=`<div class="auth-verified-email"><div class="mono">Verified company email</div><strong>${esc(state.activation.email)}</strong></div><div class="auth-heading" style="margin-top:22px"><h2>Create your EduCut.ai password</h2><p>You'll use this password together with your company email whenever you sign in.</p></div><form class="auth-form" id="activationPasswordForm" novalidate><div class="auth-form-grid">${passwordField('activationPassword','New Password','new-password')}${passwordField('activationConfirm','Confirm Password','new-password')}</div><div class="password-strength"><span id="activationStrength"></span></div><div class="password-rules" id="activationRules"><span data-rule="len">○ At least 8 characters</span><span data-rule="upper">○ At least one uppercase letter</span><span data-rule="lower">○ At least one lowercase letter</span><span data-rule="number">○ At least one number</span><span data-rule="special">○ At least one special character</span></div><button class="btn btn-lime auth-submit" type="submit">Activate My EduCut.ai Account</button>${status()}</form>`;wirePasswordToggles(h);const p=h.querySelector('#activationPassword'),rules=h.querySelector('#activationRules'),bar=h.querySelector('#activationStrength');const checks=v=>({len:v.length>=8,upper:/[A-Z]/.test(v),lower:/[a-z]/.test(v),number:/\d/.test(v),special:/[^A-Za-z0-9]/.test(v)});p.oninput=()=>{const c=checks(p.value);Object.entries(c).forEach(([k,v])=>{const el=rules.querySelector(`[data-rule="${k}"]`);el?.classList.toggle('ok',v);if(el)el.textContent=(v?'✓ ':'○ ')+el.textContent.replace(/^[✓○]\s*/,'')});bar.style.width=(Object.values(c).filter(Boolean).length/5*100)+'%'};h.querySelector('form').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]'),c=checks(f.activationPassword.value);if(!Object.values(c).every(Boolean)){st.textContent='Please meet all password requirements.';st.className='auth-status error';return;}if(f.activationPassword.value!==f.activationConfirm.value){st.textContent='Passwords do not match.';st.className='auth-status error';return;}loading(btn,'Activating your account…');let ok=false;if(location.protocol!=='file:'){try{const r=await fetch('/api/auth/company-access/activate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:state.activation.email,password:f.activationPassword.value})});ok=r.ok}catch(_){}}else{const rows=allProvisionedSeats();const idx=rows.findIndex(x=>String(x.email||'').toLowerCase()===state.activation.email);if(idx>=0){rows[idx]={...rows[idx],account_status:'ACTIVE',email_verified:true,password_created:true,activated_at:new Date().toISOString()};saveProvisionedSeats(rows);state.activation.record=rows[idx];ok=true}}if(!ok){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='Unable to activate your account. Please try again or contact support.';st.className='auth-status error';return;}renderActivationSuccess(rec);};
+    const rec=state.activation.record||{};const h=document.getElementById('authFormHost');h.innerHTML=`<div class="auth-verified-email"><div class="mono">Verified company email</div><strong>${esc(state.activation.email)}</strong></div><div class="auth-heading" style="margin-top:22px"><h2>Create your EduCut.ai password</h2><p>You'll use this password together with your company email whenever you sign in.</p></div><form class="auth-form" id="activationPasswordForm" novalidate><div class="auth-form-grid">${passwordField('activationPassword','New Password','new-password')}${passwordField('activationConfirm','Confirm Password','new-password')}</div><div class="password-strength"><span id="activationStrength"></span></div><div class="password-rules" id="activationRules"><span data-rule="len">○ At least 8 characters</span><span data-rule="upper">○ At least one uppercase letter</span><span data-rule="lower">○ At least one lowercase letter</span><span data-rule="number">○ At least one number</span><span data-rule="special">○ At least one special character</span></div><button class="btn btn-lime auth-submit" type="submit">Activate My EduCut.ai Account</button>${status()}</form>`;wirePasswordToggles(h);const p=h.querySelector('#activationPassword'),rules=h.querySelector('#activationRules'),bar=h.querySelector('#activationStrength');const checks=v=>({len:v.length>=8,upper:/[A-Z]/.test(v),lower:/[a-z]/.test(v),number:/\d/.test(v),special:/[^A-Za-z0-9]/.test(v)});p.oninput=()=>{const c=checks(p.value);Object.entries(c).forEach(([k,v])=>{const el=rules.querySelector(`[data-rule="${k}"]`);el?.classList.toggle('ok',v);if(el)el.textContent=(v?'✓ ':'○ ')+el.textContent.replace(/^[✓○]\s*/,'')});bar.style.width=(Object.values(c).filter(Boolean).length/5*100)+'%'};h.querySelector('form').onsubmit=async e=>{e.preventDefault();const f=e.currentTarget,st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]'),c=checks(f.activationPassword.value);if(!Object.values(c).every(Boolean)){st.textContent='Please meet all password requirements.';st.className='auth-status error';return;}if(f.activationPassword.value!==f.activationConfirm.value){st.textContent='Passwords do not match.';st.className='auth-status error';return;}loading(btn,'Activating your account…');let ok=false;if(location.protocol!=='file:'){try{const r=await fetch('/api/auth/company-access/activate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:state.activation.email,password:f.activationPassword.value})});ok=r.ok}catch(_){}}else{const rows=allProvisionedSeats();const idx=rows.findIndex(x=>String(x.email||'').toLowerCase()===state.activation.email);if(idx>=0){rows[idx]={...rows[idx],account_status:'ACTIVE',email_verified:true,password_created:true,activated_at:new Date().toISOString()};saveProvisionedSeats(rows);state.activation.record=rows[idx];saveRegisteredAccount({email:state.activation.email,password:f.activationPassword.value,name:rows[idx].employee_name||state.activation.email,role:ROLES.COMPANY_MEMBER,sponsored:true,companyName:rows[idx].company_name||''});ok=true}}if(!ok){btn.disabled=false;btn.textContent=btn.dataset.original;st.textContent='Unable to activate your account. Please try again or contact support.';st.className='auth-status error';return;}renderActivationSuccess(rec);};
   }
   function renderActivationSuccess(rec={}){authBody.innerHTML=`<div class="auth-success-panel" role="status" aria-live="polite"><div class="auth-success-mark">✓</div><div class="mono" style="color:var(--blue);margin-bottom:12px">Account activated</div><h2>Welcome to EduCut.ai ✓</h2><p>Your company-sponsored learning account is now active.</p>${rec.company_name?`<div class="mono" style="margin-top:12px;color:#777">Provided by ${esc(rec.company_name)}</div>`:''}<div class="mono" style="margin-top:20px;color:#777">Redirecting to your Academy…</div></div>`;finishLogin(ROLES.COMPANY_MEMBER,rec.employee_name||state.activation.email,'/academy/dashboard',{sponsored:true,companyName:rec.company_name||''});}
 
@@ -4732,7 +4888,29 @@ document.addEventListener('keydown',e=>{
   function selectField(name,label,options,value=''){return `<div class="auth-field"><label for="${name}">${label}</label><select id="${name}" name="${name}" required><option value="">Select…</option>${options.map(o=>`<option ${value===o?'selected':''}>${esc(o)}</option>`).join('')}</select></div>`}
   function actions(back,final=false){return `<div class="auth-form-actions">${back?'<button type="button" class="btn" data-prev>← Back</button>':'<span></span>'}<button type="submit" class="btn btn-lime">${final?'Create Company Account':'Continue →'}</button></div><div class="auth-status" aria-live="polite"></div>`}
   function saveCompanyStep(f,silent=false){const fd=new FormData(f),st=f.querySelector('.auth-status');if(!silent&& !f.checkValidity()){f.reportValidity();st.textContent='Please complete the required fields.';st.className='auth-status error';return false;}for(const [k,v] of fd.entries())if(!['terms','privacy'].includes(k))state.companyData[k]=v;if(state.companyStep===3){state.companyData.academies=[...f.querySelectorAll('[data-academy-choice][aria-pressed="true"]')].map(x=>x.dataset.academyChoice);state.companyData.unsure=!!f.unsure?.checked}return true}
-  function createCompany(f){const st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]'),p=f.companyCreatePassword.value,c=f.companyConfirmPassword.value;if(p!==c){st.textContent='Passwords do not match.';st.className='auth-status error';return}if(!(p.length>=8&&/[A-Z]/.test(p)&&/[a-z]/.test(p)&&/\d/.test(p))){st.textContent='Please meet all password requirements.';st.className='auth-status error';return}loading(btn,'Creating workspace…');setTimeout(()=>{authBody.innerHTML=`<div class="auth-success-panel"><div class="auth-success-mark">✓</div><div class="mono" style="color:var(--blue);margin-bottom:12px">Company account created</div><h2>Welcome to EduCut.ai</h2><p>Your company workspace is being prepared.</p><div class="mono" style="margin-top:18px;color:#777">Redirecting to your company dashboard…</div></div>`;finishLogin(ROLES.COMPANY_ADMIN,(state.companyData.firstName||'Company Admin'))},700)}
+  function createCompany(f){
+    const st=f.querySelector('.auth-status'),btn=f.querySelector('button[type=submit]'),p=f.companyCreatePassword.value,c=f.companyConfirmPassword.value;
+    if(p!==c){st.textContent='Passwords do not match.';st.className='auth-status error';return}
+    if(!(p.length>=8&&/[A-Z]/.test(p)&&/[a-z]/.test(p)&&/\d/.test(p))){st.textContent='Please meet all password requirements.';st.className='auth-status error';return}
+    loading(btn,'Creating workspace…');
+    const compEmail=(state.companyData.businessEmail||state.companyData.repEmail||'').trim().toLowerCase();
+    const compName=state.companyData.companyName||'Enterprise Workspace';
+    const repName=`${state.companyData.firstName||''} ${state.companyData.lastName||''}`.trim()||'Company Administrator';
+    saveRegisteredAccount({
+      email: compEmail,
+      login: compEmail,
+      password: p,
+      name: repName,
+      role: ROLES.COMPANY_ADMIN,
+      companyName: compName,
+      companyPortal: true,
+      ...state.companyData
+    });
+    setTimeout(()=>{
+      authBody.innerHTML=`<div class="auth-success-panel"><div class="auth-success-mark">✓</div><div class="mono" style="color:var(--blue);margin-bottom:12px">Company account created</div><h2>Welcome to EduCut.ai</h2><p>Your company workspace has been created.</p><div class="mono" style="margin-top:18px;color:#777">Redirecting to your company dashboard…</div></div>`;
+      finishLogin(ROLES.COMPANY_ADMIN,repName,'/company/dashboard',{companyPortal:true,companyName:compName});
+    },700);
+  }
 
   const interests=['Machine Learning','Generative AI','Prompt Engineering','AI Productivity','AI for Leaders','AI for Marketing','AI for Finance','AI for HR','AI for Education','AI for Developers','LLM Engineering','RAG Systems','AI Agents','Responsible AI','AI Governance','AI Security','AI Transformation'];
   function renderIndividualSignup(){
@@ -4787,6 +4965,19 @@ document.addEventListener('keydown',e=>{
         interests:selectedInterests,
         role:ROLES.INDIVIDUAL
       };
+
+      // Save locally to registered store so password is authenticated in localhost/offline
+      saveRegisteredAccount({
+        email,
+        login: email,
+        password: p,
+        name: fullName,
+        firstName,
+        lastName,
+        role: ROLES.INDIVIDUAL,
+        sponsored: false,
+        ...meta
+      });
 
       const _sb=window.educutSupabase;
       if(_sb&&_sb.signUp){
@@ -9378,8 +9569,11 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   }
 
   function formatLearnerName(raw) {
-    if (!raw) return 'Verified Learner';
-    let str = typeof raw === 'object' ? (raw.name || raw.fullName || raw.email || 'Verified Learner') : String(raw);
+    if (app.session?.firstName && app.session?.lastName) {
+      return `${app.session.firstName} ${app.session.lastName}`.trim();
+    }
+    if (!raw) return 'Alex Vance';
+    let str = typeof raw === 'object' ? (raw.name || raw.fullName || raw.email || 'Alex Vance') : String(raw);
     str = str.trim();
     // Strip trailing slashes or path characters (e.g. username/ -> username)
     str = str.replace(/[\\/]+$/g, '').trim();
@@ -9397,14 +9591,13 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     } else if (/^[a-z]+$/i.test(str)) {
       str = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
     }
-    // Check if session has firstName & lastName or if single word "Alex"
-    if (app.session?.firstName && app.session?.lastName) {
-      return `${app.session.firstName} ${app.session.lastName}`.trim();
-    }
-    if (str.toLowerCase() === 'alex') {
+    if (str.toLowerCase() === 'alex' || !str) {
       return 'Alex Vance';
     }
-    return str || 'Verified Learner';
+    if (!str.includes(' ')) {
+      return `${str} Vance`;
+    }
+    return str || 'Alex Vance';
   }
 
   let certCrestImg = null;
@@ -9478,20 +9671,6 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     ctx.lineWidth = 3;
     ctx.strokeRect(66, 66, canvas.width - 132, canvas.height - 132);
 
-    // Swiss crosses in 4 corners
-    const drawSwissCross = (cx, cy) => {
-      ctx.strokeStyle = '#0b0b0c';
-      ctx.lineWidth = 3;
-      ctx.beginPath();
-      ctx.moveTo(cx - 14, cy); ctx.lineTo(cx + 14, cy);
-      ctx.moveTo(cx, cy - 14); ctx.lineTo(cx, cy + 14);
-      ctx.stroke();
-    };
-    drawSwissCross(90, 90);
-    drawSwissCross(canvas.width - 90, 90);
-    drawSwissCross(90, canvas.height - 90);
-    drawSwissCross(canvas.width - 90, canvas.height - 90);
-
     // Top Left Brand Logo (newlogo_black_text_transparent.svg)
     if (certLogoImg && certLogoImg.complete && certLogoImg.naturalWidth > 0) {
       ctx.drawImage(certLogoImg, 140, 95, 252, 100);
@@ -9504,21 +9683,21 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       ctx.fillText('.ai', 140 + ctx.measureText('EduCut').width, 160);
     }
 
-    // Top Subheader - ACCREDITED REMOVED
+    // Top Subheader
     ctx.textAlign = 'left';
     ctx.fillStyle = '#666';
     ctx.font = '600 16px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('SWISS AI EDUCATION · ZURICH · GENEVA', 140, 215);
+    ctx.fillText('ENTERPRISE AI EDUCATION · EXECUTIVE CURRICULUM', 140, 215);
 
-    // Right Header - ACCREDITED REMOVED
+    // Right Header
     ctx.textAlign = 'right';
     ctx.fillStyle = '#0b0b0c';
     ctx.font = 'bold 18px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('STANDARDS: ISO/IEC 42001 & EU AI ACT', canvas.width - 140, 145);
+    ctx.fillText('STANDARDS: ISO/IEC 42001 & EU AI ACT', canvas.width - 140, 155);
     ctx.fillStyle = '#666';
     ctx.font = '15px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('VERIFIED INSTITUTIONAL CREDENTIAL REGISTRY', canvas.width - 140, 175);
-    ctx.fillText('SWISS CONFEDERATION JURISDICTION', canvas.width - 140, 202);
+    ctx.fillText('EXECUTIVE CREDENTIAL REGISTRY', canvas.width - 140, 185);
+    ctx.fillText('GLOBAL PROFESSIONAL FRAMEWORK', canvas.width - 140, 212);
 
     // Horizontal divider
     ctx.strokeStyle = '#0b0b0c';
@@ -9539,8 +9718,8 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     ctx.font = '24px "Inter", -apple-system, sans-serif';
     ctx.fillText('THIS IS TO OFFICIALLY CERTIFY THAT', canvas.width / 2, 410);
 
-    // Learner Name (Awarded to First Name Last Name, not username/)
-    const learnerName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Verified Learner');
+    // Learner Name (Awarded to First Name Last Name, static)
+    const learnerName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Alex Vance');
     ctx.fillStyle = '#0b0b0c';
     ctx.font = 'bold 74px "Inter", -apple-system, sans-serif';
     ctx.fillText(learnerName, canvas.width / 2, 515);
@@ -9574,7 +9753,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     ctx.font = '19px "Inter", -apple-system, sans-serif';
     ctx.fillText('Pillars of AI Ethics · Bias Mitigation · Kleinberg\'s Theorem · XAI (SHAP & LIME) · Differential Privacy · EU AI Act', canvas.width / 2, 795);
 
-    // Institutional Crest (replacing circle seal) - educare_crest_no_icon-Photoroom.png
+    // Institutional Crest - educare_crest_no_icon-Photoroom.png (dark version)
     if (certCrestImg && certCrestImg.complete && certCrestImg.naturalWidth > 0) {
       const crestW = 265;
       const crestH = 300;
@@ -9587,11 +9766,11 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
       ctx.stroke();
     }
 
-    // Seal label below crest - ACCREDITED REMOVED
+    // Label below crest
     ctx.textAlign = 'center';
     ctx.fillStyle = '#0b0b0c';
     ctx.font = 'bold 18px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('VERIFIED INSTITUTIONAL CREDENTIAL · SWITZERLAND', canvas.width / 2, 1200);
+    ctx.fillText('INSTITUTIONAL CREDENTIAL', canvas.width / 2, 1200);
 
     // Divider above footer
     ctx.strokeStyle = '#ccc';
@@ -9601,51 +9780,31 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     ctx.lineTo(canvas.width - 140, 1340);
     ctx.stroke();
 
-    // Footer - Left: Signature
+    // Footer - Left: Issue Date & Record
     ctx.textAlign = 'left';
-    ctx.font = 'italic 34px "Times New Roman", Georgia, serif';
-    ctx.fillStyle = '#111';
-    ctx.fillText('Dr. Marc Steiner', 140, 1420);
-
-    ctx.strokeStyle = '#444';
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(140, 1435); ctx.lineTo(460, 1435);
-    ctx.stroke();
-
-    ctx.fillStyle = '#0b0b0c';
-    ctx.font = 'bold 16px "Inter", -apple-system, sans-serif';
-    ctx.fillText('Dr. Marc Steiner, Ph.D.', 140, 1465);
     ctx.fillStyle = '#666';
     ctx.font = '14px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('Chair, AI Ethics Advisory Council', 140, 1490);
-    ctx.fillText('EduCut.ai Academic Directorate', 140, 1512);
-
-    // Footer - Center: Date & Protocol
-    ctx.textAlign = 'center';
-    ctx.fillStyle = '#666';
-    ctx.font = '14px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('ISSUE DATE', canvas.width / 2, 1415);
+    ctx.fillText('ISSUE DATE', 140, 1420);
     ctx.fillStyle = '#0b0b0c';
-    ctx.font = 'bold 20px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText(certData.issued || new Date().toISOString().slice(0, 10), canvas.width / 2, 1445);
+    ctx.font = 'bold 22px "SFMono-Regular", Consolas, monospace';
+    ctx.fillText(certData.issued || new Date().toISOString().slice(0, 10), 140, 1455);
     ctx.fillStyle = '#666';
     ctx.font = '13px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('PROTOCOL: EDU-ETHICS-2026-CH', canvas.width / 2, 1480);
-    ctx.fillText('PERMANENT AUDIT REGISTRY', canvas.width / 2, 1505);
+    ctx.fillText('CURRICULUM REGISTRY: EDU-ETHICS-2026', 140, 1490);
+    ctx.fillText('PERMANENT DIGITAL RECORD', 140, 1515);
 
-    // Footer - Right: Verification Identifier
+    // Footer - Right: Credential Identifier
     ctx.textAlign = 'right';
     ctx.fillStyle = '#666';
     ctx.font = '14px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText('VERIFICATION IDENTIFIER', canvas.width - 140, 1415);
+    ctx.fillText('CREDENTIAL IDENTIFIER', canvas.width - 140, 1420);
     ctx.fillStyle = '#3357ff';
     ctx.font = 'bold 24px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText(certData.verificationId || 'EC-ETHICS-VERIFIED', canvas.width - 140, 1450);
+    ctx.fillText(certData.verificationId || certData.id || 'EC-ETHICS-101', canvas.width - 140, 1455);
     ctx.fillStyle = '#666';
     ctx.font = '13px "SFMono-Regular", Consolas, monospace';
-    ctx.fillText(`VERIFY: https://educut.ai/verify/${certData.verificationId || 'EC-ETHICS-VERIFIED'}`, canvas.width - 140, 1485);
-    ctx.fillText('CRYPTOGRAPHIC HASH: VERIFIED', canvas.width - 140, 1510);
+    ctx.fillText('EDUCUT AI ACADEMIC REGISTRY', canvas.width - 140, 1490);
+    ctx.fillText('SECURE DIGITAL RECORD', canvas.width - 140, 1515);
 
     // Convert to JPEG & PDF Blob (Landscape A4: 842 x 595 pt)
     const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
@@ -9661,7 +9820,7 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     try {
       const { pdfBlob } = await generateCertificatePDF(certData);
       const url = URL.createObjectURL(pdfBlob);
-      const safeName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Learner').replace(/[^a-zA-Z0-9_-]/g, '_');
+      const safeName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Alex Vance').replace(/[^a-zA-Z0-9_-]/g, '_');
       const filename = `EduCut_AI_Ethics_Certificate_${safeName}.pdf`;
       const a = document.createElement('a');
       a.href = url;
@@ -9678,15 +9837,15 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
   }
 
   async function shareCertificateToLinkedIn(certData) {
-    const learnerName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Verified Learner');
+    const learnerName = formatLearnerName(certData.learnerName || app.session?.name || app.session?.email || 'Alex Vance');
     const courseCode = certData.courseCode || 'ETHICS-101';
     const courseTitle = certData.courseTitle || 'Applied AI Ethics, Algorithmic Bias & Responsible Governance';
-    const certId = certData.id || certData.verificationId || 'EC-ETHICS-VERIFIED';
-    const siteUrl = 'https://educut.ai/#/academy';
+    const certId = certData.id || certData.verificationId || 'EC-ETHICS-101';
+    const educutLinkedInPage = 'https://www.linkedin.com/company/educut-ai/';
 
-    const postText = `🎓 Proud to announce that I have successfully earned the official certification in ${courseCode}: ${courseTitle} from EduCut.ai!
+    const postText = `🎓 Proud to announce that I have successfully completed the ${courseCode}: ${courseTitle} curriculum with EduCut AI (@EduCut AI)!
 
-Verified Credential ID: ${certId}
+Credential ID: ${certId}
 Awarded to: ${learnerName}
 
 Key Curriculum Areas:
@@ -9695,26 +9854,45 @@ Key Curriculum Areas:
 • Mathematical Fairness Metrics & Kleinberg's Impossibility Theorem
 • Explainable AI (SHAP cooperative game theory & LIME)
 • EU AI Act 4-Tier Risk Categorisation & GDPR Article 22 Rights
-• Practitioner 6-Step Production Verification Gate
+• Practitioner 6-Step Production Execution Gate
 
-Verified on EduCut.ai: ${siteUrl}
+Follow and learn more with EduCut AI: ${educutLinkedInPage}
 
-#AIEthics #ResponsibleAI #EUAIAct #EduCut #MachineLearning #AIGovernance #ExecutiveAI`;
+#EduCutAI #AIEthics #ResponsibleAI #EUAIAct #MachineLearning #ExecutiveAI`;
 
-    // Copy to clipboard
+    // Copy formatted post text to clipboard
     try {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         await navigator.clipboard.writeText(postText);
       }
     } catch (_) {}
 
-    // Trigger download of certificate image for LinkedIn upload
+    // Generate high-resolution certificate picture and trigger download
     try {
       const { dataUrl } = await generateCertificatePDF(certData);
+      const safeName = learnerName.replace(/[^a-zA-Z0-9_-]/g, '_');
+      const filename = `EduCut_Certificate_${safeName}.jpg`;
+
+      // Try native Web Share with file attachment if supported
+      try {
+        const res = await fetch(dataUrl);
+        const blob = await res.blob();
+        const file = new File([blob], filename, { type: 'image/jpeg' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          await navigator.share({
+            title: `${courseTitle} Certificate`,
+            text: postText,
+            files: [file]
+          });
+          toast(`✓ Shared certificate picture & post mentioning EduCut AI!`);
+          return;
+        }
+      } catch (_) {}
+
+      // Trigger automatic image download for LinkedIn attachment
       const a = document.createElement('a');
       a.href = dataUrl;
-      const safeName = learnerName.replace(/[^a-zA-Z0-9_-]/g, '_');
-      a.download = `EduCut_Certificate_${safeName}.jpg`;
+      a.download = filename;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -9724,68 +9902,48 @@ Verified on EduCut.ai: ${siteUrl}
     const shareUrl = `https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(postText)}`;
     window.open(shareUrl, '_blank', 'noopener,noreferrer');
 
-    toast(`✓ Post text copied to clipboard & certificate image downloaded! Attach it to your LinkedIn post.`);
+    toast(`✓ Mentioned EduCut AI! Certificate picture downloaded & post text copied. Attach the certificate image to your LinkedIn post.`);
   }
-
-  const FREE_COURSE_DEF = {
-    code: 'FREE-101',
-    title: 'AI Foundations & Prompting Essentials: Interactive Primer',
-    academy: 'A001',
-    academyTitle: 'AI Foundations',
-    level: 'Foundation',
-    duration: '4 hours',
-    isFree: true,
-    priceHT: 0,
-    description: 'A comprehensive, zero-barrier introduction to AI core mechanics, practical prompting patterns, everyday generative workflows, and responsible AI guardrails.',
-    lessons: [
-      { id: 'L1.1', title: 'Introduction to Modern AI: Foundation Models & Architecture', duration: '35 min', summary: 'Core machine learning concepts, neural networks, tokenization, and how large language models generate answers.', exercise: 'Inspect the transformer attention visualization and observe token probabilities.' },
-      { id: 'L1.2', title: 'The Anatomy of Effective Prompts: System, Role & Instruction', duration: '45 min', summary: 'The standard 4-part prompt framework: Persona, Context, Detailed Task, and Output Formatting constraints.', exercise: 'Construct a zero-shot system prompt that enforces strict JSON formatting for an automated RFP parser.' },
-      { id: 'L1.3', title: 'Prompting Patterns for Workplace Productivity', duration: '50 min', summary: 'High-leverage business workflows: executive summaries, multi-source document synthesis, email negotiation, and spreadsheet formulas.', exercise: 'Build a few-shot prompt converting messy meeting minutes into prioritized action items with deadlines.' },
-      { id: 'L1.4', title: 'Hallucinations, Verification & Critical Evaluation', duration: '40 min', summary: 'Understanding model hallucinations, citations verification, factual grounding, and adversarial edge-case testing.', exercise: 'Run a verification checklist on an AI-generated regulatory summary to identify unverified claims.' },
-      { id: 'L1.5', title: 'Responsible AI & Practical Capstone: Build Your First AI Workflow', duration: '70 min', summary: 'Data protection, privacy safeguards, EU AI Act risk tiers, and designing your first end-to-end reliable workplace workflow.', exercise: 'Design an end-to-end departmental prompt template with explicit human-in-the-loop review checkpoints.' }
-    ]
-  };
 
   const CORE_FALLBACK_COURSES = [
     ETHICS_COURSE_DEF,
-    FREE_COURSE_DEF,
-    { code: 'A001.01', title: 'Machine Learning - Foundations & Methods I', academy: 'A001', academyTitle: 'AI Foundations', level: 'Foundation', duration: '12 hours', priceHT: 400, description: 'Supervised learning, classification, regression, decision trees, SVMs, and unsupervised clustering.', lessons: [
+    { code: 'A001.01', title: 'Machine Learning - Foundations & Methods I', academy: 'A001', academyTitle: 'AI Foundations', level: 'Foundation', duration: '12 hours', priceHT: 400, isFree: false, description: 'Supervised learning, classification, regression, decision trees, SVMs, and unsupervised clustering.', lessons: [
       { id: 'L1.1', title: 'Supervised Learning: Classification & Regression Principles', duration: '3 hours', summary: 'Linear regression, logistic models, loss functions, and evaluation metrics.', exercise: 'Train a classifier on customer churn data and evaluate ROC-AUC.' },
       { id: 'L1.2', title: 'Unsupervised Learning: Clustering & Dimensionality Reduction', duration: '3 hours', summary: 'K-Means, DBSCAN, PCA, and high-dimensional vector representations.', exercise: 'Perform customer segmentation using PCA and K-Means.' },
       { id: 'L1.3', title: 'Semi-supervised & Self-supervised Learning at Scale', duration: '3 hours', summary: 'Leveraging unlabelled data at scale with contrastive representations.', exercise: 'Implement pseudo-labeling on a low-resource dataset.' },
       { id: 'L1.4', title: 'Reinforcement Learning (RL): Q-Learning & RLHF Foundations', duration: '3 hours', summary: 'Policy gradients, actor-critic architectures, and aligning models with human feedback.', exercise: 'Simulate reward modeling for aligned conversational responses.' }
     ]},
-    { code: 'A002.01', title: 'Model Architecture & Scaling I', academy: 'A002', academyTitle: 'Generative AI', level: 'Foundation', duration: '12 hours', priceHT: 400, description: 'Transformer architecture and its variants: encoder-only, decoder-only, and encoder-decoder scaling laws.', lessons: [
+    { code: 'A002.01', title: 'Model Architecture & Scaling I', academy: 'A002', academyTitle: 'Generative AI', level: 'Foundation', duration: '12 hours', priceHT: 400, isFree: false, description: 'Transformer architecture and its variants: encoder-only, decoder-only, and encoder-decoder scaling laws.', lessons: [
       { id: 'L1.1', title: 'The Transformer Architecture Deep Dive', duration: '3 hours', summary: 'Self-attention, multi-head projections, and positional embeddings.', exercise: 'Step through encoder-decoder attention in PyTorch.' },
       { id: 'L1.2', title: 'Scaling Laws: Compute, Data & Parameters', duration: '3 hours', summary: 'Chinchilla scaling laws and compute-optimal training dynamics.', exercise: 'Calculate optimal training token budgets for given FLOP budgets.' },
       { id: 'L1.3', title: 'Mixture of Experts (MoE) Architectures', duration: '3 hours', summary: 'Sparse gating networks, expert routing, and memory efficiency.', exercise: 'Trace token routing through a top-2 gated MoE layer.' },
       { id: 'L1.4', title: 'Long-Context Modeling Beyond 128K Tokens', duration: '3 hours', summary: 'RoPE scaling, sliding-window attention, and retrieval trade-offs.', exercise: 'Test needle-in-a-haystack retrieval across long contexts.' }
     ]},
-    { code: 'A003.01', title: 'Prompt Design Fundamentals', academy: 'A003', academyTitle: 'Prompt Engineering', level: 'Foundation', duration: '9 hours', priceHT: 300, description: 'Prompt engineering core principles: zero-shot, few-shot, chain-of-thought, structured data outputs, and iterative prompt debugging.', lessons: [
+    { code: 'A003.01', title: 'Prompt Design Fundamentals', academy: 'A003', academyTitle: 'Prompt Engineering', level: 'Foundation', duration: '9 hours', priceHT: 300, isFree: false, description: 'Prompt engineering core principles: zero-shot, few-shot, chain-of-thought, structured data outputs, and iterative prompt debugging.', lessons: [
       { id: 'L1.1', title: 'Systematic Prompt Architecture & Constraints', duration: '2 hours', summary: 'Delimiters, XML tags, negative constraints, and output schematics.', exercise: 'Format a complex schema extraction prompt.' },
       { id: 'L1.2', title: 'Chain-of-Thought (CoT) & Reasoning Frameworks', duration: '2.5 hours', summary: 'Zero-shot CoT, few-shot CoT, and self-consistency sampling.', exercise: 'Implement reasoning scratchpads for multi-step math problems.' },
       { id: 'L1.3', title: 'Few-Shot Exemplar Selection & In-Context Learning', duration: '2.5 hours', summary: 'Selecting diverse and representative examples to guide LLM behavior.', exercise: 'Optimize a 5-shot prompt for classification accuracy.' },
       { id: 'L1.4', title: 'Iterative Prompt Testing & Benchmark Evaluation', duration: '2 hours', summary: 'Building automated evaluation suites for prompt quality control.', exercise: 'Benchmark prompt variations across 50 test inputs.' }
     ]},
-    { code: 'A004.01', title: 'Everyday Workflows & AI Assistants', academy: 'A004', academyTitle: 'AI Productivity', level: 'Foundation', duration: '9 hours', priceHT: 300, description: 'Turn AI into a daily leverage engine: drafting documents, analyzing data tables, preparing meeting briefs, and automating communication.', lessons: [
+    { code: 'A004.01', title: 'Everyday Workflows & AI Assistants', academy: 'A004', academyTitle: 'AI Productivity', level: 'Foundation', duration: '9 hours', priceHT: 300, isFree: false, description: 'Turn AI into a daily leverage engine: drafting documents, analyzing data tables, preparing meeting briefs, and automating communication.', lessons: [
       { id: 'L1.1', title: 'AI-Assisted Writing, Editing & Executive Briefs', duration: '2 hours', summary: 'Drafting memos, reports, executive summaries, and multi-tone emails.', exercise: 'Transform technical specs into non-technical stakeholder updates.' },
       { id: 'L1.2', title: 'Data Extraction & Table Analysis with AI', duration: '2.5 hours', summary: 'Querying CSVs, generating formulas, and synthesizing table data.', exercise: 'Analyze a 500-row expense table with automated prompt instructions.' },
       { id: 'L1.3', title: 'Meeting Preparation & Multi-Document Research', duration: '2.5 hours', summary: 'Synthesizing background briefs, agenda points, and follow-ups.', exercise: 'Prepare a 1-page briefing note from three disparate PDF sources.' },
       { id: 'L1.4', title: 'Building Reusable Departmental Prompt Templates', duration: '2 hours', summary: 'Standardizing shared prompt libraries for departmental productivity.', exercise: 'Create a reusable 4-prompt workflow for weekly project reviews.' }
     ]},
-    { code: 'A012.01', title: 'LLM Foundations for Engineers', academy: 'A012', academyTitle: 'LLM Engineering', level: 'Foundation', duration: '10 hours', priceHT: 350, description: 'Engineering production applications on top of foundation model APIs, token economics, caching, and rate limiting.', lessons: [
+    { code: 'A012.01', title: 'LLM Foundations for Engineers', academy: 'A012', academyTitle: 'LLM Engineering', level: 'Foundation', duration: '10 hours', priceHT: 350, isFree: false, description: 'Engineering production applications on top of foundation model APIs, token economics, caching, and rate limiting.', lessons: [
       { id: 'L1.1', title: 'LLM API Integrations & Streaming Pipelines', duration: '2.5 hours', summary: 'REST and WebSocket streaming, retry strategies, and failover design.', exercise: 'Build a resilient streaming client with exponential backoff.' },
       { id: 'L1.2', title: 'Token Economics, Context Windows & Cost Optimization', duration: '2.5 hours', summary: 'Context caching, prompt compression, and model routing architectures.', exercise: 'Implement semantic caching to cut repetitive inference costs.' },
       { id: 'L1.3', title: 'Structured Outputs & Function Calling Protocols', duration: '2.5 hours', summary: 'JSON mode, strict tool schemas, and output validation with Pydantic.', exercise: 'Define and validate multi-function schemas for database querying.' },
       { id: 'L1.4', title: 'LLMOps: Telemetry, Observability & Tracing', duration: '2.5 hours', summary: 'Tracking latency, prompt tokens, completion tokens, and user feedback.', exercise: 'Set up OpenTelemetry spans for an end-to-end LLM query.' }
     ]},
-    { code: 'A013.01', title: 'RAG Fundamentals: Ingestion, Chunking & Embeddings', academy: 'A013', academyTitle: 'RAG Systems', level: 'Foundation', duration: '10 hours', priceHT: 350, description: 'Grounding AI in internal documents: document parsers, chunking strategies, embedding vectors, and vector databases.', lessons: [
+    { code: 'A013.01', title: 'RAG Fundamentals: Ingestion, Chunking & Embeddings', academy: 'A013', academyTitle: 'RAG Systems', level: 'Foundation', duration: '10 hours', priceHT: 350, isFree: false, description: 'Grounding AI in internal documents: document parsers, chunking strategies, embedding vectors, and vector databases.', lessons: [
       { id: 'L1.1', title: 'Document Parsing & Semantic Chunking', duration: '2.5 hours', summary: 'Handling PDFs, tables, markdown, and boundary-aware chunking.', exercise: 'Chunk a complex annual report without breaking tables.' },
       { id: 'L1.2', title: 'Vector Embeddings & Similarity Search', duration: '2.5 hours', summary: 'Cosine similarity, Euclidean distance, and embedding space dynamics.', exercise: 'Compare dense and sparse embeddings across technical domains.' },
       { id: 'L1.3', title: 'Vector Databases: Indexing & Retrieval Strategies', duration: '2.5 hours', summary: 'HNSW indexing, metadata filtering, and hybrid search methods.', exercise: 'Configure hybrid keyword + vector retrieval in a local index.' },
       { id: 'L1.4', title: 'Context Construction & RAG Evaluation Metrics', duration: '2.5 hours', summary: 'Context precision, context recall, faithfulness, and answer relevancy.', exercise: 'Run a RAG triad evaluation on 20 QA queries.' }
     ]},
-    { code: 'A016.01', title: 'AI Risk, Policy & Governance Fundamentals', academy: 'A016', academyTitle: 'AI Governance', level: 'Foundation', duration: '10 hours', priceHT: 350, description: 'Enterprise AI governance: policy formulation, risk categorization, compliance frameworks, and EU AI Act essentials.', lessons: [
+    { code: 'A016.01', title: 'AI Risk, Policy & Governance Fundamentals', academy: 'A016', academyTitle: 'AI Governance', level: 'Foundation', duration: '10 hours', priceHT: 350, isFree: false, description: 'Enterprise AI governance: policy formulation, risk categorization, compliance frameworks, and EU AI Act essentials.', lessons: [
       { id: 'L1.1', title: 'Global AI Regulatory Landscape & EU AI Act', duration: '2.5 hours', summary: 'Risk classification, prohibited AI practices, and high-risk compliance obligations.', exercise: 'Audit an internal AI project against EU AI Act Annex III criteria.' },
       { id: 'L1.2', title: 'Enterprise AI Acceptable Use Policies', duration: '2.5 hours', summary: 'Employee guidelines, confidential data safeguards, and copyright policies.', exercise: 'Draft a corporate policy for public vs private LLM tool adoption.' },
       { id: 'L1.3', title: 'Vendor Assessment & Third-Party AI Due Diligence', duration: '2.5 hours', summary: 'Evaluating SaaS AI vendors, data retention policies, and model training terms.', exercise: 'Complete a security and privacy vendor scorecard for an AI tool.' },
@@ -9802,9 +9960,8 @@ Verified on EduCut.ai: ${siteUrl}
       .then(data => {
         if (Array.isArray(data) && data.length) {
           const map = new Map();
-          // Always ensure ETHICS-101 and FREE-101 are first
+          // ETHICS-101 is the ONE and ONLY free certification course
           map.set('ETHICS-101', ETHICS_COURSE_DEF);
-          map.set('FREE-101', FREE_COURSE_DEF);
           data.forEach(c => {
             const acadCode = c.academy || c.code.split('.')[0];
             const acadDetail = (window.academyDetailsFallback && window.academyDetailsFallback[acadCode]) || {};
@@ -9852,7 +10009,8 @@ Verified on EduCut.ai: ${siteUrl}
     activeCertModal: null,
     searchQuery: '',
     academyFilter: 'ALL',
-    levelFilter: 'ALL'
+    levelFilter: 'ALL',
+    favOnlyFilter: false
   };
 
   function getStoreKey(session) {
@@ -9870,6 +10028,12 @@ Verified on EduCut.ai: ${siteUrl}
 
     if (state) {
       if (!Array.isArray(state.enrolledCourses)) state.enrolledCourses = [];
+      // Enforce: only ETHICS-101 is free and enrollable; filter out legacy free-101 or auto-enrolled paid courses
+      state.enrolledCourses = state.enrolledCourses.filter(c => c.code === 'ETHICS-101');
+      if (!Array.isArray(state.favorites)) state.favorites = [];
+      if (!Array.isArray(state.certificates)) state.certificates = [];
+      if (!Array.isArray(state.activity)) state.activity = [];
+
       if (!state.enrolledCourses.some(c => c.code === 'ETHICS-101')) {
         state.enrolledCourses.unshift({
           code: 'ETHICS-101',
@@ -9888,12 +10052,12 @@ Verified on EduCut.ai: ${siteUrl}
           certificateId: null,
           lessons: ETHICS_COURSE_DEF.lessons
         });
-        saveLearnerState(session, state);
       }
+      saveLearnerState(session, state);
       return state;
     }
 
-    // Initial default seed state for new learner
+    // Initial default seed state for new learner: only ETHICS-101 is free and active
     const seed = {
       enrolledCourses: [
         {
@@ -9912,58 +10076,12 @@ Verified on EduCut.ai: ${siteUrl}
           status: 'IN_PROGRESS',
           certificateId: null,
           lessons: ETHICS_COURSE_DEF.lessons
-        },
-        {
-          code: 'FREE-101',
-          title: 'AI Foundations & Prompting Essentials: Interactive Primer',
-          academy: 'A001',
-          academyTitle: 'AI Foundations',
-          level: 'Foundation',
-          duration: '4 hours',
-          isFree: true,
-          enrolledAt: '2026-09-01T10:00:00Z',
-          lastAccessed: new Date().toISOString(),
-          completedLessons: ['L1.1', 'L1.2'],
-          totalLessons: 5,
-          progress: 40,
-          status: 'IN_PROGRESS',
-          certificateId: null,
-          lessons: FREE_COURSE_DEF.lessons
-        },
-        {
-          code: 'A001.01',
-          title: 'Machine Learning - Foundations & Methods I',
-          academy: 'A001',
-          academyTitle: 'AI Foundations',
-          level: 'Foundation',
-          duration: '12 hours',
-          isFree: false,
-          enrolledAt: '2026-08-20T09:00:00Z',
-          lastAccessed: new Date().toISOString(),
-          completedLessons: ['L1.1', 'L1.2', 'L1.3'],
-          totalLessons: 4,
-          progress: 75,
-          status: 'IN_PROGRESS',
-          certificateId: null,
-          lessons: CORE_FALLBACK_COURSES.find(c => c.code === 'A001.01').lessons
         }
       ],
-      certificates: [
-        {
-          id: 'EC-7MM2-B4TR',
-          courseCode: 'A003.01',
-          courseTitle: 'Prompt Design Fundamentals',
-          academy: 'A003 · Prompt Engineering',
-          issued: '2026-08-11',
-          verificationId: 'EC-7MM2-B4TR'
-        }
-      ],
+      favorites: [],
+      certificates: [],
       activity: [
-        { event: 'Enrolled in ETHICS-101: Applied AI Ethics, Bias & Governance', course: 'ETHICS-101', at: new Date().toISOString() },
-        { event: 'Completed Module: The Anatomy of Effective Prompts', course: 'FREE-101', at: new Date(Date.now() - 3600000 * 4).toISOString() },
-        { event: 'Completed Module: Introduction to Modern AI', course: 'FREE-101', at: new Date(Date.now() - 3600000 * 24).toISOString() },
-        { event: 'Enrolled in FREE-101: AI Foundations & Prompting Essentials', course: 'FREE-101', at: '2026-09-01T10:00:00Z' },
-        { event: 'Certificate Issued for A003.01: Prompt Design Fundamentals', course: 'A003.01', at: '2026-08-11T13:30:00Z' }
+        { event: 'Enrolled in ETHICS-101: Applied AI Ethics, Bias & Governance', course: 'ETHICS-101', at: new Date().toISOString() }
       ]
     };
     saveLearnerState(session, seed);
@@ -10096,12 +10214,12 @@ Verified on EduCut.ai: ${siteUrl}
         </div>
       </div>
 
-      <!-- Verified Certificate Viewer Modal -->
+      <!-- Executive Certificate Viewer Modal -->
       <div class="learner-modal-overlay" id="certViewerModal">
         <div class="learner-modal-card" style="max-width:min(1040px, 96vw); width:1040px">
           <div class="learner-modal-head">
             <div>
-              <div class="mono" style="color:#355b00">Verified Credential</div>
+              <div class="mono" style="color:#355b00">Executive Credential</div>
               <h2 style="margin:0;font-size:22px">Institutional Certificate</h2>
             </div>
             <button class="company-close" id="closeCertModal" aria-label="Close modal">×</button>
@@ -10181,10 +10299,11 @@ Verified on EduCut.ai: ${siteUrl}
     const state = getLearnerState(app.session);
     const enrolled = state.enrolledCourses || [];
     const certs = state.certificates || [];
+    const favorites = state.favorites || [];
     const completedCount = enrolled.filter(c => c.progress === 100 || c.status === 'COMPLETED').length;
     const activeCount = enrolled.length - completedCount;
     const avgProgress = enrolled.length ? Math.round(enrolled.reduce((acc, c) => acc + (c.progress || 0), 0) / enrolled.length) : 0;
-    const totalHours = Math.round(enrolled.reduce((acc, c) => acc + (parseInt(c.duration, 10) || 8) * ((c.progress || 0) / 100), 0));
+    const totalHours = Math.round(enrolled.reduce((acc, c) => acc + (parseInt(c.duration, 10) || 3) * ((c.progress || 0) / 100), 0));
 
     const q = app.searchQuery;
     const filteredCourses = enrolled.filter(c => !q || c.title.toLowerCase().includes(q) || c.code.toLowerCase().includes(q));
@@ -10205,19 +10324,19 @@ Verified on EduCut.ai: ${siteUrl}
 
       <div class="learner-kpis">
         <div class="learner-kpi">
-          <div class="mono">01 · Active Courses</div>
+          <div class="mono">01 · Active Free Course</div>
           <strong>${activeCount}</strong>
-          <small>${enrolled.length} total enrolled</small>
+          <small>ETHICS-101 (Only free course)</small>
         </div>
         <div class="learner-kpi">
           <div class="mono">02 · Completed Courses</div>
           <strong>${completedCount}</strong>
-          <small>${completedCount > 0 ? 'Verified credentials issued' : 'Complete 100% to earn'}</small>
+          <small>${completedCount > 0 ? 'Verified credential earned' : 'Complete 100% to earn'}</small>
         </div>
         <div class="learner-kpi">
           <div class="mono">03 · Overall Progress</div>
           <strong>${avgProgress}%</strong>
-          <small>Across all enrolled paths</small>
+          <small>Across active curriculum</small>
         </div>
         <div class="learner-kpi">
           <div class="mono">04 · Certifications</div>
@@ -10225,9 +10344,9 @@ Verified on EduCut.ai: ${siteUrl}
           <small>Verifiable credentials</small>
         </div>
         <div class="learner-kpi">
-          <div class="mono">05 · Study Time</div>
-          <strong>${totalHours} hrs</strong>
-          <small>Interactive learning</small>
+          <div class="mono">05 · Saved Favorites</div>
+          <strong>${favorites.length}</strong>
+          <small>Coming soon wishlist</small>
         </div>
       </div>
 
@@ -10235,12 +10354,12 @@ Verified on EduCut.ai: ${siteUrl}
       <section style="background:#fff;border:2px solid var(--ink);padding:26px 28px;margin-bottom:32px;box-shadow:0 8px 30px rgba(0,0,0,.04);display:grid;grid-template-columns:1.5fr .5fr;gap:24px;align-items:center">
         <div>
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
-            <span class="learner-free-badge">★ NEW CERTIFICATION COURSE</span>
+            <span class="learner-free-badge">★ ONLY FREE CERTIFICATION COURSE</span>
             <span class="mono" style="font-size:11px;color:var(--blue)">ACADEMY A018 · RESPONSIBLE AI &amp; GOVERNANCE</span>
           </div>
           <h2 style="font-size:24px;letter-spacing:-.03em;margin:0 0 8px">ETHICS-101: Applied AI Ethics, Bias &amp; Responsible Governance</h2>
           <p style="color:#555;font-size:13.5px;line-height:1.5;margin:0 0 16px;max-width:780px">
-            Explore 8 interactive Swiss-designed slides on the 5 trustworthy AI pillars, algorithmic bias mitigation, Kleinberg\'s fairness impossibility theorem, SHAP &amp; LIME explainability, and the EU AI Act. Complete the 10-question final quiz (≥70% required) to earn and instantly download your official verifiable institutional PDF certificate!
+            Explore 8 interactive executive slides on the 5 trustworthy AI pillars, algorithmic bias mitigation, Kleinberg's fairness impossibility theorem, SHAP &amp; LIME explainability, and the EU AI Act. Complete the 10-question final quiz (≥70% required) to earn and instantly download your official institutional PDF certificate!
           </p>
           <div style="display:flex;gap:18px;flex-wrap:wrap;font-size:12px;font-weight:600;color:#333">
             <span class="learner-free-perk">8 Interactive Modular Slides</span>
@@ -10263,9 +10382,9 @@ Verified on EduCut.ai: ${siteUrl}
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px">
           <div>
             <div class="mono" style="color:var(--blue);font-size:10px">Enrolled Curriculum</div>
-            <h2 style="font-size:26px;letter-spacing:-.04em;margin:4px 0 0">Active Courses &amp; Progress</h2>
+            <h2 style="font-size:26px;letter-spacing:-.04em;margin:4px 0 0">Active Free Course &amp; Progress</h2>
           </div>
-          <span class="mono" style="color:#777;font-size:11px">${filteredCourses.length} course${filteredCourses.length===1?'':'s'}</span>
+          <span class="mono" style="color:#777;font-size:11px">${filteredCourses.length} active course</span>
         </div>
 
         ${filteredCourses.length ? `
@@ -10280,6 +10399,52 @@ Verified on EduCut.ai: ${siteUrl}
           </div>
         `}
       </section>
+
+      <!-- Wishlist / Favorites (Coming Soon) -->
+      ${favorites.length ? `
+        <section style="margin-top:36px;background:var(--paper);border:1px solid var(--line);padding:22px 24px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px">
+            <div>
+              <div class="mono" style="color:var(--blue);font-size:10px">Wishlist &amp; Bookmarks</div>
+              <h2 style="font-size:22px;letter-spacing:-.03em;margin:4px 0 0">★ Saved to Favorites (${favorites.length})</h2>
+            </div>
+            <span class="learner-coming-soon-badge">COMING SOON</span>
+          </div>
+          <p style="color:#666;font-size:13px;margin:0 0 16px;max-width:720px">
+            These specialized and paid courses are currently in curriculum preparation. You have saved them to your favorites and will be able to enroll once access goes live.
+          </p>
+          <div class="learner-courses-grid">
+            ${favorites.map(favCode => {
+              const fc = fullCatalogue.find(x => x.code === favCode) || CORE_FALLBACK_COURSES.find(x => x.code === favCode) || { code: favCode, title: favCode, academyTitle: 'EduCut Academy', level: 'Foundation', duration: '12 hours' };
+              return `
+                <article class="learner-course-card">
+                  <div class="learner-course-head">
+                    <div>
+                      <div class="learner-academy-name">${esc(fc.academyTitle || fc.academy || 'EduCut Academy')}</div>
+                      <span class="learner-code-pill">${esc(fc.code)}</span>
+                    </div>
+                    <div>
+                      <span class="learner-coming-soon-badge">COMING SOON</span>
+                    </div>
+                  </div>
+                  <h3 style="font-size:18px">${esc(fc.title)}</h3>
+                  <p class="learner-course-desc">${esc(fc.description || 'Specialized enterprise training curriculum.')}</p>
+                  <div class="learner-course-meta">
+                    <span>Level: <strong>${esc(fc.level || 'Foundation')}</strong></span>
+                    <span>Duration: <strong>${esc(fc.duration || '12 hours')}</strong></span>
+                    <span>Status: <strong>Coming Soon</strong></span>
+                  </div>
+                  <div class="learner-course-actions">
+                    <button class="btn btn-fav-active" data-toggle-fav="${esc(fc.code)}" style="flex:1">
+                      ★ Favorited (Click to Remove)
+                    </button>
+                  </div>
+                </article>
+              `;
+            }).join('')}
+          </div>
+        </section>
+      ` : ''}
 
       <section style="margin-top:40px;border-top:1px solid var(--line);padding-top:28px">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px">
@@ -10347,23 +10512,27 @@ Verified on EduCut.ai: ${siteUrl}
     P.querySelectorAll('[data-view-course-cert]').forEach(b => {
       b.onclick = () => openCertificateViewer(b.dataset.viewCourseCert);
     });
+
+    P.querySelectorAll('[data-toggle-fav]').forEach(b => {
+      b.onclick = () => toggleFavoriteCourse(b.dataset.toggleFav);
+    });
   }
 
   function courseCardMarkup(c) {
     const isComplete = c.progress === 100 || c.status === 'COMPLETED';
-    const totalLessons = c.totalLessons || (c.lessons && c.lessons.length) || 5;
+    const totalLessons = c.totalLessons || (c.lessons && c.lessons.length) || 8;
     const completedCount = (c.completedLessons || []).length;
     const nextLesson = (c.lessons || []).find(l => !(c.completedLessons || []).includes(l.id)) || (c.lessons || [])[0];
 
     return `
-      <article class="learner-course-card ${c.isFree ? 'is-free' : ''}">
+      <article class="learner-course-card is-free">
         <div class="learner-course-head">
           <div>
             <div class="learner-academy-name">${esc(c.academyTitle || c.academy)}</div>
             <span class="learner-code-pill">${esc(c.code)}</span>
           </div>
           <div>
-            ${c.isFree ? '<span class="learner-free-badge">★ FREE COURSE</span>' : `<span class="company-status ${isComplete?'ACTIVE':'PENDING'}">${isComplete?'COMPLETED':'IN PROGRESS'}</span>`}
+            <span class="learner-free-badge">★ ONLY FREE COURSE</span>
           </div>
         </div>
 
@@ -10372,7 +10541,7 @@ Verified on EduCut.ai: ${siteUrl}
 
         <div class="learner-course-meta">
           <span>Level: <strong>${esc(c.level || 'Foundation')}</strong></span>
-          <span>Duration: <strong>${esc(c.duration || '8 hours')}</strong></span>
+          <span>Duration: <strong>${esc(c.duration || '3 hours')}</strong></span>
           <span>Modules: <strong>${completedCount} / ${totalLessons}</strong></span>
         </div>
 
@@ -10391,10 +10560,10 @@ Verified on EduCut.ai: ${siteUrl}
 
         <div class="learner-course-actions">
           <button class="btn btn-lime" style="flex:1" data-open-player="${esc(c.code)}">
-            ${isComplete ? 'Review Modules' : 'Continue Learning →'}
+            ${isComplete ? 'Review Course & Download Certificate →' : 'Continue Learning →'}
           </button>
           ${isComplete ? `
-            <button class="btn btn-outline" data-view-course-cert="${esc(c.code)}" title="View verified certificate">
+            <button class="btn btn-outline" data-view-course-cert="${esc(c.code)}" title="View official certificate">
               Certificate ↗
             </button>
           ` : ''}
@@ -10409,20 +10578,23 @@ Verified on EduCut.ai: ${siteUrl}
   function renderCatalogue(P) {
     const state = getLearnerState(app.session);
     const enrolledCodes = new Set((state.enrolledCourses || []).map(c => c.code));
+    const favSet = new Set(state.favorites || []);
 
     const q = app.searchQuery.toLowerCase();
     const acadFilter = app.academyFilter;
     const lvlFilter = app.levelFilter;
+    const isFavOnly = !!app.favOnlyFilter;
 
     const filtered = fullCatalogue.filter(c => {
       const matchQ = !q || c.title.toLowerCase().includes(q) || c.code.toLowerCase().includes(q) || (c.description || '').toLowerCase().includes(q);
       const matchAcad = acadFilter === 'ALL' || c.academy === acadFilter;
       const matchLvl = lvlFilter === 'ALL' || c.level.toLowerCase() === lvlFilter.toLowerCase();
-      return matchQ && matchAcad && matchLvl;
+      const matchFav = !isFavOnly || favSet.has(c.code);
+      return matchQ && matchAcad && matchLvl && matchFav;
     });
 
-    const isFreeEnrolled = enrolledCodes.has('FREE-101');
-    const freeCourse = fullCatalogue.find(c => c.code === 'FREE-101') || FREE_COURSE_DEF;
+    const isEthicsEnrolled = enrolledCodes.has('ETHICS-101');
+    const ethicsCourse = ETHICS_COURSE_DEF;
 
     P.innerHTML = `
       <div class="learner-head">
@@ -10431,40 +10603,33 @@ Verified on EduCut.ai: ${siteUrl}
           <h1>Explore &amp; Enroll</h1>
         </div>
         <div>
-          <p>Discover specialized courses across all 18 AI Academies. Enroll instantly into your personal workspace and start learning immediately.</p>
+          <p>Discover specialized courses across all 18 AI Academies. Access the official free certification course or save upcoming specialized curricula to your favorites list.</p>
         </div>
       </div>
 
-      <!-- FREE COURSE PLACEHOLDER SPOTLIGHT -->
+      <!-- SINGLE FREE COURSE SPOTLIGHT: AI FOR ETHICS -->
       <section class="learner-free-hero">
         <div>
-          <span class="learner-free-badge">★ FREE COURSE PLACEHOLDER · 0 CHF</span>
-          <h2>${esc(freeCourse.title)}</h2>
-          <p>${esc(freeCourse.description)}</p>
+          <span class="learner-free-badge">★ OFFICIAL FREE CERTIFICATION COURSE · 0 CHF</span>
+          <h2>${esc(ethicsCourse.title)}</h2>
+          <p>${esc(ethicsCourse.description)}</p>
           <div class="learner-free-perks">
             <span class="learner-free-perk">Zero barrier access (0 CHF)</span>
-            <span class="learner-free-perk">5 modular interactive lessons</span>
-            <span class="learner-free-perk">Practical workplace prompting labs</span>
-            <span class="learner-free-perk">Official certificate upon completion</span>
-            <span class="learner-free-perk">100% self-paced &amp; online</span>
+            <span class="learner-free-perk">8 executive interactive slides</span>
+            <span class="learner-free-perk">Algorithmic bias &amp; XAI methods</span>
+            <span class="learner-free-perk">10-question certification exam</span>
+            <span class="learner-free-perk">Official downloadable vector PDF certificate</span>
           </div>
         </div>
         <div class="learner-free-hero-action">
           <div class="learner-free-price">
             0 CHF
-            <span>Free Access Forever</span>
+            <span>Free Forever</span>
           </div>
-          ${isFreeEnrolled ? `
-            <button class="btn btn-lime" style="width:100%" data-open-player="FREE-101">
-              Continue Free Course →
-            </button>
-            <small style="color:#355b00;font-weight:700">✓ Enrolled in your workspace</small>
-          ` : `
-            <button class="btn btn-lime" style="width:100%" data-enroll-course="FREE-101">
-              Enroll for Free (0 CHF) →
-            </button>
-            <small style="color:#666">Instant 1-click access</small>
-          `}
+          <button class="btn btn-lime" style="width:100%" data-open-player="ETHICS-101">
+            ${isEthicsEnrolled ? 'Start / Continue Free Course →' : 'Enroll for Free (0 CHF) →'}
+          </button>
+          <small style="color:#355b00;font-weight:700">✓ Free Institutional Credential</small>
         </div>
       </section>
 
@@ -10485,6 +10650,10 @@ Verified on EduCut.ai: ${siteUrl}
           <option value="Advanced" ${lvlFilter==='Advanced'?'selected':''}>Advanced</option>
         </select>
 
+        <button type="button" class="btn ${isFavOnly ? 'btn-fav-active' : 'btn-outline'}" id="catalogueFavFilterBtn" style="padding:6px 14px;font-size:12px;font-weight:700">
+          ★ My Favorites (${favSet.size})
+        </button>
+
         <div style="flex:1"></div>
         <div class="mono" style="font-size:11px;color:#777">
           Showing <strong>${filtered.length}</strong> of ${fullCatalogue.length} courses
@@ -10494,16 +10663,17 @@ Verified on EduCut.ai: ${siteUrl}
       <!-- CATALOGUE GRID -->
       <div class="learner-courses-grid">
         ${filtered.map(c => {
-          const enrolled = enrolledCodes.has(c.code);
+          const isEthics = c.code === 'ETHICS-101';
+          const isFav = favSet.has(c.code);
           return `
-            <article class="learner-course-card ${c.isFree ? 'is-free' : ''}">
+            <article class="learner-course-card ${isEthics ? 'is-free' : ''}">
               <div class="learner-course-head">
                 <div>
                   <div class="learner-academy-name">${esc(c.academyTitle || c.academy)}</div>
                   <span class="learner-code-pill">${esc(c.code)}</span>
                 </div>
                 <div>
-                  ${c.isFree ? '<span class="learner-free-badge">★ FREE ACCESS</span>' : `<span class="mono" style="font-size:11px;font-weight:700">${c.priceHT || 400} CHF</span>`}
+                  ${isEthics ? '<span class="learner-free-badge">★ ONLY FREE COURSE</span>' : '<span class="learner-coming-soon-badge">COMING SOON</span>'}
                 </div>
               </div>
 
@@ -10513,18 +10683,23 @@ Verified on EduCut.ai: ${siteUrl}
               <div class="learner-course-meta">
                 <span>Level: <strong>${esc(c.level)}</strong></span>
                 <span>Duration: <strong>${esc(c.duration)}</strong></span>
-                <span>Access: <strong>${c.isFree ? 'Free (0 CHF)' : 'Standard'}</strong></span>
+                <span>Access: <strong>${isEthics ? 'Free (0 CHF)' : '<span class="learner-coming-soon-pill">Coming Soon</span>'}</strong></span>
               </div>
 
               <div class="learner-course-actions">
-                ${enrolled ? `
-                  <button class="btn btn-outline" style="flex:1" data-open-player="${esc(c.code)}">
-                    Enrolled ✓ (Manage Progress)
+                ${isEthics ? `
+                  <button class="btn btn-lime" style="flex:1" data-open-player="ETHICS-101">
+                    Start Free Course &amp; Certification →
                   </button>
                 ` : `
-                  <button class="btn btn-lime" style="flex:1" data-enroll-course="${esc(c.code)}">
-                    ${c.isFree ? 'Enroll for Free (0 CHF)' : '+ Enroll in Course'}
-                  </button>
+                  <div style="display:flex;gap:8px;align-items:center;width:100%">
+                    <button class="btn ${isFav ? 'btn-fav-active' : 'btn-outline'}" style="flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px" data-toggle-fav="${esc(c.code)}" title="${isFav ? 'Remove from favorites' : 'Add to favorites'}">
+                      ${isFav ? '★ Favorited' : '☆ Add to Favorites'}
+                    </button>
+                    <button class="btn btn-outline" style="opacity:0.5;cursor:not-allowed;font-size:11.5px;padding:8px 10px;white-space:nowrap" disabled title="Enrollment opens soon">
+                      Coming Soon
+                    </button>
+                  </div>
                 `}
               </div>
             </article>
@@ -10543,6 +10718,11 @@ Verified on EduCut.ai: ${siteUrl}
       renderCatalogue(P);
     };
 
+    document.getElementById('catalogueFavFilterBtn').onclick = () => {
+      app.favOnlyFilter = !app.favOnlyFilter;
+      renderCatalogue(P);
+    };
+
     P.querySelectorAll('[data-enroll-course]').forEach(b => {
       b.onclick = () => enrollCourse(b.dataset.enrollCourse);
     });
@@ -10550,45 +10730,70 @@ Verified on EduCut.ai: ${siteUrl}
     P.querySelectorAll('[data-open-player]').forEach(b => {
       b.onclick = () => openCoursePlayer(b.dataset.openPlayer);
     });
+
+    P.querySelectorAll('[data-toggle-fav]').forEach(b => {
+      b.onclick = () => toggleFavoriteCourse(b.dataset.toggleFav);
+    });
   }
 
   function enrollCourse(code) {
-    const courseDef = fullCatalogue.find(c => c.code === code) || CORE_FALLBACK_COURSES.find(c => c.code === code);
-    if (!courseDef) return;
+    if (code !== 'ETHICS-101') {
+      toast(`This course is coming soon. Added to your Favorites list!`);
+      toggleFavoriteCourse(code);
+      return;
+    }
 
     const state = getLearnerState(app.session);
-    if ((state.enrolledCourses || []).some(c => c.code === code)) {
-      toast(`You are already enrolled in ${code}.`);
+    if ((state.enrolledCourses || []).some(c => c.code === 'ETHICS-101')) {
+      toast(`You are already enrolled in ETHICS-101.`);
       return;
     }
 
     const newEnrollment = {
-      code: courseDef.code,
-      title: courseDef.title,
-      academy: courseDef.academy,
-      academyTitle: courseDef.academyTitle || courseDef.academy,
-      level: courseDef.level,
-      duration: courseDef.duration,
-      isFree: !!courseDef.isFree,
+      code: 'ETHICS-101',
+      title: ETHICS_COURSE_DEF.title,
+      academy: 'A018',
+      academyTitle: ETHICS_COURSE_DEF.academyTitle,
+      level: ETHICS_COURSE_DEF.level,
+      duration: ETHICS_COURSE_DEF.duration,
+      isFree: true,
       enrolledAt: new Date().toISOString(),
       lastAccessed: new Date().toISOString(),
       completedLessons: [],
-      totalLessons: (courseDef.lessons || []).length || 4,
+      totalLessons: 8,
       progress: 0,
       status: 'IN_PROGRESS',
       certificateId: null,
-      lessons: courseDef.lessons || []
+      lessons: ETHICS_COURSE_DEF.lessons
     };
 
     state.enrolledCourses.unshift(newEnrollment);
     state.activity.unshift({
-      event: `Enrolled in ${courseDef.code}: ${courseDef.title}`,
-      course: courseDef.code,
+      event: `Enrolled in ETHICS-101: ${ETHICS_COURSE_DEF.title}`,
+      course: 'ETHICS-101',
       at: new Date().toISOString()
     });
 
     saveLearnerState(app.session, state);
-    toast(`✓ Successfully enrolled in ${courseDef.code} · ${courseDef.title}!`);
+    toast(`✓ Successfully enrolled in ETHICS-101!`);
+    renderActivePage();
+  }
+
+  function toggleFavoriteCourse(code) {
+    const state = getLearnerState(app.session);
+    state.favorites = Array.isArray(state.favorites) ? state.favorites : [];
+    const courseDef = fullCatalogue.find(c => c.code === code) || CORE_FALLBACK_COURSES.find(c => c.code === code) || { code, title: code };
+    const title = courseDef.title || code;
+    const idx = state.favorites.indexOf(code);
+    if (idx >= 0) {
+      state.favorites.splice(idx, 1);
+      saveLearnerState(app.session, state);
+      toast(`Removed ${code} from your Favorites.`);
+    } else {
+      state.favorites.push(code);
+      saveLearnerState(app.session, state);
+      toast(`★ Added ${code} (${title}) to Favorites! We'll notify you when enrollment opens.`);
+    }
     renderActivePage();
   }
 
@@ -10613,7 +10818,7 @@ Verified on EduCut.ai: ${siteUrl}
 
     function renderEthicsView() {
       const isComplete = course.progress === 100 || course.status === 'COMPLETED';
-      const learnerName = formatLearnerName(app.session?.name || app.session?.email || 'Verified Learner');
+      const learnerName = formatLearnerName(app.session?.name || app.session?.email || 'Alex Vance');
 
       body.innerHTML = `
         <div class="ethics-player-tabs">
@@ -10655,7 +10860,7 @@ Verified on EduCut.ai: ${siteUrl}
           <div style="background:#f4fbf0;border:1px solid #badf78;padding:14px 20px;margin-bottom:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
             <div>
               <strong style="color:#2f5400;display:block;font-size:14px">🎉 Course Completed &amp; Certified!</strong>
-              <span style="color:#4d6d23;font-size:12px">Official Credential: <strong>${esc(course.certificateId || 'EC-ETHICS-VERIFIED')}</strong></span>
+              <span style="color:#4d6d23;font-size:12px">Official Credential: <strong>${esc(course.certificateId || 'EC-ETHICS-2026')}</strong></span>
             </div>
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <button class="btn btn-lime" id="slideDownloadPdfBtn" style="padding:7px 14px;font-size:12px">Download PDF Certificate ⬇</button>
@@ -10756,7 +10961,7 @@ Verified on EduCut.ai: ${siteUrl}
           courseCode: 'ETHICS-101',
           academyTitle: 'Academy A018 · Responsible AI',
           issued: new Date().toISOString().slice(0, 10),
-          verificationId: course.certificateId || 'EC-ETHICS-VERIFIED',
+          verificationId: course.certificateId || 'EC-ETHICS-2026',
           score: 10,
           learnerName
         };
@@ -10769,7 +10974,7 @@ Verified on EduCut.ai: ${siteUrl}
           courseCode: 'ETHICS-101',
           academyTitle: 'Academy A018 · Responsible AI',
           issued: new Date().toISOString().slice(0, 10),
-          verificationId: course.certificateId || 'EC-ETHICS-VERIFIED',
+          verificationId: course.certificateId || 'EC-ETHICS-2026',
           learnerName
         };
         shareCertificateToLinkedIn(cert);
@@ -10801,7 +11006,7 @@ Verified on EduCut.ai: ${siteUrl}
                     You scored <strong>${quizScore} of 10 (${quizScore * 10}%)</strong>. You have demonstrated rigorous understanding of AI Ethics principles and met the institutional pass threshold.
                   </p>
                   <div class="mono" style="font-size:12px;color:#15803d">
-                    Credential ID: <strong>${esc(course.certificateId || 'EC-ETHICS-VERIFIED')}</strong>
+                    Credential ID: <strong>${esc(course.certificateId || 'EC-ETHICS-2026')}</strong>
                   </div>
                 </div>
                 <div style="display:flex;flex-direction:column;gap:8px;min-width:220px">
@@ -10831,7 +11036,7 @@ Verified on EduCut.ai: ${siteUrl}
                     Score: ${quizScore} of 10 (${quizScore * 10}%)
                   </h3>
                   <p style="color:#9a3412;font-size:14px;margin:0 0 14px">
-                    A minimum of 7 correct answers (70%) is required to earn your verified PDF certificate. You answered ${quizScore} correctly. Review the explanations below and try again.
+                    A minimum of 7 correct answers (70%) is required to earn your official PDF certificate. You answered ${quizScore} correctly. Review the explanations below and try again.
                   </p>
                 </div>
                 <div style="display:flex;flex-direction:column;gap:8px;min-width:200px">
@@ -10849,7 +11054,7 @@ Verified on EduCut.ai: ${siteUrl}
               <div>
                 <span class="mono" style="font-size:11px;color:var(--blue);letter-spacing:.08em">EXECUTIVE CERTIFICATION ASSESSMENT</span>
                 <h3>ETHICS-101: 10-Question Knowledge Exam</h3>
-                <p>Answer all 10 questions. Scoring <strong>7 or more (≥70%)</strong> completes the course and generates your verified PDF certificate with your name.</p>
+                <p>Answer all 10 questions. Scoring <strong>7 or more (≥70%)</strong> completes the course and generates your official PDF certificate with your name.</p>
               </div>
               <div style="text-align:right">
                 <div class="mono" style="font-size:12px;font-weight:700;color:var(--ink);background:#fff;border:1px solid var(--line);padding:8px 14px">
@@ -11029,7 +11234,7 @@ Verified on EduCut.ai: ${siteUrl}
           courseCode: 'ETHICS-101',
           academyTitle: 'Academy A018 · Responsible AI',
           issued: new Date().toISOString().slice(0, 10),
-          verificationId: course.certificateId || 'EC-ETHICS-VERIFIED',
+          verificationId: course.certificateId || 'EC-ETHICS-2026',
           score: quizScore,
           learnerName
         };
@@ -11086,136 +11291,20 @@ Verified on EduCut.ai: ${siteUrl}
   }
 
   function openCoursePlayer(code) {
+    if (code !== 'ETHICS-101') {
+      toast(`This course is coming soon. You can add it to your Favorites list!`);
+      return;
+    }
+
     const state = getLearnerState(app.session);
-    const course = (state.enrolledCourses || []).find(c => c.code === code);
+    let course = (state.enrolledCourses || []).find(c => c.code === 'ETHICS-101');
     if (!course) {
-      enrollCourse(code);
-      return openCoursePlayer(code);
+      enrollCourse('ETHICS-101');
+      course = (getLearnerState(app.session).enrolledCourses || []).find(c => c.code === 'ETHICS-101');
     }
 
     const modal = document.getElementById('coursePlayerModal');
-    if (code === 'ETHICS-101') {
-      return openEthicsCoursePlayer(course, modal, state);
-    }
-
-    const kicker = document.getElementById('playerKicker');
-    const title = document.getElementById('playerTitle');
-    const body = document.getElementById('playerBody');
-
-    kicker.textContent = `${course.code} · ${course.academyTitle || course.academy} · ${course.level}`;
-    title.textContent = course.title;
-
-    function renderPlayerContent() {
-      const isComplete = course.progress === 100 || course.status === 'COMPLETED';
-      const lessons = course.lessons || [];
-      const completed = new Set(course.completedLessons || []);
-
-      body.innerHTML = `
-        <div style="background:var(--paper);border:1px solid var(--line);padding:18px 20px;margin-bottom:22px">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-            <span class="mono" style="font-size:11px;color:var(--blue)">Syllabus Progress</span>
-            <strong style="font-size:14px">${completed.size} of ${lessons.length} Modules Completed (${course.progress}%)</strong>
-          </div>
-          <div class="learner-progress-bar ${isComplete ? 'complete' : ''}" style="height:9px">
-            <span style="width:${Math.max(0, Math.min(100, course.progress))}%"></span>
-          </div>
-          <div style="font-size:11.5px;color:#666;margin-top:8px">
-            ${isComplete ? '✓ Course completed! You have earned your official verifiable completion certificate.' : 'Click any module checkmark below to mark your learning progress.'}
-          </div>
-        </div>
-
-        ${isComplete ? `
-          <div style="background:#f4fbf0;border:1px solid #badf78;padding:16px 20px;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;gap:16px">
-            <div>
-              <strong style="color:#2f5400;display:block;font-size:15px">🎉 Course Completed!</strong>
-              <span style="color:#4d6d23;font-size:12px">Certificate ID: <strong>${esc(course.certificateId || 'EC-VERIFIED')}</strong></span>
-            </div>
-            <button class="btn btn-lime" id="playerModalViewCertBtn">View Certificate ↗</button>
-          </div>
-        ` : ''}
-
-        <div class="mono" style="font-size:10px;color:var(--blue);margin-bottom:8px">Interactive Lesson Checklist</div>
-        <div class="learner-lesson-list">
-          ${lessons.map((l, i) => {
-            const isDone = completed.has(l.id);
-            return `
-              <div class="learner-lesson-item ${isDone ? 'completed' : ''}" data-lesson-id="${esc(l.id)}">
-                <button type="button" class="learner-lesson-check" data-toggle-lesson="${esc(l.id)}" title="${isDone ? 'Mark incomplete' : 'Mark complete'}">
-                  ${isDone ? '✓' : ''}
-                </button>
-                <div class="learner-lesson-info">
-                  <h4>${esc(l.id)} · ${esc(l.title)}</h4>
-                  <p>${esc(l.summary || '')}</p>
-                  ${l.exercise ? `<div style="font-size:11px;color:#555;margin-top:6px;background:rgba(0,0,0,.03);padding:6px 10px;border-left:2px solid var(--blue)"><strong>Lab:</strong> ${esc(l.exercise)}</div>` : ''}
-                </div>
-                <div class="mono" style="font-size:11px;color:#777;white-space:nowrap">
-                  ${esc(l.duration || '45 min')}
-                </div>
-              </div>
-            `;
-          }).join('')}
-        </div>
-      `;
-
-      body.querySelectorAll('[data-toggle-lesson]').forEach(b => {
-        b.onclick = () => {
-          const lid = b.dataset.toggleLesson;
-          let comp = course.completedLessons || [];
-          if (comp.includes(lid)) {
-            comp = comp.filter(x => x !== lid);
-          } else {
-            comp.push(lid);
-            state.activity.unshift({
-              event: `Completed Module ${lid} in ${course.code}`,
-              course: course.code,
-              at: new Date().toISOString()
-            });
-          }
-          course.completedLessons = comp;
-          course.progress = Math.round((comp.length / Math.max(1, lessons.length)) * 100);
-          course.lastAccessed = new Date().toISOString();
-
-          // Check for completion
-          if (course.progress === 100) {
-            course.status = 'COMPLETED';
-            if (!course.certificateId) {
-              const certId = `EC-${Math.random().toString(36).slice(2, 6).toUpperCase()}-${course.code.replace(/[^A-Z0-9]/gi, '')}`;
-              course.certificateId = certId;
-              state.certificates = state.certificates || [];
-              if (!state.certificates.some(c => c.courseCode === course.code)) {
-                state.certificates.unshift({
-                  id: certId,
-                  courseCode: course.code,
-                  courseTitle: course.title,
-                  academy: course.academyTitle || course.academy,
-                  issued: new Date().toISOString().slice(0, 10),
-                  verificationId: certId
-                });
-                state.activity.unshift({
-                  event: `Certificate Issued for ${course.code}: ${course.title}`,
-                  course: course.code,
-                  at: new Date().toISOString()
-                });
-              }
-            }
-            toast(`🎉 Congratulations! You completed ${course.code}! Certificate awarded.`);
-          } else {
-            course.status = 'IN_PROGRESS';
-          }
-
-          saveLearnerState(app.session, state);
-          renderPlayerContent();
-        };
-      });
-
-      document.getElementById('playerModalViewCertBtn')?.addEventListener('click', () => {
-        modal.classList.remove('open');
-        openCertificateViewer(course.code);
-      });
-    }
-
-    renderPlayerContent();
-    modal.classList.add('open');
+    return openEthicsCoursePlayer(course, modal, state);
   }
 
   /* -------------------------------------------------------------
@@ -11232,7 +11321,7 @@ Verified on EduCut.ai: ${siteUrl}
           <h1>My Certifications</h1>
         </div>
         <div>
-          <p>Verified certificates of completion issued by EduCut.ai. Each certificate carries a tamper-evident verification identifier and can be printed or downloaded as a vector PDF.</p>
+          <p>Certificates of completion issued by EduCut.ai. Each certificate carries an institutional credential identifier and can be printed or downloaded as a vector PDF.</p>
         </div>
       </div>
 
@@ -11241,7 +11330,7 @@ Verified on EduCut.ai: ${siteUrl}
           ${certs.map(c => `
             <article class="learner-cert-card">
               <div class="learner-cert-header">
-                <span class="learner-cert-stamp">VERIFIED INSTITUTIONAL CREDENTIAL</span>
+                <span class="learner-cert-stamp">INSTITUTIONAL CREDENTIAL</span>
                 <span class="mono" style="font-size:11px;color:#777">${fmt(c.issued)}</span>
               </div>
 
@@ -11250,7 +11339,7 @@ Verified on EduCut.ai: ${siteUrl}
               <p style="color:#666;font-size:12px;margin:0 0 16px">${esc(c.academy || 'EduCut.ai Academy')}</p>
 
               <div style="background:var(--paper);border:1px solid var(--line);padding:12px;margin-bottom:16px;font:700 11px monospace">
-                Verification ID: <span style="color:var(--blue)">${esc(c.id || c.verificationId)}</span>
+                Credential ID: <span style="color:var(--blue)">${esc(c.id || c.verificationId)}</span>
               </div>
 
               <div style="margin-top:auto;display:flex;gap:8px;flex-wrap:wrap">
@@ -11286,7 +11375,7 @@ Verified on EduCut.ai: ${siteUrl}
         const cert = (state.certificates || []).find(c => c.courseCode === courseCode);
         if (cert) {
           downloadCertificatePDF({
-            learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner'),
+            learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Alex Vance'),
             courseTitle: cert.courseTitle,
             courseCode: cert.courseCode,
             academyTitle: cert.academy,
@@ -11310,7 +11399,7 @@ Verified on EduCut.ai: ${siteUrl}
             academyTitle: cert.academy,
             issued: cert.issued,
             verificationId: cert.id || cert.verificationId,
-            learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner')
+            learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Alex Vance')
           });
         }
       };
@@ -11331,10 +11420,10 @@ Verified on EduCut.ai: ${siteUrl}
       cert = {
         id: `EC-LIVE-${courseCode.replace(/[^A-Z0-9]/gi, '')}`,
         courseCode,
-        courseTitle: courseCode === 'ETHICS-101' ? 'Applied AI Ethics, Algorithmic Bias & Responsible Governance' : (courseCode === 'FREE-101' ? 'AI Foundations & Prompting Essentials: Interactive Primer' : 'Advanced AI Professional Curriculum'),
+        courseTitle: courseCode === 'ETHICS-101' ? 'Applied AI Ethics, Algorithmic Bias & Responsible Governance' : 'Advanced AI Professional Curriculum',
         academy: courseCode === 'ETHICS-101' ? 'Academy A018 · Responsible AI & Governance' : 'EduCut.ai Academy',
         issued: new Date().toISOString().slice(0, 10),
-        learnerName: formatLearnerName(app.session?.name || app.session?.email || 'Verified Learner')
+        learnerName: formatLearnerName(app.session?.name || app.session?.email || 'Alex Vance')
       };
     }
 
@@ -11342,33 +11431,21 @@ Verified on EduCut.ai: ${siteUrl}
     const body = document.getElementById('certBody');
 
     function renderModalContent() {
-      const currentName = formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner');
+      const currentName = formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Alex Vance');
 
       body.innerHTML = `
-        <!-- Recipient Name Editor Toolbar -->
-        <div style="background:#f4f6fa;border:1px solid #d5d9e5;padding:12px 18px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-radius:4px">
-          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-            <span class="mono" style="font-size:11px;font-weight:700;color:#1e293b">Awarded To:</span>
-            <input type="text" id="certLearnerNameInput" value="${esc(currentName)}" placeholder="First Name Last Name" style="padding:7px 12px;font-size:14px;font-weight:700;border:1px solid #94a3b8;border-radius:4px;min-width:240px;background:#fff;color:#0b0b0c">
-            <button class="btn btn-outline" id="certUpdateNameBtn" style="padding:7px 14px;font-size:12px;font-weight:700">Update Name</button>
-          </div>
-          <div class="mono" style="font-size:11px;color:#64748b">
-            Format: First Name Last Name (No usernames or slashes)
-          </div>
-        </div>
-
         <!-- Landscape Certificate Modal Paper -->
         <div class="learner-cert-modal-paper" id="printableCert">
-          <!-- Top Header: Logo on Left, Swiss Info on Right (NO ACCREDITED) -->
+          <!-- Top Header: Logo on Left, Standards on Right -->
           <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #0b0b0c;padding-bottom:16px;margin-bottom:22px">
             <div style="display:flex;flex-direction:column;align-items:flex-start">
               <img src="/assets/logo_cert.svg" alt="EduCut.ai" style="height:40px;width:auto;display:block">
-              <span class="mono" style="font-size:9.5px;color:#666;margin-top:4px;letter-spacing:.05em">SWISS AI EDUCATION · ZURICH · GENEVA</span>
+              <span class="mono" style="font-size:9.5px;color:#666;margin-top:4px;letter-spacing:.05em">ENTERPRISE AI EDUCATION · EXECUTIVE CURRICULUM</span>
             </div>
             <div class="mono" style="font-size:9.5px;text-align:right;color:#444;line-height:1.45">
               STANDARDS: ISO/IEC 42001 &amp; EU AI ACT<br>
-              VERIFIED INSTITUTIONAL CREDENTIAL REGISTRY<br>
-              <strong style="color:#0b0b0c">SWISS CONFEDERATION JURISDICTION</strong>
+              EXECUTIVE CREDENTIAL REGISTRY<br>
+              <strong style="color:#0b0b0c">GLOBAL PROFESSIONAL FRAMEWORK</strong>
             </div>
           </div>
 
@@ -11385,31 +11462,27 @@ Verified on EduCut.ai: ${siteUrl}
           <div class="mono" style="font-size:11.5px;color:var(--blue);font-weight:700;margin-bottom:8px">${esc(cert.academy || 'EduCut.ai Academy')}</div>
           <div style="font-size:11.5px;color:#666;margin-bottom:18px">Pillars of AI Ethics · Bias Mitigation · Kleinberg's Theorem · XAI (SHAP &amp; LIME) · Differential Privacy · EU AI Act</div>
 
-          <!-- Institutional Crest (replacing circle seal) - educare_crest_no_icon-Photoroom.png -->
+          <!-- Institutional Crest -->
           <div style="margin:16px auto 12px;text-align:center">
             <img src="/assets/crest_dark.png?v=1" alt="EduCut Institutional Crest" style="height:120px;width:auto;display:inline-block;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.08))">
             <div class="mono" style="font-size:10.5px;font-weight:800;letter-spacing:.12em;color:#0b0b0c;margin-top:6px">
-              VERIFIED INSTITUTIONAL CREDENTIAL · SWITZERLAND
+              INSTITUTIONAL CREDENTIAL
             </div>
           </div>
 
-          <!-- Footer details -->
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;border-top:1px solid #ccc;padding-top:18px;margin-top:20px;text-align:left;font-size:11px">
+          <!-- Footer details (2 columns, no directorate/signature) -->
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid #ccc;padding-top:18px;margin-top:20px;text-align:left;font-size:11px">
             <div>
-              <span class="mono" style="color:#777;display:block;margin-bottom:2px">Academic Directorate</span>
-              <div style="font-family:'Times New Roman',serif;font-style:italic;font-size:18px;color:#111;line-height:1.1;margin-bottom:2px">Dr. Marc Steiner</div>
-              <strong style="display:block;font-size:11px">Dr. Marc Steiner, Ph.D.</strong>
-              <span style="color:#666;font-size:10px">Chair, AI Ethics Advisory Council</span>
-            </div>
-            <div style="text-align:center">
-              <span class="mono" style="color:#777;display:block;margin-bottom:2px">Issue Date</span>
-              <strong style="font-size:13px;display:block">${fmt(cert.issued)}</strong>
-              <span class="mono" style="font-size:9.5px;color:#666">PROTOCOL: EDU-ETHICS-2026-CH</span>
+              <span class="mono" style="color:#777;display:block;margin-bottom:3px;font-size:10px">ISSUE DATE</span>
+              <strong style="font-size:15px;display:block;font-family:monospace;color:#0b0b0c">${fmt(cert.issued)}</strong>
+              <span class="mono" style="font-size:10px;color:#666;display:block;margin-top:2px">CURRICULUM REGISTRY: EDU-ETHICS-2026</span>
+              <span class="mono" style="font-size:10px;color:#666">PERMANENT DIGITAL RECORD</span>
             </div>
             <div style="text-align:right">
-              <span class="mono" style="color:#777;display:block;margin-bottom:2px">Verification Identifier</span>
-              <strong style="color:var(--blue);font-size:13px;display:block">${esc(cert.id || cert.verificationId)}</strong>
-              <span class="mono" style="font-size:9.5px;color:#666">CRYPTOGRAPHIC HASH: VERIFIED</span>
+              <span class="mono" style="color:#777;display:block;margin-bottom:3px;font-size:10px">CREDENTIAL IDENTIFIER</span>
+              <strong style="color:var(--blue);font-size:15px;display:block;font-family:monospace">${esc(cert.id || cert.verificationId)}</strong>
+              <span class="mono" style="font-size:10px;color:#666;display:block;margin-top:2px">EDUCUT AI ACADEMIC REGISTRY</span>
+              <span class="mono" style="font-size:10px;color:#666">SECURE DIGITAL RECORD</span>
             </div>
           </div>
         </div>
@@ -11417,7 +11490,7 @@ Verified on EduCut.ai: ${siteUrl}
         <!-- Action Controls -->
         <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px;flex-wrap:wrap">
           <div class="mono" style="font-size:11px;color:#666">
-            Permanent Verification: <a href="/#/academy/certificates" style="color:var(--blue);font-weight:700">educut.ai/verify/${esc(cert.id || cert.verificationId)}</a>
+            Credential Registry: <a href="/#/academy/certificates" style="color:var(--blue);font-weight:700">educut.ai/credentials/${esc(cert.id || cert.verificationId)}</a>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
             <button class="btn" id="modalShareLinkedInBtn" style="background:#0077b5;color:#fff;border-color:#0077b5;font-weight:700;display:inline-flex;align-items:center;gap:6px">
@@ -11437,21 +11510,6 @@ Verified on EduCut.ai: ${siteUrl}
         </div>
       `;
 
-      // Wire update name button & enter key
-      const nameInput = document.getElementById('certLearnerNameInput');
-      const updateName = () => {
-        const newName = formatLearnerName(nameInput.value);
-        cert.learnerName = newName;
-        // Update in state
-        const cIdx = (state.certificates || []).findIndex(c => c.courseCode === cert.courseCode);
-        if (cIdx >= 0) state.certificates[cIdx].learnerName = newName;
-        saveLearnerState(app.session, state);
-        toast(`✓ Recipient name updated to: ${newName}`);
-        renderModalContent();
-      };
-      document.getElementById('certUpdateNameBtn')?.addEventListener('click', updateName);
-      nameInput?.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); updateName(); } });
-
       // Wire share on LinkedIn
       document.getElementById('modalShareLinkedInBtn')?.addEventListener('click', () => {
         shareCertificateToLinkedIn({
@@ -11461,14 +11519,14 @@ Verified on EduCut.ai: ${siteUrl}
           academyTitle: cert.academy,
           issued: cert.issued,
           verificationId: cert.id || cert.verificationId,
-          learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner')
+          learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Alex Vance')
         });
       });
 
       // Wire download PDF
       document.getElementById('modalDownloadPdfBtn')?.addEventListener('click', () => {
         downloadCertificatePDF({
-          learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Verified Learner'),
+          learnerName: formatLearnerName(cert.learnerName || app.session?.name || app.session?.email || 'Alex Vance'),
           courseTitle: cert.courseTitle,
           courseCode: cert.courseCode,
           academyTitle: cert.academy,
