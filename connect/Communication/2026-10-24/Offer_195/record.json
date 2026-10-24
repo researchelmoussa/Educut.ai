@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "institution": {
+    "name": "University of Auckland",
+    "website": "https://www.auckland.ac.nz",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/university-of-auckland-doctoral-scholarship-43-all.html",
+  "source_url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/postgraduate-scholarships/doctoral-scholarships.html",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Auckland",
+    "country": "New Zealand",
+    "country_code": "NZ"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "All disciplines",
+  "seniority": "PhD",
+  "qualifications": [
+    "Supervisor endorsement required; contact proposed supervisors well before the closing date",
+    "International applicants without a previous NZ student visa are advised to apply in the 1 November or 1 February rounds",
+    "Four rounds a year; some faculties (e.g. Auckland Bioengineering Institute) list different dates"
+  ],
+  "skills": [],
+  "description_short": "The University of Auckland Doctoral Scholarship supports doctoral study, with four application rounds a year. The next round closes 1 November 2026; applicants need supervisor endorsement and international applicants are advised to apply in November or February rounds.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-01",
+    "timezone": "Pacific/Auckland",
+    "evidence_url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/postgraduate-scholarships/doctoral-scholarships.html",
+    "evidence_quote": "1 November 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official University of Auckland doctoral scholarships page (search results): next closing date 1 November 2026",
+    "Faculty of Arts and Education page lists the same rounds",
+    "Application system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Stipend amount not shown in the results",
+    "Faculty-level closing dates can differ",
+    "Deadline time of day not shown",
+    "Publication date not shown"
+  ],
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "University of Auckland Doctoral Scholarship",
+    "evidence_url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/find-a-scholarship/university-of-auckland-doctoral-scholarship-43-all.html",
+    "evidence_quote": "University of Auckland Doctoral Scholarship"
+  },
+  "id": "opp_ad585c0d3f7ad491",
+  "fingerprint": "52979445a125c6bf",
+  "discovered_at": "2026-10-24T02:05:04.862Z",
+  "last_verified_at": "2026-10-24T02:05:04.862Z",
+  "content_hash": "sha256:7d09658bd818e05a9bd1e76961600bf3c803517395eb052dd27fb0334a8a35ba"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "IPMI 2027",
+    "evidence_url": "https://2027.ipmi-conf.org/",
+    "evidence_quote": "IPMI 2027 Canada"
+  },
+  "institution": {
+    "name": "IPMI 2027 (International Conference on Information Processing in Medical Imaging)",
+    "website": "https://2027.ipmi-conf.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://2027.ipmi-conf.org/",
+  "source_url": "https://2027.ipmi-conf.org/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Orford",
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Medical image analysis, machine learning",
+  "seniority": null,
+  "qualifications": [
+    "Abstract due 7 December 2026 (AoE); full paper due 14 December 2026, no extensions",
+    "Authors are required to attend in person (residential retreat)"
+  ],
+  "skills": [
+    "Medical imaging",
+    "Machine learning"
+  ],
+  "description_short": "Call for papers for IPMI 2027, the International Conference on Information Processing in Medical Imaging, held 27 June to 2 July 2027 at Lake Stukely, Quebec, Canada. Abstracts are due 7 December 2026 and full papers 14 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-07",
+    "timezone": "AoE",
+    "evidence_url": "https://2027.ipmi-conf.org/",
+    "evidence_quote": "December 7, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IPMI 2027 site (search results): abstract deadline December 7, 2026; full paper December 14, 2026; decisions February 15, 2027",
+    "Submission system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Page length (12 pages, LNCS) and double-blind review reported only by secondary listings",
+    "Venue is the Jouvence Center at Lake Stukely near Orford, per secondary listings",
+    "Publication date not shown",
+    "Evidence quotes are the wording shown in search results"
+  ],
+  "discovered_at": "2026-10-23T01:59:43.072Z",
+  "last_verified_at": "2026-10-23T01:59:51.816Z",
+  "id": "opp_37b84ce93575f8b9",
+  "fingerprint": "c5028c21e56a655a",
+  "content_hash": "sha256:d47b3e3e48700d9a2b0441bfc9220231aa015dd2ecd0f3f79d9139efc02192b2"
+}

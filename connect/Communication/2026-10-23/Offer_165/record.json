@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD & Master in Advanced Computing",
+    "evidence_url": "https://ac.cs.tsinghua.edu.cn/application.html",
+    "evidence_quote": "PhD & Master in Advanced Computing - Tsinghua University"
+  },
+  "institution": {
+    "name": "Tsinghua University",
+    "website": "https://www.tsinghua.edu.cn",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ac.cs.tsinghua.edu.cn/application.html",
+  "source_url": "https://ac.cs.tsinghua.edu.cn/application.html",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Beijing",
+    "country": "China",
+    "country_code": "CN"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Computer science (advanced computing)",
+  "seniority": "Master's / PhD",
+  "qualifications": [
+    "Foreign nationals who do not hold Chinese nationality",
+    "Degree (or CSCSE authentication for overseas degrees) before Tsinghua graduate registration in 2027",
+    "Non-native English speakers: TOEFL iBT 85 (tests before 21 January 2026) / 4.5 (tests from 21 January 2026) or IELTS 6.5",
+    "Two recommendation letters from associate professors or above, or senior professionals in a related field",
+    "Chinese Government Scholarship applicants are strongly encouraged to apply in the first round"
+  ],
+  "skills": [],
+  "description_short": "Tsinghua University's English-taught PhD and Master programmes in Advanced Computing admit international students for 2027. The first application round closes 15 December 2026 (17:00 Beijing time); a second round runs 1 January to 27 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": "Asia/Shanghai",
+    "evidence_url": "https://ac.cs.tsinghua.edu.cn/application.html",
+    "evidence_quote": "Before Dec 15, 2026 (17:00)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official programme page (search results): first round before Dec 15, 2026 (17:00); second round Jan 1 - Feb 27, 2027",
+    "Application site not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Funding is not stated for the programme itself (scholarships are separate)",
+    "The PhD Master's-degree requirement wording in the results is unclear",
+    "University closed 21 January - 17 February 2027; the page recommends applying 2-3 weeks early",
+    "Publication date not shown"
+  ],
+  "discovered_at": "2026-10-23T01:59:43.072Z",
+  "last_verified_at": "2026-10-23T01:59:50.062Z",
+  "id": "opp_ed62a04a37031adb",
+  "fingerprint": "887d0680adfbbe29",
+  "content_hash": "sha256:5dab04966171fa67c1dcea9c5444542e85b0f3e9df481e878efe4906dd480184"
+}

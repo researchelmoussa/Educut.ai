@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "institution": {
+    "name": "Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas",
+    "website": "https://dcc.uchile.cl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://dcc.uchile.cl/postgrado/doctorado/",
+  "source_url": "https://ingenieria.uchile.cl/postgrados/6288/computacion",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Santiago",
+    "country": "Chile",
+    "country_code": "CL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Computer science",
+  "seniority": "PhD",
+  "qualifications": [
+    "Licenciado or Magíster degree in a related discipline",
+    "Applications accepted until 31 December for March (autumn semester) entry",
+    "Applicants seeking ANID scholarships were advised to apply before 31 October",
+    "Programme accredited by CNA-Chile for 5 years, until November 2029"
+  ],
+  "skills": [],
+  "description_short": "Universidad de Chile's Doctorado en Computación (Department of Computer Science, FCFM) accepts applications until 31 December of the previous year for March entry, so the deadline for the March 2027 intake is 31 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-31",
+    "timezone": "America/Santiago",
+    "evidence_url": "https://ingenieria.uchile.cl/postgrados/6288/computacion",
+    "evidence_quote": "Hasta el 31 de diciembre del año anterior para ingresar en el semestre de otoño (marzo)."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official programme page and DCC page (search results): applications until 31 December of the previous year for the autumn (March) semester",
+    "Application system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline is the programme's standing rule; no 2027-specific call was shown",
+    "The programme sheet shows a 4 May - 30 June 2026 window (spring cycle); an older DCC page gives 15 May for the second semester",
+    "Admission programme; funding not stated (ANID scholarships are separate)",
+    "City not stated in the excerpt"
+  ],
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doctorado en Computación",
+    "evidence_url": "https://ingenieria.uchile.cl/postgrados/6288/computacion",
+    "evidence_quote": "Doctorado en Computación - Facultad de Ciencias Físicas y Matemáticas - Universidad de Chile"
+  },
+  "id": "opp_3a65b5e4ffa8d07e",
+  "fingerprint": "f0044841bf9612b7",
+  "discovered_at": "2026-10-24T02:05:03.991Z",
+  "last_verified_at": "2026-10-24T02:05:03.991Z",
+  "content_hash": "sha256:3b84d96eec22ebb5fe8edba43d17578be5cacfbbda467621c76d1e582d358b2f"
+}
