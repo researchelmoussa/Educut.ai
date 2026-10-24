@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "institution": {
+    "name": "Loughborough University",
+    "website": "https://www.lboro.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.lboro.ac.uk/study/postgraduate/fees-funding/research-degree-funding/china-scholarship-council/",
+  "source_url": "https://www.lboro.ac.uk/study/postgraduate/fees-funding/research-degree-funding/china-scholarship-council/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Loughborough",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "All disciplines",
+  "seniority": "PhD",
+  "qualifications": [
+    "For students receiving China Scholarship Council (CSC) funding",
+    "An unconditional offer from Loughborough University is needed before applying for the CSC scholarship",
+    "Academic and English requirements must be met by 31 January 2027",
+    "CSC sets its own separate funding deadline"
+  ],
+  "skills": [],
+  "description_short": "Loughborough University offers up to 30 scholarships covering full tuition fees for China Scholarship Council-funded students starting PhD study from October 2027. Submit the PhD application by 4 January 2027; CSC has its own funding deadline.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-04",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.lboro.ac.uk/study/postgraduate/fees-funding/research-degree-funding/china-scholarship-council/",
+    "evidence_quote": "4 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Loughborough CSC page (search results): submit PhD application by 4 January 2027; up to 30 scholarships for October 2027 starts",
+    "Application system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "4 January 2027 is the university application deadline, not the CSC funding deadline",
+    "Page metadata marked as old in search results",
+    "Living costs are expected from CSC; amounts not shown",
+    "Publication date not shown"
+  ],
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "China Scholarship Council PhD scholarships",
+    "evidence_url": "https://www.lboro.ac.uk/study/postgraduate/fees-funding/research-degree-funding/china-scholarship-council/",
+    "evidence_quote": "China Scholarship Council"
+  },
+  "id": "opp_711a45c102feccf8",
+  "fingerprint": "272a5e157fd5029a",
+  "discovered_at": "2026-10-24T02:05:03.840Z",
+  "last_verified_at": "2026-10-24T02:05:03.840Z",
+  "content_hash": "sha256:f808717dca5364fc95eb714ae63e8640da4b272694b25c8bb2495a03cdd74aa0"
+}
