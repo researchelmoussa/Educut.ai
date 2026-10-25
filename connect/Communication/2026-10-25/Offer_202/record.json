@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "onsite",
+  "seniority": "Students",
+  "skills": [
+    "Computational neuroscience",
+    "Machine learning"
+  ],
+  "opportunity_type": "internship",
+  "employment_type": "internship",
+  "title": {
+    "value": "CaCTüS — Computation and Cognition Tübingen Summer Internship",
+    "evidence_url": "https://projects.tuebingen.mpg.de/",
+    "evidence_quote": "CaCTüS — Computation and Cognition Tübingen Summer Internship"
+  },
+  "institution": {
+    "name": "Max Planck Institute for Biological Cybernetics (CaCTüS programme)",
+    "website": "https://projects.tuebingen.mpg.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://projects.tuebingen.mpg.de/",
+  "source_url": "https://projects.tuebingen.mpg.de/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Tübingen",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "field": "Computation and cognition",
+  "qualifications": [
+    "Available for the full 90 days between 1 July and 30 September 2027",
+    "Applicants for Projects 1-4 must be enrolled at an academic institution from January to October 2027",
+    "Internship must be voluntary (no course-credit internships)",
+    "Apply only through the official CaCTüS portal; do not contact supervisors or send applications by email"
+  ],
+  "description_short": "Paid three-month summer research internship in computation and cognition in Tübingen, 1 July to 30 September 2027. The key-dates table lists the portal opening on 21 October 2026, the deadline on 16 November 2026, and interviews in January 2027.",
+  "deadline": {
+    "value": "2026-11-16",
+    "timezone": null,
+    "evidence_url": "https://projects.tuebingen.mpg.de/",
+    "evidence_quote": "Oct 21, 2026 Application portal opens Nov 16, 2026 Application deadline"
+  },
+  "status_evidence": [
+    "Official CaCTüS key-dates table (search results): portal opens 21 October 2026, deadline 16 November 2026",
+    "Program page lists 2027 eligibility dates",
+    "Portal not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Page body text still refers to 'summer of 2026'; the 2027 dates may be on a reused page",
+    "Host institution name not stated in the results; programme is hosted on a tuebingen.mpg.de domain",
+    "Stipend amount not stated",
+    "Paid status taken from the page text referring to the earlier round"
+  ],
+  "id": "opp_3ca89ade84ce7ba2",
+  "fingerprint": "85404be1ee628536",
+  "discovered_at": "2026-10-25T03:02:55.542Z",
+  "last_verified_at": "2026-10-25T03:02:55.542Z",
+  "content_hash": "sha256:1a029e9a14fcdffdefac90e8ea45ba227cd64dad36095728c559029ebc42b075"
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": {
+    "value": "Round-trip train fare and a monthly fellowship stipend",
+    "evidence_url": "https://webjapps.ias.ac.in/fellowship2027/index.html",
+    "evidence_quote": "round-trip train fare and a monthly fellowship stipend"
+  },
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "onsite",
+  "seniority": "Students and teachers",
+  "skills": [
+    "Research"
+  ],
+  "opportunity_type": "fellowship",
+  "employment_type": "fellowship",
+  "title": {
+    "value": "Science Academies' Summer Research Fellowship Programme for Students and Teachers 2027",
+    "evidence_url": "https://webjapps.ias.ac.in/fellowship2027/index.html",
+    "evidence_quote": "Science Academies' Summer Research Fellowship Program for Students and Teachers 2027"
+  },
+  "institution": {
+    "name": "Indian Academy of Sciences, Indian National Science Academy and The National Academy of Sciences, India (IAS-INSA-NASI)",
+    "website": "https://www.ias.ac.in",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://webjapps.ias.ac.in/fellowship2027/applicationform1.jsp",
+  "source_url": "https://webjapps.ias.ac.in/fellowship2027/index.html",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": null,
+    "country": "India",
+    "country_code": "IN"
+  },
+  "field": "Science and engineering research",
+  "qualifications": [
+    "Students or teachers at institutions in India",
+    "Teachers who have already received the fellowship twice cannot apply",
+    "Two months with an assigned guide, preferably in summer"
+  ],
+  "description_short": "India's three science academies offer two-month summer research fellowships with an assigned guide for students and teachers at Indian institutions. Online applications for 2027 close on 30 November 2026; selection notices are expected around March-April 2027.",
+  "deadline": {
+    "value": "2026-11-30",
+    "timezone": null,
+    "evidence_url": "https://www.ias.ac.in/public/Resources/News/SRFP2027_Announcement.pdf",
+    "evidence_quote": "The last date for receipt of applications online is 30 November 2026."
+  },
+  "status_evidence": [
+    "Official IAS SRFP 2027 portal and announcement (search results): last date 30 November 2026",
+    "Application form page exists on the official portal (search result); not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Stipend amount not stated",
+    "Host city depends on the assigned guide"
+  ],
+  "id": "opp_9379dae9ef0da825",
+  "fingerprint": "e847759c4cbac120",
+  "discovered_at": "2026-10-25T03:02:56.550Z",
+  "last_verified_at": "2026-10-25T03:02:56.550Z",
+  "content_hash": "sha256:f53e274456e9ef016d231b6e36acdd352db840a965f4e809140a635585825954"
+}

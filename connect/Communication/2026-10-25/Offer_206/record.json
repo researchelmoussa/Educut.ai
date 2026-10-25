@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": {
+    "value": "Full scholarship (up to THB 5 million) with monthly stipend up to THB 20K; PhD students also get THB 1 million for up to one year of research abroad",
+    "evidence_url": "https://www.vistec.ac.th/education/scholarship-and-support",
+    "evidence_quote": "full scholarship for all students (up to THB 5 million) with no obligation after graduation"
+  },
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "unspecified",
+  "seniority": "Graduate students",
+  "skills": [],
+  "opportunity_type": "phd",
+  "employment_type": "other",
+  "title": {
+    "value": "VISTEC Student Admission 2027",
+    "evidence_url": "https://www.vistec.ac.th/admission",
+    "evidence_quote": "Admission Period October 01, 2026 – February 15, 2027"
+  },
+  "institution": {
+    "name": "Vidyasirimedhi Institute of Science and Technology (VISTEC)",
+    "website": "https://www.vistec.ac.th",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://admission.vistec.ac.th/",
+  "source_url": "https://www.vistec.ac.th/admission",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Thailand",
+    "country_code": "TH"
+  },
+  "field": "Science and technology (graduate programmes)",
+  "qualifications": [
+    "Maximum of two application forms per applicant",
+    "Two recommendation letters (may be submitted later, before the interview day) and an English test score",
+    "For last-day submissions, payment must be completed by 23:59 Thai time that day",
+    "Interviews and written exams on 27 February 2027; results on 31 March 2027"
+  ],
+  "description_short": "VISTEC graduate admission for 2027 in Thailand, with full scholarships for all admitted students. Applications run 1 October 2026 to 15 February 2027; interviews on 27 February and results on 31 March 2027.",
+  "deadline": {
+    "value": "2027-02-15T23:59:00+07:00",
+    "timezone": "Asia/Bangkok",
+    "evidence_url": "https://www.vistec.ac.th/admission",
+    "evidence_quote": "Admission Period October 01, 2026 – February 15, 2027"
+  },
+  "status_evidence": [
+    "Official VISTEC admission page (search results): admission period 1 October 2026 to 15 February 2027",
+    "Admission system not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title composed from the admission cycle shown in results; no separate PhD-specific deadline found",
+    "City not stated in results",
+    "Covers master and PhD programmes; type set to phd"
+  ],
+  "id": "opp_2ad363ce9069ac6b",
+  "fingerprint": "9e6b4288adac2e7f",
+  "discovered_at": "2026-10-25T03:02:56.050Z",
+  "last_verified_at": "2026-10-25T03:02:56.050Z",
+  "content_hash": "sha256:9d3af4fbb2024ca564bf907d2c277aa08f9ad3c82f663818ffaea8a11ef8daf8"
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "unspecified",
+  "seniority": "Master's",
+  "skills": [
+    "Data science",
+    "Machine learning"
+  ],
+  "opportunity_type": "other",
+  "employment_type": "other",
+  "title": {
+    "value": "Magíster en Ciencia de Datos (MDS)",
+    "evidence_url": "https://mds.uchile.cl/",
+    "evidence_quote": "Desde el 01 de septiembre hasta el 20 de noviembre del 2026 puedes postular al Magíster en Ciencia de Datos (MDS) si quieres ser parte del programa a contar de marzo 2027."
+  },
+  "institution": {
+    "name": "Universidad de Chile, Facultad de Ciencias Físicas y Matemáticas",
+    "website": "https://ingenieria.uchile.cl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://mds.uchile.cl/",
+  "source_url": "https://mds.uchile.cl/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Chile",
+    "country_code": "CL"
+  },
+  "field": "Data science",
+  "qualifications": [
+    "Licenciatura or equivalent professional title; each case evaluated by the Academic Committee",
+    "96 credits: 66 of coursework and 30 of thesis seminars",
+    "Classes start 8 March 2027"
+  ],
+  "description_short": "Universidad de Chile's Magíster en Ciencia de Datos (MDS) accepts applications from 1 September to 20 November 2026 for entry in March 2027. The programme has 96 credits; tuition is 75 UF per active semester, with merit and inclusion fee reductions.",
+  "deadline": {
+    "value": "2026-11-20",
+    "timezone": null,
+    "evidence_url": "https://mds.uchile.cl/",
+    "evidence_quote": "Desde el 01 de septiembre hasta el 20 de noviembre del 2026 puedes postular al Magíster en Ciencia de Datos (MDS)"
+  },
+  "status_evidence": [
+    "Official MDS site (search results): applications 1 September to 20 November 2026 for March 2027",
+    "Application form not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Fee-paying master's programme (75 UF per semester); opportunity_type set to other",
+    "Another faculty page shows an older cycle (May-June 2026)",
+    "Document requirements taken from a related programme page",
+    "City (Santiago) not stated in results"
+  ],
+  "id": "opp_099f8b4c2518cfdf",
+  "fingerprint": "f1e39bfb7b77ec00",
+  "discovered_at": "2026-10-25T03:02:56.907Z",
+  "last_verified_at": "2026-10-25T03:02:56.907Z",
+  "content_hash": "sha256:6684c494291d23ae4a0e4de31eb88c248596107078ff81412c48ccd964a8dcb6"
+}

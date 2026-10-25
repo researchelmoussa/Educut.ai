@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "onsite",
+  "seniority": null,
+  "skills": [
+    "Automated planning",
+    "Scheduling",
+    "Artificial intelligence"
+  ],
+  "opportunity_type": "other",
+  "employment_type": "other",
+  "title": {
+    "value": "ICAPS 2027",
+    "evidence_url": "https://icaps27.icaps-conference.org/",
+    "evidence_quote": "ICAPS 2027 is the 37th edition of the ICAPS conference series and will take place in Columbia, SC, USA"
+  },
+  "institution": {
+    "name": "ICAPS 2027 (37th International Conference on Automated Planning and Scheduling)",
+    "website": "https://icaps27.icaps-conference.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://icaps27.icaps-conference.org/dates/",
+  "source_url": "https://icaps27.icaps-conference.org/dates/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Columbia",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "field": "Automated planning and scheduling",
+  "qualifications": [
+    "Abstract submission 7 December 2026; full paper 14 December 2026",
+    "Author notification 26 February 2027"
+  ],
+  "description_short": "Call for papers for ICAPS 2027, the 37th International Conference on Automated Planning and Scheduling, in Columbia, SC, USA, 27 June to 2 July 2027. Abstracts are due 7 December 2026 and full papers 14 December 2026.",
+  "deadline": {
+    "value": "2026-12-07",
+    "timezone": null,
+    "evidence_url": "https://icaps27.icaps-conference.org/dates/",
+    "evidence_quote": "Abstract submission: December 7, 2026"
+  },
+  "status_evidence": [
+    "Official ICAPS 2027 important-dates page (search results): abstracts 7 December 2026, full papers 14 December 2026",
+    "Homepage news: 'Call for Papers Published' (9/6/26)",
+    "Submission system not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline timezone not confirmed for 2027 (previous editions used UTC-12)",
+    "Deadline quote is the search-result rendering of the dates list"
+  ],
+  "id": "opp_d0dfc62c1fc7fcbd",
+  "fingerprint": "5ef1c89e9b62e69c",
+  "discovered_at": "2026-10-25T03:02:56.795Z",
+  "last_verified_at": "2026-10-25T03:02:56.795Z",
+  "content_hash": "sha256:71a182cfa347d7983fd694561d2348e07eb52065efcfe0066c49d1750104b54e"
+}
