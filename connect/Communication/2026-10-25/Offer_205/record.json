@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "unspecified",
+  "seniority": "Postdoctoral",
+  "skills": [
+    "Mathematics"
+  ],
+  "opportunity_type": "postdoc",
+  "employment_type": "fellowship",
+  "title": {
+    "value": "PIMS Postdoctoral Fellowship",
+    "evidence_url": "https://www.pims.math.ca/news/pims-postdoctoral-fellowship-competitions-are-open",
+    "evidence_quote": "PIMS Postdoctoral Fellowship Competitions Are Open"
+  },
+  "institution": {
+    "name": "Pacific Institute for the Mathematical Sciences (PIMS)",
+    "website": "https://pims.math.ca",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://pims.math.ca/programs/scientific/postdoctoral",
+  "source_url": "https://pims.math.ca/programs/scientific/postdoctoral",
+  "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+  "location": {
+    "city": null,
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  "field": "Mathematical sciences",
+  "qualifications": [
+    "Application by nomination only; unsolicited applications are not considered",
+    "Nominee needs a sponsor at a PIMS member university",
+    "All nominees apply through MathJobs",
+    "Sponsor nomination forms due 5 December 2026"
+  ],
+  "description_short": "PIMS Postdoctoral Fellowship competition for the mathematical sciences, by nomination from a sponsor at a PIMS member university. Complete nominations and applications are due 1 December 2026 via MathJobs; sponsor forms by 5 December. Decisions by end of March.",
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": null,
+    "evidence_url": "https://pims.math.ca/programs/scientific/postdoctoral",
+    "evidence_quote": "The deadline for complete nominations/applications: DECEMBER 1, 2026."
+  },
+  "status_evidence": [
+    "Official PIMS postdoctoral page (search results): deadline 1 December 2026",
+    "PIMS news item: 'PIMS Postdoctoral Fellowship Competitions Are Open'",
+    "MathJobs posting not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Award value not stated in results",
+    "Host city depends on the sponsoring member university",
+    "Deadline time/timezone not stated"
+  ],
+  "id": "opp_6a6e176918f7643c",
+  "fingerprint": "7b386968816d0409",
+  "discovered_at": "2026-10-25T03:02:55.930Z",
+  "last_verified_at": "2026-10-25T03:02:55.930Z",
+  "content_hash": "sha256:aeb6e71576340d35f632384284b382540b94761425670edb21cc02d1ddfa5c37"
+}

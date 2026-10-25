@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "unspecified",
+  "seniority": "Postgraduate",
+  "skills": [
+    "Leadership"
+  ],
+  "opportunity_type": "scholarship",
+  "employment_type": "other",
+  "title": {
+    "value": "The Mandela Rhodes Scholarship",
+    "evidence_url": "https://www.mandelarhodes.org/scholarship/apply/",
+    "evidence_quote": "The Mandela Rhodes Scholarship is a life-changing"
+  },
+  "institution": {
+    "name": "The Mandela Rhodes Foundation",
+    "website": "https://www.mandelarhodes.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.mandelarhodes.org/scholarship/apply/",
+  "source_url": "https://www.mandelarhodes.org/scholarship/apply/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "field": "Postgraduate study and leadership development",
+  "qualifications": [
+    "African citizens aged 19 to 29",
+    "Undergraduate degree completed by 1 January 2028",
+    "Referees must upload references by the deadline; no late or incomplete applications"
+  ],
+  "description_short": "The Mandela Rhodes Scholarship for young African leaders, Class of 2028, for African citizens aged 19 to 29 with an undergraduate degree. Applications open 9 March 2027 and close 14 April 2027 at 23:59 GMT+2; references must be uploaded by then.",
+  "deadline": {
+    "value": "2027-04-14T23:59:00+02:00",
+    "timezone": "GMT+2",
+    "evidence_url": "https://www.mandelarhodes.org/scholarship/apply/",
+    "evidence_quote": "the end of Wednesday, 14 April 2027 at 23:59 GMT+2"
+  },
+  "status_evidence": [
+    "Official Mandela Rhodes Foundation apply page (search results): Class of 2028 applications open 9 March 2027, close 14 April 2027",
+    "Applications not yet open at discovery; portal not fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Applications open only on 9 March 2027",
+    "Country/city of study not stated in results",
+    "Scholarship value not stated",
+    "Some page metadata looked inconsistent per search results"
+  ],
+  "id": "opp_6e0b6c1ffebbb5b8",
+  "fingerprint": "b6ef315902fd6708",
+  "discovered_at": "2026-10-25T03:02:57.381Z",
+  "last_verified_at": "2026-10-25T03:02:57.381Z",
+  "content_hash": "sha256:fb82f39519df99e1d601074170080889cadca49610b7ab0ca91a5a149740be6c"
+}

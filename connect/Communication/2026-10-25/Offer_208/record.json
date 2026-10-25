@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "unspecified",
+  "seniority": "Graduate students",
+  "skills": [],
+  "opportunity_type": "scholarship",
+  "employment_type": "other",
+  "title": {
+    "value": "Fellowships",
+    "evidence_url": "https://www.aucegypt.edu/admissions/fellowships",
+    "evidence_quote": "Fellowship cycle 1 is from December 22, 2026 until January 17, 2027."
+  },
+  "institution": {
+    "name": "The American University in Cairo (AUC)",
+    "website": "https://www.aucegypt.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.aucegypt.edu/admissions/fellowships",
+  "source_url": "https://www.aucegypt.edu/admissions/fellowships/deadlines",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Egypt",
+    "country_code": "EG"
+  },
+  "field": "Graduate studies (all fields)",
+  "qualifications": [
+    "Graduate admission application must be submitted at least two weeks before the fellowship deadline",
+    "Fall 2027 graduate admission deadlines: 15 December 2026 (early) and 1 April 2027 (regular)",
+    "Some fellowships are restricted by nationality or school; check each listing"
+  ],
+  "description_short": "Graduate fellowships at The American University in Cairo for fall 2027 entry. Fellowship cycle 1 runs from 22 December 2026 to 17 January 2027; cycle 2 runs in April-May 2027. The admission application must be submitted two weeks before.",
+  "deadline": {
+    "value": "2027-01-17",
+    "timezone": null,
+    "evidence_url": "https://www.aucegypt.edu/admissions/fellowships/deadlines",
+    "evidence_quote": "Fellowship cycle 1 is from December 22, 2026 until January 17, 2027."
+  },
+  "status_evidence": [
+    "Official AUC fellowships pages (search results): cycle 1 22 December 2026 to 17 January 2027",
+    "Cycle 1 opens after the discovery date; portal not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title is the page name 'Fellowships'; individual fellowship names and values not shown",
+    "Cycle 2 start date differs between pages (6 April vs 6 May 2027)",
+    "City not stated in results"
+  ],
+  "id": "opp_40bf82db8b5d8e68",
+  "fingerprint": "bde158b5f1f5324f",
+  "discovered_at": "2026-10-25T03:02:56.323Z",
+  "last_verified_at": "2026-10-25T03:02:56.323Z",
+  "content_hash": "sha256:12bfee7885b47b6f3b2bea9d4872ca06b0e62872646cb0da3e1ad354ae3926d9"
+}
