@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "RSAA PhD Scholarships (2026/27 round) for international applicants",
+    "evidence_url": "https://rsaa.anu.edu.au/study/phd/information-international-students",
+    "evidence_quote": "Applications are now open for the 2026/27 RSAA PhD Scholarship round."
+  },
+  "institution": {
+    "name": "Research School of Astronomy and Astrophysics (RSAA), The Australian National University",
+    "website": "https://rsaa.anu.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://rsaa.anu.edu.au/study/phd/information-international-students",
+  "source_url": "https://rsaa.anu.edu.au/study/phd/information-international-students",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Astronomy and astrophysics",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "International PhD applicants",
+    "Single combined PDF application emailed to the RSAA international address by 15 November 2026",
+    "Three letters of reference, arriving no later than one week after the deadline",
+    "ANU English requirements must be met by successful applicants (not by the deadline)"
+  ],
+  "skills": [
+    "Astronomy",
+    "Astrophysics",
+    "Physics"
+  ],
+  "description_short": "PhD scholarship round at ANU's Research School of Astronomy and Astrophysics for international applicants. Applications are due 15 November 2026 as one combined PDF, with three reference letters within a week; contacting faculty about projects beforehand is encouraged. Interviews expected February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-15",
+    "timezone": null,
+    "evidence_url": "https://rsaa.anu.edu.au/study/phd/information-international-students",
+    "evidence_quote": "application deadline for the 2026/27 round at 15 November 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official RSAA international students page (search results): 'Applications are now open for the 2026/27 RSAA PhD Scholarship round', deadline 15 November 2026",
+    "Submission is by email; no online form to confirm"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Stipend not stated on the RSAA page in results (ANU lists a 2027 RTP base rate separately)",
+    "Deadline time/timezone not stated",
+    "An older RSAA scholarships page still cites a 2023 deadline",
+    "City not stated in the official text seen; left null"
+  ],
+  "id": "opp_b2404de9867ecfe9",
+  "fingerprint": "3e09059e72514ee1",
+  "discovered_at": "2026-10-26T02:59:55.797Z",
+  "last_verified_at": "2026-10-26T02:59:55.797Z",
+  "content_hash": "sha256:88c3b74dc37091902558985b713cddd2ac7af2b750f6bff408ec3cdaacd40b84"
+}

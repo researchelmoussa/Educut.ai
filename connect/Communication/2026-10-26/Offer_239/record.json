@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "DESY Summer Student Programme 2027",
+    "evidence_url": "https://summerstudents.desy.de/application/",
+    "evidence_quote": "Application - DESY Summer Student Programme"
+  },
+  "institution": {
+    "name": "Deutsches Elektronen-Synchrotron DESY",
+    "website": "https://www.desy.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://summerstudents.desy.de/application/",
+  "source_url": "https://summerstudents.desy.de/application/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Physics, related natural sciences and computing",
+  "seniority": "Undergraduate (advanced)",
+  "qualifications": [
+    "At least three years of university study in physics, related natural sciences or computing",
+    "Enrolled at a university for the whole period of the programme",
+    "Separate reserved-place track for students at Ukrainian universities (until 15 February)"
+  ],
+  "skills": [
+    "Physics",
+    "Computing"
+  ],
+  "description_short": "DESY summer research programme for advanced students in physics, related sciences and computing. The 2027 timeline lists online applications from early December to 31 January; the programme is expected to start 21 July 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": null,
+    "evidence_url": "https://summerstudents.desy.de/application/",
+    "evidence_quote": "Online Application: Early December – 31 January"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official DESY summer student pages (search results): 2027 timeline 'Online Application: Early December – 31 January'",
+    "Application page says applications for 2027 open later this year; portal not yet open"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The 2027 timeline page also contains leftover 2026 details (e.g. eligibility 'by summer 2026')",
+    "Year of the 31 January deadline inferred as 2027 from the 2027 timeline",
+    "Host site (Hamburg or Zeuthen) not stated in results; city left null",
+    "Stipend not stated in results"
+  ],
+  "id": "opp_915889911174be99",
+  "fingerprint": "5b17e8d54c9b9e63",
+  "discovered_at": "2026-10-26T03:10:08.275Z",
+  "last_verified_at": "2026-10-26T03:10:08.275Z",
+  "content_hash": "sha256:2a48ece54cde07187de3911e8dbece46c9609cd261cc1523514038c1cc976ade"
+}

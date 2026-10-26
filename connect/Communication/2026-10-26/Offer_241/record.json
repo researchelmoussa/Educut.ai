@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "IMB Simon Anders Axelsen PhD Scholarships",
+    "evidence_url": "https://imb.uq.edu.au/study/phd-scholarships",
+    "evidence_quote": "PhD Scholarship Opportunities - Institute for Molecular Bioscience - University of Queensland"
+  },
+  "institution": {
+    "name": "Institute for Molecular Bioscience (IMB), The University of Queensland",
+    "website": "https://imb.uq.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://imb.uq.edu.au/study/phd-scholarships",
+  "source_url": "https://imb.uq.edu.au/study/phd-scholarships",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Molecular bioscience",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Expression of Interest submitted directly to the relevant principal advisor by 23 November 2026",
+    "Full application closes 7 December 2026"
+  ],
+  "skills": [
+    "Molecular biology",
+    "Bioscience research"
+  ],
+  "description_short": "PhD scholarships at UQ's Institute for Molecular Bioscience covering a living stipend, tuition fees and overseas student health cover. Expressions of interest go to the principal advisor by 23 November 2026; applications close 7 December 2026, with offers in January-February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-23",
+    "timezone": null,
+    "evidence_url": "https://imb.uq.edu.au/study/phd-scholarships",
+    "evidence_quote": "EOI closing 23 November 2026 ... application closing 7 December 2026"
+  },
+  "compensation": {
+    "value": "Living stipend of $32,192 per annum (2023 rate, indexed annually), tuition fees and OSHC",
+    "evidence_url": "https://imb.uq.edu.au/study/phd-scholarships",
+    "evidence_quote": "a living stipend of $32,192 per annum (2023 rate, indexed annually), tuition fees, and Overseas Student Health Cover (OSHC)"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IMB PhD Scholarship Opportunities page (search results): 'EOI is now open!', EOI closing 23 November 2026, application closing 7 December 2026",
+    "Recorded deadline is the EOI closing date (first required step)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Another IMB page gives 'closing: late December 2026'",
+    "Stipend figure is a 2023 rate, indexed annually",
+    "City not stated in the text seen"
+  ],
+  "id": "opp_eb9c44a816e35d84",
+  "fingerprint": "8a0bf1c8a2a14f03",
+  "discovered_at": "2026-10-26T03:10:08.849Z",
+  "last_verified_at": "2026-10-26T03:10:08.849Z",
+  "content_hash": "sha256:e68514ab2838f901674979fbc79b5d6352d97c4d32abbe0915bd08057ae41098"
+}
