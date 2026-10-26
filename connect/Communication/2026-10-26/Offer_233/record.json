@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Young India Fellowship (Class of 2028)",
+    "evidence_url": "https://www.ashoka.edu.in/yif-admissions/",
+    "evidence_quote": "Apply to Young India Fellowship"
+  },
+  "institution": {
+    "name": "Ashoka University",
+    "website": "https://www.ashoka.edu.in",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ashoka.edu.in/yif-admissions/",
+  "source_url": "https://www.ashoka.edu.in/yif-admissions/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "India",
+    "country_code": "IN"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Interdisciplinary liberal studies",
+  "seniority": "Recent graduates",
+  "qualifications": [
+    "Graduates; final-year undergraduates completing their degree by summer 2027 are also eligible",
+    "Apply only once per admissions cycle and in only one round",
+    "Applications reviewed on a rolling basis; priority-deadline applications reviewed first"
+  ],
+  "skills": [
+    "Critical thinking",
+    "Writing",
+    "Leadership"
+  ],
+  "description_short": "Ashoka University's one-year interdisciplinary fellowship for graduates, with every Class of 2028 Fellow partially or fully funded. Round 1 priority deadline is 29 November 2026; later round deadlines are still to be announced.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-29",
+    "timezone": null,
+    "evidence_url": "https://www.ashoka.edu.in/yif-admissions/",
+    "evidence_quote": "Round 1 Priority Deadline: November 29, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official YIF admissions page (search results): Round 1 Priority Deadline November 29, 2026; Round 1 and Round 2 final deadlines TBA",
+    "Another Ashoka page says applications open on 19 November 2026; application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Opening date conflicts between Ashoka pages (already open vs 19 November 2026)",
+    "Deadline recorded is the Round 1 priority deadline; final deadlines TBA",
+    "City not stated in the text seen",
+    "Scholarship amounts not stated in results"
+  ],
+  "id": "opp_986819d80a4a17cc",
+  "fingerprint": "13f40e8b8c8959f0",
+  "discovered_at": "2026-10-26T03:04:54.671Z",
+  "last_verified_at": "2026-10-26T03:04:54.671Z",
+  "content_hash": "sha256:5e72fc1eddd06dd453ede2bb181ada724b5919d799a1ee862beaa0fe2324ed20"
+}

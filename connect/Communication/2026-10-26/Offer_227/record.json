@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "AAAI-27 Workshop Program",
+    "evidence_url": "https://aaai.org/conference/aaai/aaai-27/aaai-27-workshop-program/",
+    "evidence_quote": "AAAI-27 Workshop Program - AAAI"
+  },
+  "institution": {
+    "name": "Association for the Advancement of Artificial Intelligence (AAAI)",
+    "website": "https://aaai.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://aaai.org/conference/aaai/aaai-27/aaai-27-workshop-program/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Montréal",
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Artificial intelligence",
+  "seniority": "Researchers and students",
+  "qualifications": [
+    "Submit directly to the individual workshop, not to AAAI",
+    "Individual workshop websites may list different deadlines or extensions"
+  ],
+  "skills": [
+    "Artificial intelligence research"
+  ],
+  "description_short": "AAAI-27 runs 47 workshops on 22-23 February 2027 at the Palais des congrès, Montréal. Papers go directly to each workshop's organisers; the program page lists 20 November 2026 as the submission date and 2 December 2026 for notifications.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-20",
+    "timezone": null,
+    "evidence_url": "https://aaai.org/conference/aaai/aaai-27/aaai-27-workshop-program/",
+    "evidence_quote": "Submissions are due to the organizers on November 20, 2026, but individual workshop websites may list extensions."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official AAAI-27 Workshop Program page (search results): submissions due to organizers November 20, 2026",
+    "Each workshop runs its own submission system; none independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "No single application URL: submission is per workshop",
+    "Individual workshop deadlines may differ",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_1bace246dbb308de",
+  "fingerprint": "aee9673de6d7745d",
+  "discovered_at": "2026-10-26T02:59:56.300Z",
+  "last_verified_at": "2026-10-26T02:59:56.300Z",
+  "content_hash": "sha256:f7b5fdc19c0dd025da737a9af49017194416d3c253643ceb5fd383b1dc33babe"
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "The Swedish Institute Scholarship for Global Professionals",
+    "evidence_url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/",
+    "evidence_quote": "The Swedish Institute Scholarship for Global Professionals"
+  },
+  "institution": {
+    "name": "Swedish Institute (Svenska institutet)",
+    "website": "https://si.se",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://apply-scholarships.si.se/",
+  "source_url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "Sweden",
+    "country_code": "SE"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Master's studies at Swedish universities (eligible programmes)",
+  "seniority": "Master's",
+  "qualifications": [
+    "Apply to an eligible master's programme via UniversityAdmissions.se by 15 January 2027",
+    "Must be admitted to an eligible programme by 1 April 2027",
+    "Applicants from certain listed countries need at least 3,000 hours of work experience",
+    "Scholarship portal open 8-24 February 2027; late applications not accepted"
+  ],
+  "skills": [
+    "Leadership"
+  ],
+  "description_short": "Swedish Institute scholarships for global professionals to study eligible master's programmes in Sweden in 2027/28. Apply to the programme via UniversityAdmissions.se by 15 January 2027, then to SI between 8 and 24 February 2027 (14:59 CET). Results 22 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-24",
+    "timezone": "Europe/Stockholm",
+    "evidence_url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/",
+    "evidence_quote": "the application portal will close at 14:59 CET, 24 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SI scholarship page (search results): portal open 8-24 February 2027, closing 14:59 CET on 24 February 2027",
+    "Prerequisite university application by 15 January 2027",
+    "Scholarship portal not yet open; not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Two-step process: the earlier 15 January 2027 university application deadline is the first gate",
+    "List of eligible countries and programmes published 13 November 2026, not yet seen",
+    "Award amounts not stated in results",
+    "City depends on the university"
+  ],
+  "id": "opp_b6640f7d341c6672",
+  "fingerprint": "c216461299b67e18",
+  "discovered_at": "2026-10-26T03:10:07.980Z",
+  "last_verified_at": "2026-10-26T03:10:07.980Z",
+  "content_hash": "sha256:929c0b3818b3ceaaaffb47b2adc7bb8c925ce09fa863299eae5019de128f99ce"
+}

@@ -1,0 +1,317 @@
+{
+  "opportunity_id": "opp_f8bace2d1faf99e0",
+  "at": "2026-10-26T03:18:02.160Z",
+  "status": "PASS_WITH_FLAGS",
+  "failures": [],
+  "warnings": [
+    {
+      "check": "application portal independently confirmed",
+      "pass": false,
+      "detail": "OPEN_LIKELY: verify the application portal manually before approval",
+      "owner": "opportunity-scout",
+      "severity": "warn"
+    }
+  ],
+  "checks": [
+    {
+      "check": "record unchanged since content was made",
+      "pass": true,
+      "detail": "sha256:4d2f36a347bacf611e55e2798c75a4ac28a75cd2687a0372c47254b5323d4c3e",
+      "owner": "opportunity-scout"
+    },
+    {
+      "check": "record matches opportunity.schema.json",
+      "pass": true,
+      "detail": "ok",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "stable id",
+      "pass": true,
+      "detail": "expected opp_f8bace2d1faf99e0",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "content hash current",
+      "pass": true,
+      "detail": "recompute with `cli.mjs finalize`",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "eligible application status",
+      "pass": true,
+      "detail": "OPEN_LIKELY",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "description ≤ 45 words",
+      "pass": true,
+      "detail": "36 words",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "deadline in the future",
+      "pass": true,
+      "detail": "2027-01-15",
+      "owner": "opportunity-scout",
+      "severity": "fail"
+    },
+    {
+      "check": "application portal independently confirmed",
+      "pass": false,
+      "detail": "OPEN_LIKELY: verify the application portal manually before approval",
+      "owner": "opportunity-scout",
+      "severity": "warn"
+    },
+    {
+      "check": "official application URL present",
+      "pass": true,
+      "detail": "https://data-science.llnl.gov/dssi/apply",
+      "owner": "opportunity-scout",
+      "severity": "warn"
+    },
+    {
+      "check": "package matches visual-package.schema.json",
+      "pass": true,
+      "detail": "ok",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "built from current record",
+      "pass": true,
+      "detail": "sha256:4d2f36a347bacf611e55e2798c75a4ac28a75cd2687a0372c47254b5323d4c3e",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "title on image identical to record",
+      "pass": true,
+      "detail": "image: \"Data Science Summer Institute (DSSI)\"",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "institution on image identical to record",
+      "pass": true,
+      "detail": "image: \"Lawrence Livermore National Laboratory (LLNL), Data Science Institute\"",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "location on image matches record",
+      "pass": true,
+      "detail": "image: \"United States\"",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "deadline on image is the verified date",
+      "pass": true,
+      "detail": "spec.deadline_source=2027-01-15 record=2027-01-15",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "portrait PNG exists at 1080×1350",
+      "pass": true,
+      "detail": "/home/user/Educut.ai/connect/runs/2026-10-26/offers/Offer_240/card.png",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "render QC passed",
+      "pass": true,
+      "detail": "ok",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "alt text names title and institution",
+      "pass": true,
+      "detail": "alt text",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "landmark image licensed",
+      "pass": true,
+      "detail": "Provided by EduCut (rights confirmed by administrator) · Administrator photo (Drive Landmarks/images/US)",
+      "owner": "visual-designer",
+      "severity": "fail"
+    },
+    {
+      "check": "package matches comms-package.schema.json",
+      "pass": true,
+      "detail": "ok",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "built from current record",
+      "pass": true,
+      "detail": "sha256:4d2f36a347bacf611e55e2798c75a4ac28a75cd2687a0372c47254b5323d4c3e",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "exact job title in caption",
+      "pass": true,
+      "detail": "Data Science Summer Institute (DSSI)",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "institution name in caption",
+      "pass": true,
+      "detail": "Lawrence Livermore National Laboratory (LLNL), Data Science Institute",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "caption length 70–150 words",
+      "pass": true,
+      "detail": "124 words",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "caption length ideally 80–130 words",
+      "pass": true,
+      "detail": "124 words",
+      "owner": "communications",
+      "severity": "warn"
+    },
+    {
+      "check": "at most 3 emojis",
+      "pass": true,
+      "detail": "1 emoji(s)",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "4–7 hashtags",
+      "pass": true,
+      "detail": "6: #DataScience #MachineLearning #Internship #STEM #EduCutAI #EduCutConnect",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "required hashtags",
+      "pass": true,
+      "detail": "#EduCutAI #EduCutConnect",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "no repeated hashtags",
+      "pass": true,
+      "detail": "#DataScience #MachineLearning #Internship #STEM #EduCutAI #EduCutConnect",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "hashtags field matches caption",
+      "pass": true,
+      "detail": "hashtags[] must list the caption hashtags in order",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "EduCut website CTA",
+      "pass": true,
+      "detail": "https://educutai.com",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "EduCut Connect page link",
+      "pass": true,
+      "detail": "educut_link must be {\"url\":\"https://educutai.com/educut-connect/240-data-science-summer-institute-dssi/\",\"type\":\"opportunity_page\"}",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "EduCut Connect page link in caption",
+      "pass": true,
+      "detail": "caption must contain \"Explore this opportunity through EduCut Connect: https://educutai.com/educut-connect/240-data-science-summer-institute-dssi/\"",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "caption does not refer to the first comment",
+      "pass": true,
+      "detail": "the post no longer says where the application link is",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "upskilling line present",
+      "pass": true,
+      "detail": "a line starting \"Want to strengthen your profile for opportunities like this?\"",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "official application URL carried",
+      "pass": true,
+      "detail": "https://data-science.llnl.gov/dssi/apply",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "no banned / unsupported claims",
+      "pass": true,
+      "detail": "none",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "no salary claimed",
+      "pass": true,
+      "detail": "record has no stated compensation",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "course exists and its page anchor is live",
+      "pass": true,
+      "detail": "https://educutai.com/academies/data-analytics/#a005-03",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "course name matches catalog",
+      "pass": true,
+      "detail": "Machine Learning & Predictive Modelling I",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "course URL matches catalog",
+      "pass": true,
+      "detail": "https://educutai.com/academies/data-analytics/#a005-03",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "course URL in caption",
+      "pass": true,
+      "detail": "https://educutai.com/academies/data-analytics/#a005-03",
+      "owner": "communications",
+      "severity": "fail"
+    },
+    {
+      "check": "no employment guarantee",
+      "pass": true,
+      "detail": "courses never promise selection",
+      "owner": "communications",
+      "severity": "fail"
+    }
+  ]
+}

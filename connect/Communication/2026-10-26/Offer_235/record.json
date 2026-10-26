@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "IEEE ISIE 2027 Call for Papers",
+    "evidence_url": "https://isie2027.ieee-ies.org/call-for-papers/call-for-papers/",
+    "evidence_quote": "Call for Papers :: IEEE ISIE 2027"
+  },
+  "institution": {
+    "name": "IEEE International Symposium on Industrial Electronics (ISIE 2027), IEEE Industrial Electronics Society",
+    "website": "https://isie2027.ieee-ies.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://isie2027.ieee-ies.org/important-dates/",
+  "source_url": "https://isie2027.ieee-ies.org/important-dates/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Paris",
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Industrial electronics",
+  "seniority": "Researchers and students",
+  "qualifications": [
+    "Full papers in English, official IEEE conference format",
+    "Standard length 6 pages; up to 2 extra pages for an additional fee"
+  ],
+  "skills": [
+    "Industrial electronics",
+    "Control",
+    "Power electronics"
+  ],
+  "description_short": "36th IEEE International Symposium on Industrial Electronics, at Sorbonne University's Pierre and Marie Curie Campus, Paris, from 30 June to 3 July 2027. Regular and special-session papers are due 15 December 2026; acceptance notifications on 15 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": null,
+    "evidence_url": "https://isie2027.ieee-ies.org/important-dates/",
+    "evidence_quote": "Regular Paper submissions are now open, with a deadline of December 15, 2026."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ISIE 2027 site (search results): 'Regular Paper submissions are now open, with a deadline of December 15, 2026'",
+    "Submission system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Conference dates differ on one IES page (15-17 June 2027) versus the official site (30 June - 3 July 2027)",
+    "Deadline timezone not stated",
+    "Registration fees not stated in results"
+  ],
+  "id": "opp_d79643d73c9bf130",
+  "fingerprint": "949ecc0b33158a7e",
+  "discovered_at": "2026-10-26T03:07:05.816Z",
+  "last_verified_at": "2026-10-26T03:07:05.816Z",
+  "content_hash": "sha256:267d9f8cf9553328aefc5fa8000e2a6e7210eab79e15d522a1cce19c288e4c61"
+}

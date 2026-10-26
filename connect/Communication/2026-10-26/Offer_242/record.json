@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Red Bird MPhil Program (2027 Fall intake)",
+    "evidence_url": "https://cft.hkust-gz.edu.cn/admission/",
+    "evidence_quote": "Red Bird MPhil Program"
+  },
+  "institution": {
+    "name": "The Hong Kong University of Science and Technology (Guangzhou), College of Future Technology",
+    "website": "https://cft.hkust-gz.edu.cn",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cft.hkust-gz.edu.cn/admission/",
+  "source_url": "https://cft.hkust-gz.edu.cn/admission/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Guangzhou",
+    "country": "China",
+    "country_code": "CN"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Interdisciplinary research (MPhil)",
+  "seniority": "Master's (research)",
+  "qualifications": [
+    "Select 'Master of Philosophy (General)' in the Online Admission System; no hub or thrust needed",
+    "All full-time MPhil students automatically considered for the Postgraduate Studentship",
+    "Applications after the deadline roll over to the 2028 Fall intake"
+  ],
+  "skills": [
+    "Research"
+  ],
+  "description_short": "Interdisciplinary research MPhil at HKUST (Guangzhou) for Fall 2027. Applications close 1 March 2027 (23:59); full-time students are automatically considered for a CNY 120,000-per-year studentship for up to 24 months. Tuition is CNY 60,000 per year.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-01",
+    "timezone": "Asia/Shanghai",
+    "evidence_url": "https://cft.hkust-gz.edu.cn/admission/",
+    "evidence_quote": "April 2, 2026 Application opens 23:59 March 1, 2027 Application deadline"
+  },
+  "compensation": {
+    "value": "Postgraduate Studentship of CNY 120,000 per year for up to 24 months",
+    "evidence_url": "https://cft.hkust-gz.edu.cn/admission/admission-faq/",
+    "evidence_quote": "a stipend of CNY 120,000 per year for up to 24 months for full-time MPhil students"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official College of Future Technology admission page (search results): application window 2 April 2026 - 23:59 1 March 2027",
+    "Online Admission System not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Main HKUST(GZ) Red Bird page still shows 2025 deadlines; College of Future Technology page treated as authoritative",
+    "City inferred from the institution name 'HKUST (Guangzhou)'"
+  ],
+  "id": "opp_0f3113035d1463d9",
+  "fingerprint": "f3f344643d62c5f8",
+  "discovered_at": "2026-10-26T03:10:09.136Z",
+  "last_verified_at": "2026-10-26T03:10:09.136Z",
+  "content_hash": "sha256:6baacba57098b576146163d890973ebb1f1d68161633f134826b36c6a373e89f"
+}

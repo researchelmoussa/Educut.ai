@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Membership in the School of Mathematics (2027-28)",
+    "evidence_url": "https://www.ias.edu/math/apply/membership",
+    "evidence_quote": "Applying for Membership in the School of Mathematics"
+  },
+  "institution": {
+    "name": "Institute for Advanced Study (IAS), School of Mathematics",
+    "website": "https://www.ias.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ias.edu/math/apply/membership",
+  "source_url": "https://www.ias.edu/math/apply/membership",
+  "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Mathematics",
+  "seniority": "Postdoctoral and senior researchers",
+  "qualifications": [
+    "Applications through MathJobs",
+    "Letters of recommendation due by the same December 1 deadline"
+  ],
+  "skills": [
+    "Mathematics research"
+  ],
+  "description_short": "Memberships at the IAS School of Mathematics for the 2027-28 academic year, which features a special year on Expansion and Computation (September 2027-April 2028). Applications and recommendation letters go through MathJobs by December 1.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": null,
+    "evidence_url": "https://www.math.ias.edu/administration/applications",
+    "evidence_quote": "December 1"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "IAS news release (search results): 'Institute for Advanced Study Invites Membership Applications for 2027-28 Academic Year'",
+    "School of Mathematics application pages (search results) list December 1 as the deadline for applications and letters",
+    "MathJobs posting not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The official pages shown say 'December 1' without the year; 2026 inferred from the 2027-28 membership cycle",
+    "Stipend not stated in results",
+    "An older version of the membership page still describes the 2026-27 special year",
+    "City not stated in the official text seen; left null"
+  ],
+  "id": "opp_d94d52fc54c80701",
+  "fingerprint": "b744aba83e3b4cdc",
+  "discovered_at": "2026-10-26T02:59:55.035Z",
+  "last_verified_at": "2026-10-26T02:59:55.035Z",
+  "content_hash": "sha256:76a93313622b83788ff93983b41ede7b19eaa24fb0c719cf0a22a2877c03adca"
+}

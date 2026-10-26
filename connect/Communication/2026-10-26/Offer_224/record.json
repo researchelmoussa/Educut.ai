@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "EIT Digital Master School 2027/28 intake (Period 1)",
+    "evidence_url": "https://masterschool.eitdigital.eu/admissions/fees",
+    "evidence_quote": "The application for the 2027/28 intake will open on 30 October 2026, 12:00 (CET)."
+  },
+  "institution": {
+    "name": "EIT Digital Master School",
+    "website": "https://masterschool.eitdigital.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://masterschool.eitdigital.eu/admissions/fees",
+  "source_url": "https://masterschool.eitdigital.eu/admissions/fees",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Digital technology and innovation (e.g. Data Science, Cyber Security, Cloud and HPC)",
+  "seniority": "Master's",
+  "qualifications": [
+    "Period 1 (30 October 2026 - 31 January 2027) mainly for non-EU citizens who need a residence permit",
+    "Scholarships are requested within the main application in the portal",
+    "EIT Digital scholarship scheme is limited to EU Member State nationals and listed associated countries",
+    "Admission does not imply funding"
+  ],
+  "skills": [
+    "Computer science",
+    "Data science",
+    "Entrepreneurship"
+  ],
+  "description_short": "Two-year European master's programmes in digital technology and innovation across partner universities. The 2027/28 application opens 30 October 2026; Period 1, mainly for non-EU applicants, closes 31 January 2027. Fee waivers and Scholarships of Excellence are requested in the same application.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": "Europe/Brussels",
+    "evidence_url": "https://masterschool.eitdigital.eu/admissions/fees",
+    "evidence_quote": "Period 1: Applications open 30 October 2026 and close 31 January 2027 (23:59 CET)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official EIT Digital Master School admissions/fees page (search results): 2027/28 application opens 30 October 2026, Period 1 closes 31 January 2027",
+    "Portal not yet open as of 2026-10-26; not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Some programme pages still show 2026/27 as closed",
+    "Site also brands itself '28DIGITAL Master School'",
+    "Host country depends on entry/exit universities",
+    "Scholarship amounts not stated in results"
+  ],
+  "id": "opp_06a6f2e90c475fce",
+  "fingerprint": "3d4b5eb60dbe628c",
+  "discovered_at": "2026-10-26T02:59:55.539Z",
+  "last_verified_at": "2026-10-26T02:59:55.539Z",
+  "content_hash": "sha256:19cba23263b7637bc58fa2cf2452a68a9dcdb96c52eb83e67cd94d3599342d01"
+}

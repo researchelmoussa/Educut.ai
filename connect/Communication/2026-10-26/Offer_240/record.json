@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Data Science Summer Institute (DSSI)",
+    "evidence_url": "https://data-science.llnl.gov/dssi/apply",
+    "evidence_quote": "Data Science Summer Institute (DSSI)"
+  },
+  "institution": {
+    "name": "Lawrence Livermore National Laboratory (LLNL), Data Science Institute",
+    "website": "https://data-science.llnl.gov",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://data-science.llnl.gov/dssi/apply",
+  "source_url": "https://data-science.llnl.gov/dssi/apply",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Data science and machine learning",
+  "seniority": "Undergraduate and graduate students",
+  "qualifications": [
+    "Graduate applicants: bachelor's degree and enrolment in a graduate program by Fall 2027",
+    "Undergraduate applicants: continuing students"
+  ],
+  "skills": [
+    "Data science",
+    "Machine learning",
+    "Programming"
+  ],
+  "description_short": "Lawrence Livermore National Laboratory's Data Science Summer Institute places students with mentors on data science projects, in two 2027 cohorts (17 May-6 August and 21 June-10 September). Applications close at end of day 15 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": null,
+    "evidence_url": "https://data-science.llnl.gov/dssi/apply",
+    "evidence_quote": "applications close end of day January 15, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official DSSI apply page and LLNL Summer 2027 intern postings (search results): applications close end of day January 15, 2027",
+    "LLNL job postings for Summer 2027 DSI graduate/undergraduate interns are listed on llnl.gov; not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "City not stated in the text seen",
+    "Citizenship/clearance requirements not stated in results",
+    "Pay not stated in results",
+    "DSSI FAQ appears to carry some 2025 text"
+  ],
+  "id": "opp_f8bace2d1faf99e0",
+  "fingerprint": "21c14656bbca1bdb",
+  "discovered_at": "2026-10-26T03:10:08.568Z",
+  "last_verified_at": "2026-10-26T03:10:08.568Z",
+  "content_hash": "sha256:4d2f36a347bacf611e55e2798c75a4ac28a75cd2687a0372c47254b5323d4c3e"
+}
