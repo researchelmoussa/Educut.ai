@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "AIT Scholarships",
+    "evidence_url": "https://ait.ac.th/financial-aid/",
+    "evidence_quote": "AIT Scholarships"
+  },
+  "institution": {
+    "name": "Asian Institute of Technology (AIT)",
+    "website": "https://ait.ac.th",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ait.ac.th/apply-online/",
+  "source_url": "https://ait.ac.th/financial-aid/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "Thailand",
+    "country_code": "TH"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Engineering, technology, environment and management (AIT graduate programmes)",
+  "seniority": "Master's and doctoral",
+  "qualifications": [
+    "Any nationality",
+    "Study levels: Master's Degree Programs, Flexible Master's Option, Flexible PhD Option, Doctoral Degree Programs",
+    "No separate scholarship application: applicants who submit the online admission application are considered for all scholarships they are eligible for whose deadline has not passed"
+  ],
+  "skills": [],
+  "description_short": "The Asian Institute of Technology's AIT Scholarships, open to any nationality for master's and doctoral study, list a 10 December 2026 deadline on AIT's financial aid page. Applicants are considered automatically after submitting the online admission application.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-10",
+    "timezone": null,
+    "evidence_url": "https://ait.ac.th/financial-aid/",
+    "evidence_quote": "Deadline: 10 Dec 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official AIT financial aid page (search results): AIT Scholarships, any nationality, Master's and Doctoral programmes, deadline 10 Dec 2026",
+    "Online application not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The intake the 10 December 2026 deadline applies to is not stated; it appears to be the January 2027 intake",
+    "AIT admissions deadline pages give 20 December for overseas applicants needing a visa for the January intake",
+    "Scholarship coverage (tuition, stipend) not captured from results",
+    "City not stated in the text seen",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_10325e3303977be1",
+  "fingerprint": "a6d052f149ce42dd",
+  "discovered_at": "2026-10-27T03:09:01.629Z",
+  "last_verified_at": "2026-10-27T03:09:01.629Z",
+  "content_hash": "sha256:8fff71aff3c894ceda9f30c3414628e9534498fa5d05051de3edbe4d86f12c89"
+}

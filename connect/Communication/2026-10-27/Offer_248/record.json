@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Computer Science (PhD)",
+    "evidence_url": "https://www.mcgill.ca/gradapplicants/program/computer-science-phd",
+    "evidence_quote": "Computer Science (PhD)"
+  },
+  "institution": {
+    "name": "McGill University, School of Computer Science",
+    "website": "https://www.mcgill.ca",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.mcgill.ca/gradapplicants/program/computer-science-phd",
+  "source_url": "https://www.mcgill.ca/gradapplicants/program/computer-science-phd",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Computer science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "M.Sc. degree in Computer Science or a closely related area, minimum CGPA 3.2 out of 4.0",
+    "List at least 3 proposed supervisors in the application",
+    "International applicants: December 15 deadline; Canadian citizens and permanent residents: February 15",
+    "Applications completed by December 15 are automatically considered for funding"
+  ],
+  "skills": [
+    "Computer science research"
+  ],
+  "description_short": "McGill's School of Computer Science PhD takes applications for fall admission from September 15. International applicants must apply by December 15 and Canadian applicants by February 15. Applicants name at least three proposed supervisors.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": null,
+    "evidence_url": "https://www.cs.mcgill.ca/graduate/future/deadline/",
+    "evidence_quote": "For International students the application deadline is December 15th. For Canadian students the application deadline is February 15th."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official McGill programme page and School deadlines page (search results): Fall deadline December 15 (international) / February 15 (domestic)",
+    "McGill important-dates page (search results): application period for September 2027 runs September 15, 2026 to June 15, 2027",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Pages state a recurring yearly deadline; December 15, 2026 for fall 2027 is inferred from the September 2027 application period",
+    "An older School admissions page lists January 1 / March 1 dates",
+    "Deadline shown is for international applicants; domestic deadline is February 15",
+    "City not stated in the text seen",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_a72c90cfaf0fdf4b",
+  "fingerprint": "9f60efb91c62e30a",
+  "discovered_at": "2026-10-27T03:01:50.336Z",
+  "last_verified_at": "2026-10-27T03:01:50.336Z",
+  "content_hash": "sha256:afdf5d7bf6cf07f54bec4fbf69a70b0c05fb0773f0f3fd209e9164c1715aa223"
+}

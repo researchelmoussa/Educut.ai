@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "academic_position",
+  "title": {
+    "value": "Researcher - Institute of Computational Science and Artificial Intelligence",
+    "evidence_url": "https://www.vlu.edu.vn/en/career/KXD-GV-Eng",
+    "evidence_quote": "Researcher - Institute of Computational Science and Artificial Intelligence."
+  },
+  "institution": {
+    "name": "Van Lang University, Institute of Computational Science and Artificial Intelligence",
+    "website": "https://www.vlu.edu.vn",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.vlu.edu.vn/en/career/KXD-GV-Eng",
+  "source_url": "https://www.vlu.edu.vn/en/career/KXD-GV-Eng",
+  "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+  "location": {
+    "city": null,
+    "country": "Vietnam",
+    "country_code": "VN"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Computational science and artificial intelligence",
+  "seniority": "Researcher (doctoral degree holders)",
+  "qualifications": [
+    "Doctoral degree",
+    "Full-time and part-time researchers of any nationality are recruited (institute page)"
+  ],
+  "skills": [
+    "Computational science",
+    "Artificial intelligence"
+  ],
+  "description_short": "Van Lang University's careers page lists a Researcher role at its Institute of Computational Science and Artificial Intelligence (Main Campus), deadline 31 December 2026. The institute says it is recruiting 10 full- and part-time researchers with doctoral degrees, regardless of nationality.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-31",
+    "timezone": null,
+    "evidence_url": "https://www.vlu.edu.vn/en/career/KXD-GV-Eng",
+    "evidence_quote": "Dealine: 2026-12-31"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Van Lang University careers page (search results): Researcher - Institute of Computational Science and Artificial Intelligence, deadline 2026-12-31",
+    "Institute page (search results): recruiting 10 researchers with a doctoral degree",
+    "Application form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The careers page shows the same 31 December 2026 date for other openings, so it may be a generic listing deadline",
+    "The posting does not say 'postdoctoral'; contract type, salary and research areas not captured",
+    "City not stated in the text seen ('Main Campus' only)",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_cd6c6c477c4ca715",
+  "fingerprint": "9683a23f6cc46ad9",
+  "discovered_at": "2026-10-27T03:13:20.661Z",
+  "last_verified_at": "2026-10-27T03:13:20.661Z",
+  "content_hash": "sha256:369549d66bcd4d451233750508cbdcb3a4b6acd91073180f08c59f1b215dff6b"
+}

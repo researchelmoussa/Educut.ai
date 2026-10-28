@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Maestría en Ciencia y Tecnología de Inteligencia Artificial y Ciencia de Datos",
+    "evidence_url": "https://www.escom.ipn.mx/posgrado/convocatoriaMaestriaIACD/index.php?page=planEstudios",
+    "evidence_quote": "Maestría en Ciencia y Tecnología de Inteligencia Artificial y"
+  },
+  "institution": {
+    "name": "Instituto Politécnico Nacional (IPN), Escuela Superior de Cómputo (ESCOM)",
+    "website": "https://www.escom.ipn.mx",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.escom.ipn.mx/posgrado/convocatoriaMaestriaIACD/index.php?page=ProcesoAdmision",
+  "source_url": "https://www.escom.ipn.mx/posgrado/convocatoriaMaestriaIACD/index.php?page=ProcesoAdmision",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Mexico",
+    "country_code": "MX"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Artificial intelligence and data science",
+  "seniority": "Master's",
+  "qualifications": [
+    "Bachelor's degree",
+    "Minimum score of eight or equivalent in English (or another language set by the faculty)",
+    "Pass the admission exam and the interview",
+    "Register through the online form and share a folder with documents (CURP or passport for foreign applicants, CV, transcript, degree certificate, English certificate)"
+  ],
+  "skills": [
+    "Artificial intelligence",
+    "Data science"
+  ],
+  "description_short": "ESCOM-IPN's master's in science and technology of AI and data science runs its B27 admission round (August 2027 start): registration from 7 September 2026 to 16 April 2027, evaluation 19 April to 25 June 2027, online interviews 7-18 June 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-16",
+    "timezone": null,
+    "evidence_url": "https://www.escom.ipn.mx/posgrado/convocatoriaMaestriaIACD/index.php?page=ProcesoAdmision",
+    "evidence_quote": "B27: 07 de septiembre de 2026 al 16 de abril de 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ESCOM-IPN admission process page (search results): B27 registration 7 September 2026 to 16 April 2027",
+    "Registration form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The page header reads 'Convocatoria A27 Enero 2027 - Julio 2027' while the B27 column carries the April 2027 date; the call's exact label is unclear",
+    "Start month (August 2027) inferred from the B27 cycle naming and the August 2027 enrolment dates",
+    "City not stated in the text seen",
+    "Funding not stated in results",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_7124dcbaa83ac9c5",
+  "fingerprint": "875dbfd30bd380c2",
+  "discovered_at": "2026-10-27T03:01:50.010Z",
+  "last_verified_at": "2026-10-27T03:01:50.010Z",
+  "content_hash": "sha256:daddb8166ac23846c7c51a82799aa9890df34ec5a390b9a7d5de1af8692ae23a"
+}

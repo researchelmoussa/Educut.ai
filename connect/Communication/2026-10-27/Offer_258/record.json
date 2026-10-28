@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Iso Lomso Fellowship",
+    "evidence_url": "https://www.stias.ac.za/fellowships/apply/iso-lomso/",
+    "evidence_quote": "Apply for an Iso Lomso Fellowship at STIAS"
+  },
+  "institution": {
+    "name": "Stellenbosch Institute for Advanced Study (STIAS)",
+    "website": "https://www.stias.ac.za",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.stias.ac.za/fellowships/apply/iso-lomso/",
+  "source_url": "https://www.stias.ac.za/fellowships/apply/iso-lomso/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "South Africa",
+    "country_code": "ZA"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Any discipline (early-career African researchers)",
+  "seniority": "Early-career researchers",
+  "qualifications": [
+    "National of an African country",
+    "Affiliation with a research or higher-education institution in Africa, expected to be maintained",
+    "Doctorate obtained within the preceding seven or eight years from 1 January of the call year (STIAS pages differ)",
+    "Completed postdoctoral fellowship or equivalent post-PhD research programme",
+    "Not more than 42 years of age on 1 January of the call year",
+    "Able to begin a first residency within the first year of the fellowship"
+  ],
+  "skills": [
+    "Independent research"
+  ],
+  "description_short": "STIAS's Iso Lomso Fellowship is a three-year award for early-career researchers from African countries affiliated with African institutions, with residencies at STIAS. The 2027 call opens 15 October 2026 and closes 15 February 2027; results are usually announced in June.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-15",
+    "timezone": null,
+    "evidence_url": "https://www.stias.ac.za/fellowships/apply/iso-lomso/",
+    "evidence_quote": "opens on 15 October 2026 and closes on 15 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official STIAS Iso Lomso application page (search results): 2027 call opens 15 October 2026 and closes 15 February 2027",
+    "Application system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "STIAS pages give seven or eight years for the doctorate time limit",
+    "Stipend and residency length not captured from results",
+    "City not stated in the text seen",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_569a5819c9d2e40e",
+  "fingerprint": "24971449d0c31aae",
+  "discovered_at": "2026-10-27T03:09:02.612Z",
+  "last_verified_at": "2026-10-27T03:09:02.612Z",
+  "content_hash": "sha256:3e36db945f83206ffde6bcd96af116cfdc8ecb33c5a167497f9efeb30ac2837a"
+}
