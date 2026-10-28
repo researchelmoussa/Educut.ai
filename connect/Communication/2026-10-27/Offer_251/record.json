@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "MODEST-27 School",
+    "evidence_url": "https://www.ictp-saifr.org/2027-activities/",
+    "evidence_quote": "MODEST-27 School"
+  },
+  "institution": {
+    "name": "ICTP South American Institute for Fundamental Research (ICTP-SAIFR)",
+    "website": "https://www.ictp-saifr.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.ictp-saifr.org/2027-activities/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": null,
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Astrophysics (stellar evolution and stellar dynamics)",
+  "seniority": "Advanced undergraduate, Master's and PhD students",
+  "qualifications": [
+    "Aimed primarily at advanced undergraduate, Master's and PhD students",
+    "Online application by April 6, 2027"
+  ],
+  "skills": [
+    "Stellar evolution",
+    "Stellar dynamics",
+    "Observational astronomy"
+  ],
+  "description_short": "ICTP-SAIFR's MODEST-27 School runs 5-9 July 2027 at the IFT-UNESP Auditorium, ahead of the MODEST-27 Conference. Lecturers cover single and binary stellar evolution, stellar dynamics and observational astronomy. Application deadline: April 6, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-06",
+    "timezone": null,
+    "evidence_url": "https://www.ictp-saifr.org/2027-activities/",
+    "evidence_quote": "Deadline: April 6, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ICTP-SAIFR school page and 2027 activities page (search results): school 5-9 July 2027, deadline April 6, 2027",
+    "Online application link was marked 'opening soon' when indexed; not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The online application link was shown as 'opening soon' in the indexed page; applications may not be open yet",
+    "One listing gives 5-10 July 2027 for the school",
+    "City not stated in the text seen",
+    "Application URL not captured; application_url left null",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_70717221d192a157",
+  "fingerprint": "092ed36836747a21",
+  "discovered_at": "2026-10-27T03:01:51.264Z",
+  "last_verified_at": "2026-10-27T03:01:51.264Z",
+  "content_hash": "sha256:e7815ab0c83fe134ef9015acdac4eb407ceb962bb4169adbe8f1284828965d01"
+}

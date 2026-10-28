@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "DPhil in Computer Science",
+    "evidence_url": "https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science",
+    "evidence_quote": "DPhil in Computer Science"
+  },
+  "institution": {
+    "name": "University of Oxford, Department of Computer Science",
+    "website": "https://www.ox.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science",
+  "source_url": "https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Computer science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "December deadline is the final deadline for Oxford scholarship consideration",
+    "A later final application deadline is listed for Tuesday 2 March 2027",
+    "Interviews are usually held in January and February for December applicants"
+  ],
+  "skills": [
+    "Computer science research"
+  ],
+  "description_short": "Oxford's DPhil in Computer Science for 2027-28 entry lists about 55 places and an expected start of 10 October 2027. The 2 December 2026 midday deadline is the last for Oxford scholarship consideration; a later deadline of 2 March 2027 is also listed.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-02T12:00:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science",
+    "evidence_quote": "midday UK time on Wednesday 2 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Oxford graduate admissions course page (search results): upcoming deadline midday UK time on Wednesday 2 December 2026 for 2027-28 entry",
+    "Application form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Funding and fees not captured from results",
+    "Application form URL not captured; course page used as application_url"
+  ],
+  "id": "opp_d3ff2e804c240ca1",
+  "fingerprint": "aca6405d221b9535",
+  "discovered_at": "2026-10-27T03:01:49.719Z",
+  "last_verified_at": "2026-10-27T03:01:49.719Z",
+  "content_hash": "sha256:170f27fc58887d76c30afcee239ffd9c70d7870a7d7f8beb63ca43daeb02caec"
+}

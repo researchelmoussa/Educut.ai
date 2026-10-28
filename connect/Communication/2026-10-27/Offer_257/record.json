@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD scholarship: economics of university reputation",
+    "evidence_url": "https://www.uow.edu.au/research/graduate-research/scholarships/",
+    "evidence_quote": "economics of university reputation"
+  },
+  "institution": {
+    "name": "University of Wollongong, Faculty of Arts, Society and Business",
+    "website": "https://www.uow.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.uow.edu.au/research/graduate-research/scholarships/",
+  "source_url": "https://www.uow.edu.au/research/graduate-research/scholarships/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Accounting, finance and economics",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Open to domestic and international students"
+  ],
+  "skills": [
+    "Economics"
+  ],
+  "description_short": "The University of Wollongong lists a PhD scholarship on the economics of university reputation in the Faculty of Arts, Society and Business (Accounting, Finance and Economics), open to domestic and international students: stipend $38,420 a year, closing 10 November 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-10",
+    "timezone": null,
+    "evidence_url": "https://www.uow.edu.au/research/graduate-research/scholarships/",
+    "evidence_quote": "10 November 2026"
+  },
+  "compensation": {
+    "value": "Stipend of $38,420 per year, indexed annually",
+    "evidence_url": "https://www.uow.edu.au/research/graduate-research/scholarships/",
+    "evidence_quote": "$38,420"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UOW graduate research scholarships listing (search results): PhD scholarship on the economics of university reputation, closing date 10 November 2026",
+    "Individual project page and application form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Exact title of the listing not visible in results; title built from the listing's topic",
+    "UOW's general international application page says international research scholarship applications close in May of the year before intake, which conflicts with this listing",
+    "Commencement date not stated in results",
+    "Currency assumed to be AUD; not stated in the text seen",
+    "City not stated in the text seen",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_afefe644700b2dcc",
+  "fingerprint": "0ce721b4e855ac2b",
+  "discovered_at": "2026-10-27T03:09:02.271Z",
+  "last_verified_at": "2026-10-27T03:09:02.271Z",
+  "content_hash": "sha256:87d77936d9ee556fa71c95b85c63186f5a12fbb086339774af316cf0fe0d1d99"
+}

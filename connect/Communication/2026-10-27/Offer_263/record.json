@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Graduate School of Engineering and Science - Spring 2027 admission",
+    "evidence_url": "https://mfbe.bilkent.edu.tr/?page_id=17",
+    "evidence_quote": "Spring 2027 Application Deadline: 9 November 2026"
+  },
+  "institution": {
+    "name": "Bilkent University, Graduate School of Engineering and Science",
+    "website": "https://mfbe.bilkent.edu.tr",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://mfbe.bilkent.edu.tr/?page_id=17",
+  "source_url": "https://mfbe.bilkent.edu.tr/?page_id=17",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Turkey",
+    "country_code": "TR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Engineering and science (including computer engineering)",
+  "seniority": "Master's and doctoral",
+  "qualifications": [
+    "Turkish citizens generally need ALES; foreign applicants need the GRE General Test",
+    "Applicants can apply before receiving exam scores and may get conditional admission; scores must be in by registration",
+    "Department or programme interviews (25-27 November 2026) only for invited applicants",
+    "No institution-wide minimum CGPA set by the Graduate School"
+  ],
+  "skills": [],
+  "description_short": "Bilkent University's Graduate School of Engineering and Science takes Spring 2027 applications until 9 November 2026, with invited interviews 25-27 November. The November submission covers both admission and scholarship decisions; Bilkent's computer engineering department offers tuition scholarships to accepted students.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-09",
+    "timezone": null,
+    "evidence_url": "https://mfbe.bilkent.edu.tr/?page_id=17",
+    "evidence_quote": "Spring 2027 Application Deadline: 9 November 2026 (admission system will be opened on 8th of October 2026)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Bilkent Graduate School 'Application Requirements & Dates' page (search results): Spring 2027 deadline 9 November 2026, system opened 8 October 2026",
+    "Admission system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Search metadata marks the requirements page as roughly two years old although its content gives 2026-2027 dates",
+    "Scholarship terms quoted from the computer engineering department page may differ by programme",
+    "City not stated in the text seen",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_72e0172cfe997155",
+  "fingerprint": "6a927a9c6c60b241",
+  "discovered_at": "2026-10-27T03:13:20.057Z",
+  "last_verified_at": "2026-10-27T03:13:20.057Z",
+  "content_hash": "sha256:a84470fae72c7bc93020223bb47ffefced601d1131af690cb80dafca77a9fade"
+}

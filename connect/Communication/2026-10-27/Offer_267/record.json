@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "MPI-SWS Doctoral Program",
+    "evidence_url": "https://www.mpi-sws.org/graduate-studies/",
+    "evidence_quote": "Graduate Studies @ MPI-SWS"
+  },
+  "institution": {
+    "name": "Max Planck Institute for Software Systems (MPI-SWS)",
+    "website": "https://www.mpi-sws.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.mpi-sws.org/graduate-studies/",
+  "source_url": "https://www.mpi-sws.org/graduate-studies/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Computer science (software systems)",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Applications accepted throughout the year; decisions four times a year",
+    "A submitted application stays live for approximately four months",
+    "Related programmes: cs@max planck (applications due December 31) and the Maryland Max Planck Ph.D. Program (December 20)"
+  ],
+  "skills": [
+    "Computer science research"
+  ],
+  "description_short": "MPI-SWS's doctoral program accepts applications year-round and makes decisions four times a year, based on applications received by December 31, March 31, June 30 and September 30. The next cut-off is 31 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-31",
+    "timezone": null,
+    "evidence_url": "https://www.mpi-sws.org/graduate-studies/",
+    "evidence_quote": "applications received until December 31, March 31, June 30, and September 30"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official MPI-SWS Graduate Studies page (search results): decisions four times a year, based on applications received until December 31, March 31, June 30 and September 30",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Recurring quarterly cut-off; 31 December 2026 is the next occurrence, inferred from the page",
+    "Funding and campus (Saarbrücken or Kaiserslautern) not stated in the text seen",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_73bf98fc092f83c3",
+  "fingerprint": "a3a1993034e4a151",
+  "discovered_at": "2026-10-27T03:13:21.244Z",
+  "last_verified_at": "2026-10-27T03:13:21.244Z",
+  "content_hash": "sha256:e70442ab1f11dfef804858fdc21df60625ab394b027ae51963615de22bc1159b"
+}
