@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Commonwealth Shared Scholarships",
+    "evidence_url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-shared-scholarships-applications/",
+    "evidence_quote": "Commonwealth Shared Scholarships"
+  },
+  "institution": {
+    "name": "Commonwealth Scholarship Commission in the UK",
+    "website": "https://cscuk.fcdo.gov.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-shared-scholarships-applications/",
+  "source_url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-shared-scholarships-applications/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Master's study (courses published by the CSC)",
+  "seniority": "Master's",
+  "qualifications": [
+    "For Master's courses only, not for undergraduate study",
+    "Candidates must also apply separately to a university course",
+    "Courses and participating UK universities for 2027 are published before the application opening date"
+  ],
+  "skills": [],
+  "description_short": "Commonwealth Shared Scholarships fund Master's study at participating UK universities in 2027/28. Applications open on 10 November 2026 and close at 16:00 GMT on 8 December 2026; candidates must also apply separately to their university course.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-08T16:00:00+00:00",
+    "timezone": "GMT",
+    "evidence_url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-shared-scholarships-applications/",
+    "evidence_quote": "The closing date for applications is 16:00 GMT on Tuesday 8 December 2026."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CSC page (search results): applications for 2027/28 open Tuesday 10 November 2026 and close 16:00 GMT on Tuesday 8 December 2026",
+    "Application system not independently fetched; not open yet at discovery"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Applications open 10 November 2026; not open yet at discovery",
+    "Country-of-citizenship eligibility rules were not captured in the text seen",
+    "An earlier CSC bidding page gave only 'mid-December 2026'; the applications page date is used",
+    "City not applicable (multiple UK universities)"
+  ],
+  "id": "opp_88586af31bf4f019",
+  "fingerprint": "828eb509a5be2a88",
+  "discovered_at": "2026-10-28T02:58:35.279Z",
+  "last_verified_at": "2026-10-28T02:58:35.279Z",
+  "content_hash": "sha256:dcd72a5a73979d2e0af456ee7d9a1b77a12fb19f9c7a32f2d9b87480b480211e"
+}

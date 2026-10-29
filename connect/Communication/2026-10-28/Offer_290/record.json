@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Programa Crédito Beca 2027",
+    "evidence_url": "https://www.colfuturo.org/programas/credito-beca/convocatoria",
+    "evidence_quote": "Programa Crédito Beca"
+  },
+  "institution": {
+    "name": "COLFUTURO",
+    "website": "https://www.colfuturo.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.colfuturo.org/programas/credito-beca/convocatoria",
+  "source_url": "https://www.colfuturo.org/programas/credito-beca/convocatoria",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "Colombia",
+    "country_code": "CO"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Postgraduate study abroad (any field)",
+  "seniority": "Postgraduate",
+  "qualifications": [
+    "Colombian nationality",
+    "Hold an undergraduate degree (título de pregrado)",
+    "Present the programme of interest and a written essay",
+    "If selected, certify proficiency in a second language when formalising the credit"
+  ],
+  "skills": [],
+  "description_short": "COLFUTURO's 2027 Crédito Beca call funds Colombians with an undergraduate degree for postgraduate study abroad with credit of up to USD 50,000, up to 65% convertible into a scholarship on graduating and returning. Applications run 4 January to 4 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-04",
+    "timezone": "America/Bogota",
+    "evidence_url": "https://www.colfuturo.org/programas/credito-beca/convocatoria",
+    "evidence_quote": "4 de marzo de 2027"
+  },
+  "compensation": {
+    "value": "Credit of up to USD 50,000; up to 65% can become a scholarship if the beneficiary graduates and returns to Colombia",
+    "evidence_url": "https://www.colfuturo.org/programas/credito-beca/convocatoria",
+    "evidence_quote": "hasta de USD 50.000"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official COLFUTURO convocatoria page (search results): call opens 4 January 2027, closes 4 March 2027, results 18 May 2027",
+    "Application system not independently fetched; not open yet at discovery"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Applications open 4 January 2027; not open yet at discovery",
+    "Study takes place abroad; location reflects the funder's country",
+    "Timezone assumed from location (Colombia); not stated",
+    "Quotes are search-result wording of the official page"
+  ],
+  "id": "opp_f0362f6938c14794",
+  "fingerprint": "c69df07169caa3ea",
+  "discovered_at": "2026-10-28T03:05:59.597Z",
+  "last_verified_at": "2026-10-28T03:05:59.597Z",
+  "content_hash": "sha256:40f1c12dbf658a3951fb6ff311a2d157049d90b5b1b7d19a0b8b0d0d22e9a856"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "MA in Education",
+    "evidence_url": "https://azimpremjiuniversity.edu.in/programmes/ma-in-education",
+    "evidence_quote": "MA in Education"
+  },
+  "institution": {
+    "name": "Azim Premji University",
+    "website": "https://azimpremjiuniversity.edu.in",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://azimpremjiuniversity.edu.in/postgraduate",
+  "source_url": "https://azimpremjiuniversity.edu.in/programmes/ma-in-education",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "India",
+    "country_code": "IN"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Education",
+  "seniority": "Master's",
+  "qualifications": [
+    "Selection through the National Entrance Test (20 Dec 2026) and personal interviews (4-8 Jan 2027)",
+    "Offered full-time over two years at the Bengaluru and Bhopal campuses"
+  ],
+  "skills": [],
+  "description_short": "Azim Premji University's two-year, full-time MA in Education, offered at its Bengaluru and Bhopal campuses, combines theory, fieldwork, research and policy engagement. Round 1 applications for 2027 close 20 November 2026, followed by a National Entrance Test on 20 December.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-20",
+    "timezone": "Asia/Kolkata",
+    "evidence_url": "https://azimpremjiuniversity.edu.in/postgraduate/admissions-calendar",
+    "evidence_quote": "Apply by 20 Nov 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official PG Admissions Calendar (search results): Round 1 apply by 20 Nov 2026; university site advertises Admissions 2027 open",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Programme page states 'Batch Starting May 2027' while the admissions calendar gives class commencement in July 2027",
+    "Round 1 deadline; later rounds may exist",
+    "Fees and need-based scholarship amounts not captured",
+    "Timezone assumed from location (India); not stated"
+  ],
+  "id": "opp_2dc3c8a3a2c5e377",
+  "fingerprint": "e07c178656d4292f",
+  "discovered_at": "2026-10-28T03:03:21.046Z",
+  "last_verified_at": "2026-10-28T03:03:21.046Z",
+  "content_hash": "sha256:c4444d33b3ded5ea588b2126fbe9e1e227c7d8ebedbfa7fe706f836b8fc7039a"
+}
