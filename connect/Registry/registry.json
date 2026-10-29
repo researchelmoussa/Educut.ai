@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-28T02:52:15.008Z",
+  "updated_at": "2026-10-29T02:52:33.836Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -1900,7 +1900,7 @@
       "deadline": "2026-10-27T16:00:00+01:00",
       "content_hash": "sha256:d82301043bb3329a0bfd3103234652d8405afc95ad01e3a3fe16ede56ad281eb",
       "last_verified_at": "2026-10-15T01:55:29.016Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-15T01:55:29.285Z",
       "history": [
         {
@@ -1944,6 +1944,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-10-28T02:50:13.837Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-27T16:00:00+01:00 passed"
         }
       ],
       "offer_number": 25
@@ -1962,7 +1969,7 @@
       "deadline": "2026-10-27T16:00:00+01:00",
       "content_hash": "sha256:f1c73dd643808c1649f8c92a498571fc57eec29c19c802d31a4ca45b61e347a1",
       "last_verified_at": "2026-10-15T01:55:29.495Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-15T01:55:29.703Z",
       "history": [
         {
@@ -2006,6 +2013,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-10-28T02:50:13.837Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-27T16:00:00+01:00 passed"
         }
       ],
       "offer_number": 26
@@ -17226,7 +17240,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:b41c782764e89666512e55a737cc43ddb85b0684cf3d2109b42d608b72026895",
       "last_verified_at": "2026-10-27T03:01:49.112Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:01:49.280Z",
       "history": [
         {
@@ -17256,20 +17270,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:03.958Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:03.959Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 244
@@ -17288,7 +17288,7 @@
       "deadline": "2026-11-05",
       "content_hash": "sha256:84a01c64b47a738206ebf1503b84782296d3a19ac2610fb6453bb9d811a5ad90",
       "last_verified_at": "2026-10-27T03:01:49.420Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:01:49.571Z",
       "history": [
         {
@@ -17318,20 +17318,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:04.454Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:04.454Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 245
@@ -17350,7 +17336,7 @@
       "deadline": "2026-12-02T12:00:00+00:00",
       "content_hash": "sha256:170f27fc58887d76c30afcee239ffd9c70d7870a7d7f8beb63ca43daeb02caec",
       "last_verified_at": "2026-10-27T03:01:49.719Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:01:49.851Z",
       "history": [
         {
@@ -17380,20 +17366,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:05.045Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:05.045Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 246
@@ -17412,7 +17384,7 @@
       "deadline": "2027-04-16",
       "content_hash": "sha256:daddb8166ac23846c7c51a82799aa9890df34ec5a390b9a7d5de1af8692ae23a",
       "last_verified_at": "2026-10-27T03:01:50.010Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:01:50.172Z",
       "history": [
         {
@@ -17442,20 +17414,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:05.471Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:05.472Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 247
@@ -17474,7 +17432,7 @@
       "deadline": "2026-12-15",
       "content_hash": "sha256:afdf5d7bf6cf07f54bec4fbf69a70b0c05fb0773f0f3fd209e9164c1715aa223",
       "last_verified_at": "2026-10-27T03:01:50.336Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:01:50.499Z",
       "history": [
         {
@@ -17504,20 +17462,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:06.532Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:06.533Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 248
@@ -17536,7 +17480,7 @@
       "deadline": "2026-12-01",
       "content_hash": "sha256:71823debd86974a3b1959c34a2aa2069863592956345d80070b8c8204e7b8f0f",
       "last_verified_at": "2026-10-27T03:01:50.637Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:01:50.801Z",
       "history": [
         {
@@ -17566,20 +17510,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:06.913Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:06.913Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 249
@@ -17598,7 +17528,7 @@
       "deadline": "2026-11-20",
       "content_hash": "sha256:7b1ba178576338407531d9f0508455b4d004491d4782e46534836b9feb5ae378",
       "last_verified_at": "2026-10-27T03:01:50.966Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:01:51.107Z",
       "history": [
         {
@@ -17628,20 +17558,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:07.379Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:07.380Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 250
@@ -17660,7 +17576,7 @@
       "deadline": "2027-04-06",
       "content_hash": "sha256:e7815ab0c83fe134ef9015acdac4eb407ceb962bb4169adbe8f1284828965d01",
       "last_verified_at": "2026-10-27T03:01:51.264Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:01:51.426Z",
       "history": [
         {
@@ -17690,20 +17606,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:07.821Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:07.821Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 251
@@ -17722,7 +17624,7 @@
       "deadline": "2026-11-26",
       "content_hash": "sha256:187188de57d6f73394b4c7f629a4efa3d09766c6e1257cb6f29450be2b2a379d",
       "last_verified_at": "2026-10-27T03:01:51.571Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:01:51.746Z",
       "history": [
         {
@@ -17752,20 +17654,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:08.394Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:08.395Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 252
@@ -17784,7 +17672,7 @@
       "deadline": "2027-03-01",
       "content_hash": "sha256:28ef9363e3c737487843a31f87687aedb6f7dd818b1f78c7d23471f60d57bbdb",
       "last_verified_at": "2026-10-27T03:01:51.899Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:01:52.052Z",
       "history": [
         {
@@ -17814,20 +17702,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:09.006Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:09.006Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 253
@@ -17846,7 +17720,7 @@
       "deadline": "2027-01-18",
       "content_hash": "sha256:a1c59632900b75daff005e950b0a9bca64c49a1c7db404ae23f17436dd299b4f",
       "last_verified_at": "2026-10-27T03:09:01.254Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:09:01.452Z",
       "history": [
         {
@@ -17876,20 +17750,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:09.463Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:09.463Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 254
@@ -17908,7 +17768,7 @@
       "deadline": "2026-12-10",
       "content_hash": "sha256:8fff71aff3c894ceda9f30c3414628e9534498fa5d05051de3edbe4d86f12c89",
       "last_verified_at": "2026-10-27T03:09:01.629Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:09:01.778Z",
       "history": [
         {
@@ -17938,20 +17798,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:09.841Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:09.841Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 255
@@ -17970,7 +17816,7 @@
       "deadline": "2027-02-01",
       "content_hash": "sha256:f9c1d41bffd60dd93dc3a65d6de2786896933b5d50f6cf4d7d13dc4110e992e0",
       "last_verified_at": "2026-10-27T03:09:01.933Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:09:02.120Z",
       "history": [
         {
@@ -18000,20 +17846,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:10.185Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:10.185Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 256
@@ -18032,7 +17864,7 @@
       "deadline": "2026-11-10",
       "content_hash": "sha256:87d77936d9ee556fa71c95b85c63186f5a12fbb086339774af316cf0fe0d1d99",
       "last_verified_at": "2026-10-27T03:09:02.271Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:09:02.434Z",
       "history": [
         {
@@ -18062,20 +17894,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:10.697Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:10.697Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 257
@@ -18094,7 +17912,7 @@
       "deadline": "2027-02-15",
       "content_hash": "sha256:3e36db945f83206ffde6bcd96af116cfdc8ecb33c5a167497f9efeb30ac2837a",
       "last_verified_at": "2026-10-27T03:09:02.612Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:09:02.760Z",
       "history": [
         {
@@ -18124,20 +17942,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:11.259Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:11.259Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 258
@@ -18156,7 +17960,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:7a3afbc4f8408c5bcdc5542d3a2cf4ad14a9ce83ba551564ae16bcbd7f2fd247",
       "last_verified_at": "2026-10-27T03:09:02.919Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:09:03.068Z",
       "history": [
         {
@@ -18186,20 +17990,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:11.632Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:11.633Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 259
@@ -18218,7 +18008,7 @@
       "deadline": "2026-11-18",
       "content_hash": "sha256:b88b600ef0fa1b6b1629fc17765ce7a3f2a0c0bd2d889acf50e96f8d37c86442",
       "last_verified_at": "2026-10-27T03:09:03.233Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:09:03.391Z",
       "history": [
         {
@@ -18248,20 +18038,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:12.018Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:12.019Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 260
@@ -18280,7 +18056,7 @@
       "deadline": "2026-12-31T23:59:00+08:00",
       "content_hash": "sha256:4f648ec459a9e35c84912be11a50626cd6bf1ebab3396d9756c363565cd39721",
       "last_verified_at": "2026-10-27T03:09:03.580Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "UNDER_REVIEW",
       "first_seen": "2026-10-27T03:09:03.751Z",
       "history": [
         {
@@ -18310,20 +18086,6 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:12.401Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:12.401Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 261
@@ -18342,7 +18104,7 @@
       "deadline": "2027-01-08T17:00:00+09:00",
       "content_hash": "sha256:d7a848cdc6df277949cbd879974b1e21d02a9322b57a4ccb554f56e4c14b5eda",
       "last_verified_at": "2026-10-27T03:09:03.899Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "VERIFIED",
       "first_seen": "2026-10-27T03:09:04.065Z",
       "history": [
         {
@@ -18358,34 +18120,6 @@
           "to": "VERIFIED",
           "actor": "opportunity-scout",
           "reason": "application_status=OPEN_LIKELY"
-        },
-        {
-          "at": "2026-10-28T02:50:14.011Z",
-          "from": "VERIFIED",
-          "to": "CONTENT_GENERATED",
-          "actor": "validator",
-          "reason": "image and caption produced"
-        },
-        {
-          "at": "2026-10-28T02:50:14.012Z",
-          "from": "CONTENT_GENERATED",
-          "to": "UNDER_REVIEW",
-          "actor": "validator",
-          "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:12.756Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:12.756Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 262
@@ -18404,7 +18138,7 @@
       "deadline": "2026-11-09",
       "content_hash": "sha256:a84470fae72c7bc93020223bb47ffefced601d1131af690cb80dafca77a9fade",
       "last_verified_at": "2026-10-27T03:13:20.057Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "VERIFIED",
       "first_seen": "2026-10-27T03:13:20.203Z",
       "history": [
         {
@@ -18420,34 +18154,6 @@
           "to": "VERIFIED",
           "actor": "opportunity-scout",
           "reason": "application_status=OPEN_LIKELY"
-        },
-        {
-          "at": "2026-10-28T02:50:23.851Z",
-          "from": "VERIFIED",
-          "to": "CONTENT_GENERATED",
-          "actor": "validator",
-          "reason": "image and caption produced"
-        },
-        {
-          "at": "2026-10-28T02:50:23.851Z",
-          "from": "CONTENT_GENERATED",
-          "to": "UNDER_REVIEW",
-          "actor": "validator",
-          "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:13.109Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:13.109Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 263
@@ -18466,7 +18172,7 @@
       "deadline": "2026-11-22",
       "content_hash": "sha256:da96fe231d8cbb5dd1db62253f8e65189c8cb678c583f5570798df5515387120",
       "last_verified_at": "2026-10-27T03:13:20.356Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "VERIFIED",
       "first_seen": "2026-10-27T03:13:20.519Z",
       "history": [
         {
@@ -18482,34 +18188,6 @@
           "to": "VERIFIED",
           "actor": "opportunity-scout",
           "reason": "application_status=OPEN_LIKELY"
-        },
-        {
-          "at": "2026-10-28T02:51:25.332Z",
-          "from": "VERIFIED",
-          "to": "CONTENT_GENERATED",
-          "actor": "validator",
-          "reason": "image and caption produced"
-        },
-        {
-          "at": "2026-10-28T02:51:25.332Z",
-          "from": "CONTENT_GENERATED",
-          "to": "UNDER_REVIEW",
-          "actor": "validator",
-          "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:13.471Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:13.472Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 264
@@ -18528,7 +18206,7 @@
       "deadline": "2026-12-31",
       "content_hash": "sha256:369549d66bcd4d451233750508cbdcb3a4b6acd91073180f08c59f1b215dff6b",
       "last_verified_at": "2026-10-27T03:13:20.661Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "VERIFIED",
       "first_seen": "2026-10-27T03:13:20.803Z",
       "history": [
         {
@@ -18544,34 +18222,6 @@
           "to": "VERIFIED",
           "actor": "opportunity-scout",
           "reason": "application_status=OPEN_LIKELY"
-        },
-        {
-          "at": "2026-10-28T02:51:17.479Z",
-          "from": "VERIFIED",
-          "to": "CONTENT_GENERATED",
-          "actor": "validator",
-          "reason": "image and caption produced"
-        },
-        {
-          "at": "2026-10-28T02:51:17.479Z",
-          "from": "CONTENT_GENERATED",
-          "to": "UNDER_REVIEW",
-          "actor": "validator",
-          "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:13.854Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:13.855Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 265
@@ -18590,7 +18240,7 @@
       "deadline": "2027-01-19T23:59:00-12:00",
       "content_hash": "sha256:d13584aae42bcb690f90688d0a827ecf6925221e130fa97ceda28ce49816ad25",
       "last_verified_at": "2026-10-27T03:13:20.945Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "VERIFIED",
       "first_seen": "2026-10-27T03:13:21.077Z",
       "history": [
         {
@@ -18606,34 +18256,6 @@
           "to": "VERIFIED",
           "actor": "opportunity-scout",
           "reason": "application_status=OPEN_LIKELY"
-        },
-        {
-          "at": "2026-10-28T02:51:26.937Z",
-          "from": "VERIFIED",
-          "to": "CONTENT_GENERATED",
-          "actor": "validator",
-          "reason": "image and caption produced"
-        },
-        {
-          "at": "2026-10-28T02:51:26.937Z",
-          "from": "CONTENT_GENERATED",
-          "to": "UNDER_REVIEW",
-          "actor": "validator",
-          "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:14.245Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:14.245Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 266
@@ -18652,7 +18274,7 @@
       "deadline": "2026-12-31",
       "content_hash": "sha256:e70442ab1f11dfef804858fdc21df60625ab394b027ae51963615de22bc1159b",
       "last_verified_at": "2026-10-27T03:13:21.244Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "VERIFIED",
       "first_seen": "2026-10-27T03:13:21.416Z",
       "history": [
         {
@@ -18668,34 +18290,6 @@
           "to": "VERIFIED",
           "actor": "opportunity-scout",
           "reason": "application_status=OPEN_LIKELY"
-        },
-        {
-          "at": "2026-10-28T02:51:26.814Z",
-          "from": "VERIFIED",
-          "to": "CONTENT_GENERATED",
-          "actor": "validator",
-          "reason": "image and caption produced"
-        },
-        {
-          "at": "2026-10-28T02:51:26.814Z",
-          "from": "CONTENT_GENERATED",
-          "to": "UNDER_REVIEW",
-          "actor": "validator",
-          "reason": "checks PASS_WITH_FLAGS"
-        },
-        {
-          "at": "2026-10-28T02:52:14.618Z",
-          "from": "UNDER_REVIEW",
-          "to": "APPROVED",
-          "actor": "admin:EduCut administrator (auto-approval)",
-          "reason": "approved"
-        },
-        {
-          "at": "2026-10-28T02:52:14.618Z",
-          "from": "APPROVED",
-          "to": "READY_TO_PUBLISH",
-          "actor": "system",
-          "reason": "approved; status re-checked"
         }
       ],
       "offer_number": 267
@@ -18747,7 +18341,7 @@
       "deadline": "2027-04-16",
       "content_hash": "sha256:4e8af90632f0d65318a1670914729a1fde273d6567bb90857e6bd70f2fe16736",
       "last_verified_at": "2026-10-27T03:14:42.581Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "VERIFIED",
       "first_seen": "2026-10-27T03:14:42.722Z",
       "history": [
         {
@@ -18763,37 +18357,1442 @@
           "to": "VERIFIED",
           "actor": "opportunity-scout",
           "reason": "application_status=OPEN_LIKELY"
+        }
+      ],
+      "offer_number": 268
+    },
+    "opp_88586af31bf4f019": {
+      "id": "opp_88586af31bf4f019",
+      "fingerprint": "828eb509a5be2a88",
+      "title": "Commonwealth Shared Scholarships",
+      "institution": "Commonwealth Scholarship Commission in the UK",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-shared-scholarships-applications/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-shared-scholarships-applications/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-08T16:00:00+00:00",
+      "content_hash": "sha256:dcd72a5a73979d2e0af456ee7d9a1b77a12fb19f9c7a32f2d9b87480b480211e",
+      "last_verified_at": "2026-10-28T02:58:35.279Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T02:58:35.405Z",
+      "history": [
+        {
+          "at": "2026-10-28T02:58:35.405Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
         },
         {
-          "at": "2026-10-28T02:51:38.713Z",
+          "at": "2026-10-28T02:58:35.405Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:08:27.350Z",
           "from": "VERIFIED",
           "to": "CONTENT_GENERATED",
           "actor": "validator",
           "reason": "image and caption produced"
         },
         {
-          "at": "2026-10-28T02:51:38.713Z",
+          "at": "2026-10-28T03:08:27.350Z",
           "from": "CONTENT_GENERATED",
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
         },
         {
-          "at": "2026-10-28T02:52:15.008Z",
+          "at": "2026-10-29T02:52:27.876Z",
           "from": "UNDER_REVIEW",
           "to": "APPROVED",
           "actor": "admin:EduCut administrator (auto-approval)",
           "reason": "approved"
         },
         {
-          "at": "2026-10-28T02:52:15.008Z",
+          "at": "2026-10-29T02:52:27.876Z",
           "from": "APPROVED",
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
         }
       ],
-      "offer_number": 268
+      "offer_number": 269
+    },
+    "opp_f535753ee8d994c5": {
+      "id": "opp_f535753ee8d994c5",
+      "fingerprint": "72870fa358ff68f4",
+      "title": "Ph.D. Program",
+      "institution": "Toyota Technological Institute at Chicago (TTIC)",
+      "city": "Chicago",
+      "country": "United States",
+      "source_url": "https://www.ttic.edu/phd-program/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.ttic.edu/studentapplication/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-09",
+      "content_hash": "sha256:b8adf690c2d722ede90ace34fcd90f653e73a0e780b236121a04dc796fe47d2f",
+      "last_verified_at": "2026-10-28T02:58:35.557Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T02:58:35.678Z",
+      "history": [
+        {
+          "at": "2026-10-28T02:58:35.678Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T02:58:35.678Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:08:35.822Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:08:35.822Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:28.180Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:28.180Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 270
+    },
+    "opp_89e038eb4148a8b0": {
+      "id": "opp_89e038eb4148a8b0",
+      "fingerprint": "a8596baa57e971f9",
+      "title": "2027 summer school - Systems thinking and innovation for the prevention of noncommunicable diseases and a healthy ageing population in the WHO European Region",
+      "institution": "WHO Regional Office for Europe",
+      "city": "Nice",
+      "country": "France",
+      "source_url": "https://www.who.int/europe/news-room/articles/item/call-for-applications--2027-summer-school---systems-thinking-and-innovation-for-the-prevention-of-noncommunicable-diseases-and-a-healthy-ageing-population-in-the-who-european-region",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.who.int/europe/news-room/articles/item/call-for-applications--2027-summer-school---systems-thinking-and-innovation-for-the-prevention-of-noncommunicable-diseases-and-a-healthy-ageing-population-in-the-who-european-region",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-23",
+      "content_hash": "sha256:d68088964fd8bd62a93dad6d79f3d03617c87feb15fe82899d7885a5602e4ec9",
+      "last_verified_at": "2026-10-28T02:58:35.807Z",
+      "pipeline_status": "VERIFIED",
+      "first_seen": "2026-10-28T02:58:35.938Z",
+      "history": [
+        {
+          "at": "2026-10-28T02:58:35.938Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T02:58:35.938Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        }
+      ],
+      "offer_number": 271
+    },
+    "opp_65e8a993119ecc42": {
+      "id": "opp_65e8a993119ecc42",
+      "fingerprint": "3b09b51ee4e2ef80",
+      "title": "Ageing is Living Leadership Course 2027: Unlocking the potential of population ageing",
+      "institution": "WHO Regional Office for Europe",
+      "city": "Bilbao",
+      "country": "Spain",
+      "source_url": "https://www.who.int/europe/news-room/events/item/2027/04/28/default-calendar/ageing-is-living-leadership-course-2027--unlocking-the-potential-of-population-ageing",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.who.int/europe/news-room/events/item/2027/04/28/default-calendar/ageing-is-living-leadership-course-2027--unlocking-the-potential-of-population-ageing",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-16",
+      "content_hash": "sha256:87c6e29649a83323080573d839b4e726f72274d847ff0aaa4b074fc23d754cf6",
+      "last_verified_at": "2026-10-28T02:58:36.061Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T02:58:36.221Z",
+      "history": [
+        {
+          "at": "2026-10-28T02:58:36.221Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T02:58:36.221Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:08:47.235Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:08:47.235Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:28.517Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:28.517Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 272
+    },
+    "opp_0c2aa6920191a015": {
+      "id": "opp_0c2aa6920191a015",
+      "fingerprint": "e06b4304a076441a",
+      "title": "Perimeter Scholars International (PSI)",
+      "institution": "Perimeter Institute for Theoretical Physics",
+      "city": null,
+      "country": "Canada",
+      "source_url": "https://perimeterinstitute.ca/training/masters-program",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://perimeterinstitute.ca/training/masters-program/psi-how-apply",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-24T23:59:00-05:00",
+      "content_hash": "sha256:f39bb5003533f76c2b64130f198854243d8d58bfee67362e2cf315ad80cd3c25",
+      "last_verified_at": "2026-10-28T03:02:15.560Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T02:58:36.464Z",
+      "history": [
+        {
+          "at": "2026-10-28T02:58:36.464Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T02:58:36.464Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:08:47.593Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:08:47.593Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:29.023Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:29.023Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 273
+    },
+    "opp_32cf14d665715666": {
+      "id": "opp_32cf14d665715666",
+      "fingerprint": "2b82639c0bea290c",
+      "title": "MPhil in Machine Learning and Machine Intelligence",
+      "institution": "University of Cambridge, Department of Engineering",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://www.postgraduate.study.cam.ac.uk/courses/directory/egegmpmsl",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.postgraduate.study.cam.ac.uk/courses/directory/egegmpmsl",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-08",
+      "content_hash": "sha256:d7e161c33ba8164729c78f2fdd0671e9c7fdae0cbf982271d8267f5e1274e3cd",
+      "last_verified_at": "2026-10-28T03:02:15.261Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T02:58:36.701Z",
+      "history": [
+        {
+          "at": "2026-10-28T02:58:36.701Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T02:58:36.701Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:09:51.398Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:09:51.398Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:29.260Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:29.260Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 274
+    },
+    "opp_b9cb697d3fd0a81f": {
+      "id": "opp_b9cb697d3fd0a81f",
+      "fingerprint": "f0c36fa4f32a2cab",
+      "title": "DPoA MTR Journalism Fellowship",
+      "institution": "United Nations Office of the High Representative for the Least Developed Countries, Landlocked Developing Countries and Small Island Developing States (UN-OHRLLS)",
+      "city": "Doha",
+      "country": "Qatar",
+      "source_url": "https://www.un.org/ohrlls/content/dpoa-mtr-journalism-fellowship",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.un.org/ohrlls/content/dpoa-mtr-journalism-fellowship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-19",
+      "content_hash": "sha256:b4039a795e520d1bf69bbf3d3a3f257c074e221673e0534f1d6d585e6c184fe9",
+      "last_verified_at": "2026-10-28T02:58:36.814Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T02:58:36.941Z",
+      "history": [
+        {
+          "at": "2026-10-28T02:58:36.941Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T02:58:36.941Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:10:20.475Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:10:20.476Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:29.605Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:29.605Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 275
+    },
+    "opp_808922e3b5ee7468": {
+      "id": "opp_808922e3b5ee7468",
+      "fingerprint": "c77d6c01063c9164",
+      "title": "PhD and Master's by Research (August 2027 intake)",
+      "institution": "National Institute of Education (NIE), Nanyang Technological University",
+      "city": null,
+      "country": "Singapore",
+      "source_url": "https://www.ntu.edu.sg/nie/admissions/graduate-education/graduate-programmes-application-exercise",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.ntu.edu.sg/nie/admissions/graduate-education/graduate-programmes-application-exercise",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-30",
+      "content_hash": "sha256:b9bd807390bbf025192961a680521448d2cedb4061b5431caed2a2b8cc356d2b",
+      "last_verified_at": "2026-10-28T02:58:37.079Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T02:58:37.218Z",
+      "history": [
+        {
+          "at": "2026-10-28T02:58:37.218Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T02:58:37.218Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:10:04.733Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:10:04.733Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:29.958Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:29.958Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 276
+    },
+    "opp_6980750291a7527c": {
+      "id": "opp_6980750291a7527c",
+      "fingerprint": "659fe41ddf653613",
+      "title": "IEEE International Conference on Multimedia and Expo (ICME 2027)",
+      "institution": "IEEE International Conference on Multimedia and Expo (ICME 2027)",
+      "city": "Xiamen",
+      "country": "China",
+      "source_url": "https://2027.ieeeicme.org/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://2027.ieeeicme.org/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-30T23:59:00-12:00",
+      "content_hash": "sha256:34618864a8c9ff37797fede5d50cd93b51a40936876d384d27ebcd552990d66c",
+      "last_verified_at": "2026-10-28T03:02:15.818Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T02:58:37.494Z",
+      "history": [
+        {
+          "at": "2026-10-28T02:58:37.494Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T02:58:37.494Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:10:03.119Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:10:03.119Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:30.252Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:30.253Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 277
+    },
+    "opp_400579d28d60fe0e": {
+      "id": "opp_400579d28d60fe0e",
+      "fingerprint": "4fe5e6e4232821b2",
+      "title": "From Statistical Inference to Learning Methods",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with UNSTIM, Benin",
+      "city": "Abomey",
+      "country": "Benin",
+      "source_url": "https://www.cimpa.info/en/ecoles/statistical-inference-learning-methods",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.cimpa.info/en/node/63",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15",
+      "content_hash": "sha256:3e07fe6ff6ddd83a7005d279d1e6d5ccfaf28bf2e19551a366215ae7d1f92cd8",
+      "last_verified_at": "2026-10-28T03:02:16.098Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:00:27.485Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:00:27.485Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:00:27.486Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:00:27.749Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-10-28T03:00:28.004Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-10-28T03:00:28.243Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-10-28T03:00:28.486Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-10-28T03:00:43.128Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-10-28T03:10:09.602Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:10:09.602Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:30.545Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:30.546Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 278
+    },
+    "opp_ac481342b666fae3": {
+      "id": "opp_ac481342b666fae3",
+      "fingerprint": "bc825faed99c6df1",
+      "title": "Mathematical Modeling and Machine Learning for Biomedicine and Public Health",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with Tribhuvan University",
+      "city": "Kathmandu",
+      "country": "Nepal",
+      "source_url": "https://www.cimpa.info/en/ecoles/mathematical-modeling-and-machine-learning-biomedicine-and-public-health",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.cimpa.info/en/ecoles/mathematical-modeling-and-machine-learning-biomedicine-and-public-health",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:7f79d1f679e841ad82873172c1b0de86ec8ccdec7e2dacfd4c277e7ca811bb05",
+      "last_verified_at": "2026-10-28T03:02:16.350Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:00:43.370Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:00:43.370Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:00:43.370Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:11:16.324Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:11:16.324Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:30.779Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:30.779Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 279
+    },
+    "opp_21d5166126b27a54": {
+      "id": "opp_21d5166126b27a54",
+      "fingerprint": "684279d97fbf9c66",
+      "title": "Modern Techniques in Analysis and Differential Geometry",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with Universidad de El Salvador",
+      "city": "San Salvador",
+      "country": "El Salvador",
+      "source_url": "https://www.cimpa.info/en/ecoles/modern-techniques-analysis-and-differential-geometry",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.cimpa.info/en/ecoles/modern-techniques-analysis-and-differential-geometry",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-11",
+      "content_hash": "sha256:fcb99d40f540bb3d22808ea738c231f815e987a78bad097ed391d899506ae1b5",
+      "last_verified_at": "2026-10-28T03:02:16.604Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:00:43.629Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:00:43.629Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:00:43.630Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:11:21.821Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:11:21.821Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:31.050Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:31.051Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 280
+    },
+    "opp_17bf593b1b1aa14d": {
+      "id": "opp_17bf593b1b1aa14d",
+      "fingerprint": "cc481dbb694641b7",
+      "title": "Geometry and Dynamics",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with the National Higher School of Mathematics, Algeria",
+      "city": "Algiers",
+      "country": "Algeria",
+      "source_url": "https://www.cimpa.info/en/ecoles/geometry-and-dynamics",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.cimpa.info/en/ecoles/geometry-and-dynamics",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-23",
+      "content_hash": "sha256:7534f09cc9f0db4ffdd2edd99a8cbb6af92f9ba815117ca06027f4416700f728",
+      "last_verified_at": "2026-10-28T03:02:16.871Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:00:43.881Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:00:43.881Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:00:43.882Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:11:21.255Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:11:21.255Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:31.284Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:31.284Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 281
+    },
+    "opp_1841fe839447dcfe": {
+      "id": "opp_1841fe839447dcfe",
+      "fingerprint": "ab215b95723707ee",
+      "title": "Modélisation mathématiques et intelligence artificielle au service des sciences de la santé et de l'environnement",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with Université Hassan II de Casablanca",
+      "city": "Casablanca",
+      "country": "Morocco",
+      "source_url": "https://cimpa.info/index.php/fr/ecoles/modelisation-mathematiques-et-intelligence-artificielle-au-service-des-sciences-de-la-sante",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://cimpa.info/index.php/fr/ecoles/modelisation-mathematiques-et-intelligence-artificielle-au-service-des-sciences-de-la-sante",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-05",
+      "content_hash": "sha256:c15304de54331bfedc35e9e19d4c837dae85124f0f668dd94944def36adb80f4",
+      "last_verified_at": "2026-10-28T03:02:17.161Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:00:44.153Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:00:44.153Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:00:44.153Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:11:20.561Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:11:20.561Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:31.564Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:31.564Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 282
+    },
+    "opp_e814780f4fce7c2d": {
+      "id": "opp_e814780f4fce7c2d",
+      "fingerprint": "e4d328e3a285f816",
+      "title": "Postdoctoral Research Associates",
+      "institution": "James Madison Program in American Ideals and Institutions, Princeton University",
+      "city": "Princeton",
+      "country": "United States",
+      "source_url": "https://jmp.princeton.edu/fellowships/postdoctoral-research-associates",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://jmp.princeton.edu/fellowships/postdoctoral-research-associates/apply-postdoctoral-fellowship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-04T23:59:00-05:00",
+      "content_hash": "sha256:211b6defa7ca368b98c8b7b9b66aaeed2c3b3af3d7e27cac3cecafade446d3f0",
+      "last_verified_at": "2026-10-28T03:03:20.541Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:03:20.667Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:03:20.667Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:03:20.667Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-28T03:11:25.641Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-28T03:11:25.641Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:31.826Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:31.827Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 283
+    },
+    "opp_8db079f7a4106e1b": {
+      "id": "opp_8db079f7a4106e1b",
+      "fingerprint": "583b9c6d5b0af27a",
+      "title": "Ph.D. in Computer Science",
+      "institution": "Siebel School of Computing and Data Science, University of Illinois Urbana-Champaign",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://siebelschool.illinois.edu/admissions/graduate/application-deadlines",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://siebelschool.illinois.edu/admissions/graduate/applications-process-requirements",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:66f23b9082fd31b8ded4a2b64e37bb86fd183ff390fd2e1e2a500c513948b1b3",
+      "last_verified_at": "2026-10-28T03:03:20.785Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:03:20.923Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:03:20.923Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:03:20.924Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T02:51:59.916Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T02:51:59.916Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:32.093Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:32.093Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 284
+    },
+    "opp_2dc3c8a3a2c5e377": {
+      "id": "opp_2dc3c8a3a2c5e377",
+      "fingerprint": "e07c178656d4292f",
+      "title": "MA in Education",
+      "institution": "Azim Premji University",
+      "city": null,
+      "country": "India",
+      "source_url": "https://azimpremjiuniversity.edu.in/programmes/ma-in-education",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://azimpremjiuniversity.edu.in/postgraduate",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-20",
+      "content_hash": "sha256:c4444d33b3ded5ea588b2126fbe9e1e227c7d8ebedbfa7fe706f836b8fc7039a",
+      "last_verified_at": "2026-10-28T03:03:21.046Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:03:21.163Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:03:21.163Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:03:21.164Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T02:51:42.615Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T02:51:42.615Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:32.310Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:32.310Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 285
+    },
+    "opp_18bfc05f15d48cc1": {
+      "id": "opp_18bfc05f15d48cc1",
+      "fingerprint": "645192962bb2518f",
+      "title": "Symbolic Dynamics in connection with combinatorics on words, number theory and geometry.",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with Lahore College for Women University",
+      "city": "Lahore",
+      "country": "Pakistan",
+      "source_url": "https://www.cimpa.info/en/ecoles/symbolic-dynamics-connection-combinatorics-words-number-theory-and-geometry",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.cimpa.info/en/ecoles/symbolic-dynamics-connection-combinatorics-words-number-theory-and-geometry",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15",
+      "content_hash": "sha256:54acdaaa549054e3ed2604d9ba0b79d841a4cf311c098f9cc4734bcaa4bf50ed",
+      "last_verified_at": "2026-10-28T03:03:21.288Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:03:21.403Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:03:21.403Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:03:21.403Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T02:51:58.466Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T02:51:58.466Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:32.580Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:32.581Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 286
+    },
+    "opp_c08959ccd046c560": {
+      "id": "opp_c08959ccd046c560",
+      "fingerprint": "66896e4bc3f7edf8",
+      "title": "TWAS Research Professors in LDCs",
+      "institution": "The World Academy of Sciences (TWAS)",
+      "city": null,
+      "country": null,
+      "source_url": "https://twas.org/opportunity/twas-research-professors-ldcs",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://twas.org/opportunity/twas-research-professors-ldcs",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-23",
+      "content_hash": "sha256:7db778de12aeb12d93bb4d93ba64416a39b9d3045600c9d7e113f18bd57871e6",
+      "last_verified_at": "2026-10-28T03:03:21.510Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:03:21.612Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:03:21.613Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:03:21.613Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T02:52:07.042Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T02:52:07.042Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:32.839Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:32.839Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 287
+    },
+    "opp_c32277eb20eeaa2e": {
+      "id": "opp_c32277eb20eeaa2e",
+      "fingerprint": "5dc1fd775b2d61f3",
+      "title": "Amgen Scholars Program",
+      "institution": "National University of Singapore, Department of Biological Sciences",
+      "city": null,
+      "country": "Singapore",
+      "source_url": "https://www.dbs.nus.edu.sg/outreach/amgen-scholars-program/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.dbs.nus.edu.sg/outreach/amgen-scholars-program/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01T18:00:00+08:00",
+      "content_hash": "sha256:e8e276d9d18144b63778a3d7f67bbefd7f35c10039489cb1377de38ae50a8ee3",
+      "last_verified_at": "2026-10-28T03:05:58.997Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:05:59.155Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:05:59.155Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:05:59.155Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T02:52:06.813Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T02:52:06.814Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:33.114Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:33.114Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 288
+    },
+    "opp_cde24782571ea741": {
+      "id": "opp_cde24782571ea741",
+      "fingerprint": "be50f3d3b4876fb3",
+      "title": "Master of Science in Artificial Intelligence - Computer Vision",
+      "institution": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+      "city": null,
+      "country": "United Arab Emirates",
+      "source_url": "https://mbzuai.ac.ae/study/msc-programs/master-of-science-in-computer-vision/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://mbzuai.ac.ae/study/msc-programs/master-of-science-in-computer-vision/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15T17:00:00+04:00",
+      "content_hash": "sha256:1c927005c5da3507f5d13458251501b7e9b64272f77c00798ef69cef828cf1df",
+      "last_verified_at": "2026-10-28T03:05:59.320Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:05:59.453Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:05:59.453Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:05:59.454Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T02:51:55.519Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T02:51:55.519Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:33.370Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:33.370Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 289
+    },
+    "opp_f0362f6938c14794": {
+      "id": "opp_f0362f6938c14794",
+      "fingerprint": "c69df07169caa3ea",
+      "title": "Programa Crédito Beca 2027",
+      "institution": "COLFUTURO",
+      "city": null,
+      "country": "Colombia",
+      "source_url": "https://www.colfuturo.org/programas/credito-beca/convocatoria",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.colfuturo.org/programas/credito-beca/convocatoria",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-04",
+      "content_hash": "sha256:40f1c12dbf658a3951fb6ff311a2d157049d90b5b1b7d19a0b8b0d0d22e9a856",
+      "last_verified_at": "2026-10-28T03:05:59.597Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:05:59.744Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:05:59.744Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:05:59.744Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T02:51:58.234Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T02:51:58.234Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:33.598Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:33.598Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 290
+    },
+    "opp_c1da2a0e1b0bf08f": {
+      "id": "opp_c1da2a0e1b0bf08f",
+      "fingerprint": "8334da0e804ed1d4",
+      "title": "Arithmetic geometry",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with Chulalongkorn University",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "source_url": "https://cimpa.info/en/ecoles/arithmetic-geometry",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://cimpa.info/en/ecoles/arithmetic-geometry",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-17",
+      "content_hash": "sha256:abebd4817fad1dd0a6c2be419dcc686bae3f52418b4bf25e3d95e489b0e2743c",
+      "last_verified_at": "2026-10-28T03:05:59.884Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-28T03:06:00.017Z",
+      "history": [
+        {
+          "at": "2026-10-28T03:06:00.017Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-28T03:06:00.017Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T02:52:11.602Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T02:52:11.602Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-29T02:52:33.835Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-29T02:52:33.836Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 291
     }
   },
   "seen_urls": {
@@ -19245,7 +20244,36 @@
     "https://cc.acm.org/2027": "opp_edd4bed03d708c76",
     "https://mpi-sws.org/graduate-studies": "opp_73bf98fc092f83c3",
     "https://attend.ieee.org/fuzz-2027": "opp_d5444ce188c0275d",
-    "https://cidetec.ipn.mx/oferta-educativa/doctorado-en-ctiaycd/admisi%C3%B3n.html": "opp_6a6cbdd04cc94a61"
+    "https://cidetec.ipn.mx/oferta-educativa/doctorado-en-ctiaycd/admisi%C3%B3n.html": "opp_6a6cbdd04cc94a61",
+    "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-shared-scholarships-applications": "opp_88586af31bf4f019",
+    "https://ttic.edu/phd-program": "opp_f535753ee8d994c5",
+    "https://ttic.edu/studentapplication": "opp_f535753ee8d994c5",
+    "https://who.int/europe/news-room/articles/item/call-for-applications--2027-summer-school---systems-thinking-and-innovation-for-the-prevention-of-noncommunicable-diseases-and-a-healthy-ageing-population-in-the-who-european-region": "opp_89e038eb4148a8b0",
+    "https://who.int/europe/news-room/events/item/2027/04/28/default-calendar/ageing-is-living-leadership-course-2027--unlocking-the-potential-of-population-ageing": "opp_65e8a993119ecc42",
+    "https://perimeterinstitute.ca/training/masters-program": "opp_0c2aa6920191a015",
+    "https://perimeterinstitute.ca/training/masters-program/psi-how-apply": "opp_0c2aa6920191a015",
+    "https://postgraduate.study.cam.ac.uk/courses/directory/egegmpmsl": "opp_32cf14d665715666",
+    "https://un.org/ohrlls/content/dpoa-mtr-journalism-fellowship": "opp_b9cb697d3fd0a81f",
+    "https://ntu.edu.sg/nie/admissions/graduate-education/graduate-programmes-application-exercise": "opp_808922e3b5ee7468",
+    "https://2027.ieeeicme.org/": "opp_6980750291a7527c",
+    "https://cimpa.info/en/ecoles/statistical-inference-learning-methods": "opp_400579d28d60fe0e",
+    "https://cimpa.info/en/node/63": "opp_400579d28d60fe0e",
+    "https://cimpa.info/en/ecoles/mathematical-modeling-and-machine-learning-biomedicine-and-public-health": "opp_ac481342b666fae3",
+    "https://cimpa.info/en/ecoles/modern-techniques-analysis-and-differential-geometry": "opp_21d5166126b27a54",
+    "https://cimpa.info/en/ecoles/geometry-and-dynamics": "opp_17bf593b1b1aa14d",
+    "https://cimpa.info/index.php/fr/ecoles/modelisation-mathematiques-et-intelligence-artificielle-au-service-des-sciences-de-la-sante": "opp_1841fe839447dcfe",
+    "https://jmp.princeton.edu/fellowships/postdoctoral-research-associates": "opp_e814780f4fce7c2d",
+    "https://jmp.princeton.edu/fellowships/postdoctoral-research-associates/apply-postdoctoral-fellowship": "opp_e814780f4fce7c2d",
+    "https://siebelschool.illinois.edu/admissions/graduate/application-deadlines": "opp_8db079f7a4106e1b",
+    "https://siebelschool.illinois.edu/admissions/graduate/applications-process-requirements": "opp_8db079f7a4106e1b",
+    "https://azimpremjiuniversity.edu.in/programmes/ma-in-education": "opp_2dc3c8a3a2c5e377",
+    "https://azimpremjiuniversity.edu.in/postgraduate": "opp_2dc3c8a3a2c5e377",
+    "https://cimpa.info/en/ecoles/symbolic-dynamics-connection-combinatorics-words-number-theory-and-geometry": "opp_18bfc05f15d48cc1",
+    "https://twas.org/opportunity/twas-research-professors-ldcs": "opp_c08959ccd046c560",
+    "https://dbs.nus.edu.sg/outreach/amgen-scholars-program": "opp_c32277eb20eeaa2e",
+    "https://mbzuai.ac.ae/study/msc-programs/master-of-science-in-computer-vision": "opp_cde24782571ea741",
+    "https://colfuturo.org/programas/credito-beca/convocatoria": "opp_f0362f6938c14794",
+    "https://cimpa.info/en/ecoles/arithmetic-geometry": "opp_c1da2a0e1b0bf08f"
   },
-  "last_offer_number": 268
+  "last_offer_number": 291
 }
