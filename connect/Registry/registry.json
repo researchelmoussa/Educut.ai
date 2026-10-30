@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-29T02:52:33.836Z",
+  "updated_at": "2026-10-30T02:50:40.225Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -7887,7 +7887,7 @@
       "deadline": "2026-10-27T23:59:00-12:00",
       "content_hash": "sha256:c31d4cba5131c9da2aa40c632847fcf9c192adc6096e6f96abbb129e75c4735e",
       "last_verified_at": "2026-10-20T01:59:18.210Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-20T01:59:24.854Z",
       "history": [
         {
@@ -7931,6 +7931,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-10-29T02:58:30.363Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-27T23:59:00-12:00 passed"
         }
       ],
       "offer_number": 98
@@ -19793,6 +19800,1122 @@
         }
       ],
       "offer_number": 291
+    },
+    "opp_a04421def0955afe": {
+      "id": "opp_a04421def0955afe",
+      "fingerprint": "6faa46e6aad41890",
+      "title": "The Environmental Fellows Program",
+      "institution": "Harvard University Center for the Environment",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.environment.harvard.edu/environmental-fellows-program",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://academicpositions.harvard.edu/postings/16665",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01T17:00:00-05:00",
+      "content_hash": "sha256:38a5672d947bfd84c74555dd0a5868a5fe791ea9926dedcbd477447ab2ef15dd",
+      "last_verified_at": "2026-10-29T03:18:39.617Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:47.453Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:47.453Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:47.454Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:20:21.786Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:20:21.786Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:34.490Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:34.490Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 292
+    },
+    "opp_e18fe4086e6fc5a5": {
+      "id": "opp_e18fe4086e6fc5a5",
+      "fingerprint": "5337bf269d8dc511",
+      "title": "TaiwanICDF International Higher Education Scholarship Program",
+      "institution": "International Cooperation and Development Fund (TaiwanICDF)",
+      "city": null,
+      "country": "Taiwan",
+      "source_url": "https://www.icdf.org.tw/wSite/ct?xItem=12505&ctNode=31562&mp=2",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.icdf.org.tw/wSite/ct?xItem=69338&ctNode=31566&mp=2",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-15",
+      "content_hash": "sha256:0cdb0bd8db3fd339292c654fb2b7151730b2396d764f44c6505abac80250625a",
+      "last_verified_at": "2026-10-29T03:18:39.749Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:47.587Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:47.587Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:47.588Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:20:18.707Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:20:18.707Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:34.759Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:34.759Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 293
+    },
+    "opp_62e6fa5ab2a701f4": {
+      "id": "opp_62e6fa5ab2a701f4",
+      "fingerprint": "a61d5e13fb34f32a",
+      "title": "A*STAR Graduate Scholarship",
+      "institution": "Agency for Science, Technology and Research (A*STAR) Graduate Academy",
+      "city": "Singapore",
+      "country": "Singapore",
+      "source_url": "https://www.a-star.edu.sg/scholarships/home/scholarships/ags--scholarship",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.a-star.edu.sg/scholarships/home/scholarships/ags--scholarship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01",
+      "content_hash": "sha256:14211967e0db902b8bc0b6a784ff4e3d680a9c81e82ff1ac5bb4f1d4b837dbc0",
+      "last_verified_at": "2026-10-29T03:18:39.863Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:47.735Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:47.735Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:47.735Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:20:34.190Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:20:34.191Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:35.108Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:35.108Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 294
+    },
+    "opp_0dc4893c2333a2f8": {
+      "id": "opp_0dc4893c2333a2f8",
+      "fingerprint": "c3890dd6e48c4820",
+      "title": "University of Otago City of Literature PhD Scholarship",
+      "institution": "University of Otago",
+      "city": "Dunedin",
+      "country": "New Zealand",
+      "source_url": "https://www.otago.ac.nz/english-linguistics/english/the-university-of-otago-city-of-literature-phd-scholarship",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.otago.ac.nz/courses/scholarships/university-of-otago-city-of-literature-phd-scholarship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:6a779af1b4c2285b0b8a7a93c61cc418b96a70e4af96c606cccd80cc97069464",
+      "last_verified_at": "2026-10-29T03:18:40.020Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:47.884Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:47.884Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:47.885Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:20:31.012Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:20:31.013Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:35.340Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:35.341Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 295
+    },
+    "opp_944f4b3561be8968": {
+      "id": "opp_944f4b3561be8968",
+      "fingerprint": "277bf13bfbf37030",
+      "title": "Master of Science in Tropical Biodiversity and Ecosystems (Mundus tropicalis c/o TROPIMUNDO)",
+      "institution": "VLIR-UOS",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.vliruos.be/get-funded/master-science-tropical-biodiversity-and-ecosystems-mundus-tropicalis-co-tropimundo",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.vliruos.be/get-funded/master-science-tropical-biodiversity-and-ecosystems-mundus-tropicalis-co-tropimundo",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30",
+      "content_hash": "sha256:1ba2fd354e5a341aab2b2f3e923ad7b0fec9a8408d054162474ebfab187d552a",
+      "last_verified_at": "2026-10-29T03:18:40.160Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:48.016Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:48.016Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:48.016Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:20:36.636Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:20:36.636Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:35.607Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:35.607Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 296
+    },
+    "opp_d1936d0a7f98fd05": {
+      "id": "opp_d1936d0a7f98fd05",
+      "fingerprint": "fefc0359d626d24a",
+      "title": "COLT 2027",
+      "institution": "40th Annual Conference on Learning Theory (COLT 2027)",
+      "city": "Tokyo",
+      "country": "Japan",
+      "source_url": "https://learningtheory.org/colt2027/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://learningtheory.org/colt2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-29T23:59:00-12:00",
+      "content_hash": "sha256:05ce0bb8c7b2fe1c9b337e22ccfa624108e9957287eec99cf87bfb7041eb3f78",
+      "last_verified_at": "2026-10-29T03:18:40.279Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:48.146Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:48.146Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:48.147Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:21:32.695Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:21:32.695Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:36.101Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:36.101Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 297
+    },
+    "opp_f5874a3cc28a6bbe": {
+      "id": "opp_f5874a3cc28a6bbe",
+      "fingerprint": "1c563e248da6126e",
+      "title": "SIGIR 2027",
+      "institution": "50th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2027)",
+      "city": "San Jose",
+      "country": "United States",
+      "source_url": "https://sigir2027.org/pages/submit-full.html",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://sigir2027.org/pages/submit-full.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-14T23:59:00-12:00",
+      "content_hash": "sha256:2725933c3e2bf55aaeeaf83c428df0b9904687e0f5e5c9520cab64e89840b9c8",
+      "last_verified_at": "2026-10-29T03:18:40.382Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:48.284Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:48.284Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:48.284Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:21:42.581Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:21:42.581Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:36.594Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:36.594Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 298
+    },
+    "opp_b1a1008a53d60784": {
+      "id": "opp_b1a1008a53d60784",
+      "fingerprint": "b3f6b57c89193a96",
+      "title": "Robotics Institute Summer Scholars (RISS)",
+      "institution": "Carnegie Mellon University, Robotics Institute",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://riss.ri.cmu.edu/faq/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://applygrad.cs.cmu.edu/apply/index.php?domain=38",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-20T15:00:00-05:00",
+      "content_hash": "sha256:d4d1f5e0424c9b32f69387cbd59b3b81afaacc15c13e7221c3954068f8000f42",
+      "last_verified_at": "2026-10-29T03:18:40.508Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:48.426Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:48.426Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:48.426Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:21:33.695Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:21:33.695Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:36.854Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:36.855Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 299
+    },
+    "opp_6634ce39661591f7": {
+      "id": "opp_6634ce39661591f7",
+      "fingerprint": "ef419298490e66f1",
+      "title": "In-Country/In-Region Programme Sub-Saharan Africa",
+      "institution": "DAAD (German Academic Exchange Service)",
+      "city": null,
+      "country": null,
+      "source_url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=10000486",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=10000486",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-12",
+      "content_hash": "sha256:eeb6e77e8bfa5eac14819d3c0c9da6fd3ffe699f87bf00a17d3f0023db72ffdd",
+      "last_verified_at": "2026-10-29T03:18:40.627Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:48.573Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:48.573Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:48.573Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:21:36.259Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:21:36.259Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:37.108Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:37.108Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 300
+    },
+    "opp_5e139cb0788758d2": {
+      "id": "opp_5e139cb0788758d2",
+      "fingerprint": "8838bea76984115c",
+      "title": "Minicursos Temáticos",
+      "institution": "Laboratório Nacional de Computação Científica (LNCC), Programa de Verão 2027",
+      "city": "Petrópolis",
+      "country": "Brazil",
+      "source_url": "https://verao.lncc.br/minicursos/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://verao.lncc.br/prices/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08",
+      "content_hash": "sha256:deeecdb5e005a988241a372af1b412fbcf8ee3df13e6c545d39d84b4a4e5803e",
+      "last_verified_at": "2026-10-29T03:18:40.742Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:48.707Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:48.707Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:48.707Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:21:43.497Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:21:43.497Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:37.624Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:37.625Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 301
+    },
+    "opp_fc624f0fedde73d9": {
+      "id": "opp_fc624f0fedde73d9",
+      "fingerprint": "9f7e8dde157017ec",
+      "title": "[MSc] Computer Sciences and Engineering - Thesis",
+      "institution": "Koç University, Graduate School of Sciences and Engineering",
+      "city": null,
+      "country": "Turkey",
+      "source_url": "https://apply.ku.edu.tr/courses/course/60-msc-computer-sciences-and-engineering---thesis",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://apply.ku.edu.tr/courses/course/60-msc-computer-sciences-and-engineering---thesis",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-05T23:59:59+03:00",
+      "content_hash": "sha256:368bf96504c78f5fdc57ccecfd8e1e0661078bc2dcda3b7e7ab3015712feeac4",
+      "last_verified_at": "2026-10-29T03:18:40.867Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:48.843Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:48.843Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:48.844Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:22:47.259Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:22:47.259Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:37.960Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:37.961Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 302
+    },
+    "opp_a585086148e9543a": {
+      "id": "opp_a585086148e9543a",
+      "fingerprint": "f4834083114fe74c",
+      "title": "ICDE 2027 Call for Research Papers",
+      "institution": "43rd IEEE International Conference on Data Engineering (ICDE 2027)",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://icde2027.github.io/cf-research-papers.html",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://cmt3.research.microsoft.com/ICDE2027",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-11T17:00:00-08:00",
+      "content_hash": "sha256:7d71b24c1b785effca8ce7ff434eb7b4a1cb23330e2e2f1822bb4ffe07a5a160",
+      "last_verified_at": "2026-10-29T03:18:41.001Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:48.962Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:48.962Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:48.962Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:22:33.044Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:22:33.044Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:38.216Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:38.216Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 303
+    },
+    "opp_f8069312cae902bc": {
+      "id": "opp_f8069312cae902bc",
+      "fingerprint": "c2f9ba8b07fbf521",
+      "title": "ETH Postdoctoral Fellowships",
+      "institution": "ETH Zurich",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://grantsoffice.ethz.ch/funding-opportunities/internal/eth-fellowships.html",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://grantsoffice.ethz.ch/funding-opportunities/internal/eth-fellowships.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-01T17:00:00+01:00",
+      "content_hash": "sha256:a847b3aa29349d9206a00c68c85cddc3c94ed0e8532a70818cd0a857033c1810",
+      "last_verified_at": "2026-10-29T03:18:41.116Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:49.074Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:49.074Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:49.074Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:22:46.035Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:22:46.035Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:38.480Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:38.480Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 304
+    },
+    "opp_9aebd4a469c265c9": {
+      "id": "opp_9aebd4a469c265c9",
+      "fingerprint": "427abeccccd03e9e",
+      "title": "CAV 2027",
+      "institution": "International Conference on Computer Aided Verification (CAV 2027)",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "source_url": "https://conferences.i-cav.org/2027/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://conferences.i-cav.org/2027/cfp/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-20T23:59:00-12:00",
+      "content_hash": "sha256:862ee3a711e6975e26de00adf6758e6accea1f25fe397f5f93f6d4dd7e2764df",
+      "last_verified_at": "2026-10-29T03:18:41.241Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:49.195Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:49.197Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:49.197Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:22:57.361Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:22:57.361Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:39.094Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:39.094Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 305
+    },
+    "opp_4cb6365f5e2a2b30": {
+      "id": "opp_4cb6365f5e2a2b30",
+      "fingerprint": "45350f44f4067f96",
+      "title": "Master of Science in Artificial Intelligence - Natural Language Processing",
+      "institution": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+      "city": null,
+      "country": "United Arab Emirates",
+      "source_url": "https://mbzuai.ac.ae/study/msc-programs/master-of-science-in-natural-language-processing/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://mbzuai.ac.ae/study/msc-programs/master-of-science-in-natural-language-processing/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15T17:00:00+04:00",
+      "content_hash": "sha256:ef601745657a6a9c2ec65e8f37bfe5c2a318d74b43bdcd344fd103fc99562ab4",
+      "last_verified_at": "2026-10-29T03:18:41.359Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:49.336Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:49.336Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:49.336Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:22:48.847Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:22:48.848Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:39.471Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:39.471Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 306
+    },
+    "opp_a9502f6b78308e0a": {
+      "id": "opp_a9502f6b78308e0a",
+      "fingerprint": "49c36529ba6aaeae",
+      "title": "PhD/MPhil Astronomy and Astrophysics (2027 entry)",
+      "institution": "The University of Manchester, Jodrell Bank Centre for Astrophysics",
+      "city": "Manchester",
+      "country": "United Kingdom",
+      "source_url": "https://www.jodrellbank.manchester.ac.uk/study/postgraduate/phd-projects/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.manchester.ac.uk/study/postgraduate-research/programmes/list/05482/phd-mphil-astronomy-and-astrophysics/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-22",
+      "content_hash": "sha256:47fca398990b138aef34e0b74eb64f73002549ebcec6b4d0070a1e27a8fd080a",
+      "last_verified_at": "2026-10-29T03:18:41.475Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:49.462Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:49.462Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:49.462Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-30T02:50:10.983Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-30T02:50:10.984Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:39.707Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:39.708Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 307
+    },
+    "opp_3d6bb46ac7f2489d": {
+      "id": "opp_3d6bb46ac7f2489d",
+      "fingerprint": "479972dcfb805553",
+      "title": "Fields Postdoctoral Fellowships",
+      "institution": "Fields Institute for Research in Mathematical Sciences",
+      "city": null,
+      "country": "Canada",
+      "source_url": "https://www.fields.utoronto.ca/honours-and-fellowships/postdoctoral-fellowships",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.fields.utoronto.ca/honours-and-fellowships/postdoctoral-fellowships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:0b4d51b0faeea91c90339b5b1d798a9b58cbc57adafa54e537572fcae327b124",
+      "last_verified_at": "2026-10-29T03:18:41.618Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:49.625Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:49.625Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:49.625Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:23:43.251Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:23:43.251Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:39.979Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:39.979Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 308
+    },
+    "opp_99f51c47795c4a3d": {
+      "id": "opp_99f51c47795c4a3d",
+      "fingerprint": "b4a9787b9c371975",
+      "title": "Computer Science (M.Sc.)",
+      "institution": "Saarland University",
+      "city": null,
+      "country": "Germany",
+      "source_url": "https://www.uni-saarland.de/en/study/programmes/master/informatics.html",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.uni-saarland.de/en/study/programmes/master/informatics.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15",
+      "content_hash": "sha256:d9ac1f39259e65efaf94a131e6259086ec8443d9f196a6a80326271c66fb4f0f",
+      "last_verified_at": "2026-10-29T03:18:41.758Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-29T03:18:49.765Z",
+      "history": [
+        {
+          "at": "2026-10-29T03:18:49.765Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-29T03:18:49.765Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-29T03:23:45.017Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-29T03:23:45.017Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-10-30T02:50:40.225Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-10-30T02:50:40.225Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 309
     }
   },
   "seen_urls": {
@@ -20273,7 +21396,33 @@
     "https://dbs.nus.edu.sg/outreach/amgen-scholars-program": "opp_c32277eb20eeaa2e",
     "https://mbzuai.ac.ae/study/msc-programs/master-of-science-in-computer-vision": "opp_cde24782571ea741",
     "https://colfuturo.org/programas/credito-beca/convocatoria": "opp_f0362f6938c14794",
-    "https://cimpa.info/en/ecoles/arithmetic-geometry": "opp_c1da2a0e1b0bf08f"
+    "https://cimpa.info/en/ecoles/arithmetic-geometry": "opp_c1da2a0e1b0bf08f",
+    "https://environment.harvard.edu/environmental-fellows-program": "opp_a04421def0955afe",
+    "https://academicpositions.harvard.edu/postings/16665": "opp_a04421def0955afe",
+    "https://icdf.org.tw/wSite/ct?ctNode=31562&mp=2&xItem=12505": "opp_e18fe4086e6fc5a5",
+    "https://icdf.org.tw/wSite/ct?ctNode=31566&mp=2&xItem=69338": "opp_e18fe4086e6fc5a5",
+    "https://a-star.edu.sg/scholarships/home/scholarships/ags--scholarship": "opp_62e6fa5ab2a701f4",
+    "https://otago.ac.nz/english-linguistics/english/the-university-of-otago-city-of-literature-phd-scholarship": "opp_0dc4893c2333a2f8",
+    "https://otago.ac.nz/courses/scholarships/university-of-otago-city-of-literature-phd-scholarship": "opp_0dc4893c2333a2f8",
+    "https://vliruos.be/get-funded/master-science-tropical-biodiversity-and-ecosystems-mundus-tropicalis-co-tropimundo": "opp_944f4b3561be8968",
+    "https://learningtheory.org/colt2027": "opp_d1936d0a7f98fd05",
+    "https://sigir2027.org/pages/submit-full.html": "opp_f5874a3cc28a6bbe",
+    "https://riss.ri.cmu.edu/faq": "opp_b1a1008a53d60784",
+    "https://applygrad.cs.cmu.edu/apply/index.php?domain=38": "opp_b1a1008a53d60784",
+    "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database?detail=10000486": "opp_6634ce39661591f7",
+    "https://verao.lncc.br/minicursos": "opp_5e139cb0788758d2",
+    "https://verao.lncc.br/prices": "opp_5e139cb0788758d2",
+    "https://apply.ku.edu.tr/courses/course/60-msc-computer-sciences-and-engineering---thesis": "opp_fc624f0fedde73d9",
+    "https://icde2027.github.io/cf-research-papers.html": "opp_a585086148e9543a",
+    "https://cmt3.research.microsoft.com/ICDE2027": "opp_a585086148e9543a",
+    "https://grantsoffice.ethz.ch/funding-opportunities/internal/eth-fellowships.html": "opp_f8069312cae902bc",
+    "https://conferences.i-cav.org/2027": "opp_9aebd4a469c265c9",
+    "https://conferences.i-cav.org/2027/cfp": "opp_9aebd4a469c265c9",
+    "https://mbzuai.ac.ae/study/msc-programs/master-of-science-in-natural-language-processing": "opp_4cb6365f5e2a2b30",
+    "https://jodrellbank.manchester.ac.uk/study/postgraduate/phd-projects": "opp_a9502f6b78308e0a",
+    "https://manchester.ac.uk/study/postgraduate-research/programmes/list/05482/phd-mphil-astronomy-and-astrophysics": "opp_a9502f6b78308e0a",
+    "https://fields.utoronto.ca/honours-and-fellowships/postdoctoral-fellowships": "opp_3d6bb46ac7f2489d",
+    "https://uni-saarland.de/en/study/programmes/master/informatics.html": "opp_99f51c47795c4a3d"
   },
-  "last_offer_number": 291
+  "last_offer_number": 309
 }
