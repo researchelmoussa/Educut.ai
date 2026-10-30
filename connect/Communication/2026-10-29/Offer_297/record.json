@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "COLT 2027",
+    "evidence_url": "https://learningtheory.org/colt2027/",
+    "evidence_quote": "COLT 2027"
+  },
+  "institution": {
+    "name": "40th Annual Conference on Learning Theory (COLT 2027)",
+    "website": "https://learningtheory.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://learningtheory.org/colt2027/",
+  "source_url": "https://learningtheory.org/colt2027/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Tokyo",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Learning theory, machine learning",
+  "seniority": "Researchers",
+  "qualifications": [
+    "Paper submission deadline January 29, 2027, Anywhere on Earth",
+    "Reviews released March 29; initial author response due April 2; author notification May 3",
+    "Conference June 28 - July 2, 2027, Tokyo"
+  ],
+  "skills": [],
+  "description_short": "The 40th Annual Conference on Learning Theory (COLT 2027) takes place 28 June to 2 July 2027 in Tokyo, Japan. Paper submissions are due 29 January 2027 (Anywhere on Earth), with author notification on 3 May.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-29T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://learningtheory.org/colt2027/",
+    "evidence_quote": "January 29, Anywhere on Earth · Submission deadline"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official COLT 2027 page (search results): submission deadline January 29, Anywhere on Earth",
+    "Full 2027 call for papers and submission system not seen"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Submission format, page limits and submission system for 2027 not confirmed",
+    "The dates page shows month/day; year 2027 taken from the COLT 2027 page context"
+  ],
+  "id": "opp_d1936d0a7f98fd05",
+  "fingerprint": "fefc0359d626d24a",
+  "discovered_at": "2026-10-29T03:18:40.279Z",
+  "last_verified_at": "2026-10-29T03:18:40.279Z",
+  "content_hash": "sha256:05ce0bb8c7b2fe1c9b337e22ccfa624108e9957287eec99cf87bfb7041eb3f78"
+}

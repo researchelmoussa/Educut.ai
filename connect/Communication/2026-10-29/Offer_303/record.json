@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "ICDE 2027 Call for Research Papers",
+    "evidence_url": "https://icde2027.github.io/cf-research-papers.html",
+    "evidence_quote": "ICDE 2027 Call for Research Papers"
+  },
+  "institution": {
+    "name": "43rd IEEE International Conference on Data Engineering (ICDE 2027)",
+    "website": "https://icde2027.github.io",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cmt3.research.microsoft.com/ICDE2027",
+  "source_url": "https://icde2027.github.io/cf-research-papers.html",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "country_code": "DK"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Data engineering and data management",
+  "seniority": "Researchers",
+  "qualifications": [
+    "Second-round research paper deadline November 11, 2026, 5:00 p.m. Pacific Time",
+    "Up to 5 research-track papers per author per round",
+    "Papers rejected in round 1 are not eligible for round 2 (except desk rejections for conflict-of-interest or formatting/length problems)",
+    "Submissions through Microsoft CMT"
+  ],
+  "skills": [],
+  "description_short": "IEEE ICDE 2027, the 43rd International Conference on Data Engineering, takes place 17-21 May 2027 in Copenhagen, Denmark. Second-round research paper submissions are due 11 November 2026 (5 p.m. Pacific Time) via Microsoft CMT.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-11T17:00:00-08:00",
+    "timezone": "America/Los_Angeles",
+    "evidence_url": "https://icde2027.github.io/cf-research-papers.html",
+    "evidence_quote": "All deadlines are 5:00 p.m. Pacific Time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ICDE 2027 call for research papers (search results): round 2 submission deadline November 11, 2026, 5:00 p.m. Pacific Time",
+    "ICDE 2027 homepage (search results) states the round 2 submission window is open",
+    "CMT submission site not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The date itself appears in a table on the official page; the quote captured is the timezone sentence, the date (November 11, 2026) is from the same search result",
+    "Other tracks (industry, demo) not covered"
+  ],
+  "id": "opp_a585086148e9543a",
+  "fingerprint": "f4834083114fe74c",
+  "discovered_at": "2026-10-29T03:18:41.001Z",
+  "last_verified_at": "2026-10-29T03:18:41.001Z",
+  "content_hash": "sha256:7d71b24c1b785effca8ce7ff434eb7b4a1cb23330e2e2f1822bb4ffe07a5a160"
+}
