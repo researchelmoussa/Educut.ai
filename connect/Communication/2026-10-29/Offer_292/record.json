@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "The Environmental Fellows Program",
+    "evidence_url": "https://www.environment.harvard.edu/environmental-fellows-program",
+    "evidence_quote": "The Environmental Fellows Program"
+  },
+  "institution": {
+    "name": "Harvard University Center for the Environment",
+    "website": "https://www.environment.harvard.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://academicpositions.harvard.edu/postings/16665",
+  "source_url": "https://www.environment.harvard.edu/environmental-fellows-program",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Environmental research (interdisciplinary)",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "Terminal degree (PhD or equivalent) obtained between May 2023 and August 2027",
+    "Applicants must secure a commitment from one or more Harvard faculty members to serve as mentor and provide office or lab space for the two-year fellowship",
+    "Recommendation letters and host letters due by December 11, 2026, 5:00pm EST"
+  ],
+  "skills": [],
+  "description_short": "Two-year postdoctoral fellowship at Harvard for recent PhD or terminal-degree holders, hosted by Harvard faculty mentors. Applications for the 2027 cohort are due 1 December 2026; recommendation and host letters by 11 December 2026. Fellows and alternates are selected by late January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01T17:00:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.environment.harvard.edu/program-requirements-environmental-fellows-programs",
+    "evidence_quote": "December 1, 2026, at 5:00pm EST"
+  },
+  "compensation": {
+    "value": "$92,000 per year, plus health insurance eligibility and a travel allowance",
+    "evidence_url": "https://www.environment.harvard.edu/environmental-fellows-program",
+    "evidence_quote": "salary of $92,000 per year"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Harvard Center for the Environment pages (search results): applications for the 2027 cohort due December 1, 2026, 5:00pm EST",
+    "Harvard Academic Positions posting 16665 (search results) gives the same date",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "City not stated in the text seen",
+    "Exact wording of the salary sentence not captured beyond the figure shown in search results"
+  ],
+  "id": "opp_a04421def0955afe",
+  "fingerprint": "6faa46e6aad41890",
+  "discovered_at": "2026-10-29T03:18:39.617Z",
+  "last_verified_at": "2026-10-29T03:18:39.617Z",
+  "content_hash": "sha256:38a5672d947bfd84c74555dd0a5868a5fe791ea9926dedcbd477447ab2ef15dd"
+}

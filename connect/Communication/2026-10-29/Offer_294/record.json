@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "A*STAR Graduate Scholarship",
+    "evidence_url": "https://www.a-star.edu.sg/scholarships/home/scholarships/ags--scholarship",
+    "evidence_quote": "A*STAR Graduate Scholarship"
+  },
+  "institution": {
+    "name": "Agency for Science, Technology and Research (A*STAR) Graduate Academy",
+    "website": "https://www.a-star.edu.sg",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.a-star.edu.sg/scholarships/home/scholarships/ags--scholarship",
+  "source_url": "https://www.a-star.edu.sg/scholarships/home/scholarships/ags--scholarship",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Singapore",
+    "country": "Singapore",
+    "country_code": "SG"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Science and engineering PhD research",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Singapore citizens or permanent residents: at least a Second-Class (Upper) Honours degree or equivalent in a relevant discipline (obtained or on track)",
+    "Non-SPR foreigners: completed or on track to obtain at least a Second-Class (Upper) Honours degree at a Singapore autonomous university",
+    "Must meet the criteria for, and gain admission to, a PhD programme at an autonomous university in Singapore",
+    "Non-SPR foreigners serve a three-year bond in a Singapore-based company; no bond for citizens and permanent residents"
+  ],
+  "skills": [],
+  "description_short": "A*STAR scholarship funding PhD studies of up to four years at a Singapore autonomous university. The first application cycle opens 1 November and closes 1 February; interviews follow from mid-February to March, with outcomes from mid-April.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": "Asia/Singapore",
+    "evidence_url": "https://www.a-star.edu.sg/scholarships/home/scholarships/ags--scholarship",
+    "evidence_quote": "1 Nov to 1 Feb & 5 Jun to 1 Aug"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official A*STAR scholarship page (search results): first application cycle opens 1 November and closes 1 February",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The page states recurring dates without a year; 1 February 2027 is inferred as the close of the cycle opening 1 November 2026",
+    "Second-cycle dates conflict on the page (5 June vs 1 June to 1 August)",
+    "Stipend amount not captured",
+    "Deadline timezone assumed Singapore time"
+  ],
+  "id": "opp_62e6fa5ab2a701f4",
+  "fingerprint": "a61d5e13fb34f32a",
+  "discovered_at": "2026-10-29T03:18:39.863Z",
+  "last_verified_at": "2026-10-29T03:18:39.863Z",
+  "content_hash": "sha256:14211967e0db902b8bc0b6a784ff4e3d680a9c81e82ff1ac5bb4f1d4b837dbc0"
+}

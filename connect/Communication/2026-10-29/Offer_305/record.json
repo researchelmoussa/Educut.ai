@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "CAV 2027",
+    "evidence_url": "https://conferences.i-cav.org/2027/",
+    "evidence_quote": "CAV 2027"
+  },
+  "institution": {
+    "name": "International Conference on Computer Aided Verification (CAV 2027)",
+    "website": "https://conferences.i-cav.org/2027/",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://conferences.i-cav.org/2027/cfp/",
+  "source_url": "https://conferences.i-cav.org/2027/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Formal methods and computer-aided verification",
+  "seniority": "Researchers",
+  "qualifications": [
+    "Paper submission deadline 20 January 2027 (AoE)",
+    "Author notification Friday, 23 April 2027",
+    "Main conference 21-23 July 2027, Amsterdam"
+  ],
+  "skills": [],
+  "description_short": "CAV 2027, the International Conference on Computer Aided Verification, holds its main conference 21-23 July 2027 in Amsterdam, its first edition in the Netherlands. Paper submissions are due 20 January 2027 (AoE); authors are notified 23 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-20T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://conferences.i-cav.org/2027/",
+    "evidence_quote": "Call for Papers Submission deadline 20 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CAV 2027 homepage (search results): Call for Papers submission deadline 20 January 2027; all deadlines AoE",
+    "Submission categories, formatting instructions and submission site still marked coming soon on the CFP page"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Full call for papers (categories, page limits, submission site) not yet published",
+    "Venue name not confirmed"
+  ],
+  "id": "opp_9aebd4a469c265c9",
+  "fingerprint": "427abeccccd03e9e",
+  "discovered_at": "2026-10-29T03:18:41.241Z",
+  "last_verified_at": "2026-10-29T03:18:41.241Z",
+  "content_hash": "sha256:862ee3a711e6975e26de00adf6758e6accea1f25fe397f5f93f6d4dd7e2764df"
+}

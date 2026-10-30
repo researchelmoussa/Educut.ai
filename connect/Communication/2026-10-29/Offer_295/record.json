@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "University of Otago City of Literature PhD Scholarship",
+    "evidence_url": "https://www.otago.ac.nz/courses/scholarships/university-of-otago-city-of-literature-phd-scholarship",
+    "evidence_quote": "University of Otago City of Literature PhD Scholarship"
+  },
+  "institution": {
+    "name": "University of Otago",
+    "website": "https://www.otago.ac.nz",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.otago.ac.nz/courses/scholarships/university-of-otago-city-of-literature-phd-scholarship",
+  "source_url": "https://www.otago.ac.nz/english-linguistics/english/the-university-of-otago-city-of-literature-phd-scholarship",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Dunedin",
+    "country": "New Zealand",
+    "country_code": "NZ"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Literature (PhD research on a topic relevant to literature)",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Graduates in any discipline intending to undertake PhD research on a topic relevant to literature",
+    "Applicants must be obtaining their first doctoral qualification",
+    "Offered annually to support one PhD candidate; applications reviewed after 31 January each year"
+  ],
+  "skills": [],
+  "description_short": "Annual University of Otago scholarship for one PhD candidate researching literature, marking Dunedin's UNESCO City of Literature status. It provides a NZ$34,128 yearly stipend plus a domestic tuition fee waiver. Applications close 31 January.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": "Pacific/Auckland",
+    "evidence_url": "https://www.otago.ac.nz/english-linguistics/english/the-university-of-otago-city-of-literature-phd-scholarship",
+    "evidence_quote": "Closing date: 31 January annually"
+  },
+  "compensation": {
+    "value": "NZ$34,128 stipend per annum plus domestic tuition fee waiver (excludes student services fee)",
+    "evidence_url": "https://www.otago.ac.nz/courses/scholarships/university-of-otago-city-of-literature-phd-scholarship",
+    "evidence_quote": "NZ $34,128 stipend per annum (PhD) plus domestic tuition fee waiver (excludes student services fee)"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official University of Otago pages (search results): closing date 31 January annually; applications reviewed after 31 January each year",
+    "eVision application system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Year inferred: the page states an annual 31 January closing date",
+    "Whether international students are eligible is not explicit (general Otago regulations limit doctoral scholarships to domestic fee-paying students unless the scholarship terms say otherwise)",
+    "Deadline timezone assumed New Zealand time"
+  ],
+  "id": "opp_0dc4893c2333a2f8",
+  "fingerprint": "c3890dd6e48c4820",
+  "discovered_at": "2026-10-29T03:18:40.020Z",
+  "last_verified_at": "2026-10-29T03:18:40.020Z",
+  "content_hash": "sha256:6a779af1b4c2285b0b8a7a93c61cc418b96a70e4af96c606cccd80cc97069464"
+}

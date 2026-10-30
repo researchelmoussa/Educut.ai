@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "SIGIR 2027",
+    "evidence_url": "https://sigir2027.org/",
+    "evidence_quote": "SIGIR 2027"
+  },
+  "institution": {
+    "name": "50th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2027)",
+    "website": "https://sigir2027.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://sigir2027.org/pages/submit-full.html",
+  "source_url": "https://sigir2027.org/pages/submit-full.html",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "San Jose",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Information retrieval",
+  "seniority": "Researchers",
+  "qualifications": [
+    "Full paper abstract submission January 14, 2027; full paper submission January 21, 2027 (AoE)",
+    "A full paper cannot be submitted without a previously submitted abstract",
+    "Full author list must be specified at abstract submission time; no authorship changes afterwards",
+    "All authors need OpenReview accounts before the abstract deadline"
+  ],
+  "skills": [],
+  "description_short": "SIGIR 2027, the 50th ACM SIGIR conference on information retrieval, runs 18-24 July 2027 in San Jose, California. Full-paper abstracts are due 14 January 2027 and full papers 21 January 2027 (AoE); notification is 5 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-14T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://sigir2027.org/pages/submit-full.html",
+    "evidence_quote": "Full paper abstract submission: January 14, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SIGIR 2027 call for full papers (search results): abstract January 14, 2027; full paper January 21, 2027",
+    "Submission system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The official site labels these dates as proposed; they may still change",
+    "Deadlines for short, demo, resource, reproducibility and perspective papers listed as TBA"
+  ],
+  "id": "opp_f5874a3cc28a6bbe",
+  "fingerprint": "1c563e248da6126e",
+  "discovered_at": "2026-10-29T03:18:40.382Z",
+  "last_verified_at": "2026-10-29T03:18:40.382Z",
+  "content_hash": "sha256:2725933c3e2bf55aaeeaf83c428df0b9904687e0f5e5c9520cab64e89840b9c8"
+}

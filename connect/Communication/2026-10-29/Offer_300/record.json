@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "In-Country/In-Region Programme Sub-Saharan Africa",
+    "evidence_url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=10000486",
+    "evidence_quote": "In-Country/In-Region Programme Sub-Saharan Africa"
+  },
+  "institution": {
+    "name": "DAAD (German Academic Exchange Service)",
+    "website": "https://www.daad.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=10000486",
+  "source_url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=10000486",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Master's and doctoral studies at host universities in Sub-Saharan Africa",
+  "seniority": "Master's and doctoral",
+  "qualifications": [
+    "For graduates from Sub-Saharan Africa (In-Country and In-Region options)",
+    "Current calls cover programmes in Burkina Faso, Ethiopia, Ghana, Kenya, Malawi, Rwanda, Tanzania and Uganda",
+    "Apply through the DAAD portal and separately to the host university for admission",
+    "Individual host-institution calls can have their own deadlines; the South Africa DAAD-NRF In-Country scholarship is paused"
+  ],
+  "skills": [],
+  "description_short": "DAAD scholarships for Sub-Saharan African graduates to pursue master's or doctoral studies at host universities in their own country or region. Current calls cover programmes in Burkina Faso, Ethiopia, Ghana, Kenya, Malawi, Rwanda, Tanzania and Uganda; applications close 12 November 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-12",
+    "timezone": null,
+    "evidence_url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=10000486",
+    "evidence_quote": "November, 12, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official DAAD scholarship database entry (search results): application deadline November 12, 2026",
+    "DAAD MUBAS call for 2027 (search results) lists 12th November 2026 as the closing date in the DAAD portal",
+    "DAAD portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Study start window conflicts across DAAD pages (January-July 2027 vs August-December 2027)",
+    "Host-institution calls may set different deadlines",
+    "Deadline timezone not stated",
+    "Location spans several countries, so no single country is set"
+  ],
+  "id": "opp_6634ce39661591f7",
+  "fingerprint": "ef419298490e66f1",
+  "discovered_at": "2026-10-29T03:18:40.627Z",
+  "last_verified_at": "2026-10-29T03:18:40.627Z",
+  "content_hash": "sha256:eeb6e77e8bfa5eac14819d3c0c9da6fd3ffe699f87bf00a17d3f0023db72ffdd"
+}
