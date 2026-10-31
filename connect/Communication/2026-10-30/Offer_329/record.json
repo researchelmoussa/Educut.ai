@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD in Computer Science",
+    "evidence_url": "https://www.comp.nus.edu.sg/programmes/pg/phdcs/",
+    "evidence_quote": "PhD in Computer Science - NUS Computing"
+  },
+  "institution": {
+    "name": "National University of Singapore (NUS), School of Computing",
+    "website": "https://www.comp.nus.edu.sg",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.comp.nus.edu.sg/programmes/pg/phdcs/application/",
+  "source_url": "https://www.comp.nus.edu.sg/programmes/pg/phdcs/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Singapore",
+    "country": "Singapore",
+    "country_code": "SG"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "August intake cut-off 15 December (January intake 15 June); applications accepted year round for the next intake",
+    "Research Scholarship applicants need at least a 2nd Class Upper Honours in computing or a related discipline",
+    "Scholarship covers monthly emoluments and full tuition subsidy, renewable annually for up to four years",
+    "Outcome about three months after the cut-off; overseas scholarship interviews in mid-March"
+  ],
+  "skills": [],
+  "description_short": "NUS Computing's PhD in Computer Science takes applications year round, with a 15 December cut-off for the August intake. Research Scholarships cover monthly emoluments and full tuition for up to four years for applicants with at least Second Upper Honours.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": "Asia/Singapore",
+    "evidence_url": "https://www.comp.nus.edu.sg/programmes/pg/phdcs/application/",
+    "evidence_quote": "August Intake: 15 December"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NUS Computing application page (search results): August intake cut-off 15 December; applications accepted year round",
+    "Graduate application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Year inferred: the page states a recurring 15 December cut-off (taken as the August 2027 intake)",
+    "Current stipend amount not confirmed (an older PDF gives SGD 2,000-2,300 per month)"
+  ],
+  "id": "opp_f6adf016b758a277",
+  "fingerprint": "4b206c7a861df2bd",
+  "discovered_at": "2026-10-30T03:20:11.797Z",
+  "last_verified_at": "2026-10-30T03:20:11.797Z",
+  "content_hash": "sha256:7491c12c8880e544495275a765170111a0fa1d2107701b2b1d8f94fa24ef28a6"
+}

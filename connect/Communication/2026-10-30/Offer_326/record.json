@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Admissions for International Degree Students (2027 September Entry)",
+    "evidence_url": "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/application-timeline/",
+    "evidence_quote": "National Taiwan University (NTU) 2027/2028 September Entry"
+  },
+  "institution": {
+    "name": "National Taiwan University (NTU)",
+    "website": "https://www.ntu.edu.tw",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://admissions.ntu.edu.tw/apply/degree-students/international-students/",
+  "source_url": "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/application-timeline/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Taiwan",
+    "country_code": "TW"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "All NTU bachelor's, master's and PhD programmes",
+  "seniority": "Bachelor's, master's and doctoral",
+  "qualifications": [
+    "Round 1: 29 September - 5 November 2026 (expected to be extended because of system maintenance); Round 2: 1 December 2026 - 19 January 2027",
+    "Apply to up to five departments or graduate institutes",
+    "Fee NTD 2,000 or USD 80 per department; online applications only"
+  ],
+  "skills": [],
+  "description_short": "National Taiwan University admits international degree students for September 2027 entry in two rounds. Round 2 runs 1 December 2026 to 19 January 2027, with decisions on 8 April 2027; applicants may choose up to five departments.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-19",
+    "timezone": "Asia/Taipei",
+    "evidence_url": "https://admissions.ntu.edu.tw/apply/degree-students/admission-information/application-timeline/",
+    "evidence_quote": "Round 2: Applications open December 1, 2026 and close January 19, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NTU admissions timeline (search results): Round 2 opens December 1, 2026 and closes January 19, 2027",
+    "Official NTU page (search results): application system under maintenance; first-round deadline expected to be extended"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Application system was under maintenance at the time of the search",
+    "Round 2 has not opened yet (opens 1 December 2026)",
+    "Scholarships for international degree students not captured",
+    "City not stated in the text seen"
+  ],
+  "id": "opp_4d14d27b1a51996c",
+  "fingerprint": "dbca6144ca5e4a6e",
+  "discovered_at": "2026-10-30T03:20:11.547Z",
+  "last_verified_at": "2026-10-30T03:20:11.547Z",
+  "content_hash": "sha256:fb871a36ab7aa038a0ba34ba12c72dab3eae53dec6cf5ee9a9db45ca67fcaa52"
+}

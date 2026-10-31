@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Japanese Studies Fellowship Program",
+    "evidence_url": "https://co.jpf.go.jp/pool/user_upload/files/foerderprogramme/2027-28/RJS-FW2027_e.pdf",
+    "evidence_quote": "[RJS-FW 2027] Japanese Studies Fellowship Program"
+  },
+  "institution": {
+    "name": "The Japan Foundation",
+    "website": "https://www.jpf.go.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.jpf.go.jp/e/program/intel.html",
+  "source_url": "https://co.jpf.go.jp/pool/user_upload/files/foerderprogramme/2027-28/RJS-FW2027_e.pdf",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Japanese studies (humanities and social sciences)",
+  "seniority": "Scholars and doctoral candidates",
+  "qualifications": [
+    "Categories: long-term research (4-12 months), short-term research (21-89 days), doctoral fellowships (4-12 months)",
+    "Doctoral candidates must be Ph.D. candidates in humanities or social sciences who have completed or will complete coursework by the fellowship start",
+    "Fellowships must begin between 20 June 2027 and 20 March 2028",
+    "US applicants apply via The Japan Foundation, New York (deadline 11:59pm EST, 1 December 2026)"
+  ],
+  "skills": [],
+  "description_short": "The Japan Foundation's Japanese Studies Fellowship Program funds long-term, short-term and doctoral research fellowships starting between June 2027 and March 2028. Applications close 1 December 2026 (1:00 p.m. Japan time; US applicants 11:59 p.m. EST).",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01T13:00:00+09:00",
+    "timezone": "Asia/Tokyo (JST)",
+    "evidence_url": "https://co.jpf.go.jp/pool/user_upload/files/foerderprogramme/2027-28/RJS-FW2027_e.pdf",
+    "evidence_quote": "December 1, 2026, 1:00 p.m. (Japan Standard Time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Japan Foundation application instructions (search results): deadline December 1, 2026, 1:00 p.m. JST",
+    "Japan Foundation New York (search results): \"Now Accepting Applications\" for Japanese Studies grants and fellowships; US deadline 11:59pm EST December 1, 2026"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Location: fellowships are for research in Japan per the program's nature; the text seen does not state it explicitly",
+    "Stipend amounts not captured",
+    "Application route differs by country of residence (overseas Japan Foundation offices)"
+  ],
+  "id": "opp_d9e6254310c0b10f",
+  "fingerprint": "d7fb4678b0b0c04c",
+  "discovered_at": "2026-10-30T03:20:11.178Z",
+  "last_verified_at": "2026-10-30T03:20:11.178Z",
+  "content_hash": "sha256:c7a5a6e595eeea5637149e799f941178515b6d769f9debe1f3b31ee1201313bb"
+}

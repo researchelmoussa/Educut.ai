@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "MIT Summer Research Program (MSRP)",
+    "evidence_url": "https://oge.mit.edu/msrp/",
+    "evidence_quote": "MIT Summer Research Program"
+  },
+  "institution": {
+    "name": "Massachusetts Institute of Technology (MIT), Office of Graduate Education",
+    "website": "https://oge.mit.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://oge.mit.edu/msrp/application/",
+  "source_url": "https://oge.mit.edu/msrp/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Research across MIT disciplines",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Minimum 3.5 GPA",
+    "Full-time enrolment at a U.S. institution as a sophomore, junior or non-graduating senior",
+    "International students on F-1 visas need CPT or OPT approval by 15 May 2027",
+    "Recommendation letters must arrive by the 19 January 2027 deadline"
+  ],
+  "skills": [],
+  "description_short": "The MIT Summer Research Program (MSRP) brings undergraduates enrolled at U.S. institutions to MIT for summer research from 7 June to 7 August 2027. Applications close 19 January 2027 at 11:59 PM ET; a 3.5 minimum GPA applies.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-19T23:59:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://oge.mit.edu/msrp/application/",
+    "evidence_quote": "January 19, 2027 at 11:59 PM ET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official MSRP application page (search results): applications opened September 29, 2026; deadline January 19, 2027 at 11:59 PM ET",
+    "Application form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Some FAQ text still refers to 2026 graduation cutoffs",
+    "Stipend and housing details not captured",
+    "City not stated in the text seen"
+  ],
+  "id": "opp_77ce30be5df19a9a",
+  "fingerprint": "b28c33f1b6537ec0",
+  "discovered_at": "2026-10-30T03:20:11.427Z",
+  "last_verified_at": "2026-10-30T03:20:11.427Z",
+  "content_hash": "sha256:9e01b5d8a61002a2d81890869bf1b73b57e3ac54de9c5cec51d20e8b5b3c0d7d"
+}
