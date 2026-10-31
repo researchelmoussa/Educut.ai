@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD by Research Programme",
+    "evidence_url": "https://www.ntu.edu.sg/medicine/education/graduate-programmes/phd-by-research-programme/admissions-applications",
+    "evidence_quote": "PhD by Research Programme"
+  },
+  "institution": {
+    "name": "Nanyang Technological University (NTU), Lee Kong Chian School of Medicine",
+    "website": "https://www.ntu.edu.sg/medicine",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ntu.edu.sg/medicine/education/graduate-programmes/phd-by-research-programme/admissions-applications",
+  "source_url": "https://www.ntu.edu.sg/medicine/education/graduate-programmes/phd-by-research-programme/admissions-applications",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Singapore",
+    "country_code": "SG"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Biomedical and medical research",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Bachelor's degree with at least Distinction or Second Upper Class Honours (or equivalent), or an MBBS",
+    "Confirmation from a proposed supervisor; choose a project from the PhD Project Proposals list",
+    "TOEFL iBT 100 or IELTS 6.5 (results within two years) where required",
+    "CV, one-page personal statement and one-page project proposal; S$50 application fee via the NTU Graduate Admissions Portal"
+  ],
+  "skills": [],
+  "description_short": "NTU's Lee Kong Chian School of Medicine accepts PhD by Research applications for the August 2027 intake from 1 October to 31 December 2026, with outcomes by June 2027. Applicants choose a project and need a proposed supervisor's confirmation.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-31",
+    "timezone": "Asia/Singapore",
+    "evidence_url": "https://www.ntu.edu.sg/medicine/education/graduate-programmes/phd-by-research-programme/admissions-applications",
+    "evidence_quote": "August 2027 intake: 1 October 2026 to 31 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NTU LKCMedicine admissions page (search results): August 2027 intake application window 1 October 2026 to 31 December 2026; outcome by June 2027",
+    "Graduate Admissions Portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "An older LKCMedicine page lists 1 October to 31 January; the newer NTU page (31 December) is used",
+    "Scholarship details not captured",
+    "City not stated in the text seen"
+  ],
+  "id": "opp_d7c3f5df1a79d285",
+  "fingerprint": "74701c805e1365fd",
+  "discovered_at": "2026-10-30T03:20:11.672Z",
+  "last_verified_at": "2026-10-30T03:20:11.672Z",
+  "content_hash": "sha256:78989a95b12739768fbbca9cf1ba0e44cff0fb1a14cf09e581b2904eb362bb88"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "International PhD studentships",
+    "evidence_url": "https://www.reading.ac.uk/doctoral-researcher-college/funding/phd-studentships/international-phd-studentships",
+    "evidence_quote": "International PhD studentships"
+  },
+  "institution": {
+    "name": "University of Reading",
+    "website": "https://www.reading.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.reading.ac.uk/doctoral-researcher-college/funding/phd-studentships/international-phd-studentships",
+  "source_url": "https://www.reading.ac.uk/doctoral-researcher-college/funding/phd-studentships/international-phd-studentships",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "All disciplines offered for PhD study at the University of Reading",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Applicants must be eligible for International fees",
+    "Apply for a PhD place by 15 January 2027 and enter \"International Research Studentship Competition\" in the scholarship section",
+    "Off-campus/distance applicants receive tuition fees and the training and development allowance only, with no stipend",
+    "Each School nominates one candidate; a university-wide panel decides around the end of March 2027"
+  ],
+  "skills": [],
+  "description_short": "The University of Reading offers International PhD studentships for an October 2027 start to applicants eligible for international fees. Applicants apply for a PhD place by 15 January 2027; Schools nominate candidates and a university panel decides around the end of March.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.reading.ac.uk/doctoral-researcher-college/funding/phd-studentships/international-phd-studentships",
+    "evidence_quote": "the deadline for applications is Friday 15th January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official University of Reading page (search results): studentships available to start in October 2027; deadline Friday 15 January 2027",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Stipend amount not captured in the text seen",
+    "City not stated in the text seen",
+    "Number of studentships not stated in the text seen"
+  ],
+  "id": "opp_7bcd546bbec74be6",
+  "fingerprint": "e57b6cea8bcbe1aa",
+  "discovered_at": "2026-10-30T03:20:12.527Z",
+  "last_verified_at": "2026-10-30T03:20:12.527Z",
+  "content_hash": "sha256:0f19df692db91750f0a309ff964af62c94a29fdff424d41ee42e4a768b4044ea"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "2027 Postgraduate NRF Scholarships",
+    "evidence_url": "https://www.up.ac.za/funding-site/funding/2027-postgraduate-nrf-scholarships",
+    "evidence_quote": "2027 Postgraduate NRF Scholarships"
+  },
+  "institution": {
+    "name": "University of Pretoria (UP)",
+    "website": "https://www.up.ac.za",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.up.ac.za/funding-site/funding/2027-postgraduate-nrf-scholarships",
+  "source_url": "https://www.up.ac.za/funding-site/funding/2027-postgraduate-nrf-scholarships",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Pretoria",
+    "country": "South Africa",
+    "country_code": "ZA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Postgraduate study (Honours to Doctoral)",
+  "seniority": "Honours, master's and doctoral",
+  "qualifications": [
+    "National Research Foundation (NRF) scholarships for the 2027 academic year",
+    "Six different scholarships available, from Honours to Doctoral level",
+    "Call documents attached to the UP funding page; faculty admission rules apply separately"
+  ],
+  "skills": [],
+  "description_short": "The University of Pretoria lists six National Research Foundation scholarships for the 2027 academic year, from Honours to Doctoral level. Applications close 23 November 2026 at 15:55; the NRF call documents are attached to the UP funding page.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-23T15:55:00+02:00",
+    "timezone": "Africa/Johannesburg",
+    "evidence_url": "https://www.up.ac.za/funding-site/funding/2027-postgraduate-nrf-scholarships",
+    "evidence_quote": "Closing date: Mon, 11/23/2026 - 15:55"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UP funding page (search results): NRF scholarships open for the 2027 academic year; closing date Mon, 11/23/2026 - 15:55"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Scholarship values and NRF eligibility rules (citizenship, age) not captured",
+    "Funder is the NRF; UP hosts the call",
+    "City taken from the institution name"
+  ],
+  "id": "opp_a2432fd40f54a6ba",
+  "fingerprint": "f5ad6b82a2278b11",
+  "discovered_at": "2026-10-30T03:20:12.391Z",
+  "last_verified_at": "2026-10-30T03:20:12.391Z",
+  "content_hash": "sha256:c359f25f622b6b0c87404baa6aa15ffb4f6db99b623b71640c0ba51a1ce090ba"
+}

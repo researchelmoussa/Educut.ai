@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Computer Science - Doctor of Philosophy (PhD)",
+    "evidence_url": "https://uwaterloo.ca/future-graduate-students/programs/by-faculty/math/computer-science-doctor-philosophy-phd",
+    "evidence_quote": "Computer Science - Doctor of Philosophy (PhD)"
+  },
+  "institution": {
+    "name": "University of Waterloo, David R. Cheriton School of Computer Science",
+    "website": "https://cs.uwaterloo.ca",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://uwaterloo.ca/future-graduate-students/programs/by-faculty/math/computer-science-doctor-philosophy-phd",
+  "source_url": "https://cs.uwaterloo.ca/future-graduate-students/applying-admissions",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Deadline December 1 for September admission (Fall 2027)",
+    "Application documents due on the deadline day; reference letters within 14 calendar days of the deadline",
+    "Waterloo advises applying at least two weeks before the deadline"
+  ],
+  "skills": [],
+  "description_short": "The University of Waterloo's Cheriton School of Computer Science accepts PhD applications for September 2027. The program page sets a 1 December deadline for September admission; reference letters are due within 14 days of the deadline.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": "America/Toronto",
+    "evidence_url": "https://uwaterloo.ca/future-graduate-students/programs/by-faculty/math/computer-science-doctor-philosophy-phd",
+    "evidence_quote": "December 1 (for admission in September of the following year)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Waterloo program page (search results): December 1 deadline for September admission; programs currently accepting applications for fall 2027",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "An older Waterloo admissions page gives December 15; the program page date (December 1) is used",
+    "Year inferred from the \"following year\" wording",
+    "Funding details not captured",
+    "City not stated in the text seen"
+  ],
+  "id": "opp_05568820d9a69963",
+  "fingerprint": "51daafee04cf9e2f",
+  "discovered_at": "2026-10-30T03:20:12.638Z",
+  "last_verified_at": "2026-10-30T03:20:12.638Z",
+  "content_hash": "sha256:5a31fe682ae5afa8cac24b6bfaab0f9c536481446957846f9103a5d1c0d0f2c5"
+}

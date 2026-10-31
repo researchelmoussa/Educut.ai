@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "William Georgetti Scholarship",
+    "evidence_url": "https://www.universitiesnz.ac.nz/scholarships/william-georgetti-scholarship",
+    "evidence_quote": "William Georgetti Scholarship"
+  },
+  "institution": {
+    "name": "Universities New Zealand",
+    "website": "https://www.universitiesnz.ac.nz",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.universitiesnz.ac.nz/scholarships/william-georgetti-scholarship",
+  "source_url": "https://www.universitiesnz.ac.nz/scholarships/postgraduate-scholarships",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "New Zealand",
+    "country_code": "NZ"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Postgraduate study in any field of importance to New Zealand",
+  "seniority": "Master's and doctoral",
+  "qualifications": [
+    "At least five years' residence in New Zealand immediately before the year of selection (at least 1,350 days over five years and 240 days in each year)",
+    "For postgraduate study in New Zealand or overseas",
+    "Applications open 1 October and close 1 February"
+  ],
+  "skills": [],
+  "description_short": "Universities New Zealand's William Georgetti Scholarship supports postgraduate study by long-term New Zealand residents, in New Zealand or overseas. Awards reach NZ$30,000 a year for doctoral study in New Zealand. Applications close 1 February.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": "Pacific/Auckland",
+    "evidence_url": "https://www.universitiesnz.ac.nz/scholarships/postgraduate-scholarships",
+    "evidence_quote": "Applications open: 1 October Applications close: 1 February"
+  },
+  "compensation": {
+    "value": "Up to NZ$20,000 a year (Masters in NZ), NZ$30,000 a year (doctoral in NZ), up to NZ$45,000 a year overseas",
+    "evidence_url": "https://www.universitiesnz.ac.nz/scholarships/william-georgetti-scholarship",
+    "evidence_quote": "In New Zealand up to $20,000 per year for Masters study and $30,000 per year for doctoral study. For those students studying overseas, the award can be up to $NZ45,000 per year."
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Universities NZ postgraduate scholarships page (search results): applications open 1 October, close 1 February",
+    "No 2027-specific notice seen; application form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Year inferred: the page states an annual 1 October - 1 February window",
+    "Older regulations mention 1 March; the current page and newer regulations say 1 February"
+  ],
+  "id": "opp_0c329e7604ba73de",
+  "fingerprint": "1eca5480e3db4882",
+  "discovered_at": "2026-10-30T03:20:12.753Z",
+  "last_verified_at": "2026-10-30T03:20:12.753Z",
+  "content_hash": "sha256:4a46b13aeced32762808be34d05b1655517109df4ccb811390b9c998b6372973"
+}
