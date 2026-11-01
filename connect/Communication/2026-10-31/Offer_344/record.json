@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Informatics Program, Doctoral Program (October 2027 Admission)",
+    "evidence_url": "https://www.soken.ac.jp/en/admission/application_info/informatics/",
+    "evidence_quote": "October 2027 Admission"
+  },
+  "institution": {
+    "name": "SOKENDAI (The Graduate University for Advanced Studies), Informatics Program",
+    "website": "https://www.soken.ac.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.soken.ac.jp/en/admission/application_info/informatics/",
+  "source_url": "https://www.soken.ac.jp/en/admission/application_info/informatics/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Informatics",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Applicants residing abroad use the special admissions route (second round November 19 to December 2, 2026, 5:00 pm JST)",
+    "General admission (December 3 to 9, 2026) is only for applicants residing in Japan",
+    "Before applying, contact the prospective supervisor and confirm they will accept you if you pass",
+    "Entrance fee JPY 282,000; tuition JPY 267,900 per six months (2027 guideline)"
+  ],
+  "skills": [],
+  "description_short": "SOKENDAI's Informatics Program is accepting second-round applications for its doctoral program starting October 2027. Applicants residing abroad apply November 19 to December 2, 2026 (5:00 pm JST) and must first secure a prospective supervisor.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-02T17:00:00+09:00",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.soken.ac.jp/en/admission/application_info/informatics/",
+    "evidence_quote": "November 19 to December 2, 2026, 5:00 pm JST"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SOKENDAI Informatics application page (search results): second round for applicants residing abroad, November 19 to December 2, 2026, 5:00 pm JST (October 2027 admission)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The 2027 guideline also shows an October 29, 2026 date whose purpose (possibly a qualification pre-screening step) was not visible",
+    "Second-round exam date differs across documents (January 18 vs 19-20, 2027)",
+    "City not stated in the text seen"
+  ],
+  "id": "opp_12eacd685cac83ba",
+  "fingerprint": "78a8471a21b3515c",
+  "discovered_at": "2026-10-31T03:16:54.111Z",
+  "last_verified_at": "2026-10-31T03:16:54.111Z",
+  "content_hash": "sha256:b8c85d00cf228addefad655a19e0c9bf4a797e123162eb8f1fbd44f67cfde92c"
+}

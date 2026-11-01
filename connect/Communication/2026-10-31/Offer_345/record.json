@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "International PhD Programme (2027 entry)",
+    "evidence_url": "https://www2.mrc-lmb.cam.ac.uk/students/international-phd-programme/how-to-apply/",
+    "evidence_quote": "applications for 2027 are open"
+  },
+  "institution": {
+    "name": "MRC Laboratory of Molecular Biology (LMB)",
+    "website": "https://www2.mrc-lmb.cam.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www2.mrc-lmb.cam.ac.uk/students/international-phd-programme/how-to-apply/",
+  "source_url": "https://www2.mrc-lmb.cam.ac.uk/students/international-phd-programme/how-to-apply/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Molecular biology, structural and cell biology",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Between 20 and 30 new graduate students are selected every year",
+    "Apply through the LMB International PhD Programme"
+  ],
+  "skills": [],
+  "description_short": "The MRC Laboratory of Molecular Biology in Cambridge is accepting applications to its International PhD Programme for 2027 entry, selecting 20 to 30 students each year. The deadline is Tuesday 8 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-08",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www2.mrc-lmb.cam.ac.uk/students/international-phd-programme/how-to-apply/",
+    "evidence_quote": "Tuesday 8th December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official LMB how-to-apply page (search results): applications for 2027 are open; deadline Tuesday 8th December 2026"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "A vacancy listing on the LMB site shows a closing date of 23/11/2026, possibly for a specific group position; check the posting",
+    "Funding details not captured",
+    "Country inferred from the Cambridge location and UK-applicant wording"
+  ],
+  "id": "opp_8ad23a3ad33ee5b0",
+  "fingerprint": "d319404f064ef185",
+  "discovered_at": "2026-10-31T03:16:53.815Z",
+  "last_verified_at": "2026-10-31T03:16:53.815Z",
+  "content_hash": "sha256:5fc975ffa045963c07392c4cad887609a0aad2fe64ec6aa618ffc63d3db26fdd"
+}

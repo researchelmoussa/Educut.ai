@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "DIS 2027 Interactivity & Arts",
+    "evidence_url": "https://dis.acm.org/2027/interactivity-arts/",
+    "evidence_quote": "Interactivity & Arts"
+  },
+  "institution": {
+    "name": "ACM Conference on Designing Interactive Systems (DIS 2027)",
+    "website": "https://dis.acm.org/2027/",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://dis.acm.org/2027/interactivity-arts/",
+  "source_url": "https://dis.acm.org/2027/interactivity-arts/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Human-computer interaction, interaction design, arts",
+  "seniority": "Researchers, designers and artists",
+  "qualifications": [
+    "Deadlines are Anywhere on Earth",
+    "Acceptance notification March 19th, 2027; camera-ready due April 16th, 2027"
+  ],
+  "skills": [],
+  "description_short": "ACM DIS 2027 invites Interactivity & Arts submissions. The deadline is February 19th, 2027 (Anywhere on Earth), with notifications on March 19th and the conference running June 28 to July 2, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-19T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://dis.acm.org/2027/interactivity-arts/",
+    "evidence_quote": "Submission Deadline February 19th, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official DIS 2027 Interactivity & Arts page (search results): submission deadline February 19th, 2027, AoE"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Main papers track deadline not confirmed (an aggregator lists 2027-01-11)",
+    "Conference location given only by an aggregator (Stockholm, Sweden); location left empty"
+  ],
+  "id": "opp_184f5b8fe2e3d439",
+  "fingerprint": "f368bd66a3598db7",
+  "discovered_at": "2026-10-31T03:16:51.299Z",
+  "last_verified_at": "2026-10-31T03:16:51.299Z",
+  "content_hash": "sha256:bb52d661f80ac5707c00f882ada0d9d971ece65d17525e87c4109085b5779955"
+}

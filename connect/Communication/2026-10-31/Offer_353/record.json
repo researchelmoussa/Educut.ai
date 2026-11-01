@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Graduate Admission for International Applicants, Fall 2027",
+    "evidence_url": "https://www.gist.ac.kr/iadm/html/sub02/020101.html",
+    "evidence_quote": "Schedule< Admission Guide <Admissions"
+  },
+  "institution": {
+    "name": "Gwangju Institute of Science and Technology (GIST)",
+    "website": "https://www.gist.ac.kr",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.gist.ac.kr/iadm/html/sub02/020101.html",
+  "source_url": "https://www.gist.ac.kr/iadm/html/sub02/020101.html",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Gwangju",
+    "country": "South Korea",
+    "country_code": "KR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Science and technology",
+  "seniority": "Master's / Doctoral",
+  "qualifications": [
+    "Late submissions are not allowed",
+    "Fall application period March 9, 10:00 to April 8, 17:00, 2027 (KST); enrollment by July 5, 2027"
+  ],
+  "skills": [],
+  "description_short": "GIST's 2027 admission schedule for international graduate applicants sets the Fall 2027 application period from March 9 to April 8, 2027 (17:00 KST). Late submissions are not allowed.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-08T17:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "evidence_url": "https://www.gist.ac.kr/iadm/html/sub02/020101.html",
+    "evidence_quote": "April 8, 17:00"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official GIST international admissions schedule (search results): Fall 2027 application period March 9, 10:00 to April 8, 17:00, 2027 (KST)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Applications open March 9, 2027",
+    "Programmes and scholarship terms not captured",
+    "City taken from the institution name",
+    "Country taken from the institution's official name/domain; not seen verbatim in the search snippet"
+  ],
+  "id": "opp_f58b10a5ce1556a7",
+  "fingerprint": "9c9b07615465edbf",
+  "discovered_at": "2026-10-31T03:16:52.862Z",
+  "last_verified_at": "2026-10-31T03:16:52.862Z",
+  "content_hash": "sha256:5e2256d89bd071ee936fbbc8cc27278976d05cec3b2ff5cebdf22a59d2048437"
+}
