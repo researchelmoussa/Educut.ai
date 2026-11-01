@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Master's Degrees, Fall 2027 Admission",
+    "evidence_url": "https://www.aus.edu/admissions/masters-degrees/deadlines-and-important-dates-for-masters-admissions",
+    "evidence_quote": "Accepting applications for Fall 2027"
+  },
+  "institution": {
+    "name": "American University of Sharjah (AUS)",
+    "website": "https://www.aus.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.aus.edu/admissions/masters-degrees/deadlines-and-important-dates-for-masters-admissions",
+  "source_url": "https://www.aus.edu/admissions/masters-degrees/deadlines-and-important-dates-for-masters-admissions",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Sharjah",
+    "country": "United Arab Emirates",
+    "country_code": "AE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Open across disciplines",
+  "seniority": "Master's",
+  "qualifications": [
+    "Four-year bachelor's degree from an accredited institution with a minimum cumulative GPA of 3.0 (on a 4.0 scale)",
+    "English proficiency required",
+    "Graduate Assistantship applicants: tick the assistantship box and submit transcripts and two reference letters by May 27, 2027",
+    "Applicants not seeking an assistantship: deadline July 22, 2027"
+  ],
+  "skills": [],
+  "description_short": "American University of Sharjah is accepting master's applications for Fall 2027 since October 19, 2026. Applicants seeking a Graduate Assistantship must apply by May 27, 2027; others by July 22, 2027. Classes begin August 23, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-05-27",
+    "timezone": "Asia/Dubai",
+    "evidence_url": "https://www.aus.edu/admissions/masters-degrees/deadlines-and-important-dates-for-masters-admissions",
+    "evidence_quote": "May 27, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official AUS master's deadlines page (search results): accepting applications for Fall 2027 from October 19, 2026; assistantship deadline May 27, 2027; non-assistantship July 22, 2027"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Card deadline uses the earlier Graduate Assistantship date; the general deadline is July 22, 2027",
+    "Country taken from the institution's official domain; not seen verbatim in the snippet"
+  ],
+  "id": "opp_0e6011b6b1aab066",
+  "fingerprint": "384ed33192edf5ab",
+  "discovered_at": "2026-10-31T03:16:51.593Z",
+  "last_verified_at": "2026-10-31T03:16:51.593Z",
+  "content_hash": "sha256:dc943cd8cf9ef8dcd73feb816960c3aa29de63fd74da325459aa9eae438e3d6a"
+}

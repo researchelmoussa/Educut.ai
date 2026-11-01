@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "Young Scientists Summer Program 2027",
+    "evidence_url": "https://iiasa.ac.at/employment/job-openings?jh=dask82y4td6iww3t8cykuun7in77zg4",
+    "evidence_quote": "applications for the Young Scientists Summer Program 2027 are now open"
+  },
+  "institution": {
+    "name": "International Institute for Applied Systems Analysis (IIASA)",
+    "website": "https://iiasa.ac.at",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://iiasa.ac.at/train-with-us/yssp-young-scientists-summer-program/application-information",
+  "source_url": "https://iiasa.ac.at/employment/job-openings?jh=dask82y4td6iww3t8cykuun7in77zg4",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": null,
+    "country": "Austria",
+    "country_code": "AT"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Systems analysis, global change research",
+  "seniority": "PhD students",
+  "qualifications": [
+    "Enrolled in a PhD program, ideally within one to two years of completing the degree",
+    "Available to participate full-time and in person for the full three-month program (June, July and August)",
+    "All information and documents must be submitted in one session on the Onlyfy system (progress cannot be saved)"
+  ],
+  "skills": [],
+  "description_short": "IIASA's Young Scientists Summer Program 2027 is accepting applications from PhD students for a three-month, full-time, in-person research stay in June, July and August. Applications close 10 January 2027 at 23:00 (Vienna time).",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-10T23:00:00+01:00",
+    "timezone": "Europe/Vienna",
+    "evidence_url": "https://iiasa.ac.at/employment/job-openings?jh=dask82y4td6iww3t8cykuun7in77zg4",
+    "evidence_quote": "10 January 2027 at 23:00"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IIASA job openings page (search results): applications for YSSP 2027 are now open; deadline 10 January 2027, 23:00",
+    "Official application information page gives the same January 2027, 23:00 CET deadline; application system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The job page labels the time CEST while the information page says CET; recorded as 23:00 Vienna time (CET in January)",
+    "Funding and stipend details not captured",
+    "City not stated in the text seen",
+    "Country taken from IIASA's official pages (information session for Austria); not seen in the deadline snippet"
+  ],
+  "id": "opp_42514879bd9adc44",
+  "fingerprint": "2c420e541d577f8c",
+  "discovered_at": "2026-10-31T03:16:52.988Z",
+  "last_verified_at": "2026-10-31T03:16:52.988Z",
+  "content_hash": "sha256:51ee56dd5b8af15e306a52c4c869bb1b5984d30f9728e637dceba85da94655c7"
+}

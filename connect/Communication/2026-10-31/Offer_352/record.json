@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Undergraduate Research Program (URP) 2027",
+    "evidence_url": "https://www.cshl.edu/education/undergraduate-research-program/",
+    "evidence_quote": "The 2027 URP will run Monday, June 7 through Saturday, August 7"
+  },
+  "institution": {
+    "name": "Cold Spring Harbor Laboratory (CSHL)",
+    "website": "https://www.cshl.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cshl.edu/education/undergraduate-research-program/",
+  "source_url": "https://www.cshl.edu/education/undergraduate-research-program/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Biological sciences research",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Current sophomores and juniors are eligible",
+    "Letters of recommendation must arrive by the deadline",
+    "Late applications are not reviewed"
+  ],
+  "skills": [],
+  "description_short": "Cold Spring Harbor Laboratory's Undergraduate Research Program runs June 7 to August 7, 2027, for current sophomores and juniors. Applications and recommendation letters are due January 15 at 11:59 pm Pacific Standard Time; applicants hear by end of March.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15T23:59:00-08:00",
+    "timezone": "America/Los_Angeles",
+    "evidence_url": "https://www.cshl.edu/education/undergraduate-research-program/",
+    "evidence_quote": "January 15 at 11:59 pm Pacific Standard Time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CSHL URP page (search results, updated days before the run): deadline January 15, 11:59 pm PST, for the 2027 program"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Stipend and housing details not captured",
+    "City not stated in the text seen",
+    "Country taken from the institution's official name/domain; not seen verbatim in the search snippet"
+  ],
+  "id": "opp_1496d8b1f6ddbc64",
+  "fingerprint": "09bd55d97fb25d53",
+  "discovered_at": "2026-10-31T03:16:52.412Z",
+  "last_verified_at": "2026-10-31T03:16:52.412Z",
+  "content_hash": "sha256:14dc9a4a830e2c1fce0c83f63842014518af2ee1e121ffe4a6babe286d39145c"
+}

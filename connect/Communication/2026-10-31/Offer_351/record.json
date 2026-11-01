@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Erasmus Mundus Joint Master in Data Engineering and Artificial Intelligence (DEAI)",
+    "evidence_url": "https://deai.ulb.be/home/students/admission/",
+    "evidence_quote": "Joint Master Degree in Data Engineering and Artificial Intelligence"
+  },
+  "institution": {
+    "name": "DEAI Erasmus Mundus consortium (coordinated at Université libre de Bruxelles)",
+    "website": "https://deai.ulb.be",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://deai.ulb.be/home/students/admission/",
+  "source_url": "https://deai.ulb.be/home/students/admission/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Data engineering, artificial intelligence",
+  "seniority": "Master's",
+  "qualifications": [
+    "Erasmus+ scholarship track deadline: January 11th, 2027 (12:00 GMT); reference letters by January 18th, 2027",
+    "Self-funded and partial-grant track opens March 1st, 2027 (non-EU deadline May 15, EU deadline May 30, 2027)"
+  ],
+  "skills": [],
+  "description_short": "Applications for the 2027-2029 cohort of DEAI, an Erasmus Mundus joint master's in Data Engineering and Artificial Intelligence, are open. The Erasmus+ scholarship period closes January 11th, 2027 (12:00 GMT); a self-funded track opens in March.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-11T12:00:00+00:00",
+    "timezone": "UTC",
+    "evidence_url": "https://deai.ulb.be/home/students/admission/",
+    "evidence_quote": "January 11th, 2027 (12:00 GMT)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official DEAI admission page (search results): grant application period deadline January 11th, 2027 (12:00 GMT)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The DEAI homepage said the online application form was temporarily offline for security maintenance",
+    "Cohort labels differ across DEAI pages (2027-2029 vs 2026-2031)",
+    "Partner universities and study locations not captured; country left empty"
+  ],
+  "id": "opp_060d40da7121ecd3",
+  "fingerprint": "65df285725120854",
+  "discovered_at": "2026-10-31T03:16:52.701Z",
+  "last_verified_at": "2026-10-31T03:16:52.701Z",
+  "content_hash": "sha256:c0ce79d17627b08ba84ee3de19c813d27f1cb574306009b40564c9e97626fd5f"
+}
