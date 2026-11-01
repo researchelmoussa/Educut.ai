@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-10-31T02:53:26.396Z",
+  "updated_at": "2026-11-01T02:54:35.809Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -2231,7 +2231,7 @@
       "deadline": "2026-10-30T23:59:00+08:00",
       "content_hash": "sha256:464348af75b71a5bd8d84864c3b20a00158afbffb87407429312c4d936654a45",
       "last_verified_at": "2026-10-15T01:55:31.208Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-15T01:55:31.397Z",
       "history": [
         {
@@ -2275,6 +2275,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-10-31T03:00:16.319Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-30T23:59:00+08:00 passed"
         }
       ],
       "offer_number": 30
@@ -3725,7 +3732,7 @@
       "deadline": "2026-10-29",
       "content_hash": "sha256:929e0249e1308b6a6b15956732fbbb67eed2ce5e2adfd7d120aa4f98aa92bde2",
       "last_verified_at": "2026-10-16T02:01:53.952Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-16T02:01:54.142Z",
       "history": [
         {
@@ -3769,6 +3776,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-10-31T03:00:16.319Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-29 passed"
         }
       ],
       "offer_number": 46
@@ -22513,6 +22527,1556 @@
           "reason": "application_status=NEEDS_REVIEW"
         }
       ]
+    },
+    "opp_42514879bd9adc44": {
+      "id": "opp_42514879bd9adc44",
+      "fingerprint": "2c420e541d577f8c",
+      "title": "Young Scientists Summer Program 2027",
+      "institution": "International Institute for Applied Systems Analysis (IIASA)",
+      "city": null,
+      "country": "Austria",
+      "source_url": "https://iiasa.ac.at/employment/job-openings?jh=dask82y4td6iww3t8cykuun7in77zg4",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://iiasa.ac.at/train-with-us/yssp-young-scientists-summer-program/application-information",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10T23:00:00+01:00",
+      "content_hash": "sha256:51ee56dd5b8af15e306a52c4c869bb1b5984d30f9728e637dceba85da94655c7",
+      "last_verified_at": "2026-10-31T03:16:52.988Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:03.348Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:03.348Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:03.348Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-31T03:19:19.302Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-31T03:19:19.302Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:27.835Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:27.835Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 335
+    },
+    "opp_a633081d03d9cab9": {
+      "id": "opp_a633081d03d9cab9",
+      "fingerprint": "69639e41c09ff6c2",
+      "title": "2027 Application Information for International Students (Master's Degree and Ph.D. Degree)",
+      "institution": "Peking University, International Students Division",
+      "city": "Beijing",
+      "country": "China",
+      "source_url": "https://www.isd.pku.edu.cn/cn/detail.php?id=729",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.isd.pku.edu.cn/cn/detail.php?id=729",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-25",
+      "content_hash": "sha256:a65eb844077edccb9712b72856076392b0e248ce0247c4b8e03d864d936bfcee",
+      "last_verified_at": "2026-10-31T03:16:53.957Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:03.501Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:03.501Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:03.501Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-31T03:19:36.246Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-31T03:19:36.246Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:28.179Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:28.179Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 336
+    },
+    "opp_d73ff242f82f8874": {
+      "id": "opp_d73ff242f82f8874",
+      "fingerprint": "71594ffece688ea7",
+      "title": "MSc Data Science",
+      "institution": "University of the Witwatersrand (Wits)",
+      "city": null,
+      "country": "South Africa",
+      "source_url": "https://www.wits.ac.za/course-finder/postgraduate/science/msc-data-science/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.wits.ac.za/course-finder/postgraduate/science/msc-data-science/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30",
+      "content_hash": "sha256:12b29398c68fcab0087abfe7afd7bc16a23394fcd74543e6bac6dea6cc34ce48",
+      "last_verified_at": "2026-10-31T03:16:54.685Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:03.670Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:03.670Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:03.670Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-31T03:19:21.186Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-31T03:19:21.187Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:28.459Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:28.459Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 337
+    },
+    "opp_077f154c7b4fb2b9": {
+      "id": "opp_077f154c7b4fb2b9",
+      "fingerprint": "93d8a5549a5ba1c5",
+      "title": "Doutorado em Computação (Edital PPGC 004/2026)",
+      "institution": "Universidade Federal do Rio Grande do Sul (UFRGS), Programa de Pós-Graduação em Computação (PPGC)",
+      "city": null,
+      "country": "Brazil",
+      "source_url": "https://www.inf.ufrgs.br/ppgc/wp-content/uploads/2026/07/Edital-PPGC-004_2026-Doutorado.pdf",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.inf.ufrgs.br/ppgc/wp-content/uploads/2026/07/Edital-PPGC-004_2026-Doutorado.pdf",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-10",
+      "content_hash": "sha256:66127cc10a0a3c91e1e60adcc5457bda76203d819af19f54a3bebc8dda350401",
+      "last_verified_at": "2026-10-31T03:16:54.526Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:03.839Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:03.839Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:03.839Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-31T03:19:32.300Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-31T03:19:32.300Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:29.022Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:29.022Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 338
+    },
+    "opp_0e6011b6b1aab066": {
+      "id": "opp_0e6011b6b1aab066",
+      "fingerprint": "384ed33192edf5ab",
+      "title": "Master's Degrees, Fall 2027 Admission",
+      "institution": "American University of Sharjah (AUS)",
+      "city": "Sharjah",
+      "country": "United Arab Emirates",
+      "source_url": "https://www.aus.edu/admissions/masters-degrees/deadlines-and-important-dates-for-masters-admissions",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.aus.edu/admissions/masters-degrees/deadlines-and-important-dates-for-masters-admissions",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-27",
+      "content_hash": "sha256:dc943cd8cf9ef8dcd73feb816960c3aa29de63fd74da325459aa9eae438e3d6a",
+      "last_verified_at": "2026-10-31T03:16:51.593Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:03.986Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:03.986Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:03.986Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-31T03:19:33.911Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-31T03:19:33.912Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:29.393Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:29.393Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 339
+    },
+    "opp_fc0072b74a8200fb": {
+      "id": "opp_fc0072b74a8200fb",
+      "fingerprint": "78c0aa88ba1e67fb",
+      "title": "CSC-UQ PhD Scholarship (China Scholarship Council)",
+      "institution": "The University of Queensland",
+      "city": null,
+      "country": "Australia",
+      "source_url": "https://scholarships.uq.edu.au/csc",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://scholarships.uq.edu.au/csc",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-20",
+      "content_hash": "sha256:03588e7cfeeaf8bba1db549209b92804c401b03f98aa281df36f57633af092db",
+      "last_verified_at": "2026-10-31T03:16:52.289Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:04.167Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:04.167Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:04.168Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-31T03:20:35.607Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-31T03:20:35.608Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:29.688Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:29.688Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 340
+    },
+    "opp_e216c2636cc6ecd0": {
+      "id": "opp_e216c2636cc6ecd0",
+      "fingerprint": "869c19afd03c68e6",
+      "title": "MSc (thesis) and PhD in Computing Science (2027/28)",
+      "institution": "University of Alberta, Department of Computing Science",
+      "city": null,
+      "country": "Canada",
+      "source_url": "https://www.ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/applications-and-admissions/frequently-asked-questions.html",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/applications-and-admissions/index.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:a9216269a8a5b0e19e2c1002011a0870c554dd7505a39e5988db223255b0ea12",
+      "last_verified_at": "2026-10-31T03:16:54.393Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:04.330Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:04.330Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:04.330Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-31T03:20:48.527Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-31T03:20:48.527Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:30.022Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:30.022Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 341
+    },
+    "opp_8ff9f339bdc35bdd": {
+      "id": "opp_8ff9f339bdc35bdd",
+      "fingerprint": "1afa69a3f8f5c6db",
+      "title": "International Postgraduate Admission, Fall 2027",
+      "institution": "Egypt-Japan University of Science and Technology (E-JUST)",
+      "city": null,
+      "country": "Egypt",
+      "source_url": "https://www.ejust.edu.eg/international-deadlines",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.ejust.edu.eg/international-deadlines",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10",
+      "content_hash": "sha256:82f29feebd41df462d8248ab07b236dc2b8e7ed3626f47920e627114747322c8",
+      "last_verified_at": "2026-10-31T03:16:52.567Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:04.472Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:04.472Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:04.472Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-31T03:20:45.988Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-31T03:20:45.989Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:30.818Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:30.818Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 342
+    },
+    "opp_0ad8a4c7b7301bc7": {
+      "id": "opp_0ad8a4c7b7301bc7",
+      "fingerprint": "36e4d64c8445aa39",
+      "title": "Bacharelado em Matemática da Tecnologia e Inovação (turma 2027)",
+      "institution": "IMPA Tech (Instituto de Matemática Pura e Aplicada)",
+      "city": null,
+      "country": "Brazil",
+      "source_url": "https://impa.br/notices/impa-tech-divulga-edital-para-turma-2027-da-graduacao-em-matematica/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://impa.br/notices/impa-tech-divulga-edital-para-turma-2027-da-graduacao-em-matematica/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-23T12:00:00-03:00",
+      "content_hash": "sha256:dedb32f099d52a3c52b514afe1e64aaccebf12694bb335511a69315193146a56",
+      "last_verified_at": "2026-10-31T03:16:53.167Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:04.661Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:04.661Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:04.662Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-31T03:21:11.786Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-31T03:21:11.786Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:31.491Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:31.492Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 343
+    },
+    "opp_12eacd685cac83ba": {
+      "id": "opp_12eacd685cac83ba",
+      "fingerprint": "78a8471a21b3515c",
+      "title": "Informatics Program, Doctoral Program (October 2027 Admission)",
+      "institution": "SOKENDAI (The Graduate University for Advanced Studies), Informatics Program",
+      "city": null,
+      "country": "Japan",
+      "source_url": "https://www.soken.ac.jp/en/admission/application_info/informatics/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.soken.ac.jp/en/admission/application_info/informatics/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-02T17:00:00+09:00",
+      "content_hash": "sha256:b8c85d00cf228addefad655a19e0c9bf4a797e123162eb8f1fbd44f67cfde92c",
+      "last_verified_at": "2026-10-31T03:16:54.111Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:04.841Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:04.841Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:04.841Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-10-31T03:21:06.809Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-10-31T03:21:06.810Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:31.818Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:31.818Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 344
+    },
+    "opp_8ad23a3ad33ee5b0": {
+      "id": "opp_8ad23a3ad33ee5b0",
+      "fingerprint": "d319404f064ef185",
+      "title": "International PhD Programme (2027 entry)",
+      "institution": "MRC Laboratory of Molecular Biology (LMB)",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://www2.mrc-lmb.cam.ac.uk/students/international-phd-programme/how-to-apply/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www2.mrc-lmb.cam.ac.uk/students/international-phd-programme/how-to-apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-08",
+      "content_hash": "sha256:5fc975ffa045963c07392c4cad887609a0aad2fe64ec6aa618ffc63d3db26fdd",
+      "last_verified_at": "2026-10-31T03:16:53.815Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:04.975Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:04.975Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:04.975Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:50:58.245Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:50:58.270Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:32.069Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:32.070Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 345
+    },
+    "opp_784c69052e39e647": {
+      "id": "opp_784c69052e39e647",
+      "fingerprint": "8f804b3a71f8ca1e",
+      "title": "Bachelor of Science in Artificial Intelligence (Fall 2027 intake)",
+      "institution": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+      "city": null,
+      "country": "United Arab Emirates",
+      "source_url": "https://mbzuai.ac.ae/study/undergraduate-program/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://mbzuai.ac.ae/study/undergraduate-program/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01T17:00:00+04:00",
+      "content_hash": "sha256:e3f927bdc39324d846485c27aa45c71525563b0bd09dfbb5e363c5059e918417",
+      "last_verified_at": "2026-10-31T03:16:53.558Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:05.133Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:05.133Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:05.134Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:51:08.205Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:51:08.205Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:32.314Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:32.314Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 346
+    },
+    "opp_35a65539e19003c1": {
+      "id": "opp_35a65539e19003c1",
+      "fingerprint": "2d474eaf77e18830",
+      "title": "Monash Graduate Scholarship (MGS)",
+      "institution": "Monash University",
+      "city": null,
+      "country": "Australia",
+      "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-graduate-scholarship-mgs",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-graduate-scholarship-mgs",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28",
+      "content_hash": "sha256:7c5d4642ef0c53ab56ceec5b2a2f6614d34d13dc086f2e92344cce592802ee07",
+      "last_verified_at": "2026-10-31T03:16:53.684Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:05.362Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:05.362Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:05.362Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:51:05.254Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:51:05.254Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:32.579Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:32.579Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 347
+    },
+    "opp_b3463f174f094033": {
+      "id": "opp_b3463f174f094033",
+      "fingerprint": "5314d3e25f251cf6",
+      "title": "Processo Seletivo 2027.1: Mestrado e Doutorado Acadêmico em Ciência da Computação",
+      "institution": "Universidade Federal de Pernambuco (UFPE), Centro de Informática (CIn)",
+      "city": null,
+      "country": "Brazil",
+      "source_url": "https://portal.cin.ufpe.br/2026/10/26/abertas-as-inscricoes-para-o-processo-seletivo-2027-1-do-programa-academico-de-pos-graduacao-academico-em-ciencia-da-computacao-do-cin-ufpe/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://secpos.cin.ufpe.br/2027-1/processo-seletivo-2027-1",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-10",
+      "content_hash": "sha256:e42907f868eba86da78bce7bc5bedf0a6533bbfdb2852d69295c343c00a5c21d",
+      "last_verified_at": "2026-10-31T03:16:51.881Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:05.527Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:05.527Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:05.527Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:51:18.823Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:51:18.823Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:32.849Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:32.850Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 348
+    },
+    "opp_d5723349e481ea75": {
+      "id": "opp_d5723349e481ea75",
+      "fingerprint": "1f3fafcba237ffe0",
+      "title": "MSc Artificial Intelligence",
+      "institution": "City University of Hong Kong, Department of Computer Science",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "source_url": "https://www.cityu.edu.hk/pg/programme/program-list/2027/college-of-computing/department-of-computer-science/p75",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.cityu.edu.hk/pg/programme/program-list/2027/college-of-computing/department-of-computer-science/p75",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-31",
+      "content_hash": "sha256:bc41df46034e1250590c5670369483c3dd7ce156c297814907b57853cb91d66a",
+      "last_verified_at": "2026-10-31T03:16:52.024Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:05.711Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:05.711Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:05.712Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:51:22.954Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:51:22.954Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:33.110Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:33.110Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 349
+    },
+    "opp_bb60aa19a425575e": {
+      "id": "opp_bb60aa19a425575e",
+      "fingerprint": "e0df9b1e48f4522b",
+      "title": "AfOx Graduate Scholarships (2027-28 Oxford MBA)",
+      "institution": "Saïd Business School, University of Oxford",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "source_url": "https://www.sbs.ox.ac.uk/oxford-experience/scholarships-and-funding/afox-graduate-scholarships",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.sbs.ox.ac.uk/oxford-experience/scholarships-and-funding/afox-graduate-scholarships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-06T23:59:00+00:00",
+      "content_hash": "sha256:2077472736abd8248b8068f5b8c604becff6e6518e274a4c3b0716da9766ebe3",
+      "last_verified_at": "2026-10-31T03:16:51.463Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:05.913Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:05.913Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:05.913Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:53:01.657Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:53:01.657Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:33.398Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:33.399Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 350
+    },
+    "opp_060d40da7121ecd3": {
+      "id": "opp_060d40da7121ecd3",
+      "fingerprint": "65df285725120854",
+      "title": "Erasmus Mundus Joint Master in Data Engineering and Artificial Intelligence (DEAI)",
+      "institution": "DEAI Erasmus Mundus consortium (coordinated at Université libre de Bruxelles)",
+      "city": null,
+      "country": null,
+      "source_url": "https://deai.ulb.be/home/students/admission/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://deai.ulb.be/home/students/admission/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-11T12:00:00+00:00",
+      "content_hash": "sha256:c0ce79d17627b08ba84ee3de19c813d27f1cb574306009b40564c9e97626fd5f",
+      "last_verified_at": "2026-10-31T03:16:52.701Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:06.129Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:06.129Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:06.130Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:52:28.859Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:52:28.860Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:33.658Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:33.658Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 351
+    },
+    "opp_1496d8b1f6ddbc64": {
+      "id": "opp_1496d8b1f6ddbc64",
+      "fingerprint": "09bd55d97fb25d53",
+      "title": "Undergraduate Research Program (URP) 2027",
+      "institution": "Cold Spring Harbor Laboratory (CSHL)",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.cshl.edu/education/undergraduate-research-program/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.cshl.edu/education/undergraduate-research-program/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:00-08:00",
+      "content_hash": "sha256:14dc9a4a830e2c1fce0c83f63842014518af2ee1e121ffe4a6babe286d39145c",
+      "last_verified_at": "2026-10-31T03:16:52.412Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:06.371Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:06.371Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:06.371Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:52:24.244Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:52:24.244Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:33.929Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:33.930Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 352
+    },
+    "opp_f58b10a5ce1556a7": {
+      "id": "opp_f58b10a5ce1556a7",
+      "fingerprint": "9c9b07615465edbf",
+      "title": "Graduate Admission for International Applicants, Fall 2027",
+      "institution": "Gwangju Institute of Science and Technology (GIST)",
+      "city": "Gwangju",
+      "country": "South Korea",
+      "source_url": "https://www.gist.ac.kr/iadm/html/sub02/020101.html",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.gist.ac.kr/iadm/html/sub02/020101.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-08T17:00:00+09:00",
+      "content_hash": "sha256:5e2256d89bd071ee936fbbc8cc27278976d05cec3b2ff5cebdf22a59d2048437",
+      "last_verified_at": "2026-10-31T03:16:52.862Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:06.519Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:06.520Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:06.520Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:52:37.273Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:52:37.273Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:34.195Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:34.195Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 353
+    },
+    "opp_0367f820d598e348": {
+      "id": "opp_0367f820d598e348",
+      "fingerprint": "f6a25b989445e697",
+      "title": "Research Fellowships in Mathematics, Astronomy and Physics (from 1 October 2027)",
+      "institution": "Trinity Hall, University of Cambridge",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://www.trinhall.cam.ac.uk/about/vacancies/academic-vacancies/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.trinhall.cam.ac.uk/about/vacancies/academic-vacancies/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-09T17:00:00+00:00",
+      "content_hash": "sha256:f3fa69d0023c439442d3f75dc8bee8f260f633e199914c1ad9e20e2281e8569b",
+      "last_verified_at": "2026-10-31T03:16:54.259Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:06.667Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:06.667Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:06.667Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:52:31.511Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:52:31.511Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:34.467Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:34.467Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 354
+    },
+    "opp_1531ddc5994215cf": {
+      "id": "opp_1531ddc5994215cf",
+      "fingerprint": "f4ea91a8a1730182",
+      "title": "Visiting Fellowships 2027-2028",
+      "institution": "Magdalen College, University of Oxford",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "source_url": "https://collegevacancies.site.ox.ac.uk/academic-vacancies",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.magd.ox.ac.uk/job-vacancies/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-11",
+      "content_hash": "sha256:3030f8d1ded71cc4ca11c2968685c485b1a41267b203641eafaa7cfb7b359d30",
+      "last_verified_at": "2026-10-31T03:16:53.429Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:06.807Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:06.807Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:06.807Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:53:29.225Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:53:29.225Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:34.759Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:34.759Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 355
+    },
+    "opp_184f5b8fe2e3d439": {
+      "id": "opp_184f5b8fe2e3d439",
+      "fingerprint": "f368bd66a3598db7",
+      "title": "DIS 2027 Interactivity & Arts",
+      "institution": "ACM Conference on Designing Interactive Systems (DIS 2027)",
+      "city": null,
+      "country": null,
+      "source_url": "https://dis.acm.org/2027/interactivity-arts/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://dis.acm.org/2027/interactivity-arts/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-19T23:59:00-12:00",
+      "content_hash": "sha256:bb52d661f80ac5707c00f882ada0d9d971ece65d17525e87c4109085b5779955",
+      "last_verified_at": "2026-10-31T03:16:51.299Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:06.951Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:06.951Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:06.951Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:53:37.537Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:53:37.538Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:35.030Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:35.030Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 356
+    },
+    "opp_21645d6d24cc6fc2": {
+      "id": "opp_21645d6d24cc6fc2",
+      "fingerprint": "52914d88a13b19f6",
+      "title": "JAX Summer Student Program 2027",
+      "institution": "The Jackson Laboratory (JAX)",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/learn-earn-and-explore/admission",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/learn-earn-and-explore/admission",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-25T17:00:00-05:00",
+      "content_hash": "sha256:a6fa187b39f6057a62f91b41ebe63c73370b8a78f938fe0b49042216831eec6a",
+      "last_verified_at": "2026-10-31T03:16:53.306Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:07.095Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:07.095Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:07.095Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:53:38.033Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:53:38.033Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:35.299Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:35.299Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 357
+    },
+    "opp_abefc6df2eecabd9": {
+      "id": "opp_abefc6df2eecabd9",
+      "fingerprint": "bd7eceb73884c332",
+      "title": "PhD in Computer Science (Fall 2027 entry)",
+      "institution": "Columbia University, Department of Computer Science (Columbia Engineering)",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.engineering.columbia.edu/admissions-aid/graduate-admissions/how-apply/application-requirements",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.cs.columbia.edu/education/admissions8/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:891ea7cf551922bc4915023056b165ae2f66e69c7b4052ca71266a29dc729a92",
+      "last_verified_at": "2026-10-31T03:16:52.150Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:07.245Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:07.245Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:07.246Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:54:06.452Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:54:06.453Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:35.560Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:35.560Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 358
+    },
+    "opp_23e6255731bc6bc7": {
+      "id": "opp_23e6255731bc6bc7",
+      "fingerprint": "cd4caf064c2fe902",
+      "title": "Summer Undergraduate Research Fellowships (SURF) 2027",
+      "institution": "California Institute of Technology (Caltech), Student-Faculty Programs",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://sfp.caltech.edu/undergraduate-research/programs/surf/application_information",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://sfp.caltech.edu/undergraduate-research/programs/surf/application_information",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-22",
+      "content_hash": "sha256:fafdb91d26a9fec7762aaecdaf7078321e8d25e1db8764c4b6c0087efb37de2a",
+      "last_verified_at": "2026-10-31T03:16:51.734Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-10-31T03:17:07.405Z",
+      "history": [
+        {
+          "at": "2026-10-31T03:17:07.405Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-10-31T03:17:07.405Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-01T02:53:47.419Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-01T02:53:47.419Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-01T02:54:35.809Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-01T02:54:35.809Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 359
     }
   },
   "seen_urls": {
@@ -23055,7 +24619,37 @@
     "https://ntu.edu.sg/medicine/education/graduate-programmes/phd-by-research-programme/admissions-applications": "opp_d7c3f5df1a79d285",
     "https://exeter.ox.ac.uk/vacancies/visiting-fellowships": "opp_c0cda89a07a21748",
     "https://jornal.usp.br/universidade/programa-de-verao-em-matematica-tem-inscricoes-abertas-na-usp-em-sao-carlos": "opp_0ca30cde8ce29112",
-    "https://verao.icmc.usp.br/inscricoes.html": "opp_0ca30cde8ce29112"
+    "https://verao.icmc.usp.br/inscricoes.html": "opp_0ca30cde8ce29112",
+    "https://iiasa.ac.at/employment/job-openings?jh=dask82y4td6iww3t8cykuun7in77zg4": "opp_42514879bd9adc44",
+    "https://iiasa.ac.at/train-with-us/yssp-young-scientists-summer-program/application-information": "opp_42514879bd9adc44",
+    "https://isd.pku.edu.cn/cn/detail.php?id=729": "opp_a633081d03d9cab9",
+    "https://wits.ac.za/course-finder/postgraduate/science/msc-data-science": "opp_d73ff242f82f8874",
+    "https://inf.ufrgs.br/ppgc/wp-content/uploads/2026/07/Edital-PPGC-004_2026-Doutorado.pdf": "opp_077f154c7b4fb2b9",
+    "https://aus.edu/admissions/masters-degrees/deadlines-and-important-dates-for-masters-admissions": "opp_0e6011b6b1aab066",
+    "https://scholarships.uq.edu.au/csc": "opp_fc0072b74a8200fb",
+    "https://ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/applications-and-admissions/frequently-asked-questions.html": "opp_e216c2636cc6ecd0",
+    "https://ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/applications-and-admissions/index.html": "opp_e216c2636cc6ecd0",
+    "https://ejust.edu.eg/international-deadlines": "opp_8ff9f339bdc35bdd",
+    "https://impa.br/notices/impa-tech-divulga-edital-para-turma-2027-da-graduacao-em-matematica": "opp_0ad8a4c7b7301bc7",
+    "https://soken.ac.jp/en/admission/application_info/informatics": "opp_12eacd685cac83ba",
+    "https://www2.mrc-lmb.cam.ac.uk/students/international-phd-programme/how-to-apply": "opp_8ad23a3ad33ee5b0",
+    "https://mbzuai.ac.ae/study/undergraduate-program": "opp_784c69052e39e647",
+    "https://monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-graduate-scholarship-mgs": "opp_35a65539e19003c1",
+    "https://portal.cin.ufpe.br/2026/10/26/abertas-as-inscricoes-para-o-processo-seletivo-2027-1-do-programa-academico-de-pos-graduacao-academico-em-ciencia-da-computacao-do-cin-ufpe": "opp_b3463f174f094033",
+    "https://secpos.cin.ufpe.br/2027-1/processo-seletivo-2027-1": "opp_b3463f174f094033",
+    "https://cityu.edu.hk/pg/programme/program-list/2027/college-of-computing/department-of-computer-science/p75": "opp_d5723349e481ea75",
+    "https://sbs.ox.ac.uk/oxford-experience/scholarships-and-funding/afox-graduate-scholarships": "opp_bb60aa19a425575e",
+    "https://deai.ulb.be/home/students/admission": "opp_060d40da7121ecd3",
+    "https://cshl.edu/education/undergraduate-research-program": "opp_1496d8b1f6ddbc64",
+    "https://gist.ac.kr/iadm/html/sub02/020101.html": "opp_f58b10a5ce1556a7",
+    "https://trinhall.cam.ac.uk/about/vacancies/academic-vacancies": "opp_0367f820d598e348",
+    "https://collegevacancies.site.ox.ac.uk/academic-vacancies": "opp_1531ddc5994215cf",
+    "https://magd.ox.ac.uk/job-vacancies": "opp_1531ddc5994215cf",
+    "https://dis.acm.org/2027/interactivity-arts": "opp_184f5b8fe2e3d439",
+    "https://jax.org/education-and-learning/high-school-students-and-undergraduates/learn-earn-and-explore/admission": "opp_21645d6d24cc6fc2",
+    "https://engineering.columbia.edu/admissions-aid/graduate-admissions/how-apply/application-requirements": "opp_abefc6df2eecabd9",
+    "https://cs.columbia.edu/education/admissions8": "opp_abefc6df2eecabd9",
+    "https://sfp.caltech.edu/undergraduate-research/programs/surf/application_information": "opp_23e6255731bc6bc7"
   },
-  "last_offer_number": 334
+  "last_offer_number": 359
 }
