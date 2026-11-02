@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Beit Trust Postgraduate Scholarships",
+    "evidence_url": "https://beittrust.org.uk/scholarships/",
+    "evidence_quote": "Beit Trust Postgraduate Scholarships"
+  },
+  "institution": {
+    "name": "The Beit Trust",
+    "website": "https://beittrust.org.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://beittrust.org.uk/scholarships/",
+  "source_url": "https://beittrust.org.uk/scholarships/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Postgraduate study (multiple disciplines)",
+  "seniority": "Postgraduate applicants",
+  "qualifications": [
+    "Nationals of Malawi, Zambia or Zimbabwe only",
+    "Applicants must first be accepted by a Beit Trust partner university",
+    "UK partner universities for September 2027 entry; South African partner universities for January 2028 entry"
+  ],
+  "skills": [],
+  "description_short": "Beit Trust postgraduate scholarships for nationals of Malawi, Zambia and Zimbabwe at partner universities in the UK (September 2027 entry) and South Africa (January 2028 entry). Applications close 12 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-12",
+    "timezone": null,
+    "evidence_url": "https://beittrust.org.uk/scholarships/",
+    "evidence_quote": "Close: 12 February 2027. No applications can be processed after this date."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Beit Trust scholarships page (search results): 'Close: 12 February 2027'",
+    "Applications open 1 December 2026 per a third-party listing; portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Opening date (1 December 2026) and 17:00 CAT closing time come from a third-party listing, not the official page",
+    "Host country varies (United Kingdom or South Africa), so location is left null",
+    "Award value not captured"
+  ],
+  "id": "opp_8ffcace86a8f60e2",
+  "fingerprint": "fa4c61f326c04dd5",
+  "discovered_at": "2026-11-01T03:14:06.445Z",
+  "last_verified_at": "2026-11-01T03:14:06.445Z",
+  "content_hash": "sha256:a9b350d940cb043b64f876890562a389039b7379783d0acb0ba308554587492d"
+}

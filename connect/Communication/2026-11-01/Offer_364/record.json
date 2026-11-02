@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "DPhil in Social Data Science",
+    "evidence_url": "https://www.oii.ox.ac.uk/study/dphil-in-social-data-science/",
+    "evidence_quote": "DPhil in Social Data Science"
+  },
+  "institution": {
+    "name": "Oxford Internet Institute, University of Oxford",
+    "website": "https://www.oii.ox.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.oii.ox.ac.uk/study/dphil-in-social-data-science/",
+  "source_url": "https://www.oii.ox.ac.uk/study/dphil-in-social-data-science/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Social data science",
+  "seniority": "Doctoral applicants",
+  "qualifications": [
+    "Applying by the course deadline gives automatic consideration for Clarendon scholarships (no separate form)"
+  ],
+  "skills": [],
+  "description_short": "The Oxford Internet Institute's DPhil in Social Data Science is accepting applications for 2027-28 entry, with a deadline of noon on 7 January 2027. Applicants meeting the deadline are considered for Oxford scholarships such as Clarendon.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-07T12:00:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.oii.ox.ac.uk/study/dphil-in-social-data-science/",
+    "evidence_quote": "noon on 7 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official OII course page (search results) gives noon on 7 January 2027",
+    "Clarendon guidance (ox.ac.uk): apply by the December or January course deadline to be considered",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "City not stated in the evidence",
+    "Funding availability for individual applicants not captured"
+  ],
+  "id": "opp_dd49478da0ca68d3",
+  "fingerprint": "d317b7409499c8a2",
+  "discovered_at": "2026-11-01T03:14:05.739Z",
+  "last_verified_at": "2026-11-01T03:14:05.739Z",
+  "content_hash": "sha256:bf61980f14b6387c69f43973cc6b0c5af02a8890df9605edf2e4c9711e8b479b"
+}

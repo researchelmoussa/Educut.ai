@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "International Degree Student Admission, Fall 2027",
+    "evidence_url": "https://en.som.nycu.edu.tw/?p=2085",
+    "evidence_quote": "Application Open December 20 – March 15, Application Deadline March 15 (11:59 a.m. GMT+8)"
+  },
+  "institution": {
+    "name": "National Yang Ming Chiao Tung University (NYCU)",
+    "website": "https://www.nycu.edu.tw",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://en.som.nycu.edu.tw/?p=2085",
+  "source_url": "https://en.som.nycu.edu.tw/?p=2085",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Taiwan",
+    "country_code": "TW"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Bachelor's, master's and PhD programmes",
+  "seniority": "International degree applicants",
+  "qualifications": [
+    "Fall 2027 intake covers bachelor's, master's and PhD programmes; the separate Spring 2027 graduate round closed on 30 September 2026"
+  ],
+  "skills": [],
+  "description_short": "NYCU's international degree admission for Fall 2027 (bachelor's, master's and PhD programmes). The application window opens December 20 and closes March 15 at 11:59 a.m. (GMT+8).",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-15T11:59:00+08:00",
+    "timezone": "Asia/Taipei",
+    "evidence_url": "https://en.som.nycu.edu.tw/?p=2085",
+    "evidence_quote": "Application Deadline March 15 (11:59 a.m. GMT+8)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NYCU College of Medicine admissions page (search results) lists the window December 20 - March 15 for Fall 2027",
+    "University-wide OIA portal page not independently fetched; application window not yet open"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Evidence is from the College of Medicine page on the NYCU domain; the university-wide Office of International Affairs page was not seen",
+    "Year of the dates inferred from the Fall 2027 context",
+    "Scholarship terms not captured",
+    "opportunity_type set to 'other' because the schema has no admissions type"
+  ],
+  "id": "opp_b5a7e73953459fa8",
+  "fingerprint": "826a7def3ef2960b",
+  "discovered_at": "2026-11-01T03:14:06.813Z",
+  "last_verified_at": "2026-11-01T03:14:06.813Z",
+  "content_hash": "sha256:8aba9d0c3fcf06f170b5fde019360b785201b28b4db8d07eed73dafe703a7bbc"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Master's Programme in Computer Science",
+    "evidence_url": "https://studies.helsinki.fi/system/files/inline-files/Master's%20Programme%20in%20Computer%20Science%20Curriculum%202026-2030_1.pdf",
+    "evidence_quote": "Master's Programme in Computer Science"
+  },
+  "institution": {
+    "name": "University of Helsinki",
+    "website": "https://www.helsinki.fi",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.helsinki.fi/en/degree-programmes/computer-science-masters-programme",
+  "source_url": "https://www.helsinki.fi/en/degree-programmes/computer-science-masters-programme",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Finland",
+    "country_code": "FI"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Master's applicants",
+  "qualifications": [
+    "A completed bachelor's degree or equivalent (applicants graduating after the application period can apply; offers are then conditional)",
+    "One intake per academic year; the online form is open only during the application period"
+  ],
+  "skills": [],
+  "description_short": "University of Helsinki's international Master's Programme in Computer Science for studies starting autumn 2027. The application period runs from 5 January 2027 (08:00) to 19 January 2027 (15:00).",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-19T15:00:00+02:00",
+    "timezone": "Europe/Helsinki",
+    "evidence_url": "https://www.helsinki.fi/en/degree-programmes/computer-science-masters-programme",
+    "evidence_quote": "Application period Begins: 05 Jan 2027 at 08:00 Ends: 19 Jan 2027 at 15:00"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official programme page (search results) gives the autumn 2027 application period 5-19 January 2027",
+    "The application period has not started yet (opens 5 January 2027)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Tuition fees and scholarships not captured",
+    "opportunity_type set to 'other' because the schema has no master's-programme type",
+    "City not stated in the evidence"
+  ],
+  "id": "opp_c0d79ae1363aaeda",
+  "fingerprint": "7a25e34ec201630d",
+  "discovered_at": "2026-11-01T03:14:06.060Z",
+  "last_verified_at": "2026-11-01T03:14:06.060Z",
+  "content_hash": "sha256:9288bdef9ae7d62fa67fa57270c8e3ad37b24ee1cbaa4bc7a451e8e7ef2571ba"
+}
