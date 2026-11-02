@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "MSc Machine Learning",
+    "evidence_url": "https://www.kth.se/en/studies/master/machine-learning/msc-machine-learning-1.48533",
+    "evidence_quote": "MSc Machine Learning"
+  },
+  "institution": {
+    "name": "KTH Royal Institute of Technology",
+    "website": "https://www.kth.se",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.kth.se/en/studies/master/machine-learning/msc-machine-learning-1.48533",
+  "source_url": "https://www.kth.se/en/studies/master/machine-learning/msc-machine-learning-1.48533",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Sweden",
+    "country_code": "SE"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Machine learning",
+  "seniority": "Master's applicants",
+  "qualifications": [
+    "Apply through University Admissions in Sweden (up to four ranked programmes)",
+    "Documents and any application fee due 1 February 2027"
+  ],
+  "skills": [],
+  "description_short": "KTH's two-year (120 ECTS) MSc Machine Learning, taught in English, for studies starting autumn 2027. Applications through University Admissions are due 15 January; documents and fees by 1 February; results on 1 April.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/Stockholm",
+    "evidence_url": "https://www.kth.se/en/studies/master/machine-learning/msc-machine-learning-1.48533",
+    "evidence_quote": "Apply before 15 January"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official programme page (search results): current admission round is for studies starting autumn 2027, apply before 15 January",
+    "KTH admissions page: application for studies starting in 2027 opens 16 October",
+    "Application portal (universityadmissions.se) not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Year of the 15 January deadline inferred from the autumn 2027 admission round stated on the page",
+    "Tuition fees and scholarships not captured",
+    "opportunity_type set to 'other' because the schema has no master's-programme type",
+    "City not stated in the evidence"
+  ],
+  "id": "opp_a0771ed4e14bd652",
+  "fingerprint": "07ba67aa901bfd64",
+  "discovered_at": "2026-11-01T03:14:06.171Z",
+  "last_verified_at": "2026-11-01T03:14:06.171Z",
+  "content_hash": "sha256:a964215dbaca710a0b8d36e87478bbd41da43109d70db9fc1587bf41acae706f"
+}

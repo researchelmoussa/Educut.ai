@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "MPhil in Advanced Computer Science",
+    "evidence_url": "https://www.cst.cam.ac.uk/admissions/acs",
+    "evidence_quote": "MPhil in Advanced Computer Science"
+  },
+  "institution": {
+    "name": "University of Cambridge, Department of Computer Science and Technology",
+    "website": "https://www.cst.cam.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cst.cam.ac.uk/admissions/acs",
+  "source_url": "https://www.cst.cam.ac.uk/admissions/acs",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Master's applicants",
+  "qualifications": [
+    "Applicants needing University and Cambridge Trust funding should apply by 23:59 GMT on 2 December 2026",
+    "Complete application materials must reach Postgraduate Admissions within ten days of the funding deadline to be considered for funding"
+  ],
+  "skills": [],
+  "description_short": "Cambridge's nine-month MPhil in Advanced Computer Science, starting October 2027. Applications opened 9 September 2026 and close 25 February 2027; applicants seeking University or Cambridge Trust funding should apply by 2 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-25",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.cst.cam.ac.uk/admissions/acs",
+    "evidence_quote": "Applications will close on 25 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official department page (search results): applications for October 2027 admission opened 9 September 2026 and close 25 February 2027",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Funding deadlines differ across official pages (2 December 2026 on the ACS page, 8 December 2026 in the course directory)",
+    "opportunity_type set to 'other' because the schema has no master's-programme type",
+    "City not stated in the evidence"
+  ],
+  "id": "opp_696e945918537ee1",
+  "fingerprint": "bbb590eb95f53dd3",
+  "discovered_at": "2026-11-01T03:14:05.937Z",
+  "last_verified_at": "2026-11-01T03:14:05.937Z",
+  "content_hash": "sha256:7a4a2e87cb8233ed90415e23ac3b2e40f0cc1e2266309558a0f1e949213b65f3"
+}

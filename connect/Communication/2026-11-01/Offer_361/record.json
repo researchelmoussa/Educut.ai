@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Ph.D. in Computer Science",
+    "evidence_url": "https://www.cs.cornell.edu/phd-computer-science/apply",
+    "evidence_quote": "Apply: Ph.D. in Computer Science"
+  },
+  "institution": {
+    "name": "Cornell University, Department of Computer Science",
+    "website": "https://www.cs.cornell.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cs.cornell.edu/phd-computer-science/apply",
+  "source_url": "https://www.cs.cornell.edu/phd-computer-science/apply",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Doctoral applicants",
+  "qualifications": [
+    "Fall admission only",
+    "Applications are submitted through the Cornell Graduate School online application"
+  ],
+  "skills": [],
+  "description_short": "Cornell Computer Science accepts PhD applications for fall entry only, with a December 15 deadline. A Student-Applicant Support Program has a November 6, 2026 deadline. Applications go through the Cornell Graduate School online system.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.cs.cornell.edu/phd-computer-science/apply",
+    "evidence_quote": "the deadline for the Fall 2026 semester is December 15th"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Cornell CS apply page (search results): fall-only admission with a December 15 deadline; the same page lists a Student-Applicant Support Program deadline of November 6, 2026, indicating the current cycle",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The page labels the deadline \"Fall 2026 semester\"; the November 6, 2026 support-program date indicates the December 15, 2026 deadline is for Fall 2027 entry (likely mislabel)",
+    "Funding terms not captured"
+  ],
+  "id": "opp_33c2d0ec2cd7c9ea",
+  "fingerprint": "80c2104d36a16249",
+  "discovered_at": "2026-11-01T03:14:05.270Z",
+  "last_verified_at": "2026-11-01T03:14:05.270Z",
+  "content_hash": "sha256:6c5d698b0a068b7fc9de4ada683e5b8c1275b2ad0f67caa0fba8737c423b922e"
+}
