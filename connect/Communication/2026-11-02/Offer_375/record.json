@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Graduate Admissions, Fall 2027",
+    "evidence_url": "https://www.aucegypt.edu/admissions/graduate",
+    "evidence_quote": "Graduate Admissions"
+  },
+  "institution": {
+    "name": "The American University in Cairo (AUC)",
+    "website": "https://www.aucegypt.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.aucegypt.edu/admissions/graduate",
+  "source_url": "https://www.aucegypt.edu/admissions/graduate",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Cairo",
+    "country": "Egypt",
+    "country_code": "EG"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Graduate programmes (all fields)",
+  "seniority": "Master's / Doctoral",
+  "qualifications": [
+    "Graduate application must be submitted at least two weeks before the fellowship deadline",
+    "Applications submitted after a deadline are evaluated at the next deadline"
+  ],
+  "skills": [],
+  "description_short": "AUC graduate admissions for Fall 2027: early deadline December 15, 2026, regular deadline April 1, 2027. Fellowship cycle 1 runs December 22, 2026 to January 17, 2027; decisions usually follow three to four months after submission.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": "Africa/Cairo",
+    "evidence_url": "https://www.aucegypt.edu/academics/graduate-studies/frequently-asked-questions",
+    "evidence_quote": "applications for fall are due on December 15 for early consideration and on April 1 for regular consideration"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official AUC graduate admissions page and FAQ (search results) list December 15, 2026 (early) and April 1, 2027 (regular) for Fall 2027",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Programme-specific requirements and fees not captured",
+    "Date used is the early-consideration deadline; the regular deadline is April 1, 2027"
+  ],
+  "id": "opp_bd9626706563ef53",
+  "fingerprint": "14831e7c7cc21a31",
+  "discovered_at": "2026-11-02T03:15:41.631Z",
+  "last_verified_at": "2026-11-02T03:15:41.631Z",
+  "content_hash": "sha256:bca4878d52da3f0ada703649ee78511ca5395afffa3ea7069917cc290ca269a3"
+}

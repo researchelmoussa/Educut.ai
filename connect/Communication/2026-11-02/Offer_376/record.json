@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "B.Sc. Computer Science (January 2027 intake)",
+    "evidence_url": "https://admissions.ashesi.edu.gh/courses/course/212-bsc-computer-science",
+    "evidence_quote": "[B.Sc.] Computer Science"
+  },
+  "institution": {
+    "name": "Ashesi University",
+    "website": "https://ashesi.edu.gh",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://admissions.ashesi.edu.gh/courses/course/212-bsc-computer-science",
+  "source_url": "https://admissions.ashesi.edu.gh/courses/course/212-bsc-computer-science",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Undergraduate",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Ashesi University's B.Sc. in Computer Science, January intake for academic year 2026/27. The programme page lists an application deadline of November 16, 2026 (11:59:59 PM GMT), with studies commencing January 11, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-16T23:59:59+00:00",
+    "timezone": "GMT",
+    "evidence_url": "https://admissions.ashesi.edu.gh/courses/course/212-bsc-computer-science",
+    "evidence_quote": "Nov 16, 2026, 11:59:59 PM Greenwich Mean Time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Ashesi admissions programme page (search results) lists the November 16, 2026 deadline and January 11, 2027 start",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Ashesi's general 'How to Apply' page mentions a December deadline for January entry; the programme page date is used",
+    "Country not stated in the results (ashesi.edu.gh domain)",
+    "Admission requirements and financial aid not captured"
+  ],
+  "id": "opp_7a32b5f83395e22c",
+  "fingerprint": "38ce5ed0d3961952",
+  "discovered_at": "2026-11-02T03:15:41.148Z",
+  "last_verified_at": "2026-11-02T03:15:41.148Z",
+  "content_hash": "sha256:2d960f1ca98dd81e4a76414336d4ea9e405063b295a8b0b5b5a7013434b7921b"
+}

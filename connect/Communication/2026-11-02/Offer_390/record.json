@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "School of Informatics PhD Funding (September 2027 entry)",
+    "evidence_url": "https://informatics.ed.ac.uk/study-with-us/our-degrees/postgraduate-research-programmes-and-centres-doctoral-training/postgraduate-research-funding-opportunities-0",
+    "evidence_quote": "Application links for September 2027 will open on 6 October 2026."
+  },
+  "institution": {
+    "name": "The University of Edinburgh, School of Informatics",
+    "website": "https://informatics.ed.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://informatics.ed.ac.uk/study-with-us/our-degrees/postgraduate-research-programmes-and-centres-doctoral-training/postgraduate-research-funding-opportunities-0",
+  "source_url": "https://informatics.ed.ac.uk/study-with-us/our-degrees/postgraduate-research-programmes-and-centres-doctoral-training/postgraduate-research-funding-opportunities-0",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Edinburgh",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Informatics / computer science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "First round open to Home and international applicants",
+    "Centre for Doctoral Training programmes are separate and require a separate application"
+  ],
+  "skills": [],
+  "description_short": "Edinburgh's Informatics Graduate School funding round for PhD study starting September 2027. The deadline is 30 November 2026 at 23:59 for Home and international applicants; outcomes are expected by April 2027. A Home-only second round is planned for early 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-30T23:59:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://informatics.ed.ac.uk/study-with-us/our-degrees/postgraduate-research-programmes-and-centres-doctoral-training/postgraduate-research-funding-opportunities-0",
+    "evidence_quote": "30 November 2026 at 23:59"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Informatics Graduate School funding page (search results) gives a 30 November 2026 deadline for September 2027 entry",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title composed from the funding page name and the September 2027 entry stated on it",
+    "Number and value of awards not captured from the results"
+  ],
+  "id": "opp_75e762bca0b4a549",
+  "fingerprint": "385c3eb23a0e1ef7",
+  "discovered_at": "2026-11-02T03:15:41.779Z",
+  "last_verified_at": "2026-11-02T03:15:41.779Z",
+  "content_hash": "sha256:3a84d2fa2d73383fb503c7ef427f6bca38b3b85cfd62508d01d88fb3a4d27f41"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "2027 Gene Golub SIAM Summer School",
+    "evidence_url": "https://www.siam.org/programs-initiatives/programs/gene-golub-siam-summer-school/",
+    "evidence_quote": "The 2027 Gene Golub SIAM Summer School will take place at the Texas A&M University-Corpus Christi (TAMU-CC) in Corpus Christi, Texas, U.S."
+  },
+  "institution": {
+    "name": "Society for Industrial and Applied Mathematics (SIAM)",
+    "website": "https://www.siam.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.siam.org/programs-initiatives/programs/gene-golub-siam-summer-school/",
+  "source_url": "https://www.siam.org/programs-initiatives/programs/gene-golub-siam-summer-school/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Corpus Christi",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Nonlinear solvers and preconditioning techniques for multiphysics partial differential equations",
+  "seniority": "Graduate students",
+  "qualifications": [
+    "Two-week school aimed at graduate students (about 40 participants per the 2027 call for proposals)"
+  ],
+  "skills": [],
+  "description_short": "Two-week SIAM summer school on nonlinear solvers and preconditioning techniques for multiphysics PDEs, held June 14-25, 2027 at Texas A&M University-Corpus Christi. Registration closes January 8, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08",
+    "timezone": null,
+    "evidence_url": "https://www.siam.org/programs-initiatives/programs/gene-golub-siam-summer-school/",
+    "evidence_quote": "January 8, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SIAM programme page (search results) lists a January 8, 2027 registration close for the 2027 school",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline quote is the date as shown in the search summary of the SIAM page; exact time of day not stated",
+    "Participant costs/support not captured"
+  ],
+  "id": "opp_9f1b78e4e5e560bc",
+  "fingerprint": "86f6a18ad5ad811f",
+  "discovered_at": "2026-11-02T03:15:41.952Z",
+  "last_verified_at": "2026-11-02T03:15:41.952Z",
+  "content_hash": "sha256:41e7ebc130588e121721800ebeeb1698c6400b9e8a43e4f97ed01ef40bf4c01a"
+}

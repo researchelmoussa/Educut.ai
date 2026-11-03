@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD Programs, Fall 2027 Admission",
+    "evidence_url": "https://www.ku.ac.ae/postgraduate-admissions",
+    "evidence_quote": "Postgraduate Admissions for Fall 2027 are now open for PhD programs only."
+  },
+  "institution": {
+    "name": "Khalifa University",
+    "website": "https://www.ku.ac.ae",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ku.ac.ae/postgraduate-admissions",
+  "source_url": "https://www.ku.ac.ae/postgraduate-admissions",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "United Arab Emirates",
+    "country_code": "AE"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Science and engineering (PhD programs)",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Direct PhD applicants: bachelor's CGPA of at least 3.5/4.0 and a GRE Quantitative score of at least 150 taken at a test center",
+    "Applicants holding a master's degree: master's CGPA of at least 3.25"
+  ],
+  "skills": [],
+  "description_short": "Khalifa University's postgraduate admissions for Fall 2027 are open for PhD programs only; applications are accepted until 1 March 2027. Admitted applicants are normally notified by email within eight weeks of the deadline.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-01",
+    "timezone": "Asia/Dubai",
+    "evidence_url": "https://www.ku.ac.ae/postgraduate-admissions",
+    "evidence_quote": "Applications will be accepted until 1 March 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Khalifa University postgraduate admissions page (search results): 'Postgraduate Admissions for Fall 2027 are now open for PhD programs only'",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "City not stated in the results",
+    "Scholarship terms for 2027 not captured",
+    "Country inferred from the university's .ae domain and admissions page context"
+  ],
+  "id": "opp_c62bb2bc5b736804",
+  "fingerprint": "6b2138c4ad341ccf",
+  "discovered_at": "2026-11-02T03:15:43.061Z",
+  "last_verified_at": "2026-11-02T03:15:43.061Z",
+  "content_hash": "sha256:01e82cd68eb2b4660c161c972c673b9a90af8d0f99e2d2c4387c2a49d221fe55"
+}

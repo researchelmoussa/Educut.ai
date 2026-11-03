@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Magíster en Ciencia de Datos UC",
+    "evidence_url": "https://uconline.uc.cl/programa/magister-en-ciencia-de-datos/",
+    "evidence_quote": "Magíster en Ciencia de Datos UC"
+  },
+  "institution": {
+    "name": "Pontificia Universidad Católica de Chile (UC Online)",
+    "website": "https://www.uc.cl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://uconline.uc.cl/programa/magister-en-ciencia-de-datos/",
+  "source_url": "https://uconline.uc.cl/programa/magister-en-ciencia-de-datos/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Chile",
+    "country_code": "CL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "remote",
+  "field": "Data science",
+  "seniority": "Master's",
+  "qualifications": [
+    "Incomplete applications are not processed (per the UC admissions page)"
+  ],
+  "skills": [],
+  "description_short": "Online Master's in Data Science from Pontificia Universidad Católica de Chile, taught over Zoom (1,800 hours, 10 two-month terms). Applications close 31 January 2027; classes start 22 March 2027. Listed fee: USD 10,000.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": "America/Santiago",
+    "evidence_url": "https://uconline.uc.cl/programa/magister-en-ciencia-de-datos/",
+    "evidence_quote": "postulaciones hasta el 31 de enero 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UC Online programme page (search results) states applications until 31 January 2027 and a 22 March 2027 start",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Programme is fee-paying; no scholarship or stipend captured",
+    "Country inferred from the university's name and .cl domain",
+    "The UC admissions page still mentions 2026 start dates"
+  ],
+  "id": "opp_51edd5326e9bd298",
+  "fingerprint": "ebf986e1e8b163d9",
+  "discovered_at": "2026-11-02T03:15:43.712Z",
+  "last_verified_at": "2026-11-02T03:15:43.712Z",
+  "content_hash": "sha256:7d3811a81eeb24b8de0b432b398618c5a3b9f85370ce9daa95e586824aee0701"
+}
