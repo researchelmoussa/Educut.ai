@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "ICDAR 2027 Call for Papers",
+    "evidence_url": "https://icdar2027.org/call-for-papers",
+    "evidence_quote": "ICDAR 2027 Calls for Papers"
+  },
+  "institution": {
+    "name": "ICDAR 2027 (International Conference on Document Analysis and Recognition)",
+    "website": "https://icdar2027.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://icdar2027.org/call-for-papers",
+  "source_url": "https://icdar2027.org/call-for-papers",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Kuala Lumpur",
+    "country": "Malaysia",
+    "country_code": "MY"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Document analysis and recognition",
+  "seniority": "Researchers",
+  "qualifications": [
+    "Full papers limited to 17 pages including figures and references",
+    "Abstract deadline January 31, 2027"
+  ],
+  "skills": [],
+  "description_short": "Main-track call for papers for ICDAR 2027 in Kuala Lumpur, Malaysia. Abstracts are due January 31, 2027 and full papers February 20, 2027 (23:59 AoE, no extension); acceptance notification May 15, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-20T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://icdar2027.org/call-for-papers",
+    "evidence_quote": "February 20, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ICDAR 2027 call for papers (search results) gives a February 20, 2027 full-paper deadline",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The important-dates page lists February 28, 2027 instead; the earlier call-for-papers date is used",
+    "Conference dates differ across pages (18-22 vs. 17-20 August 2027)"
+  ],
+  "id": "opp_5270dc29bd1627d0",
+  "fingerprint": "b418837c2fe868c8",
+  "discovered_at": "2026-11-02T03:15:42.262Z",
+  "last_verified_at": "2026-11-02T03:15:42.262Z",
+  "content_hash": "sha256:f440f8367bd7ca65c5722f15b056063715fdc8c719d34bba84e70b09b7eed98f"
+}

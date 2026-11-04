@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD Admissions (Regular - January 2027)",
+    "evidence_url": "https://iith.ac.in/phdadmissions/",
+    "evidence_quote": "PhD Admissions (Regular - January 2027)"
+  },
+  "institution": {
+    "name": "Indian Institute of Technology Hyderabad (IIT Hyderabad)",
+    "website": "https://www.iith.ac.in",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://iith.ac.in/phdadmissions/",
+  "source_url": "https://iith.ac.in/phdadmissions/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Hyderabad",
+    "country": "India",
+    "country_code": "IN"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Engineering, science and AI (department-specific)",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Regular (full-time) PhD only; part-time applications are not considered in this round",
+    "Department-specific eligibility in each department's brochure"
+  ],
+  "skills": [],
+  "description_short": "IIT Hyderabad's regular PhD admissions for January 2027. Applications are open from 21 October to 10 November 2026 (5:00 PM IST) through the central portal; eligibility and research areas are set out in each department's brochure.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-10T17:00:00+05:30",
+    "timezone": "Asia/Kolkata",
+    "evidence_url": "https://iith.ac.in/phdadmissions/",
+    "evidence_quote": "Applications are open from 21 October to 10 November 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IIT Hyderabad PhD admissions page (search results) gives the 10 November 2026 deadline",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Department brochures may change for the January 2027 cycle",
+    "Fellowship amounts not captured"
+  ],
+  "id": "opp_565017e339f8c8fb",
+  "fingerprint": "2c822743d64c38d1",
+  "discovered_at": "2026-11-02T03:15:42.595Z",
+  "last_verified_at": "2026-11-02T03:15:42.595Z",
+  "content_hash": "sha256:d09d60e131abc6988f6abcbcdc443d7f9e011bdf19ce670ca8df403d9efe70cc"
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "ANU Research Degree Scholarships, Round 2 (2027)",
+    "evidence_url": "https://research.anu.edu.au/postgraduate-research-candidates/research-degree-scholarships",
+    "evidence_quote": "Round 2 International and Domestic | Closing 15 April each year | same year by 31 August"
+  },
+  "institution": {
+    "name": "The Australian National University (ANU)",
+    "website": "https://www.anu.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://research.anu.edu.au/postgraduate-research-candidates/research-degree-scholarships",
+  "source_url": "https://research.anu.edu.au/postgraduate-research-candidates/research-degree-scholarships",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Research degrees (PhD/MPhil), all fields",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "For research students commencing in the same year by 31 August",
+    "Applications must be complete by the closing date; incomplete applications are not assessed"
+  ],
+  "skills": [],
+  "description_short": "ANU's second research scholarship round, open to international and domestic applicants, closes 15 April for students commencing by 31 August of the same year. The University Research Scholarship base stipend for 2027 is listed at $40,475 per annum.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-15",
+    "timezone": "Australia/Sydney",
+    "evidence_url": "https://research.anu.edu.au/postgraduate-research-candidates/research-degree-scholarships",
+    "evidence_quote": "Closing 15 April each year"
+  },
+  "compensation": {
+    "value": "$40,475 per annum (full-time base stipend rate 2027)",
+    "evidence_url": "https://study.anu.edu.au/scholarships/find-scholarship/anu-university-research-scholarships",
+    "evidence_quote": "$ 40,475 per annum (Full-time base stipend rate 2027)"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ANU research scholarship pages (search results) state Round 2 closes 15 April each year",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The page gives a recurring date ('each year'); 15 April 2027 is inferred for the 2027 round",
+    "Some college pages describe the extra round only as 'March/April'",
+    "Currency of the stipend assumed to be AUD (not stated in the quote)",
+    "City not captured"
+  ],
+  "id": "opp_d8d94e51b83237c9",
+  "fingerprint": "04d8cf2b460ff2a8",
+  "discovered_at": "2026-11-02T03:15:40.975Z",
+  "last_verified_at": "2026-11-02T03:15:40.975Z",
+  "content_hash": "sha256:95a81367300fbea15590d1e0d4adbd5565ac013cb58c11b52b01b239daf4a24e"
+}

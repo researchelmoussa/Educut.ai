@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Tsing Hua College International Bachelor Program (Fall 2027)",
+    "evidence_url": "https://ibp.nthu.edu.tw/userfiles/images/product/Fall%202027%20IBP%20Application%20Guidelines%20for%20International%20Student.pdf",
+    "evidence_quote": "Fall 2027 IBP Application Guidelines for International Student"
+  },
+  "institution": {
+    "name": "National Tsing Hua University, Tsing Hua College",
+    "website": "https://www.nthu.edu.tw",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ibp.nthu.edu.tw/userfiles/images/product/Fall%202027%20IBP%20Application%20Guidelines%20for%20International%20Student.pdf",
+  "source_url": "https://ibp.nthu.edu.tw/userfiles/images/product/Fall%202027%20IBP%20Application%20Guidelines%20for%20International%20Student.pdf",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Taiwan",
+    "country_code": "TW"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Undergraduate study (international bachelor program)",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Chinese-taught Group A: TOCFL A2 or HSK level 4 minimum",
+    "English-taught tracks: e.g. IELTS 6.0 or TOEFL iBT 82",
+    "Online application only; one major per application; late or incomplete applications are not reviewed"
+  ],
+  "skills": [],
+  "description_short": "International bachelor program at National Tsing Hua University's Tsing Hua College for Fall 2027. Applications run from October 1, 2026 to April 22, 2027 (12:00 noon Taiwan time); selection is mainly by document review, with a quota of 180 international students.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-22T12:00:00+08:00",
+    "timezone": "Asia/Taipei",
+    "evidence_url": "https://ibp.nthu.edu.tw/userfiles/images/product/Fall%202027%20IBP%20Application%20Guidelines%20for%20International%20Student.pdf",
+    "evidence_quote": "April 22nd, 2027 at 12:00 noon Taiwan time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Fall 2027 IBP application guidelines (search results) give the April 22, 2027 deadline",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "One search summary mentions earlier rounds closing November 23, 2026 and March 3, 2027; another reports a single window",
+    "Country inferred from the guidelines' context (Taiwan time, nthu.edu.tw)",
+    "Scholarships not captured"
+  ],
+  "id": "opp_32c1a19b671dd7a4",
+  "fingerprint": "ad956b47952be5c4",
+  "discovered_at": "2026-11-02T03:15:43.412Z",
+  "last_verified_at": "2026-11-02T03:15:43.412Z",
+  "content_hash": "sha256:81bb42f5520e5eb2245ae8bcf84d7a62cd7f98c8f3eaa086c42c72d1ba8693c3"
+}

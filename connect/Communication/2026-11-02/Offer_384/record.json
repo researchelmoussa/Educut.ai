@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "ALU Public Sector Fellowship (Cohort 6)",
+    "evidence_url": "https://psf.alueducation.com/",
+    "evidence_quote": "For Cohort 6, the application deadline is December 15, 2026."
+  },
+  "institution": {
+    "name": "African Leadership University (ALU) School of Business",
+    "website": "https://www.alueducation.com",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://psf.alueducation.com/",
+  "source_url": "https://psf.alueducation.com/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Public sector leadership",
+  "seniority": "Mid-to-senior career",
+  "qualifications": [
+    "Aimed at mid-to-senior public sector leaders",
+    "Nomination deadline November 15, 2026"
+  ],
+  "skills": [],
+  "description_short": "ALU School of Business Public Sector Fellowship, a non-degree programme for mid-to-senior public sector leaders. Cohort 6 nominations close November 15, 2026 and applications December 15, 2026, with the cohort starting in May/June 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": null,
+    "evidence_url": "https://psf.alueducation.com/",
+    "evidence_quote": "December 15, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ALU Public Sector Fellowship page (search results) gives the Cohort 6 application deadline of December 15, 2026",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Fees, funding and format not captured",
+    "Location not stated in the results",
+    "Whether direct applications are possible without a nomination is not clear"
+  ],
+  "id": "opp_de76947aa7febdc3",
+  "fingerprint": "c6d5cf4f823344e1",
+  "discovered_at": "2026-11-02T03:15:40.800Z",
+  "last_verified_at": "2026-11-02T03:15:40.800Z",
+  "content_hash": "sha256:404085c05ca01c995904da7f0c07a8c2c95ebdfdf3302846d54cfd80a3429c1c"
+}

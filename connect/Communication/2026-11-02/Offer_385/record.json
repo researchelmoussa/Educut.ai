@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Regular Freshman Admissions, Fall 2027-28",
+    "evidence_url": "https://www.aub.edu.lb/admissions/Pages/Deadlines.aspx",
+    "evidence_quote": "Regular Freshman Admissions to Fall 2027-28"
+  },
+  "institution": {
+    "name": "American University of Beirut (AUB)",
+    "website": "https://www.aub.edu.lb",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.aub.edu.lb/admissions/Pages/Deadlines.aspx",
+  "source_url": "https://www.aub.edu.lb/admissions/Pages/Deadlines.aspx",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Beirut",
+    "country": "Lebanon",
+    "country_code": "LB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Undergraduate study (all fields)",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Latest SAT session considered: December 2026"
+  ],
+  "skills": [],
+  "description_short": "AUB regular freshman admissions for Fall 2027-28. The application window opens November 1, 2026 and closes December 20, 2026; decisions are expected by the end of March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-20",
+    "timezone": "Asia/Beirut",
+    "evidence_url": "https://www.aub.edu.lb/admissions/Pages/Deadlines.aspx",
+    "evidence_quote": "December 20, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official AUB deadlines page and undergraduate catalogue (search results) list December 20, 2026 for regular Fall 2027-28 admission",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Programme-specific requirements and financial aid not captured"
+  ],
+  "id": "opp_39fe5c0ea721ccf4",
+  "fingerprint": "bcd084d2aa08e1c0",
+  "discovered_at": "2026-11-02T03:15:41.473Z",
+  "last_verified_at": "2026-11-02T03:15:41.473Z",
+  "content_hash": "sha256:4efcd9a5637c8161d4efd0393b60208eaf98321ad6b49b6bb371601b045711f7"
+}

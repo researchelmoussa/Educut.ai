@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Department of Computing PhD (2027 entry)",
+    "evidence_url": "https://www.imperial.ac.uk/computing/prospective-students/phd/",
+    "evidence_quote": "four application deadlines for April and October 2027 entry: 1 October 2026, 1 December 2026, 1 February 2027, and 1 April 2027"
+  },
+  "institution": {
+    "name": "Imperial College London, Department of Computing",
+    "website": "https://www.imperial.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.imperial.ac.uk/computing/prospective-students/phd/",
+  "source_url": "https://www.imperial.ac.uk/computing/prospective-students/phd/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "London",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Computing",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Applicants are expected to have a First Class or Distinction Masters level degree, or equivalent",
+    "Overseas candidates who need funding are advised to apply by the October and December deadlines"
+  ],
+  "skills": [],
+  "description_short": "Imperial's Department of Computing PhD for April and October 2027 entry has deadlines of 1 December 2026, 1 February 2027 and 1 April 2027 (the 1 October 2026 round has passed). Decisions run from 15 February to 15 July 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.imperial.ac.uk/computing/prospective-students/phd/",
+    "evidence_quote": "1 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Department of Computing PhD page (search results) lists 1 December 2026 among the 2027-entry deadlines",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title composed from the department's PhD page and the 2027 entry it describes",
+    "Applications are also accepted at any time; the 1 December 2026 date is the next listed deadline",
+    "Studentship values not captured"
+  ],
+  "id": "opp_43eebea530dec266",
+  "fingerprint": "815f9950ab3d3207",
+  "discovered_at": "2026-11-02T03:15:42.764Z",
+  "last_verified_at": "2026-11-02T03:15:42.764Z",
+  "content_hash": "sha256:25c6ebe7dc6908dff738349c2ce8af06ff64cc53a7c67e44649d19228cebfd4f"
+}
