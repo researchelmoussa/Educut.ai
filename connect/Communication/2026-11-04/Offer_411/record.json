@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Euroculture Erasmus Mundus Joint Master (2027–2029)",
+    "evidence_url": "https://www.euroculturemaster.eu/application-procedure",
+    "evidence_quote": "Applications for the 2027–2029 Euroculture Erasmus Mundus Joint Master open on 15 October 2026."
+  },
+  "institution": {
+    "name": "Euroculture Erasmus Mundus Joint Master consortium",
+    "website": "https://www.euroculturemaster.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.euroculturemaster.eu/online-application-tool",
+  "source_url": "https://www.euroculturemaster.eu/erasmus-mundus-scholarship",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Groningen",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "European studies, culture and society",
+  "seniority": "Master's",
+  "qualifications": [
+    "First higher education degree (or recognised equivalent) by the deadline; an official document confirming completion is sufficient",
+    "English test results must be in by 15 January 2027 for scholarship consideration"
+  ],
+  "skills": [],
+  "description_short": "Applications for the 2027-2029 Euroculture Erasmus Mundus Joint Master opened on 15 October 2026. To be considered for an Erasmus Mundus scholarship, a complete application must be submitted by 15 January 2027. The scholarship covers participation fees, health insurance and EUR 1,400 monthly living costs.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/Amsterdam",
+    "evidence_url": "https://www.euroculturemaster.eu/erasmus-mundus-scholarship",
+    "evidence_quote": "To be considered for an Erasmus Mundus scholarship, you must submit your complete application by 15 January 2027"
+  },
+  "compensation": {
+    "value": "Erasmus Mundus scholarship: participation fees, health insurance and living costs of EUR 1,400 per month",
+    "evidence_url": "https://www.euroculturemaster.eu/erasmus-mundus-scholarship",
+    "evidence_quote": "It covers participation fees for the Euroculture programme, health insurance, living costs (€1.400 per month)"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Euroculture pages (search results): applications for 2027-2029 opened 15 October 2026; scholarship applications due 15 January 2027",
+    "Results expected end of March 2027 (application page) or early March 2027 (FAQ)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "FAQ says new applications are accepted 'from October 15 2027 onwards', apparently a typo for 2026",
+    "Application-tool page still contains older 2026-2028 notices",
+    "City is the Euroculture Secretariat (Groningen); study takes place across consortium universities",
+    "Time of day for the deadline not stated",
+    "The deadline applies to scholarship consideration; a later self-funded deadline may exist"
+  ],
+  "id": "opp_b7923f00ee28c2aa",
+  "fingerprint": "72ca8121fbef9701",
+  "discovered_at": "2026-11-04T05:54:42.244Z",
+  "last_verified_at": "2026-11-04T05:54:42.244Z",
+  "content_hash": "sha256:b21d021a3fc75d3cd752545f22af0124cbbbcb4aa72492502267b26c03a6ef10"
+}
