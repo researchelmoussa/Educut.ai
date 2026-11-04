@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Nieman Fellowship (International, 2027-28)",
+    "evidence_url": "https://nieman.harvard.edu/fellowships/how-to-apply/",
+    "evidence_quote": "How to Apply - Nieman Foundation - Harvard University"
+  },
+  "institution": {
+    "name": "Nieman Foundation for Journalism at Harvard University",
+    "website": "https://nieman.harvard.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://nieman.harvard.edu/fellowships/how-to-apply/",
+  "source_url": "https://nieman.harvard.edu/fellowships/how-to-apply/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Cambridge",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Journalism",
+  "seniority": "Working journalists (5+ years)",
+  "qualifications": [
+    "Working journalist with at least five years of full-time media experience (student journalism does not count; PR professionals excluded)",
+    "Two essays, professional profile and study proposal summary, work samples, three recommendation letters",
+    "International recommendation letters due December 15"
+  ],
+  "skills": [],
+  "description_short": "Harvard's Nieman Foundation is accepting applications for its 2027-28 fellowships for working journalists with at least five years of full-time experience. The international application is due 1 December 2026; the U.S. deadline is 31 January 2027. Fellowships start around mid-August.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": "America/New_York",
+    "evidence_url": "https://nieman.harvard.edu/fellowships/how-to-apply/",
+    "evidence_quote": "The International Nieman Fellowship application for the 2027-28 year is due December 1, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Nieman Foundation How to Apply page (search results): international 2027-28 applications due December 1, 2026; submissions open",
+    "U.S. applicants: deadline January 31, 2027 (same page as shown in search results)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title composed from the official fellowship name plus the international application track; the page heading is 'How to Apply'",
+    "Time of day for the deadline not stated",
+    "Applicants from countries where the U.S. has suspended J visa issuance are advised to wait",
+    "Stipend not captured from the search results"
+  ],
+  "id": "opp_0afa153070a677b7",
+  "fingerprint": "96b36a285fd78971",
+  "discovered_at": "2026-11-04T05:52:11.084Z",
+  "last_verified_at": "2026-11-04T05:52:11.084Z",
+  "content_hash": "sha256:375677370d38d18c70d5cfb1ccec27aeb8d8ca792f9a42c0ebc78771227aa1f9"
+}
