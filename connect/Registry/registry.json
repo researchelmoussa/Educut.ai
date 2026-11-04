@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-02T02:53:18.112Z",
+  "updated_at": "2026-11-03T02:56:22.116Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -1724,7 +1724,7 @@
       "deadline": "2026-10-31",
       "content_hash": "sha256:86a44f3bc2fc7f72e3dbe15461b847cadb4d5a789f2d4ca7085677d9b17f43f1",
       "last_verified_at": "2026-10-14T07:13:32.439Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-14T07:13:44.378Z",
       "history": [
         {
@@ -1768,6 +1768,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-02T02:59:20.221Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-31 passed"
         }
       ],
       "offer_number": 23
@@ -1852,7 +1859,7 @@
       "deadline": "2026-10-31T23:59:00-12:00",
       "content_hash": "sha256:1ce45846ecba1d4ce4f327eefc39bd34c38167ce94ee23c22175dd40ec6a516e",
       "last_verified_at": "2026-10-15T01:55:28.645Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-15T01:55:28.836Z",
       "history": [
         {
@@ -1896,6 +1903,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-02T02:59:20.222Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-31T23:59:00-12:00 passed"
         }
       ],
       "offer_number": 24
@@ -2753,7 +2767,7 @@
       "deadline": "2026-11-01T23:59:00+01:00",
       "content_hash": "sha256:21375841fbd77d301020d3828b3361a4bef71ad10e6c5d97d2a438fd59b18100",
       "last_verified_at": "2026-10-16T01:56:35.029Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-16T01:56:40.339Z",
       "history": [
         {
@@ -2797,6 +2811,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-02T02:59:20.222Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-01T23:59:00+01:00 passed"
         }
       ],
       "offer_number": 38
@@ -3067,7 +3088,7 @@
       "deadline": "2026-10-31",
       "content_hash": "sha256:5165e2395ed48fdeea3b12574bf940e8811b8b2bf1b03ea6317a8a19d74c0fa3",
       "last_verified_at": "2026-10-16T01:56:36.121Z",
-      "pipeline_status": "NEEDS_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-16T01:56:41.426Z",
       "history": [
         {
@@ -3083,6 +3104,13 @@
           "to": "NEEDS_REVIEW",
           "actor": "opportunity-scout",
           "reason": "application_status=NEEDS_REVIEW"
+        },
+        {
+          "at": "2026-11-02T02:59:20.222Z",
+          "from": "NEEDS_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-31 passed"
         }
       ]
     },
@@ -4953,7 +4981,7 @@
       "deadline": "2026-10-31",
       "content_hash": "sha256:9dede3f79b80c1af37d1eb35bfca554a662e642d86ab84c9a20d2e58814c03d9",
       "last_verified_at": "2026-10-17T01:55:25.739Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T01:55:25.920Z",
       "history": [
         {
@@ -4997,6 +5025,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-02T02:59:20.222Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-31 passed"
         }
       ],
       "offer_number": 50
@@ -5511,7 +5546,7 @@
       "deadline": "2026-10-31",
       "content_hash": "sha256:9981f2642c40af62aa84d66ebb675fbd9710e365e34dfc669eb1f42376975e28",
       "last_verified_at": "2026-10-17T01:58:56.703Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T01:58:56.885Z",
       "history": [
         {
@@ -5555,6 +5590,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-02T02:59:20.222Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-31 passed"
         }
       ],
       "offer_number": 59
@@ -10207,7 +10249,7 @@
       "deadline": "2026-10-31",
       "content_hash": "sha256:02856a575d5eae364b2056a8877f0aafc70db16353532af5fbf27c06d0efbaea",
       "last_verified_at": "2026-10-21T01:59:23.267Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-21T01:59:32.748Z",
       "history": [
         {
@@ -10251,6 +10293,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-02T02:59:20.222Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-31 passed"
         }
       ],
       "offer_number": 133
@@ -12889,7 +12938,7 @@
       "deadline": "2026-10-31",
       "content_hash": "sha256:6ad9cec2000f48caad84a96c8158aebe307649f3cf0f673ef39b21e33bdc6f8f",
       "last_verified_at": "2026-10-23T01:59:51.478Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-23T02:00:00.448Z",
       "history": [
         {
@@ -12933,6 +12982,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-02T02:59:20.222Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-10-31 passed"
         }
       ],
       "offer_number": 173
@@ -13137,7 +13193,7 @@
       "deadline": "2026-11-01T16:30:00+13:00",
       "content_hash": "sha256:805f7b8abc95e4993a19478fb98b47bfe3dc0b88921429a9b8592dfff4a4214b",
       "last_verified_at": "2026-10-24T02:05:02.519Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-24T02:05:12.474Z",
       "history": [
         {
@@ -13181,6 +13237,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-02T02:59:20.222Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-01T16:30:00+13:00 passed"
         }
       ],
       "offer_number": 177
@@ -24994,6 +25057,1494 @@
         }
       ],
       "offer_number": 373
+    },
+    "opp_c62bb2bc5b736804": {
+      "id": "opp_c62bb2bc5b736804",
+      "fingerprint": "6b2138c4ad341ccf",
+      "title": "PhD Programs, Fall 2027 Admission",
+      "institution": "Khalifa University",
+      "city": null,
+      "country": "United Arab Emirates",
+      "source_url": "https://www.ku.ac.ae/postgraduate-admissions",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.ku.ac.ae/postgraduate-admissions",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-01",
+      "content_hash": "sha256:01e82cd68eb2b4660c161c972c673b9a90af8d0f99e2d2c4387c2a49d221fe55",
+      "last_verified_at": "2026-11-02T03:15:43.061Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:51.977Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:51.977Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:51.978Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-02T03:18:58.347Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-02T03:18:58.348Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:14.907Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:14.908Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 374
+    },
+    "opp_bd9626706563ef53": {
+      "id": "opp_bd9626706563ef53",
+      "fingerprint": "14831e7c7cc21a31",
+      "title": "Graduate Admissions, Fall 2027",
+      "institution": "The American University in Cairo (AUC)",
+      "city": "Cairo",
+      "country": "Egypt",
+      "source_url": "https://www.aucegypt.edu/admissions/graduate",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.aucegypt.edu/admissions/graduate",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:bca4878d52da3f0ada703649ee78511ca5395afffa3ea7069917cc290ca269a3",
+      "last_verified_at": "2026-11-02T03:15:41.631Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:52.140Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:52.140Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:52.140Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-02T03:19:17.004Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-02T03:19:17.005Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:15.225Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:15.225Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 375
+    },
+    "opp_7a32b5f83395e22c": {
+      "id": "opp_7a32b5f83395e22c",
+      "fingerprint": "38ce5ed0d3961952",
+      "title": "B.Sc. Computer Science (January 2027 intake)",
+      "institution": "Ashesi University",
+      "city": null,
+      "country": null,
+      "source_url": "https://admissions.ashesi.edu.gh/courses/course/212-bsc-computer-science",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://admissions.ashesi.edu.gh/courses/course/212-bsc-computer-science",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-16T23:59:59+00:00",
+      "content_hash": "sha256:2d960f1ca98dd81e4a76414336d4ea9e405063b295a8b0b5b5a7013434b7921b",
+      "last_verified_at": "2026-11-02T03:15:41.148Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:52.308Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:52.308Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:52.309Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-02T03:19:26.153Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-02T03:19:26.154Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:15.602Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:15.603Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 376
+    },
+    "opp_66acc8e099dc5da0": {
+      "id": "opp_66acc8e099dc5da0",
+      "fingerprint": "6604b310496232de",
+      "title": "Maestría en Inteligencia Artificial (MAIA)",
+      "institution": "Universidad de los Andes, Departamento de Ingeniería de Sistemas y Computación",
+      "city": null,
+      "country": "Colombia",
+      "source_url": "https://sistemas.uniandes.edu.co/maia/admisiones",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://sistemas.uniandes.edu.co/maia/admisiones",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-25",
+      "content_hash": "sha256:a68ad02c86cf3f31474c478f330395d5b61902f7bf77d519527a2515e6c75d23",
+      "last_verified_at": "2026-11-02T03:15:44.186Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:52.505Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:52.505Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:52.505Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-02T03:19:10.185Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-02T03:19:10.186Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:16.023Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:16.023Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 377
+    },
+    "opp_51edd5326e9bd298": {
+      "id": "opp_51edd5326e9bd298",
+      "fingerprint": "ebf986e1e8b163d9",
+      "title": "Magíster en Ciencia de Datos UC",
+      "institution": "Pontificia Universidad Católica de Chile (UC Online)",
+      "city": null,
+      "country": "Chile",
+      "source_url": "https://uconline.uc.cl/programa/magister-en-ciencia-de-datos/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://uconline.uc.cl/programa/magister-en-ciencia-de-datos/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:7d3811a81eeb24b8de0b432b398618c5a3b9f85370ce9daa95e586824aee0701",
+      "last_verified_at": "2026-11-02T03:15:43.712Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:52.689Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:52.689Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:52.689Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-02T03:19:20.772Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-02T03:19:20.772Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:16.318Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:16.318Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 378
+    },
+    "opp_28cae739bb581a17": {
+      "id": "opp_28cae739bb581a17",
+      "fingerprint": "7bf585ace967f7af",
+      "title": "Ph.D. Admissions (Winter Session, AY 2026-2027)",
+      "institution": "Indraprastha Institute of Information Technology Delhi (IIIT-Delhi)",
+      "city": "Delhi",
+      "country": "India",
+      "source_url": "https://iiitd.ac.in/admission/phd/oct2026",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://iiitd.ac.in/admission/phd/oct2026",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15T17:00:00+05:30",
+      "content_hash": "sha256:57f17018a7b4696a4f6f749cedfb816a339d373d8f056cd05ec50f4bd9e831e3",
+      "last_verified_at": "2026-11-02T03:15:42.434Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:52.860Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:52.860Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:52.861Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-02T03:20:12.204Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-02T03:20:12.204Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:16.594Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:16.595Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 379
+    },
+    "opp_5270dc29bd1627d0": {
+      "id": "opp_5270dc29bd1627d0",
+      "fingerprint": "b418837c2fe868c8",
+      "title": "ICDAR 2027 Call for Papers",
+      "institution": "ICDAR 2027 (International Conference on Document Analysis and Recognition)",
+      "city": "Kuala Lumpur",
+      "country": "Malaysia",
+      "source_url": "https://icdar2027.org/call-for-papers",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://icdar2027.org/call-for-papers",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-20T23:59:00-12:00",
+      "content_hash": "sha256:f440f8367bd7ca65c5722f15b056063715fdc8c719d34bba84e70b09b7eed98f",
+      "last_verified_at": "2026-11-02T03:15:42.262Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:53.061Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:53.061Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:53.061Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-02T03:20:06.536Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-02T03:20:06.536Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:16.877Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:16.878Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 380
+    },
+    "opp_d8d94e51b83237c9": {
+      "id": "opp_d8d94e51b83237c9",
+      "fingerprint": "04d8cf2b460ff2a8",
+      "title": "ANU Research Degree Scholarships, Round 2 (2027)",
+      "institution": "The Australian National University (ANU)",
+      "city": null,
+      "country": "Australia",
+      "source_url": "https://research.anu.edu.au/postgraduate-research-candidates/research-degree-scholarships",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://research.anu.edu.au/postgraduate-research-candidates/research-degree-scholarships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-15",
+      "content_hash": "sha256:95a81367300fbea15590d1e0d4adbd5565ac013cb58c11b52b01b239daf4a24e",
+      "last_verified_at": "2026-11-02T03:15:40.975Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:53.232Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:53.232Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:53.233Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-02T03:20:09.158Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-02T03:20:09.159Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:17.186Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:17.186Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 381
+    },
+    "opp_6ecb429c182e9787": {
+      "id": "opp_6ecb429c182e9787",
+      "fingerprint": "d03c654554cd94f1",
+      "title": "Computer Science MPhil/PhD",
+      "institution": "University College London (UCL), Department of Computer Science",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://www.ucl.ac.uk/study/prospective-students/graduate/courses/computer-science-mphilphd-0",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.ucl.ac.uk/study/prospective-students/graduate/courses/computer-science-mphilphd-0",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-12T17:00:00+00:00",
+      "content_hash": "sha256:61d1a88a53c3c27f03d5a75d8d555b7d73739a4c37e4dfc6802940de317d568a",
+      "last_verified_at": "2026-11-02T03:15:44.035Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:53.432Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:53.432Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:53.433Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-02T03:20:29.116Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-02T03:20:29.116Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:17.464Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:17.464Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 382
+    },
+    "opp_34fb26039864bf0b": {
+      "id": "opp_34fb26039864bf0b",
+      "fingerprint": "d772415fffc81770",
+      "title": "Presidential Postdoctoral Research Fellows",
+      "institution": "Princeton University, Office of the Dean of the Faculty",
+      "city": "Princeton",
+      "country": "United States",
+      "source_url": "https://dof.princeton.edu/faculty-development-and-inclusion/talent-pathway-programs/presidential-postdoctoral-research-fellows",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://dof.princeton.edu/faculty-development-and-inclusion/talent-pathway-programs/presidential-postdoctoral-research-fellows",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-13",
+      "content_hash": "sha256:935a77f1fec1c7d5928f6f8bb1996022e21f1c87b4a98dad8aeb34a06cbde68a",
+      "last_verified_at": "2026-11-02T03:15:43.562Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:53.628Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:53.628Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:53.629Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-02T03:20:14.282Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-02T03:20:14.282Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:17.790Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:17.791Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 383
+    },
+    "opp_de76947aa7febdc3": {
+      "id": "opp_de76947aa7febdc3",
+      "fingerprint": "c6d5cf4f823344e1",
+      "title": "ALU Public Sector Fellowship (Cohort 6)",
+      "institution": "African Leadership University (ALU) School of Business",
+      "city": null,
+      "country": null,
+      "source_url": "https://psf.alueducation.com/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://psf.alueducation.com/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:404085c05ca01c995904da7f0c07a8c2c95ebdfdf3302846d54cfd80a3429c1c",
+      "last_verified_at": "2026-11-02T03:15:40.800Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:53.818Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:53.818Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:53.818Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:51:36.693Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:51:36.693Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:18.099Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:18.099Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 384
+    },
+    "opp_39fe5c0ea721ccf4": {
+      "id": "opp_39fe5c0ea721ccf4",
+      "fingerprint": "bcd084d2aa08e1c0",
+      "title": "Regular Freshman Admissions, Fall 2027-28",
+      "institution": "American University of Beirut (AUB)",
+      "city": "Beirut",
+      "country": "Lebanon",
+      "source_url": "https://www.aub.edu.lb/admissions/Pages/Deadlines.aspx",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.aub.edu.lb/admissions/Pages/Deadlines.aspx",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-20",
+      "content_hash": "sha256:4efcd9a5637c8161d4efd0393b60208eaf98321ad6b49b6bb371601b045711f7",
+      "last_verified_at": "2026-11-02T03:15:41.473Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:54.003Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:54.003Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:54.003Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:51:35.913Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:51:35.913Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:18.423Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:18.424Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 385
+    },
+    "opp_32c1a19b671dd7a4": {
+      "id": "opp_32c1a19b671dd7a4",
+      "fingerprint": "ad956b47952be5c4",
+      "title": "Tsing Hua College International Bachelor Program (Fall 2027)",
+      "institution": "National Tsing Hua University, Tsing Hua College",
+      "city": null,
+      "country": "Taiwan",
+      "source_url": "https://ibp.nthu.edu.tw/userfiles/images/product/Fall%202027%20IBP%20Application%20Guidelines%20for%20International%20Student.pdf",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://ibp.nthu.edu.tw/userfiles/images/product/Fall%202027%20IBP%20Application%20Guidelines%20for%20International%20Student.pdf",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-22T12:00:00+08:00",
+      "content_hash": "sha256:81bb42f5520e5eb2245ae8bcf84d7a62cd7f98c8f3eaa086c42c72d1ba8693c3",
+      "last_verified_at": "2026-11-02T03:15:43.412Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:54.168Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:54.168Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:54.168Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:51:44.918Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:51:44.918Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:18.722Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:18.723Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 386
+    },
+    "opp_e373d28e0669fd0e": {
+      "id": "opp_e373d28e0669fd0e",
+      "fingerprint": "dddcb57dd767e146",
+      "title": "ASIA CCS 2027 Call for Papers (Second Round)",
+      "institution": "ACM ASIA Conference on Computer and Communications Security (ASIA CCS 2027)",
+      "city": null,
+      "country": null,
+      "source_url": "https://asiaccs2027.cityu.edu.mo/call-for-papers/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://asiaccs2027.cityu.edu.mo/call-for-papers/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-11",
+      "content_hash": "sha256:fdb4a76e037527fd6a88632e2be33cc45d35bbb1e9801677ea7c3cf73d2c79d3",
+      "last_verified_at": "2026-11-02T03:15:41.323Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:54.366Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:54.366Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:54.366Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:51:41.503Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:51:41.503Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:19.047Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:19.047Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 387
+    },
+    "opp_9f1b78e4e5e560bc": {
+      "id": "opp_9f1b78e4e5e560bc",
+      "fingerprint": "86f6a18ad5ad811f",
+      "title": "2027 Gene Golub SIAM Summer School",
+      "institution": "Society for Industrial and Applied Mathematics (SIAM)",
+      "city": "Corpus Christi",
+      "country": "United States",
+      "source_url": "https://www.siam.org/programs-initiatives/programs/gene-golub-siam-summer-school/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.siam.org/programs-initiatives/programs/gene-golub-siam-summer-school/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08",
+      "content_hash": "sha256:41e7ebc130588e121721800ebeeb1698c6400b9e8a43e4f97ed01ef40bf4c01a",
+      "last_verified_at": "2026-11-02T03:15:41.952Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:54.537Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:54.537Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:54.537Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:51:52.633Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:51:52.633Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:19.324Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:19.324Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 388
+    },
+    "opp_210679050b940c21": {
+      "id": "opp_210679050b940c21",
+      "fingerprint": "e62a6a2b6b109919",
+      "title": "Leiden University Excellence Scholarship (LExS)",
+      "institution": "Leiden University",
+      "city": "Leiden",
+      "country": "Netherlands",
+      "source_url": "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:4cf51ed2ab2571ddbf802721c70c347614ddd9e52805619f9a0ab015c176f4d2",
+      "last_verified_at": "2026-11-02T03:15:43.221Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:54.713Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:54.713Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:54.713Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:52:38.228Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:52:38.228Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:19.608Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:19.608Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 389
+    },
+    "opp_75e762bca0b4a549": {
+      "id": "opp_75e762bca0b4a549",
+      "fingerprint": "385c3eb23a0e1ef7",
+      "title": "School of Informatics PhD Funding (September 2027 entry)",
+      "institution": "The University of Edinburgh, School of Informatics",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "source_url": "https://informatics.ed.ac.uk/study-with-us/our-degrees/postgraduate-research-programmes-and-centres-doctoral-training/postgraduate-research-funding-opportunities-0",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://informatics.ed.ac.uk/study-with-us/our-degrees/postgraduate-research-programmes-and-centres-doctoral-training/postgraduate-research-funding-opportunities-0",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30T23:59:00+00:00",
+      "content_hash": "sha256:3a84d2fa2d73383fb503c7ef427f6bca38b3b85cfd62508d01d88fb3a4d27f41",
+      "last_verified_at": "2026-11-02T03:15:41.779Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:54.886Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:54.886Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:54.887Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:52:56.340Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:52:56.340Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:19.923Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:19.923Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 390
+    },
+    "opp_d0e2fb8996f3119f": {
+      "id": "opp_d0e2fb8996f3119f",
+      "fingerprint": "f3c1b851415150fa",
+      "title": "International Scholars Program (September 2027 intake)",
+      "institution": "The University of British Columbia",
+      "city": null,
+      "country": "Canada",
+      "source_url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-15T23:59:00-08:00",
+      "content_hash": "sha256:49f5fb1d00496bbfa85e75d4958a6e8879fa277f58ad3bea37a0a9f4ae1a5637",
+      "last_verified_at": "2026-11-02T03:15:43.873Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:55.062Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:55.062Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:55.062Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:52:33.704Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:52:33.704Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:20.212Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:20.213Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 391
+    },
+    "opp_972603df5c5116d4": {
+      "id": "opp_972603df5c5116d4",
+      "fingerprint": "69bd2aa59fb59b8e",
+      "title": "USENIX Security '27 Call for Papers (Cycle 2)",
+      "institution": "USENIX Association (36th USENIX Security Symposium)",
+      "city": "Denver",
+      "country": "United States",
+      "source_url": "https://www.usenix.org/conference/usenixsecurity27/call-for-papers",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://www.usenix.org/conference/usenixsecurity27/call-for-papers",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-26T23:59:00-12:00",
+      "content_hash": "sha256:1796fdda909042b2f68e8b81c0de29d835a97a519e60f6b461609cd8c2a6011b",
+      "last_verified_at": "2026-11-02T03:15:44.346Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:55.249Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:55.249Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:55.249Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:52:39.419Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:52:39.419Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:20.637Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:20.637Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 392
+    },
+    "opp_565017e339f8c8fb": {
+      "id": "opp_565017e339f8c8fb",
+      "fingerprint": "2c822743d64c38d1",
+      "title": "PhD Admissions (Regular - January 2027)",
+      "institution": "Indian Institute of Technology Hyderabad (IIT Hyderabad)",
+      "city": "Hyderabad",
+      "country": "India",
+      "source_url": "https://iith.ac.in/phdadmissions/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://iith.ac.in/phdadmissions/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-10T17:00:00+05:30",
+      "content_hash": "sha256:d09d60e131abc6988f6abcbcdc443d7f9e011bdf19ce670ca8df403d9efe70cc",
+      "last_verified_at": "2026-11-02T03:15:42.595Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:55.495Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:55.495Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:55.496Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:52:51.523Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:52:51.524Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:20.928Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:20.929Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 393
+    },
+    "opp_43eebea530dec266": {
+      "id": "opp_43eebea530dec266",
+      "fingerprint": "815f9950ab3d3207",
+      "title": "Department of Computing PhD (2027 entry)",
+      "institution": "Imperial College London, Department of Computing",
+      "city": "London",
+      "country": "United Kingdom",
+      "source_url": "https://www.imperial.ac.uk/computing/prospective-students/phd/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.imperial.ac.uk/computing/prospective-students/phd/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:25c6ebe7dc6908dff738349c2ce8af06ff64cc53a7c67e44649d19228cebfd4f",
+      "last_verified_at": "2026-11-02T03:15:42.764Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:55.674Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:55.674Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:55.674Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:53:25.311Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:53:25.311Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:21.212Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:21.212Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 394
+    },
+    "opp_19efe1d482d9c2e0": {
+      "id": "opp_19efe1d482d9c2e0",
+      "fingerprint": "a488cef0e4c09fb1",
+      "title": "Computer Science Ph.D.",
+      "institution": "The University of Texas at Austin, Department of Computer Science",
+      "city": "Austin",
+      "country": "United States",
+      "source_url": "https://www.cs.utexas.edu/graduate/apply",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.cs.utexas.edu/graduate/apply",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15T23:59:00-06:00",
+      "content_hash": "sha256:6d26ecfb05cedffd3b6731b4d8263d32192de1127ee29082d953194277384473",
+      "last_verified_at": "2026-11-02T03:15:44.494Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:55.834Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:55.835Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:55.835Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:55:53.972Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:55:53.972Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:21.512Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:21.513Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 395
+    },
+    "opp_883b81af93870981": {
+      "id": "opp_883b81af93870981",
+      "fingerprint": "07512a9cd7fff1aa",
+      "title": "Computer Science (PhD)",
+      "institution": "Harvard University, John A. Paulson School of Engineering and Applied Sciences (SEAS)",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://gsas.harvard.edu/program/computer-science",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://gsas.harvard.edu/program/computer-science",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15T17:00:00-05:00",
+      "content_hash": "sha256:dc0dc1f2efea2a3582c9e4ab1ce43bba7ba5ea3873d8e0f6b200b6c4ad17b023",
+      "last_verified_at": "2026-11-02T03:15:42.096Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:56.006Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:56.006Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:56.006Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:53:26.045Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:53:26.045Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:21.795Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:21.795Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 396
+    },
+    "opp_94bf155a1d11ce59": {
+      "id": "opp_94bf155a1d11ce59",
+      "fingerprint": "d9769120da875dcb",
+      "title": "PhD Program in Computer Science",
+      "institution": "Johns Hopkins University, Department of Computer Science (Whiting School of Engineering)",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.cs.jhu.edu/academic-programs/graduate-studies/phd-program/phd-program-admissions/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.cs.jhu.edu/academic-programs/graduate-studies/phd-program/phd-program-admissions/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15T23:59:00-05:00",
+      "content_hash": "sha256:df96c305d3d4c8ef022cc5d3709d0cb02137512f977ebe4d9a351a5c04504e83",
+      "last_verified_at": "2026-11-02T03:15:42.916Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-02T03:15:56.178Z",
+      "history": [
+        {
+          "at": "2026-11-02T03:15:56.178Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-02T03:15:56.179Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-03T02:53:59.158Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-03T02:53:59.159Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-03T02:56:22.115Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-03T02:56:22.116Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 397
     }
   },
   "seen_urls": {
@@ -25580,7 +27131,31 @@
     "https://lse.ac.uk/study-at-lse/graduate/mphilphd-data-networks-and-society": "opp_f25cf09b8750dcd8",
     "https://polyu.edu.hk/study/pg/research-postgraduate/find-your-programmes-rpg": "opp_e80df2ccd22f101d",
     "https://en.som.nycu.edu.tw/?p=2085": "opp_b5a7e73953459fa8",
-    "https://www2.ufjf.br/pgcc/wp-content/uploads/sites/181/2026/10/Edital-PPGCC-2027_v1.docx-1.pdf": "opp_5b051b9b5bc64dac"
+    "https://www2.ufjf.br/pgcc/wp-content/uploads/sites/181/2026/10/Edital-PPGCC-2027_v1.docx-1.pdf": "opp_5b051b9b5bc64dac",
+    "https://ku.ac.ae/postgraduate-admissions": "opp_c62bb2bc5b736804",
+    "https://aucegypt.edu/admissions/graduate": "opp_bd9626706563ef53",
+    "https://admissions.ashesi.edu.gh/courses/course/212-bsc-computer-science": "opp_7a32b5f83395e22c",
+    "https://sistemas.uniandes.edu.co/maia/admisiones": "opp_66acc8e099dc5da0",
+    "https://uconline.uc.cl/programa/magister-en-ciencia-de-datos": "opp_51edd5326e9bd298",
+    "https://iiitd.ac.in/admission/phd/oct2026": "opp_28cae739bb581a17",
+    "https://icdar2027.org/call-for-papers": "opp_5270dc29bd1627d0",
+    "https://research.anu.edu.au/postgraduate-research-candidates/research-degree-scholarships": "opp_d8d94e51b83237c9",
+    "https://ucl.ac.uk/study/prospective-students/graduate/courses/computer-science-mphilphd-0": "opp_6ecb429c182e9787",
+    "https://dof.princeton.edu/faculty-development-and-inclusion/talent-pathway-programs/presidential-postdoctoral-research-fellows": "opp_34fb26039864bf0b",
+    "https://psf.alueducation.com/": "opp_de76947aa7febdc3",
+    "https://aub.edu.lb/admissions/Pages/Deadlines.aspx": "opp_39fe5c0ea721ccf4",
+    "https://ibp.nthu.edu.tw/userfiles/images/product/Fall%202027%20IBP%20Application%20Guidelines%20for%20International%20Student.pdf": "opp_32c1a19b671dd7a4",
+    "https://asiaccs2027.cityu.edu.mo/call-for-papers": "opp_e373d28e0669fd0e",
+    "https://siam.org/programs-initiatives/programs/gene-golub-siam-summer-school": "opp_9f1b78e4e5e560bc",
+    "https://universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs": "opp_210679050b940c21",
+    "https://informatics.ed.ac.uk/study-with-us/our-degrees/postgraduate-research-programmes-and-centres-doctoral-training/postgraduate-research-funding-opportunities-0": "opp_75e762bca0b4a549",
+    "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars": "opp_d0e2fb8996f3119f",
+    "https://usenix.org/conference/usenixsecurity27/call-for-papers": "opp_972603df5c5116d4",
+    "https://iith.ac.in/phdadmissions": "opp_565017e339f8c8fb",
+    "https://imperial.ac.uk/computing/prospective-students/phd": "opp_43eebea530dec266",
+    "https://cs.utexas.edu/graduate/apply": "opp_19efe1d482d9c2e0",
+    "https://gsas.harvard.edu/program/computer-science": "opp_883b81af93870981",
+    "https://cs.jhu.edu/academic-programs/graduate-studies/phd-program/phd-program-admissions": "opp_94bf155a1d11ce59"
   },
-  "last_offer_number": 373
+  "last_offer_number": 397
 }
