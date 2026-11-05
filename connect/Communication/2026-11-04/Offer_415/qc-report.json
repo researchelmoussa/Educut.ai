@@ -1,6 +1,6 @@
 {
   "opportunity_id": "opp_61317816eab9c546",
-  "at": "2026-11-04T06:05:13.990Z",
+  "at": "2026-11-05T02:53:13.144Z",
   "status": "PASS_WITH_FLAGS",
   "failures": [],
   "warnings": [
@@ -16,7 +16,7 @@
     {
       "check": "record unchanged since content was made",
       "pass": true,
-      "detail": "sha256:d00056355744ceefaae2177ac54351c6ce95f32fcce7b3598e7ae458907efde7",
+      "detail": "sha256:0f47b1e2846fdb2a19b27a8ec54e93d1104241039fab2e049d79b0750ae8fa96",
       "owner": "opportunity-scout"
     },
     {
@@ -50,7 +50,7 @@
     {
       "check": "description ≤ 45 words",
       "pass": true,
-      "detail": "41 words",
+      "detail": "39 words",
       "owner": "opportunity-scout",
       "severity": "fail"
     },
@@ -85,7 +85,7 @@
     {
       "check": "built from current record",
       "pass": true,
-      "detail": "sha256:d00056355744ceefaae2177ac54351c6ce95f32fcce7b3598e7ae458907efde7",
+      "detail": "sha256:0f47b1e2846fdb2a19b27a8ec54e93d1104241039fab2e049d79b0750ae8fa96",
       "owner": "visual-designer",
       "severity": "fail"
     },
@@ -155,7 +155,7 @@
     {
       "check": "built from current record",
       "pass": true,
-      "detail": "sha256:d00056355744ceefaae2177ac54351c6ce95f32fcce7b3598e7ae458907efde7",
+      "detail": "sha256:0f47b1e2846fdb2a19b27a8ec54e93d1104241039fab2e049d79b0750ae8fa96",
       "owner": "communications",
       "severity": "fail"
     },
