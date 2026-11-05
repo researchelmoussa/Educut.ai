@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-03T02:56:22.116Z",
+  "updated_at": "2026-11-05T02:53:13.302Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -381,7 +381,7 @@
       "deadline": "2026-11-01",
       "content_hash": "sha256:883e38e24efe6882c452ba012bd7fd33358ad9b2a866e0c5674ef069d3b8475b",
       "last_verified_at": "2026-10-12T07:05:03.541Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-13T10:30:34.035Z",
       "history": [
         {
@@ -425,6 +425,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.536Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-01 passed"
         }
       ],
       "offer_number": 7
@@ -1600,7 +1607,7 @@
       "deadline": "2026-11-02T23:59:00-08:00",
       "content_hash": "sha256:a15fcd01e4301f1c1c5ba49ba758ad75fde7f2a5bb1433f2450525eae4dc3067",
       "last_verified_at": "2026-10-14T07:13:32.686Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-14T07:13:43.994Z",
       "history": [
         {
@@ -1644,6 +1651,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.537Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-02T23:59:00-08:00 passed"
         }
       ],
       "offer_number": 21
@@ -2066,7 +2080,7 @@
       "deadline": "2026-11-02T23:59:00+01:00",
       "content_hash": "sha256:77a1a17c4e31038c6febbacfcc75fe821696242a9abc0f0cb25a923fd381dd48",
       "last_verified_at": "2026-10-15T01:55:29.923Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-15T01:55:30.130Z",
       "history": [
         {
@@ -2110,6 +2124,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.537Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-02T23:59:00+01:00 passed"
         }
       ],
       "offer_number": 27
@@ -2190,7 +2211,7 @@
       "deadline": "2026-11-01",
       "content_hash": "sha256:7ecc3e3d25f4cc1827ba2e9d18a01569675303904c8e2c4989ce1452c765d1d5",
       "last_verified_at": "2026-10-15T01:55:30.781Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-15T01:55:31.004Z",
       "history": [
         {
@@ -2234,6 +2255,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.537Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-01 passed"
         }
       ],
       "offer_number": 29
@@ -2383,7 +2411,7 @@
       "deadline": "2026-11-01",
       "content_hash": "sha256:b4b6b595e45082b7c10f9478d81813f36ebe4bfb4fa916df8ad3c908b7accff3",
       "last_verified_at": "2026-10-15T01:55:31.993Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-15T01:55:32.185Z",
       "history": [
         {
@@ -2427,6 +2455,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.537Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-01 passed"
         }
       ],
       "offer_number": 32
@@ -3650,7 +3685,7 @@
       "deadline": "2026-11-01",
       "content_hash": "sha256:9ad61b431a465c9b762f6c0f2718249a409b5360ca78e6f79aa41f3282964287",
       "last_verified_at": "2026-10-16T02:01:53.196Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-16T02:01:53.389Z",
       "history": [
         {
@@ -3694,6 +3729,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.537Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-01 passed"
         }
       ],
       "offer_number": 44
@@ -6421,7 +6463,7 @@
       "deadline": "2026-11-02",
       "content_hash": "sha256:b228222be8135f522181450c960b3dda0da26062eb6081f1825f9e2f9a9232a4",
       "last_verified_at": "2026-10-18T01:58:23.920Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-18T01:58:24.205Z",
       "history": [
         {
@@ -6465,6 +6507,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.537Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-02 passed"
         }
       ],
       "offer_number": 73
@@ -7785,7 +7834,7 @@
       "deadline": "2026-11-02T17:00:00-05:00",
       "content_hash": "sha256:f5fcfd96514344b42285638157c2709fa869365466a37a87178ffd2ae05aa3bf",
       "last_verified_at": "2026-10-20T01:59:17.584Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-20T01:59:24.340Z",
       "history": [
         {
@@ -7829,6 +7878,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.537Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-02T17:00:00-05:00 passed"
         }
       ],
       "offer_number": 95
@@ -8364,7 +8420,7 @@
       "deadline": "2026-11-03T14:00:00+01:00",
       "content_hash": "sha256:070a469d2ed3a930f10520a738b662830f44f5b0daa4752acd8ff92bc75edce9",
       "last_verified_at": "2026-10-20T01:59:19.295Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-20T01:59:25.918Z",
       "history": [
         {
@@ -8408,6 +8464,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.537Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-03T14:00:00+01:00 passed"
         }
       ],
       "offer_number": 104
@@ -9067,7 +9130,7 @@
       "deadline": "2026-11-03T12:00:00+00:00",
       "content_hash": "sha256:0f79932e0e9449c6f47133c83e90262172897ef553eeacfc948a9c3172114c18",
       "last_verified_at": "2026-10-21T01:59:19.151Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-21T01:59:28.564Z",
       "history": [
         {
@@ -9111,6 +9174,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.538Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-03T12:00:00+00:00 passed"
         }
       ],
       "offer_number": 115
@@ -10063,7 +10133,7 @@
       "deadline": "2026-11-02T23:59:00-12:00",
       "content_hash": "sha256:4b36cf9f5ce76a86a2518d7ce33b74157fe3fb2b111e9276435d02e593538133",
       "last_verified_at": "2026-10-21T01:59:22.689Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-21T01:59:32.173Z",
       "history": [
         {
@@ -10107,6 +10177,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.538Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-02T23:59:00-12:00 passed"
         }
       ],
       "offer_number": 130
@@ -12187,7 +12264,7 @@
       "deadline": "2026-11-02",
       "content_hash": "sha256:81ad7d5189cf7ec0ef2a55b77178500e28c93105b4dd18ed75f02f06b81a2aee",
       "last_verified_at": "2026-10-23T01:59:49.417Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-23T01:59:58.323Z",
       "history": [
         {
@@ -12231,6 +12308,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.538Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-02 passed"
         }
       ],
       "offer_number": 161
@@ -14316,7 +14400,7 @@
       "deadline": "2026-11-01",
       "content_hash": "sha256:7d09658bd818e05a9bd1e76961600bf3c803517395eb052dd27fb0334a8a35ba",
       "last_verified_at": "2026-10-24T02:05:04.862Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-24T02:05:15.154Z",
       "history": [
         {
@@ -14360,6 +14444,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.538Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-01 passed"
         }
       ],
       "offer_number": 195
@@ -14907,7 +14998,7 @@
       "deadline": "2026-11-01",
       "content_hash": "sha256:a433cdcab79d002e06fd03a01220587d92e62373eb8e058664b3288177e4c4db",
       "last_verified_at": "2026-10-25T03:02:55.799Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-25T03:03:05.629Z",
       "history": [
         {
@@ -14951,6 +15042,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-04T05:43:18.538Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-01 passed"
         }
       ],
       "offer_number": 204
@@ -26545,6 +26643,1645 @@
         }
       ],
       "offer_number": 397
+    },
+    "opp_96a1295e28a39c85": {
+      "id": "opp_96a1295e28a39c85",
+      "fingerprint": "28f9c7dfd7b9d641",
+      "title": "European Master in Migration and Intercultural Relations (EMMIR)",
+      "institution": "EMMIR Consortium (Erasmus Mundus Joint Master)",
+      "city": "Oldenburg",
+      "country": "Germany",
+      "source_url": "https://www.emmir.org/post/applications-for-emmir-edition-14-are-now-open-here-s-what-you-need-to-know",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.emmir.org/application-procedures",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-20T23:59:00+01:00",
+      "content_hash": "sha256:c657b6ac6ba1756c6159334bac2bbaee8d47477dfda4ee06781f262ee5c73282",
+      "last_verified_at": "2026-11-04T05:50:30.937Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:50:31.070Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:50:31.070Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:50:31.070Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:00:37.885Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:00:37.885Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:08.761Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:08.761Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 398
+    },
+    "opp_7d70e5841cbd7cf8": {
+      "id": "opp_7d70e5841cbd7cf8",
+      "fingerprint": "63757d3070528655",
+      "title": "Postdoctoral Fellowships at University of Oxford - 2027",
+      "institution": "Novo Nordisk Foundation",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "source_url": "https://novonordiskfonden.dk/en/grant/postdoctoral-fellowships-at-university-of-oxford-2026/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://novonordiskfonden.dk/en/grant/postdoctoral-fellowships-at-university-of-oxford-2026/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-29T14:00:00+01:00",
+      "content_hash": "sha256:acfa1a3a99533d2f695673ea4df913d659fa145a1805852563ba13acdb0fc090",
+      "last_verified_at": "2026-11-04T05:50:31.218Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:50:31.360Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:50:31.360Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:50:31.360Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:00:50.726Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:00:50.727Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:09.090Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:09.090Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 399
+    },
+    "opp_e2b72d13f2f213ea": {
+      "id": "opp_e2b72d13f2f213ea",
+      "fingerprint": "00b763354db810d0",
+      "title": "Postdoctoral Fellowships at ETH Zurich",
+      "institution": "Novo Nordisk Foundation",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://novonordiskfonden.dk/en/grant/postdoctoral-fellowships-at-eth-zurich-2026/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://novonordiskfonden.dk/en/grant/postdoctoral-fellowships-at-eth-zurich-2026/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-29T14:00:00+01:00",
+      "content_hash": "sha256:a24a5a577a1f9096bf2dad250dc96fb57af447d0789355fabeb6c6185e8525ab",
+      "last_verified_at": "2026-11-04T05:50:31.491Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:50:31.625Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:50:31.625Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:50:31.625Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:00:54.806Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:00:54.807Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:09.406Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:09.407Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 400
+    },
+    "opp_7fcdfde5779eacbe": {
+      "id": "opp_7fcdfde5779eacbe",
+      "fingerprint": "94fb716467ba240f",
+      "title": "Mads Øvlisen Postdoc Fellowships 2027",
+      "institution": "Novo Nordisk Foundation",
+      "city": null,
+      "country": "Denmark",
+      "source_url": "https://novonordiskfonden.dk/en/grant/mads-oevlisen-postdoc-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://novonordiskfonden.dk/en/grant/mads-oevlisen-postdoc-fellowships/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-14T14:00:00+01:00",
+      "content_hash": "sha256:7c44bb687be5d9b11464c427b8e234f5d71e361696828c247fe5ec9ab2b8252b",
+      "last_verified_at": "2026-11-04T05:51:16.188Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:50:31.930Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:50:31.930Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:50:31.931Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T05:51:16.323Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-04T06:00:54.467Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:00:54.467Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:09.713Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:09.714Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 401
+    },
+    "opp_4a28539c47a55ab5": {
+      "id": "opp_4a28539c47a55ab5",
+      "fingerprint": "4dd7b36a3a32e6bf",
+      "title": "Mads Øvlisen PhD Scholarships within Art History and Practice-Based Artistic Research 2027",
+      "institution": "Novo Nordisk Foundation",
+      "city": null,
+      "country": "Denmark",
+      "source_url": "https://novonordiskfonden.dk/en/grant/mads-oevlisen-phd-scholarships-within-art-history-and-practice-based-artistic-research-2026/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://novonordiskfonden.dk/en/grant/mads-oevlisen-phd-scholarships-within-art-history-and-practice-based-artistic-research-2026/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-14T14:00:00+01:00",
+      "content_hash": "sha256:ae9878d71eab6b80164ed79eb42070dfb5265a99e422594b7ad525d6d4095945",
+      "last_verified_at": "2026-11-04T05:51:16.454Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:51:16.579Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:51:16.579Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:51:16.579Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:00:52.257Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:00:52.257Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:10.051Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:10.052Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 402
+    },
+    "opp_0afa153070a677b7": {
+      "id": "opp_0afa153070a677b7",
+      "fingerprint": "96b36a285fd78971",
+      "title": "Nieman Fellowship (International, 2027-28)",
+      "institution": "Nieman Foundation for Journalism at Harvard University",
+      "city": "Cambridge",
+      "country": "United States",
+      "source_url": "https://nieman.harvard.edu/fellowships/how-to-apply/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://nieman.harvard.edu/fellowships/how-to-apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:375677370d38d18c70d5cfb1ccec27aeb8d8ca792f9a42c0ebc78771227aa1f9",
+      "last_verified_at": "2026-11-04T05:52:11.084Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:52:11.232Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:52:11.232Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:52:11.233Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:01:46.936Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:01:46.936Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:10.405Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:10.405Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 403
+    },
+    "opp_1d7570fb7fa01ceb": {
+      "id": "opp_1d7570fb7fa01ceb",
+      "fingerprint": "adccf4f51239beac",
+      "title": "John S. Knight Journalism Fellowships",
+      "institution": "John S. Knight Journalism Fellowships, Stanford University",
+      "city": "Stanford",
+      "country": "United States",
+      "source_url": "https://jsk.stanford.edu/become-a-fellow",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://jsk.stanford.edu/become-a-fellow",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-02T13:00:00-08:00",
+      "content_hash": "sha256:e3bc46afffdf854c41331abd862da6036406a48029d61327e171f1e6fc237582",
+      "last_verified_at": "2026-11-04T05:52:11.369Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:52:11.492Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:52:11.492Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:52:11.493Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:01:48.714Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:01:48.714Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:10.694Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:10.695Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 404
+    },
+    "opp_8dfec6f34d13f027": {
+      "id": "opp_8dfec6f34d13f027",
+      "fingerprint": "d63133a8bb1dea77",
+      "title": "Embryology: Concepts and Techniques in Modern Developmental Biology",
+      "institution": "Marine Biological Laboratory (MBL)",
+      "city": "Woods Hole",
+      "country": "United States",
+      "source_url": "https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/embryology-concepts-and-techniques-modern-developmental-biology",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01",
+      "content_hash": "sha256:f61e4448a4aa008d995dbfcf95e25a4af6c79a4cdcdd4326ac438eda4bb7a5f3",
+      "last_verified_at": "2026-11-04T05:53:11.130Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:53:11.255Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:53:11.255Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:53:11.255Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:01:45.552Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:01:45.552Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:10.985Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:10.985Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 405
+    },
+    "opp_609529aafb2f59f3": {
+      "id": "opp_609529aafb2f59f3",
+      "fingerprint": "91961794cf23d748",
+      "title": "Physiology: Modern Cell Biology Using Microscopic, Biochemical and Computational Approaches",
+      "institution": "Marine Biological Laboratory (MBL)",
+      "city": "Woods Hole",
+      "country": "United States",
+      "source_url": "https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/physiology-modern-cell-biology-using-microscopic-biochemical-and-computational-approaches",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-10",
+      "content_hash": "sha256:8e7923717477769e648bbdcad3f474eb8dd888de11d5d8b36e42a2f180faa603",
+      "last_verified_at": "2026-11-04T05:53:11.413Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:53:11.545Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:53:11.545Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:53:11.545Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:05:11.144Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:05:11.144Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:11.303Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:11.303Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 406
+    },
+    "opp_2f6806267f9bb2c8": {
+      "id": "opp_2f6806267f9bb2c8",
+      "fingerprint": "6bf369d3f6f3b5a7",
+      "title": "Neural Systems & Behavior",
+      "institution": "Marine Biological Laboratory (MBL)",
+      "city": "Woods Hole",
+      "country": "United States",
+      "source_url": "https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/neural-systems-behavior",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-02",
+      "content_hash": "sha256:d936d2e484219d9da168e3535c78beae67ea288a587dc41fc5a8457c284878b9",
+      "last_verified_at": "2026-11-04T05:53:11.698Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:53:11.824Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:53:11.824Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:53:11.824Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:01:52.220Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:01:52.220Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:11.620Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:11.620Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 407
+    },
+    "opp_3f41fb218ffe2642": {
+      "id": "opp_3f41fb218ffe2642",
+      "fingerprint": "4fb4bff410c64fe4",
+      "title": "Methods in Computational Neuroscience",
+      "institution": "Marine Biological Laboratory (MBL)",
+      "city": "Woods Hole",
+      "country": "United States",
+      "source_url": "https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/methods-computational-neuroscience",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-10",
+      "content_hash": "sha256:2ad797e3d75fc7523d961e3e1837720f255d3b8446a0d2b26294e738009fb2c0",
+      "last_verified_at": "2026-11-04T05:53:12.017Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:53:12.144Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:53:12.144Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:53:12.144Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:02:47.790Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:02:47.790Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:11.926Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:11.927Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 408
+    },
+    "opp_d9073288c91babd2": {
+      "id": "opp_d9073288c91babd2",
+      "fingerprint": "90e39f9628d170a5",
+      "title": "Brains, Minds and Machines",
+      "institution": "Marine Biological Laboratory (MBL)",
+      "city": "Woods Hole",
+      "country": "United States",
+      "source_url": "https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/brains-minds-and-machines",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-29",
+      "content_hash": "sha256:91d8c8823ebee8e7568a7138d8ccf3fd419f56c8a0763d49e9cfd4c445c1e401",
+      "last_verified_at": "2026-11-04T05:53:12.307Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:53:12.434Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:53:12.434Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:53:12.435Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:02:54.579Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:02:54.579Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:12.247Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:12.247Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 409
+    },
+    "opp_c0beca911507e053": {
+      "id": "opp_c0beca911507e053",
+      "fingerprint": "7eef37ab5bf893d9",
+      "title": "2027 IEEE International Symposium on Information Theory (ISIT 2027)",
+      "institution": "IEEE Information Theory Society",
+      "city": "Sorrento",
+      "country": "Italy",
+      "source_url": "https://2027.ieee-isit.org/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://2027.ieee-isit.org/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10T23:59:00-12:00",
+      "content_hash": "sha256:443f066e15ebcb276d46e2b6a62b0db130fe5de9dff1d64651e0e68e0ea882b7",
+      "last_verified_at": "2026-11-04T05:53:41.078Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:53:41.200Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:53:41.200Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:53:41.200Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:03:47.929Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:03:47.929Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:12.572Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:12.572Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 410
+    },
+    "opp_b7923f00ee28c2aa": {
+      "id": "opp_b7923f00ee28c2aa",
+      "fingerprint": "72ca8121fbef9701",
+      "title": "Euroculture Erasmus Mundus Joint Master (2027–2029)",
+      "institution": "Euroculture Erasmus Mundus Joint Master consortium",
+      "city": "Groningen",
+      "country": "Netherlands",
+      "source_url": "https://www.euroculturemaster.eu/erasmus-mundus-scholarship",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.euroculturemaster.eu/online-application-tool",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:b21d021a3fc75d3cd752545f22af0124cbbbcb4aa72492502267b26c03a6ef10",
+      "last_verified_at": "2026-11-04T05:54:42.244Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:54:42.391Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:54:42.391Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:54:42.391Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:02:45.771Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:02:45.772Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:12.893Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:12.893Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 411
+    },
+    "opp_72fca4f5c47df00f": {
+      "id": "opp_72fca4f5c47df00f",
+      "fingerprint": "6b265d76d862d16e",
+      "title": "Erasmus Mundus Journalism 2027-2029",
+      "institution": "Erasmus Mundus Journalism consortium (Mundus Journalism)",
+      "city": "Aarhus",
+      "country": "Denmark",
+      "source_url": "https://mundusjournalism.com/admissions",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://mundusjournalism.com/admissions/application-process",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10T13:00:00+01:00",
+      "content_hash": "sha256:382cc6dd43edfc7c6cdeeb9dd338df20bc0ccf683f723f370edb36ce7fb0bda9",
+      "last_verified_at": "2026-11-04T05:54:42.583Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:54:42.730Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:54:42.730Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:54:42.730Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:03:17.586Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:03:17.586Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:13.218Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:13.218Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 412
+    },
+    "opp_1e3edb126630f4d4": {
+      "id": "opp_1e3edb126630f4d4",
+      "fingerprint": "ae515ba055107050",
+      "title": "European Master in Law and Economics (EMLE) 2027/2028",
+      "institution": "European Master in Law and Economics (EMLE) consortium",
+      "city": null,
+      "country": null,
+      "source_url": "https://emle.org/application-for-the-emle-2027-2028-open/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://apply.emle.org/courses/course/16-llm-european-master-law-and-economics",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:a60378efe63ca6101b07da3fc5d1eb1e2be4e5959ebe00a365ee00fdc23217d6",
+      "last_verified_at": "2026-11-04T05:55:21.763Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:55:21.888Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:55:21.888Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:55:21.888Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:03:38.170Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:03:38.170Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:13.534Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:13.534Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 413
+    },
+    "opp_b3b38e472e920086": {
+      "id": "opp_b3b38e472e920086",
+      "fingerprint": "e8c366f79a42c72f",
+      "title": "Intelligent Earth (UKRI CDT in AI for the Environment)",
+      "institution": "University of Oxford",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "source_url": "https://www.ox.ac.uk/admissions/graduate/courses/cdt-intelligent-earth",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.ox.ac.uk/admissions/graduate/courses/cdt-intelligent-earth",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-06T12:00:00+00:00",
+      "content_hash": "sha256:1807ebdeab5e806f4baa7e9eb9ab7ae4e9c7afba5bdab8ccfe7381dfc9097941",
+      "last_verified_at": "2026-11-04T05:56:22.105Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:56:22.255Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:56:22.255Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:56:22.255Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:03:47.242Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:03:47.243Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:13.826Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:13.827Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 414
+    },
+    "opp_61317816eab9c546": {
+      "id": "opp_61317816eab9c546",
+      "fingerprint": "809c9cef0c9f59e2",
+      "title": "UKRI AI Centre for Doctoral Training in Decision Making for Complex Systems",
+      "institution": "UKRI AI Centre for Doctoral Training in Decision Making for Complex Systems (University of Manchester)",
+      "city": "Manchester",
+      "country": "United Kingdom",
+      "source_url": "https://www.ai-decisions-cdt.ac.uk/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.ai-decisions-cdt.ac.uk/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-04",
+      "content_hash": "sha256:0f47b1e2846fdb2a19b27a8ec54e93d1104241039fab2e049d79b0750ae8fa96",
+      "last_verified_at": "2026-11-05T02:52:46.344Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:56:22.574Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:56:22.574Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:56:22.574Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:03:37.369Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:03:37.369Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:14.156Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:14.156Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-05T02:52:46.490Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "READY_TO_PUBLISH",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-05T02:52:46.490Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-05T02:53:12.970Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: removed unsupported 'fully funded' claim from card and summary"
+        },
+        {
+          "at": "2026-11-05T02:53:13.156Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-05T02:53:13.156Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-05T02:53:13.301Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-05T02:53:13.302Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 415
+    },
+    "opp_429ec5b097fe1128": {
+      "id": "opp_429ec5b097fe1128",
+      "fingerprint": "37cb5e699e1cda2d",
+      "title": "EPSRC Centre For Doctoral Training in Future Fluid Dynamics",
+      "institution": "University of Leeds",
+      "city": "Leeds",
+      "country": "United Kingdom",
+      "source_url": "https://phd.leeds.ac.uk/funding/66-epsrc-centre-for-doctoral-training-in-future-fluid-dynamics",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://fluid-dynamics.leeds.ac.uk/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-07",
+      "content_hash": "sha256:3a33ce6ebb8286905613637c0eebc9f2bca2f4bf5f43a548c25da7f49c8240df",
+      "last_verified_at": "2026-11-04T05:56:22.736Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:56:22.897Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:56:22.897Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:56:22.897Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:03:36.732Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:03:36.732Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:14.463Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:14.463Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 416
+    },
+    "opp_a56df4b6a796baaf": {
+      "id": "opp_a56df4b6a796baaf",
+      "fingerprint": "575aa5e9c7726fe3",
+      "title": "UKRI AI Centre for Doctoral Training in Citizen-Centred Artificial Intelligence",
+      "institution": "Northumbria University",
+      "city": "Newcastle upon Tyne",
+      "country": "United Kingdom",
+      "source_url": "https://ccai-cdt.ac.uk/news/2026-10-20-bring-your-perspective-to-ai-ccai-opens-applications-for-september-2027/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://ccai-cdt.ac.uk/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-11T17:00:00+00:00",
+      "content_hash": "sha256:f3d3c1470a1c41c0e573bb8bee266dc01ea6bbac37f2261d0f404c7fd8665651",
+      "last_verified_at": "2026-11-04T05:57:08.178Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:57:08.314Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:57:08.314Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:57:08.315Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:04:01.884Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:04:01.885Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:14.763Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:14.764Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 417
+    },
+    "opp_9f2fcdf0fc0ea2ec": {
+      "id": "opp_9f2fcdf0fc0ea2ec",
+      "fingerprint": "b4870bbbb744466d",
+      "title": "Quantum Informatics CDT (2027/28 entry, Cohort 3)",
+      "institution": "Quantum Informatics Centre for Doctoral Training (University of Edinburgh)",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "source_url": "https://www.quantuminformatics-cdt.ac.uk/apply/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.quantuminformatics-cdt.ac.uk/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-07",
+      "content_hash": "sha256:4a0621c7f1009e87e897d0a45c85c261864a29f8f1924d979496dfc30f02a502",
+      "last_verified_at": "2026-11-04T05:57:08.443Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:57:08.565Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:57:08.565Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:57:08.565Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:04:21.039Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:04:21.039Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:15.066Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:15.067Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 418
+    },
+    "opp_fab9a2635d1fb12e": {
+      "id": "opp_fab9a2635d1fb12e",
+      "fingerprint": "c1bdbf16019d1e64",
+      "title": "Centre for Doctoral Training in Designing Responsible Natural Language Processing PhD with Integrated Study",
+      "institution": "University of Edinburgh",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "source_url": "https://www.responsiblenlp.org/2027-studentships/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.responsiblenlp.org/2027-studentships/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30T23:59:00+00:00",
+      "content_hash": "sha256:abf593c2a0ea0981e1eae265ba501eafca20438ab87451d08f6b652adb2168fd",
+      "last_verified_at": "2026-11-04T05:57:34.355Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:57:34.497Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:57:34.497Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:57:34.497Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:04:13.614Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:04:13.614Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:15.346Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:15.347Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 419
+    },
+    "opp_5cbbf66ec11fa5a6": {
+      "id": "opp_5cbbf66ec11fa5a6",
+      "fingerprint": "19205fd0a0b3b527",
+      "title": "EPSRC Centre for Doctoral Training in the Mathematics for our Future Climate",
+      "institution": "University of Reading",
+      "city": "Reading",
+      "country": "United Kingdom",
+      "source_url": "https://www.reading.ac.uk/maths-and-stats/phd/mathematics-for-our-future-climate",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.reading.ac.uk/maths-and-stats/phd/mathematics-for-our-future-climate",
+      "application_status": "NEEDS_REVIEW",
+      "deadline": "2027-01-10",
+      "content_hash": "sha256:c3c12e8548b78cd4dd09708af71512f4e1208d93fb11d47e7307bf624500bae5",
+      "last_verified_at": "2026-11-04T05:57:58.403Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-11-04T05:57:58.551Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:57:58.551Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:57:58.551Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_7991af9d8ad23644": {
+      "id": "opp_7991af9d8ad23644",
+      "fingerprint": "2d40dccc8e372c58",
+      "title": "EPSRC CDT MRes + PhD in Sensor Technologies and Applications",
+      "institution": "University of Cambridge",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://cdt.sensors.cam.ac.uk/admissions/how-to-apply",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://cdt.sensors.cam.ac.uk/admissions/how-to-apply",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-06",
+      "content_hash": "sha256:565f8474b8e0b56994b7a90f4226d843b29e2f095a4611fe0d299fc9a43cc06c",
+      "last_verified_at": "2026-11-04T05:58:42.738Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:58:42.868Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:58:42.868Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:58:42.868Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:04:22.834Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:04:22.834Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:15.638Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:15.639Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 420
+    },
+    "opp_2d3b2c9349cda9b2": {
+      "id": "opp_2d3b2c9349cda9b2",
+      "fingerprint": "b3be6bfc1386c35e",
+      "title": "PhD in Interdisciplinary Nanoscience and Nanotechnology",
+      "institution": "EPSRC CDT in Nanoscience and Nanotechnology (NanoDTC), University of Cambridge",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://www.nanodtc.cam.ac.uk/apply/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.nanodtc.cam.ac.uk/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-08",
+      "content_hash": "sha256:c7a45b913e740b9e1b4ff920d99bdc02385ce2e47ac9873a2118bc189ebaebfc",
+      "last_verified_at": "2026-11-04T05:58:43.017Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:58:43.191Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:58:43.191Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:58:43.191Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:04:28.296Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:04:28.296Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:15.916Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:15.917Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 421
+    },
+    "opp_f2286a2da425546b": {
+      "id": "opp_f2286a2da425546b",
+      "fingerprint": "304aaef0a810eb02",
+      "title": "EPSRC CDT MRes + PhD in Photonic and Electronic Systems",
+      "institution": "University of Cambridge",
+      "city": "Cambridge",
+      "country": "United Kingdom",
+      "source_url": "https://www.postgraduate.study.cam.ac.uk/courses/directory/egegpdele",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.postgraduate.study.cam.ac.uk/courses/directory/egegpdele",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-08",
+      "content_hash": "sha256:a4f8329341c2e8e74df1645ba38a4c5737b3f7bd6d5e4f78d8ec9ad5fe01083c",
+      "last_verified_at": "2026-11-04T05:59:02.170Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-04T05:59:02.306Z",
+      "history": [
+        {
+          "at": "2026-11-04T05:59:02.307Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-04T05:59:02.307Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-04T06:04:50.194Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-04T06:04:50.194Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-04T06:05:16.200Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-04T06:05:16.201Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 422
     }
   },
   "seen_urls": {
@@ -27155,7 +28892,40 @@
     "https://imperial.ac.uk/computing/prospective-students/phd": "opp_43eebea530dec266",
     "https://cs.utexas.edu/graduate/apply": "opp_19efe1d482d9c2e0",
     "https://gsas.harvard.edu/program/computer-science": "opp_883b81af93870981",
-    "https://cs.jhu.edu/academic-programs/graduate-studies/phd-program/phd-program-admissions": "opp_94bf155a1d11ce59"
+    "https://cs.jhu.edu/academic-programs/graduate-studies/phd-program/phd-program-admissions": "opp_94bf155a1d11ce59",
+    "https://emmir.org/post/applications-for-emmir-edition-14-are-now-open-here-s-what-you-need-to-know": "opp_96a1295e28a39c85",
+    "https://emmir.org/application-procedures": "opp_96a1295e28a39c85",
+    "https://novonordiskfonden.dk/en/grant/postdoctoral-fellowships-at-university-of-oxford-2026": "opp_7d70e5841cbd7cf8",
+    "https://novonordiskfonden.dk/en/grant/postdoctoral-fellowships-at-eth-zurich-2026": "opp_e2b72d13f2f213ea",
+    "https://novonordiskfonden.dk/en/grant/mads-oevlisen-postdoc-fellowships": "opp_7fcdfde5779eacbe",
+    "https://novonordiskfonden.dk/en/grant/mads-oevlisen-phd-scholarships-within-art-history-and-practice-based-artistic-research-2026": "opp_4a28539c47a55ab5",
+    "https://nieman.harvard.edu/fellowships/how-to-apply": "opp_0afa153070a677b7",
+    "https://jsk.stanford.edu/become-a-fellow": "opp_1d7570fb7fa01ceb",
+    "https://mbl.edu/education/advanced-research-training-courses/course-offerings/embryology-concepts-and-techniques-modern-developmental-biology": "opp_8dfec6f34d13f027",
+    "https://mbl.edu/education/advanced-research-training-courses/course-offerings/physiology-modern-cell-biology-using-microscopic-biochemical-and-computational-approaches": "opp_609529aafb2f59f3",
+    "https://mbl.edu/education/advanced-research-training-courses/course-offerings/neural-systems-behavior": "opp_2f6806267f9bb2c8",
+    "https://mbl.edu/education/advanced-research-training-courses/course-offerings/methods-computational-neuroscience": "opp_3f41fb218ffe2642",
+    "https://mbl.edu/education/advanced-research-training-courses/course-offerings/brains-minds-and-machines": "opp_d9073288c91babd2",
+    "https://2027.ieee-isit.org/": "opp_c0beca911507e053",
+    "https://euroculturemaster.eu/erasmus-mundus-scholarship": "opp_b7923f00ee28c2aa",
+    "https://euroculturemaster.eu/online-application-tool": "opp_b7923f00ee28c2aa",
+    "https://mundusjournalism.com/admissions": "opp_72fca4f5c47df00f",
+    "https://mundusjournalism.com/admissions/application-process": "opp_72fca4f5c47df00f",
+    "https://emle.org/application-for-the-emle-2027-2028-open": "opp_1e3edb126630f4d4",
+    "https://apply.emle.org/courses/course/16-llm-european-master-law-and-economics": "opp_1e3edb126630f4d4",
+    "https://ox.ac.uk/admissions/graduate/courses/cdt-intelligent-earth": "opp_b3b38e472e920086",
+    "https://ai-decisions-cdt.ac.uk/": "opp_61317816eab9c546",
+    "https://ai-decisions-cdt.ac.uk/apply": "opp_61317816eab9c546",
+    "https://phd.leeds.ac.uk/funding/66-epsrc-centre-for-doctoral-training-in-future-fluid-dynamics": "opp_429ec5b097fe1128",
+    "https://fluid-dynamics.leeds.ac.uk/": "opp_429ec5b097fe1128",
+    "https://ccai-cdt.ac.uk/news/2026-10-20-bring-your-perspective-to-ai-ccai-opens-applications-for-september-2027": "opp_a56df4b6a796baaf",
+    "https://ccai-cdt.ac.uk/apply": "opp_a56df4b6a796baaf",
+    "https://quantuminformatics-cdt.ac.uk/apply": "opp_9f2fcdf0fc0ea2ec",
+    "https://responsiblenlp.org/2027-studentships": "opp_fab9a2635d1fb12e",
+    "https://reading.ac.uk/maths-and-stats/phd/mathematics-for-our-future-climate": "opp_5cbbf66ec11fa5a6",
+    "https://cdt.sensors.cam.ac.uk/admissions/how-to-apply": "opp_7991af9d8ad23644",
+    "https://nanodtc.cam.ac.uk/apply": "opp_2d3b2c9349cda9b2",
+    "https://postgraduate.study.cam.ac.uk/courses/directory/egegpdele": "opp_f2286a2da425546b"
   },
-  "last_offer_number": 397
+  "last_offer_number": 422
 }
