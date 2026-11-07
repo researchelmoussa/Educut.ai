@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-05T02:53:13.302Z",
+  "updated_at": "2026-11-07T02:56:29.682Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -5905,7 +5905,7 @@
       "deadline": "2026-11-03",
       "content_hash": "sha256:dbdf94a47097534b458a3e1283ff1b8cc38a7ab47393c8f8da87df6df7f632b6",
       "last_verified_at": "2026-10-17T02:02:27.020Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T02:02:27.185Z",
       "history": [
         {
@@ -5949,6 +5949,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-05T02:55:51.968Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-03 passed"
         }
       ],
       "offer_number": 64
@@ -9728,7 +9735,7 @@
       "deadline": "2026-11-03",
       "content_hash": "sha256:8caba2c4119aab2b95a1b3e39a7af272dbc00a42756608e3e96fd6e5efe41222",
       "last_verified_at": "2026-10-21T01:59:21.293Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-21T01:59:30.701Z",
       "history": [
         {
@@ -9772,6 +9779,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-05T02:55:51.968Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-03 passed"
         }
       ],
       "offer_number": 124
@@ -20599,19 +20613,19 @@
     },
     "opp_5e139cb0788758d2": {
       "id": "opp_5e139cb0788758d2",
-      "fingerprint": "8838bea76984115c",
-      "title": "Minicursos Temáticos",
-      "institution": "Laboratório Nacional de Computação Científica (LNCC), Programa de Verão 2027",
+      "fingerprint": "e522f3b40d00a5c4",
+      "title": "Programa de Verão",
+      "institution": "Laboratório Nacional de Computação Científica (LNCC)",
       "city": "Petrópolis",
       "country": "Brazil",
-      "source_url": "https://verao.lncc.br/minicursos/",
+      "source_url": "https://verao.lncc.br/",
       "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
       "application_url": "https://verao.lncc.br/prices/",
       "application_status": "OPEN_LIKELY",
       "deadline": "2027-01-08",
-      "content_hash": "sha256:deeecdb5e005a988241a372af1b412fbcf8ee3df13e6c545d39d84b4a4e5803e",
-      "last_verified_at": "2026-10-29T03:18:40.742Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "content_hash": "sha256:1cca17e82071558db79a878d49a25abe1b19cb8f9818c9098c1c34fcf7689b79",
+      "last_verified_at": "2026-11-05T03:10:05.773Z",
+      "pipeline_status": "NEEDS_REVIEW",
       "first_seen": "2026-10-29T03:18:48.707Z",
       "history": [
         {
@@ -20655,6 +20669,20 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-05T03:10:05.924Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "READY_TO_PUBLISH",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-05T03:10:05.925Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
         }
       ],
       "offer_number": 301
@@ -28282,6 +28310,1295 @@
         }
       ],
       "offer_number": 422
+    },
+    "opp_21f96490a3a8cab6": {
+      "id": "opp_21f96490a3a8cab6",
+      "fingerprint": "0386fff4216b02ec",
+      "title": "DAAD Artists-in-Berlin Program",
+      "institution": "DAAD Artists-in-Berlin Program (Berliner Künstlerprogramm des DAAD)",
+      "city": "Berlin",
+      "country": "Germany",
+      "source_url": "https://www.berliner-kuenstlerprogramm.de/en/application/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.berliner-kuenstlerprogramm.de/en/application/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:25e8996c53214dc13e195fca2bfa46d68fa1f6aa5371f8d46ce8f29d2b07ec4e",
+      "last_verified_at": "2026-11-05T03:03:32.380Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:03:32.525Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:03:32.525Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:03:32.526Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:52:58.546Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:52:58.546Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:25.766Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:25.767Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 423
+    },
+    "opp_8477864dc9fbf485": {
+      "id": "opp_8477864dc9fbf485",
+      "fingerprint": "45b806014c679ae0",
+      "title": "Doctoral Programmes",
+      "institution": "European University Institute (EUI)",
+      "city": "Florence",
+      "country": "Italy",
+      "source_url": "https://www.eui.eu/en/services/academic-service/doctoral-programme",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:439cfc7e131b505c13ce7d815bd414bbfe4692059a64e2d6219254873af37d12",
+      "last_verified_at": "2026-11-05T03:03:32.698Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:03:32.869Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:03:32.869Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:03:32.869Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:52:58.750Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:52:58.750Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:25.979Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:25.980Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 424
+    },
+    "opp_868f906d7a5ab530": {
+      "id": "opp_868f906d7a5ab530",
+      "fingerprint": "5317e6f130221d6f",
+      "title": "Applications for the academic year 2027-2028",
+      "institution": "College of Europe",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.coleurope.eu/admission",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-13",
+      "content_hash": "sha256:5e334238b30d62c6f3e9f929e1c16a1e9fd29689ecff20a15f3c582494bb6744",
+      "last_verified_at": "2026-11-05T03:03:33.029Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:03:33.183Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:03:33.183Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:03:33.184Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:52:58.940Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:52:58.940Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:26.179Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:26.179Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 425
+    },
+    "opp_875ee044c74b57b2": {
+      "id": "opp_875ee044c74b57b2",
+      "fingerprint": "8864e31e482b55e9",
+      "title": "The Summer Courses",
+      "institution": "The Hague Academy of International Law",
+      "city": "The Hague",
+      "country": "Netherlands",
+      "source_url": "https://www.hagueacademy.nl/programmes/the-summer-courses/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:4be46de60afb707990a2a30b1174009774de608a7b910dbb05c0628c4b4f9ff2",
+      "last_verified_at": "2026-11-05T03:03:33.317Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:03:33.460Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:03:33.460Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:03:33.460Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:52:59.134Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:52:59.134Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:26.385Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:26.385Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 426
+    },
+    "opp_d383343f4dde6a51": {
+      "id": "opp_d383343f4dde6a51",
+      "fingerprint": "96be7443f5f3c238",
+      "title": "Soloists & Ensembles",
+      "institution": "Verbier Festival Academy",
+      "city": "Verbier",
+      "country": "Switzerland",
+      "source_url": "https://verbierfestival.com/en/academy/soloists-ensembles/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-11",
+      "content_hash": "sha256:b2bb023a6620b22f58681a53a3674530480d570d82db1c8caf286255676afabf",
+      "last_verified_at": "2026-11-05T03:03:33.620Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:03:33.754Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:03:33.754Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:03:33.755Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:52:59.322Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:52:59.322Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:26.594Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:26.594Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 427
+    },
+    "opp_e0a67ef055b92a48": {
+      "id": "opp_e0a67ef055b92a48",
+      "fingerprint": "1401a15a7ee1c557",
+      "title": "Master & PhD Programmes",
+      "institution": "Geneva Graduate Institute",
+      "city": "Geneva",
+      "country": "Switzerland",
+      "source_url": "https://www.graduateinstitute.ch/application",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-14",
+      "content_hash": "sha256:b552f58e9a8d128de82a97983aaa517e9c7311fdc22e484de7dbe26d366b7946",
+      "last_verified_at": "2026-11-05T03:04:13.020Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:04:13.178Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:04:13.178Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:04:13.178Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:53:03.731Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:53:03.731Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:26.808Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:26.808Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 428
+    },
+    "opp_879a1bcd6d91e4dc": {
+      "id": "opp_879a1bcd6d91e4dc",
+      "fingerprint": "6e25a1f5ea6bf3ef",
+      "title": "Graduate Fellowship Program",
+      "institution": "Kavli Institute for Theoretical Physics (KITP), UC Santa Barbara",
+      "city": "Santa Barbara",
+      "country": "United States",
+      "source_url": "https://www.kitp.ucsb.edu/apply/fellowships/graduate-fellowship-program",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-15",
+      "content_hash": "sha256:7ef317904585bf93f70e4bc949d5979034a5c15786f841435d3f16071d36f9c2",
+      "last_verified_at": "2026-11-05T03:04:13.336Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:04:13.484Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:04:13.484Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:04:13.484Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:53:03.918Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:53:03.918Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:27.012Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:27.012Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 429
+    },
+    "opp_020d31b146f49fec": {
+      "id": "opp_020d31b146f49fec",
+      "fingerprint": "8cabf1691845a499",
+      "title": "NL Scholarship",
+      "institution": "Utrecht University",
+      "city": "Utrecht",
+      "country": "Netherlands",
+      "source_url": "https://www.uu.nl/en/masters/general-information/application-and-admission/scholarships-and-grants/nl-scholarship",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01",
+      "content_hash": "sha256:b739fc595f28fa4781e825ec93e50f4c8bf5d4bf642e027666bc15ea44cbd83d",
+      "last_verified_at": "2026-11-05T03:04:13.629Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:04:13.776Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:04:13.776Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:04:13.776Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:53:04.108Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:53:04.108Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:27.233Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:27.233Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 430
+    },
+    "opp_a8ba5e6688d92520": {
+      "id": "opp_a8ba5e6688d92520",
+      "fingerprint": "1441b1aa10195960",
+      "title": "University of Twente Scholarship (UTS)",
+      "institution": "University of Twente",
+      "city": "Enschede",
+      "country": "Netherlands",
+      "source_url": "https://www.utwente.nl/en/education/scholarship-finder/university-of-twente-scholarship/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-01",
+      "content_hash": "sha256:4f3936955114d55a881d817688999dfca055aae17cf9d3d1a134e109f4016347",
+      "last_verified_at": "2026-11-05T03:04:13.931Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:04:14.074Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:04:14.074Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:04:14.074Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:53:04.297Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:53:04.297Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:27.460Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:27.460Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 431
+    },
+    "opp_51e3bedc357a0719": {
+      "id": "opp_51e3bedc357a0719",
+      "fingerprint": "a92bb1e421828a6a",
+      "title": "VFO - Verbier Festival Orchestra",
+      "institution": "Verbier Festival",
+      "city": "Verbier",
+      "country": "Switzerland",
+      "source_url": "https://verbierfestival.com/en/orchestras/vfo/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-14",
+      "content_hash": "sha256:9dd74430105e26e8aa1f8c960efdaeb6abef250fa8ff924cb68651e54865107f",
+      "last_verified_at": "2026-11-05T03:04:14.231Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:04:14.373Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:04:14.373Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:04:14.373Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:53:04.490Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:53:04.490Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:27.668Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:27.668Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 432
+    },
+    "opp_35b585506ae1b773": {
+      "id": "opp_35b585506ae1b773",
+      "fingerprint": "6f293ddb2883648d",
+      "title": "UTokyo Amgen Scholars Program",
+      "institution": "The University of Tokyo",
+      "city": "Tokyo",
+      "country": "Japan",
+      "source_url": "https://www.u-tokyo.ac.jp/en/prospective-students/amgen_program.html",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01",
+      "content_hash": "sha256:c3727355a112c2d204ec267dff61377a5ab88eae95e9409e74a0fe32a4a11745",
+      "last_verified_at": "2026-11-05T03:06:13.372Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:06:13.507Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:06:13.507Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:06:13.507Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:54:26.257Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:54:26.257Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:27.867Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:27.867Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 433
+    },
+    "opp_46f9d3649d645d36": {
+      "id": "opp_46f9d3649d645d36",
+      "fingerprint": "c9f93c3aa7e0240a",
+      "title": "The University of Tokyo Research Internship Program",
+      "institution": "School of Science, The University of Tokyo",
+      "city": "Tokyo",
+      "country": "Japan",
+      "source_url": "https://www.s.u-tokyo.ac.jp/en/utrip/apply-now/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.s.u-tokyo.ac.jp/en/utrip/apply-now/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-25",
+      "content_hash": "sha256:6c2f0785664bb63b11bd800f17ae721962c6245b943b5a2b77ba321c1ef897e9",
+      "last_verified_at": "2026-11-05T03:06:13.647Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:06:13.815Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:06:13.815Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:06:13.815Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:54:26.446Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:54:26.446Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:28.069Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:28.070Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 434
+    },
+    "opp_b223d5bda36554c1": {
+      "id": "opp_b223d5bda36554c1",
+      "fingerprint": "4096554174d8e52a",
+      "title": "2027 Admissions Requirements for G30 Undergraduate Programs",
+      "institution": "Nagoya University",
+      "city": "Nagoya",
+      "country": "Japan",
+      "source_url": "https://admissions.g30.nagoya-u.ac.jp/upload/2027_admission_requirements_en.pdf",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-21",
+      "content_hash": "sha256:48e079c65685cbbcb1a9f01a5ad6013907693a0a8cde41f6f4b10d55ac7400da",
+      "last_verified_at": "2026-11-05T03:06:14.024Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:06:14.183Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:06:14.183Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:06:14.184Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:54:26.625Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:54:26.625Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:28.268Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:28.268Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 435
+    },
+    "opp_11c0a6f35030ece4": {
+      "id": "opp_11c0a6f35030ece4",
+      "fingerprint": "1005007b9445411f",
+      "title": "Graduate Research School Scholarships (UQGRSS)",
+      "institution": "The University of Queensland",
+      "city": "Brisbane",
+      "country": "Australia",
+      "source_url": "https://scholarships.uq.edu.au/scholarship/graduate-school-scholarships-uqgss-%E2%80%93-includes-rtp",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-25",
+      "content_hash": "sha256:8191eb4fc1c731a0249202045255d83fb9266db69beee913b238dfa6c28dc5b0",
+      "last_verified_at": "2026-11-05T03:06:14.325Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:06:14.491Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:06:14.491Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:06:14.492Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:54:26.813Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:54:26.813Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:28.481Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:28.481Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 436
+    },
+    "opp_e5bf59e9b2892ed8": {
+      "id": "opp_e5bf59e9b2892ed8",
+      "fingerprint": "ee36f8e848b1f9ba",
+      "title": "[PhD] International Relations and Political Science",
+      "institution": "Koç University",
+      "city": "Istanbul",
+      "country": "Türkiye",
+      "source_url": "https://apply.ku.edu.tr/courses/course/35-phd-international-relations-and-political-science",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://apply.ku.edu.tr/courses/course/35-phd-international-relations-and-political-science",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:65e6bf293ff6cf211ba76c3b1f155f2bdc6fb1876f10fe8724cb1fd427402b69",
+      "last_verified_at": "2026-11-05T03:07:53.303Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:07:53.492Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:07:53.492Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:07:53.492Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:54:26.999Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:54:26.999Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:28.691Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:28.691Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 437
+    },
+    "opp_20fe3b40e53eeea4": {
+      "id": "opp_20fe3b40e53eeea4",
+      "fingerprint": "1b7677cab137c32f",
+      "title": "Application Dates",
+      "institution": "Koç University, Graduate School of Health Sciences",
+      "city": "Istanbul",
+      "country": "Türkiye",
+      "source_url": "https://gshs.ku.edu.tr/en/admissions/application-dates/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-05",
+      "content_hash": "sha256:cd7458afd593a588a4b4e131d424e96c481a5efc1b7c2c0a3105e25655922385",
+      "last_verified_at": "2026-11-05T03:07:53.665Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:07:53.849Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:07:53.849Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:07:53.850Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:55:47.340Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:55:47.340Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:28.890Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:28.891Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 438
+    },
+    "opp_9b69512a47ed11fe": {
+      "id": "opp_9b69512a47ed11fe",
+      "fingerprint": "2313a2a31bf622a4",
+      "title": "Verbier Festival Shenzhen Masterclasses",
+      "institution": "Verbier Festival",
+      "city": "Shenzhen",
+      "country": "China",
+      "source_url": "https://verbierfestival.com/en/academy/shenzhen-verbier-festival-masterclasses/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30",
+      "content_hash": "sha256:dac5a3a12aef7628bb30ab8bc692e469da123331027602b92a40a0058561df98",
+      "last_verified_at": "2026-11-05T03:10:06.078Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:10:06.253Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:10:06.253Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:10:06.254Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:55:47.551Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:55:47.551Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:29.092Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:29.092Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 439
+    },
+    "opp_17cef5767832c10e": {
+      "id": "opp_17cef5767832c10e",
+      "fingerprint": "745957d4f5d80cf7",
+      "title": "Doctoral Scholarships",
+      "institution": "The Hague Academy of International Law",
+      "city": "The Hague",
+      "country": "Netherlands",
+      "source_url": "https://www.hagueacademy.nl/doctoral-scholarships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:7dacd501bc72a32d5f84fa75f1672178d7c9cfbafa76e1204957938d7889bb46",
+      "last_verified_at": "2026-11-05T03:10:06.437Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:10:06.601Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:10:06.601Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:10:06.601Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-07T02:55:47.762Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:55:47.762Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:29.290Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:29.290Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 440
+    },
+    "opp_9391bb99a5adef7b": {
+      "id": "opp_9391bb99a5adef7b",
+      "fingerprint": "dfd0f4a1992e2fa5",
+      "title": "The Émile Boutmy scholarship",
+      "institution": "Sciences Po",
+      "city": "Paris",
+      "country": "France",
+      "source_url": "https://www.sciencespo.fr/students/en/fees-funding/bursaries-financial-aid/emile-boutmy-scholarship/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-13",
+      "content_hash": "sha256:c6793c27993ae142543a053a495d3b711d9852687ae2c4130f79c3d81abd16c3",
+      "last_verified_at": "2026-11-05T03:11:21.639Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:11:11.376Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:11:11.376Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:11:11.376Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-05T03:11:21.802Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-07T02:55:47.955Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:55:47.955Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:29.489Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:29.489Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 441
+    },
+    "opp_ec456caef262d00a": {
+      "id": "opp_ec456caef262d00a",
+      "fingerprint": "5290720a952f3a82",
+      "title": "African Scholars Programme",
+      "institution": "Hertie School",
+      "city": "Berlin",
+      "country": "Germany",
+      "source_url": "https://www.hertie-school.org/en/study/funding/full-scholarships/african-scholars-programme",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:a8e3a611cc8a578f133a1899dc070e3ee1dfe9735415bc2e651a11a89f98cd93",
+      "last_verified_at": "2026-11-07T02:56:17.371Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-05T03:11:11.678Z",
+      "history": [
+        {
+          "at": "2026-11-05T03:11:11.678Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-05T03:11:11.678Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-05T03:11:22.150Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-07T02:55:48.163Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:55:48.163Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:17.470Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-07T02:56:17.470Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-07T02:56:18.765Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: removed unsupported 'full scholarship' claim from summary"
+        },
+        {
+          "at": "2026-11-07T02:56:18.875Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-07T02:56:18.875Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-07T02:56:29.682Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-07T02:56:29.682Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 442
     }
   },
   "seen_urls": {
@@ -28925,7 +30242,28 @@
     "https://reading.ac.uk/maths-and-stats/phd/mathematics-for-our-future-climate": "opp_5cbbf66ec11fa5a6",
     "https://cdt.sensors.cam.ac.uk/admissions/how-to-apply": "opp_7991af9d8ad23644",
     "https://nanodtc.cam.ac.uk/apply": "opp_2d3b2c9349cda9b2",
-    "https://postgraduate.study.cam.ac.uk/courses/directory/egegpdele": "opp_f2286a2da425546b"
+    "https://postgraduate.study.cam.ac.uk/courses/directory/egegpdele": "opp_f2286a2da425546b",
+    "https://berliner-kuenstlerprogramm.de/en/application": "opp_21f96490a3a8cab6",
+    "https://eui.eu/en/services/academic-service/doctoral-programme": "opp_8477864dc9fbf485",
+    "https://coleurope.eu/admission": "opp_868f906d7a5ab530",
+    "https://hagueacademy.nl/programmes/the-summer-courses": "opp_875ee044c74b57b2",
+    "https://verbierfestival.com/en/academy/soloists-ensembles": "opp_d383343f4dde6a51",
+    "https://graduateinstitute.ch/application": "opp_e0a67ef055b92a48",
+    "https://kitp.ucsb.edu/apply/fellowships/graduate-fellowship-program": "opp_879a1bcd6d91e4dc",
+    "https://uu.nl/en/masters/general-information/application-and-admission/scholarships-and-grants/nl-scholarship": "opp_020d31b146f49fec",
+    "https://utwente.nl/en/education/scholarship-finder/university-of-twente-scholarship": "opp_a8ba5e6688d92520",
+    "https://verbierfestival.com/en/orchestras/vfo": "opp_51e3bedc357a0719",
+    "https://u-tokyo.ac.jp/en/prospective-students/amgen_program.html": "opp_35b585506ae1b773",
+    "https://s.u-tokyo.ac.jp/en/utrip/apply-now": "opp_46f9d3649d645d36",
+    "https://admissions.g30.nagoya-u.ac.jp/upload/2027_admission_requirements_en.pdf": "opp_b223d5bda36554c1",
+    "https://scholarships.uq.edu.au/scholarship/graduate-school-scholarships-uqgss-%E2%80%93-includes-rtp": "opp_11c0a6f35030ece4",
+    "https://apply.ku.edu.tr/courses/course/35-phd-international-relations-and-political-science": "opp_e5bf59e9b2892ed8",
+    "https://gshs.ku.edu.tr/en/admissions/application-dates": "opp_20fe3b40e53eeea4",
+    "https://verao.lncc.br/": "opp_5e139cb0788758d2",
+    "https://verbierfestival.com/en/academy/shenzhen-verbier-festival-masterclasses": "opp_9b69512a47ed11fe",
+    "https://hagueacademy.nl/doctoral-scholarships": "opp_17cef5767832c10e",
+    "https://sciencespo.fr/students/en/fees-funding/bursaries-financial-aid/emile-boutmy-scholarship": "opp_9391bb99a5adef7b",
+    "https://hertie-school.org/en/study/funding/full-scholarships/african-scholars-programme": "opp_ec456caef262d00a"
   },
-  "last_offer_number": 422
+  "last_offer_number": 442
 }
