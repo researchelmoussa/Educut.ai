@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "2027 Admissions Requirements for G30 Undergraduate Programs",
+    "evidence_url": "https://admissions.g30.nagoya-u.ac.jp/2027-admissions-requirements/",
+    "evidence_quote": "2027 Admissions Requirements for G30 Undergraduate Programs"
+  },
+  "institution": {
+    "name": "Nagoya University",
+    "website": "https://admissions.g30.nagoya-u.ac.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://admissions.g30.nagoya-u.ac.jp/upload/2027_admission_requirements_en.pdf",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Nagoya",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Engineering and science (English-taught undergraduate programmes)",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Second round available only for limited programmes; per the English requirements, no second round for Chemistry (Science), Biological Science, Social Sciences and Japan-in-Asia Cultural Studies",
+    "Primary screening results 24 March 2027; interviews/oral exams 6-16 April 2027"
+  ],
+  "skills": [],
+  "description_short": "Nagoya University's English-taught G30 undergraduate programmes for October 2027 entry hold a second application round, open 5 January 2027 and closing 21 January 2027 at 12:00 noon JST, for a limited set of programmes. Final decisions are announced 26 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-21",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://admissions.g30.nagoya-u.ac.jp/upload/2027_admission_requirements_en.pdf",
+    "evidence_quote": "2nd round applications (only limited programs available) Open: January 5th, 2027 Deadline to apply: January 21st, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official 2027 G30 admission requirements (search results): second round opens 5 January 2027, deadline 21 January 2027",
+    "Round not yet open on the run date; portal not fetched, so OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The English and Japanese requirement documents differ on which programmes accept second-round applications",
+    "First-round dates not captured",
+    "Tuition and scholarship details not captured"
+  ],
+  "id": "opp_b223d5bda36554c1",
+  "fingerprint": "4096554174d8e52a",
+  "discovered_at": "2026-11-05T03:06:14.024Z",
+  "last_verified_at": "2026-11-05T03:06:14.024Z",
+  "content_hash": "sha256:48e079c65685cbbcb1a9f01a5ad6013907693a0a8cde41f6f4b10d55ac7400da"
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Application Dates",
+    "evidence_url": "https://gshs.ku.edu.tr/en/admissions/application-dates/",
+    "evidence_quote": "Spring 2027 application deadline: 05 December 2026"
+  },
+  "institution": {
+    "name": "Koç University, Graduate School of Health Sciences",
+    "website": "https://gshs.ku.edu.tr",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://gshs.ku.edu.tr/en/admissions/application-dates/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Istanbul",
+    "country": "Türkiye",
+    "country_code": "TR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Health sciences",
+  "seniority": "Master's and doctoral",
+  "qualifications": [
+    "Final admission decisions notified 4-6 weeks after the application deadline"
+  ],
+  "skills": [],
+  "description_short": "Koç University's Graduate School of Health Sciences accepts applications for spring 2027 entry until 5 December 2026; final admission decisions follow within 4-6 weeks. Koç states that all admitted PhD students receive a full scholarship for the duration of their studies.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-05",
+    "timezone": "Europe/Istanbul",
+    "evidence_url": "https://gshs.ku.edu.tr/en/admissions/application-dates/",
+    "evidence_quote": "Spring 2027 application deadline: 05 December 2026"
+  },
+  "compensation": {
+    "value": "Full scholarship for the duration of PhD studies",
+    "evidence_url": "https://international.ku.edu.tr/graduate-programs/tuition-and-scholarships/",
+    "evidence_quote": "Koç University offers all Ph.D. domestic and international admitted students a full scholarship for the duration of their studies."
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Graduate School of Health Sciences 'Application Dates' page (search results): Spring 2027 application deadline 05 December 2026",
+    "Koç international admissions site (search results) says Spring 2027 applications are open for the Graduate Schools of Sciences and Engineering and of Health Sciences until 5 December 2026",
+    "Portal not fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title is the page name ('Application Dates'); the specific health sciences programmes open for spring 2027 were not listed in the results",
+    "A general 'How to Apply' page says only the Graduate School of Sciences and Engineering has a spring intake, which conflicts with this page",
+    "Full-scholarship statement covers PhD students; master's funding not captured",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_20fe3b40e53eeea4",
+  "fingerprint": "1b7677cab137c32f",
+  "discovered_at": "2026-11-05T03:07:53.664Z",
+  "last_verified_at": "2026-11-05T03:07:53.665Z",
+  "content_hash": "sha256:cd7458afd593a588a4b4e131d424e96c481a5efc1b7c2c0a3105e25655922385"
+}

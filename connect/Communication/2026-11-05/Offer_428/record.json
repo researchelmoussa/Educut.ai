@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Master & PhD Programmes",
+    "evidence_url": "https://www.graduateinstitute.ch/master-phd-programmes",
+    "evidence_quote": "Master & PhD Programmes"
+  },
+  "institution": {
+    "name": "Geneva Graduate Institute",
+    "website": "https://www.graduateinstitute.ch",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.graduateinstitute.ch/application",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Geneva",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "International relations and development studies",
+  "seniority": "Master's and doctoral",
+  "qualifications": [
+    "Recommendation letters due Thursday, 22 January 2027",
+    "The January deadline is the only one at which master's applicants can request financial aid"
+  ],
+  "skills": [],
+  "description_short": "The Geneva Graduate Institute accepts applications to its master's and PhD programmes for the 2027 intake until Thursday, 14 January 2027; recommendation letters are due 22 January 2027. This is the only deadline at which master's applicants can submit financial aid requests.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-14",
+    "timezone": null,
+    "evidence_url": "https://www.graduateinstitute.ch/application",
+    "evidence_quote": "Thursday, 14 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official 'How to Apply' page (search results) lists Thursday, 14 January 2027 as the deadline for all MA and PhD programmes",
+    "Application portal not fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Some older Institute pages and a checklist give 15 January; the 14 January 2027 date from the current application page is recorded",
+    "Time of day and time zone not stated",
+    "Application URL not confirmed",
+    "Financial aid amounts not captured"
+  ],
+  "id": "opp_e0a67ef055b92a48",
+  "fingerprint": "1401a15a7ee1c557",
+  "discovered_at": "2026-11-05T03:04:13.020Z",
+  "last_verified_at": "2026-11-05T03:04:13.020Z",
+  "content_hash": "sha256:b552f58e9a8d128de82a97983aaa517e9c7311fdc22e484de7dbe26d366b7946"
+}

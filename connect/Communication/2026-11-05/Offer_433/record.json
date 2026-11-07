@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "UTokyo Amgen Scholars Program",
+    "evidence_url": "https://www.u-tokyo.ac.jp/en/prospective-students/amgen_program.html",
+    "evidence_quote": "UTokyo Amgen Scholars Program"
+  },
+  "institution": {
+    "name": "The University of Tokyo",
+    "website": "https://www.u-tokyo.ac.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.u-tokyo.ac.jp/en/prospective-students/amgen_program.html",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Tokyo",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Bioscience and biotechnology",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Undergraduates at colleges or universities across the Asia region that award a bachelor's degree (or equivalent)",
+    "At least first year completed; must return to undergraduate study for at least one term afterwards",
+    "Not open to students who have previously earned a bachelor's degree",
+    "Two recommenders, one a faculty member at the current institution",
+    "English test scores if English is not the language of instruction (e.g. TOEFL iBT 72 or IELTS 5.5)"
+  ],
+  "skills": [],
+  "description_short": "The UTokyo Amgen Scholars Program is a summer research internship in bioscience and biotechnology, 3 June to 5 August 2027, for undergraduates at Asian universities. Online applications run 1 November 2026 to 1 February 2027, 3 p.m. JST. Airfare, accommodation and living allowances are covered.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.u-tokyo.ac.jp/en/prospective-students/amgen_program.html",
+    "evidence_quote": "Online Application Period: November 1, 2026 - February 1, 2027 3 p.m. JST"
+  },
+  "compensation": {
+    "value": "Airfare, accommodation and living allowances covered by the program",
+    "evidence_url": "https://www.u-tokyo.ac.jp/en/prospective-students/amgen_program.html",
+    "evidence_quote": "Expenses such as airfare, accommodation, and living allowances are covered by the program."
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UTokyo Amgen Scholars page (search results): online application period 1 November 2026 to 1 February 2027, 3 p.m. JST; programme 3 June to 5 August 2027",
+    "Application form not fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Application URL not confirmed",
+    "Number of places not captured"
+  ],
+  "id": "opp_35b585506ae1b773",
+  "fingerprint": "6f293ddb2883648d",
+  "discovered_at": "2026-11-05T03:06:13.372Z",
+  "last_verified_at": "2026-11-05T03:06:13.372Z",
+  "content_hash": "sha256:c3727355a112c2d204ec267dff61377a5ab88eae95e9409e74a0fe32a4a11745"
+}
