@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "African Scholars Programme",
+    "evidence_url": "https://www.hertie-school.org/en/study/funding/full-scholarships/african-scholars-programme",
+    "evidence_quote": "African Scholars Programme"
+  },
+  "institution": {
+    "name": "Hertie School",
+    "website": "https://www.hertie-school.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.hertie-school.org/en/study/funding/full-scholarships/african-scholars-programme",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Berlin",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Public policy, international affairs, data science for public policy",
+  "seniority": "Master's",
+  "qualifications": [
+    "Nationals of listed African countries facing economic challenges",
+    "Master's application must be submitted by the 1 December Early Bird deadline",
+    "Funding application opens only after admission, with two weeks to complete it; short leadership essay required",
+    "Only one full scholarship application per year"
+  ],
+  "skills": [],
+  "description_short": "The Hertie School's African Scholars Programme is a scholarship programme for nationals of listed African countries applying to its Master of Public Policy, Master of International Affairs or Master of Data Science and AI for Public Policy. The master's application is due by 1 December.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": null,
+    "evidence_url": "https://www.hertie-school.org/en/study/funding/full-scholarships/african-scholars-programme",
+    "evidence_quote": "1 December"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Hertie School African Scholars Programme page (search results) requires the master's application by the 1 December Early Bird deadline; programme pages reference a 2027 start (coursework to be finished before 30 August 2027)",
+    "Year not stated on the page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The page gives '1 December' without a year; 1 December 2026 is inferred for the 2027 intake from the 2025 announcement pattern and 2027 start references",
+    "Number of scholarships and list of eligible countries differ across sources (20 vs 25 countries)",
+    "Benefits (reported as tuition worth EUR 39,500 and a EUR 1,000 monthly stipend) not recorded as compensation because no verbatim quote was captured",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_ec456caef262d00a",
+  "fingerprint": "5290720a952f3a82",
+  "discovered_at": "2026-11-05T03:11:21.971Z",
+  "last_verified_at": "2026-11-07T02:56:17.371Z",
+  "content_hash": "sha256:a8e3a611cc8a578f133a1899dc070e3ee1dfe9735415bc2e651a11a89f98cd93"
+}

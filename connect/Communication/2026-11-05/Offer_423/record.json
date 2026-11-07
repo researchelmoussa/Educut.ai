@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "DAAD Artists-in-Berlin Program",
+    "evidence_url": "https://www.berliner-kuenstlerprogramm.de/en/application/",
+    "evidence_quote": "DAAD Artists-in-Berlin Program"
+  },
+  "institution": {
+    "name": "DAAD Artists-in-Berlin Program (Berliner Künstlerprogramm des DAAD)",
+    "website": "https://www.berliner-kuenstlerprogramm.de/en/",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.berliner-kuenstlerprogramm.de/en/application/",
+  "source_url": "https://www.berliner-kuenstlerprogramm.de/en/application/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Berlin",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Literature, music & sound, film",
+  "seniority": "Professional artists",
+  "qualifications": [
+    "Open applications only in literature, music & sound, and film; visual arts candidates are nominated by a jury",
+    "Artists residing primarily in Germany are generally excluded",
+    "German nationals living abroad must show at least six years of primary residence in the country they apply from"
+  ],
+  "skills": [],
+  "description_short": "The DAAD Artists-in-Berlin Program offers residency fellowships for 2028: 12 months in literature and in music & sound, 6 months in film. Applications close 15 December 2026, 23:59 CET. For 2028 the single collective fellowship is in music & sound.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": "CET",
+    "evidence_url": "https://www.berliner-kuenstlerprogramm.de/en/application/",
+    "evidence_quote": "The deadline for submissions in the disciplines of literature and music & sound (12 months residency) and film (6 months residency) will be on December 15, 2026 (23:59 CET)."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official application page (search results): deadline for literature, music & sound and film is 15 December 2026 (23:59 CET); application period reported as opened 19 October 2026",
+    "Portal not independently fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Stipend amount not captured",
+    "Opening date of 19 October 2026 comes from the search summary, not a verbatim quote"
+  ],
+  "id": "opp_21f96490a3a8cab6",
+  "fingerprint": "0386fff4216b02ec",
+  "discovered_at": "2026-11-05T03:03:32.380Z",
+  "last_verified_at": "2026-11-05T03:03:32.380Z",
+  "content_hash": "sha256:25e8996c53214dc13e195fca2bfa46d68fa1f6aa5371f8d46ce8f29d2b07ec4e"
+}

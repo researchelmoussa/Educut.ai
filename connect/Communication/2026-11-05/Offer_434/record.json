@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "The University of Tokyo Research Internship Program",
+    "evidence_url": "https://www.s.u-tokyo.ac.jp/en/utrip/apply-now/",
+    "evidence_quote": "The University of Tokyo Research Internship Program"
+  },
+  "institution": {
+    "name": "School of Science, The University of Tokyo",
+    "website": "https://www.s.u-tokyo.ac.jp/en/utrip/",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.s.u-tokyo.ac.jp/en/utrip/apply-now/",
+  "source_url": "https://www.s.u-tokyo.ac.jp/en/utrip/apply-now/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Tokyo",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Natural sciences",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Enrolled in, and expected to return to, a bachelor's degree programme at a university outside Japan",
+    "Studying a natural science or related field",
+    "Able to commit full-time to all six consecutive weeks",
+    "English test scores required if English is not the first language (exemption for 8 years of continuous English-medium education)"
+  ],
+  "skills": [],
+  "description_short": "UTRIP is a six-week research internship at the University of Tokyo School of Science, 23 June to 3 August 2027, for undergraduates in natural sciences at universities outside Japan. Applications run 12 November to 25 December 2026, 17:00 JST.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-25",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.s.u-tokyo.ac.jp/en/utrip/apply-now/",
+    "evidence_quote": "The application period is from November 12, 2026 to December 25, 2026"
+  },
+  "compensation": {
+    "value": "GSS-UTRIP Scholarship including free housing and a stipend (except FUTI Award recipients)",
+    "evidence_url": "https://www.s.u-tokyo.ac.jp/en/utrip/",
+    "evidence_quote": "all participants except for those receiving the FUTI Award will receive the GSS-UTRIP Scholarship, which includes free housing and a stipend"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UTRIP Apply Now page (search results): application period 12 November 2026 to 25 December 2026, closing 17:00 JST; no late submissions considered",
+    "The application period opens on 12 November 2026, after today's run; portal not fetched, so OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Applications open 12 November 2026; not yet open on the run date",
+    "Stipend amount not stated in the results"
+  ],
+  "id": "opp_46f9d3649d645d36",
+  "fingerprint": "c9f93c3aa7e0240a",
+  "discovered_at": "2026-11-05T03:06:13.647Z",
+  "last_verified_at": "2026-11-05T03:06:13.647Z",
+  "content_hash": "sha256:6c2f0785664bb63b11bd800f17ae721962c6245b943b5a2b77ba321c1ef897e9"
+}

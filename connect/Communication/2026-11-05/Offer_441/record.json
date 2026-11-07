@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "The Émile Boutmy scholarship",
+    "evidence_url": "https://www.sciencespo.fr/students/en/fees-funding/bursaries-financial-aid/emile-boutmy-scholarship/",
+    "evidence_quote": "The Émile Boutmy scholarship"
+  },
+  "institution": {
+    "name": "Sciences Po",
+    "website": "https://www.sciencespo.fr",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.sciencespo.fr/students/en/fees-funding/bursaries-financial-aid/emile-boutmy-scholarship/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Paris",
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Social sciences, humanities and public affairs",
+  "seniority": "Undergraduate (and master's)",
+  "qualifications": [
+    "First-time applicants to Sciences Po from a non-European Union state whose household does not file taxes within the EU",
+    "Must be admitted to an undergraduate or master's programme",
+    "Scholarship must be selected in the online application; no scholarship applications after submission of the Sciences Po application"
+  ],
+  "skills": [],
+  "description_short": "Sciences Po's Émile Boutmy scholarship is for first-time, non-EU applicants admitted to an undergraduate or master's programme. Undergraduate applicants from foreign secondary schools must apply for the September 2027 intake by 13 January 2027; scholarship decisions follow by the end of April.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-13",
+    "timezone": null,
+    "evidence_url": "https://www.sciencespo.fr/admissions/en/undergraduate/foreign-secondary-schools/",
+    "evidence_quote": "The deadline for the undergraduate programme for applicants from foreign secondary schools is January 13, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Sciences Po undergraduate admissions page for foreign secondary schools (search results): deadline January 13, 2027; scholarship page says no application request accepted after the deadline",
+    "Application platform not fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline recorded is for undergraduate applicants from foreign secondary schools; master's scholarship deadlines for 2027 were not confirmed (one page lists 18 October / 29 November without a year)",
+    "General international undergraduate admissions reportedly close 1 March 2027, but the Boutmy scholarship requires the earlier 13 January deadline",
+    "Award amounts not captured",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_9391bb99a5adef7b",
+  "fingerprint": "dfd0f4a1992e2fa5",
+  "discovered_at": "2026-11-05T03:11:21.639Z",
+  "last_verified_at": "2026-11-05T03:11:21.639Z",
+  "content_hash": "sha256:c6793c27993ae142543a053a495d3b711d9852687ae2c4130f79c3d81abd16c3"
+}

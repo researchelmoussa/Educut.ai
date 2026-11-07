@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Graduate Research School Scholarships (UQGRSS)",
+    "evidence_url": "https://scholarships.uq.edu.au/scholarship/graduate-school-scholarships-uqgss-%E2%80%93-includes-rtp",
+    "evidence_quote": "Graduate Research School Scholarships (UQGRSS)"
+  },
+  "institution": {
+    "name": "The University of Queensland",
+    "website": "https://www.uq.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://scholarships.uq.edu.au/scholarship/graduate-school-scholarships-uqgss-%E2%80%93-includes-rtp",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Brisbane",
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": null,
+  "seniority": "PhD / MPhil",
+  "qualifications": [
+    "Expression of interest first, to confirm a supervisor will support the research; final application if invited",
+    "Round 1 (2027) intake: Research Quarters 3 and 4 2027 and Research Quarter 1 2028"
+  ],
+  "skills": [],
+  "description_short": "UQ's Graduate Research School Scholarships fund PhD and MPhil study. Round 1 (2027) closes 25 January 2027, with outcomes from 6 April 2027, for commencement in Research Quarters 3-4 2027 or Research Quarter 1 2028. Applicants submit an expression of interest first.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-25",
+    "timezone": null,
+    "evidence_url": "https://scholarships.uq.edu.au/scholarship/graduate-school-scholarships-uqgss-%E2%80%93-includes-rtp",
+    "evidence_quote": "25 January 2027"
+  },
+  "compensation": {
+    "value": "Living stipend of $39,220 per annum tax free (2026 rate), indexed annually; Single OSHC; tuition fees",
+    "evidence_url": "https://scholarships.uq.edu.au/scholarship/graduate-school-scholarships-uqgss-%E2%80%93-includes-rtp",
+    "evidence_quote": "$39,220 per annum tax free (2026 rate)"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UQ scholarship page (search results) lists Round 1 (2027) with application closing date 25 January 2027 and outcomes from 6 April 2027",
+    "Not independently confirmed, so OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Unclear whether Round 1 (2027) is open to offshore international applicants; the page's international round closed 19 October 2026 and the domestic section mentions onshore international students",
+    "The closing date is marked with an unexplained asterisk",
+    "Field not set: open across disciplines",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_11c0a6f35030ece4",
+  "fingerprint": "1005007b9445411f",
+  "discovered_at": "2026-11-05T03:06:14.325Z",
+  "last_verified_at": "2026-11-05T03:06:14.325Z",
+  "content_hash": "sha256:8191eb4fc1c731a0249202045255d83fb9266db69beee913b238dfa6c28dc5b0"
+}
