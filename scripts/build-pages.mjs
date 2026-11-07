@@ -576,7 +576,79 @@ ${footer()}
 `;
 }
 
-const ctaBand = (heading) => `<section class="cta"><div class="wrap cta-grid"><h2>${heading}</h2><a class="btn btn-lg" href="/#start-assessment">Start the free assessment →</a></div></section>`;
+/* ---------------- Academy launch offer (countdown + sign-up) ----------------
+   Every academy page carries a cobalt band counting down to the launch and a
+   short form. Submissions go to the Supabase RPC register_academy_interest
+   (anon key, public by design) and land in the admin Prospect Database. */
+const LAUNCH_DATE = '2026-12-31T00:00:00+01:00';
+const LAUNCH_LABEL = '31 December 2026';
+const SUPABASE_URL = 'https://jgcyaqdmdzthwiehjzdd.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpnY3lhcWRtZHp0aHdpZWhqemRkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2MDk4MDAsImV4cCI6MjEwNDE4NTgwMH0.TEC7YPj7s07P0gaf7z2CF4JLAbhtbPd1wQBE084Dqkg';
+
+const launchBand = (a) => `
+    <section class="launch-band" id="launch-offer" aria-labelledby="launch-title" data-launch="${LAUNCH_DATE}">
+      <div class="wrap launch-grid">
+        <div>
+          <div class="mono launch-kicker">Academy launch · ${LAUNCH_LABEL}</div>
+          <h2 id="launch-title">The ${esc(a.name)} Academy launches on ${LAUNCH_LABEL}</h2>
+          <p>Register your details today to benefit from our launch offer.</p>
+          <div class="launch-count" aria-live="polite">
+            <div><strong data-unit="d">--</strong><span>days</span></div>
+            <div><strong data-unit="h">--</strong><span>hours</span></div>
+            <div><strong data-unit="m">--</strong><span>minutes</span></div>
+            <div><strong data-unit="s">--</strong><span>seconds</span></div>
+          </div>
+        </div>
+        <form class="launch-form" novalidate data-academy="${esc(a.name)}">
+          <label>Full name<input name="full_name" autocomplete="name" required maxlength="200"></label>
+          <label>Business email<input name="email" type="email" autocomplete="email" required maxlength="200"></label>
+          <label>Company <small>(optional)</small><input name="company_name" autocomplete="organization" maxlength="200"></label>
+          <label>Phone <small>(optional)</small><input name="phone" type="tel" autocomplete="tel" maxlength="50"></label>
+          <label>Country <small>(optional)</small><input name="country" autocomplete="country-name" maxlength="100"></label>
+          <button class="btn btn-lime" type="submit">Get the launch offer →</button>
+          <p class="launch-msg" role="status"></p>
+          <p class="launch-note">We use these details only to contact you about the ${esc(a.name)} Academy launch offer.</p>
+        </form>
+      </div>
+    </section>`;
+
+const LAUNCH_SCRIPT = `<script>
+(function(){
+  var band=document.querySelector('[data-launch]'); if(!band) return;
+  var end=Date.parse(band.getAttribute('data-launch'));
+  var cells={}; band.querySelectorAll('[data-unit]').forEach(function(el){cells[el.getAttribute('data-unit')]=el});
+  function pad(n){return n<10?'0'+n:''+n}
+  function tick(){
+    var s=Math.max(0,Math.floor((end-Date.now())/1000));
+    cells.d.textContent=Math.floor(s/86400); cells.h.textContent=pad(Math.floor(s%86400/3600));
+    cells.m.textContent=pad(Math.floor(s%3600/60)); cells.s.textContent=pad(s%60);
+    if(!s){ band.classList.add('is-live'); clearInterval(timer); }
+  }
+  var timer=setInterval(tick,1000); tick();
+  var form=band.querySelector('.launch-form'), msg=band.querySelector('.launch-msg');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=new FormData(form), name=(f.get('full_name')||'').trim(), email=(f.get('email')||'').trim();
+    if(!name){ msg.textContent='Please enter your name.'; msg.className='launch-msg err'; return; }
+    if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){ msg.textContent='Please enter a valid email address.'; msg.className='launch-msg err'; return; }
+    var btn=form.querySelector('button'); btn.disabled=true; msg.textContent='Sending…'; msg.className='launch-msg';
+    fetch('${SUPABASE_URL}/rest/v1/rpc/register_academy_interest',{method:'POST',
+      headers:{'Content-Type':'application/json',apikey:'${SUPABASE_ANON_KEY}',Authorization:'Bearer ${SUPABASE_ANON_KEY}'},
+      body:JSON.stringify({p_full_name:name,p_email:email,p_academy:form.getAttribute('data-academy'),
+        p_company_name:(f.get('company_name')||'').trim()||null,p_phone:(f.get('phone')||'').trim()||null,
+        p_country:(f.get('country')||'').trim()||null})
+    }).then(function(r){
+      if(!r.ok) return r.text().then(function(t){throw new Error(t)});
+      form.reset(); msg.textContent='Thank you! You are registered for the launch offer. We will contact you before '+${JSON.stringify(LAUNCH_LABEL)}+'.'; msg.className='launch-msg ok';
+    }).catch(function(err){
+      msg.textContent=/INVALID_EMAIL/.test(String(err))?'Please enter a valid email address.':'Sorry, something went wrong. Please try again or write to us from the contact page.';
+      msg.className='launch-msg err';
+    }).finally(function(){ btn.disabled=false; });
+  });
+})();
+</script>`;
+
+const ctaBand = (heading) =>`<section class="cta"><div class="wrap cta-grid"><h2>${heading}</h2><a class="btn btn-lg" href="/#start-assessment">Start the free assessment →</a></div></section>`;
 
 const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
@@ -659,6 +731,7 @@ function academyPage(a) {
         </div>
       </div>
     </header>
+${launchBand(a)}
 
     <section class="page-section alt" aria-labelledby="glance">
       <div class="wrap">
@@ -718,7 +791,8 @@ function academyPage(a) {
       </div>
     </section>
 
-    ${ctaBand(`Not sure which ${esc(a.name)} courses fit your team?`)}`;
+    ${ctaBand(`Not sure which ${esc(a.name)} courses fit your team?`)}
+${LAUNCH_SCRIPT}`;
 
   const [seoTitle, seoDescription] = ACADEMY_SEO[a.code] || [];
   if (!seoTitle) throw new Error(`${a.code}: missing ACADEMY_SEO entry`);

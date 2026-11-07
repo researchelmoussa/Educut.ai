@@ -113,7 +113,7 @@ export function validateVisual(rec, pkg, spec) {
   const t = pkg.rendered_text;
   add('title on image identical to record', t.title === rec.title.value, `image: "${t.title}"`);
   add('institution on image identical to record', t.institution === rec.institution.name, `image: "${t.institution}"`);
-  const loc = [rec.location.city, rec.location.country].filter(Boolean).join(', ');
+  const loc = [rec.location.city, rec.location.country].filter((v, i, a) => v && a.findIndex((x) => String(x).toLowerCase() === String(v).toLowerCase()) === i).join(', ');
   add('location on image matches record', t.location === (loc || 'Not specified'), `image: "${t.location}"`);
   if (!rec.deadline) add('no deadline on image', t.deadline === 'See official page', `image: "${t.deadline}"`);
   else add('deadline on image is the verified date', spec?.deadline_source === rec.deadline.value, `spec.deadline_source=${spec?.deadline_source} record=${rec.deadline.value}`);
