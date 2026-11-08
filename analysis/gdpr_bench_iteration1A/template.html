@@ -1,0 +1,95 @@
+<title>GDPR-Bench Iteration 1A Article Counts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one wide chart panel, header + totals strip above, legend toggles in Plotly */
+:root{
+  --bg:#f7f8fa; --panel:#ffffff; --ink:#14171c; --ink-2:#4d5560; --ink-3:#7c8591; --grid:#e3e6ea; --line:#d5d9df;
+  --gold:#14171c;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#6250d6;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121417; --panel:#1a1d21; --ink:#eef0f3; --ink-2:#b7bec7; --ink-3:#8a929c; --grid:#2a2f35; --line:#353b42;
+  --gold:#eef0f3; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121417; --panel:#1a1d21; --ink:#eef0f3; --ink-2:#b7bec7; --ink-3:#8a929c; --grid:#2a2f35; --line:#353b42;
+  --gold:#eef0f3; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px}
+.wrap{max-width:1400px;margin:0 auto;padding-block:28px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:20px}
+h1{font-size:22px;font-weight:600;margin:0;text-wrap:balance}
+.sub{color:var(--ink-2);margin:6px 0 0;max-width:80ch;line-height:1.5}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.totals{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.t{background:var(--panel);padding:10px 12px;display:grid;gap:4px;min-width:0}
+.t .n{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2)}
+.t .sw{width:14px;height:0;border-top:2px solid;flex:none}
+.t .v{font-family:var(--mono);font-size:18px;font-variant-numeric:tabular-nums}
+.t .d{font-size:11px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 8px 4px;min-width:0}
+#chart{width:100%;height:620px}
+.note{color:var(--ink-3);font-size:12px;line-height:1.5;max-width:100ch}
+code{font-family:var(--mono);font-size:12px}
+@media (max-width:600px){#chart{height:480px}}
+</style>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">GDPR-Bench RQ2 pilot · data level · iteration 1 · structure A</div>
+    <h1>Violated articles per snippet: gold vs. 6 prompting set-ups</h1>
+    <p class="sub">Each point is one of the 887 Task 2 snippets, in <code>predictions.json</code> order. The y value is the number of GDPR articles in the answer text (<code>text = "0"</code> → 0, <code>"25,32"</code> → 2). The dashed line is the gold label count from <code>predictions.json</code>. Click legend entries to hide or show a series; drag on the chart or use the slider below it to zoom.</p>
+  </header>
+  <section class="totals" id="totals" aria-label="Total articles per series"></section>
+  <section class="panel"><div id="chart" role="img" aria-label="Line chart of article count per snippet for gold labels and six prompting set-ups"></div></section>
+  <p class="note">Sources: <code>*/output/predictions.json</code> (gold), <code>baseline_calls.jsonl</code>, <code>description_calls.jsonl</code>, <code>function_calls.jsonl</code>, <code>cove_final_calls.jsonl</code>, <code>refine_r2_calls.jsonl</code> (last <code>ANSWER:</code> line), <code>sr_cove_final_calls.jsonl</code>. CoVe steps run only on non-zero answers, so snippets missing from the CoVe final files count as 0. Counts match each set-up's <code>predictions.json</code> for all 887 snippets.</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.35.2/plotly.min.js"></script>
+<script>
+const DATA = __DATA__;
+const ORDER = [
+  ["Prediction","--gold","dash"],
+  ["Baseline","--s1","solid"],
+  ["Snippet + description","--s2","solid"],
+  ["Snippet + function","--s3","solid"],
+  ["Snippet + CoVe","--s4","solid"],
+  ["Snippet + Self-Refine","--s5","solid"],
+  ["Snippet + CoVe + Self-Refine","--s6","solid"],
+];
+const LABEL = {"Prediction":"Prediction (gold)"};
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const N = DATA.ids.length;
+const short = DATA.ids.map((id,i)=>{const [f,l]=id.split(": "); return `${i+1}. ${f.split("/").pop()}: ${l||""}`;});
+
+function totals(){
+  const el=document.getElementById("totals"); el.innerHTML="";
+  for(const [k,c] of ORDER){
+    const s=DATA.series[k], sum=s.reduce((a,b)=>a+b,0), nz=s.filter(v=>v>0).length;
+    const d=document.createElement("div"); d.className="t";
+    d.innerHTML=`<div class="n"><span class="sw" style="border-color:var(${c});${k==="Prediction"?"border-top-style:dashed":""}"></span>${LABEL[k]||k}</div><div class="v">${sum}</div><div class="d">articles · ${nz} of ${N} snippets non-zero</div>`;
+    el.appendChild(d);
+  }
+}
+function draw(){
+  const ink=css("--ink"), ink2=css("--ink-2"), grid=css("--grid"), panel=css("--panel"), line=css("--line");
+  const traces=ORDER.map(([k,c,dash])=>({
+    x:short, y:DATA.series[k], name:LABEL[k]||k, type:"scatter", mode:"lines",
+    line:{color:css(c), width:k==="Prediction"?2.5:1.5, dash, shape:"linear"},
+    customdata:DATA.articles[k].map(a=>a.length?a.join(", "):"0"),
+    hovertemplate:"%{y} <span style='opacity:.7'>[%{customdata}]</span><extra>"+(LABEL[k]||k)+"</extra>",
+  }));
+  traces[0].text=DATA.ids;
+  const layout={
+    paper_bgcolor:panel, plot_bgcolor:panel, font:{family:css("--sans"),color:ink2,size:12},
+    margin:{l:90,r:16,t:8,b:8}, hovermode:"x unified",
+    hoverlabel:{bgcolor:panel,bordercolor:line,font:{color:ink,family:css("--mono"),size:11}},
+    legend:{orientation:"h",y:1.08,x:0,font:{color:ink,size:12},itemclick:"toggle",itemdoubleclick:"toggleothers"},
+    xaxis:{type:"category",title:{text:"Snippet (file: line id)",font:{color:ink2}},tickangle:-45,tickfont:{size:10,family:css("--mono")},
+      nticks:24,showgrid:false,linecolor:line,range:[-0.5,79.5],
+      rangeslider:{visible:true,thickness:0.08,bgcolor:css("--bg"),bordercolor:line,borderwidth:1}},
+    yaxis:{title:{text:"Number of articles violated",font:{color:ink2}},dtick:1,rangemode:"tozero",gridcolor:grid,zeroline:true,zerolinecolor:line,fixedrange:true},
+  };
+  Plotly.react("chart",traces,layout,{responsive:true,displaylogo:false,modeBarButtonsToRemove:["lasso2d","select2d"]});
+}
+totals(); draw();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",draw);
+new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+</script>
