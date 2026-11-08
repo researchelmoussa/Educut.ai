@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-07T02:56:29.682Z",
+  "updated_at": "2026-11-08T03:11:39.319Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -5278,7 +5278,7 @@
       "deadline": "2026-11-06T23:55:00+11:00",
       "content_hash": "sha256:90ee2fc62cbdf4ede3994c56e8fcf583beb2cd0a11521e333572587e206b2ed9",
       "last_verified_at": "2026-10-17T01:57:07.573Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T01:57:07.779Z",
       "history": [
         {
@@ -5322,6 +5322,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-08T02:49:49.399Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-06T23:55:00+11:00 passed"
         }
       ],
       "offer_number": 54
@@ -6098,7 +6105,7 @@
       "deadline": "2026-11-05",
       "content_hash": "sha256:b472a7800662ee475d183ba4ef131595353f96c3cb325cbe9676a6a4e004c4e2",
       "last_verified_at": "2026-10-17T02:03:52.429Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T02:03:52.602Z",
       "history": [
         {
@@ -6142,6 +6149,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-08T02:49:49.399Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-05 passed"
         }
       ],
       "offer_number": 67
@@ -11960,7 +11974,7 @@
       "deadline": "2026-11-06",
       "content_hash": "sha256:c2bd66ed16c8718183f232f04e52cc60a246e74d76f3543fcc14f1f4893b9d78",
       "last_verified_at": "2026-10-22T02:01:00.527Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-22T02:01:23.233Z",
       "history": [
         {
@@ -12004,6 +12018,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-08T02:49:49.399Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-06 passed"
         }
       ],
       "offer_number": 158
@@ -12781,7 +12802,7 @@
       "deadline": "2026-11-06",
       "content_hash": "sha256:9ef34cc9e0e5b8467e24dd9d512c489993332c5a60dd9543883e46673d3f3c65",
       "last_verified_at": "2026-10-23T01:59:50.733Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-23T01:59:59.750Z",
       "history": [
         {
@@ -12825,6 +12846,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-08T02:49:49.399Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-06 passed"
         }
       ],
       "offer_number": 169
@@ -12974,7 +13002,7 @@
       "deadline": "2026-11-04",
       "content_hash": "sha256:25494bdff9bb84192f92fd8cdf8894688631b7a759e271e8d47d10fc7a7ae484",
       "last_verified_at": "2026-10-23T01:59:51.251Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-23T02:00:00.284Z",
       "history": [
         {
@@ -13018,6 +13046,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-08T02:49:49.399Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-04 passed"
         }
       ],
       "offer_number": 172
@@ -13484,7 +13519,7 @@
       "deadline": "2026-11-05",
       "content_hash": "sha256:3cbfd0f27e1db1078e7fae036141f864b884268e65da475c419b99403740d3b6",
       "last_verified_at": "2026-10-24T02:05:02.886Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-24T02:05:12.872Z",
       "history": [
         {
@@ -13528,6 +13563,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-08T02:49:49.399Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-05 passed"
         }
       ],
       "offer_number": 180
@@ -14483,7 +14525,7 @@
       "deadline": "2026-11-04",
       "content_hash": "sha256:3df8647fd6b2622b02e944a402dcce22be5f495759d7bad2c53173b7aff5534b",
       "last_verified_at": "2026-10-24T02:05:04.988Z",
-      "pipeline_status": "NEEDS_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-24T02:05:15.311Z",
       "history": [
         {
@@ -14499,6 +14541,13 @@
           "to": "NEEDS_REVIEW",
           "actor": "opportunity-scout",
           "reason": "application_status=NEEDS_REVIEW"
+        },
+        {
+          "at": "2026-11-08T02:49:49.399Z",
+          "from": "NEEDS_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-04 passed"
         }
       ]
     },
@@ -17547,7 +17596,7 @@
       "deadline": "2026-11-05",
       "content_hash": "sha256:84a01c64b47a738206ebf1503b84782296d3a19ac2610fb6453bb9d811a5ad90",
       "last_verified_at": "2026-10-27T03:01:49.420Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-27T03:01:49.571Z",
       "history": [
         {
@@ -17577,6 +17626,13 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T02:49:49.399Z",
+          "from": "UNDER_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-05 passed"
         }
       ],
       "offer_number": 245
@@ -29599,6 +29655,1569 @@
         }
       ],
       "offer_number": 442
+    },
+    "opp_2db7e83dd5692a28": {
+      "id": "opp_2db7e83dd5692a28",
+      "fingerprint": "39acb001b326a2c3",
+      "title": "Oxford–UBS Centre for Applied AI DPhil Studentship: Future AI Systems for Finance",
+      "institution": "University of Oxford, Department of Engineering Science",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "source_url": "https://eng.ox.ac.uk/study/research-studentships/oxford-ubs-centre-for-applied-ai-dphil-studentship-future-ai-systems-for-finance",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-02",
+      "content_hash": "sha256:4725d654f008049b9a83f9125393dbe2ec82313f6d2259d1899df329b70726ab",
+      "last_verified_at": "2026-11-08T02:58:33.492Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T02:58:38.733Z",
+      "history": [
+        {
+          "at": "2026-11-08T02:58:38.733Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T02:58:38.733Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:09:59.537Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:09:59.538Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:32.566Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:32.567Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 443
+    },
+    "opp_8dfa85e105542f7a": {
+      "id": "opp_8dfa85e105542f7a",
+      "fingerprint": "9df0c18c24b1e434",
+      "title": "KAIST International Undergraduate Admission 2027 (Regular Admission)",
+      "institution": "KAIST (Korea Advanced Institute of Science and Technology)",
+      "city": "Daejeon",
+      "country": "South Korea",
+      "source_url": "https://admission.kaist.ac.kr/intl-undergraduate/application/ApplicationGuide/ApplicationTimeline",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-14",
+      "content_hash": "sha256:8406f639102c0ae9ea333d2e066c829fe5fe073a8b03c63c4cedf676ef32bc48",
+      "last_verified_at": "2026-11-08T02:58:33.113Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T02:58:38.882Z",
+      "history": [
+        {
+          "at": "2026-11-08T02:58:38.882Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T02:58:38.882Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:09:59.895Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:09:59.896Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:32.878Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:32.878Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 444
+    },
+    "opp_de1a6a1a5bd11a4b": {
+      "id": "opp_de1a6a1a5bd11a4b",
+      "fingerprint": "be5332d0cf1615a0",
+      "title": "The Audrey Flack Short-Term Fellowship",
+      "institution": "Smithsonian American Art Museum (SAAM)",
+      "city": "Washington, D.C.",
+      "country": "United States",
+      "source_url": "https://americanart.si.edu/research/fellowships/audrey-flack",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01",
+      "content_hash": "sha256:a62dc390fafdc8f6a7c7b14c6a9370cd7554e1af05b90818b65fe6b2b0cbbc42",
+      "last_verified_at": "2026-11-08T02:58:33.754Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T02:58:39.034Z",
+      "history": [
+        {
+          "at": "2026-11-08T02:58:39.034Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T02:58:39.034Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:00.289Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:00.289Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:33.145Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:33.145Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 445
+    },
+    "opp_b9df6cc47f70c0a0": {
+      "id": "opp_b9df6cc47f70c0a0",
+      "fingerprint": "c6dbd894866c5383",
+      "title": "Simons Postdoctoral Fellowships in Plant Biology",
+      "institution": "Simons Foundation",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.simonsfoundation.org/funding/simons-postdoctoral-fellowships-in-plant-biology-2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-03",
+      "content_hash": "sha256:1dd14b6c075b0214b270e6be6e3681f6e540dd10da4c1118d7546afdd89182cf",
+      "last_verified_at": "2026-11-08T02:58:33.908Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T02:58:39.174Z",
+      "history": [
+        {
+          "at": "2026-11-08T02:58:39.174Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T02:58:39.174Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:00.608Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:00.608Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:33.414Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:33.415Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 446
+    },
+    "opp_a3c7bc591ded6104": {
+      "id": "opp_a3c7bc591ded6104",
+      "fingerprint": "035e6854eafa7f36",
+      "title": "Neukom Postdoctoral Fellows",
+      "institution": "The Neukom Institute for Computational Science, Dartmouth College",
+      "city": "Hanover",
+      "country": "United States",
+      "source_url": "https://neukom.dartmouth.edu/funding/faculty/postdoctoral-fellows",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:62a61965d68af22c79b3f8272b2a5c24d56160dac805399f77f267d3fd9c0ea6",
+      "last_verified_at": "2026-11-08T02:58:33.365Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T02:58:39.315Z",
+      "history": [
+        {
+          "at": "2026-11-08T02:58:39.315Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T02:58:39.315Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:00.973Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:00.973Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:33.702Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:33.702Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 447
+    },
+    "opp_674cb93c0f48a4be": {
+      "id": "opp_674cb93c0f48a4be",
+      "fingerprint": "61ad13771756aece",
+      "title": "Danish Government Scholarships",
+      "institution": "University of Copenhagen",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://studies.ku.dk/masters/tuition-fees--scholarships/scholarships--loans-at-ucph/danish-government-scholarships/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:0dbac719c6f341ed1bbf9d321bbe3a47aff85e6d68399091eb728585e5914f30",
+      "last_verified_at": "2026-11-08T02:58:34.029Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T02:58:39.471Z",
+      "history": [
+        {
+          "at": "2026-11-08T02:58:39.471Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T02:58:39.471Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:01.291Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:01.291Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:33.998Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:33.999Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 448
+    },
+    "opp_abcbc59eee7781a8": {
+      "id": "opp_abcbc59eee7781a8",
+      "fingerprint": "ca6d0de4e76a4f7c",
+      "title": "Radboud Scholarship Programme",
+      "institution": "Radboud University",
+      "city": "Nijmegen",
+      "country": "Netherlands",
+      "source_url": "https://www.ru.nl/en/education/scholarships/radboud-scholarship-programme",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:6dbb675320132d5cc6a489df0633d43cdecae175e9d894bb00785f19abcafe45",
+      "last_verified_at": "2026-11-08T02:58:33.623Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T02:58:39.626Z",
+      "history": [
+        {
+          "at": "2026-11-08T02:58:39.626Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T02:58:39.626Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:22.784Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:22.784Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:34.277Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:34.277Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 449
+    },
+    "opp_42a91d44c0bfc38d": {
+      "id": "opp_42a91d44c0bfc38d",
+      "fingerprint": "6bbdff227c549ffe",
+      "title": "Postdoctoral Positions (2027), Institute of Mathematics",
+      "institution": "Institute of Mathematics, Academia Sinica",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "source_url": "https://www.math.sinica.edu.tw/pages/117",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:061e863ea8d8817672fc62e36078b586c83a1411df8256e5c3ba714ab0877112",
+      "last_verified_at": "2026-11-08T02:58:32.861Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T02:58:39.775Z",
+      "history": [
+        {
+          "at": "2026-11-08T02:58:39.775Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T02:58:39.775Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:23.161Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:23.161Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:34.553Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:34.553Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 450
+    },
+    "opp_9a1d18d6610cb94a": {
+      "id": "opp_9a1d18d6610cb94a",
+      "fingerprint": "8fe2c9251b4655a4",
+      "title": "MOPGA 2027: Visiting Fellowship Program for Early Career Researchers",
+      "institution": "Campus France (Make Our Planet Great Again programme)",
+      "city": null,
+      "country": "France",
+      "source_url": "https://www.campusfrance.org/en/mopga-2027",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:55111b8e70f327415b147bbea79b969924db39dd5d89eedf3ca40293aaaf5a55",
+      "last_verified_at": "2026-11-08T02:58:33.237Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T02:58:39.917Z",
+      "history": [
+        {
+          "at": "2026-11-08T02:58:39.917Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T02:58:39.918Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:23.486Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:23.486Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:34.864Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:34.864Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 451
+    },
+    "opp_96f939c873950c25": {
+      "id": "opp_96f939c873950c25",
+      "fingerprint": "5fdf1df1439eb649",
+      "title": "Global Markets, Local Creativities (Erasmus Mundus International Master)",
+      "institution": "University of Glasgow",
+      "city": "Glasgow",
+      "country": "United Kingdom",
+      "source_url": "https://www.gla.ac.uk/postgraduate/erasmusmundus/glocal/feesandfunding/tuitionfees/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "NEEDS_REVIEW",
+      "deadline": "2027-01-14",
+      "content_hash": "sha256:0d484db2bc00c19280cc747f11518c1a011d64b4beb17a879cd1b4e9294b0ae7",
+      "last_verified_at": "2026-11-08T02:58:32.989Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-11-08T02:58:40.062Z",
+      "history": [
+        {
+          "at": "2026-11-08T02:58:40.062Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T02:58:40.062Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_f55b281d7a81f157": {
+      "id": "opp_f55b281d7a81f157",
+      "fingerprint": "b01f7364ef158838",
+      "title": "Berlin Mathematical School (BMS) PhD Program, 2027 admission",
+      "institution": "Berlin Mathematical School (BMS)",
+      "city": "Berlin",
+      "country": "Germany",
+      "source_url": "https://www.math-berlin.de/application",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:eeb066f60213557f8eb08fa3ebd1745933a03b85759dd6ce686ab53b814b1852",
+      "last_verified_at": "2026-11-08T03:01:46.607Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:01:37.853Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:01:37.853Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:01:37.854Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:01:46.806Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-08T03:10:23.815Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:23.816Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:35.147Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:35.147Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 452
+    },
+    "opp_c5713f9f28be42b7": {
+      "id": "opp_c5713f9f28be42b7",
+      "fingerprint": "9fd5e1e08a00c539",
+      "title": "Doctoral Programs at CEU (2027-2028 admission)",
+      "institution": "Central European University (CEU)",
+      "city": "Vienna",
+      "country": "Austria",
+      "source_url": "https://www.ceu.edu/admissions/doctoral",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:c7feb03691f08e70b54a504640bc89d684f5574c63877467fdd0380945fbc81c",
+      "last_verified_at": "2026-11-08T03:01:37.996Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:01:38.136Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:01:38.136Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:01:38.137Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:24.157Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:24.157Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:35.445Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:35.446Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 453
+    },
+    "opp_95401a6e9dccf8a5": {
+      "id": "opp_95401a6e9dccf8a5",
+      "fingerprint": "baeaa7baf2d08c92",
+      "title": "Admissions for 2027-2028 (Master's and Doctoral Programs)",
+      "institution": "Doha Institute for Graduate Studies",
+      "city": "Doha",
+      "country": "Qatar",
+      "source_url": "https://www.dohainstitute.edu.qa/en/Admissions-Office/Pages/Apply.aspx",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:7bd49a4907caadb0a782aa7ba7ec1ec89119652649af9cc2efa212bec11d8dc5",
+      "last_verified_at": "2026-11-08T03:01:38.296Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:01:38.455Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:01:38.455Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:01:38.455Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:24.474Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:24.474Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:35.731Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:35.731Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 454
+    },
+    "opp_285d3e7ea131f2df": {
+      "id": "opp_285d3e7ea131f2df",
+      "fingerprint": "b65850ba810718be",
+      "title": "One Health Master's Programme",
+      "institution": "University of Helsinki",
+      "city": "Helsinki",
+      "country": "Finland",
+      "source_url": "https://www.helsinki.fi/en/degree-programmes/one-health-masters-programme",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-19",
+      "content_hash": "sha256:ae549bb7f7bb8b7feb4a037020eff17e88b25ee95cf0e80b0213f4fb446bd1aa",
+      "last_verified_at": "2026-11-08T03:01:38.607Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:01:38.743Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:01:38.743Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:01:38.743Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:29.702Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:29.703Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:36.026Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:36.026Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 455
+    },
+    "opp_466ee0e275cef97f": {
+      "id": "opp_466ee0e275cef97f",
+      "fingerprint": "037474effae4fdef",
+      "title": "ICTS Postdoctoral program 2027 (Fall Cycle)",
+      "institution": "International Centre for Theoretical Sciences (ICTS-TIFR)",
+      "city": "Bengaluru",
+      "country": "India",
+      "source_url": "https://www.icts.res.in/academic/postdoctoral-fellowships",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30",
+      "content_hash": "sha256:4a39721131f11df8e83d31854971af7d6fe9107c6fcf0cc7bf7e0c1a9658e287",
+      "last_verified_at": "2026-11-08T03:01:38.890Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:01:39.030Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:01:39.031Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:01:39.031Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:30.016Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:30.016Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:36.307Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:36.308Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 456
+    },
+    "opp_ba99a8d5585fdccd": {
+      "id": "opp_ba99a8d5585fdccd",
+      "fingerprint": "e27985e9be6a7195",
+      "title": "2027 R-CCS International HPC Computational Science Internship Program",
+      "institution": "RIKEN Center for Computational Science (R-CCS)",
+      "city": "Kobe",
+      "country": "Japan",
+      "source_url": "https://www.r-ccs.riken.jp/en/outreach/schools/20270413-1223/index.html",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-01",
+      "content_hash": "sha256:ecc72ac21ea2ba59c5e53151f62fba971f4ddfc17ce06e2e231096d6d554be6f",
+      "last_verified_at": "2026-11-08T03:01:39.188Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:01:39.326Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:01:39.326Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:01:39.326Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:30.308Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:30.309Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:36.596Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:36.596Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 457
+    },
+    "opp_23f86af56f49cb44": {
+      "id": "opp_23f86af56f49cb44",
+      "fingerprint": "bec60c2f0d52e1ec",
+      "title": "Graduate Application, 2026-2027 Spring Semester (Graduate School of Social Sciences)",
+      "institution": "Middle East Technical University (METU), Graduate School of Social Sciences",
+      "city": "Ankara",
+      "country": "Turkey",
+      "source_url": "https://sbe.metu.edu.tr/en/social-science-application",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-18",
+      "content_hash": "sha256:0e0bf75fcd4e735d2337e6bf878d2db10040dc0832d0da3b40eb7255debafcc3",
+      "last_verified_at": "2026-11-08T03:04:38.556Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:04:38.725Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:04:38.725Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:04:38.726Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:30.633Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:30.633Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:36.881Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:36.881Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 458
+    },
+    "opp_61ecde6dc682a159": {
+      "id": "opp_61ecde6dc682a159",
+      "fingerprint": "6f1984e8615423f2",
+      "title": "Master in Public Policy (MPP)",
+      "institution": "Lee Kuan Yew School of Public Policy, National University of Singapore",
+      "city": "Singapore",
+      "country": "Singapore",
+      "source_url": "https://lkyspp.nus.edu.sg/graduate-admissions/admission-guide/how-to-apply",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:13792ecbc6cfbf1dbaaa4fa0f7cb11bc7fe00e91e411fd930884ace062977533",
+      "last_verified_at": "2026-11-08T03:04:38.877Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:04:39.041Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:04:39.041Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:04:39.041Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:30.962Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:30.962Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:37.199Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:37.199Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 459
+    },
+    "opp_be3ef4579657bc08": {
+      "id": "opp_be3ef4579657bc08",
+      "fingerprint": "c845f96699ac8f39",
+      "title": "Data Sciences Institute Postdoctoral Fellowship",
+      "institution": "Data Sciences Institute, University of Toronto",
+      "city": "Toronto",
+      "country": "Canada",
+      "source_url": "https://datasciences.utoronto.ca/postdoctoral-fellowship/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-22",
+      "content_hash": "sha256:493ac8e4a2d46e9768f722df29cc4f00d8c995578ab937b7fa93cbe8ff375783",
+      "last_verified_at": "2026-11-08T03:04:39.210Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:04:39.354Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:04:39.354Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:04:39.354Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:31.265Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:31.265Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:37.488Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:37.488Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 460
+    },
+    "opp_c8695e3234f16ac1": {
+      "id": "opp_c8695e3234f16ac1",
+      "fingerprint": "dc29bb7be4db0fd4",
+      "title": "BSE Master's Degrees (2027-2028 intake)",
+      "institution": "Barcelona School of Economics (BSE)",
+      "city": "Barcelona",
+      "country": "Spain",
+      "source_url": "https://bse.eu/masters-degrees/admissions",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:d983c12ae917ab33f125b6db2b83bd53939635cdcc2ad5c21cf8ab968e9af6ab",
+      "last_verified_at": "2026-11-08T03:04:39.501Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:04:39.650Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:04:39.650Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:04:39.650Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:54.180Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:54.180Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:37.774Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:37.774Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 461
+    },
+    "opp_cadb4d453c2825aa": {
+      "id": "opp_cadb4d453c2825aa",
+      "fingerprint": "4d253fa9ceddd785",
+      "title": "Doctorado en Economía",
+      "institution": "El Colegio de México, Centro de Estudios Económicos",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "source_url": "https://cee.colmex.mx/doctorado/economia/convocatoria/solicitud-de-admision",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-12",
+      "content_hash": "sha256:6c8a13dd34767e915e89beeb774ea12f81536a7228cde5a96b9688b0cb86df30",
+      "last_verified_at": "2026-11-08T03:04:39.791Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:04:39.917Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:04:39.917Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:04:39.917Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:54.507Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:54.508Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:38.071Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:38.071Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 462
+    },
+    "opp_94adcca9692c06ff": {
+      "id": "opp_94adcca9692c06ff",
+      "fingerprint": "e40a272a2d08fdcf",
+      "title": "KI Global Master's Scholarship",
+      "institution": "Karolinska Institutet",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "source_url": "https://education.ki.se/bachelors-masters-studies/scholarships/the-ki-global-masters-scholarships-for-fee-paying-students",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-24",
+      "content_hash": "sha256:09bc2843c854816e06c8735d4433c67d2f6293ff7145f7cfff429af3d95c22ac",
+      "last_verified_at": "2026-11-08T03:04:40.050Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:04:40.183Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:04:40.183Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:04:40.184Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:54.830Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:54.830Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:38.364Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:38.365Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 463
+    },
+    "opp_576786011ed5cea1": {
+      "id": "opp_576786011ed5cea1",
+      "fingerprint": "a8b1a28450315098",
+      "title": "PhD Programs, 2027-28 Fall Intake",
+      "institution": "The Hong Kong University of Science and Technology (Guangzhou)",
+      "city": "Guangzhou",
+      "country": "China",
+      "source_url": "https://fytgs.hkust-gz.edu.cn/admissions/before-submitting-an-application/admission-timeline",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-06-15",
+      "content_hash": "sha256:73c9f93b1faf60d72cd464b4fead87a65a3d8c2fc3d42ced4b687cb9480f2481",
+      "last_verified_at": "2026-11-08T03:04:40.316Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:04:40.448Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:04:40.448Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:04:40.448Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:55.158Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:55.158Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:38.714Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:38.715Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 464
+    },
+    "opp_e87e8ae6a4193bbf": {
+      "id": "opp_e87e8ae6a4193bbf",
+      "fingerprint": "7d121ed9e97f190f",
+      "title": "Postdoctoral Fellows in Educational Measurement",
+      "institution": "University of Oslo, CREATE - Centre for Research on Equality in Education",
+      "city": "Oslo",
+      "country": "Norway",
+      "source_url": "https://www.uio.no/english/about/vacancies/academic/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.jobbnorge.no/en/available-jobs/job/309569/postdoctoral-fellows-in-educational-measurement",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-04",
+      "content_hash": "sha256:ce3e8b68b4bf554454570d895981865d65911d4c5fff9fb8273839ece587f247",
+      "last_verified_at": "2026-11-08T03:05:53.694Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:05:53.832Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:05:53.832Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:05:53.833Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:55.486Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:55.486Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:39.025Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:39.025Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 465
+    },
+    "opp_9cbd5899d015161d": {
+      "id": "opp_9cbd5899d015161d",
+      "fingerprint": "c7e0bfab7b7bbcba",
+      "title": "Postdoctoral Researcher in Econometrics and Causal Inference",
+      "institution": "University of Groningen, Faculty of Economics and Business",
+      "city": "Groningen",
+      "country": "Netherlands",
+      "source_url": "https://werkenbij.rug.nl/en/all-vacancies/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:d9bc24c3f6819ab391dd69c5e9424308f5f93ff11a09c4f43a644bb39cbf1489",
+      "last_verified_at": "2026-11-08T03:11:30.449Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-08T03:05:54.150Z",
+      "history": [
+        {
+          "at": "2026-11-08T03:05:54.150Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-08T03:05:54.150Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-08T03:10:55.830Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:10:55.830Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:30.603Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-08T03:11:30.603Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-08T03:11:32.271Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: removed unsupported 'NWO-funded' claim from summary"
+        },
+        {
+          "at": "2026-11-08T03:11:39.180Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-08T03:11:39.180Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-08T03:11:39.319Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-08T03:11:39.319Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 466
     }
   },
   "seen_urls": {
@@ -30263,7 +31882,33 @@
     "https://verbierfestival.com/en/academy/shenzhen-verbier-festival-masterclasses": "opp_9b69512a47ed11fe",
     "https://hagueacademy.nl/doctoral-scholarships": "opp_17cef5767832c10e",
     "https://sciencespo.fr/students/en/fees-funding/bursaries-financial-aid/emile-boutmy-scholarship": "opp_9391bb99a5adef7b",
-    "https://hertie-school.org/en/study/funding/full-scholarships/african-scholars-programme": "opp_ec456caef262d00a"
+    "https://hertie-school.org/en/study/funding/full-scholarships/african-scholars-programme": "opp_ec456caef262d00a",
+    "https://eng.ox.ac.uk/study/research-studentships/oxford-ubs-centre-for-applied-ai-dphil-studentship-future-ai-systems-for-finance": "opp_2db7e83dd5692a28",
+    "https://admission.kaist.ac.kr/intl-undergraduate/application/ApplicationGuide/ApplicationTimeline": "opp_8dfa85e105542f7a",
+    "https://americanart.si.edu/research/fellowships/audrey-flack": "opp_de1a6a1a5bd11a4b",
+    "https://simonsfoundation.org/funding/simons-postdoctoral-fellowships-in-plant-biology-2027": "opp_b9df6cc47f70c0a0",
+    "https://neukom.dartmouth.edu/funding/faculty/postdoctoral-fellows": "opp_a3c7bc591ded6104",
+    "https://studies.ku.dk/masters/tuition-fees--scholarships/scholarships--loans-at-ucph/danish-government-scholarships": "opp_674cb93c0f48a4be",
+    "https://ru.nl/en/education/scholarships/radboud-scholarship-programme": "opp_abcbc59eee7781a8",
+    "https://math.sinica.edu.tw/pages/117": "opp_42a91d44c0bfc38d",
+    "https://campusfrance.org/en/mopga-2027": "opp_9a1d18d6610cb94a",
+    "https://gla.ac.uk/postgraduate/erasmusmundus/glocal/feesandfunding/tuitionfees": "opp_96f939c873950c25",
+    "https://math-berlin.de/application": "opp_f55b281d7a81f157",
+    "https://ceu.edu/admissions/doctoral": "opp_c5713f9f28be42b7",
+    "https://dohainstitute.edu.qa/en/Admissions-Office/Pages/Apply.aspx": "opp_95401a6e9dccf8a5",
+    "https://helsinki.fi/en/degree-programmes/one-health-masters-programme": "opp_285d3e7ea131f2df",
+    "https://icts.res.in/academic/postdoctoral-fellowships": "opp_466ee0e275cef97f",
+    "https://r-ccs.riken.jp/en/outreach/schools/20270413-1223/index.html": "opp_ba99a8d5585fdccd",
+    "https://sbe.metu.edu.tr/en/social-science-application": "opp_23f86af56f49cb44",
+    "https://lkyspp.nus.edu.sg/graduate-admissions/admission-guide/how-to-apply": "opp_61ecde6dc682a159",
+    "https://datasciences.utoronto.ca/postdoctoral-fellowship": "opp_be3ef4579657bc08",
+    "https://bse.eu/masters-degrees/admissions": "opp_c8695e3234f16ac1",
+    "https://cee.colmex.mx/doctorado/economia/convocatoria/solicitud-de-admision": "opp_cadb4d453c2825aa",
+    "https://education.ki.se/bachelors-masters-studies/scholarships/the-ki-global-masters-scholarships-for-fee-paying-students": "opp_94adcca9692c06ff",
+    "https://fytgs.hkust-gz.edu.cn/admissions/before-submitting-an-application/admission-timeline": "opp_576786011ed5cea1",
+    "https://uio.no/english/about/vacancies/academic": "opp_e87e8ae6a4193bbf",
+    "https://jobbnorge.no/en/available-jobs/job/309569/postdoctoral-fellows-in-educational-measurement": "opp_e87e8ae6a4193bbf",
+    "https://werkenbij.rug.nl/en/all-vacancies": "opp_9cbd5899d015161d"
   },
-  "last_offer_number": 442
+  "last_offer_number": 466
 }
