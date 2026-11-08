@@ -6,15 +6,15 @@
 :root{
   --bg:#f7f8fa; --panel:#ffffff; --ink:#14171c; --ink-2:#4d5560; --ink-3:#7c8591; --grid:#e3e6ea; --line:#d5d9df;
   --gold:#14171c;
-  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#6250d6;
+  --q0:#f1f3f6; --q1:#cde2fb; --q2:#86b6ef; --q3:#2a78d6; --q4:#104281; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#6250d6;
   --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#121417; --panel:#1a1d21; --ink:#eef0f3; --ink-2:#b7bec7; --ink-3:#8a929c; --grid:#2a2f35; --line:#353b42;
-  --gold:#eef0f3; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}}
+  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#121417; --panel:#1a1d21; --ink:#eef0f3; --ink-2:#b7bec7; --ink-3:#8a929c; --grid:#2a2f35; --line:#353b42;
-  --gold:#eef0f3; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}
+  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px}
 .wrap{max-width:1400px;margin:0 auto;padding-block:28px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:20px}
 h1{font-size:22px;font-weight:600;margin:0;text-wrap:balance}
@@ -41,9 +41,15 @@ table{border-collapse:collapse;width:100%;font-size:12px;font-variant-numeric:ta
 th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
 th{font-weight:500;color:var(--ink-2);font-size:11px;vertical-align:bottom;white-space:normal}
 td:first-child,th:first-child{text-align:left}
+#atab td:nth-child(2),#atab th:nth-child(2){text-align:left}
 td.k{display:flex;align-items:center;gap:6px}
 tr.gold td{color:var(--ink-2)}
 td b{font-weight:600}
+#heat{width:100%;height:640px}
+td.na{color:var(--ink-3)}
+td.z{color:var(--ink-3)}
+.ok{color:var(--ink-3);font-size:11px}
+th.sub{font-size:10px}
 </style>
 <div class="wrap">
   <header>
@@ -58,6 +64,14 @@ td b{font-weight:600}
     <div class="stats">
       <div id="bars" role="img" aria-label="Bar chart of percent predicted and percent correct versus gold per method"></div>
       <div class="tw"><table id="stab"></table></div>
+    </div>
+  </section>
+  <section class="panel" style="padding:16px">
+    <h2>Per-article statistics: the 23 GDPR articles in the prompt</h2>
+    <p class="def">For each article: how many snippets have it in the gold label, and how many times each method predicted it (the number of correct predictions, meaning the article is also in that snippet's gold label, is shown after the ✓). Articles are ranked by the total number of times they were predicted across the 6 methods. Hover a heatmap cell for details.</p>
+    <div class="stats">
+      <div id="heat" role="img" aria-label="Heatmap of how often each GDPR article was predicted by each method, compared with gold"></div>
+      <div class="tw"><table id="atab"></table></div>
     </div>
   </section>
   <section class="panel"><div id="chart" role="img" aria-label="Line chart of article count per snippet for gold labels and six prompting set-ups"></div></section>
@@ -138,7 +152,44 @@ function bars(S){
   },{responsive:true,displaylogo:false,displayModeBar:false});
 }
 function drawStats(){const S=stats();table(S);bars(S);}
-totals(); draw(); drawStats();
-matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{draw();bars(stats());});
-new MutationObserver(()=>{draw();bars(stats());}).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+const ART={5:"Principles of processing",6:"Lawfulness of processing",7:"Conditions for consent",8:"Child's consent",9:"Special categories of data",12:"Transparent information",13:"Information at collection",14:"Information, data not from subject",15:"Right of access",16:"Right to rectification",17:"Right to erasure",18:"Right to restriction",19:"Notification of rectification/erasure",21:"Right to object",25:"Data protection by design/default",30:"Records of processing",32:"Security of processing",33:"Breach notification",35:"DPIA",44:"Transfers: general principle",46:"Transfers with safeguards",58:"Supervisory authority powers",83:"Administrative fines"};
+const ARTS=Object.keys(ART).map(Number);
+function artStats(){
+  const G=DATA.articles["Prediction"], M=ORDER.slice(1).map(o=>o[0]);
+  const rows=ARTS.map(a=>{const r={a,gold:G.filter(g=>g.includes(a)).length,pred:{},cor:{}};
+    for(const k of M){const P=DATA.articles[k];r.pred[k]=0;r.cor[k]=0;
+      P.forEach((p,i)=>{if(p.includes(a)){r.pred[k]++;if(G[i].includes(a))r.cor[k]++;}});}
+    r.tp=M.reduce((s,k)=>s+r.pred[k],0);r.tc=M.reduce((s,k)=>s+r.cor[k],0);return r;});
+  rows.sort((x,y)=>y.tp-x.tp||y.gold-x.gold||x.a-y.a);
+  return {rows,M};
+}
+function artTable({rows,M}){
+  const short={"Snippet + description":"+ description","Snippet + function":"+ function","Snippet + CoVe":"+ CoVe","Snippet + Self-Refine":"+ Self-Refine","Snippet + CoVe + Self-Refine":"+ CoVe + Self-Refine"};
+  let h="<thead><tr><th>Rank</th><th>Article</th><th>Gold snippets</th>"+M.map(k=>`<th>${short[k]||k}<br><span class=\"ok\">predicted ✓correct</span></th>`).join("")+"<th>Total predicted (6 methods)</th><th>Total ✓correct</th></tr></thead><tbody>";
+  rows.forEach((r,i)=>{
+    h+=`<tr><td>${r.tp?i+1:"–"}</td><td style="white-space:normal;min-width:180px"><b>Art. ${r.a}</b> <span class="ok">${ART[r.a]}</span></td><td>${r.gold}</td>`+
+      M.map(k=>r.pred[k]?`<td>${r.pred[k]} <span class="ok">✓${r.cor[k]}</span></td>`:`<td class="z">0</td>`).join("")+
+      `<td><b>${r.tp}</b></td><td>${r.tc}</td></tr>`;});
+  document.getElementById("atab").innerHTML=h.replace(/\\"/g,'"')+"</tbody>";
+}
+function heat({rows,M}){
+  const ink=css("--ink"),ink2=css("--ink-2"),panel=css("--panel");
+  const cols=["Gold",...M.map(k=>k.replace("Snippet + ","+ "))];
+  const y=rows.map(r=>"Art. "+r.a), z=rows.map(r=>[r.gold,...M.map(k=>r.pred[k])]);
+  const cd=rows.map(r=>[[ART[r.a],"",""],...M.map(k=>[ART[r.a],r.cor[k],r.pred[k]?(100*r.cor[k]/r.pred[k]).toFixed(0)+"%":"–"])]);
+  const zmax=Math.max(...z.flat());
+  const sc=[[0,css("--q0")],[0.001,css("--q1")],[0.15,css("--q2")],[0.5,css("--q3")],[1,css("--q4")]];
+  Plotly.react("heat",[{type:"heatmap",x:cols,y,z:z.map(r=>r.map(v=>Math.sqrt(v))),zmin:0,zmax:Math.sqrt(zmax),colorscale:sc,showscale:false,xgap:2,ygap:2,
+    text:z,texttemplate:"%{text}",textfont:{family:css("--mono"),size:11},customdata:cd,
+    hovertemplate:"<b>%{y}</b> %{customdata[0]}<br>%{x}: %{text} snippets<br>correct: %{customdata[1]} (%{customdata[2]})<extra></extra>"}],{
+    paper_bgcolor:panel,plot_bgcolor:panel,font:{family:css("--sans"),color:ink2,size:12},margin:{l:70,r:60,t:80,b:10},
+    xaxis:{side:"top",tickfont:{color:ink,size:11},tickangle:-25,fixedrange:true},
+    yaxis:{autorange:"reversed",tickfont:{color:ink,family:css("--mono"),size:11},fixedrange:true},
+  },{responsive:true,displaylogo:false,displayModeBar:false});
+}
+function drawArt(){const s=artStats();artTable(s);heat(s);}
+totals(); draw(); drawStats(); drawArt();
+const redraw=()=>{draw();bars(stats());heat(artStats());};
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",redraw);
+new MutationObserver(redraw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
 </script>
