@@ -8,9 +8,12 @@ Interactive line chart (`gdpr_bench_iteration1A_plot.html`) of the number of GDP
 y = number of articles in the answer `text` of the experiment's `*_calls.jsonl` (`"0"` -> 0, `"1,2"` -> 2).
 Self-Refine uses the last `ANSWER:` line of `refine_r2_calls.jsonl`; CoVe uses the `*_final_calls.jsonl` files (snippets not verified count as 0).
 
+Plotly is embedded in the HTML, so the file opens offline (download it and open it in a browser; GitHub only shows its source).
+
 Rebuild from a checkout of `aishahasim/gdpr-bench-rq2-pilot`:
 
 ```bash
 python build_data.py <repo>/data_level/iteration1_structureA data.json
-python -c "open('gdpr_bench_iteration1A_plot.html','w').write(open('template.html').read().replace('__DATA__',open('data.json').read()))"
+npm pack plotly.js-dist-min@2.35.2 && tar xzf plotly.js-dist-min-2.35.2.tgz
+python -c "t=open('template.html').read().replace('__DATA__',open('data.json').read()); open('gdpr_bench_iteration1A_plot.html','w').write(t.replace('__PLOTLY__',open('package/plotly.min.js').read().replace('</script','<\\/script'),1))"
 ```
