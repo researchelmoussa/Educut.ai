@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doctorado en Economía",
+    "evidence_url": "https://cee.colmex.mx/doctorado/economia/convocatoria/solicitud-de-admision",
+    "evidence_quote": "Doctorado en Economía"
+  },
+  "institution": {
+    "name": "El Colegio de México, Centro de Estudios Económicos",
+    "website": "https://www.colmex.mx",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://cee.colmex.mx/doctorado/economia/convocatoria/solicitud-de-admision",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Mexico City",
+    "country": "Mexico",
+    "country_code": "MX"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Economics",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Application submitted online at admision.colmex.mx"
+  ],
+  "skills": [],
+  "description_short": "El Colegio de México's Centro de Estudios Económicos accepts applications to its Doctorate in Economics for the 2027 intake through admision.colmex.mx from 1 October 2026 until 12 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-12",
+    "timezone": "America/Mexico_City",
+    "evidence_url": "https://cee.colmex.mx/doctorado/economia/convocatoria/solicitud-de-admision",
+    "evidence_quote": "a partir del 1 de octubre de 2026 y hasta el 12 de febrero de 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Colmex economics admissions page and main admissions page (search results) give the application period 1 October 2026 to 12 February 2027",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline quote is search-result wording in Spanish",
+    "Entry requirements (e.g. EXANI-III) and funding not recorded for this programme"
+  ],
+  "id": "opp_cadb4d453c2825aa",
+  "fingerprint": "4d253fa9ceddd785",
+  "discovered_at": "2026-11-08T03:04:39.791Z",
+  "last_verified_at": "2026-11-08T03:04:39.791Z",
+  "content_hash": "sha256:6c8a13dd34767e915e89beeb774ea12f81536a7228cde5a96b9688b0cb86df30"
+}

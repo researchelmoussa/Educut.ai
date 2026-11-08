@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Postdoctoral Positions (2027), Institute of Mathematics",
+    "evidence_url": "https://www.math.sinica.edu.tw/pages/117",
+    "evidence_quote": "These positions are for mathematicians who have received their Ph.D. degrees before officially taking up the position. The appointment is for 2+1 years and is not renewable."
+  },
+  "institution": {
+    "name": "Institute of Mathematics, Academia Sinica",
+    "website": "https://www.math.sinica.edu.tw",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.math.sinica.edu.tw/pages/117",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": "Taipei",
+    "country": "Taiwan",
+    "country_code": "TW"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Mathematics",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "PhD in mathematics before taking up the position",
+    "Research-only positions, no teaching duties"
+  ],
+  "skills": [],
+  "description_short": "Research-only postdoctoral positions in mathematics at Academia Sinica's Institute of Mathematics, appointed for 2+1 years (not renewable). Review began 1 November 2026; materials submitted by 1 December 2026 receive full consideration, later applications are evaluated on a rolling basis.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": "Asia/Taipei",
+    "evidence_url": "https://www.math.sinica.edu.tw/pages/117",
+    "evidence_quote": "Candidates are encouraged to submit all required materials by 1 December 2026 to ensure full consideration."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Institute of Mathematics 2027 employment page (search results) says review started 1 November 2026 and applications after 1 December are evaluated on a rolling basis",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title is descriptive; the page is the Institute's 2027 employment announcement",
+    "1 December 2026 is a full-consideration date, not a hard deadline",
+    "Salary and application portal not recorded; page publication date not shown",
+    "Exact URL of the 2027 employment page not confirmed (search result pointed to the Institute's pages/117)"
+  ],
+  "id": "opp_42a91d44c0bfc38d",
+  "fingerprint": "6bbdff227c549ffe",
+  "discovered_at": "2026-11-08T02:58:32.861Z",
+  "last_verified_at": "2026-11-08T02:58:32.861Z",
+  "content_hash": "sha256:061e863ea8d8817672fc62e36078b586c83a1411df8256e5c3ba714ab0877112"
+}

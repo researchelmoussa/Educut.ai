@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "MOPGA 2027: Visiting Fellowship Program for Early Career Researchers",
+    "evidence_url": "https://www.campusfrance.org/en/mopga-2027",
+    "evidence_quote": "MOPGA 2027: Visiting Fellowship Program for Early Career Researchers"
+  },
+  "institution": {
+    "name": "Campus France (Make Our Planet Great Again programme)",
+    "website": "https://www.campusfrance.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.campusfrance.org/en/mopga-2027",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Climate, Earth system and sustainability research",
+  "seniority": "Early-career researcher (postdoctoral)",
+  "qualifications": [
+    "PhD defended between December 2021 and December 2026 inclusive",
+    "Non-French nationality",
+    "Not living and working in France at the time of application"
+  ],
+  "skills": [],
+  "description_short": "MOPGA 2027 funds 12-month research stays in French laboratories for non-French early-career researchers whose PhD was defended between December 2021 and December 2026. Applications close 15 December 2026; results May–June 2027, arrivals September–December 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": null,
+    "evidence_url": "https://www.srilanka.campusfrance.org/mopga-2027-visiting-fellowship-program-for-early-career-researchers-apply-until-15-december-2026",
+    "evidence_quote": "MOPGA 2027: Visiting Fellowship Program for Early Career Researchers - apply until 15 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Campus France pages (search results) give the timeline: opening 15 September 2026, deadline 15 December 2026, results May–June 2027",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Allowance amounts not recorded (no verbatim quote); international travel not covered per Campus France",
+    "Pages disagree on whether this is the ninth or tenth call",
+    "City not set: host laboratories across France",
+    "Field summarised from the programme name; exact thematic scope not quoted"
+  ],
+  "id": "opp_9a1d18d6610cb94a",
+  "fingerprint": "8fe2c9251b4655a4",
+  "discovered_at": "2026-11-08T02:58:33.237Z",
+  "last_verified_at": "2026-11-08T02:58:33.237Z",
+  "content_hash": "sha256:55111b8e70f327415b147bbea79b969924db39dd5d89eedf3ca40293aaaf5a55"
+}

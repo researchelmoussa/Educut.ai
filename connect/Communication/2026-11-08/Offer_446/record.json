@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Simons Postdoctoral Fellowships in Plant Biology",
+    "evidence_url": "https://www.simonsfoundation.org/funding/simons-postdoctoral-fellowships-in-plant-biology-2027/",
+    "evidence_quote": "Simons Postdoctoral Fellowships in Plant Biology"
+  },
+  "institution": {
+    "name": "Simons Foundation",
+    "website": "https://www.simonsfoundation.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.simonsfoundation.org/funding/simons-postdoctoral-fellowships-in-plant-biology-2027/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Plant biology (interdisciplinary)",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "PhD earned no earlier than three years before the deadline, or expected by the start date",
+    "U.S. citizens and foreign applicants may apply",
+    "Award issued only to U.S. nonprofit research universities or research institutions",
+    "Two tracks: plant biologists training with mentors in other fields, or researchers from other fields applying their expertise to plant biology"
+  ],
+  "skills": [],
+  "description_short": "Three-year postdoctoral fellowships for plant biologists moving into other fields, or researchers from other fields moving into plant biology, hosted at U.S. nonprofit research institutions. Applications through Simons Award Manager by 3 December 2026, noon ET; start between July and October 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-03",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.simonsfoundation.org/funding/simons-postdoctoral-fellowships-in-plant-biology-2027/",
+    "evidence_quote": "December 3, 2026, 12 p.m. ET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Simons Foundation 2027 RFA page (search results) shows the call open with an Apply Now option and a December 3, 2026 noon ET deadline",
+    "Some other listings on the Simons site show older status labels (\"Closed\", \"Under Review\")",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Funding amount not recorded: no verbatim quote available",
+    "City not set: fellows are hosted at any eligible U.S. institution",
+    "Application URL (Simons Award Manager) not confirmed"
+  ],
+  "id": "opp_b9df6cc47f70c0a0",
+  "fingerprint": "c6dbd894866c5383",
+  "discovered_at": "2026-11-08T02:58:33.908Z",
+  "last_verified_at": "2026-11-08T02:58:33.908Z",
+  "content_hash": "sha256:1dd14b6c075b0214b270e6be6e3681f6e540dd10da4c1118d7546afdd89182cf"
+}

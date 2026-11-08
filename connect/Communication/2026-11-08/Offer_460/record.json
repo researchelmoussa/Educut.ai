@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Data Sciences Institute Postdoctoral Fellowship",
+    "evidence_url": "https://datasciences.utoronto.ca/postdoctoral-fellowship/",
+    "evidence_quote": "Data Sciences Institute Postdoctoral Fellowship"
+  },
+  "institution": {
+    "name": "Data Sciences Institute, University of Toronto",
+    "website": "https://datasciences.utoronto.ca",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://datasciences.utoronto.ca/postdoctoral-fellowship/",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": "Toronto",
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Data science (interdisciplinary)",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "Supervisor with a tenure or tenure-stream appointment at U of T, or an eligible PI at a funding partner institution",
+    "International applicants must complete the PhD before the start date",
+    "Supervisor form, reference letter and demographic surveys due January 29, 2027",
+    "Fellowship starts between May 1 and December 1 of the award year"
+  ],
+  "skills": [],
+  "description_short": "The University of Toronto's Data Sciences Institute funds one-year postdoctoral fellowships in data science with a U of T or partner supervisor. Candidate proposals are due 22 January 2027 (23:59 ET); supervisor forms and reference letters by 29 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-22",
+    "timezone": "America/Toronto",
+    "evidence_url": "https://datasciences.utoronto.ca/postdoctoral-fellowship/",
+    "evidence_quote": "January 22, 2027 at 23:59 ET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official DSI Postdoctoral Fellowship page (search results) lists the 2027 competition deadlines (January 22 and January 29, 2027)",
+    "The same page carries a banner saying the deadline has passed, referring to the February 2025 round",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Fellowship value not recorded: no verbatim quote available",
+    "Page banner about a passed deadline refers to an earlier round; 2027 dates should be rechecked on the live page"
+  ],
+  "id": "opp_be3ef4579657bc08",
+  "fingerprint": "c845f96699ac8f39",
+  "discovered_at": "2026-11-08T03:04:39.210Z",
+  "last_verified_at": "2026-11-08T03:04:39.210Z",
+  "content_hash": "sha256:493ac8e4a2d46e9768f722df29cc4f00d8c995578ab937b7fa93cbe8ff375783"
+}

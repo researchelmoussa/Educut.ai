@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "2027 R-CCS International HPC Computational Science Internship Program",
+    "evidence_url": "https://www.r-ccs.riken.jp/en/outreach/schools/20270413-1223/index.html",
+    "evidence_quote": "2027 R-CCS International HPC Computational Science Internship Program"
+  },
+  "institution": {
+    "name": "RIKEN Center for Computational Science (R-CCS)",
+    "website": "https://www.r-ccs.riken.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.r-ccs.riken.jp/en/outreach/schools/20270413-1223/index.html",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Kobe",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Computational science / high-performance computing",
+  "seniority": "Doctoral students (some teams accept undergraduate or master's students)",
+  "qualifications": [
+    "Enrolled as a student at a university located outside Japan",
+    "Doctoral student specializing in computational science",
+    "Official request letter from the home institution",
+    "Term 2 (starts after 3 August 2027, up to 10 places) closes 8 February 2027, noon JST"
+  ],
+  "skills": [],
+  "description_short": "RIKEN R-CCS hosts computational-science internships in Kobe, Tokyo and Wako for students at universities outside Japan, mainly doctoral students. Term 1 (start 13 April to 29 July 2027, up to 20 places) closes 1 December 2026, noon JST; Term 2 closes 8 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.r-ccs.riken.jp/en/outreach/schools/20270413-1223/index.html",
+    "evidence_quote": "Tuesday, December 1, noon (Japan Standard Time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official R-CCS 2027 programme page (search results) lists Term 1 applications due Tuesday, December 1, noon (JST) and Term 2 due Monday, February 8, noon (JST)",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Internship sites are Kobe, Tokyo and Wako; city set to Kobe (R-CCS headquarters)",
+    "Support/allowance not recorded",
+    "An older R-CCS lab page gives a late-January deadline, superseded by the 2027 programme page"
+  ],
+  "id": "opp_ba99a8d5585fdccd",
+  "fingerprint": "e27985e9be6a7195",
+  "discovered_at": "2026-11-08T03:01:39.188Z",
+  "last_verified_at": "2026-11-08T03:01:39.188Z",
+  "content_hash": "sha256:ecc72ac21ea2ba59c5e53151f62fba971f4ddfc17ce06e2e231096d6d554be6f"
+}

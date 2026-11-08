@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "KI Global Master's Scholarship",
+    "evidence_url": "https://education.ki.se/bachelors-masters-studies/scholarships/the-ki-global-masters-scholarships-for-fee-paying-students",
+    "evidence_quote": "KI Global Master's Scholarship"
+  },
+  "institution": {
+    "name": "Karolinska Institutet",
+    "website": "https://ki.se",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://education.ki.se/bachelors-masters-studies/scholarships/the-ki-global-masters-scholarships-for-fee-paying-students",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Stockholm",
+    "country": "Sweden",
+    "country_code": "SE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Medicine and life sciences (master's programmes)",
+  "seniority": "Postgraduate (master's)",
+  "qualifications": [
+    "Tuition-fee-paying student throughout studies",
+    "Applied to a KI master's programme for autumn 2027 (University Admissions, by 15 January 2027) with a KI programme ranked first",
+    "Only admitted students are considered in the final selection"
+  ],
+  "skills": [],
+  "description_short": "Karolinska Institutet's Global Master's Scholarship is for tuition-fee-paying students applying to KI master's programmes starting autumn 2027. Programme applications close 15 January 2027; the separate scholarship application runs 8-24 February 2027, with results on 26 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-24",
+    "timezone": "Europe/Stockholm",
+    "evidence_url": "https://education.ki.se/bachelors-masters-studies/scholarships/the-ki-global-masters-scholarships-for-fee-paying-students",
+    "evidence_quote": "8 to 24 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official KI scholarship page (search results) gives the scholarship application period 8 to 24 February 2027 and results on 26 April 2027",
+    "Scholarship application link is published only when the period opens; not yet open on the date of this run",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Page metadata suggests it was last updated long ago, conflicting with its 2027 dates",
+    "Scholarship value not recorded",
+    "Campus city set to Stockholm (KI is in Solna/Stockholm)"
+  ],
+  "id": "opp_94adcca9692c06ff",
+  "fingerprint": "e40a272a2d08fdcf",
+  "discovered_at": "2026-11-08T03:04:40.050Z",
+  "last_verified_at": "2026-11-08T03:04:40.050Z",
+  "content_hash": "sha256:09bc2843c854816e06c8735d4433c67d2f6293ff7145f7cfff429af3d95c22ac"
+}

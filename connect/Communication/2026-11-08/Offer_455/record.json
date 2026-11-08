@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "One Health Master's Programme",
+    "evidence_url": "https://www.helsinki.fi/en/degree-programmes/one-health-masters-programme",
+    "evidence_quote": "One Health Master's Programme"
+  },
+  "institution": {
+    "name": "University of Helsinki",
+    "website": "https://www.helsinki.fi",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.helsinki.fi/en/degree-programmes/one-health-masters-programme",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Helsinki",
+    "country": "Finland",
+    "country_code": "FI"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "One Health (human, animal and environmental health)",
+  "seniority": "Postgraduate (master's)",
+  "qualifications": [
+    "Non-EU/EEA applicants pay a one-time national application fee of 100 euros"
+  ],
+  "skills": [],
+  "description_short": "The University of Helsinki's international One Health Master's Programme accepts applications for studies starting in autumn 2027 from 5 January 2027 (08:00) to 19 January 2027 (15:00). Non-EU/EEA applicants pay a one-time national application fee of 100 euros.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-19",
+    "timezone": "Europe/Helsinki",
+    "evidence_url": "https://www.helsinki.fi/en/degree-programmes/one-health-masters-programme",
+    "evidence_quote": "Begins: 05 Jan 2027 at 08:00 Ends: 19 Jan 2027 at 15:00"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official programme page (search results) lists the application period 5-19 January 2027",
+    "University admissions page (search results): application period for autumn 2027 runs from 5 to 19 January 2027",
+    "Application window not yet open on the date of this run",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Tuition fee waiver details not recorded: the scholarship page seen still refers to the 2025-26 round",
+    "Entry requirements not recorded"
+  ],
+  "id": "opp_285d3e7ea131f2df",
+  "fingerprint": "b65850ba810718be",
+  "discovered_at": "2026-11-08T03:01:38.607Z",
+  "last_verified_at": "2026-11-08T03:01:38.607Z",
+  "content_hash": "sha256:ae549bb7f7bb8b7feb4a037020eff17e88b25ee95cf0e80b0213f4fb446bd1aa"
+}

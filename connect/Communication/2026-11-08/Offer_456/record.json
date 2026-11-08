@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "ICTS Postdoctoral program 2027 (Fall Cycle)",
+    "evidence_url": "https://www.icts.res.in/academic/postdoctoral-fellowships",
+    "evidence_quote": "ICTS Postdoctoral program 2027 (Fall Cycle)"
+  },
+  "institution": {
+    "name": "International Centre for Theoretical Sciences (ICTS-TIFR)",
+    "website": "https://www.icts.res.in",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.icts.res.in/academic/postdoctoral-fellowships",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": "Bengaluru",
+    "country": "India",
+    "country_code": "IN"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Theoretical sciences (physics, mathematics, biology and related areas)",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "PhD required by the time of joining",
+    "Referee letters due 15 December 2026, 5:00 PM IST"
+  ],
+  "skills": [],
+  "description_short": "ICTS-TIFR in Bengaluru invites applications for postdoctoral positions in its 2027 fall cycle, with a nominal (negotiable) start on 1 September 2027. Applications close 30 November 2026, 5:00 PM IST; referee letters are due 15 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-30",
+    "timezone": "Asia/Kolkata",
+    "evidence_url": "https://www.icts.res.in/academic/postdoctoral-fellowships",
+    "evidence_quote": "30 November 2026, 5:00 PM IST"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ICTS postdoctoral page and careers page (search results) give the fall-cycle deadline of 30 November 2026, 5:00 PM IST",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title reconstructed from the summer-cycle page naming (\"ICTS Postdoctoral program 2027 (Summer Cycle)\"); exact fall-cycle page title not confirmed",
+    "Stipend not recorded",
+    "Field list is a summary of ICTS research areas, not quoted",
+    "Application portal (applications.icts.res.in/postdoc/) not confirmed for the fall cycle"
+  ],
+  "id": "opp_466ee0e275cef97f",
+  "fingerprint": "037474effae4fdef",
+  "discovered_at": "2026-11-08T03:01:38.890Z",
+  "last_verified_at": "2026-11-08T03:01:38.890Z",
+  "content_hash": "sha256:4a39721131f11df8e83d31854971af7d6fe9107c6fcf0cc7bf7e0c1a9658e287"
+}
