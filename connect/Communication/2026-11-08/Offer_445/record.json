@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "The Audrey Flack Short-Term Fellowship",
+    "evidence_url": "https://americanart.si.edu/research/fellowships/audrey-flack",
+    "evidence_quote": "The Audrey Flack Short-Term Fellowship"
+  },
+  "institution": {
+    "name": "Smithsonian American Art Museum (SAAM)",
+    "website": "https://americanart.si.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://americanart.si.edu/research/fellowships/audrey-flack",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Washington, D.C.",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "American art history",
+  "seniority": "Predoctoral, postdoctoral and senior scholars",
+  "qualifications": [
+    "Researching American art",
+    "Live, work or study outside commuting distance of Washington, D.C.",
+    "Statement explaining why a short-term residency suits the applicant (e.g. financial, employment or caregiving constraints)",
+    "Residency between June 1, 2027 and May 31, 2028"
+  ],
+  "skills": [],
+  "description_short": "Short-term research residency at the Smithsonian American Art Museum for predoctoral, postdoctoral and senior scholars of American art living outside commuting distance of Washington, D.C. Applications open 1 December through SOLAA; deadline 1 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": null,
+    "evidence_url": "https://americanart.si.edu/research/fellowships/apply",
+    "evidence_quote": "Opens December 1; Deadline: February 1, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SAAM fellowship pages (search results) state applications open December 1 with a February 1, 2027 deadline",
+    "Application window not yet open on the date of this run (opens 1 December 2026)",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Stipend not recorded: SAAM pages show conflicting figures ($53,000 and $5,000)",
+    "Tenure window differs between pages (to May 31, 2028 vs August 31, 2028)",
+    "Application URL (SOLAA) not confirmed"
+  ],
+  "id": "opp_de1a6a1a5bd11a4b",
+  "fingerprint": "be5332d0cf1615a0",
+  "discovered_at": "2026-11-08T02:58:33.754Z",
+  "last_verified_at": "2026-11-08T02:58:33.754Z",
+  "content_hash": "sha256:a62dc390fafdc8f6a7c7b14c6a9370cd7554e1af05b90818b65fe6b2b0cbbc42"
+}

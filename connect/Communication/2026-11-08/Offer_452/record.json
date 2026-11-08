@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Berlin Mathematical School (BMS) PhD Program, 2027 admission",
+    "evidence_url": "https://www.math-berlin.de/application",
+    "evidence_quote": "For admission to our program in 2027, applications will be accepted via our online portal from 1 October to 1 December 2026 (first round) 1 March to 1 April 2027 (second round)."
+  },
+  "institution": {
+    "name": "Berlin Mathematical School (BMS)",
+    "website": "https://www.math-berlin.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.math-berlin.de/application",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Berlin",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Mathematics",
+  "seniority": "Master's (Phase I) and doctoral (Phase II)",
+  "qualifications": [
+    "Phase I: bachelor's degree completed by summer 2027",
+    "Phase II: master's degree completed",
+    "Recommendation letters due one week after the application deadline"
+  ],
+  "skills": [],
+  "description_short": "The Berlin Mathematical School accepts 2027 applications: Phase I (master's studies) for bachelor's graduates and Phase II (doctoral research) for master's graduates. First round closes 1 December 2026, with 10 Phase I places with scholarship; second round runs to 1 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://www.math-berlin.de/application",
+    "evidence_quote": "Phase I (Master studies): Deadline for application requiring admission with scholarship: 1 December 2026 Number of available places with scholarship: 10"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official BMS application page (search results) states the portal accepts 2027 applications from 1 October to 1 December 2026 (first round)",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title is descriptive (programme name plus intake year)",
+    "Scholarship amount not recorded",
+    "Second-round (1 April 2027) admission is without funding for Phase I"
+  ],
+  "id": "opp_f55b281d7a81f157",
+  "fingerprint": "b01f7364ef158838",
+  "discovered_at": "2026-11-08T03:01:37.671Z",
+  "last_verified_at": "2026-11-08T03:01:46.607Z",
+  "content_hash": "sha256:eeb066f60213557f8eb08fa3ebd1745933a03b85759dd6ce686ab53b814b1852"
+}

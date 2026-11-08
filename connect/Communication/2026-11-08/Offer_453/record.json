@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doctoral Programs at CEU (2027-2028 admission)",
+    "evidence_url": "https://www.ceu.edu/admissions/doctoral",
+    "evidence_quote": "Apply to a Doctoral Program at CEU"
+  },
+  "institution": {
+    "name": "Central European University (CEU)",
+    "website": "https://www.ceu.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.ceu.edu/admissions/doctoral",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Vienna",
+    "country": "Austria",
+    "country_code": "AT"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Social sciences, humanities, law, network and cognitive science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Master's degree required for most programmes (Cognitive Science is the exception)",
+    "Interviews, where used, 1-24 February 2027",
+    "Admission decisions 1-30 April 2027"
+  ],
+  "skills": [],
+  "description_short": "Central European University in Vienna accepts applications to its doctoral programmes, including Political Science, Philosophy, Sociology and Social Anthropology, Comparative History, Network Science and Cognitive Science, until 15 January 2027. Applicants by the deadline are automatically considered for the CEU Doctoral Scholarship.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/Vienna",
+    "evidence_url": "https://www.ceu.edu/admissions/doctoral",
+    "evidence_quote": "January 15, 2027 at 23:59 Central European Time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CEU doctoral admissions page and programme pages (search results) list January 15, 2027 as the current application deadline",
+    "CEU states: \"Doctoral candidates applying by the relevant application deadline are automatically considered for the CEU Doctoral Scholarship.\"",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Some CEU pages are older cached versions showing previous-cycle dates",
+    "Scholarship amount not recorded",
+    "Title is descriptive; CEU runs several separate doctoral programmes"
+  ],
+  "id": "opp_c5713f9f28be42b7",
+  "fingerprint": "9fd5e1e08a00c539",
+  "discovered_at": "2026-11-08T03:01:37.996Z",
+  "last_verified_at": "2026-11-08T03:01:37.996Z",
+  "content_hash": "sha256:c7feb03691f08e70b54a504640bc89d684f5574c63877467fdd0380945fbc81c"
+}

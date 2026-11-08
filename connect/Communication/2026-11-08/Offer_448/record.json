@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Danish Government Scholarships",
+    "evidence_url": "https://studies.ku.dk/masters/tuition-fees--scholarships/scholarships--loans-at-ucph/danish-government-scholarships/",
+    "evidence_quote": "Danish Government Scholarships"
+  },
+  "institution": {
+    "name": "University of Copenhagen",
+    "website": "https://www.ku.dk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://studies.ku.dk/masters/tuition-fees--scholarships/scholarships--loans-at-ucph/danish-government-scholarships/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "country_code": "DK"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Master's programmes (all faculties)",
+  "seniority": "Postgraduate (master's)",
+  "qualifications": [
+    "Citizen of a country outside the EU/EEA/Switzerland",
+    "Admitted to a UCPH master's programme and holding a time-limited residence permit for study",
+    "No separate scholarship application: admitted applicants are considered automatically",
+    "Awarded on academic achievement; financial need not considered"
+  ],
+  "skills": [],
+  "description_short": "University of Copenhagen awards Danish Government Scholarships to admitted non-EU/EEA/Swiss master's students on academic merit, as full or partial tuition waivers and/or living-cost support. No separate application; the master's admission deadline for September 2027 is 15 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/Copenhagen",
+    "evidence_url": "https://www.ku.dk/studies/contact",
+    "evidence_quote": "deadline 15 January at 23:59 (CET) 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UCPH pages (search results): admission portal reopens 15 November with a deadline of 15 January at 23:59 (CET) 2027 for non-EU/EEA applicants",
+    "UCPH states: \"Awards are either full or partial tuition fee waivers and/or an amount that covers basic living costs\"",
+    "Portal not yet open on the date of this run (reopens 15 November 2026)",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The 15 January 2027 date is the master's admission deadline; there is no separate scholarship deadline",
+    "Number of awards limited and varies by faculty (Social Sciences: generally 2-3 per year)"
+  ],
+  "id": "opp_674cb93c0f48a4be",
+  "fingerprint": "61ad13771756aece",
+  "discovered_at": "2026-11-08T02:58:34.029Z",
+  "last_verified_at": "2026-11-08T02:58:34.029Z",
+  "content_hash": "sha256:0dbac719c6f341ed1bbf9d321bbe3a47aff85e6d68399091eb728585e5914f30"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "KAIST International Undergraduate Admission 2027 (Regular Admission)",
+    "evidence_url": "https://admission.kaist.ac.kr/intl-undergraduate/application/ApplicationGuide/ApplicationTimeline",
+    "evidence_quote": "Regular admission (Fall track only): November 10, 2026 ~ January 14, 2027, 6:00 PM (KST)"
+  },
+  "institution": {
+    "name": "KAIST (Korea Advanced Institute of Science and Technology)",
+    "website": "https://www.kaist.ac.kr",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://admission.kaist.ac.kr/intl-undergraduate/application/ApplicationGuide/ApplicationTimeline",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Daejeon",
+    "country": "South Korea",
+    "country_code": "KR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Science and engineering (undergraduate)",
+  "seniority": "Undergraduate (freshman entry)",
+  "qualifications": [
+    "International applicants; KAIST has no transfer programme for international students (freshman entry only)",
+    "For fall 2027: high-school graduation by 31 August 2027",
+    "Recommendation letters due 21 January 2027"
+  ],
+  "skills": [],
+  "description_short": "KAIST regular admission for international undergraduate applicants (Fall 2027 track) accepts applications from 10 November 2026 to 14 January 2027, 6:00 PM KST. Recommendation letters are due 21 January 2027; admission results are announced 25 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-14",
+    "timezone": "Asia/Seoul",
+    "evidence_url": "https://admission.kaist.ac.kr/intl-undergraduate/application/ApplicationGuide/ApplicationTimeline",
+    "evidence_quote": "November 10, 2026 ~ January 14, 2027, 6:00 PM (KST)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official KAIST Admission Office timeline (search results) lists the regular admission window November 10, 2026 to January 14, 2027",
+    "Application window opens on 10 November 2026, two days after this run",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title is a descriptive name for the regular admission round, not a scholarship name; scholarship terms not recorded",
+    "Announcement dates are marked as subject to change on the official page",
+    "Application portal (univapply.kaist.ac.kr/interapply/) not confirmed as live"
+  ],
+  "id": "opp_8dfa85e105542f7a",
+  "fingerprint": "9df0c18c24b1e434",
+  "discovered_at": "2026-11-08T02:58:33.113Z",
+  "last_verified_at": "2026-11-08T02:58:33.113Z",
+  "content_hash": "sha256:8406f639102c0ae9ea333d2e066c829fe5fe073a8b03c63c4cedf676ef32bc48"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Admissions for 2027-2028 (Master's and Doctoral Programs)",
+    "evidence_url": "https://www.dohainstitute.edu.qa/en/Admissions-Office/Pages/Apply.aspx",
+    "evidence_quote": "Admissions Open for the 2027–2028 Academic Year"
+  },
+  "institution": {
+    "name": "Doha Institute for Graduate Studies",
+    "website": "https://www.dohainstitute.edu.qa",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.dohainstitute.edu.qa/en/Admissions-Office/Pages/Apply.aspx",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Doha",
+    "country": "Qatar",
+    "country_code": "QA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Social sciences, humanities, public administration and economics",
+  "seniority": "Postgraduate (master's and doctoral)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The Doha Institute for Graduate Studies accepts applications for its master's and doctoral programmes for the 2027-2028 academic year from 1 September 2026 until 15 January 2027 through its admissions portal.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Asia/Qatar",
+    "evidence_url": "https://www.dohainstitute.edu.qa/en/Admissions-Office/Pages/Apply.aspx",
+    "evidence_quote": "15 Jan 2027 Admission Application Deadline for 2027-2028"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Apply page (search results) lists \"01 Sep 2026 Admission Application Open for 2027-2028\" and \"15 Jan 2027 Admission Application Deadline for 2027-2028\"",
+    "Homepage banner (search results): \"Admissions Open for the 2027–2028 Academic Year\"",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The institute's Scholarships page for doctoral and master's programmes is headed \"No Scholarships\"; no funding is claimed",
+    "An older version of the Apply page shows previous cycles",
+    "Programme list and entry requirements not recorded",
+    "Title is descriptive"
+  ],
+  "id": "opp_95401a6e9dccf8a5",
+  "fingerprint": "baeaa7baf2d08c92",
+  "discovered_at": "2026-11-08T03:01:38.296Z",
+  "last_verified_at": "2026-11-08T03:01:38.296Z",
+  "content_hash": "sha256:7bd49a4907caadb0a782aa7ba7ec1ec89119652649af9cc2efa212bec11d8dc5"
+}

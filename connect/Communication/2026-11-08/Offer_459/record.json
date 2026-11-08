@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Master in Public Policy (MPP)",
+    "evidence_url": "https://lkyspp.nus.edu.sg/graduate-programmes/master-in-public-policy-mpp/overview",
+    "evidence_quote": "Master in Public Policy (MPP)"
+  },
+  "institution": {
+    "name": "Lee Kuan Yew School of Public Policy, National University of Singapore",
+    "website": "https://lkyspp.nus.edu.sg",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://lkyspp.nus.edu.sg/graduate-admissions/admission-guide/how-to-apply",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Singapore",
+    "country": "Singapore",
+    "country_code": "SG"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Public policy",
+  "seniority": "Postgraduate (master's)",
+  "qualifications": [
+    "Applicants wishing to be considered for a school scholarship must indicate it in the application",
+    "Application fee waived for the MPP"
+  ],
+  "skills": [],
+  "description_short": "The Lee Kuan Yew School of Public Policy at NUS accepts applications to its Master in Public Policy from 1 August to 15 December each year, by 11:59pm Singapore time. Applicants indicate in their application whether they wish to be considered for a scholarship.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": "Asia/Singapore",
+    "evidence_url": "https://lkyspp.nus.edu.sg/graduate-admissions/admission-guide/how-to-apply",
+    "evidence_quote": "1 Aug - 15 Dec every year"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official LKYSPP how-to-apply page and FAQ (search results) list the MPP application window as 1 August to 15 December every year",
+    "LKYSPP states: \"Candidates must indicate that they wish to be considered for scholarship when they submit their application.\"",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The window is a standing annual window; no page specific to the August 2027 intake was seen",
+    "Scholarship amounts and number not recorded",
+    "Admissions page still shows an outdated MPAM window, suggesting parts of the site are not updated"
+  ],
+  "id": "opp_61ecde6dc682a159",
+  "fingerprint": "6f1984e8615423f2",
+  "discovered_at": "2026-11-08T03:04:38.877Z",
+  "last_verified_at": "2026-11-08T03:04:38.877Z",
+  "content_hash": "sha256:13792ecbc6cfbf1dbaaa4fa0f7cb11bc7fe00e91e411fd930884ace062977533"
+}
