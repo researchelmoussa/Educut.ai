@@ -87,7 +87,7 @@ function draw(){
       rangeslider:{visible:true,thickness:0.08,bgcolor:css("--bg"),bordercolor:line,borderwidth:1}},
     yaxis:{title:{text:"Number of articles violated",font:{color:ink2}},dtick:1,rangemode:"tozero",gridcolor:grid,zeroline:true,zerolinecolor:line,fixedrange:true},
   };
-  Plotly.react("chart",traces,layout,{responsive:true,displaylogo:false,modeBarButtonsToRemove:["lasso2d","select2d"]});
+  Plotly.react("chart",traces,layout,{responsive:true,displaylogo:false,modeBarButtonsToRemove:["lasso2d","select2d","toImage"]});
 }
 totals(); draw();
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change",draw);
