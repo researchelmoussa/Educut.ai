@@ -6,15 +6,15 @@
 :root{
   --bg:#f7f8fa; --panel:#ffffff; --ink:#14171c; --ink-2:#4d5560; --ink-3:#7c8591; --grid:#e3e6ea; --line:#d5d9df;
   --gold:#14171c;
-  --q0:#f1f3f6; --q1:#cde2fb; --q2:#86b6ef; --q3:#2a78d6; --q4:#104281; --o1:#fbd3c0; --o2:#f4a07c; --o3:#eb6834; --o4:#a8370f; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#6250d6;
+  --q0:#f1f3f6; --q1:#cde2fb; --q2:#86b6ef; --q3:#2a78d6; --q4:#104281; --o1:#fbd3c0; --o2:#f4a07c; --o3:#eb6834; --o4:#a8370f; --y1:#fbeab0; --y2:#f6cf5c; --y3:#eda100; --y4:#9a6300; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#6250d6;
   --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#121417; --panel:#1a1d21; --ink:#eef0f3; --ink-2:#b7bec7; --ink-3:#8a929c; --grid:#2a2f35; --line:#353b42;
-  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --o1:#6b2a12; --o2:#a8401a; --o3:#e0662f; --o4:#fbd3c0; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}}
+  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --o1:#6b2a12; --o2:#a8401a; --o3:#e0662f; --o4:#fbd3c0; --y1:#5a4200; --y2:#8a6400; --y3:#c98500; --y4:#fbe08a; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#121417; --panel:#1a1d21; --ink:#eef0f3; --ink-2:#b7bec7; --ink-3:#8a929c; --grid:#2a2f35; --line:#353b42;
-  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --o1:#6b2a12; --o2:#a8401a; --o3:#e0662f; --o4:#fbd3c0; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}
+  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --o1:#6b2a12; --o2:#a8401a; --o3:#e0662f; --o4:#fbd3c0; --y1:#5a4200; --y2:#8a6400; --y3:#c98500; --y4:#fbe08a; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px}
 .wrap{max-width:1400px;margin:0 auto;padding-block:28px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:20px}
 h1{font-size:22px;font-weight:600;margin:0;text-wrap:balance}
@@ -45,7 +45,7 @@ td:first-child,th:first-child{text-align:left}
 td.k{display:flex;align-items:center;gap:6px}
 tr.gold td{color:var(--ink-2)}
 td b{font-weight:600}
-#heat,#heat2{width:100%;height:640px}
+#heat,#heat2,#heat3{width:100%;height:640px}
 .key{display:inline-flex;align-items:center;gap:6px;margin-right:14px}
 .key i{width:12px;height:12px;border-radius:2px;display:inline-block}
 td.na{color:var(--ink-3)}
@@ -81,6 +81,12 @@ th.sub{font-size:10px}
     <p class="def">Same counts as the blue heatmap above. A cell is <b>orange</b> when the method predicted the article in more snippets than the gold label has it (method &gt; gold, over-prediction / hallucination). Blue cells are at or below the gold count (method ≤ gold). Hover a cell to see the difference from gold.</p>
     <p class="def"><span class="key"><i style="background:var(--o3)"></i>method &gt; gold (hallucination)</span><span class="key"><i style="background:var(--q3)"></i>method ≤ gold</span></p>
     <div id="heat2" role="img" aria-label="Heatmap of per-article prediction counts, with cells where the method exceeds gold highlighted in orange"></div>
+  </section>
+  <section class="panel" style="padding:16px">
+    <h2>Omitted articles: predicted less often than in gold</h2>
+    <p class="def">Same counts as the blue heatmap above. A cell is <b>yellow</b> when the method predicted the article in fewer snippets than the gold label has it (gold &gt; method, under-prediction / omission). Blue cells are at or above the gold count (method ≥ gold). Hover a cell to see the difference from gold.</p>
+    <p class="def"><span class="key"><i style="background:var(--y3)"></i>gold &gt; method (omission)</span><span class="key"><i style="background:var(--q3)"></i>method ≥ gold</span></p>
+    <div id="heat3" role="img" aria-label="Heatmap of per-article prediction counts, with cells where gold exceeds the method highlighted in yellow"></div>
   </section>
   <section class="panel"><div id="chart" role="img" aria-label="Line chart of article count per snippet for gold labels and six prompting set-ups"></div></section>
   <p class="note">Sources: <code>*/output/predictions.json</code> (gold), <code>baseline_calls.jsonl</code>, <code>description_calls.jsonl</code>, <code>function_calls.jsonl</code>, <code>cove_final_calls.jsonl</code>, <code>refine_r2_calls.jsonl</code> (last <code>ANSWER:</code> line), <code>sr_cove_final_calls.jsonl</code>. CoVe steps run only on non-zero answers, so snippets missing from the CoVe final files count as 0. Counts match each set-up's <code>predictions.json</code> for all 887 snippets.</p>
@@ -202,29 +208,31 @@ function heat({rows,M}){
     yaxis:{autorange:"reversed",tickfont:{color:ink,family:css("--mono"),size:11},fixedrange:true},
   },{responsive:true,displaylogo:false,displayModeBar:false});
 }
-function heat2({rows,M}){
+function heatCmp(id,{rows,M},isHi,pfx){
   const ink=css("--ink"),ink2=css("--ink-2"),panel=css("--panel");
   const cols=["Gold",...M.map(k=>k.replace("Snippet + ","+ "))], y=rows.map(r=>"Art. "+r.a);
   const zmax=Math.sqrt(Math.max(...rows.flatMap(r=>[r.gold,...M.map(k=>r.pred[k])])));
   const zB=[],zO=[],tB=[],tO=[],cd=[];
   rows.forEach(r=>{const vals=[r.gold,...M.map(k=>r.pred[k])];const b=[],o=[],tb=[],to=[],c=[];
-    vals.forEach((v,j)=>{const over=j>0&&v>r.gold;
+    vals.forEach((v,j)=>{const over=j>0&&isHi(v,r.gold);
       b.push(over?null:Math.sqrt(v));o.push(over?Math.sqrt(v):null);tb.push(over?"":String(v));to.push(over?String(v):"");
       const d=v-r.gold;c.push([ART[r.a],v,j===0?"gold":(d>0?"+"+d+" vs gold (hallucination)":d<0?d+" vs gold (omission)":"= gold")]);});
     zB.push(b);zO.push(o);tB.push(tb);tO.push(to);cd.push(c);});
   const ht="<b>%{y}</b> %{customdata[0]}<br>%{x}: %{customdata[1]} snippets<br>%{customdata[2]}<extra></extra>";
   const base={type:"heatmap",x:cols,y,zmin:0,zmax,showscale:false,xgap:2,ygap:2,texttemplate:"%{text}",textfont:{family:css("--mono"),size:11},customdata:cd,hovertemplate:ht,hoverongaps:false};
   const sB=[[0,css("--q0")],[0.001,css("--q1")],[0.15,css("--q2")],[0.5,css("--q3")],[1,css("--q4")]];
-  const sO=[[0,css("--o1")],[0.15,css("--o2")],[0.5,css("--o3")],[1,css("--o4")]];
-  Plotly.react("heat2",[{...base,z:zB,text:tB,colorscale:sB},{...base,z:zO,text:tO,colorscale:sO}],{
+  const sO=[[0,css(pfx+"1")],[0.15,css(pfx+"2")],[0.5,css(pfx+"3")],[1,css(pfx+"4")]];
+  Plotly.react(id,[{...base,z:zB,text:tB,colorscale:sB},{...base,z:zO,text:tO,colorscale:sO}],{
     paper_bgcolor:panel,plot_bgcolor:panel,font:{family:css("--sans"),color:ink2,size:12},margin:{l:70,r:60,t:80,b:10},
     xaxis:{side:"top",tickfont:{color:ink,size:11},tickangle:-25,fixedrange:true},
     yaxis:{autorange:"reversed",tickfont:{color:ink,family:css("--mono"),size:11},fixedrange:true},
   },{responsive:true,displaylogo:false,displayModeBar:false});
 }
-function drawArt(){const s=artStats();artTable(s);heat(s);heat2(s);}
+const heat2=s=>heatCmp("heat2",s,(v,g)=>v>g,"--o");
+const heat3=s=>heatCmp("heat3",s,(v,g)=>v<g,"--y");
+function drawArt(){const s=artStats();artTable(s);heat(s);heat2(s);heat3(s);}
 totals(); draw(); drawStats(); drawArt();
-const redraw=()=>{draw();bars(stats());const s=artStats();heat(s);heat2(s);};
+const redraw=()=>{draw();bars(stats());const s=artStats();heat(s);heat2(s);heat3(s);};
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change",redraw);
 new MutationObserver(redraw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
 </script>
