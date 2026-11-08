@@ -15,5 +15,5 @@ Rebuild from a checkout of `aishahasim/gdpr-bench-rq2-pilot`:
 ```bash
 python build_data.py <repo>/data_level/iteration1_structureA data.json
 npm pack plotly.js-dist-min@2.35.2 && tar xzf plotly.js-dist-min-2.35.2.tgz
-python -c "t=open('template.html').read().replace('__DATA__',open('data.json').read()); open('gdpr_bench_iteration1A_plot.html','w').write(t.replace('__PLOTLY__',open('package/plotly.min.js').read().replace('</script','<\\/script'),1))"
+python -c "t=open('template.html').read().replace('__DATA__',open('data.json').read()); open('gdpr_bench_iteration1A_plot.html','w').write(t.replace('__PLOTLY__',open('package/plotly.min.js').read().replace('</script','<\\/script').replace('\ufffd','\\uFFFD'),1))"
 ```
