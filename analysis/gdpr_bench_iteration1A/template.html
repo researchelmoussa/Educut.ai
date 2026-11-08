@@ -31,6 +31,19 @@ h1{font-size:22px;font-weight:600;margin:0;text-wrap:balance}
 .note{color:var(--ink-3);font-size:12px;line-height:1.5;max-width:100ch}
 code{font-family:var(--mono);font-size:12px}
 @media (max-width:600px){#chart{height:480px}}
+.stats{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (max-width:900px){.stats{grid-template-columns:minmax(0,1fr)}}
+h2{font-size:16px;font-weight:600;margin:0 0 4px}
+.def{color:var(--ink-2);font-size:12px;line-height:1.5;margin:0 0 8px;max-width:90ch}
+#bars{width:100%;height:420px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:12px;font-variant-numeric:tabular-nums}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-weight:500;color:var(--ink-2);font-size:11px;vertical-align:bottom;white-space:normal}
+td:first-child,th:first-child{text-align:left}
+td.k{display:flex;align-items:center;gap:6px}
+tr.gold td{color:var(--ink-2)}
+td b{font-weight:600}
 </style>
 <div class="wrap">
   <header>
@@ -39,6 +52,14 @@ code{font-family:var(--mono);font-size:12px}
     <p class="sub">Each point is one of the 887 Task 2 snippets, in <code>predictions.json</code> order. The y value is the number of GDPR articles in the answer text (<code>text = "0"</code> → 0, <code>"25,32"</code> → 2). The dashed line is the gold label count from <code>predictions.json</code>. Click legend entries to hide or show a series; drag on the chart or use the slider below it to zoom.</p>
   </header>
   <section class="totals" id="totals" aria-label="Total articles per series"></section>
+  <section class="panel" style="padding:16px">
+    <h2>Aggregated statistics vs. gold (all 887 snippets)</h2>
+    <p class="def"><b>% predicted vs gold</b> = total articles the method predicted ÷ total gold articles (1948). <b>% correct over gold</b> = predicted articles that are also in that snippet's gold label ÷ total gold articles (micro recall). Precision = correct ÷ predicted. Exact match = the predicted set equals the gold set.</p>
+    <div class="stats">
+      <div id="bars" role="img" aria-label="Bar chart of percent predicted and percent correct versus gold per method"></div>
+      <div class="tw"><table id="stab"></table></div>
+    </div>
+  </section>
   <section class="panel"><div id="chart" role="img" aria-label="Line chart of article count per snippet for gold labels and six prompting set-ups"></div></section>
   <p class="note">Sources: <code>*/output/predictions.json</code> (gold), <code>baseline_calls.jsonl</code>, <code>description_calls.jsonl</code>, <code>function_calls.jsonl</code>, <code>cove_final_calls.jsonl</code>, <code>refine_r2_calls.jsonl</code> (last <code>ANSWER:</code> line), <code>sr_cove_final_calls.jsonl</code>. CoVe steps run only on non-zero answers, so snippets missing from the CoVe final files count as 0. Counts match each set-up's <code>predictions.json</code> for all 887 snippets.</p>
 </div>
@@ -89,7 +110,35 @@ function draw(){
   };
   Plotly.react("chart",traces,layout,{responsive:true,displaylogo:false,modeBarButtonsToRemove:["lasso2d","select2d","toImage"]});
 }
-totals(); draw();
-matchMedia("(prefers-color-scheme: dark)").addEventListener("change",draw);
-new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+function stats(){
+  const G=DATA.articles["Prediction"], tg=G.reduce((a,g)=>a+g.length,0);
+  return ORDER.map(([k,c])=>{const P=DATA.articles[k];let pred=0,cor=0,ex=0,hit=0,nz=0;
+    P.forEach((p,i)=>{const g=new Set(G[i]);pred+=p.length;const c2=p.filter(a=>g.has(a)).length;cor+=c2;
+      if(c2)hit++;if(p.length)nz++;if(p.length===g.size&&c2===g.size)ex++;});
+    return {k,c,pred,cor,ex,hit,nz,pp:100*pred/tg,pc:100*cor/tg,prec:pred?100*cor/pred:0};});
+}
+function table(S){
+  const f=x=>x.toFixed(1)+"%";
+  let h="<thead><tr><th>Method</th><th>Articles predicted</th><th>% predicted vs gold</th><th>Correct articles</th><th>% correct over gold</th><th>Precision</th><th>Exact-match snippets</th><th>Snippets with ≥1 correct</th></tr></thead><tbody>";
+  for(const s of S){const g=s.k==="Prediction";
+    h+=`<tr class="${g?"gold":""}"><td class="k"><span class="sw" style="width:14px;border-top:2px ${g?"dashed":"solid"} var(${s.c})"></span>${g?"Gold (Prediction)":s.k}</td><td>${s.pred}</td><td><b>${g?"100.0%":f(s.pp)}</b></td><td>${g?"–":s.cor}</td><td><b>${g?"–":f(s.pc)}</b></td><td>${g?"–":f(s.prec)}</td><td>${g?"–":s.ex+" ("+f(100*s.ex/N)+")"}</td><td>${g?"–":s.hit+" ("+f(100*s.hit/N)+")"}</td></tr>`;}
+  document.getElementById("stab").innerHTML=h+"</tbody>";
+}
+function bars(S){
+  const M=S.filter(s=>s.k!=="Prediction"), ink=css("--ink"), ink2=css("--ink-2"), grid=css("--grid"), panel=css("--panel"), line=css("--line");
+  const y=M.map(s=>s.k).reverse(), mk=(name,v,col)=>({type:"bar",orientation:"h",name,y,x:v.reverse(),marker:{color:col,line:{color:panel,width:2}},
+    text:v.map(x=>x.toFixed(1)+"%"),textposition:"outside",cliponaxis:false,textfont:{color:ink,size:11,family:css("--mono")},hovertemplate:"%{y}<br>"+name+": %{x:.1f}%<extra></extra>"});
+  Plotly.react("bars",[mk("% correct over gold",M.map(s=>s.pc),css("--s2")),mk("% predicted vs gold",M.map(s=>s.pp),css("--s1"))],{
+    barmode:"group",bargap:0.3,bargroupgap:0.08,paper_bgcolor:panel,plot_bgcolor:panel,font:{family:css("--sans"),color:ink2,size:12},
+    margin:{l:190,r:40,t:30,b:40},legend:{orientation:"h",x:0,y:1.1,font:{color:ink},traceorder:"reversed"},
+    xaxis:{range:[0,105],ticksuffix:"%",gridcolor:grid,zeroline:false,title:{text:"% of gold articles (1948 = 100%)",font:{color:ink2}},fixedrange:true},
+    yaxis:{tickfont:{color:ink},fixedrange:true},
+    shapes:[{type:"line",x0:100,x1:100,yref:"paper",y0:0,y1:1,line:{color:ink,dash:"dash",width:1.5}}],
+    annotations:[{x:100,yref:"paper",y:1,yanchor:"bottom",text:"gold",showarrow:false,font:{color:ink2,size:11}}]
+  },{responsive:true,displaylogo:false,displayModeBar:false});
+}
+function drawStats(){const S=stats();table(S);bars(S);}
+totals(); draw(); drawStats();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{draw();bars(stats());});
+new MutationObserver(()=>{draw();bars(stats());}).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
 </script>
