@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "ECAI 2027",
+    "evidence_url": "https://ecai2027.org/",
+    "evidence_quote": "ECAI 2027"
+  },
+  "institution": {
+    "name": "ECAI 2027 (European Conference on Artificial Intelligence)",
+    "website": "https://ecai2027.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://ecai2027.org/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Athens",
+    "country": "Greece",
+    "country_code": "GR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Artificial intelligence",
+  "seniority": "Researchers",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "ECAI 2027, the European Conference on Artificial Intelligence, takes place in Athens on 2-7 October 2027. The conference site lists 14 April 2027 as the full paper submission deadline, with author notification on 15 July 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-14",
+    "timezone": null,
+    "evidence_url": "https://ecai2027.org/",
+    "evidence_quote": "14 April 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ECAI 2027 site (search results) lists the full paper submission deadline as 14 April 2027 and the conference as 2-7 October 2027 in Athens",
+    "The full call for papers is not yet posted; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Full call for papers not yet published; deadline time zone, abstract deadline and submission system unknown",
+    "Date wording seen only as a summary of the important-dates list",
+    "Organising body (EurAI) not confirmed from the captured wording"
+  ],
+  "id": "opp_e227db949d3bb306",
+  "fingerprint": "231dd6211bc788d2",
+  "discovered_at": "2026-11-09T02:59:34.146Z",
+  "last_verified_at": "2026-11-09T02:59:34.146Z",
+  "content_hash": "sha256:a2ef395bf3663ef4abdf0628ddc2f73c9604d1599b48e5592fcbe63c554754ce"
+}

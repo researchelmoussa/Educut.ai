@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Undergraduate Programmes – January 2027 Intake",
+    "evidence_url": "https://www.alueducation.com/home/study-at-alu/",
+    "evidence_quote": "January 2027, Applications open and ongoing; Applications close 30 November 2026"
+  },
+  "institution": {
+    "name": "African Leadership University (ALU)",
+    "website": "https://www.alueducation.com",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.alueducation.com/home/study-at-alu/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Kigali",
+    "country": "Rwanda",
+    "country_code": "RW"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Entrepreneurial leadership, software engineering",
+  "seniority": "Undergraduate (Bachelor's)",
+  "qualifications": [
+    "Applications reviewed on a rolling basis; seats for the preferred intake are limited"
+  ],
+  "skills": [],
+  "description_short": "African Leadership University (ALU Rwanda) is accepting applications for its January 2027 undergraduate intake, including the Entrepreneurial Leadership and Software Engineering bachelor's tracks. Applications are reviewed on a rolling basis and close on 30 November 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-30",
+    "timezone": "Africa/Kigali",
+    "evidence_url": "https://www.alueducation.com/apply-now/",
+    "evidence_quote": "Applications closes 30 November 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ALU 'Apply Now' and 'Study at ALU' pages (search results): January 2027 intake 'Applications open and ongoing', closing 30 November 2026",
+    "Explicit open statement seen only through search results; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Self-funded degree admission, not a scholarship; tuition and financial aid not captured",
+    "The 'Study at ALU' page lists a conflicting 31 July 2026 date for the International Business and Trade track, which an admissions article says is offered only in May and September intakes",
+    "Programme pages are inconsistently dated",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_fbc39acd8d29fa2d",
+  "fingerprint": "c096d948cf47ffe7",
+  "discovered_at": "2026-11-09T03:01:32.311Z",
+  "last_verified_at": "2026-11-09T03:01:32.311Z",
+  "content_hash": "sha256:e6bb9b30e5d65794339e3aa085a4847d8f618a8d664f09007f38106981580bd8"
+}

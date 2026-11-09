@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Master in Law and Governance",
+    "evidence_url": "https://um6p.ma/en/enrollment/admissions",
+    "evidence_quote": "Master en droit et gouvernance"
+  },
+  "institution": {
+    "name": "Mohammed VI Polytechnic University (UM6P)",
+    "website": "https://um6p.ma",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://um6p.ma/en/enrollment/admissions",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Rabat",
+    "country": "Morocco",
+    "country_code": "MA"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Law and governance",
+  "seniority": "Master's",
+  "qualifications": [
+    "Online application: create a candidate account, complete details and upload documents, submit before the deadline"
+  ],
+  "skills": [],
+  "description_short": "Mohammed VI Polytechnic University (UM6P) in Morocco lists its Master in Law and Governance for a September 2027 start. Applications go through the UM6P online portal and close on 31 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-31",
+    "timezone": "Africa/Casablanca",
+    "evidence_url": "https://um6p.ma/en/enrollment/admissions",
+    "evidence_quote": "Closing date 31 Mars 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UM6P admissions pages (English and French, search results): Master in Law and Governance, opening date September 2027, closing date 31 March 2027",
+    "Portal not independently confirmed; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Eligibility requirements, tuition and funding not captured",
+    "Campus not stated in the captured wording; Rabat recorded as the likely location (UM6P also has a Benguerir campus)",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_245093f484c1297b",
+  "fingerprint": "35e5467eea9626ea",
+  "discovered_at": "2026-11-09T03:00:58.021Z",
+  "last_verified_at": "2026-11-09T03:00:58.021Z",
+  "content_hash": "sha256:fd53c3c5316b2e38dbe295093d2a9da31abafc0954640c9992af3a4bbee412a5"
+}

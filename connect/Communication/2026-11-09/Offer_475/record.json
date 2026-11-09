@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doctoral INPhINIT Fellowships Incoming",
+    "evidence_url": "https://fundacionlacaixa.org/en/inphinit-doctoral-fellowships-call",
+    "evidence_quote": "Doctoral INPhINIT Fellowships Incoming. Until 12 January 2027, at 2 pm Peninsular Spain."
+  },
+  "institution": {
+    "name": "\"la Caixa\" Foundation",
+    "website": "https://lacaixafoundation.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://fundacionlacaixa.org/en/inphinit-doctoral-fellowships-call",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "Spain",
+    "country_code": "ES"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Technology, engineering, physics, chemistry, mathematics, life and health sciences (per the 2026 rules)",
+  "seniority": "Doctoral (early-stage researchers)",
+  "qualifications": [
+    "Host must be an accredited Spanish centre (Severo Ochoa, Maria de Maeztu, Carlos III Health Institute) or a Portuguese R&D unit rated excellent by FCT (per the 2026 rules)",
+    "Within the first four years of full-time research experience at the deadline; not previously enrolled in a doctoral programme (2026 rules)",
+    "Mobility rule: no more than 12 months of residence or main activity in the destination country in the last three years (2026 rules)",
+    "Proof of English proficiency"
+  ],
+  "skills": [],
+  "description_short": "The \"la Caixa\" Foundation's Doctoral INPhINIT Fellowships Incoming support early-stage researchers starting a doctorate at accredited research centres in Spain or Portugal. The Foundation's listing shows the call open until 12 January 2027 at 2 pm Peninsular Spain time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-12T14:00:00+01:00",
+    "timezone": "Europe/Madrid",
+    "evidence_url": "https://fundacionlacaixa.org/en/inphinit-doctoral-fellowships-call",
+    "evidence_quote": "Doctoral INPhINIT Fellowships Incoming. Until 12 January 2027, at 2 pm Peninsular Spain."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official \"la Caixa\" Foundation call listing (search results): Doctoral INPhINIT Fellowships Incoming open until 12 January 2027, at 2 pm Peninsular Spain",
+    "Dedicated call page in search results still showed the 2026 call as closed; 2027 rules not seen; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "2027 call rules not seen; eligibility and field details are taken from the 2026 rules and may change",
+    "Host location may be anywhere in Spain or Portugal; city null, country recorded as Spain (Portugal also eligible)",
+    "Fellowship covers labour costs, research costs and doctoral tuition fees per the 2026 call; amounts not captured, compensation null",
+    "Number of fellowships in 2027 not confirmed",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_461980ea3ff10258",
+  "fingerprint": "9bf009455a462f18",
+  "discovered_at": "2026-11-09T02:57:34.589Z",
+  "last_verified_at": "2026-11-09T02:57:34.589Z",
+  "content_hash": "sha256:a1e7b02cbcee795213344c0dd8c4e8977626831c513da0736f8721f0b9b15981"
+}

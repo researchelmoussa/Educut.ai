@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD Program",
+    "evidence_url": "https://wwz.unibas.ch/en/gsbe/phd/",
+    "evidence_quote": "PhD Program"
+  },
+  "institution": {
+    "name": "Graduate School of Business and Economics (GSBE), University of Basel",
+    "website": "https://wwz.unibas.ch",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://wwz.unibas.ch/en/gsbe/phd/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Basel",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Business and economics",
+  "seniority": "PhD",
+  "qualifications": [
+    "Completed application form, CV, degree diplomas with transcripts and a scientific writing sample",
+    "Application via the University of Basel online portal with CHF 100 application fee"
+  ],
+  "skills": [],
+  "description_short": "The University of Basel's Graduate School of Business and Economics calls for applications to PhD positions supervised by professors listed in each call. For a PhD starting in fall 2027, the deadline is 31 January 2027; applications go through the university portal.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31T23:59:00+01:00",
+    "timezone": "Europe/Zurich",
+    "evidence_url": "https://wwz.unibas.ch/en/gsbe/phd/",
+    "evidence_quote": "January 31, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official GSBE PhD Program page (search results) lists 'start of PhD in fall 2027' with a January 31, 2027 deadline; spring 2027 deadline (August 14, 2026) has passed",
+    "GSBE calls are 'contingent on openings'; portal not independently confirmed; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Calls are contingent on openings; number of positions and salary not stated in the captured wording",
+    "Described as fully funded positions in the source, but no amount captured; compensation null",
+    "The university's central deadline list shows only the spring 2027 date (5 January 2027); the 31 January 2027 date appears only on the GSBE page",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_a826f6c0330a4e4a",
+  "fingerprint": "c75d3d49362c3463",
+  "discovered_at": "2026-11-09T02:56:13.054Z",
+  "last_verified_at": "2026-11-09T02:56:13.054Z",
+  "content_hash": "sha256:5f7dd558f6fccc305ba191efb9b225e135bb8c373e4c7abfc1108d35363d43d2"
+}

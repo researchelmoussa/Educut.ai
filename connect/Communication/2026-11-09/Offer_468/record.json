@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "EPFL PhD Excellence Program",
+    "evidence_url": "https://www.epfl.ch/education/phd/doctoral-studies-structure/epfl-phd-excellence-programme/",
+    "evidence_quote": "EPFL PhD Excellence Program"
+  },
+  "institution": {
+    "name": "EPFL",
+    "website": "https://www.epfl.ch",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.epfl.ch/education/phd/doctoral-studies-structure/epfl-phd-excellence-programme/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Lausanne",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "All EPFL doctoral fields",
+  "seniority": "PhD candidates (second year)",
+  "qualifications": [
+    "EPFL doctoral students who passed the candidacy exam within the last 12 months, or will pass it before the programme starts in May 2027",
+    "Matriculated between 31 May 2025 and 31 May 2026",
+    "CV of up to two pages and a support letter from the thesis director (both co-directors if applicable)"
+  ],
+  "skills": [],
+  "description_short": "The EPFL PhD Excellence Program selects a cohort of EPFL doctoral students who recently passed their candidacy exam. Applications for the 2027 cohort opened on 2 November 2026 and close on 5 February 2027; decisions are scheduled for 25 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-05T17:00:00+01:00",
+    "timezone": "Europe/Zurich",
+    "evidence_url": "https://www.epfl.ch/education/phd/doctoral-studies-structure/epfl-phd-excellence-programme/",
+    "evidence_quote": "The next deadline for application submission will be February 5th, 2027 at 17:00 Swiss local time."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official EPFL programme page (search results): next deadline 5 February 2027 at 17:00 Swiss local time; applications opened 2 November 2026",
+    "Portal not independently confirmed from this environment, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Open only to doctoral students already enrolled at EPFL",
+    "Programme benefits not captured verbatim; compensation null",
+    "Reference letters from outside academia are reported as due 12 February 2027",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_c3ad4379776ca9d4",
+  "fingerprint": "7ef7ba777706491b",
+  "discovered_at": "2026-11-09T02:53:12.367Z",
+  "last_verified_at": "2026-11-09T02:53:12.367Z",
+  "content_hash": "sha256:34b1693bd3bda8dd6c446c39be18dcbaf6df584fff0b0887e3e1174009484723"
+}
