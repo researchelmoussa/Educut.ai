@@ -53,6 +53,10 @@ td.na{color:var(--ink-3)}
 td.z{color:var(--ink-3)}
 .ok{color:var(--ink-3);font-size:11px}
 th.sub{font-size:10px}
+#halltab td,#halltab th{padding:6px 5px;text-align:center}
+#halltab th{white-space:nowrap}
+#halltab td:first-child,#halltab th:first-child{text-align:left}
+#halltab td.hc{background:color-mix(in srgb,var(--o3) 14%,transparent)}
 </style>
 <div class="wrap">
   <header>
@@ -95,6 +99,10 @@ th.sub{font-size:10px}
     <p class="def">For each snippet, every gold article the method missed is an <b>omission (−1)</b>, every predicted article not in gold is a <b>hallucination (+1)</b>, and every correctly predicted article counts <b>0</b>. Score = hallucinations − omissions. Example: gold = {4, 5}, method = {7} → 2 omissions + 1 hallucination = <b>−1</b>. Bars: yellow below zero = omitted articles; blue above zero = correct articles (0 points, shown for context); orange stacked on top = hallucinated articles; black dot = net score. All 6 charts share the x axis: zoom or drag the slider at the bottom to move them together.</p>
     <p class="def"><span class="key"><i style="background:var(--y3)"></i>Omission (−1 each)</span><span class="key"><i style="background:var(--s1)"></i>Correct prediction (0)</span><span class="key"><i style="background:var(--o3)"></i>Hallucination (+1 each)</span><span class="key"><i style="background:var(--ink);border-radius:50%"></i>Score</span></p>
     <div class="tw"><table id="scoretab"></table></div>
+    <p class="def" style="margin-top:6px">% Omission, % Correct and % Hallucination divide by all articles involved for that method: omissions + correct + hallucinations (the gold articles plus the hallucinated ones), so the three add up to 100%.</p>
+    <h2 style="margin-top:14px">Hallucinations per article</h2>
+    <p class="def">For each method and each of the 23 articles: the number of times the method predicted that article for a snippet whose gold label does not contain it (hallucination), and below it that article's share of the method's total hallucinations.</p>
+    <div class="tw"><table id="halltab"></table></div>
     <div id="score" role="img" aria-label="Six bar charts, one per method, showing omitted, correct and hallucinated articles and the net score for each snippet"></div>
   </section>
   <p class="note">Sources: <code>*/output/predictions.json</code> (gold), <code>baseline_calls.jsonl</code>, <code>description_calls.jsonl</code>, <code>function_calls.jsonl</code>, <code>cove_final_calls.jsonl</code>, <code>refine_r2_calls.jsonl</code> (last <code>ANSWER:</code> line), <code>sr_cove_final_calls.jsonl</code>. CoVe steps run only on non-zero answers, so snippets missing from the CoVe final files count as 0. Counts match each set-up's <code>predictions.json</code> for all 887 snippets.</p>
@@ -241,8 +249,9 @@ function scoreData(){
 }
 function scoreTable(S){
   const sum=a=>a.reduce((x,y)=>x+y,0);
-  let h="<thead><tr><th>Method</th><th>Total score</th><th>Mean score / snippet</th><th>Omissions (−1)</th><th>Correct (0)</th><th>Hallucinations (+1)</th><th>Snippets with score 0</th></tr></thead><tbody>";
-  for(const s of S){const T=sum(s.sc);h+=`<tr><td class="k"><span class="sw" style="width:14px;border-top:2px solid var(${s.c})"></span>${s.k}</td><td><b>${T}</b></td><td>${(T/N).toFixed(2)}</td><td>${sum(s.fn)}</td><td>${sum(s.tp)}</td><td>${sum(s.fp)}</td><td>${s.sc.filter(v=>v===0).length}</td></tr>`;}
+  let h="<thead><tr><th>Method</th><th>Total score</th><th>Mean score / snippet</th><th>Omissions (−1)</th><th>Correct (0)</th><th>Hallucinations (+1)</th><th>% Omission</th><th>% Correct</th><th>% Hallucination</th><th>Snippets with score 0</th></tr></thead><tbody>";
+  for(const s of S){const T=sum(s.sc),O=sum(s.fn),C=sum(s.tp),H=sum(s.fp),A=O+C+H,p=v=>(100*v/A).toFixed(1)+"%";
+    h+=`<tr><td class="k"><span class="sw" style="width:14px;border-top:2px solid var(${s.c})"></span>${s.k}</td><td><b>${T}</b></td><td>${(T/N).toFixed(2)}</td><td>${O}</td><td>${C}</td><td>${H}</td><td><b>${p(O)}</b></td><td><b>${p(C)}</b></td><td><b>${p(H)}</b></td><td>${s.sc.filter(v=>v===0).length}</td></tr>`;}
   document.getElementById("scoretab").innerHTML=h+"</tbody>";
 }
 function scorePlot(S){
@@ -271,7 +280,18 @@ function scorePlot(S){
   });
   Plotly.react("score",traces,layout,{responsive:true,displaylogo:false,modeBarButtonsToRemove:["lasso2d","select2d","toImage"]});
 }
-function drawScore(){const S=scoreData();scoreTable(S);scorePlot(S);}
+function hallTable(){
+  const G=DATA.articles["Prediction"];
+  let h="<thead><tr><th>Method</th>"+ARTS.map(a=>`<th title="${ART[a]}">Art. ${a}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
+  for(const [k,c] of ORDER.slice(1)){const P=DATA.articles[k],cnt={};ARTS.forEach(a=>cnt[a]=0);
+    P.forEach((p,i)=>p.forEach(a=>{if(!G[i].includes(a))cnt[a]=(cnt[a]||0)+1;}));
+    const tot=ARTS.reduce((s,a)=>s+cnt[a],0);
+    h+=`<tr><td class="k"><span class="sw" style="width:14px;border-top:2px solid var(${c})"></span>${k}</td>`+
+      ARTS.map(a=>cnt[a]?`<td class="hc"><b>${cnt[a]}</b><br><span class="ok">${(100*cnt[a]/tot).toFixed(1)}%</span></td>`:`<td class="z">0<br><span class="ok">0%</span></td>`).join("")+
+      `<td><b>${tot}</b><br><span class="ok">100%</span></td></tr>`;}
+  document.getElementById("halltab").innerHTML=h+"</tbody>";
+}
+function drawScore(){const S=scoreData();scoreTable(S);hallTable();scorePlot(S);}
 totals(); draw(); drawStats(); drawArt(); drawScore();
 const redraw=()=>{draw();bars(stats());const s=artStats();heat(s);heat2(s);heat3(s);scorePlot(scoreData());};
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change",redraw);
