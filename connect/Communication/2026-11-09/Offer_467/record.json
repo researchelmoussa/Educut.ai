@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Merit Based International Scholarships",
+    "evidence_url": "https://www.polimi.it/fileadmin/user_upload/futuri_studenti/borse-di-studio/Merit_Based_Call_For_Applications_a.y._2027-2028.pdf",
+    "evidence_quote": "All Merit Based International Scholarships include a tuition fee waiver for the academic year for which they are assigned"
+  },
+  "institution": {
+    "name": "Politecnico di Milano",
+    "website": "https://www.polimi.it",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.polimi.it/fileadmin/user_upload/futuri_studenti/borse-di-studio/Merit_Based_Call_For_Applications_a.y._2027-2028.pdf",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Milan",
+    "country": "Italy",
+    "country_code": "IT"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Engineering, architecture and design (English-taught Master's programmes)",
+  "seniority": "Master's",
+  "qualifications": [
+    "Applicants to Politecnico di Milano Master of Science programmes taught in English",
+    "Admission application fee paid between 1 October and 1 December 2026",
+    "Valid English certificate submitted by 4 March 2027 to be considered"
+  ],
+  "skills": [],
+  "description_short": "Politecnico di Milano's Merit Based International Scholarships for academic year 2027-2028 are awarded to applicants to its English-taught Master's programmes. All awards include a tuition fee waiver; the scholarship form is submitted through Politecnico di Milano Online Services by 15 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15T12:00:00+01:00",
+    "timezone": "Europe/Rome",
+    "evidence_url": "https://www.polimi.it/fileadmin/user_upload/futuri_studenti/borse-di-studio/Merit_Based_Call_For_Applications_a.y._2027-2028.pdf",
+    "evidence_quote": "until 12:00 noon (Italian time) on December 15th 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official 2027-2028 call PDF on polimi.it (search results): application form can be submitted from 1 October 2026 until 12:00 noon (Italian time) on 15 December 2026",
+    "Deadline in the future; portal not independently confirmed from this environment, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Award amounts per tier (Platinum, Gold, Bronze, Silver) are reported in the call but no verbatim quote of the amounts was captured, so compensation is null",
+    "Application URL (Online Services) not confirmed",
+    "The scholarships page and the call disagree on the acceptance fee (about EUR 170 vs about EUR 190)"
+  ],
+  "id": "opp_b663cb77f8e85f74",
+  "fingerprint": "dd6635a3de8d713f",
+  "discovered_at": "2026-11-09T02:53:12.067Z",
+  "last_verified_at": "2026-11-09T02:53:12.067Z",
+  "content_hash": "sha256:cc9217a0efd831972d020bba72bfb8b3ce4871b57b5c410e845ee2b015f5771d"
+}

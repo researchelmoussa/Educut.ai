@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Master of Business Administration Full Time Programme",
+    "evidence_url": "https://www.gsb.uct.ac.za/academic-programmes/mba-ft",
+    "evidence_quote": "Master of business administration full time programme"
+  },
+  "institution": {
+    "name": "UCT Graduate School of Business, University of Cape Town",
+    "website": "https://www.gsb.uct.ac.za",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.gsb.uct.ac.za/academic-programmes/mba-ft",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "country_code": "ZA"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Business administration",
+  "seniority": "Graduate (MBA), one year full time",
+  "qualifications": [
+    "Application fee 1000 ZAR / 100 USD"
+  ],
+  "skills": [],
+  "description_short": "The UCT Graduate School of Business is accepting applications for its one-year, face-to-face full-time MBA in Cape Town, starting 11 August 2027. The listed application period runs from 1 September 2026 to 31 May 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-05-31",
+    "timezone": "Africa/Johannesburg",
+    "evidence_url": "https://www.gsb.uct.ac.za/academic-programmes/mba-ft",
+    "evidence_quote": "1 September 2026 - 31 May 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UCT GSB full-time MBA page (search results): application period 1 September 2026 - 31 May 2027, programme start 11 August 2027",
+    "Programme-format page lists rounds with submissions due 15 April, 15 May and 30 June 2027, which conflicts with the 31 May end date; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline conflict on the official site: overview page says 31 May 2027, programme-format page lists a final round on 30 June 2027; the earlier 31 May date is recorded",
+    "Self-funded degree programme (programme fee reported as R367 000), not a scholarship; fee not recorded as compensation",
+    "Eligibility requirements not captured",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_8ef5bb071b7f8bc4",
+  "fingerprint": "37b6f6388360691c",
+  "discovered_at": "2026-11-09T02:56:13.293Z",
+  "last_verified_at": "2026-11-09T02:56:13.293Z",
+  "content_hash": "sha256:6a228d864a56a20b842ed978cd219ad55c289d52792927b5d2ed96a7aa3a50ea"
+}

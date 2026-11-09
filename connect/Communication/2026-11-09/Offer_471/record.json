@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "The Ashesi MBA",
+    "evidence_url": "https://admissions.ashesi.edu.gh/courses/course/251-mba-ashesi-mba",
+    "evidence_quote": "[MBA] The Ashesi MBA"
+  },
+  "institution": {
+    "name": "Ashesi University",
+    "website": "https://www.ashesi.edu.gh",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://admissions.ashesi.edu.gh/courses/course/251-mba-ashesi-mba",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Berekuso",
+    "country": "Ghana",
+    "country_code": "GH"
+  },
+  "employment_type": "part_time",
+  "work_arrangement": "onsite",
+  "field": "Business administration",
+  "seniority": "Graduate (MBA), part-time, 2 years",
+  "qualifications": [
+    "Good first degree in any field from a recognized university with a minimum of 3 years of relevant work experience, or a recognized global professional body qualification with the same experience",
+    "Online assessment and interview"
+  ],
+  "skills": [],
+  "description_short": "Ashesi University is accepting applications for The Ashesi MBA, a two-year part-time graduate programme, for academic year 2027/28. Applicants need a first degree or recognised professional qualification and at least three years of relevant work experience. Applications close on 31 July 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-07-31T23:59:59+00:00",
+    "timezone": "Africa/Accra",
+    "evidence_url": "https://admissions.ashesi.edu.gh/courses/course/251-mba-ashesi-mba",
+    "evidence_quote": "Jul 31, 2027, 11:59:59 PM Africa/Accra time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Ashesi admissions listing (search results) for the MBA, academic year 2027/28: application deadline Jul 31, 2027, 11:59:59 PM Africa/Accra time; the 2026/27 window is shown as ended",
+    "Portal not independently confirmed from this environment; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "This is a self-funded degree programme, not a scholarship; tuition and any financial aid not captured",
+    "City not stated in the captured wording; Berekuso is Ashesi's campus location",
+    "A May 2026 student handbook lists other general application deadlines (15 May / 15 November), apparently for other programmes",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_b7514f1bb67ef78a",
+  "fingerprint": "abb0119995b34726",
+  "discovered_at": "2026-11-09T02:55:12.853Z",
+  "last_verified_at": "2026-11-09T02:55:12.853Z",
+  "content_hash": "sha256:045e4f12db365fff7a8f3b9976a739c6c9587242f6a228ab31f5b5295e93f1dc"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD in Mathematics in Natural, Social and Life Sciences",
+    "evidence_url": "https://www.gssi.it/communication/news-events/item/26427-call-open-for-the-mathematics-phd-programme-at-gssi",
+    "evidence_quote": "Mathematics in Natural, Social, and Life Sciences PhD"
+  },
+  "institution": {
+    "name": "Gran Sasso Science Institute (GSSI)",
+    "website": "https://www.gssi.it",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.gssi.it/communication/news-events/item/26427-call-open-for-the-mathematics-phd-programme-at-gssi",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "L'Aquila",
+    "country": "Italy",
+    "country_code": "IT"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Mathematics in natural, social and life sciences",
+  "seniority": "PhD",
+  "qualifications": [
+    "Online application through the GSSI website only (www.gssi.it/phd/)",
+    "Master's degree or equivalent (details in the full call, not captured)"
+  ],
+  "skills": [],
+  "description_short": "Gran Sasso Science Institute has opened the 43rd-cycle call (academic year 2027/2028) for its PhD programme in Mathematics in Natural, Social and Life Sciences. First-round applications close on 12 January 2027 at 3 p.m. Italian time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-12T15:00:00+01:00",
+    "timezone": "Europe/Rome",
+    "evidence_url": "https://www.gssi.it/communication/news-events/item/26427-call-open-for-the-mathematics-phd-programme-at-gssi",
+    "evidence_quote": "first-round deadline of January 12, 2027 at 3 p.m. Italian time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official GSSI news item 'Call open for the Mathematics PhD programme at GSSI' (search results): 43rd cycle call, first-round deadline 12 January 2027 at 3 p.m. Italian time",
+    "Second round (deadline 11 May 2027) only if positions remain",
+    "Full call document and online portal not independently confirmed; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Only the GSSI news item was seen, not the full AY 2027/2028 call document; eligibility and scholarship amount unconfirmed",
+    "Described as 'fully funded' in the source, with free accommodation and research allowance, but not recorded as compensation (no amount)",
+    "City inferred from the GSSI seat (L'Aquila); not stated in the captured wording",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_472bc1ef8f349371",
+  "fingerprint": "993d7db6e834e555",
+  "discovered_at": "2026-11-09T02:54:48.119Z",
+  "last_verified_at": "2026-11-09T03:06:32.553Z",
+  "content_hash": "sha256:b269bd35f4b3d0c6ad3164207963f9123a45c989549b20730670761165c73019"
+}

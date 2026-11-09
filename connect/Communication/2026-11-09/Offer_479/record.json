@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Master of Education",
+    "evidence_url": "https://www.wits.ac.za/course-finder/postgraduate/humanities/master-of-education/",
+    "evidence_quote": "Master of Education - Wits University"
+  },
+  "institution": {
+    "name": "University of the Witwatersrand (Wits), School of Education",
+    "website": "https://www.wits.ac.za",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.wits.ac.za/course-finder/postgraduate/humanities/master-of-education/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Johannesburg",
+    "country": "South Africa",
+    "country_code": "ZA"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Education",
+  "seniority": "Master's (by dissertation)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The University of the Witwatersrand's Master of Education is offered by dissertation or by coursework and research, with January, April and July intakes. The course finder lists 28 February 2027 as the closing date for the MEd by Dissertation (HRA00).",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-28",
+    "timezone": "Africa/Johannesburg",
+    "evidence_url": "https://www.wits.ac.za/course-finder/postgraduate/humanities/master-of-education/",
+    "evidence_quote": "28 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Wits course finder page (search results) lists the MEd by Dissertation (HRA00) closing date as 28 February 2027; the coursework-and-research route closes 30 November",
+    "Intake that the 28 February 2027 date applies to not stated; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "This is a degree admission, not a scholarship; funding not stated",
+    "The page does not say which intake (April or July 2027) the 28 February 2027 closing date covers",
+    "Entry requirements not captured",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_6929b1098d9093c6",
+  "fingerprint": "4d69293bfdfc4bea",
+  "discovered_at": "2026-11-09T02:58:41.045Z",
+  "last_verified_at": "2026-11-09T02:58:41.045Z",
+  "content_hash": "sha256:9da7407a3d8d6be64452e81e8dffe6c0ec02d7f417df706dd19c9cc54463617b"
+}

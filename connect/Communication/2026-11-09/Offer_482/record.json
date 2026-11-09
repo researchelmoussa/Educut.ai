@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Excellence Research Internship Program",
+    "evidence_url": "https://www.epfl.ch/education/international/en/coming-to-epfl/research-internships/eligibility-and-application/",
+    "evidence_quote": "Excellence Research Internship Program (ERIP)"
+  },
+  "institution": {
+    "name": "EPFL",
+    "website": "https://www.epfl.ch",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.epfl.ch/education/international/en/coming-to-epfl/research-internships/eligibility-and-application/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Lausanne",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Engineering, computer and basic sciences (EPFL research labs)",
+  "seniority": "Bachelor's and Master's students",
+  "qualifications": [
+    "Students at EPFL partner universities in North America and Singapore",
+    "Top 10% students at Bachelor's or Master's level",
+    "Complete applications only; late applications not considered"
+  ],
+  "skills": [],
+  "description_short": "EPFL's Excellence Research Internship Program (ERIP) offers summer 2027 research internships in EPFL labs to top-ranked Bachelor's and Master's students from partner universities in North America and Singapore. Applications are open until 30 November 2026; shortlisting decisions follow in December.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-30",
+    "timezone": "Europe/Zurich",
+    "evidence_url": "https://www.epfl.ch/education/international/en/coming-to-epfl/research-internships/eligibility-and-application/",
+    "evidence_quote": "applications are now open until November 30, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official EPFL international page (search results): 'applications are now open until November 30, 2026'; incomplete and late applications will not be considered",
+    "Explicit open statement seen only through search results; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Eligibility limited to students of EPFL partner universities in North America and Singapore",
+    "Internship stipend or allowance not captured; compensation null",
+    "Deadline time of day not captured",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_4e0861ecd1965a52",
+  "fingerprint": "5b10636be80bcce1",
+  "discovered_at": "2026-11-09T03:00:57.771Z",
+  "last_verified_at": "2026-11-09T03:00:57.771Z",
+  "content_hash": "sha256:7e484be31e866794118af407793bd078dacfde54ca9d51c8879a33178a965cfa"
+}

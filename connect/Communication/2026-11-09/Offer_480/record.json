@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "Call for Proceedings - ISMB/ECCB 2027",
+    "evidence_url": "https://www.iscb.org/ismbeccb2027/call-for-submissions/proceedings",
+    "evidence_quote": "Call for Proceedings - ISMB/ECCB 2027"
+  },
+  "institution": {
+    "name": "International Society for Computational Biology (ISCB), ISMB/ECCB 2027",
+    "website": "https://www.iscb.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.iscb.org/ismbeccb2027/call-for-submissions/proceedings",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "country_code": "DK"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computational biology and bioinformatics",
+  "seniority": "Researchers",
+  "qualifications": [
+    "Papers submitted electronically as PDF via the submission system",
+    "Code used in papers must be in a publicly accessible repository, complete enough for review by the deadline"
+  ],
+  "skills": [],
+  "description_short": "ISMB/ECCB 2027, held in Copenhagen on 18-22 July 2027, invites proceedings papers in computational biology. Accepted papers appear in an open-access section of the journal Bioinformatics. Submissions close on 14 January 2027, 11:59 PM Anywhere on Earth, with no extensions.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-14T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://www.iscb.org/ismbeccb2027/call-for-submissions/proceedings",
+    "evidence_quote": "January 14, 2027, 11:59 PM Anywhere on Earth (AoE)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ISCB ISMB/ECCB 2027 call for proceedings (search results): paper deadline January 14, 2027, 11:59 PM AoE; no extension will be granted",
+    "Submission system not independently confirmed; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Conference registration fees not captured",
+    "Submission system URL not confirmed"
+  ],
+  "id": "opp_46031721753ae0dd",
+  "fingerprint": "84c617c8cf563f1b",
+  "discovered_at": "2026-11-09T02:59:33.864Z",
+  "last_verified_at": "2026-11-09T02:59:33.864Z",
+  "content_hash": "sha256:19ba14e550964362d21f5d4a7f7c33eff034da7a90bf1c5b97f21bc9a7aa18df"
+}
