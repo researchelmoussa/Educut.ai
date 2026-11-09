@@ -6,15 +6,15 @@
 :root{
   --bg:#f7f8fa; --panel:#ffffff; --ink:#14171c; --ink-2:#4d5560; --ink-3:#7c8591; --grid:#e3e6ea; --line:#d5d9df;
   --gold:#14171c;
-  --q0:#f1f3f6; --q1:#cde2fb; --q2:#86b6ef; --q3:#2a78d6; --q4:#104281; --o1:#fbd3c0; --o2:#f4a07c; --o3:#eb6834; --o4:#a8370f; --y1:#fbeab0; --y2:#f6cf5c; --y3:#eda100; --y4:#9a6300; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#6250d6;
+  --q0:#f1f3f6; --q1:#cde2fb; --q2:#86b6ef; --q3:#2a78d6; --q4:#104281; --o1:#fbd3c0; --o2:#f4a07c; --o3:#eb6834; --o4:#a8370f; --red:#d0302f; --y1:#fbeab0; --y2:#f6cf5c; --y3:#eda100; --y4:#9a6300; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#6250d6;
   --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#121417; --panel:#1a1d21; --ink:#eef0f3; --ink-2:#b7bec7; --ink-3:#8a929c; --grid:#2a2f35; --line:#353b42;
-  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --o1:#6b2a12; --o2:#a8401a; --o3:#e0662f; --o4:#fbd3c0; --y1:#5a4200; --y2:#8a6400; --y3:#c98500; --y4:#fbe08a; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}}
+  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --o1:#6b2a12; --o2:#a8401a; --o3:#e0662f; --o4:#fbd3c0; --red:#ff6b66; --y1:#5a4200; --y2:#8a6400; --y3:#c98500; --y4:#fbe08a; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#121417; --panel:#1a1d21; --ink:#eef0f3; --ink-2:#b7bec7; --ink-3:#8a929c; --grid:#2a2f35; --line:#353b42;
-  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --o1:#6b2a12; --o2:#a8401a; --o3:#e0662f; --o4:#fbd3c0; --y1:#5a4200; --y2:#8a6400; --y3:#c98500; --y4:#fbe08a; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}
+  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --o1:#6b2a12; --o2:#a8401a; --o3:#e0662f; --o4:#fbd3c0; --red:#ff6b66; --y1:#5a4200; --y2:#8a6400; --y3:#c98500; --y4:#fbe08a; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px}
 .wrap{max-width:1400px;margin:0 auto;padding-block:28px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:20px}
 h1{font-size:22px;font-weight:600;margin:0;text-wrap:balance}
@@ -53,6 +53,7 @@ td.na{color:var(--ink-3)}
 td.z{color:var(--ink-3)}
 .ok{color:var(--ink-3);font-size:11px}
 th.sub{font-size:10px}
+td.red,td.red b{color:var(--red)}
 #halltab td,#halltab th{padding:6px 5px;text-align:center}
 #halltab th{white-space:nowrap}
 #halltab td:first-child,#halltab th:first-child{text-align:left}
@@ -252,8 +253,9 @@ function scoreTable(S){
   let h="<thead><tr><th>Method</th><th>Total score</th><th>Mean score / snippet</th><th>Omissions (−1)</th><th>Correct (0)</th><th>Hallucinations (+1)</th><th>% Omission</th><th>% Correct</th><th>% Hallucination</th><th>Snippets with score 0</th></tr></thead><tbody>";
   {const tg=DATA.articles["Prediction"].reduce((x,g)=>x+g.length,0);
     h+=`<tr class="gold"><td class="k"><span class="sw" style="width:14px;border-top:2px dashed var(--gold)"></span>Gold (Prediction)</td><td><b>0</b></td><td>0.00</td><td>0</td><td>${tg}</td><td>0</td><td><b>0.0%</b></td><td><b>100.0%</b></td><td><b>0.0%</b></td><td>${N}</td></tr>`;}
+  const hp=S.map(s=>{const O=sum(s.fn),C=sum(s.tp),H=sum(s.fp);return (100*H/(O+C+H)).toFixed(1);}), hmin=Math.min(...hp.map(Number)).toFixed(1);
   for(const s of S){const T=sum(s.sc),O=sum(s.fn),C=sum(s.tp),H=sum(s.fp),A=O+C+H,p=v=>(100*v/A).toFixed(1)+"%";
-    h+=`<tr><td class="k"><span class="sw" style="width:14px;border-top:2px solid var(${s.c})"></span>${s.k}</td><td><b>${T}</b></td><td>${(T/N).toFixed(2)}</td><td>${O}</td><td>${C}</td><td>${H}</td><td><b>${p(O)}</b></td><td><b>${p(C)}</b></td><td><b>${p(H)}</b></td><td>${s.sc.filter(v=>v===0).length}</td></tr>`;}
+    h+=`<tr><td class="k"><span class="sw" style="width:14px;border-top:2px solid var(${s.c})"></span>${s.k}</td><td><b>${T}</b></td><td>${(T/N).toFixed(2)}</td><td>${O}</td><td>${C}</td><td>${H}</td><td><b>${p(O)}</b></td><td><b>${p(C)}</b></td><td class="${p(H)===hmin+"%"?"red":""}"><b>${p(H)}</b></td><td>${s.sc.filter(v=>v===0).length}</td></tr>`;}
   document.getElementById("scoretab").innerHTML=h+"</tbody>";
 }
 function scorePlot(S){
