@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-08T03:11:39.319Z",
+  "updated_at": "2026-11-09T03:06:47.314Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -2999,7 +2999,7 @@
       "deadline": "2026-11-07",
       "content_hash": "sha256:0c52c759cf8ab701cda81156e8356ff337a5cdfcd4855b453ef3a5c585ead6cf",
       "last_verified_at": "2026-10-16T01:56:35.746Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-16T01:56:41.050Z",
       "history": [
         {
@@ -3043,6 +3043,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-09T02:49:49.817Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-07 passed"
         }
       ],
       "offer_number": 36
@@ -5788,7 +5795,7 @@
       "deadline": "2026-11-08T23:59:00+00:00",
       "content_hash": "sha256:b06ffe07dfe4d433830471893a58fb1fabd733b6960ac1625701ee9a15a33e3b",
       "last_verified_at": "2026-10-17T02:00:22.319Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T02:00:22.496Z",
       "history": [
         {
@@ -5832,6 +5839,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-09T02:49:49.817Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-08T23:59:00+00:00 passed"
         }
       ],
       "offer_number": 62
@@ -31218,6 +31232,1157 @@
         }
       ],
       "offer_number": 466
+    },
+    "opp_b663cb77f8e85f74": {
+      "id": "opp_b663cb77f8e85f74",
+      "fingerprint": "dd6635a3de8d713f",
+      "title": "Merit Based International Scholarships",
+      "institution": "Politecnico di Milano",
+      "city": "Milan",
+      "country": "Italy",
+      "source_url": "https://www.polimi.it/fileadmin/user_upload/futuri_studenti/borse-di-studio/Merit_Based_Call_For_Applications_a.y._2027-2028.pdf",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15T12:00:00+01:00",
+      "content_hash": "sha256:cc9217a0efd831972d020bba72bfb8b3ce4871b57b5c410e845ee2b015f5771d",
+      "last_verified_at": "2026-11-09T02:53:12.067Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:53:12.212Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:53:12.212Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:53:12.212Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:05:49.337Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:05:49.337Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:42.679Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:42.679Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 467
+    },
+    "opp_c3ad4379776ca9d4": {
+      "id": "opp_c3ad4379776ca9d4",
+      "fingerprint": "7ef7ba777706491b",
+      "title": "EPFL PhD Excellence Program",
+      "institution": "EPFL",
+      "city": "Lausanne",
+      "country": "Switzerland",
+      "source_url": "https://www.epfl.ch/education/phd/doctoral-studies-structure/epfl-phd-excellence-programme/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-05T17:00:00+01:00",
+      "content_hash": "sha256:34b1693bd3bda8dd6c446c39be18dcbaf6df584fff0b0887e3e1174009484723",
+      "last_verified_at": "2026-11-09T02:53:12.367Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:53:12.494Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:53:12.494Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:53:12.494Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:05:49.606Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:05:49.606Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:42.956Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:42.956Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 468
+    },
+    "opp_8247cefd69ae47b7": {
+      "id": "opp_8247cefd69ae47b7",
+      "fingerprint": "69fe5922a4076b7f",
+      "title": "Vice-Chancellor's International Scholarships Scheme",
+      "institution": "The University of Sydney",
+      "city": "Sydney",
+      "country": "Australia",
+      "source_url": "https://www.sydney.edu.au/scholarships/e/vice-chancellor-international-scholarships-scheme.html",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-15",
+      "content_hash": "sha256:b53ecbe3d2db57221ad52704cc088e0d117a5515681204876d538f0c97571529",
+      "last_verified_at": "2026-11-09T02:53:12.630Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:53:12.779Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:53:12.779Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:53:12.779Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:05:49.849Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:05:49.849Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:43.215Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:43.215Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 469
+    },
+    "opp_472bc1ef8f349371": {
+      "id": "opp_472bc1ef8f349371",
+      "fingerprint": "993d7db6e834e555",
+      "title": "PhD in Mathematics in Natural, Social and Life Sciences",
+      "institution": "Gran Sasso Science Institute (GSSI)",
+      "city": "L'Aquila",
+      "country": "Italy",
+      "source_url": "https://www.gssi.it/communication/news-events/item/26427-call-open-for-the-mathematics-phd-programme-at-gssi",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-12T15:00:00+01:00",
+      "content_hash": "sha256:b269bd35f4b3d0c6ad3164207963f9123a45c989549b20730670761165c73019",
+      "last_verified_at": "2026-11-09T03:06:32.553Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:54:48.267Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:54:48.267Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:54:48.267Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:05:50.095Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:05:50.096Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:32.675Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-09T03:06:32.675Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-09T03:06:34.153Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: removed unsupported scholarship count from summary"
+        },
+        {
+          "at": "2026-11-09T03:06:34.300Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:06:34.301Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:43.480Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:43.481Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 470
+    },
+    "opp_b7514f1bb67ef78a": {
+      "id": "opp_b7514f1bb67ef78a",
+      "fingerprint": "abb0119995b34726",
+      "title": "The Ashesi MBA",
+      "institution": "Ashesi University",
+      "city": "Berekuso",
+      "country": "Ghana",
+      "source_url": "https://admissions.ashesi.edu.gh/courses/course/251-mba-ashesi-mba",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-07-31T23:59:59+00:00",
+      "content_hash": "sha256:045e4f12db365fff7a8f3b9976a739c6c9587242f6a228ab31f5b5295e93f1dc",
+      "last_verified_at": "2026-11-09T02:55:12.853Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:55:12.997Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:55:12.998Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:55:12.998Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:05:50.328Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:05:50.329Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:43.754Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:43.754Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 471
+    },
+    "opp_a826f6c0330a4e4a": {
+      "id": "opp_a826f6c0330a4e4a",
+      "fingerprint": "c75d3d49362c3463",
+      "title": "PhD Program",
+      "institution": "Graduate School of Business and Economics (GSBE), University of Basel",
+      "city": "Basel",
+      "country": "Switzerland",
+      "source_url": "https://wwz.unibas.ch/en/gsbe/phd/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31T23:59:00+01:00",
+      "content_hash": "sha256:5f7dd558f6fccc305ba191efb9b225e135bb8c373e4c7abfc1108d35363d43d2",
+      "last_verified_at": "2026-11-09T02:56:13.054Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:56:13.171Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:56:13.171Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:56:13.171Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:06:04.612Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:06:04.612Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:44.016Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:44.016Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 472
+    },
+    "opp_8ef5bb071b7f8bc4": {
+      "id": "opp_8ef5bb071b7f8bc4",
+      "fingerprint": "37b6f6388360691c",
+      "title": "Master of Business Administration Full Time Programme",
+      "institution": "UCT Graduate School of Business, University of Cape Town",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "source_url": "https://www.gsb.uct.ac.za/academic-programmes/mba-ft",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-31",
+      "content_hash": "sha256:6a228d864a56a20b842ed978cd219ad55c289d52792927b5d2ed96a7aa3a50ea",
+      "last_verified_at": "2026-11-09T02:56:13.293Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:56:13.412Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:56:13.412Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:56:13.413Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:05:31.839Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:05:31.839Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:44.296Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:44.296Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 473
+    },
+    "opp_192d1f1e2a5581d8": {
+      "id": "opp_192d1f1e2a5581d8",
+      "fingerprint": "efe2f4248fc2fa47",
+      "title": "PhD in Economics and Finance",
+      "institution": "Bocconi University",
+      "city": "Milan",
+      "country": "Italy",
+      "source_url": "https://www.unibocconi.it/en/programs/phd/admission-phd-programs/submitting-your-application",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-18T23:59:00+01:00",
+      "content_hash": "sha256:63994d195e21353bc50ad97cd9cfda1c85518385c8bb82ad88fe3e671998d761",
+      "last_verified_at": "2026-11-09T02:56:13.538Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:56:13.661Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:56:13.661Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:56:13.661Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:05:24.373Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:05:24.373Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:44.609Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:44.609Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 474
+    },
+    "opp_461980ea3ff10258": {
+      "id": "opp_461980ea3ff10258",
+      "fingerprint": "9bf009455a462f18",
+      "title": "Doctoral INPhINIT Fellowships Incoming",
+      "institution": "\"la Caixa\" Foundation",
+      "city": null,
+      "country": "Spain",
+      "source_url": "https://fundacionlacaixa.org/en/inphinit-doctoral-fellowships-call",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-12T14:00:00+01:00",
+      "content_hash": "sha256:a1e7b02cbcee795213344c0dd8c4e8977626831c513da0736f8721f0b9b15981",
+      "last_verified_at": "2026-11-09T02:57:34.589Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:57:34.724Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:57:34.725Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:57:34.725Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:05:24.691Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:05:24.691Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:44.871Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:44.871Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 475
+    },
+    "opp_15c093888065ea21": {
+      "id": "opp_15c093888065ea21",
+      "fingerprint": "f6c2f94a750c4f2a",
+      "title": "LLM in International Humanitarian Law and Human Rights",
+      "institution": "Geneva Academy of International Humanitarian Law and Human Rights",
+      "city": "Geneva",
+      "country": "Switzerland",
+      "source_url": "https://geneva-academy.ch/masters/llm-master-of-advanced-studies-in-international-humanitarian-law-and-human-rights/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-17",
+      "content_hash": "sha256:60e6c1328a4ba6cb36a92ff5f81edd595383dbd16f6e8c27c027f42aa5c89b9f",
+      "last_verified_at": "2026-11-09T02:57:34.858Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:57:35.011Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:57:35.011Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:57:35.011Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:05:24.960Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:05:24.960Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:45.155Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:45.155Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 476
+    },
+    "opp_54df89956916288e": {
+      "id": "opp_54df89956916288e",
+      "fingerprint": "771b635e6e75162e",
+      "title": "Research Scholarships Round 2 (April and July 2027 intakes)",
+      "institution": "Griffith University",
+      "city": "Brisbane",
+      "country": "Australia",
+      "source_url": "https://www.griffith.edu.au/apply/research-study",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-05",
+      "content_hash": "sha256:9cd84513d116c9645812dfe1157d2f80ede6a52e0a3afe4a5058f093aee7cfc0",
+      "last_verified_at": "2026-11-09T02:58:40.510Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:58:40.628Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:58:40.628Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:58:40.629Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:05:25.210Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:05:25.210Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:45.429Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:45.429Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 477
+    },
+    "opp_b23806d775e9094b": {
+      "id": "opp_b23806d775e9094b",
+      "fingerprint": "a03650b49b1ae3c1",
+      "title": "Graduate Research Scholarships – 2028 Main Round",
+      "institution": "University of Wollongong",
+      "city": "Wollongong",
+      "country": "Australia",
+      "source_url": "https://www.uow.edu.au/research/graduate-research/scholarships/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-23",
+      "content_hash": "sha256:9522813ef43120c6d5ff400db5694aae08b31e7402011107001ce47fb1c836a3",
+      "last_verified_at": "2026-11-09T02:58:40.768Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:58:40.907Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:58:40.907Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:58:40.907Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:05:25.470Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:05:25.470Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:45.715Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:45.715Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 478
+    },
+    "opp_6929b1098d9093c6": {
+      "id": "opp_6929b1098d9093c6",
+      "fingerprint": "4d69293bfdfc4bea",
+      "title": "Master of Education",
+      "institution": "University of the Witwatersrand (Wits), School of Education",
+      "city": "Johannesburg",
+      "country": "South Africa",
+      "source_url": "https://www.wits.ac.za/course-finder/postgraduate/humanities/master-of-education/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28",
+      "content_hash": "sha256:9da7407a3d8d6be64452e81e8dffe6c0ec02d7f417df706dd19c9cc54463617b",
+      "last_verified_at": "2026-11-09T02:58:41.045Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:58:41.190Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:58:41.190Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:58:41.191Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:06:12.517Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:06:12.518Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:45.965Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:45.965Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 479
+    },
+    "opp_46031721753ae0dd": {
+      "id": "opp_46031721753ae0dd",
+      "fingerprint": "84c617c8cf563f1b",
+      "title": "Call for Proceedings - ISMB/ECCB 2027",
+      "institution": "International Society for Computational Biology (ISCB), ISMB/ECCB 2027",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://www.iscb.org/ismbeccb2027/call-for-submissions/proceedings",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-14T23:59:00-12:00",
+      "content_hash": "sha256:19ba14e550964362d21f5d4a7f7c33eff034da7a90bf1c5b97f21bc9a7aa18df",
+      "last_verified_at": "2026-11-09T02:59:33.864Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:59:34.008Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:59:34.008Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:59:34.008Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:06:12.789Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:06:12.789Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:46.229Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:46.229Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 480
+    },
+    "opp_e227db949d3bb306": {
+      "id": "opp_e227db949d3bb306",
+      "fingerprint": "231dd6211bc788d2",
+      "title": "ECAI 2027",
+      "institution": "ECAI 2027 (European Conference on Artificial Intelligence)",
+      "city": "Athens",
+      "country": "Greece",
+      "source_url": "https://ecai2027.org/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-14",
+      "content_hash": "sha256:a2ef395bf3663ef4abdf0628ddc2f73c9604d1599b48e5592fcbe63c554754ce",
+      "last_verified_at": "2026-11-09T02:59:34.146Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T02:59:34.282Z",
+      "history": [
+        {
+          "at": "2026-11-09T02:59:34.282Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T02:59:34.283Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:06:13.069Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:06:13.070Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:46.471Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:46.471Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 481
+    },
+    "opp_4e0861ecd1965a52": {
+      "id": "opp_4e0861ecd1965a52",
+      "fingerprint": "5b10636be80bcce1",
+      "title": "Excellence Research Internship Program",
+      "institution": "EPFL",
+      "city": "Lausanne",
+      "country": "Switzerland",
+      "source_url": "https://www.epfl.ch/education/international/en/coming-to-epfl/research-internships/eligibility-and-application/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30",
+      "content_hash": "sha256:7e484be31e866794118af407793bd078dacfde54ca9d51c8879a33178a965cfa",
+      "last_verified_at": "2026-11-09T03:00:57.771Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T03:00:57.900Z",
+      "history": [
+        {
+          "at": "2026-11-09T03:00:57.900Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T03:00:57.900Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:06:13.353Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:06:13.353Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:46.732Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:46.732Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 482
+    },
+    "opp_245093f484c1297b": {
+      "id": "opp_245093f484c1297b",
+      "fingerprint": "35e5467eea9626ea",
+      "title": "Master in Law and Governance",
+      "institution": "Mohammed VI Polytechnic University (UM6P)",
+      "city": "Rabat",
+      "country": "Morocco",
+      "source_url": "https://um6p.ma/en/enrollment/admissions",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-31",
+      "content_hash": "sha256:fd53c3c5316b2e38dbe295093d2a9da31abafc0954640c9992af3a4bbee412a5",
+      "last_verified_at": "2026-11-09T03:00:58.021Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T03:00:58.142Z",
+      "history": [
+        {
+          "at": "2026-11-09T03:00:58.142Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T03:00:58.143Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:06:13.613Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:06:13.613Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:47.024Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:47.024Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 483
+    },
+    "opp_fbc39acd8d29fa2d": {
+      "id": "opp_fbc39acd8d29fa2d",
+      "fingerprint": "c096d948cf47ffe7",
+      "title": "Undergraduate Programmes – January 2027 Intake",
+      "institution": "African Leadership University (ALU)",
+      "city": "Kigali",
+      "country": "Rwanda",
+      "source_url": "https://www.alueducation.com/home/study-at-alu/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30",
+      "content_hash": "sha256:e6bb9b30e5d65794339e3aa085a4847d8f618a8d664f09007f38106981580bd8",
+      "last_verified_at": "2026-11-09T03:01:32.311Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-09T03:01:32.464Z",
+      "history": [
+        {
+          "at": "2026-11-09T03:01:32.464Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-09T03:01:32.465Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-09T03:06:13.898Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-09T03:06:13.898Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-09T03:06:47.314Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-09T03:06:47.314Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 484
     }
   },
   "seen_urls": {
@@ -31524,7 +32689,7 @@
     "https://cst.cam.ac.uk/admissions/phd": "opp_d658b6e6e3b1ab28",
     "https://postgraduate.study.cam.ac.uk/courses/directory/cscspdpcs": "opp_d658b6e6e3b1ab28",
     "https://uva.nl/en/about-the-uva/organisation/faculties/faculty-of-social-and-behavioural-sciences/education/social-sciences/scholarships.html": "opp_ec94f7bb88df7d12",
-    "https://unibocconi.it/en/programs/phd/admission-phd-programs/submitting-your-application": "opp_4428df2a7fec2b76",
+    "https://unibocconi.it/en/programs/phd/admission-phd-programs/submitting-your-application": "opp_192d1f1e2a5581d8",
     "https://pasteur.fr/en/education/ppu": "opp_8e5f2101af7d49b1",
     "https://research.pasteur.fr/en/call/master-students-call": "opp_54f12f7abd9a8fa2",
     "https://pasteur.fr/en/education/programs-and-courses/internships-and-pre-doctoral-programs/amgen-scholars-program": "opp_fa3308b0a7400588",
@@ -31657,7 +32822,7 @@
     "https://ait.ac.th/financial-aid": "opp_10325e3303977be1",
     "https://ait.ac.th/apply-online": "opp_10325e3303977be1",
     "https://massey.ac.nz/study/scholarships-and-awards/massey-university-alumni-doctoral-scholarship": "opp_100cd8083f1aff6a",
-    "https://uow.edu.au/research/graduate-research/scholarships": "opp_afefe644700b2dcc",
+    "https://uow.edu.au/research/graduate-research/scholarships": "opp_b23806d775e9094b",
     "https://stias.ac.za/fellowships/apply/iso-lomso": "opp_569a5819c9d2e40e",
     "https://twas.org/opportunities/deadlines": "opp_2e9156a733b7b51b",
     "https://royalsociety.org/grants/career-development-fellowship": "opp_5468cb783ba7dbd5",
@@ -31908,7 +33073,23 @@
     "https://fytgs.hkust-gz.edu.cn/admissions/before-submitting-an-application/admission-timeline": "opp_576786011ed5cea1",
     "https://uio.no/english/about/vacancies/academic": "opp_e87e8ae6a4193bbf",
     "https://jobbnorge.no/en/available-jobs/job/309569/postdoctoral-fellows-in-educational-measurement": "opp_e87e8ae6a4193bbf",
-    "https://werkenbij.rug.nl/en/all-vacancies": "opp_9cbd5899d015161d"
+    "https://werkenbij.rug.nl/en/all-vacancies": "opp_9cbd5899d015161d",
+    "https://polimi.it/fileadmin/user_upload/futuri_studenti/borse-di-studio/Merit_Based_Call_For_Applications_a.y._2027-2028.pdf": "opp_b663cb77f8e85f74",
+    "https://epfl.ch/education/phd/doctoral-studies-structure/epfl-phd-excellence-programme": "opp_c3ad4379776ca9d4",
+    "https://sydney.edu.au/scholarships/e/vice-chancellor-international-scholarships-scheme.html": "opp_8247cefd69ae47b7",
+    "https://gssi.it/communication/news-events/item/26427-call-open-for-the-mathematics-phd-programme-at-gssi": "opp_472bc1ef8f349371",
+    "https://admissions.ashesi.edu.gh/courses/course/251-mba-ashesi-mba": "opp_b7514f1bb67ef78a",
+    "https://wwz.unibas.ch/en/gsbe/phd": "opp_a826f6c0330a4e4a",
+    "https://gsb.uct.ac.za/academic-programmes/mba-ft": "opp_8ef5bb071b7f8bc4",
+    "https://fundacionlacaixa.org/en/inphinit-doctoral-fellowships-call": "opp_461980ea3ff10258",
+    "https://geneva-academy.ch/masters/llm-master-of-advanced-studies-in-international-humanitarian-law-and-human-rights": "opp_15c093888065ea21",
+    "https://griffith.edu.au/apply/research-study": "opp_54df89956916288e",
+    "https://wits.ac.za/course-finder/postgraduate/humanities/master-of-education": "opp_6929b1098d9093c6",
+    "https://iscb.org/ismbeccb2027/call-for-submissions/proceedings": "opp_46031721753ae0dd",
+    "https://ecai2027.org/": "opp_e227db949d3bb306",
+    "https://epfl.ch/education/international/en/coming-to-epfl/research-internships/eligibility-and-application": "opp_4e0861ecd1965a52",
+    "https://um6p.ma/en/enrollment/admissions": "opp_245093f484c1297b",
+    "https://alueducation.com/home/study-at-alu": "opp_fbc39acd8d29fa2d"
   },
-  "last_offer_number": 466
+  "last_offer_number": 484
 }
