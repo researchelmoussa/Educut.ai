@@ -250,6 +250,8 @@ function scoreData(){
 function scoreTable(S){
   const sum=a=>a.reduce((x,y)=>x+y,0);
   let h="<thead><tr><th>Method</th><th>Total score</th><th>Mean score / snippet</th><th>Omissions (−1)</th><th>Correct (0)</th><th>Hallucinations (+1)</th><th>% Omission</th><th>% Correct</th><th>% Hallucination</th><th>Snippets with score 0</th></tr></thead><tbody>";
+  {const tg=DATA.articles["Prediction"].reduce((x,g)=>x+g.length,0);
+    h+=`<tr class="gold"><td class="k"><span class="sw" style="width:14px;border-top:2px dashed var(--gold)"></span>Gold (Prediction)</td><td><b>0</b></td><td>0.00</td><td>0</td><td>${tg}</td><td>0</td><td><b>0.0%</b></td><td><b>100.0%</b></td><td><b>0.0%</b></td><td>${N}</td></tr>`;}
   for(const s of S){const T=sum(s.sc),O=sum(s.fn),C=sum(s.tp),H=sum(s.fp),A=O+C+H,p=v=>(100*v/A).toFixed(1)+"%";
     h+=`<tr><td class="k"><span class="sw" style="width:14px;border-top:2px solid var(${s.c})"></span>${s.k}</td><td><b>${T}</b></td><td>${(T/N).toFixed(2)}</td><td>${O}</td><td>${C}</td><td>${H}</td><td><b>${p(O)}</b></td><td><b>${p(C)}</b></td><td><b>${p(H)}</b></td><td>${s.sc.filter(v=>v===0).length}</td></tr>`;}
   document.getElementById("scoretab").innerHTML=h+"</tbody>";
