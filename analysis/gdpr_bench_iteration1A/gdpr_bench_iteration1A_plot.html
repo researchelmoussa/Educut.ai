@@ -58,6 +58,12 @@ td.red,td.red b{color:var(--red)}
 #halltab th{white-space:nowrap}
 #halltab td:first-child,#halltab th:first-child{text-align:left}
 #halltab td.hc{background:color-mix(in srgb,var(--o3) 14%,transparent)}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11px;font-weight:500;white-space:nowrap}
+.pill.high{background:var(--o3);color:#fff}
+.pill.occ{background:var(--o2);color:#2a1206}
+.pill.rare{background:var(--o1);color:#2a1206}
+.pill.never{background:var(--q0);color:var(--ink-2);border:1px solid var(--line)}
+#ovtab td:nth-child(2),#ovtab th:nth-child(2){text-align:left}
 </style>
 <div class="wrap">
   <header>
@@ -104,6 +110,10 @@ td.red,td.red b{color:var(--red)}
     <h2 style="margin-top:14px">Hallucinations per article</h2>
     <p class="def">For each method and each of the 23 articles: the number of times the method predicted that article for a snippet whose gold label does not contain it (hallucination), and below it that article's share of the method's total hallucinations.</p>
     <div class="tw"><table id="halltab"></table></div>
+    <p class="def" style="margin-top:6px"><b>How to read a cell</b>, e.g. Art. 5 · Baseline · 78 · 18.8%: Baseline hallucinated Art. 5 78 times (it predicted Art. 5 for 78 snippets whose gold label does not contain it), and these 78 make up 18.8% of all Baseline hallucinations (78 ÷ 415). It is not the share of Art. 5 predictions that are wrong: that is the hallucination rate, 78 ÷ 122 = 64% for Baseline.</p>
+    <h2 style="margin-top:14px">Overall hallucination per article (all 6 methods)</h2>
+    <p class="def">Hallucinations summed over the 6 methods, with each article classed as <b>High</b> (100 or more hallucinations), <b>Occasional</b> (10–99), <b>Rare</b> (1–9) or <b>Never</b> (0). Share = the article's part of all hallucinations. Hallucination rate = hallucinations ÷ times predicted (how often a prediction of that article is wrong).</p>
+    <div class="tw"><table id="ovtab"></table></div>
     <div id="score" role="img" aria-label="Six bar charts, one per method, showing omitted, correct and hallucinated articles and the net score for each snippet"></div>
   </section>
   <p class="note">Sources: <code>*/output/predictions.json</code> (gold), <code>baseline_calls.jsonl</code>, <code>description_calls.jsonl</code>, <code>function_calls.jsonl</code>, <code>cove_final_calls.jsonl</code>, <code>refine_r2_calls.jsonl</code> (last <code>ANSWER:</code> line), <code>sr_cove_final_calls.jsonl</code>. CoVe steps run only on non-zero answers, so snippets missing from the CoVe final files count as 0. Counts match each set-up's <code>predictions.json</code> for all 887 snippets.</p>
@@ -302,7 +312,20 @@ function hallTable(){
       `<td><b>${tot}</b><br><span class="ok">100%</span></td></tr>`;}
   document.getElementById("halltab").innerHTML=h+"</tbody>";
 }
-function drawScore(){const S=scoreData();scoreTable(S);hallTable();scorePlot(S);}
+function overallTable(){
+  const G=DATA.articles["Prediction"], M=ORDER.slice(1).map(o=>o[0]);
+  const R=ARTS.map(a=>{let p=0,c=0,h=0,mh=0;for(const k of M){let any=false;DATA.articles[k].forEach((pr,i)=>{if(pr.includes(a)){p++;if(G[i].includes(a))c++;else{h++;any=true;}}});if(any)mh++;}
+    return {a,g:G.filter(x=>x.includes(a)).length,p,c,h,mh};});
+  const tot=R.reduce((s,r)=>s+r.h,0);
+  const cls=h=>h>=100?["high","High"]:h>=10?["occ","Occasional"]:h>=1?["rare","Rare"]:["never","Never"];
+  R.sort((x,y)=>y.h-x.h||y.g-x.g||x.a-y.a);
+  let h="<thead><tr><th>Class</th><th>Article</th><th>Gold snippets</th><th>Times predicted</th><th>Correct</th><th>Hallucinations</th><th>Share of all hallucinations</th><th>Hallucination rate</th><th>Methods that hallucinate it</th></tr></thead><tbody>";
+  for(const r of R){const [c,l]=cls(r.h);
+    h+=`<tr><td><span class="pill ${c}">${l}</span></td><td><b>Art. ${r.a}</b> <span class="ok">${ART[r.a]}</span></td><td>${r.g}</td><td>${r.p}</td><td>${r.c}</td><td><b>${r.h}</b></td><td>${(100*r.h/tot).toFixed(1)}%</td><td>${r.p?(100*r.h/r.p).toFixed(0)+"%":"–"}</td><td>${r.mh} / 6</td></tr>`;}
+  h+=`<tr><td></td><td><b>Total</b></td><td>${R.reduce((s,r)=>s+r.g,0)}</td><td>${R.reduce((s,r)=>s+r.p,0)}</td><td>${R.reduce((s,r)=>s+r.c,0)}</td><td><b>${tot}</b></td><td>100%</td><td>${(100*tot/R.reduce((s,r)=>s+r.p,0)).toFixed(0)}%</td><td></td></tr>`;
+  document.getElementById("ovtab").innerHTML=h+"</tbody>";
+}
+function drawScore(){const S=scoreData();scoreTable(S);hallTable();overallTable();scorePlot(S);}
 totals(); draw(); drawStats(); drawArt(); drawScore();
 const redraw=()=>{draw();bars(stats());const s=artStats();heat(s);heat2(s);heat3(s);scorePlot(scoreData());};
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change",redraw);
