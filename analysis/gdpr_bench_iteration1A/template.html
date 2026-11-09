@@ -45,6 +45,7 @@ td:first-child,th:first-child{text-align:left}
 td.k{display:flex;align-items:center;gap:6px}
 tr.gold td{color:var(--ink-2)}
 td b{font-weight:600}
+#score{width:100%;height:1500px}
 #heat,#heat2,#heat3{width:100%;height:640px}
 .key{display:inline-flex;align-items:center;gap:6px;margin-right:14px}
 .key i{width:12px;height:12px;border-radius:2px;display:inline-block}
@@ -89,6 +90,13 @@ th.sub{font-size:10px}
     <div id="heat3" role="img" aria-label="Heatmap of per-article prediction counts, with cells where gold exceeds the method highlighted in yellow"></div>
   </section>
   <section class="panel"><div id="chart" role="img" aria-label="Line chart of article count per snippet for gold labels and six prompting set-ups"></div></section>
+  <section class="panel" style="padding:16px">
+    <h2>Score per snippet: omission vs. hallucination, by method</h2>
+    <p class="def">For each snippet, every gold article the method missed is an <b>omission (−1)</b>, every predicted article not in gold is a <b>hallucination (+1)</b>, and every correctly predicted article counts <b>0</b>. Score = hallucinations − omissions. Example: gold = {4, 5}, method = {7} → 2 omissions + 1 hallucination = <b>−1</b>. Bars: yellow below zero = omitted articles; blue above zero = correct articles (0 points, shown for context); orange stacked on top = hallucinated articles; black dot = net score. All 6 charts share the x axis: zoom or drag the slider at the bottom to move them together.</p>
+    <p class="def"><span class="key"><i style="background:var(--y3)"></i>Omission (−1 each)</span><span class="key"><i style="background:var(--s1)"></i>Correct prediction (0)</span><span class="key"><i style="background:var(--o3)"></i>Hallucination (+1 each)</span><span class="key"><i style="background:var(--ink);border-radius:50%"></i>Score</span></p>
+    <div class="tw"><table id="scoretab"></table></div>
+    <div id="score" role="img" aria-label="Six bar charts, one per method, showing omitted, correct and hallucinated articles and the net score for each snippet"></div>
+  </section>
   <p class="note">Sources: <code>*/output/predictions.json</code> (gold), <code>baseline_calls.jsonl</code>, <code>description_calls.jsonl</code>, <code>function_calls.jsonl</code>, <code>cove_final_calls.jsonl</code>, <code>refine_r2_calls.jsonl</code> (last <code>ANSWER:</code> line), <code>sr_cove_final_calls.jsonl</code>. CoVe steps run only on non-zero answers, so snippets missing from the CoVe final files count as 0. Counts match each set-up's <code>predictions.json</code> for all 887 snippets.</p>
 </div>
 <script>__PLOTLY__</script>
@@ -224,8 +232,48 @@ function heatCmp(id,{rows,M},isHi,pfx){
 const heat2=s=>heatCmp("heat2",s,(v,g)=>v>g,"--o");
 const heat3=s=>heatCmp("heat3",s,(v,g)=>v<g,"--y");
 function drawArt(){const s=artStats();artTable(s);heat(s);heat2(s);heat3(s);}
-totals(); draw(); drawStats(); drawArt();
-const redraw=()=>{draw();bars(stats());const s=artStats();heat(s);heat2(s);heat3(s);};
+function scoreData(){
+  const G=DATA.articles["Prediction"];
+  return ORDER.slice(1).map(([k,c])=>{const P=DATA.articles[k];const tp=[],fp=[],fn=[],sc=[];
+    P.forEach((p,i)=>{const g=new Set(G[i]),ps=new Set(p);const a=p.filter(x=>g.has(x)).length,h=p.length-a,o=G[i].filter(x=>!ps.has(x)).length;
+      tp.push(a);fp.push(h);fn.push(o);sc.push(h-o);});
+    return {k,c,tp,fp,fn,sc};});
+}
+function scoreTable(S){
+  const sum=a=>a.reduce((x,y)=>x+y,0);
+  let h="<thead><tr><th>Method</th><th>Total score</th><th>Mean score / snippet</th><th>Omissions (−1)</th><th>Correct (0)</th><th>Hallucinations (+1)</th><th>Snippets with score 0</th></tr></thead><tbody>";
+  for(const s of S){const T=sum(s.sc);h+=`<tr><td class="k"><span class="sw" style="width:14px;border-top:2px solid var(${s.c})"></span>${s.k}</td><td><b>${T}</b></td><td>${(T/N).toFixed(2)}</td><td>${sum(s.fn)}</td><td>${sum(s.tp)}</td><td>${sum(s.fp)}</td><td>${s.sc.filter(v=>v===0).length}</td></tr>`;}
+  document.getElementById("scoretab").innerHTML=h+"</tbody>";
+}
+function scorePlot(S){
+  const ink=css("--ink"),ink2=css("--ink-2"),grid=css("--grid"),panel=css("--panel"),line=css("--line");
+  const n=S.length, gap=0.035, hgt=(1-0.06-gap*(n-1))/n;
+  const traces=[], layout={paper_bgcolor:panel,plot_bgcolor:panel,font:{family:css("--sans"),color:ink2,size:12},barmode:"relative",bargap:0.15,
+    margin:{l:60,r:16,t:30,b:10},hovermode:"x unified",showlegend:false,
+    hoverlabel:{bgcolor:panel,bordercolor:line,font:{color:ink,family:css("--mono"),size:11}},annotations:[]};
+  const lo=Math.min(...S.flatMap(s=>s.fn.map(v=>-v))), hi=Math.max(...S.flatMap(s=>s.tp.map((v,i)=>v+s.fp[i])));
+  S.forEach((s,j)=>{
+    const ax=j===n-1?"":String(j+2), xa="x"+ax, ya="y"+ax;
+    const top=1-j*(hgt+gap), bot=top-hgt;
+    const G=DATA.articles["Prediction"],P=DATA.articles[s.k];
+    const cd=P.map((p,i)=>[G[i].length?G[i].join(", "):"–",p.length?p.join(", "):"0",s.sc[i]]);
+    const bar=(name,y,col)=>({type:"bar",name,x:short,y,xaxis:xa,yaxis:ya,marker:{color:col,line:{width:0}},hovertemplate:name+": %{y}<extra></extra>"});
+    traces.push(bar("Omission",s.fn.map(v=>-v),css("--y3")),bar("Correct",s.tp,css("--s1")),bar("Hallucination",s.fp,css("--o3")),
+      {type:"scatter",mode:"markers",name:"Score",x:short,y:s.sc,xaxis:xa,yaxis:ya,marker:{color:ink,size:5},customdata:cd,
+       hovertemplate:"<b>Score: %{y}</b><br>gold [%{customdata[0]}]<br>pred [%{customdata[1]}]<extra></extra>"});
+    layout["yaxis"+ax]={domain:[Math.max(0,bot),top],range:[lo-0.5,hi+0.5],dtick:2,gridcolor:grid,zeroline:true,zerolinecolor:ink2,zerolinewidth:1,fixedrange:true,tickfont:{size:10}};
+    const xo={type:"category",anchor:ya,range:[-0.5,79.5],showgrid:false,linecolor:line};
+    if(j===n-1){Object.assign(xo,{tickangle:-45,tickfont:{size:10,family:css("--mono")},nticks:24,
+      rangeslider:{visible:true,thickness:0.04,bgcolor:css("--bg"),bordercolor:line,borderwidth:1}});}
+    else Object.assign(xo,{matches:"x",showticklabels:false});
+    layout["xaxis"+ax]=xo;
+    layout.annotations.push({xref:"paper",yref:"paper",x:0,y:top,xanchor:"left",yanchor:"bottom",text:"<b>"+s.k+"</b>",showarrow:false,font:{color:ink,size:12}});
+  });
+  Plotly.react("score",traces,layout,{responsive:true,displaylogo:false,modeBarButtonsToRemove:["lasso2d","select2d","toImage"]});
+}
+function drawScore(){const S=scoreData();scoreTable(S);scorePlot(S);}
+totals(); draw(); drawStats(); drawArt(); drawScore();
+const redraw=()=>{draw();bars(stats());const s=artStats();heat(s);heat2(s);heat3(s);scorePlot(scoreData());};
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change",redraw);
 new MutationObserver(redraw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
 </script>
