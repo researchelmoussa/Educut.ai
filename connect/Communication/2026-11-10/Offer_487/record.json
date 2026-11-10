@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "Research Grants on University Ecosystems",
+    "evidence_url": "https://codesria.org/call-for-proposals-research-grants-on-university-ecosystems/",
+    "evidence_quote": "Call for Proposals: Research Grants on University Ecosystems"
+  },
+  "institution": {
+    "name": "Council for the Development of Social Science Research in Africa (CODESRIA)",
+    "website": "https://codesria.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://apply.codesria.org/",
+  "source_url": "https://codesria.org/call-for-proposals-research-grants-on-university-ecosystems/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Higher education studies, social sciences",
+  "seniority": "Researchers (individual or teams of 3 to 5)",
+  "qualifications": [
+    "Affiliation with a recognised African higher education or research institution, with an affiliation or endorsement letter",
+    "Diaspora scholars may apply in collaboration with a colleague at an African-based institution",
+    "Individual or collaborative proposals (teams of 3 to 5 members)"
+  ],
+  "skills": [],
+  "description_short": "CODESRIA invites proposals from researchers affiliated with African universities and research institutions for research grants on university ecosystems, including higher education, gender and academic freedom. Applications are submitted through the CODESRIA portal by 16 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-16",
+    "timezone": null,
+    "evidence_url": "https://codesria.org/call-for-proposals-research-grants-on-university-ecosystems/",
+    "evidence_quote": "The deadline for submission of applications is 16 January 2027. Late applications will not be considered."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CODESRIA call page (search results) states the 16 January 2027 deadline",
+    "CODESRIA application portal grants page (search results) lists 'Next deadline: Jan 16, 2027'",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Location of the research is the applicant's African institution; no single city or country applies (CODESRIA's own seat not stated in the evidence)",
+    "Grant amounts appear in search summaries (USD 5,000 to USD 15,000) but no verbatim quote was captured, so compensation is null",
+    "Time zone of the deadline not stated"
+  ],
+  "id": "opp_9a5f76db1d06192e",
+  "fingerprint": "e95ee01f322ec7c0",
+  "discovered_at": "2026-11-10T03:02:32.696Z",
+  "last_verified_at": "2026-11-10T03:02:32.696Z",
+  "content_hash": "sha256:c51681c9b6bf199f710c2c6f8afa23d0996e34c176ba509dd8a53defb630daa0"
+}

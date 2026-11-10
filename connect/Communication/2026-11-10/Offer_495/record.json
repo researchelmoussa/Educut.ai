@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doctorado en Estudios Urbanos y Ambientales",
+    "evidence_url": "https://cedua.colmex.mx/es/doctorado/estudios-urbanos-y-ambientales/admision-al-programa",
+    "evidence_quote": "Doctorado en Estudios Urbanos y Ambientales"
+  },
+  "institution": {
+    "name": "El Colegio de México, Centro de Estudios Demográficos, Urbanos y Ambientales (CEDUA)",
+    "website": "https://cedua.colmex.mx",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cedua.colmex.mx/es/doctorado/estudios-urbanos-y-ambientales/admision-al-programa",
+  "source_url": "https://cedua.colmex.mx/es/doctorado/estudios-urbanos-y-ambientales/admision-al-programa",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Mexico City",
+    "country": "Mexico",
+    "country_code": "MX"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Urban and environmental studies",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Take the EXANI-III national postgraduate entrance exam in the February 2027 national sitting"
+  ],
+  "skills": [],
+  "description_short": "El Colegio de México's Centre for Demographic, Urban and Environmental Studies has opened admission to its Doctorate in Urban and Environmental Studies. The call runs from 1 September 2026 to 29 January 2027; applicants also sit the EXANI-III exam in February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-29",
+    "timezone": "America/Mexico_City",
+    "evidence_url": "https://cedua.colmex.mx/es/doctorado/estudios-urbanos-y-ambientales/admision-al-programa",
+    "evidence_quote": "Duración de convocatoria: 01 de septiembre de 2026 a 29 de enero de 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "CEDUA admission page (search results) gives the call period 1 September 2026 to 29 January 2027",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "City (Mexico City) not stated in the captured evidence quotes",
+    "Funding not captured",
+    "Application form is on admision.colmex.mx; application_url points to the programme's official admission page"
+  ],
+  "id": "opp_20885c383b30b95e",
+  "fingerprint": "6d40700dba02d798",
+  "discovered_at": "2026-11-10T03:02:33.603Z",
+  "last_verified_at": "2026-11-10T03:02:40.032Z",
+  "content_hash": "sha256:536cfacb70e9710034da5e16c7cb5227ed688047b451f834116fad2c9ac1edb4"
+}

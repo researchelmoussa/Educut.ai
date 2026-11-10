@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "International Postgraduate Programmes, First Semester 2027",
+    "evidence_url": "https://www.tm.mahidol.ac.th/bstm/?q=Application_Process",
+    "evidence_quote": "Application : 1 October 2026 – 31 May 2027"
+  },
+  "institution": {
+    "name": "Faculty of Tropical Medicine, Mahidol University (Mahidol Bangkok School of Tropical Medicine)",
+    "website": "https://www.tm.mahidol.ac.th",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.tm.mahidol.ac.th/bstm/?q=Application_Process",
+  "source_url": "https://www.tm.mahidol.ac.th/bstm/?q=Application_Process",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Bangkok",
+    "country": "Thailand",
+    "country_code": "TH"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Tropical medicine and public health",
+  "seniority": "Master's, PhD and diploma",
+  "qualifications": [
+    "Translated degree certificates and transcripts, photo, passport copy and CV"
+  ],
+  "skills": [],
+  "description_short": "The Mahidol Bangkok School of Tropical Medicine accepts applications from 1 October 2026 to 31 May 2027 for first-semester 2027 admission to its international postgraduate programmes, including the PhD and MSc in Tropical Medicine and the Diploma in Tropical Medicine and Hygiene.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-05-31",
+    "timezone": "Asia/Bangkok",
+    "evidence_url": "https://www.tm.mahidol.ac.th/bstm/?q=Application_Process",
+    "evidence_quote": "Application : 1 October 2026 – 31 May 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Faculty application-process page (search results) lists the first-semester 2027 window as 1 October 2026 - 31 May 2027",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The window is faculty-wide; individual programmes may set different dates",
+    "The 'How to Apply' page header still shows an older 31 May 2026 deadline",
+    "Title is a descriptive label for the faculty-wide admission round, not a single programme name"
+  ],
+  "id": "opp_4c1337300cfaaf1c",
+  "fingerprint": "e4665f88195ba065",
+  "discovered_at": "2026-11-10T03:02:33.278Z",
+  "last_verified_at": "2026-11-10T03:02:33.278Z",
+  "content_hash": "sha256:631c2e6ca7ddf7bba2f9c5d60b52ea75c17b2e13ddbe703b9203d4f12edae394"
+}

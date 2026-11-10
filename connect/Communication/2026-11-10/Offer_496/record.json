@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Maestría en Ciencia Política",
+    "evidence_url": "https://cei.colmex.mx/convocatorias.html",
+    "evidence_quote": "Maestría en Ciencia Política"
+  },
+  "institution": {
+    "name": "El Colegio de México, Centro de Estudios Internacionales (CEI)",
+    "website": "https://cei.colmex.mx",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cei.colmex.mx/convocatorias.html",
+  "source_url": "https://cei.colmex.mx/convocatorias.html",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Mexico City",
+    "country": "Mexico",
+    "country_code": "MX"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Political science",
+  "seniority": "Master's",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "El Colegio de México's Centre for International Studies has opened its call for the Master's in Political Science. The call opened on 23 October 2026 and closes on 19 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-19",
+    "timezone": "America/Mexico_City",
+    "evidence_url": "https://cei.colmex.mx/convocatorias.html",
+    "evidence_quote": "Inicio de convocatoria: 23 de octubre de 2026 Fin de convocatoria: 19 de febrero de 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "CEI 'Convocatorias abiertas' page (search results) gives the call period 23 October 2026 to 19 February 2027",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Cohort years and start date not captured",
+    "Eligibility requirements not captured",
+    "City (Mexico City) not stated in the captured evidence quotes",
+    "Application form is on admision.colmex.mx; application_url points to the programme's official admission page"
+  ],
+  "id": "opp_5a6fd11def070ce8",
+  "fingerprint": "09e1ee977f6bc6ee",
+  "discovered_at": "2026-11-10T03:02:33.709Z",
+  "last_verified_at": "2026-11-10T03:02:40.135Z",
+  "content_hash": "sha256:b0961303cbbc017ccfb90246272a13a41c33758d38f0d277aa0376b16951fa49"
+}

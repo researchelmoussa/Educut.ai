@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Undergraduate Admissions, Class of 2031 (Fall Cycle)",
+    "evidence_url": "https://fulbright.edu.vn/apply-to-us",
+    "evidence_quote": "The timelines for the Class of 2031 are as follows: Fall Cycle"
+  },
+  "institution": {
+    "name": "Fulbright University Vietnam",
+    "website": "https://fulbright.edu.vn",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://fulbright.edu.vn/apply-to-us",
+  "source_url": "https://fulbright.edu.vn/apply-to-us",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "country_code": "VN"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Liberal arts and sciences (undergraduate)",
+  "seniority": "Undergraduate (Bachelor's)",
+  "qualifications": [
+    "One Admissions Application per applicant for the Class of 2031",
+    "Application processing fee of VND 3,000,000",
+    "Scholarship Application can only be submitted after the Admissions Application, by the same deadline"
+  ],
+  "skills": [],
+  "description_short": "Fulbright University Vietnam's Fall Cycle for its undergraduate Class of 2031 opened October 3, 2026 and closes at 5:00 PM on January 26, 2027. Scholarship applicants submit both the admissions and scholarship applications by the same deadline.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-26T17:00:00+07:00",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "evidence_url": "https://fulbright.edu.vn/apply-to-us",
+    "evidence_quote": "Fall Cycle, applications open October 03, 2026, applications close 5:00 PM on January 26, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official 'How To Apply' and scholarship pages (search results) give the Class of 2031 Fall Cycle as open from October 3, 2026 to 5:00 PM January 26, 2027",
+    "A Spring Cycle opens February 17, 2027 and closes May 15, 2027",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "City not stated in the captured evidence quotes",
+    "Scholarship award ranges were shown in search summaries but are not included in the description"
+  ],
+  "id": "opp_fb67876da95c37e4",
+  "fingerprint": "7fb19500fd676509",
+  "discovered_at": "2026-11-10T03:02:32.969Z",
+  "last_verified_at": "2026-11-10T03:02:32.969Z",
+  "content_hash": "sha256:186270d5b0cbbcb79e8353303721d540ca6342e7a2adcbce1c498ee3dcbd9e48"
+}
