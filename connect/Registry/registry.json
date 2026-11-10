@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-09T03:06:47.314Z",
+  "updated_at": "2026-11-10T03:08:32.901Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -5733,7 +5733,7 @@
       "deadline": "2026-11-08",
       "content_hash": "sha256:5ee5ff299c4e305097d45eb20e0e706381b362a251f3dd9b78ab0b55b4a2eb66",
       "last_verified_at": "2026-10-17T02:00:21.983Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T02:00:22.154Z",
       "history": [
         {
@@ -5777,6 +5777,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-10T02:49:47.059Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-08 passed"
         }
       ],
       "offer_number": 61
@@ -5864,7 +5871,7 @@
       "deadline": "2026-11-08",
       "content_hash": "sha256:935eb1dbf338266ba56e240af70c1a0c5c6b01e2e998cc3203ef0530647a3d45",
       "last_verified_at": "2026-10-17T02:00:22.682Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T02:00:22.868Z",
       "history": [
         {
@@ -5908,6 +5915,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-10T02:49:47.059Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-08 passed"
         }
       ],
       "offer_number": 63
@@ -9639,7 +9653,7 @@
       "deadline": "2026-11-09T17:00:00+00:00",
       "content_hash": "sha256:5cc0ec84b97269c0b394b4a48f40b9ce7f9521cc54f1d941d30953b82141cf03",
       "last_verified_at": "2026-10-21T01:59:20.877Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-21T01:59:30.260Z",
       "history": [
         {
@@ -9683,6 +9697,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-10T02:49:47.059Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-09T17:00:00+00:00 passed"
         }
       ],
       "offer_number": 122
@@ -22755,7 +22776,7 @@
       "deadline": "2026-11-09T12:00:00+00:00",
       "content_hash": "sha256:7ee96d147b174681fd1acc10030552bdcdbd9ab91f042efd79ab1de5e81446f8",
       "last_verified_at": "2026-10-30T03:20:10.248Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-30T03:20:26.250Z",
       "history": [
         {
@@ -22799,6 +22820,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-10T02:49:47.060Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-09T12:00:00+00:00 passed"
         }
       ],
       "offer_number": 334
@@ -24028,7 +24056,7 @@
       "deadline": "2026-11-09T17:00:00+00:00",
       "content_hash": "sha256:f3fa69d0023c439442d3f75dc8bee8f260f633e199914c1ad9e20e2281e8569b",
       "last_verified_at": "2026-10-31T03:16:54.259Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-31T03:17:06.667Z",
       "history": [
         {
@@ -24072,6 +24100,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-10T02:49:47.060Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-09T17:00:00+00:00 passed"
         }
       ],
       "offer_number": 354
@@ -32383,6 +32418,1122 @@
         }
       ],
       "offer_number": 484
+    },
+    "opp_feb37fd63f6e657f": {
+      "id": "opp_feb37fd63f6e657f",
+      "fingerprint": "e61b51c5abe0a41d",
+      "title": "PhD Computer Science",
+      "institution": "Lahore University of Management Sciences (LUMS)",
+      "city": "Lahore",
+      "country": "Pakistan",
+      "source_url": "https://lums.edu.pk/programmes/phd-computer-science",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://lums.edu.pk/programmes/phd-computer-science",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-06T17:00:00+05:00",
+      "content_hash": "sha256:9c12af8f8c781ca9cc1c81f350695192e9b2c728a3e60145976d8a23739cb30b",
+      "last_verified_at": "2026-11-10T03:02:32.482Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:44.543Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:44.543Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:44.544Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:07:45.743Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:07:45.743Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:28.659Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:28.659Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 485
+    },
+    "opp_bcb776a9f3dcc804": {
+      "id": "opp_bcb776a9f3dcc804",
+      "fingerprint": "f8e25fac138601d4",
+      "title": "22nd Singapore Graduate Forum on Southeast Asian Studies",
+      "institution": "Asia Research Institute, National University of Singapore",
+      "city": "Singapore",
+      "country": "Singapore",
+      "source_url": "https://ari.nus.edu.sg/events/22nd-singapore-graduate-forum/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://ari.nus.edu.sg/events/22nd-singapore-graduate-forum/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-04",
+      "content_hash": "sha256:261ad56cead19f5707c58f75eab46a0302adba6e987a78151133a5d3ade1bf99",
+      "last_verified_at": "2026-11-10T03:02:32.594Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:44.678Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:44.678Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:44.679Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:07:46.023Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:07:46.023Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:28.904Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:28.905Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 486
+    },
+    "opp_9a5f76db1d06192e": {
+      "id": "opp_9a5f76db1d06192e",
+      "fingerprint": "e95ee01f322ec7c0",
+      "title": "Research Grants on University Ecosystems",
+      "institution": "Council for the Development of Social Science Research in Africa (CODESRIA)",
+      "city": null,
+      "country": null,
+      "source_url": "https://codesria.org/call-for-proposals-research-grants-on-university-ecosystems/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://apply.codesria.org/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-16",
+      "content_hash": "sha256:c51681c9b6bf199f710c2c6f8afa23d0996e34c176ba509dd8a53defb630daa0",
+      "last_verified_at": "2026-11-10T03:02:32.696Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:44.813Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:44.813Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:44.813Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:07:46.284Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:07:46.284Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:29.145Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:29.146Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 487
+    },
+    "opp_788752789a780ad4": {
+      "id": "opp_788752789a780ad4",
+      "fingerprint": "cd1eddc8f544dbe6",
+      "title": "Master's Programs (MP1, MP2), Admission 2027-2028",
+      "institution": "National Graduate Institute for Policy Studies (GRIPS)",
+      "city": "Tokyo",
+      "country": "Japan",
+      "source_url": "https://www.grips.ac.jp/en/admissions/apply/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.grips.ac.jp/en/admissions/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-30T17:00:00+09:00",
+      "content_hash": "sha256:39b2df748111824c86cd7accc432d3d30d1f77f29e3548676ea4ab4835f8306c",
+      "last_verified_at": "2026-11-10T03:02:32.826Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:44.939Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:44.939Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:44.939Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:07:46.589Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:07:46.589Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:29.389Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:29.389Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 488
+    },
+    "opp_fb67876da95c37e4": {
+      "id": "opp_fb67876da95c37e4",
+      "fingerprint": "7fb19500fd676509",
+      "title": "Undergraduate Admissions, Class of 2031 (Fall Cycle)",
+      "institution": "Fulbright University Vietnam",
+      "city": "Ho Chi Minh City",
+      "country": "Vietnam",
+      "source_url": "https://fulbright.edu.vn/apply-to-us",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://fulbright.edu.vn/apply-to-us",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-26T17:00:00+07:00",
+      "content_hash": "sha256:186270d5b0cbbcb79e8353303721d540ca6342e7a2adcbce1c498ee3dcbd9e48",
+      "last_verified_at": "2026-11-10T03:02:32.969Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:45.087Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:45.087Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:45.087Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:07:46.891Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:07:46.891Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:29.636Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:29.637Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 489
+    },
+    "opp_ec16da2a0142a888": {
+      "id": "opp_ec16da2a0142a888",
+      "fingerprint": "f9dd7e3e94c17069",
+      "title": "Maestría en Métodos para el Análisis de Políticas Públicas (METPOL)",
+      "institution": "Centro de Investigación y Docencia Económicas (CIDE)",
+      "city": null,
+      "country": "Mexico",
+      "source_url": "https://www.cide.edu/wp-content/uploads/2026/09/Convocatoria-METPOL-2027.pdf",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.cide.edu/admisiones/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-15",
+      "content_hash": "sha256:f5a0392f3c1327f725fcd9ae819f8bfa3b4cf76e44f9cef3dc667e93c5ffc4f7",
+      "last_verified_at": "2026-11-10T03:02:33.072Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:45.222Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:45.222Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:45.222Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:07:47.165Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:07:47.165Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:29.902Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:29.902Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 490
+    },
+    "opp_22f4451aef0a7283": {
+      "id": "opp_22f4451aef0a7283",
+      "fingerprint": "cbfe7c306ebc9090",
+      "title": "Postgraduate Diploma Programme",
+      "institution": "The Abdus Salam International Centre for Theoretical Physics (ICTP)",
+      "city": "Trieste",
+      "country": "Italy",
+      "source_url": "https://www.ictp.it/opportunity/ictp-postgraduate-diploma-programme",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.ictp.it/opportunity/ictp-postgraduate-diploma-programme",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28",
+      "content_hash": "sha256:849dfe7352b2f2ddb0aaf41914e867002f064b4ef7f1987e79d05db08308362c",
+      "last_verified_at": "2026-11-10T03:02:33.175Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:45.383Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:45.383Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:45.383Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:05:52.753Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:05:52.753Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:30.147Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:30.148Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 491
+    },
+    "opp_4c1337300cfaaf1c": {
+      "id": "opp_4c1337300cfaaf1c",
+      "fingerprint": "e4665f88195ba065",
+      "title": "International Postgraduate Programmes, First Semester 2027",
+      "institution": "Faculty of Tropical Medicine, Mahidol University (Mahidol Bangkok School of Tropical Medicine)",
+      "city": "Bangkok",
+      "country": "Thailand",
+      "source_url": "https://www.tm.mahidol.ac.th/bstm/?q=Application_Process",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.tm.mahidol.ac.th/bstm/?q=Application_Process",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-31",
+      "content_hash": "sha256:631c2e6ca7ddf7bba2f9c5d60b52ea75c17b2e13ddbe703b9203d4f12edae394",
+      "last_verified_at": "2026-11-10T03:02:33.278Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:45.507Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:45.507Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:45.508Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:05:53.077Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:05:53.078Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:30.389Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:30.389Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 492
+    },
+    "opp_c7662d93938143ba": {
+      "id": "opp_c7662d93938143ba",
+      "fingerprint": "b73e452c8748432c",
+      "title": "RIKEN CBS Summer Program 2027",
+      "institution": "RIKEN Center for Brain Science (RIKEN CBS)",
+      "city": "Wako",
+      "country": "Japan",
+      "source_url": "https://cbs.riken.jp/en/summer/apply.html",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://cbs.riken.jp/en/summer/apply.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08T09:00:00+09:00",
+      "content_hash": "sha256:6137c6b39936e752e8e616c1173ba7f60b20bd320e53a057336092ab529b02e3",
+      "last_verified_at": "2026-11-10T03:02:33.384Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:45.641Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:45.641Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:45.641Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:05:53.386Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:05:53.386Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:30.624Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:30.624Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 493
+    },
+    "opp_efeaea12b5d4ee4c": {
+      "id": "opp_efeaea12b5d4ee4c",
+      "fingerprint": "5289403ca0c0b8a8",
+      "title": "Master of Science in Biomedical Sciences",
+      "institution": "Mohammed Bin Rashid University of Medicine and Health Sciences (MBRU)",
+      "city": "Dubai",
+      "country": "United Arab Emirates",
+      "source_url": "https://www.mbru.ac.ae/programs/master-of-science-in-biomedical-sciences/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.mbru.ac.ae/programs/master-of-science-in-biomedical-sciences/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-07-12",
+      "content_hash": "sha256:b4cc4261ab2b90d4aa04b5efb241c652ef6812c9b6d54a780940a722d1cbc847",
+      "last_verified_at": "2026-11-10T03:02:33.495Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:45.770Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:45.770Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:45.771Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:05:53.672Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:05:53.672Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:30.866Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:30.867Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 494
+    },
+    "opp_20885c383b30b95e": {
+      "id": "opp_20885c383b30b95e",
+      "fingerprint": "6d40700dba02d798",
+      "title": "Doctorado en Estudios Urbanos y Ambientales",
+      "institution": "El Colegio de México, Centro de Estudios Demográficos, Urbanos y Ambientales (CEDUA)",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "source_url": "https://cedua.colmex.mx/es/doctorado/estudios-urbanos-y-ambientales/admision-al-programa",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://cedua.colmex.mx/es/doctorado/estudios-urbanos-y-ambientales/admision-al-programa",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-29",
+      "content_hash": "sha256:536cfacb70e9710034da5e16c7cb5227ed688047b451f834116fad2c9ac1edb4",
+      "last_verified_at": "2026-11-10T03:02:40.032Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:45.897Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:45.897Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:45.898Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:05:53.924Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:05:53.924Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:31.117Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:31.117Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 495
+    },
+    "opp_5a6fd11def070ce8": {
+      "id": "opp_5a6fd11def070ce8",
+      "fingerprint": "09e1ee977f6bc6ee",
+      "title": "Maestría en Ciencia Política",
+      "institution": "El Colegio de México, Centro de Estudios Internacionales (CEI)",
+      "city": "Mexico City",
+      "country": "Mexico",
+      "source_url": "https://cei.colmex.mx/convocatorias.html",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://cei.colmex.mx/convocatorias.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-19",
+      "content_hash": "sha256:b0961303cbbc017ccfb90246272a13a41c33758d38f0d277aa0376b16951fa49",
+      "last_verified_at": "2026-11-10T03:02:40.135Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:46.058Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:46.059Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:46.059Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:05:54.205Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:05:54.205Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:31.358Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:31.358Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 496
+    },
+    "opp_7bb64d819082e982": {
+      "id": "opp_7bb64d819082e982",
+      "fingerprint": "4ac9476142b9d986",
+      "title": "Maestría en Administración y Políticas Públicas",
+      "institution": "Universidad de San Andrés (UdeSA)",
+      "city": "Buenos Aires",
+      "country": "Argentina",
+      "source_url": "https://www.udesa.edu.ar/departamento-de-ciencias-sociales/maestria-en-administracion-y-politicas-publicas/admision",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.udesa.edu.ar/departamento-de-ciencias-sociales/maestria-en-administracion-y-politicas-publicas/admision",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-23",
+      "content_hash": "sha256:cc44c8251e7a16f2a067f33c8852b2794fdf1145c0f2818d2815af021615986e",
+      "last_verified_at": "2026-11-10T03:02:33.818Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:46.188Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:46.188Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:46.189Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:06:51.103Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:06:51.103Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:31.635Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:31.635Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 497
+    },
+    "opp_006de7806430226a": {
+      "id": "opp_006de7806430226a",
+      "fingerprint": "ffab61b507cfb73e",
+      "title": "Regular Decision, Fall 2027 Admission",
+      "institution": "Georgetown University in Qatar (GU-Q)",
+      "city": "Doha",
+      "country": "Qatar",
+      "source_url": "https://www.qatar.georgetown.edu/admissions/how-to-apply/regular-decision/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://admissions.qatar.georgetown.edu/register/fall2027application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:a008b2c7d756346cd1415c01719a24c37a0f9caf11b3f6b43a3f348c09abf0cb",
+      "last_verified_at": "2026-11-10T03:02:33.962Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:46.309Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:46.309Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:46.309Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:06:51.336Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:06:51.336Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:31.881Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:31.881Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 498
+    },
+    "opp_970e1844f8e2a724": {
+      "id": "opp_970e1844f8e2a724",
+      "fingerprint": "7ec5fbdb9bc71cb7",
+      "title": "Maestría en Gerencia en Salud",
+      "institution": "Universidad Peruana Cayetano Heredia (UPCH)",
+      "city": "Lima",
+      "country": "Peru",
+      "source_url": "https://posgrado.cayetano.edu.pe/programas/maestria-en-gerencia-en-salud/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://posgrado.cayetano.edu.pe/programas/maestria-en-gerencia-en-salud/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-01",
+      "content_hash": "sha256:4ceba43690873aca7db041e627a5b17224471397bfc13fb5f2b2a802afe81407",
+      "last_verified_at": "2026-11-10T03:02:34.084Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:46.434Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:46.434Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:46.434Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:06:51.576Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:06:51.576Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:32.132Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:32.132Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 499
+    },
+    "opp_398c251eb878ca4b": {
+      "id": "opp_398c251eb878ca4b",
+      "fingerprint": "00db72ee5004e71b",
+      "title": "PhD Programmes, Faculty of Information Science and Computing (2027/2028)",
+      "institution": "University of Macau, Faculty of Information Science and Computing",
+      "city": "Macau",
+      "country": "Macau",
+      "source_url": "https://fic.um.edu.mo/programmes/pg_admission/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://grs.um.edu.mo/index.php/prospective-students/doctoral-degrees-programmes/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-30",
+      "content_hash": "sha256:76b5b254a7e75684aa87a12d1ad72d1cf656306c8dcb4fc72822048bab51f98b",
+      "last_verified_at": "2026-11-10T03:02:34.193Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:46.555Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:46.555Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:46.556Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:06:59.822Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:06:59.822Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:32.379Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:32.380Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 500
+    },
+    "opp_e0893c29189032e5": {
+      "id": "opp_e0893c29189032e5",
+      "fingerprint": "f6f6987091afc07d",
+      "title": "Master of Business Administration (MBA) Direct",
+      "institution": "Gordon Institute of Business Science (GIBS)",
+      "city": "Johannesburg",
+      "country": "South Africa",
+      "source_url": "https://www.gibs.co.za/programmes/master-of-business-administration--mba--direct",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.gibs.co.za/programmes/master-of-business-administration--mba--direct",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-30",
+      "content_hash": "sha256:43b110251b878a3c67326b75ed8ae00c790cc347ecefe5dd68f2f8864e1552a9",
+      "last_verified_at": "2026-11-10T03:02:34.293Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:46.676Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:46.676Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:46.676Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:06:52.021Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:06:52.021Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:32.630Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:32.630Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 501
+    },
+    "opp_f57d66268d17901d": {
+      "id": "opp_f57d66268d17901d",
+      "fingerprint": "9af3c108e7bd3f2b",
+      "title": "American Center of Research Fellowships 2027–2028",
+      "institution": "American Center of Research (ACOR)",
+      "city": "Amman",
+      "country": "Jordan",
+      "source_url": "https://acorjordan.org/fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://acorjordan.org/fellowships/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-15",
+      "content_hash": "sha256:794706625da522b17e0555883c3d75e58c8a522f64b34d9e491a5deea6d58308",
+      "last_verified_at": "2026-11-10T03:02:34.402Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-10T03:02:46.796Z",
+      "history": [
+        {
+          "at": "2026-11-10T03:02:46.796Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-10T03:02:46.796Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-10T03:06:52.249Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-10T03:06:52.249Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-10T03:08:32.900Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-10T03:08:32.901Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 502
     }
   },
   "seen_urls": {
@@ -33089,7 +34240,29 @@
     "https://ecai2027.org/": "opp_e227db949d3bb306",
     "https://epfl.ch/education/international/en/coming-to-epfl/research-internships/eligibility-and-application": "opp_4e0861ecd1965a52",
     "https://um6p.ma/en/enrollment/admissions": "opp_245093f484c1297b",
-    "https://alueducation.com/home/study-at-alu": "opp_fbc39acd8d29fa2d"
+    "https://alueducation.com/home/study-at-alu": "opp_fbc39acd8d29fa2d",
+    "https://lums.edu.pk/programmes/phd-computer-science": "opp_feb37fd63f6e657f",
+    "https://ari.nus.edu.sg/events/22nd-singapore-graduate-forum": "opp_bcb776a9f3dcc804",
+    "https://codesria.org/call-for-proposals-research-grants-on-university-ecosystems": "opp_9a5f76db1d06192e",
+    "https://apply.codesria.org/": "opp_9a5f76db1d06192e",
+    "https://grips.ac.jp/en/admissions/apply": "opp_788752789a780ad4",
+    "https://fulbright.edu.vn/apply-to-us": "opp_fb67876da95c37e4",
+    "https://cide.edu/wp-content/uploads/2026/09/Convocatoria-METPOL-2027.pdf": "opp_ec16da2a0142a888",
+    "https://cide.edu/admisiones": "opp_ec16da2a0142a888",
+    "https://ictp.it/opportunity/ictp-postgraduate-diploma-programme": "opp_22f4451aef0a7283",
+    "https://tm.mahidol.ac.th/bstm?q=Application_Process": "opp_4c1337300cfaaf1c",
+    "https://cbs.riken.jp/en/summer/apply.html": "opp_c7662d93938143ba",
+    "https://mbru.ac.ae/programs/master-of-science-in-biomedical-sciences": "opp_efeaea12b5d4ee4c",
+    "https://cedua.colmex.mx/es/doctorado/estudios-urbanos-y-ambientales/admision-al-programa": "opp_20885c383b30b95e",
+    "https://cei.colmex.mx/convocatorias.html": "opp_5a6fd11def070ce8",
+    "https://udesa.edu.ar/departamento-de-ciencias-sociales/maestria-en-administracion-y-politicas-publicas/admision": "opp_7bb64d819082e982",
+    "https://qatar.georgetown.edu/admissions/how-to-apply/regular-decision": "opp_006de7806430226a",
+    "https://admissions.qatar.georgetown.edu/register/fall2027application": "opp_006de7806430226a",
+    "https://posgrado.cayetano.edu.pe/programas/maestria-en-gerencia-en-salud": "opp_970e1844f8e2a724",
+    "https://fic.um.edu.mo/programmes/pg_admission": "opp_398c251eb878ca4b",
+    "https://grs.um.edu.mo/index.php/prospective-students/doctoral-degrees-programmes": "opp_398c251eb878ca4b",
+    "https://gibs.co.za/programmes/master-of-business-administration--mba--direct": "opp_e0893c29189032e5",
+    "https://acorjordan.org/fellowships": "opp_f57d66268d17901d"
   },
-  "last_offer_number": 484
+  "last_offer_number": 502
 }
