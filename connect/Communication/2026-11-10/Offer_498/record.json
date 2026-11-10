@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Regular Decision, Fall 2027 Admission",
+    "evidence_url": "https://www.qatar.georgetown.edu/admissions/how-to-apply/regular-decision/",
+    "evidence_quote": "How to Apply to GU-Q"
+  },
+  "institution": {
+    "name": "Georgetown University in Qatar (GU-Q)",
+    "website": "https://www.qatar.georgetown.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://admissions.qatar.georgetown.edu/register/fall2027application",
+  "source_url": "https://www.qatar.georgetown.edu/admissions/how-to-apply/regular-decision/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Doha",
+    "country": "Qatar",
+    "country_code": "QA"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "International affairs (undergraduate)",
+  "seniority": "Undergraduate (Bachelor's)",
+  "qualifications": [
+    "Apply through the Common App or the GU-Q application",
+    "Test-flexible for Fall 2027"
+  ],
+  "skills": [],
+  "description_short": "Georgetown University in Qatar is accepting Regular Decision applications for Fall 2027 undergraduate admission until January 15, 2027, through the Common App or its own application. Regular Decision applicants are notified by April 1, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Asia/Qatar",
+    "evidence_url": "https://www.qatar.georgetown.edu/admissions/information-counselors/",
+    "evidence_quote": "the deadline is January 15, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "GU-Q admissions and counselor pages (search results) give the Regular Decision deadline as January 15, 2027",
+    "Fall 2027 application page exists on admissions.qatar.georgetown.edu",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The Regular Decision page's timeline block also shows an Early Action deadline of November 1, 2026, apparently a copy error",
+    "Field label summarises GU-Q's programmes; specific majors not captured"
+  ],
+  "id": "opp_006de7806430226a",
+  "fingerprint": "ffab61b507cfb73e",
+  "discovered_at": "2026-11-10T03:02:33.962Z",
+  "last_verified_at": "2026-11-10T03:02:33.962Z",
+  "content_hash": "sha256:a008b2c7d756346cd1415c01719a24c37a0f9caf11b3f6b43a3f348c09abf0cb"
+}

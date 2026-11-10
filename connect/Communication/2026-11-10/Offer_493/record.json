@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "RIKEN CBS Summer Program 2027",
+    "evidence_url": "https://cbs.riken.jp/en/summer/",
+    "evidence_quote": "RIKEN CBS Summer Program 2027"
+  },
+  "institution": {
+    "name": "RIKEN Center for Brain Science (RIKEN CBS)",
+    "website": "https://cbs.riken.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cbs.riken.jp/en/summer/apply.html",
+  "source_url": "https://cbs.riken.jp/en/summer/apply.html",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Wako",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Neuroscience",
+  "seniority": "Undergraduate, graduate or early-career (beyond high school)",
+  "qualifications": [
+    "Enrolled at an academic institution or company at application and throughout the program; high school students ineligible",
+    "CV, motivation letter (about 500 words) and one recommendation letter; Plan A also needs an internship project description",
+    "Full on-site attendance at RIKEN Wako Campus, Saitama"
+  ],
+  "skills": [],
+  "description_short": "RIKEN Center for Brain Science offers a two-month research internship (Plan A, June 8 - August 5, 2027) and a one-week lecture course (Plan B, July 5-9, 2027) at its Wako campus. Applications are open until January 8, 2027, 9:00 a.m. JST.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08T09:00:00+09:00",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://cbs.riken.jp/en/summer/apply.html",
+    "evidence_quote": "Monday, November 9, 2026, 9:00 a.m. (JST) to Friday, January 8, 2027, 9:00 AM (JST)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official 'Apply 2027' page (search results) gives the application period November 9, 2026 to January 8, 2027, 9:00 a.m. JST",
+    "Late applications are not accepted; no registration fee",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Stipend or travel support not captured",
+    "Results expected around mid-February 2027"
+  ],
+  "id": "opp_c7662d93938143ba",
+  "fingerprint": "b73e452c8748432c",
+  "discovered_at": "2026-11-10T03:02:33.384Z",
+  "last_verified_at": "2026-11-10T03:02:33.384Z",
+  "content_hash": "sha256:6137c6b39936e752e8e616c1173ba7f60b20bd320e53a057336092ab529b02e3"
+}

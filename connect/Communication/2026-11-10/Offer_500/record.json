@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD Programmes, Faculty of Information Science and Computing (2027/2028)",
+    "evidence_url": "https://fic.um.edu.mo/programmes/pg_admission/",
+    "evidence_quote": "Admission Details for Master’s and Ph.D. Degree Programmes"
+  },
+  "institution": {
+    "name": "University of Macau, Faculty of Information Science and Computing",
+    "website": "https://fic.um.edu.mo",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://grs.um.edu.mo/index.php/prospective-students/doctoral-degrees-programmes/",
+  "source_url": "https://fic.um.edu.mo/programmes/pg_admission/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Macau",
+    "country": "Macau",
+    "country_code": "MO"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Computer science and artificial intelligence",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "General entry with a master's degree; direct entry possible for bachelor's holders with outstanding grades and research ability"
+  ],
+  "skills": [],
+  "description_short": "The University of Macau's Faculty of Information Science and Computing, which includes a Department of Artificial Intelligence, is accepting PhD applications for 2027/2028. The second application batch runs from 24 October 2026 to 30 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-30",
+    "timezone": "Asia/Macau",
+    "evidence_url": "https://fic.um.edu.mo/programmes/pg_admission/",
+    "evidence_quote": "Phase 2: October 24, 2026 – April 30, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Faculty admission page (search results) lists 'Phase 2: October 24, 2026 – April 30, 2027'",
+    "UM press release (search results) announces postgraduate programmes open for the 2027/2028 academic year",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "First batch closed on 23 October 2026",
+    "Scholarship amounts not captured",
+    "Title is a descriptive label for the faculty's PhD admission round"
+  ],
+  "id": "opp_398c251eb878ca4b",
+  "fingerprint": "00db72ee5004e71b",
+  "discovered_at": "2026-11-10T03:02:34.193Z",
+  "last_verified_at": "2026-11-10T03:02:34.193Z",
+  "content_hash": "sha256:76b5b254a7e75684aa87a12d1ad72d1cf656306c8dcb4fc72822048bab51f98b"
+}
