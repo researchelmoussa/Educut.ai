@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "skills": [],
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "CENTA Studentships",
+    "evidence_url": "https://centa.ac.uk/apply/centa-studentship-information/",
+    "evidence_quote": "CENTA Studentship Information"
+  },
+  "institution": {
+    "name": "CENTA",
+    "website": "https://centa.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://centa.ac.uk/apply/",
+  "source_url": "https://fellowshipsguide.com/latest-posts/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "field": "Environmental and Earth sciences",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Apply to an advertised CENTA project",
+    "Also apply separately to the host university; CENTA offers depend on the university offer"
+  ],
+  "description_short": "Project-based PhD studentships for autumn 2027 entry across CENTA host institutions in the UK, with projects such as machine learning for water-quality prediction and health risks from heat and air pollution. Applications close 23:59 GMT, Wednesday 6 January 2027.",
+  "deadline": {
+    "value": "2027-01-06T23:59:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://centa.ac.uk/studentship/2027-w16-from-local-waters-to-national-insight-robust-and-transferable-machine-learning-for-water-quality-prediction-across-scales/",
+    "evidence_quote": "applications must be submitted by 23:59 GMT on Wednesday 6th January 2027"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CENTA project pages (seen in search results): applications must be submitted by 23:59 GMT on Wednesday 6th January 2027 (future)",
+    "The separate CENTA Science Opportunity Scholarships (CSOS) pathway has closed for 2027 entry",
+    "Application system not independently confirmed"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Funding level (stipend, fees, research grant) seen only in a search summary; not quoted",
+    "Fellowships Guide post for CENTA not located; source_url is its Latest Posts page, which lists CENTA among PhD scholarships",
+    "City not stated: studentships are hosted at several institutions",
+    "Title is the programme name as used on centa.ac.uk (\"CENTA Studentship Information\")"
+  ],
+  "id": "opp_072afd0276a9e8a0",
+  "fingerprint": "6f7faecfa14e7c55",
+  "discovered_at": "2026-11-11T03:01:09.708Z",
+  "last_verified_at": "2026-11-11T03:01:09.708Z",
+  "content_hash": "sha256:0e2049fa180408f7918f38759b7f3203e68a52488da2e5778ac09876adee2115"
+}
