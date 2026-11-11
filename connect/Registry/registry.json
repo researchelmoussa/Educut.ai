@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-10T03:08:32.901Z",
+  "updated_at": "2026-11-11T03:06:19.521Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -6202,7 +6202,7 @@
       "deadline": "2026-11-09",
       "content_hash": "sha256:4d2f04022feac41599246a7fc20b595e883e1f93c6a76b29b4cf0debbe51e9ad",
       "last_verified_at": "2026-10-17T02:03:52.805Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T02:03:52.980Z",
       "history": [
         {
@@ -6246,6 +6246,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-11T02:51:17.761Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-09 passed"
         }
       ],
       "offer_number": 68
@@ -18488,7 +18495,7 @@
       "deadline": "2026-11-09",
       "content_hash": "sha256:a84470fae72c7bc93020223bb47ffefced601d1131af690cb80dafca77a9fade",
       "last_verified_at": "2026-10-27T03:13:20.057Z",
-      "pipeline_status": "VERIFIED",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-27T03:13:20.203Z",
       "history": [
         {
@@ -18504,6 +18511,13 @@
           "to": "VERIFIED",
           "actor": "opportunity-scout",
           "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-11T02:51:17.761Z",
+          "from": "VERIFIED",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-09 passed"
         }
       ],
       "offer_number": 263
@@ -26481,7 +26495,7 @@
       "deadline": "2026-11-10T17:00:00+05:30",
       "content_hash": "sha256:d09d60e131abc6988f6abcbcdc443d7f9e011bdf19ce670ca8df403d9efe70cc",
       "last_verified_at": "2026-11-02T03:15:42.595Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-11-02T03:15:55.495Z",
       "history": [
         {
@@ -26525,6 +26539,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-11T02:51:17.761Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-10T17:00:00+05:30 passed"
         }
       ],
       "offer_number": 393
@@ -33534,6 +33555,906 @@
         }
       ],
       "offer_number": 502
+    },
+    "opp_3afc4ad497af474c": {
+      "id": "opp_3afc4ad497af474c",
+      "fingerprint": "ab892f3662f3282d",
+      "title": "Slavic NLP 2027",
+      "institution": "Slavic NLP 2027 workshop organisers (EACL 2027)",
+      "city": "Athens",
+      "country": "Greece",
+      "source_url": "https://mlscientist.com/slavic-nlp-2027-workshop-call-papers-greece/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://bsnlp.cs.helsinki.fi/call-for-papers.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-09",
+      "content_hash": "sha256:3e2afd7adba39c16bb684f96eaf0b1ff3a415e7fe85350e4b28521d04035e22e",
+      "last_verified_at": "2026-11-11T03:01:09.062Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-11T03:01:16.477Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:16.477Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:16.478Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-11T03:05:29.170Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-11T03:05:29.170Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-11T03:06:18.063Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-11T03:06:18.063Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 503
+    },
+    "opp_dd7e3cef63e4ea9a": {
+      "id": "opp_dd7e3cef63e4ea9a",
+      "fingerprint": "e9d34d3e2547b26d",
+      "title": "Hurford Youth Fellows Program",
+      "institution": "National Endowment for Democracy (NED)",
+      "city": "Washington, D.C.",
+      "country": "United States",
+      "source_url": "https://fellowshipsguide.com/hurford-youth-fellows-program/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.ned.org/fellowships/hurford-youth-fellows-program/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30",
+      "content_hash": "sha256:5f30f011a94c62e5ce58ead7abdf5e512a7466a4d77c7e2d6a78af43291122ad",
+      "last_verified_at": "2026-11-11T03:01:09.160Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-11T03:01:16.615Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:16.615Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:16.616Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-11T03:05:29.417Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-11T03:05:29.417Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-11T03:06:18.303Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-11T03:06:18.303Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 504
+    },
+    "opp_b3aead0dd457a1e7": {
+      "id": "opp_b3aead0dd457a1e7",
+      "fingerprint": "654d61392b370509",
+      "title": "BRIDGE – Translational Excellence Programme",
+      "institution": "University of Copenhagen, Faculty of Health and Medical Sciences",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://bridge.ku.dk/research/process/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-09T23:59:00+01:00",
+      "content_hash": "sha256:69fea403b607cda0560012a43480d4e1db9c6c6a1fcb515b8e08e9ad32c391cb",
+      "last_verified_at": "2026-11-11T03:01:09.260Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-11T03:01:16.778Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:16.778Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:16.779Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-11T03:05:29.701Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-11T03:05:29.701Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-11T03:06:18.544Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-11T03:06:18.544Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 505
+    },
+    "opp_0963226faee35cd6": {
+      "id": "opp_0963226faee35cd6",
+      "fingerprint": "c4519ac1e7f0a4f3",
+      "title": "Stanford Doerr School of Sustainability Dean’s Postdoctoral Fellowship",
+      "institution": "Stanford Doerr School of Sustainability, Stanford University",
+      "city": "Stanford",
+      "country": "United States",
+      "source_url": "https://fellowshipsguide.com/stanford-doerr-postdoctoral-fellowship/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://sustainability.stanford.edu/about-school/postdoctoral-resources/postdoctoral-fellowship-program/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-11-30",
+      "content_hash": "sha256:ef070b6b6a3fdd115ae3e6c3be7a94b64121b12a679f85fb4203cf74229bcf36",
+      "last_verified_at": "2026-11-11T03:06:07.949Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-11T03:01:16.917Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:16.917Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:16.917Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-11T03:05:29.970Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-11T03:05:29.970Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-11T03:06:08.057Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-11T03:06:08.057Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-11T03:06:09.448Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: removed salary figure without evidence quote"
+        },
+        {
+          "at": "2026-11-11T03:06:09.587Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-11T03:06:09.587Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-11T03:06:18.789Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-11T03:06:18.789Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 506
+    },
+    "opp_59e39ebd4d473e8a": {
+      "id": "opp_59e39ebd4d473e8a",
+      "fingerprint": "c27ffdfc81bab556",
+      "title": "Scholarships for International Students",
+      "institution": "Graduate School of Yeungnam University",
+      "city": null,
+      "country": "South Korea",
+      "source_url": "https://fellowshipsguide.com/latest-posts/page/2/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.yu.ac.kr/engraduate/admissions/admission-guideline.do",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-11T17:00:00+09:00",
+      "content_hash": "sha256:18d559f762c3f29f7eb383eeabf9c5a07bd74fb98533e2adfa1014c4dd072b74",
+      "last_verified_at": "2026-11-11T03:06:09.710Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-11T03:01:17.063Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:17.063Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:17.064Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-11T03:05:30.226Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-11T03:05:30.226Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-11T03:06:09.817Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-11T03:06:09.818Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-11T03:06:11.351Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: removed unsupported tuition-waiver claim"
+        },
+        {
+          "at": "2026-11-11T03:06:11.481Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-11T03:06:11.481Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-11T03:06:19.042Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-11T03:06:19.042Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 507
+    },
+    "opp_d60e1b611a3ed5f0": {
+      "id": "opp_d60e1b611a3ed5f0",
+      "fingerprint": "ddef46af7a8be1f8",
+      "title": "2027 Admissions to Tsinghua Shenzhen International Graduate School",
+      "institution": "Tsinghua Shenzhen International Graduate School (SIGS), Tsinghua University",
+      "city": "Shenzhen",
+      "country": "China",
+      "source_url": "https://fellowshipsguide.com/category/scholarships/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://yzbm.tsinghua.edu.cn/intlLogin",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-15T17:00:00+08:00",
+      "content_hash": "sha256:33e81b1e5b1f1d05729990ff3a9bceec51d6a84b890913033b700263a345ed99",
+      "last_verified_at": "2026-11-11T03:01:09.586Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-11T03:01:17.179Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:17.179Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:17.179Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-11T03:05:30.469Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-11T03:05:30.469Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-11T03:06:19.283Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-11T03:06:19.283Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 508
+    },
+    "opp_072afd0276a9e8a0": {
+      "id": "opp_072afd0276a9e8a0",
+      "fingerprint": "6f7faecfa14e7c55",
+      "title": "CENTA Studentships",
+      "institution": "CENTA",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://fellowshipsguide.com/latest-posts/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://centa.ac.uk/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-06T23:59:00+00:00",
+      "content_hash": "sha256:0e2049fa180408f7918f38759b7f3203e68a52488da2e5778ac09876adee2115",
+      "last_verified_at": "2026-11-11T03:01:09.708Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-11T03:01:17.336Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:17.336Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:17.336Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-11T03:05:30.715Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-11T03:05:30.715Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-11T03:06:19.521Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-11T03:06:19.521Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 509
+    },
+    "opp_26cf2d2c5aa480ae": {
+      "id": "opp_26cf2d2c5aa480ae",
+      "fingerprint": "23838fd9374e81f3",
+      "title": "Impact AI Fellowship 2027",
+      "institution": "Humboldt Institute for Internet and Society (HIIG)",
+      "city": "Berlin",
+      "country": "Germany",
+      "source_url": "https://fellowshipsguide.com/impact-ai-fellowship/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.hiig.de/en/impact-ai-call-for-fellows/",
+      "application_status": "NEEDS_REVIEW",
+      "deadline": null,
+      "content_hash": "sha256:70f1402b38b6a78a81841dcce7aafc1ba604ebd8a8e0f959b285e26501583b35",
+      "last_verified_at": "2026-11-11T03:01:09.805Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-11-11T03:01:17.464Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:17.464Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:17.464Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_1702ef79d8d19651": {
+      "id": "opp_1702ef79d8d19651",
+      "fingerprint": "2dd271c39445fa44",
+      "title": "IMSISS",
+      "institution": "University of Glasgow (IMSISS Erasmus Mundus consortium)",
+      "city": null,
+      "country": null,
+      "source_url": "https://fellowshipsguide.com/imsiss-erasmus-mundus/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "DEADLINE_NOT_SPECIFIED",
+      "deadline": null,
+      "content_hash": "sha256:cc7da69377555cafc9da640d215f569c1135e681b6b0748c8827bb3d6b46838e",
+      "last_verified_at": "2026-11-11T03:01:09.914Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-11-11T03:01:17.603Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:17.603Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:17.603Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=DEADLINE_NOT_SPECIFIED"
+        }
+      ]
+    },
+    "opp_879bc8550931999d": {
+      "id": "opp_879bc8550931999d",
+      "fingerprint": "bcda30f2482cf497",
+      "title": "CICOPS Scholarships 2027",
+      "institution": "University of Pavia, CICOPS",
+      "city": "Pavia",
+      "country": "Italy",
+      "source_url": "https://fellowshipsguide.com/cicops-scholarships/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": null,
+      "content_hash": "sha256:28df33e1e299da56f497371d360687eac4d4ad183f4fc77d308fd7d06ae6edb9",
+      "last_verified_at": "2026-11-11T03:01:10.053Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-11-11T03:01:17.741Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:17.741Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:17.741Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_a821a2d823b9105f": {
+      "id": "opp_a821a2d823b9105f",
+      "fingerprint": "29ce353b2e95cc7a",
+      "title": "Kempner Research Fellowship",
+      "institution": "Kempner Institute, Harvard University",
+      "city": "Cambridge, MA",
+      "country": "United States",
+      "source_url": "https://mlscientist.com/kempner-institute-research-fellowship-united-states/",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://kempnerinstitute.harvard.edu/kempner-institute-research-fellowship/",
+      "application_status": "CLOSED",
+      "deadline": "2026-10-01",
+      "content_hash": "sha256:ea5f865008bf8ea6cc8f0d2d21ef6418058373b74ae9d9cfd93c94443f8be46e",
+      "last_verified_at": "2026-11-11T03:01:10.180Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-11-11T03:01:17.875Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:17.875Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:17.875Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_adbcd2bb1f3660a7": {
+      "id": "opp_adbcd2bb1f3660a7",
+      "fingerprint": "4e53b75097980c03",
+      "title": "King's College London PhD in AI Safety and Causal Reasoning",
+      "institution": "King's College London, Department of Informatics",
+      "city": "London",
+      "country": "United Kingdom",
+      "source_url": "https://mlscientist.com/king-s-college-london-phd-ai-safety-causal-reasoning-united-kingdom/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": null,
+      "application_status": "NEEDS_REVIEW",
+      "deadline": null,
+      "content_hash": "sha256:61b548079252e1ac0784b397dde4aa098801806fb20e2d7fc1d95d55b2becfd6",
+      "last_verified_at": "2026-11-11T03:01:10.319Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-11-11T03:01:18.041Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:18.041Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:18.041Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_cf851557f251231a": {
+      "id": "opp_cf851557f251231a",
+      "fingerprint": "71cd7129aec58558",
+      "title": "Rotary Peace Fellowships",
+      "institution": "The Rotary Foundation",
+      "city": null,
+      "country": null,
+      "source_url": "https://fellowshipsguide.com/rotary-peace-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://my.rotary.org/en/peace-fellowship-application",
+      "application_status": "CLOSED",
+      "deadline": null,
+      "content_hash": "sha256:dfc6dc1dacd05cabaf53f7b1d60d8b168d5823309648ced6491bc5e78539b30f",
+      "last_verified_at": "2026-11-11T03:01:10.426Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-11-11T03:01:18.169Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:18.169Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:18.169Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_39d1f28fd8272515": {
+      "id": "opp_39d1f28fd8272515",
+      "fingerprint": "e809aebd9745a80f",
+      "title": "PIBBSS Fellowship",
+      "institution": "PIBBSS",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "source_url": "https://mlscientist.com/pibbss-fellowship/",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": null,
+      "application_status": "CLOSED",
+      "deadline": null,
+      "content_hash": "sha256:93e380232f62db18d35e22bc9758c9b535483fd11974af7814ac7a7b1b735da6",
+      "last_verified_at": "2026-11-11T03:01:10.537Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-11-11T03:01:18.294Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:18.294Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:18.294Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_41e2a5ae56a52c14": {
+      "id": "opp_41e2a5ae56a52c14",
+      "fingerprint": "285e25e4c8d5ae25",
+      "title": "RLDM 2027 Call for Workshops",
+      "institution": "RLDM 2027",
+      "city": "Paris",
+      "country": "France",
+      "source_url": "https://mlscientist.com/rldm-2027-workshop-proposal-call-paris-france/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": null,
+      "application_status": "NEEDS_REVIEW",
+      "deadline": null,
+      "content_hash": "sha256:ba3ed044197d05e462b701f79e514e22fa6c459f5dc9223cce66fb24685cd2ff",
+      "last_verified_at": "2026-11-11T03:01:10.651Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-11-11T03:01:18.425Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:18.425Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:18.426Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_fe0708be36a14482": {
+      "id": "opp_fe0708be36a14482",
+      "fingerprint": "0c37e05b29e3537e",
+      "title": "Visiting Student Research Program",
+      "institution": "King Abdullah University of Science and Technology (KAUST)",
+      "city": null,
+      "country": "Saudi Arabia",
+      "source_url": "https://fellowshipsguide.com/category/internships/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://vsrp.kaust.edu.sa/",
+      "application_status": "DEADLINE_NOT_SPECIFIED",
+      "deadline": null,
+      "content_hash": "sha256:6997b6bfdf3cdd739ef81ecf4e101e4c776d377bd04a75083bb4e45b166bbbfe",
+      "last_verified_at": "2026-11-11T03:01:10.782Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-11-11T03:01:18.562Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:18.562Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:18.563Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=DEADLINE_NOT_SPECIFIED"
+        }
+      ]
+    },
+    "opp_e004d0a594538388": {
+      "id": "opp_e004d0a594538388",
+      "fingerprint": "09a405b290f41c54",
+      "title": "Postdoctoral Researcher in Peptide-Based Drug Discovery",
+      "institution": "ETH Zurich",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://vacancyedu.com/2026-12-06-postdoctoral-fellowship-23-at-eth-zurich-switzerland/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://jobs.ethz.ch/job/view/JOPG_ethz_syvixc0T7t4Tlc4aEQ",
+      "application_status": "NEEDS_REVIEW",
+      "deadline": null,
+      "content_hash": "sha256:f19f0d933ccc1a4329c17ed0d0ff610dc5a4d84c82cf945b9cb082fbdad0ce9f",
+      "last_verified_at": "2026-11-11T03:01:10.888Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-11-11T03:01:18.685Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:18.685Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:18.685Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=NEEDS_REVIEW"
+        }
+      ]
+    },
+    "opp_6c861719ec312a3a": {
+      "id": "opp_6c861719ec312a3a",
+      "fingerprint": "8911751294311af2",
+      "title": "Jean Monnet Fellowships",
+      "institution": "European University Institute, Robert Schuman Centre for Advanced Studies",
+      "city": null,
+      "country": null,
+      "source_url": "https://fellowshipsguide.com/latest-posts/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.eui.eu/apply?id=jean-monnet-fellowships",
+      "application_status": "CLOSED",
+      "deadline": "2026-10-23T14:00:00+02:00",
+      "content_hash": "sha256:3ed84462e739eccbae3d54583a1ee0e2d64677e59fbe1371ccc2b0ded23ce2e5",
+      "last_verified_at": "2026-11-11T03:01:11.004Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-11-11T03:01:18.829Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:18.829Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:18.829Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_322387c54642dced": {
+      "id": "opp_322387c54642dced",
+      "fingerprint": "c3572bd8fddba695",
+      "title": "Weidenfeld-Hoffmann Scholarships and Leadership Programme",
+      "institution": "University of Oxford",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "source_url": "https://fellowshipsguide.com/latest-posts/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.ox.ac.uk/admissions/graduate/fees-and-funding/fees-funding-and-scholarship-search/weidenfeld-hoffmann-scholarships-and-leadership-programme",
+      "application_status": "DEADLINE_NOT_SPECIFIED",
+      "deadline": null,
+      "content_hash": "sha256:2d38adc6a1a2bf3fa5a598856940fb787a1928c92679d45a0fe6b6f2f688bfb7",
+      "last_verified_at": "2026-11-11T03:01:11.106Z",
+      "pipeline_status": "NEEDS_REVIEW",
+      "first_seen": "2026-11-11T03:01:18.992Z",
+      "history": [
+        {
+          "at": "2026-11-11T03:01:18.992Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-11T03:01:18.993Z",
+          "from": "DISCOVERED",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "application_status=DEADLINE_NOT_SPECIFIED"
+        }
+      ]
     }
   },
   "seen_urls": {
@@ -33588,7 +34509,7 @@
     "https://oist.jp/visiting-program/application-visiting-scholars": "opp_ad8d8a716568cd23",
     "https://fellowshipsguide.com/2027-swiss-government-excellence-scholarships": "opp_e5ca8420c0dc9bf3",
     "https://sbfi.admin.ch/en/swiss-government-excellence-scholarships": "opp_e5ca8420c0dc9bf3",
-    "https://fellowshipsguide.com/category/scholarships": "opp_024d76337193d4d1",
+    "https://fellowshipsguide.com/category/scholarships": "opp_d60e1b611a3ed5f0",
     "https://forms.sanger.ac.uk/form/Sanger_PhD_Application": "opp_024d76337193d4d1",
     "https://fellowshipsguide.com/academic-university-of-cambridge": "opp_efa475c968a77e13",
     "https://cam.ac.uk/jobs/next-generation-fellow-fixed-term-pm50284": "opp_efa475c968a77e13",
@@ -33702,7 +34623,7 @@
     "https://fellowshipsguide.com/eraai-fellowship-uk": "opp_ebc3b00b51fdb0a5",
     "https://fellowshipsguide.com/emirates-elevate-internship": "opp_e41e323c8e61c949",
     "https://fellowshipsguide.com/european-blue-traineeship": "opp_7320653e28252a93",
-    "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark": "opp_01a8a42645688bb7",
+    "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark": "opp_b3aead0dd457a1e7",
     "https://employment.ku.dk/faculty?show=167779": "opp_992047ce6fe5a2dd",
     "https://vacancyedu.com/2026/10/06/postdoctoral-fellowship-15-at-max-planck-institute-germany": "opp_d63ec9f1d3b0426e",
     "https://jobs.aei.mpg.de/": "opp_e7185d79782a61da",
@@ -34262,7 +35183,36 @@
     "https://fic.um.edu.mo/programmes/pg_admission": "opp_398c251eb878ca4b",
     "https://grs.um.edu.mo/index.php/prospective-students/doctoral-degrees-programmes": "opp_398c251eb878ca4b",
     "https://gibs.co.za/programmes/master-of-business-administration--mba--direct": "opp_e0893c29189032e5",
-    "https://acorjordan.org/fellowships": "opp_f57d66268d17901d"
+    "https://acorjordan.org/fellowships": "opp_f57d66268d17901d",
+    "https://mlscientist.com/slavic-nlp-2027-workshop-call-papers-greece": "opp_3afc4ad497af474c",
+    "https://bsnlp.cs.helsinki.fi/call-for-papers.html": "opp_3afc4ad497af474c",
+    "https://fellowshipsguide.com/hurford-youth-fellows-program": "opp_dd7e3cef63e4ea9a",
+    "https://ned.org/fellowships/hurford-youth-fellows-program": "opp_dd7e3cef63e4ea9a",
+    "https://bridge.ku.dk/research/process": "opp_b3aead0dd457a1e7",
+    "https://fellowshipsguide.com/stanford-doerr-postdoctoral-fellowship": "opp_0963226faee35cd6",
+    "https://sustainability.stanford.edu/about-school/postdoctoral-resources/postdoctoral-fellowship-program": "opp_0963226faee35cd6",
+    "https://fellowshipsguide.com/latest-posts/page/2": "opp_59e39ebd4d473e8a",
+    "https://yu.ac.kr/engraduate/admissions/admission-guideline.do": "opp_59e39ebd4d473e8a",
+    "https://yzbm.tsinghua.edu.cn/intlLogin": "opp_d60e1b611a3ed5f0",
+    "https://fellowshipsguide.com/latest-posts": "opp_322387c54642dced",
+    "https://centa.ac.uk/apply": "opp_072afd0276a9e8a0",
+    "https://fellowshipsguide.com/impact-ai-fellowship": "opp_26cf2d2c5aa480ae",
+    "https://hiig.de/en/impact-ai-call-for-fellows": "opp_26cf2d2c5aa480ae",
+    "https://fellowshipsguide.com/imsiss-erasmus-mundus": "opp_1702ef79d8d19651",
+    "https://fellowshipsguide.com/cicops-scholarships": "opp_879bc8550931999d",
+    "https://mlscientist.com/kempner-institute-research-fellowship-united-states": "opp_a821a2d823b9105f",
+    "https://kempnerinstitute.harvard.edu/kempner-institute-research-fellowship": "opp_a821a2d823b9105f",
+    "https://mlscientist.com/king-s-college-london-phd-ai-safety-causal-reasoning-united-kingdom": "opp_adbcd2bb1f3660a7",
+    "https://fellowshipsguide.com/rotary-peace-fellowships": "opp_cf851557f251231a",
+    "https://my.rotary.org/en/peace-fellowship-application": "opp_cf851557f251231a",
+    "https://mlscientist.com/pibbss-fellowship": "opp_39d1f28fd8272515",
+    "https://mlscientist.com/rldm-2027-workshop-proposal-call-paris-france": "opp_41e2a5ae56a52c14",
+    "https://fellowshipsguide.com/category/internships": "opp_fe0708be36a14482",
+    "https://vsrp.kaust.edu.sa/": "opp_fe0708be36a14482",
+    "https://vacancyedu.com/2026-12-06-postdoctoral-fellowship-23-at-eth-zurich-switzerland": "opp_e004d0a594538388",
+    "https://jobs.ethz.ch/job/view/JOPG_ethz_syvixc0T7t4Tlc4aEQ": "opp_e004d0a594538388",
+    "https://eui.eu/apply?id=jean-monnet-fellowships": "opp_6c861719ec312a3a",
+    "https://ox.ac.uk/admissions/graduate/fees-and-funding/fees-funding-and-scholarship-search/weidenfeld-hoffmann-scholarships-and-leadership-programme": "opp_322387c54642dced"
   },
-  "last_offer_number": 502
+  "last_offer_number": 509
 }
