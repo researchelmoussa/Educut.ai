@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "UCC Futures Scholars Programme (GoI) PhD scholarships - Research Ireland Empower Scheme",
+    "evidence_url": "https://www.ucc.ie/en/french/postgraduatedegrees/uccfuturesempower/",
+    "evidence_quote": "UCC Futures Scholars Programme (GoI) PhD scholarships - Research Ireland Empower Scheme"
+  },
+  "institution": {
+    "name": "University College Cork (UCC)",
+    "website": "https://www.ucc.ie",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ucc.ie/en/doctoral-institute/empower/ucc-futures-scholars/",
+  "source_url": "https://fellowshipsguide.com/category/scholarships/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Cork",
+    "country": "Ireland",
+    "country_code": "IE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "All disciplines (doctoral)",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "First registered for the first year of doctoral study between 01 September 2026 and 31 August 2027"
+  ],
+  "skills": [],
+  "description_short": "PhD scholarship call at University College Cork under the Research Ireland Empower scheme for doctoral students first registering between September 2026 and August 2027. Online interviews 9-12 February 2027; awards expected to start 1 October 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-11T17:00:00+00:00",
+    "timezone": "Europe/Dublin",
+    "evidence_url": "https://www.ucc.ie/en/doctoral-institute/empower/ucc-futures-scholars/",
+    "evidence_quote": "5pm on 11 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UCC Doctoral Institute page (seen in search results): call launched 02 November 2026, deadline 5pm on 11 December 2026 (future)",
+    "Application system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Funding amounts not quoted; compensation left null",
+    "Department of French page gives a September 2027 start, conflicting with the 1 October 2027 start on the Doctoral Institute page",
+    "Fellowships Guide post not located individually; source_url is the PhD Scholarships category page which lists a UCC Futures PhD programme"
+  ],
+  "discovered_at": "2026-11-12T03:55:00.000Z",
+  "last_verified_at": "2026-11-12T02:57:14.008Z",
+  "id": "opp_35bfeb4505a61d86",
+  "fingerprint": "f5f653f9a6b0ebfa",
+  "content_hash": "sha256:c808c313d687cfacff8cd1d881ef1b7a9c6c4aebcc02f9de346c63a5ad39f49e"
+}
