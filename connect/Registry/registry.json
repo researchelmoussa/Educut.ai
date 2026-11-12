@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-11T03:06:19.521Z",
+  "updated_at": "2026-11-12T03:07:44.920Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -6712,7 +6712,7 @@
       "deadline": "2026-11-10T23:59:00-12:00",
       "content_hash": "sha256:82e4730809b26a33485b7b4a7b8341c65ace46ac87be83944450dae3de0d0924",
       "last_verified_at": "2026-10-19T01:59:16.660Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-19T01:59:24.779Z",
       "history": [
         {
@@ -6756,6 +6756,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-12T02:49:22.585Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-10T23:59:00-12:00 passed"
         }
       ],
       "offer_number": 76
@@ -18221,7 +18228,7 @@
       "deadline": "2026-11-10",
       "content_hash": "sha256:87d77936d9ee556fa71c95b85c63186f5a12fbb086339774af316cf0fe0d1d99",
       "last_verified_at": "2026-10-27T03:09:02.271Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-27T03:09:02.434Z",
       "history": [
         {
@@ -18251,6 +18258,13 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-12T02:49:22.585Z",
+          "from": "UNDER_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-10 passed"
         }
       ],
       "offer_number": 257
@@ -20868,7 +20882,7 @@
       "deadline": "2026-11-11T17:00:00-08:00",
       "content_hash": "sha256:7d71b24c1b785effca8ce7ff434eb7b4a1cb23330e2e2f1822bb4ffe07a5a160",
       "last_verified_at": "2026-10-29T03:18:41.001Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-29T03:18:48.962Z",
       "history": [
         {
@@ -20912,6 +20926,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-12T02:49:22.585Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-11T17:00:00-08:00 passed"
         }
       ],
       "offer_number": 303
@@ -23698,7 +23719,7 @@
       "deadline": "2026-11-10",
       "content_hash": "sha256:e42907f868eba86da78bce7bc5bedf0a6533bbfdb2852d69295c343c00a5c21d",
       "last_verified_at": "2026-10-31T03:16:51.881Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-31T03:17:05.527Z",
       "history": [
         {
@@ -23742,6 +23763,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-12T02:49:22.585Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-10 passed"
         }
       ],
       "offer_number": 348
@@ -34455,6 +34483,440 @@
           "reason": "application_status=DEADLINE_NOT_SPECIFIED"
         }
       ]
+    },
+    "opp_abf4c314a9181b80": {
+      "id": "opp_abf4c314a9181b80",
+      "fingerprint": "1344ce482f6e5597",
+      "title": "PhD Researcher Van Vollenhoven Institute for Law, Governance and Society (1.0 FTE)",
+      "institution": "Leiden University, Van Vollenhoven Institute for Law, Governance and Society",
+      "city": "Leiden",
+      "country": "Netherlands",
+      "source_url": "https://vacancyedu.com/2026/11/08/phd-degree-06-fully-funded-at-leiden-university-netherlands-2/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://careers.universiteitleiden.nl/job/PhD-Researcher-Van-Vollenhoven-Institute-for-Law%2C-Governance-and-Society-%281_0-FTE%29/16924-en_US/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:7249160b811b4bbeecd19fcc1656f79434be60e01845bb747824244a6a382055",
+      "last_verified_at": "2026-11-12T02:54:40.511Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-12T02:54:40.627Z",
+      "history": [
+        {
+          "at": "2026-11-12T02:54:40.627Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-12T02:54:40.628Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-12T03:07:07.144Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-12T03:07:07.144Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-12T03:07:43.622Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-12T03:07:43.622Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 510
+    },
+    "opp_3cdb30c09e0b2360": {
+      "id": "opp_3cdb30c09e0b2360",
+      "fingerprint": "7ab18bc91585b4b0",
+      "title": "PhD Candidate on Responsible AI for Online Safety (1.0 FTE)",
+      "institution": "Leiden University, Leiden Institute of Advanced Computer Science (LIACS)",
+      "city": "Leiden",
+      "country": "Netherlands",
+      "source_url": "https://vacancyedu.com/2026/11/08/phd-degree-06-fully-funded-at-leiden-university-netherlands-2/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://careers.universiteitleiden.nl/job/PhD-Candidate-on-Responsible-AI-for-Online-Safety-(1_0-FTE)/17032-en_US/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-13T23:59:00+01:00",
+      "content_hash": "sha256:4e90a3c3bb01a70fb4fd1d39ed67990d60706dac0a3801968473a33feb4c9a6e",
+      "last_verified_at": "2026-11-12T02:55:31.396Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-12T02:55:31.505Z",
+      "history": [
+        {
+          "at": "2026-11-12T02:55:31.505Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-12T02:55:31.505Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-12T03:07:07.359Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-12T03:07:07.359Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-12T03:07:43.859Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-12T03:07:43.859Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 511
+    },
+    "opp_bd6089d3eb9e937d": {
+      "id": "opp_bd6089d3eb9e937d",
+      "fingerprint": "8c07e3624c985889",
+      "title": "PhD in Information Systems and Artificial Intelligence",
+      "institution": "Erasmus University Rotterdam, Rotterdam School of Management (RSM)",
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "source_url": "https://vacancyedu.com/2026/11/06/phd-degree-10-fully-funded-at-erasmus-university-rotterdam-netherlands/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.eur.nl/en/working-at-eur/vacancies/phd-information-systems-and-artificial-intelligence",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:263089bc5dc3a61e7beef1c7987c4a6ef8ff48d604e3d4a9348cd6f70451771e",
+      "last_verified_at": "2026-11-12T02:55:31.614Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-12T02:55:31.750Z",
+      "history": [
+        {
+          "at": "2026-11-12T02:55:31.750Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-12T02:55:31.750Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-12T03:07:07.566Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-12T03:07:07.566Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-12T03:07:44.071Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-12T03:07:44.071Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 512
+    },
+    "opp_c7d8c0e22cb5a294": {
+      "id": "opp_c7d8c0e22cb5a294",
+      "fingerprint": "2824f4b8db74ca32",
+      "title": "PhD in Finance",
+      "institution": "Erasmus University Rotterdam, Rotterdam School of Management (RSM)",
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "source_url": "https://vacancyedu.com/2026/11/06/phd-degree-10-fully-funded-at-erasmus-university-rotterdam-netherlands/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.eur.nl/en/working-at-eur/vacancies/phd-finance-1",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:2f6e341485c8e0f853d4d2cb8ddb5478802c4ab9df80d99e163bff064c96b43d",
+      "last_verified_at": "2026-11-12T02:55:31.877Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-12T02:55:31.996Z",
+      "history": [
+        {
+          "at": "2026-11-12T02:55:31.996Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-12T02:55:31.996Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-12T03:07:07.789Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-12T03:07:07.789Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-12T03:07:44.287Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-12T03:07:44.287Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 513
+    },
+    "opp_35bfeb4505a61d86": {
+      "id": "opp_35bfeb4505a61d86",
+      "fingerprint": "f5f653f9a6b0ebfa",
+      "title": "UCC Futures Scholars Programme (GoI) PhD scholarships - Research Ireland Empower Scheme",
+      "institution": "University College Cork (UCC)",
+      "city": "Cork",
+      "country": "Ireland",
+      "source_url": "https://fellowshipsguide.com/category/scholarships/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.ucc.ie/en/doctoral-institute/empower/ucc-futures-scholars/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-11T17:00:00+00:00",
+      "content_hash": "sha256:c808c313d687cfacff8cd1d881ef1b7a9c6c4aebcc02f9de346c63a5ad39f49e",
+      "last_verified_at": "2026-11-12T02:57:14.008Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-12T02:57:14.122Z",
+      "history": [
+        {
+          "at": "2026-11-12T02:57:14.122Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-12T02:57:14.123Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-12T03:07:08.025Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-12T03:07:08.025Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-12T03:07:44.494Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-12T03:07:44.494Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 514
+    },
+    "opp_ea99ec4dcf54a7ce": {
+      "id": "opp_ea99ec4dcf54a7ce",
+      "fingerprint": "5e1b8782b3897262",
+      "title": "2213-A Overseas Graduate Scholarship Program (Only PhD.)",
+      "institution": "TÜBİTAK (Scientific and Technological Research Council of Türkiye), BİDEB",
+      "city": "Ankara",
+      "country": "Turkey",
+      "source_url": "https://fellowshipsguide.com/category/scholarships/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://ebideb.tubitak.gov.tr/basvuruacikprogramlar.htm",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:94f0487c9c20fefc892a168fa84d321fe015a3182017822fe304671d8e813560",
+      "last_verified_at": "2026-11-12T02:57:14.464Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-12T02:57:14.567Z",
+      "history": [
+        {
+          "at": "2026-11-12T02:57:14.567Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-12T02:57:14.567Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-12T03:07:08.280Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-12T03:07:08.280Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-12T03:07:44.696Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-12T03:07:44.696Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 515
+    },
+    "opp_a80a295b2f883238": {
+      "id": "opp_a80a295b2f883238",
+      "fingerprint": "995e02456f753b09",
+      "title": "PhD Position in Decision Neuroscience",
+      "institution": "Erasmus University Rotterdam, Erasmus Research Institute of Management (ERIM)",
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "source_url": "https://vacancyedu.com/2026/11/06/phd-degree-10-fully-funded-at-erasmus-university-rotterdam-netherlands/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.erim.eur.nl/doctoral-programme/phd-in-management/phd-vacancies/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:4258d827d38951a6982acd7b37ac3db8ecc71dac0846db5188a7ee91338e1c4e",
+      "last_verified_at": "2026-11-12T03:01:29.177Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-12T03:01:33.930Z",
+      "history": [
+        {
+          "at": "2026-11-12T03:01:33.930Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-12T03:01:33.930Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-12T03:07:08.514Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-12T03:07:08.515Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-12T03:07:44.920Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-12T03:07:44.920Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 516
     }
   },
   "seen_urls": {
@@ -34509,7 +34971,7 @@
     "https://oist.jp/visiting-program/application-visiting-scholars": "opp_ad8d8a716568cd23",
     "https://fellowshipsguide.com/2027-swiss-government-excellence-scholarships": "opp_e5ca8420c0dc9bf3",
     "https://sbfi.admin.ch/en/swiss-government-excellence-scholarships": "opp_e5ca8420c0dc9bf3",
-    "https://fellowshipsguide.com/category/scholarships": "opp_d60e1b611a3ed5f0",
+    "https://fellowshipsguide.com/category/scholarships": "opp_ea99ec4dcf54a7ce",
     "https://forms.sanger.ac.uk/form/Sanger_PhD_Application": "opp_024d76337193d4d1",
     "https://fellowshipsguide.com/academic-university-of-cambridge": "opp_efa475c968a77e13",
     "https://cam.ac.uk/jobs/next-generation-fellow-fixed-term-pm50284": "opp_efa475c968a77e13",
@@ -34561,7 +35023,7 @@
     "https://phd.tech.au.dk/for-applicants/apply-here/saeropslag/phd-position-in-physical-ai-adaptive-foundation-models-for-robotics": "opp_4999d5f961bb61b9",
     "https://fellowshipsguide.com/aauw-fellowships": "opp_2589aee0cb0d083e",
     "https://aauw.org/resources/programs/fellowships-grants/aauw-international-fellowships": "opp_2589aee0cb0d083e",
-    "https://fellowshipsguide.com/": "opp_5dbda96363dd017d",
+    "https://fellowshipsguide.com/": "opp_b6640f7d341c6672",
     "https://us.boell.org/en/internships": "opp_8eff0836a9d2b10b",
     "https://fellowshipsguide.com/branco-weiss-postdoctoral": "opp_88db489f065bb0e6",
     "https://brancoweissfellowship.org/who-should-apply/application": "opp_88db489f065bb0e6",
@@ -35212,7 +35674,16 @@
     "https://vacancyedu.com/2026-12-06-postdoctoral-fellowship-23-at-eth-zurich-switzerland": "opp_e004d0a594538388",
     "https://jobs.ethz.ch/job/view/JOPG_ethz_syvixc0T7t4Tlc4aEQ": "opp_e004d0a594538388",
     "https://eui.eu/apply?id=jean-monnet-fellowships": "opp_6c861719ec312a3a",
-    "https://ox.ac.uk/admissions/graduate/fees-and-funding/fees-funding-and-scholarship-search/weidenfeld-hoffmann-scholarships-and-leadership-programme": "opp_322387c54642dced"
+    "https://ox.ac.uk/admissions/graduate/fees-and-funding/fees-funding-and-scholarship-search/weidenfeld-hoffmann-scholarships-and-leadership-programme": "opp_322387c54642dced",
+    "https://vacancyedu.com/2026/11/08/phd-degree-06-fully-funded-at-leiden-university-netherlands-2": "opp_3cdb30c09e0b2360",
+    "https://careers.universiteitleiden.nl/job/PhD-Researcher-Van-Vollenhoven-Institute-for-Law%2C-Governance-and-Society-%281_0-FTE%29/16924-en_US": "opp_abf4c314a9181b80",
+    "https://careers.universiteitleiden.nl/job/PhD-Candidate-on-Responsible-AI-for-Online-Safety-(1_0-FTE)/17032-en_US": "opp_3cdb30c09e0b2360",
+    "https://vacancyedu.com/2026/11/06/phd-degree-10-fully-funded-at-erasmus-university-rotterdam-netherlands": "opp_a80a295b2f883238",
+    "https://eur.nl/en/working-at-eur/vacancies/phd-information-systems-and-artificial-intelligence": "opp_bd6089d3eb9e937d",
+    "https://eur.nl/en/working-at-eur/vacancies/phd-finance-1": "opp_c7d8c0e22cb5a294",
+    "https://ucc.ie/en/doctoral-institute/empower/ucc-futures-scholars": "opp_35bfeb4505a61d86",
+    "https://ebideb.tubitak.gov.tr/basvuruacikprogramlar.htm": "opp_ea99ec4dcf54a7ce",
+    "https://erim.eur.nl/doctoral-programme/phd-in-management/phd-vacancies": "opp_a80a295b2f883238"
   },
-  "last_offer_number": 509
+  "last_offer_number": 516
 }
