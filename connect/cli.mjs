@@ -100,7 +100,9 @@ const commands = {
                                       Compose the LinkedIn post for an offer (draft, not yet timed)
   li-schedule [--reschedule]          Give every draft a time between 07:00 and 22:00, max 10 a day (bigger
                                       batches spread over the next days), evenly spaced, newest offers first;
-                                      --reschedule also re-spreads overdue posts
+                                      --reschedule also re-spreads overdue posts; --only Offer_001,…
+                                      times just those drafts; --order deadline puts the closest deadline first; --per-day n
+                                      overrides max_posts_per_day for this run
   li-kit [--date YYYY-MM-DD] [--rebuild] [--out dir]
                                       Posting kit for posting by hand: every scheduled post not yet in a kit
                                       (index.html + posts.md + numbered card images) in connect/linkedin/kits/<date>/;
@@ -616,13 +618,15 @@ const commands = {
     // closes; then the newest offers on the site (the day's new listings before older ones), then the
     // most urgent deadline; offers without a deadline last.
     const added = new Map(loadOffers(root).offers.map((o) => [o.opportunity_id, o.added_at ?? '']));
+    // --only Offer_001,Offer_002: time just these drafts (e.g. a kit of the offers closing soonest).
+    const only = typeof flags.only === 'string' ? new Set(flags.only.split(',').map((x) => x.trim()).filter(Boolean)) : null;
     const urgent = (p) => dl(p) - nowD.getTime() < (config.linkedin.urgent_days ?? 7) * 864e5;
     const drafts = q.posts
-      .filter((p) => p.status === 'DRAFT' && p.format === POST_FORMAT)
-      .sort((a, b) => urgent(b) - urgent(a) || (urgent(a) && dl(a) - dl(b)) || (added.get(b.opportunity_id) ?? '').slice(0, 10).localeCompare((added.get(a.opportunity_id) ?? '').slice(0, 10)) || dl(a) - dl(b));
+      .filter((p) => p.status === 'DRAFT' && p.format === POST_FORMAT && (!only || only.has(p.offer) || only.has(p.slug)))
+      .sort(flags.order === 'deadline' ? (a, b) => dl(a) - dl(b) : (a, b) => urgent(b) - urgent(a) || (urgent(a) && dl(a) - dl(b)) || (added.get(b.opportunity_id) ?? '').slice(0, 10).localeCompare((added.get(a.opportunity_id) ?? '').slice(0, 10)) || dl(a) - dl(b));
     const L = config.linkedin;
     const taken = q.posts.filter((p) => p.status === 'SCHEDULED' && p.format === POST_FORMAT).map((p) => p.scheduled_at);
-    const slots = planSlots(drafts.length, { now: nowD, leadMinutes: L.lead_minutes, minGapMinutes: L.min_gap_minutes, activeHours: L.active_hours, timeZone: L.time_zone, maxPerDay: L.max_posts_per_day, taken });
+    const slots = planSlots(drafts.length, { now: nowD, leadMinutes: L.lead_minutes, minGapMinutes: L.min_gap_minutes, activeHours: L.active_hours, timeZone: L.time_zone, maxPerDay: Number(flags['per-day'] ?? L.max_posts_per_day), taken });
     drafts.forEach((p, i) => {
       if (slots[i]) Object.assign(p, { status: 'SCHEDULED', scheduled_at: slots[i] });
     });
