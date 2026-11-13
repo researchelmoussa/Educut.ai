@@ -1,0 +1,358 @@
+<title>GDPR-Bench Article Counts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one wide chart panel, header + totals strip above, legend toggles in Plotly */
+:root{
+  --bg:#f7f8fa; --panel:#ffffff; --ink:#14171c; --ink-2:#4d5560; --ink-3:#7c8591; --grid:#e3e6ea; --line:#d5d9df;
+  --gold:#14171c;
+  --q0:#f1f3f6; --q1:#cde2fb; --q2:#86b6ef; --q3:#2a78d6; --q4:#104281; --o1:#fbd3c0; --o2:#f4a07c; --o3:#eb6834; --o4:#a8370f; --red:#d0302f; --y1:#fbeab0; --y2:#f6cf5c; --y3:#eda100; --y4:#9a6300; --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#6250d6;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#121417; --panel:#1a1d21; --ink:#eef0f3; --ink-2:#b7bec7; --ink-3:#8a929c; --grid:#2a2f35; --line:#353b42;
+  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --o1:#6b2a12; --o2:#a8401a; --o3:#e0662f; --o4:#fbd3c0; --red:#ff6b66; --y1:#5a4200; --y2:#8a6400; --y3:#c98500; --y4:#fbe08a; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121417; --panel:#1a1d21; --ink:#eef0f3; --ink-2:#b7bec7; --ink-3:#8a929c; --grid:#2a2f35; --line:#353b42;
+  --gold:#eef0f3; --q0:#20242a; --q1:#184f95; --q2:#256abf; --q3:#5598e7; --q4:#cde2fb; --o1:#6b2a12; --o2:#a8401a; --o3:#e0662f; --o4:#fbd3c0; --red:#ff6b66; --y1:#5a4200; --y2:#8a6400; --y3:#c98500; --y4:#fbe08a; --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px}
+.wrap{max-width:1400px;margin:0 auto;padding-block:28px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:20px}
+h1{font-size:22px;font-weight:600;margin:0;text-wrap:balance}
+.sub{color:var(--ink-2);margin:6px 0 0;max-width:80ch;line-height:1.5}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.totals{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.t{background:var(--panel);padding:10px 12px;display:grid;gap:4px;min-width:0}
+.t .n{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2)}
+.t .sw{width:14px;height:0;border-top:2px solid;flex:none}
+.t .v{font-family:var(--mono);font-size:18px;font-variant-numeric:tabular-nums}
+.t .d{font-size:11px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 8px 4px;min-width:0}
+#chart{width:100%;height:620px}
+.note{color:var(--ink-3);font-size:12px;line-height:1.5;max-width:100ch}
+code{font-family:var(--mono);font-size:12px}
+@media (max-width:600px){#chart{height:480px}}
+.stats{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media (max-width:900px){.stats{grid-template-columns:minmax(0,1fr)}}
+h2{font-size:16px;font-weight:600;margin:0 0 4px}
+.def{color:var(--ink-2);font-size:12px;line-height:1.5;margin:0 0 8px;max-width:90ch}
+#bars{width:100%;height:420px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:12px;font-variant-numeric:tabular-nums}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-weight:500;color:var(--ink-2);font-size:11px;vertical-align:bottom;white-space:normal}
+td:first-child,th:first-child{text-align:left}
+#atab td:nth-child(2),#atab th:nth-child(2){text-align:left}
+td.k{display:flex;align-items:center;gap:6px}
+tr.gold td{color:var(--ink-2)}
+td b{font-weight:600}
+#score{width:100%;height:1500px}
+#heat,#heat2,#heat3{width:100%;height:640px}
+.key{display:inline-flex;align-items:center;gap:6px;margin-right:14px}
+.key i{width:12px;height:12px;border-radius:2px;display:inline-block}
+td.na{color:var(--ink-3)}
+td.z{color:var(--ink-3)}
+.ok{color:var(--ink-3);font-size:11px}
+th.sub{font-size:10px}
+td.red,td.red b{color:var(--red)}
+#halltab td,#halltab th{padding:6px 5px;text-align:center}
+#halltab th{white-space:nowrap}
+#halltab td:first-child,#halltab th:first-child{text-align:left}
+#halltab td.hc{background:color-mix(in srgb,var(--o3) 14%,transparent)}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11px;font-weight:500;white-space:nowrap}
+.pill.high{background:var(--o3);color:#fff}
+.pill.occ{background:var(--o2);color:#2a1206}
+.pill.rare{background:var(--o1);color:#2a1206}
+.pill.never{background:var(--q0);color:var(--ink-2);border:1px solid var(--line)}
+#ovtab td:nth-child(2),#ovtab th:nth-child(2){text-align:left}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.switch{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;border-bottom:1px solid var(--line)}
+.switch-label{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.seg{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--panel)}
+.seg button{font:inherit;font-size:13px;color:var(--ink-2);background:transparent;border:0;padding:8px 14px;cursor:pointer;min-width:0;text-align:left}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--s1);color:#fff}
+.seg button:focus-visible{outline:2px solid var(--s1);outline-offset:2px}
+</style>
+<div class="wrap">
+  <header>
+    <div class="eyebrow"><span data-s="A">GDPR-Bench RQ2 pilot · data level · iteration 1 · structure A (snippet only)</span><span data-s="B" hidden>GDPR-Bench RQ2 pilot · data level · iteration 2 · structure B (snippet + GDPR classification JSON)</span></div>
+    <h1>Violated articles per snippet: gold vs. 6 prompting set-ups</h1>
+    <p class="sub">Each point is one of the 887 Task 2 snippets, in <code>predictions.json</code> order. The y value is the number of GDPR articles in the answer text (<code>text = "0"</code> → 0, <code>"25,32"</code> → 2). The dashed line is the gold label count from <code>predictions.json</code>. Click legend entries to hide or show a series; drag on the chart or use the slider below it to zoom.</p>
+  </header>
+  <nav class="switch" aria-label="Choose structure">
+    <span class="switch-label">Structure</span>
+    <div class="seg" role="group">
+      <button type="button" id="btnA" data-pick="A" aria-pressed="true"><b>A</b> · iteration 1 · snippet only</button>
+      <button type="button" id="btnB" data-pick="B" aria-pressed="false"><b>B</b> · iteration 2 · snippet + GDPR classification JSON</button>
+    </div>
+  </nav>
+  <section class="totals" id="totals" aria-label="Total articles per series"></section>
+  <section class="panel" style="padding:16px">
+    <h2>Aggregated statistics vs. gold (all 887 snippets)</h2>
+    <p class="def"><b>% predicted vs gold</b> = total articles the method predicted ÷ total gold articles (1948). <b>% correct over gold</b> = predicted articles that are also in that snippet's gold label ÷ total gold articles (micro recall). Precision = correct ÷ predicted. Exact match = the predicted set equals the gold set.</p>
+    <div class="stats">
+      <div id="bars" role="img" aria-label="Bar chart of percent predicted and percent correct versus gold per method"></div>
+      <div class="tw"><table id="stab"></table></div>
+    </div>
+  </section>
+  <section class="panel" style="padding:16px">
+    <h2>Per-article statistics: the 23 GDPR articles in the prompt</h2>
+    <p class="def">For each article: how many snippets have it in the gold label, and how many times each method predicted it (the number of correct predictions, meaning the article is also in that snippet's gold label, is shown after the ✓). Articles are ranked by the total number of times they were predicted across the 6 methods. Hover a heatmap cell for details.</p>
+    <div class="stats">
+      <div id="heat" role="img" aria-label="Heatmap of how often each GDPR article was predicted by each method, compared with gold"></div>
+      <div class="tw"><table id="atab"></table></div>
+    </div>
+  </section>
+  <section class="panel" style="padding:16px">
+    <h2>Hallucinated articles: predicted more often than in gold</h2>
+    <p class="def">Same counts as the blue heatmap above. A cell is <b>orange</b> when the method predicted the article in more snippets than the gold label has it (method &gt; gold, over-prediction / hallucination). Blue cells are at or below the gold count (method ≤ gold). Hover a cell to see the difference from gold.</p>
+    <p class="def"><span class="key"><i style="background:var(--o3)"></i>method &gt; gold (hallucination)</span><span class="key"><i style="background:var(--q3)"></i>method ≤ gold</span></p>
+    <div id="heat2" role="img" aria-label="Heatmap of per-article prediction counts, with cells where the method exceeds gold highlighted in orange"></div>
+    <p data-s="A" class="def" style="margin-top:8px"><b>How to read a cell</b> (Gold and Baseline columns): each number is a count of snippets out of 887. <b>Art. 8 · Gold 4 · Baseline 6 (orange):</b> the gold label contains Art. 8 in 4 snippets, and Baseline predicted Art. 8 in 6 snippets. 6 &gt; 4, so Baseline over-predicts Art. 8 by +2 and the cell is orange. <b>Art. 25 · Gold 311 · Baseline 188 (blue):</b> Art. 25 is in 311 gold labels but Baseline predicted it in only 188 snippets, so the count is below gold (−123) and the cell stays blue. The colour compares totals only; it does not check whether the predictions were on the right snippets. Baseline's 6 predictions of Art. 8 are all wrong (0 correct), and 128 of its 188 Art. 25 predictions are hallucinations even though that cell is blue. The ✓ numbers in the per-article table and the "Hallucinations per article" table show the snippet-level picture.</p>
+    <p data-s="B" hidden class="def" style="margin-top:8px"><b>How to read a cell</b> (Gold and Baseline columns): each number is a count of snippets out of 887. <b>Art. 9 · Gold 35 · Baseline 37 (orange):</b> the gold label contains Art. 9 in 35 snippets, and Baseline predicted Art. 9 in 37 snippets. 37 &gt; 35, so Baseline over-predicts Art. 9 by +2 and the cell is orange. <b>Art. 25 · Gold 311 · Baseline 103 (blue):</b> Art. 25 is in 311 gold labels but Baseline predicted it in only 103 snippets, so the count is below gold (−208) and the cell stays blue. The colour compares totals only; it does not check whether the predictions were on the right snippets. Only 10 of Baseline's 37 Art. 9 predictions are correct, and 71 of its 103 Art. 25 predictions are hallucinations even though that cell is blue. The ✓ numbers in the per-article table and the "Hallucinations per article" table show the snippet-level picture.</p>
+  </section>
+  <section class="panel" style="padding:16px">
+    <h2>Omitted articles: predicted less often than in gold</h2>
+    <p class="def">Same counts as the blue heatmap above. A cell is <b>yellow</b> when the method predicted the article in fewer snippets than the gold label has it (gold &gt; method, under-prediction / omission). Blue cells are at or above the gold count (method ≥ gold). Hover a cell to see the difference from gold.</p>
+    <p class="def"><span class="key"><i style="background:var(--y3)"></i>gold &gt; method (omission)</span><span class="key"><i style="background:var(--q3)"></i>method ≥ gold</span></p>
+    <div id="heat3" role="img" aria-label="Heatmap of per-article prediction counts, with cells where gold exceeds the method highlighted in yellow"></div>
+  </section>
+  <section class="panel"><div id="chart" role="img" aria-label="Line chart of article count per snippet for gold labels and six prompting set-ups"></div></section>
+  <section class="panel" style="padding:16px">
+    <h2>Score per snippet: omission vs. hallucination, by method</h2>
+    <p class="def">For each snippet, every gold article the method missed is an <b>omission (−1)</b>, every predicted article not in gold is a <b>hallucination (+1)</b>, and every correctly predicted article counts <b>0</b>. Score = hallucinations − omissions. Example: gold = {4, 5}, method = {7} → 2 omissions + 1 hallucination = <b>−1</b>. Bars: yellow below zero = omitted articles; blue above zero = correct articles (0 points, shown for context); orange stacked on top = hallucinated articles; black dot = net score. All 6 charts share the x axis: zoom or drag the slider at the bottom to move them together.</p>
+    <p class="def"><span class="key"><i style="background:var(--y3)"></i>Omission (−1 each)</span><span class="key"><i style="background:var(--s1)"></i>Correct prediction (0)</span><span class="key"><i style="background:var(--o3)"></i>Hallucination (+1 each)</span><span class="key"><i style="background:var(--ink);border-radius:50%"></i>Score</span></p>
+    <div class="tw"><table id="scoretab"></table></div>
+    <p class="def" style="margin-top:6px">% Omission, % Correct and % Hallucination divide by all articles involved for that method: omissions + correct + hallucinations (the gold articles plus the hallucinated ones), so the three add up to 100%.</p>
+    <h2 style="margin-top:14px">Hallucinations per article</h2>
+    <p class="def">For each method and each of the 23 articles: the number of times the method predicted that article for a snippet whose gold label does not contain it (hallucination), and below it that article's share of the method's total hallucinations.</p>
+    <div class="tw"><table id="halltab"></table></div>
+    <p data-s="A" class="def" style="margin-top:6px"><b>How to read a cell</b>, e.g. Art. 5 · Baseline · 78 · 18.8%: Baseline hallucinated Art. 5 78 times (it predicted Art. 5 for 78 snippets whose gold label does not contain it), and these 78 make up 18.8% of all Baseline hallucinations (78 ÷ 415). It is not the share of Art. 5 predictions that are wrong: that is the hallucination rate, 78 ÷ 122 = 64% for Baseline.</p>
+    <p data-s="B" hidden class="def" style="margin-top:6px"><b>How to read a cell</b>, e.g. Art. 5 · Baseline · 69 · 18.9%: Baseline hallucinated Art. 5 69 times (it predicted Art. 5 for 69 snippets whose gold label does not contain it), and these 69 make up 18.9% of all Baseline hallucinations (69 ÷ 365). It is not the share of Art. 5 predictions that are wrong: that is the hallucination rate, 69 ÷ 93 = 74% for Baseline.</p>
+    <h2 style="margin-top:14px">Overall hallucination per article (all 6 methods)</h2>
+    <p class="def">Hallucinations summed over the 6 methods, with each article classed as <b>High</b> (100 or more hallucinations), <b>Occasional</b> (10–99), <b>Rare</b> (1–9) or <b>Never</b> (0). Share = the article's part of all hallucinations. Hallucination rate = hallucinations ÷ times predicted (how often a prediction of that article is wrong).</p>
+    <div class="tw"><table id="ovtab"></table></div>
+    <p data-s="A" class="def" style="margin-top:6px"><b>How to read a row</b>, e.g. <b>High · Art. 25 · 311 · 1070 · 319 · 751 · 28.9% · 70% · 6 / 6</b>: Art. 25 is in the gold label of 311 snippets. Summed over the 6 methods, it was predicted 1070 times (each method can predict it at most once per snippet, so the maximum is 6 × 887). 319 of those predictions were on a snippet whose gold label contains Art. 25 (correct) and 751 were not (hallucinations, so 319 + 751 = 1070). These 751 are 28.9% of the 2600 hallucinations made by all methods together, and 70% of the times a method predicts Art. 25 it is wrong (751 ÷ 1070). All 6 methods hallucinate it at least once. It is classed <b>High</b> because it has 100 or more hallucinations.</p>
+    <p data-s="B" hidden class="def" style="margin-top:6px"><b>How to read a row</b>, e.g. <b>High · Art. 25 · 311 · 780 · 215 · 565 · 20.9% · 72% · 6 / 6</b>: Art. 25 is in the gold label of 311 snippets. Summed over the 6 methods, it was predicted 780 times (each method can predict it at most once per snippet, so the maximum is 6 × 887). 215 of those predictions were on a snippet whose gold label contains Art. 25 (correct) and 565 were not (hallucinations, so 215 + 565 = 780). These 565 are 20.9% of the 2709 hallucinations made by all methods together, and 72% of the times a method predicts Art. 25 it is wrong (565 ÷ 780). All 6 methods hallucinate it at least once. It is classed <b>High</b> because it has 100 or more hallucinations.</p>
+    <div id="score" role="img" aria-label="Six bar charts, one per method, showing omitted, correct and hallucinated articles and the net score for each snippet"></div>
+  </section>
+  <p class="note">Sources: <code>*/output/predictions.json</code> (gold), <code>baseline_calls.jsonl</code>, <code>description_calls.jsonl</code>, <code>function_calls.jsonl</code>, <code>cove_final_calls.jsonl</code>, <code>refine_r2_calls.jsonl</code> (last <code>ANSWER:</code> line), <code>sr_cove_final_calls.jsonl</code>. CoVe steps run only on non-zero answers, so snippets missing from the CoVe final files count as 0. Counts match each set-up's <code>predictions.json</code> for all 887 snippets.</p>
+</div>
+<script>__PLOTLY__</script>
+<script>
+const DATASETS = {A: __DATA_A__, B: __DATA_B__};
+let DATA = DATASETS.A;
+const ORDER = [
+  ["Prediction","--gold","dash"],
+  ["Baseline","--s1","solid"],
+  ["Snippet + description","--s2","solid"],
+  ["Snippet + function","--s3","solid"],
+  ["Snippet + CoVe","--s4","solid"],
+  ["Snippet + Self-Refine","--s5","solid"],
+  ["Snippet + CoVe + Self-Refine","--s6","solid"],
+];
+const LABEL = {"Prediction":"Prediction (gold)"};
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const N = DATA.ids.length;
+const short = DATA.ids.map((id,i)=>{const [f,l]=id.split(": "); return `${i+1}. ${f.split("/").pop()}: ${l||""}`;});
+
+function totals(){
+  const el=document.getElementById("totals"); el.innerHTML="";
+  for(const [k,c] of ORDER){
+    const s=DATA.series[k], sum=s.reduce((a,b)=>a+b,0), nz=s.filter(v=>v>0).length;
+    const d=document.createElement("div"); d.className="t";
+    d.innerHTML=`<div class="n"><span class="sw" style="border-color:var(${c});${k==="Prediction"?"border-top-style:dashed":""}"></span>${LABEL[k]||k}</div><div class="v">${sum}</div><div class="d">articles · ${nz} of ${N} snippets non-zero</div>`;
+    el.appendChild(d);
+  }
+}
+function draw(){
+  const ink=css("--ink"), ink2=css("--ink-2"), grid=css("--grid"), panel=css("--panel"), line=css("--line");
+  const traces=ORDER.map(([k,c,dash])=>({
+    x:short, y:DATA.series[k], name:LABEL[k]||k, type:"scatter", mode:"lines",
+    line:{color:css(c), width:k==="Prediction"?2.5:1.5, dash, shape:"linear"},
+    customdata:DATA.articles[k].map(a=>a.length?a.join(", "):"0"),
+    hovertemplate:"%{y} <span style='opacity:.7'>[%{customdata}]</span><extra>"+(LABEL[k]||k)+"</extra>",
+  }));
+  traces[0].text=DATA.ids;
+  const layout={
+    paper_bgcolor:panel, plot_bgcolor:panel, font:{family:css("--sans"),color:ink2,size:12},
+    margin:{l:90,r:16,t:8,b:8}, hovermode:"x unified",
+    hoverlabel:{bgcolor:panel,bordercolor:line,font:{color:ink,family:css("--mono"),size:11}},
+    legend:{orientation:"h",y:1.08,x:0,font:{color:ink,size:12},itemclick:"toggle",itemdoubleclick:"toggleothers"},
+    xaxis:{type:"category",title:{text:"Snippet (file: line id)",font:{color:ink2}},tickangle:-45,tickfont:{size:10,family:css("--mono")},
+      nticks:24,showgrid:false,linecolor:line,range:[-0.5,79.5],
+      rangeslider:{visible:true,thickness:0.08,bgcolor:css("--bg"),bordercolor:line,borderwidth:1}},
+    yaxis:{title:{text:"Number of articles violated",font:{color:ink2}},dtick:1,rangemode:"tozero",gridcolor:grid,zeroline:true,zerolinecolor:line,fixedrange:true},
+  };
+  Plotly.react("chart",traces,layout,{responsive:true,displaylogo:false,modeBarButtonsToRemove:["lasso2d","select2d","toImage"]});
+}
+function stats(){
+  const G=DATA.articles["Prediction"], tg=G.reduce((a,g)=>a+g.length,0);
+  return ORDER.map(([k,c])=>{const P=DATA.articles[k];let pred=0,cor=0,ex=0,hit=0,nz=0;
+    P.forEach((p,i)=>{const g=new Set(G[i]);pred+=p.length;const c2=p.filter(a=>g.has(a)).length;cor+=c2;
+      if(c2)hit++;if(p.length)nz++;if(p.length===g.size&&c2===g.size)ex++;});
+    return {k,c,pred,cor,ex,hit,nz,pp:100*pred/tg,pc:100*cor/tg,prec:pred?100*cor/pred:0};});
+}
+function table(S){
+  const f=x=>x.toFixed(1)+"%";
+  let h="<thead><tr><th>Method</th><th>Articles predicted</th><th>% predicted vs gold</th><th>Correct articles</th><th>% correct over gold</th><th>Precision</th><th>Exact-match snippets</th><th>Snippets with ≥1 correct</th></tr></thead><tbody>";
+  for(const s of S){const g=s.k==="Prediction";
+    h+=`<tr class="${g?"gold":""}"><td class="k"><span class="sw" style="width:14px;border-top:2px ${g?"dashed":"solid"} var(${s.c})"></span>${g?"Gold (Prediction)":s.k}</td><td>${s.pred}</td><td><b>${g?"100.0%":f(s.pp)}</b></td><td>${g?"–":s.cor}</td><td><b>${g?"–":f(s.pc)}</b></td><td>${g?"–":f(s.prec)}</td><td>${g?"–":s.ex+" ("+f(100*s.ex/N)+")"}</td><td>${g?"–":s.hit+" ("+f(100*s.hit/N)+")"}</td></tr>`;}
+  document.getElementById("stab").innerHTML=h+"</tbody>";
+}
+function bars(S){
+  const M=S.filter(s=>s.k!=="Prediction"), ink=css("--ink"), ink2=css("--ink-2"), grid=css("--grid"), panel=css("--panel"), line=css("--line");
+  const y=M.map(s=>s.k).reverse(), mk=(name,v,col)=>({type:"bar",orientation:"h",name,y,x:v.reverse(),marker:{color:col,line:{color:panel,width:2}},
+    text:v.map(x=>x.toFixed(1)+"%"),textposition:"outside",cliponaxis:false,textfont:{color:ink,size:11,family:css("--mono")},hovertemplate:"%{y}<br>"+name+": %{x:.1f}%<extra></extra>"});
+  Plotly.react("bars",[mk("% correct over gold",M.map(s=>s.pc),css("--s2")),mk("% predicted vs gold",M.map(s=>s.pp),css("--s1"))],{
+    barmode:"group",bargap:0.3,bargroupgap:0.08,paper_bgcolor:panel,plot_bgcolor:panel,font:{family:css("--sans"),color:ink2,size:12},
+    margin:{l:190,r:40,t:30,b:40},legend:{orientation:"h",x:0,y:1.1,font:{color:ink},traceorder:"reversed"},
+    xaxis:{range:[0,105],ticksuffix:"%",gridcolor:grid,zeroline:false,title:{text:"% of gold articles (1948 = 100%)",font:{color:ink2}},fixedrange:true},
+    yaxis:{tickfont:{color:ink},fixedrange:true},
+    shapes:[{type:"line",x0:100,x1:100,yref:"paper",y0:0,y1:1,line:{color:ink,dash:"dash",width:1.5}}],
+    annotations:[{x:100,yref:"paper",y:1,yanchor:"bottom",text:"gold",showarrow:false,font:{color:ink2,size:11}}]
+  },{responsive:true,displaylogo:false,displayModeBar:false});
+}
+function drawStats(){const S=stats();table(S);bars(S);}
+const ART={5:"Principles of processing",6:"Lawfulness of processing",7:"Conditions for consent",8:"Child's consent",9:"Special categories of data",12:"Transparent information",13:"Information at collection",14:"Information, data not from subject",15:"Right of access",16:"Right to rectification",17:"Right to erasure",18:"Right to restriction",19:"Notification of rectification/erasure",21:"Right to object",25:"Data protection by design/default",30:"Records of processing",32:"Security of processing",33:"Breach notification",35:"DPIA",44:"Transfers: general principle",46:"Transfers with safeguards",58:"Supervisory authority powers",83:"Administrative fines"};
+const ARTS=Object.keys(ART).map(Number);
+function artStats(){
+  const G=DATA.articles["Prediction"], M=ORDER.slice(1).map(o=>o[0]);
+  const rows=ARTS.map(a=>{const r={a,gold:G.filter(g=>g.includes(a)).length,pred:{},cor:{}};
+    for(const k of M){const P=DATA.articles[k];r.pred[k]=0;r.cor[k]=0;
+      P.forEach((p,i)=>{if(p.includes(a)){r.pred[k]++;if(G[i].includes(a))r.cor[k]++;}});}
+    r.tp=M.reduce((s,k)=>s+r.pred[k],0);r.tc=M.reduce((s,k)=>s+r.cor[k],0);return r;});
+  rows.sort((x,y)=>y.tp-x.tp||y.gold-x.gold||x.a-y.a);
+  return {rows,M};
+}
+function artTable({rows,M}){
+  const short={"Snippet + description":"+ description","Snippet + function":"+ function","Snippet + CoVe":"+ CoVe","Snippet + Self-Refine":"+ Self-Refine","Snippet + CoVe + Self-Refine":"+ CoVe + Self-Refine"};
+  let h="<thead><tr><th>Rank</th><th>Article</th><th>Gold snippets</th>"+M.map(k=>`<th>${short[k]||k}<br><span class=\"ok\">predicted ✓correct</span></th>`).join("")+"<th>Total predicted (6 methods)</th><th>Total ✓correct</th></tr></thead><tbody>";
+  rows.forEach((r,i)=>{
+    h+=`<tr><td>${r.tp?i+1:"–"}</td><td style="white-space:normal;min-width:180px"><b>Art. ${r.a}</b> <span class="ok">${ART[r.a]}</span></td><td>${r.gold}</td>`+
+      M.map(k=>r.pred[k]?`<td>${r.pred[k]} <span class="ok">✓${r.cor[k]}</span></td>`:`<td class="z">0</td>`).join("")+
+      `<td><b>${r.tp}</b></td><td>${r.tc}</td></tr>`;});
+  document.getElementById("atab").innerHTML=h.replace(/\\"/g,'"')+"</tbody>";
+}
+function heat({rows,M}){
+  const ink=css("--ink"),ink2=css("--ink-2"),panel=css("--panel");
+  const cols=["Gold",...M.map(k=>k.replace("Snippet + ","+ "))];
+  const y=rows.map(r=>"Art. "+r.a), z=rows.map(r=>[r.gold,...M.map(k=>r.pred[k])]);
+  const cd=rows.map(r=>[[ART[r.a],"",""],...M.map(k=>[ART[r.a],r.cor[k],r.pred[k]?(100*r.cor[k]/r.pred[k]).toFixed(0)+"%":"–"])]);
+  const zmax=Math.max(...z.flat());
+  const sc=[[0,css("--q0")],[0.001,css("--q1")],[0.15,css("--q2")],[0.5,css("--q3")],[1,css("--q4")]];
+  Plotly.react("heat",[{type:"heatmap",x:cols,y,z:z.map(r=>r.map(v=>Math.sqrt(v))),zmin:0,zmax:Math.sqrt(zmax),colorscale:sc,showscale:false,xgap:2,ygap:2,
+    text:z,texttemplate:"%{text}",textfont:{family:css("--mono"),size:11},customdata:cd,
+    hovertemplate:"<b>%{y}</b> %{customdata[0]}<br>%{x}: %{text} snippets<br>correct: %{customdata[1]} (%{customdata[2]})<extra></extra>"}],{
+    paper_bgcolor:panel,plot_bgcolor:panel,font:{family:css("--sans"),color:ink2,size:12},margin:{l:70,r:60,t:80,b:10},
+    xaxis:{side:"top",tickfont:{color:ink,size:11},tickangle:-25,fixedrange:true},
+    yaxis:{autorange:"reversed",tickfont:{color:ink,family:css("--mono"),size:11},fixedrange:true},
+  },{responsive:true,displaylogo:false,displayModeBar:false});
+}
+function heatCmp(id,{rows,M},isHi,pfx){
+  const ink=css("--ink"),ink2=css("--ink-2"),panel=css("--panel");
+  const cols=["Gold",...M.map(k=>k.replace("Snippet + ","+ "))], y=rows.map(r=>"Art. "+r.a);
+  const zmax=Math.sqrt(Math.max(...rows.flatMap(r=>[r.gold,...M.map(k=>r.pred[k])])));
+  const zB=[],zO=[],tB=[],tO=[],cd=[];
+  rows.forEach(r=>{const vals=[r.gold,...M.map(k=>r.pred[k])];const b=[],o=[],tb=[],to=[],c=[];
+    vals.forEach((v,j)=>{const over=j>0&&isHi(v,r.gold);
+      b.push(over?null:Math.sqrt(v));o.push(over?Math.sqrt(v):null);tb.push(over?"":String(v));to.push(over?String(v):"");
+      const d=v-r.gold;c.push([ART[r.a],v,j===0?"gold":(d>0?"+"+d+" vs gold (hallucination)":d<0?d+" vs gold (omission)":"= gold")]);});
+    zB.push(b);zO.push(o);tB.push(tb);tO.push(to);cd.push(c);});
+  const ht="<b>%{y}</b> %{customdata[0]}<br>%{x}: %{customdata[1]} snippets<br>%{customdata[2]}<extra></extra>";
+  const base={type:"heatmap",x:cols,y,zmin:0,zmax,showscale:false,xgap:2,ygap:2,texttemplate:"%{text}",textfont:{family:css("--mono"),size:11},customdata:cd,hovertemplate:ht,hoverongaps:false};
+  const sB=[[0,css("--q0")],[0.001,css("--q1")],[0.15,css("--q2")],[0.5,css("--q3")],[1,css("--q4")]];
+  const sO=[[0,css(pfx+"1")],[0.15,css(pfx+"2")],[0.5,css(pfx+"3")],[1,css(pfx+"4")]];
+  Plotly.react(id,[{...base,z:zB,text:tB,colorscale:sB},{...base,z:zO,text:tO,colorscale:sO}],{
+    paper_bgcolor:panel,plot_bgcolor:panel,font:{family:css("--sans"),color:ink2,size:12},margin:{l:70,r:60,t:80,b:10},
+    xaxis:{side:"top",tickfont:{color:ink,size:11},tickangle:-25,fixedrange:true},
+    yaxis:{autorange:"reversed",tickfont:{color:ink,family:css("--mono"),size:11},fixedrange:true},
+  },{responsive:true,displaylogo:false,displayModeBar:false});
+}
+const heat2=s=>heatCmp("heat2",s,(v,g)=>v>g,"--o");
+const heat3=s=>heatCmp("heat3",s,(v,g)=>v<g,"--y");
+function drawArt(){const s=artStats();artTable(s);heat(s);heat2(s);heat3(s);}
+function scoreData(){
+  const G=DATA.articles["Prediction"];
+  return ORDER.slice(1).map(([k,c])=>{const P=DATA.articles[k];const tp=[],fp=[],fn=[],sc=[];
+    P.forEach((p,i)=>{const g=new Set(G[i]),ps=new Set(p);const a=p.filter(x=>g.has(x)).length,h=p.length-a,o=G[i].filter(x=>!ps.has(x)).length;
+      tp.push(a);fp.push(h);fn.push(o);sc.push(h-o);});
+    return {k,c,tp,fp,fn,sc};});
+}
+function scoreTable(S){
+  const sum=a=>a.reduce((x,y)=>x+y,0);
+  let h="<thead><tr><th>Method</th><th>Total score</th><th>Mean score / snippet</th><th>Omissions (−1)</th><th>Correct (0)</th><th>Hallucinations (+1)</th><th>% Omission</th><th>% Correct</th><th>% Hallucination</th><th>Snippets with score 0</th></tr></thead><tbody>";
+  {const tg=DATA.articles["Prediction"].reduce((x,g)=>x+g.length,0);
+    h+=`<tr class="gold"><td class="k"><span class="sw" style="width:14px;border-top:2px dashed var(--gold)"></span>Gold (Prediction)</td><td><b>0</b></td><td>0.00</td><td>0</td><td>${tg}</td><td>0</td><td><b>0.0%</b></td><td><b>100.0%</b></td><td><b>0.0%</b></td><td>${N}</td></tr>`;}
+  const hp=S.map(s=>{const O=sum(s.fn),C=sum(s.tp),H=sum(s.fp);return (100*H/(O+C+H)).toFixed(1);}), hmin=Math.min(...hp.map(Number)).toFixed(1);
+  for(const s of S){const T=sum(s.sc),O=sum(s.fn),C=sum(s.tp),H=sum(s.fp),A=O+C+H,p=v=>(100*v/A).toFixed(1)+"%";
+    h+=`<tr><td class="k"><span class="sw" style="width:14px;border-top:2px solid var(${s.c})"></span>${s.k}</td><td><b>${T}</b></td><td>${(T/N).toFixed(2)}</td><td>${O}</td><td>${C}</td><td>${H}</td><td><b>${p(O)}</b></td><td><b>${p(C)}</b></td><td class="${p(H)===hmin+"%"?"red":""}"><b>${p(H)}</b></td><td>${s.sc.filter(v=>v===0).length}</td></tr>`;}
+  document.getElementById("scoretab").innerHTML=h+"</tbody>";
+}
+function scorePlot(S){
+  const ink=css("--ink"),ink2=css("--ink-2"),grid=css("--grid"),panel=css("--panel"),line=css("--line");
+  const n=S.length, gap=0.035, hgt=(1-0.06-gap*(n-1))/n;
+  const traces=[], layout={paper_bgcolor:panel,plot_bgcolor:panel,font:{family:css("--sans"),color:ink2,size:12},barmode:"relative",bargap:0.15,
+    margin:{l:60,r:16,t:30,b:10},hovermode:"x unified",showlegend:false,
+    hoverlabel:{bgcolor:panel,bordercolor:line,font:{color:ink,family:css("--mono"),size:11}},annotations:[]};
+  const lo=Math.min(...S.flatMap(s=>s.fn.map(v=>-v))), hi=Math.max(...S.flatMap(s=>s.tp.map((v,i)=>v+s.fp[i])));
+  S.forEach((s,j)=>{
+    const ax=j===n-1?"":String(j+2), xa="x"+ax, ya="y"+ax;
+    const top=1-j*(hgt+gap), bot=top-hgt;
+    const G=DATA.articles["Prediction"],P=DATA.articles[s.k];
+    const cd=P.map((p,i)=>[G[i].length?G[i].join(", "):"–",p.length?p.join(", "):"0",s.sc[i]]);
+    const bar=(name,y,col)=>({type:"bar",name,x:short,y,xaxis:xa,yaxis:ya,marker:{color:col,line:{width:0}},hovertemplate:name+": %{y}<extra></extra>"});
+    traces.push(bar("Omission",s.fn.map(v=>-v),css("--y3")),bar("Correct",s.tp,css("--s1")),bar("Hallucination",s.fp,css("--o3")),
+      {type:"scatter",mode:"markers",name:"Score",x:short,y:s.sc,xaxis:xa,yaxis:ya,marker:{color:ink,size:5},customdata:cd,
+       hovertemplate:"<b>Score: %{y}</b><br>gold [%{customdata[0]}]<br>pred [%{customdata[1]}]<extra></extra>"});
+    layout["yaxis"+ax]={domain:[Math.max(0,bot),top],range:[lo-0.5,hi+0.5],dtick:2,gridcolor:grid,zeroline:true,zerolinecolor:ink2,zerolinewidth:1,fixedrange:true,tickfont:{size:10}};
+    const xo={type:"category",anchor:ya,range:[-0.5,79.5],showgrid:false,linecolor:line};
+    if(j===n-1){Object.assign(xo,{tickangle:-45,tickfont:{size:10,family:css("--mono")},nticks:24,
+      rangeslider:{visible:true,thickness:0.04,bgcolor:css("--bg"),bordercolor:line,borderwidth:1}});}
+    else Object.assign(xo,{matches:"x",showticklabels:false});
+    layout["xaxis"+ax]=xo;
+    layout.annotations.push({xref:"paper",yref:"paper",x:0,y:top,xanchor:"left",yanchor:"bottom",text:"<b>"+s.k+"</b>",showarrow:false,font:{color:ink,size:12}});
+  });
+  Plotly.react("score",traces,layout,{responsive:true,displaylogo:false,modeBarButtonsToRemove:["lasso2d","select2d","toImage"]});
+}
+function hallTable(){
+  const G=DATA.articles["Prediction"];
+  let h="<thead><tr><th>Method</th>"+ARTS.map(a=>`<th title="${ART[a]}">Art. ${a}</th>`).join("")+"<th>Total</th></tr></thead><tbody>";
+  for(const [k,c] of ORDER.slice(1)){const P=DATA.articles[k],cnt={};ARTS.forEach(a=>cnt[a]=0);
+    P.forEach((p,i)=>p.forEach(a=>{if(!G[i].includes(a))cnt[a]=(cnt[a]||0)+1;}));
+    const tot=ARTS.reduce((s,a)=>s+cnt[a],0);
+    h+=`<tr><td class="k"><span class="sw" style="width:14px;border-top:2px solid var(${c})"></span>${k}</td>`+
+      ARTS.map(a=>cnt[a]?`<td class="hc"><b>${cnt[a]}</b><br><span class="ok">${(100*cnt[a]/tot).toFixed(1)}%</span></td>`:`<td class="z">0<br><span class="ok">0%</span></td>`).join("")+
+      `<td><b>${tot}</b><br><span class="ok">100%</span></td></tr>`;}
+  document.getElementById("halltab").innerHTML=h+"</tbody>";
+}
+function overallTable(){
+  const G=DATA.articles["Prediction"], M=ORDER.slice(1).map(o=>o[0]);
+  const R=ARTS.map(a=>{let p=0,c=0,h=0,mh=0;for(const k of M){let any=false;DATA.articles[k].forEach((pr,i)=>{if(pr.includes(a)){p++;if(G[i].includes(a))c++;else{h++;any=true;}}});if(any)mh++;}
+    return {a,g:G.filter(x=>x.includes(a)).length,p,c,h,mh};});
+  const tot=R.reduce((s,r)=>s+r.h,0);
+  const cls=h=>h>=100?["high","High"]:h>=10?["occ","Occasional"]:h>=1?["rare","Rare"]:["never","Never"];
+  R.sort((x,y)=>y.h-x.h||y.g-x.g||x.a-y.a);
+  let h="<thead><tr><th>Class</th><th>Article</th><th>Gold snippets</th><th>Times predicted</th><th>Correct</th><th>Hallucinations</th><th>Share of all hallucinations</th><th>Hallucination rate</th><th>Methods that hallucinate it</th></tr></thead><tbody>";
+  for(const r of R){const [c,l]=cls(r.h);
+    h+=`<tr><td><span class="pill ${c}">${l}</span></td><td><b>Art. ${r.a}</b> <span class="ok">${ART[r.a]}</span></td><td>${r.g}</td><td>${r.p}</td><td>${r.c}</td><td><b>${r.h}</b></td><td>${(100*r.h/tot).toFixed(1)}%</td><td>${r.p?(100*r.h/r.p).toFixed(0)+"%":"–"}</td><td>${r.mh} / 6</td></tr>`;}
+  h+=`<tr><td></td><td><b>Total</b></td><td>${R.reduce((s,r)=>s+r.g,0)}</td><td>${R.reduce((s,r)=>s+r.p,0)}</td><td>${R.reduce((s,r)=>s+r.c,0)}</td><td><b>${tot}</b></td><td>100%</td><td>${(100*tot/R.reduce((s,r)=>s+r.p,0)).toFixed(0)}%</td><td></td></tr>`;
+  document.getElementById("ovtab").innerHTML=h+"</tbody>";
+}
+function drawScore(){const S=scoreData();scoreTable(S);hallTable();overallTable();scorePlot(S);}
+let CUR="A";
+function setStructure(s,push){
+  if(!DATASETS[s])s="A"; CUR=s; DATA=DATASETS[s];
+  document.querySelectorAll("[data-s]").forEach(el=>{el.hidden=el.dataset.s!==s;});
+  document.querySelectorAll(".seg button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.pick===s)));
+  totals(); draw(); drawStats(); drawArt(); drawScore();
+  if(push){try{history.replaceState(null,"","#structure-"+s.toLowerCase());}catch(e){location.hash="structure-"+s.toLowerCase();}}
+}
+const fromHash=()=>/structure-b/i.test(location.hash)?"B":"A";
+document.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",()=>setStructure(b.dataset.pick,true)));
+window.addEventListener("hashchange",()=>{const s=fromHash();if(s!==CUR)setStructure(s,false);});
+setStructure(fromHash(),false);
+const redraw=()=>{draw();bars(stats());const s=artStats();heat(s);heat2(s);heat3(s);scorePlot(scoreData());};
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",redraw);
+new MutationObserver(redraw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
+</script>
