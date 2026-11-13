@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "unspecified",
+  "seniority": "Master's",
+  "skills": [
+    "Computer science"
+  ],
+  "opportunity_type": "other",
+  "employment_type": "other",
+  "title": {
+    "value": "Seleção 2027/1 - Mestrado em Computação (PPGC)",
+    "evidence_url": "https://www.inf.ufrgs.br/ppgc/mestrado/selecao-2027-1/",
+    "evidence_quote": "Seleção 2027/1 - PPGC"
+  },
+  "institution": {
+    "name": "Universidade Federal do Rio Grande do Sul (UFRGS), Programa de Pós-Graduação em Computação (PPGC)",
+    "website": "https://www.inf.ufrgs.br/ppgc",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.inf.ufrgs.br/ppgc/mestrado/selecao-2027-1/",
+  "source_url": "https://www.inf.ufrgs.br/ppgc/mestrado/selecao-2027-1/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  "field": "Computer science",
+  "qualifications": [
+    "Edital PPGC 008/2026",
+    "Applications only via the programme online system",
+    "At least 30% of places for historically and socially discriminated groups"
+  ],
+  "description_short": "UFRGS Graduate Program in Computing (PPGC) master's selection for 2027/1 under Edital PPGC 008/2026. Applications run 19 October to 18 November 2026 through the online system; at least 30% of places are reserved for historically discriminated groups.",
+  "deadline": {
+    "value": "2026-11-18",
+    "timezone": null,
+    "evidence_url": "https://www.inf.ufrgs.br/ppgc/mestrado/selecao-2027-1/",
+    "evidence_quote": "O período de inscrições vai de 19 de outubro a 18 de novembro de 2026."
+  },
+  "status_evidence": [
+    "Official PPGC selection page (search results): applications 19 October to 18 November 2026",
+    "Online system not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Master's degree admission; opportunity_type set to other",
+    "Scholarship availability not stated",
+    "City (Porto Alegre) not stated in results",
+    "Full edital not seen"
+  ],
+  "id": "opp_7aea9396a9fd9c29",
+  "fingerprint": "cabeb50d18b16891",
+  "discovered_at": "2026-10-25T03:02:57.013Z",
+  "last_verified_at": "2026-10-25T03:02:57.013Z",
+  "content_hash": "sha256:a1a753c8c0b1c95131f5d9c67bfb34730d538cd427d47856de18b62750c87a75"
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "Research Continuity Grants for Africa",
+    "evidence_url": "https://twas.org/opportunities/deadlines",
+    "evidence_quote": "Research Continuity Grants for Africa"
+  },
+  "institution": {
+    "name": "UNESCO and The World Academy of Sciences (TWAS)",
+    "website": "https://twas.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://twas.org/opportunities/deadlines",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Natural sciences",
+  "seniority": "Researchers",
+  "qualifications": [
+    "African scientists based at recognized universities or research institutions in Africa",
+    "Research in the natural sciences interrupted by conflict or by natural or biological hazards"
+  ],
+  "skills": [],
+  "description_short": "Under UNESCO's Science for Crisis Response and Solutions Programme, six grants of up to USD 2,000 each help African scientists at African institutions resume or complete natural-sciences research interrupted by conflict or natural or biological hazards. Deadline: 15 November 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-15",
+    "timezone": null,
+    "evidence_url": "https://twas.org/opportunities/deadlines",
+    "evidence_quote": "15 November 2026"
+  },
+  "compensation": {
+    "value": "Up to USD 2,000 per grant (six grants)",
+    "evidence_url": "https://twas.org/opportunities/deadlines",
+    "evidence_quote": "Six grants of up to USD 2,000 each"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official TWAS deadlines page (search results): Research Continuity Grants for Africa, deadline 15 November 2026",
+    "UNESCO call page linked from TWAS not fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The same TWAS page also shows '16 November, 2026' beside the heading; the earlier date is used",
+    "Detailed call page (UNESCO) and application URL not captured; application_url left null",
+    "Multi-country programme: no single location",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_2e9156a733b7b51b",
+  "fingerprint": "a63541398fbc1f6b",
+  "discovered_at": "2026-10-27T03:09:02.919Z",
+  "last_verified_at": "2026-10-27T03:09:02.919Z",
+  "content_hash": "sha256:7a3afbc4f8408c5bcdc5542d3a2cf4ad14a9ce83ba551564ae16bcbd7f2fd247"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "The Summer Courses",
+    "evidence_url": "https://www.hagueacademy.nl/programmes/the-summer-courses/",
+    "evidence_quote": "The Summer Courses"
+  },
+  "institution": {
+    "name": "The Hague Academy of International Law",
+    "website": "https://www.hagueacademy.nl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.hagueacademy.nl/programmes/the-summer-courses/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "The Hague",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Public and private international law",
+  "seniority": null,
+  "qualifications": [
+    "Scholarships are limited and based on academic merit",
+    "No scholarships for online attendance",
+    "A scholarship can be awarded only once across Summer and Winter Courses"
+  ],
+  "skills": [],
+  "description_short": "The Hague Academy of International Law's 2027 Summer Courses at the Peace Palace run in two sessions: Public International Law (5-23 July 2027) and Private International Law (26 July-13 August 2027). Applications, including scholarship requests, are accepted from 1 November 2026 to 31 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": "Europe/Amsterdam",
+    "evidence_url": "https://www.hagueacademy.nl/wp-content/uploads/PROGRAMME-2027-SUMMER_ETE.pdf",
+    "evidence_quote": "1 November 2026 to 31 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official 2027 Summer Courses programme (search results) lists an application window of 1 November 2026 to 31 January 2027 for full-fee, scholarship, doctoral scholarship and Directed Studies applicants",
+    "Registration form not fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Course fee not captured",
+    "Deadline time stated as 23:59 (Hague time) in the summary; quote shows the date window only",
+    "Application URL (registration forms page) not confirmed"
+  ],
+  "id": "opp_875ee044c74b57b2",
+  "fingerprint": "8864e31e482b55e9",
+  "discovered_at": "2026-11-05T03:03:33.317Z",
+  "last_verified_at": "2026-11-05T03:03:33.317Z",
+  "content_hash": "sha256:4be46de60afb707990a2a30b1174009774de608a7b910dbb05c0628c4b4f9ff2"
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Massey University Alumni Doctoral Scholarship",
+    "evidence_url": "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-alumni-doctoral-scholarship/",
+    "evidence_quote": "Massey University Alumni Doctoral Scholarship"
+  },
+  "institution": {
+    "name": "Massey University",
+    "website": "https://www.massey.ac.nz",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-alumni-doctoral-scholarship/",
+  "source_url": "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-alumni-doctoral-scholarship/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "New Zealand",
+    "country_code": "NZ"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Any field (doctoral study)",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Hold a Massey University degree (undergraduate or postgraduate)",
+    "Hold an offer of place in a Massey doctoral programme, or be enrolled within the first 12 months of a doctorate by the closing date",
+    "International and domestic, full-time and part-time candidates are eligible",
+    "Successful applicants must enrol by 1 June of the award year"
+  ],
+  "skills": [],
+  "description_short": "Massey University's Alumni Doctoral Scholarship gives Massey graduates starting or early in a Massey doctorate $90,000 plus fees over three years. International and domestic, full- and part-time candidates can apply. Applications open 1 November 2026 and close 1 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": null,
+    "evidence_url": "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-alumni-doctoral-scholarship/",
+    "evidence_quote": "Closing date: 1 February 2027"
+  },
+  "compensation": {
+    "value": "$90,000 plus fees, over three years",
+    "evidence_url": "https://www.massey.ac.nz/study/scholarships-and-awards/massey-university-alumni-doctoral-scholarship/",
+    "evidence_quote": "$90,000 plus fees"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Massey scholarship page (search results): applications open 1 November 2026, closing date 1 February 2027",
+    "Application form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Applications open 1 November 2026; not open yet at discovery",
+    "The page's status field read 'Closed' when indexed, before the 1 November opening",
+    "Currency assumed to be NZD; not stated in the text seen",
+    "City not stated in the text seen",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_100cd8083f1aff6a",
+  "fingerprint": "84e047c71cfd562c",
+  "discovered_at": "2026-10-27T03:09:01.933Z",
+  "last_verified_at": "2026-10-27T03:09:01.933Z",
+  "content_hash": "sha256:f9c1d41bffd60dd93dc3a65d6de2786896933b5d50f6cf4d7d13dc4110e992e0"
+}

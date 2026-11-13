@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "institution": {
+    "name": "The Chinese University of Hong Kong (CUHK)",
+    "website": "https://www.gs.cuhk.edu.hk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.gs.cuhk.edu.hk/admissions/scholarships-fees/scholarships",
+  "source_url": "https://www.gs.cuhk.edu.hk/admissions/scholarships-fees/scholarships",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "country_code": "HK"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "All disciplines",
+  "seniority": "PhD",
+  "qualifications": [
+    "Candidates applying for the full-time PhD programme through the Online Application System by the deadline are considered automatically; no separate application",
+    "Main round 1 December 2026; clearing round 31 March 2027 only if places remain",
+    "HKPFS applicants submit the RGC initial application by 12 noon, 1 December 2026 (HKT), plus the CUHK application the same day"
+  ],
+  "skills": [],
+  "description_short": "CUHK's Vice-Chancellor's PhD Scholarship Scheme supports full-time PhD entrants for 2027-28. Applicants are considered automatically when they apply to a full-time PhD by the main-round deadline of 1 December 2026 (11:59 pm HKT).",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01T23:59:00+08:00",
+    "timezone": "Asia/Hong_Kong",
+    "evidence_url": "https://www.law.cuhk.edu.hk/app/applications-for-2027-28-phd-and-mphil-in-laws-programmes-now-open/",
+    "evidence_quote": "1 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CUHK pages (search results): 2027-28 main round 1 December 2026, 11:59 pm Hong Kong time; clearing round 31 March 2027",
+    "Online Application System not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Award amounts (HK$80,000 total plus HK$229,200 per annum studentship) appear on a department page that still mentions the 2026-27 intake; compensation left null",
+    "Deadline quote taken from the Faculty of Law page",
+    "Publication date not shown"
+  ],
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "CUHK Vice-Chancellor's PhD Scholarship Scheme",
+    "evidence_url": "https://eng.cuhk.edu.hk/study/rpg/phd-ael/scholarships-phdael/cuhk-vice-chancellors-phd-scholarship-scheme/",
+    "evidence_quote": "CUHK Vice-Chancellor’s PhD Scholarship Scheme"
+  },
+  "id": "opp_2c47cda2547269db",
+  "fingerprint": "ad53919f68b4ef11",
+  "discovered_at": "2026-10-24T02:05:04.743Z",
+  "last_verified_at": "2026-10-24T02:05:04.743Z",
+  "content_hash": "sha256:45a7ff6064520f8945eaa7d53fd59a0842f26f9cef6aa2e2271b72aab6b68b97"
+}

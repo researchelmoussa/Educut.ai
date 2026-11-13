@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Global PhD Student Fellowship in Computer Science",
+    "evidence_url": "https://nyuad.nyu.edu/en/academics/graduate-and-phd/phd-programs/global-phd-student-fellowship-in-computer-science.html",
+    "evidence_quote": "Global PhD Student Fellowship in Computer Science - NYU Abu Dhabi"
+  },
+  "institution": {
+    "name": "NYU Abu Dhabi",
+    "website": "https://nyuad.nyu.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://nyuad.nyu.edu/en/academics/graduate-and-phd/phd-programs/global-phd-student-fellowship-in-computer-science.html",
+  "source_url": "https://nyuad.nyu.edu/en/academics/graduate-and-phd/phd-programs/global-phd-student-fellowship-in-computer-science.html",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Abu Dhabi",
+    "country": "United Arab Emirates",
+    "country_code": "AE"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "No separate application: apply to the NYU Computer Science PhD and indicate interest in research at NYU Abu Dhabi",
+    "Statement of purpose, three letters of recommendation, CV and transcripts",
+    "TOEFL or IELTS for applicants whose native language or undergraduate instruction is not English"
+  ],
+  "skills": [],
+  "description_short": "NYU Abu Dhabi's Global PhD Student Fellowship in Computer Science lets NYU PhD students conduct research at NYUAD. Applicants apply to NYU's Computer Science PhD, due 12 December 2026 for Fall 2027, and indicate interest in NYUAD.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-12",
+    "timezone": "America/New_York",
+    "evidence_url": "https://cs.nyu.edu/dynamic/phd/admissions/",
+    "evidence_quote": "the deadline for applications is December 12"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NYU CS PhD admissions page (search results): deadline for applications December 12",
+    "NYU Shanghai CS PhD page (search results): for admission in Fall 2027 the application deadline is December 12, 2026",
+    "NYUAD (search results): no separate application; applications open mid-September; deadlines typically 1-15 December"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline taken from the NYU Computer Science PhD admissions page; the NYUAD fellowship page itself does not show a date",
+    "Fellowship funding details not captured"
+  ],
+  "id": "opp_9696f823dc150873",
+  "fingerprint": "cf6d8f08b8c03d98",
+  "discovered_at": "2026-10-30T03:20:11.918Z",
+  "last_verified_at": "2026-10-30T03:20:11.918Z",
+  "content_hash": "sha256:c82fb919ca3fd1421fe701103012c8e1676ae34a45e7bbe1ae4a2b5cd9d8f0df"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "2027 IEEE International Symposium on Information Theory (ISIT 2027)",
+    "evidence_url": "https://2027.ieee-isit.org/",
+    "evidence_quote": "IEEE International Symposium on Information Theory"
+  },
+  "institution": {
+    "name": "IEEE Information Theory Society",
+    "website": "https://www.itsoc.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://2027.ieee-isit.org/",
+  "source_url": "https://2027.ieee-isit.org/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Sorrento",
+    "country": "Italy",
+    "country_code": "IT"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Information theory",
+  "seniority": null,
+  "qualifications": [
+    "Paper submission by January 10, 2027 (AoE)",
+    "Tutorial proposals due February 26, 2027"
+  ],
+  "skills": [],
+  "description_short": "ISIT 2027, the IEEE International Symposium on Information Theory, takes place 27 June to 2 July 2027 in Sorrento, Italy. Paper submissions are due 10 January 2027, 23:59 Anywhere on Earth; acceptance notifications follow on 27 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-10T23:59:00-12:00",
+    "timezone": "AoE (UTC-12)",
+    "evidence_url": "https://2027.ieee-isit.org/",
+    "evidence_quote": "paper submission deadline is January 10, 2027, at 23:59 Anywhere on Earth time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ISIT 2027 site and IEEE ITSoc conference page (search results): paper submission deadline January 10, 2027 23:59 AoE; notification March 27, 2027; final manuscripts April 17, 2027"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title composed from the society's conference name and year; exact page heading not seen",
+    "Submission system link not identified; application_url points to the conference home page",
+    "Registration fees not captured"
+  ],
+  "id": "opp_c0beca911507e053",
+  "fingerprint": "7eef37ab5bf893d9",
+  "discovered_at": "2026-11-04T05:53:41.078Z",
+  "last_verified_at": "2026-11-04T05:53:41.078Z",
+  "content_hash": "sha256:443f066e15ebcb276d46e2b6a62b0db130fe5de9dff1d64651e0e68e0ea882b7"
+}

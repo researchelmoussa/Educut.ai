@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "ACM Creativity & Cognition 2027",
+    "evidence_url": "https://cc.acm.org/2027/",
+    "evidence_quote": "ACM Creativity & Cognition 2027"
+  },
+  "institution": {
+    "name": "ACM Creativity & Cognition (C&C 2027)",
+    "website": "https://cc.acm.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://cc.acm.org/2027/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "remote",
+  "field": "Human-computer interaction, creativity and computing",
+  "seniority": "Researchers, practitioners and students",
+  "qualifications": [
+    "Papers, pictorials and artworks: abstracts by 19 January 2027, final submission by 25 January 2027 (11:59 pm AoE)",
+    "Posters, demos, graduate student symposium, undergraduate research and creative computing contest: submissions by 18 March 2027"
+  ],
+  "skills": [
+    "Research writing",
+    "HCI research"
+  ],
+  "description_short": "ACM Creativity & Cognition 2027, a virtual conference on 13-16 June 2027 themed 'Creativity and the Unseen', invites papers, pictorials and artworks: abstracts due 19 January 2027, final submissions 25 January 2027 (AoE). Posters, demos and symposia are due 18 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-19T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://cc.acm.org/2027/",
+    "evidence_quote": "Abstracts due: Tue, Jan 19, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official C&C 2027 site (search results): abstracts due 19 January 2027, final submission 25 January 2027, 11:59 pm AoE",
+    "Submission system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The site's location line reads 'New Gatherleans', which looks like an error; the conference is described as virtual",
+    "Deadline shown is the abstract deadline; full submissions are due 25 January 2027",
+    "Submission URL not captured; application_url left null"
+  ],
+  "id": "opp_edd4bed03d708c76",
+  "fingerprint": "744fad850b23e74d",
+  "discovered_at": "2026-10-27T03:13:20.945Z",
+  "last_verified_at": "2026-10-27T03:13:20.945Z",
+  "content_hash": "sha256:d13584aae42bcb690f90688d0a827ecf6925221e130fa97ceda28ce49816ad25"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "International Postgraduate Admission, Fall 2027",
+    "evidence_url": "https://www.ejust.edu.eg/international-deadlines",
+    "evidence_quote": "Fall 2027"
+  },
+  "institution": {
+    "name": "Egypt-Japan University of Science and Technology (E-JUST)",
+    "website": "https://www.ejust.edu.eg",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ejust.edu.eg/international-deadlines",
+  "source_url": "https://www.ejust.edu.eg/international-deadlines",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "Egypt",
+    "country_code": "EG"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Science and engineering",
+  "seniority": "Master's / Doctoral",
+  "qualifications": [
+    "Apply online through the E-JUST website",
+    "Certificates must be certified by the Egyptian embassy in the country of the awarding institution",
+    "Certified original documents due April 29, 2027"
+  ],
+  "skills": [],
+  "description_short": "E-JUST's international postgraduate admission for Fall 2027 accepts applications from November 8, 2026 to January 10, 2027. Screening follows in February, online interviews and exams February 21-25, results March 31, and classes start September 19, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-10",
+    "timezone": "Africa/Cairo",
+    "evidence_url": "https://www.ejust.edu.eg/international-deadlines",
+    "evidence_quote": "November 8, 2026 - January 10, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official E-JUST international deadlines page (search results): Fall 2027 application window November 8, 2026 - January 10, 2027"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Applications open November 8, 2026 (after the run date)",
+    "Programmes offered and funding not captured",
+    "City not stated in the text seen"
+  ],
+  "id": "opp_8ff9f339bdc35bdd",
+  "fingerprint": "1afa69a3f8f5c6db",
+  "discovered_at": "2026-10-31T03:16:52.567Z",
+  "last_verified_at": "2026-10-31T03:16:52.567Z",
+  "content_hash": "sha256:82f29feebd41df462d8248ab07b236dc2b8e7ed3626f47920e627114747322c8"
+}

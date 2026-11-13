@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Graduate Fellowship Program",
+    "evidence_url": "https://www.kitp.ucsb.edu/apply/fellowships/graduate-fellowship-program",
+    "evidence_quote": "Graduate Fellowship Program"
+  },
+  "institution": {
+    "name": "Kavli Institute for Theoretical Physics (KITP), UC Santa Barbara",
+    "website": "https://www.kitp.ucsb.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.kitp.ucsb.edu/apply/fellowships/graduate-fellowship-program",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Santa Barbara",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Theoretical physics",
+  "seniority": "Graduate students",
+  "qualifications": [
+    "CV and 500-word essay",
+    "Advisor recommendation letter (or nomination letter)"
+  ],
+  "skills": [],
+  "description_short": "KITP's Graduate Fellowship Program hosts graduate students for 5-6 month appointments. For the summer/fall (July-December) term, applications or nominations must be received by 15 February. Applicants send a CV and a 500-word essay; the advisor provides a recommendation letter.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-15",
+    "timezone": null,
+    "evidence_url": "https://www.kitp.ucsb.edu/apply/fellowships/graduate-fellowship-program",
+    "evidence_quote": "For participation in the summer/fall term, applications or nominations must be received by February 15 of that year."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official KITP Graduate Fellowship Program page (search results): summer/fall term applications due February 15 of that year; winter/spring 2027 deadline (15 September 2026) has passed",
+    "Portal not fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The page states 'February 15 of that year' without naming 2027; 2027-02-15 is inferred for the summer/fall 2027 term",
+    "Stipend/support not captured",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_879a1bcd6d91e4dc",
+  "fingerprint": "6e25a1f5ea6bf3ef",
+  "discovered_at": "2026-11-05T03:04:13.336Z",
+  "last_verified_at": "2026-11-05T03:04:13.336Z",
+  "content_hash": "sha256:7ef317904585bf93f70e4bc949d5979034a5c15786f841435d3f16071d36f9c2"
+}

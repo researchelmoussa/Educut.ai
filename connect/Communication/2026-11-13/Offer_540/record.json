@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doctoral INPhINIT Fellowships Retaining 2027",
+    "evidence_url": "https://lacaixafoundation.org/documents/d/la-caixa-foundation/doctoral-inphinit-retaining-2027-rules-participation-pdf",
+    "evidence_quote": "Doctoral INPhINIT Retaining 2027"
+  },
+  "institution": {
+    "name": "\"la Caixa\" Foundation",
+    "website": "https://lacaixafoundation.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://lacaixafoundation.org/en/doctoral-inphinit-fellowships",
+  "source_url": "https://lacaixafoundation.org/en/doctoral-inphinit-fellowships",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Spain",
+    "country_code": "ES"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Any discipline",
+  "seniority": "Doctoral (early-stage researchers)",
+  "qualifications": [
+    "Any nationality",
+    "Resided or carried out main activity in Spain/Portugal for more than twelve months in the three years before the deadline",
+    "Within the first four years (full-time equivalent) of research career at the deadline"
+  ],
+  "skills": [],
+  "description_short": "\"la Caixa\" Foundation call for 30 doctoral fellowships in any discipline at universities or research centres in Spain or Portugal, open to researchers of any nationality who meet the mobility rule. Fellows start between September and November 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-02T14:00:00+01:00",
+    "timezone": "Europe/Madrid",
+    "evidence_url": "https://lacaixafoundation.org/documents/d/la-caixa-foundation/doctoral-inphinit-retaining-2027-rules-participation-pdf",
+    "evidence_quote": "The call closes on March 2 2027 at 14:00:00h (mainland Spain time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official \"la Caixa\" Foundation call page and 2027 rules (seen in search results) list the Retaining call as open with closing date 2 March 2027 14:00 (future)",
+    "Portal not fetched directly, so status capped at OPEN_LIKELY",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Host can be in Spain or Portugal; country set to Spain (seat of the foundation)",
+    "Dedicated Retaining call URL not seen; application_url is the INPhINIT programme page",
+    "English accreditation may be submitted until 12 March 2027",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-13T03:03:00.135Z",
+  "last_verified_at": "2026-11-13T03:03:02.530Z",
+  "id": "opp_c4edaff41685d492",
+  "fingerprint": "544af57e0836020c",
+  "content_hash": "sha256:3d8f39c08a0bf48ac436650c173a7499068421f58f52ae06b79f443064a7e481"
+}

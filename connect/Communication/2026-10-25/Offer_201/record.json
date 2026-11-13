@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "unspecified",
+  "seniority": "PhD candidates",
+  "skills": [],
+  "opportunity_type": "scholarship",
+  "employment_type": "other",
+  "title": {
+    "value": "China Scholarship Council - Adelaide University Partnership Scholarship Program",
+    "evidence_url": "https://adelaide.edu.au/research/research-degrees/research-scholarships/",
+    "evidence_quote": "China Scholarship Council - Adelaide University Partnership Scholarship Program"
+  },
+  "institution": {
+    "name": "Adelaide University",
+    "website": "https://adelaide.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://adelaide.edu.au/research/research-degrees/research-scholarships/",
+  "source_url": "https://adelaide.edu.au/research/research-degrees/research-scholarships/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Adelaide",
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "field": "All research fields (PhD)",
+  "qualifications": [
+    "For PhD commencement between July 2027 and June 2028",
+    "Requires an unconditional Adelaide offer that depends on also winning a CSC award",
+    "After Adelaide nomination, applicants apply to the China Scholarship Council around April to May 2027",
+    "The university fee contribution goes only to candidates it nominates"
+  ],
+  "description_short": "Adelaide University and the China Scholarship Council partnership for PhD study starting between July 2027 and June 2028. Applications to Adelaide run 1 October 2026 to 1 February 2027; nominated candidates then apply to the CSC around April-May 2027.",
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": null,
+    "evidence_url": "https://adelaide.edu.au/research/research-degrees/research-scholarships/",
+    "evidence_quote": "Applications run from 1 October 2026 to 1 February 2027, for candidates commencing their PhD between July 2027 and June 2028"
+  },
+  "status_evidence": [
+    "Official Adelaide research scholarships page (search results): 2027 round open 1 October 2026 to 1 February 2027",
+    "Portal not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline quote is the search-result wording of the page",
+    "City not stated explicitly in results (inferred from the university name)",
+    "Award amounts not shown on the page summary (China Fee Scholarship page mentions a tuition waiver for an earlier window)",
+    "Eligibility (Chinese citizenship) implied by CSC but not stated in results"
+  ],
+  "id": "opp_f897de912544fc67",
+  "fingerprint": "a65ea34150466c80",
+  "discovered_at": "2026-10-25T03:02:55.431Z",
+  "last_verified_at": "2026-10-25T03:02:55.431Z",
+  "content_hash": "sha256:4c1f75cee84224f12ea1ab1bbcb7b74a682ea71e1896709d665e60fcd3d0d0f9"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Mestrado em Informática",
+    "evidence_url": "https://www.puc-rio.br/ensinopesq/ccpg/inscricoes.html",
+    "evidence_quote": "Informática | 02/12/2026"
+  },
+  "institution": {
+    "name": "Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio), Departamento de Informática",
+    "website": "https://www.inf.puc-rio.br",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.puc-rio.br/ensinopesq/ccpg/inscricoes.html",
+  "source_url": "https://www.puc-rio.br/ensinopesq/ccpg/inscricoes.html",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer science (Informática)",
+  "seniority": "Master's",
+  "qualifications": [
+    "Selection for programmes starting in 2027.1; master's application deadline 02/12/2026",
+    "Applications through PUC-Rio's online system",
+    "Previous DI calls required a degree, transcripts, CV and at least two reference letters (check the 2027.1 edital)"
+  ],
+  "skills": [],
+  "description_short": "PUC-Rio's Department of Informatics is selecting master's students in Informática for the first semester of 2027. The university's central graduate table lists 2 December 2026 as the master's application deadline; applications are made online.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-02",
+    "timezone": "America/Sao_Paulo",
+    "evidence_url": "https://www.puc-rio.br/ensinopesq/ccpg/inscricoes.html",
+    "evidence_quote": "Para início em 2027.1 ... Informática | 02/12/2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official PUC-Rio central graduate admissions table (search results): Informática, start 2027.1, master's deadline 02/12/2026",
+    "The DI 2027.1 edital itself was not seen"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Doctoral deadline cell for Informática is blank in the table; only the master's is covered",
+    "Requirements taken from the 2026.1 edital and may have changed",
+    "Scholarship availability not captured"
+  ],
+  "id": "opp_1df66368c896204c",
+  "fingerprint": "39c5059c235c64e9",
+  "discovered_at": "2026-10-30T03:20:12.038Z",
+  "last_verified_at": "2026-10-30T03:20:12.038Z",
+  "content_hash": "sha256:bcaed34491b47f0d75e731917df60960cce4e9649305b0604bb2ef5f490a7804"
+}

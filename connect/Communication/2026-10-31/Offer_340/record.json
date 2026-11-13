@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "CSC-UQ PhD Scholarship (China Scholarship Council)",
+    "evidence_url": "https://scholarships.uq.edu.au/csc",
+    "evidence_quote": "CSC-UQ PhD Scholarship (China Scholarship Council)"
+  },
+  "institution": {
+    "name": "The University of Queensland",
+    "website": "https://www.uq.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://scholarships.uq.edu.au/csc",
+  "source_url": "https://scholarships.uq.edu.au/csc",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Open across disciplines",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Applicants must first be offered a place in UQ's PhD program",
+    "Expressions of Interest open Monday 2 November 2026",
+    "Full applications must be submitted by Wednesday 20 January 2027"
+  ],
+  "skills": [],
+  "description_short": "The University of Queensland and the China Scholarship Council offer joint PhD scholarships. Expressions of interest open 2 November 2026 and full applications are due 20 January 2027; applicants must first hold an offer of a place in UQ's PhD program.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-20",
+    "timezone": "Australia/Brisbane",
+    "evidence_url": "https://scholarships.uq.edu.au/csc",
+    "evidence_quote": "full applications must be submitted by Wednesday 20 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UQ scholarships page (search results): EOIs open 2 November 2026; full applications due Wednesday 20 January 2027"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "CSC nationality and other eligibility conditions not captured",
+    "Scholarship value not captured",
+    "City not stated in the text seen",
+    "Country taken from the institution's official name/domain; not seen verbatim in the search snippet"
+  ],
+  "id": "opp_fc0072b74a8200fb",
+  "fingerprint": "78c0aa88ba1e67fb",
+  "discovered_at": "2026-10-31T03:16:52.289Z",
+  "last_verified_at": "2026-10-31T03:16:52.289Z",
+  "content_hash": "sha256:03588e7cfeeaf8bba1db549209b92804c401b03f98aa281df36f57633af092db"
+}

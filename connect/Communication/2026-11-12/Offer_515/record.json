@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "2213-A Overseas Graduate Scholarship Program (Only PhD.)",
+    "evidence_url": "https://tubitak.gov.tr/en/scholarships/postgraduate/research-scholarship-programs/2213-overseas-graduate-scholarship-program-only-phd",
+    "evidence_quote": "2213-A Overseas Graduate Scholarship Program (Only PhD.)"
+  },
+  "institution": {
+    "name": "TÜBİTAK (Scientific and Technological Research Council of Türkiye), BİDEB",
+    "website": "https://tubitak.gov.tr",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ebideb.tubitak.gov.tr/basvuruacikprogramlar.htm",
+  "source_url": "https://fellowshipsguide.com/category/scholarships/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Ankara",
+    "country": "Turkey",
+    "country_code": "TR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "All fields (doctoral study abroad)",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Final-year undergraduates, graduates, current graduate students or master's holders may apply (per programme FAQ)"
+  ],
+  "skills": [],
+  "description_short": "TÜBİTAK BİDEB scholarship programme for doctoral study abroad. The 2026/1 call opened on 13 May 2026; applications are made online through the TÜBİTAK system and evaluated periodically.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-31",
+    "timezone": "Europe/Istanbul",
+    "evidence_url": "https://ebideb.tubitak.gov.tr/basvuruacikprogramlar.htm",
+    "evidence_quote": "13/05/2026 - 31/12/2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official BİDEB open-programmes list (seen in search results): 2026/1 call open 13/05/2026 to 31/12/2026 (future)",
+    "Programme FAQ (tubitak.gov.tr, 30.07.2026) says applications can be made all year",
+    "Application system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Deadline quote is the date range shown in the search summary of the BİDEB list; the list may be updated",
+    "Citizenship eligibility not confirmed in the search results",
+    "Scholarship amounts not quoted; compensation left null",
+    "Host country of study is abroad; location given is the funder's seat",
+    "Fellowships Guide post not located individually; source_url is the PhD Scholarships category page which lists a TÜBİTAK 2213A Overseas Doctoral Scholarship"
+  ],
+  "discovered_at": "2026-11-12T03:55:00.000Z",
+  "last_verified_at": "2026-11-12T02:57:14.464Z",
+  "id": "opp_ea99ec4dcf54a7ce",
+  "fingerprint": "5e1b8782b3897262",
+  "content_hash": "sha256:94f0487c9c20fefc892a168fa84d321fe015a3182017822fe304671d8e813560"
+}

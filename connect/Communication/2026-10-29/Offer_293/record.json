@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "TaiwanICDF International Higher Education Scholarship Program",
+    "evidence_url": "https://www.icdf.org.tw/wSite/ct?xItem=12505&ctNode=31562&mp=2",
+    "evidence_quote": "TaiwanICDF International Higher Education Scholarship Program"
+  },
+  "institution": {
+    "name": "International Cooperation and Development Fund (TaiwanICDF)",
+    "website": "https://www.icdf.org.tw",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.icdf.org.tw/wSite/ct?xItem=69338&ctNode=31566&mp=2",
+  "source_url": "https://www.icdf.org.tw/wSite/ct?xItem=12505&ctNode=31562&mp=2",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "Taiwan",
+    "country_code": "TW"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Degree programmes at partner universities in Taiwan",
+  "seniority": "Undergraduate and graduate students",
+  "qualifications": [
+    "Online application covers both the TaiwanICDF Scholarship and the Taiwan-Europe Scholarship",
+    "Application window: December 1, 2026 to March 15, 2027",
+    "Documents are also submitted through the ROC (Taiwan) embassy or representative office in the applicant's country",
+    "Incomplete or inaccurate applications are not processed"
+  ],
+  "skills": [],
+  "description_short": "TaiwanICDF scholarships fund international students in degree programmes at partner universities in Taiwan. The 2027 online application, covering the TaiwanICDF Scholarship and the Taiwan-Europe Scholarship, runs from 1 December 2026 to 15 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-15",
+    "timezone": null,
+    "evidence_url": "https://www.icdf.org.tw/wSite/np?ctNode=31563&CtUnit=365&BaseDSD=7&mp=2",
+    "evidence_quote": "The 2027 TaiwanICDF Scholarship applications open from December 1, 2026 to March 15, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official TaiwanICDF Apply Now and Eligibility pages (search results): 2027 application period December 1, 2026 to March 15, 2027",
+    "Application window not yet open on 2026-10-29 (opens December 1, 2026)",
+    "Online application system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "2027 guidebook and list of participating programmes not yet posted (download links still point to the 2026 documents)",
+    "Eligible nationalities not captured",
+    "Embassy-level submission deadline, if any, not stated",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_e18fe4086e6fc5a5",
+  "fingerprint": "5337bf269d8dc511",
+  "discovered_at": "2026-10-29T03:18:39.749Z",
+  "last_verified_at": "2026-10-29T03:18:39.749Z",
+  "content_hash": "sha256:0cdb0bd8db3fd339292c654fb2b7151730b2396d764f44c6505abac80250625a"
+}

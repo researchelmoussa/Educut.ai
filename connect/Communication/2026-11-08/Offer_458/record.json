@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Graduate Application, 2026-2027 Spring Semester (Graduate School of Social Sciences)",
+    "evidence_url": "https://sbe.metu.edu.tr/en/social-science-application",
+    "evidence_quote": "Spring Semester graduate applications"
+  },
+  "institution": {
+    "name": "Middle East Technical University (METU), Graduate School of Social Sciences",
+    "website": "https://www.metu.edu.tr",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://sbe.metu.edu.tr/en/social-science-application",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Ankara",
+    "country": "Turkey",
+    "country_code": "TR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Social sciences (master's and doctoral programmes)",
+  "seniority": "Postgraduate (master's and doctoral)",
+  "qualifications": [
+    "Some programmes require GRE or equivalent; conditional admission may be possible without it",
+    "Applications are taken and evaluated by the graduate schools"
+  ],
+  "skills": [],
+  "description_short": "METU's Graduate School of Social Sciences in Ankara accepts applications to its master's and doctoral programmes for the 2026-2027 Spring semester from 23 November to 18 December 2026 (23:59). Results are announced on 22 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-18",
+    "timezone": "Europe/Istanbul",
+    "evidence_url": "https://sbe.metu.edu.tr/en/social-science-application",
+    "evidence_quote": "November 23 to December 18, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Graduate School of Social Sciences page and METU Ankara 2026-2027 academic calendar (search results) list Spring Semester graduate applications from November 23 to December 18, 2026",
+    "Application window opens on 23 November 2026, after the date of this run",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "METU calendar states application and registration dates for international students will be announced later; the window above may apply to domestic applicants only",
+    "Page shows a likely typo (\"Submission to Departments\" on December 31, 2027)",
+    "List of programmes open in Spring not recorded; title is descriptive"
+  ],
+  "id": "opp_23f86af56f49cb44",
+  "fingerprint": "bec60c2f0d52e1ec",
+  "discovered_at": "2026-11-08T03:04:38.556Z",
+  "last_verified_at": "2026-11-08T03:04:38.556Z",
+  "content_hash": "sha256:0e0bf75fcd4e735d2337e6bf878d2db10040dc0832d0da3b40eb7255debafcc3"
+}

@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD studentships in Computing Science (October 2027 entry)",
+    "evidence_url": "https://www.gla.ac.uk/schools/computing/postgraduateresearch/prospectivestudents/phd-projects/",
+    "evidence_quote": "The School of Computing Science is offering studentships to support PhD research for students starting in October 2027 or shortly thereafter."
+  },
+  "institution": {
+    "name": "University of Glasgow, School of Computing Science",
+    "website": "https://www.gla.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.gla.ac.uk/schools/computing/postgraduateresearch/prospectivestudents/phd-projects/",
+  "source_url": "https://www.gla.ac.uk/schools/computing/postgraduateresearch/prospectivestudents/phd-projects/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Computing science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "For PhD students starting in October 2027 or shortly thereafter",
+    "Excellence Bursaries are fee scholarships (value deducted from tuition)",
+    "Minerva Scholarships are for part-time PhD students (5 years, research and teaching)",
+    "College Scholarships cover home-level fees and living costs at the UKRI rate",
+    "China Scholarship Council route available for Chinese students"
+  ],
+  "skills": [
+    "Computer science research"
+  ],
+  "description_short": "University of Glasgow School of Computing Science studentships for PhD research starting October 2027, including Excellence Bursaries, part-time Minerva Scholarships, College Scholarships and a China Scholarship Council route. Applications are due 31 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": null,
+    "evidence_url": "https://www.gla.ac.uk/schools/computing/postgraduateresearch/prospectivestudents/phd-projects/",
+    "evidence_quote": "The deadline for applications is 31 January 2027."
+  },
+  "compensation": {
+    "value": "College Scholarships: home-level fees plus annual stipend of £22,437 (2027-28); Minerva: at least £22,000 per year",
+    "evidence_url": "https://www.gla.ac.uk/schools/computing/postgraduateresearch/prospectivestudents/phd-projects/",
+    "evidence_quote": "College Scholarships ... annual stipend (£22,437 for session 2027-28); Minerva Scholarships ... living allowance of at least £22,000 per year"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official School of Computing Science PhD projects page (search results): studentships for October 2027 entry, deadline 31 January 2027",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Compensation figures are as summarised in search results of the official page",
+    "Eligibility details per scholarship type not fully visible",
+    "Deadline time not stated",
+    "City not stated in the official text seen; left null"
+  ],
+  "id": "opp_750f424cf67559b6",
+  "fingerprint": "84a8fbf8ed915b46",
+  "discovered_at": "2026-10-26T02:59:54.790Z",
+  "last_verified_at": "2026-10-26T02:59:54.790Z",
+  "content_hash": "sha256:45ccba613309a8fdf3e8ed93c20aafe9d7a59ed1fe3b9099139702f26b5804f6"
+}

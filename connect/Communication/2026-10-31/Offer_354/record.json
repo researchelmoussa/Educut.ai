@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Research Fellowships in Mathematics, Astronomy and Physics (from 1 October 2027)",
+    "evidence_url": "https://www.trinhall.cam.ac.uk/about/vacancies/academic-vacancies/",
+    "evidence_quote": "Fellowships starting 1 October 2027"
+  },
+  "institution": {
+    "name": "Trinity Hall, University of Cambridge",
+    "website": "https://www.trinhall.cam.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.trinhall.cam.ac.uk/about/vacancies/academic-vacancies/",
+  "source_url": "https://www.trinhall.cam.ac.uk/about/vacancies/academic-vacancies/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Applied mathematics, pure mathematics, astronomy, physics",
+  "seniority": "Early-career researchers",
+  "qualifications": [
+    "Open in four areas: applied mathematics, pure mathematics, astronomy and physics",
+    "Referees' letters due 16 November at 5pm",
+    "Joint scheme with other Cambridge colleges; the college typically funds two posts a year"
+  ],
+  "skills": [],
+  "description_short": "Trinity Hall, Cambridge, invites applications for Research Fellowships starting 1 October 2027 in applied mathematics, pure mathematics, astronomy and physics. The term usually runs three years with little teaching. Applications close Monday 9 November, 5pm.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-09T17:00:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.trinhall.cam.ac.uk/about/vacancies/academic-vacancies/",
+    "evidence_quote": "Monday 9 November, 5pm"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Trinity Hall academic vacancies page (search results): application deadline Monday 9 November, 5pm, for Fellowships starting 1 October 2027",
+    "Application portal and eligibility rules not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline year inferred from the 1 October 2027 start (Monday 9 November falls in 2026)",
+    "Stipend and eligibility rules not captured",
+    "Exact published title not seen; title built from the subjects and start date shown"
+  ],
+  "id": "opp_0367f820d598e348",
+  "fingerprint": "f6a25b989445e697",
+  "discovered_at": "2026-10-31T03:16:54.259Z",
+  "last_verified_at": "2026-10-31T03:16:54.259Z",
+  "content_hash": "sha256:f3fa69d0023c439442d3f75dc8bee8f260f633e199914c1ad9e20e2281e8569b"
+}

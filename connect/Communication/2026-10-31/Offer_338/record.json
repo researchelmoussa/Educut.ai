@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doutorado em Computação (Edital PPGC 004/2026)",
+    "evidence_url": "https://www.inf.ufrgs.br/ppgc/wp-content/uploads/2026/07/Edital-PPGC-004_2026-Doutorado.pdf",
+    "evidence_quote": "Edital PPGC 004 2026 Doutorado"
+  },
+  "institution": {
+    "name": "Universidade Federal do Rio Grande do Sul (UFRGS), Programa de Pós-Graduação em Computação (PPGC)",
+    "website": "https://www.inf.ufrgs.br/ppgc/",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.inf.ufrgs.br/ppgc/wp-content/uploads/2026/07/Edital-PPGC-004_2026-Doutorado.pdf",
+  "source_url": "https://www.inf.ufrgs.br/ppgc/wp-content/uploads/2026/07/Edital-PPGC-004_2026-Doutorado.pdf",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Continuous-flow selection: documents received between 01/08/2026 and 10/02/2027",
+    "Entry between September 2026 and May 2027"
+  ],
+  "skills": [],
+  "description_short": "UFRGS's Graduate Program in Computing (PPGC) runs a continuous-flow selection for its doctorate: applications are received from August 2026 to 10 February 2027, for entry between September 2026 and May 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-10",
+    "timezone": "America/Sao_Paulo",
+    "evidence_url": "https://www.inf.ufrgs.br/ppgc/wp-content/uploads/2026/07/Edital-PPGC-004_2026-Doutorado.pdf",
+    "evidence_quote": "01/08/2026 e 10/02/2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official PPGC call (Edital 004/2026, search results): INSCRIÇÕES DE AGOSTO DE 2026 A FEVEREIRO DE 2027; documents received 01/08/2026 to 10/02/2027"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Number of places, fees and quota rules for this call not captured (the previous call had up to 30 places)",
+    "The call PDF is used as the application/info link; the submission system was not seen",
+    "City not stated in the text seen",
+    "Country taken from the institution's official name/domain; not seen verbatim in the search snippet"
+  ],
+  "id": "opp_077f154c7b4fb2b9",
+  "fingerprint": "93d8a5549a5ba1c5",
+  "discovered_at": "2026-10-31T03:16:54.526Z",
+  "last_verified_at": "2026-10-31T03:16:54.526Z",
+  "content_hash": "sha256:66127cc10a0a3c91e1e60adcc5457bda76203d819af19f54a3bebc8dda350401"
+}

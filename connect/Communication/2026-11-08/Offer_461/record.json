@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "BSE Master's Degrees (2027-2028 intake)",
+    "evidence_url": "https://bse.eu/masters-degrees/admissions",
+    "evidence_quote": "Master's degrees admissions"
+  },
+  "institution": {
+    "name": "Barcelona School of Economics (BSE)",
+    "website": "https://bse.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://bse.eu/masters-degrees/admissions",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Barcelona",
+    "country": "Spain",
+    "country_code": "ES"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Economics, finance and data science",
+  "seniority": "Postgraduate (master's)",
+  "qualifications": [
+    "Funding awarded on merit; BSE assesses eligibility for tuition waivers automatically",
+    "Later applicants are considered for any remaining funding"
+  ],
+  "skills": [],
+  "description_short": "The Barcelona School of Economics accepts applications to its master's programmes starting September 2027. Applicants who submit a complete application before 15 January 2027 are considered for all funding opportunities and receive a decision by mid-February.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/Madrid",
+    "evidence_url": "https://bse.eu/masters-degrees/admissions",
+    "evidence_quote": "Candidates who submit a completed application before January 15 will be considered for all funding opportunities."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official BSE admissions page (search results) gives January 15, 2027 as the first-round deadline for the 2027-28 intake",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "15 January 2027 is the first-round (full funding consideration) deadline; later applications are still accepted",
+    "Application fee (EUR 100) seen only on an old page; not recorded",
+    "Programme-specific scholarship amounts not recorded; title is descriptive"
+  ],
+  "id": "opp_c8695e3234f16ac1",
+  "fingerprint": "dc29bb7be4db0fd4",
+  "discovered_at": "2026-11-08T03:04:39.501Z",
+  "last_verified_at": "2026-11-08T03:04:39.501Z",
+  "content_hash": "sha256:d983c12ae917ab33f125b6db2b83bd53939635cdcc2ad5c21cf8ab968e9af6ab"
+}

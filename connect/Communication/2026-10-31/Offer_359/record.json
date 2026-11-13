@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Summer Undergraduate Research Fellowships (SURF) 2027",
+    "evidence_url": "https://sfp.caltech.edu/undergraduate-research/programs/surf/application_information",
+    "evidence_quote": "SURF 2027 application opens November 1"
+  },
+  "institution": {
+    "name": "California Institute of Technology (Caltech), Student-Faculty Programs",
+    "website": "https://sfp.caltech.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://sfp.caltech.edu/undergraduate-research/programs/surf/application_information",
+  "source_url": "https://sfp.caltech.edu/undergraduate-research/programs/surf/application_information",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Science and engineering research",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Two confidential letters of recommendation, one from a faculty member, due with the application",
+    "International students can take part on the Caltech campus; JPL placements are limited to U.S. citizens and permanent residents",
+    "The prospective Caltech mentor completes a separate evaluation"
+  ],
+  "skills": [],
+  "description_short": "Caltech's Summer Undergraduate Research Fellowships (SURF) pair undergraduates with Caltech mentors for summer research. The 2027 application opens November 1; applications and two recommendation letters are due February 22, and awards are announced April 1.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-22",
+    "timezone": "America/Los_Angeles",
+    "evidence_url": "https://sfp.caltech.edu/undergraduate-research/programs/surf/application_information",
+    "evidence_quote": "SURF applications are due on February 22"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Caltech SFP page (search results): 2027 application opens November 1; applications and recommendations due February 22; awards announced April 1"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Year inferred from the 2027 cycle wording; an older cached copy of the page showed March 1",
+    "Application opens November 1, 2026 (after the run date)",
+    "Award amount not captured",
+    "Country taken from the institution's official name/domain; not seen verbatim in the search snippet"
+  ],
+  "id": "opp_23e6255731bc6bc7",
+  "fingerprint": "cd4caf064c2fe902",
+  "discovered_at": "2026-10-31T03:16:51.734Z",
+  "last_verified_at": "2026-10-31T03:16:51.734Z",
+  "content_hash": "sha256:fafdb91d26a9fec7762aaecdaf7078321e8d25e1db8764c4b6c0087efb37de2a"
+}

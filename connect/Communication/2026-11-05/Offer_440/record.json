@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Doctoral Scholarships",
+    "evidence_url": "https://www.hagueacademy.nl/doctoral-scholarships/",
+    "evidence_quote": "Doctoral Scholarships"
+  },
+  "institution": {
+    "name": "The Hague Academy of International Law",
+    "website": "https://www.hagueacademy.nl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.hagueacademy.nl/doctoral-scholarships/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "The Hague",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "International law",
+  "seniority": "Doctoral candidates",
+  "qualifications": [
+    "PhD candidates from non-OECD states currently residing in their home country",
+    "Expected thesis defence by 31 December of the year after the award",
+    "Undergraduate law degree at minimum; master's preferred",
+    "Proficiency in English or French",
+    "Previous Doctoral Scholarship recipients are ineligible"
+  ],
+  "skills": [],
+  "description_short": "The Hague Academy of International Law offers Doctoral Scholarships for PhD candidates from non-OECD states residing in their home country, for a research stay in The Hague from 1 July to 1 September 2027. Applications close 31 January 2027 at 23:59 Hague time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": "Europe/Amsterdam",
+    "evidence_url": "https://www.hagueacademy.nl/wp-content/uploads/PROGRAMME-2027-SUMMER_ETE.pdf",
+    "evidence_quote": "1 November 2026 to 31 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official 2027 Summer programme and Doctoral Scholarships page (search results): doctoral scholarship applications accepted 1 November 2026 to 31 January 2027, 23:59 Hague time; residence 1 July to 1 September 2027",
+    "Registration form not fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Stipend (reported as EUR 2,250 plus half of travel costs up to EUR 910) not recorded as compensation because no verbatim quote was captured",
+    "Notification reportedly by email in April; not verified for 2027",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_17cef5767832c10e",
+  "fingerprint": "745957d4f5d80cf7",
+  "discovered_at": "2026-11-05T03:10:06.437Z",
+  "last_verified_at": "2026-11-05T03:10:06.437Z",
+  "content_hash": "sha256:7dacd501bc72a32d5f84fa75f1672178d7c9cfbafa76e1204957938d7889bb46"
+}

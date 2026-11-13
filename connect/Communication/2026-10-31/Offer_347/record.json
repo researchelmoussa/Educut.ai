@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Monash Graduate Scholarship (MGS)",
+    "evidence_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-graduate-scholarship-mgs",
+    "evidence_quote": "Monash Graduate Scholarship"
+  },
+  "institution": {
+    "name": "Monash University",
+    "website": "https://www.monash.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-graduate-scholarship-mgs",
+  "source_url": "https://www.monash.edu/study/fees-scholarships/scholarships/find-a-scholarship/monash-graduate-scholarship-mgs",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Open across disciplines (graduate research)",
+  "seniority": "Doctoral / research master's",
+  "qualifications": [
+    "Round 1 (international applicants) closes 28 February 2027",
+    "Scholarship applications are submitted with the course application; eligible applicants are considered for all available graduate research scholarships",
+    "Round dates apply to Australian campuses only"
+  ],
+  "skills": [],
+  "description_short": "Monash University's Round 1 graduate research scholarship round for international applicants, including the Monash Graduate Scholarship, closes 28 February 2027, brought forward from 31 March. Applicants apply with their research degree application.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-28",
+    "timezone": "Australia/Melbourne",
+    "evidence_url": "https://www.monash.edu/pharm/research/doctoral-program/how-to-apply-for-our-doctoral-program",
+    "evidence_quote": "28 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Monash Graduate Research and Pharmacy pages (search results): international Round 1 close moved from 31 March to 28 February; Pharmacy table gives 28 February 2027"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "No dedicated 2027 Round 1 page seen; faculty pages may set internal deadlines",
+    "Round 3 dates differ across pages (31 July vs 31 August)",
+    "Stipend amount not captured",
+    "City not stated in the text seen"
+  ],
+  "id": "opp_35a65539e19003c1",
+  "fingerprint": "2d474eaf77e18830",
+  "discovered_at": "2026-10-31T03:16:53.684Z",
+  "last_verified_at": "2026-10-31T03:16:53.684Z",
+  "content_hash": "sha256:7c5d4642ef0c53ab56ceec5b2a2f6614d34d13dc086f2e92344cce592802ee07"
+}

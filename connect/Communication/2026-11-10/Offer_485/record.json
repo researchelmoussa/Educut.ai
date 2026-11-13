@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD Computer Science",
+    "evidence_url": "https://lums.edu.pk/programmes/phd-computer-science",
+    "evidence_quote": "PhD Computer Science"
+  },
+  "institution": {
+    "name": "Lahore University of Management Sciences (LUMS)",
+    "website": "https://lums.edu.pk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://lums.edu.pk/programmes/phd-computer-science",
+  "source_url": "https://lums.edu.pk/programmes/phd-computer-science",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Lahore",
+    "country": "Pakistan",
+    "country_code": "PK"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Computer Science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "LUMS Graduate Admission Test (LGAT) and SBASSE Subject Test, or GRE, by April 18, 2027 (per search results)"
+  ],
+  "skills": [],
+  "description_short": "LUMS is accepting applications for its PhD Computer Science programme for Fall 2027. The online application closes on April 6, 2027 at 5:00 pm PKT, with supporting documents and the application fee due April 7, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-06T17:00:00+05:00",
+    "timezone": "Asia/Karachi",
+    "evidence_url": "https://admission.lums.edu.pk/critical-dates-all-programmes",
+    "evidence_quote": "April 6, 2027, 5:00 pm PKT"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official programme page and LUMS Admissions Calendar (search results) both give the Fall 2027 online application deadline as April 6, 2027, 5:00 pm PKT",
+    "Programme page lists online application activation in October 2026",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Foreign nationals follow a separate track (PhD Computer Science (Foreign Nationals)) with an earlier deadline of March 3, 2027, 11:59 pm PKT",
+    "LUMS states it reserves the right to change dates and deadlines",
+    "Funding and stipend details not captured"
+  ],
+  "id": "opp_feb37fd63f6e657f",
+  "fingerprint": "e61b51c5abe0a41d",
+  "discovered_at": "2026-11-10T03:02:32.482Z",
+  "last_verified_at": "2026-11-10T03:02:32.482Z",
+  "content_hash": "sha256:9c12af8f8c781ca9cc1c81f350695192e9b2c728a3e60145976d8a23739cb30b"
+}

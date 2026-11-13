@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Mestrado em Ciência da Computação 2027 (PPGCC/UFJF)",
+    "evidence_url": "https://www2.ufjf.br/pgcc/wp-content/uploads/sites/181/2026/10/Edital-PPGCC-2027_v1.docx-1.pdf",
+    "evidence_quote": "02 de novembro de 2026 a 15 de janeiro de 2027"
+  },
+  "institution": {
+    "name": "Universidade Federal de Juiz de Fora (UFJF), Programa de Pós-Graduação em Ciência da Computação (PPGCC)",
+    "website": "https://www2.ufjf.br/pgcc/",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www2.ufjf.br/pgcc/wp-content/uploads/sites/181/2026/10/Edital-PPGCC-2027_v1.docx-1.pdf",
+  "source_url": "https://www2.ufjf.br/pgcc/wp-content/uploads/sites/181/2026/10/Edital-PPGCC-2027_v1.docx-1.pdf",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Master's applicants",
+  "qualifications": [
+    "Selection notice (edital) 2027 is for the master's programme only"
+  ],
+  "skills": [],
+  "description_short": "UFJF's Graduate Program in Computer Science (PPGCC) selection notice for its 2027 master's intake. Registration runs from 2 November 2026 to 15 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "America/Sao_Paulo",
+    "evidence_url": "https://www2.ufjf.br/pgcc/wp-content/uploads/sites/181/2026/10/Edital-PPGCC-2027_v1.docx-1.pdf",
+    "evidence_quote": "02 de novembro de 2026 a 15 de janeiro de 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UFJF PPGCC edital PDF (www2.ufjf.br, search results): registration window 02 November 2026 to 15 January 2027",
+    "Registration opens 2 November 2026; portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title composed (programme + intake year); the edital number was given as 01/2027 in search summaries only",
+    "A UFJF-domain search did not surface the edital text itself; dates come from the search result for the edital PDF",
+    "Scholarship (bolsa) availability not captured",
+    "City not stated in the evidence",
+    "opportunity_type set to 'other' because the schema has no master's-programme type"
+  ],
+  "id": "opp_5b051b9b5bc64dac",
+  "fingerprint": "9ede30a2127b10d8",
+  "discovered_at": "2026-11-01T03:14:06.926Z",
+  "last_verified_at": "2026-11-01T03:14:06.926Z",
+  "content_hash": "sha256:bf339ebd8ac1957e2ed0dea1f02fcf97a5381d478aa90ff4f0a08003416415e9"
+}

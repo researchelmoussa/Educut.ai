@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "ETH Postdoctoral Fellowships",
+    "evidence_url": "https://grantsoffice.ethz.ch/funding-opportunities/internal/eth-fellowships.html",
+    "evidence_quote": "ETH Postdoctoral Fellowships"
+  },
+  "institution": {
+    "name": "ETH Zurich",
+    "website": "https://ethz.ch",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://grantsoffice.ethz.ch/funding-opportunities/internal/eth-fellowships.html",
+  "source_url": "https://grantsoffice.ethz.ch/funding-opportunities/internal/eth-fellowships.html",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": "Zurich",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "All research fields at ETH Zurich",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "Doctorate by the submission deadline (or within six months of it), obtained at most two years before the deadline",
+    "At least one peer-reviewed journal publication or a prize for the doctoral thesis",
+    "Mobility rules: no more than twelve months in Switzerland, and no more than six months at ETH Zurich, EPFL, PSI, WSL, Empa, Eawag or the University of Zurich, in the three years before the deadline; ETH/UZH doctorates ineligible",
+    "Joint application with an ETH host professor via the eResearch system; all parts, including reference letters, in English"
+  ],
+  "skills": [],
+  "description_short": "ETH Zurich's two-year postdoctoral fellowship for early-career researchers, applied for jointly with an ETH host professor. It covers the fellow's salary at ETH standards plus CHF 12,000 per year for research expenses. Calls close 1 March and 1 September, 17:00 Swiss time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-01T17:00:00+01:00",
+    "timezone": "Europe/Zurich",
+    "evidence_url": "https://ethz.ch/content/dam/ethz/main/research/Forschungsf%C3%B6rderung/ETH%20Fellows/ETHFellowsGuidelines.pdf",
+    "evidence_quote": "There are two ETH Fellowship calls per year. Submission deadlines are 1 March and 1 September, 17:00 Swiss local time."
+  },
+  "compensation": {
+    "value": "Salary (100%, ETH standards) plus CHF 12,000 per year for research expenses",
+    "evidence_url": "https://grantsoffice.ethz.ch/funding-opportunities/internal/eth-fellowships.html",
+    "evidence_quote": "the fellowship covers the fellow's salary (100%, based on ETH standards)"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ETH Grants Office page and guidelines (search results): two calls per year, deadlines 1 March and 1 September, 17:00 Swiss local time",
+    "eResearch submission system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "No page seen that confirms the March 2027 call specifically; 1 March 2027 is inferred from the standing twice-yearly deadlines",
+    "Research-expense figures differ between older guidelines/FAQ and the Grants Office page",
+    "Success rate reported at about 15-20%"
+  ],
+  "id": "opp_f8069312cae902bc",
+  "fingerprint": "c2f9ba8b07fbf521",
+  "discovered_at": "2026-10-29T03:18:41.116Z",
+  "last_verified_at": "2026-10-29T03:18:41.116Z",
+  "content_hash": "sha256:a847b3aa29349d9206a00c68c85cddc3c94ed0e8532a70818cd0a857033c1810"
+}

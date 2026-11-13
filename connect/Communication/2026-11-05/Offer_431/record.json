@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "University of Twente Scholarship (UTS)",
+    "evidence_url": "https://www.utwente.nl/en/education/scholarship-finder/university-of-twente-scholarship/",
+    "evidence_quote": "University of Twente Scholarship (UTS)"
+  },
+  "institution": {
+    "name": "University of Twente",
+    "website": "https://www.utwente.nl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.utwente.nl/en/education/scholarship-finder/university-of-twente-scholarship/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Enschede",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": null,
+  "seniority": "Master's",
+  "qualifications": [
+    "Excellent students from non-EU/EER countries",
+    "(Provisionally) admitted to a qualifying UT master's programme starting in 2027/2028",
+    "Scholarship application is separate from the programme application"
+  ],
+  "skills": [],
+  "description_short": "The University of Twente Scholarship is for excellent non-EU/EER students admitted to a qualifying UT master's programme starting September 2027. The form opened 15 October 2026 and closes 1 April 2027 at 16:00 CET; results are expected in early May 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-01",
+    "timezone": "CET",
+    "evidence_url": "https://www.utwente.nl/en/education/scholarship-finder/university-of-twente-scholarship/",
+    "evidence_quote": "1 April 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UTS page and scholarship finder (search results): form opens 15 October 2026 at 09:00 CET and closes 1 April 2027 at 16:00 CET for programmes starting September 2027",
+    "Form not fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Award amount not captured",
+    "The UTS page carries an old age stamp in search results although it shows 2027 dates; verify on the live page",
+    "Field not set: applies to qualifying UT master's programmes",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_a8ba5e6688d92520",
+  "fingerprint": "1441b1aa10195960",
+  "discovered_at": "2026-11-05T03:04:13.931Z",
+  "last_verified_at": "2026-11-05T03:04:13.931Z",
+  "content_hash": "sha256:4f3936955114d55a881d817688999dfca055aae17cf9d3d1a134e109f4016347"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "European Master in Law and Economics (EMLE) 2027/2028",
+    "evidence_url": "https://emle.org/application-for-the-emle-2027-2028-open/",
+    "evidence_quote": "Application for the EMLE 2027/2028 open!"
+  },
+  "institution": {
+    "name": "European Master in Law and Economics (EMLE) consortium",
+    "website": "https://emle.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://apply.emle.org/courses/course/16-llm-european-master-law-and-economics",
+  "source_url": "https://emle.org/application-for-the-emle-2027-2028-open/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Law and economics",
+  "seniority": "Master's (LL.M.)",
+  "qualifications": [
+    "Only fully completed applications including at least one letter of reference are considered",
+    "Scholarships are merit-based, ranked among complete, on-time applications",
+    "Targeted scholarships encouraged for applicants from Sub-Saharan Africa and the Western Balkans"
+  ],
+  "skills": [],
+  "description_short": "Applications for the EMLE 2027/2028 Erasmus Mundus master in law and economics opened on 1 September 2026. Deadlines are 31 December 2026 for non-European applicants and 15 January 2027 for European applicants. About 15 full Erasmus+ scholarships are available per academic year.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-31",
+    "timezone": null,
+    "evidence_url": "https://emle.org/application-2/",
+    "evidence_quote": "31 December 2026 for non-European applicants and 15 January 2027 for European applicants"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official EMLE news post 'Application for the EMLE 2027/2028 open!' and application page (search results): application period opened 1 September 2026; deadlines 31 December 2026 (non-European) and 15 January 2027 (European)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline field uses the earlier non-European deadline; European applicants have until 15 January 2027",
+    "Time of day and time zone of the deadlines not stated",
+    "Location not set: the programme rotates across consortium universities; Barcelona (UPF) as the 2027-2028 first-term destination is 'highly likely but formal confirmation is still pending'",
+    "Scholarship amounts not captured"
+  ],
+  "id": "opp_1e3edb126630f4d4",
+  "fingerprint": "ae515ba055107050",
+  "discovered_at": "2026-11-04T05:55:21.763Z",
+  "last_verified_at": "2026-11-04T05:55:21.763Z",
+  "content_hash": "sha256:a60378efe63ca6101b07da3fc5d1eb1e2be4e5959ebe00a365ee00fdc23217d6"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doctoral Programmes",
+    "evidence_url": "https://www.eui.eu/en/services/academic-service/doctoral-programme",
+    "evidence_quote": "Doctoral Programmes"
+  },
+  "institution": {
+    "name": "European University Institute (EUI)",
+    "website": "https://www.eui.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.eui.eu/en/services/academic-service/doctoral-programme",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Florence",
+    "country": "Italy",
+    "country_code": "IT"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Economics, History and Civilisation, Law, Political and Social Sciences",
+  "seniority": "Doctoral",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The European University Institute accepts applications for its 2027-28 doctoral programmes in Economics, History and Civilisation, Law, and Political and Social Sciences until 15 January 2027 at 14:00 CET. Later applications are not accepted. Programmes begin 1 September 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "CET",
+    "evidence_url": "https://www.eui.eu/en/services/academic-service/doctoral-programme",
+    "evidence_quote": "the deadline to apply for the 2027-28 academic year is 15 January 2027 at 14:00 (CET)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official EUI doctoral overview (search results): deadline for the 2027-28 academic year is 15 January 2027 at 14:00 CET; programmes begin 01/09/2027",
+    "Portal not independently fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Closing time differs across EUI pages: programme pages say 14:00 CET, the educational programmes listing says 23:59 CET; the earlier time is recorded",
+    "Application URL not set: the apply listing page could not be fetched to confirm the form link",
+    "Funding depends on national grants (varies by applicant nationality); not captured",
+    "Exact page title of the overview page not verified; 'Doctoral Programmes' is the search-result title"
+  ],
+  "id": "opp_8477864dc9fbf485",
+  "fingerprint": "45b806014c679ae0",
+  "discovered_at": "2026-11-05T03:03:32.698Z",
+  "last_verified_at": "2026-11-05T03:03:32.698Z",
+  "content_hash": "sha256:439cfc7e131b505c13ce7d815bd414bbfe4692059a64e2d6219254873af37d12"
+}

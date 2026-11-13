@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Bodleian Visiting Fellowships in Special Collections",
+    "evidence_url": "https://www.bodleian.ox.ac.uk/csb/fellowships/bodleian-visiting-fellowships",
+    "evidence_quote": "Bodleian Visiting Fellowships in Special Collections"
+  },
+  "institution": {
+    "name": "Bodleian Libraries, University of Oxford",
+    "website": "https://www.bodleian.ox.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.bodleian.ox.ac.uk/csb/fellowships/bodleian-visiting-fellowships",
+  "source_url": "https://www.bodleian.ox.ac.uk/csb/fellowships/bodleian-visiting-fellowships",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Research using the Bodleian special collections",
+  "seniority": "Postdoctoral (any level)",
+  "qualifications": [
+    "Open to academically affiliated and independent scholars at any postdoctoral level",
+    "Current doctoral students must have submitted their thesis before the deadline and been awarded the doctorate before taking up the fellowship",
+    "Applications by email to fellowships@bodleian.ox.ac.uk with the online application form, before 5pm GMT on 27 November 2026",
+    "Fellowship year runs 1 August to 31 July"
+  ],
+  "skills": [],
+  "description_short": "The Bodleian Libraries offer Visiting Fellowships in Special Collections for 2027-28, open to affiliated and independent scholars at any postdoctoral level. Applications go by email and close 27 November 2026 at 5pm GMT; the fellowship year runs August to July.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-27T17:00:00+00:00",
+    "timezone": "Europe/London (GMT)",
+    "evidence_url": "https://www.bodleian.ox.ac.uk/csb/fellowships/bodleian-visiting-fellowships",
+    "evidence_quote": "the deadline is 27 November 2026, 5pm (GMT)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Bodleian page (search results): applications for the 2027-28 Visiting Fellowships are open; deadline 27 November 2026, 5pm (GMT)"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Stipend or award amount not captured",
+    "Proposal length and referee requirements come from an older page and may have changed",
+    "City not stated in the text seen"
+  ],
+  "id": "opp_2079fad0ea12f714",
+  "fingerprint": "831b09d1a6ce4a68",
+  "discovered_at": "2026-10-30T03:20:09.811Z",
+  "last_verified_at": "2026-10-30T03:20:09.811Z",
+  "content_hash": "sha256:8daea816699a9748f0ff338a1f46ce9fa72e2a01bf2ead502bdf9cc0c7975a69"
+}

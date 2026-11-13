@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Science Undergraduate Laboratory Internships (SULI), Summer 2027",
+    "evidence_url": "https://www.energy.gov/node/4860707",
+    "evidence_quote": "Discover Science: Applications Open for Summer 2027 Undergraduate Internships"
+  },
+  "institution": {
+    "name": "U.S. Department of Energy, Office of Science",
+    "website": "https://science.osti.gov",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://science.osti.gov/wdts/suli",
+  "source_url": "https://science.osti.gov/wdts/suli",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Science and engineering research at DOE national laboratories",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Hard deadline: no materials accepted after the submission deadline",
+    "Recommendation letters must also be in by the deadline"
+  ],
+  "skills": [],
+  "description_short": "DOE Office of Science summer 2027 undergraduate research internships (SULI, alongside the Community College Internships program). The application system opened October 14, 2026; applications close January 6, 2027 at 5:00 p.m. Eastern.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-06T17:00:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.energy.gov/node/4860707",
+    "evidence_quote": "The application deadline for both programs is Jan. 6, 2027, at 5:00 p.m. EST"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official DOE announcement \"Discover Science: Applications Open for Summer 2027 Undergraduate Internships\" (energy.gov, search results) gives the Jan. 6, 2027 deadline",
+    "DOE SULI key dates page (science.osti.gov) lists offer notices from about 3 February 2027",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Title composed from the program name and the Summer 2027 term stated in the announcement",
+    "Stipend amount not captured",
+    "Eligibility (citizenship, enrollment) not captured from the search results"
+  ],
+  "id": "opp_984ae860a1d3746b",
+  "fingerprint": "81c81f75a3150c68",
+  "discovered_at": "2026-11-01T03:14:05.402Z",
+  "last_verified_at": "2026-11-01T03:14:05.402Z",
+  "content_hash": "sha256:d58656e3a2ab09a692c80084f83aa22666e47759347e413e73da83ff0e10d77a"
+}

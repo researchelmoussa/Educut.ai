@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "2027 Application Information for International Students (Master's Degree and Ph.D. Degree)",
+    "evidence_url": "https://www.isd.pku.edu.cn/cn/detail.php?id=729",
+    "evidence_quote": "2027 Application Information for International Students (Master's Degree and Ph.D. Degree)"
+  },
+  "institution": {
+    "name": "Peking University, International Students Division",
+    "website": "https://www.isd.pku.edu.cn",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.isd.pku.edu.cn/cn/detail.php?id=729",
+  "source_url": "https://www.isd.pku.edu.cn/cn/detail.php?id=729",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Beijing",
+    "country": "China",
+    "country_code": "CN"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Open across disciplines",
+  "seniority": "Master's / Doctoral",
+  "qualifications": [
+    "Non-Chinese citizens holding a valid passport",
+    "Master's applicants need a bachelor's degree; doctoral applicants need a master's degree (bachelor's holders may apply to science and engineering doctorates)",
+    "Personal statement with research plan (1,500 words for master's, 3,000 for doctoral), résumé, commitment letter and two recommendation letters",
+    "Up to two programs per applicant; non-refundable application fee of 800 RMB",
+    "Applications are submitted through studyatpku.com"
+  ],
+  "skills": [],
+  "description_short": "Peking University accepts applications from international students for 2027 master's and Ph.D. programs from October 26 to December 25, 2026 (Beijing time). Some schools and English-taught programs set their own deadlines.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-25",
+    "timezone": "Asia/Shanghai",
+    "evidence_url": "https://www.isd.pku.edu.cn/cn/detail.php?id=729",
+    "evidence_quote": "October 26 to December 25, 2026 (Beijing time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official PKU International Students Division prospectus dated October 23, 2026 (search results): application window October 26 to December 25, 2026"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Individual schools set their own deadlines (e.g. HSBC Business School rounds); English-taught doctoral programs had a later deadline in past cycles",
+    "English-language score threshold shown garbled in the source",
+    "City inferred from 'Beijing time'"
+  ],
+  "id": "opp_a633081d03d9cab9",
+  "fingerprint": "69639e41c09ff6c2",
+  "discovered_at": "2026-10-31T03:16:53.957Z",
+  "last_verified_at": "2026-10-31T03:16:53.957Z",
+  "content_hash": "sha256:a65eb844077edccb9712b72856076392b0e248ce0247c4b8e03d864d936bfcee"
+}

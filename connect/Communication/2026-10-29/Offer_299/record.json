@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Robotics Institute Summer Scholars (RISS)",
+    "evidence_url": "https://riss.ri.cmu.edu/faq/",
+    "evidence_quote": "Robotics Institute Summer Scholars (RISS)"
+  },
+  "institution": {
+    "name": "Carnegie Mellon University, Robotics Institute",
+    "website": "https://riss.ri.cmu.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://applygrad.cs.cmu.edu/apply/index.php?domain=38",
+  "source_url": "https://riss.ri.cmu.edu/faq/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Robotics research",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Current undergraduate students only; applicants who do not meet all eligibility criteria are not considered",
+    "Applications accepted from November 1 to January 20, 3 PM EST",
+    "Program dates generally June 1 to August 15",
+    "Approximately 35 applicants selected from several hundred U.S. and international applicants"
+  ],
+  "skills": [],
+  "description_short": "Carnegie Mellon's Robotics Institute Summer Scholars program places undergraduates in summer robotics research, generally June 1 to August 15. About 35 are selected each year. Applications are accepted from 1 November to 20 January (3 PM EST).",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-20T15:00:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://riss.ri.cmu.edu/faq/",
+    "evidence_quote": "Applications are accepted from November 1 – January 20, at 3 PM EST"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official RISS FAQ (search results): applications accepted from November 1 to January 20, 3 PM EST",
+    "Application portal (applygrad.cs.cmu.edu) not independently fetched; window opens November 1"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The FAQ does not name the cohort year; January 20, 2027 is inferred for the 2027 cohort (the 2026 cohort closed January 21)",
+    "City not stated in the text seen",
+    "Stipend not captured"
+  ],
+  "id": "opp_b1a1008a53d60784",
+  "fingerprint": "b3f6b57c89193a96",
+  "discovered_at": "2026-10-29T03:18:40.508Z",
+  "last_verified_at": "2026-10-29T03:18:40.508Z",
+  "content_hash": "sha256:d4d1f5e0424c9b32f69387cbd59b3b81afaacc15c13e7221c3954068f8000f42"
+}

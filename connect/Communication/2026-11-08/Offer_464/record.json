@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD Programs, 2027-28 Fall Intake",
+    "evidence_url": "https://fytgs.hkust-gz.edu.cn/admissions/before-submitting-an-application/admission-timeline",
+    "evidence_quote": "2027-28 Fall Intake"
+  },
+  "institution": {
+    "name": "The Hong Kong University of Science and Technology (Guangzhou)",
+    "website": "https://www.hkust-gz.edu.cn",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://fytgs.hkust-gz.edu.cn/admissions/before-submitting-an-application/admission-timeline",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Guangzhou",
+    "country": "China",
+    "country_code": "CN"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Interdisciplinary science and technology",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Offers issued on a rolling basis",
+    "Programme-specific requirements on each programme's application tab"
+  ],
+  "skills": [],
+  "description_short": "HKUST (Guangzhou) accepts PhD applications for its 2027-28 fall intake from 21 July 2026; the deadline is 15 June 2027 for international applicants and 15 July 2027 for Chinese applicants. Offers are made on a rolling basis; classes start 1 September 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-06-15",
+    "timezone": "Asia/Shanghai",
+    "evidence_url": "https://fytgs.hkust-gz.edu.cn/admissions/before-submitting-an-application/admission-timeline",
+    "evidence_quote": "21 July 2026 to 15 June 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official HKUST(GZ) graduate school admission timeline (search results) lists the PhD application period 21 July 2026 to 15 June 2027 for international applicants",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Rolling offers: places may fill before the final deadline",
+    "Programme-specific deadlines may differ",
+    "Funding not recorded; title is descriptive"
+  ],
+  "id": "opp_576786011ed5cea1",
+  "fingerprint": "a8b1a28450315098",
+  "discovered_at": "2026-11-08T03:04:40.316Z",
+  "last_verified_at": "2026-11-08T03:04:40.316Z",
+  "content_hash": "sha256:73c9f93b1faf60d72cd464b4fead87a65a3d8c2fc3d42ced4b687cb9480f2481"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Associates Programme",
+    "evidence_url": "https://www.ictp.it/home/associates-programme",
+    "evidence_quote": "Associates Programme"
+  },
+  "institution": {
+    "name": "The Abdus Salam International Centre for Theoretical Physics (ICTP)",
+    "website": "https://www.ictp.it",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ictp.it/home/associates-programme",
+  "source_url": "https://www.ictp.it/news/2026/10/become-ictp-associate",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Trieste",
+    "country": "Italy",
+    "country_code": "IT"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Physics, mathematics and related sciences",
+  "seniority": "Mid-career and senior scientists",
+  "qualifications": [
+    "Regular Associates: scientists aged 36 to 45 working in developing countries",
+    "Senior Associates: scientists aged 46 to 65 working in a developing country",
+    "PhD and main affiliation in a developing country required",
+    "Apply through ICTP's online application system by 31 January 2027; successful applicants can visit ICTP from 2028"
+  ],
+  "skills": [],
+  "description_short": "ICTP's Associates Programme supports scientists working in developing countries through research visits to ICTP. Regular Associates are aged 36 to 45, Senior Associates 46 to 65; both need a PhD. Applications close 31 January 2027, for visits starting in 2028.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": "CET",
+    "evidence_url": "https://www.ictp.it/news/2026/10/become-ictp-associate",
+    "evidence_quote": "The deadline to apply, using ICTP's online application system, is 31 January 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ICTP news item (search results): \"The Centre is now accepting applications for its Associateships programme\"; deadline 31 January 2027",
+    "ICTP portal (search results): application window runs from 1 October to 31 January of the following year",
+    "Online application system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Junior Associates (up to age 35) call details are inconsistent across ICTP pages and are not covered here",
+    "City and country taken from ICTP's Trieste, Italy location; the Associates text seen does not repeat it",
+    "Deadline time and timezone not stated in the text seen"
+  ],
+  "id": "opp_5ac85006ab4722d4",
+  "fingerprint": "61330e81f7183e50",
+  "discovered_at": "2026-10-30T03:20:10.940Z",
+  "last_verified_at": "2026-10-30T03:20:10.940Z",
+  "content_hash": "sha256:b80dd521d02ae69d926d10386b79be60d214d8af189a91a4389690abf44fce4b"
+}

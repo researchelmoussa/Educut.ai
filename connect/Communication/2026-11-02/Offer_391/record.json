@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "International Scholars Program (September 2027 intake)",
+    "evidence_url": "https://undergraduatescholarships.ubc.ca/prog/2027_international_scholars_program_application/",
+    "evidence_quote": "2027 International Scholars Program Application"
+  },
+  "institution": {
+    "name": "The University of British Columbia",
+    "website": "https://www.ubc.ca",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+  "source_url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Undergraduate study (all fields)",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Supporting documents due January 31",
+    "Karen McKellin International Leader of Tomorrow Award nominations may close earlier than the UBC application deadline"
+  ],
+  "skills": [],
+  "description_short": "UBC's International Scholars Program for international students entering undergraduate study in September 2027, including the Karen McKellin International Leader of Tomorrow Award. Applications are due November 15, 2026 at 11:59 PM Pacific Time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-15T23:59:00-08:00",
+    "timezone": "America/Vancouver",
+    "evidence_url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/",
+    "evidence_quote": "The deadline to apply is November 15, 2026 at 11:59 PM Pacific Time (PCT)."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UBC International Scholars page (search results) gives the November 15, 2026 deadline for the September 2027 intake",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Award values and full eligibility criteria not captured",
+    "Sources disagree on the opening date (October 5, 2026 vs. July 22, 2026)",
+    "City not captured (UBC has Vancouver and Okanagan campuses)"
+  ],
+  "id": "opp_d0e2fb8996f3119f",
+  "fingerprint": "f3c1b851415150fa",
+  "discovered_at": "2026-11-02T03:15:43.873Z",
+  "last_verified_at": "2026-11-02T03:15:43.873Z",
+  "content_hash": "sha256:49f5fb1d00496bbfa85e75d4958a6e8879fa277f58ad3bea37a0a9f4ae1a5637"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Minicursos Temáticos",
+    "evidence_url": "https://verao.lncc.br/minicursos/",
+    "evidence_quote": "Minicursos Temáticos"
+  },
+  "institution": {
+    "name": "Laboratório Nacional de Computação Científica (LNCC), Programa de Verão 2027",
+    "website": "https://verao.lncc.br",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://verao.lncc.br/prices/",
+  "source_url": "https://verao.lncc.br/minicursos/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Petrópolis",
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "hybrid",
+  "field": "Scientific computing (HPC, data science, quantum computing, machine learning)",
+  "seniority": "Students and researchers",
+  "qualifications": [
+    "Registration open 02 Nov 2026 to 08 Jan 2027",
+    "General fee R$ 30,00; free for LNCC members (institutional e-mail) and LNCC PIBIC/PIBIT scholarship holders (with proof)",
+    "Certificates only for participants following via Zoom; YouTube-only participation does not give a certificate",
+    "Each Programa de Verão event requires a separate registration"
+  ],
+  "skills": [],
+  "description_short": "LNCC's 2027 summer programme offers thematic short courses on 22-26 February 2027, in hybrid format (in person in Petrópolis and on Zoom), on topics such as high-performance computing, data science, quantum computing and machine learning. Registration runs 2 November 2026 to 8 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08",
+    "timezone": "America/Sao_Paulo",
+    "evidence_url": "https://verao.lncc.br/minicursos/",
+    "evidence_quote": "As inscrições nas atividades deste evento estarão abertas de 02 Nov 2026 a 08 Jan 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official LNCC Programa de Verão minicursos page (search results): registration open 02 Nov 2026 to 08 Jan 2027",
+    "Registration window opens November 2, 2026; registration system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Individual course list not captured",
+    "FAQ page still shows 2025 dates (outdated)",
+    "Deadline timezone assumed Brazil time"
+  ],
+  "id": "opp_5e139cb0788758d2",
+  "fingerprint": "8838bea76984115c",
+  "discovered_at": "2026-10-29T03:18:40.742Z",
+  "last_verified_at": "2026-10-29T03:18:40.742Z",
+  "content_hash": "sha256:deeecdb5e005a988241a372af1b412fbcf8ee3df13e6c545d39d84b4a4e5803e"
+}

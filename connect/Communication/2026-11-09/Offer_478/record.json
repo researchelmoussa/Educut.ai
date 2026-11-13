@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Graduate Research Scholarships – 2028 Main Round",
+    "evidence_url": "https://www.uow.edu.au/research/graduate-research/scholarships/",
+    "evidence_quote": "International applications are now open until 23 May 2027"
+  },
+  "institution": {
+    "name": "University of Wollongong",
+    "website": "https://www.uow.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.uow.edu.au/research/graduate-research/scholarships/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Wollongong",
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "All research fields (higher degree by research)",
+  "seniority": "PhD / Master of Philosophy",
+  "qualifications": [
+    "International applicants for Autumn 2028 commencement",
+    "Scholarship application made as part of the online HDR application"
+  ],
+  "skills": [],
+  "description_short": "The University of Wollongong's 2028 main round of graduate research scholarships, including the Australian Government Research Training Program and University Postgraduate Award, is open to international applicants until 23 May 2027 for Autumn 2028 starts. Outcomes are expected in mid-August 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-05-23",
+    "timezone": "Australia/Sydney",
+    "evidence_url": "https://www.uow.edu.au/research/graduate-research/scholarships/",
+    "evidence_quote": "International applications are now open until 23 May 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UOW graduate research scholarships page (search results): 'International applications are now open until 23 May 2027' for the 2028 main round (Autumn 2028 commencement)",
+    "Explicit open statement seen only through search results; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Scholarship values not captured; compensation null",
+    "Older UOW FAQ gives a different outcome date (mid-December); the newer scholarships page says mid-August 2027",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_b23806d775e9094b",
+  "fingerprint": "a03650b49b1ae3c1",
+  "discovered_at": "2026-11-09T02:58:40.768Z",
+  "last_verified_at": "2026-11-09T02:58:40.768Z",
+  "content_hash": "sha256:9522813ef43120c6d5ff400db5694aae08b31e7402011107001ce47fb1c836a3"
+}

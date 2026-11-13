@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Maestría en Métodos para el Análisis de Políticas Públicas (METPOL)",
+    "evidence_url": "https://www.cide.edu/wp-content/uploads/2026/09/Convocatoria-METPOL-2027.pdf",
+    "evidence_quote": "Convocatoria-METPOL-2027"
+  },
+  "institution": {
+    "name": "Centro de Investigación y Docencia Económicas (CIDE)",
+    "website": "https://www.cide.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cide.edu/admisiones/",
+  "source_url": "https://www.cide.edu/wp-content/uploads/2026/09/Convocatoria-METPOL-2027.pdf",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Mexico",
+    "country_code": "MX"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Public policy analysis methods",
+  "seniority": "Master's",
+  "qualifications": [
+    "Applicants may apply to only one programme per call",
+    "Admission stages end on the dates set in the call, with no extensions"
+  ],
+  "skills": [],
+  "description_short": "CIDE's 2027 call for its Master's in Methods for Public Policy Analysis (METPOL) accepts registrations from 4 September 2026 to 15 February 2027 for applicants sitting exams at an embassy, consulate or SECIHTI site, and to 24 February 2027 at CIDE sites.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-15",
+    "timezone": "America/Mexico_City",
+    "evidence_url": "https://www.cide.edu/wp-content/uploads/2026/09/Convocatoria-METPOL-2027.pdf",
+    "evidence_quote": "del 4 de septiembre de 2026 al 15 de febrero de 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official METPOL 2027 call (search results) gives the registration window 4 September 2026 to 15 February 2027 (embassy/consulate/SECIHTI sites) and to 24 February 2027 (CIDE Santa Fe and Región Centro sites)",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Two deadlines depending on exam site: 15 February 2027 (embassy, consulate or SECIHTI site) and 24 February 2027 (CIDE sites); the earlier date is recorded",
+    "Campus city for METPOL not stated in the evidence",
+    "Funding not captured"
+  ],
+  "id": "opp_ec16da2a0142a888",
+  "fingerprint": "f9dd7e3e94c17069",
+  "discovered_at": "2026-11-10T03:02:33.072Z",
+  "last_verified_at": "2026-11-10T03:02:33.072Z",
+  "content_hash": "sha256:f5a0392f3c1327f725fcd9ae819f8bfa3b4cf76e44f9cef3dc667e93c5ffc4f7"
+}

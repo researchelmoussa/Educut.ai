@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Leiden University Excellence Scholarship (LExS)",
+    "evidence_url": "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs",
+    "evidence_quote": "Leiden University Excellence Scholarship (LExS)"
+  },
+  "institution": {
+    "name": "Leiden University",
+    "website": "https://www.universiteitleiden.nl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs",
+  "source_url": "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Leiden",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Master's programmes (all fields, with stated exceptions)",
+  "seniority": "Master's",
+  "qualifications": [
+    "Master's students from non-EEA/non-EFTA countries",
+    "Excludes Leiden Law School's (non-advanced) LLM and MSc programmes; exceptions for Advanced LLMs and MSc International Relations and Diplomacy",
+    "Only for Master's programmes starting in September; February starters are not eligible",
+    "Motivation letter as a PDF of no more than 500 words; late scholarship applications are not considered"
+  ],
+  "skills": [],
+  "description_short": "Leiden University scholarship for non-EEA/non-EFTA students starting a September Master's programme. Applications are due 1 December 2026, alongside an admission application; all applicants hear the award decision before the end of March.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": "Europe/Amsterdam",
+    "evidence_url": "https://www.universiteitleiden.nl/en/scholarships/sea/leiden-university-excellence-scholarship-lexs",
+    "evidence_quote": "1 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official LExS page (search results) lists a 1 December 2026 deadline for the Master's scholarship",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Search metadata marks the page as older; the 1 December 2026 date is assumed to apply to the September 2027 intake",
+    "Award amounts not captured",
+    "Time of day for the deadline not captured"
+  ],
+  "id": "opp_210679050b940c21",
+  "fingerprint": "e62a6a2b6b109919",
+  "discovered_at": "2026-11-02T03:15:43.221Z",
+  "last_verified_at": "2026-11-02T03:15:43.221Z",
+  "content_hash": "sha256:4cf51ed2ab2571ddbf802721c70c347614ddd9e52805619f9a0ab015c176f4d2"
+}

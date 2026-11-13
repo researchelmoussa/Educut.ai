@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Tarbell Fellowship",
+    "evidence_url": "https://www.tarbellcenter.org/fellowship",
+    "evidence_quote": "Applications for the 2027-28 Tarbell Fellowship are currently open and will close on Nov. 22, 2026."
+  },
+  "institution": {
+    "name": "Tarbell Center for AI Journalism",
+    "website": "https://www.tarbellcenter.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.tarbellcenter.org/fellowship",
+  "source_url": "https://www.tarbellcenter.org/fellowship",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "AI journalism",
+  "seniority": "Journalists (early to mid career)",
+  "qualifications": [
+    "At least 18 years old by the fellowship start date, June 7, 2027",
+    "At least one writing sample must be in prose format (e.g. news article, blog post or essay)"
+  ],
+  "skills": [
+    "Journalism",
+    "Writing",
+    "Artificial intelligence"
+  ],
+  "description_short": "Twelve-month fellowship for journalists covering artificial intelligence, with newsroom placements from September 2027 to May 2028. Applications for the 2027-28 cohort close 22 November 2026; second-stage decisions by end of December and fellows selected in March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-22",
+    "timezone": null,
+    "evidence_url": "https://www.tarbellcenter.org/fellowship",
+    "evidence_quote": "Applications for the 2027-28 Tarbell Fellowship are currently open and will close on Nov. 22, 2026."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Tarbell fellowship page (search results): 'Applications for the 2027-28 Tarbell Fellowship are currently open and will close on Nov. 22, 2026'",
+    "Application form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Placement locations / country not stated in results",
+    "Stipend not stated in results",
+    "Deadline time and timezone not stated",
+    "Institution legal name assumed from the site title (Tarbell)"
+  ],
+  "id": "opp_5ce2267b0fdfa271",
+  "fingerprint": "0c0da61a5aaf5110",
+  "discovered_at": "2026-10-26T02:59:54.522Z",
+  "last_verified_at": "2026-10-26T02:59:54.522Z",
+  "content_hash": "sha256:2287927e7af79a63463fadd2192c9899487d88a0c8b2eb4bc27c9016598a4cc8"
+}

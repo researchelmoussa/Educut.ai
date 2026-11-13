@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Aarhus BSS Graduate School PhD general call (February 2027)",
+    "evidence_url": "https://bss.au.dk/en/research/phd/application",
+    "evidence_quote": "The general call is open for applications from 4 January 2027 to 1 February 2027 at 23.59 CET."
+  },
+  "institution": {
+    "name": "Aarhus University, Aarhus BSS Graduate School",
+    "website": "https://bss.au.dk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://bss.au.dk/en/research/phd/application",
+  "source_url": "https://bss.au.dk/en/research/phd/application",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Aarhus",
+    "country": "Denmark",
+    "country_code": "DK"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Business and social sciences",
+  "seniority": "PhD",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "General call for PhD positions in business and social sciences across six PhD programmes at Aarhus BSS Graduate School, Aarhus University. Applications open 4 January and close 1 February 2027; earliest start 1 September 2027, with decisions expected by end of April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01T23:59:00+01:00",
+    "timezone": "Europe/Copenhagen",
+    "evidence_url": "https://bss.au.dk/en/research/phd/application",
+    "evidence_quote": "The general call is open for applications from 4 January 2027 to 1 February 2027 at 23.59 CET."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Aarhus BSS application page (seen in search results) gives the window 4 January to 1 February 2027 23:59 CET (future)",
+    "Application window not yet open at time of check",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Number of funded positions not stated",
+    "Funding terms not quoted",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-13T03:03:00.135Z",
+  "last_verified_at": "2026-11-13T03:03:00.297Z",
+  "id": "opp_a95bec59c148a36f",
+  "fingerprint": "ca5ca5b1c41fad9b",
+  "content_hash": "sha256:b4422c4c0fb0727aaec4395d9968f9aa2373ee71c8cb747fa2d76239b558800b"
+}

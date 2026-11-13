@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Master of Business Administration (MBA) Direct",
+    "evidence_url": "https://www.gibs.co.za/programmes/master-of-business-administration--mba--direct",
+    "evidence_quote": "Master of Business Administration (MBA) Direct"
+  },
+  "institution": {
+    "name": "Gordon Institute of Business Science (GIBS)",
+    "website": "https://www.gibs.co.za",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.gibs.co.za/programmes/master-of-business-administration--mba--direct",
+  "source_url": "https://www.gibs.co.za/programmes/master-of-business-administration--mba--direct",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Johannesburg",
+    "country": "South Africa",
+    "country_code": "ZA"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Business administration",
+  "seniority": "Master's",
+  "qualifications": [
+    "Accessible to holders of a cognate PGDip or PDBA (per GIBS brochure)",
+    "GIBS Entrance Test or GMAT for degreed applicants"
+  ],
+  "skills": [],
+  "description_short": "GIBS is accepting applications for the 2027-2028 intake of its MBA Direct, delivered on campus at GIBS Illovo. Applications are open from 26 October 2026 to 30 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-30",
+    "timezone": "Africa/Johannesburg",
+    "evidence_url": "https://www.gibs.co.za/programmes/master-of-business-administration--mba--direct",
+    "evidence_quote": "26 Oct 2026 - 30 Apr 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official programme page (search results) lists the 2027-2028 intake with applications open 26 Oct 2026 - 30 Apr 2027",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Start date conflicts: programme page says 24 June 2027, a GIBS brochure says October 2027",
+    "GIBS processes applications round by round; earlier rounds may fill places",
+    "Search cache of the programme page may be dated",
+    "City: GIBS Illovo campus is in Johannesburg; city not quoted"
+  ],
+  "id": "opp_e0893c29189032e5",
+  "fingerprint": "f6f6987091afc07d",
+  "discovered_at": "2026-11-10T03:02:34.293Z",
+  "last_verified_at": "2026-11-10T03:02:34.293Z",
+  "content_hash": "sha256:43b110251b878a3c67326b75ed8ae00c790cc347ecefe5dd68f2f8864e1552a9"
+}

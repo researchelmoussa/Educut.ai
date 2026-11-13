@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Ph.D. Program",
+    "evidence_url": "https://www.ttic.edu/phd-program/",
+    "evidence_quote": "Ph.D. Program at TTIC"
+  },
+  "institution": {
+    "name": "Toyota Technological Institute at Chicago (TTIC)",
+    "website": "https://www.ttic.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ttic.edu/studentapplication/",
+  "source_url": "https://www.ttic.edu/phd-program/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Chicago",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer science (machine learning, theory, and related areas)",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Applications are only accepted between October 7 and January 15",
+    "Only complete applications (including at least two reference letters) received by January 15 are considered",
+    "No application fee"
+  ],
+  "skills": [],
+  "description_short": "TTIC's PhD program in computer science accepts applications between October 7 and January 15. Applications received by December 9 get full consideration, with decisions expected by March 1. There is no application fee.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-09",
+    "timezone": null,
+    "evidence_url": "https://www.ttic.edu/studentapplication/",
+    "evidence_quote": "To receive full consideration, applications must be received by DECEMBER 9."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official TTIC application page (search results): applications accepted between October 7 and January 15; full consideration by December 9",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The pages seen do not state the year; December 9, 2026 is inferred from the current October 7 - January 15 application window",
+    "Final cutoff January 15 (complete applications only)",
+    "Deadline timezone not stated",
+    "Stipend not stated in the text seen"
+  ],
+  "id": "opp_f535753ee8d994c5",
+  "fingerprint": "72870fa358ff68f4",
+  "discovered_at": "2026-10-28T02:58:35.557Z",
+  "last_verified_at": "2026-10-28T02:58:35.557Z",
+  "content_hash": "sha256:b8adf690c2d722ede90ace34fcd90f653e73a0e780b236121a04dc796fe47d2f"
+}

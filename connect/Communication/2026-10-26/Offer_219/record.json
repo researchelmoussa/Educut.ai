@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Fisher Family Summer Fellows Program",
+    "evidence_url": "https://fsi.stanford.edu/news/applications-2027-fisher-family-summer-fellows-program-are-now-open",
+    "evidence_quote": "Applications for the 2027 Fisher Family Summer Fellows Program are Now Open"
+  },
+  "institution": {
+    "name": "Center on Democracy, Development and the Rule of Law (CDDRL), Stanford University",
+    "website": "https://cddrl.fsi.stanford.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cddrl.fsi.stanford.edu/summerfellows/apply",
+  "source_url": "https://cddrl.fsi.stanford.edu/summerfellows/apply",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Democracy, development and the rule of law",
+  "seniority": "Mid-career professional",
+  "qualifications": [
+    "10 to 12 years of professional experience",
+    "At least 28 years of age at the start of the fellowship in July 2027",
+    "Must commit to attending the full program",
+    "At least two and no more than three letters of recommendation, received by January 12, 2027",
+    "Nationality restrictions apply (see official eligibility list)"
+  ],
+  "skills": [
+    "Leadership",
+    "Public policy",
+    "Governance"
+  ],
+  "description_short": "Three-week Stanford CDDRL summer program for mid-career practitioners working on democracy, development and the rule of law. Program dates in July-August 2027; applications and two to three recommendation letters are due 12 January 2027. Selection results by April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-12",
+    "timezone": "America/Los_Angeles",
+    "evidence_url": "https://cddrl.fsi.stanford.edu/summerfellows/apply",
+    "evidence_quote": "Tuesday, January 12, 2027, at 11:59 pm PST"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CDDRL apply page and FSI news post (search results): 'Applications for the 2027 Fisher Family Summer Fellows Program are Now Open'",
+    "Deadline 12 January 2027, 11:59 pm PST, in the future",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Program end date differs between official pages (6 vs 8 August 2027)",
+    "Funding level not stated in results (aggregator says partially funded)",
+    "Exact list of ineligible nationalities not confirmed on the official page",
+    "City not stated in the official text seen; left null"
+  ],
+  "id": "opp_76546f23e674256d",
+  "fingerprint": "05b33b63e2a79768",
+  "discovered_at": "2026-10-26T02:59:54.237Z",
+  "last_verified_at": "2026-10-26T02:59:54.237Z",
+  "content_hash": "sha256:c27b521c23d0dba8492129efc6937cb7a2608a089a02258eef7551b07ad8e1ad"
+}

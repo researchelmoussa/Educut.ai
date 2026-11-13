@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Vice-Chancellor's International Scholarships Scheme",
+    "evidence_url": "https://www.sydney.edu.au/scholarships/e/vice-chancellor-international-scholarships-scheme.html",
+    "evidence_quote": "Vice-Chancellor's International Scholarships Scheme"
+  },
+  "institution": {
+    "name": "The University of Sydney",
+    "website": "https://www.sydney.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.sydney.edu.au/scholarships/e/vice-chancellor-international-scholarships-scheme.html",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Sydney",
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "All coursework fields",
+  "seniority": "Undergraduate and postgraduate coursework",
+  "qualifications": [
+    "International students holding an unconditional offer from the University of Sydney by the round closing date",
+    "No separate application required; eligible students are automatically considered"
+  ],
+  "skills": [],
+  "description_short": "The University of Sydney's Vice-Chancellor's International Scholarships Scheme considers international students with an unconditional offer automatically, without a separate application. Round 1 for Semester 2, 2027 entry closes on 15 February 2027, with later rounds in March and May 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-15",
+    "timezone": null,
+    "evidence_url": "https://www.sydney.edu.au/scholarships/e/vice-chancellor-international-scholarships-scheme.html",
+    "evidence_quote": "Semester 2, 2027 Round 1 closes 15 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official University of Sydney scholarship page (search results): Semester 2, 2027 Round 1 closes 15 February 2027; Semester 1, 2027 rounds already closed",
+    "Deadline in the future; portal not independently confirmed, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline is for Round 1 of Semester 2, 2027; later round dates not captured verbatim",
+    "Award value (reported as up to AUD 60,000) not captured verbatim; compensation null",
+    "Page age in search results inconsistent; dates should be rechecked",
+    "Application URL not applicable (automatic consideration) and not confirmed"
+  ],
+  "id": "opp_8247cefd69ae47b7",
+  "fingerprint": "69fe5922a4076b7f",
+  "discovered_at": "2026-11-09T02:53:12.630Z",
+  "last_verified_at": "2026-11-09T02:53:12.630Z",
+  "content_hash": "sha256:b53ecbe3d2db57221ad52704cc088e0d117a5515681204876d538f0c97571529"
+}

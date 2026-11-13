@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Programa de Verão 2027",
+    "evidence_url": "https://impa.br/programas/escola-de-verao-3/",
+    "evidence_quote": "Programa de Verão 2027"
+  },
+  "institution": {
+    "name": "IMPA - Instituto de Matemática Pura e Aplicada",
+    "website": "https://impa.br",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://impa.br/programas/escola-de-verao-3/",
+  "source_url": "https://impa.br/programas/escola-de-verao-3/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": null,
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Mathematics",
+  "seniority": "Undergraduate and graduate students",
+  "qualifications": [
+    "Register in the 'IMPA Institucional' online system",
+    "Photo (3x4) and photo ID, recommendations from at least two professors and an official transcript",
+    "Scholarship applicants: only applications submitted by 31 October with complete documentation are assured of review",
+    "Residents of Rio de Janeiro cannot apply for the scholarship"
+  ],
+  "skills": [
+    "Mathematics"
+  ],
+  "description_short": "IMPA's Summer Program 2027 runs mathematics courses from 4 January to 26 February 2027. Course registration runs 15 December 2026 to 18 January 2027. A two-month local-expenses scholarship of R$ 1,200 per month is offered, with review assured only for applications by 31 October.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-18",
+    "timezone": null,
+    "evidence_url": "https://impa.br/programas/escola-de-verao-3/",
+    "evidence_quote": "Inscrições: 15/12/2026 a 18/01/2027"
+  },
+  "compensation": {
+    "value": "Scholarship of R$ 1,200 per month for two months (local expenses; subject to change)",
+    "evidence_url": "https://impa.br/programas/escola-de-verao-3/",
+    "evidence_quote": "R$ 1.200,00 por mês"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IMPA Summer Program 2027 page (search results): course registration 15/12/2026 to 18/01/2027, course period 04/01/2027 to 26/02/2027",
+    "Registration system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Course registration opens 15 December 2026; it is not open yet",
+    "Scholarship review is only assured for applications submitted by 31 October (passed); later scholarship applications are reviewed only if time allows",
+    "The page notes the programme schedule is still being built and dates may change",
+    "Other IMPA pages show different dates (10 November, 16 January) that appear to belong to earlier editions",
+    "City not stated in the text seen",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_e9e7b9e74d8525dd",
+  "fingerprint": "52b90df4d0582fd4",
+  "discovered_at": "2026-10-27T03:09:01.254Z",
+  "last_verified_at": "2026-10-27T03:09:01.254Z",
+  "content_hash": "sha256:a1c59632900b75daff005e950b0a9bca64c49a1c7db404ae23f17436dd299b4f"
+}

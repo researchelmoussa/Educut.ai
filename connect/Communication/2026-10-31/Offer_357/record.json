@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "JAX Summer Student Program 2027",
+    "evidence_url": "https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/learn-earn-and-explore/admission",
+    "evidence_quote": "Applications for 2027 admission will open in November"
+  },
+  "institution": {
+    "name": "The Jackson Laboratory (JAX)",
+    "website": "https://www.jax.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/learn-earn-and-explore/admission",
+  "source_url": "https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/learn-earn-and-explore/admission",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Genetics and biomedical research",
+  "seniority": "High school and undergraduate students",
+  "qualifications": [
+    "Applications must be formally submitted in the portal by the deadline; edits allowed until then",
+    "Acceptance notifications by email by March 31",
+    "10-week program at Bar Harbor (residential) or Farmington (non-residential)"
+  ],
+  "skills": [],
+  "description_short": "The Jackson Laboratory's Summer Student Program is a 10-week research program at Bar Harbor (residential) or Farmington. Applications for 2027 open in November and are due January 25, 2027, at 5:00 p.m. ET.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-25T17:00:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/learn-earn-and-explore/admission",
+    "evidence_quote": "January 25, 2027, at 5:00 p.m. ET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official JAX admission pages (search results): 2027 deadline January 25, 2027, 5:00 p.m. ET; applications open in November"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Applications had not opened on the run date (open in November 2026)",
+    "Stipend shown as $7,500 on the current listing but $7,000 for 2026 on older pages; not recorded",
+    "Eligibility (school level, citizenship) not fully captured",
+    "Country taken from the institution's official name/domain; not seen verbatim in the search snippet"
+  ],
+  "id": "opp_21645d6d24cc6fc2",
+  "fingerprint": "52914d88a13b19f6",
+  "discovered_at": "2026-10-31T03:16:53.306Z",
+  "last_verified_at": "2026-10-31T03:16:53.306Z",
+  "content_hash": "sha256:a6fa187b39f6057a62f91b41ebe63c73370b8a78f938fe0b49042216831eec6a"
+}

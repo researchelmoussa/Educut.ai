@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Ph.D. in Computer Science",
+    "evidence_url": "https://siebelschool.illinois.edu/admissions/graduate/application-deadlines",
+    "evidence_quote": "Ph.D. in Computer Science"
+  },
+  "institution": {
+    "name": "Siebel School of Computing and Data Science, University of Illinois Urbana-Champaign",
+    "website": "https://siebelschool.illinois.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://siebelschool.illinois.edu/admissions/graduate/applications-process-requirements",
+  "source_url": "https://siebelschool.illinois.edu/admissions/graduate/application-deadlines",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Fall entry only",
+    "Letters of reference required",
+    "Applicants with a strong computing and data science record can be admitted with only a bachelor's degree",
+    "Late applications will not be accepted"
+  ],
+  "skills": [],
+  "description_short": "The Siebel School at the University of Illinois Urbana-Champaign accepts Ph.D. in Computer Science applications for fall entry until December 1 (U.S. Central Time), with decisions by March 15. Late applications are not accepted.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": "America/Chicago",
+    "evidence_url": "https://siebelschool.illinois.edu/admissions/graduate/application-deadlines",
+    "evidence_quote": "Ph.D. in Computer Science | Fall only | December 1 | March 15"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Siebel School application deadlines page (search results): Ph.D. in Computer Science, Fall only, December 1",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The deadline page does not state the year; December 1, 2026 is inferred for fall 2027 entry",
+    "The Graduate College announcement for fall 2027 gives a general 15 December 2026 date; the department's earlier December 1 date is used",
+    "City not stated in the text seen",
+    "Funding not stated in the text seen"
+  ],
+  "id": "opp_8db079f7a4106e1b",
+  "fingerprint": "583b9c6d5b0af27a",
+  "discovered_at": "2026-10-28T03:03:20.785Z",
+  "last_verified_at": "2026-10-28T03:03:20.785Z",
+  "content_hash": "sha256:66f23b9082fd31b8ded4a2b64e37bb86fd183ff390fd2e1e2a500c513948b1b3"
+}

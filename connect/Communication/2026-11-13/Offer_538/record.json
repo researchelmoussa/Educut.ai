@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "ECSO–CMS 2027",
+    "evidence_url": "https://wp.lancs.ac.uk/ecso-cms-2027/",
+    "evidence_quote": "ECSO–CMS 2027"
+  },
+  "institution": {
+    "name": "Lancaster University (host of ECSO–CMS 2027)",
+    "website": "https://www.lancaster.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://wp.lancs.ac.uk/ecso-cms-2027/submissions/abstract-submission/",
+  "source_url": "https://wp.lancs.ac.uk/ecso-cms-2027/venue-and-travel/travel-grants/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Lancaster",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Operations research and computational management science",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Conference at Lancaster University, 20-23 June 2027. Abstracts are due 4 February 2027, with acceptance by 11 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-04",
+    "timezone": null,
+    "evidence_url": "https://wp.lancs.ac.uk/ecso-cms-2027/venue-and-travel/travel-grants/",
+    "evidence_quote": "4 Feb 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official conference site (seen in search results) gives abstract deadline 4 February 2027 and travel-grant deadline 18 March 2027 (future)",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Full conference name behind the ECSO–CMS acronym not shown in the results; field inferred from the STOR-i sponsorship and should be checked",
+    "Grant amounts capped per category; amounts not quoted",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-13T03:03:00.135Z",
+  "last_verified_at": "2026-11-13T03:42:49.992Z",
+  "id": "opp_e7b8ded640269765",
+  "fingerprint": "a3ea0ff4c5e27d8c",
+  "content_hash": "sha256:cccd8926b975d82968e30a75e1927dc34e9ad6ffdd05963dd6f24767f40ee08b"
+}

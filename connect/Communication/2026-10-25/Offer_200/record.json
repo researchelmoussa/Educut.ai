@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": {
+    "value": "CHF 4,000 stipend for housing and living expenses; travel and visa costs covered",
+    "evidence_url": "https://inf.ethz.ch/studies/summer-research-fellowship.html",
+    "evidence_quote": "Fellows receive a stipend of CHF 4,000 to cover housing and living expenses"
+  },
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "onsite",
+  "seniority": "Bachelor and master students",
+  "skills": [
+    "Computer science research"
+  ],
+  "opportunity_type": "internship",
+  "employment_type": "internship",
+  "title": {
+    "value": "ETH Student Summer Research Fellowship",
+    "evidence_url": "https://inf.ethz.ch/studies/summer-research-fellowship.html",
+    "evidence_quote": "ETH Student Summer Research Fellowship"
+  },
+  "institution": {
+    "name": "ETH Zurich, Department of Computer Science",
+    "website": "https://inf.ethz.ch",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://inf.ethz.ch/studies/summer-research-fellowship/how-to-apply.html",
+  "source_url": "https://inf.ethz.ch/studies/summer-research-fellowship/how-to-apply.html",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Zurich",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "field": "Computer science",
+  "qualifications": [
+    "Enrolled in a bachelor or master programme in computer science or a closely related field (e.g. electrical engineering, mathematics, physics)",
+    "Expected graduation in the year after the fellowship or later; two years of study completed by the programme start",
+    "Open to students worldwide except students enrolled at ETH Zurich",
+    "Apply via SiROP; only complete applications are considered; the deadline is never extended"
+  ],
+  "description_short": "Summer research fellowship at ETH Zurich computer science, 2 July to 27 August 2027, for bachelor and master students from other institutions. Applications via SiROP open 1 November and close 16 December 2026 at 13:00 CET.",
+  "deadline": {
+    "value": "2026-12-16T13:00:00+01:00",
+    "timezone": "Europe/Zurich",
+    "evidence_url": "https://inf.ethz.ch/studies/summer-research-fellowship/how-to-apply.html",
+    "evidence_quote": "The application window for the 2027 programme closes on 16 December 2026 at 13:00 Central European Time"
+  },
+  "status_evidence": [
+    "Official ETH computer science pages (search results): window opens 1 November 2026, closes 16 December 2026 13:00 CET",
+    "Notification by end of February 2027",
+    "SiROP opportunity not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Application window opens 1 November 2026, after the discovery date",
+    "Deadline quote is the search-result wording of the page"
+  ],
+  "id": "opp_c8f784e8ab735c36",
+  "fingerprint": "643ee79363b48adc",
+  "discovered_at": "2026-10-25T03:02:55.310Z",
+  "last_verified_at": "2026-10-25T03:02:55.310Z",
+  "content_hash": "sha256:4c291431c64b6e0d0d1b57237d2c878663dbbdc2474a01ab8de129289830cf1d"
+}

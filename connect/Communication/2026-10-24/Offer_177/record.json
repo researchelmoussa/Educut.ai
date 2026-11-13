@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "institution": {
+    "name": "Victoria University of Wellington",
+    "website": "https://www.wgtn.ac.nz",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.wgtn.ac.nz/scholarships/current/wellington-doctoral-scholarships",
+  "source_url": "https://www.wgtn.ac.nz/scholarships/current/wellington-doctoral-scholarships",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Wellington",
+    "country": "New Zealand",
+    "country_code": "NZ"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "All disciplines",
+  "seniority": "PhD",
+  "qualifications": [
+    "Normally a Bachelor's or Master's degree with academic distinction equivalent to a First Class Honours degree at a New Zealand university",
+    "Must be eligible, or reasonably expect to become eligible within three months, to enrol in a Doctoral degree at the university",
+    "Online application and all supporting documentation, including references, must be received by 4.30 pm on the closing date; late or incomplete applications are not accepted"
+  ],
+  "skills": [],
+  "description_short": "Victoria University of Wellington offers Wellington Doctoral Scholarships for doctoral study, with three rounds a year. The current round closes 1 November 2026 at 4.30 pm; offers are made about six weeks after each closing date.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-01T16:30:00+13:00",
+    "timezone": "Pacific/Auckland",
+    "evidence_url": "https://www.wgtn.ac.nz/scholarships/current/wellington-doctoral-scholarships",
+    "evidence_quote": "Three rounds each year closing 1 March, 1 July and 1 November"
+  },
+  "compensation": {
+    "value": "$32,000 stipend annually plus tuition fees, for up to three years",
+    "evidence_url": "https://www.wgtn.ac.nz/scholarships/current/wellington-doctoral-scholarships",
+    "evidence_quote": "$32,000 stipend annually plus tuition fees"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official scholarship page (search results): rounds close 1 March, 1 July and 1 November, 4.30 pm",
+    "University application page (search results) states the November 2026 application round is now open",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Stipend currency assumed to be NZD; not restated in the excerpt",
+    "Stipend figure appeared in a search summary of the university pages, not confirmed as the 2027 amount",
+    "Acceptance to a PhD programme does not ensure a scholarship offer",
+    "Publication date not shown"
+  ],
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Wellington Doctoral Scholarship",
+    "evidence_url": "https://www.wgtn.ac.nz/scholarships/current/wellington-doctoral-scholarships",
+    "evidence_quote": "Wellington Doctoral Scholarship"
+  },
+  "id": "opp_b0abed21a5222bbe",
+  "fingerprint": "3787804041a82428",
+  "discovered_at": "2026-10-24T02:05:02.519Z",
+  "last_verified_at": "2026-10-24T02:05:02.519Z",
+  "content_hash": "sha256:805f7b8abc95e4993a19478fb98b47bfe3dc0b88921429a9b8592dfff4a4214b"
+}

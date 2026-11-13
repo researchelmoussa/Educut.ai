@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Career Development Fellowship",
+    "evidence_url": "https://royalsociety.org/grants/career-development-fellowship/",
+    "evidence_quote": "Career Development Fellowship"
+  },
+  "institution": {
+    "name": "The Royal Society",
+    "website": "https://royalsociety.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://royalsociety.org/grants/career-development-fellowship/",
+  "source_url": "https://royalsociety.org/grants/career-development-fellowship/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Science (Royal Society remit)",
+  "seniority": "Early-career researchers",
+  "qualifications": [
+    "Self-identify as Black heritage, including mixed Black background",
+    "UK nationality, or part of education completed in the UK, or a UK postdoctoral post held",
+    "PhD, or PhD by the time funding starts",
+    "Fewer than 24 months of postdoctoral experience (career breaks taken into account)",
+    "Applicants needing a visa are eligible for the Global Talent Visa fast-track endorsement"
+  ],
+  "skills": [
+    "Scientific research"
+  ],
+  "description_short": "The Royal Society's Career Development Fellowship supports early-career researchers of Black heritage with UK links, offering up to £703,800 over four years. Applicants need a PhD and under 24 months of postdoctoral experience. Applications close 18 November 2026; decisions by 30 June 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-18",
+    "timezone": null,
+    "evidence_url": "https://royalsociety.org/grants/career-development-fellowship/",
+    "evidence_quote": "18 November 2026"
+  },
+  "compensation": {
+    "value": "Up to £703,800 over four years",
+    "evidence_url": "https://royalsociety.org/grants/career-development-fellowship/",
+    "evidence_quote": "£703,800"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Royal Society Career Development Fellowship page and application-dates page (search results): open, closing 18 November 2026",
+    "Application system (Flexi-Grant) not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Scheme notes and FAQ PDFs found refer to the previous round (closing 19 November 2025, £690,000 cap)",
+    "Host institution and city depend on the applicant",
+    "Deadline time and timezone not stated"
+  ],
+  "id": "opp_5468cb783ba7dbd5",
+  "fingerprint": "64c4f97048701922",
+  "discovered_at": "2026-10-27T03:09:03.233Z",
+  "last_verified_at": "2026-10-27T03:09:03.233Z",
+  "content_hash": "sha256:b88b600ef0fa1b6b1629fc17765ce7a3f2a0c0bd2d889acf50e96f8d37c86442"
+}

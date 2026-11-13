@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Research Scholarships Round 2 (April and July 2027 intakes)",
+    "evidence_url": "https://www.griffith.edu.au/apply/research-study",
+    "evidence_quote": "Round 2 applications open 2 November and close 5 February 2027 for April and July 2027 intakes"
+  },
+  "institution": {
+    "name": "Griffith University",
+    "website": "https://www.griffith.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.griffith.edu.au/apply/research-study",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Brisbane",
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "All research fields (higher degree by research)",
+  "seniority": "PhD / Master of Philosophy",
+  "qualifications": [
+    "International applicants: Griffith International Pathway, i.e. completed or completing an Honours, Masters or Graduate Diploma at Griffith University with a minimum 40 credit point research component in the last ten years",
+    "Domestic applicants: open merit round including the Research Training Program and the Griffith University Postgraduate Research Scholarship"
+  ],
+  "skills": [],
+  "description_short": "Griffith University's Round 2 research scholarships, for April and July 2027 higher degree by research intakes, opened on 2 November 2026 and close on 5 February 2027. International applicants in this round need a qualifying research-component degree from Griffith.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-05",
+    "timezone": "Australia/Brisbane",
+    "evidence_url": "https://www.griffith.edu.au/apply/research-study",
+    "evidence_quote": "Round 2 applications open 2 November and close 5 February 2027 for April and July 2027 intakes"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Griffith 'Research study' apply page (search results): Round 2 opens 2 November and closes 5 February 2027 for April and July 2027 intakes; Round 1 closed",
+    "Portal not independently confirmed; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "International eligibility in Round 2 is limited to the Griffith International Pathway; most international applicants without a Griffith degree are not eligible",
+    "Griffith has several campuses (Gold Coast, Brisbane/Nathan, Logan); Brisbane recorded as city but the campus depends on the project",
+    "Scholarship stipend amounts not captured; compensation null",
+    "Application URL not confirmed"
+  ],
+  "id": "opp_54df89956916288e",
+  "fingerprint": "771b635e6e75162e",
+  "discovered_at": "2026-11-09T02:58:40.510Z",
+  "last_verified_at": "2026-11-09T02:58:40.510Z",
+  "content_hash": "sha256:9cd84513d116c9645812dfe1157d2f80ede6a52e0a3afe4a5058f093aee7cfc0"
+}

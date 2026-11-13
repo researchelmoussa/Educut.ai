@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Ph.D. in Information Science",
+    "evidence_url": "https://infosci.cornell.edu/phd/admissions",
+    "evidence_quote": "Apply: Ph.D. in Information Science"
+  },
+  "institution": {
+    "name": "Cornell University, Department of Information Science",
+    "website": "https://infosci.cornell.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://infosci.cornell.edu/phd/admissions",
+  "source_url": "https://infosci.cornell.edu/phd/admissions",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Information science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Apply for fall 2027 entry by December 1, 2026"
+  ],
+  "skills": [
+    "Information science research"
+  ],
+  "description_short": "Cornell's Ph.D. in Information Science accepts applications for fall 2027 entry; the department's admissions page sets the application deadline at December 1, 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-01",
+    "timezone": null,
+    "evidence_url": "https://infosci.cornell.edu/phd/admissions",
+    "evidence_quote": "For Fall 2027, the Information Science Ph.D. application deadline is December 1, 2026."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Cornell Information Science PhD admissions page (search results): fall 2027 deadline December 1, 2026",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Eligibility requirements, funding and fees not captured from results",
+    "City not stated in the text seen",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_da06559b8ebe59b3",
+  "fingerprint": "c8fa6afa900ea632",
+  "discovered_at": "2026-10-27T03:01:50.637Z",
+  "last_verified_at": "2026-10-27T03:01:50.637Z",
+  "content_hash": "sha256:71823debd86974a3b1959c34a2aa2069863592956345d80070b8c8204e7b8f0f"
+}

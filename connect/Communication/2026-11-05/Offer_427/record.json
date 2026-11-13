@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Soloists & Ensembles",
+    "evidence_url": "https://verbierfestival.com/en/academy/soloists-ensembles/",
+    "evidence_quote": "Soloists & Ensembles"
+  },
+  "institution": {
+    "name": "Verbier Festival Academy",
+    "website": "https://verbierfestival.com",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://verbierfestival.com/en/academy/soloists-ensembles/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Verbier",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Classical music performance",
+  "seniority": "Young musicians",
+  "qualifications": [
+    "Soloists aged 16 to 26 on 1 July 2027; junior students 13 to 15",
+    "Ensemble members average 22 to 30 on 1 July 2027",
+    "Applications through the getAcceptd platform"
+  ],
+  "skills": [],
+  "description_short": "The Verbier Festival Academy's Soloists & Ensembles programme runs 11 July to 2 August 2027 in Verbier. Soloists aged 16 to 26, junior students aged 13 to 15 and ensembles apply through getAcceptd by 11 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-11",
+    "timezone": null,
+    "evidence_url": "https://verbierfestival.com/en/academy/soloists-ensembles/",
+    "evidence_quote": "January 11, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Soloists & Ensembles page (search results) lists the 2027 application deadline as 11 January 2027 and states applications are open",
+    "Application platform not fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline quote is the date as shown in search results; time and time zone not captured",
+    "2027 application fee not confirmed (2026 guidelines listed EUR 105 / EUR 55)",
+    "Application URL (getAcceptd) not confirmed"
+  ],
+  "id": "opp_d383343f4dde6a51",
+  "fingerprint": "96be7443f5f3c238",
+  "discovered_at": "2026-11-05T03:03:33.620Z",
+  "last_verified_at": "2026-11-05T03:03:33.620Z",
+  "content_hash": "sha256:b2bb023a6620b22f58681a53a3674530480d570d82db1c8caf286255676afabf"
+}

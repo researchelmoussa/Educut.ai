@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Oxford–UBS Centre for Applied AI DPhil Studentship: Future AI Systems for Finance",
+    "evidence_url": "https://eng.ox.ac.uk/study/research-studentships/oxford-ubs-centre-for-applied-ai-dphil-studentship-future-ai-systems-for-finance",
+    "evidence_quote": "Oxford–UBS Centre for Applied AI DPhil Studentship: Future AI Systems for Finance"
+  },
+  "institution": {
+    "name": "University of Oxford, Department of Engineering Science",
+    "website": "https://eng.ox.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://eng.ox.ac.uk/study/research-studentships/oxford-ubs-centre-for-applied-ai-dphil-studentship-future-ai-systems-for-finance",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Oxford",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Engineering / computer science (hardware-software co-design for financial AI)",
+  "seniority": "Doctoral (DPhil)",
+  "qualifications": [
+    "Strong undergraduate degree in Engineering, Computer Science or a related field",
+    "Strong computational or engineering background",
+    "Must meet University of Oxford doctoral admission requirements",
+    "Quote reference 27ENGIN_NZ in the application"
+  ],
+  "skills": [
+    "Hardware-software co-design",
+    "Computing infrastructure"
+  ],
+  "description_short": "DPhil studentship at Oxford Engineering Science for October 2027 entry, supervised by Professor Noa Zilberman, studying hardware-software co-design, novel accelerators and resilient compute infrastructure for financial AI. One award for a Home and one for an Overseas student; reference 27ENGIN_NZ.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-02",
+    "timezone": "Europe/London",
+    "evidence_url": "https://eng.ox.ac.uk/study/research-studentships/oxford-ubs-centre-for-applied-ai-dphil-studentship-future-ai-systems-for-finance",
+    "evidence_quote": "noon on Wednesday 2 December 2026 (In line with the December admissions deadline, set by the University)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Engineering Science project page (search results) gives the deadline of noon on Wednesday 2 December 2026 for October 2027 entry",
+    "Saïd Business School scholarship page gives the same date (search results)",
+    "Page not fetched directly, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused CONNECT); opportunity found by web search, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Funding amount not recorded: no verbatim quote of the stipend was available",
+    "Application URL (Oxford graduate application form) not confirmed"
+  ],
+  "id": "opp_2db7e83dd5692a28",
+  "fingerprint": "39acb001b326a2c3",
+  "discovered_at": "2026-11-08T02:58:33.492Z",
+  "last_verified_at": "2026-11-08T02:58:33.492Z",
+  "content_hash": "sha256:4725d654f008049b9a83f9125393dbe2ec82313f6d2259d1899df329b70726ab"
+}

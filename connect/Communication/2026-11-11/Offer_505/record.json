@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "skills": [],
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "BRIDGE – Translational Excellence Programme",
+    "evidence_url": "https://bridge.ku.dk/research/process/",
+    "evidence_quote": "BRIDGE – Translational Excellence Programme"
+  },
+  "institution": {
+    "name": "University of Copenhagen, Faculty of Health and Medical Sciences",
+    "website": "https://bridge.ku.dk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://bridge.ku.dk/research/process/",
+  "source_url": "https://vacancyedu.com/2026/10/15/postdoctoral-fellowship-26-at-university-of-copenhagen-denmark/",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "country_code": "DK"
+  },
+  "field": "Translational medicine",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "PhD awarded less than 8 years before the application deadline (leave periods can extend this)",
+    "PhD students may apply if the thesis will be defended before 1 September 2027",
+    "Not eligible: more than two years of postdoctoral employment at the University of Copenhagen before the fellowship starts",
+    "Apply together with a mentor team (basic biomedical scientist plus clinical or industry scientist)"
+  ],
+  "description_short": "The University of Copenhagen seeks 14 postdoctoral fellows in translational medicine for two-year appointments starting 1 September 2027. Fellows work mainly on individual translational projects, guided by a mentor team pairing a basic biomedical scientist with a clinical or industry scientist.",
+  "deadline": {
+    "value": "2027-02-09T23:59:00+01:00",
+    "timezone": "Europe/Copenhagen",
+    "evidence_url": "https://bridge.ku.dk/research/process/",
+    "evidence_quote": "must be submitted via HR Manager by 9 February, 23:59 CET"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official BRIDGE application page (seen in search results): 14 postdoc fellows to start 1 September 2027; applications via HR Manager by 9 February, 23:59 CET (future)",
+    "Official \"Important dates\" page exists (bridge.ku.dk/research/process/important-dates/)",
+    "HR Manager application form not independently confirmed"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "The official deadline sentence gives \"9 February\" without a year; the year 2027 follows from the 1 September 2027 cohort start on the same page and from the Vacancy Edu listing (\"Deadline: 9 February 2027\")",
+    "Vacancy Edu states a start on 1 February 2027, which conflicts with the official 1 September 2027 start; the official date is used",
+    "Salary not stated in the evidence seen",
+    "Direct HR Manager job-ad link not found; application_url is the BRIDGE application-process page"
+  ],
+  "id": "opp_b3aead0dd457a1e7",
+  "fingerprint": "654d61392b370509",
+  "discovered_at": "2026-11-11T03:01:09.260Z",
+  "last_verified_at": "2026-11-11T03:01:09.260Z",
+  "content_hash": "sha256:69fea403b607cda0560012a43480d4e1db9c6c6a1fcb515b8e08e9ad32c391cb"
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "IST-Africa 2027 Conference",
+    "evidence_url": "http://www.ist-africa.org/Conference2027/default.asp",
+    "evidence_quote": "IST-Africa 2027 Conference"
+  },
+  "institution": {
+    "name": "IST-Africa",
+    "website": null,
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "http://www.ist-africa.org/Conference2027/default.asp",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "remote",
+  "field": "ICT for development (including AI, big data, eHealth, cybersecurity)",
+  "seniority": "Researchers and practitioners",
+  "qualifications": [
+    "Full papers of 8 pages following the IST-Africa paper guidelines and template",
+    "Double-blind peer review",
+    "Each presenter presents one paper"
+  ],
+  "skills": [
+    "Research writing",
+    "ICT research"
+  ],
+  "description_short": "IST-Africa 2027, a virtual conference in May 2027, invites 8-page full papers through an open call with double-blind review. Themes include technology-enabled healthcare and next-generation computing (AI, big data, cloud, IoT) and cybersecurity. Extended deadline: 20 November 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-20",
+    "timezone": null,
+    "evidence_url": "http://www.ist-africa.org/Conference2027/default.asp",
+    "evidence_quote": "extended deadline of 20 November 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IST-Africa 2027 conference page (search results): open Call for Papers, extended deadline 20 November 2026",
+    "Submission system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The IST-Africa homepage shows 'Deadline 31 October '26'; the conference page shows the extended 20 November 2026 deadline",
+    "Exact May 2027 conference dates not stated",
+    "Virtual event: no city or country",
+    "Submission URL not captured; application_url left null",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_3b484ae6341d6740",
+  "fingerprint": "f50bd2f52e7548a5",
+  "discovered_at": "2026-10-27T03:01:50.966Z",
+  "last_verified_at": "2026-10-27T03:01:50.966Z",
+  "content_hash": "sha256:7b1ba178576338407531d9f0508455b4d004491d4782e46534836b9feb5ae378"
+}

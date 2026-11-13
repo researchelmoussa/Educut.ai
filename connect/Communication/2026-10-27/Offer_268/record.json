@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doctorado en Ciencia y Tecnología de Inteligencia Artificial y Ciencia de Datos",
+    "evidence_url": "https://www.cic.ipn.mx/views/posgraduate/DCyTIAyCD.php",
+    "evidence_quote": "Doctorado en Ciencia y Tecnología de Inteligencia Artificial y Ciencia de Datos"
+  },
+  "institution": {
+    "name": "Instituto Politécnico Nacional (IPN), Centro de Innovación y Desarrollo Tecnológico en Cómputo (CIDETEC)",
+    "website": "https://www.cidetec.ipn.mx",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cidetec.ipn.mx/oferta-educativa/doctorado-en-ctiaycd/admisi%C3%B3n.html",
+  "source_url": "https://www.cidetec.ipn.mx/oferta-educativa/doctorado-en-ctiaycd/admisi%C3%B3n.html",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Mexico",
+    "country_code": "MX"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Artificial intelligence and data science",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Aimed mainly at applicants with a master's degree in computing, engineering, exact sciences or related fields, particularly AI and data science",
+    "Selection criteria (B26 call) include a GRE or EXANI-III score, English proficiency, a personal interview with the admission committee and the CV",
+    "Programme offered at five IPN sites: CIC, CIDETEC, ESCOM, ESFM and UPIITA"
+  ],
+  "skills": [
+    "Artificial intelligence",
+    "Data science"
+  ],
+  "description_short": "IPN's doctorate in AI and data science, taught at five IPN sites including CIDETEC, has B27 (August 2027) applicant registration from 7 September 2026 to 16 April 2027. Selection uses GRE or EXANI-III, English level and an interview.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-16",
+    "timezone": null,
+    "evidence_url": "https://www.cidetec.ipn.mx/oferta-educativa/doctorado-en-ctiaycd/admisi%C3%B3n.html",
+    "evidence_quote": "07 de septiembre 2026 al 16 de abril 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IPN CIDETEC admission page, 2027 calendar (search results): B27 applicant registration 07 September 2026 to 16 April 2027",
+    "Registration system not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The ESCOM doctorate page still showed the B26 call; B27 dates are from the CIDETEC site",
+    "Requirements are from the B26 call and may change for B27",
+    "Funding not stated in results",
+    "City not stated in the text seen",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_6a6cbdd04cc94a61",
+  "fingerprint": "cd3bb43889e8996f",
+  "discovered_at": "2026-10-27T03:14:42.581Z",
+  "last_verified_at": "2026-10-27T03:14:42.581Z",
+  "content_hash": "sha256:4e8af90632f0d65318a1670914729a1fde273d6567bb90857e6bd70f2fe16736"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Maestría en Inteligencia Artificial (MAIA)",
+    "evidence_url": "https://www.uniandes.edu.co/es/programas/maestria-en-inteligencia-artificial",
+    "evidence_quote": "Maestría en Inteligencia Artificial"
+  },
+  "institution": {
+    "name": "Universidad de los Andes, Departamento de Ingeniería de Sistemas y Computación",
+    "website": "https://uniandes.edu.co",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://sistemas.uniandes.edu.co/maia/admisiones",
+  "source_url": "https://sistemas.uniandes.edu.co/maia/admisiones",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Colombia",
+    "country_code": "CO"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Artificial intelligence",
+  "seniority": "Master's",
+  "qualifications": [
+    "Professional (undergraduate) degree",
+    "Basic knowledge of programming, linear algebra, probability and statistics",
+    "Intermediate English reading comprehension",
+    "Admission exam after each application cut-off"
+  ],
+  "skills": [],
+  "description_short": "Universidad de los Andes Master's in Artificial Intelligence (MAIA), January 2027 intake. The third cut-off closes 18 November 2026 and final registration closes 25 November 2026; applicants are invited to an admission exam after each cut-off.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-25",
+    "timezone": "America/Bogota",
+    "evidence_url": "https://sistemas.uniandes.edu.co/maia/admisiones",
+    "evidence_quote": "Cierre final inscripciones 25 noviembre 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official MAIA admissions and programme pages (search results) list the final registration close of 25 November 2026",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Results mix period labels (2027-10, 2027-11, first two-month term of 2027)",
+    "Tuition and modality not captured",
+    "Country inferred from the university's .edu.co domain"
+  ],
+  "id": "opp_66acc8e099dc5da0",
+  "fingerprint": "6604b310496232de",
+  "discovered_at": "2026-11-02T03:15:44.186Z",
+  "last_verified_at": "2026-11-02T03:15:44.186Z",
+  "content_hash": "sha256:a68ad02c86cf3f31474c478f330395d5b61902f7bf77d519527a2515e6c75d23"
+}

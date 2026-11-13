@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "skills": [],
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Scholarships for International Students",
+    "evidence_url": "https://www.yu.ac.kr/engraduate/academic/scholarship-for-international-students.do",
+    "evidence_quote": "Scholarships for International Students"
+  },
+  "institution": {
+    "name": "Graduate School of Yeungnam University",
+    "website": "https://www.yu.ac.kr/engraduate/index.do",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.yu.ac.kr/engraduate/admissions/admission-guideline.do",
+  "source_url": "https://fellowshipsguide.com/latest-posts/page/2/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "South Korea",
+    "country_code": "KR"
+  },
+  "field": "All graduate fields",
+  "seniority": "Master's and doctoral applicants",
+  "qualifications": [
+    "New international graduate students recommended by their department",
+    "Award tier based on TOPIK, IELTS, TOEFL iBT or TOEIC scores",
+    "Top-tier recipients assist with teaching or lab work up to 10 hours per week"
+  ],
+  "description_short": "Scholarships for new international students at Yeungnam University Graduate School, graded by language test scores and awarded on department recommendation. The second application round for Spring 2027 entry runs online from 16 November to 11 December 2026 (17:00); documents are due 18 December.",
+  "deadline": {
+    "value": "2026-12-11T17:00:00+09:00",
+    "timezone": "Asia/Seoul",
+    "evidence_url": "https://www.yu.ac.kr/engraduate/admissions/admission-guideline.do",
+    "evidence_quote": "Nov 16 (Mon) – Dec 11 (Fri), 2026, 17:00"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Yeungnam Graduate School admissions page (seen in search results): Spring 2027 second-round online application Nov 16 – Dec 11, 2026, 17:00 (future)",
+    "International Student Admissions Team page gives the same window",
+    "The second-round window opens on 16 November 2026, five days after this check; the portal was not independently confirmed"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Scholarship is tied to graduate admission; the deadline recorded is the Spring 2027 second-round online application deadline",
+    "Time zone assumed to be Korea Standard Time (not stated)",
+    "Fellowships Guide post URL not found; source_url is its Latest Posts page, which mentions \"Yeungnam University Scholarship 2027\"",
+    "City not stated in the evidence seen",
+    "Application fee: KRW 100,000 (admissions page)"
+  ],
+  "id": "opp_59e39ebd4d473e8a",
+  "fingerprint": "c27ffdfc81bab556",
+  "discovered_at": "2026-11-11T03:01:09.479Z",
+  "last_verified_at": "2026-11-11T03:06:09.710Z",
+  "content_hash": "sha256:18d559f762c3f29f7eb383eeabf9c5a07bd74fb98533e2adfa1014c4dd072b74"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "skills": [],
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "opportunity_type": "other",
+  "title": {
+    "value": "2027 Admissions to Tsinghua Shenzhen International Graduate School",
+    "evidence_url": "https://www.sigs.tsinghua.edu.cn/en/2026/0917/c7519a293346/page.htm",
+    "evidence_quote": "2027 Admissions to Tsinghua Shenzhen International Graduate School are Now Open!"
+  },
+  "institution": {
+    "name": "Tsinghua Shenzhen International Graduate School (SIGS), Tsinghua University",
+    "website": "https://www.sigs.tsinghua.edu.cn/en/",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://yzbm.tsinghua.edu.cn/intlLogin",
+  "source_url": "https://fellowshipsguide.com/category/scholarships/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Shenzhen",
+    "country": "China",
+    "country_code": "CN"
+  },
+  "field": "Engineering, science and interdisciplinary programmes",
+  "seniority": "Master's and doctoral applicants",
+  "qualifications": [
+    "Bachelor's or master's degree obtained before the 2027 registration date",
+    "English proficiency for non-native speakers (e.g. IELTS 6.5 or TOEFL iBT 85, per the admissions page)"
+  ],
+  "description_short": "Tsinghua Shenzhen International Graduate School is accepting international applications for 2027 entry to its master's and doctoral programmes (40 master's, 22 doctoral). Applications go through Tsinghua's international portal; the general deadline is 15 May 2027, 17:00 Beijing time. Some programmes close earlier.",
+  "deadline": {
+    "value": "2027-05-15T17:00:00+08:00",
+    "timezone": "Asia/Shanghai",
+    "evidence_url": "https://www.sigs.tsinghua.edu.cn/en/2026/0917/c7519a293346/page.htm",
+    "evidence_quote": "17:00 p.m. Beijing Time on May 15, 2027"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SIGS announcement (seen in search results): \"2027 Admissions to Tsinghua Shenzhen International Graduate School are Now Open!\", closing 17:00 Beijing Time on May 15, 2027",
+    "Programme pages (e.g. Synthetic Biology and Biomanufacturing) list \"Application Deadline May 15, 2027\"",
+    "Capped at OPEN_LIKELY: the page could not be fetched and the portal was not independently confirmed"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Some programmes have earlier rounds (e.g. Tsinghua SEM Master of Finance rounds closing December 2026 and February 2027; Tsinghua-Columbia Business Analytics closing 26 February 2027)",
+    "Fellowships Guide post (\"Tsinghua University SIGS Scholarship 2027 for MS & PhD\", 3 November 2026) not located; source_url is its scholarships category page",
+    "Scholarship terms not verified; the admissions page only says scholarships are available",
+    "Tuition varies by programme (RMB 30,000-75,000 per year, per the search summary)"
+  ],
+  "id": "opp_d60e1b611a3ed5f0",
+  "fingerprint": "ddef46af7a8be1f8",
+  "discovered_at": "2026-11-11T03:01:09.586Z",
+  "last_verified_at": "2026-11-11T03:01:09.586Z",
+  "content_hash": "sha256:33e81b1e5b1f1d05729990ff3a9bceec51d6a84b890913033b700263a345ed99"
+}

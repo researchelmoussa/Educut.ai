@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Beca Avanza 2027-10",
+    "evidence_url": "https://ingenieria.uniandes.edu.co/es/Beca-avanza",
+    "evidence_quote": "BECA AVANZA 2027-10"
+  },
+  "institution": {
+    "name": "Universidad de los Andes, Facultad de Ingeniería",
+    "website": "https://ingenieria.uniandes.edu.co",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ingenieria.uniandes.edu.co/es/Beca-avanza",
+  "source_url": "https://ingenieria.uniandes.edu.co/es/Beca-avanza",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Colombia",
+    "country_code": "CO"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Engineering (research master's programmes)",
+  "seniority": "Master's",
+  "qualifications": [
+    "Admitted to an in-person research master's programme of the Faculty of Engineering for 2027-10, or an undergraduate degree candidate",
+    "Not eligible if already holding another scholarship or tuition funding, or already active in an in-person engineering research master's at Uniandes",
+    "Motivation letter, undergraduate GPA evidence and evidence of prior contact with a faculty member or research group director",
+    "Renewal requires a cumulative average of at least 4.0",
+    "One scholarship per programme (nine in total)"
+  ],
+  "skills": [
+    "Research"
+  ],
+  "description_short": "Uniandes Engineering's Beca Avanza 2027-10 covers tuition for up to eight credits per semester in a research master's, plus pay as an 8-hour-a-week research monitor, for up to four semesters. One award per programme; applications close 26 November 2026, results 10 December.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-11-26",
+    "timezone": null,
+    "evidence_url": "https://ingenieria.uniandes.edu.co/es/Beca-avanza",
+    "evidence_quote": "26 de noviembre de 2026"
+  },
+  "compensation": {
+    "value": "Tuition up to 8 credits per semester plus a research-monitor payment of COP 2,729,376 (8 hours per week)",
+    "evidence_url": "https://ingenieria.uniandes.edu.co/es/Beca-avanza",
+    "evidence_quote": "$2.729.376 COP"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Uniandes Faculty of Engineering Beca Avanza page (search results): opens 5 October 2026, closes 26 November 2026, results 10 December 2026",
+    "Application form not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The period covered by the COP 2,729,376 monitor payment is not stated in results",
+    "City not stated in the text seen",
+    "Deadline timezone not stated"
+  ],
+  "id": "opp_e3a3476b4ceb058d",
+  "fingerprint": "83ceac514c110797",
+  "discovered_at": "2026-10-27T03:01:51.571Z",
+  "last_verified_at": "2026-10-27T03:01:51.571Z",
+  "content_hash": "sha256:187188de57d6f73394b4c7f629a4efa3d09766c6e1257cb6f29450be2b2a379d"
+}

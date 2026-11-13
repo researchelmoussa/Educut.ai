@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Ph.D. in Machine Learning",
+    "evidence_url": "https://www.cc.gatech.edu/degree-programs/phd-machine-learning",
+    "evidence_quote": "Ph.D. in Machine Learning"
+  },
+  "institution": {
+    "name": "Georgia Institute of Technology",
+    "website": "https://www.gatech.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://gradapp.gatech.edu/portal/program-info?cmd=view-program&program=d4d36cbd-0756-8283-48a1-3f5413851f4a",
+  "source_url": "https://ml.gatech.edu/admissions",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Machine learning",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Admission is through one of nine home schools; deadlines vary by home school, the earliest being December 1",
+    "Most home schools have a final deadline of December 15"
+  ],
+  "skills": [],
+  "description_short": "Georgia Tech's interdisciplinary Ph.D. in Machine Learning admits students through nine home schools. The program listing gives a Fall 2027 deadline of 15 December 2026 (11:59 PM Eastern); some home schools close earlier, from 1 December.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15T23:59:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://gradapp.gatech.edu/portal/program-info?cmd=view-program&program=d4d36cbd-0756-8283-48a1-3f5413851f4a",
+    "evidence_quote": "Fall 2027 deadline of December 15, 2026, at 11:59 PM Eastern"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Georgia Tech graduate application listing (search results): Fall 2027 deadline December 15, 2026, 11:59 PM Eastern",
+    "ML admissions page (search results): deadline varies by home school, earliest December 1"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Applicants must check their home school's own deadline (one home school lists December 16)",
+    "Funding details not captured",
+    "City not stated in the text seen"
+  ],
+  "id": "opp_b2b08b918a9f0a5a",
+  "fingerprint": "5a1cb051e443ec46",
+  "discovered_at": "2026-10-30T03:20:10.438Z",
+  "last_verified_at": "2026-10-30T03:20:10.438Z",
+  "content_hash": "sha256:91405ceede62028ce6e0050726779aa182318d2e070a19c1bda2dae98022ee41"
+}

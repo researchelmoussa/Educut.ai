@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "VFO - Verbier Festival Orchestra",
+    "evidence_url": "https://verbierfestival.com/en/orchestras/vfo/",
+    "evidence_quote": "VFO - Verbier Festival Orchestra"
+  },
+  "institution": {
+    "name": "Verbier Festival",
+    "website": "https://verbierfestival.com",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://verbierfestival.com/en/orchestras/vfo/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Verbier",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Orchestral music performance",
+  "seniority": "Young musicians",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The Verbier Festival Orchestra is recruiting musicians for summer 2027. Live-audition applications close 14 December 2026 and video-audition applications close 11 January 2027 (both 23:59 EST).",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-14",
+    "timezone": "EST",
+    "evidence_url": "https://verbierfestival.com/en/orchestras/vfo/vfo-guidelines/",
+    "evidence_quote": "14 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official VFO guidelines (search results): live-audition deadline 14 December 2026, video-audition deadline 11 January 2027, 23:59 EST",
+    "Portal not fetched, so capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Deadline field records the earlier live-audition date; video auditions close 11 January 2027",
+    "Deadline quote is the date as shown in search results; the 23:59 EST time comes from the search summary",
+    "Age limits and fees for 2027 not captured",
+    "Festival 2027 dates for the orchestra not confirmed"
+  ],
+  "id": "opp_51e3bedc357a0719",
+  "fingerprint": "a92bb1e421828a6a",
+  "discovered_at": "2026-11-05T03:04:14.231Z",
+  "last_verified_at": "2026-11-05T03:04:14.231Z",
+  "content_hash": "sha256:9dd74430105e26e8aa1f8c960efdaeb6abef250fa8ff924cb68651e54865107f"
+}

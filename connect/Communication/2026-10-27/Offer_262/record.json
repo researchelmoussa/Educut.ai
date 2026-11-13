@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "JSPS Postdoctoral Fellowships for Research in Japan (Short-term (PE)), FY2027 2nd recruitment",
+    "evidence_url": "https://www.jsps.go.jp/english/e-fellow/e-oubei-s/appliguidelines.html",
+    "evidence_quote": "Application Schedule (Short-term (PE)・Open Call)｜Postdoctoral Fellowships for Research in Japan"
+  },
+  "institution": {
+    "name": "Japan Society for the Promotion of Science (JSPS)",
+    "website": "https://www.jsps.go.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.jsps.go.jp/english/e-fellow/e-oubei-s/appliguidelines.html",
+  "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+  "location": {
+    "city": null,
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Any field",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "For researchers from the US, Canada and Europe",
+    "Holders of professional degrees such as a JD or MD are not eligible unless they also hold a PhD",
+    "Applications go through a Japanese host institution, whose internal deadline may be a month or more earlier than JSPS's",
+    "Arrival in Japan between August 1, 2027 and March 31, 2028"
+  ],
+  "skills": [],
+  "description_short": "JSPS Short-term (PE) postdoctoral fellowships let researchers from the US, Canada and Europe carry out research in Japan with a host. For the FY2027 2nd recruitment, hosts submit to JSPS by 8 January 2027; about 20 awards, results mid-May 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08T17:00:00+09:00",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.jsps.go.jp/english/e-fellow/e-oubei-s/appliguidelines.html",
+    "evidence_quote": "January 8, 2027 (by 5 p.m. (JST))"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official JSPS Short-term (PE) application schedule (search results): FY2027 2nd recruitment deadline January 8, 2027 (host institution to JSPS)",
+    "FY2027 guideline PDF (search results) shows the same date",
+    "No direct applicant portal: applications go via the host institution"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The January 8, 2027 deadline is for host institutions submitting to JSPS; applicants' internal deadlines are earlier and set by each host",
+    "Fellowship duration and allowance not captured from results",
+    "City depends on the host institution",
+    "Application is via host institution; application_url left null"
+  ],
+  "id": "opp_33e9104524609a3f",
+  "fingerprint": "f77dade3e5d194b0",
+  "discovered_at": "2026-10-27T03:09:03.899Z",
+  "last_verified_at": "2026-10-27T03:09:03.899Z",
+  "content_hash": "sha256:d7a848cdc6df277949cbd879974b1e21d02a9322b57a4ccb554f56e4c14b5eda"
+}

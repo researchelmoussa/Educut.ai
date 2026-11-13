@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "onsite",
+  "seniority": null,
+  "skills": [
+    "Recommender systems",
+    "Personalization",
+    "User modeling"
+  ],
+  "opportunity_type": "other",
+  "employment_type": "other",
+  "title": {
+    "value": "UMAP 2027",
+    "evidence_url": "https://um.org/umap2027/",
+    "evidence_quote": "UMAP 2027"
+  },
+  "institution": {
+    "name": "ACM UMAP 2027 (Conference on User Modeling, Adaptation and Personalization)",
+    "website": "https://um.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://um.org/umap2027/",
+  "source_url": "https://um.org/umap2027/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Chicago",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "field": "User modeling, adaptation and personalization",
+  "qualifications": [
+    "Full and short papers: abstracts due 22 January 2027, full paper 29 January 2027 (23:59 AoE)",
+    "Doctoral Consortium submissions due 6 February 2027",
+    "Workshop/tutorial proposals due 11 December 2026"
+  ],
+  "description_short": "Call for full and short papers for ACM UMAP 2027, held 9-12 June 2027 in Chicago. Abstracts are due 22 January 2027 and full papers 29 January 2027 (AoE); notification on 15 March 2027.",
+  "deadline": {
+    "value": "2027-01-22T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://um.org/umap2027/",
+    "evidence_quote": "Abstract Submission: January 22, 2027"
+  },
+  "status_evidence": [
+    "Official UMAP 2027 homepage (search results): abstract 22 January 2027, full paper 29 January 2027",
+    "Submission system not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Separate full CFP page not seen; dates from the homepage",
+    "Deadline set to the abstract date (full paper due 29 January 2027)"
+  ],
+  "id": "opp_7620cf6189d4463d",
+  "fingerprint": "c3d0b8692dcdf627",
+  "discovered_at": "2026-10-25T03:02:56.665Z",
+  "last_verified_at": "2026-10-25T03:02:56.665Z",
+  "content_hash": "sha256:69ad7eb3373bd28862ab93e0e9b9d8f4689c538cc61f0e5f44b7ec5e9e7e21f3"
+}

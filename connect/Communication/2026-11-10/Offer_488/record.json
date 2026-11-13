@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Master's Programs (MP1, MP2), Admission 2027-2028",
+    "evidence_url": "https://www.grips.ac.jp/uploads/admissions/2026/07/GRIPS_AppGuide_2027rev.pdf",
+    "evidence_quote": "Application for Applicants Residing Outside Japan 2027–2028"
+  },
+  "institution": {
+    "name": "National Graduate Institute for Policy Studies (GRIPS)",
+    "website": "https://www.grips.ac.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.grips.ac.jp/en/admissions/apply/",
+  "source_url": "https://www.grips.ac.jp/en/admissions/apply/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Tokyo",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Public policy",
+  "seniority": "Master's",
+  "qualifications": [
+    "Online Registration Form may be submitted only once per academic year",
+    "Complete set of supporting documents by post",
+    "Incomplete or late applications are not considered"
+  ],
+  "skills": [],
+  "description_short": "GRIPS is accepting applications for 2027-2028 admission to its master's programs (MP1 and MP2) from applicants residing outside Japan. The Online Registration Form is due April 30, 2027, 17:00 JST, and supporting documents by May 7, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-30T17:00:00+09:00",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.grips.ac.jp/uploads/admissions/2026/07/GRIPS_AppGuide_2027rev.pdf",
+    "evidence_quote": "April 30, 2027, 17:00 (JST)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "GRIPS 'How to Apply' page (search results) says GRIPS is accepting applications for 2027-2028 admission",
+    "2027-2028 application guide (search results) lists April 30, 2027, 17:00 JST for the MP1/MP2 Online Registration Form",
+    "Evidence seen only through search results of the official page; capped at OPEN_LIKELY"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment (egress proxy refused the connection); opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "The deadline chart in the 2027 guide is garbled in the extracted text; other rows show Nov 27, 2026 and Feb 19, 2027, possibly for other programs or rounds",
+    "Economics, Planning and Public Policy program applications are suspended for 2027-2028",
+    "Programme-level names of MP1/MP2 not captured; scholarship availability not captured"
+  ],
+  "id": "opp_788752789a780ad4",
+  "fingerprint": "cd1eddc8f544dbe6",
+  "discovered_at": "2026-11-10T03:02:32.826Z",
+  "last_verified_at": "2026-11-10T03:02:32.826Z",
+  "content_hash": "sha256:39b2df748111824c86cd7accc432d3d30d1f77f29e3548676ea4ab4835f8306c"
+}

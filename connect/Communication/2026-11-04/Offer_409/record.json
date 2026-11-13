@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Brains, Minds and Machines",
+    "evidence_url": "https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/brains-minds-and-machines",
+    "evidence_quote": "Brains, Minds and Machines"
+  },
+  "institution": {
+    "name": "Marine Biological Laboratory (MBL)",
+    "website": "https://www.mbl.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/brains-minds-and-machines",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Woods Hole",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Computer science and neuroscience (intelligence)",
+  "seniority": null,
+  "qualifications": [
+    "Appropriate for graduate students, postdocs and faculty in computer science or neuroscience"
+  ],
+  "skills": [],
+  "description_short": "Marine Biological Laboratory three-week advanced research training course in Woods Hole, Massachusetts: Brains, Minds and Machines. The 2027 course runs Aug 08, 2027 - Aug 29, 2027; the application deadline is 29 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-29",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.mbl.edu/education/advanced-research-training-courses/course-offerings/brains-minds-and-machines",
+    "evidence_quote": "application due date of Mar 29, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official MBL course page (search results): 2027 dates Aug 08, 2027 - Aug 29, 2027; application due date of Mar 29, 2027",
+    "MBL course-offerings listing (search results) shows the same 2027 deadline"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Whether the 2027 application form is already live was not confirmed",
+    "Official apply link not identified; application_url left null",
+    "Tuition, fees and financial aid not captured",
+    "Time of day for the deadline not stated"
+  ],
+  "id": "opp_d9073288c91babd2",
+  "fingerprint": "90e39f9628d170a5",
+  "discovered_at": "2026-11-04T05:53:12.307Z",
+  "last_verified_at": "2026-11-04T05:53:12.307Z",
+  "content_hash": "sha256:91d8c8823ebee8e7568a7138d8ccf3fd419f56c8a0763d49e9cfd4c445c1e401"
+}

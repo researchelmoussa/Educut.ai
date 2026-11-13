@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "published_at": null,
+  "compensation": null,
+  "pipeline_status": "DISCOVERED",
+  "application_status": "OPEN_LIKELY",
+  "work_arrangement": "unspecified",
+  "seniority": "Graduate students",
+  "skills": [
+    "Computational science",
+    "Scientific computing"
+  ],
+  "opportunity_type": "fellowship",
+  "employment_type": "fellowship",
+  "title": {
+    "value": "DOE Computational Science Graduate Fellowship",
+    "evidence_url": "https://www.krellinst.org/doecsgf/application/",
+    "evidence_quote": "DOE Computational Science Graduate Fellowship"
+  },
+  "institution": {
+    "name": "Krell Institute (DOE Computational Science Graduate Fellowship)",
+    "website": "https://www.krellinst.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.krellinst.org/csgf/how-apply",
+  "source_url": "https://www.krellinst.org/csgf/how-apply",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "field": "Computational science",
+  "qualifications": [
+    "Applications for the 37th cohort (2027-2028 incoming class) are due 7 January 2027",
+    "All transcripts must be received by Krell no later than 7 January 2027; applicant-sent transcripts are not accepted",
+    "Notification by late April 2027 for studies beginning in fall 2027"
+  ],
+  "description_short": "The DOE Computational Science Graduate Fellowship invites applications for its 37th cohort, the 2027-2028 incoming class. Applications, transcripts and reference letters are due 7 January 2027; applicants for studies beginning in fall 2027 are notified by late April 2027.",
+  "deadline": {
+    "value": "2027-01-07",
+    "timezone": null,
+    "evidence_url": "https://www.krellinst.org/csgf/how-apply",
+    "evidence_quote": "applications for the fellowship's 37th cohort — the 2027-2028 incoming class — are due Thursday, January 7, 2027"
+  },
+  "status_evidence": [
+    "Official Krell How to Apply page (search results): 37th cohort applications due 7 January 2027",
+    "Krell homepage (search results): 'the 2027 application is now open!'",
+    "Application portal not independently fetched"
+  ],
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Detailed eligibility (citizenship, year of study) not shown in results",
+    "One FAQ entry lists the letter deadline as January 7, 2026, apparently a typo",
+    "Deadline time and timezone not stated",
+    "Stipend not shown in results"
+  ],
+  "id": "opp_03eaeb716dfbc738",
+  "fingerprint": "937bb0dab3cede8c",
+  "discovered_at": "2026-10-25T03:02:54.807Z",
+  "last_verified_at": "2026-10-25T03:02:54.807Z",
+  "content_hash": "sha256:c70c13522adc5ef55ff9f2d908276a4c8cc200aedaab8aa9ecb682c1241a7b34"
+}

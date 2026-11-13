@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Kupcinet-Getz International Summer Program",
+    "evidence_url": "https://info.weizmann.ac.il/en/kupcinet-getz-international-summer-program/",
+    "evidence_quote": "Kupcinet-Getz International Summer Program"
+  },
+  "institution": {
+    "name": "Weizmann Institute of Science",
+    "website": "https://www.weizmann.ac.il",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://info.weizmann.ac.il/en/kupcinet-getz-international-summer-program/",
+  "source_url": "https://info.weizmann.ac.il/en/kupcinet-getz-international-summer-program/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": null,
+    "country": "Israel",
+    "country_code": "IL"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Natural and exact sciences research",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Undergraduate students",
+    "Complete application by the deadline (CV, transcripts, recommendation letters, motivation letter)",
+    "Applicants choose up to five research topics for lab matching"
+  ],
+  "skills": [
+    "Scientific research"
+  ],
+  "description_short": "Weizmann Institute summer research program for international undergraduates, placed in host labs for 16 June-12 August 2027. The online application opens 20 December 2026 and closes 20 January 2027; applicants list up to five research topics.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-20",
+    "timezone": null,
+    "evidence_url": "https://info.weizmann.ac.il/en/kupcinet-getz-international-summer-program/",
+    "evidence_quote": "application deadline of 20 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Weizmann Kupcinet-Getz program page (search results): application deadline 20 January 2027; online application opens 20 December 2026",
+    "Application form not yet open as of 2026-10-26"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Application opens only on 20 December 2026",
+    "Program duration differs between official pages (7 vs 8 weeks)",
+    "Funding/stipend not stated in results",
+    "City not stated in the official text seen; left null"
+  ],
+  "id": "opp_06791fe8298016ce",
+  "fingerprint": "38acca5d5882892d",
+  "discovered_at": "2026-10-26T02:59:55.296Z",
+  "last_verified_at": "2026-10-26T02:59:55.296Z",
+  "content_hash": "sha256:00ca2c5e7ca9c235499dd5cf5e392b3207c33419519d72ae1810e10185f0e784"
+}

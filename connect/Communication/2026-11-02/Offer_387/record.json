@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "ASIA CCS 2027 Call for Papers (Second Round)",
+    "evidence_url": "https://asiaccs2027.cityu.edu.mo/call-for-papers/",
+    "evidence_quote": "Call for Papers"
+  },
+  "institution": {
+    "name": "ACM ASIA Conference on Computer and Communications Security (ASIA CCS 2027)",
+    "website": "https://asiaccs2027.cityu.edu.mo",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://asiaccs2027.cityu.edu.mo/call-for-papers/",
+  "source_url": "https://asiaccs2027.cityu.edu.mo/call-for-papers/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Computer and communications security",
+  "seniority": "Researchers",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Second-round call for papers for ACM ASIA CCS 2027. Second-round submissions are due 11 December 2026 (AoE), with early rejection notices on 5 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-11",
+    "timezone": "AoE",
+    "evidence_url": "https://asiaccs2027.cityu.edu.mo/call-for-papers/",
+    "evidence_quote": "second-round submission of 11 December 2026 (AoE)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ASIA CCS 2027 call for papers (search results) lists the 11 December 2026 second-round submission date",
+    "Application portal not independently fetched"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Source list (fellowshipsguide.com / mlscientist.com / vacancyedu.com) unreachable from this environment; opportunity found by web search for the category this source covers, then confirmed on the official domain",
+    "Evidence quotes are the wording shown in search results",
+    "Conference city/country not stated in the results (site hosted on a cityu.edu.mo domain)",
+    "Conference dates and page limits not captured"
+  ],
+  "id": "opp_e373d28e0669fd0e",
+  "fingerprint": "dddcb57dd767e146",
+  "discovered_at": "2026-11-02T03:15:41.323Z",
+  "last_verified_at": "2026-11-02T03:15:41.323Z",
+  "content_hash": "sha256:fdb4a76e037527fd6a88632e2be33cc45d35bbb1e9801677ea7c3cf73d2c79d3"
+}
