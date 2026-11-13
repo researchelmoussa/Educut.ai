@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "7 fully funded PhD student positions in the computational & experimental plant sciences",
+    "evidence_url": "https://www.mpipz.mpg.de/imprs-2027",
+    "evidence_quote": "7 fully funded PhD student positions in the computational & experimental plant sciences"
+  },
+  "institution": {
+    "name": "Max Planck Institute for Plant Breeding Research (MPIPZ), International Max Planck Research School",
+    "website": "https://www.mpipz.mpg.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.mpipz.mpg.de/imprs/imprs-application",
+  "source_url": "https://www.mpipz.mpg.de/imprs-2027",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Cologne",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Computational and experimental plant sciences",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Master's degree or comparable with 4 to 5 years of relevant university study, awarded before the project starts",
+    "Two referee letters by 19 January 2027"
+  ],
+  "skills": [],
+  "description_short": "International Max Planck Research School call for seven PhD positions in computational and experimental plant sciences at MPIPZ in Cologne. Applications close 5 January 2027; interviews 15-19 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-05T23:59:00+01:00",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://www.mpipz.mpg.de/imprs/imprs-application",
+    "evidence_quote": "The final deadline for application is Tuesday, January 5, 2027 (23:59 CET)."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official MPIPZ IMPRS pages (seen in search results) give final deadline 5 January 2027 23:59 CET (future) and say the call for 2027 positions is open",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "One older MPIPZ page says the 2027 call \"will open around autumn/winter 2026\"; the newer page says it is open",
+    "Application portal gradschool.mpipz.mpg.de not fetched",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-13T03:03:00.135Z",
+  "last_verified_at": "2026-11-13T03:42:37.463Z",
+  "id": "opp_cb27c00267c4b82e",
+  "fingerprint": "1432d26d38c1f629",
+  "content_hash": "sha256:3a4e2e3b89a7400a98bd157827e9fb236d05b276c17f8c5b50595f9f00017589"
+}

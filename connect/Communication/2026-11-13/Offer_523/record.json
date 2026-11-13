@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "academic_position",
+  "title": {
+    "value": "Two Open Rank Positions in International Relations",
+    "evidence_url": "https://ir.bilkent.edu.tr/?page_id=3396",
+    "evidence_quote": "Two Open Rank Positions in International Relations"
+  },
+  "institution": {
+    "name": "Bilkent University, Department of International Relations",
+    "website": "https://www.bilkent.edu.tr",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://stars.bilkent.edu.tr/staffapp/IR2027",
+  "source_url": "https://ir.bilkent.edu.tr/?page_id=3396",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": null,
+    "country": "Turkey",
+    "country_code": "TR"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "International relations",
+  "seniority": "Assistant, Associate or Full Professor",
+  "qualifications": [
+    "Ph.D. in International Relations, Political Science or a related academic discipline by the beginning of the appointment",
+    "CV, cover letter, three recommenders and a writing sample"
+  ],
+  "skills": [],
+  "description_short": "Bilkent University's Department of International Relations invites applications for two open-rank (Assistant, Associate or Full Professor) positions starting September 2027. Areas of interest include international institutions, migration, environmental, climate and energy politics, and emerging technologies including AI.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": null,
+    "evidence_url": "https://ir.bilkent.edu.tr/?page_id=3396",
+    "evidence_quote": "The deadline for submission is December 15, 2026."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Bilkent IR announcement and the Bilkent staff application page (seen in search results) give deadline 15 December 2026 (future)",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "City not stated in the results",
+    "Full-time status assumed from faculty rank; not explicitly stated",
+    "Salary not stated",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-13T03:03:00.135Z",
+  "last_verified_at": "2026-11-13T03:03:00.590Z",
+  "id": "opp_64b4bac0c9f26c2c",
+  "fingerprint": "186b599d6f9d143d",
+  "content_hash": "sha256:619454663022e0569c1b47fd3c5a8a3fc4dccd7a603267a50f4a711968c3264b"
+}

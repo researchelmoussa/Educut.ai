@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Statistics for health",
+    "evidence_url": "https://www.cimpa.info/en/ecoles/statistics-health",
+    "evidence_quote": "Statistics for health"
+  },
+  "institution": {
+    "name": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with the University of Burundi",
+    "website": "https://www.cimpa.info",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cimpa.info/en/ecoles/statistics-health",
+  "source_url": "https://www.cimpa.info/en/ecoles/statistics-health",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Bujumbura",
+    "country": "Burundi",
+    "country_code": "BI"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Statistics for health",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "CIMPA research school organised by the Institute of Applied Statistics, University of Burundi, 14-25 June 2027 in Bujumbura. Topics include disease risk factors, prevalence and incidence, analysis of historical data and prediction of disease spread. Applications close 14 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-14",
+    "timezone": null,
+    "evidence_url": "https://www.cimpa.info/en/ecoles/statistics-health",
+    "evidence_quote": "14 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CIMPA school page and interactive map (seen in search results) give the application deadline 14 February 2027 (future)",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Eligibility and any CIMPA support not detailed in the results",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-13T03:03:00.135Z",
+  "last_verified_at": "2026-11-13T03:03:00.959Z",
+  "id": "opp_0bc3307b61029cd5",
+  "fingerprint": "070ec70a2fb6b805",
+  "content_hash": "sha256:4b21275b083cfcb9ed45d5dce6d3a8af1aeade1cc72aab629e10ee27f1d174ad"
+}
