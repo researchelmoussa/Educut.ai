@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "The Va'adia-BARD Postdoctoral Fellowship",
+    "evidence_url": "https://www.bard-isus.org/opportunities/the-vaadia-bard-postdoctoral-fellowship/",
+    "evidence_quote": "The Va’adia-BARD Postdoctoral Fellowship"
+  },
+  "institution": {
+    "name": "BARD, the United States - Israel Binational Agricultural Research and Development Fund",
+    "website": "https://www.bard-isus.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.bard-isus.org/opportunities/the-vaadia-bard-postdoctoral-fellowship/",
+  "source_url": "https://www.bard-isus.org/opportunities/the-vaadia-bard-postdoctoral-fellowship/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Agricultural research",
+  "seniority": "Postdoctoral",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "BARD postdoctoral fellowship in agricultural research. The application portal opens 15 December 2026 and the next submission deadline is 15 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": null,
+    "evidence_url": "https://www.bard-isus.org/opportunities/the-vaadia-bard-postdoctoral-fellowship/",
+    "evidence_quote": "January 15, 2027"
+  },
+  "compensation": {
+    "value": "Maximum award: $64,000 including travel expenses",
+    "evidence_url": "https://www.bard-isus.org/opportunities/the-vaadia-bard-postdoctoral-fellowship/",
+    "evidence_quote": "Maximum award: $64,000 including travel expenses"
+  },
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official BARD opportunity page (seen in search results) lists 15 January 2027 as the next submission date, confirmed by the Hebrew University funding page",
+    "Portal opens 15 December 2026, so it was not yet live at time of check",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Host country rules (United States / Israel) not confirmed in search results; location left null",
+    "Duration: current page says 1-2 years; older guidelines describe a one-year award",
+    "Eligibility details not seen",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-13T03:03:00.135Z",
+  "last_verified_at": "2026-11-13T03:42:41.470Z",
+  "id": "opp_c0f1b05ab8b733ad",
+  "fingerprint": "1c2fb21513e2d897",
+  "content_hash": "sha256:58aca532dd2dffdbfb5f4d562a324897065f205826c3434190a35621d5ecdcd4"
+}

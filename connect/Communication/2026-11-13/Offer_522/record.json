@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Summer Undergraduate Research Fellowship (SURF)",
+    "evidence_url": "https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF",
+    "evidence_quote": "SURF"
+  },
+  "institution": {
+    "name": "Purdue University, College of Engineering",
+    "website": "https://engineering.purdue.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF",
+  "source_url": "https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Engineering research",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Undergraduate students enrolled at Purdue University, other U.S. institutions, and international institutions"
+  ],
+  "skills": [],
+  "description_short": "Purdue College of Engineering summer research programme for undergraduates from Purdue, other U.S. and international institutions. International students needing a J-1 visa should apply by 15 December 2026; the priority deadline is 15 January 2027, rolling afterwards.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": null,
+    "evidence_url": "https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF",
+    "evidence_quote": "International students requiring a J-1 visa should apply by December 15, 2026."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Purdue Engineering SURF pages (seen in search results) give the international deadline 15 December 2026 and priority deadline 15 January 2027 (future); application opened early November 2026",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "A faculty-facing Purdue page gives 15 January for J-1 applicants",
+    "City not stated in the results",
+    "Stipend not quoted; compensation null",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-13T03:03:00.135Z",
+  "last_verified_at": "2026-11-13T03:03:02.985Z",
+  "id": "opp_525fd05f90ae6c8f",
+  "fingerprint": "e4ff191716236d1a",
+  "content_hash": "sha256:1b94dd869e5ed60916bd77f2be5a1df3a5ebd3c3f391a3a9a5edc6283e5cd549"
+}

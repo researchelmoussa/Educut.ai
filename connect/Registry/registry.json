@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-12T03:07:44.920Z",
+  "updated_at": "2026-11-13T03:43:07.506Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -450,7 +450,7 @@
       "deadline": "2026-11-12T23:59:00+06:00",
       "content_hash": "sha256:42fef2d49a0cddbc2c51055515b0007cacf920a36bc37e8d7ff6a717b6eaea5f",
       "last_verified_at": "2026-10-12T07:05:05.299Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-13T10:30:34.278Z",
       "history": [
         {
@@ -494,6 +494,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-13T02:50:46.959Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-12T23:59:00+06:00 passed"
         }
       ],
       "offer_number": 8
@@ -7835,7 +7842,7 @@
       "deadline": "2026-11-11",
       "content_hash": "sha256:4853ed56d3ba485e4b11106925ead5382038544a97262a44e0a9acbffc7c0c82",
       "last_verified_at": "2026-10-20T01:59:17.424Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-20T01:59:24.174Z",
       "history": [
         {
@@ -7879,6 +7886,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-13T02:50:46.960Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-11 passed"
         }
       ],
       "offer_number": 94
@@ -34917,6 +34931,1941 @@
         }
       ],
       "offer_number": 516
+    },
+    "opp_a95bec59c148a36f": {
+      "id": "opp_a95bec59c148a36f",
+      "fingerprint": "ca5ca5b1c41fad9b",
+      "title": "Aarhus BSS Graduate School PhD general call (February 2027)",
+      "institution": "Aarhus University, Aarhus BSS Graduate School",
+      "city": "Aarhus",
+      "country": "Denmark",
+      "source_url": "https://bss.au.dk/en/research/phd/application",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://bss.au.dk/en/research/phd/application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01T23:59:00+01:00",
+      "content_hash": "sha256:b4422c4c0fb0727aaec4395d9968f9aa2373ee71c8cb747fa2d76239b558800b",
+      "last_verified_at": "2026-11-13T03:03:00.297Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:07.111Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:07.111Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:07.111Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:09:01.643Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:09:01.643Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:06.782Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:06.782Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 536
+    },
+    "opp_c0f1b05ab8b733ad": {
+      "id": "opp_c0f1b05ab8b733ad",
+      "fingerprint": "1c2fb21513e2d897",
+      "title": "The Va'adia-BARD Postdoctoral Fellowship",
+      "institution": "BARD, the United States - Israel Binational Agricultural Research and Development Fund",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.bard-isus.org/opportunities/the-vaadia-bard-postdoctoral-fellowship/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.bard-isus.org/opportunities/the-vaadia-bard-postdoctoral-fellowship/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:58aca532dd2dffdbfb5f4d562a324897065f205826c3434190a35621d5ecdcd4",
+      "last_verified_at": "2026-11-13T03:42:41.470Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:07.257Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:07.258Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:07.258Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:15.322Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:15.323Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:42:41.600Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-13T03:42:41.601Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-13T03:42:43.251Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported funding/benefit/duration claims from description"
+        },
+        {
+          "at": "2026-11-13T03:42:43.402Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:42:43.403Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:05.943Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:05.943Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 530
+    },
+    "opp_64b4bac0c9f26c2c": {
+      "id": "opp_64b4bac0c9f26c2c",
+      "fingerprint": "186b599d6f9d143d",
+      "title": "Two Open Rank Positions in International Relations",
+      "institution": "Bilkent University, Department of International Relations",
+      "city": null,
+      "country": "Turkey",
+      "source_url": "https://ir.bilkent.edu.tr/?page_id=3396",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://stars.bilkent.edu.tr/staffapp/IR2027",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:619454663022e0569c1b47fd3c5a8a3fc4dccd7a603267a50f4a711968c3264b",
+      "last_verified_at": "2026-11-13T03:03:00.590Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:07.400Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:07.400Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:07.400Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:37.461Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:37.461Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:04.984Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:04.984Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 523
+    },
+    "opp_f2fe782e1a85fd41": {
+      "id": "opp_f2fe782e1a85fd41",
+      "fingerprint": "6f79a705a8fc37df",
+      "title": "Deterministic mathematical models for biological processes",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with Urgench State University",
+      "city": "Urgench",
+      "country": "Uzbekistan",
+      "source_url": "https://www.cimpa.info/en/ecoles/deterministic-mathematical-models-biological-processes",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.cimpa.info/en/ecoles/deterministic-mathematical-models-biological-processes",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-17",
+      "content_hash": "sha256:6acf12b2953103c75934ff81432e4d8d659a95c921da69066fa36e3193d08922",
+      "last_verified_at": "2026-11-13T03:03:00.709Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:07.552Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:07.552Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:07.553Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:09:00.193Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:09:00.193Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:06.215Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:06.215Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 532
+    },
+    "opp_5743abc29b5c6235": {
+      "id": "opp_5743abc29b5c6235",
+      "fingerprint": "8c17ed13da6d8846",
+      "title": "Modern Perspectives on Partial Differential Equations: Theory and Applications",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with Addis Ababa University",
+      "city": "Addis Ababa",
+      "country": "Ethiopia",
+      "source_url": "https://www.cimpa.info/en/ecoles/modern-perspectives-partial-differential-equations-theory-and-applications",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.cimpa.info/en/ecoles/modern-perspectives-partial-differential-equations-theory-and-applications",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-26",
+      "content_hash": "sha256:93dbc3762559a594a01f4dd71c906fde8b0664be3f487d5fd0feecd420c326f7",
+      "last_verified_at": "2026-11-13T03:03:00.829Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:07.694Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:07.694Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:07.694Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:09:15.057Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:09:15.057Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:07.506Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:07.506Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 541
+    },
+    "opp_0bc3307b61029cd5": {
+      "id": "opp_0bc3307b61029cd5",
+      "fingerprint": "070ec70a2fb6b805",
+      "title": "Statistics for health",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with the University of Burundi",
+      "city": "Bujumbura",
+      "country": "Burundi",
+      "source_url": "https://www.cimpa.info/en/ecoles/statistics-health",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.cimpa.info/en/ecoles/statistics-health",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-14",
+      "content_hash": "sha256:4b21275b083cfcb9ed45d5dce6d3a8af1aeade1cc72aab629e10ee27f1d174ad",
+      "last_verified_at": "2026-11-13T03:03:00.959Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:07.843Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:07.843Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:07.844Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:09:14.413Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:09:14.414Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:07.207Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:07.207Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 539
+    },
+    "opp_e7b8ded640269765": {
+      "id": "opp_e7b8ded640269765",
+      "fingerprint": "a3ea0ff4c5e27d8c",
+      "title": "ECSO–CMS 2027",
+      "institution": "Lancaster University (host of ECSO–CMS 2027)",
+      "city": "Lancaster",
+      "country": "United Kingdom",
+      "source_url": "https://wp.lancs.ac.uk/ecso-cms-2027/venue-and-travel/travel-grants/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://wp.lancs.ac.uk/ecso-cms-2027/submissions/abstract-submission/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-04",
+      "content_hash": "sha256:cccd8926b975d82968e30a75e1927dc34e9ad6ffdd05963dd6f24767f40ee08b",
+      "last_verified_at": "2026-11-13T03:42:49.992Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:07.990Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:07.990Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:07.990Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:09:14.069Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:09:14.069Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:42:50.126Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-13T03:42:50.126Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-13T03:42:51.765Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported funding/benefit/duration claims from description"
+        },
+        {
+          "at": "2026-11-13T03:42:51.905Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:42:51.906Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:07.068Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:07.069Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 538
+    },
+    "opp_77e7fcff51610d4d": {
+      "id": "opp_77e7fcff51610d4d",
+      "fingerprint": "14495b988f317f08",
+      "title": "2027 - Histories of Education Doctoral Summer School",
+      "institution": "European Educational Research Association (EERA), Network 17 Histories of Education",
+      "city": "Palma",
+      "country": "Spain",
+      "source_url": "https://eera-ecer.de/seasonschools/2027-histories-of-education-doctoral-summer-school",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://eera-ecer.de/seasonschools/2027-histories-of-education-doctoral-summer-school",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:7807ff9a7d32351d390d57022e323c53399f263937d57c442a1567d1e224d7ae",
+      "last_verified_at": "2026-11-13T03:42:35.366Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:08.139Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:08.139Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:08.140Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:38.034Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:38.034Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:42:35.492Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-13T03:42:35.492Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-13T03:42:37.187Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported funding/benefit/duration claims from description"
+        },
+        {
+          "at": "2026-11-13T03:42:37.324Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:42:37.324Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:05.274Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:05.275Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 525
+    },
+    "opp_bf48b82fc24015be": {
+      "id": "opp_bf48b82fc24015be",
+      "fingerprint": "4c6b732ced427ba1",
+      "title": "EERA Summer School 2027",
+      "institution": "European Educational Research Association (EERA)",
+      "city": "Vilnius",
+      "country": "Lithuania",
+      "source_url": "https://eera-ecer.de/seasonschools/eera-summer-school-2027",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://eera-ecer.de/seasonschools/eera-summer-school-2027/application-/-cost-/-terms-of-registration",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:23b9a36643b2e950c1db826693194757bd38b7c6327467fb27582fa8f46416f3",
+      "last_verified_at": "2026-11-13T03:03:01.370Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:08.296Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:08.296Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:08.296Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:15.049Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:15.049Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:05.810Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:05.810Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 529
+    },
+    "opp_044011b9dd633180": {
+      "id": "opp_044011b9dd633180",
+      "fingerprint": "01077cabd562130b",
+      "title": "ESHG 2027",
+      "institution": "European Society of Human Genetics (ESHG)",
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "source_url": "https://www.eshg.org/conferences/future-eshg-meetings",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://2027.eshg.org/myconference/faqs/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-04",
+      "content_hash": "sha256:2edbf854e3eb318c118d413db315287b6292d90bfcfad7cd6c959059be334c89",
+      "last_verified_at": "2026-11-13T03:42:47.886Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:08.447Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:08.447Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:08.447Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:09:13.701Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:09:13.701Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:42:48.015Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-13T03:42:48.015Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-13T03:42:49.697Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported funding/benefit/duration claims from description"
+        },
+        {
+          "at": "2026-11-13T03:42:49.837Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:42:49.838Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:06.924Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:06.925Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 537
+    },
+    "opp_16915e8593083c38": {
+      "id": "opp_16915e8593083c38",
+      "fingerprint": "01920947d224f923",
+      "title": "Doctoral Position in Machine Learning for Engineering Design",
+      "institution": "ETH Zurich, Laboratory for Intelligence in Design Engineering and Learning (IDEAL)",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://jobs.ethz.ch/job/view/JOPG_ethz_AUmT7tc75KfdQZK3sA",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://jobs.ethz.ch/job/view/JOPG_ethz_AUmT7tc75KfdQZK3sA",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:9a1988977c9963fb0415c56a4c486ef2e041aad1a5b8bf31cce8cbf53ce66c2d",
+      "last_verified_at": "2026-11-13T03:03:01.655Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:08.597Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:08.597Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:08.597Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:14.750Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:14.750Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:05.680Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:05.680Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 528
+    },
+    "opp_67913c4da440541a": {
+      "id": "opp_67913c4da440541a",
+      "fingerprint": "b7108b72f012e46d",
+      "title": "Doctoral Fellowships in Architecture and Technology",
+      "institution": "ETH Zurich, Institute of Technology in Architecture (ITA)",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://jobs.ethz.ch/job/view/JOPG_ethz_ImqWbdbtPQtWCAnkbZ",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://jobs.ethz.ch/job/view/JOPG_ethz_ImqWbdbtPQtWCAnkbZ",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:99f2c72a8c9ef6bbddbaa504b30d2429f459d4cb2389b359c5a827ce4329725b",
+      "last_verified_at": "2026-11-13T03:42:45.659Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:08.739Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:08.739Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:08.739Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:09:01.315Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:09:01.315Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:42:45.794Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-13T03:42:45.794Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-13T03:42:47.591Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported funding/benefit/duration claims from description"
+        },
+        {
+          "at": "2026-11-13T03:42:47.750Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:42:47.751Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:06.634Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:06.634Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 535
+    },
+    "opp_699b75b6c5e8fb56": {
+      "id": "opp_699b75b6c5e8fb56",
+      "fingerprint": "7c0c0e4b7d84786b",
+      "title": "Children's Literature, Media & Cultural Entrepreneurship (Erasmus Mundus International Master)",
+      "institution": "University of Glasgow",
+      "city": "Glasgow",
+      "country": "United Kingdom",
+      "source_url": "https://www.gla.ac.uk/postgraduate/erasmusmundus/clmce/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.gla.ac.uk/postgraduate/erasmusmundus/clmce/howtoapply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-22T13:00:00+00:00",
+      "content_hash": "sha256:68b13fc3858f2ae202803836bd72f8af794728e30295cb56d2407abf8c7aca72",
+      "last_verified_at": "2026-11-13T03:03:01.898Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:08.908Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:08.908Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:08.908Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:09:00.572Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:09:00.573Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:06.350Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:06.350Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 533
+    },
+    "opp_e25fb34f29b248f5": {
+      "id": "opp_e25fb34f29b248f5",
+      "fingerprint": "357dd1e367635539",
+      "title": "Applications of AI in Astrophysics and Cosmology",
+      "institution": "International Centre for Theoretical Sciences (ICTS-TIFR)",
+      "city": "Bengaluru",
+      "country": "India",
+      "source_url": "https://www.icts.res.in/program/AIAstro2027",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.icts.res.in/program/AIAstro2027",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:4b05ee138d545e4308b75482201f357bacad90bb2e2c15bfde8e6d0824dfca96",
+      "last_verified_at": "2026-11-13T03:42:43.565Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:09.052Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:09.052Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:09.052Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:15.594Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:15.594Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:42:43.699Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-13T03:42:43.699Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-13T03:42:45.338Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported funding/benefit/duration claims from description"
+        },
+        {
+          "at": "2026-11-13T03:42:45.507Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:42:45.507Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:06.078Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:06.078Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 531
+    },
+    "opp_e520999de7b4b932": {
+      "id": "opp_e520999de7b4b932",
+      "fingerprint": "b7dae1d711fbf75b",
+      "title": "S. N. Bhatt Memorial Excellence Fellowship Program 2027",
+      "institution": "International Centre for Theoretical Sciences (ICTS-TIFR)",
+      "city": "Bengaluru",
+      "country": "India",
+      "source_url": "https://www.icts.res.in/academic/summer-research-program",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.icts.res.in/academic/summer-research-program",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15T17:00:00+05:30",
+      "content_hash": "sha256:2fe2e86d490717a6058b1fa323ce62f604f404f910a2f13cc995e1f46598e356",
+      "last_verified_at": "2026-11-13T03:42:33.316Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:09.199Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:09.199Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:09.199Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:37.750Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:37.750Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:42:33.445Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-13T03:42:33.445Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-13T03:42:35.089Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported funding/benefit/duration claims from description"
+        },
+        {
+          "at": "2026-11-13T03:42:35.233Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:42:35.233Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:05.136Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:05.136Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 524
+    },
+    "opp_26234f08a05c7b9c": {
+      "id": "opp_26234f08a05c7b9c",
+      "fingerprint": "02fb688c14e405ec",
+      "title": "2027 IMPRS EvolBio annual call for doctoral positions",
+      "institution": "International Max Planck Research School for Evolutionary Biology (IMPRS EvolBio), Max Planck Institute for Evolutionary Biology",
+      "city": "Plön",
+      "country": "Germany",
+      "source_url": "https://www.evolbio.mpg.de/3024391/open-projects",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.evolbio.mpg.de/3017297/application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10",
+      "content_hash": "sha256:329433c2ca021a9fd6a27b753805a900c0fa157f94ea7bdd015195a17e24cdef",
+      "last_verified_at": "2026-11-13T03:42:39.395Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:09.346Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:09.346Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:09.346Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:14.469Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:14.469Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:42:39.529Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-13T03:42:39.529Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-13T03:42:41.193Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported funding/benefit/duration claims from description"
+        },
+        {
+          "at": "2026-11-13T03:42:41.333Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:42:41.333Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:05.542Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:05.542Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 527
+    },
+    "opp_6462b0be8431864b": {
+      "id": "opp_6462b0be8431864b",
+      "fingerprint": "03e954fa32ae3e06",
+      "title": "International Winter School on Public Policy – Doha Edition 2027",
+      "institution": "International Public Policy Association (IPPA)",
+      "city": "Doha",
+      "country": "Qatar",
+      "source_url": "https://www.ippapublicpolicy.org/summerschool/winter-school-doha-edition-2027/73",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.ippapublicpolicy.org/summerschool/winter-school-doha-edition-2027/howToApply/73",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-10",
+      "content_hash": "sha256:f12de8cbfa68fa13a4687802071fe61aaac6e1812319bc0d73c9a1d7ac8884b9",
+      "last_verified_at": "2026-11-13T03:03:02.394Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:09.485Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:09.485Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:09.485Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:19.728Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:19.728Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:04.368Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:04.368Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 519
+    },
+    "opp_c4edaff41685d492": {
+      "id": "opp_c4edaff41685d492",
+      "fingerprint": "544af57e0836020c",
+      "title": "Doctoral INPhINIT Fellowships Retaining 2027",
+      "institution": "\"la Caixa\" Foundation",
+      "city": null,
+      "country": "Spain",
+      "source_url": "https://lacaixafoundation.org/en/doctoral-inphinit-fellowships",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://lacaixafoundation.org/en/doctoral-inphinit-fellowships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-02T14:00:00+01:00",
+      "content_hash": "sha256:3d8f39c08a0bf48ac436650c173a7499068421f58f52ae06b79f443064a7e481",
+      "last_verified_at": "2026-11-13T03:03:02.530Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:09.635Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:09.635Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:09.636Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:09:14.738Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:09:14.738Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:07.352Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:07.352Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 540
+    },
+    "opp_cb27c00267c4b82e": {
+      "id": "opp_cb27c00267c4b82e",
+      "fingerprint": "1432d26d38c1f629",
+      "title": "7 fully funded PhD student positions in the computational & experimental plant sciences",
+      "institution": "Max Planck Institute for Plant Breeding Research (MPIPZ), International Max Planck Research School",
+      "city": "Cologne",
+      "country": "Germany",
+      "source_url": "https://www.mpipz.mpg.de/imprs-2027",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.mpipz.mpg.de/imprs/imprs-application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-05T23:59:00+01:00",
+      "content_hash": "sha256:3a4e2e3b89a7400a98bd157827e9fb236d05b276c17f8c5b50595f9f00017589",
+      "last_verified_at": "2026-11-13T03:42:37.463Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:09.780Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:09.781Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:09.781Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:38.384Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:38.384Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:42:37.594Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-13T03:42:37.595Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-13T03:42:39.103Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported funding/benefit/duration claims from description"
+        },
+        {
+          "at": "2026-11-13T03:42:39.250Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:42:39.250Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:05.405Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:05.405Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 526
+    },
+    "opp_39b35ab09a140ee6": {
+      "id": "opp_39b35ab09a140ee6",
+      "fingerprint": "e21bdedb950ac2ee",
+      "title": "Postdoctoral Research Associate in Large-scale dynamics for strongly interacting particle systems",
+      "institution": "University of Oxford, Mathematical Institute",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "source_url": "https://www.maths.ox.ac.uk/node/86323",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.maths.ox.ac.uk/node/86323",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-07T12:00:00+00:00",
+      "content_hash": "sha256:5e8775dfdb73b9f1e1c4ba122abe6594dd03529edb12fb4152f24409902b414c",
+      "last_verified_at": "2026-11-13T03:42:29.217Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:09.956Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:09.956Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:09.956Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:19.092Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:19.092Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:42:29.341Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-13T03:42:29.342Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-13T03:42:31.032Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported funding/benefit/duration claims from description"
+        },
+        {
+          "at": "2026-11-13T03:42:31.180Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:42:31.180Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:04.084Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:04.084Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 517
+    },
+    "opp_419055a37bb3b6c5": {
+      "id": "opp_419055a37bb3b6c5",
+      "fingerprint": "a33e1b05c014651b",
+      "title": "Postdoctoral Research Associates in Universal Statistics in Number Theory",
+      "institution": "University of Oxford, Mathematical Institute",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "source_url": "https://www.maths.ox.ac.uk/node/86372",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.maths.ox.ac.uk/node/86372",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-11T12:00:00+00:00",
+      "content_hash": "sha256:5115ea3dc4838979f8c936885e86eb1b416b1db964330c99e40b21c9bf14a862",
+      "last_verified_at": "2026-11-13T03:42:31.323Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:10.128Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:10.128Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:10.129Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:20.033Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:20.033Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:42:31.453Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-13T03:42:31.453Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-13T03:42:33.032Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported funding/benefit/duration claims from description"
+        },
+        {
+          "at": "2026-11-13T03:42:33.173Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:42:33.173Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:04.560Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:04.560Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 520
+    },
+    "opp_525fd05f90ae6c8f": {
+      "id": "opp_525fd05f90ae6c8f",
+      "fingerprint": "e4ff191716236d1a",
+      "title": "Summer Undergraduate Research Fellowship (SURF)",
+      "institution": "Purdue University, College of Engineering",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:1b94dd869e5ed60916bd77f2be5a1df3a5ebd3c3f391a3a9a5edc6283e5cd549",
+      "last_verified_at": "2026-11-13T03:03:02.985Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:10.300Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:10.300Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:10.300Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:37.171Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:37.171Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:04.851Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:04.851Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 522
+    },
+    "opp_556a99454617917b": {
+      "id": "opp_556a99454617917b",
+      "fingerprint": "697b1cf7ee118a5e",
+      "title": "T-IES Winter School 2027",
+      "institution": "University of Tübingen",
+      "city": "Tübingen",
+      "country": "Germany",
+      "source_url": "https://uni-tuebingen.de/international/studierende-aus-dem-ausland/virtuelle-und-kurzzeit-programme/international-european-studies/winter-school/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://uni-tuebingen.de/international/studierende-aus-dem-ausland/virtuelle-und-kurzzeit-programme/international-european-studies/winter-school/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-10",
+      "content_hash": "sha256:83d588bb815c5894072f93c33f5176fe0afc1a4ede65d534d3eb608381474c4b",
+      "last_verified_at": "2026-11-13T03:03:03.103Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:10.462Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:10.462Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:10.462Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:19.414Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:19.414Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:04.222Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:04.222Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 518
+    },
+    "opp_3d5cdc5c6a220e52": {
+      "id": "opp_3d5cdc5c6a220e52",
+      "fingerprint": "ae8007d38681ffbf",
+      "title": "PhD Research Fellow in Political Science - Norway and the EU",
+      "institution": "University of Oslo, ARENA Centre for European Studies",
+      "city": "Oslo",
+      "country": "Norway",
+      "source_url": "https://www.uio.no/english/about/vacancies/last-published.html",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.jobbnorge.no/en/available-jobs/job/307984/phd-research-fellow-in-political-science-norway-and-the-eu",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-13",
+      "content_hash": "sha256:1a504e549be1cd2aacd6382487967bec65d277a59bfa5b533eba7ebcd0660a01",
+      "last_verified_at": "2026-11-13T03:03:03.220Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:10.629Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:10.629Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:10.629Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:08:35.102Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:08:35.102Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:04.710Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:04.711Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 521
+    },
+    "opp_444d5dc1b1a0e068": {
+      "id": "opp_444d5dc1b1a0e068",
+      "fingerprint": "74f154f12d0a9205",
+      "title": "The Research Excellence Postdoctoral Fellows Program",
+      "institution": "University of Toronto, Temerty Faculty of Medicine",
+      "city": "Toronto",
+      "country": "Canada",
+      "source_url": "https://rhse.temertymedicine.utoronto.ca/research-excellence-postdoctoral-fellows-program",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://rhse.temertymedicine.utoronto.ca/research-excellence-postdoctoral-fellows-program",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:c5e51ded90bc34d5fa2c3bfb306690a0bc94d3a040b556ecdcc8d5a0ccbbc62f",
+      "last_verified_at": "2026-11-13T03:03:03.331Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-13T03:03:10.777Z",
+      "history": [
+        {
+          "at": "2026-11-13T03:03:10.778Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-13T03:03:10.778Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-13T03:09:00.968Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-13T03:09:00.969Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-13T03:43:06.483Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-13T03:43:06.483Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 534
     }
   },
   "seen_urls": {
@@ -35683,7 +37632,41 @@
     "https://eur.nl/en/working-at-eur/vacancies/phd-finance-1": "opp_c7d8c0e22cb5a294",
     "https://ucc.ie/en/doctoral-institute/empower/ucc-futures-scholars": "opp_35bfeb4505a61d86",
     "https://ebideb.tubitak.gov.tr/basvuruacikprogramlar.htm": "opp_ea99ec4dcf54a7ce",
-    "https://erim.eur.nl/doctoral-programme/phd-in-management/phd-vacancies": "opp_a80a295b2f883238"
+    "https://erim.eur.nl/doctoral-programme/phd-in-management/phd-vacancies": "opp_a80a295b2f883238",
+    "https://bss.au.dk/en/research/phd/application": "opp_a95bec59c148a36f",
+    "https://bard-isus.org/opportunities/the-vaadia-bard-postdoctoral-fellowship": "opp_c0f1b05ab8b733ad",
+    "https://ir.bilkent.edu.tr/?page_id=3396": "opp_64b4bac0c9f26c2c",
+    "https://stars.bilkent.edu.tr/staffapp/IR2027": "opp_64b4bac0c9f26c2c",
+    "https://cimpa.info/en/ecoles/deterministic-mathematical-models-biological-processes": "opp_f2fe782e1a85fd41",
+    "https://cimpa.info/en/ecoles/modern-perspectives-partial-differential-equations-theory-and-applications": "opp_5743abc29b5c6235",
+    "https://cimpa.info/en/ecoles/statistics-health": "opp_0bc3307b61029cd5",
+    "https://wp.lancs.ac.uk/ecso-cms-2027/venue-and-travel/travel-grants": "opp_e7b8ded640269765",
+    "https://wp.lancs.ac.uk/ecso-cms-2027/submissions/abstract-submission": "opp_e7b8ded640269765",
+    "https://eera-ecer.de/seasonschools/2027-histories-of-education-doctoral-summer-school": "opp_77e7fcff51610d4d",
+    "https://eera-ecer.de/seasonschools/eera-summer-school-2027": "opp_bf48b82fc24015be",
+    "https://eera-ecer.de/seasonschools/eera-summer-school-2027/application-/-cost-/-terms-of-registration": "opp_bf48b82fc24015be",
+    "https://eshg.org/conferences/future-eshg-meetings": "opp_044011b9dd633180",
+    "https://2027.eshg.org/myconference/faqs": "opp_044011b9dd633180",
+    "https://jobs.ethz.ch/job/view/JOPG_ethz_AUmT7tc75KfdQZK3sA": "opp_16915e8593083c38",
+    "https://jobs.ethz.ch/job/view/JOPG_ethz_ImqWbdbtPQtWCAnkbZ": "opp_67913c4da440541a",
+    "https://gla.ac.uk/postgraduate/erasmusmundus/clmce": "opp_699b75b6c5e8fb56",
+    "https://gla.ac.uk/postgraduate/erasmusmundus/clmce/howtoapply": "opp_699b75b6c5e8fb56",
+    "https://icts.res.in/program/AIAstro2027": "opp_e25fb34f29b248f5",
+    "https://icts.res.in/academic/summer-research-program": "opp_e520999de7b4b932",
+    "https://evolbio.mpg.de/3024391/open-projects": "opp_26234f08a05c7b9c",
+    "https://evolbio.mpg.de/3017297/application": "opp_26234f08a05c7b9c",
+    "https://ippapublicpolicy.org/summerschool/winter-school-doha-edition-2027/73": "opp_6462b0be8431864b",
+    "https://ippapublicpolicy.org/summerschool/winter-school-doha-edition-2027/howToApply/73": "opp_6462b0be8431864b",
+    "https://lacaixafoundation.org/en/doctoral-inphinit-fellowships": "opp_c4edaff41685d492",
+    "https://mpipz.mpg.de/imprs-2027": "opp_cb27c00267c4b82e",
+    "https://mpipz.mpg.de/imprs/imprs-application": "opp_cb27c00267c4b82e",
+    "https://maths.ox.ac.uk/node/86323": "opp_39b35ab09a140ee6",
+    "https://maths.ox.ac.uk/node/86372": "opp_419055a37bb3b6c5",
+    "https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF": "opp_525fd05f90ae6c8f",
+    "https://uni-tuebingen.de/international/studierende-aus-dem-ausland/virtuelle-und-kurzzeit-programme/international-european-studies/winter-school": "opp_556a99454617917b",
+    "https://uio.no/english/about/vacancies/last-published.html": "opp_3d5cdc5c6a220e52",
+    "https://jobbnorge.no/en/available-jobs/job/307984/phd-research-fellow-in-political-science-norway-and-the-eu": "opp_3d5cdc5c6a220e52",
+    "https://rhse.temertymedicine.utoronto.ca/research-excellence-postdoctoral-fellows-program": "opp_444d5dc1b1a0e068"
   },
-  "last_offer_number": 516
+  "last_offer_number": 541
 }

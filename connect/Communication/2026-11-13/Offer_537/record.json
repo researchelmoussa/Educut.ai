@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "ESHG 2027",
+    "evidence_url": "https://2027.eshg.org/myconference/faqs/",
+    "evidence_quote": "ESHG 2027"
+  },
+  "institution": {
+    "name": "European Society of Human Genetics (ESHG)",
+    "website": "https://www.eshg.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://2027.eshg.org/myconference/faqs/",
+  "source_url": "https://www.eshg.org/conferences/future-eshg-meetings",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Rotterdam",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Human genetics",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "European Human Genetics Conference, 12-15 June 2027 in Rotterdam. The abstract submission deadline is 4 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-04",
+    "timezone": null,
+    "evidence_url": "https://2027.eshg.org/myconference/faqs/",
+    "evidence_quote": "Thursday, February 4, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ESHG 2027 FAQ (seen in search results) gives the submission deadline 4 February 2027 (future); ESHG future-meetings page lists Rotterdam, 12-15 June 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "2027 fellowship terms not published in the results (2026 rules only); fellowship details omitted",
+    "Direct abstract-submission URL not seen; application_url is the official 2027 FAQ page",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-13T03:03:00.135Z",
+  "last_verified_at": "2026-11-13T03:42:47.886Z",
+  "id": "opp_044011b9dd633180",
+  "fingerprint": "01077cabd562130b",
+  "content_hash": "sha256:2edbf854e3eb318c118d413db315287b6292d90bfcfad7cd6c959059be334c89"
+}

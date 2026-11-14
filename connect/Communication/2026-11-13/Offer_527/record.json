@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "2027 IMPRS EvolBio annual call for doctoral positions",
+    "evidence_url": "https://www.evolbio.mpg.de/3024391/open-projects",
+    "evidence_quote": "the 2027 IMPRS EvolBio annual call for doctoral positions"
+  },
+  "institution": {
+    "name": "International Max Planck Research School for Evolutionary Biology (IMPRS EvolBio), Max Planck Institute for Evolutionary Biology",
+    "website": "https://www.evolbio.mpg.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.evolbio.mpg.de/3017297/application",
+  "source_url": "https://www.evolbio.mpg.de/3024391/open-projects",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Plön",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "Evolutionary biology",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Relevant master's or diploma, awarded before the doctorate starts",
+    "Separate project-specific application (single PDF) for each project"
+  ],
+  "skills": [],
+  "description_short": "Six doctoral projects in evolutionary biology offered through the IMPRS EvolBio annual call at the Max Planck Institute for Evolutionary Biology in Plön. Project-specific applications are sent as one PDF by email until 10 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-10",
+    "timezone": null,
+    "evidence_url": "https://www.evolbio.mpg.de/3017297/application",
+    "evidence_quote": "applications for project-related positions can be submitted until January 10th, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IMPRS EvolBio application page (seen in search results) accepts applications until 10 January 2027 (future)",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Applications by email (address on official page); application_url is the official application page",
+    "Start date: application page says 1 September 2027, guidebook says October",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-13T03:03:00.135Z",
+  "last_verified_at": "2026-11-13T03:42:39.395Z",
+  "id": "opp_26234f08a05c7b9c",
+  "fingerprint": "02fb688c14e405ec",
+  "content_hash": "sha256:329433c2ca021a9fd6a27b753805a900c0fa157f94ea7bdd015195a17e24cdef"
+}
