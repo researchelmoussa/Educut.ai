@@ -72,6 +72,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .seg button+button{border-left:1px solid var(--line)}
 .seg button[aria-pressed="true"]{background:var(--s1);color:#fff}
 .seg button:focus-visible{outline:2px solid var(--s1);outline-offset:2px}
+.switch2{display:flex;flex-wrap:wrap;gap:10px;margin:4px 0 8px}
+#tagchart{width:100%;height:420px}
+#tagtab td,#tagtab th{text-align:center}
+#tagtab td:first-child,#tagtab th:first-child{text-align:left}
+#tagtab td.tg{background:color-mix(in srgb,var(--o3) var(--a),transparent)}
+#tagtab tr.all td{font-weight:500;border-bottom:2px solid var(--line)}
 </style>
 <div class="wrap">
   <header>
@@ -117,6 +123,25 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <p class="def"><span class="key"><i style="background:var(--y3)"></i>gold &gt; method (omission)</span><span class="key"><i style="background:var(--q3)"></i>method ≥ gold</span></p>
     <div id="heat3" role="img" aria-label="Heatmap of per-article prediction counts, with cells where gold exceeds the method highlighted in yellow"></div>
   </section>
+  <section class="panel" style="padding:16px" id="by-type">
+    <h2>Hallucination by code-snippet type</h2>
+    <p class="def">Each snippet is tagged in <code>data_level/error_analysis/snippet_tags.csv</code> (tree-sitter + rules, no LLM). The tags are joined to the results above by snippet id (<code>file: line</code>), so every number below uses the same predictions as the rest of the page and follows the A / B switch. <b>Hallucinations</b> = predicted articles that are not in that snippet's gold label. <b>% hallucination</b> = hallucinations ÷ predicted articles for the snippets in that sub-level (the definition used in the repo's <code>error_by_tag.py</code>; "–" when the method predicted nothing there). Choose a level to see its sub-levels.</p>
+    <div class="switch2">
+      <div class="seg" role="group" aria-label="Level">
+        <button type="button" data-lv="Structure" aria-pressed="true">Structure</button>
+        <button type="button" data-lv="Syntactic" aria-pressed="false">Syntactic</button>
+        <button type="button" data-lv="Formatting" aria-pressed="false">Formatting</button>
+      </div>
+      <div class="seg" role="group" aria-label="Chart value">
+        <button type="button" data-mt="pct" aria-pressed="true">% hallucination</button>
+        <button type="button" data-mt="cnt" aria-pressed="false">Number of hallucinations</button>
+      </div>
+    </div>
+    <p class="def" id="lvnote"></p>
+    <div class="tw"><table id="tagtab"></table></div>
+    <div id="tagchart" role="img" aria-label="Grouped bar chart of hallucinations per sub-level and method"></div>
+    <p class="def" style="margin-top:6px"><b>How to read a cell</b>: each cell shows the number of hallucinations, and below it the % hallucination with the number of predicted articles it is based on. The orange tint gets stronger as the % rises. Hover a cell or a bar for the number of snippets in the sub-level.</p>
+  </section>
   <section class="panel"><div id="chart" role="img" aria-label="Line chart of article count per snippet for gold labels and six prompting set-ups"></div></section>
   <section class="panel" style="padding:16px">
     <h2>Score per snippet: omission vs. hallucination, by method</h2>
@@ -141,6 +166,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <script>__PLOTLY__</script>
 <script>
 const DATASETS = {A: __DATA_A__, B: __DATA_B__};
+const TAGS = __TAGS__;
 let DATA = DATASETS.A;
 const ORDER = [
   ["Prediction","--gold","dash"],
@@ -342,19 +368,58 @@ function overallTable(){
   document.getElementById("ovtab").innerHTML=h+"</tbody>";
 }
 function drawScore(){const S=scoreData();scoreTable(S);hallTable();overallTable();scorePlot(S);}
+const LV={
+ Structure:{note:"One label per snippet (the five rows add up to all 887 snippets). <b>Config / markup</b> (XML, JSON, Gradle, manifest files…) is a fifth label in the tag file, kept so no snippet is left out.",
+  subs:[["Expression",i=>TAGS.s[i]===0],["Statement",i=>TAGS.s[i]===1],["Block",i=>TAGS.s[i]===2],["Function",i=>TAGS.s[i]===3],["Config / markup",i=>TAGS.s[i]===4]]},
+ Syntactic:{note:"One label per snippet (the rows add up to all 887 snippets). <b>Mixed content</b> (13 snippets mixing code and other text) is a fourth label in the tag file, kept so no snippet is left out.",
+  subs:[["Complete",i=>TAGS.y[i]===0],["Context dependent",i=>TAGS.y[i]===1],["Syntactically incomplete",i=>TAGS.y[i]===2],["Mixed content",i=>TAGS.y[i]===3]]},
+ Formatting:{note:"Formatting tags are <b>flags, not exclusive classes</b>: a snippet can be both single line and compact, or indented and commented, so it can count in several rows and the rows do not add up to the total. <b>None of these</b> = snippets with none of the five flags. Only 1 snippet is Documented.",
+  subs:[["Single line",i=>(TAGS.f[i]&1)>0],["Compact",i=>(TAGS.f[i]&2)>0],["Indented",i=>(TAGS.f[i]&4)>0],["Comment",i=>(TAGS.f[i]&8)>0],["Documented",i=>(TAGS.f[i]&16)>0],["None of these",i=>TAGS.f[i]===0]]}
+};
+let CURLV="Structure", CURMT="pct";
+function tagCalc(){
+  const G=DATA.articles["Prediction"], M=ORDER.slice(1).map(o=>o[0]);
+  const rows=[["All snippets",()=>true],...LV[CURLV].subs].map(([name,f])=>{const idx=[];for(let i=0;i<N;i++)if(f(i))idx.push(i);
+    const cells=M.map(k=>{const P=DATA.articles[k];let pr=0,fp=0;for(const i of idx){pr+=P[i].length;for(const a of P[i])if(!G[i].includes(a))fp++;}return {pr,fp,pct:pr?100*fp/pr:null};});
+    return {name,n:idx.length,cells};});
+  return {rows,M};
+}
+function tagTable({rows,M}){
+  const cols=ORDER.slice(1);
+  let h="<thead><tr><th>Sub-level</th><th>Snippets</th>"+cols.map(([k,c])=>`<th><span class="sw" style="display:inline-block;width:12px;border-top:2px solid var(${c});vertical-align:middle;margin-right:4px"></span>${k.replace("Snippet + ","+ ")}</th>`).join("")+"</tr></thead><tbody>";
+  rows.forEach((r,ri)=>{h+=`<tr class="${ri===0?"all":""}"><td>${r.name}</td><td>${r.n}</td>`+r.cells.map(c=>c.pr?`<td class="tg" style="--a:${Math.round(c.pct*0.45)}%" title="${r.n} snippets · ${c.fp} hallucinated of ${c.pr} predicted"><b>${c.fp}</b><br><span class="ok">${c.pct.toFixed(1)}% of ${c.pr}</span></td>`:`<td class="z" title="${r.n} snippets · nothing predicted">0<br><span class="ok">–</span></td>`).join("")+"</tr>";});
+  document.getElementById("tagtab").innerHTML=h+"</tbody>";
+  document.getElementById("lvnote").innerHTML=LV[CURLV].note;
+}
+function tagChart({rows,M}){
+  const ink=css("--ink"),ink2=css("--ink-2"),grid=css("--grid"),panel=css("--panel"),line=css("--line");
+  const R=rows.slice(1), x=R.map(r=>r.name+" ("+r.n+")");
+  const traces=ORDER.slice(1).map(([k,c],j)=>({type:"bar",name:k,x,y:R.map(r=>CURMT==="pct"?r.cells[j].pct:r.cells[j].fp),
+    marker:{color:css(c),line:{color:panel,width:1}},
+    customdata:R.map(r=>[r.cells[j].fp,r.cells[j].pr,r.cells[j].pct==null?"–":r.cells[j].pct.toFixed(1)+"%",r.n]),
+    hovertemplate:"<b>%{x}</b><br>"+k+"<br>%{customdata[0]} hallucinated of %{customdata[1]} predicted (%{customdata[2]})<br>%{customdata[3]} snippets<extra></extra>"}));
+  Plotly.react("tagchart",traces,{barmode:"group",bargap:0.22,bargroupgap:0.05,paper_bgcolor:panel,plot_bgcolor:panel,font:{family:css("--sans"),color:ink2,size:12},
+    margin:{l:60,r:10,t:40,b:60},legend:{orientation:"h",x:0,y:1.12,font:{color:ink,size:11}},
+    xaxis:{tickfont:{color:ink,size:11},fixedrange:true},
+    yaxis:{title:{text:CURMT==="pct"?"% hallucination (wrong ÷ predicted)":"Number of hallucinations",font:{color:ink2}},ticksuffix:CURMT==="pct"?"%":"",range:CURMT==="pct"?[0,100]:null,gridcolor:grid,zeroline:true,zerolinecolor:line,fixedrange:true}
+  },{responsive:true,displaylogo:false,displayModeBar:false});
+}
+function drawTags(){const s=tagCalc();tagTable(s);tagChart(s);}
+document.querySelectorAll("[data-lv]").forEach(b=>b.addEventListener("click",()=>{CURLV=b.dataset.lv;document.querySelectorAll("[data-lv]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));drawTags();}));
+document.querySelectorAll("[data-mt]").forEach(b=>b.addEventListener("click",()=>{CURMT=b.dataset.mt;document.querySelectorAll("[data-mt]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));tagChart(tagCalc());}));
 let CUR="A";
 function setStructure(s,push){
   if(!DATASETS[s])s="A"; CUR=s; DATA=DATASETS[s];
   document.querySelectorAll("[data-s]").forEach(el=>{el.hidden=el.dataset.s!==s;});
-  document.querySelectorAll(".seg button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.pick===s)));
-  totals(); draw(); drawStats(); drawArt(); drawScore();
+  document.querySelectorAll("[data-pick]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.pick===s)));
+  totals(); draw(); drawStats(); drawArt(); drawScore(); drawTags();
   if(push){try{history.replaceState(null,"","#structure-"+s.toLowerCase());}catch(e){location.hash="structure-"+s.toLowerCase();}}
 }
 const fromHash=()=>/structure-b/i.test(location.hash)?"B":"A";
-document.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",()=>setStructure(b.dataset.pick,true)));
+document.querySelectorAll("[data-pick]").forEach(b=>b.addEventListener("click",()=>setStructure(b.dataset.pick,true)));
 window.addEventListener("hashchange",()=>{const s=fromHash();if(s!==CUR)setStructure(s,false);});
 setStructure(fromHash(),false);
-const redraw=()=>{draw();bars(stats());const s=artStats();heat(s);heat2(s);heat3(s);scorePlot(scoreData());};
+const redraw=()=>{tagChart(tagCalc());draw();bars(stats());const s=artStats();heat(s);heat2(s);heat3(s);scorePlot(scoreData());};
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change",redraw);
 new MutationObserver(redraw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
 </script>
