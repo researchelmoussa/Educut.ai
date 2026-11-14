@@ -80,10 +80,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 #tagtab tr.all td{font-weight:500;border-bottom:2px solid var(--line)}
 #exptab th,#exptab td{text-align:right}
 #exptab td:nth-child(-n+2),#exptab th.l{text-align:left}
-#exptab th.grp{text-align:center;border-bottom:1px solid var(--line)}
 #exptab tr.ov td{font-weight:600;border-bottom:2px solid var(--line)}
-#exptab td.up{background:color-mix(in srgb,var(--o3) 18%,transparent)}
-#exptab td.dn{background:color-mix(in srgb,var(--s1) 16%,transparent)}
+#exptab td.hi,.hl-hi{background:color-mix(in srgb,var(--o3) 22%,transparent)}
+#exptab td.lo,.hl-lo{background:color-mix(in srgb,var(--s1) 18%,transparent)}
+.hl-hi,.hl-lo{padding:0 4px;border-radius:3px}
+#exptab .tag{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2)}
 #exptab td.lv{color:var(--ink-3);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
 .steps{padding-left:20px;display:grid;gap:4px;max-width:100ch}
 </style>
@@ -151,17 +152,25 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <p class="def" style="margin-top:6px"><b>How to read a cell</b>: each cell shows the number of hallucinations, and below it the % hallucination with the number of predicted articles it is based on. The orange tint gets stronger as the % rises. Hover a cell or a bar for the number of snippets in the sub-level.</p>
   </section>
   <section class="panel" style="padding:16px" id="expected">
-    <h2>Expected hallucination per sub-level (6 methods pooled)</h2>
-    <p class="def">If a snippet belongs to a given sub-level, what hallucination rate should we expect, whatever the method? Structure A and Structure B are shown side by side (this table does not follow the A / B switch). <b>▲</b> / <b>▼</b> mark sub-levels whose 95% interval lies entirely above / below the overall rate of that structure; without a mark, the difference from the overall rate could be chance.</p>
+    <h2>Expected hallucination per sub-level (6 methods pooled) · <span data-s="A">Structure A</span><span data-s="B" hidden>Structure B</span></h2>
+    <p class="def">If a snippet belongs to a given sub-level, what hallucination rate should we expect, whatever the method? This table follows the A / B switch. In each level, the sub-level with the <b>highest</b> expected hallucination is in <span class="hl-hi">orange</span> and the <b>lowest</b> in <span class="hl-lo">blue</span>. The last column says whether the difference from the overall rate is <b>beyond chance</b> (the 95% interval does not contain the overall rate).</p>
     <div class="tw"><table id="exptab"></table></div>
-    <h3 style="font-size:14px;margin:14px 0 4px">How it is calculated (example: Expression, Structure A)</h3>
+    <div data-s="A"><h3 style="font-size:14px;margin:14px 0 4px">How it is calculated (example: Expression, Structure A)</h3>
     <ol class="def steps">
       <li><b>Select the snippets</b> of the sub-level using <code>snippet_tags.csv</code>: 23 snippets are tagged Expression.</li>
       <li><b>Pool the 6 methods.</b> On those 23 snippets, count every article each method predicted (144 in total) and how many of them are not in the snippet's gold label (101 hallucinations). An answer of 0 (Class 0) predicts nothing, so it adds nothing to either count.</li>
       <li><b>Expected hallucination</b> = hallucinations ÷ predicted articles = 101 ÷ 144 = <b>70.1%</b>.</li>
       <li><b>Compare with the overall rate</b> of the structure, all 887 snippets and 6 methods: 2600 ÷ 4139 = 62.8%. Difference = 70.1 − 62.8 = <b>+7.3 points</b>; ratio = 70.1 ÷ 62.8 = <b>×1.12</b>.</li>
-      <li><b>95% interval</b>: draw the 23 snippets again at random with replacement, recompute the rate, repeat 2000 times, and keep the middle 95% of the results (54.5% to 81.5%). Whole snippets are redrawn because the articles of one snippet are not independent. The interval contains 62.8%, so Expression is not marked: with so few snippets, its +7.3 points could be chance.</li>
-    </ol>
+      <li><b>95% interval</b>: draw the 23 snippets again at random with replacement, recompute the rate, repeat 2000 times, and keep the middle 95% of the results (54.5% to 81.5%). Whole snippets are redrawn because the articles of one snippet are not independent. The interval contains 62.8%, so the difference is not beyond chance: with so few snippets, +7.3 points could be chance.</li>
+    </ol></div>
+    <div data-s="B" hidden><h3 style="font-size:14px;margin:14px 0 4px">How it is calculated (example: Expression, Structure B)</h3>
+    <ol class="def steps">
+      <li><b>Select the snippets</b> of the sub-level using <code>snippet_tags.csv</code>: 23 snippets are tagged Expression.</li>
+      <li><b>Pool the 6 methods.</b> On those 23 snippets, count every article each method predicted (110 in total) and how many of them are not in the snippet's gold label (74 hallucinations). An answer of 0 (Class 0) predicts nothing, so it adds nothing to either count.</li>
+      <li><b>Expected hallucination</b> = hallucinations ÷ predicted articles = 74 ÷ 110 = <b>67.3%</b>.</li>
+      <li><b>Compare with the overall rate</b> of the structure, all 887 snippets and 6 methods: 2709 ÷ 4095 = 66.2%. Difference = 67.3 − 66.2 = <b>+1.1 points</b>; ratio = 67.3 ÷ 66.2 = <b>×1.02</b>.</li>
+      <li><b>95% interval</b>: draw the 23 snippets again at random with replacement, recompute the rate, repeat 2000 times, and keep the middle 95% of the results (47.1% to 79.5%). Whole snippets are redrawn because the articles of one snippet are not independent. The interval contains 66.2%, so the difference is not beyond chance.</li>
+    </ol></div>
     <p class="def">Formatting sub-levels are flags, so a snippet can count in several of them. Documented has a single snippet and no method predicted anything for it. Computed by <code>analysis/gdpr_bench_structures/expected_by_subtype.py</code> (fixed random seed, so the intervals are reproducible).</p>
   </section>
   <section class="panel"><div id="chart" role="img" aria-label="Line chart of article count per snippet for gold labels and six prompting set-ups"></div></section>
@@ -431,15 +440,16 @@ function drawTags(){const s=tagCalc();tagTable(s);tagChart(s);}
 document.querySelectorAll("[data-lv]").forEach(b=>b.addEventListener("click",()=>{CURLV=b.dataset.lv;document.querySelectorAll("[data-lv]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));drawTags();}));
 document.querySelectorAll("[data-mt]").forEach(b=>b.addEventListener("click",()=>{CURMT=b.dataset.mt;document.querySelectorAll("[data-mt]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));tagChart(tagCalc());}));
 function expTable(){
-  const f=x=>(100*x).toFixed(1)+"%", S=["A","B"];
-  let h="<thead><tr><th class='l' rowspan='2'>Level</th><th class='l' rowspan='2'>Sub-level</th><th rowspan='2'>Snippets</th>"+S.map(s=>`<th class='grp' colspan='5'>Structure ${s}</th>`).join("")+"</tr><tr>"+S.map(()=>"<th>Predicted</th><th>Hallucinated</th><th>Expected rate</th><th>95% interval</th><th>vs overall</th>").join("")+"</tr></thead><tbody>";
-  h+=`<tr class="ov"><td class="lv">All</td><td>All snippets</td><td>887</td>`+S.map(s=>{const o=EXP[s].overall;return `<td>${o.pred}</td><td>${o.hall}</td><td>${f(o.rate)}</td><td>–</td><td>reference</td>`;}).join("")+"</tr>";
+  const f=x=>(100*x).toFixed(1)+"%", E=EXP[CUR], o=E.overall.rate;
+  const ext={};E.rows.forEach(r=>{if(r.rate==null)return;const x=ext[r.level]||(ext[r.level]={hi:r,lo:r});if(r.rate>x.hi.rate)x.hi=r;if(r.rate<x.lo.rate)x.lo=r;});
+  let h="<thead><tr><th class='l'>Level</th><th class='l'>Sub-level</th><th>Snippets</th><th>Predicted articles</th><th>Hallucinated</th><th>Expected hallucination</th><th>95% interval</th><th>vs overall</th><th>Beyond chance?</th></tr></thead><tbody>";
+  h+=`<tr class="ov"><td class="lv">All</td><td>All snippets</td><td>887</td><td>${E.overall.pred}</td><td>${E.overall.hall}</td><td>${f(o)}</td><td>–</td><td>reference</td><td></td></tr>`;
   let prev="";
-  EXP.A.rows.forEach((ra,i)=>{const lv=ra.level!==prev?ra.level:"";prev=ra.level;
-    h+=`<tr><td class="lv">${lv}</td><td>${ra.sub}</td><td>${ra.n}</td>`+S.map(s=>{const r=EXP[s].rows[i],o=EXP[s].overall.rate;
-      if(r.rate==null)return `<td>${r.pred}</td><td>${r.hall}</td><td>–</td><td>–</td><td>no prediction</td>`;
-      const up=r.lo>o, dn=r.hi<o, d=100*(r.rate-o), cls=up?"up":dn?"dn":"";
-      return `<td>${r.pred}</td><td>${r.hall}</td><td class="${cls}"><b>${f(r.rate)}</b> ${up?"▲":dn?"▼":""}</td><td>${f(r.lo)} – ${f(r.hi)}</td><td>${d>=0?"+":""}${d.toFixed(1)} pts · ×${(r.rate/o).toFixed(2)}</td>`;}).join("")+"</tr>";});
+  E.rows.forEach(r=>{const lv=r.level!==prev?r.level:"";prev=r.level;
+    if(r.rate==null){h+=`<tr><td class="lv">${lv}</td><td>${r.sub}</td><td>${r.n}</td><td>${r.pred}</td><td>${r.hall}</td><td>–</td><td>–</td><td>no prediction</td><td></td></tr>`;return;}
+    const isHi=ext[r.level].hi===r, isLo=ext[r.level].lo===r, d=100*(r.rate-o);
+    const sig=r.lo>o?"Yes, higher":r.hi<o?"Yes, lower":"No";
+    h+=`<tr><td class="lv">${lv}</td><td>${r.sub}</td><td>${r.n}</td><td>${r.pred}</td><td>${r.hall}</td><td class="${isHi?"hi":isLo?"lo":""}"><b>${f(r.rate)}</b>${isHi?" <span class='tag'>highest</span>":isLo?" <span class='tag'>lowest</span>":""}</td><td>${f(r.lo)} – ${f(r.hi)}</td><td>${d>=0?"+":""}${d.toFixed(1)} pts · ×${(r.rate/o).toFixed(2)}</td><td class="${sig==="No"?"z":""}">${sig}</td></tr>`;});
   document.getElementById("exptab").innerHTML=h+"</tbody>";
 }
 let CUR="A";
@@ -447,14 +457,13 @@ function setStructure(s,push){
   if(!DATASETS[s])s="A"; CUR=s; DATA=DATASETS[s];
   document.querySelectorAll("[data-s]").forEach(el=>{el.hidden=el.dataset.s!==s;});
   document.querySelectorAll("[data-pick]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.pick===s)));
-  totals(); draw(); drawStats(); drawArt(); drawScore(); drawTags();
+  totals(); draw(); drawStats(); drawArt(); drawScore(); drawTags(); expTable();
   if(push){try{history.replaceState(null,"","#structure-"+s.toLowerCase());}catch(e){location.hash="structure-"+s.toLowerCase();}}
 }
 const fromHash=()=>/structure-b/i.test(location.hash)?"B":"A";
 document.querySelectorAll("[data-pick]").forEach(b=>b.addEventListener("click",()=>setStructure(b.dataset.pick,true)));
 window.addEventListener("hashchange",()=>{const s=fromHash();if(s!==CUR)setStructure(s,false);});
 setStructure(fromHash(),false);
-expTable();
 const redraw=()=>{tagChart(tagCalc());draw();bars(stats());const s=artStats();heat(s);heat2(s);heat3(s);scorePlot(scoreData());};
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change",redraw);
 new MutationObserver(redraw).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
