@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "20th International Conference on Machine Vision Applications (MVA 2027)",
+    "evidence_url": "https://www.mva-org.jp/mva2027/cfp/",
+    "evidence_quote": "20th International Conference on Machine Vision Applications (MVA 2027)"
+  },
+  "institution": {
+    "name": "MVA Organization",
+    "website": "https://www.mva-org.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.mva-org.jp/mva2027/submission/",
+  "source_url": "https://www.mva-org.jp/mva2027/cfp/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Fukuoka",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Machine vision and computer vision applications",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Call for papers for the 20th International Conference on Machine Vision Applications (MVA 2027), 12-14 May 2027 at Centennial Hall, Kyushu University, Fukuoka, Japan. Full papers for double-blind review are submitted online by January 14, 2027; decisions March 30, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-14",
+    "timezone": null,
+    "evidence_url": "https://www.mva-org.jp/mva2027/cfp/",
+    "evidence_quote": "January 14, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official MVA2027 call for papers and submission pages (seen in search results): paper submission deadline January 14, 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline time zone differs between result snippets (23:59 JST vs 23:59 AoE); timezone left null",
+    "Work arrangement assumed onsite (in-person programme/event); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-15T03:09:22.688Z",
+  "last_verified_at": "2026-11-15T03:09:23.074Z",
+  "id": "opp_09ca8d87dadcf164",
+  "fingerprint": "bcfcd2f0b16efca4",
+  "content_hash": "sha256:dd2953a96e37f9df12b8cfd176dee7e72c0f05a16c29a6a2745c40c9415e1db2"
+}

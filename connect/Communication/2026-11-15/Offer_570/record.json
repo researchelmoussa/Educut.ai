@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "FASPE Journalism Fellowship",
+    "evidence_url": "https://www.faspe-ethics.org/journalism/",
+    "evidence_quote": "Journalism"
+  },
+  "institution": {
+    "name": "FASPE (Fellowships at Auschwitz for the Study of Professional Ethics)",
+    "website": "https://www.faspe-ethics.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.faspe-ethics.org/how-to-apply/",
+  "source_url": "https://www.faspe-ethics.org/journalism/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Journalism ethics",
+  "seniority": "Early-career journalists",
+  "qualifications": [
+    "Preference for candidates with journalistic work published or aired by a recognized news organization",
+    "Total professional experience generally not exceeding 10 years"
+  ],
+  "skills": [],
+  "description_short": "FASPE's 2027 journalism programme on the ethical responsibilities of journalists runs June 18 to July 2, 2027. Applications via the FASPE Submittable portal close January 3, 2027 at 11:59 PM ET; recommendation letters are due January 10, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-03",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.faspe-ethics.org/journalism/",
+    "evidence_quote": "January 3, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official FASPE site (seen in search results): journalism application open through January 3, 2027, 11:59 PM ET; recommenders submit by January 10, 2027; Fellows informed by early-to-mid March",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "The official page is titled \"Journalism\"; the record title adds \"FASPE ... Fellowship\" because FASPE refers to participants as Fellows",
+    "Programme travel locations not confirmed on the official page in the results, so country is null",
+    "Funding details not quoted from the official page, so compensation is null",
+    "Work arrangement assumed onsite (in-person programme/event); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-15T03:07:51.231Z",
+  "last_verified_at": "2026-11-15T03:07:51.462Z",
+  "id": "opp_57bc5df4996a8d4d",
+  "fingerprint": "80ba02cb9a3cb488",
+  "content_hash": "sha256:722035ac58d6c85c2f39b39b20163ab4c28f6efc02d1fe29a4717ed5565c2e66"
+}

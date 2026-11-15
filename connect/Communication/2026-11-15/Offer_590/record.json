@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "IUBMB Congress 2027",
+    "evidence_url": "https://www.iubmbcongress2027.co.za/abstracts/",
+    "evidence_quote": "IUBMB Congress 2027"
+  },
+  "institution": {
+    "name": "International Union of Biochemistry and Molecular Biology (IUBMB)",
+    "website": "https://www.iubmbcongress2027.co.za",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.iubmbcongress2027.co.za/abstracts/",
+  "source_url": "https://www.iubmbcongress2027.co.za/abstracts/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "country_code": "ZA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Biochemistry and molecular biology",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Call for abstracts for the IUBMB Congress 2027, 19-23 September 2027 at the Cape Town International Convention Centre (CTICC), South Africa. Abstracts in ten topics, including bioinformatics, structural biology and infectious diseases, are due 12 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-12",
+    "timezone": "Africa/Johannesburg",
+    "evidence_url": "https://www.iubmbcongress2027.co.za/abstracts/",
+    "evidence_quote": "12 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official congress abstracts page (seen in search results): Abstract Submission Deadline 12 February 2027",
+    "IUBMB calendar entry gives 19-23 September 2027, CTICC",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline time of day not stated in the results",
+    "Separate Young Scientist Programme has its own earlier deadline (30 November 2026); this record covers abstracts only",
+    "Work arrangement assumed onsite (in-person programme/event); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-15T03:09:22.688Z",
+  "last_verified_at": "2026-11-15T03:09:22.813Z",
+  "id": "opp_5da3a530f18abc36",
+  "fingerprint": "f701e25a4da860b6",
+  "content_hash": "sha256:ee90adc05d42218088f9f4d7f888a85b43bc004b74e09b67dfec890b3b84e6bd"
+}

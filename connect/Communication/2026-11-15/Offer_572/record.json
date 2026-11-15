@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "China Scholarship Council-UCL Joint Research Scholarship",
+    "evidence_url": "https://www.ucl.ac.uk/scholarships/china-scholarship-council-ucl-joint-research-scholarship",
+    "evidence_quote": "China Scholarship Council-UCL Joint Research Scholarship"
+  },
+  "institution": {
+    "name": "University College London (UCL)",
+    "website": "https://www.ucl.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ucl.ac.uk/scholarships/china-scholarship-council-ucl-joint-research-scholarship",
+  "source_url": "https://www.ucl.ac.uk/scholarships/china-scholarship-council-ucl-joint-research-scholarship",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "London",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "onsite",
+  "field": "All research areas",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "Citizen and permanent resident of the People's Republic of China at the time of application",
+    "Prospective first-year PhD student"
+  ],
+  "skills": [],
+  "description_short": "Joint UCL and China Scholarship Council scheme for prospective first-year PhD students who are citizens and permanent residents of the People's Republic of China, 2027/28 entry. Deadline 8 January 2027 for most subject areas; 13 January 2027 for Mathematical & Physical Sciences and IOE.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08",
+    "timezone": null,
+    "evidence_url": "https://www.ucl.ac.uk/scholarships/china-scholarship-council-ucl-joint-research-scholarship",
+    "evidence_quote": "Friday, 8th January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UCL scholarship page (seen in search results, updated about 19 days ago): deadline 8 January 2027 for most subjects, 13 January 2027 for MAPS (Dean's Prize scheme) and IOE",
+    "Successful candidates must then apply separately to the China Scholarship Council",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline time not stated in the results",
+    "Faculty-specific deadline (13 January 2027) applies to Mathematical & Physical Sciences and IOE; IOE also requires an unconditional offer",
+    "Award amounts not quoted, so compensation is null",
+    "Work arrangement assumed onsite (in-person programme/event); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-15T02:58:23.189Z",
+  "last_verified_at": "2026-11-15T02:58:23.705Z",
+  "id": "opp_7d4350030e133991",
+  "fingerprint": "28e64f73bb221ec9",
+  "content_hash": "sha256:1a1a55982e4789e14d22b24d0c918b1452c2bef1d47613639067ec33cff32f77"
+}

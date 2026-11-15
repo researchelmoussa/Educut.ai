@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-15T02:55:19.824Z",
+  "updated_at": "2026-11-15T03:14:56.963Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -38423,6 +38423,1591 @@
         }
       ],
       "offer_number": 543
+    },
+    "opp_e80c0c1d9d216ae0": {
+      "id": "opp_e80c0c1d9d216ae0",
+      "fingerprint": "0d321631cd4ac28a",
+      "title": "MINARET Doctoral Network",
+      "institution": "Lund University (MINARET MSCA Doctoral Network)",
+      "city": "Lund",
+      "country": "Sweden",
+      "source_url": "https://www.norca.lu.se/article/minaret-doctoral-network-15-fully-funded-msca-phd-positions",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.norca.lu.se/article/minaret-doctoral-network-15-fully-funded-msca-phd-positions",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:930697450b056f20be8979ea08f50ed0b00af712617003ba77ce3d55e10bf875",
+      "last_verified_at": "2026-11-15T02:58:23.310Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T02:58:29.824Z",
+      "history": [
+        {
+          "at": "2026-11-15T02:58:29.824Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T02:58:29.824Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:14:20.251Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:14:20.251Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:56.450Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:56.450Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 588
+    },
+    "opp_5c34ae35c22077e5": {
+      "id": "opp_5c34ae35c22077e5",
+      "fingerprint": "c1e52272876b119b",
+      "title": "International Human Resource Management Conference",
+      "institution": "Edinburgh Napier University, The Business School",
+      "city": "Edinburgh",
+      "country": "United Kingdom",
+      "source_url": "https://www.napier.ac.uk/about-us/our-schools/the-business-school/ihrm-conference-2027/call-for-papers",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.napier.ac.uk/about-us/our-schools/the-business-school/ihrm-conference-2027/call-for-papers",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-22",
+      "content_hash": "sha256:f11aab3873183c89652d35867b27eda38f165c9dd1d09c63f144a6265b9bb4df",
+      "last_verified_at": "2026-11-15T02:58:23.459Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T02:58:29.974Z",
+      "history": [
+        {
+          "at": "2026-11-15T02:58:29.974Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T02:58:29.974Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:45.794Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:45.794Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:55.203Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:55.203Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 581
+    },
+    "opp_0b7e6d973f8f34f2": {
+      "id": "opp_0b7e6d973f8f34f2",
+      "fingerprint": "87f56fc60d9f8727",
+      "title": "JRC Summer School on Non-Animal Approaches in Science",
+      "institution": "European Commission, Joint Research Centre (JRC)",
+      "city": "Ispra",
+      "country": "Italy",
+      "source_url": "https://joint-research-centre.ec.europa.eu/events/jrc-summer-school-non-animal-approaches-science-2027-05-24_en",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://joint-research-centre.ec.europa.eu/events/jrc-summer-school-non-animal-approaches-science-2027-05-24_en",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-22",
+      "content_hash": "sha256:da90dcdb1a2aa826964bba0027fbb9dae3172aa6c99bf88f9521a6a0230af34c",
+      "last_verified_at": "2026-11-15T02:58:23.591Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T02:58:30.123Z",
+      "history": [
+        {
+          "at": "2026-11-15T02:58:30.123Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T02:58:30.123Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:45.468Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:45.468Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:54.992Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:54.992Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 580
+    },
+    "opp_7d4350030e133991": {
+      "id": "opp_7d4350030e133991",
+      "fingerprint": "28e64f73bb221ec9",
+      "title": "China Scholarship Council-UCL Joint Research Scholarship",
+      "institution": "University College London (UCL)",
+      "city": "London",
+      "country": "United Kingdom",
+      "source_url": "https://www.ucl.ac.uk/scholarships/china-scholarship-council-ucl-joint-research-scholarship",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.ucl.ac.uk/scholarships/china-scholarship-council-ucl-joint-research-scholarship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08",
+      "content_hash": "sha256:1a1a55982e4789e14d22b24d0c918b1452c2bef1d47613639067ec33cff32f77",
+      "last_verified_at": "2026-11-15T02:58:23.705Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T02:58:30.284Z",
+      "history": [
+        {
+          "at": "2026-11-15T02:58:30.284Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T02:58:30.285Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:47.721Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:47.721Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:53.621Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:53.621Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 572
+    },
+    "opp_743b0dde16acf901": {
+      "id": "opp_743b0dde16acf901",
+      "fingerprint": "995b4ea3d6cec245",
+      "title": "2027 IEEE Statistical Signal Processing Workshop (SSP)",
+      "institution": "IEEE Signal Processing Society",
+      "city": "Annecy",
+      "country": "France",
+      "source_url": "https://signalprocessingsociety.org/our-story/news-updates/2026/10/advancing-signal-processing-innovations-ieee-ssp-2027-heads-annecy",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://ssp27.ieeesps.org/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-07",
+      "content_hash": "sha256:f85a0d712277cd6d52bc0f38cb8790540f1213a9acc34d164ecc6cf2d7a7ddfd",
+      "last_verified_at": "2026-11-15T02:58:23.826Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T02:58:30.446Z",
+      "history": [
+        {
+          "at": "2026-11-15T02:58:30.446Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T02:58:30.446Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:14:20.566Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:14:20.566Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:56.626Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:56.626Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 589
+    },
+    "opp_30aa6e095a05774c": {
+      "id": "opp_30aa6e095a05774c",
+      "fingerprint": "55c09f5f8a0973bb",
+      "title": "ICMAT 2027",
+      "institution": "Materials Research Society of Singapore",
+      "city": "Singapore",
+      "country": "Singapore",
+      "source_url": "https://icmat2027.mrs.org.sg/call-for-abstract/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://icmat2027.mrs.org.sg/call-for-abstract/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:6c7986fa53386652dbdc958c3ebf0dbb4999d10e67748675094ecf71abb6fad6",
+      "last_verified_at": "2026-11-15T02:58:23.942Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T02:58:30.593Z",
+      "history": [
+        {
+          "at": "2026-11-15T02:58:30.593Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T02:58:30.593Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:44.498Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:44.498Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:54.502Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:54.502Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 577
+    },
+    "opp_69418fe0525a8371": {
+      "id": "opp_69418fe0525a8371",
+      "fingerprint": "3e0affcd807b57f9",
+      "title": "Spatial Statistics 2027: At the core of analytical intelligence",
+      "institution": "Elsevier",
+      "city": "Beijing",
+      "country": "China",
+      "source_url": "https://www.elsevier.com/events/conferences/all/spatial-statistics",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.elsevier.com/events/conferences/all/spatial-statistics/participate",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-29",
+      "content_hash": "sha256:f92a69349709963e55000a8da27f3f4aa69fb0de017bc517918c8fc731910478",
+      "last_verified_at": "2026-11-15T02:58:24.103Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T02:58:30.776Z",
+      "history": [
+        {
+          "at": "2026-11-15T02:58:30.776Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T02:58:30.777Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:40.553Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:40.553Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:55.919Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:55.919Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 585
+    },
+    "opp_5c58d1dfa84f168b": {
+      "id": "opp_5c58d1dfa84f168b",
+      "fingerprint": "f121bf75426aea34",
+      "title": "Long-term Public Humanities Fellowships",
+      "institution": "Folger Shakespeare Library, Folger Institute",
+      "city": "Washington",
+      "country": "United States",
+      "source_url": "https://www.folger.edu/research/the-folger-institute/fellowships/apply-for-a-fellowship/long-term-public-humanities-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.folger.edu/research/the-folger-institute/fellowships/apply-for-a-fellowship/long-term-public-humanities-fellowships/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:4adcc74bd30fab9ac93e8372cfd307b73fec6c2d9de00c8a495366e8e68bfea1",
+      "last_verified_at": "2026-11-15T03:02:24.337Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:02:24.471Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:02:24.471Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:02:24.471Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:47.214Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:47.215Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:52.729Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:52.730Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 567
+    },
+    "opp_cc62b567d65b6c2c": {
+      "id": "opp_cc62b567d65b6c2c",
+      "fingerprint": "3799c849e03f19cc",
+      "title": "Yale Young Global Scholars",
+      "institution": "Yale University",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://globalscholars.yale.edu/application-deadlines",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://globalscholars.yale.edu/application-deadlines",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-06",
+      "content_hash": "sha256:4a326e38cee7e2967995a961f08a44d94c5706c7a1bce7926f6d8465747a501f",
+      "last_verified_at": "2026-11-15T03:14:26.760Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:02:24.748Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:02:24.748Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:02:24.748Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:48.637Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:48.637Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:26.939Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-15T03:14:26.940Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-15T03:14:28.940Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported financial-aid wording from description"
+        },
+        {
+          "at": "2026-11-15T03:14:29.118Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:14:29.118Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:53.443Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:53.443Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 571
+    },
+    "opp_8eeef2529eb5c9a5": {
+      "id": "opp_8eeef2529eb5c9a5",
+      "fingerprint": "617c8fdcd0d4cabd",
+      "title": "FUB-CSC PhD Program 2027",
+      "institution": "Freie Universität Berlin",
+      "city": "Berlin",
+      "country": "Germany",
+      "source_url": "https://www.fu-berlin.de/en/sites/china/foerdermoeglichkeiten/fuer_chinesen/csc-phd-program/application-procedure-phd/index.html",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.fu-berlin.de/en/sites/china/foerdermoeglichkeiten/fuer_chinesen/csc-phd-program/application-procedure-phd/index.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:5775b43a7baad8eb048a26155463934ace0ed1ac98ad7beed5023e955b451beb",
+      "last_verified_at": "2026-11-15T03:02:24.941Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:02:25.088Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:02:25.088Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:02:25.089Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:44.860Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:44.860Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:54.657Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:54.658Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 578
+    },
+    "opp_8f1b5d0ff6976f6f": {
+      "id": "opp_8f1b5d0ff6976f6f",
+      "fingerprint": "c6d377e0756d4603",
+      "title": "Transportation Research Symposium",
+      "institution": "Elsevier",
+      "city": "Singapore",
+      "country": "Singapore",
+      "source_url": "https://www.elsevier.com/events/conferences/all/transport-research-symposium",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.elsevier.com/events/conferences/all/transport-research-symposium/participate",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-22",
+      "content_hash": "sha256:71ef5a6c51229b17fc125db0de816f7edff3634f5bdbd9fe93f782fd787e2441",
+      "last_verified_at": "2026-11-15T03:02:25.225Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:02:25.362Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:02:25.362Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:02:25.362Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:39.556Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:39.556Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:55.376Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:55.377Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 582
+    },
+    "opp_39f9868b31e3f0c8": {
+      "id": "opp_39f9868b31e3f0c8",
+      "fingerprint": "3070ee01c3b4b2d2",
+      "title": "beVisioneers: The Mercedes-Benz Fellowship",
+      "institution": "beVisioneers: The Mercedes-Benz Fellowship",
+      "city": null,
+      "country": null,
+      "source_url": "https://applications.bevisioneers.world/courses/course/11-bevisioneers-mercedes-benz-fellowship",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://applications.bevisioneers.world/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:044adfc9a53f89a5aebeb1b2713094ec34ed24e742c7d9b2edec24a50b4f29e2",
+      "last_verified_at": "2026-11-15T03:05:15.509Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:05:20.238Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:05:20.238Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:05:20.238Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:40.859Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:40.859Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:56.067Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:56.068Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 586
+    },
+    "opp_920566c3576788c1": {
+      "id": "opp_920566c3576788c1",
+      "fingerprint": "e294b674d8dc1982",
+      "title": "Regional, Rural and Remote Emergency Medicine Conference 2027",
+      "institution": "Australasian College for Emergency Medicine (ACEM)",
+      "city": "Hobart",
+      "country": "Australia",
+      "source_url": "https://acem.org.au/Events/Regional-Rural-and-Remote-Emergency-Medicine-Confe",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://acem.org.au/Events/Regional-Rural-and-Remote-Emergency-Medicine-Confe",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-22",
+      "content_hash": "sha256:3ab1b58949e53b7a6084d6ae21fce73ee5f602a9edd9a902d917ecc27594716e",
+      "last_verified_at": "2026-11-15T03:05:15.635Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:05:20.387Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:05:20.387Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:05:20.388Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:14:21.218Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:14:21.219Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:56.962Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:56.963Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 591
+    },
+    "opp_e5f5ab92fec93dbb": {
+      "id": "opp_e5f5ab92fec93dbb",
+      "fingerprint": "270ee070fa512c70",
+      "title": "Quantum Computing Internship for Physics Undergraduates Program (QCIPU)",
+      "institution": "Fermi National Accelerator Laboratory (Fermilab)",
+      "city": "Batavia",
+      "country": "United States",
+      "source_url": "https://internships.fnal.gov/quantum-computing-internship-for-physics-undergraduates-program/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://internships.fnal.gov/quantum-computing-internship-for-physics-undergraduates-program/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-14",
+      "content_hash": "sha256:5fcfbcaa4d7fc824b054067a4cea42a8d0a167fd39990796e964b32a76f2a7c6",
+      "last_verified_at": "2026-11-15T03:05:15.753Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:05:20.530Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:05:20.530Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:05:20.530Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:49.236Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:49.236Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:54.323Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:54.323Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 576
+    },
+    "opp_d4da9e0172ca6d5c": {
+      "id": "opp_d4da9e0172ca6d5c",
+      "fingerprint": "564a979846420c7f",
+      "title": "Advanced Imaging in Neuroscience",
+      "institution": "CAJAL Advanced Neuroscience Training Programme",
+      "city": "Bordeaux",
+      "country": "France",
+      "source_url": "https://cajal-training.org/courses/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://cajal-training.org/courses/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-20",
+      "content_hash": "sha256:c0a559108fbc0da85c39b19d7b3584bb506cb33ea65dbcd394ae16823e2e69b5",
+      "last_verified_at": "2026-11-15T03:05:15.874Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:05:20.678Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:05:20.678Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:05:20.678Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:47.905Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:47.906Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:53.068Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:53.068Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 569
+    },
+    "opp_de9b89f74668f4ad": {
+      "id": "opp_de9b89f74668f4ad",
+      "fingerprint": "2b9288d22c562e0e",
+      "title": "Assistant Professor - Defence and Dual-use Technologies",
+      "institution": "University of Toronto",
+      "city": "Toronto",
+      "country": "Canada",
+      "source_url": "https://jobs.utoronto.ca/job/Toronto-Assistant-Professor-Defence-and-Dual-use-Technologies-ON/603644117/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://jobs.utoronto.ca/job/Toronto-Assistant-Professor-Defence-and-Dual-use-Technologies-ON/603644117/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-11",
+      "content_hash": "sha256:e7c8c2cfd18abcf9288aafd9865042fde24481dd73ea71359c8776d82d1055c8",
+      "last_verified_at": "2026-11-15T03:07:51.346Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:08:01.479Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:08:01.479Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:08:01.480Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:48.492Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:48.492Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:53.995Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:53.996Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 574
+    },
+    "opp_57bc5df4996a8d4d": {
+      "id": "opp_57bc5df4996a8d4d",
+      "fingerprint": "80ba02cb9a3cb488",
+      "title": "FASPE Journalism Fellowship",
+      "institution": "FASPE (Fellowships at Auschwitz for the Study of Professional Ethics)",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.faspe-ethics.org/journalism/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.faspe-ethics.org/how-to-apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-03",
+      "content_hash": "sha256:722035ac58d6c85c2f39b39b20163ab4c28f6efc02d1fe29a4717ed5565c2e66",
+      "last_verified_at": "2026-11-15T03:07:51.462Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:08:01.658Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:08:01.658Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:08:01.658Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:48.260Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:48.260Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:53.254Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:53.254Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 570
+    },
+    "opp_7ea872c59f316f1f": {
+      "id": "opp_7ea872c59f316f1f",
+      "fingerprint": "7049838e014b8db8",
+      "title": "Assistant Professor (Tenure Track) of Earth and Planetary Evolution",
+      "institution": "ETH Zurich, Department of Earth and Planetary Sciences (D-EAPS)",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://ethz.ch/en/the-eth-zurich/working-teaching-and-research/faculty/faculty-affairs/ausgeschriebene-professuren/systemorientierte-naturwissenschaften/aptt-earth-and-planetary-evolution.html",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://ethz.ch/en/the-eth-zurich/working-teaching-and-research/faculty/faculty-affairs/ausgeschriebene-professuren/systemorientierte-naturwissenschaften/aptt-earth-and-planetary-evolution.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:5cb73393a7bdcbf71e18ec97376c73ff073cc6dfe9ecaf6f93e96d1a6dae38a1",
+      "last_verified_at": "2026-11-15T03:07:51.583Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:08:01.819Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:08:01.819Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:08:01.819Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:47.587Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:47.587Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:52.908Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:52.908Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 568
+    },
+    "opp_7cdc847c6ee011aa": {
+      "id": "opp_7cdc847c6ee011aa",
+      "fingerprint": "1a6b2ca891ae361d",
+      "title": "Postdoctoral Researcher positions - Statistical Physics and Active Matter",
+      "institution": "Max Planck Institute for Dynamics and Self-Organization (MPIDS), Department of Living Matter Physics",
+      "city": "Göttingen",
+      "country": "Germany",
+      "source_url": "https://www.mpg.de/26889399/postdoctoral-researcher-positions-mpids-w092",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://www.ds.mpg.de/4133369/job_full_offer_26889399",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10",
+      "content_hash": "sha256:3830c01c978b56f07ca3231268b5b584c2885c4168e3bd8dd2bc3b30b7b63533",
+      "last_verified_at": "2026-11-15T03:07:51.838Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:08:01.977Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:08:01.977Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:08:01.977Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:48.099Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:48.099Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:53.806Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:53.806Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 573
+    },
+    "opp_bcfcd9a5b02f3f7b": {
+      "id": "opp_bcfcd9a5b02f3f7b",
+      "fingerprint": "18a4d4ec9870e5c9",
+      "title": "\"First Research Article\" Fellowship Program",
+      "institution": "Max Planck Institute for the History of Science (MPIWG)",
+      "city": "Berlin",
+      "country": "Germany",
+      "source_url": "https://www.mpiwg-berlin.mpg.de/job-position/first-research-article-fellowship-program",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.mpiwg-berlin.mpg.de/job-position/first-research-article-fellowship-program",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:fecc6b1d5f215e60953402710efe7cc18d0d33833acf5bc6552107b402a179e2",
+      "last_verified_at": "2026-11-15T03:07:51.971Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:08:02.133Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:08:02.133Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:08:02.133Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:45.180Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:45.180Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:54.823Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:54.823Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 579
+    },
+    "opp_5da3a530f18abc36": {
+      "id": "opp_5da3a530f18abc36",
+      "fingerprint": "f701e25a4da860b6",
+      "title": "IUBMB Congress 2027",
+      "institution": "International Union of Biochemistry and Molecular Biology (IUBMB)",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "source_url": "https://www.iubmbcongress2027.co.za/abstracts/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.iubmbcongress2027.co.za/abstracts/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-12",
+      "content_hash": "sha256:ee90adc05d42218088f9f4d7f888a85b43bc004b74e09b67dfec890b3b84e6bd",
+      "last_verified_at": "2026-11-15T03:09:22.813Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:09:28.389Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:09:28.389Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:09:28.389Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:14:20.873Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:14:20.873Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:56.799Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:56.799Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 590
+    },
+    "opp_9efff86840c1f50f": {
+      "id": "opp_9efff86840c1f50f",
+      "fingerprint": "638dcb38df2b4b2a",
+      "title": "2027 Symposium on VLSI Technology and Circuits",
+      "institution": "Symposium on VLSI Technology and Circuits",
+      "city": "Kyoto",
+      "country": "Japan",
+      "source_url": "https://www.vlsisymposium.org/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://www.vlsisymposium.org/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-25",
+      "content_hash": "sha256:5e49cb934336139a30e561eadf93adf5faa6ae68c92001d46cec1810e7fb1c16",
+      "last_verified_at": "2026-11-15T03:09:22.938Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:09:28.561Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:09:28.561Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:09:28.562Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:39.886Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:39.886Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:55.571Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:55.571Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 583
+    },
+    "opp_09ca8d87dadcf164": {
+      "id": "opp_09ca8d87dadcf164",
+      "fingerprint": "bcfcd2f0b16efca4",
+      "title": "20th International Conference on Machine Vision Applications (MVA 2027)",
+      "institution": "MVA Organization",
+      "city": "Fukuoka",
+      "country": "Japan",
+      "source_url": "https://www.mva-org.jp/mva2027/cfp/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://www.mva-org.jp/mva2027/submission/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-14",
+      "content_hash": "sha256:dd2953a96e37f9df12b8cfd176dee7e72c0f05a16c29a6a2745c40c9415e1db2",
+      "last_verified_at": "2026-11-15T03:09:23.074Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:09:28.707Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:09:28.708Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:09:28.708Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:48.892Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:48.892Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:54.154Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:54.155Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 575
+    },
+    "opp_c5a7693f3d25724d": {
+      "id": "opp_c5a7693f3d25724d",
+      "fingerprint": "414318ef190a6531",
+      "title": "International Teaching & Learning Conference 2027",
+      "institution": "University of South Africa (UNISA)",
+      "city": "Pretoria",
+      "country": "South Africa",
+      "source_url": "https://www.unisa.ac.za/sites/corporate/default/News-&-Media/Calendar-&-events/International-Teaching-&-Learning-Conference-2027",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.unisa.ac.za/sites/corporate/default/News-&-Media/Calendar-&-events/International-Teaching-&-Learning-Conference-2027",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:bb9dea704f8c7bb34f518c6444c89bdcd28325b89d7146158b2ad81549ef39e9",
+      "last_verified_at": "2026-11-15T03:09:23.222Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:09:28.885Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:09:28.885Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:09:28.885Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:14:19.909Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:14:19.909Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:56.255Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:56.256Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 587
+    },
+    "opp_af41002c077ad49d": {
+      "id": "opp_af41002c077ad49d",
+      "fingerprint": "8b014f1784b12cb7",
+      "title": "Harvard Summer School Program in Seoul",
+      "institution": "Harvard Summer School",
+      "city": "Seoul",
+      "country": "South Korea",
+      "source_url": "https://summer.harvard.edu/study-abroad/seoul-korea/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://summer.harvard.edu/study-abroad/seoul-korea/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-28",
+      "content_hash": "sha256:2300812afdd8e4630d6560ca97d5ea17d2a2c1995d492ca2194234482d1c55a8",
+      "last_verified_at": "2026-11-15T03:09:23.367Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-15T03:09:29.060Z",
+      "history": [
+        {
+          "at": "2026-11-15T03:09:29.060Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-15T03:09:29.061Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T03:13:40.215Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T03:13:40.216Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T03:14:55.739Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T03:14:55.739Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 584
     }
   },
   "seen_urls": {
@@ -39248,7 +40833,39 @@
     "https://educationaldatamining.org/edm2027/call-for-papers": "opp_14cfad6ea2910d65",
     "https://easychair.org/cfp/EUNIS2027": "opp_b486664f37a14626",
     "https://utu.fi/en/research/research-collegia/tcsm/call-for-applications": "opp_7e3c9a4efb1c1591",
-    "https://sites.utu.fi/cepe2027/call-for-papers": "opp_6174cbb66cd27347"
+    "https://sites.utu.fi/cepe2027/call-for-papers": "opp_6174cbb66cd27347",
+    "https://norca.lu.se/article/minaret-doctoral-network-15-fully-funded-msca-phd-positions": "opp_e80c0c1d9d216ae0",
+    "https://napier.ac.uk/about-us/our-schools/the-business-school/ihrm-conference-2027/call-for-papers": "opp_5c34ae35c22077e5",
+    "https://joint-research-centre.ec.europa.eu/events/jrc-summer-school-non-animal-approaches-science-2027-05-24_en": "opp_0b7e6d973f8f34f2",
+    "https://ucl.ac.uk/scholarships/china-scholarship-council-ucl-joint-research-scholarship": "opp_7d4350030e133991",
+    "https://signalprocessingsociety.org/our-story/news-updates/2026/10/advancing-signal-processing-innovations-ieee-ssp-2027-heads-annecy": "opp_743b0dde16acf901",
+    "https://ssp27.ieeesps.org/": "opp_743b0dde16acf901",
+    "https://icmat2027.mrs.org.sg/call-for-abstract": "opp_30aa6e095a05774c",
+    "https://elsevier.com/events/conferences/all/spatial-statistics": "opp_69418fe0525a8371",
+    "https://elsevier.com/events/conferences/all/spatial-statistics/participate": "opp_69418fe0525a8371",
+    "https://folger.edu/research/the-folger-institute/fellowships/apply-for-a-fellowship/long-term-public-humanities-fellowships": "opp_5c58d1dfa84f168b",
+    "https://globalscholars.yale.edu/application-deadlines": "opp_cc62b567d65b6c2c",
+    "https://fu-berlin.de/en/sites/china/foerdermoeglichkeiten/fuer_chinesen/csc-phd-program/application-procedure-phd/index.html": "opp_8eeef2529eb5c9a5",
+    "https://elsevier.com/events/conferences/all/transport-research-symposium": "opp_8f1b5d0ff6976f6f",
+    "https://elsevier.com/events/conferences/all/transport-research-symposium/participate": "opp_8f1b5d0ff6976f6f",
+    "https://applications.bevisioneers.world/courses/course/11-bevisioneers-mercedes-benz-fellowship": "opp_39f9868b31e3f0c8",
+    "https://applications.bevisioneers.world/": "opp_39f9868b31e3f0c8",
+    "https://acem.org.au/Events/Regional-Rural-and-Remote-Emergency-Medicine-Confe": "opp_920566c3576788c1",
+    "https://internships.fnal.gov/quantum-computing-internship-for-physics-undergraduates-program": "opp_e5f5ab92fec93dbb",
+    "https://cajal-training.org/courses": "opp_d4da9e0172ca6d5c",
+    "https://jobs.utoronto.ca/job/Toronto-Assistant-Professor-Defence-and-Dual-use-Technologies-ON/603644117": "opp_de9b89f74668f4ad",
+    "https://faspe-ethics.org/journalism": "opp_57bc5df4996a8d4d",
+    "https://faspe-ethics.org/how-to-apply": "opp_57bc5df4996a8d4d",
+    "https://ethz.ch/en/the-eth-zurich/working-teaching-and-research/faculty/faculty-affairs/ausgeschriebene-professuren/systemorientierte-naturwissenschaften/aptt-earth-and-planetary-evolution.html": "opp_7ea872c59f316f1f",
+    "https://mpg.de/26889399/postdoctoral-researcher-positions-mpids-w092": "opp_7cdc847c6ee011aa",
+    "https://ds.mpg.de/4133369/job_full_offer_26889399": "opp_7cdc847c6ee011aa",
+    "https://mpiwg-berlin.mpg.de/job-position/first-research-article-fellowship-program": "opp_bcfcd9a5b02f3f7b",
+    "https://iubmbcongress2027.co.za/abstracts": "opp_5da3a530f18abc36",
+    "https://vlsisymposium.org/": "opp_9efff86840c1f50f",
+    "https://mva-org.jp/mva2027/cfp": "opp_09ca8d87dadcf164",
+    "https://mva-org.jp/mva2027/submission": "opp_09ca8d87dadcf164",
+    "https://unisa.ac.za/sites/corporate/default/News-&-Media/Calendar-&-events/International-Teaching-&-Learning-Conference-2027": "opp_c5a7693f3d25724d",
+    "https://summer.harvard.edu/study-abroad/seoul-korea": "opp_af41002c077ad49d"
   },
-  "last_offer_number": 566
+  "last_offer_number": 591
 }

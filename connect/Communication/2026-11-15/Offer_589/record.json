@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "2027 IEEE Statistical Signal Processing Workshop (SSP)",
+    "evidence_url": "https://signalprocessingsociety.org/index.php/tags/ssp",
+    "evidence_quote": "2027 IEEE Statistical Signal Processing Workshop (SSP)"
+  },
+  "institution": {
+    "name": "IEEE Signal Processing Society",
+    "website": "https://signalprocessingsociety.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ssp27.ieeesps.org/",
+  "source_url": "https://signalprocessingsociety.org/our-story/news-updates/2026/10/advancing-signal-processing-innovations-ieee-ssp-2027-heads-annecy",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Annecy",
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Statistical signal processing",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Call for papers for the 2027 IEEE Statistical Signal Processing Workshop (SSP), held in Annecy, France, 28 June to 1 July 2027. Paper submissions are due 7 February 2027; full details are on the official workshop website.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-07",
+    "timezone": null,
+    "evidence_url": "https://signalprocessingsociety.org/our-story/news-updates/2026/10/advancing-signal-processing-innovations-ieee-ssp-2027-heads-annecy",
+    "evidence_quote": "7 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "IEEE Signal Processing Society event listing and October 2026 announcement (seen in search results): paper submission deadline 7 February 2027, official site ssp27.ieeesps.org",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Official workshop website ssp27.ieeesps.org not seen directly; evidence comes from the organising society's pages",
+    "Deadline time zone not stated in the results",
+    "Submission portal status not confirmed",
+    "Work arrangement assumed onsite (in-person programme/event); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-15T02:58:23.189Z",
+  "last_verified_at": "2026-11-15T02:58:23.826Z",
+  "id": "opp_743b0dde16acf901",
+  "fingerprint": "995b4ea3d6cec245",
+  "content_hash": "sha256:f85a0d712277cd6d52bc0f38cb8790540f1213a9acc34d164ecc6cf2d7a7ddfd"
+}
