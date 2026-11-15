@@ -93,6 +93,13 @@ table.fml{font-size:12px;width:100%;border-collapse:collapse;background:color-mi
 table.fml th,table.fml td{text-align:left;white-space:normal;vertical-align:top;padding:6px 8px;border-bottom:1px solid var(--line)}
 table.fml td:nth-child(2){font-family:var(--mono);font-size:11.5px;white-space:nowrap}
 table.fml td:first-child{font-weight:600;white-space:nowrap}
+.toc{display:flex;flex-wrap:wrap;gap:8px;padding-block:8px 0}
+.toc button{font:inherit;font-size:12.5px;color:var(--ink-2);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer}
+.toc button:hover{color:var(--ink);border-color:var(--ink-3)}
+.toc button:focus-visible{outline:2px solid var(--s1);outline-offset:2px}
+.phase{display:flex;gap:14px;align-items:flex-start;margin-top:18px;padding:12px 4px 6px;border-top:2px solid var(--ink);scroll-margin-top:70px}
+.phase-num{font-family:var(--mono);font-size:13px;font-weight:600;min-width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--ink);color:var(--bg)}
+.phase-t{font-size:19px;margin:4px 0 0}
 </style>
 <div class="wrap">
   <header>
@@ -107,8 +114,15 @@ table.fml td:first-child{font-weight:600;white-space:nowrap}
       <button type="button" id="btnB" data-pick="B" aria-pressed="false"><b>B</b> · iteration 2 · snippet + GDPR classification JSON</button>
     </div>
   </nav>
+  <nav class="toc" aria-label="Contents">
+    <button type="button" data-go="phase-0"><b>Phase 0</b> · Overall statistics</button>
+    <button type="button" data-go="phase-1"><b>Phase I</b> · Method &amp; article level</button>
+    <button type="button" data-go="phase-2"><b>Phase II</b> · Error analysis (code-snippet level)</button>
+  </nav>
+  <div class="phase" id="phase-0"><div class="phase-num">0</div><div><h2 class="phase-t">Phase 0 · Overall statistics</h2><p class="def" style="margin:2px 0 0">How many articles each method predicts compared with gold, snippet by snippet and in total.</p></div></div>
   <section class="totals" id="totals" aria-label="Total articles per series"></section>
-  <section class="panel" style="padding:16px">
+  <section class="panel" id="chart-sec"><h2 style="padding:14px 8px 0;margin:0">Article count per snippet (line chart)</h2><div id="chart" role="img" aria-label="Line chart of article count per snippet for gold labels and six prompting set-ups"></div><div style="padding:0 8px 10px"><div class="fmlw" id="f-chart"></div></div></section>
+  <section class="panel" style="padding:16px" id="agg-sec">
     <h2>Aggregated statistics vs. gold (all 887 snippets)</h2>
     <p class="def">TP = predicted article that is in the snippet's gold label, FP = predicted article not in it, FN = gold article not predicted. The formulas are in the table under the chart.</p>
     <div class="stats">
@@ -117,7 +131,16 @@ table.fml td:first-child{font-weight:600;white-space:nowrap}
     </div>
     <div class="fmlw" id="f-stats"></div>
   </section>
-  <section class="panel" style="padding:16px">
+  <div class="phase" id="phase-1"><div class="phase-num">I</div><div><h2 class="phase-t">Phase I · Method &amp; article level</h2><p class="def" style="margin:2px 0 0">Per method: TP, FP, FN, FDR, Precision, FNR, TPR and the per-snippet score. Per article: which GDPR articles are hallucinated or omitted.</p></div></div>
+  <section class="panel" style="padding:16px" id="score-sec">
+    <h2>Score per snippet: omission vs. hallucination, by method</h2>
+    <p class="def">For each snippet, every gold article the method missed is an <b>omission (−1)</b>, every predicted article not in gold is a <b>hallucination (+1)</b>, and every correctly predicted article counts <b>0</b>. Score = hallucinations − omissions. Example: gold = {4, 5}, method = {7} → 2 omissions + 1 hallucination = <b>−1</b>. An answer of <b>0</b> is <b>Class 0</b> (“no violation detected”): the method predicts nothing, so it has 0 predictions and 0 hallucinations, and every gold article of that snippet is an omission. Example: gold = [5], method = 0 → omission −1, prediction 0, hallucination 0 → score <b>−1</b>. Bars: yellow below zero = omitted articles; blue above zero = correct articles (0 points, shown for context); orange stacked on top = hallucinated articles; black dot = net score. All 6 charts share the x axis: zoom or drag the slider at the bottom to move them together.</p>
+    <p class="def"><span class="key"><i style="background:var(--y3)"></i>Omission (−1 each)</span><span class="key"><i style="background:var(--s1)"></i>Correct prediction (0)</span><span class="key"><i style="background:var(--o3)"></i>Hallucination (+1 each)</span><span class="key"><i style="background:var(--ink);border-radius:50%"></i>Score</span></p>
+    <div class="tw"><table id="scoretab"></table></div>
+    <div class="fmlw" id="f-score"></div>
+    <div id="score" role="img" aria-label="Six bar charts, one per method, showing omitted, correct and hallucinated articles and the net score for each snippet"></div>
+  </section>
+  <section class="panel" style="padding:16px" id="art-sec">
     <h2>Per-article statistics: the 23 GDPR articles in the prompt, plus Class 0 (“no violation detected”)</h2>
     <p class="def">For each article: how many snippets have it in the gold label, and how many times each method predicted it (the number of correct predictions, meaning the article is also in that snippet's gold label, is shown after the ✓). Articles are ranked by the total number of times they were predicted across the 6 methods. Hover a heatmap cell for details. <b>Class 0</b> (“no violation detected”) is the answer "0": its row counts the snippets where a method answered 0. No gold label contains it, so it is never correct. It adds no penalty of its own: the gold articles of those snippets are the omissions. It is shown yellow in the omission heatmap, never orange.</p>
     <div class="stats">
@@ -126,7 +149,7 @@ table.fml td:first-child{font-weight:600;white-space:nowrap}
     </div>
     <div class="fmlw" id="f-art"></div>
   </section>
-  <section class="panel" style="padding:16px">
+  <section class="panel" style="padding:16px" id="halluc-heat">
     <h2>Hallucinated articles: predicted more often than in gold</h2>
     <p class="def">Same counts as the blue heatmap above. A cell is <b>orange</b> when the method predicted the article in more snippets than the gold label has it (method &gt; gold, over-prediction / hallucination). Blue cells are at or below the gold count (method ≤ gold). Hover a cell to see the difference from gold.</p>
     <p class="def"><span class="key"><i style="background:var(--o3)"></i>method &gt; gold (hallucination)</span><span class="key"><i style="background:var(--q3)"></i>method ≤ gold</span></p>
@@ -134,13 +157,28 @@ table.fml td:first-child{font-weight:600;white-space:nowrap}
     <p data-s="A" class="def" style="margin-top:8px"><b>How to read a cell</b> (Gold and Baseline columns): each number is a count of snippets out of 887. <b>Art. 8 · Gold 4 · Baseline 6 (orange):</b> the gold label contains Art. 8 in 4 snippets, and Baseline predicted Art. 8 in 6 snippets. 6 &gt; 4, so Baseline over-predicts Art. 8 by +2 and the cell is orange. <b>Art. 25 · Gold 311 · Baseline 188 (blue):</b> Art. 25 is in 311 gold labels but Baseline predicted it in only 188 snippets, so the count is below gold (−123) and the cell stays blue. The colour compares totals only; it does not check whether the predictions were on the right snippets. Baseline's 6 predictions of Art. 8 are all wrong (0 correct), and 128 of its 188 Art. 25 predictions are hallucinations even though that cell is blue. The ✓ numbers in the per-article table and the "Hallucinations per article" table show the snippet-level picture.</p>
     <p data-s="B" hidden class="def" style="margin-top:8px"><b>How to read a cell</b> (Gold and Baseline columns): each number is a count of snippets out of 887. <b>Art. 9 · Gold 35 · Baseline 37 (orange):</b> the gold label contains Art. 9 in 35 snippets, and Baseline predicted Art. 9 in 37 snippets. 37 &gt; 35, so Baseline over-predicts Art. 9 by +2 and the cell is orange. <b>Art. 25 · Gold 311 · Baseline 103 (blue):</b> Art. 25 is in 311 gold labels but Baseline predicted it in only 103 snippets, so the count is below gold (−208) and the cell stays blue. The colour compares totals only; it does not check whether the predictions were on the right snippets. Only 10 of Baseline's 37 Art. 9 predictions are correct, and 71 of its 103 Art. 25 predictions are hallucinations even though that cell is blue. The ✓ numbers in the per-article table and the "Hallucinations per article" table show the snippet-level picture.</p>
   </section>
-  <section class="panel" style="padding:16px">
+  <section class="panel" style="padding:16px" id="omit-heat">
     <h2>Omitted articles: predicted less often than in gold</h2>
     <p class="def">Same counts as the blue heatmap above. A cell is <b>yellow</b> when the method predicted the article in fewer snippets than the gold label has it (gold &gt; method, under-prediction / omission). Blue cells are at or above the gold count (method ≥ gold). Hover a cell to see the difference from gold.</p>
     <p class="def"><span class="key"><i style="background:var(--y3)"></i>gold &gt; method (omission)</span><span class="key"><i style="background:var(--q3)"></i>method ≥ gold</span></p>
     <div id="heat3" role="img" aria-label="Heatmap of per-article prediction counts, with cells where gold exceeds the method highlighted in yellow"></div>
     <div class="fmlw" id="f-cmp"></div>
   </section>
+  <section class="panel" style="padding:16px" id="hall-art">
+    <h2>Hallucinations per article</h2>
+    <p class="def">For each method and each of the 23 articles: <b>FP</b> (the method predicted the article for a snippet whose gold label does not contain it) and below it the <b>FDR</b> for that article, FP ÷ times the method predicted it ("–" = never predicted). Hover a cell for TP, FN, FNR, TPR and the article's share of the method's FP. Class 0 is not listed: answering 0 predicts nothing, so it cannot be a false positive.</p>
+    <div class="tw"><table id="halltab"></table></div>
+    <p class="def" style="margin-top:6px" id="hallnote"></p>
+    <div class="fmlw" id="f-hall"></div>
+  </section>
+  <section class="panel" style="padding:16px" id="ov-art">
+    <h2>Overall hallucination per article (all 6 methods)</h2>
+    <p class="def">TP, FP and FN summed over the 6 methods for each article (each method counts the article's gold snippets once, so FN = 6 × gold snippets − TP). Classes are based on the FP count: <b>High</b> (100 or more), <b>Occasional</b> (10–99), <b>Rare</b> (1–9) or <b>Never</b> (0). "–" = the article was never predicted.</p>
+    <div class="tw"><table id="ovtab"></table></div>
+    <p class="def" style="margin-top:6px" id="ovnote"></p>
+    <div class="fmlw" id="f-ov"></div>
+  </section>
+  <div class="phase" id="phase-2"><div class="phase-num">II</div><div><h2 class="phase-t">Phase II · Error analysis (code-snippet level)</h2><p class="def" style="margin:2px 0 0">How the type of code snippet (structure, syntactic completeness, formatting) relates to hallucination.</p></div></div>
   <section class="panel" style="padding:16px" id="by-type">
     <h2>Hallucination by code-snippet type</h2>
     <p class="def">Each snippet is tagged in <code>data_level/error_analysis/snippet_tags.csv</code> (tree-sitter + rules, no LLM) and joined to the results by snippet id (<code>file: line</code>), so every number uses the same predictions as the rest of the page and follows the A / B switch. Choose a level, then a measure: <b>FDR</b> (% hallucination), <b>FNR</b> (% omission), <b>Precision</b>, <b>TPR</b> (recall) or the <b>FP</b> count. Formulas are in the table at the bottom of this section.</p>
@@ -186,25 +224,6 @@ table.fml td:first-child{font-weight:600;white-space:nowrap}
     </ol></div>
     <div class="fmlw" id="f-exp"></div>
     <p class="def">Formatting sub-levels are flags, so a snippet can count in several of them. Documented has a single snippet and no method predicted anything for it. Computed by <code>analysis/gdpr_bench_structures/expected_by_subtype.py</code> (fixed random seed, so the intervals are reproducible).</p>
-  </section>
-  <section class="panel"><div id="chart" role="img" aria-label="Line chart of article count per snippet for gold labels and six prompting set-ups"></div><div style="padding:0 8px 10px"><div class="fmlw" id="f-chart"></div></div></section>
-  <section class="panel" style="padding:16px">
-    <h2>Score per snippet: omission vs. hallucination, by method</h2>
-    <p class="def">For each snippet, every gold article the method missed is an <b>omission (−1)</b>, every predicted article not in gold is a <b>hallucination (+1)</b>, and every correctly predicted article counts <b>0</b>. Score = hallucinations − omissions. Example: gold = {4, 5}, method = {7} → 2 omissions + 1 hallucination = <b>−1</b>. An answer of <b>0</b> is <b>Class 0</b> (“no violation detected”): the method predicts nothing, so it has 0 predictions and 0 hallucinations, and every gold article of that snippet is an omission. Example: gold = [5], method = 0 → omission −1, prediction 0, hallucination 0 → score <b>−1</b>. Bars: yellow below zero = omitted articles; blue above zero = correct articles (0 points, shown for context); orange stacked on top = hallucinated articles; black dot = net score. All 6 charts share the x axis: zoom or drag the slider at the bottom to move them together.</p>
-    <p class="def"><span class="key"><i style="background:var(--y3)"></i>Omission (−1 each)</span><span class="key"><i style="background:var(--s1)"></i>Correct prediction (0)</span><span class="key"><i style="background:var(--o3)"></i>Hallucination (+1 each)</span><span class="key"><i style="background:var(--ink);border-radius:50%"></i>Score</span></p>
-    <div class="tw"><table id="scoretab"></table></div>
-    <div class="fmlw" id="f-score"></div>
-    <h2 style="margin-top:14px">Hallucinations per article</h2>
-    <p class="def">For each method and each of the 23 articles: <b>FP</b> (the method predicted the article for a snippet whose gold label does not contain it) and below it the <b>FDR</b> for that article, FP ÷ times the method predicted it ("–" = never predicted). Hover a cell for TP, FN, FNR, TPR and the article's share of the method's FP. Class 0 is not listed: answering 0 predicts nothing, so it cannot be a false positive.</p>
-    <div class="tw"><table id="halltab"></table></div>
-    <p class="def" style="margin-top:6px" id="hallnote"></p>
-    <div class="fmlw" id="f-hall"></div>
-    <h2 style="margin-top:14px">Overall hallucination per article (all 6 methods)</h2>
-    <p class="def">TP, FP and FN summed over the 6 methods for each article (each method counts the article's gold snippets once, so FN = 6 × gold snippets − TP). Classes are based on the FP count: <b>High</b> (100 or more), <b>Occasional</b> (10–99), <b>Rare</b> (1–9) or <b>Never</b> (0). "–" = the article was never predicted.</p>
-    <div class="tw"><table id="ovtab"></table></div>
-    <p class="def" style="margin-top:6px" id="ovnote"></p>
-    <div class="fmlw" id="f-ov"></div>
-    <div id="score" role="img" aria-label="Six bar charts, one per method, showing omitted, correct and hallucinated articles and the net score for each snippet"></div>
   </section>
   <p class="note">Sources: <code>*/output/predictions.json</code> (gold), <code>baseline_calls.jsonl</code>, <code>description_calls.jsonl</code>, <code>function_calls.jsonl</code>, <code>cove_final_calls.jsonl</code>, <code>refine_r2_calls.jsonl</code> (last <code>ANSWER:</code> line), <code>sr_cove_final_calls.jsonl</code>. CoVe steps run only on non-zero answers, so snippets missing from the CoVe final files count as 0. Counts match each set-up's <code>predictions.json</code> for all 887 snippets.</p>
 </div>
@@ -973,6 +992,7 @@ function expTable(){
    ["TPR<sub>s</sub>","TP<sub>s</sub> ÷ (TP<sub>s</sub> + FN<sub>s</sub>)","share of gold articles of s found",`${r.tp} ÷ ${r.gold} = ${pc(r.tp,r.gold)}`],
    ["Highest / lowest","max / min FDR<sub>s</sub> within each level","orange / blue cells",""]],`${r.sub}, Structure ${CUR}`);
 }
+document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>{const el=document.getElementById(b.dataset.go);if(el)el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});}));
 let CUR="A";
 function setStructure(s,push){
   if(!DATASETS[s])s="A"; CUR=s; DATA=DATASETS[s];
