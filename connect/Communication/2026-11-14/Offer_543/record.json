@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "CEPE 2027 Call for Papers",
+    "evidence_url": "https://sites.utu.fi/cepe2027/call-for-papers/",
+    "evidence_quote": "Call for Papers"
+  },
+  "institution": {
+    "name": "CEPE 2027 (Computer Ethics - Philosophical Enquiry), University of Turku",
+    "website": "https://sites.utu.fi/cepe2027/",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://sites.utu.fi/cepe2027/call-for-papers/",
+  "source_url": "https://sites.utu.fi/cepe2027/call-for-papers/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Turku",
+    "country": "Finland",
+    "country_code": "FI"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Computer and information ethics",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "CEPE 2027 conference, 26-28 May 2027, hosted at the University of Turku. Abstracts, full papers, panels and roundtables are due 31 December 2026 by email to director@inseit.eu; decisions by 31 January 2027, full manuscripts by 15 March 2027. Double-blind review.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-31",
+    "timezone": null,
+    "evidence_url": "https://sites.utu.fi/cepe2027/call-for-papers/",
+    "evidence_quote": "December 31, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CEPE 2027 call for papers page on sites.utu.fi (seen in search results): submissions due 31 December 2026",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Expansion of the CEPE acronym not visible in the results; recorded from the conference series name",
+    "City inferred from the University of Turku conference site; venue not stated in the results",
+    "Page metadata showed an unusual age value; dates should be confirmed",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T03:06:11.794Z",
+  "last_verified_at": "2026-11-14T03:06:12.544Z",
+  "id": "opp_6174cbb66cd27347",
+  "fingerprint": "34ba75a4c8afd146",
+  "content_hash": "sha256:bfee212b52f5901dee2efed3df2bfd9049b57e741461624f7214e026d07cb191"
+}

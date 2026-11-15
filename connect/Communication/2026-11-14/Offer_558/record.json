@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "EUSIPCO 2027",
+    "evidence_url": "https://eusipco2027.de/",
+    "evidence_quote": "EUSIPCO 2027"
+  },
+  "institution": {
+    "name": "EUSIPCO 2027 (European Signal Processing Conference, EURASIP)",
+    "website": "https://eusipco2027.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://eusipco2027.de/conference-papers/",
+  "source_url": "https://eusipco2027.de/conference-papers/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Darmstadt",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Signal processing",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "European Signal Processing Conference EUSIPCO 2027, Darmstadt, Germany, 30 August to 3 September 2027. Conference papers are submitted through the online Conference Management System by 6 February 2027; accepted or published journal papers can be submitted for presentation until 30 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-06",
+    "timezone": null,
+    "evidence_url": "https://signalprocessingsociety.org/events/conference-call-papers",
+    "evidence_quote": "Conference Paper Submission Deadline: February 6, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official EUSIPCO 2027 homepage (seen in search results) lists the conference paper submission deadline as 6 February 2027; the IEEE Signal Processing Society conference listing gives the same date",
+    "Deadline is in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Verbatim deadline quote taken from the IEEE Signal Processing Society conference listing; the eusipco2027.de homepage shows the same date but its exact wording was not visible in the results",
+    "Time zone of the deadline not stated",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T02:58:53.030Z",
+  "last_verified_at": "2026-11-14T02:58:53.549Z",
+  "id": "opp_5523fafdc9424503",
+  "fingerprint": "482d4f6781787ca0",
+  "content_hash": "sha256:479865f364220b502d826543a1b147513810e69c9095da42eab3bf48cbe3092c"
+}

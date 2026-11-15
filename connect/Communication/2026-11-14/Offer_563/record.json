@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Newton International Fellowships",
+    "evidence_url": "https://royalsociety.org/grants/newton-international/",
+    "evidence_quote": "Newton International Fellowships"
+  },
+  "institution": {
+    "name": "The Royal Society",
+    "website": "https://royalsociety.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://royalsociety.org/grants/newton-international/",
+  "source_url": "https://royalsociety.org/grants/newton-international/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Natural sciences",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "PhD awarded or thesis defended by the closing date",
+    "No more than five years' active full-time postdoctoral experience post-PhD"
+  ],
+  "skills": [],
+  "description_short": "Royal Society Newton International Fellowships, 2027 round: opens 13 January 2027 and closes 10 March 2027, with decisions on 23 August 2027. For researchers with a PhD and no more than five years' postdoctoral experience; sponsors may support one application per round.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-10",
+    "timezone": null,
+    "evidence_url": "https://royalsociety.org/grants/application-dates/",
+    "evidence_quote": "closes 10 March 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Royal Society application dates page (seen in search results): 2027 round opens 13 January 2027, closes 10 March 2027",
+    "Round not yet open at time of check; the scheme page label 'Closed' refers to the period before opening",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Host country not explicitly stated in the results; the scheme is run by the UK's Royal Society, so United Kingdom recorded",
+    "City depends on the host institution",
+    "Royal Society introduced changes to eligibility, selection and sponsor limits from the 2026 round; check current scheme notes",
+    "Field: scheme notes for subject coverage not seen; 'Natural sciences' is a broad placeholder",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T02:58:53.030Z",
+  "last_verified_at": "2026-11-14T02:58:53.943Z",
+  "id": "opp_50c3eb943688d716",
+  "fingerprint": "3a1f1368d358a198",
+  "content_hash": "sha256:220a849531034bb60dd60ab62dc5ef9f9cc3e73e4dff043bc78aaa3a554a4a03"
+}

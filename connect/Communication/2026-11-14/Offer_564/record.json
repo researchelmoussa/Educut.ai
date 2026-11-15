@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "CFP: Recent Advances in Natural Language Processing (RANLP'27)",
+    "evidence_url": "https://www.aclweb.org/portal/events?order=field_event_date&sort=desc",
+    "evidence_quote": "CFP: Recent Advances in Natural Language Processing (RANLP'27)"
+  },
+  "institution": {
+    "name": "RANLP 2027 (Recent Advances in Natural Language Processing)",
+    "website": "https://ranlp.org/2027/",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ranlp.org/2027/",
+  "source_url": "https://ranlp.org/2027/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Varna",
+    "country": "Bulgaria",
+    "country_code": "BG"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Natural language processing",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Call for papers for RANLP 2027, the Recent Advances in Natural Language Processing conference at Hotel 'Cherno More', Varna, Bulgaria, 6-8 September 2027, with tutorials 4-5 September and a summer school 1-3 September. Paper submission deadline 25 May 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-05-25",
+    "timezone": null,
+    "evidence_url": "https://www.aclweb.org/portal/events?order=field_event_date&sort=desc",
+    "evidence_quote": "Submission Deadline: Tuesday, 25 May 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "ACL events listing (posted 8 November 2026) gives the RANLP'27 submission deadline as 25 May 2027; the official RANLP 2027 page confirms dates and venue and links the First Call for Papers",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline seen on the ACL Anthology events portal; the First Call for Papers PDF on ranlp.org was not visible in the results",
+    "In 2025 the RANLP deadline was extended; check for changes",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T03:02:45.699Z",
+  "last_verified_at": "2026-11-14T03:02:51.066Z",
+  "id": "opp_f16d9e4ed398cb6a",
+  "fingerprint": "0681f768f4d936c6",
+  "content_hash": "sha256:ac1448ccd33855bc50b8ceab281718f5e501bac08c3a0e8af8fec56b82e2e239"
+}

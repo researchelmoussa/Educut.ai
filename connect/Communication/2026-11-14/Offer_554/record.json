@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Fellowships: Postdoctoral",
+    "evidence_url": "https://librarycompany.org/academic-programs/fellowships-2-2/postdoc-2/",
+    "evidence_quote": "Fellowships: Postdoctoral"
+  },
+  "institution": {
+    "name": "The Library Company of Philadelphia",
+    "website": "https://librarycompany.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://librarycompany.org/academic-programs/fellowships-2-2/postdoc-2/",
+  "source_url": "https://librarycompany.org/academic-programs/fellowships-2-2/postdoc-2/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Philadelphia",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Early American history and culture",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "PhD by September 1 of the residency year",
+    "Fellows must reside in the Philadelphia area for the duration of the fellowship"
+  ],
+  "skills": [],
+  "description_short": "Long-term postdoctoral fellowships at the Library Company of Philadelphia for 2027-28, including the PAAH Mellon Scholars and PEAES fellowships. Applications are accepted until 17 January 2027; one application is considered for all eligible fellowships. Fellows reside in the Philadelphia area; no visa sponsorship.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-17",
+    "timezone": null,
+    "evidence_url": "https://librarycompany.org/academic-programs/fellowships-2-2/postdoc-2/",
+    "evidence_quote": "Applications for the 2027-28 postdoctoral fellowships cycle will be accepted from September 1, 2026, until the submission deadline of January 17, 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official postdoctoral fellowships page (seen in search results): applications accepted from 1 September 2026 until 17 January 2027",
+    "Decisions by 2 April 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "The short-term fellowship application page shows 'January 17, 2026', apparently a typo; the postdoctoral page gives 2027",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T02:58:53.030Z",
+  "last_verified_at": "2026-11-14T02:58:53.784Z",
+  "id": "opp_d03614aa88c0725a",
+  "fingerprint": "b61bfd855660238f",
+  "content_hash": "sha256:55e77bf8be7f21cf3d64648e9f92eb2f71f29cb2d8f64c6831b4d29716d4e24b"
+}

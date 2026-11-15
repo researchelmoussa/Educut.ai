@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "CEGA Fellowship Program: 2027-2028 Request for Applications",
+    "evidence_url": "https://cega.berkeley.edu/article/cega-fellowship-program-2027-2028-request-for-applications/",
+    "evidence_quote": "CEGA Fellowship Program: 2027-2028 Request for Applications"
+  },
+  "institution": {
+    "name": "Center for Effective Global Action (CEGA), University of California, Berkeley",
+    "website": "https://cega.berkeley.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cega.berkeley.edu/article/cega-fellowship-program-2027-2028-request-for-applications/",
+  "source_url": "https://cega.berkeley.edu/article/cega-fellowship-program-2027-2028-request-for-applications/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Berkeley",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "hybrid",
+  "field": "Development economics and global development research",
+  "seniority": "Researchers and practitioners",
+  "qualifications": [
+    "From an eligible East or West African country (16 countries listed in the RFA)",
+    "Plan to return to an institution in East or West Africa after the fellowship"
+  ],
+  "skills": [],
+  "description_short": "CEGA Fellowship 2027-2028 for researchers from East and West Africa: 16 weeks in residence at UC Berkeley or virtually, in Fall 2027 (August-December) or Spring 2028 (January-May). Applications close 17 January 2027, 5 PM GMT; selections notified 1-12 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-17",
+    "timezone": "GMT",
+    "evidence_url": "https://cega.berkeley.edu/wp-content/uploads/2026/11/CEGA-Fellowship-Program_-2027-RFA.pdf",
+    "evidence_quote": "Friday, January 17th, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CEGA request for applications (web page and PDF, seen in search results): submissions due Friday, January 17th, 2027 at 5 PM GMT",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Residency vs. virtual track and country eligibility differ between the web page and the PDF; check the full RFA",
+    "Work arrangement recorded as hybrid because the call offers residential and virtual participation"
+  ],
+  "discovered_at": "2026-11-14T03:02:45.699Z",
+  "last_verified_at": "2026-11-14T03:02:52.600Z",
+  "id": "opp_ac8d6e68e7ed5541",
+  "fingerprint": "5efd008c59e1a12b",
+  "content_hash": "sha256:f52a950044f1f9f69c0bd8257c7274ebf89973b7a5fa24aef2e6e30a0a293923"
+}

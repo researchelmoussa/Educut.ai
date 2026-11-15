@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Vulcanus in Japan - A training programme for students in engineering and other scientific fields",
+    "evidence_url": "https://www.eu-japan.eu/events/vulcanus-japan",
+    "evidence_quote": "Vulcanus in Japan - A training programme for students in engineering and other scientific fields"
+  },
+  "institution": {
+    "name": "EU-Japan Centre for Industrial Cooperation",
+    "website": "https://www.eu-japan.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.eu-japan.eu/events/vulcanus-japan",
+  "source_url": "https://www.eu-japan.eu/events/vulcanus-japan",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Engineering and scientific fields",
+  "seniority": "Student",
+  "qualifications": [
+    "Enrolled at a university in the EU or an associated country, with enrolment lasting at least until late June 2027",
+    "Able to commit to the full eight months"
+  ],
+  "skills": [],
+  "description_short": "Vulcanus in Japan 2027-2028: an eight-month programme in Japan, August 2027 to March 2028, for engineering and science students enrolled at universities in the EU or associated countries. The call opened 30 October 2026; online applications close 20 January 2027 at 23:00 CET.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-20",
+    "timezone": "CET",
+    "evidence_url": "https://www.eu-japan.eu/events/vulcanus-japan",
+    "evidence_quote": "20 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official EU-Japan Centre programme page (seen in search results): call opened 30 October 2026, deadline 20 January 2027 at 23:00 CET",
+    "Applications after the deadline will not be accepted",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Host companies and cities in Japan not stated in the results",
+    "The 7 December 2026 date on the Centre's homepage is for expert evaluators, not student applicants",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T02:58:53.030Z",
+  "last_verified_at": "2026-11-14T02:58:54.648Z",
+  "id": "opp_7e8fe144d290461f",
+  "fingerprint": "5b1e79eb7b7eaa03",
+  "content_hash": "sha256:cbba9b10d9ed7077c38a066bcece1ca6857fbccd403ce099fc4a9b6665843cb6"
+}
