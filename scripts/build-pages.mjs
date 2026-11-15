@@ -31,7 +31,6 @@ import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
-import { GUIDES } from '../content/guides.mjs';
 import { COMPANY, FACULTY, LEGAL } from '../content/about.mjs';
 import { DEFAULT_LANGUAGE, LANGUAGES, ALTERNATES } from '../content/i18n.mjs';
 
@@ -355,19 +354,6 @@ for (const [code, target] of Object.entries(SEE_ALSO)) {
   if (target !== 'paths' && (!byCode[target] || target === code.split('.')[0])) throw new Error(`SEE_ALSO ${code}: bad target ${target}`);
 }
 
-// Guides (content/guides.mjs): drafts are noindex and unlinked; a guide
-// can only be published with a named author, a date and no reviewer notes.
-for (const g of GUIDES) {
-  if (!['draft', 'published'].includes(g.status)) throw new Error(`Guide ${g.slug}: status must be draft or published`);
-  for (const c of g.related) if (!byCode[c]) throw new Error(`Guide ${g.slug}: unknown academy ${c}`);
-  if (g.status === 'published') {
-    if (!g.author?.name || !g.author?.jobTitle) throw new Error(`Guide ${g.slug}: a published guide needs author.name and author.jobTitle`);
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(g.datePublished || '')) throw new Error(`Guide ${g.slug}: a published guide needs datePublished (YYYY-MM-DD)`);
-    if ([g.body, g.lead, ...g.faq.flat()].some((t) => t.includes('[['))) throw new Error(`Guide ${g.slug}: resolve every [[reviewer note]] before publishing`);
-  }
-}
-const publishedGuides = GUIDES.filter((g) => g.status === 'published');
-
 // Languages (content/i18n.mjs): only reviewed translations that exist on
 // disk may be announced with hreflang.
 for (const [enPath, alts] of Object.entries(ALTERNATES)) {
@@ -447,7 +433,6 @@ const NAV = [
   ['/academies/', 'Academies'],
   ['/ai-learning-paths/', 'AI Paths'],
   ['/educut-connect/', 'Connect'],
-  ...(publishedGuides.length ? [['/guides/', 'Guides']] : []),
   ...(ABOUT_PUBLISHED ? [['/about/', 'About']] : []),
   ['/contact/', 'Contact'],
 ];
@@ -525,7 +510,7 @@ function footer() {
           <li><a href="/academies/">All academies</a></li>
           <li><a href="/ai-learning-paths/">AI learning paths</a></li>
           <li><a href="/educut-connect/">EduCut Connect: opportunities</a></li>
-          <li><a href="/contact/">Contact &amp; consultation</a></li>${publishedGuides.length ? '\n          <li><a href="/guides/">Guides</a></li>' : ''}${ABOUT_PUBLISHED ? '\n          <li><a href="/about/">About EduCut.ai</a></li>' : ''}${LEGAL_PAGES.map(([k, v]) => `\n          <li><a href="/${k}/">${esc(v.title)}</a></li>`).join('')}
+          <li><a href="/contact/">Contact &amp; consultation</a></li>${ABOUT_PUBLISHED ? '\n          <li><a href="/about/">About EduCut.ai</a></li>' : ''}${LEGAL_PAGES.map(([k, v]) => `\n          <li><a href="/${k}/">${esc(v.title)}</a></li>`).join('')}
         </ul>
         <p class="footer-place">Based in ${esc(COMPANY.country)} · <a href="mailto:partners@educutai.com" style="color:#a1a19c">partners@educutai.com</a>${COMPANY.sameAs && COMPANY.sameAs.length ? ` · <a href="${esc(COMPANY.sameAs[0])}" target="_blank" rel="noopener noreferrer" style="color:#a1a19c">LinkedIn ↗</a>` : ''}</p>
       </div>
@@ -714,7 +699,7 @@ function academyPage(a) {
       <div class="wrap">
         <h2 id="related">Related academies</h2>
         <p class="section-intro">${clusterIntro}</p>
-        <div class="academy-cards">${related.map(card).join('')}</div>${guidesFor(a.code)}
+        <div class="academy-cards">${related.map(card).join('')}</div>
       </div>
     </section>
 
@@ -738,14 +723,6 @@ function academyPage(a) {
       itemListElement: a.courses.map((c, i) => ({ '@type': 'ListItem', position: i + 1, item: courseSchema(c, a) })),
     },
   });
-}
-
-function guidesFor(code) {
-  const list = publishedGuides.filter((g) => g.related.includes(code));
-  if (!list.length) return '';
-  return `
-        <h3 class="guides-heading">Guides on this topic</h3>
-        <ul class="guide-links">${list.map((g) => `<li><a href="/guides/${g.slug}/">${esc(g.title)}</a></li>`).join('')}</ul>`;
 }
 
 function card(a) {
@@ -1056,92 +1033,6 @@ function notFoundPage() {
 }
 
 const fmtDate = (d) => new Date(d + 'T00:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-// Draft-only: reviewer notes are shown highlighted so nothing is missed.
-const showNotes = (h) => h.replace(/\[\[([\s\S]*?)\]\]/g, '<mark class="review-note">$1</mark>');
-
-function guidePage(g) {
-  const draft = g.status !== 'published';
-  const path = `/guides/${g.slug}/`;
-  const crumbs = [['/', 'Home'], ['/guides/', 'Guides'], [path, g.title]];
-  const byline = draft
-    ? '<p class="byline mono">Author and expert reviewer to be confirmed</p>'
-    : `<p class="byline">By <strong>${esc(g.author.name)}</strong>, ${esc(g.author.jobTitle)}${g.reviewer ? ` · Reviewed by <strong>${esc(g.reviewer.name)}</strong>, ${esc(g.reviewer.jobTitle)}` : ''} · Published <time datetime="${g.datePublished}">${fmtDate(g.datePublished)}</time>${g.dateModified ? ` · Updated <time datetime="${g.dateModified}">${fmtDate(g.dateModified)}</time>` : ''}</p>`;
-  const body = `
-    ${draft ? '<div class="draft-banner"><div class="wrap"><strong>DRAFT: pending expert review.</strong> Not published: hidden from search engines and not linked from the site. Highlighted notes are for the reviewer.</div></div>' : ''}
-    <header class="page-hero">
-      <div class="wrap">
-        ${breadcrumb(crumbs)}
-        <div class="mono kicker" style="margin-top:34px">EduCut.ai guide</div>
-        <h1>${esc(g.title)}</h1>
-        <p class="lead">${esc(g.lead)}</p>
-        ${byline}
-      </div>
-    </header>
-
-    <article class="page-section alt">
-      <div class="wrap article">
-        ${draft ? showNotes(g.body) : g.body}
-      </div>
-    </article>
-
-    ${faqSection('faq', 'Frequently asked questions', g.faq)}
-
-    <section class="page-section alt" aria-labelledby="related">
-      <div class="wrap">
-        <h2 id="related">Related EduCut.ai academies</h2>
-        <div class="academy-cards">${g.related.map((c) => card(byCode[c])).join('')}</div>
-      </div>
-    </section>
-
-    ${ctaBand('Turn this into a learning plan for your teams.')}`;
-
-  const article = draft ? null : {
-    '@type': 'Article', '@id': SITE_URL + path + '#article',
-    headline: g.title, description: g.description, inLanguage: 'en',
-    author: { '@type': 'Person', name: g.author.name, jobTitle: g.author.jobTitle, worksFor: { '@id': ORG_ID } },
-    publisher: { '@id': ORG_ID },
-    datePublished: g.datePublished, dateModified: g.dateModified || g.datePublished,
-    mainEntityOfPage: { '@id': SITE_URL + path + '#webpage' },
-    about: g.related.map((c) => ({ '@type': 'Thing', name: byCode[c].name })),
-  };
-  return page({
-    path, nav: '/guides/', title: g.seoTitle + BRAND, description: g.description, body, crumbs,
-    noindex: draft, faq: g.faq, mainEntity: article || undefined,
-  });
-}
-
-function guidesIndexPage() {
-  const crumbs = [['/', 'Home'], ['/guides/', 'Guides']];
-  const list = publishedGuides.length ? publishedGuides : GUIDES;
-  const body = `
-    ${publishedGuides.length ? '' : '<div class="draft-banner"><div class="wrap"><strong>No guide is published yet.</strong> This page is hidden from search engines until the first guide is reviewed and published.</div></div>'}
-    <header class="page-hero">
-      <div class="wrap">
-        ${breadcrumb(crumbs)}
-        <div class="mono kicker" style="margin-top:34px">EduCut.ai guides</div>
-        <h1>Guides to AI training and adoption</h1>
-        <p class="lead">Practical guides from EduCut.ai on assessing AI readiness, planning AI training and meeting AI regulation.</p>
-      </div>
-    </header>
-    <section class="page-section alt">
-      <div class="wrap">
-        <div class="guide-cards">${list.map((g) => `
-          <a class="academy-card" href="/guides/${g.slug}/">
-            <span class="mono code">${g.status === 'published' ? `Guide · ${fmtDate(g.dateModified || g.datePublished)}` : 'Draft · pending review'}</span>
-            <h3>${esc(g.title)}</h3>
-            <p>${esc(g.description)}</p>
-            <span class="more">Read the guide →</span>
-          </a>`).join('')}
-        </div>
-      </div>
-    </section>`;
-  return page({
-    path: '/guides/', title: 'AI Training & Adoption Guides' + BRAND,
-    description: 'Practical guides from EduCut.ai on assessing AI readiness, building an AI training plan and preparing teams for AI regulation.',
-    body, crumbs, type: 'CollectionPage', noindex: !publishedGuides.length,
-  });
-}
-
 function aboutPage() {
   const draft = !ABOUT_PUBLISHED;
   const crumbs = [['/', 'Home'], ['/about/', 'About']];
@@ -1234,7 +1125,6 @@ const CONNECT_OFFERS = existsSync(join(ROOT, 'connect', 'site', 'offers.json'))
 
 // Every indexable URL, for sitemap.xml. The 404 page is deliberately absent.
 const PUBLIC_PATHS = ['/', '/academies/', ...academies.map((a) => `/academies/${a.slug}/`), '/ai-learning-paths/', '/educut-connect/', ...CONNECT_OFFERS.map((o) => `/educut-connect/${o.slug}/`), '/contact/',
-  ...(publishedGuides.length ? ['/guides/', ...publishedGuides.map((g) => `/guides/${g.slug}/`)] : []),
   ...(ABOUT_PUBLISHED ? ['/about/'] : []), ...LEGAL_PAGES.map(([k]) => `/${k}/`)];
 
 const ROBOTS = `# EduCut.ai - generated by scripts/build-pages.mjs
@@ -1274,7 +1164,6 @@ const LLMS_TXT = `# EduCut.ai
 - [All academies](${SITE_URL}/academies/): the ${academies.length} academies, a comparison of similar academies and FAQs
 - [AI learning paths](${SITE_URL}/ai-learning-paths/): how the free assessment works and what it can recommend
 - [Contact](${SITE_URL}/contact/): free consultation and catalogue request
-${publishedGuides.map((g) => `- [${g.title}](${SITE_URL}/guides/${g.slug}/): ${g.description}`).join('\n')}
 
 ## Academies
 
@@ -1289,9 +1178,6 @@ for (const a of academies) write(`academies/${a.slug}/index.html`, academyPage(a
 write('ai-learning-paths/index.html', pathsPage());
 write('contact/index.html', contactPage());
 write('404.html', notFoundPage());
-if (existsSync(join(ROOT, 'guides'))) rmSync(join(ROOT, 'guides'), { recursive: true });
-write('guides/index.html', guidesIndexPage());
-for (const g of GUIDES) write(`guides/${g.slug}/index.html`, guidePage(g));
 write('about/index.html', aboutPage());
 for (const k of ['privacy', 'terms']) if (existsSync(join(ROOT, k))) rmSync(join(ROOT, k), { recursive: true });
 for (const [k, v] of LEGAL_PAGES) write(`${k}/index.html`, legalPage(k, v));
