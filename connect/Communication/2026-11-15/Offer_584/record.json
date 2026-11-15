@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Harvard Summer School Program in Seoul",
+    "evidence_url": "https://korea.fas.harvard.edu/harvard-summer-school-program-seoul-undergraduate",
+    "evidence_quote": "Harvard Summer School Program in Seoul"
+  },
+  "institution": {
+    "name": "Harvard Summer School",
+    "website": "https://summer.harvard.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://summer.harvard.edu/study-abroad/seoul-korea/",
+  "source_url": "https://summer.harvard.edu/study-abroad/seoul-korea/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Seoul",
+    "country": "South Korea",
+    "country_code": "KR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Korean studies and language (study abroad)",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "At least 18 years old",
+    "Completed a year of college or be a first-year student, in good academic standing"
+  ],
+  "skills": [],
+  "description_short": "Harvard Summer School's study abroad programme in Seoul runs June 24 to August 19, 2027 at Ewha Womans University, for two semester-long courses of degree credit. The online application opens in early December 2026; deadline January 28, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-28",
+    "timezone": null,
+    "evidence_url": "https://summer.harvard.edu/study-abroad/seoul-korea/",
+    "evidence_quote": "January 28, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Harvard Summer School programme and study-abroad pages (seen in search results): application deadline January 28, 2027; online application opens early December 2026",
+    "Application portal not yet open on the date of this run",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Online application only opens in early December 2026",
+    "Deadline time zone not stated in the results",
+    "Work arrangement assumed onsite (in-person programme/event); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-15T03:09:22.688Z",
+  "last_verified_at": "2026-11-15T03:09:23.367Z",
+  "id": "opp_af41002c077ad49d",
+  "fingerprint": "8b014f1784b12cb7",
+  "content_hash": "sha256:2300812afdd8e4630d6560ca97d5ea17d2a2c1995d492ca2194234482d1c55a8"
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "P@W Summer School 2027",
+    "evidence_url": "https://warwick.ac.uk/fac/sci/statistics/news/patw_summer_school_2027/",
+    "evidence_quote": "P@W Summer School 2027"
+  },
+  "institution": {
+    "name": "University of Warwick, Department of Statistics (Probability at Warwick)",
+    "website": "https://warwick.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://warwick.ac.uk/fac/sci/statistics/news/patw_summer_school_2027/",
+  "source_url": "https://warwick.ac.uk/fac/sci/statistics/news/patw_summer_school_2027/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Coventry",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Probability and statistical mechanics",
+  "seniority": "PhD students and early-career researchers",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Second Probability at Warwick (P@W) Summer School, 'Large Scale Universal Properties of Random Systems', 12-16 July 2027 at the University of Warwick, on large-scale behaviour of statistical mechanics systems, for PhD students and early-career researchers. Registration closes 31 May 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-05-31",
+    "timezone": null,
+    "evidence_url": "https://warwick.ac.uk/fac/sci/statistics/news/patw_summer_school_2027/",
+    "evidence_quote": "31 May 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official University of Warwick P@W Summer School 2027 page (seen in search results) gives the registration close date as 31 May 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Page lists a registration close date; whether selection applies was not stated",
+    "Fees and support not seen; not stated",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T03:02:45.699Z",
+  "last_verified_at": "2026-11-14T03:02:52.270Z",
+  "id": "opp_d179cd9f905e5785",
+  "fingerprint": "18addb00c18c38b8",
+  "content_hash": "sha256:ea41f0f63ccb794e95a0acea2f34bb23465e7f7dd09cf1a2b5ad79451162b680"
+}

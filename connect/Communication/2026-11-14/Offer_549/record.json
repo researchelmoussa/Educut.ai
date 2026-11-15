@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Turku Collegium for Science, Medicine and Technology - Call for Applications 2027",
+    "evidence_url": "https://www.utu.fi/en/research/research-collegia/tcsm/call-for-applications",
+    "evidence_quote": "Turku Collegium for Science, Medicine and Technology - Call for Applications 2027"
+  },
+  "institution": {
+    "name": "University of Turku, Turku Collegium for Science, Medicine and Technology (TCSMT)",
+    "website": "https://www.utu.fi",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.utu.fi/en/research/research-collegia/tcsm/call-for-applications",
+  "source_url": "https://www.utu.fi/en/research/research-collegia/tcsm/call-for-applications",
+  "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+  "location": {
+    "city": "Turku",
+    "country": "Finland",
+    "country_code": "FI"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Science, medicine and technology",
+  "seniority": "Postdoctoral and Collegium researcher",
+  "qualifications": [
+    "Postdoctoral positions: doctoral degree no more than five years old at the deadline",
+    "Collegium researcher positions: doctoral degree three to nine years old (family leave, military service excluded)"
+  ],
+  "skills": [],
+  "description_short": "University of Turku TCSMT 2027 call for postdoctoral and Collegium researcher positions in science, medicine and technology. Open 1 November 2026 to 15 January 2027 (16:00 Finnish time) via the university's electronic form. Evaluation by 19 February; starts 1 September to 1 December 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/Helsinki",
+    "evidence_url": "https://www.utu.fi/en/research/research-collegia/tcsm/call-for-applications",
+    "evidence_quote": "15 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official University of Turku TCSMT page (seen in search results): call open 1 November 2026 to 15 January 2027, 16:00 Finnish time; electronic form is the only accepted route",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Number of positions and employment terms not seen; not stated",
+    "Employment type recorded as full_time is an assumption; not explicitly stated in the results",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T03:06:11.794Z",
+  "last_verified_at": "2026-11-14T03:06:12.365Z",
+  "id": "opp_7e3c9a4efb1c1591",
+  "fingerprint": "fb5231ca5ba64667",
+  "content_hash": "sha256:c208f89a2a194bc5571aa09e1283f9994b4dbf6acc6517a30febefebd1e84eb6"
+}

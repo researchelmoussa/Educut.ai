@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "beVisioneers: The Mercedes-Benz Fellowship",
+    "evidence_url": "https://applications.bevisioneers.world/courses/course/11-bevisioneers-mercedes-benz-fellowship",
+    "evidence_quote": "beVisioneers: The Mercedes-Benz Fellowship"
+  },
+  "institution": {
+    "name": "beVisioneers: The Mercedes-Benz Fellowship",
+    "website": "https://bevisioneers.world",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://applications.bevisioneers.world/",
+  "source_url": "https://applications.bevisioneers.world/courses/course/11-bevisioneers-mercedes-benz-fellowship",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Environmental and sustainability innovation",
+  "seniority": "Young people aged 18-28",
+  "qualifications": [
+    "Aged between 18 and 28 on the application closing date, 31 January 2027",
+    "Recorded interview video is mandatory"
+  ],
+  "skills": [],
+  "description_short": "beVisioneers: The Mercedes-Benz Fellowship is recruiting 250 Fellows for its 2027/28 cohort, which starts in June 2027. Applicants must be 18-28 on 31 January 2027; the online application has three sections and a mandatory interview video. Deadline 31 January 2027, 23:59:59 CET.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": "CET",
+    "evidence_url": "https://applications.bevisioneers.world/courses/course/11-bevisioneers-mercedes-benz-fellowship",
+    "evidence_quote": "31 Jan 2027, 23:59:59 Central European Time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official beVisioneers application portal (seen in search results): Fellowship year 2027/28, deadline 31 Jan 2027, 23:59:59 CET; \"Cohort 5 Applications are open now\"",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Fellowship location/format not stated in the results; country left null",
+    "Some portal pages still show the previous cycle's deadline (25 January 2026)",
+    "Country-of-residence eligibility rules not quoted from the official page"
+  ],
+  "discovered_at": "2026-11-15T03:05:15.391Z",
+  "last_verified_at": "2026-11-15T03:05:15.509Z",
+  "id": "opp_39f9868b31e3f0c8",
+  "fingerprint": "3070ee01c3b4b2d2",
+  "content_hash": "sha256:044adfc9a53f89a5aebeb1b2713094ec34ed24e742c7d9b2edec24a50b4f29e2"
+}

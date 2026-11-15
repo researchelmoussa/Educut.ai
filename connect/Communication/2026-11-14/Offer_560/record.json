@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Inbound Summer Exchange Programme",
+    "evidence_url": "https://www.cityu.edu.hk/csci/global-outreach/student-exchange/summer-exchange-programme/inbound-summer-exchange-programme",
+    "evidence_quote": "Inbound Summer Exchange Programme"
+  },
+  "institution": {
+    "name": "City University of Hong Kong (CityU), College of Science",
+    "website": "https://www.cityu.edu.hk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cityu.edu.hk/csci/global-outreach/student-exchange/summer-exchange-programme/inbound-summer-exchange-programme",
+  "source_url": "https://www.cityu.edu.hk/csci/global-outreach/student-exchange/summer-exchange-programme/inbound-summer-exchange-programme",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "country_code": "HK"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Science",
+  "seniority": "Undergraduate",
+  "qualifications": [
+    "Full-time student at a CityU partner university for at least one academic year",
+    "Nominated by the home (partner) university"
+  ],
+  "skills": [],
+  "description_short": "CityU College of Science summer research exchange, 14 June to 6 August 2027, registered as the 6-credit course CSCI4006 Summer Research Project for Science Students. Open to students of partner universities, who must be nominated. Application deadline 15 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-15",
+    "timezone": null,
+    "evidence_url": "https://www.cityu.edu.hk/csci/global-outreach/student-exchange/summer-exchange-programme/inbound-summer-exchange-programme",
+    "evidence_quote": "15 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CityU College of Science page (seen in search results) lists the application deadline as 15 February 2027",
+    "CityU Exchange Students page gives the Summer Term 2027 application period as 15 Jan - 15 Feb 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Only students of CityU partner universities are eligible; nomination by the home university required",
+    "Fees and support not seen; not stated",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T03:02:45.699Z",
+  "last_verified_at": "2026-11-14T03:02:51.649Z",
+  "id": "opp_d9fadb611b75e83f",
+  "fingerprint": "76c04d23e6c538d8",
+  "content_hash": "sha256:d3cc0639524a7163a5b78ef06bad47ed9ec14ed326746b2a3cf9478427767d2a"
+}

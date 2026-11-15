@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "ICML 2027 Call for Papers",
+    "evidence_url": "https://icml.cc/Conferences/2027/CallForPapers",
+    "evidence_quote": "ICML 2027 Call for Papers"
+  },
+  "institution": {
+    "name": "International Conference on Machine Learning (ICML)",
+    "website": "https://icml.cc",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://icml.cc/Conferences/2027/CallForPapers",
+  "source_url": "https://icml.cc/Conferences/2027/CallForPapers",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Rio de Janeiro",
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Machine learning",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Call for papers for ICML 2027, the 44th International Conference on Machine Learning, at Riocentro, Rio de Janeiro, Brazil, 31 July to 6 August 2027. The submission site opens 8 January 2027; abstracts are due 14 January and full papers 22 January 2027 (AoE).",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-14",
+    "timezone": "AoE (UTC-12)",
+    "evidence_url": "https://icml.cc/Conferences/2027/CallForPapers",
+    "evidence_quote": "Abstract submission deadline: January 14, 2027 11:59 PM AOE"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ICML 2027 Call for Papers (seen in search results): abstract deadline 14 January 2027, full paper deadline 22 January 2027 (AoE), both in the future",
+    "Submission site opens 8 January 2027, so it was not yet live at time of check",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "ICML announced that some submission-process updates would be posted by late November 2026",
+    "Deadline recorded is the abstract deadline; the full paper deadline is 22 January 2027",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T02:58:53.030Z",
+  "last_verified_at": "2026-11-14T02:58:53.665Z",
+  "id": "opp_d93d51fef03e009c",
+  "fingerprint": "f9010bf3427777fb",
+  "content_hash": "sha256:054266815876b23845a0907a9c0cdb903066f73d61568538bc46da301ea7efa2"
+}

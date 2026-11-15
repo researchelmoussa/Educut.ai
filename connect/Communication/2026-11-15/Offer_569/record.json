@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Advanced Imaging in Neuroscience",
+    "evidence_url": "https://cajal-training.org/",
+    "evidence_quote": "Advanced Imaging in Neuroscience"
+  },
+  "institution": {
+    "name": "CAJAL Advanced Neuroscience Training Programme",
+    "website": "https://cajal-training.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cajal-training.org/courses/",
+  "source_url": "https://cajal-training.org/courses/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Bordeaux",
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Neuroscience imaging",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "CAJAL Advanced Neuroscience Training Programme course \"Advanced Imaging in Neuroscience\", 30 March to 16 April 2027 at the Bordeaux School of Neuroscience, France. Applications are due by December 20.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-20",
+    "timezone": null,
+    "evidence_url": "https://cajal-training.org/",
+    "evidence_quote": "Apply by December 20"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CAJAL homepage and courses page (seen in search results): course 30 March - 16 April 2027, \"Apply by December 20\"",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Year of the December 20 deadline not printed; inferred as 2026 because the course starts 30 March 2027",
+    "Course-specific page, fees and eligibility not shown in the results",
+    "Deadline time zone not stated in the results",
+    "Work arrangement assumed onsite (in-person programme/event); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-15T03:05:15.391Z",
+  "last_verified_at": "2026-11-15T03:05:15.874Z",
+  "id": "opp_d4da9e0172ca6d5c",
+  "fingerprint": "564a979846420c7f",
+  "content_hash": "sha256:c0a559108fbc0da85c39b19d7b3584bb506cb33ea65dbcd394ae16823e2e69b5"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Call For Papers: Educational Data Mining 2027",
+    "evidence_url": "https://educationaldatamining.org/edm2027/call-for-papers/",
+    "evidence_quote": "Call For Papers: Educational Data Mining 2027-"
+  },
+  "institution": {
+    "name": "International Educational Data Mining Society (EDM 2027)",
+    "website": "https://educationaldatamining.org/edm2027/",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://educationaldatamining.org/edm2027/call-for-papers/",
+  "source_url": "https://educationaldatamining.org/edm2027/call-for-papers/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Adelaide",
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Educational data mining",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "EDM 2027, the Educational Data Mining conference in Adelaide, Australia, 18-23 July 2027. The JEDM Journal Track accepts de-identified submissions to the journal's 'EDM 2027 Journal Track' section, with cut-offs on 15 November 2026, 15 December 2026 and 15 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": null,
+    "evidence_url": "https://jedm.educationaldatamining.org/index.php/JEDM/announcement",
+    "evidence_quote": "15 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "JEDM announcement dated 28 October 2026 (seen in search results): submissions accepted November 2026 through January 2027, cut-offs 15 November, 15 December 2026 and 15 January 2027",
+    "Official EDM 2027 call for papers page describes the Journal Track",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Main-track and workshop deadlines for EDM 2027 not found in the official pages seen; a third-party listing gives 8 February (abstracts) and 15 February 2027 (full papers), unverified",
+    "The call page contains a stray 'EDM 2026' label next to the 2027 dates",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T03:06:11.794Z",
+  "last_verified_at": "2026-11-14T03:06:11.956Z",
+  "id": "opp_14cfad6ea2910d65",
+  "fingerprint": "0625de8e8d6f5b03",
+  "content_hash": "sha256:bcc3f7de3501c2481cef4d0eedabbcf7e127a84db8e57a7d7b908af9aeb87ba4"
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "CogSci 2027",
+    "evidence_url": "https://cognitivesciencesociety.org/cogsci-2027/",
+    "evidence_quote": "CogSci 2027"
+  },
+  "institution": {
+    "name": "Cognitive Science Society",
+    "website": "https://cognitivesciencesociety.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cognitivesciencesociety.org/submissions/",
+  "source_url": "https://cognitivesciencesociety.org/submissions/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Bilbao",
+    "country": "Spain",
+    "country_code": "ES"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Cognitive science",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Annual conference of the Cognitive Science Society, 28-31 July 2027 at the Euskalduna Bilbao Convention Centre, Spain, themed \"Human Cognition in the Age of AI\". Submissions open 20 November 2026 and close 1 February 2027 (UTC-11); decisions in early April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": "UTC-11",
+    "evidence_url": "https://cognitivesciencesociety.org/submissions/",
+    "evidence_quote": "February 1, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Cognitive Science Society submissions page (seen in search results): submissions open 20 November 2026 and close 1 February 2027 (UTC-11)",
+    "Submission portal not yet open at time of check",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Conference awards page gives a 30 November opening for the abstract and student-grant window, which conflicts with the 20 November opening on the submissions page",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T02:58:53.030Z",
+  "last_verified_at": "2026-11-14T02:58:53.305Z",
+  "id": "opp_f2fcecf3f9a5c86f",
+  "fingerprint": "ae9fd439872d5038",
+  "content_hash": "sha256:539b9b47516475826f8cc1d5a7849729e9e863c0dbdf447b720b4add185e81dc"
+}

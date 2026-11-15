@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "2027 Symposium on VLSI Technology and Circuits",
+    "evidence_url": "https://www.vlsisymposium.org/",
+    "evidence_quote": "2027 Symposium on VLSI Technology and Circuits"
+  },
+  "institution": {
+    "name": "Symposium on VLSI Technology and Circuits",
+    "website": "https://www.vlsisymposium.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.vlsisymposium.org/",
+  "source_url": "https://www.vlsisymposium.org/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Kyoto",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "VLSI technology and circuits",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Call for papers for the 2027 Symposium on VLSI Technology and Circuits, 20-24 June 2027 at Rihga Royal Hotel Kyoto, planned as fully in-person. Three-page papers are submitted through the symposium website by 23:59 JST, January 25, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-25",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.vlsisymposium.org/assets/pdf/VLSI2027_1stCFP.pdf",
+    "evidence_quote": "Paper Submission Deadline: 23:59 JST Monday, January 25, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official symposium website and first call for papers (seen in search results): paper submission deadline January 25, 2027, 23:59 JST",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Work arrangement assumed onsite (in-person programme/event); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-15T03:09:22.688Z",
+  "last_verified_at": "2026-11-15T03:09:22.938Z",
+  "id": "opp_9efff86840c1f50f",
+  "fingerprint": "638dcb38df2b4b2a",
+  "content_hash": "sha256:5e49cb934336139a30e561eadf93adf5faa6ae68c92001d46cec1810e7fb1c16"
+}

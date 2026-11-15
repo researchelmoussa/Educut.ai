@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "ICMAT 2027",
+    "evidence_url": "https://icmat2027.mrs.org.sg/",
+    "evidence_quote": "ICMAT 2027"
+  },
+  "institution": {
+    "name": "Materials Research Society of Singapore",
+    "website": "https://icmat2027.mrs.org.sg",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://icmat2027.mrs.org.sg/call-for-abstract/",
+  "source_url": "https://icmat2027.mrs.org.sg/call-for-abstract/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Singapore",
+    "country": "Singapore",
+    "country_code": "SG"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Materials science and advanced technologies",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Call for abstracts for ICMAT 2027, organised by the Materials Research Society of Singapore, 5-9 July 2027 at Suntec Singapore Convention and Exhibition Centre. Abstracts for one of 39 symposia are submitted through the online portal by 15 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": null,
+    "evidence_url": "https://icmat2027.mrs.org.sg/call-for-abstract/",
+    "evidence_quote": "15 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ICMAT 2027 site (seen in search results): call for abstracts open from 1 September 2026, deadline 15 January 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Notification date differs between pages (15 February vs 1 March 2027)",
+    "Deadline time zone not stated in the results",
+    "Work arrangement assumed onsite (in-person programme/event); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-15T02:58:23.189Z",
+  "last_verified_at": "2026-11-15T02:58:23.942Z",
+  "id": "opp_30aa6e095a05774c",
+  "fingerprint": "55c09f5f8a0973bb",
+  "content_hash": "sha256:6c7986fa53386652dbdc958c3ebf0dbb4999d10e67748675094ecf71abb6fad6"
+}
