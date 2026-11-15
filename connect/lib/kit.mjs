@@ -2,6 +2,7 @@
 // (LinkedIn's own scheduler), for as long as the API publisher has no access token. One folder per day:
 //   index.html   one card per post: date and time, card image, the post text with a copy button
 //   posts.md     the same list as plain text (readable on GitHub)
+//   publer_import.csv  the same posts for Publer's bulk CSV import
 //   cards/       the card images, named NN_<day><Mon>_<HH>h<MM>_Offer_NNN.png in posting order
 import { copyFileSync, existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -36,6 +37,18 @@ export function buildKit(posts, { outDir, root, timeZone = 'Europe/Zurich', titl
     for (const p of ps) md.push(`### ${p.time} · ${p.offer}`, '', `Image: \`cards/${p.image}\``, '', '```', p.text, '```', '');
   }
   writeFileSync(join(outDir, 'posts.md'), md.join('\n'));
+
+  // publer_import.csv: the same posts for Publer's bulk CSV import (dates in the kit's time zone; images
+  // are loaded from the live offer pages).
+  const zoned = (t) => {
+    const d = Object.fromEntries(new Intl.DateTimeFormat('en-CA', { timeZone, year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date(t)).map((x) => [x.type, x.value]));
+    return `${d.year}-${d.month}-${d.day} ${d.hour}:${d.minute}`;
+  };
+  const cell = (v) => `"${String(v ?? '').replace(/"/g, '""')}"`;
+  const csv = [['Date', 'Text', 'Link(s)', 'Media URL(s)', 'Title', 'Label(s)', 'Alt text(s)']]
+    .concat(items.map((p) => [zoned(p.scheduled_at), p.text, '', p.page_url ? `${p.page_url}card.png` : '', '', 'EduCut Connect', p.alt_text]))
+    .map((r) => r.map(cell).join(','));
+  writeFileSync(join(outDir, 'publer_import.csv'), '\ufeff' + csv.join('\r\n') + '\r\n');
 
   const card = (p) => `
       <article class="post" id="${p.offer}">
