@@ -1,5 +1,6 @@
 """Expected hallucination per code-snippet sub-level, 6 methods pooled, for structures A and B.
 
+FDR (expected hallucination) = FP / (TP + FP); also TP, FN for Precision, FNR, TPR
 rate = hallucinated articles / predicted articles over all snippets of the sub-level and all 6 methods
 95% CI = cluster bootstrap over snippets (2000 resamples, seed 0): articles of one snippet move together.
 Usage: python expected_by_subtype.py <snippet_tags.csv> <A data.json> <B data.json> <out.json>
@@ -31,12 +32,16 @@ for name, path in (('A', sys.argv[2]), ('B', sys.argv[3])):
     # per snippet: predicted and hallucinated articles summed over the 6 methods
     P = np.array([sum(len(d['articles'][m][i]) for m in METHODS) for i in range(len(tags))])
     H = np.array([sum(sum(a not in G[i] for a in d['articles'][m][i]) for m in METHODS) for i in range(len(tags))])
+    # gold articles counted once per method (6 x gold), so FN = 6 x gold - TP
+    GD = np.array([len(METHODS) * len(G[i]) for i in range(len(tags))])
+    TP = P - H; FN = GD - TP
     rng = np.random.default_rng(0)
-    res = {'overall': {'pred': int(P.sum()), 'hall': int(H.sum()), 'rate': H.sum() / P.sum()}, 'rows': []}
+    res = {'overall': {'pred': int(P.sum()), 'hall': int(H.sum()), 'tp': int(TP.sum()), 'fn': int(FN.sum()), 'gold': int(GD.sum()), 'rate': H.sum() / P.sum()}, 'rows': []}
     for lvl, sub, f in GROUPS:
         idx = np.array([i for i, t in enumerate(tags) if f(t)])
         p, h = int(P[idx].sum()), int(H[idx].sum())
-        row = {'level': lvl, 'sub': sub, 'n': len(idx), 'answered': int((P[idx] > 0).sum()), 'pred': p, 'hall': h}
+        row = {'level': lvl, 'sub': sub, 'n': len(idx), 'answered': int((P[idx] > 0).sum()), 'pred': p, 'hall': h,
+               'tp': int(TP[idx].sum()), 'fn': int(FN[idx].sum()), 'gold': int(GD[idx].sum())}
         if p:
             k = rng.integers(0, len(idx), (2000, len(idx)))
             r = H[idx][k].sum(1) / np.maximum(P[idx][k].sum(1), 1)
