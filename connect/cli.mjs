@@ -611,8 +611,9 @@ const commands = {
     // spread again over the coming days.
     if (flags.reschedule) for (const p of q.posts) if (p.status === 'SCHEDULED' && Date.parse(p.scheduled_at) < nowD.getTime()) Object.assign(p, { status: 'DRAFT', scheduled_at: null });
     const dl = (p) => (p.deadline ? Date.parse(p.deadline.length === 10 ? `${p.deadline}T23:59:59Z` : p.deadline) : Infinity);
-    // A closed offer would only be skipped by the publisher: free its slot now.
-    for (const p of q.posts) if ((p.status === 'DRAFT' || p.status === 'SCHEDULED') && dl(p) < nowD.getTime()) Object.assign(p, { status: 'SKIPPED', scheduled_at: null, skipped_reason: 'deadline passed' });
+    // A closed offer would only be skipped by the publisher: free its slot now. Closed means closed at the
+    // real current time, not at --now (planning ahead must not drop offers that are still open today).
+    for (const p of q.posts) if ((p.status === 'DRAFT' || p.status === 'SCHEDULED') && dl(p) < Date.now()) Object.assign(p, { status: 'SKIPPED', scheduled_at: null, skipped_reason: 'deadline passed' });
     // Only posts in the current format are timed; older drafts are listed by li-pending to be rewritten.
     // Offers closing within linkedin.urgent_days go first (by deadline), so none is posted after it
     // closes; then the newest offers on the site (the day's new listings before older ones), then the
