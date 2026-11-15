@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Postdoctoral Fellowship",
+    "evidence_url": "https://www.sciencehistory.org/research/fellowships/apply/postdoctoral/",
+    "evidence_quote": "Postdoctoral Fellowship Application"
+  },
+  "institution": {
+    "name": "Science History Institute",
+    "website": "https://www.sciencehistory.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.sciencehistory.org/research/fellowships/apply/",
+  "source_url": "https://www.sciencehistory.org/research/fellowships/apply/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Philadelphia",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "History of science",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "Dissertation defended by the end of July 2027"
+  ],
+  "skills": [],
+  "description_short": "Postdoctoral research fellowships at the Science History Institute for 2027-2028. The application deadline is 15 January 2027, referee letters are due 31 January and decisions are sent by 15 April. Applicants must be on track to defend their dissertation by end of July 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": null,
+    "evidence_url": "https://www.sciencehistory.org/research/fellowships/apply/application-guide/",
+    "evidence_quote": "Application Deadline · January 15"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official How to Apply page (seen in search results) says applications for 2027-2028 will open soon with a January 15 submission deadline",
+    "Application form not confirmed live at time of check",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline year inferred from the How to Apply page's reference to the 2027-2028 cycle; the application guide quote shows only 'January 15'",
+    "Fellowship length conflicts between pages (12 months in residence vs. a continuous four-month period)",
+    "City/country not stated in the results; recorded from the Institute's Philadelphia location",
+    "Work arrangement assumed onsite (in-person programme/position); not explicitly stated"
+  ],
+  "discovered_at": "2026-11-14T02:58:53.030Z",
+  "last_verified_at": "2026-11-14T02:58:54.060Z",
+  "id": "opp_c204ad7f238e3d09",
+  "fingerprint": "49497b457a3471c9",
+  "content_hash": "sha256:b08f5bde79fdb33c5ceea9936a7cae094a2a360fa87f0af46d54945a35facab4"
+}

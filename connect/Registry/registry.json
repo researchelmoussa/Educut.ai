@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-13T03:43:07.506Z",
+  "updated_at": "2026-11-15T02:55:19.824Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -20696,7 +20696,7 @@
       "deadline": "2026-11-12",
       "content_hash": "sha256:eeb6e77e8bfa5eac14819d3c0c9da6fd3ffe699f87bf00a17d3f0023db72ffdd",
       "last_verified_at": "2026-10-29T03:18:40.627Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-29T03:18:48.573Z",
       "history": [
         {
@@ -20740,6 +20740,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-14T02:51:11.330Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-12 passed"
         }
       ],
       "offer_number": 300
@@ -36866,6 +36873,1556 @@
         }
       ],
       "offer_number": 534
+    },
+    "opp_aec78c3501147210": {
+      "id": "opp_aec78c3501147210",
+      "fingerprint": "ada4483e2e441a6d",
+      "title": "Yehuda Elkana Fellowship",
+      "institution": "Central European University (CEU), Yehuda Elkana Center for Teaching, Learning, and Higher Education Research",
+      "city": "Vienna",
+      "country": "Austria",
+      "source_url": "https://elkana.ceu.edu/call-applications-yehuda-elkana-fellowship",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://elkana.ceu.edu/call-applications-yehuda-elkana-fellowship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:a23d0e53a204f76c4f51bcf1449ab1c99b2da7952f1c888dba9966691b4d04d7",
+      "last_verified_at": "2026-11-14T02:58:53.172Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:57.455Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:57.455Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:57.455Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:08.065Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:08.065Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:17.455Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:17.455Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 551
+    },
+    "opp_f2fcecf3f9a5c86f": {
+      "id": "opp_f2fcecf3f9a5c86f",
+      "fingerprint": "ae9fd439872d5038",
+      "title": "CogSci 2027",
+      "institution": "Cognitive Science Society",
+      "city": "Bilbao",
+      "country": "Spain",
+      "source_url": "https://cognitivesciencesociety.org/submissions/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://cognitivesciencesociety.org/submissions/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01",
+      "content_hash": "sha256:539b9b47516475826f8cc1d5a7849729e9e863c0dbdf447b720b4add185e81dc",
+      "last_verified_at": "2026-11-14T02:58:53.305Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:57.609Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:57.609Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:57.609Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:53:50.648Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:53:50.648Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:18.381Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:18.381Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 557
+    },
+    "opp_f6a682486266f348": {
+      "id": "opp_f6a682486266f348",
+      "fingerprint": "97b7e53f6803e383",
+      "title": "Strategy and Statecraft Fellowship",
+      "institution": "Center for Strategic and International Studies (CSIS)",
+      "city": "Washington, D.C.",
+      "country": "United States",
+      "source_url": "https://www.csis.org/programs/strategy-and-statecraft/fellowship",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.csis.org/programs/strategy-and-statecraft/fellowship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-13",
+      "content_hash": "sha256:2a83106e8a0475f816b29ba5d2a27bb62d57504591a3409e811fa9c0e89f0c4d",
+      "last_verified_at": "2026-11-14T02:58:53.427Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:57.755Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:57.755Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:57.755Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:43.612Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:43.612Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:16.068Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:16.068Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 542
+    },
+    "opp_5523fafdc9424503": {
+      "id": "opp_5523fafdc9424503",
+      "fingerprint": "482d4f6781787ca0",
+      "title": "EUSIPCO 2027",
+      "institution": "EUSIPCO 2027 (European Signal Processing Conference, EURASIP)",
+      "city": "Darmstadt",
+      "country": "Germany",
+      "source_url": "https://eusipco2027.de/conference-papers/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://eusipco2027.de/conference-papers/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-06",
+      "content_hash": "sha256:479865f364220b502d826543a1b147513810e69c9095da42eab3bf48cbe3092c",
+      "last_verified_at": "2026-11-14T02:58:53.549Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:57.910Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:57.910Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:57.910Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:05.819Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:05.819Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:18.541Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:18.541Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 558
+    },
+    "opp_d93d51fef03e009c": {
+      "id": "opp_d93d51fef03e009c",
+      "fingerprint": "f9010bf3427777fb",
+      "title": "ICML 2027 Call for Papers",
+      "institution": "International Conference on Machine Learning (ICML)",
+      "city": "Rio de Janeiro",
+      "country": "Brazil",
+      "source_url": "https://icml.cc/Conferences/2027/CallForPapers",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://icml.cc/Conferences/2027/CallForPapers",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-14",
+      "content_hash": "sha256:054266815876b23845a0907a9c0cdb903066f73d61568538bc46da301ea7efa2",
+      "last_verified_at": "2026-11-14T02:58:53.665Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:58.065Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:58.065Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:58.065Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:44.749Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:44.749Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:16.684Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:16.684Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 546
+    },
+    "opp_d03614aa88c0725a": {
+      "id": "opp_d03614aa88c0725a",
+      "fingerprint": "b61bfd855660238f",
+      "title": "Fellowships: Postdoctoral",
+      "institution": "The Library Company of Philadelphia",
+      "city": "Philadelphia",
+      "country": "United States",
+      "source_url": "https://librarycompany.org/academic-programs/fellowships-2-2/postdoc-2/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://librarycompany.org/academic-programs/fellowships-2-2/postdoc-2/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-17",
+      "content_hash": "sha256:55e77bf8be7f21cf3d64648e9f92eb2f71f29cb2d8f64c6831b4d29716d4e24b",
+      "last_verified_at": "2026-11-14T02:58:53.784Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:58.227Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:58.227Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:58.227Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:53:43.443Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:53:43.443Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:17.914Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:17.915Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 554
+    },
+    "opp_50c3eb943688d716": {
+      "id": "opp_50c3eb943688d716",
+      "fingerprint": "3a1f1368d358a198",
+      "title": "Newton International Fellowships",
+      "institution": "The Royal Society",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://royalsociety.org/grants/newton-international/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://royalsociety.org/grants/newton-international/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-10",
+      "content_hash": "sha256:220a849531034bb60dd60ab62dc5ef9f9cc3e73e4dff043bc78aaa3a554a4a03",
+      "last_verified_at": "2026-11-14T02:58:53.943Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:58.408Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:58.408Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:58.408Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:21.887Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:21.887Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:19.336Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:19.337Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 563
+    },
+    "opp_c204ad7f238e3d09": {
+      "id": "opp_c204ad7f238e3d09",
+      "fingerprint": "49497b457a3471c9",
+      "title": "Postdoctoral Fellowship",
+      "institution": "Science History Institute",
+      "city": "Philadelphia",
+      "country": "United States",
+      "source_url": "https://www.sciencehistory.org/research/fellowships/apply/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.sciencehistory.org/research/fellowships/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:b08f5bde79fdb33c5ceea9936a7cae094a2a360fa87f0af46d54945a35facab4",
+      "last_verified_at": "2026-11-14T02:58:54.060Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:58.566Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:58.566Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:58.566Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:53:42.895Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:53:42.895Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:17.605Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:17.605Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 552
+    },
+    "opp_f0ce2139e9c813be": {
+      "id": "opp_f0ce2139e9c813be",
+      "fingerprint": "2533ff6f57d056e3",
+      "title": "Fellows-to-Faculty - 2027 Request for Applications",
+      "institution": "Simons Foundation",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.simonsfoundation.org/funding/fellows-to-faculty-2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.simonsfoundation.org/funding/fellows-to-faculty-2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-13",
+      "content_hash": "sha256:de45ba7d36beb233e7c11e91d0e6c2efd548ac0567c1328b7f23caf7fdd8d5eb",
+      "last_verified_at": "2026-11-14T02:58:54.200Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:58.719Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:58.719Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:58.719Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:44.479Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:44.479Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:16.542Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:16.543Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 545
+    },
+    "opp_8af0cb40a8f08454": {
+      "id": "opp_8af0cb40a8f08454",
+      "fingerprint": "71df90724e34db1d",
+      "title": "UCL EPSRC Postdoctoral Pathway Fellowships",
+      "institution": "University College London (UCL)",
+      "city": "London",
+      "country": "United Kingdom",
+      "source_url": "https://www.ucl.ac.uk/epsrc-doctoral-training/prospective-students/ucl-epsrc-postdoctoral-pathway-fellowships-formerly-doctoral-prize-fellowships",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://www.ucl.ac.uk/epsrc-doctoral-training/prospective-students/ucl-epsrc-postdoctoral-pathway-fellowships-formerly-doctoral-prize-fellowships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:ff2bd5db5126e2d1a1de9887e2ce7f268f2a0a8fd651470283b8b66d2ee3382a",
+      "last_verified_at": "2026-11-14T02:58:54.356Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:58.887Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:58.887Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:58.888Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:07.801Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:07.801Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:17.313Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:17.313Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 550
+    },
+    "opp_5dddbc3d4a9f31db": {
+      "id": "opp_5dddbc3d4a9f31db",
+      "fingerprint": "45cd5aef85fbab7f",
+      "title": "UCL EPSRC Doctoral Landscape Award (UELA) Studentships",
+      "institution": "University College London (UCL)",
+      "city": "London",
+      "country": "United Kingdom",
+      "source_url": "https://www.ucl.ac.uk/study/doctoral-school/funding/epsrc-doctoral-funding/epsrc-prospective-doctoral-students/ucl-epsrc-doctoral-landscape-award-uela-studentships",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.ucl.ac.uk/study/doctoral-school/funding/epsrc-doctoral-funding/epsrc-prospective-doctoral-students/ucl-epsrc-doctoral-landscape-award-uela-studentships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08",
+      "content_hash": "sha256:4f49a21c64c893c377b13f70d6b909dd1177c61ac3bacab06c4e3f0ff109de91",
+      "last_verified_at": "2026-11-14T02:58:54.523Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:59.039Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:59.039Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:59.039Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:44.173Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:44.173Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:16.369Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:16.369Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 544
+    },
+    "opp_7e8fe144d290461f": {
+      "id": "opp_7e8fe144d290461f",
+      "fingerprint": "5b1e79eb7b7eaa03",
+      "title": "Vulcanus in Japan - A training programme for students in engineering and other scientific fields",
+      "institution": "EU-Japan Centre for Industrial Cooperation",
+      "city": null,
+      "country": "Japan",
+      "source_url": "https://www.eu-japan.eu/events/vulcanus-japan",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.eu-japan.eu/events/vulcanus-japan",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-20",
+      "content_hash": "sha256:cbba9b10d9ed7077c38a066bcece1ca6857fbccd403ce099fc4a9b6665843cb6",
+      "last_verified_at": "2026-11-14T02:58:54.648Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T02:58:59.211Z",
+      "history": [
+        {
+          "at": "2026-11-14T02:58:59.211Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T02:58:59.211Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:53:43.725Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:53:43.725Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:18.064Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:18.065Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 555
+    },
+    "opp_dcc4b95b9e70a447": {
+      "id": "opp_dcc4b95b9e70a447",
+      "fingerprint": "0332ad03db5d878a",
+      "title": "Technical Papers - SIGGRAPH 2027",
+      "institution": "ACM SIGGRAPH (SIGGRAPH 2027)",
+      "city": "Anaheim",
+      "country": "United States",
+      "source_url": "https://s2027.siggraph.org/program/technical-papers/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://s2027.siggraph.org/program/technical-papers/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-21",
+      "content_hash": "sha256:f5c7134388f9e97cd8b0eae1a74c228a2753c2670a35d2e168940b905ff81524",
+      "last_verified_at": "2026-11-14T03:02:50.446Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:02:50.600Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:02:50.600Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:02:50.601Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:53:43.992Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:53:43.992Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:18.220Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:18.220Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 556
+    },
+    "opp_079805ec49b90c5a": {
+      "id": "opp_079805ec49b90c5a",
+      "fingerprint": "2aaf42108d84788c",
+      "title": "Boulder School 2027: Machine Learning and Condensed Matter",
+      "institution": "Boulder School for Condensed Matter and Materials Physics, University of Colorado Boulder",
+      "city": "Boulder",
+      "country": "United States",
+      "source_url": "https://www.colorado.edu/conference/bss/2027/boulder-school-2027",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.colorado.edu/conference/bss/2027/boulder-school-2027",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:2cc73f6a8be2527769c4086e1d7d943dcdd014e6cecff806b0355efbe0c54656",
+      "last_verified_at": "2026-11-14T03:02:50.754Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:02:50.918Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:02:50.918Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:02:50.919Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:07.001Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:07.001Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:16.850Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:16.850Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 547
+    },
+    "opp_f16d9e4ed398cb6a": {
+      "id": "opp_f16d9e4ed398cb6a",
+      "fingerprint": "0681f768f4d936c6",
+      "title": "CFP: Recent Advances in Natural Language Processing (RANLP'27)",
+      "institution": "RANLP 2027 (Recent Advances in Natural Language Processing)",
+      "city": "Varna",
+      "country": "Bulgaria",
+      "source_url": "https://ranlp.org/2027/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://ranlp.org/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-25",
+      "content_hash": "sha256:ac1448ccd33855bc50b8ceab281718f5e501bac08c3a0e8af8fec56b82e2e239",
+      "last_verified_at": "2026-11-14T03:02:51.066Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:02:51.206Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:02:51.206Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:02:51.206Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:22.214Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:22.214Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:19.493Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:19.493Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 564
+    },
+    "opp_d9fadb611b75e83f": {
+      "id": "opp_d9fadb611b75e83f",
+      "fingerprint": "76c04d23e6c538d8",
+      "title": "Inbound Summer Exchange Programme",
+      "institution": "City University of Hong Kong (CityU), College of Science",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "source_url": "https://www.cityu.edu.hk/csci/global-outreach/student-exchange/summer-exchange-programme/inbound-summer-exchange-programme",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.cityu.edu.hk/csci/global-outreach/student-exchange/summer-exchange-programme/inbound-summer-exchange-programme",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-15",
+      "content_hash": "sha256:d3cc0639524a7163a5b78ef06bad47ed9ec14ed326746b2a3cf9478427767d2a",
+      "last_verified_at": "2026-11-14T03:02:51.649Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:02:51.803Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:02:51.803Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:02:51.803Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:53:51.487Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:53:51.487Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:18.852Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:18.852Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 560
+    },
+    "opp_b22cd5cd805733ba": {
+      "id": "opp_b22cd5cd805733ba",
+      "fingerprint": "3ba68ac5f6ea0476",
+      "title": "VIASM-IAMP Summer School 2027 on Probability and Mathematical Physics",
+      "institution": "Vietnam Institute for Advanced Study in Mathematics (VIASM)",
+      "city": "Hanoi",
+      "country": "Vietnam",
+      "source_url": "https://viasm.edu.vn/en/hdkh/VIASM-IAMP-PMP-27",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://viasm.edu.vn/en/hdkh/VIASM-IAMP-PMP-27",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-07-01",
+      "content_hash": "sha256:b7a2ae69cfef66085c0680c8d118551fcbcad772c51c587e926d454ffd5d76be",
+      "last_verified_at": "2026-11-14T03:02:51.960Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:02:52.112Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:02:52.112Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:02:52.112Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:22.856Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:22.857Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:19.823Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:19.824Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 566
+    },
+    "opp_d179cd9f905e5785": {
+      "id": "opp_d179cd9f905e5785",
+      "fingerprint": "18addb00c18c38b8",
+      "title": "P@W Summer School 2027",
+      "institution": "University of Warwick, Department of Statistics (Probability at Warwick)",
+      "city": "Coventry",
+      "country": "United Kingdom",
+      "source_url": "https://warwick.ac.uk/fac/sci/statistics/news/patw_summer_school_2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://warwick.ac.uk/fac/sci/statistics/news/patw_summer_school_2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-31",
+      "content_hash": "sha256:ea41f0f63ccb794e95a0acea2f34bb23465e7f7dd09cf1a2b5ad79451162b680",
+      "last_verified_at": "2026-11-14T03:02:52.270Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:02:52.429Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:02:52.429Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:02:52.429Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:22.523Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:22.524Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:19.649Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:19.649Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 565
+    },
+    "opp_ac8d6e68e7ed5541": {
+      "id": "opp_ac8d6e68e7ed5541",
+      "fingerprint": "5efd008c59e1a12b",
+      "title": "CEGA Fellowship Program: 2027-2028 Request for Applications",
+      "institution": "Center for Effective Global Action (CEGA), University of California, Berkeley",
+      "city": "Berkeley",
+      "country": "United States",
+      "source_url": "https://cega.berkeley.edu/article/cega-fellowship-program-2027-2028-request-for-applications/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://cega.berkeley.edu/article/cega-fellowship-program-2027-2028-request-for-applications/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-17",
+      "content_hash": "sha256:f52a950044f1f9f69c0bd8257c7274ebf89973b7a5fa24aef2e6e30a0a293923",
+      "last_verified_at": "2026-11-14T03:02:52.600Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:02:52.737Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:02:52.737Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:02:52.737Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:53:43.172Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:53:43.173Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:17.753Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:17.753Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 553
+    },
+    "opp_0bf6d2731ffda355": {
+      "id": "opp_0bf6d2731ffda355",
+      "fingerprint": "b6c79613adf14010",
+      "title": "The Geometry of Singular Sets",
+      "institution": "Institute for Advanced Study (IAS / South America), with Universidad de Buenos Aires",
+      "city": "Buenos Aires",
+      "country": "Argentina",
+      "source_url": "https://www.ias.edu/southamerica/geometry-singular-sets",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.ias.edu/southamerica/geometry-singular-sets",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-15",
+      "content_hash": "sha256:0b0bc295af7a7b51286fd999eef35a2290094b8abe2c313f61b82c0270042bcf",
+      "last_verified_at": "2026-11-14T03:06:12.721Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:06:17.377Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:06:17.377Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:06:17.377Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:06.083Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:06.083Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:18.692Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:18.692Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 559
+    },
+    "opp_f02a2b9bd7551324": {
+      "id": "opp_f02a2b9bd7551324",
+      "fingerprint": "2f4c128982aab536",
+      "title": "Algebraic and Enumerative Combinatorics",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées) with Makerere University",
+      "city": "Kampala",
+      "country": "Uganda",
+      "source_url": "https://cimpa.info/en/ecoles/algebraic-and-enumerative-combinatorics",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://cimpa.info/en/ecoles/algebraic-and-enumerative-combinatorics",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-05",
+      "content_hash": "sha256:43b60385ff5c2f42ee252284c19e7d28730fea90c1cbd5176d1ecdbb2f1be6c2",
+      "last_verified_at": "2026-11-14T03:06:12.900Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:06:17.531Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:06:17.531Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:06:17.532Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:21.566Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:21.567Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:19.181Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:19.181Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 562
+    },
+    "opp_14cfad6ea2910d65": {
+      "id": "opp_14cfad6ea2910d65",
+      "fingerprint": "0625de8e8d6f5b03",
+      "title": "Call For Papers: Educational Data Mining 2027",
+      "institution": "International Educational Data Mining Society (EDM 2027)",
+      "city": "Adelaide",
+      "country": "Australia",
+      "source_url": "https://educationaldatamining.org/edm2027/call-for-papers/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://educationaldatamining.org/edm2027/call-for-papers/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:bcc3f7de3501c2481cef4d0eedabbcf7e127a84db8e57a7d7b908af9aeb87ba4",
+      "last_verified_at": "2026-11-14T03:06:11.956Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:06:17.722Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:06:17.722Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:06:17.722Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:07.276Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:07.276Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:16.996Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:16.996Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 548
+    },
+    "opp_b486664f37a14626": {
+      "id": "opp_b486664f37a14626",
+      "fingerprint": "253bd0a91d7bce00",
+      "title": "EUNIS 2027 annual congress",
+      "institution": "EUNIS (European University Information Systems), hosted by Riga Stradins University",
+      "city": "Riga",
+      "country": "Latvia",
+      "source_url": "https://easychair.org/cfp/EUNIS2027",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://easychair.org/cfp/EUNIS2027",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-22",
+      "content_hash": "sha256:ffbec00d1bc6b11a4e5fbbc3bfd2d8eae40f17b9919fe1175d5b07c070e6351a",
+      "last_verified_at": "2026-11-14T03:06:12.177Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:06:17.881Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:06:17.881Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:06:17.881Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:06.346Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:06.346Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:19.006Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:19.006Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 561
+    },
+    "opp_7e3c9a4efb1c1591": {
+      "id": "opp_7e3c9a4efb1c1591",
+      "fingerprint": "fb5231ca5ba64667",
+      "title": "Turku Collegium for Science, Medicine and Technology - Call for Applications 2027",
+      "institution": "University of Turku, Turku Collegium for Science, Medicine and Technology (TCSMT)",
+      "city": "Turku",
+      "country": "Finland",
+      "source_url": "https://www.utu.fi/en/research/research-collegia/tcsm/call-for-applications",
+      "source_list_url": "https://mlscientist.com/category/postdoc-positions/",
+      "application_url": "https://www.utu.fi/en/research/research-collegia/tcsm/call-for-applications",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:c208f89a2a194bc5571aa09e1283f9994b4dbf6acc6517a30febefebd1e84eb6",
+      "last_verified_at": "2026-11-14T03:06:12.365Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:06:18.070Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:06:18.070Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:06:18.072Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:07.538Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:07.538Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:17.165Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:17.166Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 549
+    },
+    "opp_6174cbb66cd27347": {
+      "id": "opp_6174cbb66cd27347",
+      "fingerprint": "34ba75a4c8afd146",
+      "title": "CEPE 2027 Call for Papers",
+      "institution": "CEPE 2027 (Computer Ethics - Philosophical Enquiry), University of Turku",
+      "city": "Turku",
+      "country": "Finland",
+      "source_url": "https://sites.utu.fi/cepe2027/call-for-papers/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://sites.utu.fi/cepe2027/call-for-papers/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:bfee212b52f5901dee2efed3df2bfd9049b57e741461624f7214e026d07cb191",
+      "last_verified_at": "2026-11-14T03:06:12.544Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-14T03:06:18.237Z",
+      "history": [
+        {
+          "at": "2026-11-14T03:06:18.237Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-14T03:06:18.237Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-15T02:54:43.886Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-15T02:54:43.887Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-15T02:55:16.222Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-15T02:55:16.222Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 543
     }
   },
   "seen_urls": {
@@ -37666,7 +39223,32 @@
     "https://uni-tuebingen.de/international/studierende-aus-dem-ausland/virtuelle-und-kurzzeit-programme/international-european-studies/winter-school": "opp_556a99454617917b",
     "https://uio.no/english/about/vacancies/last-published.html": "opp_3d5cdc5c6a220e52",
     "https://jobbnorge.no/en/available-jobs/job/307984/phd-research-fellow-in-political-science-norway-and-the-eu": "opp_3d5cdc5c6a220e52",
-    "https://rhse.temertymedicine.utoronto.ca/research-excellence-postdoctoral-fellows-program": "opp_444d5dc1b1a0e068"
+    "https://rhse.temertymedicine.utoronto.ca/research-excellence-postdoctoral-fellows-program": "opp_444d5dc1b1a0e068",
+    "https://elkana.ceu.edu/call-applications-yehuda-elkana-fellowship": "opp_aec78c3501147210",
+    "https://cognitivesciencesociety.org/submissions": "opp_f2fcecf3f9a5c86f",
+    "https://csis.org/programs/strategy-and-statecraft/fellowship": "opp_f6a682486266f348",
+    "https://eusipco2027.de/conference-papers": "opp_5523fafdc9424503",
+    "https://icml.cc/Conferences/2027/CallForPapers": "opp_d93d51fef03e009c",
+    "https://librarycompany.org/academic-programs/fellowships-2-2/postdoc-2": "opp_d03614aa88c0725a",
+    "https://royalsociety.org/grants/newton-international": "opp_50c3eb943688d716",
+    "https://sciencehistory.org/research/fellowships/apply": "opp_c204ad7f238e3d09",
+    "https://simonsfoundation.org/funding/fellows-to-faculty-2027": "opp_f0ce2139e9c813be",
+    "https://ucl.ac.uk/epsrc-doctoral-training/prospective-students/ucl-epsrc-postdoctoral-pathway-fellowships-formerly-doctoral-prize-fellowships": "opp_8af0cb40a8f08454",
+    "https://ucl.ac.uk/study/doctoral-school/funding/epsrc-doctoral-funding/epsrc-prospective-doctoral-students/ucl-epsrc-doctoral-landscape-award-uela-studentships": "opp_5dddbc3d4a9f31db",
+    "https://eu-japan.eu/events/vulcanus-japan": "opp_7e8fe144d290461f",
+    "https://s2027.siggraph.org/program/technical-papers": "opp_dcc4b95b9e70a447",
+    "https://colorado.edu/conference/bss/2027/boulder-school-2027": "opp_079805ec49b90c5a",
+    "https://ranlp.org/2027": "opp_f16d9e4ed398cb6a",
+    "https://cityu.edu.hk/csci/global-outreach/student-exchange/summer-exchange-programme/inbound-summer-exchange-programme": "opp_d9fadb611b75e83f",
+    "https://viasm.edu.vn/en/hdkh/VIASM-IAMP-PMP-27": "opp_b22cd5cd805733ba",
+    "https://warwick.ac.uk/fac/sci/statistics/news/patw_summer_school_2027": "opp_d179cd9f905e5785",
+    "https://cega.berkeley.edu/article/cega-fellowship-program-2027-2028-request-for-applications": "opp_ac8d6e68e7ed5541",
+    "https://ias.edu/southamerica/geometry-singular-sets": "opp_0bf6d2731ffda355",
+    "https://cimpa.info/en/ecoles/algebraic-and-enumerative-combinatorics": "opp_f02a2b9bd7551324",
+    "https://educationaldatamining.org/edm2027/call-for-papers": "opp_14cfad6ea2910d65",
+    "https://easychair.org/cfp/EUNIS2027": "opp_b486664f37a14626",
+    "https://utu.fi/en/research/research-collegia/tcsm/call-for-applications": "opp_7e3c9a4efb1c1591",
+    "https://sites.utu.fi/cepe2027/call-for-papers": "opp_6174cbb66cd27347"
   },
-  "last_offer_number": 541
+  "last_offer_number": 566
 }

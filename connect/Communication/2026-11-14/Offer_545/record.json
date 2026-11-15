@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Fellows-to-Faculty - 2027 Request for Applications",
+    "evidence_url": "https://www.simonsfoundation.org/funding/fellows-to-faculty-2027/",
+    "evidence_quote": "Fellows-to-Faculty - 2027 Request for Applications"
+  },
+  "institution": {
+    "name": "Simons Foundation",
+    "website": "https://www.simonsfoundation.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.simonsfoundation.org/funding/fellows-to-faculty-2027/",
+  "source_url": "https://www.simonsfoundation.org/funding/fellows-to-faculty-2027/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Autism research and neuroscience",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "Ph.D. and/or M.D. scientists in mentored research training positions who will seek tenure-track research faculty positions during the upcoming academic job cycle"
+  ],
+  "skills": [],
+  "description_short": "Simons Foundation Fellows-to-Faculty 2027 request for applications, for Ph.D./M.D. scientists in mentored training who will seek tenure-track faculty positions in the upcoming job cycle. Applications via the Simons Award Manager close 13 January 2027 at noon Eastern; awards start 1 September 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-13",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.simonsfoundation.org/funding/fellows-to-faculty-2027/",
+    "evidence_quote": "January 13, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Simons Foundation news item: 'Applications Open for 2027 Fellows-to-Faculty Award Program' (opened 13 October 2026)",
+    "Deadline 13 January 2027 is in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Location of the award (host institution country) not stated in the results; location left null",
+    "The Foundation says this is the final request for applications for the SCPAB Fellows-to-Faculty program",
+    "Field label taken from the 'Autism & Neuroscience: Fellows-to-Faculty' page title; exact scientific scope not seen"
+  ],
+  "discovered_at": "2026-11-14T02:58:53.030Z",
+  "last_verified_at": "2026-11-14T02:58:54.200Z",
+  "id": "opp_f0ce2139e9c813be",
+  "fingerprint": "2533ff6f57d056e3",
+  "content_hash": "sha256:de45ba7d36beb233e7c11e91d0e6c2efd548ac0567c1328b7f23caf7fdd8d5eb"
+}
