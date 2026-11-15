@@ -107,6 +107,9 @@ const commands = {
                                       Posting kit for posting by hand: every scheduled post not yet in a kit
                                       (index.html + posts.md + numbered card images) in connect/linkedin/kits/<date>/;
                                       --rebuild remakes that date's kit
+  li-topkit --start <ISO> [--count 100] [--days 15] [--plan]
+                                      Kit of the N offers closing soonest, over D days from --start, each still
+                                      open when posted (posts.md, cards, publer_import.csv); --plan only reports
   li-done <Offer_NNN…> [--url u]      Mark posts as published by hand
   li-publish-due [--dry-run] [--max n]
                                       Publish scheduled posts that are due (LinkedIn Posts API; GitHub Action)
@@ -654,6 +657,58 @@ const commands = {
     saveQueue(q, root);
     log('li.kit', { date, posts: r.posts });
     out({ date, ...r });
+  },
+
+  // Top-N kit: the N offers on the site closing soonest, posted over D days from --start, closest deadline
+  // first; an offer that would close before its slot is skipped for the next one, so every offer is still
+  // open when posted. Offers already timed before --start (the previous kit) count as posted.
+  // --plan prints the plan and the offers that still need a post (li-queue) without changing anything.
+  'li-topkit'() {
+    const root = flags.site ? resolve(flags.site) : undefined;
+    const L = config.linkedin;
+    const start = Date.parse(typeof flags.start === 'string' ? flags.start : fail('li-topkit --start <ISO time> [--count 100] [--days 15] [--plan]'));
+    const count = Number(flags.count ?? 100);
+    const days = Number(flags.days ?? 15);
+    const dl = (o) => Date.parse(o.deadline.length === 10 ? `${o.deadline}T23:59:59Z` : o.deadline);
+    const q = loadQueue(root);
+    const done = new Set(q.posts.filter((p) => p.status === 'POSTED' || (p.status === 'SCHEDULED' && Date.parse(p.scheduled_at) < start)).map((p) => p.opportunity_id));
+    const cand = loadOffers(root).offers.filter((o) => !o.preview && o.deadline && !done.has(o.opportunity_id) && dl(o) > Date.now()).sort((a, b) => dl(a) - dl(b));
+    const slots = planSlots(count, { now: new Date(start - L.lead_minutes * 60e3), leadMinutes: L.lead_minutes, minGapMinutes: L.min_gap_minutes, activeHours: L.active_hours, timeZone: L.time_zone, maxPerDay: Math.ceil(count / days) }).map(Date.parse);
+    if (slots.length) slots[0] = Math.min(slots[0], start);
+    const plan = [];
+    let i = 0;
+    for (const t of slots) {
+      while (i < cand.length && dl(cand[i]) <= t + 3600e3) i++;
+      if (i >= cand.length) break;
+      plan.push({ offer: cand[i].offer, opportunity_id: cand[i].opportunity_id, at: new Date(t).toISOString(), deadline: cand[i].deadline });
+      i++;
+    }
+    const posts = new Map(q.posts.filter((p) => p.format === POST_FORMAT && p.status !== 'POSTED').map((p) => [p.opportunity_id, p]));
+    const need = plan.filter((x) => !posts.has(x.opportunity_id)).map((x) => x.offer);
+    const perDay = {};
+    for (const x of plan) perDay[localDay(Date.parse(x.at), L.time_zone)] = (perDay[localDay(Date.parse(x.at), L.time_zone)] ?? 0) + 1;
+    const summary = { planned: plan.length, first: plan[0]?.at ?? null, last: plan.at(-1)?.at ?? null, per_day: perDay, need_posts: need };
+    if (flags.plan) return out(summary);
+    if (need.length) {
+      out({ ok: false, ...summary, note: 'write these posts with li-queue first' });
+      process.exitCode = 3;
+      return;
+    }
+    // Free every slot from --start on, then time the plan.
+    for (const p of q.posts) if (p.format === POST_FORMAT && p.status === 'SCHEDULED' && Date.parse(p.scheduled_at) >= start) Object.assign(p, { status: 'DRAFT', scheduled_at: null, kit: undefined });
+    for (const x of plan) {
+      const p = posts.get(x.opportunity_id);
+      Object.assign(p, { status: 'SCHEDULED', scheduled_at: x.at, kit: undefined });
+      delete p.skipped_reason;
+    }
+    const date = typeof flags.date === 'string' ? flags.date : localDay(start, L.time_zone);
+    const outDir = join(root ?? REPO_DIR, 'connect', 'linkedin', 'kits', date);
+    const kitPosts = plan.map((x) => posts.get(x.opportunity_id));
+    const r = buildKit(kitPosts, { outDir, root, timeZone: L.time_zone, title: `EduCut Connect posting kit, ${date}` });
+    for (const p of kitPosts) p.kit = date;
+    saveQueue(q, root);
+    log('li.topkit', { date, posts: r.posts });
+    out({ ok: true, ...summary, kit: outDir, csv: join(outDir, 'publer_import.csv'), missing_images: r.missing_images });
   },
 
   'li-done'() {
