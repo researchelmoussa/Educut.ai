@@ -1,12 +1,12 @@
-# EduCut Connect posting kit, 2026-11-17
+# EduCut Connect posting kit, 2026-11-15
 
-100 posts, times in Europe/Zurich. Attach the image from `cards/`, paste the text, schedule at the time shown.
+89 posts, times in Europe/Zurich. Attach the image from `cards/`, paste the text, schedule at the time shown.
 
-## Tuesday 17 Nov 2026
+## Monday 16 Nov 2026
 
-### 08:00 · Offer_321
+### 21:00 · Offer_321
 
-Image: `cards/01_17Nov_08h00_Offer_321.png`
+Image: `cards/01_16Nov_21h00_Offer_321.png`
 
 ```
 🎓🇫🇷 Call for Papers at the Conference on Causal Learning and Reasoning, France!
@@ -24,9 +24,11 @@ Know a researcher working on causal inference or machine learning? Share this op
 #CallForPapers #CLeaR2027 #CausalInference #MachineLearning #France #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_155
+## Tuesday 17 Nov 2026
 
-Image: `cards/02_17Nov_10h15_Offer_155.png`
+### 08:00 · Offer_155
+
+Image: `cards/02_17Nov_08h00_Offer_155.png`
 
 ```
 🎓🇯🇵 Master's Program in Information Science and Technology at the University of Tokyo, Japan!
@@ -44,9 +46,9 @@ Know someone looking for a computer science Master's in Tokyo? Share this opport
 #MastersDegree #UniversityOfTokyo #ComputerScience #InformationScience #StudyInJapan #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_181
+### 10:15 · Offer_181
 
-Image: `cards/03_17Nov_12h15_Offer_181.png`
+Image: `cards/03_17Nov_10h15_Offer_181.png`
 
 ```
 🎓🇧🇪 Call for Papers at ESANN 2027 European Symposium on Neural Networks, Belgium!
@@ -64,9 +66,9 @@ Know a researcher working on neural networks or machine learning who should subm
 #CallForPapers #ESANN #NeuralNetworks #MachineLearning #Belgium #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_214
+### 12:15 · Offer_214
 
-Image: `cards/04_17Nov_14h30_Offer_214.png`
+Image: `cards/04_17Nov_12h15_Offer_214.png`
 
 ```
 🎓🇧🇷 Master's in Computing at Universidade Federal do Rio Grande do Sul, Brazil!
@@ -84,9 +86,9 @@ Know a computer science graduate looking for a master's in Brazil? Share this op
 #MastersDegree #UFRGS #ComputerScience #GraduateStudy #Brazil #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_260
+### 14:30 · Offer_260
 
-Image: `cards/05_17Nov_16h45_Offer_260.png`
+Image: `cards/05_17Nov_14h30_Offer_260.png`
 
 ```
 🎓🇬🇧 Career Development Fellowship at The Royal Society, UK!
@@ -105,9 +107,9 @@ Know an early-career researcher of Black heritage building a science career in t
 #ResearchFellowship #RoyalSociety #EarlyCareerResearchers #Science #UK #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_051
+### 16:45 · Offer_051
 
-Image: `cards/06_17Nov_18h45_Offer_051.png`
+Image: `cards/06_17Nov_16h45_Offer_051.png`
 
 ```
 🎓🇨🇦 Postdoctoral Fellowships in Men's Health Research at The University of British Columbia, Canada!
@@ -125,9 +127,9 @@ Know an early-career researcher interested in men's health? Share this opportuni
 #PostdoctoralFellowship #UBC #MensHealth #HealthResearch #Canada #EduCutConnect #EduCutAI
 ```
 
-### 21:00 · Offer_275
+### 18:45 · Offer_275
 
-Image: `cards/07_17Nov_21h00_Offer_275.png`
+Image: `cards/07_17Nov_18h45_Offer_275.png`
 
 ```
 🎓🇶🇦 Journalism Fellowship at United Nations UN-OHRLLS, Qatar!
@@ -146,11 +148,9 @@ Know a journalist from a Least Developed Country covering sustainable developmen
 #JournalismFellowship #UnitedNations #SustainableDevelopment #Journalism #Qatar #EduCutConnect #EduCutAI
 ```
 
-## Wednesday 18 Nov 2026
+### 21:00 · Offer_167
 
-### 08:00 · Offer_167
-
-Image: `cards/08_18Nov_08h00_Offer_167.png`
+Image: `cards/08_17Nov_21h00_Offer_167.png`
 
 ```
 🎓🇮🇳 PhD Research Admissions for Spring 2027 at IIIT Hyderabad, India!
@@ -168,9 +168,11 @@ Know someone looking for a computing PhD in India? Share this opportunity!
 #PhDOpportunities #IIITHyderabad #ComputerScience #Research #StudyInIndia #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_182
+## Wednesday 18 Nov 2026
 
-Image: `cards/09_18Nov_10h15_Offer_182.png`
+### 08:00 · Offer_182
+
+Image: `cards/09_18Nov_08h00_Offer_182.png`
 
 ```
 🎓🇳🇿 Call for Papers at PAKDD 2027 Data Mining Conference, New Zealand!
@@ -188,9 +190,9 @@ Know a researcher with new work in data mining or machine learning? Share this o
 #CallForPapers #PAKDD2027 #DataMining #MachineLearning #NewZealand #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_189
+### 10:15 · Offer_189
 
-Image: `cards/10_18Nov_12h15_Offer_189.png`
+Image: `cards/10_18Nov_10h15_Offer_189.png`
 
 ```
 🎓🇨🇮 Mo Ibrahim Leadership Fellowship at the African Development Bank, Côte d'Ivoire!
@@ -208,9 +210,9 @@ Know a mid-career African professional ready for a leadership fellowship? Share 
 #LeadershipFellowship #AfricanDevelopmentBank #MoIbrahimFoundation #DevelopmentPolicy #Africa #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_198
+### 12:15 · Offer_198
 
-Image: `cards/11_18Nov_14h30_Offer_198.png`
+Image: `cards/11_18Nov_12h15_Offer_198.png`
 
 ```
 🎓🇩🇪 Undergraduate Research Internship in Theoretical Physics at the Max Planck Institute, Germany!
@@ -228,9 +230,9 @@ Know an undergraduate physics student ready for summer research in Germany? Shar
 #ResearchInternship #MaxPlanck #MPIPKS #TheoreticalPhysics #CondensedMatter #Germany #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_213
+### 14:30 · Offer_213
 
-Image: `cards/12_18Nov_16h45_Offer_213.png`
+Image: `cards/12_18Nov_14h30_Offer_213.png`
 
 ```
 🎓🇨🇱 Master's in Data Science at Universidad de Chile, Chile!
@@ -248,9 +250,9 @@ Know someone looking for a data science master's in Chile? Share this opportunit
 #MastersProgram #UniversidadDeChile #DataScience #LatinAmerica #Chile #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_227
+### 16:45 · Offer_227
 
-Image: `cards/13_18Nov_18h45_Offer_227.png`
+Image: `cards/13_18Nov_16h45_Offer_227.png`
 
 ```
 🎓🇨🇦 AAAI-27 Workshop Program on Artificial Intelligence in Montréal, Canada!
@@ -268,9 +270,9 @@ Know an AI researcher or student with a paper ready for a workshop? Share this o
 #AAAI27 #AAAI #ArtificialIntelligence #CallForPapers #Canada #EduCutConnect #EduCutAI
 ```
 
-### 21:00 · Offer_250
+### 18:45 · Offer_250
 
-Image: `cards/14_18Nov_21h00_Offer_250.png`
+Image: `cards/14_18Nov_18h45_Offer_250.png`
 
 ```
 🎓 Call for Papers at IST-Africa 2027 Virtual Conference!
@@ -287,11 +289,9 @@ Know a researcher working on ICT for development who has a paper to share? Share
 #CallForPapers #ISTAfrica #ICT4D #ArtificialIntelligence #Cybersecurity #EHealth #EduCutConnect #EduCutAI
 ```
 
-## Thursday 19 Nov 2026
+### 21:00 · Offer_285
 
-### 08:00 · Offer_285
-
-Image: `cards/15_19Nov_08h00_Offer_285.png`
+Image: `cards/15_18Nov_21h00_Offer_285.png`
 
 ```
 🎓🇮🇳 MA in Education at Azim Premji University, India!
@@ -309,9 +309,11 @@ Know someone passionate about education looking for a master's in India? Share t
 #MAEducation #AzimPremjiUniversity #Education #MastersProgram #India #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_220
+## Thursday 19 Nov 2026
 
-Image: `cards/16_19Nov_10h15_Offer_220.png`
+### 08:00 · Offer_220
+
+Image: `cards/16_19Nov_08h00_Offer_220.png`
 
 ```
 🎓 AI Journalism Fellowship at Tarbell Center for AI Journalism!
@@ -328,9 +330,9 @@ Know a journalist who covers artificial intelligence? Share this opportunity!
 #JournalismFellowship #Tarbell #AIJournalism #ArtificialIntelligence #Journalism #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_264
+### 10:15 · Offer_264
 
-Image: `cards/17_19Nov_12h15_Offer_264.png`
+Image: `cards/17_19Nov_10h15_Offer_264.png`
 
 ```
 🎓🇨🇭 PhD in Machine Learning and Medical Data Science at ETH Zurich, Switzerland!
@@ -348,9 +350,9 @@ Know someone looking for a machine learning PhD in Switzerland? Share this oppor
 #PhDPosition #ETHZurich #MachineLearning #MedicalDataScience #Switzerland #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_317
+### 12:15 · Offer_317
 
-Image: `cards/18_19Nov_14h30_Offer_317.png`
+Image: `cards/18_19Nov_12h15_Offer_317.png`
 
 ```
 🎓🇿🇦 2027 Postgraduate NRF Scholarships at the University of Pretoria, South Africa!
@@ -368,9 +370,9 @@ Know a postgraduate student planning Honours, master's or doctoral study in Sout
 #PostgraduateScholarship #NRF #UniversityOfPretoria #SouthAfrica #Masters #PhD #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_049
+### 14:30 · Offer_049
 
-Image: `cards/19_19Nov_16h45_Offer_049.png`
+Image: `cards/19_19Nov_14h30_Offer_049.png`
 
 ```
 🎓🇩🇪 Postdoctoral Positions in Gravitational-Wave Science at the Albert Einstein Institute, Germany!
@@ -388,9 +390,9 @@ Know a physicist looking for a gravitational-wave postdoc in Germany? Share this
 #Postdoc #AlbertEinsteinInstitute #MaxPlanck #GravitationalWaves #Astrophysics #Germany #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_053
+### 16:45 · Offer_053
 
-Image: `cards/20_19Nov_18h45_Offer_053.png`
+Image: `cards/20_19Nov_16h45_Offer_053.png`
 
 ```
 🎓🇩🇰 Postdoc in Hybrid War and Democracy at Danish Institute for Advanced Study, Denmark!
@@ -408,9 +410,9 @@ Know a social scientist or data scientist looking for a postdoc in Denmark? Shar
 #Postdoc #DIAS #Democracy #ComputationalSocialScience #Denmark #EduCutConnect #EduCutAI
 ```
 
-### 21:00 · Offer_241
+### 18:45 · Offer_241
 
-Image: `cards/21_19Nov_21h00_Offer_241.png`
+Image: `cards/21_19Nov_18h45_Offer_241.png`
 
 ```
 🎓🇦🇺 Funded PhD Scholarships at the Institute for Molecular Bioscience, University of Queensland, Australia!
@@ -429,11 +431,9 @@ Know someone looking for a funded molecular bioscience PhD in Australia? Share t
 #PhDScholarship #UQ #MolecularBioscience #FundedPhD #Australia #EduCutConnect #EduCutAI
 ```
 
-## Friday 20 Nov 2026
+### 21:00 · Offer_287
 
-### 08:00 · Offer_287
-
-Image: `cards/22_20Nov_08h00_Offer_287.png`
+Image: `cards/22_19Nov_21h00_Offer_287.png`
 
 ```
 🎓 TWAS Research Professors in Least Developed Countries at The World Academy of Sciences!
@@ -450,9 +450,11 @@ Know a research group in a Least Developed Country that could host a visiting sc
 #ResearchProfessor #TWAS #NaturalSciences #ScienceForDevelopment #VisitingScholar #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_197
+## Friday 20 Nov 2026
 
-Image: `cards/23_20Nov_10h15_Offer_197.png`
+### 08:00 · Offer_197
+
+Image: `cards/23_20Nov_08h00_Offer_197.png`
 
 ```
 🎓🇺🇸 Eric and Wendy Schmidt AI in Science Postdoctoral Fellowship at the University of Michigan, USA!
@@ -471,9 +473,9 @@ Know a recent PhD applying AI to science, engineering or mathematics? Share this
 #PostdoctoralFellowship #UniversityOfMichigan #MIDAS #AIinScience #SchmidtSciences #USA #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_018
+### 10:15 · Offer_018
 
-Image: `cards/24_20Nov_12h15_Offer_018.png`
+Image: `cards/24_20Nov_10h15_Offer_018.png`
 
 ```
 🎓🇬🇧 Funded PhD Programme in Genomics at Wellcome Sanger Institute, UK!
@@ -492,9 +494,9 @@ Know someone looking for a funded genomics PhD in the UK? Share this opportunity
 #PhDProgram #WellcomeSanger #Genomics #FundedPhD #Cambridge #UK #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_191
+### 12:15 · Offer_191
 
-Image: `cards/25_20Nov_14h30_Offer_191.png`
+Image: `cards/25_20Nov_12h15_Offer_191.png`
 
 ```
 🎓🇲🇽 PhD in Probability and Statistics at CIMAT, Mexico!
@@ -512,9 +514,9 @@ Know a mathematics graduate looking for a statistics PhD in Mexico? Share this o
 #PhDProgram #CIMAT #Statistics #Probability #Mexico #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_234
+### 14:30 · Offer_234
 
-Image: `cards/26_20Nov_16h45_Offer_234.png`
+Image: `cards/26_20Nov_14h30_Offer_234.png`
 
 ```
 🎓🇯🇵 Call for Papers at the Conference on Parsimony and Learning CPAL 2027, Japan!
@@ -532,9 +534,9 @@ Know a machine learning researcher working on parsimony or low-dimensional struc
 #CallForPapers #MachineLearning #CPAL2027 #AIResearch #Japan #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_236
+### 16:45 · Offer_236
 
-Image: `cards/27_20Nov_18h45_Offer_236.png`
+Image: `cards/27_20Nov_16h45_Offer_236.png`
 
 ```
 🎓🇨🇳 Call for Research Papers at the DASFAA 2027 Database Systems Conference, China!
@@ -552,9 +554,9 @@ Know a database or data science researcher with a paper to submit? Share this op
 #CallForPapers #DASFAA2027 #Databases #DataScience #DataMining #China #EduCutConnect #EduCutAI
 ```
 
-### 21:00 · Offer_377
+### 18:45 · Offer_377
 
-Image: `cards/28_20Nov_21h00_Offer_377.png`
+Image: `cards/28_20Nov_18h45_Offer_377.png`
 
 ```
 🎓🇨🇴 Master's in Artificial Intelligence at Universidad de los Andes, Colombia!
@@ -572,11 +574,9 @@ Know someone looking for an artificial intelligence master's in Colombia? Share 
 #MastersProgram #UniandesColombia #ArtificialIntelligence #MachineLearning #Colombia #EduCutConnect #EduCutAI
 ```
 
-## Saturday 21 Nov 2026
+### 21:00 · Offer_252
 
-### 08:00 · Offer_252
-
-Image: `cards/29_21Nov_08h00_Offer_252.png`
+Image: `cards/29_20Nov_21h00_Offer_252.png`
 
 ```
 🎓🇨🇴 Beca Avanza Research Master's Scholarship at Universidad de los Andes, Colombia!
@@ -595,9 +595,11 @@ Know an engineering graduate starting a research master's in Colombia? Share thi
 #MastersScholarship #Uniandes #Engineering #ResearchMasters #Colombia #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_331
+## Saturday 21 Nov 2026
 
-Image: `cards/30_21Nov_10h15_Offer_331.png`
+### 08:00 · Offer_331
+
+Image: `cards/30_21Nov_08h00_Offer_331.png`
 
 ```
 🎓🇬🇧 Visiting Fellowships in Special Collections at the Bodleian Libraries, Oxford, UK!
@@ -615,9 +617,9 @@ Know a scholar whose research needs the Bodleian special collections? Share this
 #VisitingFellowship #BodleianLibraries #Oxford #SpecialCollections #Humanities #UK #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_037
+### 10:15 · Offer_037
 
-Image: `cards/31_21Nov_12h15_Offer_037.png`
+Image: `cards/31_21Nov_10h15_Offer_037.png`
 
 ```
 🎓🇬🇧 Four-Year PhD in Dependable and Deployable AI for Robotics in Edinburgh, UK!
@@ -635,9 +637,9 @@ Know someone who wants to do a PhD in AI for robotics in the UK? Share this oppo
 #PhD #CDTD2AIR #Robotics #ArtificialIntelligence #HeriotWatt #Edinburgh #UK #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_146
+### 12:15 · Offer_146
 
-Image: `cards/32_21Nov_14h30_Offer_146.png`
+Image: `cards/32_21Nov_12h15_Offer_146.png`
 
 ```
 🎓🇨🇭 Fully Funded RobotX PhD Fellowship at ETH Zurich, Switzerland!
@@ -656,9 +658,9 @@ Know someone dreaming of a robotics PhD in Zurich? Share this opportunity!
 #PhDOpportunities #ETHZurich #RobotX #Robotics #StudyInSwitzerland #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_166
+### 14:30 · Offer_166
 
-Image: `cards/33_21Nov_16h45_Offer_166.png`
+Image: `cards/33_21Nov_14h30_Offer_166.png`
 
 ```
 🎓🇨🇱 National Doctoral Scholarships 2027 from ANID, Chile!
@@ -677,9 +679,9 @@ Know someone planning a PhD in Chile? Share this opportunity!
 #PhDScholarship #ANID #Chile #DoctoralResearch #LatinAmerica #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_215
+### 16:45 · Offer_215
 
-Image: `cards/34_21Nov_18h45_Offer_215.png`
+Image: `cards/34_21Nov_16h45_Offer_215.png`
 
 ```
 🎓🇹🇷 MSc and PhD Programmes at Sabancı University, Turkey!
@@ -698,9 +700,9 @@ Know someone looking for an engineering or science graduate programme in Turkey?
 #PhDProgram #MSc #SabanciUniversity #Engineering #NaturalSciences #Turkey #EduCutConnect #EduCutAI
 ```
 
-### 21:00 · Offer_092
+### 18:45 · Offer_092
 
-Image: `cards/35_21Nov_21h00_Offer_092.png`
+Image: `cards/35_21Nov_18h45_Offer_092.png`
 
 ```
 🎓🇨🇭 Summer Research Internship at EPFL School of Computer and Communication Sciences, Switzerland!
@@ -718,11 +720,9 @@ Know a computer science student looking for a summer research internship in Swit
 #ResearchInternship #EPFL #ComputerScience #SummerInternship #Switzerland #EduCutConnect #EduCutAI
 ```
 
-## Sunday 22 Nov 2026
+### 21:00 · Offer_233
 
-### 08:00 · Offer_233
-
-Image: `cards/36_22Nov_08h00_Offer_233.png`
+Image: `cards/36_21Nov_21h00_Offer_233.png`
 
 ```
 🎓🇮🇳 Young India Fellowship at Ashoka University, India!
@@ -740,9 +740,11 @@ Know a recent graduate interested in interdisciplinary liberal studies in India?
 #YoungIndiaFellowship #AshokaUniversity #LiberalArts #Fellowship #India #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_360
+## Sunday 22 Nov 2026
 
-Image: `cards/37_22Nov_10h15_Offer_360.png`
+### 08:00 · Offer_360
+
+Image: `cards/37_22Nov_08h00_Offer_360.png`
 
 ```
 🎓🇦🇺 Taiwan Australian National University Scholarship for PhD Study, Australia!
@@ -761,9 +763,9 @@ Know a Taiwanese student planning a PhD in Australia? Share this opportunity!
 #PhDScholarship #ANU #AustralianNationalUniversity #Taiwan #StudyInAustralia #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_052
+### 10:15 · Offer_052
 
-Image: `cards/38_22Nov_12h15_Offer_052.png`
+Image: `cards/38_22Nov_10h15_Offer_052.png`
 
 ```
 🎓🇨🇦 Postdoctoral Fellow in Digital Platforms at The University of British Columbia, Canada!
@@ -781,9 +783,9 @@ Know an early-career researcher studying digital platforms? Share this opportuni
 #Postdoc #UBC #DigitalPlatforms #Vancouver #Canada #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_077
+### 12:15 · Offer_077
 
-Image: `cards/39_22Nov_14h30_Offer_077.png`
+Image: `cards/39_22Nov_12h15_Offer_077.png`
 
 ```
 🎓🇩🇪 DAAD RISE Summer Research Internships for Undergraduates, Germany!
@@ -801,9 +803,9 @@ Know an undergraduate in science or engineering looking for a summer research in
 #RISEGermany #DAAD #ResearchInternship #STEM #Germany #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_120
+### 14:30 · Offer_120
 
-Image: `cards/40_22Nov_16h45_Offer_120.png`
+Image: `cards/40_22Nov_14h30_Offer_120.png`
 
 ```
 🎓🇨🇭 Excellence Master's Scholarships at ETH Zurich, Switzerland!
@@ -821,9 +823,9 @@ Know a top student planning a Master's at ETH Zurich? Share this opportunity!
 #Scholarship #ETHZurich #MastersDegree #FundedStudy #StudyInSwitzerland #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_390
+### 16:45 · Offer_390
 
-Image: `cards/41_22Nov_18h45_Offer_390.png`
+Image: `cards/41_22Nov_16h45_Offer_390.png`
 
 ```
 🎓🇬🇧 PhD Funding in Informatics at the University of Edinburgh, UK!
@@ -841,9 +843,9 @@ Know someone looking for a computer science PhD in Scotland? Share this opportun
 #PhDFunding #Informatics #ComputerScience #UniversityOfEdinburgh #UK #EduCutConnect #EduCutAI
 ```
 
-### 21:00 · Offer_419
+### 18:45 · Offer_419
 
-Image: `cards/42_22Nov_21h00_Offer_419.png`
+Image: `cards/42_22Nov_18h45_Offer_419.png`
 
 ```
 🎓🇬🇧 PhD in Responsible Natural Language Processing at the University of Edinburgh, UK!
@@ -862,11 +864,9 @@ Know someone who wants to pursue a PhD in responsible NLP? Share this opportunit
 #PhD #UniversityOfEdinburgh #NaturalLanguageProcessing #ResponsibleAI #CDT #UK #EduCutConnect #EduCutAI
 ```
 
-## Monday 23 Nov 2026
+### 21:00 · Offer_001
 
-### 08:00 · Offer_001
-
-Image: `cards/43_23Nov_08h00_Offer_001.png`
+Image: `cards/43_22Nov_21h00_Offer_001.png`
 
 ```
 🎓🇺🇸 CDDRL Pre-doctoral and Postdoctoral Fellowships at Stanford University, USA!
@@ -884,9 +884,11 @@ Know a scholar working on democracy, development or the rule of law? Share this 
 #Fellowship #Stanford #CDDRL #Democracy #RuleOfLaw #USA #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_057
+## Monday 23 Nov 2026
 
-Image: `cards/44_23Nov_10h15_Offer_057.png`
+### 08:00 · Offer_057
+
+Image: `cards/44_23Nov_08h00_Offer_057.png`
 
 ```
 🎓🇸🇪 Postdoctoral Positions in Microcomb Applications at Chalmers University of Technology, Sweden!
@@ -904,9 +906,9 @@ Know a photonics researcher looking for a postdoc in Sweden? Share this opportun
 #Postdoc #Chalmers #Photonics #Microcombs #Sweden #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_113
+### 10:15 · Offer_113
 
-Image: `cards/45_23Nov_12h15_Offer_113.png`
+Image: `cards/45_23Nov_10h15_Offer_113.png`
 
 ```
 🎓🇨🇳 Master's Program in China Studies at Yenching Academy of Peking University, China!
@@ -924,9 +926,9 @@ Know someone interested in studying China in Beijing? Share this opportunity!
 #ChinaStudies #YenchingAcademy #MastersProgram #HigherEducation #StudyInChina #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_186
+### 12:15 · Offer_186
 
-Image: `cards/46_23Nov_14h30_Offer_186.png`
+Image: `cards/46_23Nov_12h15_Offer_186.png`
 
 ```
 🎓🇩🇪 PhD in AI-Assisted Therapy Decisions at LMU Munich, Germany!
@@ -944,9 +946,9 @@ Know a machine learning graduate who wants to work on intensive care medicine? S
 #PhDPosition #MachineLearning #HealthcareAI #LMUMunich #IntensiveCare #Germany #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_210
+### 14:30 · Offer_210
 
-Image: `cards/47_23Nov_16h45_Offer_210.png`
+Image: `cards/47_23Nov_14h30_Offer_210.png`
 
 ```
 🎓🇮🇳 Summer Research Fellowship for Students and Teachers at the Indian Academy of Sciences, India!
@@ -965,9 +967,9 @@ Know a science or engineering student or teacher in India looking for summer res
 #SummerResearchFellowship #IndianAcademyOfSciences #INSA #NASI #ScienceResearch #India #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_296
+### 16:45 · Offer_296
 
-Image: `cards/48_23Nov_18h45_Offer_296.png`
+Image: `cards/48_23Nov_16h45_Offer_296.png`
 
 ```
 🎓 Master's Scholarship in Tropical Biodiversity from VLIR-UOS, Belgium!
@@ -985,9 +987,9 @@ Know someone looking for a fully funded master's in tropical biodiversity? Share
 #Scholarship #VLIRUOS #TROPIMUNDO #Biodiversity #Ecology #MastersDegree #EduCutConnect #EduCutAI
 ```
 
-### 21:00 · Offer_310
+### 18:45 · Offer_310
 
-Image: `cards/49_23Nov_21h00_Offer_310.png`
+Image: `cards/49_23Nov_18h45_Offer_310.png`
 
 ```
 🎓🇿🇦 MSc in Artificial Intelligence at the University of the Witwatersrand, South Africa!
@@ -1005,11 +1007,9 @@ Know a graduate looking for an artificial intelligence master's in South Africa?
 #MScAI #WitsUniversity #ArtificialIntelligence #MastersDegree #SouthAfrica #EduCutConnect #EduCutAI
 ```
 
-## Tuesday 24 Nov 2026
+### 21:00 · Offer_323
 
-### 08:00 · Offer_323
-
-Image: `cards/50_24Nov_08h00_Offer_323.png`
+Image: `cards/50_23Nov_21h00_Offer_323.png`
 
 ```
 🎓🇿🇦 Master's and Doctoral Bursary at the University of South Africa, South Africa!
@@ -1027,9 +1027,11 @@ Know a Unisa master's or doctoral student who could use a bursary? Share this op
 #Bursary #Unisa #PostgraduateStudy #Masters #PhD #SouthAfrica #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_337
+## Tuesday 24 Nov 2026
 
-Image: `cards/51_24Nov_10h15_Offer_337.png`
+### 08:00 · Offer_337
+
+Image: `cards/51_24Nov_08h00_Offer_337.png`
 
 ```
 🎓🇿🇦 MSc in Data Science at the University of the Witwatersrand, South Africa!
@@ -1047,9 +1049,9 @@ Know a graduate looking for a data science master's in South Africa? Share this 
 #MScDataScience #WitsUniversity #DataScience #MastersProgram #SouthAfrica #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_439
+### 10:15 · Offer_439
 
-Image: `cards/52_24Nov_12h15_Offer_439.png`
+Image: `cards/52_24Nov_10h15_Offer_439.png`
 
 ```
 🎓🇨🇳 Shenzhen Masterclasses at Verbier Festival, China!
@@ -1067,9 +1069,9 @@ Know a young pianist or string player in the Asia-Pacific region? Share this opp
 #Masterclass #VerbierFestival #ClassicalMusic #ChamberMusic #China #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_456
+### 12:15 · Offer_456
 
-Image: `cards/53_24Nov_14h30_Offer_456.png`
+Image: `cards/53_24Nov_12h15_Offer_456.png`
 
 ```
 🎓🇮🇳 Postdoctoral Program at the International Centre for Theoretical Sciences, India!
@@ -1087,9 +1089,9 @@ Know a PhD researcher in the theoretical sciences looking for a postdoc in India
 #Postdoc #ICTS #TheoreticalPhysics #Mathematics #India #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_482
+### 14:30 · Offer_482
 
-Image: `cards/54_24Nov_16h45_Offer_482.png`
+Image: `cards/54_24Nov_14h30_Offer_482.png`
 
 ```
 🎓🇨🇭 Excellence Research Internship Program at EPFL, Switzerland!
@@ -1107,9 +1109,9 @@ Know a top engineering or science student looking for a summer research internsh
 #ResearchInternship #EPFL #Engineering #ComputerScience #SummerResearch #Switzerland #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_484
+### 16:45 · Offer_484
 
-Image: `cards/55_24Nov_18h45_Offer_484.png`
+Image: `cards/55_24Nov_16h45_Offer_484.png`
 
 ```
 🎓🇷🇼 Undergraduate Programmes for the January 2027 Intake at African Leadership University, Rwanda!
@@ -1127,9 +1129,9 @@ Know a student looking for a bachelor's degree in Rwanda? Share this opportunity
 #UndergraduateAdmissions #AfricanLeadershipUniversity #SoftwareEngineering #Entrepreneurship #Rwanda #EduCutConnect #EduCutAI
 ```
 
-### 21:00 · Offer_504
+### 18:45 · Offer_504
 
-Image: `cards/56_24Nov_21h00_Offer_504.png`
+Image: `cards/56_24Nov_18h45_Offer_504.png`
 
 ```
 🎓🇺🇸 Hurford Youth Fellows Program at National Endowment for Democracy, USA!
@@ -1147,11 +1149,9 @@ Know a young advocate for youth participation in democracy? Share this opportuni
 #Fellowship #NED #Democracy #YouthLeadership #USA #EduCutConnect #EduCutAI
 ```
 
-## Wednesday 25 Nov 2026
+### 21:00 · Offer_506
 
-### 08:00 · Offer_506
-
-Image: `cards/57_25Nov_08h00_Offer_506.png`
+Image: `cards/57_24Nov_21h00_Offer_506.png`
 
 ```
 🎓🇺🇸 Dean's Postdoctoral Fellowship at Stanford Doerr School of Sustainability, USA!
@@ -1170,9 +1170,11 @@ Know a recent PhD graduate working on sustainability research? Share this opport
 #PostdocFellowship #Stanford #Sustainability #EarthSciences #USA #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_100
+## Wednesday 25 Nov 2026
 
-Image: `cards/58_25Nov_10h15_Offer_100.png`
+### 08:00 · Offer_100
+
+Image: `cards/58_25Nov_08h00_Offer_100.png`
 
 ```
 🎓🇭🇰 Hong Kong PhD Fellowship Scheme 2027/28 by the Research Grants Council, Hong Kong!
@@ -1190,9 +1192,9 @@ Know someone planning a PhD in Hong Kong? Share this opportunity!
 #HKPFS #PhDFellowship #PhD #Research #HongKong #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_320
+### 10:15 · Offer_320
 
-Image: `cards/59_25Nov_12h15_Offer_320.png`
+Image: `cards/59_25Nov_10h15_Offer_320.png`
 
 ```
 🎓🇯🇵 Japanese Studies Fellowship Program at The Japan Foundation, Japan!
@@ -1210,9 +1212,9 @@ Know a scholar or PhD candidate researching Japan in the humanities or social sc
 #JapaneseStudies #JapanFoundation #ResearchFellowship #Humanities #SocialSciences #Japan #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_083
+### 12:15 · Offer_083
 
-Image: `cards/60_25Nov_14h30_Offer_083.png`
+Image: `cards/60_25Nov_12h15_Offer_083.png`
 
 ```
 🎓🇵🇹 Call for Papers at MIDL 2027 Medical Imaging with Deep Learning, Portugal!
@@ -1230,9 +1232,9 @@ Know a researcher working on deep learning for medical imaging? Share this oppor
 #CallForPapers #MIDL2027 #MedicalImaging #DeepLearning #Portugal #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_178
+### 14:30 · Offer_178
 
-Image: `cards/61_25Nov_16h45_Offer_178.png`
+Image: `cards/61_25Nov_14h30_Offer_178.png`
 
 ```
 🎓🇬🇧 Funded DPhil Studentships at Kennedy Institute of Rheumatology, Oxford, UK!
@@ -1250,9 +1252,9 @@ Know an African student looking for a molecular medicine DPhil at Oxford? Share 
 #DPhil #Oxford #KennedyInstitute #AfOx #MolecularMedicine #UK #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_176
+### 16:45 · Offer_176
 
-Image: `cards/62_25Nov_18h45_Offer_176.png`
+Image: `cards/62_25Nov_16h45_Offer_176.png`
 
 ```
 🎓🇭🇰 Presidential PhD Scholarships at the University of Hong Kong, Hong Kong!
@@ -1271,9 +1273,9 @@ Know someone planning a fully funded PhD in Hong Kong? Share this opportunity!
 #PhDScholarship #HKU #FundedPhD #GraduateStudy #HongKong #EduCutConnect #EduCutAI
 ```
 
-### 21:00 · Offer_194
+### 18:45 · Offer_194
 
-Image: `cards/63_25Nov_21h00_Offer_194.png`
+Image: `cards/63_25Nov_18h45_Offer_194.png`
 
 ```
 🎓🇭🇰 Vice-Chancellor's PhD Scholarship at The Chinese University of Hong Kong!
@@ -1291,11 +1293,9 @@ Know someone planning a full-time PhD in Hong Kong? Share this opportunity!
 #PhDScholarship #CUHK #HongKong #PhDPosition #GraduateStudy #EduCutConnect #EduCutAI
 ```
 
-## Thursday 26 Nov 2026
+### 21:00 · Offer_292
 
-### 08:00 · Offer_292
-
-Image: `cards/64_26Nov_08h00_Offer_292.png`
+Image: `cards/64_25Nov_21h00_Offer_292.png`
 
 ```
 🎓🇺🇸 Environmental Fellows Postdoctoral Program at Harvard University Center for the Environment, USA!
@@ -1314,9 +1314,11 @@ Know a recent PhD doing interdisciplinary environmental research? Share this opp
 #PostdoctoralFellowship #Harvard #EnvironmentalScience #Sustainability #USA #EduCutConnect #EduCutAI
 ```
 
-### 10:15 · Offer_072
+## Thursday 26 Nov 2026
 
-Image: `cards/65_26Nov_10h15_Offer_072.png`
+### 08:00 · Offer_072
+
+Image: `cards/65_26Nov_08h00_Offer_072.png`
 
 ```
 🎓🇩🇰 Postdoc in Cognitive Computational Neuroscience at the University of Copenhagen, Denmark!
@@ -1334,9 +1336,9 @@ Know a cognitive or computational neuroscientist looking for a postdoc in Denmar
 #Postdoc #UniversityOfCopenhagen #Neuroscience #CognitiveScience #Denmark #EduCutConnect #EduCutAI
 ```
 
-### 12:15 · Offer_097
+### 10:15 · Offer_097
 
-Image: `cards/66_26Nov_12h15_Offer_097.png`
+Image: `cards/66_26Nov_10h15_Offer_097.png`
 
 ```
 🎓🇨🇭 Doctoral Program in Computer and Communication Sciences at EPFL, Switzerland!
@@ -1354,9 +1356,9 @@ Know someone looking for a computer science PhD in Switzerland? Share this oppor
 #PhDOpportunities #EPFL #ComputerScience #DoctoralResearch #StudyInSwitzerland #EduCutConnect #EduCutAI
 ```
 
-### 14:30 · Offer_131
+### 12:15 · Offer_131
 
-Image: `cards/67_26Nov_14h30_Offer_131.png`
+Image: `cards/67_26Nov_12h15_Offer_131.png`
 
 ```
 🎓🇳🇱 Justus & Louise van Effen Excellence Scholarships at TU Delft, Netherlands!
@@ -1374,9 +1376,9 @@ Know an international student planning an MSc at TU Delft? Share this opportunit
 #Scholarship #TUDelft #MastersDegree #InternationalStudents #StudyInNetherlands #EduCutConnect #EduCutAI
 ```
 
-### 16:45 · Offer_010
+### 14:30 · Offer_010
 
-Image: `cards/68_26Nov_16h45_Offer_010.png`
+Image: `cards/68_26Nov_14h30_Offer_010.png`
 
 ```
 🎓 Joint Master in Public Policy (Mundus MAPP) at Central European University!
@@ -1393,9 +1395,9 @@ Know someone looking for an international master's in public policy? Share this 
 #ErasmusMundus #CEU #PublicPolicy #MastersDegree #MundusMAPP #EduCutConnect #EduCutAI
 ```
 
-### 18:45 · Offer_031
+### 16:45 · Offer_031
 
-Image: `cards/69_26Nov_18h45_Offer_031.png`
+Image: `cards/69_26Nov_16h45_Offer_031.png`
 
 ```
 🎓🇩🇪 25 PhD Positions at the Max Planck School of Biomedical Artificial Intelligence, Germany!
@@ -1413,9 +1415,9 @@ Know a computational graduate who wants to apply AI to biomedical research? Shar
 #PhDPositions #BiomedicalAI #ArtificialIntelligence #MaxPlanck #Bioinformatics #Germany #EduCutConnect #EduCutAI
 ```
 
-### 21:00 · Offer_084
+### 18:45 · Offer_084
 
-Image: `cards/70_26Nov_21h00_Offer_084.png`
+Image: `cards/70_26Nov_18h45_Offer_084.png`
 
 ```
 🎓🇨🇦 Research Master's and PhD Supervision Requests at Mila, Canada!
@@ -1433,11 +1435,9 @@ Know someone aiming for a machine learning PhD or research master's in Montreal?
 #PhD #ResearchMasters #MachineLearning #ArtificialIntelligence #Mila #Canada #EduCutConnect #EduCutAI
 ```
 
-## Friday 27 Nov 2026
+### 21:00 · Offer_090
 
-### 08:15 · Offer_090
-
-Image: `cards/71_27Nov_08h15_Offer_090.png`
+Image: `cards/71_26Nov_21h00_Offer_090.png`
 
 ```
 🎓🇺🇸 Research Fellowships at Simons Institute for the Theory of Computing, USA!
@@ -1455,9 +1455,11 @@ Know an early-career theorist working on diffusion generative modeling? Share th
 #ResearchFellowship #SimonsInstitute #UCBerkeley #TheoryOfComputing #GenerativeModeling #USA #EduCutConnect #EduCutAI
 ```
 
-### 10:45 · Offer_110
+## Friday 27 Nov 2026
 
-Image: `cards/72_27Nov_10h45_Offer_110.png`
+### 08:15 · Offer_110
+
+Image: `cards/72_27Nov_08h15_Offer_110.png`
 
 ```
 🎓🇺🇸 Shorenstein Postdoctoral Fellowship at Stanford University, USA!
@@ -1475,9 +1477,9 @@ Know a researcher working on contemporary Asia? Share this opportunity!
 #Postdoc #StanfordUniversity #AsianStudies #Fellowship #StudyInUSA #EduCutConnect #EduCutAI
 ```
 
-### 13:15 · Offer_112
+### 10:45 · Offer_112
 
-Image: `cards/73_27Nov_13h15_Offer_112.png`
+Image: `cards/73_27Nov_10h45_Offer_112.png`
 
 ```
 🎓🇨🇦 PhD in Computer Science at the University of Toronto, Canada!
@@ -1495,9 +1497,9 @@ Know someone looking for a computer science PhD in Canada? Share this opportunit
 #PhDOpportunities #UofT #ComputerScience #GraduateStudies #StudyInCanada #EduCutConnect #EduCutAI
 ```
 
-### 15:45 · Offer_179
+### 13:15 · Offer_179
 
-Image: `cards/74_27Nov_15h45_Offer_179.png`
+Image: `cards/74_27Nov_13h15_Offer_179.png`
 
 ```
 🎓🇺🇸 Asia Health Policy Postdoctoral Fellowship at Stanford University, USA!
@@ -1515,9 +1517,9 @@ Know a recent PhD working on health policy in the Asia-Pacific region? Share thi
 #Postdoc #HealthPolicy #GlobalHealth #AsiaPacific #Stanford #USA #EduCutConnect #EduCutAI
 ```
 
-### 18:15 · Offer_192
+### 15:45 · Offer_192
 
-Image: `cards/75_27Nov_18h15_Offer_192.png`
+Image: `cards/75_27Nov_15h45_Offer_192.png`
 
 ```
 🎓🇯🇵 Postdoc in AI-enhanced Theoretical Physics at Kavli IPMU, Japan!
@@ -1535,9 +1537,9 @@ Know a physicist excited about human-AI collaboration in theoretical research? S
 #Postdoc #KavliIPMU #TheoreticalPhysics #AgenticAI #Japan #EduCutConnect #EduCutAI
 ```
 
-### 20:45 · Offer_205
+### 18:15 · Offer_205
 
-Image: `cards/76_27Nov_20h45_Offer_205.png`
+Image: `cards/76_27Nov_18h15_Offer_205.png`
 
 ```
 🎓🇨🇦 PIMS Postdoctoral Fellowship at the Pacific Institute for the Mathematical Sciences, Canada!
@@ -1555,11 +1557,9 @@ Know a mathematician looking for a postdoc at a Canadian university? Share this 
 #Postdoc #Mathematics #MathematicalSciences #PIMS #Canada #EduCutConnect #EduCutAI
 ```
 
-## Saturday 28 Nov 2026
+### 20:45 · Offer_222
 
-### 08:15 · Offer_222
-
-Image: `cards/77_28Nov_08h15_Offer_222.png`
+Image: `cards/77_27Nov_20h45_Offer_222.png`
 
 ```
 🎓🇺🇸 Membership in the School of Mathematics at the Institute for Advanced Study, USA!
@@ -1577,9 +1577,11 @@ Know a mathematician who would thrive in a year of focused research? Share this 
 #Mathematics #InstituteForAdvancedStudy #Postdoc #ResearchMembership #USA #EduCutConnect #EduCutAI
 ```
 
-### 10:45 · Offer_230
+## Saturday 28 Nov 2026
 
-Image: `cards/78_28Nov_10h45_Offer_230.png`
+### 08:15 · Offer_230
+
+Image: `cards/78_28Nov_08h15_Offer_230.png`
 
 ```
 🎓🇺🇸 PhD in Electrical Engineering and Computer Sciences at UC Berkeley, USA!
@@ -1597,9 +1599,9 @@ Know someone planning a PhD in electrical engineering or computer science? Share
 #PhD #ElectricalEngineering #ComputerScience #EECS #UCBerkeley #USA #EduCutConnect #EduCutAI
 ```
 
-### 13:15 · Offer_249
+### 10:45 · Offer_249
 
-Image: `cards/79_28Nov_13h15_Offer_249.png`
+Image: `cards/79_28Nov_10h45_Offer_249.png`
 
 ```
 🎓🇺🇸 PhD in Information Science at Cornell University, USA!
@@ -1617,9 +1619,9 @@ Know someone looking for an information science PhD in the USA? Share this oppor
 #PhD #CornellUniversity #InformationScience #DoctoralStudy #USA #EduCutConnect #EduCutAI
 ```
 
-### 15:45 · Offer_284
+### 13:15 · Offer_284
 
-Image: `cards/80_28Nov_15h45_Offer_284.png`
+Image: `cards/80_28Nov_13h15_Offer_284.png`
 
 ```
 🎓🇺🇸 PhD in Computer Science at the University of Illinois Urbana-Champaign, USA!
@@ -1637,9 +1639,9 @@ Know someone ready to start a computer science PhD in the USA? Share this opport
 #PhD #ComputerScience #DataScience #UIUC #Illinois #USA #EduCutConnect #EduCutAI
 ```
 
-### 18:15 · Offer_316
+### 15:45 · Offer_316
 
-Image: `cards/81_28Nov_18h15_Offer_316.png`
+Image: `cards/81_28Nov_15h45_Offer_316.png`
 
 ```
 🎓🇨🇦 PhD in Computer Science at the University of Waterloo, Canada!
@@ -1657,9 +1659,9 @@ Know someone looking for a computer science PhD in Canada? Share this opportunit
 #PhD #UniversityOfWaterloo #ComputerScience #DoctoralStudy #Canada #EduCutConnect #EduCutAI
 ```
 
-### 20:45 · Offer_389
+### 18:15 · Offer_389
 
-Image: `cards/82_28Nov_20h45_Offer_389.png`
+Image: `cards/82_28Nov_18h15_Offer_389.png`
 
 ```
 🎓🇳🇱 Leiden University Excellence Scholarship for Master's Students, Netherlands!
@@ -1677,11 +1679,9 @@ Know an international student planning a Master's degree in the Netherlands? Sha
 #Scholarship #MastersDegree #StudyAbroad #LeidenUniversity #Netherlands #EduCutConnect #EduCutAI
 ```
 
-## Sunday 29 Nov 2026
+### 20:45 · Offer_394
 
-### 08:15 · Offer_394
-
-Image: `cards/83_29Nov_08h15_Offer_394.png`
+Image: `cards/83_28Nov_20h45_Offer_394.png`
 
 ```
 🎓🇬🇧 PhD in Computing at Imperial College London, UK!
@@ -1699,9 +1699,11 @@ Know someone aiming for a computing PhD in London? Share this opportunity!
 #PhD #ImperialCollegeLondon #Computing #ComputerScience #UK #EduCutConnect #EduCutAI
 ```
 
-### 10:45 · Offer_403
+## Sunday 29 Nov 2026
 
-Image: `cards/84_29Nov_10h45_Offer_403.png`
+### 08:15 · Offer_403
+
+Image: `cards/84_29Nov_08h15_Offer_403.png`
 
 ```
 🎓🇺🇸 International Nieman Fellowship for Journalists at Harvard University, USA!
@@ -1719,9 +1721,9 @@ Know a journalist with five or more years of experience looking for a Harvard fe
 #Fellowship #Journalism #Media #NiemanFoundation #Harvard #USA #EduCutConnect #EduCutAI
 ```
 
-### 13:15 · Offer_442
+### 10:45 · Offer_442
 
-Image: `cards/85_29Nov_13h15_Offer_442.png`
+Image: `cards/85_29Nov_10h45_Offer_442.png`
 
 ```
 🎓🇩🇪 African Scholars Programme at the Hertie School, Germany!
@@ -1739,9 +1741,9 @@ Know an African student planning a public policy master's in Berlin? Share this 
 #Scholarship #HertieSchool #PublicPolicy #InternationalAffairs #AfricanScholars #Germany #EduCutConnect #EduCutAI
 ```
 
-### 15:45 · Offer_447
+### 13:15 · Offer_447
 
-Image: `cards/86_29Nov_15h45_Offer_447.png`
+Image: `cards/86_29Nov_13h15_Offer_447.png`
 
 ```
 🎓🇺🇸 Neukom Postdoctoral Fellowships in Computational Science at Dartmouth College, USA!
@@ -1759,9 +1761,9 @@ Know a PhD researcher doing computational work in any field? Share this opportun
 #Postdoc #ComputationalScience #Research #Neukom #Dartmouth #USA #EduCutConnect #EduCutAI
 ```
 
-### 18:15 · Offer_450
+### 15:45 · Offer_450
 
-Image: `cards/87_29Nov_18h15_Offer_450.png`
+Image: `cards/87_29Nov_15h45_Offer_450.png`
 
 ```
 🎓🇹🇼 Postdoctoral Positions in Mathematics at Academia Sinica, Taiwan!
@@ -1779,9 +1781,9 @@ Know a new mathematics PhD looking for a research-only postdoc? Share this oppor
 #Postdoc #AcademiaSinica #Mathematics #ResearchPosition #Taiwan #EduCutConnect #EduCutAI
 ```
 
-### 20:45 · Offer_452
+### 18:15 · Offer_452
 
-Image: `cards/88_29Nov_20h45_Offer_452.png`
+Image: `cards/88_29Nov_18h15_Offer_452.png`
 
 ```
 🎓🇩🇪 Mathematics PhD Programme at the Berlin Mathematical School, Germany!
@@ -1799,11 +1801,9 @@ Know a mathematics graduate looking for a PhD programme in Berlin? Share this op
 #PhD #Mathematics #BerlinMathematicalSchool #Berlin #Germany #EduCutConnect #EduCutAI
 ```
 
-## Monday 30 Nov 2026
+### 20:45 · Offer_457
 
-### 08:15 · Offer_457
-
-Image: `cards/89_30Nov_08h15_Offer_457.png`
+Image: `cards/89_29Nov_20h45_Offer_457.png`
 
 ```
 🎓🇯🇵 International HPC Internship Program at RIKEN Center for Computational Science, Japan!
@@ -1819,224 +1819,4 @@ The RIKEN Center for Computational Science is inviting applications for its 2027
 https://educutai.com/educut-connect/457-2027-r-ccs-international-hpc-computational-science/
 Know a doctoral student in high-performance computing who wants experience in Japan? Share this opportunity!
 #Internship #RIKEN #HighPerformanceComputing #ComputationalScience #Japan #EduCutConnect #EduCutAI
-```
-
-### 10:45 · Offer_344
-
-Image: `cards/90_30Nov_10h45_Offer_344.png`
-
-```
-🎓🇯🇵 Doctoral Programme in Informatics at SOKENDAI, Japan!
-
-SOKENDAI (The Graduate University for Advanced Studies) is inviting second-round applications to its Informatics Program doctoral course starting October 2027. Applicants residing abroad apply from 19 November to 2 December 2026 and must first secure a prospective supervisor.
-
-📍 Location: Japan
-🎓 Level: Doctoral
-🔬 Fields: Informatics
-📅 Deadline: 2 December 2026
-
-🔗 Explore the opportunity and apply:
-https://educutai.com/educut-connect/344-informatics-program-doctoral-program-october-2027-admission/
-Know someone interested in an informatics PhD in Japan? Share this opportunity!
-#PhD #Informatics #ComputerScience #SOKENDAI #Japan #StudyInJapan #EduCutConnect #EduCutAI
-```
-
-### 13:15 · Offer_246
-
-Image: `cards/91_30Nov_13h15_Offer_246.png`
-
-```
-🎓🇬🇧 DPhil in Computer Science at the University of Oxford, UK!
-
-The University of Oxford's Department of Computer Science is inviting applications for its DPhil in Computer Science for 2027-28 entry, with about 55 places and an expected start on 10 October 2027.
-
-📍 Location: Oxford, United Kingdom
-🎓 Level: Doctoral
-🔬 Fields: Computer science
-📅 Deadline: 2 December 2026
-
-🔗 Explore the opportunity and apply:
-https://educutai.com/educut-connect/246-dphil-in-computer-science/
-Know someone looking for a computer science doctorate in the UK? Share this opportunity!
-#DPhil #UniversityOfOxford #ComputerScience #DoctoralStudy #UK #EduCutConnect #EduCutAI
-```
-
-### 15:45 · Offer_065
-
-Image: `cards/92_30Nov_15h45_Offer_065.png`
-
-```
-🎓🇺🇸 Yale World Fellows Program 2027 for Mid-Career Leaders, USA!
-
-Yale University's Jackson School of Global Affairs is inviting applications for the Yale World Fellows Program 2027, a leadership fellowship for mid-career professionals running from mid-August to mid-December in New Haven.
-
-📍 Location: New Haven, United States
-🎓 Level: Mid-career professionals
-🔬 Fields: Global leadership
-📅 Deadline: 2 December 2026
-
-🔗 Explore the opportunity and apply:
-https://educutai.com/educut-connect/065-yale-world-fellows-program-2027/
-Know a mid-career professional with global leadership ambitions? Share this opportunity!
-#Fellowship #GlobalLeadership #GlobalAffairs #YaleWorldFellows #Yale #USA #EduCutConnect #EduCutAI
-```
-
-### 18:15 · Offer_404
-
-Image: `cards/93_30Nov_18h15_Offer_404.png`
-
-```
-🎓🇺🇸 John S. Knight Journalism Fellowships at Stanford University, USA!
-
-The JSK Journalism Fellowships program at Stanford University is inviting applications for its 2027-28 class from journalism professionals with at least five years of professional experience. A college degree is not required, and late applications are not accepted.
-
-📍 Location: Stanford, United States
-🎓 Level: Professionals (5+ years)
-🔬 Fields: Journalism
-📅 Deadline: 2 December 2026
-
-🔗 Explore the opportunity and apply:
-https://educutai.com/educut-connect/404-john-s-knight-journalism-fellowships/
-Know an experienced journalist ready for a fellowship year at Stanford? Share this opportunity!
-#JournalismFellowship #StanfordUniversity #JSKFellowships #Journalism #USA #EduCutConnect #EduCutAI
-```
-
-### 20:45 · Offer_139
-
-Image: `cards/94_30Nov_20h45_Offer_139.png`
-
-```
-🎓🇺🇸 CISAC Fellowships at Stanford University, USA!
-
-The Center for International Security and Cooperation (CISAC) at Stanford University is inviting applications for its 2027-2028 fellowships, with tracks in AI and the laws of armed conflict, the geopolitics of AI, nuclear security and international security.
-
-📍 Location: Stanford, United States
-🔬 Fields: International Security, AI Policy, Nuclear Security
-📅 Deadline: 2 December 2026
-
-🔗 Explore the opportunity and apply:
-https://educutai.com/educut-connect/139-cisac-fellowships/
-Know someone working on AI policy or international security? Share this opportunity!
-#Fellowship #StanfordUniversity #CISAC #InternationalSecurity #AIPolicy #EduCutConnect #EduCutAI
-```
-
-## Tuesday 1 Dec 2026
-
-### 08:15 · Offer_231
-
-Image: `cards/95_01Dec_08h15_Offer_231.png`
-
-```
-🎓🇬🇧 Fully Funded DPhil Studentships in Technical AI Governance at Oxford, UK!
-
-The Oxford Martin AI Governance Initiative at the University of Oxford is inviting applications for fully funded DPhil studentships in technical AI governance for October 2027 entry, with dedicated compute funding. The direct route closes on 2 December 2026.
-
-📍 Location: United Kingdom
-🎓 Level: Doctoral
-🔬 Fields: Technical AI governance
-📅 Deadline: 2 December 2026
-
-🔗 Explore the opportunity and apply:
-https://educutai.com/educut-connect/231-technical-ai-governance-taig-dphil-studentships/
-Know someone who wants to research technical AI governance at Oxford? Share this opportunity!
-#DPhil #PhD #AIGovernance #ArtificialIntelligence #Oxford #UK #EduCutConnect #EduCutAI
-```
-
-### 10:45 · Offer_311
-
-Image: `cards/96_01Dec_10h45_Offer_311.png`
-
-```
-🎓🇧🇷 Master's in Informática at Pontifícia Universidade Católica do Rio de Janeiro, Brazil!
-
-PUC-Rio's Department of Informatics in Rio de Janeiro is inviting applications for its master's programme in Informática (computer science), starting in the first semester of 2027. Applications are made online by 2 December 2026.
-
-📍 Location: Rio de Janeiro, Brazil
-🎓 Level: Master's
-🔬 Fields: Computer science (Informática)
-📅 Deadline: 2 December 2026
-
-🔗 Explore the opportunity and apply:
-https://educutai.com/educut-connect/311-mestrado-em-informatica/
-Know someone looking for a computer science master's in Brazil? Share this opportunity!
-#MastersDegree #PUCRio #ComputerScience #Informatica #Brazil #EduCutConnect #EduCutAI
-```
-
-### 13:15 · Offer_443
-
-Image: `cards/97_01Dec_13h15_Offer_443.png`
-
-```
-🎓🇬🇧 DPhil Studentship in Future AI Systems for Finance at Oxford, UK!
-
-The University of Oxford's Department of Engineering Science is inviting applications for a DPhil studentship within the Oxford–UBS Centre for Applied AI, for October 2027 entry. Research covers hardware-software co-design, novel accelerators and resilient compute infrastructure for financial AI.
-
-📍 Location: Oxford, United Kingdom
-🎓 Level: Doctoral (DPhil)
-🔬 Fields: Engineering, Computer science, AI for finance
-📅 Deadline: 2 December 2026
-
-🔗 Explore the opportunity and apply:
-https://educutai.com/educut-connect/443-oxford-ubs-centre-for-applied-ai-dphil-studentship-future/
-Know an engineer or computer scientist interested in AI systems for finance? Share this opportunity!
-#DPhil #PhD #ArtificialIntelligence #FinTech #Engineering #Oxford #UK #EduCutConnect #EduCutAI
-```
-
-### 15:45 · Offer_125
-
-Image: `cards/98_01Dec_15h45_Offer_125.png`
-
-```
-🎓🇯🇵 Kyoto iUP International Undergraduate Program at Kyoto University, Japan!
-
-Kyoto University is inviting applications for its International Undergraduate Program (Kyoto iUP), offering 40 places for October 2027 enrollment, with no Japanese proficiency required to apply.
-
-📍 Location: Kyoto, Japan
-🎓 Level: Undergraduate
-📅 Deadline: 3 December 2026
-
-🔗 Explore the opportunity and apply:
-https://educutai.com/educut-connect/125-kyoto-iup-kyoto-university-international-undergraduate/
-Know a student dreaming of an undergraduate degree in Japan? Share this opportunity!
-#StudyInJapan #KyotoUniversity #UndergraduateAdmissions #InternationalStudents #HigherEducation #EduCutConnect #EduCutAI
-```
-
-### 18:15 · Offer_129
-
-Image: `cards/99_01Dec_18h15_Offer_129.png`
-
-```
-🎓🇺🇸 PhD in Data Science at the NYU Center for Data Science, USA!
-
-The NYU Center for Data Science in New York is inviting applications for its PhD in Data Science for Fall 2027 entry, with applications due online on 3 December 2026.
-
-📍 Location: New York, United States
-🎓 Level: Doctoral
-🔬 Fields: Data science
-📅 Deadline: 3 December 2026
-
-🔗 Explore the opportunity and apply:
-https://educutai.com/educut-connect/129-phd-in-data-science/
-Know someone looking for a data science PhD in New York? Share this opportunity!
-#PhDOpportunities #NYU #DataScience #DoctoralResearch #StudyInUSA #EduCutConnect #EduCutAI
-```
-
-### 20:45 · Offer_446
-
-Image: `cards/100_01Dec_20h45_Offer_446.png`
-
-```
-🎓🇺🇸 Postdoctoral Fellowships in Plant Biology at the Simons Foundation, USA!
-
-The Simons Foundation is inviting applications for its three-year Postdoctoral Fellowships in Plant Biology, hosted at US nonprofit research institutions, for plant biologists training with mentors in other fields and researchers from other fields applying their expertise to plant biology.
-
-📍 Location: United States
-🎓 Level: Postdoctoral
-🔬 Fields: Plant biology (interdisciplinary)
-📅 Deadline: 3 December 2026
-
-🔗 Explore the opportunity and apply:
-https://educutai.com/educut-connect/446-simons-postdoctoral-fellowships-in-plant-biology/
-Know a researcher bringing new perspectives to plant biology? Share this opportunity!
-#PostdoctoralFellowship #SimonsFoundation #PlantBiology #Interdisciplinary #USA #EduCutConnect #EduCutAI
 ```
