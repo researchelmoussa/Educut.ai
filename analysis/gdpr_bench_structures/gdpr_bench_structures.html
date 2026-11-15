@@ -116,7 +116,7 @@ table.fml td:first-child{font-weight:600;white-space:nowrap}
   </nav>
   <nav class="toc" aria-label="Contents">
     <button type="button" data-go="phase-0"><b>Phase 0</b> · Overall statistics</button>
-    <button type="button" data-go="phase-1"><b>Phase I</b> · Method &amp; article level</button>
+    <button type="button" data-go="phase-1"><b>Phase I</b> · Error analysis (method &amp; article level)</button>
     <button type="button" data-go="phase-2"><b>Phase II</b> · Error analysis (code-snippet level)</button>
   </nav>
   <div class="phase" id="phase-0"><div class="phase-num">0</div><div><h2 class="phase-t">Phase 0 · Overall statistics</h2><p class="def" style="margin:2px 0 0">How many articles each method predicts compared with gold, snippet by snippet and in total.</p></div></div>
@@ -131,7 +131,7 @@ table.fml td:first-child{font-weight:600;white-space:nowrap}
     </div>
     <div class="fmlw" id="f-stats"></div>
   </section>
-  <div class="phase" id="phase-1"><div class="phase-num">I</div><div><h2 class="phase-t">Phase I · Method &amp; article level</h2><p class="def" style="margin:2px 0 0">Per method: TP, FP, FN, FDR, Precision, FNR, TPR and the per-snippet score. Per article: which GDPR articles are hallucinated or omitted.</p></div></div>
+  <div class="phase" id="phase-1"><div class="phase-num">I</div><div><h2 class="phase-t">Phase I · Error analysis (method &amp; article level)</h2><p class="def" style="margin:2px 0 0">Per method: TP, FP, FN, FDR, Precision, FNR, TPR and the per-snippet score. Per article: which GDPR articles are hallucinated or omitted.</p></div></div>
   <section class="panel" style="padding:16px" id="score-sec">
     <h2>Score per snippet: omission vs. hallucination, by method</h2>
     <p class="def">For each snippet, every gold article the method missed is an <b>omission (−1)</b>, every predicted article not in gold is a <b>hallucination (+1)</b>, and every correctly predicted article counts <b>0</b>. Score = hallucinations − omissions. Example: gold = {4, 5}, method = {7} → 2 omissions + 1 hallucination = <b>−1</b>. An answer of <b>0</b> is <b>Class 0</b> (“no violation detected”): the method predicts nothing, so it has 0 predictions and 0 hallucinations, and every gold article of that snippet is an omission. Example: gold = [5], method = 0 → omission −1, prediction 0, hallucination 0 → score <b>−1</b>. Bars: yellow below zero = omitted articles; blue above zero = correct articles (0 points, shown for context); orange stacked on top = hallucinated articles; black dot = net score. All 6 charts share the x axis: zoom or drag the slider at the bottom to move them together.</p>
