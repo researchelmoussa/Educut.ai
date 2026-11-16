@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "IMPRS-µLife (Marburg Graduate School of Microbiology) PhD call",
+    "evidence_url": "https://www.mpi-marburg.mpg.de/1555569/2025-12-a",
+    "evidence_quote": "The Marburg Graduate School of Microbiology (IMPRS-µLife)"
+  },
+  "institution": {
+    "name": "Max Planck Institute for Terrestrial Microbiology and Philipps-Universität Marburg (IMPRS-µLife)",
+    "website": "https://imprs-marburg.mpg.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://imprs-marburg.mpg.de/3496/Selection-and-admission",
+  "source_url": "https://imprs-marburg.mpg.de/3496/Selection-and-admission",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Marburg",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Microbiology",
+  "seniority": "Master's graduates (PhD candidates)",
+  "qualifications": [
+    "Master of Science or equivalent in fields such as biology, microbiology or chemistry",
+    "Extended four-year Bachelor's may qualify, usually with extra courses at Philipps-Universität Marburg",
+    "Applications only via the online portal"
+  ],
+  "skills": [],
+  "description_short": "The Marburg Graduate School of Microbiology (IMPRS-µLife) opens its next PhD call on 1 December 2026, closing 31 January 2027, for an October 2027 start in Marburg, Germany. Shortlisted applicants have online interviews in March and a selection symposium in April.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://imprs-marburg.mpg.de/3496/Selection-and-admission",
+    "evidence_quote": "close on the 31st January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IMPRS-µLife selection page (seen in search results): next call opens on 1 December 2026 and closes on the 31st January 2027 for an October 2027 start",
+    "Application portal not yet open on the date of this run",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Online application only opens on 1 December 2026",
+    "Deadline time not stated in the results",
+    "Title composed from the school name and the call; no single posting title seen"
+  ],
+  "discovered_at": "2026-11-16T03:09:35.046Z",
+  "last_verified_at": "2026-11-16T03:09:36.014Z",
+  "id": "opp_4e57fe8fbe89640f",
+  "fingerprint": "9c13acd94b9d54e2",
+  "content_hash": "sha256:92019345365ddb4f61efe8966d650f4dae5635bfec00a0c79e02b4346ee31e2c"
+}

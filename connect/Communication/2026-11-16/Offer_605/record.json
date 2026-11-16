@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Bergen Summer Research School 2027 (BSRS)",
+    "evidence_url": "https://www4.uib.no/en/research/research-schools/bergen-summer-research-school",
+    "evidence_quote": "Bergen Summer Research School 2027 (BSRS)"
+  },
+  "institution": {
+    "name": "University of Bergen",
+    "website": "https://www.uib.no",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www4.uib.no/en/research/research-schools/bergen-summer-research-school/apply-to-participate",
+  "source_url": "https://www4.uib.no/en/research/research-schools/bergen-summer-research-school",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Bergen",
+    "country": "Norway",
+    "country_code": "NO"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Interdisciplinary PhD courses (e.g. moral economies of AI and of universal health coverage)",
+  "seniority": "PhD students",
+  "qualifications": [
+    "PhD student",
+    "Strong command of English"
+  ],
+  "skills": [],
+  "description_short": "The University of Bergen's Bergen Summer Research School runs 7-17 June 2027 in Bergen, Norway, with seven parallel PhD courses, including Moral economies of Artificial Intelligence. Participants choose one course. Application deadline: 1 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": null,
+    "evidence_url": "https://www4.uib.no/en/research/research-schools/bergen-summer-research-school/apply-to-participate",
+    "evidence_quote": "application deadline is 1 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UiB application page (seen in search results): application deadline is 1 February 2027; applicants can edit submissions until then",
+    "Deadline is in the future; application form not independently confirmed",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline time and time zone not stated in the results",
+    "Overall field label summarised from the listed course titles"
+  ],
+  "discovered_at": "2026-11-16T02:56:56.214Z",
+  "last_verified_at": "2026-11-16T03:05:51.067Z",
+  "id": "opp_1d6454b9f79e1fb7",
+  "fingerprint": "026a7f4a14a8c4a2",
+  "content_hash": "sha256:a4aa63d58ea4471d682ab5fd33d267296abad9c4c7fbb3f0defa68a9120f0401"
+}

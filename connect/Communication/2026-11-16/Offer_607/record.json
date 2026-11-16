@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Complex Systems Summer School",
+    "evidence_url": "https://santafe.edu/engage/learn/programs/sfi-complex-systems-summer-school",
+    "evidence_quote": "Programs: Complex Systems Summer School"
+  },
+  "institution": {
+    "name": "Santa Fe Institute (SFI)",
+    "website": "https://www.santafe.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://santafe.edu/engage/learn/programs/sfi-complex-systems-summer-school",
+  "source_url": "https://santafe.edu/engage/learn/programs/sfi-complex-systems-summer-school",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Santa Fe",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Complex systems (interdisciplinary)",
+  "seniority": "Graduate students, postdocs and professionals",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The Santa Fe Institute's 2027 Complex Systems Summer School, a four-week residential programme in Santa Fe, United States, runs June 8 to July 1, 2027. Applications are due February 3, 2027 by 4 PM MST.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-03T16:00:00-07:00",
+    "timezone": "America/Denver",
+    "evidence_url": "https://santafe.edu/engage/learn/programs/sfi-complex-systems-summer-school",
+    "evidence_quote": "Application Deadline: February 3 by 4 PM MST"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SFI programme page (seen in search results) lists the 2027 session: Begins Jun 08 2027, Ends Jul 01 2027, Application Deadline February 3 by 4 PM MST",
+    "Deadline is in the future; application portal not independently confirmed",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Another SFI page still showed 2026 programme content with 2027 details 'to follow in November 2026'; the 2027 deadline comes from the newer programme page",
+    "Year of the deadline (2027) inferred from the 2027 session dates on the same page",
+    "Eligibility details not confirmed from the results",
+    "City assumed Santa Fe (SFI location); not quoted from the programme page in the results"
+  ],
+  "discovered_at": "2026-11-16T02:56:56.214Z",
+  "last_verified_at": "2026-11-16T02:56:56.321Z",
+  "id": "opp_8b35bf9f7835502d",
+  "fingerprint": "c5b776c34356fdbe",
+  "content_hash": "sha256:f1c8324dd9ae664a45f5bb3dc56cdbd8a5e18730f19114de3f7919ccb164d00e"
+}

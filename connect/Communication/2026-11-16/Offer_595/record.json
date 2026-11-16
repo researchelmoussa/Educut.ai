@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Master Program in Geospatial Technologies",
+    "evidence_url": "http://mastergeotech.info/wp-content/uploads/2014/10/examination_regulations_and_module_handbook_7-10-14.pdf",
+    "evidence_quote": "Examination Regulations for the Master Program in Geospatial Technologies"
+  },
+  "institution": {
+    "name": "University of Münster, Universitat Jaume I and NOVA IMS (Erasmus Mundus Master in Geospatial Technologies)",
+    "website": "https://mastergeotech.info",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://mastergeotech.info/how-to-apply/on-line-application/",
+  "source_url": "https://mastergeotech.info/fees-fundings/erasmus-mundus-scholarships/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Münster",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Geospatial technologies, geoinformatics",
+  "seniority": "Bachelor's graduates",
+  "qualifications": [
+    "Adequate Bachelor degree of six semesters full time (180 ECTS) or more",
+    "Partner-country applicants must have finished their first degree by the deadline"
+  ],
+  "skills": [],
+  "description_short": "Erasmus Mundus scholarship applications for the joint MSc in Geospatial Technologies (University of Münster, Universitat Jaume I in Castellón, NOVA IMS in Lisbon), taught in English and starting September 2027, are due January 7, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-07",
+    "timezone": null,
+    "evidence_url": "https://mastergeotech.info/fees-fundings/erasmus-mundus-scholarships/",
+    "evidence_quote": "January 7, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official programme scholarship page (seen in search results): scholarship application deadline January 7, 2027, for a programme starting at the beginning of September 2027",
+    "Other pages on the same site (online application, dates and deadlines) still show the 2026 cycle with scholarships marked closed, so the portal state could not be confirmed",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Programme is multi-site: first semester in Lisbon or Castellón, second in Münster; location set to Münster (University of Münster holds the EU contract) as an approximation",
+    "Deadline time and time zone not stated in the results",
+    "Online application page in the results still marked scholarship applications closed (likely stale)",
+    "Title taken from the programme's examination regulations document; the scholarship page title is 'Erasmus Mundus Scholarships'"
+  ],
+  "discovered_at": "2026-11-16T03:00:47.806Z",
+  "last_verified_at": "2026-11-16T03:00:47.939Z",
+  "id": "opp_a48b2ba61c4102d1",
+  "fingerprint": "6bd363d3047e9ab9",
+  "content_hash": "sha256:9ae418f4ad6dec1520fae4b06103f229b5277d2d10f48f17b8b3a56827c336ba"
+}

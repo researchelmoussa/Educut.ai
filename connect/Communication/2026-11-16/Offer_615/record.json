@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Tropical Plant Systematics 2027",
+    "evidence_url": "https://tropicalstudies.org/course/tropical-plant-systematic/",
+    "evidence_quote": "Tropical Plant Systematics 2027 - Organization for Tropical Studies"
+  },
+  "institution": {
+    "name": "Organization for Tropical Studies (OTS)",
+    "website": "https://tropicalstudies.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://tropicalstudies.org/course/tropical-plant-systematic/",
+  "source_url": "https://tropicalstudies.org/course/tropical-plant-systematic/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": null,
+    "country": "Costa Rica",
+    "country_code": "CR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Tropical botany and plant systematics",
+  "seniority": "Graduate students and young professionals",
+  "qualifications": [
+    "Graduate student or young professional",
+    "At least a bachelor's degree in biology, ecology, agronomy or related fields"
+  ],
+  "skills": [],
+  "description_short": "The Organization for Tropical Studies' Tropical Plant Systematics 2027 course runs 20 June to 27 July 2027 at the three OTS research stations in Costa Rica, with a visit to herbaria in San José. For graduate students and young professionals. Deadline: March 20, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-20",
+    "timezone": null,
+    "evidence_url": "https://tropicalstudies.org/course/tropical-plant-systematic/",
+    "evidence_quote": "Deadline: March 20th, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official OTS course page (seen in search results): When 20-Jun - 27 Jul 2027; Deadline: March 20th, 2027",
+    "OTS uses rolling admissions; programmes may fill before the deadline",
+    "Application form not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "An OTS description says the course is offered in even-numbered years, which conflicts with the 2027 listing",
+    "Rolling admissions: places may fill before the deadline",
+    "Multi-site course (all three OTS stations, including La Selva and Las Cruces, plus San José); no single city set",
+    "Deadline time not stated"
+  ],
+  "discovered_at": "2026-11-16T03:05:28.022Z",
+  "last_verified_at": "2026-11-16T03:05:34.344Z",
+  "id": "opp_58128e954dde61c8",
+  "fingerprint": "bf07cc722a4e8bda",
+  "content_hash": "sha256:e910b4eb0b054156855adf1d2c1576658bb3895eafb552e2d169c4938b6ff3f6"
+}

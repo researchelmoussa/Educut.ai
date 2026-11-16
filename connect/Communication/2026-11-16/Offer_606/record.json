@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Chemers Neustein Summer Undergraduate Research Fellowship Program (SURF)",
+    "evidence_url": "https://www.rockefeller.edu/education-and-training/surf/",
+    "evidence_quote": "Chemers Neustein Summer Undergraduate Research Fellowship Program (SURF)"
+  },
+  "institution": {
+    "name": "The Rockefeller University",
+    "website": "https://www.rockefeller.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://surfapplication.rockefeller.edu/",
+  "source_url": "https://www.rockefeller.edu/education-and-training/surf/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "New York",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Laboratory research at The Rockefeller University",
+  "seniority": "Undergraduates (college sophomores and juniors)",
+  "qualifications": [
+    "College sophomores and juniors",
+    "International students are eligible to apply",
+    "Online application, personal statement, official transcript, two recommendation letters, CV"
+  ],
+  "skills": [],
+  "description_short": "The Rockefeller University's summer undergraduate research programme in New York, United States runs June 7 to August 13, 2027 for college sophomores and juniors; international students may apply. Applications and recommendation letters are due February 1, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": null,
+    "evidence_url": "https://www.rockefeller.edu/education-and-training/surf/application-information/",
+    "evidence_quote": "February 1, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Rockefeller SURF application-information page (seen in search results): application deadline February 1, 2027; programme June 7 through August 13, 2027; notification mid-March",
+    "Online application site surfapplication.rockefeller.edu seen in results but not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline time and time zone not stated in the results",
+    "Number of places stated in the results not reproduced"
+  ],
+  "discovered_at": "2026-11-16T03:02:22.766Z",
+  "last_verified_at": "2026-11-16T03:05:51.905Z",
+  "id": "opp_ae5db58fcc354d42",
+  "fingerprint": "34e2ec9ab28a02b1",
+  "content_hash": "sha256:957fd7426c3e4269881aee1cbc87d9080866085027597058a8edbc39660d76aa"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Visiting Fellowships",
+    "evidence_url": "https://www.crassh.cam.ac.uk/research/fellowships/visiting-fellowships/",
+    "evidence_quote": "Visiting Fellowships - CRASSH - University of Cambridge"
+  },
+  "institution": {
+    "name": "CRASSH (Centre for Research in the Arts, Social Sciences and Humanities), University of Cambridge",
+    "website": "https://www.crassh.cam.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.crassh.cam.ac.uk/research/fellowships/visiting-fellowships/",
+  "source_url": "https://www.crassh.cam.ac.uk/research/fellowships/visiting-fellowships/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Cambridge",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Arts, social sciences and humanities",
+  "seniority": "Scholars (visiting researchers)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "CRASSH at the University of Cambridge, United Kingdom invites applications for Visiting Fellowships held between October 2027 and June 2028. Applications are due by 17:00 UTC on 3 February 2027; references by 10 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-03T17:00:00+00:00",
+    "timezone": "UTC",
+    "evidence_url": "https://www.crassh.cam.ac.uk/research/fellowships/visiting-fellowships/",
+    "evidence_quote": "17:00 UTC on 3 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CRASSH Visiting Fellowships page (seen in search results): deadline 17:00 UTC on 3 February 2027, references due 10 February 2027, for fellowships between October 2027 and June 2028",
+    "CRASSH opportunities page: applications opening on 3 November 2026",
+    "Application system not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Eligibility criteria for the general Visiting Fellowships not detailed in the results",
+    "Application system URL (CASC fellowship application system) seen in results but not confirmed for this round; application_url is the official programme page"
+  ],
+  "discovered_at": "2026-11-16T03:02:22.766Z",
+  "last_verified_at": "2026-11-16T03:02:23.405Z",
+  "id": "opp_db205019ee393a72",
+  "fingerprint": "3fee2c391d847e97",
+  "content_hash": "sha256:ddcbd001b87c32f4dd545b8a89f8063d7c22680f66e0adb716dd52451002dbb9"
+}
