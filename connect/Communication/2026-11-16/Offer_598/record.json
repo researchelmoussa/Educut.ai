@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "One to Two Month Residential Academic Research Fellowships",
+    "evidence_url": "https://www.americanantiquarian.org/academic-research-fellowships/1-2-month-residential",
+    "evidence_quote": "One to Two Month Residential Academic Research Fellowships"
+  },
+  "institution": {
+    "name": "American Antiquarian Society (AAS)",
+    "website": "https://www.americanantiquarian.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.americanantiquarian.org/fellowships/how-apply-fellowship",
+  "source_url": "https://www.americanantiquarian.org/academic-research-fellowships/1-2-month-residential",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Worcester",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Research using the American Antiquarian Society library collections",
+  "seniority": "Doctoral candidates and postdoctoral scholars",
+  "qualifications": [
+    "Most fellowships open to doctoral candidates; some reserved for postdoctoral scholars"
+  ],
+  "skills": [],
+  "description_short": "The American Antiquarian Society's one to two month residential academic research fellowships are for research using the AAS library in Worcester, Massachusetts, United States. Most are open to doctoral candidates, some to postdoctoral scholars. Application deadline: January 15, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": null,
+    "evidence_url": "https://www.americanantiquarian.org/academic-research-fellowships/1-2-month-residential",
+    "evidence_quote": "The application deadline for the one to two month fellowships administered by AAS is January 15, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official AAS fellowship page (seen in search results): application deadline for the one to two month fellowships is January 15, 2027; the same date appears on individual fellowship pages (e.g. Ken Karmiole Fellowship)",
+    "Deadline is in the future; application portal not independently confirmed",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Award period (likely 2027-28) not explicitly stated in the results",
+    "Deadline time not confirmed for this programme (an AAS-NEH page shows 11:59pm)",
+    "Eligibility varies by individual named fellowship"
+  ],
+  "discovered_at": "2026-11-16T03:00:47.806Z",
+  "last_verified_at": "2026-11-16T03:14:48.382Z",
+  "id": "opp_98f59da591d60d20",
+  "fingerprint": "fe8856897c193eca",
+  "content_hash": "sha256:022c039fb54e7a8b4437f1ac22656c4a1d39a6139dd9a1fca6dc97555f73de72"
+}

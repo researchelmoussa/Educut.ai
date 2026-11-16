@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Molecular Biology (MSc/PhD)",
+    "evidence_url": "https://uni-goettingen.de/en/663690.html",
+    "evidence_quote": "Molecular Biology (MSc/PhD)"
+  },
+  "institution": {
+    "name": "University of Göttingen (Georg-August-Universität Göttingen)",
+    "website": "https://www.uni-goettingen.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://gpmolbio2.uni-goettingen.de/phdapp/public/index.php?app_type=molbio",
+  "source_url": "https://uni-goettingen.de/en/663690.html",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Göttingen",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Molecular biology",
+  "seniority": "Graduates (integrated MSc/PhD)",
+  "qualifications": [
+    "Generally 120 credits (ECTS or equivalent) at the time of application",
+    "Programme taught in English"
+  ],
+  "skills": [],
+  "description_short": "The University of Göttingen's integrated MSc/PhD programme in Molecular Biology, taught in English in Göttingen, Germany, accepts applications for the fall 2027 round through its online portal until January 15, 2027; shortlisted candidates are interviewed in January and February.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15T23:59:00+01:00",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://www.uni-goettingen.de/en/663790.html",
+    "evidence_quote": "January 15, 24:00 h CET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official online application system (seen in search results): fall 2027 application period runs September 15, 2026 to January 15, 2027",
+    "Official admissions page: online registration closes January 15, 24:00 h CET",
+    "Portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "A general Göttingen teaching page mentions January 31; the January 15 date on the application system and admissions page is used",
+    "Online applications not possible 4-8 January 2027 due to an IT update (per a Göttingen page in the results)",
+    "Exact title wording varies between pages ('Molecular Biology (MSc/PhD)' and 'Molecular Biology (M.Sc./Ph.D.)')"
+  ],
+  "discovered_at": "2026-11-16T02:56:56.214Z",
+  "last_verified_at": "2026-11-16T02:56:56.779Z",
+  "id": "opp_30caa63d353b964f",
+  "fingerprint": "0a68fc53001c0f9b",
+  "content_hash": "sha256:8e3ed15191c4c3a3368512b2a1e855bc9b45c1348ce9ae46e30951d24d04d602"
+}

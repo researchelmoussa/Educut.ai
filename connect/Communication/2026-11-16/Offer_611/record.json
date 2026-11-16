@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "CUPUM 2027",
+    "evidence_url": "https://cupum2027.com.au/call-for-papers/",
+    "evidence_quote": "CUPUM 2027"
+  },
+  "institution": {
+    "name": "City Futures Research Centre, UNSW Sydney (host of CUPUM 2027)",
+    "website": "https://cupum2027.com.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cupum2027.com.au/call-for-papers/",
+  "source_url": "https://cupum2027.com.au/call-for-papers/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Sydney",
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Computational urban planning and urban management",
+  "seniority": "Researchers",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The 20th International Conference on Computational Urban Planning and Urban Management (CUPUM 2027) is held 5-9 July 2027 at UNSW Sydney, Australia. Conference papers (1,500-2,000-word extended abstracts) and 250-word poster abstracts are due 12 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-12",
+    "timezone": null,
+    "evidence_url": "https://cupum2027.com.au/call-for-papers/",
+    "evidence_quote": "12 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CUPUM 2027 call-for-papers page (seen in search results): conference papers and poster abstracts due 12 February 2027",
+    "Submission system not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline time and time zone not stated in the results",
+    "Early-bird registration dates differ between pages (not used here)",
+    "Submission system URL not seen; application_url is the official call page"
+  ],
+  "discovered_at": "2026-11-16T03:09:35.046Z",
+  "last_verified_at": "2026-11-16T03:09:35.713Z",
+  "id": "opp_536c58faa59b0274",
+  "fingerprint": "9d13f25c18f89fb2",
+  "content_hash": "sha256:4719c018580ce8519ea60df6ab8e97a086174416a76631446f98427feb61dacc"
+}

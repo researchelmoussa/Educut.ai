@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Visiting Research Fellowships",
+    "evidence_url": "https://iash.ed.ac.uk/visiting-research-fellowships",
+    "evidence_quote": "Visiting Research Fellowships"
+  },
+  "institution": {
+    "name": "Institute for Advanced Studies in the Humanities (IASH), University of Edinburgh",
+    "website": "https://www.iash.ed.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://iash.ed.ac.uk/visiting-research-fellowships",
+  "source_url": "https://iash.ed.ac.uk/visiting-research-fellowships",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Edinburgh",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Humanities",
+  "seniority": "Researchers",
+  "qualifications": [
+    "References must reach the Institute Director by the deadline"
+  ],
+  "skills": [],
+  "description_short": "IASH at the University of Edinburgh, United Kingdom invites applications for 2027-28 Visiting Research Fellowships of two to six months, with visits between 1 August 2027 and 31 July 2028. Applications and references close at 17:00 GMT on 26 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-26T17:00:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://iash.ed.ac.uk/visiting-research-fellowships",
+    "evidence_quote": "Applications for the 2027-28 round will close at 17:00 GMT on 26 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IASH page (seen in search results): applications for the 2027-28 round will close at 17:00 GMT on 26 February 2027; online portal opens in November 2026",
+    "Portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "IASH page metadata in the results suggested an older last-update date, although the text carries 2027-28 dates",
+    "Eligibility details beyond references not captured from the results"
+  ],
+  "discovered_at": "2026-11-16T03:03:20.048Z",
+  "last_verified_at": "2026-11-16T03:03:20.168Z",
+  "id": "opp_892c8fd896d388f8",
+  "fingerprint": "f6ea2b1fb5dbce00",
+  "content_hash": "sha256:0f7a0898a362a565db71e33a9989d04db3f4790f31a619df9962104baa33366d"
+}

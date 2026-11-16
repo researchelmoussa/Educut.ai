@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Chamber Music 2027",
+    "evidence_url": "https://www.banffcentre.ca/programs/music/chamber-music-2027",
+    "evidence_quote": "Chamber Music 2027"
+  },
+  "institution": {
+    "name": "Banff Centre for Arts and Creativity",
+    "website": "https://www.banffcentre.ca",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.banffcentre.ca/programs/music/chamber-music-2027",
+  "source_url": "https://www.banffcentre.ca/programs/music/chamber-music-2027",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Banff",
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Classical chamber music and composition",
+  "seniority": "Early-career musicians and composers",
+  "qualifications": [
+    "18+ at the programme start date",
+    "Early-career, classically trained musicians in post-secondary or postgraduate study, or recent graduates",
+    "String, woodwind, brass, piano, percussion and composition applicants; two positions reserved for composers",
+    "Available for the entire programme"
+  ],
+  "skills": [],
+  "description_short": "Banff Centre for Arts and Creativity's Chamber Music 2027 residency runs July 5-17, 2027 in Banff, Canada, for early-career, classically trained musicians and composers aged 18+. Domestic and international applicants are welcome. Deadline: January 13, 2027, 11:59 p.m. Mountain Standard Time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-13T23:59:00-07:00",
+    "timezone": "America/Edmonton",
+    "evidence_url": "https://www.banffcentre.ca/programs/music/chamber-music-2027",
+    "evidence_quote": "The application deadline is 11:59 p.m. Mountain Standard Time."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Banff Centre programme page (seen in search results): Program Dates Jul 05, 2027 - Jul 17, 2027; music listing shows Application Deadline January 13, 2027; deadline 11:59 p.m. Mountain Standard Time",
+    "Application system not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline date (January 13, 2027) quoted from the Banff Centre music listing; the time from the programme page",
+    "City assumed Banff (Banff Centre campus)"
+  ],
+  "discovered_at": "2026-11-16T03:09:35.046Z",
+  "last_verified_at": "2026-11-16T03:09:35.457Z",
+  "id": "opp_949b3830dd9ae02c",
+  "fingerprint": "4782c126dfe1952c",
+  "content_hash": "sha256:b11f4f8d2963c72daee59f7b5e608d543f118ccbffcdf6f9555599b094df826d"
+}

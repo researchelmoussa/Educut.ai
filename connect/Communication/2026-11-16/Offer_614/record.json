@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "MemBioMed Erasmus Mundus Joint Master",
+    "evidence_url": "https://life.univ-cotedazur.eu/international/membiomed",
+    "evidence_quote": "MemBioMed Erasmus Mundus Joint Master"
+  },
+  "institution": {
+    "name": "Université Côte d'Azur, LIFE Graduate School (MemBioMed consortium)",
+    "website": "https://univ-cotedazur.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://life.univ-cotedazur.eu/international/membiomed/how-to-apply",
+  "source_url": "https://life.univ-cotedazur.eu/international/membiomed",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Nice",
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Life sciences (MemBioMed Erasmus Mundus Joint Master)",
+  "seniority": "Bachelor's graduates",
+  "qualifications": [
+    "Bachelor's degree obtained in 2023 or later",
+    "Bachelor's cGPA at least 65% of the maximum scale"
+  ],
+  "skills": [],
+  "description_short": "Applications for the 2027-2029 cohort of the MemBioMed Erasmus Mundus Joint Master, hosted via Université Côte d'Azur's LIFE Graduate School, open December 1, 2026. Deadlines: February 28, 2027 (partner countries) and March 31, 2027 (programme countries), 11:59 PM Paris time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-28T23:59:00+01:00",
+    "timezone": "Europe/Paris",
+    "evidence_url": "https://life.univ-cotedazur.eu/international/membiomed/how-to-apply",
+    "evidence_quote": "February 28, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official MemBioMed application page (seen in search results): applications for the 2027-2029 cohort open December 1st, 2026 at 00h01 AM (Paris time); deadline February 28, 2027 for partner-country applicants and March 31, 2027 for programme-country applicants, 11:59 PM Paris time",
+    "Application portal not yet open on the date of this run",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Online application only opens on December 1, 2026",
+    "Deadline recorded is the earlier (partner-country) date; programme-country applicants have until March 31, 2027",
+    "City assumed Nice (Université Côte d'Azur); study locations across the consortium not confirmed in the results"
+  ],
+  "discovered_at": "2026-11-16T03:00:47.806Z",
+  "last_verified_at": "2026-11-16T03:05:51.337Z",
+  "id": "opp_c7c0ddcc3961da1b",
+  "fingerprint": "3d72de038e7d2bd1",
+  "content_hash": "sha256:50d9d472b702556dca9cdb151d29ea16e20614f460a24ce93dfaf262724c122c"
+}

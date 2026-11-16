@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "2027-2028 Inria/Collegium Fellowship",
+    "evidence_url": "https://collegium.universite-lyon.fr/2027-2028-inria-collegium-fellowship-425137.kjsp",
+    "evidence_quote": "COLLEGIUM-LYON - 2027-2028 Inria/Collegium Fellowship"
+  },
+  "institution": {
+    "name": "Collegium de Lyon (Institut d'études avancées de Lyon) and Inria",
+    "website": "https://collegium.universite-lyon.fr",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://collegium.universite-lyon.fr/2027-2028-inria-collegium-fellowship-425137.kjsp",
+  "source_url": "https://collegium.universite-lyon.fr/2027-2028-inria-collegium-fellowship-425137.kjsp",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Lyon",
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Digital science and technology",
+  "seniority": "Professors or equivalent researchers based outside France",
+  "qualifications": [
+    "Professorship or equivalent research post at an institution outside France",
+    "Project in digital science and technology supported by an Inria team at the Lyon Saint-Etienne site"
+  ],
+  "skills": [],
+  "description_short": "The Collegium de Lyon and Inria host one researcher in 2027-2028 for 5 to 10 months in Lyon, France. Applicants hold a professorship or equivalent post outside France and need support from a Lyon Saint-Etienne Inria team. Deadline: 29 January 2027, 6 pm Paris time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-29T18:00:00+01:00",
+    "timezone": "Europe/Paris",
+    "evidence_url": "https://collegium.universite-lyon.fr/2027-2028-inria-collegium-fellowship-425137.kjsp",
+    "evidence_quote": "Application deadline: 29 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Collegium de Lyon page (seen in search results): call window September 15, 2026 to January 29, 2027; application deadline 29 January 2027; selection and results February 2027",
+    "Netias listing gives Deadline 29.01.2027 (06.00pm Paris Time)",
+    "Applications are sent by email (comi-lys@inria.fr) per the call; no portal to check",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Application is by email per the call; application_url is the official call page",
+    "Deadline time (6 pm Paris) taken from the Netias listing of the call"
+  ],
+  "discovered_at": "2026-11-16T03:03:20.048Z",
+  "last_verified_at": "2026-11-16T03:03:20.435Z",
+  "id": "opp_f9371453801e020f",
+  "fingerprint": "46ddacbc1b2a4105",
+  "content_hash": "sha256:93c296696ed2d25af39897719142f7f3b71d5b1d3cdbd9228624e1d9bd18d8cf"
+}

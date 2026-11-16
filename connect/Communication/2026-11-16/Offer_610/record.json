@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Special Call: Fellowships in the ZiF-Group \"Practices of Interdisciplinary Research\"",
+    "evidence_url": "https://blogs.uni-bielefeld.de/blog/zif/entry/special-call-fellowships-fpr-participation",
+    "evidence_quote": "Special Call: Fellowships in the ZiF-Group \"Practices of Interdisciplinary Research\""
+  },
+  "institution": {
+    "name": "Center for Interdisciplinary Research (ZiF), Bielefeld University",
+    "website": "https://www.uni-bielefeld.de/einrichtungen/zif/",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.uni-bielefeld.de/einrichtungen/zif/funding/special-call/",
+  "source_url": "https://www.uni-bielefeld.de/einrichtungen/zif/funding/special-call/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Bielefeld",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Study of interdisciplinary research (all disciplines)",
+  "seniority": "Researchers with a doctoral degree",
+  "qualifications": [
+    "Doctoral degree",
+    "Affiliation with a university or research institute",
+    "Confirmation of granted leave from the home institution"
+  ],
+  "skills": [],
+  "description_short": "Bielefeld University's ZiF offers 8 to 10 fellowships in its curated group 'Practices of Interdisciplinary Research', a six-month residency in Bielefeld, Germany from October 2028 to March 2029. Applicants need a doctorate and an institutional affiliation. Deadline: 9 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-09",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://www.uni-bielefeld.de/einrichtungen/zif/funding/special-call/",
+    "evidence_quote": "9 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ZiF special-call page (seen in search results): deadline 9 February 2027 for a residency October 2028 to March 2029",
+    "Netias listing of the call: Application deadline: 9 February 2027",
+    "Application portal not seen in the results",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Application portal/PDF not seen in the results; application_url is the official call page",
+    "Deadline time not stated in the results",
+    "Residency starts more than a year after the deadline"
+  ],
+  "discovered_at": "2026-11-16T03:04:00.196Z",
+  "last_verified_at": "2026-11-16T03:04:00.537Z",
+  "id": "opp_75cf0793c04829f1",
+  "fingerprint": "97d6c03e6baeeb18",
+  "content_hash": "sha256:306e5fb680bf13d8c36c1d4fd59499e37577935d3f0f39a69f50308296da461a"
+}

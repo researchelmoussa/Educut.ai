@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "New Europe College Fellowships 2027-2028",
+    "evidence_url": "https://nec.ro/fellowships/apply-for-a-fellowship/",
+    "evidence_quote": "Apply for a fellowship : NEC"
+  },
+  "institution": {
+    "name": "New Europe College (NEC)",
+    "website": "https://nec.ro",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://applications.nec.ro/",
+  "source_url": "https://nec.ro/fellowships/apply-for-a-fellowship/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Bucharest",
+    "country": "Romania",
+    "country_code": "RO"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Humanities and social sciences (including law and economics)",
+  "seniority": "Postdoctoral scholars",
+  "qualifications": [
+    "Romanian and international postdoctoral scholars in the humanities and social sciences"
+  ],
+  "skills": [],
+  "description_short": "New Europe College in Bucharest, Romania invites Romanian and international postdoctoral scholars in the humanities and social sciences to apply for around 25 fellowships across eight programmes for 2027-2028. Application deadline: 17 January 2027; referee letters by 24 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-17",
+    "timezone": "Europe/Bucharest",
+    "evidence_url": "https://nec.ro/fellowships/apply-for-a-fellowship/",
+    "evidence_quote": "The DEADLINE for submitting applications is 17 JANUARY 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NEC call for applications (seen in search results): DEADLINE for submitting applications is 17 JANUARY 2027; NEC homepage lists the same date",
+    "Online application form at applications.nec.ro seen in results but not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Title composed from the 2027-2028 competition described on the official page; the page heading is 'Apply for a fellowship'",
+    "Eligibility differs between the eight programmes",
+    "Deadline time not stated in the results"
+  ],
+  "discovered_at": "2026-11-16T03:02:22.766Z",
+  "last_verified_at": "2026-11-16T03:02:23.140Z",
+  "id": "opp_de57269c33fedd8a",
+  "fingerprint": "a3d5fe9d198efda4",
+  "content_hash": "sha256:533d9624a34f7e2480ad3af15266af64f1c00e56811e211821b10234949ac4bc"
+}
