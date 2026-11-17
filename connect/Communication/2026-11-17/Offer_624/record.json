@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "RJI Professional Innovation Fellowships",
+    "evidence_url": "https://rjionline.org/about-rji-fellowships/",
+    "evidence_quote": "RJI Professional Innovation Fellowships"
+  },
+  "institution": {
+    "name": "Donald W. Reynolds Journalism Institute (RJI)",
+    "website": "https://rjionline.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://rjionline.org/about-rji-fellowships/",
+  "source_url": "https://rjionline.org/about-rji-fellowships/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Columbia, Missouri",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Journalism innovation",
+  "seniority": "Journalism professionals",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The Donald W. Reynolds Journalism Institute (RJI), United States, accepts first-round applications for its 2027 Professional Innovation Fellowships from 2 November 2026 to 8 January 2027. The eight-month fellowship begins 28 June 2027 with an in-person kickoff at RJI.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08",
+    "timezone": null,
+    "evidence_url": "https://rjionline.org/frequently-asked-questions/",
+    "evidence_quote": "applications are accepted from Nov. 2, 2026 through Jan. 8, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official RJI FAQ (seen in search results): applications are accepted from Nov. 2, 2026 through Jan. 8, 2027",
+    "Official RJI fellowship page (seen in search results): first-round window closes January 8, 2027",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Work arrangement 'remote' based on a third-party summary (remote with limited visits); official wording not seen",
+    "City inferred from RJI location at the University of Missouri; not quoted",
+    "Deadline time and time zone not stated"
+  ],
+  "id": "opp_dea01121ded29ac3",
+  "fingerprint": "76803bd306ce1ca9",
+  "discovered_at": "2026-11-17T02:57:11.826Z",
+  "last_verified_at": "2026-11-17T03:08:56.558Z",
+  "content_hash": "sha256:bc605825b9dcab3e6c5c3318d4ec1a5da6443c174cda0e8a38fc4aba558ab045"
+}

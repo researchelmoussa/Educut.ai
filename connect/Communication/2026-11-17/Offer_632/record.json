@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "TQI Postdoctoral Fellowship",
+    "evidence_url": "https://quantum.utexas.edu/opportunities",
+    "evidence_quote": "TQI Fellowship"
+  },
+  "institution": {
+    "name": "Texas Quantum Initiative, The University of Texas at Austin",
+    "website": "https://quantum.utexas.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://quantum.utexas.edu/opportunities",
+  "source_url": "https://quantum.utexas.edu/opportunities",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": "Austin",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Quantum science and technology",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "Incoming or current UT Austin postdoctoral fellows"
+  ],
+  "skills": [],
+  "description_short": "The Texas Quantum Initiative at The University of Texas at Austin, United States, offers a two-year TQI Postdoctoral Fellowship open to incoming and current UT postdoctoral fellows. Applications for the next cycle are due 31 January 2027; contact TQI-OE@utexas.edu.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": null,
+    "evidence_url": "https://quantum.utexas.edu/opportunities",
+    "evidence_quote": "The application deadline for next cycle is January 31st, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UT Austin quantum opportunities page (seen in search results): application deadline for next cycle is January 31st, 2027",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline time and time zone not stated",
+    "Application is by email to TQI-OE@utexas.edu; no online form seen, application_url is the official opportunities page",
+    "Institution name for TQI taken from the utexas.edu domain; exact unit naming not verified on the page"
+  ],
+  "id": "opp_a9572f9125955ec9",
+  "fingerprint": "55cef9688153e563",
+  "discovered_at": "2026-11-17T02:53:35.963Z",
+  "last_verified_at": "2026-11-17T02:53:35.963Z",
+  "content_hash": "sha256:0c70b23d3e5fec7f0ea46e0a346d6af361af70e98951c0c74313cf976e23915a"
+}

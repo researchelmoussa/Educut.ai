@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "Digital Psychology and Education Conference",
+    "evidence_url": "https://www.elsevier.com/events/conferences/all/digital-psychology-and-education-conference",
+    "evidence_quote": "Conference - Digital Psychology and Education Conference"
+  },
+  "institution": {
+    "name": "Elsevier",
+    "website": "https://www.elsevier.com",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.elsevier.com/events/conferences/all/digital-psychology-and-education-conference/participate",
+  "source_url": "https://www.elsevier.com/events/conferences/all/digital-psychology-and-education-conference",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Shenzhen",
+    "country": "China",
+    "country_code": "CN"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Digital psychology and education",
+  "seniority": "Researchers",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Elsevier's first Digital Psychology and Education Conference (DPEC 2027), themed \"Advancing Human Society in an AI-Powered World\", takes place 17-20 June 2027 in Shenzhen, China. Abstracts are due 8 January 2027 according to the Participate page; the main page states 22 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08",
+    "timezone": null,
+    "evidence_url": "https://www.elsevier.com/events/conferences/all/digital-psychology-and-education-conference/participate",
+    "evidence_quote": "8 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Elsevier DPEC Participate page (seen in search results): abstract deadline 8 January 2027",
+    "Official Elsevier DPEC main page (seen in search results): abstract deadline 22 January 2027; author notification 12 March 2027",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Abstract deadline conflicts between official pages (8 January 2027 on Participate page vs 22 January 2027 on main page); the earlier date is recorded",
+    "Author registration deadline also differs between pages (19 vs 26 March 2027)",
+    "Deadline quote is the date shown in search results; surrounding wording not seen"
+  ],
+  "id": "opp_9b6f727b214ca36a",
+  "fingerprint": "677244483fe9edc1",
+  "discovered_at": "2026-11-17T03:03:31.761Z",
+  "last_verified_at": "2026-11-17T03:03:31.761Z",
+  "content_hash": "sha256:1520e961478798638d50ec50c51cf1160c7b54843985f8a318bc4d3e7a6af4c5"
+}

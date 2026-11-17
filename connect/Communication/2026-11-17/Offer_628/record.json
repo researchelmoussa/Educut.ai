@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "South Coast DTP ESRC Studentships 2027/28 entry",
+    "evidence_url": "https://southcoastdtp.ac.uk/apply/",
+    "evidence_quote": "The SCDTP Selection Committee for entry in 2027/28 will meet in March 2027"
+  },
+  "institution": {
+    "name": "South Coast Doctoral Training Partnership (SCDTP)",
+    "website": "https://southcoastdtp.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://southcoastdtp.ac.uk/apply/",
+  "source_url": "https://southcoastdtp.ac.uk/apply/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Social sciences",
+  "seniority": "Prospective PhD students",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The ESRC South Coast Doctoral Training Partnership, United Kingdom, invites applications for social science PhD studentships for 2027/28 entry. Applicants submit one form to the host institution and one to the SCDTP by 16:00 GMT on 15 January 2027; some partners set earlier deadlines.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/London",
+    "evidence_url": "https://southcoastdtp.ac.uk/apply/",
+    "evidence_quote": "16:00 GMT on 15 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SCDTP Apply page (seen in search results): main deadline 16:00 GMT, 15th January 2027; both forms must be submitted before the deadline",
+    "Selection Committee for entry in 2027/28 meets in March 2027",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Partner institutions may set earlier deadlines (e.g. University of Brighton: 3 January)",
+    "Exact title on the page not seen; title composed from the page's wording about 2027/28 entry",
+    "Pathway availability varies by partner institution",
+    "Funding terms not recorded (compensation left null)"
+  ],
+  "id": "opp_f433f3fc0e60d984",
+  "fingerprint": "8ade2099f8d1c75c",
+  "discovered_at": "2026-11-17T03:02:32.742Z",
+  "last_verified_at": "2026-11-17T03:02:32.742Z",
+  "content_hash": "sha256:4e0869ace3c2d7ccae3eecd1ab84fc68accbf71b136b261f408facb6b896f43d"
+}

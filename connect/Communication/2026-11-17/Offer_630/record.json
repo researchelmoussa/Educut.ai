@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Summer Internship Program (SIP)",
+    "evidence_url": "https://www.training.nih.gov/research-training/pb/sip/",
+    "evidence_quote": "Summer Internship Program (SIP)"
+  },
+  "institution": {
+    "name": "National Institutes of Health (NIH), Office of Intramural Training and Education",
+    "website": "https://www.training.nih.gov",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.training.nih.gov/research-training/pb/sip/",
+  "source_url": "https://www.training.nih.gov/research-training/pb/sip/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Biomedical research",
+  "seniority": "Students",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The NIH Summer Internship Program (SIP) in the United States runs from 10 May to 31 August 2027. Applications are due 26 January 2027 at 12 pm (noon) ET, and reference letters by 2 February 2027 at 12 pm (noon) ET.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-26",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.training.nih.gov/research-training/pb/sip/",
+    "evidence_quote": "Tuesday, January 26, 2027 at 12 pm (noon) ET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NIH OITE SIP page (seen in search results): application deadline Tuesday, January 26, 2027 at 12 pm (noon) ET; reference letters due Tuesday, February 2, 2027",
+    "Application opened Tuesday, October 13 at 9 am ET according to the same page",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Another NIH SIP page and the NIEHS FAQ mention a mid-February deadline; these appear to be older listings",
+    "Eligibility (citizenship, enrolment) not quoted from the official page",
+    "City not stated; NIH has several campuses"
+  ],
+  "id": "opp_5b16862098475d45",
+  "fingerprint": "9a3188dab9e430a0",
+  "discovered_at": "2026-11-17T02:56:11.586Z",
+  "last_verified_at": "2026-11-17T02:56:11.586Z",
+  "content_hash": "sha256:6c5a0ebe08abd3fa35d1393505b4693ca9213d66a0900c51c3e1a8ea7d933a14"
+}
