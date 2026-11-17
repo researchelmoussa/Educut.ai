@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "2027 Kyoto University Amgen Scholars Program",
+    "evidence_url": "https://www.kyoto-u.ac.jp/en/news/2026-11-02",
+    "evidence_quote": "Call for applications: 2027 Kyoto University Amgen Scholars Program"
+  },
+  "institution": {
+    "name": "Kyoto University",
+    "website": "https://www.kyoto-u.ac.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.opir.kyoto-u.ac.jp/study/en/curriculum/amgenscholars/",
+  "source_url": "https://www.kyoto-u.ac.jp/en/news/2026-11-02",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Kyoto",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Science-related research",
+  "seniority": "Undergraduate students",
+  "qualifications": [
+    "Undergraduates in science-related programs at Asian colleges and universities; master's and doctoral students are not eligible"
+  ],
+  "skills": [],
+  "description_short": "Kyoto University invites undergraduates in science-related programs at Asian colleges and universities to apply for its 2027 Amgen Scholars Program, held 4 June to 5 August 2027 in Kyoto, Japan. All application materials are due 1 February 2027, 3 p.m. JST.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.opir.kyoto-u.ac.jp/study/en/curriculum/amgenscholars/",
+    "evidence_quote": "the deadline for the submission of all application materials, including recommendation letters, is 3 p.m. on February 1, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Kyoto University news page (seen in search results) announces the call for applications for the 2027 programme; applications opened 1 November 2026",
+    "Official programme page (seen in search results): deadline 3 p.m. on 1 February 2027",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Eligibility year restrictions for 2027 not confirmed from the full guidelines",
+    "Programme dates (4 June to 5 August 2027) taken from search-result summary of the official page"
+  ],
+  "id": "opp_c54f1f93db3fdeba",
+  "fingerprint": "006f863d3a305a36",
+  "discovered_at": "2026-11-17T02:53:35.648Z",
+  "last_verified_at": "2026-11-17T02:53:35.648Z",
+  "content_hash": "sha256:85b586fa440b8da1ef7c23aaae1d819b3be17b5dce5af4d9cb407f7d07f91acc"
+}

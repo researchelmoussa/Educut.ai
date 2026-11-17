@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "MSCA Doctoral Position",
+    "evidence_url": "https://www.hhs.se/news/dmo/2026/phd-vacancy/",
+    "evidence_quote": "MSCA Doctoral Position"
+  },
+  "institution": {
+    "name": "Stockholm School of Economics (SSE), Department of Management and Organization",
+    "website": "https://www.hhs.se",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.hhs.se/news/dmo/2026/phd-vacancy/",
+  "source_url": "https://www.hhs.se/news/dmo/2026/phd-vacancy/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Stockholm",
+    "country": "Sweden",
+    "country_code": "SE"
+  },
+  "employment_type": "temporary",
+  "work_arrangement": "onsite",
+  "field": "Management and organization (human-AI coexistence in professional service firms)",
+  "seniority": "Doctoral candidates",
+  "qualifications": [
+    "Declaration concerning doctoral status and compliance with the MSCA mobility rule"
+  ],
+  "skills": [],
+  "description_short": "The Stockholm School of Economics' Department of Management and Organization, Sweden, offers a full-time doctoral position in the EMANAIRE MSCA Doctoral Network, studying human-AI coexistence in professional service firms. Applications are open from 1 December 2026 to 15 January 2027, 23:59 CET.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/Stockholm",
+    "evidence_url": "https://www.hhs.se/news/dmo/2026/phd-vacancy/",
+    "evidence_quote": "Applications are open from 1 December 2026 until 15 January 2027 at 23:59 CET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SSE Department of Management and Organization vacancy page (seen in search results): applications open from 1 December 2026 until 15 January 2027 at 23:59 CET",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Application window opens 1 December 2026; not yet open on the run date",
+    "Direct application form link not seen; application_url is the official vacancy page",
+    "Full eligibility criteria not seen"
+  ],
+  "id": "opp_bfc37e573349c1cf",
+  "fingerprint": "85aa5dc60d22bbc1",
+  "discovered_at": "2026-11-17T02:59:39.834Z",
+  "last_verified_at": "2026-11-17T02:59:39.834Z",
+  "content_hash": "sha256:a2f7d4ac759806c0e2d18be44d58e9713cdaead879f0f69ea5d304620b9408a8"
+}

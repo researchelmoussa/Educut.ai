@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "HKUST Summer School 2027",
+    "evidence_url": "https://summercampus.hkust.edu.hk/summer-school-application",
+    "evidence_quote": "HKUST Summer School 2027"
+  },
+  "institution": {
+    "name": "The Hong Kong University of Science and Technology (HKUST)",
+    "website": "https://hkust.edu.hk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://summercampus.hkust.edu.hk/summer-school-application",
+  "source_url": "https://summercampus.hkust.edu.hk/summer-school-application",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Hong Kong",
+    "country": "Hong Kong",
+    "country_code": "HK"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Summer courses",
+  "seniority": "University students",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "HKUST Summer School 2027 in Hong Kong has two application rounds: the Early Round closes 28 February 2027 and the Main Round, with open applications from 24 February, closes 10 March 2027. Students at exchange partner schools need a nomination first.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-10",
+    "timezone": "Asia/Hong_Kong",
+    "evidence_url": "https://summercampus.hkust.edu.hk/summer-school-application",
+    "evidence_quote": "Main Round Deadline 10 Mar 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official HKUST Summer School 2027 application page (seen in search results): Early Round Deadline 28 Feb 2027; Main Round Deadline 10 Mar 2027; open applications for the Main Round run 24 February to 10 March 2027",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Recorded deadline is the Main Round; the Early Round closes 28 February 2027 and gives a wider course selection",
+    "Applications open in early January 2027 (Early Round, nominated students) and 24 February 2027 (Main Round open applications); not yet open on the run date",
+    "Course list, dates of the summer school and eligibility details not recorded"
+  ],
+  "id": "opp_7d27cbd36d8900ae",
+  "fingerprint": "ebf938d76dde81a7",
+  "discovered_at": "2026-11-17T03:01:33.429Z",
+  "last_verified_at": "2026-11-17T03:01:33.429Z",
+  "content_hash": "sha256:0f69367d878d3ec34e3a093d9d4e87f508dbdd49a84385d1a00fdb46a3759619"
+}

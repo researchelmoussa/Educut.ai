@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Summer University 2027",
+    "evidence_url": "https://www.cbs.dk/en/study-programmes/summer-university/application-and-deadlines",
+    "evidence_quote": "Summer University"
+  },
+  "institution": {
+    "name": "Copenhagen Business School (CBS)",
+    "website": "https://www.cbs.dk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cbs.dk/en/study-programmes/summer-university/application-and-deadlines",
+  "source_url": "https://www.cbs.dk/en/study-programmes/summer-university/application-and-deadlines",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "country_code": "DK"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Business and economics summer courses",
+  "seniority": "Bachelor's and master's students",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Copenhagen Business School, Denmark, runs two application rounds for Summer University 2027: the first round is open from 26 January to 13 April 2027 (12:00 CEST); a second round from 23 April to 5 May 2027 covers 2-week courses only.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-13",
+    "timezone": "Europe/Copenhagen",
+    "evidence_url": "https://www.cbs.dk/en/study-programmes/summer-university/application-and-deadlines",
+    "evidence_quote": "26 January at 12:00 CET to 13 April at 12:00 CEST"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CBS Summer University application-and-deadlines page (seen in search results): first round 26 January to 13 April; second round 23 April to 5 May 2027 for 2-week courses",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Application round opens 26 January 2027; not yet open on the run date",
+    "Year of the first-round dates inferred from the Summer University 2027 page context",
+    "Course levels and dates not quoted in the results"
+  ],
+  "id": "opp_01e77a7d39523878",
+  "fingerprint": "de98171c7018edaa",
+  "discovered_at": "2026-11-17T02:55:23.379Z",
+  "last_verified_at": "2026-11-17T02:55:23.379Z",
+  "content_hash": "sha256:db4da914daf44b1ae03610e48a09c60c70479388f0f39ce2c9b2aa4ea99b530a"
+}

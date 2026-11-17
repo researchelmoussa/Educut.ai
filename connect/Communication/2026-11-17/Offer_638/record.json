@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "International Summer School (ISS)",
+    "evidence_url": "https://www.uio.no/english/studies/summerschool/admission/",
+    "evidence_quote": "International Summer School (ISS)"
+  },
+  "institution": {
+    "name": "University of Oslo",
+    "website": "https://www.uio.no",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.uio.no/english/studies/summerschool/admission/",
+  "source_url": "https://www.uio.no/english/studies/summerschool/admission/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Oslo",
+    "country": "Norway",
+    "country_code": "NO"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Bachelor's and master's level summer courses",
+  "seniority": "Bachelor's and master's students",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The University of Oslo International Summer School in Norway offers bachelor's and master's level summer courses starting 28 June 2027. The application portal opens 4 January 2027; scholarship applicants apply by 25 January 2027 and self-financed applicants by 1 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-01",
+    "timezone": null,
+    "evidence_url": "https://www.uio.no/english/studies/summerschool/admission/",
+    "evidence_quote": "The application deadline for all other applicants who are self-financed is March 1, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UiO ISS admission page (seen in search results): application portal opens January 4, 2027; scholarship applicants deadline January 25, 2027; self-financed applicants deadline March 1, 2027",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Recorded deadline is the self-financed deadline; scholarship applicants have an earlier deadline of January 25, 2027",
+    "Application portal opens January 4, 2027; not yet open on the run date",
+    "One UiO page with the same dates appeared to be an older copy; dates not confirmed on a freshly loaded page",
+    "Course start date (Monday, June 28) quoted without year in results; matches 2027 calendar"
+  ],
+  "id": "opp_e4f9f0a0849d82af",
+  "fingerprint": "0bb3beebaca062d5",
+  "discovered_at": "2026-11-17T02:55:23.060Z",
+  "last_verified_at": "2026-11-17T02:55:23.060Z",
+  "content_hash": "sha256:e82f8d81cd9576e2ac9c6c35533753845d6e96a656ee3d4e1ea2d9241ac5853d"
+}

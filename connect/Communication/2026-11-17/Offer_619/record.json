@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhD Research Fellow in Social Science - Arctic Security and Preparedness",
+    "evidence_url": "https://www.nord.no/en/about/vacancies",
+    "evidence_quote": "PhD Research Fellow in Social Science - Arctic Security and Preparedness"
+  },
+  "institution": {
+    "name": "Nord University, Faculty of Social Sciences",
+    "website": "https://www.nord.no",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.nord.no/en/about/vacancies",
+  "source_url": "https://www.nord.no/en/about/vacancies",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Bodø",
+    "country": "Norway",
+    "country_code": "NO"
+  },
+  "employment_type": "temporary",
+  "work_arrangement": "onsite",
+  "field": "Social science (Arctic security and preparedness)",
+  "seniority": "PhD candidates",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Nord University's Faculty of Social Sciences in Bodø, Norway, is recruiting 1-2 PhD Research Fellows in Social Science specialising in Arctic Security and Preparedness. Applications are submitted through the Jobbnorge portal by 4 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-04",
+    "timezone": null,
+    "evidence_url": "https://www.nord.no/en/about/vacancies",
+    "evidence_quote": "Submit the application electronically through the Jobbnorge application portal by 4 January 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Nord University vacancies page (seen in search results) lists the PhD Research Fellow in Social Science - Arctic Security and Preparedness position with a January 4, 2027 deadline",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote taken from a republished copy of the Jobbnorge advert (applykite.com); the Nord University vacancies page shows the same date in search results",
+    "Jobbnorge job ID and direct application URL not seen; application_url is the official Nord University vacancies page",
+    "Number of positions (1-2), city and project focus taken from the republished advert"
+  ],
+  "id": "opp_da58043f5ca423c2",
+  "fingerprint": "3c4f73265db9f5a0",
+  "discovered_at": "2026-11-17T02:58:49.890Z",
+  "last_verified_at": "2026-11-17T02:58:49.890Z",
+  "content_hash": "sha256:58d156ab424af1e9835ac2801039706e25caf80d3d452899bacb7b86657af901"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Danish Government Scholarship",
+    "evidence_url": "https://www.ku.dk/studies/masters/application-and-admission/scholarships",
+    "evidence_quote": "Danish Government Scholarship"
+  },
+  "institution": {
+    "name": "University of Copenhagen",
+    "website": "https://www.ku.dk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ku.dk/studies/admission/masters",
+  "source_url": "https://www.ku.dk/studies/masters/application-and-admission/scholarships",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "country_code": "DK"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Master's degree programmes",
+  "seniority": "Master's applicants",
+  "qualifications": [
+    "Citizen of a country outside the EU, EEA or Switzerland",
+    "Admitted to a master's programme",
+    "Time-limited residence permit for study in Denmark"
+  ],
+  "skills": [],
+  "description_short": "The University of Copenhagen, Denmark, considers non-EU/EEA applicants offered admission to its master's programmes for the Danish Government Scholarship; there is no separate scholarship application. Programme pages list 15 January, 23:59 CET as the application deadline for fee-paying applicants starting September 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/Copenhagen",
+    "evidence_url": "https://www.ku.dk/studies/admission/masters",
+    "evidence_quote": "15 January at 23:59 (CET)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official University of Copenhagen scholarships page (seen in search results): all non-EU/EEA applicants offered admission will automatically be considered for the scholarship",
+    "Official KU programme pages (seen in search results) list 15 January 23:59 (CET) as the deadline for fee-paying applicants for September 2027 start",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "The general KU admissions page appears to associate a 15 January deadline with a February start for non-EU/EEA applicants, while other pages give 15 October for February starts; check the specific programme",
+    "Deadline quote does not include the year; year taken from programme pages for September 2027 start",
+    "Scholarship amount and number of awards not recorded"
+  ],
+  "id": "opp_2e95cd6a9597e9c0",
+  "fingerprint": "dc5b6fb0e80a397c",
+  "discovered_at": "2026-11-17T02:56:11.882Z",
+  "last_verified_at": "2026-11-17T02:56:11.882Z",
+  "content_hash": "sha256:4a579810a65d15501665122c48829096567bd9cd29557be1949baddedb1f30af"
+}

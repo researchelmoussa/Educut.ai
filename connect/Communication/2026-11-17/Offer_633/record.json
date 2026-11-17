@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Knight-Wallace Fellowships",
+    "evidence_url": "https://wallacehouse.umich.edu/knight-wallace/how-to-apply/",
+    "evidence_quote": "Knight-Wallace Fellowships"
+  },
+  "institution": {
+    "name": "Wallace House Center for Journalists, University of Michigan",
+    "website": "https://wallacehouse.umich.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://wallacehouse.umich.edu/knight-wallace/how-to-apply/preparing-your-application/",
+  "source_url": "https://wallacehouse.umich.edu/knight-wallace/how-to-apply/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Ann Arbor",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Journalism",
+  "seniority": "Journalists",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Wallace House Center for Journalists at the University of Michigan, United States, is accepting applications for the 2027-2028 Knight-Wallace Fellowships. U.S. journalists apply by 1 February 2027, with references due 7 February; the international applicant deadline is 1 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": null,
+    "evidence_url": "https://wallacehouse.umich.edu/knight-wallace/how-to-apply/",
+    "evidence_quote": "the deadline for U.S. journalists to apply for the 2027-2028 academic year is February 1, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Wallace House timeline (seen in search results): deadline for U.S. journalists to apply for the 2027-2028 academic year is February 1, 2027",
+    "FAQ: applications for U.S. journalists close on February 1",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline recorded applies to U.S. applicants only; international applicants have a December 1, 2026 deadline",
+    "Official pages conflict on the application platform (OpenWater vs Submittable)",
+    "City inferred from University of Michigan location; not quoted",
+    "Deadline time and time zone not stated"
+  ],
+  "id": "opp_7b07475bd740d4a4",
+  "fingerprint": "712224637a405579",
+  "discovered_at": "2026-11-17T02:57:11.530Z",
+  "last_verified_at": "2026-11-17T03:09:46.655Z",
+  "content_hash": "sha256:4699ad44f9c9eb272bca3ab559000ce012307c1a16c86aaea4a344d1cbf38327"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "ESRC WRDTP studentship",
+    "evidence_url": "https://wrdtp.ac.uk/studentships/how-to-apply/",
+    "evidence_quote": "to be considered for an ESRC WRDTP studentship"
+  },
+  "institution": {
+    "name": "White Rose Doctoral Training Partnership (WRDTP)",
+    "website": "https://wrdtp.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://wrdtp.ac.uk/studentships/how-to-apply/",
+  "source_url": "https://wrdtp.ac.uk/studentships/how-to-apply/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Social sciences",
+  "seniority": "Prospective PhD students",
+  "qualifications": [
+    "Must not have already commenced a PhD"
+  ],
+  "skills": [],
+  "description_short": "The White Rose Doctoral Training Partnership, United Kingdom, runs its ESRC WRDTP studentship competition for doctoral students starting in October 2027. Applicants submit their materials by 17:00 on 20 January 2027; departments then nominate candidates by 24 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-20",
+    "timezone": "Europe/London",
+    "evidence_url": "https://wrdtp.ac.uk/studentships/how-to-apply/",
+    "evidence_quote": "by 17:00, 20 January 2027 to be considered for an ESRC WRDTP studentship"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official WRDTP How to Apply page (seen in search results): applicants must submit by 17:00, 20 January 2027; nomination packs due 24 February 2027; awards announced by 23 April 2027",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Studentship numbers are provisional, subject to the 2026 mid-term review of ESRC DTPs",
+    "Applicants may need to meet earlier departmental deadlines",
+    "Funding terms not recorded (compensation left null)"
+  ],
+  "id": "opp_2588db33fe8cc3f7",
+  "fingerprint": "c7790d14bcaf5e10",
+  "discovered_at": "2026-11-17T03:02:33.048Z",
+  "last_verified_at": "2026-11-17T03:02:33.048Z",
+  "content_hash": "sha256:33d6db478e05839ce38d708922d3206b1a0a0350b52a9fe84712d7765947a707"
+}

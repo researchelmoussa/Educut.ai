@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Summer Undergraduate Research Experience (REU)",
+    "evidence_url": "https://www.janelia.org/you-janelia/students-and-postdocs/summer-undergraduate-research-at-janelia",
+    "evidence_quote": "Summer Undergraduate Research Experience (REU)"
+  },
+  "institution": {
+    "name": "HHMI Janelia Research Campus",
+    "website": "https://www.janelia.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.janelia.org/you-janelia/students-and-postdocs/summer-undergraduate-research-at-janelia",
+  "source_url": "https://www.janelia.org/you-janelia/students-and-postdocs/summer-undergraduate-research-at-janelia",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Ashburn, Virginia",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Biomedical and life-science research",
+  "seniority": "Undergraduate students (rising juniors or seniors)",
+  "qualifications": [
+    "Rising juniors or seniors with at least two years of coursework by June 14, 2027",
+    "Will not have earned a bachelor's degree by September 1, 2027"
+  ],
+  "skills": [],
+  "description_short": "HHMI's Janelia Research Campus, United States, hosts its summer undergraduate research program (HHMI Cech Fellows) from 14 June to 12 August 2027 for rising juniors and seniors. Applications and recommendation letters are due 17 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-17",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.hhmi.org/programs/cech-fellows/faq",
+    "evidence_quote": "Thursday, December 17, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official HHMI 2027 Cech Fellows FAQ and Janelia page (seen in search results): deadline Thursday, December 17, 2026; applications opened November 10, 2026",
+    "Program runs June 14, 2027 through August 12, 2027",
+    "Application portal not loaded from this environment",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment (proxy refusal); found by web search of official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline time differs between official snippets: before 5 pm ET vs 11:59 pm ET",
+    "Janelia page heading reads '2028 Competition Details' although the program runs in summer 2027",
+    "City inferred from Janelia Research Campus location; not quoted",
+    "Relationship between the Janelia REU page and the HHMI Cech Fellows competition taken from search-result summary"
+  ],
+  "id": "opp_e9b41a70be5cec08",
+  "fingerprint": "e069a519686e8cc7",
+  "discovered_at": "2026-11-17T03:01:33.710Z",
+  "last_verified_at": "2026-11-17T03:01:33.710Z",
+  "content_hash": "sha256:80b69909484f214ad098e60ca21a2969222ac9a96aaa0cbd79408e46b839aa0b"
+}
