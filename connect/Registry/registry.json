@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-16T03:15:08.991Z",
+  "updated_at": "2026-11-17T03:09:55.189Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -147,7 +147,7 @@
       "deadline": "2026-11-15T23:59:00-05:00",
       "content_hash": "sha256:439c4d5b712c6ec29d13d04acb6fc8a758e39701e723975dd73776d193426f18",
       "last_verified_at": "2026-10-11T19:37:43.071Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-13T10:30:32.740Z",
       "history": [
         {
@@ -191,6 +191,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.079Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15T23:59:00-05:00 passed"
         }
       ],
       "offer_number": 3
@@ -1106,7 +1113,7 @@
       "deadline": "2026-11-16T14:00:00+01:00",
       "content_hash": "sha256:c6061a953eaecc2916325e10c5855a8675ba2cabc782238b321109ea30c021c6",
       "last_verified_at": "2026-10-13T10:51:24.725Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-13T10:51:29.207Z",
       "history": [
         {
@@ -1150,6 +1157,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.079Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-16T14:00:00+01:00 passed"
         }
       ],
       "offer_number": 16
@@ -2163,7 +2177,7 @@
       "deadline": "2026-11-15T23:59:00-12:00",
       "content_hash": "sha256:0ae425b0e9460fc4cd9c1c9719a2af28b0157246505e89c415caff60d00d89e3",
       "last_verified_at": "2026-10-15T01:55:30.345Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-15T01:55:30.565Z",
       "history": [
         {
@@ -2207,6 +2221,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15T23:59:00-12:00 passed"
         }
       ],
       "offer_number": 28
@@ -4920,7 +4941,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:eb677d23fb4f58ca832df5d7dfc1e6a9a96d4644f3fd93374810fa4cb61dfcd6",
       "last_verified_at": "2026-10-17T01:55:25.033Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T01:55:25.220Z",
       "history": [
         {
@@ -4964,6 +4985,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 48
@@ -5444,7 +5472,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:35a32b5d404007606bfdb458b25212ad860ca208079c47183aef9a260bb7077c",
       "last_verified_at": "2026-10-17T01:57:08.768Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T01:57:08.973Z",
       "history": [
         {
@@ -5488,6 +5516,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 56
@@ -5699,7 +5734,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:bf8c31a5b98c5478131b1a3c049f305451322963a84d077f12eac6ca3422a8ee",
       "last_verified_at": "2026-10-17T01:58:57.059Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T01:58:57.230Z",
       "history": [
         {
@@ -5743,6 +5778,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 60
@@ -9654,7 +9696,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:aab87ac5101b135c0f2bb84ffbbfb8ee8e8d9bc79f14b72c41e5a06ab6541e30",
       "last_verified_at": "2026-10-21T01:59:20.671Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-21T01:59:30.051Z",
       "history": [
         {
@@ -9698,6 +9740,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 121
@@ -9916,7 +9965,7 @@
       "deadline": "2026-11-16T23:59:00+09:00",
       "content_hash": "sha256:a52e899ba0cb12fb80036466e5638fccd9f0d887d92bd69af719d060a3ad5843",
       "last_verified_at": "2026-10-21T01:59:21.484Z",
-      "pipeline_status": "NEEDS_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-21T01:59:30.918Z",
       "history": [
         {
@@ -9932,6 +9981,13 @@
           "to": "NEEDS_REVIEW",
           "actor": "opportunity-scout",
           "reason": "application_status=NEEDS_REVIEW"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "NEEDS_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-16T23:59:00+09:00 passed"
         }
       ]
     },
@@ -10521,7 +10577,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:4628bb3a9d48b494a8990e62d0303bad8d6525a3372ee7bc147e2fbcf09b5225",
       "last_verified_at": "2026-10-21T01:59:23.447Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-21T01:59:32.962Z",
       "history": [
         {
@@ -10565,6 +10621,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 134
@@ -12466,7 +12529,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:afad47e4957582a23e7fc342b686e59a5267002059284845447a8ea5fe0eebac",
       "last_verified_at": "2026-10-23T01:59:49.580Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-23T01:59:58.550Z",
       "history": [
         {
@@ -12510,6 +12573,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 162
@@ -13934,7 +14004,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:2441a237889f7a37b26f6632a0c60f33b7a5386d478b57de39754303cfeefce0",
       "last_verified_at": "2026-10-24T02:05:03.549Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-24T02:05:13.589Z",
       "history": [
         {
@@ -13978,6 +14048,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 185
@@ -14244,7 +14321,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:40cb34837908861543d7ce9aaa6431ba2475dd49ee1c4f487c8364f73596de6a",
       "last_verified_at": "2026-10-24T02:05:04.261Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-24T02:05:14.434Z",
       "history": [
         {
@@ -14288,6 +14365,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 190
@@ -16482,7 +16566,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:88c3b74dc37091902558985b713cddd2ac7af2b750f6bff408ec3cdaacd40b84",
       "last_verified_at": "2026-10-26T02:59:55.797Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-26T02:59:55.917Z",
       "history": [
         {
@@ -16526,6 +16610,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 225
@@ -17660,7 +17751,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:b41c782764e89666512e55a737cc43ddb85b0684cf3d2109b42d608b72026895",
       "last_verified_at": "2026-10-27T03:01:49.112Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-27T03:01:49.280Z",
       "history": [
         {
@@ -17690,6 +17781,13 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "UNDER_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 244
@@ -18394,7 +18492,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:7a3afbc4f8408c5bcdc5542d3a2cf4ad14a9ce83ba551564ae16bcbd7f2fd247",
       "last_verified_at": "2026-10-27T03:09:02.919Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-27T03:09:03.068Z",
       "history": [
         {
@@ -18424,6 +18522,13 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "UNDER_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 259
@@ -19346,7 +19451,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:3e07fe6ff6ddd83a7005d279d1e6d5ccfaf28bf2e19551a366215ae7d1f92cd8",
       "last_verified_at": "2026-10-28T03:02:16.098Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-28T03:00:27.485Z",
       "history": [
         {
@@ -19425,6 +19530,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 278
@@ -19877,7 +19989,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:54acdaaa549054e3ed2604d9ba0b79d841a4cf311c098f9cc4734bcaa4bf50ed",
       "last_verified_at": "2026-10-28T03:03:21.288Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-28T03:03:21.403Z",
       "history": [
         {
@@ -19921,6 +20033,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 286
@@ -21331,7 +21450,7 @@
       "deadline": "2026-11-15",
       "content_hash": "sha256:d9ac1f39259e65efaf94a131e6259086ec8443d9f196a6a80326271c66fb4f0f",
       "last_verified_at": "2026-10-29T03:18:41.758Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-29T03:18:49.765Z",
       "history": [
         {
@@ -21375,6 +21494,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15 passed"
         }
       ],
       "offer_number": 309
@@ -25539,7 +25665,7 @@
       "deadline": "2026-11-16T23:59:59+00:00",
       "content_hash": "sha256:2d960f1ca98dd81e4a76414336d4ea9e405063b295a8b0b5b5a7013434b7921b",
       "last_verified_at": "2026-11-02T03:15:41.148Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-11-02T03:15:52.308Z",
       "history": [
         {
@@ -25583,6 +25709,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-16T23:59:59+00:00 passed"
         }
       ],
       "offer_number": 376
@@ -26483,7 +26616,7 @@
       "deadline": "2026-11-15T23:59:00-08:00",
       "content_hash": "sha256:49f5fb1d00496bbfa85e75d4958a6e8879fa277f58ad3bea37a0a9f4ae1a5637",
       "last_verified_at": "2026-11-02T03:15:43.873Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-11-02T03:15:55.062Z",
       "history": [
         {
@@ -26527,6 +26660,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-17T02:50:03.080Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-15T23:59:00-08:00 passed"
         }
       ],
       "offer_number": 391
@@ -41726,6 +41866,1633 @@
         }
       ],
       "offer_number": 603
+    },
+    "opp_c54f1f93db3fdeba": {
+      "id": "opp_c54f1f93db3fdeba",
+      "fingerprint": "006f863d3a305a36",
+      "title": "2027 Kyoto University Amgen Scholars Program",
+      "institution": "Kyoto University",
+      "city": "Kyoto",
+      "country": "Japan",
+      "source_url": "https://www.kyoto-u.ac.jp/en/news/2026-11-02",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.opir.kyoto-u.ac.jp/study/en/curriculum/amgenscholars/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01",
+      "content_hash": "sha256:85b586fa440b8da1ef7c23aaae1d819b3be17b5dce5af4d9cb407f7d07f91acc",
+      "last_verified_at": "2026-11-17T02:53:35.648Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:53:35.786Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:53:35.786Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:53:35.786Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:44.069Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:44.069Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:54.233Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:54.233Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 634
+    },
+    "opp_a9572f9125955ec9": {
+      "id": "opp_a9572f9125955ec9",
+      "fingerprint": "55cef9688153e563",
+      "title": "TQI Postdoctoral Fellowship",
+      "institution": "Texas Quantum Initiative, The University of Texas at Austin",
+      "city": "Austin",
+      "country": "United States",
+      "source_url": "https://quantum.utexas.edu/opportunities",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://quantum.utexas.edu/opportunities",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:0c70b23d3e5fec7f0ea46e0a346d6af361af70e98951c0c74313cf976e23915a",
+      "last_verified_at": "2026-11-17T02:53:35.963Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:53:36.095Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:53:36.095Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:53:36.095Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:43.567Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:43.567Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:53.974Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:53.974Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 632
+    },
+    "opp_da5a0ed4d290ffdd": {
+      "id": "opp_da5a0ed4d290ffdd",
+      "fingerprint": "71966e61023b77e0",
+      "title": "Loeb Fellowship 2027-2028",
+      "institution": "Harvard Graduate School of Design",
+      "city": "Cambridge, Massachusetts",
+      "country": "United States",
+      "source_url": "https://loebfellowship.gsd.harvard.edu/apply-nominate/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://loebfellowship.gsd.harvard.edu/apply-nominate/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-05",
+      "content_hash": "sha256:b6aac52ac68db24f5bf41c7cce2142c29b34b11e914e669bf8c04da63cf45f1f",
+      "last_verified_at": "2026-11-17T02:53:36.247Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:53:36.377Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:53:36.377Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:53:36.377Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:18.667Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:18.668Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:52.287Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:52.287Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 620
+    },
+    "opp_413f8386b069d1d9": {
+      "id": "opp_413f8386b069d1d9",
+      "fingerprint": "b8445441cceabc33",
+      "title": "2027 – 2028 Levy/Sloan Fellowship",
+      "institution": "The Leon Levy Center for Biography, The Graduate Center, CUNY",
+      "city": "New York",
+      "country": "United States",
+      "source_url": "https://theleonlevycenterforbiography.submittable.com/submit/297907/2027-2028-levy-sloan-fellowship",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://theleonlevycenterforbiography.submittable.com/submit/297907/2027-2028-levy-sloan-fellowship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-04",
+      "content_hash": "sha256:5266e01030dae9b24a7d4144acc89d2085c7f34df73da5b7af713912a35c8158",
+      "last_verified_at": "2026-11-17T02:53:36.537Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:53:36.675Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:53:36.675Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:53:36.676Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:18.181Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:18.181Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:52.003Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:52.003Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 618
+    },
+    "opp_e4f9f0a0849d82af": {
+      "id": "opp_e4f9f0a0849d82af",
+      "fingerprint": "0bb3beebaca062d5",
+      "title": "International Summer School (ISS)",
+      "institution": "University of Oslo",
+      "city": "Oslo",
+      "country": "Norway",
+      "source_url": "https://www.uio.no/english/studies/summerschool/admission/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.uio.no/english/studies/summerschool/admission/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-01",
+      "content_hash": "sha256:e82f8d81cd9576e2ac9c6c35533753845d6e96a656ee3d4e1ea2d9241ac5853d",
+      "last_verified_at": "2026-11-17T02:55:23.060Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:55:23.214Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:55:23.214Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:55:23.214Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:09:06.914Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:09:06.914Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:54.769Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:54.769Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 638
+    },
+    "opp_01e77a7d39523878": {
+      "id": "opp_01e77a7d39523878",
+      "fingerprint": "de98171c7018edaa",
+      "title": "Summer University 2027",
+      "institution": "Copenhagen Business School (CBS)",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://www.cbs.dk/en/study-programmes/summer-university/application-and-deadlines",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.cbs.dk/en/study-programmes/summer-university/application-and-deadlines",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-13",
+      "content_hash": "sha256:db4da914daf44b1ae03610e48a09c60c70479388f0f39ce2c9b2aa4ea99b530a",
+      "last_verified_at": "2026-11-17T02:55:23.379Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:55:23.523Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:55:23.523Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:55:23.524Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:09:07.771Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:09:07.771Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:55.189Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:55.189Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 641
+    },
+    "opp_5b16862098475d45": {
+      "id": "opp_5b16862098475d45",
+      "fingerprint": "9a3188dab9e430a0",
+      "title": "Summer Internship Program (SIP)",
+      "institution": "National Institutes of Health (NIH), Office of Intramural Training and Education",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.training.nih.gov/research-training/pb/sip/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.training.nih.gov/research-training/pb/sip/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-26",
+      "content_hash": "sha256:6c5a0ebe08abd3fa35d1393505b4693ca9213d66a0900c51c3e1a8ea7d933a14",
+      "last_verified_at": "2026-11-17T02:56:11.586Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:56:11.717Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:56:11.717Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:56:11.717Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:31.459Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:31.459Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:53.711Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:53.711Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 630
+    },
+    "opp_2e95cd6a9597e9c0": {
+      "id": "opp_2e95cd6a9597e9c0",
+      "fingerprint": "dc5b6fb0e80a397c",
+      "title": "Danish Government Scholarship",
+      "institution": "University of Copenhagen",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "source_url": "https://www.ku.dk/studies/masters/application-and-admission/scholarships",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.ku.dk/studies/admission/masters",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:4a579810a65d15501665122c48829096567bd9cd29557be1949baddedb1f30af",
+      "last_verified_at": "2026-11-17T02:56:11.882Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:56:12.034Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:56:12.034Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:56:12.034Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:15.729Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:15.729Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:53.156Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:53.156Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 626
+    },
+    "opp_7b07475bd740d4a4": {
+      "id": "opp_7b07475bd740d4a4",
+      "fingerprint": "712224637a405579",
+      "title": "Knight-Wallace Fellowships",
+      "institution": "Wallace House Center for Journalists, University of Michigan",
+      "city": "Ann Arbor",
+      "country": "United States",
+      "source_url": "https://wallacehouse.umich.edu/knight-wallace/how-to-apply/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://wallacehouse.umich.edu/knight-wallace/how-to-apply/preparing-your-application/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01",
+      "content_hash": "sha256:4699ad44f9c9eb272bca3ab559000ce012307c1a16c86aaea4a344d1cbf38327",
+      "last_verified_at": "2026-11-17T03:09:46.655Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:57:11.671Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:57:11.671Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:57:11.671Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:43.815Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:43.815Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:46.817Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-17T03:09:46.817Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-17T03:09:48.357Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Fixed tense of international deadline"
+        },
+        {
+          "at": "2026-11-17T03:09:50.687Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:09:50.687Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:54.110Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:54.110Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 633
+    },
+    "opp_dea01121ded29ac3": {
+      "id": "opp_dea01121ded29ac3",
+      "fingerprint": "76803bd306ce1ca9",
+      "title": "RJI Professional Innovation Fellowships",
+      "institution": "Donald W. Reynolds Journalism Institute (RJI)",
+      "city": "Columbia, Missouri",
+      "country": "United States",
+      "source_url": "https://rjionline.org/about-rji-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://rjionline.org/about-rji-fellowships/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08",
+      "content_hash": "sha256:bc605825b9dcab3e6c5c3318d4ec1a5da6443c174cda0e8a38fc4aba558ab045",
+      "last_verified_at": "2026-11-17T03:08:56.558Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:57:11.994Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:57:11.994Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:57:11.995Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:15.241Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:15.241Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:08:56.682Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-17T03:08:56.682Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-17T03:08:58.104Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unquoted detail (institution partner list / remote)"
+        },
+        {
+          "at": "2026-11-17T03:08:58.263Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:58.263Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:52.878Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:52.878Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 624
+    },
+    "opp_945d0f5eb7bbbd82": {
+      "id": "opp_945d0f5eb7bbbd82",
+      "fingerprint": "a69a139211c2d674",
+      "title": "Recent developments on arithmetic statistics of rational points on abelian varieties and curves",
+      "institution": "Hausdorff School for Mathematics (HSM), University of Bonn",
+      "city": "Bonn",
+      "country": "Germany",
+      "source_url": "https://math-events.uni-bonn.de/event/1436/abstracts/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://math-events.uni-bonn.de/event/1436/abstracts/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:c119a4ef60d2c13205b8b330e9c9fba594c905446892b62b0471e66fb26b76b9",
+      "last_verified_at": "2026-11-17T02:57:52.351Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:57:52.493Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:57:52.493Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:57:52.494Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:31.708Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:31.709Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:53.838Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:53.839Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 631
+    },
+    "opp_25c3d817b49ac185": {
+      "id": "opp_25c3d817b49ac185",
+      "fingerprint": "7d28ce2736f37462",
+      "title": "Hypatia Graduate Summer School 2027",
+      "institution": "Centre de Recerca Matemàtica (CRM)",
+      "city": "Bellaterra",
+      "country": "Spain",
+      "source_url": "https://www.crm.cat/hypatia-2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.crm.cat/hypatia-2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28",
+      "content_hash": "sha256:77d1577d3e63b20c04f4faa150db836279ce0d7a541f01c8ac3a8d54c5ccc105",
+      "last_verified_at": "2026-11-17T02:57:52.654Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:57:52.801Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:57:52.801Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:57:52.802Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:44.585Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:44.585Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:54.499Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:54.499Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 636
+    },
+    "opp_2fecc6bbbd2bf88d": {
+      "id": "opp_2fecc6bbbd2bf88d",
+      "fingerprint": "0829c976a1a617c8",
+      "title": "Postdoc Position: Mathematical Relativity",
+      "institution": "Radboud University",
+      "city": "Nijmegen",
+      "country": "Netherlands",
+      "source_url": "https://www.ru.nl/en/working-at/job-opportunities/postdoc-position-mathematical-relativity",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.academictransfer.com/en/jobs/365297/postdoc-position-mathematical-relativity/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10",
+      "content_hash": "sha256:1e4025af1a5e8bc72c198c8be71cbb73e31ded9b978af442fb1f30e732c2e470",
+      "last_verified_at": "2026-11-17T02:58:49.588Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:58:49.725Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:58:49.725Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:58:49.725Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:15.488Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:15.488Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:53.018Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:53.018Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 625
+    },
+    "opp_da58043f5ca423c2": {
+      "id": "opp_da58043f5ca423c2",
+      "fingerprint": "3c4f73265db9f5a0",
+      "title": "PhD Research Fellow in Social Science - Arctic Security and Preparedness",
+      "institution": "Nord University, Faculty of Social Sciences",
+      "city": "Bodø",
+      "country": "Norway",
+      "source_url": "https://www.nord.no/en/about/vacancies",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.nord.no/en/about/vacancies",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-04",
+      "content_hash": "sha256:58d156ab424af1e9835ac2801039706e25caf80d3d452899bacb7b86657af901",
+      "last_verified_at": "2026-11-17T02:58:49.890Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:58:50.034Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:58:50.034Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:58:50.034Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:18.428Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:18.428Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:52.155Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:52.155Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 619
+    },
+    "opp_bfc37e573349c1cf": {
+      "id": "opp_bfc37e573349c1cf",
+      "fingerprint": "85aa5dc60d22bbc1",
+      "title": "MSCA Doctoral Position",
+      "institution": "Stockholm School of Economics (SSE), Department of Management and Organization",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "source_url": "https://www.hhs.se/news/dmo/2026/phd-vacancy/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.hhs.se/news/dmo/2026/phd-vacancy/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:a2f7d4ac759806c0e2d18be44d58e9713cdaead879f0f69ea5d304620b9408a8",
+      "last_verified_at": "2026-11-17T02:59:39.834Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T02:59:39.971Z",
+      "history": [
+        {
+          "at": "2026-11-17T02:59:39.971Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T02:59:39.971Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:30.678Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:30.678Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:53.289Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:53.289Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 627
+    },
+    "opp_7d27cbd36d8900ae": {
+      "id": "opp_7d27cbd36d8900ae",
+      "fingerprint": "ebf938d76dde81a7",
+      "title": "HKUST Summer School 2027",
+      "institution": "The Hong Kong University of Science and Technology (HKUST)",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "source_url": "https://summercampus.hkust.edu.hk/summer-school-application",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://summercampus.hkust.edu.hk/summer-school-application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-10",
+      "content_hash": "sha256:0f69367d878d3ec34e3a093d9d4e87f508dbdd49a84385d1a00fdb46a3759619",
+      "last_verified_at": "2026-11-17T03:01:33.429Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T03:01:33.560Z",
+      "history": [
+        {
+          "at": "2026-11-17T03:01:33.560Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T03:01:33.560Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:09:07.181Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:09:07.181Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:54.914Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:54.914Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 639
+    },
+    "opp_e9b41a70be5cec08": {
+      "id": "opp_e9b41a70be5cec08",
+      "fingerprint": "e069a519686e8cc7",
+      "title": "Summer Undergraduate Research Experience (REU)",
+      "institution": "HHMI Janelia Research Campus",
+      "city": "Ashburn, Virginia",
+      "country": "United States",
+      "source_url": "https://www.janelia.org/you-janelia/students-and-postdocs/summer-undergraduate-research-at-janelia",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.janelia.org/you-janelia/students-and-postdocs/summer-undergraduate-research-at-janelia",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-17",
+      "content_hash": "sha256:80b69909484f214ad098e60ca21a2969222ac9a96aaa0cbd79408e46b839aa0b",
+      "last_verified_at": "2026-11-17T03:01:33.710Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T03:01:33.845Z",
+      "history": [
+        {
+          "at": "2026-11-17T03:01:33.845Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T03:01:33.845Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:17.880Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:17.880Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:51.868Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:51.868Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 617
+    },
+    "opp_f433f3fc0e60d984": {
+      "id": "opp_f433f3fc0e60d984",
+      "fingerprint": "8ade2099f8d1c75c",
+      "title": "South Coast DTP ESRC Studentships 2027/28 entry",
+      "institution": "South Coast Doctoral Training Partnership (SCDTP)",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://southcoastdtp.ac.uk/apply/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://southcoastdtp.ac.uk/apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:4e0869ace3c2d7ccae3eecd1ab84fc68accbf71b136b261f408facb6b896f43d",
+      "last_verified_at": "2026-11-17T03:02:32.742Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T03:02:32.875Z",
+      "history": [
+        {
+          "at": "2026-11-17T03:02:32.875Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T03:02:32.875Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:30.925Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:30.925Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:53.430Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:53.430Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 628
+    },
+    "opp_2588db33fe8cc3f7": {
+      "id": "opp_2588db33fe8cc3f7",
+      "fingerprint": "c7790d14bcaf5e10",
+      "title": "ESRC WRDTP studentship",
+      "institution": "White Rose Doctoral Training Partnership (WRDTP)",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://wrdtp.ac.uk/studentships/how-to-apply/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://wrdtp.ac.uk/studentships/how-to-apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-20",
+      "content_hash": "sha256:33d6db478e05839ce38d708922d3206b1a0a0350b52a9fe84712d7765947a707",
+      "last_verified_at": "2026-11-17T03:02:33.048Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T03:02:33.185Z",
+      "history": [
+        {
+          "at": "2026-11-17T03:02:33.185Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T03:02:33.185Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:31.173Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:31.173Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:53.568Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:53.568Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 629
+    },
+    "opp_66c1ba983a8c66f9": {
+      "id": "opp_66c1ba983a8c66f9",
+      "fingerprint": "45b510496f35cf79",
+      "title": "NERC GW4+ DTP PhD studentship for September 2027 Entry",
+      "institution": "NERC GW4+ Doctoral Landscape Training Partnership",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://www.exeter.ac.uk/study/pg-research/funding/phdfunding/fundedcentres/gw4/",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.bristol.ac.uk/study/postgraduate/research/great-western-four-doctoral-training-partnership-nerc/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-07",
+      "content_hash": "sha256:2fcfa855133d1669aa743983e4b4dfde794f8b0060221cee2bb1a7743602528b",
+      "last_verified_at": "2026-11-17T03:08:54.606Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T03:02:33.471Z",
+      "history": [
+        {
+          "at": "2026-11-17T03:02:33.471Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T03:02:33.471Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:54.760Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-17T03:08:56.429Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:56.429Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:52.421Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:52.421Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 621
+    },
+    "opp_3a48d0d2b8f6f785": {
+      "id": "opp_3a48d0d2b8f6f785",
+      "fingerprint": "436d3c09ab2a19a6",
+      "title": "Stanford Next Asia Policy Lab (SNAPL) Fellowships",
+      "institution": "Walter H. Shorenstein Asia-Pacific Research Center (APARC), Stanford University",
+      "city": "Stanford, California",
+      "country": "United States",
+      "source_url": "https://aparc.fsi.stanford.edu/education/fellowship-and-training-opportunities/stanford-next-asia-policy-lab-fellowships",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://aparc.fsi.stanford.edu/education/fellowship-and-training-opportunities/stanford-next-asia-policy-lab-fellowships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-01",
+      "content_hash": "sha256:2c0d2be20500188afe6ccd7a84c812a6530999b74fb99d2784f486006d45197a",
+      "last_verified_at": "2026-11-17T03:02:49.836Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T03:02:49.994Z",
+      "history": [
+        {
+          "at": "2026-11-17T03:02:49.994Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T03:02:49.994Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:09:06.656Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:09:06.656Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:54.635Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:54.635Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 637
+    },
+    "opp_6ef7e6d7ac1f657f": {
+      "id": "opp_6ef7e6d7ac1f657f",
+      "fingerprint": "81142f1cf0ea9640",
+      "title": "Computations in Homotopy Theory",
+      "institution": "Hausdorff School for Mathematics (HSM), University of Bonn",
+      "city": "Bonn",
+      "country": "Germany",
+      "source_url": "https://www.mathematics.uni-bonn.de/hsm-school",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.mathematics.uni-bonn.de/hsm-school/programs/schools",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08",
+      "content_hash": "sha256:51127dc187b54192571f3e754902a68e3eaa04633a227adcf948e92e47afc06a",
+      "last_verified_at": "2026-11-17T03:02:50.162Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T03:02:50.321Z",
+      "history": [
+        {
+          "at": "2026-11-17T03:02:50.321Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T03:02:50.321Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:14.763Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:14.764Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:52.583Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:52.583Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 622
+    },
+    "opp_9b6f727b214ca36a": {
+      "id": "opp_9b6f727b214ca36a",
+      "fingerprint": "677244483fe9edc1",
+      "title": "Digital Psychology and Education Conference",
+      "institution": "Elsevier",
+      "city": "Shenzhen",
+      "country": "China",
+      "source_url": "https://www.elsevier.com/events/conferences/all/digital-psychology-and-education-conference",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.elsevier.com/events/conferences/all/digital-psychology-and-education-conference/participate",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08",
+      "content_hash": "sha256:1520e961478798638d50ec50c51cf1160c7b54843985f8a318bc4d3e7a6af4c5",
+      "last_verified_at": "2026-11-17T03:03:31.761Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T03:03:31.900Z",
+      "history": [
+        {
+          "at": "2026-11-17T03:03:31.900Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T03:03:31.900Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:15.010Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:15.011Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:52.745Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:52.745Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 623
+    },
+    "opp_3e4562d1f7b77ea0": {
+      "id": "opp_3e4562d1f7b77ea0",
+      "fingerprint": "4f73f7b7d4dfa16d",
+      "title": "59th EBES Conference - Rome",
+      "institution": "Eurasia Business and Economics Society (EBES)",
+      "city": "Rome",
+      "country": "Italy",
+      "source_url": "https://ebesweb.org/59th-ebes-conference-rome/59th-call-for-papers/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://ebesweb.org/59th-ebes-conference-rome/59th-call-for-papers/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-22",
+      "content_hash": "sha256:e122001ebeffb303bfdbebeb694248097465e0e9217dc8a461e316835b0caf58",
+      "last_verified_at": "2026-11-17T03:03:50.461Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T03:03:50.590Z",
+      "history": [
+        {
+          "at": "2026-11-17T03:03:50.590Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T03:03:50.590Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:09:07.494Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:09:07.494Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:55.051Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:55.052Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 640
+    },
+    "opp_333a99ffed590dd4": {
+      "id": "opp_333a99ffed590dd4",
+      "fingerprint": "a517396560d12e23",
+      "title": "HKUST Summer UG Research Program 2027",
+      "institution": "The Hong Kong University of Science and Technology (HKUST)",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "source_url": "https://summercampus.hkust.edu.hk/hkust-summer-ug-research-program",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://summercampus.hkust.edu.hk/summer-school-ug-application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-15",
+      "content_hash": "sha256:c3dc839db7bd174a3db2931ca687f34ee94910b2af41a64c2def2ffd0ec47b26",
+      "last_verified_at": "2026-11-17T03:04:25.707Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-17T03:04:25.852Z",
+      "history": [
+        {
+          "at": "2026-11-17T03:04:25.852Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-17T03:04:25.853Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-17T03:08:44.334Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-17T03:08:44.334Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-17T03:09:54.364Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-17T03:09:54.364Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 635
     }
   },
   "seen_urls": {
@@ -42615,7 +44382,41 @@
     "https://banffcentre.ca/programs/visual-arts/visual-arts-embodied-making-performance-art-images-and-objects": "opp_f7e531fb8f2e387b",
     "https://banffcentre.ca/programs/music/chamber-music-2027": "opp_949b3830dd9ae02c",
     "https://cupum2027.com.au/call-for-papers": "opp_536c58faa59b0274",
-    "https://imprs-marburg.mpg.de/3496/Selection-and-admission": "opp_4e57fe8fbe89640f"
+    "https://imprs-marburg.mpg.de/3496/Selection-and-admission": "opp_4e57fe8fbe89640f",
+    "https://kyoto-u.ac.jp/en/news/2026-11-02": "opp_c54f1f93db3fdeba",
+    "https://opir.kyoto-u.ac.jp/study/en/curriculum/amgenscholars": "opp_c54f1f93db3fdeba",
+    "https://quantum.utexas.edu/opportunities": "opp_a9572f9125955ec9",
+    "https://loebfellowship.gsd.harvard.edu/apply-nominate": "opp_da5a0ed4d290ffdd",
+    "https://loebfellowship.gsd.harvard.edu/apply-nominate/apply": "opp_da5a0ed4d290ffdd",
+    "https://theleonlevycenterforbiography.submittable.com/submit/297907/2027-2028-levy-sloan-fellowship": "opp_413f8386b069d1d9",
+    "https://uio.no/english/studies/summerschool/admission": "opp_e4f9f0a0849d82af",
+    "https://cbs.dk/en/study-programmes/summer-university/application-and-deadlines": "opp_01e77a7d39523878",
+    "https://training.nih.gov/research-training/pb/sip": "opp_5b16862098475d45",
+    "https://ku.dk/studies/masters/application-and-admission/scholarships": "opp_2e95cd6a9597e9c0",
+    "https://ku.dk/studies/admission/masters": "opp_2e95cd6a9597e9c0",
+    "https://wallacehouse.umich.edu/knight-wallace/how-to-apply": "opp_7b07475bd740d4a4",
+    "https://wallacehouse.umich.edu/knight-wallace/how-to-apply/preparing-your-application": "opp_7b07475bd740d4a4",
+    "https://rjionline.org/about-rji-fellowships": "opp_dea01121ded29ac3",
+    "https://math-events.uni-bonn.de/event/1436/abstracts": "opp_945d0f5eb7bbbd82",
+    "https://crm.cat/hypatia-2027": "opp_25c3d817b49ac185",
+    "https://ru.nl/en/working-at/job-opportunities/postdoc-position-mathematical-relativity": "opp_2fecc6bbbd2bf88d",
+    "https://academictransfer.com/en/jobs/365297/postdoc-position-mathematical-relativity/apply": "opp_2fecc6bbbd2bf88d",
+    "https://nord.no/en/about/vacancies": "opp_da58043f5ca423c2",
+    "https://hhs.se/news/dmo/2026/phd-vacancy": "opp_bfc37e573349c1cf",
+    "https://summercampus.hkust.edu.hk/summer-school-application": "opp_7d27cbd36d8900ae",
+    "https://janelia.org/you-janelia/students-and-postdocs/summer-undergraduate-research-at-janelia": "opp_e9b41a70be5cec08",
+    "https://southcoastdtp.ac.uk/apply": "opp_f433f3fc0e60d984",
+    "https://wrdtp.ac.uk/studentships/how-to-apply": "opp_2588db33fe8cc3f7",
+    "https://exeter.ac.uk/study/pg-research/funding/phdfunding/fundedcentres/gw4": "opp_66c1ba983a8c66f9",
+    "https://bristol.ac.uk/study/postgraduate/research/great-western-four-doctoral-training-partnership-nerc": "opp_66c1ba983a8c66f9",
+    "https://aparc.fsi.stanford.edu/education/fellowship-and-training-opportunities/stanford-next-asia-policy-lab-fellowships": "opp_3a48d0d2b8f6f785",
+    "https://mathematics.uni-bonn.de/hsm-school": "opp_6ef7e6d7ac1f657f",
+    "https://mathematics.uni-bonn.de/hsm-school/programs/schools": "opp_6ef7e6d7ac1f657f",
+    "https://elsevier.com/events/conferences/all/digital-psychology-and-education-conference": "opp_9b6f727b214ca36a",
+    "https://elsevier.com/events/conferences/all/digital-psychology-and-education-conference/participate": "opp_9b6f727b214ca36a",
+    "https://ebesweb.org/59th-ebes-conference-rome/59th-call-for-papers": "opp_3e4562d1f7b77ea0",
+    "https://summercampus.hkust.edu.hk/hkust-summer-ug-research-program": "opp_333a99ffed590dd4",
+    "https://summercampus.hkust.edu.hk/summer-school-ug-application": "opp_333a99ffed590dd4"
   },
-  "last_offer_number": 616
+  "last_offer_number": 641
 }
