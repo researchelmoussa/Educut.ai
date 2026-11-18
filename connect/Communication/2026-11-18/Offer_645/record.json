@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Europubhealth+, European Public Health Master",
+    "evidence_url": "https://www.europubhealth.org/",
+    "evidence_quote": "Europubhealth+, European Public Health Master - Europubhealth"
+  },
+  "institution": {
+    "name": "Europubhealth+ (Erasmus Mundus Joint Master Degree)",
+    "website": "https://www.europubhealth.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.europubhealth.org/application-procedure/",
+  "source_url": "https://www.europubhealth.org/application-procedure/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Public health",
+  "seniority": "Bachelor's graduates (master's admission)",
+  "qualifications": [
+    "University Bachelor degree (180 ECTS) or certified equivalent",
+    "Valid proof of language proficiency uploaded before the deadline",
+    "Documents issued within 12 months before the application deadline"
+  ],
+  "skills": [],
+  "description_short": "Europubhealth+, the European Public Health Master (Erasmus Mundus Joint Master Degree), is open for its 2027 intake. Applicants seeking Erasmus Mundus scholarships must apply by 8 January 2027, with interviews on 18 February 2027; self-funded applications close 24 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08",
+    "timezone": null,
+    "evidence_url": "https://www.europubhealth.org/application-procedure/",
+    "evidence_quote": "applications for Erasmus Mundus scholarships should be sent before this deadline"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Europubhealth+ application and selection procedure page (seen in search results) gives a January 8, 2027 deadline for Erasmus Mundus scholarship applicants and March 24, 2027 for self-funded applicants",
+    "Same page: best-ranked candidates from the January round are interviewed on 18 February 2027; results released mid-March",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "Deadline quote is the page's wording about the January deadline; the date 8 January 2027 was shown alongside it in the search results",
+    "Programme runs across several European universities; no single city or country recorded",
+    "Scholarship numbers are limited and funding is not guaranteed, per the official page; scholarship value not recorded in this record"
+  ],
+  "id": "opp_ffc18c338e3c246d",
+  "fingerprint": "d42e69795be19344",
+  "discovered_at": "2026-11-18T03:04:47.963Z",
+  "last_verified_at": "2026-11-18T03:04:47.963Z",
+  "content_hash": "sha256:44d598ad88cb8f30ad5289ec19f4c6d533297062cd6a8def021b0a88cdd2ce88"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "ICIAP 2027",
+    "evidence_url": "https://iciap2027.unimore.it/",
+    "evidence_quote": "ICIAP 2027 Modena, Italy · 13–17 September 2027"
+  },
+  "institution": {
+    "name": "International Conference on Image Analysis and Processing (ICIAP 2027)",
+    "website": "https://iciap2027.unimore.it",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://iciap2027.unimore.it/call-for-papers.html",
+  "source_url": "https://iciap2027.unimore.it/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Modena",
+    "country": "Italy",
+    "country_code": "IT"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Image analysis, computer vision and pattern recognition",
+  "seniority": "Researchers (open call for papers)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "ICIAP 2027, the International Conference on Image Analysis and Processing, takes place 13 to 17 September 2027 in Modena, Italy. Round-1 papers are due 11 February 2027 (23:59 AoE), with notification on 31 March 2027; a second round closes 15 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-11T23:59:00-12:00",
+    "timezone": "AoE",
+    "evidence_url": "https://iciap2027.unimore.it/",
+    "evidence_quote": "paper submission on 11 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ICIAP 2027 site (seen in search results) lists Round 1 paper submission 11 February 2027 and Round 2 15 April 2027, both 23:59 AoE",
+    "Official call-for-papers page gives a 12-page LNCS-style limit",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "The site says the full call for papers is 'coming soon'; details may change",
+    "Submission system link not seen in the results; the call-for-papers page is used as application_url",
+    "Second submission round closes 15 April 2027"
+  ],
+  "id": "opp_1dd7a3dc6df20881",
+  "fingerprint": "1436dc9a5991f3e9",
+  "discovered_at": "2026-11-18T03:00:29.988Z",
+  "last_verified_at": "2026-11-18T03:00:29.988Z",
+  "content_hash": "sha256:93518bf0a21bb9442aa35eb2dbebcc0190a89d08f448618c23dd97ef3c83de11"
+}

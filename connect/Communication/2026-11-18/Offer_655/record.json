@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "MSc in Smart Cities and Communities (SMACCs)",
+    "evidence_url": "https://www.smaccs.eu/about/",
+    "evidence_quote": "MSc in Smart Cities and Communities"
+  },
+  "institution": {
+    "name": "SMACCs (Erasmus Mundus Joint Master in Smart Cities and Communities)",
+    "website": "https://www.smaccs.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.smaccs.eu/admissions/deadlines/",
+  "source_url": "https://www.smaccs.eu/admissions/deadlines/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Smart cities, energy and urban sustainability",
+  "seniority": "Bachelor's graduates (master's admission)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The Erasmus Mundus Joint Master in Smart Cities and Communities (SMACCs) is accepting applications for September 2027 entry. Applicants seeking Erasmus Mundus or other scholarships must apply by 1 February 2027 and are told their status by May 2027; cohorts are capped at 40 students.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": null,
+    "evidence_url": "https://www.smaccs.eu/admissions/deadlines/",
+    "evidence_quote": "1st February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SMACCs deadlines page (seen in search results) lists 1st February 2027 for students seeking Erasmus Mundus or other scholarships, with status communicated by May 2027",
+    "Official SMACCs scholarships page covers entry from September 2024 through September 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "The deadlines page lists several editions; no dedicated 2027 call page was seen",
+    "Self-funded deadlines for 2027 not confirmed on the official site",
+    "Programme runs across several European universities; no single city or country recorded",
+    "Scholarship value not recorded in this record"
+  ],
+  "id": "opp_bfe996f569facf8e",
+  "fingerprint": "accc6adb39951441",
+  "discovered_at": "2026-11-18T03:04:48.268Z",
+  "last_verified_at": "2026-11-18T03:04:48.268Z",
+  "content_hash": "sha256:a7770f1522487d811f77cdc9ef28777a7dc755f201783cc5dec3a13d749e3b77"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "HOPV27",
+    "evidence_url": "https://www.nanoge.org/HOPV27/home",
+    "evidence_quote": "nanoGe - HOPV27"
+  },
+  "institution": {
+    "name": "nanoGe",
+    "website": "https://www.nanoge.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.nanoge.org/HOPV27/information-for-participants/abstract-submission-information",
+  "source_url": "https://www.nanoge.org/HOPV27/home",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Valencia",
+    "country": "Spain",
+    "country_code": "ES"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Hybrid and organic photovoltaics",
+  "seniority": "Researchers (open call for abstracts)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "HOPV27, the 19th International Conference on Hybrid and Organic Photovoltaics organised by nanoGe, takes place 2 to 4 June 2027 in Valencia, Spain. Oral abstracts are due 8 February 2027; poster abstracts are due 10 May 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-08",
+    "timezone": "Europe/Madrid",
+    "evidence_url": "https://www.nanoge.org/HOPV27/home",
+    "evidence_quote": "Oral abstracts: 8 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official nanoGe HOPV27 home page (seen in search results) lists oral abstract deadline 8 February 2027, poster abstracts 10 May 2027, early registration 22 March 2027",
+    "Official abstract submission information page exists on nanoge.org",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "The 8 February 2027 date applies to oral abstracts; posters close 10 May 2027",
+    "Registration fees not recorded"
+  ],
+  "id": "opp_7a79f1d2808fe241",
+  "fingerprint": "af0438653200108d",
+  "discovered_at": "2026-11-18T02:56:22.531Z",
+  "last_verified_at": "2026-11-18T02:56:22.531Z",
+  "content_hash": "sha256:2ea27534272ff799b2a6ac9660da5d738522d1e134c977174ab68a627c712d96"
+}

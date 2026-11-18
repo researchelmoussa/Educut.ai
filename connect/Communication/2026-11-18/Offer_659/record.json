@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Multiscale flows and self-organisation in living matter",
+    "evidence_url": "https://www.icts.res.in/programs/upcoming",
+    "evidence_quote": "Multiscale flows and self-organisation in living matter"
+  },
+  "institution": {
+    "name": "International Centre for Theoretical Sciences (ICTS-TIFR)",
+    "website": "https://www.icts.res.in",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://register1.icts.res.in/",
+  "source_url": "https://www.icts.res.in/programs/upcoming",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Bengaluru",
+    "country": "India",
+    "country_code": "IN"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Physics of living matter",
+  "seniority": "Researchers and students",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "ICTS-TIFR hosts the discussion meeting 'Multiscale flows and self-organisation in living matter' from 1 to 6 March 2027 at ICTS Bengaluru. Applications are made through the ICTS registration site; the application deadline is 15 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-15",
+    "timezone": "Asia/Kolkata",
+    "evidence_url": "https://www.icts.res.in/programs/upcoming",
+    "evidence_quote": "Application deadline: 15 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ICTS upcoming-programs page (seen in search results) lists the meeting for 01-06 March 2027 at Madhava Lecture Hall with an application deadline of 15 February 2027",
+    "Official ICTS registration site lists a registration form for this meeting as open",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "ICTS pages show conflicting organiser lists for this meeting; organisers not recorded",
+    "Eligibility and any support not recorded"
+  ],
+  "id": "opp_ac54cabbf97f69e7",
+  "fingerprint": "3cf5dda793c92384",
+  "discovered_at": "2026-11-18T03:09:42.950Z",
+  "last_verified_at": "2026-11-18T03:09:42.950Z",
+  "content_hash": "sha256:fc4c3fb5c53da7175c7cff2b462989bab0c6c09f49e30db675e4c9663d9ba49a"
+}

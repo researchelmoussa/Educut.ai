@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "UTSIP Kashiwa 2027",
+    "evidence_url": "https://www.k.u-tokyo.ac.jp/en/education/for_undergraduate/utsip/",
+    "evidence_quote": "UTSIP Kashiwa"
+  },
+  "institution": {
+    "name": "The University of Tokyo, Graduate School of Frontier Sciences",
+    "website": "https://www.k.u-tokyo.ac.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.k.u-tokyo.ac.jp/en/education/for_undergraduate/how_to_apply/",
+  "source_url": "https://www.k.u-tokyo.ac.jp/en/education/for_undergraduate/how_to_apply/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Kashiwa",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Research internship (frontier sciences)",
+  "seniority": "Undergraduate students from overseas universities",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The University of Tokyo's Graduate School of Frontier Sciences runs UTSIP Kashiwa, a summer research internship in Kashiwa for undergraduates from overseas universities. The application site opens in late November 2026; the deadline is January 13, 2027 at 17:00 Japan time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-13T17:00:00+09:00",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.k.u-tokyo.ac.jp/en/education/for_undergraduate/how_to_apply/",
+    "evidence_quote": "January 13, 2027, at 17:00 Japan time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Graduate School of Frontier Sciences 'How to Apply' page (seen in search results): application site opens in late November, deadline January 13, 2027 at 17:00 Japan time; results notified February 5-8, 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "Application site opens in late November 2026; not yet open on the run date",
+    "The programme schedule page gives a slightly different notification window (February 6-9, 2027)",
+    "Programme dates and any support not recorded"
+  ],
+  "id": "opp_bfa4228d24909141",
+  "fingerprint": "c3d6c864d92024f5",
+  "discovered_at": "2026-11-18T03:09:43.586Z",
+  "last_verified_at": "2026-11-18T03:09:43.586Z",
+  "content_hash": "sha256:077036cfebc71a30d6c02c7f1aeddacc62ad326eefeb0528675aac8d992f2ad3"
+}

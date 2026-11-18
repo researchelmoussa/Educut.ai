@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "School of Natural Sciences Scholarship",
+    "evidence_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/school-of-natural-sciences-scholarship/",
+    "evidence_quote": "School of Natural Sciences Scholarship"
+  },
+  "institution": {
+    "name": "The University of Manchester, School of Natural Sciences",
+    "website": "https://www.se.manchester.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/school-of-natural-sciences-scholarship/",
+  "source_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/school-of-natural-sciences-scholarship/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Manchester",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Natural sciences (chemistry, earth and environmental sciences, materials, mathematics, physics and astronomy, fashion business and technology)",
+  "seniority": "Prospective PhD students",
+  "qualifications": [
+    "Must have submitted an application by the deadline for a PhD starting in September 2027"
+  ],
+  "skills": [],
+  "description_short": "The University of Manchester's School of Natural Sciences invites applications for round two of its School of Natural Sciences Scholarship for PhD study starting September 2027. Round-two projects were announced on 16 November 2026; the application deadline is 15 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/school-of-natural-sciences-scholarship/",
+    "evidence_quote": "application deadline: 15 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official School of Natural Sciences Scholarship page (seen in search results): round two projects announced 16 November 2026, application deadline 15 January 2027, interviews likely w/c 8 March 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "Award value and funding terms not recorded: no verbatim quote captured in this record",
+    "Second Manchester scheme registered this run (separate from the President's Doctoral Scholarship)"
+  ],
+  "id": "opp_6c3962419c58556f",
+  "fingerprint": "443cc0569121beff",
+  "discovered_at": "2026-11-18T03:09:43.262Z",
+  "last_verified_at": "2026-11-18T03:09:43.262Z",
+  "content_hash": "sha256:062268c9f75049318d177eb9e141888b60782318051e3660fe7d6aca956f3ce8"
+}

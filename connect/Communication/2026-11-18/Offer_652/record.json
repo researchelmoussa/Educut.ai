@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "Summer Workshops 2027",
+    "evidence_url": "https://aspenphys.org/summer-workshops/",
+    "evidence_quote": "Summer Workshops - Aspen Center for Physics"
+  },
+  "institution": {
+    "name": "Aspen Center for Physics",
+    "website": "https://aspenphys.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://aspenphys.org/summer/step-by-step-application-instructions/",
+  "source_url": "https://aspenphys.org/summer-workshops/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Aspen",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Physics",
+  "seniority": "Physics researchers",
+  "qualifications": [
+    "Everyone, including workshop organizers and speakers, must submit an application"
+  ],
+  "skills": [],
+  "description_short": "The Aspen Center for Physics in Aspen invites applications for its summer 2027 workshops and individual research stays. Everyone, including organizers and speakers, must apply; the deadline for summer applications is January 15, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "America/Denver",
+    "evidence_url": "https://aspenphys.org/summer-workshops/",
+    "evidence_quote": "the deadline for summer applications is January 15, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Aspen Center for Physics summer workshops page (seen in search results) states the deadline for summer applications is January 15, 2027 and that the form will be available this fall",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "The 2026 summer poster lists 'SUMMER 2027 DUE JUNE 15, 2026', apparently the earlier workshop-proposal deadline",
+    "Application form availability on the run date not confirmed",
+    "Costs and support not recorded"
+  ],
+  "id": "opp_d5cffdb1827a7ba0",
+  "fingerprint": "fd2c8e68b3b329a7",
+  "discovered_at": "2026-11-18T03:09:42.639Z",
+  "last_verified_at": "2026-11-18T03:09:42.639Z",
+  "content_hash": "sha256:832d28a8d7dcb4185612fd0543ad5b65865fafee1d1e09c3c6c56675090f50ea"
+}
