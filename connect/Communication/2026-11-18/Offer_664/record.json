@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "International Postdoctoral Fellowship Program",
+    "evidence_url": "https://www.ofi.ca/tca/opportunities/fellowships/international",
+    "evidence_quote": "International Postdoctoral Fellowship Program"
+  },
+  "institution": {
+    "name": "Ocean Frontier Institute (OFI)",
+    "website": "https://www.ofi.ca",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ofi.ca/tca/opportunities/fellowships/international",
+  "source_url": "https://www.ofi.ca/tca/opportunities/fellowships/international",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": null,
+    "country": "Canada",
+    "country_code": "CA"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Ocean and climate research",
+  "seniority": "Postdoctoral",
+  "qualifications": [
+    "Completed application package with supporting documents sent to the Training and Early Career Development Program Manager at Dalhousie by the deadline",
+    "Referees submit confidential reference forms directly before the deadline"
+  ],
+  "skills": [],
+  "description_short": "The Ocean Frontier Institute International Postdoctoral Fellowship Program lists positions at Dalhousie University and UQAR in Canada, with applications listed until February 28, 2027 and award announcements expected in May 2027. One OFI overview page lists the programme as closed, so confirm the current call.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-28",
+    "timezone": "America/Halifax",
+    "evidence_url": "https://www.ofi.ca/tca/opportunities/fellowships/international",
+    "evidence_quote": "February 28, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official OFI International Postdoctoral Fellowship Program page (seen in search results) says applications are being accepted for positions at Dalhousie and UQAR and are accepted until February 28, 2027",
+    "Same page: number of positions depends on funding and will be confirmed in May 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "OFI's general fellowships overview page lists the International Postdoctoral Fellowship as closed (referring to a previous call); a second search of the programme page did not show the deadline again",
+    "Positions are at Dalhousie and UQAR (different cities), so no single city is recorded",
+    "Salary terms not recorded: no verbatim quote captured",
+    "Eligibility criteria for this call not captured in the search results"
+  ],
+  "id": "opp_724fcd422a550a6a",
+  "fingerprint": "9ec3dad852a4a9bf",
+  "discovered_at": "2026-11-18T03:01:50.398Z",
+  "last_verified_at": "2026-11-18T03:14:54.206Z",
+  "content_hash": "sha256:9c420696abda3b2a2597aaa885883d690faab5fedec7e9a9ca738ac0bdaa5169"
+}

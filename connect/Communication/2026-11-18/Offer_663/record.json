@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Goldschmidt 2027 Conference",
+    "evidence_url": "https://conf.goldschmidt.info/goldschmidt/2027/meetingapp.cgi/Session/9688",
+    "evidence_quote": "Goldschmidt 2027 Conference"
+  },
+  "institution": {
+    "name": "European Association of Geochemistry (EAG) and the Geochemical Society",
+    "website": "https://www.eag.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.eag.org/events/goldschmidt/",
+  "source_url": "https://www.eag.org/events/goldschmidt/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Paris",
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Geochemistry",
+  "seniority": "Researchers and students (open call for abstracts)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The Goldschmidt 2027 Conference, co-organised by the European Association of Geochemistry and the Geochemical Society, takes place 11 to 16 July 2027 in Paris, France. Abstract submission opens in December 2026 and closes 25 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-25",
+    "timezone": null,
+    "evidence_url": "https://www.eag.org/events/conferences/",
+    "evidence_quote": "Abstracts: 25 Feb 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official EAG event calendar (seen in search results) lists Goldschmidt 2027, 11-16 July 2027, Paris, with abstracts due 25 Feb 2027, grant applications 11 February 2027, early registration 25 May 2027",
+    "Geochemical Society page says the call for abstracts opens in December",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "Abstract submission opens in December 2026; not yet open on the run date",
+    "Abstract submission system URL for 2027 not seen; the EAG Goldschmidt page is used as application_url",
+    "The institution field names both co-organisers as published together on the EAG and Geochemical Society pages",
+    "Abstract fees for 2027 not recorded"
+  ],
+  "id": "opp_570637f11e0e85fd",
+  "fingerprint": "8451665ed9fb6c59",
+  "discovered_at": "2026-11-18T03:03:21.943Z",
+  "last_verified_at": "2026-11-18T03:03:21.943Z",
+  "content_hash": "sha256:ee9fb3d083d4281906588d3da4891644f3c3587f631c2254dbf152cf38568bac"
+}

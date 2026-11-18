@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Choreomundus – Erasmus Mundus Master in Dance and Movement as Practical Knowledge and Heritage",
+    "evidence_url": "https://www.vdu.lt/en/studiju-programa/choreomundus-erasmus-mundus-master-in-dance-and-movement-as-practical-knowledge-and-heritage/",
+    "evidence_quote": "Choreomundus"
+  },
+  "institution": {
+    "name": "Vytautas Magnus University",
+    "website": "https://www.vdu.lt",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.vdu.lt/en/studies/degree-studies/",
+  "source_url": "https://www.vdu.lt/en/studies/degree-studies/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Kaunas",
+    "country": "Lithuania",
+    "country_code": "LT"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Dance studies and heritage",
+  "seniority": "Bachelor's graduates (master's admission)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Vytautas Magnus University lists the Choreomundus Erasmus Mundus master's in dance and movement heritage for the 2027-2028 autumn intake. Applications opened 15 October 2026 and close 15 January 2027 for Choreomundus applicants.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/Vilnius",
+    "evidence_url": "https://www.vdu.lt/en/studies/degree-studies/",
+    "evidence_quote": "January 15, 2027 for the Choreomundus study programme applicants"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official VMU admissions page (seen in search results) lists the 2027-2028 autumn intake with applications opening October 15, 2026 for Choreomundus and a deadline of January 15, 2027 for Choreomundus applicants",
+    "Official Choreomundus site says applications for the 2027/2028 intake open on October 15, 2026",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "The Choreomundus site itself did not show the 15 January 2027 date in the results; its headings mix 2026-2027 and 2027-2028 labels",
+    "Programme is delivered across several partner universities; Kaunas is the coordinating university's city",
+    "Scholarship availability and value not recorded in this record"
+  ],
+  "id": "opp_5a3855b7e611e2f0",
+  "fingerprint": "3be5a4ea51fc4c26",
+  "discovered_at": "2026-11-18T03:06:48.912Z",
+  "last_verified_at": "2026-11-18T03:06:48.912Z",
+  "content_hash": "sha256:c47cc22cbbd41d24f7d411c5565d0fdb913b63ba5729de41aa9b99950e49338e"
+}

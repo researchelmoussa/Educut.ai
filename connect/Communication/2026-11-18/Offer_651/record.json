@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "2027 Graduate Summer School Program",
+    "evidence_url": "https://www.ias.edu/node/324591",
+    "evidence_quote": "Apply to the 2027 Graduate Summer School Program"
+  },
+  "institution": {
+    "name": "IAS/Park City Mathematics Institute (PCMI)",
+    "website": "https://www.ias.edu/pcmi",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ias.edu/node/324591",
+  "source_url": "https://www.ias.edu/node/324591",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Park City",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Mathematics (2027 research topic: Patterns, Primes and Dynamics)",
+  "seniority": "Graduate students who have completed their first year; postdocs less than one year after the PhD",
+  "qualifications": [
+    "Completed first year of graduate school",
+    "Postdoctoral scholars less than one year after receipt of their PhD are eligible",
+    "Non-U.S. citizens can apply",
+    "Participants must attend the full three weeks"
+  ],
+  "skills": [],
+  "description_short": "The IAS/Park City Mathematics Institute invites applications to its 2027 Graduate Summer School, held June 27 to July 17, 2027 in Park City, Utah. Applications, including reference details, go through MathPrograms.org and are due January 15, 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.ias.edu/node/324591",
+    "evidence_quote": "January 15, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IAS page 'Apply to the 2027 Graduate Summer School Program' (seen in search results) states PCMI uses MathPrograms.Org to receive applications for the 2027 PCMI Summer Session and gives a January 15, 2027 deadline",
+    "Official PCMI page gives the 2027 Summer Session dates June 27-July 17, 2027 in Park City, Utah",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "Exact MathPrograms.org listing for 2027 not confirmed; the IAS apply page is used as application_url",
+    "Time of day and timezone of the deadline not stated in the results"
+  ],
+  "id": "opp_83d79a1726caae33",
+  "fingerprint": "8577405f8b5d7af8",
+  "discovered_at": "2026-11-18T02:56:22.233Z",
+  "last_verified_at": "2026-11-18T02:56:22.233Z",
+  "content_hash": "sha256:1b6d1527119ed1a2ca804a81f8a6581f16dfd9293d7b9004ebbebe38dcf662a6"
+}

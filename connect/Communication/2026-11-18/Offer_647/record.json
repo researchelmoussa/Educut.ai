@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "CIbSE 2027",
+    "evidence_url": "https://conf.researchr.org/home/cibse-2027",
+    "evidence_quote": "CIbSE 2027 - conf.researchr.org"
+  },
+  "institution": {
+    "name": "Ibero-American Conference on Software Engineering (CIbSE)",
+    "website": "https://conf.researchr.org/home/cibse-2027",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://conf.researchr.org/track/cibse-2027/cibse-2027-main-track",
+  "source_url": "https://conf.researchr.org/home/cibse-2027",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Viña del Mar",
+    "country": "Chile",
+    "country_code": "CL"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Software engineering",
+  "seniority": "Researchers and doctoral students (open call for papers)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "CIbSE 2027, part of the Ibero-American Software Engineering Week (SIbSE 2027) organised by Universidad Andrés Bello, takes place 10 to 14 May 2027 in Viña del Mar, Chile. Main-track abstracts are due 11 January 2027 and full papers 18 January 2027, via EasyChair.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-11",
+    "timezone": null,
+    "evidence_url": "https://conf.researchr.org/track/cibse-2027/cibse-2027-main-track",
+    "evidence_quote": "Abstract submission: 11 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CIbSE 2027 main-track page on conf.researchr.org (seen in search results): abstracts 11 January 2027, papers 18 January 2027, notification 8 March 2027",
+    "EasyChair call for contributions lists the same dates; Doctoral Symposium and Journal First papers due 1 February 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "The 11 January 2027 date is abstract registration; full papers are due 18 January 2027",
+    "A third-party CFP aggregator shows the call as closed, apparently a stale snapshot",
+    "Papers accepted in English, Spanish or Portuguese; time zone of deadlines not stated in the results"
+  ],
+  "id": "opp_a911eeba2600f221",
+  "fingerprint": "48a21431d0e23768",
+  "discovered_at": "2026-11-18T03:00:29.733Z",
+  "last_verified_at": "2026-11-18T03:00:29.733Z",
+  "content_hash": "sha256:05ae5e0eb11101110ce122f0aa43b9818909784e0d4e9f3167aacc0ba6b3af6f"
+}

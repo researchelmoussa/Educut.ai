@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "European Master in Sustainable Systems Engineering",
+    "evidence_url": "https://emsse.eu/",
+    "evidence_quote": "EMSSE - European Master in Sustainable Systems Engineering"
+  },
+  "institution": {
+    "name": "EMSSE (Erasmus Mundus Joint Master)",
+    "website": "https://emsse.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://application.emsse.eu/",
+  "source_url": "https://emsse.eu/admission-and-scholarships/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Sustainable systems engineering",
+  "seniority": "Bachelor's graduates in engineering or technical fields",
+  "qualifications": [
+    "Bachelor's-level degree (180 ECTS) in a related engineering or technical field",
+    "Final-year students may apply if they expect to graduate by 31 July of the application year"
+  ],
+  "skills": [],
+  "description_short": "The European Master in Sustainable Systems Engineering (EMSSE), a two-year Erasmus Mundus Joint Master, takes applications for its 2027-2029 intake through application.emsse.eu from 15 November 2026 to 15 February 2027 (23:59 Paris time); interviews run 18 to 20 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-15T23:59:00+01:00",
+    "timezone": "Europe/Paris",
+    "evidence_url": "https://emsse.eu/admission-and-scholarships/",
+    "evidence_quote": "February 15, 2027 (23:59, Paris time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official EMSSE admission pages (seen in search results): application platform opens 15 November 2026, deadline February 15, 2027 (23:59 Paris time); interviews March 18-20, 2027; results end of March 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "Older EMSSE pages show 2025 and 2026 campaigns with the same day and month; check the live platform",
+    "Programme runs across several universities; no single city or country recorded",
+    "Scholarship value not recorded in this record"
+  ],
+  "id": "opp_e4304d019f2e38fe",
+  "fingerprint": "e53b9084534e0ec5",
+  "discovered_at": "2026-11-18T03:06:49.498Z",
+  "last_verified_at": "2026-11-18T03:06:49.498Z",
+  "content_hash": "sha256:3bddc07b72cf81b8baf821c6c39ff721cceabc31691c604a1405278115f3f5c7"
+}

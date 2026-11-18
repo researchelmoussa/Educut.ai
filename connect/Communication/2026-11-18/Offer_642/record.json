@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "President's Doctoral Scholarship",
+    "evidence_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/presidents-doctoral-scholarship/",
+    "evidence_quote": "President's Doctoral Scholarship"
+  },
+  "institution": {
+    "name": "The University of Manchester, Faculty of Science and Engineering",
+    "website": "https://www.se.manchester.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/presidents-doctoral-scholarship/",
+  "source_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/presidents-doctoral-scholarship/",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Manchester",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Science and engineering doctoral research",
+  "seniority": "Prospective PhD students",
+  "qualifications": [
+    "Applicants must contact the supervisor of the project they are interested in",
+    "Applicants must have submitted an application for a PhD programme by the published deadline"
+  ],
+  "skills": [],
+  "description_short": "The University of Manchester's Faculty of Science and Engineering invites applications to the President's Doctoral Scholarship for 2027 entry. Projects were announced on 30 October 2026; applicants contact the project supervisor and apply for a PhD programme. The application deadline is 18 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-18",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/presidents-doctoral-scholarship/",
+    "evidence_quote": "application deadline: 18 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Faculty of Science and Engineering page (seen in search results) gives projects announced 30 October 2026 and application deadline 18 December 2026, interviews likely in the week of 1 March 2027",
+    "Faculty funding-deadlines page (seen in search results) lists the same 18 December 2026 deadline for 2027 entry",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search (starting from an mlscientist.com Manchester PhD listing) and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "A separate Manchester Biology, Medicine and Health page for the same scheme carries headings that still mention 2026/27 entry; verify the entry year on the application form",
+    "Award value and funding terms not recorded: no verbatim quote captured",
+    "Deadline quote reproduces the date as shown in search results; exact page wording not seen"
+  ],
+  "id": "opp_6e7ee88599867dfe",
+  "fingerprint": "6e20a1890220c71f",
+  "discovered_at": "2026-11-18T02:53:44.756Z",
+  "last_verified_at": "2026-11-18T02:53:44.756Z",
+  "content_hash": "sha256:8daf0e699dd6b4577065390a38a207f890c3cc850f656586f5589126020affd9"
+}

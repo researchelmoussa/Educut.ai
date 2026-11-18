@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Materials Today Conference 2027",
+    "evidence_url": "https://www.elsevier.com/events/conferences/all/materials-today-conference",
+    "evidence_quote": "Materials Today Conference 2027"
+  },
+  "institution": {
+    "name": "Elsevier",
+    "website": "https://www.elsevier.com",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.elsevier.com/events/conferences/all/materials-today-conference/participate",
+  "source_url": "https://www.elsevier.com/events/conferences/all/materials-today-conference",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Montpellier",
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Materials science",
+  "seniority": "Researchers (open call for abstracts)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Elsevier's Materials Today Conference 2027 takes place 18 to 22 July 2027 at Le Corum, Montpellier, France. It accepts talk and poster abstracts across six symposia; the abstract deadline is 5 February 2027, with author notification on 29 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-05",
+    "timezone": null,
+    "evidence_url": "https://www.elsevier.com/events/conferences/all/materials-today-conference/participate",
+    "evidence_quote": "5 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Elsevier conference pages (seen in search results) give abstract deadline 5 February 2027, author notification 29 March 2027, early-bird registration 16 April 2027",
+    "Conference dates 18-22 July 2027, Le Corum, Montpellier",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "One regional copy of the Elsevier participation page (en-in) says the talk-abstract deadline has passed; the main pages still list 5 February 2027",
+    "Time of day and timezone of the deadline not stated in the results"
+  ],
+  "id": "opp_b81d24565ab0f2d1",
+  "fingerprint": "e834ee11af24d64a",
+  "discovered_at": "2026-11-18T02:56:22.799Z",
+  "last_verified_at": "2026-11-18T02:56:22.799Z",
+  "content_hash": "sha256:30b3090f4dbd1e8700554f9465913804088913a48a887077ce98b4e42a367f95"
+}

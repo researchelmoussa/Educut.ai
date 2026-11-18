@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "ECPR General Conference 2027",
+    "evidence_url": "https://ecpr.eu/generalconference",
+    "evidence_quote": "ECPR General Conference 2027, Pompeu Fabra University"
+  },
+  "institution": {
+    "name": "European Consortium for Political Research (ECPR)",
+    "website": "https://ecpr.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ecpr.eu/Events/Event/Content?ID=1710&EventID=373",
+  "source_url": "https://ecpr.eu/generalconference",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Barcelona",
+    "country": "Spain",
+    "country_code": "ES"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Political science",
+  "seniority": "Researchers (open call for panels and papers)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The ECPR General Conference 2027 takes place 7 to 10 September 2027 at Pompeu Fabra University, Barcelona. Panel and individual paper proposals can be submitted online in English from 17 November 2026 until midnight UK time on 8 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08T23:59:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://ecpr.eu/Events/Event/Content?ID=1710&EventID=373",
+    "evidence_quote": "17 November 2026 – 8 January 2027 (midnight UK time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ECPR 'GC27: Guidelines and Deadlines' page (seen in search results) gives the panel and paper proposal window 17 November 2026 - 8 January 2027 (midnight UK time)",
+    "Section chairs review proposals from 11 January 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "The guidelines page gives a notification date of 'on or before 10 February 2026', apparently a typo for 2027",
+    "Proposals are submitted to sections; section-specific rules may apply"
+  ],
+  "id": "opp_28e0c16115ee596d",
+  "fingerprint": "b38bc810d470278e",
+  "discovered_at": "2026-11-18T03:03:22.212Z",
+  "last_verified_at": "2026-11-18T03:03:22.212Z",
+  "content_hash": "sha256:a07c2f8bb4b6bee8ff500f4118bc36c8a4ef2bb5b7074698c5b8ab9232a694e9"
+}

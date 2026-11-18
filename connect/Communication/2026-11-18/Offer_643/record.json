@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Space Weather Training Course 2027",
+    "evidence_url": "https://education.esa.int/apply-for-the-space-weather-training-course-2027/",
+    "evidence_quote": "Apply for the Space Weather Training Course 2027"
+  },
+  "institution": {
+    "name": "European Space Agency (ESA), ESA Academy",
+    "website": "https://www.esa.int",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://education.esa.int/apply-for-the-space-weather-training-course-2027/",
+  "source_url": "https://education.esa.int/apply-for-the-space-weather-training-course-2027/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": null,
+    "country": "Belgium",
+    "country_code": "BE"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Space weather",
+  "seniority": "University students",
+  "qualifications": [
+    "Motivation letter",
+    "CV in Europass format",
+    "Recommendation letter from a university professor or academic supervisor"
+  ],
+  "skills": [],
+  "description_short": "ESA Academy's Space Weather Training Course 2027 runs 8 to 12 March 2027 at ESEC-Galaxia, Belgium. Applications go through ESA Learn with a motivation letter, Europass CV and recommendation letter, and close 27 December 2026 at 23:55 CET.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-27T23:55:00+01:00",
+    "timezone": "Europe/Brussels",
+    "evidence_url": "https://education.esa.int/apply-for-the-space-weather-training-course-2027/",
+    "evidence_quote": "27 December 2026 at 23:55 CET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ESA Education page 'Apply for the Space Weather Training Course 2027' (seen in search results) gives the deadline 27 December 2026 23:55 CET and selection announcement 11 January 2027",
+    "ESA Academy training portfolio lists the course as open for applications",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "City not recorded: the page names the ESEC-Galaxia facility in Belgium without a town in the search results",
+    "Nationality eligibility rules not captured in the search results; check the official page"
+  ],
+  "id": "opp_f38e51469afdb0fa",
+  "fingerprint": "757f2bc9bcd155e0",
+  "discovered_at": "2026-11-18T02:58:37.330Z",
+  "last_verified_at": "2026-11-18T02:58:37.330Z",
+  "content_hash": "sha256:0314d75282414b4188a1e663ee8bb18e8d0bff7a047a1255ef892f536d15d6bb"
+}

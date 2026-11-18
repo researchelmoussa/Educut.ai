@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Doctoral Program in Economics (CDSE)",
+    "evidence_url": "https://www.uni-mannheim.de/gess/apply/admission-requirements/for-cdse",
+    "evidence_quote": "the doctoral program in economics at the CDSE"
+  },
+  "institution": {
+    "name": "University of Mannheim, Graduate School of Economic and Social Sciences (GESS), Center for Doctoral Studies in Economics (CDSE)",
+    "website": "https://www.uni-mannheim.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.uni-mannheim.de/gess/apply/",
+  "source_url": "https://www.uni-mannheim.de/gess/apply/admission-requirements/for-cdse",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Mannheim",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Economics",
+  "seniority": "Prospective PhD students",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The University of Mannheim's Center for Doctoral Studies in Economics (CDSE) accepts applications to its doctoral program in economics for Fall 2027 until 31 March 2027. Applications received before 15 January 2027 are treated as early applications and reviewed first.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-31",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://www.uni-mannheim.de/gess/apply/admission-requirements/for-cdse",
+    "evidence_quote": "the application deadline for the doctoral program in economics at the CDSE is 31 March 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CDSE admission page (seen in search results) gives 31 March 2027 as the application deadline for the Fall 2027 intake",
+    "Official GESS application page: applications handed in before 15 January 2027 are treated as early applications",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote reproduces the wording as shown in search results; exact page wording not seen",
+    "Early-application cut-off is 15 January 2027; the final deadline is 31 March 2027",
+    "Funding terms not recorded: no verbatim quote captured"
+  ],
+  "id": "opp_6ed0da2bba1cf32d",
+  "fingerprint": "2d444fb6bfaf3118",
+  "discovered_at": "2026-11-18T03:09:42.328Z",
+  "last_verified_at": "2026-11-18T03:09:42.328Z",
+  "content_hash": "sha256:39e9e660013af53ef871b98d07ddebbb9945724e7c95e6e154ffbac0547efc2f"
+}
