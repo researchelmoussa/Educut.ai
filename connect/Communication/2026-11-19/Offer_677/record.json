@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Annual PhD Studentships Competition",
+    "evidence_url": "https://www.ulster.ac.uk/doctoralcollege/postgraduate-research/competition",
+    "evidence_quote": "Annual PhD Studentships Competition"
+  },
+  "institution": {
+    "name": "Ulster University",
+    "website": "https://www.ulster.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ulster.ac.uk/doctoralcollege/postgraduate-research/competition",
+  "source_url": "https://www.ulster.ac.uk/doctoralcollege/postgraduate-research/competition",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Multidisciplinary",
+  "seniority": "Doctoral",
+  "qualifications": [
+    "First or Upper Second Class Honours degree, held or expected (official pages differ on the year)"
+  ],
+  "skills": [],
+  "description_short": "Ulster University's Annual PhD Studentships Competition for September 2027 entry opened on 9 October 2026. Applications, including all supporting documents, are due by 4pm on 8 January 2027; interviews are expected in early to mid-February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08T16:00:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.ulster.ac.uk/doctoralcollege/postgraduate-research/competition",
+    "evidence_quote": "4pm on 8 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Ulster University competition page (seen in search results) says the deadline for applications is 4pm on 8 January 2027, open from 9 October 2026 for September 2027 entry",
+    "Deadline is in the future relative to the run date 2026-11-19",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "Ulster University has several campuses; the campus depends on the project, so city is null",
+    "Official pages differ on the degree-completion year in the eligibility wording (September 2026 vs September 2027)",
+    "Found via a VacancyEdu PhD listing for Ulster; source_list_url is the closest approved VacancyEdu entry",
+    "Compensation not recorded"
+  ],
+  "id": "opp_bba23741fbb4c3de",
+  "fingerprint": "cbc2073b31217b7b",
+  "discovered_at": "2026-11-19T02:54:29.398Z",
+  "last_verified_at": "2026-11-19T02:54:29.398Z",
+  "content_hash": "sha256:49a0ce8fe9d7686ed08d2c790ebc607b7d1e3bf3dcac292a5ba846f9d7ba6814"
+}

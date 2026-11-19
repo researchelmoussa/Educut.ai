@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-18T03:15:03.498Z",
+  "updated_at": "2026-11-19T03:17:42.933Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -11935,7 +11935,7 @@
       "deadline": "2026-11-17",
       "content_hash": "sha256:bcd549e6a5a5a289d04f7270a4d2c3018a459267861aa0e1a4d88a0628e5986e",
       "last_verified_at": "2026-10-22T02:03:02.183Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-22T02:01:22.740Z",
       "history": [
         {
@@ -11986,6 +11986,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-19T02:49:57.173Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-17 passed"
         }
       ],
       "offer_number": 155
@@ -45113,6 +45120,1655 @@
         }
       ],
       "offer_number": 648
+    },
+    "opp_161389f046ee381f": {
+      "id": "opp_161389f046ee381f",
+      "fingerprint": "d659c8bb97483d33",
+      "title": "Postdoctoral Fellow in Zinc Water Chemistry and NobleChem Effects on the Degradation of Light Water Reactor Structural and Fuel Cladding Materials",
+      "institution": "Paul Scherrer Institut (PSI)",
+      "city": "Villigen",
+      "country": "Switzerland",
+      "source_url": "https://www.psi.ch/en/hr/job-opportunities/75383-postdoctoral-fellow-in-zinc-water-chemistry-and-noblechem-effects-on-the",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.psi.ch/en/hr/job-opportunities/75383-postdoctoral-fellow-in-zinc-water-chemistry-and-noblechem-effects-on-the",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-04",
+      "content_hash": "sha256:1b8c1d3725a3a8a25fa4508488f2d316395d5881c76334ef9f488761caec1a31",
+      "last_verified_at": "2026-11-19T02:52:54.200Z",
+      "pipeline_status": "VERIFIED",
+      "first_seen": "2026-11-19T02:53:01.103Z",
+      "history": [
+        {
+          "at": "2026-11-19T02:53:01.103Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T02:53:01.104Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        }
+      ],
+      "offer_number": 672
+    },
+    "opp_ff9c9f5206a5a0a9": {
+      "id": "opp_ff9c9f5206a5a0a9",
+      "fingerprint": "7dcc7f9cf200d8fd",
+      "title": "Postdoctoral Fellow in Time-resolved and Room-temperature Crystallography",
+      "institution": "Paul Scherrer Institut (PSI)",
+      "city": "Villigen",
+      "country": "Switzerland",
+      "source_url": "https://www.psi.ch/en/hr/job-opportunities/75378-postdoctoral-fellow-in-time-resolved-and-room-temperature",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.psi.ch/en/hr/job-opportunities/75378-postdoctoral-fellow-in-time-resolved-and-room-temperature",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10",
+      "content_hash": "sha256:44e8e02e91aa029d906321f43c81773ea4a6de9bb17e92ab1252bb0f5987cdba",
+      "last_verified_at": "2026-11-19T02:52:54.305Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T02:53:01.247Z",
+      "history": [
+        {
+          "at": "2026-11-19T02:53:01.247Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T02:53:01.248Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:48.951Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:48.951Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:39.556Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:39.556Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 678
+    },
+    "opp_f75b14a206840c8f": {
+      "id": "opp_f75b14a206840c8f",
+      "fingerprint": "3f8aae5076c9b170",
+      "title": "NAACL 2027 Student Research Workshop",
+      "institution": "NAACL 2027 (Nations of the Americas Chapter of the Association for Computational Linguistics)",
+      "city": "San Francisco",
+      "country": "United States",
+      "source_url": "https://naacl27-srw.github.io/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://naacl27-srw.github.io/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-11T23:59:00-12:00",
+      "content_hash": "sha256:a1d126e133176c664f4c73d66451a3292e70ea162ce491c3ffb483461093180f",
+      "last_verified_at": "2026-11-19T02:54:29.062Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T02:54:29.274Z",
+      "history": [
+        {
+          "at": "2026-11-19T02:54:29.274Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T02:54:29.274Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:57.778Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:57.778Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:40.105Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:40.105Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 680
+    },
+    "opp_bba23741fbb4c3de": {
+      "id": "opp_bba23741fbb4c3de",
+      "fingerprint": "cbc2073b31217b7b",
+      "title": "Annual PhD Studentships Competition",
+      "institution": "Ulster University",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://www.ulster.ac.uk/doctoralcollege/postgraduate-research/competition",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.ulster.ac.uk/doctoralcollege/postgraduate-research/competition",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08T16:00:00+00:00",
+      "content_hash": "sha256:49a0ce8fe9d7686ed08d2c790ebc607b7d1e3bf3dcac292a5ba846f9d7ba6814",
+      "last_verified_at": "2026-11-19T02:54:29.398Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T02:54:29.590Z",
+      "history": [
+        {
+          "at": "2026-11-19T02:54:29.590Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T02:54:29.591Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:48.660Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:48.660Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:39.296Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:39.296Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 677
+    },
+    "opp_fc666374c80cd973": {
+      "id": "opp_fc666374c80cd973",
+      "fingerprint": "44ed6b5020780d06",
+      "title": "tech4health: EPSRC Centre for Doctoral Training in Digital Health Technologies",
+      "institution": "Ulster University",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://www.ulster.ac.uk/doctoralcollege/find-a-phd/12-engineering/1780118",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.ulster.ac.uk/doctoralcollege/find-a-phd/12-engineering/1780118",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-29T16:00:00+00:00",
+      "content_hash": "sha256:1920e843473e6efd4b487f8cd335f45076747486bcf0be5777f1d35c95328c39",
+      "last_verified_at": "2026-11-19T03:17:20.965Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T02:54:29.900Z",
+      "history": [
+        {
+          "at": "2026-11-19T02:54:29.900Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T02:54:29.900Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:16:35.570Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:16:35.570Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:21.089Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-19T03:17:21.090Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-19T03:17:22.580Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unquoted duration/count wording"
+        },
+        {
+          "at": "2026-11-19T03:17:29.046Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:17:29.046Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:41.494Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:41.494Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 685
+    },
+    "opp_7d60a4acc6af47bb": {
+      "id": "opp_7d60a4acc6af47bb",
+      "fingerprint": "56157fb788837c08",
+      "title": "ADB-JSP",
+      "institution": "Ritsumeikan Asia Pacific University (APU)",
+      "city": "Beppu",
+      "country": "Japan",
+      "source_url": "https://admissions.apu.ac.jp/graduate/how_to_apply/external_scholarship/adb_jsp/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://admissions.apu.ac.jp/graduate/how_to_apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08",
+      "content_hash": "sha256:7fa6d6a79ab96a0d92368cff340162eec8ff620d9b190ac8f90bd71d58694aa2",
+      "last_verified_at": "2026-11-19T02:55:46.555Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T02:55:46.761Z",
+      "history": [
+        {
+          "at": "2026-11-19T02:55:46.761Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T02:55:46.761Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:55.474Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:55.474Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:39.029Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:39.030Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 676
+    },
+    "opp_7aac86d808b21e88": {
+      "id": "opp_7aac86d808b21e88",
+      "fingerprint": "e2939297026dcb7c",
+      "title": "INTERNSHIP: All Sectors/Bureaus",
+      "institution": "UNESCO",
+      "city": null,
+      "country": null,
+      "source_url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-All-SectorsBureaus/1331682557/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://careers.unesco.org/job/Multiple-INTERNSHIP-All-SectorsBureaus/1331682557/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31T23:59:00",
+      "content_hash": "sha256:bbb58fb77fae38a5e27ea05ebaa907f3045b5f71c87b353fb7b8dd8bb1c90c4a",
+      "last_verified_at": "2026-11-19T03:17:17.485Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T02:56:54.913Z",
+      "history": [
+        {
+          "at": "2026-11-19T02:56:54.913Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T02:56:54.913Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:57.591Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:57.591Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:17.603Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-19T03:17:17.603Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-19T03:17:19.077Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unquoted duration/count wording"
+        },
+        {
+          "at": "2026-11-19T03:17:26.841Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:17:26.841Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:37.272Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:37.272Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 669
+    },
+    "opp_2d97289dc3437964": {
+      "id": "opp_2d97289dc3437964",
+      "fingerprint": "623b52edcda6fcd6",
+      "title": "ERCIM “Alain Bensoussan” Fellowship Programme",
+      "institution": "ERCIM",
+      "city": null,
+      "country": null,
+      "source_url": "https://fellowship.ercim.eu/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://fellowship.ercim.eu/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-30",
+      "content_hash": "sha256:a13618574c087fb491bc70ebdad38b462dae2fc4fd7c36fd682d979ea4b61759",
+      "last_verified_at": "2026-11-19T02:57:29.845Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T02:57:30.039Z",
+      "history": [
+        {
+          "at": "2026-11-19T02:57:30.039Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T02:57:30.039Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:55.074Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:55.074Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:42.933Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:42.933Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 690
+    },
+    "opp_eb01c9d2c4b827fb": {
+      "id": "opp_eb01c9d2c4b827fb",
+      "fingerprint": "589a1ae4c4d995b3",
+      "title": "PhD Position F/M Visualization of the Plausibility and Bias for Data Resources used in a Geographic Digital Twin",
+      "institution": "Inria (Centre Inria de Saclay, AVIZ team)",
+      "city": "Gif-sur-Yvette",
+      "country": "France",
+      "source_url": "https://jobs.inria.fr/public/classic/en/offres/2026-10501",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://jobs.inria.fr/public/classic/en/offres/2026-10501",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-28",
+      "content_hash": "sha256:e8e992cd33532d1467d1bb23b79aea3e88e0bd9388216e9d1a889a45e9859991",
+      "last_verified_at": "2026-11-19T03:17:24.629Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:00:02.640Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:00:02.640Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:00:02.640Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:54.817Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:54.817Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:24.746Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-19T03:17:24.746Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-19T03:17:26.428Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unquoted duration/count wording"
+        },
+        {
+          "at": "2026-11-19T03:17:29.649Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:17:29.650Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:42.637Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:42.637Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 689
+    },
+    "opp_52eb0b7b37777b14": {
+      "id": "opp_52eb0b7b37777b14",
+      "fingerprint": "36fd3b778dc903ac",
+      "title": "Post-Doctoral Research Visit F/M Postdoctoral position in Quantum Information Theory",
+      "institution": "Inria (Centre Inria de Saclay, PHIQUS team)",
+      "city": "Palaiseau",
+      "country": "France",
+      "source_url": "https://jobs.inria.fr/public/classic/en/offres/2026-10243",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://jobs.inria.fr/public/classic/en/offres/2026-10243",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28",
+      "content_hash": "sha256:3c373d00fd7a12b2cffc050f32d6e5e1ea2640a9be114fb24566fe70da20742b",
+      "last_verified_at": "2026-11-19T03:17:22.730Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:00:02.974Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:00:02.974Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:00:02.974Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:54.568Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:54.568Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:22.850Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-19T03:17:22.851Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-19T03:17:24.483Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unquoted duration/count wording"
+        },
+        {
+          "at": "2026-11-19T03:17:29.475Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:17:29.475Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:42.360Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:42.360Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 688
+    },
+    "opp_41fce6a8ab32a823": {
+      "id": "opp_41fce6a8ab32a823",
+      "fingerprint": "ff5c1f9e3ab96eb7",
+      "title": "PhD Research Fellowships in Economics",
+      "institution": "University of Oslo, Department of Economics",
+      "city": "Oslo",
+      "country": "Norway",
+      "source_url": "https://www.jobbnorge.no/en/available-jobs/job/311287/phd-research-fellowships-in-economics",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.jobbnorge.no/en/available-jobs/job/311287/phd-research-fellowships-in-economics",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:bb6b03c367532034458e5e1a6d65f4fea365187fddfecd56abce55bd7ce58cdc",
+      "last_verified_at": "2026-11-19T03:00:54.344Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:00:54.538Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:00:54.538Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:00:54.538Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:49.722Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:49.723Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:40.360Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:40.361Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 681
+    },
+    "opp_0fc69c852786e450": {
+      "id": "opp_0fc69c852786e450",
+      "fingerprint": "c5588d87960bb834",
+      "title": "Doctoral student in Organizational Implications of Artificial Intelligence",
+      "institution": "KTH Royal Institute of Technology, School of Industrial Engineering and Management",
+      "city": "Stockholm",
+      "country": "Sweden",
+      "source_url": "https://www.kth.se/lediga-jobb/982854",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.kth.se/lediga-jobb/982854",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-04T23:59:00+01:00",
+      "content_hash": "sha256:bb58cda5d39dac1c4e8d1d94fac4cb89fbb9960cee2c92af9fbbecc452d888ff",
+      "last_verified_at": "2026-11-19T03:01:46.302Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:01:46.508Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:01:46.508Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:01:46.509Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:55.203Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:55.203Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:38.768Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:38.769Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 675
+    },
+    "opp_f62e45c936955fd8": {
+      "id": "opp_f62e45c936955fd8",
+      "fingerprint": "fbdd7231d657cce3",
+      "title": "Engineering & Technology Studentship",
+      "institution": "European Southern Observatory (ESO)",
+      "city": "Garching",
+      "country": "Germany",
+      "source_url": "https://recruitment.eso.org/jobs/2026_0071",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://recruitment.eso.org/jobs/2026_0071",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:6ca468253bae116eacda1725282530639ae26992b607f2a40afbbf3ad34c0a47",
+      "last_verified_at": "2026-11-19T03:12:49.126Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:02:58.644Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:02:58.644Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:02:58.644Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:12:49.246Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-19T03:15:57.342Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:57.342Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:36.995Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:36.995Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 668
+    },
+    "opp_e9a9eb75b84e2738": {
+      "id": "opp_e9a9eb75b84e2738",
+      "fingerprint": "167d591f8b38992b",
+      "title": "Postgraduate Fellowships Abroad",
+      "institution": "\"la Caixa\" Foundation",
+      "city": null,
+      "country": null,
+      "source_url": "https://lacaixafoundation.org/en/postgraduate-fellowships-abroad",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://lacaixafoundation.org/en/postgraduate-fellowships-abroad",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-21T14:00:00+01:00",
+      "content_hash": "sha256:4cc790329a44ca2a7276516016e36e8e1b8e46839014d5e0b914e0bbf952cfe8",
+      "last_verified_at": "2026-11-19T03:03:55.277Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:03:55.471Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:03:55.471Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:03:55.472Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:16:35.051Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:16:35.051Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:40.885Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:40.885Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 683
+    },
+    "opp_f9ee583e6a037f87": {
+      "id": "opp_f9ee583e6a037f87",
+      "fingerprint": "624ff170a56b6d34",
+      "title": "ITC Faculty Early Bird Programme",
+      "institution": "University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC)",
+      "city": "Enschede",
+      "country": "Netherlands",
+      "source_url": "https://www.utwente.nl/en/itc/education/study-costs/scholarships/scholarship-finder/itc-early-bird-scholarship-programme/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.utwente.nl/en/itc/education/study-costs/scholarships/scholarship-finder/itc-early-bird-scholarship-programme/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:d5405af1489260ef0afbcb319b3d33cb5f849ccd141c782284a0390f2008ac3a",
+      "last_verified_at": "2026-11-19T03:05:11.213Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:05:11.405Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:05:11.405Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:05:11.405Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:16:35.846Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:16:35.846Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:41.770Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:41.770Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 686
+    },
+    "opp_c7412693bf6b596b": {
+      "id": "opp_c7412693bf6b596b",
+      "fingerprint": "0987478729640f9e",
+      "title": "Postdoctoral Fellowship Competition",
+      "institution": "SEDarc",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://www.sedarc.ac.uk/postdoctoral-fellowship-competition/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.sedarc.ac.uk/postdoctoral-fellowship-competition/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:00+00:00",
+      "content_hash": "sha256:a946801a0e66f8f67887a85790de4aa379060d180ec21e6a07f8f90040c5a640",
+      "last_verified_at": "2026-11-19T03:05:58.537Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:05:58.755Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:05:58.755Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:05:58.755Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:16:34.786Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:16:34.786Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:40.616Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:40.616Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 682
+    },
+    "opp_bf435c322fe12b8f": {
+      "id": "opp_bf435c322fe12b8f",
+      "fingerprint": "420277fe7181c5b2",
+      "title": "ESRC Postdoctoral Fellowships",
+      "institution": "LISS DTP",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://liss-dtp.ac.uk/esrc-pdf/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://liss-dtp.ac.uk/esrc-pdf/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-17T10:00:00+00:00",
+      "content_hash": "sha256:a5d03f9027f3b50eb2d75bc91d1ea7785dab764fee817630c858af1f54226356",
+      "last_verified_at": "2026-11-19T03:06:43.585Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:06:43.780Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:06:43.780Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:06:43.780Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:57.053Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:57.053Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:36.684Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:36.684Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 667
+    },
+    "opp_11640850f13444ba": {
+      "id": "opp_11640850f13444ba",
+      "fingerprint": "72e7a91295b7779c",
+      "title": "Postdoctoral Fellowships",
+      "institution": "Grand Union DTP",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://www.granduniondtp.ac.uk/postdoc-fellowships",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.granduniondtp.ac.uk/postdoc-fellowships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-11T16:00:00+00:00",
+      "content_hash": "sha256:dcf8c24d0809cf3fd93ed70b22bc796af19646e2f785dacd5383f4c21bffb2a5",
+      "last_verified_at": "2026-11-19T03:17:19.208Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:06:44.140Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:06:44.140Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:06:44.140Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:49.241Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:49.241Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:19.322Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-19T03:17:19.322Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-19T03:17:20.832Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unquoted duration/count wording"
+        },
+        {
+          "at": "2026-11-19T03:17:28.131Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:17:28.131Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:39.817Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:39.817Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 679
+    },
+    "opp_56dea9d026104740": {
+      "id": "opp_56dea9d026104740",
+      "fingerprint": "125965d2333e98e2",
+      "title": "PhD Research Fellow in Probability theory",
+      "institution": "University of Bergen",
+      "city": "Bergen",
+      "country": "Norway",
+      "source_url": "https://www.jobbnorge.no/en/available-jobs/job/311332/phd-research-fellow-in-probability-theory",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.jobbnorge.no/en/available-jobs/job/311332/phd-research-fellow-in-probability-theory",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-03",
+      "content_hash": "sha256:6a255ee02c3248ee03a045805c074fa0fb1840a2b3f21a68a28aa027e971c610",
+      "last_verified_at": "2026-11-19T03:08:24.051Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:08:24.241Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:08:24.241Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:08:24.241Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:58.109Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:58.109Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:37.799Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:37.799Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 671
+    },
+    "opp_f77666c75958ce3b": {
+      "id": "opp_f77666c75958ce3b",
+      "fingerprint": "6450aa30f5aa5139",
+      "title": "PhD Fellowship in Gender and Technology",
+      "institution": "UiT The Arctic University of Norway",
+      "city": null,
+      "country": "Norway",
+      "source_url": "https://www.jobbnorge.no/en/available-jobs/job/310199/phd-fellowship-in-gender-and-technology",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.jobbnorge.no/en/available-jobs/job/310199/phd-fellowship-in-gender-and-technology",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-25",
+      "content_hash": "sha256:4e1787ad2b5ca46c7aadf138ed8e973e51604f9a1842f75688fb77f7653a84ef",
+      "last_verified_at": "2026-11-19T03:08:24.386Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:08:24.577Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:08:24.578Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:08:24.578Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:16:35.307Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:16:35.307Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:41.192Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:41.192Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 684
+    },
+    "opp_a84b304668da48f2": {
+      "id": "opp_a84b304668da48f2",
+      "fingerprint": "adf7d2fd20651142",
+      "title": "Radiation Protection Physicist / Engineer",
+      "institution": "Paul Scherrer Institut (PSI)",
+      "city": "Villigen",
+      "country": "Switzerland",
+      "source_url": "https://www.psi.ch/en/hr/job-opportunities/75382-radiation-protection-physicist-engineer",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.psi.ch/en/hr/job-opportunities/75382-radiation-protection-physicist-engineer",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-04",
+      "content_hash": "sha256:895649f25a8d3e4e51f7c266f8be5a1742b69c816ea1103516b67eb5905ce2c7",
+      "last_verified_at": "2026-11-19T03:08:24.719Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:08:24.925Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:08:24.925Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:08:24.925Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:54.651Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:54.651Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:38.203Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:38.203Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 673
+    },
+    "opp_e1ba2695531c45cc": {
+      "id": "opp_e1ba2695531c45cc",
+      "fingerprint": "3dae00be91072838",
+      "title": "Professor/Associate Professor in Educational Psychology",
+      "institution": "University of Oslo, Department of Education, Faculty of Educational Sciences",
+      "city": "Oslo",
+      "country": "Norway",
+      "source_url": "https://www.jobbnorge.no/en/available-jobs/job/311433/professor-associate-professor-in-educational-psychology",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.jobbnorge.no/en/available-jobs/job/311433/professor-associate-professor-in-educational-psychology",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-04",
+      "content_hash": "sha256:4e70e6624cea45f770cc0ef9ca6331175531b72cdebb35a3bf3de7fcd061ebe5",
+      "last_verified_at": "2026-11-19T03:09:48.503Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:09:48.687Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:09:48.687Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:09:48.688Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:54.922Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:54.922Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:38.483Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:38.484Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 674
+    },
+    "opp_4a5551999d9248c6": {
+      "id": "opp_4a5551999d9248c6",
+      "fingerprint": "2952a0b60fa22fa4",
+      "title": "PhD Candidate: Museums, Collections and Society - Indigenous Heritage (1.0 FTE)",
+      "institution": "Leiden University, Faculty of Archaeology",
+      "city": "Leiden",
+      "country": "Netherlands",
+      "source_url": "https://careers.universiteitleiden.nl/job/PhD-Candidate-Museums%2C-Collections-and-Society-Indigenous-Heritage-%281_0-FTE%29/17018-en_US/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://careers.universiteitleiden.nl/job/PhD-Candidate-Museums%2C-Collections-and-Society-Indigenous-Heritage-%281_0-FTE%29/17018-en_US/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-01",
+      "content_hash": "sha256:dcb2174d2817da616f6176822db078cdea0af92dee07019fe74bc28aad27f512",
+      "last_verified_at": "2026-11-19T03:12:49.536Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:10:33.933Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:10:33.933Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:10:33.933Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:12:49.685Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-19T03:15:57.842Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:57.842Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:37.531Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:37.531Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 670
+    },
+    "opp_3ea9e68a3fec834e": {
+      "id": "opp_3ea9e68a3fec834e",
+      "fingerprint": "8de40678066185a5",
+      "title": "Master Internship in AI for biological microscopy",
+      "institution": "Inria (OPIS team)",
+      "city": "Gif-sur-Yvette",
+      "country": "France",
+      "source_url": "https://jobs.inria.fr/public/classic/en/offres/2026-10564",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://jobs.inria.fr/public/classic/en/offres/2026-10564",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28",
+      "content_hash": "sha256:af59fe214eeaacb6c8d52271e3467e08b1c116c573f92ac98c664a180501bd05",
+      "last_verified_at": "2026-11-19T03:11:17.826Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-19T03:11:17.999Z",
+      "history": [
+        {
+          "at": "2026-11-19T03:11:17.999Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-19T03:11:18.000Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-19T03:15:54.324Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-19T03:15:54.324Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-19T03:17:42.024Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-19T03:17:42.024Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 687
     }
   },
   "seen_urls": {
@@ -46074,7 +47730,32 @@
     "https://icts.res.in/programs/upcoming": "opp_ac54cabbf97f69e7",
     "https://register1.icts.res.in/": "opp_ac54cabbf97f69e7",
     "https://se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/school-of-natural-sciences-scholarship": "opp_6c3962419c58556f",
-    "https://k.u-tokyo.ac.jp/en/education/for_undergraduate/how_to_apply": "opp_bfa4228d24909141"
+    "https://k.u-tokyo.ac.jp/en/education/for_undergraduate/how_to_apply": "opp_bfa4228d24909141",
+    "https://psi.ch/en/hr/job-opportunities/75383-postdoctoral-fellow-in-zinc-water-chemistry-and-noblechem-effects-on-the": "opp_161389f046ee381f",
+    "https://psi.ch/en/hr/job-opportunities/75378-postdoctoral-fellow-in-time-resolved-and-room-temperature": "opp_ff9c9f5206a5a0a9",
+    "https://naacl27-srw.github.io/": "opp_f75b14a206840c8f",
+    "https://ulster.ac.uk/doctoralcollege/postgraduate-research/competition": "opp_bba23741fbb4c3de",
+    "https://ulster.ac.uk/doctoralcollege/find-a-phd/12-engineering/1780118": "opp_fc666374c80cd973",
+    "https://admissions.apu.ac.jp/graduate/how_to_apply/external_scholarship/adb_jsp": "opp_7d60a4acc6af47bb",
+    "https://admissions.apu.ac.jp/graduate/how_to_apply": "opp_7d60a4acc6af47bb",
+    "https://careers.unesco.org/job/Multiple-INTERNSHIP-All-SectorsBureaus/1331682557": "opp_7aac86d808b21e88",
+    "https://fellowship.ercim.eu/": "opp_2d97289dc3437964",
+    "https://jobs.inria.fr/public/classic/en/offres/2026-10501": "opp_eb01c9d2c4b827fb",
+    "https://jobs.inria.fr/public/classic/en/offres/2026-10243": "opp_52eb0b7b37777b14",
+    "https://jobbnorge.no/en/available-jobs/job/311287/phd-research-fellowships-in-economics": "opp_41fce6a8ab32a823",
+    "https://kth.se/lediga-jobb/982854": "opp_0fc69c852786e450",
+    "https://recruitment.eso.org/jobs/2026_0071": "opp_f62e45c936955fd8",
+    "https://lacaixafoundation.org/en/postgraduate-fellowships-abroad": "opp_e9a9eb75b84e2738",
+    "https://utwente.nl/en/itc/education/study-costs/scholarships/scholarship-finder/itc-early-bird-scholarship-programme": "opp_f9ee583e6a037f87",
+    "https://sedarc.ac.uk/postdoctoral-fellowship-competition": "opp_c7412693bf6b596b",
+    "https://liss-dtp.ac.uk/esrc-pdf": "opp_bf435c322fe12b8f",
+    "https://granduniondtp.ac.uk/postdoc-fellowships": "opp_11640850f13444ba",
+    "https://jobbnorge.no/en/available-jobs/job/311332/phd-research-fellow-in-probability-theory": "opp_56dea9d026104740",
+    "https://jobbnorge.no/en/available-jobs/job/310199/phd-fellowship-in-gender-and-technology": "opp_f77666c75958ce3b",
+    "https://psi.ch/en/hr/job-opportunities/75382-radiation-protection-physicist-engineer": "opp_a84b304668da48f2",
+    "https://jobbnorge.no/en/available-jobs/job/311433/professor-associate-professor-in-educational-psychology": "opp_e1ba2695531c45cc",
+    "https://careers.universiteitleiden.nl/job/PhD-Candidate-Museums%2C-Collections-and-Society-Indigenous-Heritage-%281_0-FTE%29/17018-en_US": "opp_4a5551999d9248c6",
+    "https://jobs.inria.fr/public/classic/en/offres/2026-10564": "opp_3ea9e68a3fec834e"
   },
-  "last_offer_number": 666
+  "last_offer_number": 690
 }

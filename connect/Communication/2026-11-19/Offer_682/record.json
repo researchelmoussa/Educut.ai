@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Postdoctoral Fellowship Competition",
+    "evidence_url": "https://www.sedarc.ac.uk/postdoctoral-fellowship-competition/",
+    "evidence_quote": "Postdoctoral Fellowship Competition"
+  },
+  "institution": {
+    "name": "SEDarc",
+    "website": "https://www.sedarc.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.sedarc.ac.uk/postdoctoral-fellowship-competition/",
+  "source_url": "https://www.sedarc.ac.uk/postdoctoral-fellowship-competition/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Social sciences (ESRC)",
+  "seniority": "Early-career postdoctoral",
+  "qualifications": [
+    "No more than 12 months of active postdoctoral experience (full-time equivalent, allowing for career breaks)"
+  ],
+  "skills": [],
+  "description_short": "SEDarc's 2027/28 Postdoctoral Fellowship Competition asks applicants to upload an expression of interest form and a two-page CV to the SEDarc portal by 23:59 GMT on 15 January 2027. Nominated candidates complete the full ESRC application by 23 March 2027; fellowships start 1 October 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15T23:59:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.sedarc.ac.uk/postdoctoral-fellowship-competition/",
+    "evidence_quote": "by 23:59 GMT on 15 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SEDarc competition page (seen in search results) requires the EOI form and 2-page CV by 23:59 GMT on 15 January 2027; nominees submit the full ESRC application by 23 March 2027",
+    "Deadline is in the future relative to the run date 2026-11-19",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "Eligibility text on the page refers to a PhD awarded by 1 October 2026, which conflicts with the 1 October 2027 start; likely carried over from the previous cycle",
+    "SEDarc's general funding page gives a different outcome timing (July) than the competition page (16 April 2027)",
+    "Host institution is one of SEDarc's six member institutions; city is null",
+    "Fellowship duration and funding terms not recorded",
+    "Compensation not recorded"
+  ],
+  "id": "opp_c7412693bf6b596b",
+  "fingerprint": "0987478729640f9e",
+  "discovered_at": "2026-11-19T03:05:58.537Z",
+  "last_verified_at": "2026-11-19T03:05:58.537Z",
+  "content_hash": "sha256:a946801a0e66f8f67887a85790de4aa379060d180ec21e6a07f8f90040c5a640"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Postdoctoral Fellowships",
+    "evidence_url": "https://www.granduniondtp.ac.uk/postdoc-fellowships",
+    "evidence_quote": "Postdoctoral Fellowships"
+  },
+  "institution": {
+    "name": "Grand Union DTP",
+    "website": "https://www.granduniondtp.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.granduniondtp.ac.uk/postdoc-fellowships",
+  "source_url": "https://www.granduniondtp.ac.uk/postdoc-fellowships",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Social sciences (ESRC)",
+  "seniority": "Early-career postdoctoral",
+  "qualifications": [
+    "PhD awarded, or viva passed with minor corrections, by the deadline",
+    "No more than 12 months of active postdoctoral experience"
+  ],
+  "skills": [],
+  "description_short": "Grand Union DTP invites expressions of interest for ESRC Postdoctoral Fellowships starting 1 October 2027, based at Brunel, The Open University or Oxford. Expression-of-interest documents go to the relevant department by 16:00 on 11 January 2027; full applications follow via departments by 23 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-11T16:00:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.granduniondtp.ac.uk/postdoc-fellowships",
+    "evidence_quote": "16:00 11 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Grand Union DTP postdoctoral fellowships page (seen in search results) sets the stage 1 EOI deadline at 16:00 11 January 2027 and full applications by 23:59 on 23 March 2027 via departments",
+    "Deadline is in the future relative to the run date 2026-11-19",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "Fellows are based at Brunel, The Open University or Oxford; city depends on the host, so null",
+    "Department-level EOI requirements may differ (e.g. some Oxford departments set earlier internal dates)",
+    "The DTP does not accept applications submitted directly by candidates; applications go through departments",
+    "Funding terms not recorded",
+    "Compensation not recorded"
+  ],
+  "id": "opp_11640850f13444ba",
+  "fingerprint": "72e7a91295b7779c",
+  "discovered_at": "2026-11-19T03:06:43.951Z",
+  "last_verified_at": "2026-11-19T03:17:19.208Z",
+  "content_hash": "sha256:dcf8c24d0809cf3fd93ed70b22bc796af19646e2f785dacd5383f4c21bffb2a5"
+}

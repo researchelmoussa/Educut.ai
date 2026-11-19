@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "ESRC Postdoctoral Fellowships",
+    "evidence_url": "https://liss-dtp.ac.uk/esrc-pdf/",
+    "evidence_quote": "ESRC Postdoctoral Fellowships"
+  },
+  "institution": {
+    "name": "LISS DTP",
+    "website": "https://liss-dtp.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://liss-dtp.ac.uk/esrc-pdf/",
+  "source_url": "https://liss-dtp.ac.uk/esrc-pdf/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Social sciences (ESRC)",
+  "seniority": "Early-career postdoctoral",
+  "qualifications": [
+    "PhD held, or viva passed with minor amendments, by 23 March 2027",
+    "No more than 12 months of active postdoctoral experience by 23 March 2027"
+  ],
+  "skills": [],
+  "description_short": "LISS DTP invites expressions of interest for ESRC Postdoctoral Fellowships starting 1 October 2027. The online EOI form is due by 10:00 on 17 December 2026; successful applicants then submit a full proposal by 23:59 on 23 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-17T10:00:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://liss-dtp.ac.uk/esrc-pdf/",
+    "evidence_quote": "10:00 on 17 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official LISS DTP ESRC PDF page (seen in search results, recently updated) gives the EOI deadline 10:00 on 17 December 2026 and full proposal deadline 23:59 on 23 March 2027",
+    "Deadline is in the future relative to the run date 2026-11-19",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "Host institution is one of the LISS DTP partners; city not stated, so null",
+    "Only the EOI stage deadline is used as the deadline; the full proposal stage follows by invitation",
+    "Fellowship duration and funding terms not recorded",
+    "Compensation not recorded"
+  ],
+  "id": "opp_bf435c322fe12b8f",
+  "fingerprint": "420277fe7181c5b2",
+  "discovered_at": "2026-11-19T03:06:43.585Z",
+  "last_verified_at": "2026-11-19T03:06:43.585Z",
+  "content_hash": "sha256:a5d03f9027f3b50eb2d75bc91d1ea7785dab764fee817630c858af1f54226356"
+}
