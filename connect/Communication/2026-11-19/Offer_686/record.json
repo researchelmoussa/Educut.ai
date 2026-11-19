@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "ITC Faculty Early Bird Programme",
+    "evidence_url": "https://www.utwente.nl/en/itc/education/study-costs/scholarships/scholarship-finder/itc-early-bird-scholarship-programme/",
+    "evidence_quote": "ITC Faculty Early Bird Programme"
+  },
+  "institution": {
+    "name": "University of Twente, Faculty of Geo-Information Science and Earth Observation (ITC)",
+    "website": "https://www.utwente.nl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.utwente.nl/en/itc/education/study-costs/scholarships/scholarship-finder/itc-early-bird-scholarship-programme/",
+  "source_url": "https://www.utwente.nl/en/itc/education/study-costs/scholarships/scholarship-finder/itc-early-bird-scholarship-programme/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Enschede",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Geo-information science and earth observation; spatial systems",
+  "seniority": "Master's applicants",
+  "qualifications": [
+    "Unconditional admission to the MSc Geo-Information Science and Earth Observation or the MSc Spatial Systems & Society",
+    "Enrolling at the University of Twente for the first time"
+  ],
+  "skills": [],
+  "description_short": "The University of Twente's ITC Faculty runs the Early Bird Programme for students unconditionally admitted to its MSc Geo-Information Science and Earth Observation or MSc Spatial Systems & Society, starting September 2027. The single, strict application deadline is 31 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-31",
+    "timezone": "Europe/Amsterdam",
+    "evidence_url": "https://www.utwente.nl/en/itc/education/study-costs/scholarships/scholarship-finder/itc-early-bird-scholarship-programme/",
+    "evidence_quote": "31 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ITC Early Bird programme page (seen in search results) lists application deadline 31 January 2027, notification 5 February 2027, payment deadline 1 March 2027",
+    "The University of Twente scholarship finder lists the programme for September 2027 starters, open until 31 January 2027",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "A separate ITC page states the 2026 round is closed and that a possible next round will open in December; the application form may not be open yet on the run date",
+    "City (Enschede) is the University of Twente's location, not quoted from the programme page",
+    "Only the date string is quoted; the full deadline line was not shown verbatim",
+    "Found while following up a Fellowships Guide University of Twente listing; source_list_url is the closest approved category",
+    "Compensation not recorded"
+  ],
+  "id": "opp_f9ee583e6a037f87",
+  "fingerprint": "624ff170a56b6d34",
+  "discovered_at": "2026-11-19T03:05:11.213Z",
+  "last_verified_at": "2026-11-19T03:05:11.213Z",
+  "content_hash": "sha256:d5405af1489260ef0afbcb319b3d33cb5f849ccd141c782284a0390f2008ac3a"
+}

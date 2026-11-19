@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "NAACL 2027 Student Research Workshop",
+    "evidence_url": "https://naacl27-srw.github.io/",
+    "evidence_quote": "NAACL 2027 Student Research Workshop"
+  },
+  "institution": {
+    "name": "NAACL 2027 (Nations of the Americas Chapter of the Association for Computational Linguistics)",
+    "website": "https://2027.naacl.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://naacl27-srw.github.io/",
+  "source_url": "https://naacl27-srw.github.io/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "San Francisco",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Natural language processing, computational linguistics",
+  "seniority": "Students",
+  "qualifications": [
+    "First author must be a current student or have completed the work while a student; proof of student status required at submission"
+  ],
+  "skills": [],
+  "description_short": "The NAACL 2027 Student Research Workshop invites research papers and thesis proposals from students. Papers are submitted through OpenReview by 11 January 2027 (11:59 PM AoE). The workshop runs alongside NAACL 2027 in San Francisco, 1 to 5 June 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-11T23:59:00-12:00",
+    "timezone": "AoE (UTC-12)",
+    "evidence_url": "https://naacl27-srw.github.io/",
+    "evidence_quote": "January 11, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NAACL 2027 SRW site (seen in search results) gives the paper submission deadline January 11, 2027, 11:59 PM UTC-12 (AoE); the same date appears in the ACL portal call",
+    "Deadline is in the future relative to the run date 2026-11-19",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "The OpenReview submission link was not yet posted on the workshop site; application_url points to the official workshop page",
+    "Exact workshop day within 1-5 June 2027 not yet announced",
+    "Only the date string is quoted; the full deadline line was not shown verbatim",
+    "Compensation not recorded"
+  ],
+  "id": "opp_f75b14a206840c8f",
+  "fingerprint": "3f8aae5076c9b170",
+  "discovered_at": "2026-11-19T02:54:29.062Z",
+  "last_verified_at": "2026-11-19T02:54:29.062Z",
+  "content_hash": "sha256:a1d126e133176c664f4c73d66451a3292e70ea162ce491c3ffb483461093180f"
+}

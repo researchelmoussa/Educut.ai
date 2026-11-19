@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Postgraduate Fellowships Abroad",
+    "evidence_url": "https://lacaixafoundation.org/documents/d/la-caixa-foundation/postgraduate-fellowships-abroad-2027-rules-participation-pdf",
+    "evidence_quote": "Postgraduate Fellowships Abroad"
+  },
+  "institution": {
+    "name": "\"la Caixa\" Foundation",
+    "website": "https://lacaixafoundation.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://lacaixafoundation.org/en/postgraduate-fellowships-abroad",
+  "source_url": "https://lacaixafoundation.org/en/postgraduate-fellowships-abroad",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Postgraduate studies (master's or doctoral), all disciplines except MBA",
+  "seniority": "Graduates",
+  "qualifications": [
+    "Spanish and Portuguese students (per the call page)",
+    "Full-time, attendance-based master's or doctoral studies starting with the fellowship; MBA programmes excluded",
+    "Application entirely in English with at least three reference letters"
+  ],
+  "skills": [],
+  "description_short": "The \"la Caixa\" Foundation's 2027 Postgraduate Fellowships Abroad call is for Spanish and Portuguese students pursuing full-time master's or doctoral studies in the EHEA, North America or Asia-Pacific. Applications are due 21 January 2027 at 14:00 mainland Spain time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-21T14:00:00+01:00",
+    "timezone": "Europe/Madrid",
+    "evidence_url": "https://lacaixafoundation.org/documents/d/la-caixa-foundation/postgraduate-fellowships-abroad-2027-rules-participation-pdf",
+    "evidence_quote": "21 January 2027 at 14:00:00h (mainland Spain time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official 2027 rules of participation (seen in search results) state the call closes on 21 January 2027 at 14:00:00h (mainland Spain time); the call page lists the call as open",
+    "Deadline is in the future relative to the run date 2026-11-19",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "Study location depends on the fellow's admitted university abroad, so city and country are null",
+    "Full bachelor's-degree eligibility window not confirmed",
+    "Quote assembled from the rules wording shown in search results ('closes on 21 January 2027 at 14:00:00h (mainland Spain time)')",
+    "Number of fellowships and coverage details not recorded",
+    "Compensation not recorded"
+  ],
+  "id": "opp_e9a9eb75b84e2738",
+  "fingerprint": "167d591f8b38992b",
+  "discovered_at": "2026-11-19T03:03:55.277Z",
+  "last_verified_at": "2026-11-19T03:03:55.277Z",
+  "content_hash": "sha256:4cc790329a44ca2a7276516016e36e8e1b8e46839014d5e0b914e0bbf952cfe8"
+}

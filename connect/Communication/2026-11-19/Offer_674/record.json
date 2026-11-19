@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "academic_position",
+  "title": {
+    "value": "Professor/Associate Professor in Educational Psychology",
+    "evidence_url": "https://www.uio.no/english/about/vacancies/academic/",
+    "evidence_quote": "Professor/Associate Professor in Educational Psychology"
+  },
+  "institution": {
+    "name": "University of Oslo, Department of Education, Faculty of Educational Sciences",
+    "website": "https://www.uio.no",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.jobbnorge.no/en/available-jobs/job/311433/professor-associate-professor-in-educational-psychology",
+  "source_url": "https://www.jobbnorge.no/en/available-jobs/job/311433/professor-associate-professor-in-educational-psychology",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": "Oslo",
+    "country": "Norway",
+    "country_code": "NO"
+  },
+  "employment_type": "unspecified",
+  "work_arrangement": "unspecified",
+  "field": "Educational psychology",
+  "seniority": "Professor / Associate Professor",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The University of Oslo's Department of Education (Faculty of Educational Sciences) has announced a Professor/Associate Professor position in Educational Psychology (Jobbnorge ID 311433). Applications are submitted through Jobbnorge by Monday, 4 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-04",
+    "timezone": "Europe/Oslo",
+    "evidence_url": "https://www.uio.no/english/about/vacancies/academic/",
+    "evidence_quote": "Deadline: Monday, January 4, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Jobbnorge listing 311433 and UiO's academic vacancies page (seen in search results) give 'Deadline: Monday, January 4, 2027'; announced 11 November 2026",
+    "Deadline is in the future relative to the run date 2026-11-19",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "Full job description and qualification requirements not seen",
+    "City (Oslo) inferred from the University of Oslo, not quoted from the posting",
+    "An older, closed listing with the same title (ID 202586) is a different vacancy",
+    "Found while following up Norwegian listings on VacancyEdu; source_list_url is the closest approved VacancyEdu entry",
+    "Compensation not recorded"
+  ],
+  "id": "opp_e1ba2695531c45cc",
+  "fingerprint": "3dae00be91072838",
+  "discovered_at": "2026-11-19T03:09:48.503Z",
+  "last_verified_at": "2026-11-19T03:09:48.503Z",
+  "content_hash": "sha256:4e70e6624cea45f770cc0ef9ca6331175531b72cdebb35a3bf3de7fcd061ebe5"
+}

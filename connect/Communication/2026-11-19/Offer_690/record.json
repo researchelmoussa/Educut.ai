@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "ERCIM “Alain Bensoussan” Fellowship Programme",
+    "evidence_url": "https://fellowship.ercim.eu/",
+    "evidence_quote": "ERCIM “Alain Bensoussan” Fellowship Programme"
+  },
+  "institution": {
+    "name": "ERCIM",
+    "website": "https://www.ercim.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://fellowship.ercim.eu/",
+  "source_url": "https://fellowship.ercim.eu/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Computer science and applied mathematics",
+  "seniority": "PhD holders",
+  "qualifications": [
+    "PhD holder"
+  ],
+  "skills": [],
+  "description_short": "ERCIM runs the “Alain Bensoussan” Fellowship Programme for PhD holders, with applications made online through fellowship.ercim.eu. The programme holds two calls a year; its official site lists the next application deadline as 30 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-30",
+    "timezone": null,
+    "evidence_url": "https://fellowship.ercim.eu/",
+    "evidence_quote": "Next Application deadline 30 Apr 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ERCIM Fellowship programme homepage (seen in search results) lists 'Next Application deadline 30 Apr 2027'",
+    "Application guide states calls close on April 30th and September 30th each year",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "Host institutions are ERCIM member institutes in several countries; city and country depend on the host, so they are null",
+    "The programme information page still listed 30 Sep 2026 as the next deadline when indexed",
+    "Older ERCIM News issues give a 31 March deadline; the homepage date is used",
+    "Eligibility details beyond holding a PhD were not confirmed on the official page",
+    "Compensation not recorded"
+  ],
+  "id": "opp_2d97289dc3437964",
+  "fingerprint": "623b52edcda6fcd6",
+  "discovered_at": "2026-11-19T02:57:29.845Z",
+  "last_verified_at": "2026-11-19T02:57:29.845Z",
+  "content_hash": "sha256:a13618574c087fb491bc70ebdad38b462dae2fc4fd7c36fd682d979ea4b61759"
+}

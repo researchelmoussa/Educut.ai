@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Engineering & Technology Studentship",
+    "evidence_url": "https://recruitment.eso.org/jobs/2026_0071",
+    "evidence_quote": "Engineering & Technology Studentship"
+  },
+  "institution": {
+    "name": "European Southern Observatory (ESO)",
+    "website": "https://www.eso.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://recruitment.eso.org/jobs/2026_0071",
+  "source_url": "https://recruitment.eso.org/jobs/2026_0071",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Garching",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "temporary",
+  "work_arrangement": "unspecified",
+  "field": "Astronomical engineering and technology",
+  "seniority": "Doctoral students",
+  "qualifications": [
+    "Nationals of, or students in, an ESO Member State or Chile",
+    "Master's degree qualifying for a doctoral school"
+  ],
+  "skills": [],
+  "description_short": "The European Southern Observatory (ESO) invites applications for an Engineering & Technology Studentship based in Garching, Germany, starting in Q3 2027. Applications in English, with cover letter, CV and two-page research plan, are due 31 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-31",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://recruitment.eso.org/jobs/2026_0071",
+    "evidence_quote": "31 December 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ESO recruitment portal job 2026_0071 (seen in search results) gives the deadline for applications as 31 December 2026, starting date Q3 2027, location Garching",
+    "Deadline is in the future relative to the run date 2026-11-19",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "Only the date string is quoted; the full deadline line was not shown verbatim",
+    "Time zone of the deadline not stated",
+    "This is separate from the ESO Studentship Programme (astronomy), whose April/October calls have different deadlines",
+    "Found while searching ESO studentship listings; source_list_url is the closest approved category",
+    "Compensation not recorded"
+  ],
+  "id": "opp_f62e45c936955fd8",
+  "fingerprint": "fbdd7231d657cce3",
+  "discovered_at": "2026-11-19T03:02:58.437Z",
+  "last_verified_at": "2026-11-19T03:12:49.126Z",
+  "content_hash": "sha256:6ca468253bae116eacda1725282530639ae26992b607f2a40afbbf3ad34c0a47"
+}
