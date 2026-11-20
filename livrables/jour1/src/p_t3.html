@@ -1,0 +1,177 @@
+<section class="page" data-t="T3">
+  <div class="opener">
+    <div>
+      <div class="num">T3</div>
+      <h2 style="margin-top:6mm">Le machine learning en RH : introduction</h2>
+      <p class="lead">Le machine learning est la technique qui se cache derrière la plupart des outils d’IA en RH. Cette séance en donne la logique, le vocabulaire et les méthodes d’évaluation, à partir de cas RH.</p>
+      <p class="q">Un modèle annonce « 92 % de bonnes prédictions » sur les départs de salariés. Est-ce un bon modèle ? Nous y répondrons page 27.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Distinguer apprentissage supervisé, non supervisé et par renforcement.</li><li>Maîtriser le vocabulaire : variables, cible, entraînement, test, surapprentissage.</li><li>Lire une matrice de confusion, la précision et le rappel.</li><li>Identifier les spécificités des données RH et cadrer un projet.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 2</b> HR machine learning – an introduction (Strohmeier, pp. 25-45)</p><p style="margin:0"><b>E • Ch. 2</b> The basics of artificial intelligence (pp. 21-44)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Qu’est-ce que le machine learning ?</h2>
+  <p class="lead">Tom Mitchell (1997) propose une définition devenue classique : un programme apprend d’une expérience E, pour une tâche T et une mesure de performance P, si sa performance sur T, mesurée par P, s’améliore avec E.</p>
+  <div class="g3">
+    <div class="card t"><span class="big">T</span><h3 style="margin-top:2mm">La tâche</h3><p>Ce que le système doit faire.</p><p class="small"><i>Exemple RH :</i> prédire si un candidat présélectionné sera embauché après les entretiens.</p></div>
+    <div class="card t"><span class="big">E</span><h3 style="margin-top:2mm">L’expérience</h3><p>Les données à partir desquelles il apprend.</p><p class="small"><i>Exemple RH :</i> 5 000 candidatures passées avec leur issue.</p></div>
+    <div class="card t"><span class="big">P</span><h3 style="margin-top:2mm">La performance</h3><p>Le critère qui permet de dire s’il fait bien.</p><p class="small"><i>Exemple RH :</i> part des candidats retenus par le modèle qui ont réellement été embauchés.</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card r"><h3>Programmation classique</h3><p><b>Règles + données → résultat.</b> Le programmeur écrit les règles : « refuser si moins de deux ans d’expérience ».</p></div>
+    <div class="card n"><h3>Machine learning</h3><p><b>Données + résultats → règles.</b> L’algorithme déduit lui-même la règle à partir d’exemples dont on connaît l’issue.</p></div>
+  </div>
+  <div class="key"><b>Pour les RH :</b> la définition de P est un choix de gestion, pas un détail technique. Choisir « embauché » comme critère de réussite revient à apprendre les préférences passées des recruteurs, et non la performance future dans le poste.</div>
+  <span class="src">Réf. H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Trois manières d’apprendre</h2>
+  <p class="lead">La distinction repose sur la nature des données disponibles : connaît-on la « bonne réponse » pour les exemples passés ?</p>
+  <div class="g3">
+    <div class="card n"><span class="tag">Le plus courant en RH</span><h3 style="margin-top:2mm">Apprentissage supervisé</h3><p>Les exemples sont <b>étiquetés</b> : on connaît le résultat (parti / resté, performance évaluée, embauché / refusé). Le modèle apprend à prédire cette étiquette.</p><p><b>Usages RH :</b> risque d’attrition, présélection, prévision d’absentéisme, estimation d’un salaire de marché.</p></div>
+    <div class="card t"><span class="tag">Explorer</span><h3 style="margin-top:2mm">Apprentissage non supervisé</h3><p>Pas d’étiquette. Le modèle cherche des <b>structures cachées</b> : groupes de profils similaires, thèmes récurrents dans des textes, anomalies.</p><p><b>Usages RH :</b> segmentation des salariés pour une politique de rétention, regroupement thématique de verbatims, détection d’anomalies de paie.</p></div>
+    <div class="card s"><span class="tag s">Plus rare</span><h3 style="margin-top:2mm">Apprentissage par renforcement</h3><p>Un agent apprend par <b>essais et erreurs</b>, en recevant des récompenses ou des pénalités selon ses actions.</p><p><b>Usages RH :</b> ajustement progressif des recommandations de formation selon les modules réellement suivis ; affinage des réponses d’un chatbot.</p></div>
+  </div>
+  <div class="key"><b>À noter :</b> les LLM combinent plusieurs approches. Ils sont pré-entraînés sur du texte non étiqueté (prédiction du mot suivant), puis ajustés par des exemples supervisés et par renforcement à partir de retours humains.</div>
+  <span class="src">Réf. H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Le vocabulaire essentiel</h2>
+  <p class="lead">Exemple fil rouge : un tableau de 2 000 lignes, une par salarié, pour prédire le départ volontaire dans les douze mois.</p>
+  <table style="font-size:12px">
+    <thead><tr><th>Matricule</th><th>Ancienneté</th><th>Écart salaire / marché</th><th>Dernière mobilité</th><th>Note entretien</th><th>Télétravail</th><th style="background:#0b7f78">Départ (cible)</th></tr></thead>
+    <tbody>
+      <tr><td>A-1042</td><td>2 ans</td><td>−8 %</td><td>jamais</td><td>3/5</td><td>non</td><td><b>Oui</b></td></tr>
+      <tr><td>A-1043</td><td>9 ans</td><td>+3 %</td><td>il y a 1 an</td><td>4/5</td><td>oui</td><td><b>Non</b></td></tr>
+      <tr><td>A-1044</td><td>4 ans</td><td>−2 %</td><td>il y a 3 ans</td><td>4/5</td><td>oui</td><td><b>Non</b></td></tr>
+    </tbody>
+  </table>
+  <div class="g3" style="margin-top:5mm">
+    <div class="card r"><h3>Observation</h3><p>Une ligne : un salarié, un candidat, une candidature.</p></div>
+    <div class="card r"><h3>Variables explicatives</h3><p><i>Features</i> : les colonnes utilisées pour prédire (ancienneté, salaire…).</p></div>
+    <div class="card r"><h3>Cible</h3><p><i>Label</i> : ce que l’on cherche à prédire (départ oui/non).</p></div>
+    <div class="card r"><h3>Jeu d’entraînement / de test</h3><p>On apprend sur environ 70 à 80 % des lignes et on évalue sur le reste, que le modèle n’a jamais vu.</p></div>
+    <div class="card r"><h3>Surapprentissage</h3><p><i>Overfitting</i> : le modèle « apprend par cœur » l’historique et se trompe sur les cas nouveaux.</p></div>
+    <div class="card r"><h3>Variable proxy</h3><p>Une variable anodine qui révèle indirectement une caractéristique protégée (code postal, prénom, interruption de carrière).</p></div>
+  </div>
+  <span class="src">Réf. H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Quatre grandes tâches du machine learning</h2>
+  <p class="lead">Avant de choisir un outil, il faut savoir quel type de tâche on lui demande. Chacune correspond à une question différente.</p>
+  <div class="g4">
+    <div class="card t"><h3>Classification</h3><p><b>Question :</b> dans quelle catégorie ?</p><p>La sortie est une classe ou une probabilité d’appartenance.</p><p class="small"><b>RH :</b> départ oui/non ; CV adapté / non adapté ; ticket RH « paie », « congés » ou « mutuelle ».</p></div>
+    <div class="card t"><h3>Régression</h3><p><b>Question :</b> combien ?</p><p>La sortie est une valeur numérique.</p><p class="small"><b>RH :</b> salaire de marché d’un poste ; nombre de jours d’absence prévus ; délai de recrutement.</p></div>
+    <div class="card t"><h3>Clustering</h3><p><b>Question :</b> quels groupes se forment ?</p><p>La sortie est un regroupement d’observations proches, sans étiquette préalable.</p><p class="small"><b>RH :</b> profils d’engagement ; familles de compétences ; thèmes d’une enquête.</p></div>
+    <div class="card t"><h3>Recommandation</h3><p><b>Question :</b> qu’est-ce qui conviendrait ?</p><p>La sortie est une liste ordonnée de suggestions.</p><p class="small"><b>RH :</b> formations suggérées ; offres internes proposées ; candidats à contacter.</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card r"><h3>Quelques algorithmes courants</h3><p><b>Régression logistique</b> (simple et lisible), <b>arbres de décision</b> et <b>forêts aléatoires</b>, <b>gradient boosting</b>, <b>réseaux de neurones</b>, <b>k-moyennes</b> pour le clustering. Les RH n’ont pas à les maîtriser, mais savoir qu’il existe des modèles plus ou moins explicables aide à négocier avec un fournisseur.</p></div>
+    <div class="key" style="margin:0"><b>Arbitrage clé :</b> les modèles les plus performants sont souvent les moins explicables. En RH, où il faut pouvoir justifier une décision à une personne, un modèle plus simple et lisible est souvent préférable.</div>
+  </div>
+  <span class="src">Réf. H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Évaluer un modèle : la matrice de confusion</h2>
+  <p class="lead">Retour à la question d’ouverture. Sur 1 000 salariés du jeu de test, 100 sont réellement partis. Le modèle en a signalé 120 comme « à risque ».</p>
+  <div style="display:grid;grid-template-columns:120mm 1fr;gap:8mm">
+    <div>
+      <table style="text-align:center">
+        <thead><tr><th></th><th style="text-align:center">Prédit : part</th><th style="text-align:center">Prédit : reste</th></tr></thead>
+        <tbody>
+          <tr><td style="text-align:left"><b>Réel : part</b><br><span class="small">100</span></td><td style="background:#dff1ee"><span class="big" style="font-size:24px">70</span><br>vrais positifs</td><td style="background:#fbeedd"><span class="big" style="font-size:24px;color:#8a4d0f">30</span><br>faux négatifs</td></tr>
+          <tr><td style="text-align:left"><b>Réel : reste</b><br><span class="small">900</span></td><td style="background:#fbeedd"><span class="big" style="font-size:24px;color:#8a4d0f">50</span><br>faux positifs</td><td style="background:#dff1ee"><span class="big" style="font-size:24px">850</span><br>vrais négatifs</td></tr>
+        </tbody>
+      </table>
+      <div class="key"><b>Le piège de l’exactitude :</b> un modèle qui prédit « personne ne part » obtient 900/1 000 = <b>90 %</b> de bonnes réponses sans rien détecter. Quand l’événement est rare, l’exactitude ne suffit pas.</div>
+    </div>
+    <table>
+      <thead><tr><th>Indicateur</th><th>Calcul</th><th>Lecture</th></tr></thead>
+      <tbody>
+        <tr><td><b>Exactitude</b><br><span class="small">accuracy</span></td><td>(70 + 850) / 1 000 = <b>92 %</b></td><td>Part des prédictions correctes.</td></tr>
+        <tr><td><b>Précision</b></td><td>70 / 120 = <b>58 %</b></td><td>Parmi les salariés signalés, combien partent vraiment ? Mesure les fausses alertes.</td></tr>
+        <tr><td><b>Rappel</b><br><span class="small">recall</span></td><td>70 / 100 = <b>70 %</b></td><td>Parmi les départs réels, combien ont été détectés ? Mesure les oublis.</td></tr>
+        <tr><td><b>AUC</b></td><td>entre 0,5 et 1</td><td>Capacité générale à classer un « partant » au-dessus d’un « restant ». 0,5 = hasard.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <span class="src">Réf. H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Les spécificités des données RH</h2>
+  <p class="lead">Strohmeier souligne que le machine learning en RH ne se pratique pas comme dans le commerce en ligne. Les données RH ont des caractéristiques qui limitent la performance et augmentent les risques.</p>
+  <div class="g3">
+    <div class="card t"><h3>Petits volumes</h3><p>Une PME compte quelques centaines de salariés et quelques dizaines de recrutements par an. C’est peu pour apprendre de façon fiable, d’où le recours à des modèles de fournisseurs entraînés ailleurs.</p></div>
+    <div class="card t"><h3>Événements rares</h3><p>Départs, accidents, fraudes : la classe intéressante est minoritaire, ce qui fausse l’exactitude (voir page précédente).</p></div>
+    <div class="card t"><h3>Critères de réussite flous</h3><p>Qu’est-ce qu’un « bon » salarié ? Les évaluations de performance sont subjectives et parfois biaisées. Le modèle apprend ces biais.</p></div>
+    <div class="card t"><h3>Biais historiques</h3><p>Les données reflètent des décisions passées (embauches, promotions) qui ont pu être discriminatoires.</p></div>
+    <div class="card t"><h3>Données sensibles</h3><p>Santé, syndicat, origine, handicap : catégories particulières protégées par le RGPD et le droit de la non-discrimination.</p></div>
+    <div class="card t"><h3>Contexte changeant</h3><p>Réorganisations, crises, nouvelles politiques : les régularités du passé cessent de valoir. On parle de dérive des données.</p></div>
+  </div>
+  <div class="key"><b>Asymétrie des enjeux :</b> une mauvaise recommandation de film est sans conséquence. Une mauvaise prédiction RH peut coûter un emploi, une promotion ou une formation à une personne. Le niveau d’exigence doit être proportionné.</div>
+  <span class="src">Réf. H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Le cycle d’un projet de machine learning en RH</h2>
+  <p class="lead">La méthode CRISP-DM, standard de l’analyse de données, décrit six étapes itératives. Les RH sont indispensables aux étapes 1, 2 et 5, et responsables de la 6.</p>
+  <div class="flow">
+    <div style="background:var(--teal-l)"><span class="step">1</span><h3>Compréhension du besoin</h3><p class="small">Quelle décision RH veut-on éclairer ? Quel bénéfice attendu ?</p><span class="tag">rôle RH clé</span></div>
+    <div style="background:var(--teal-l)"><span class="step">2</span><h3>Compréhension des données</h3><p class="small">Quelles données existent, avec quelle qualité, sur quelle base juridique ?</p><span class="tag">rôle RH clé</span></div>
+    <div><span class="step">3</span><h3>Préparation</h3><p class="small">Nettoyage, choix des variables, retrait des variables sensibles et proxys.</p></div>
+    <div><span class="step">4</span><h3>Modélisation</h3><p class="small">Choix et entraînement de l’algorithme.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">5</span><h3>Évaluation</h3><p class="small">Performance, équité entre groupes, explicabilité, utilité métier.</p><span class="tag">rôle RH clé</span></div>
+    <div style="background:var(--navy);color:#fff"><span class="step" style="color:#8fe0d6">6</span><h3 style="color:#8fe0d6">Déploiement et suivi</h3><p class="small" style="color:#d7e4ee">Intégration au processus, formation, contrôle dans la durée.</p></div>
+  </div>
+  <div class="g3" style="margin-top:6mm">
+    <div class="card r"><h3>Questions RH à l’étape 1</h3><p>Quelle décision change si le modèle fonctionne ? Qui l’utilisera ? Que fait-on d’une alerte ?</p></div>
+    <div class="card r"><h3>Questions RH à l’étape 5</h3><p>Le modèle se trompe-t-il davantage pour les femmes, les seniors, les temps partiels ? Peut-on expliquer un résultat à un salarié ?</p></div>
+    <div class="card r"><h3>Questions RH à l’étape 6</h3><p>Qui surveille la performance ? Quand réentraîne-t-on ? Comment un salarié conteste-t-il ?</p></div>
+  </div>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Cadrer un problème RH en problème de machine learning</h2>
+  <p class="lead">Le canevas ci-dessous est celui de l’activité. Il est rempli ici pour un cas différent : prévoir l’absentéisme de courte durée dans un centre logistique.</p>
+  <table>
+    <thead><tr><th style="width:24%">Rubrique</th><th>Exemple rempli</th></tr></thead>
+    <tbody>
+      <tr><td><b>Décision RH visée</b></td><td>Ajuster chaque semaine le volume d’intérimaires pour éviter les sous-effectifs.</td></tr>
+      <tr><td><b>Cible</b></td><td>Nombre de jours d’absence de moins de 3 jours par équipe la semaine suivante (régression).</td></tr>
+      <tr><td><b>Variables envisagées</b></td><td>Historique d’absence par équipe, saison, jours fériés, charge prévue, météo. <i>Exclues :</i> données de santé et absences individuelles nominatives.</td></tr>
+      <tr><td><b>Données et qualité</b></td><td>3 ans d’historique dans le SIRH temps ; codes d’absence harmonisés depuis 2 ans seulement.</td></tr>
+      <tr><td><b>Type d’apprentissage</b></td><td>Supervisé (on connaît l’absentéisme réel des semaines passées).</td></tr>
+      <tr><td><b>Mesure de performance</b></td><td>Écart moyen entre absences prévues et réelles ; comparaison avec la prévision actuelle du manager.</td></tr>
+      <tr><td><b>Risques et garde-fous</b></td><td>Glissement vers un suivi individuel : prédiction au niveau de l’équipe uniquement, information du CSE, analyse d’impact (AIPD) si nécessaire.</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Remarque :</b> le niveau d’agrégation (équipe plutôt qu’individu) est un choix de conception qui réduit fortement les risques sans sacrifier l’utilité.</div>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>À retenir, activité et quiz • T3</h2>
+  <div class="g2">
+    <div class="card n"><h3>À retenir</h3><ul>
+      <li>Le ML déduit des règles à partir d’exemples : données + résultats → modèle.</li>
+      <li>Supervisé (on connaît la réponse), non supervisé (on cherche des structures), par renforcement (essais et récompenses).</li>
+      <li>Quatre tâches : classification, régression, clustering, recommandation.</li>
+      <li>Quand l’événement est rare, l’exactitude trompe : regarder précision et rappel.</li>
+      <li>Les données RH sont petites, biaisées, sensibles et changeantes.</li>
+      <li>Les RH sont responsables du cadrage, de l’évaluation et du suivi.</li>
+    </ul></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Cadrer un problème RH en ML</h3><p>Traduisez le besoin « réduire les départs volontaires dans la première année » en problème de machine learning à l’aide du canevas : décision visée, cible, variables, données, type d’apprentissage, mesure de performance, risques et garde-fous.</p><p style="margin:0"><b>Livrable :</b> canevas d’une page (document « J1-T3 Activité »).</p></div>
+      <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions de validation</h3><p style="margin:0">Types d’apprentissage, vocabulaire, lecture d’une matrice de confusion, spécificités des données RH.</p></div>
+    </div>
+  </div>
+</section>

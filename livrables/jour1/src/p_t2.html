@@ -1,0 +1,198 @@
+<section class="page" data-t="T2">
+  <div class="opener">
+    <div>
+      <div class="num">T2</div>
+      <h2 style="margin-top:6mm">Les bases de l’intelligence artificielle</h2>
+      <p class="lead">Pour choisir, acheter ou encadrer un outil d’IA, un professionnel RH n’a pas besoin de programmer. Il doit en revanche savoir ce que recouvre le terme, ce qu’une technique sait faire et ce qu’elle ne sait pas faire.</p>
+      <p class="q">Un éditeur vous présente son logiciel « dopé à l’IA ». Quelles trois questions lui posez-vous pour savoir ce qu’il y a réellement derrière ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Définir l’IA à partir de définitions de référence.</li><li>Situer les grandes étapes de son histoire.</li><li>Distinguer les familles techniques : symbolique, machine learning, deep learning, NLP, IA générative.</li><li>Qualifier le niveau d’autonomie d’un outil.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>E • Ch. 2</b> The basics of artificial intelligence (pp. 21-44)</p><p style="margin:0"><b>H • Ch. 2</b> HR machine learning – an introduction (Strohmeier, pp. 25-45)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Qu’est-ce que l’intelligence artificielle ?</h2>
+  <p class="lead">Il n’existe pas de définition unique. Les définitions ont glissé d’une ambition (imiter l’intelligence humaine) vers une description fonctionnelle (des systèmes qui produisent des résultats à partir de données).</p>
+  <div class="g3">
+    <div class="card"><span class="tag">1955 • Fondateurs</span><h3 style="margin-top:2mm">Une ambition scientifique</h3><p>Le terme est proposé par John McCarthy pour le séminaire de Dartmouth (1956) : étudier l’hypothèse que chaque aspect de l’apprentissage ou de l’intelligence peut être décrit assez précisément pour qu’une machine le simule.</p></div>
+    <div class="card"><span class="tag">Usage courant</span><h3 style="margin-top:2mm">Une définition par les tâches</h3><p>Des systèmes capables d’accomplir des tâches qui exigeraient de l’intelligence si un humain les réalisait : reconnaître, comprendre le langage, prévoir, recommander, décider.</p></div>
+    <div class="card n"><span class="tag">2024 • AI Act, art. 3</span><h3 style="margin-top:2mm">Une définition juridique</h3><p>Un système automatisé, conçu pour fonctionner avec différents niveaux d’autonomie, qui peut s’adapter après son déploiement et qui, à partir des entrées qu’il reçoit, <b>déduit</b> comment générer des prédictions, contenus, recommandations ou décisions.</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card r"><h3>Le critère qui compte : l’inférence</h3><p>Ce qui distingue un système d’IA d’un logiciel classique est sa capacité à <b>déduire</b> un résultat à partir de données, plutôt que d’appliquer uniquement des règles écrites à l’avance par un programmeur.</p></div>
+    <div class="card r"><h3>L’« effet IA »</h3><p>Dès qu’une technique devient banale (correcteur orthographique, tri des courriels), on cesse de l’appeler IA. Le terme désigne souvent ce qui est encore nouveau, d’où son usage marketing abondant.</p></div>
+  </div>
+  <span class="src">Réf. E2</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Soixante-dix ans d’histoire en six dates</h2>
+  <p class="lead">L’IA a connu des phases d’enthousiasme et des « hivers » de désillusion. L’accélération récente s’explique par la rencontre de trois facteurs : des données massives, une puissance de calcul bon marché et de nouveaux algorithmes.</p>
+  <div class="tl">
+    <div><div class="y">1950</div>Alan Turing publie <i>Computing Machinery and Intelligence</i> et propose un test pour juger si une machine « pense ».</div>
+    <div><div class="y">1956</div>Séminaire de Dartmouth : naissance officielle du domaine et optimisme sur des résultats rapides.</div>
+    <div><div class="y">1980s</div>Âge d’or des systèmes experts à base de règles, puis second hiver : ils coûtent cher à maintenir.</div>
+    <div><div class="y">1997</div>Deep Blue bat le champion du monde d’échecs. La force brute et les règles atteignent leur sommet.</div>
+    <div><div class="y">2012</div>Percée du deep learning en reconnaissance d’images. Le machine learning devient dominant.</div>
+    <div><div class="y">2022</div>Diffusion grand public des grands modèles de langage (ChatGPT). L’IA générative entre dans les bureaux.</div>
+  </div>
+  <div class="g3" style="margin-top:12mm">
+    <div class="card t"><h3>Données</h3><p>Numérisation des activités, internet, capteurs : les données disponibles pour apprendre ont explosé.</p></div>
+    <div class="card t"><h3>Calcul</h3><p>Processeurs graphiques et informatique en nuage rendent l’entraînement de grands modèles accessible.</p></div>
+    <div class="card t"><h3>Algorithmes</h3><p>Réseaux de neurones profonds, puis architecture <i>Transformer</i> (2017) à l’origine des LLM.</p></div>
+  </div>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>IA faible ou forte, symbolique ou apprenante</h2>
+  <p class="lead">Deux distinctions structurent le débat. La première porte sur l’étendue des capacités, la seconde sur la manière dont le système obtient ses connaissances.</p>
+  <div class="g2">
+    <div>
+      <h3>Étendue des capacités</h3>
+      <table><thead><tr><th style="width:32%">Type</th><th>Description</th></tr></thead><tbody>
+        <tr><td><b>IA étroite</b><br><span class="small">narrow AI</span></td><td>Performante sur une tâche définie : trier des CV, répondre à une question de paie, prédire un départ. <b>Toutes les IA actuelles en RH sont étroites.</b></td></tr>
+        <tr><td><b>IA générale</b><br><span class="small">AGI</span></td><td>Capable de raisonner et d’apprendre dans n’importe quel domaine comme un humain. Elle n’existe pas aujourd’hui ; son horizon fait débat.</td></tr>
+      </tbody></table>
+      <div class="key"><b>Conséquence pratique :</b> un outil excellent pour présélectionner des CV n’a aucune compétence pour évaluer la motivation ou l’éthique d’un candidat.</div>
+    </div>
+    <div>
+      <h3>Origine des connaissances</h3>
+      <table><thead><tr><th style="width:32%">Approche</th><th>Description</th></tr></thead><tbody>
+        <tr><td><b>Symbolique</b><br><span class="small">règles, logique</span></td><td>Des experts écrivent les règles : « si ancienneté &gt; 5 ans et poste cadre, alors… ». Transparente, mais rigide et coûteuse à maintenir.</td></tr>
+        <tr><td><b>Apprenante</b><br><span class="small">machine learning</span></td><td>Le système déduit lui-même des régularités à partir d’exemples. Souple et puissante, mais plus opaque et dépendante de la qualité des données.</td></tr>
+        <tr><td><b>Hybride</b></td><td>Combine les deux : un modèle apprend, des règles encadrent ses sorties (seuils, interdictions, contrôles).</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+  <span class="src">Réf. E2, H2</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>La carte des familles techniques</h2>
+  <p class="lead">« IA » est un terme parapluie. Le schéma se lit en cercles emboîtés : le deep learning est une branche du machine learning, lui-même une branche de l’IA. Les autres familles s’appuient sur l’une ou l’autre de ces approches.</p>
+  <div style="display:grid;grid-template-columns:118mm 1fr;gap:8mm;align-items:start">
+    <svg viewBox="0 0 440 300" width="118mm" role="img" aria-label="Cercles emboîtés : IA, machine learning, deep learning, IA générative">
+      <ellipse cx="220" cy="150" rx="215" ry="145" fill="#eef4f6" stroke="#17324d" stroke-width="2"/>
+      <text x="220" y="30" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="17" fill="#17324d">Intelligence artificielle</text>
+      <text x="70" y="140" text-anchor="middle" font-family="Source Sans 3" font-size="12" fill="#56687a">Systèmes experts</text>
+      <text x="70" y="156" text-anchor="middle" font-family="Source Sans 3" font-size="12" fill="#56687a">Optimisation</text>
+      <ellipse cx="255" cy="165" rx="160" ry="112" fill="#dff1ee" stroke="#0b7f78" stroke-width="2"/>
+      <text x="255" y="77" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="15" fill="#0a5f59">Machine learning</text>
+      <ellipse cx="280" cy="185" rx="105" ry="75" fill="#ffffff" stroke="#0b7f78" stroke-width="2"/>
+      <text x="280" y="135" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="14" fill="#0a5f59">Deep learning</text>
+      <ellipse cx="290" cy="200" rx="58" ry="38" fill="#fbeedd" stroke="#8a4d0f" stroke-width="2"/>
+      <text x="290" y="197" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="12" fill="#8a4d0f">IA générative</text>
+      <text x="290" y="212" text-anchor="middle" font-family="Source Sans 3" font-size="11" fill="#8a4d0f">LLM</text>
+    </svg>
+    <table><thead><tr><th style="width:30%">Famille</th><th>Ce qu’elle fait</th><th style="width:30%">Exemple RH</th></tr></thead><tbody>
+      <tr><td><b>Machine learning</b></td><td>Apprend des régularités à partir d’exemples pour prédire ou classer.</td><td>Score de risque de départ</td></tr>
+      <tr><td><b>Deep learning</b></td><td>ML à base de réseaux de neurones à nombreuses couches ; traite images, son, texte.</td><td>Transcription d’entretiens</td></tr>
+      <tr><td><b>NLP</b></td><td>Traitement du langage naturel : comprendre et produire du texte.</td><td>Analyse des verbatims d’enquête</td></tr>
+      <tr><td><b>IA générative</b></td><td>Produit du contenu nouveau : texte, image, code.</td><td>Rédaction d’offres d’emploi</td></tr>
+      <tr><td><b>Systèmes experts</b></td><td>Raisonnent à partir de règles écrites.</td><td>Calcul d’éligibilité à un dispositif</td></tr>
+      <tr><td><b>Optimisation</b></td><td>Cherche la meilleure solution sous contraintes.</td><td>Plannings d’équipes</td></tr>
+    </tbody></table>
+  </div>
+  <div class="key"><b>Hors du périmètre strict :</b> la RPA (automatisation robotisée des processus) reproduit des clics et des saisies selon des règles. Elle n’apprend pas, mais elle est souvent vendue avec de l’IA.</div>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Comment une machine apprend : la logique en trois temps</h2>
+  <p class="lead">Un modèle d’apprentissage automatique est une fonction mathématique dont les paramètres sont ajustés à partir d’exemples passés, puis appliquée à des cas nouveaux.</p>
+  <div class="flow" style="margin-bottom:6mm">
+    <div><span class="step">1 • DONNÉES</span><h3 style="margin-top:1.5mm">Des exemples historiques</h3><p>Dossiers de 2 000 salariés des cinq dernières années : ancienneté, salaire, mobilité, évaluations… et l’information « est parti / est resté ».</p></div>
+    <div><span class="step">2 • ENTRAÎNEMENT</span><h3 style="margin-top:1.5mm">Le modèle cherche des régularités</h3><p>L’algorithme ajuste ses paramètres pour relier les caractéristiques au résultat observé, en minimisant ses erreurs.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">3 • PRÉDICTION</span><h3 style="margin-top:1.5mm">Application à un cas nouveau</h3><p>Pour un salarié actuel, le modèle produit une probabilité de départ dans les douze mois, par exemple 0,72.</p></div>
+  </div>
+  <div class="g3">
+    <div class="card t"><h3>Le modèle reproduit le passé</h3><p>Il apprend ce qui s’est produit, pas ce qui devrait se produire. Si les promotions passées ont défavorisé un groupe, le modèle apprend cette régularité.</p></div>
+    <div class="card t"><h3>Corrélation n’est pas causalité</h3><p>Le modèle repère des associations. Il ne dit pas pourquoi un salarié part, ni ce qu’il faut faire pour le retenir.</p></div>
+    <div class="card t"><h3>Une sortie est une probabilité</h3><p>0,72 n’est pas une certitude. C’est l’humain qui décide du seuil d’action et de la réponse à apporter.</p></div>
+  </div>
+  <span class="src">Réf. E2, H2</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Le langage naturel et l’IA générative</h2>
+  <p class="lead">Les grands modèles de langage (LLM) sont des réseaux de neurones entraînés sur d’immenses corpus de textes pour prédire la suite la plus probable d’une séquence de mots.</p>
+  <div class="g2">
+    <div>
+      <h3>Ce qui se passe quand on pose une question</h3>
+      <div class="flow" style="flex-direction:column;gap:2.5mm">
+        <div><b>Découpage</b> : le texte est découpé en unités appelées <i>tokens</i> (mots ou fragments de mots).</div>
+        <div><b>Représentation</b> : chaque token devient un vecteur de nombres qui capture son sens en contexte.</div>
+        <div><b>Prédiction</b> : le modèle calcule le token suivant le plus probable, puis recommence, token après token.</div>
+      </div>
+      <div class="key"><b>Conséquence :</b> un LLM produit un texte plausible, pas un texte vérifié. Il peut inventer une référence légale ou un chiffre avec la même assurance qu’un fait exact. On parle d’<b>hallucination</b>.</div>
+    </div>
+    <div>
+      <h3>Usages RH et précautions</h3>
+      <table><thead><tr><th>Usage</th><th>Précaution</th></tr></thead><tbody>
+        <tr><td>Rédiger une offre ou un courrier</td><td>Relire le contenu et vérifier le vocabulaire inclusif.</td></tr>
+        <tr><td>Résumer un accord ou une politique</td><td>Comparer avec le texte source.</td></tr>
+        <tr><td>Répondre aux questions des salariés</td><td>Connecter le modèle aux documents internes (RAG) et prévoir une escalade vers un humain.</td></tr>
+        <tr><td>Analyser des verbatims</td><td>Contrôler un échantillon manuellement.</td></tr>
+        <tr><td>Toute saisie de données</td><td>Ne jamais saisir de données personnelles dans un outil non autorisé.</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+  <span class="src">Réf. E2</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Automatiser, assister, augmenter : niveaux d’autonomie</h2>
+  <p class="lead">La même technique peut être utilisée avec des degrés d’autonomie très différents. C’est ce degré, plus que la technique, qui détermine les risques et les obligations.</p>
+  <table>
+    <thead><tr><th style="width:8%">Niveau</th><th style="width:18%">Mode</th><th style="width:30%">Qui décide ?</th><th>Exemple en recrutement</th></tr></thead>
+    <tbody>
+      <tr><td class="big" style="font-size:22px">0</td><td><b>Aucune IA</b></td><td>L’humain fait tout.</td><td>Le recruteur lit les 300 CV.</td></tr>
+      <tr><td class="big" style="font-size:22px">1</td><td><b>Information</b></td><td>L’IA organise l’information, l’humain analyse et décide.</td><td>L’outil extrait et structure les diplômes et expériences.</td></tr>
+      <tr><td class="big" style="font-size:22px">2</td><td><b>Assistance</b></td><td>L’IA suggère, l’humain choisit et peut ignorer la suggestion.</td><td>L’outil propose un classement ; le recruteur lit tous les dossiers.</td></tr>
+      <tr><td class="big" style="font-size:22px">3</td><td><b>Augmentation encadrée</b></td><td>L’IA agit sur une partie du flux, l’humain contrôle et valide.</td><td>L’outil retient 40 dossiers ; le recruteur vérifie un échantillon des refus.</td></tr>
+      <tr><td class="big" style="font-size:22px">4</td><td><b>Automatisation</b></td><td>L’IA décide seule, l’humain intervient sur exception.</td><td>Les candidats sous un score sont refusés automatiquement.</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="key" style="margin:0"><b>Repère juridique :</b> le RGPD (art. 22) encadre les décisions fondées exclusivement sur un traitement automatisé produisant des effets significatifs. Le niveau 4 en recrutement est donc très contraint.</div>
+    <div class="key" style="margin:0;background:var(--sand);border-color:var(--sand-d)"><b style="color:var(--sand-d)">Biais d’automatisation :</b> au niveau 2 ou 3, l’humain tend à suivre la machine sans examen. Une supervision humaine n’est réelle que si elle a le temps, l’information et le pouvoir de contredire.</div>
+  </div>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Mythes et réalités de l’IA en RH</h2>
+  <p class="lead">Le chapitre 2 d’Eubanks invite à démystifier l’IA : ni magie, ni menace immédiate pour tous les métiers RH, mais un ensemble d’outils puissants et limités.</p>
+  <table>
+    <thead><tr><th style="width:38%">Idée reçue</th><th>Ce qu’il faut savoir</th></tr></thead>
+    <tbody>
+      <tr><td><b>« L’IA est objective parce que c’est une machine. »</b></td><td>Elle reproduit les régularités des données qu’on lui fournit, y compris les discriminations passées. L’objectivité dépend des données et des choix de conception.</td></tr>
+      <tr><td><b>« L’IA va remplacer les RH. »</b></td><td>Elle automatise des <i>tâches</i>, pas des métiers entiers. Le contenu des postes RH se recompose vers le conseil, l’analyse et l’accompagnement.</td></tr>
+      <tr><td><b>« Plus il y a de données, mieux c’est. »</b></td><td>La pertinence et la qualité comptent plus que le volume. Collecter sans finalité précise est aussi contraire au RGPD.</td></tr>
+      <tr><td><b>« Un outil d’IA s’achète et fonctionne tout seul. »</b></td><td>Il faut des données propres, un paramétrage, une formation des utilisateurs, un suivi des performances et des biais dans le temps.</td></tr>
+      <tr><td><b>« L’IA comprend ce qu’elle dit. »</b></td><td>Un LLM manipule des probabilités de mots. La fluidité du texte ne garantit ni sa véracité ni sa pertinence juridique.</td></tr>
+      <tr><td><b>« C’est trop technique pour les RH. »</b></td><td>Les RH n’ont pas à coder, mais doivent savoir poser les bonnes questions : quelles données, quelle performance, quels contrôles, quelle responsabilité.</td></tr>
+    </tbody>
+  </table>
+  <span class="src">Réf. E2</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>À retenir, activité et quiz • T2</h2>
+  <div class="g2">
+    <div class="card n"><h3>À retenir</h3><ul>
+      <li>L’IA désigne des systèmes qui déduisent des résultats à partir de données ; l’AI Act en donne une définition juridique.</li>
+      <li>Toutes les IA utilisées en RH sont des IA étroites, spécialisées sur une tâche.</li>
+      <li>Approche symbolique (règles écrites) et approche apprenante (machine learning) coexistent souvent.</li>
+      <li>Un modèle apprend le passé et produit des probabilités, pas des certitudes ni des explications causales.</li>
+      <li>Les LLM génèrent du texte plausible, pas vérifié.</li>
+      <li>Le niveau d’autonomie, plus que la technique, détermine les risques.</li>
+    </ul></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Classer dix outils RH</h3><p>À partir de dix descriptifs d’outils fournis, identifiez pour chacun la famille technique mobilisée et le niveau d’autonomie (0 à 4), puis justifiez en une phrase.</p><p style="margin:0"><b>Livrable :</b> tableau de classement commenté (document « J1-T2 Activité »).</p></div>
+      <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions de validation</h3><p style="margin:0">Définitions, familles techniques, fonctionnement des LLM, niveaux d’autonomie.</p></div>
+    </div>
+  </div>
+</section>

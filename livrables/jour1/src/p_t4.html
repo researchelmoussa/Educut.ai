@@ -1,0 +1,176 @@
+<section class="page" data-t="T4">
+  <div class="opener">
+    <div>
+      <div class="num">T4</div>
+      <h2 style="margin-top:6mm">Cartographie des applications de l’IA dans le HCM</h2>
+      <p class="lead">Après les concepts, le terrain : où l’IA intervient-elle concrètement dans la gestion du capital humain, pour quelle valeur, avec quels risques, et comment choisir par où commencer ?</p>
+      <p class="q">Si vous ne pouviez financer qu’un seul projet d’IA RH cette année, lequel choisiriez-vous, et sur quels critères ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Situer les cas d’usage de l’IA sur le cycle de vie du collaborateur.</li><li>Reconnaître les technologies transversales (assistants, analytique, automatisation, recommandation, IA générative).</li><li>Identifier les sources de valeur et les conséquences à plusieurs niveaux.</li><li>Prioriser des cas d’usage avec une matrice simple.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>E • Ch. 3</b> General AI applications within HCM (pp. 45-66)</p><p><b>H • Ch. 14</b> Consequences of AI in HRM (Renkema)</p><p style="margin:0"><b>H • Ch. 2</b> HR machine learning – an introduction</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Le cycle de vie du collaborateur comme carte</h2>
+  <p class="lead">Le cycle de vie du collaborateur offre une grille simple pour repérer où l’IA peut intervenir. Les journées 3 à 5 du cours reprennent chaque étape en détail.</p>
+  <svg viewBox="0 0 1000 250" width="100%" role="img" aria-label="Cycle de vie du collaborateur en six étapes">
+    <g font-family="Space Grotesk" font-weight="700" text-anchor="middle">
+      <rect x="10" y="40" width="150" height="90" rx="4" fill="#17324d"/><text x="85" y="80" fill="#8fe0d6" font-size="13">1 • ATTIRER</text><text x="85" y="102" fill="#fff" font-size="12" font-family="Source Sans 3" font-weight="400">marque employeur</text>
+      <rect x="175" y="40" width="150" height="90" rx="4" fill="#17324d"/><text x="250" y="80" fill="#8fe0d6" font-size="13">2 • RECRUTER</text><text x="250" y="102" fill="#fff" font-size="12" font-family="Source Sans 3" font-weight="400">sourcing, sélection</text>
+      <rect x="340" y="40" width="150" height="90" rx="4" fill="#0b7f78"/><text x="415" y="80" fill="#fff" font-size="13">3 • INTÉGRER</text><text x="415" y="102" fill="#fff" font-size="12" font-family="Source Sans 3" font-weight="400">onboarding</text>
+      <rect x="505" y="40" width="150" height="90" rx="4" fill="#0b7f78"/><text x="580" y="80" fill="#fff" font-size="13">4 • DÉVELOPPER</text><text x="580" y="102" fill="#fff" font-size="12" font-family="Source Sans 3" font-weight="400">formation, mobilité</text>
+      <rect x="670" y="40" width="150" height="90" rx="4" fill="#8a4d0f"/><text x="745" y="80" fill="#fff" font-size="13">5 • FIDÉLISER</text><text x="745" y="102" fill="#fff" font-size="12" font-family="Source Sans 3" font-weight="400">engagement</text>
+      <rect x="835" y="40" width="150" height="90" rx="4" fill="#8a4d0f"/><text x="910" y="80" fill="#fff" font-size="13">6 • ACCOMPAGNER</text><text x="910" y="102" fill="#fff" font-size="12" font-family="Source Sans 3" font-weight="400">départ, alumni</text>
+    </g>
+    <path d="M910 135 C 910 230, 85 230, 85 135" fill="none" stroke="#0b7f78" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ar)"/>
+    <defs><marker id="ar" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#0b7f78"/></marker></defs>
+    <text x="500" y="222" text-anchor="middle" font-family="Source Sans 3" font-size="13" fill="#56687a">Les anciens salariés deviennent ambassadeurs, clients ou candidats de retour</text>
+  </svg>
+  <div class="g3">
+    <div class="card r" style="border-top:3px solid #17324d"><h3 style="color:#17324d">Acquisition des talents</h3><p class="small">Étapes 1 et 2 • Journée 4 du cours</p></div>
+    <div class="card r" style="border-top:3px solid #0b7f78"><h3>Core RH et développement</h3><p class="small">Étapes 3 et 4 • Journées 3 et 5</p></div>
+    <div class="card r" style="border-top:3px solid #8a4d0f"><h3 style="color:#8a4d0f">Gestion des talents</h3><p class="small">Étapes 5 et 6 • Journée 5</p></div>
+  </div>
+  <span class="src">Réf. E3</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Cas d’usage : attirer et recruter</h2>
+  <p class="lead">C’est le domaine le plus équipé et le plus exposé. Les volumes y sont élevés et les décisions répétitives, mais les enjeux de discrimination sont aussi les plus forts.</p>
+  <table>
+    <thead><tr><th style="width:22%">Cas d’usage</th><th style="width:32%">Ce que fait l’IA</th><th style="width:18%">Technique</th><th>Point de vigilance</th></tr></thead>
+    <tbody>
+      <tr><td><b>Rédaction d’offres</b></td><td>Génère ou améliore une annonce ; signale le vocabulaire genré ou excluant.</td><td>IA générative, NLP</td><td>Exigences gonflées ; promesses non tenues.</td></tr>
+      <tr><td><b>Diffusion ciblée</b></td><td>Choisit les sites et audiences où diffuser une offre selon les résultats obtenus.</td><td>ML, recommandation</td><td>Ciblage qui exclut des publics.</td></tr>
+      <tr><td><b>Sourcing</b></td><td>Recherche des profils correspondants dans des bases internes ou externes.</td><td>NLP, appariement</td><td>Collecte de données sur des personnes non candidates.</td></tr>
+      <tr><td><b>Présélection des CV</b></td><td>Extrait les informations, classe ou note les candidatures.</td><td>NLP, classification</td><td>Biais historiques ; IA à haut risque (AI Act).</td></tr>
+      <tr><td><b>Assistant candidat</b></td><td>Répond aux questions, planifie les entretiens, informe de l’avancement.</td><td>IA conversationnelle</td><td>Information claire sur le fait de parler à une machine.</td></tr>
+      <tr><td><b>Évaluations</b></td><td>Tests adaptatifs, mises en situation, analyse d’entretiens.</td><td>ML, NLP, vidéo</td><td>Validité scientifique ; analyse des émotions interdite au travail.</td></tr>
+    </tbody>
+  </table>
+  <span class="src">Réf. E3</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Cas d’usage : intégrer, administrer, former</h2>
+  <p class="lead">Ces usages sont moins visibles mais souvent plus rentables, parce qu’ils touchent des volumes importants de tâches répétitives et concernent tous les salariés.</p>
+  <div class="g3">
+    <div class="card t"><h3>Intégration (onboarding)</h3><ul>
+      <li>Parcours d’accueil personnalisé selon le poste et le site.</li>
+      <li>Assistant qui répond aux questions des nouveaux arrivants.</li>
+      <li>Relances automatiques des tâches (matériel, accès, formations obligatoires).</li>
+      <li>Repérage précoce des intégrations difficiles.</li></ul></div>
+    <div class="card t"><h3>Administration et core RH</h3><ul>
+      <li>Assistant RH qui répond aux questions sur la paie, les congés, la mutuelle.</li>
+      <li>Lecture automatique de justificatifs (arrêts, notes de frais).</li>
+      <li>Détection d’anomalies de paie ou de temps.</li>
+      <li>Prévision des effectifs et des absences.</li></ul></div>
+    <div class="card t"><h3>Formation et développement</h3><ul>
+      <li>Recommandation de formations selon le poste et les compétences visées.</li>
+      <li>Création accélérée de contenus avec l’IA générative.</li>
+      <li>Tuteurs et coachs virtuels.</li>
+      <li>Repérage des écarts de compétences dans une équipe.</li></ul></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="key" style="margin:0"><b>Valeur principale :</b> le temps libéré et la disponibilité. Un assistant répond à toute heure, ce qui réduit les sollicitations répétitives des équipes RH.</div>
+    <div class="key" style="margin:0;background:var(--sand);border-color:var(--sand-d)"><b style="color:var(--sand-d)">Risque principal :</b> une réponse erronée sur un droit (congé, indemnité) engage l’employeur. Les assistants doivent s’appuyer sur des sources validées et prévoir le passage à un humain.</div>
+  </div>
+  <span class="src">Réf. E3</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Cas d’usage : performance, fidélisation, départ</h2>
+  <p class="lead">Ces usages touchent à l’évaluation des personnes et à leur avenir dans l’entreprise. Ils sont parmi les plus prometteurs pour la décision, et les plus sensibles pour la confiance.</p>
+  <table>
+    <thead><tr><th style="width:22%">Cas d’usage</th><th style="width:34%">Ce que fait l’IA</th><th>Point de vigilance</th></tr></thead>
+    <tbody>
+      <tr><td><b>Gestion de la performance</b></td><td>Synthétise les retours, aide à rédiger les évaluations, repère les écarts de notation entre managers.</td><td>Mesure réductrice du travail ; IA à haut risque si elle influence promotions ou licenciements.</td></tr>
+      <tr><td><b>Mobilité interne</b></td><td>Recommande postes, missions et mentors selon les compétences et les aspirations.</td><td>Transparence des critères ; droit du salarié à ne pas être « profilé » sans information.</td></tr>
+      <tr><td><b>Écoute des salariés</b></td><td>Analyse les commentaires d’enquêtes, repère les thèmes et le climat par entité.</td><td>Anonymat réel des répondants, surtout dans les petites équipes.</td></tr>
+      <tr><td><b>Prédiction des départs</b></td><td>Estime un risque de départ pour orienter les actions de fidélisation.</td><td>Étiquetage durable des personnes ; prophétie autoréalisatrice.</td></tr>
+      <tr><td><b>Rémunération</b></td><td>Compare aux données du marché, détecte les écarts de salaire injustifiés.</td><td>Qualité des données de marché ; usage au service de l’égalité salariale.</td></tr>
+      <tr><td><b>Départ et alumni</b></td><td>Analyse les entretiens de sortie ; anime le réseau des anciens.</td><td>Durée de conservation des données après le départ.</td></tr>
+    </tbody>
+  </table>
+  <span class="src">Réf. E3</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Cinq briques technologiques transversales</h2>
+  <p class="lead">Eubanks observe que la plupart des applications reposent sur un petit nombre de briques réutilisées d’une étape à l’autre. Les reconnaître permet de comparer des offres très différentes en apparence.</p>
+  <table>
+    <thead><tr><th style="width:20%">Brique</th><th style="width:30%">Principe</th><th>Étapes du cycle où on la retrouve</th><th style="width:18%">Journée du cours</th></tr></thead>
+    <tbody>
+      <tr><td><b>Assistants conversationnels</b></td><td>Dialogue en langage naturel avec candidats et salariés.</td><td>Recrutement, intégration, administration, formation</td><td>Jour 3 • T4</td></tr>
+      <tr><td><b>Analytique prédictive</b></td><td>Prévoir un événement ou une valeur à partir de l’historique.</td><td>Recrutement, absences, départs, besoins en effectifs</td><td>Jour 5 • T3</td></tr>
+      <tr><td><b>Automatisation intelligente</b></td><td>Exécuter des tâches répétitives, avec lecture de documents.</td><td>Administration, paie, intégration</td><td>Jour 3 • T2</td></tr>
+      <tr><td><b>Recommandation et appariement</b></td><td>Rapprocher personnes, postes, compétences et contenus.</td><td>Sourcing, mobilité, formation, mentorat</td><td>Jour 4 • T3</td></tr>
+      <tr><td><b>IA générative</b></td><td>Produire textes, synthèses, contenus de formation.</td><td>Offres, courriers, évaluations, supports de formation</td><td>Jour 4 • T1, Jour 5 • T1</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Conseil d’achat :</b> derrière chaque fonctionnalité annoncée, demandez quelle brique est utilisée, sur quelles données elle a été entraînée et comment sa performance est mesurée chez des clients comparables.</div>
+  <span class="src">Réf. E3</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Valeur attendue et conséquences à plusieurs niveaux</h2>
+  <p class="lead">Renkema (ch. 14) invite à analyser les conséquences de l’IA en RH au-delà de l’efficience : à plusieurs niveaux, en distinguant effets voulus et effets non voulus.</p>
+  <table>
+    <thead><tr><th style="width:18%">Niveau</th><th>Effets recherchés</th><th>Effets non voulus possibles</th></tr></thead>
+    <tbody>
+      <tr><td><b>Individu</b><br><span class="small">candidat, salarié</span></td><td>Réponses rapides, parcours personnalisés, opportunités mieux identifiées.</td><td>Sentiment de surveillance, perte de contact humain, décisions incomprises, discrimination.</td></tr>
+      <tr><td><b>Fonction RH</b></td><td>Temps libéré, décisions mieux informées, rôle de conseil renforcé.</td><td>Déqualification de certaines tâches, dépendance aux fournisseurs, perte d’expertise.</td></tr>
+      <tr><td><b>Organisation</b></td><td>Meilleure allocation des talents, réduction des coûts, attractivité.</td><td>Risques juridiques et réputationnels, tensions sociales, uniformisation des profils.</td></tr>
+      <tr><td><b>Société</b></td><td>Accès élargi à l’emploi, meilleure adéquation compétences-emplois.</td><td>Exclusions systématiques à grande échelle quand un même outil est utilisé partout.</td></tr>
+    </tbody>
+  </table>
+  <div class="g3" style="margin-top:5mm">
+    <div class="card r"><h3>Efficience</h3><p class="small">Faire autant avec moins de temps ou de coût.</p></div>
+    <div class="card r"><h3>Efficacité</h3><p class="small">Prendre de meilleures décisions : meilleurs recrutements, moins de départs.</p></div>
+    <div class="card r"><h3>Expérience et équité</h3><p class="small">Améliorer le vécu des personnes et l’égalité de traitement.</p></div>
+  </div>
+  <span class="src">Réf. H14</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Prioriser les cas d’usage</h2>
+  <p class="lead">Une matrice valeur-faisabilité, complétée par un critère de risque, aide à choisir le premier projet. L’objectif est un premier succès mesurable qui crée la confiance, pas le projet le plus spectaculaire.</p>
+  <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:8mm">
+    <div class="mx" style="grid-template-columns:14mm 1fr 1fr;height:105mm">
+      <div></div><div class="c" style="text-align:center;font-weight:700;color:var(--navy)">Faisabilité faible</div><div class="c" style="text-align:center;font-weight:700;color:var(--navy)">Faisabilité forte</div>
+      <div class="c" style="font-weight:700;color:var(--navy);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center">Valeur forte</div>
+      <div class="c" style="background:var(--sand)"><b style="color:var(--sand-d)">Projets structurants</b><br>À préparer : données, compétences, gouvernance.<br><i class="small">Ex. : prédiction des départs</i></div>
+      <div class="c" style="background:var(--navy);color:#fff"><b style="color:#8fe0d6">À lancer en priorité</b><br>Gains rapides et visibles.<br><i class="small" style="color:#d7e4ee">Ex. : assistant RH sur la FAQ paie et congés</i></div>
+      <div class="c" style="font-weight:700;color:var(--navy);writing-mode:vertical-rl;transform:rotate(180deg);text-align:center">Valeur faible</div>
+      <div class="c" style="background:var(--row)"><b>À écarter</b><br>Coûteux et peu utiles.<br><i class="small">Ex. : analyse vidéo des entretiens</i></div>
+      <div class="c" style="background:var(--teal-l)"><b style="color:#0a5f59">Améliorations simples</b><br>À faire si peu coûteux.<br><i class="small">Ex. : aide à la rédaction d’offres</i></div>
+    </div>
+    <div>
+      <table><thead><tr><th>Critère</th><th>Questions à se poser</th></tr></thead><tbody>
+        <tr><td><b>Valeur</b></td><td>Temps gagné, qualité de décision, expérience améliorée, nombre de personnes concernées.</td></tr>
+        <tr><td><b>Faisabilité</b></td><td>Données disponibles et fiables, outil existant, compétences internes, budget.</td></tr>
+        <tr><td><b>Risque</b></td><td>Effet sur les droits des personnes, catégorie AI Act, réaction des salariés et des représentants du personnel.</td></tr>
+      </tbody></table>
+      <div class="key"><b>Règle pratique :</b> à valeur égale, commencer par un cas à faible risque qui concerne des tâches, pas des décisions sur des personnes.</div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Synthèse de la journée, activité et quiz • T4</h2>
+  <div class="g3">
+    <div class="card n" style="grid-column:span 2"><h3>Ce que la journée a établi</h3><ul>
+      <li><b>T1 :</b> la fonction RH est surchargée et jugée sur la donnée et l’expérience ; sa maturité numérique conditionne l’usage de l’IA.</li>
+      <li><b>T2 :</b> l’IA est un ensemble de techniques étroites qui déduisent des résultats à partir de données ; le niveau d’autonomie détermine le risque.</li>
+      <li><b>T3 :</b> le machine learning apprend le passé ; il s’évalue avec des indicateurs adaptés et exige une forte implication des RH.</li>
+      <li><b>T4 :</b> les applications couvrent tout le cycle de vie ; cinq briques reviennent partout ; il faut prioriser selon la valeur, la faisabilité et le risque.</li>
+    </ul></div>
+    <div class="card r"><h3>Préparer le jour 2</h3><p>Les données RH au service de l’IA : texte, audio et vidéo, réseaux sociaux, référentiels de compétences.</p><p class="small"><b>À lire :</b> H • Ch. 3 et 4.</p></div>
+    <div class="card s" style="grid-column:span 2"><span class="tag s">Activité individuelle • 30 min • Réflexion</span><h3 style="margin-top:2mm">Carte des cas d’usage et priorisation</h3><p>Pour une entreprise de votre choix, placez au moins huit cas d’usage de l’IA sur le cycle de vie du collaborateur, notez-les selon la valeur, la faisabilité et le risque, puis retenez trois priorités et justifiez votre choix en 300 mots.</p><p style="margin:0"><b>Livrable :</b> matrice de priorisation et justification (document « J1-T4 Activité »).</p></div>
+    <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions</h3><p style="margin:0">Cas d’usage par étape, briques technologiques, niveaux de conséquences, priorisation.</p></div>
+  </div>
+</section>
