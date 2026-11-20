@@ -1,0 +1,164 @@
+<section class="page" data-t="T4">
+  <div class="opener">
+    <div>
+      <div class="num">T4</div>
+      <h2 style="margin-top:6mm">Agents conversationnels et NLP en RH</h2>
+      <p class="lead">« Combien me reste-t-il de jours de congés ? » « Comment déclarer un arrêt maladie ? » Les assistants conversationnels répondent à ces questions à toute heure. Bien conçus, ils libèrent les équipes RH ; mal conçus, ils frustrent et désinforment.</p>
+      <p class="q">Avez-vous déjà utilisé un chatbot qui vous a fait perdre du temps ? Qu’est-ce qui n’allait pas ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Distinguer les générations d’agents conversationnels.</li><li>Comprendre l’architecture d’un assistant RH, dont la recherche documentaire (RAG).</li><li>Concevoir le dialogue, la transparence et l’escalade vers un humain.</li><li>Mesurer l’acceptation et maîtriser les risques.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 12</b> HR natural language processing – conversational agents in HRM (Laumer, Morana, pp. 226-242)</p><p style="margin:0"><b>E • Ch. 3</b> General AI applications within HCM (pp. 45-66)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Trois générations d’agents conversationnels</h2>
+  <p class="lead">Laumer et Morana définissent les agents conversationnels comme des systèmes qui interagissent avec les humains en langage naturel, à l’écrit ou à l’oral. Leur technologie a profondément changé en dix ans.</p>
+  <div class="g3">
+    <div class="card r"><span class="tag">Génération 1</span><h3 style="margin-top:2mm">Chatbots à règles</h3><p>Arbres de décision et mots-clés. Le dialogue suit des chemins prévus, souvent par boutons.</p><p class="small"><b>Force :</b> prévisible, sans erreur inventée.<br><b>Limite :</b> rigide ; échoue dès qu’on sort du script.</p></div>
+    <div class="card t"><span class="tag">Génération 2</span><h3 style="margin-top:2mm">Compréhension par intentions</h3><p>Un modèle de machine learning reconnaît l’<b>intention</b> (« demander un solde de congés ») et les <b>entités</b> (« congés payés », « mars »), puis déclenche une réponse prévue.</p><p class="small"><b>Force :</b> comprend des formulations variées.<br><b>Limite :</b> chaque intention doit être prévue et entraînée.</p></div>
+    <div class="card n"><span class="tag">Génération 3</span><h3 style="margin-top:2mm">Assistants fondés sur des LLM</h3><p>Un grand modèle de langage comprend et rédige librement, souvent connecté aux documents et aux systèmes de l’entreprise. Certains deviennent des « agents » capables d’agir (déposer une demande).</p><p class="small" style="color:#d7e4ee"><b>Force :</b> très souple, naturel.<br><b>Limite :</b> peut halluciner ; plus difficile à contrôler.</p></div>
+  </div>
+  <div class="key"><b>En pratique :</b> beaucoup d’assistants RH actuels sont hybrides. Ils utilisent un LLM pour comprendre et rédiger, mais des règles et des sources validées pour les réponses sensibles (droits, montants), et des intentions prévues pour les actions (poser un congé).</div>
+  <span class="src">Réf. H12</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>L’architecture d’un assistant RH</h2>
+  <p class="lead">Un assistant RH est un assemblage de briques. Les connaître permet de rédiger un cahier des charges précis, ce que vous ferez dans l’activité.</p>
+  <div class="flow" style="margin-bottom:6mm">
+    <div><span class="step">1 • INTERFACE</span><h3 style="margin-top:1.5mm">Où parle-t-on ?</h3><p class="small">Portail RH, messagerie interne, application mobile, téléphone.</p></div>
+    <div><span class="step">2 • COMPRÉHENSION</span><h3 style="margin-top:1.5mm">Que veut-on ?</h3><p class="small">Intention et entités ; identification de l’utilisateur (contrat, site, convention).</p></div>
+    <div><span class="step">3 • CONNAISSANCE</span><h3 style="margin-top:1.5mm">Où est la réponse ?</h3><p class="small">FAQ validée, documents (accords, convention), données du SIRH (compteurs).</p></div>
+    <div><span class="step">4 • RÉPONSE OU ACTION</span><h3 style="margin-top:1.5mm">Que fait-on ?</h3><p class="small">Réponse rédigée avec la source ; ou action : dépôt d’une demande, prise de rendez-vous.</p></div>
+    <div style="background:var(--sand)"><span class="step" style="color:var(--sand-d)">5 • ESCALADE</span><h3 style="margin-top:1.5mm">Quand passer la main ?</h3><p class="small">Question sensible, incertitude, demande de l’utilisateur : transfert à un gestionnaire.</p></div>
+  </div>
+  <div class="g2">
+    <div class="card t"><h3>Les intégrations font la valeur</h3><p>Un assistant qui ne connaît que la FAQ répond à des questions générales. Connecté au SIRH, il répond à « combien me reste-t-il de congés ? » pour la personne qui demande. Mais il accède alors à des données personnelles : droits d’accès et sécurité deviennent essentiels.</p></div>
+    <div class="card s"><h3>Personnalisation par profil</h3><p>La réponse correcte dépend souvent du contrat, de la convention collective, du site ou de l’ancienneté. Un assistant qui ignore le profil donnera des réponses justes en général et fausses pour beaucoup de cas.</p></div>
+  </div>
+  <span class="src">Réf. H12</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Des usages RH pour les salariés, les managers et les candidats</h2>
+  <p class="lead">Eubanks présente les assistants conversationnels comme l’une des applications les plus répandues de l’IA dans la gestion du capital humain. Le tableau donne des exemples d’intentions par public.</p>
+  <table>
+    <thead><tr><th style="width:16%">Public</th><th style="width:44%">Exemples d’intentions</th><th>Valeur</th></tr></thead>
+    <tbody>
+      <tr><td><b>Salariés</b></td><td>Solde de congés ; déclarer une absence ; obtenir une attestation ; comprendre son bulletin ; mutuelle ; télétravail ; formation</td><td>Réponse immédiate à toute heure ; moins de sollicitations répétitives</td></tr>
+      <tr><td><b>Managers</b></td><td>Règles d’heures supplémentaires ; procédure d’entretien annuel ; démarches pour une embauche ; questions sur un congé particulier</td><td>Appui à la gestion quotidienne de l’équipe</td></tr>
+      <tr><td><b>Nouveaux arrivants</b></td><td>Organisation du premier jour ; accès ; contacts utiles ; formations obligatoires</td><td>Intégration plus fluide</td></tr>
+      <tr><td><b>Candidats</b></td><td>Avancement de la candidature ; informations sur le poste ; prise de rendez-vous</td><td>Moins de candidats sans réponse ; marque employeur</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="key" style="margin:0"><b>Commencer petit :</b> les assistants réussis démarrent souvent avec quelques dizaines d’intentions fréquentes et bien maîtrisées, puis s’étendent en analysant les questions réellement posées.</div>
+    <div class="key" style="margin:0;background:var(--sand);border-color:var(--sand-d)"><b style="color:var(--sand-d)">Ce qui ne relève pas d’un assistant :</b> le harcèlement, la santé, un conflit, une rupture de contrat, une situation de détresse. Ces sujets demandent un humain, et l’assistant doit savoir les reconnaître.</div>
+  </div>
+  <span class="src">Réf. E3, H12</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Répondre à partir des documents : la RAG</h2>
+  <p class="lead">Un LLM seul répond avec ce qu’il a appris sur internet, pas avec les règles de votre entreprise. La génération augmentée par recherche (RAG, <i>Retrieval-Augmented Generation</i>) le connecte à vos documents.</p>
+  <div class="flow" style="margin-bottom:6mm">
+    <div><span class="step">PRÉPARATION</span><h3 style="margin-top:1.5mm">Indexer</h3><p class="small">Les documents validés (convention, accords, notes RH) sont découpés en passages et transformés en vecteurs (embeddings, jour 2).</p></div>
+    <div><span class="step">QUESTION</span><h3 style="margin-top:1.5mm">Rechercher</h3><p class="small">La question est elle aussi vectorisée ; on retrouve les passages les plus proches.</p></div>
+    <div><span class="step">GÉNÉRATION</span><h3 style="margin-top:1.5mm">Rédiger</h3><p class="small">Le LLM rédige une réponse à partir de ces passages uniquement.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">SOURCE</span><h3 style="margin-top:1.5mm">Citer</h3><p class="small">La réponse indique le document et l’article utilisés, pour vérification.</p></div>
+  </div>
+  <div class="g3">
+    <div class="card t"><h3>Avantages</h3><p>Réponses ancrées dans les règles de l’entreprise ; mise à jour simple (on remplace le document) ; sources vérifiables.</p></div>
+    <div class="card s"><h3>Limites</h3><p>Si le bon passage n’est pas retrouvé, la réponse est fausse ou incomplète. Le LLM peut encore mal interpréter ou mélanger deux passages.</p></div>
+    <div class="card r"><h3>Qualité documentaire</h3><p>Des documents obsolètes, contradictoires ou ambigus produisent des réponses obsolètes, contradictoires ou ambiguës. Un projet d’assistant commence souvent par un nettoyage documentaire.</p></div>
+  </div>
+  <span class="src">Réf. H12</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Concevoir le dialogue</h2>
+  <p class="lead">La qualité perçue d’un assistant dépend autant de la conception du dialogue que de la technologie. Laumer et Morana soulignent le rôle des caractéristiques sociales de l’agent.</p>
+  <div class="g2">
+    <div>
+      <h3>Principes de conception</h3>
+      <table><thead><tr><th style="width:30%">Principe</th><th>En pratique</th></tr></thead><tbody>
+        <tr><td><b>Transparence</b></td><td>Se présenter comme un assistant automatisé dès le début</td></tr>
+        <tr><td><b>Périmètre clair</b></td><td>Annoncer ce que l’assistant sait faire et ne sait pas faire</td></tr>
+        <tr><td><b>Ton</b></td><td>Simple, courtois, adapté à la culture de l’entreprise ; éviter le jargon</td></tr>
+        <tr><td><b>Gestion de l’échec</b></td><td>Reformuler, proposer des choix, puis passer la main plutôt que tourner en rond</td></tr>
+        <tr><td><b>Escalade facile</b></td><td>« Parler à un conseiller » toujours accessible</td></tr>
+        <tr><td><b>Accessibilité</b></td><td>Lisible, compatible avec les lecteurs d’écran, langues utiles</td></tr>
+      </tbody></table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>L’anthropomorphisme</h3><p>Donner un prénom, un avatar ou une personnalité à l’assistant peut rendre l’échange plus agréable. Mais la recherche montre aussi un risque : plus l’agent paraît humain, plus les attentes sont élevées, et plus la déception est forte quand il échoue.</p></div>
+      <div class="key" style="margin:0"><b>Règle d’or :</b> un assistant ne doit jamais laisser croire qu’il est un humain. Cette transparence est une condition de confiance, et une obligation prévue par l’AI Act (art. 50) pour les systèmes qui interagissent avec des personnes.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H12</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>L’acceptation par les utilisateurs et la mesure du succès</h2>
+  <p class="lead">Un assistant que personne n’utilise ne libère aucun temps. Les recherches sur l’acceptation des technologies identifient des facteurs que le projet doit travailler.</p>
+  <div class="g2">
+    <div>
+      <h3>Facteurs d’acceptation</h3>
+      <ul>
+        <li><b>Utilité perçue :</b> l’assistant répond-il vraiment à mes questions ?</li>
+        <li><b>Facilité d’usage :</b> est-il accessible là où je suis, sans identifiant supplémentaire ?</li>
+        <li><b>Confiance :</b> ses réponses sont-elles justes ? Mes données sont-elles protégées ?</li>
+        <li><b>Préférence pour le contact humain :</b> certains salariés, et certaines situations, appellent un interlocuteur.</li>
+        <li><b>Influence sociale :</b> les managers et collègues l’utilisent-ils ?</li>
+      </ul>
+      <p class="small">Ces facteurs proviennent notamment des modèles d’acceptation des technologies (TAM, UTAUT), que Laumer et Morana mobilisent.</p>
+    </div>
+    <table><thead><tr><th>Indicateur</th><th>Ce qu’il mesure</th></tr></thead><tbody>
+      <tr><td><b>Taux de résolution</b></td><td>Part des conversations résolues sans intervention humaine</td></tr>
+      <tr><td><b>Taux d’escalade</b></td><td>Part transférée à un gestionnaire, et pourquoi</td></tr>
+      <tr><td><b>Questions non comprises</b></td><td>Intentions à ajouter ou documents manquants</td></tr>
+      <tr><td><b>Satisfaction</b></td><td>Note donnée en fin d’échange</td></tr>
+      <tr><td><b>Exactitude</b></td><td>Contrôle d’un échantillon de réponses par un expert RH</td></tr>
+      <tr><td><b>Effet sur l’équipe RH</b></td><td>Évolution des sollicitations répétitives</td></tr>
+    </tbody></table>
+  </div>
+  <div class="key"><b>Attention au faux succès :</b> un taux de résolution élevé ne dit rien de l’exactitude. Un assistant qui répond avec assurance mais à tort « résout » la conversation. Le contrôle d’exactitude par échantillon est indispensable.</div>
+  <span class="src">Réf. H12</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Risques et cadre juridique</h2>
+  <p class="lead">Un assistant RH parle au nom de l’employeur. Ses erreurs l’engagent, et il traite des données personnelles parfois sensibles.</p>
+  <table>
+    <thead><tr><th style="width:22%">Risque</th><th style="width:40%">Exemple</th><th>Mesure</th></tr></thead>
+    <tbody>
+      <tr><td><b>Réponse erronée</b></td><td>L’assistant indique un délai de prévenance faux pour une démission</td><td>Sources validées, citation des sources, contrôle par échantillon, mention « à confirmer pour votre situation »</td></tr>
+      <tr><td><b>Hallucination</b></td><td>Il invente un dispositif ou un article de loi</td><td>RAG strict ; refus de répondre hors des documents</td></tr>
+      <tr><td><b>Données personnelles</b></td><td>Un salarié confie un problème de santé dans la conversation</td><td>Information RGPD, minimisation, durée de conservation des échanges, accès restreint</td></tr>
+      <tr><td><b>Sécurité</b></td><td>Un utilisateur manipule l’assistant pour obtenir les données d’un collègue (injection d’instructions)</td><td>Droits d’accès gérés par le SIRH, jamais par le LLM ; tests de sécurité</td></tr>
+      <tr><td><b>Situations sensibles</b></td><td>Signalement de harcèlement, détresse</td><td>Détection et orientation immédiate vers un interlocuteur humain et les dispositifs d’alerte</td></tr>
+      <tr><td><b>Surveillance</b></td><td>Analyse des questions posées par un salarié pour évaluer son engagement</td><td>Interdire ces usages ; analyse uniquement agrégée et anonymisée</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Cadre :</b> RGPD (information, minimisation, sécurité) ; AI Act, art. 50 (informer les personnes qu’elles interagissent avec un système d’IA) ; information et consultation du CSE sur l’introduction de l’outil (C. trav., L2312-8).</div>
+  <span class="src">Réf. H12</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Synthèse de la journée, activité et quiz • T4</h2>
+  <div class="g3">
+    <div class="card n" style="grid-column:span 2"><h3>Ce que la journée a établi</h3><ul>
+      <li><b>T1 :</b> le core RH est la source de vérité ; l’IA y contrôle, prévoit et répond, le calcul légal reste déterministe ; les opportunités se chiffrent.</li>
+      <li><b>T2 :</b> la RPA reproduit des actions sur les écrans sans apprendre ; associée à l’IA, elle traite des documents ; elle se gouverne et ses effets sur les emplois s’anticipent.</li>
+      <li><b>T3 :</b> plannings et affectations sont des problèmes d’optimisation ; les algorithmes génétiques cherchent de bonnes solutions ; les pénalités traduisent des choix de valeurs.</li>
+      <li><b>T4 :</b> un assistant RH combine compréhension, connaissance, action et escalade ; sa valeur dépend des sources, de la conception du dialogue et du contrôle d’exactitude.</li>
+    </ul></div>
+    <div class="card r"><h3>Préparer le jour 4</h3><p>Acquisition des talents : IA et recrutement, machine learning dans le recrutement, le staffing et la sélection.</p><p class="small"><b>À lire :</b> E • Ch. 5 ; H • Ch. 6 et 8.</p></div>
+    <div class="card s" style="grid-column:span 2"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Cahier des charges d’un assistant RH</h3><p>Pour l’entreprise décrite dans le document, rédigez le cahier des charges d’un assistant RH : dix intentions prioritaires, sources de connaissance, règles d’escalade, données interdites, ton. Testez ensuite cinq questions sur un assistant d’IA générative et analysez ses réponses.</p><p style="margin:0"><b>Livrable :</b> cahier des charges de deux pages (document « J3-T4 Activité »).</p></div>
+    <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions</h3><p style="margin:0">Générations d’agents, architecture, RAG, conception, risques.</p></div>
+  </div>
+</section>
