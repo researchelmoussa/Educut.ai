@@ -1,0 +1,10 @@
+body{font-family:"Source Sans 3","Segoe UI",sans-serif;color:#1a2b3c;font-size:10.6pt;line-height:1.45;margin:0}
+h1{font-family:"Space Grotesk",sans-serif;color:#17324d;font-size:24pt;margin:0 0 4mm}
+.intro{color:#56687a;margin-bottom:8mm}
+.sc{break-before:page}
+.sc:first-of-type{break-before:auto}
+.sc h2{font-family:"Space Grotesk",sans-serif;color:#17324d;font-size:15pt;margin:0 0 1mm}
+.sc .meta{color:#0b7f78;font-weight:700;font-size:9.5pt;letter-spacing:.04em;text-transform:uppercase;margin:0 0 4mm;border-bottom:1px solid #cfdde3;padding-bottom:2mm}
+.sc p{margin:0 0 2.2mm;text-align:justify}
+.sc .cue{color:#8a4d0f;font-style:italic}
+.cover{break-after:page}
