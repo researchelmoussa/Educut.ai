@@ -1,0 +1,187 @@
+<section class="page" data-t="T2">
+  <div class="opener">
+    <div>
+      <div class="num">T2</div>
+      <h2 style="margin-top:6mm">Machine learning sur données audio et vidéo</h2>
+      <p class="lead">Entretiens vidéo différés, visioconférences, enregistrements d’appels : la voix et l’image entrent dans les processus RH. Certains outils promettent d’y lire la personnalité, l’enthousiasme ou l’honnêteté. Que peuvent-ils réellement mesurer ?</p>
+      <p class="q">Vous enregistrez une réponse vidéo de deux minutes pour une candidature. Qu’accepteriez-vous qu’une machine en tire, et qu’est-ce qui vous paraîtrait inacceptable ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Identifier les usages des données audio et vidéo en RH.</li><li>Comprendre ce que la machine extrait réellement d’une voix ou d’un visage.</li><li>Évaluer la validité scientifique de ces mesures.</li><li>Connaître le cadre juridique, dont les interdictions de l’AI Act.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 4</b> HR machine learning on audio and video data (Fernández-Martinez, Fernández, pp. 68-88)</p><p><b>H • Ch. 13</b> HR affective computing (Becker, Tuskey, Beugré, pp. 243-260)</p><p style="margin:0"><b>H • Ch. 8</b> Machine learning in personnel selection (König, Langer, pp. 149-168)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>La voix et l’image dans les processus RH</h2>
+  <p class="lead">L’essor des entretiens à distance et des outils de visioconférence a produit de nouvelles données. Elles sont riches, très personnelles et particulièrement sensibles.</p>
+  <table>
+    <thead><tr><th style="width:24%">Situation</th><th style="width:38%">Données produites</th><th>Usage d’IA possible</th></tr></thead>
+    <tbody>
+      <tr><td><b>Entretien vidéo différé</b></td><td>Le candidat enregistre ses réponses à des questions affichées à l’écran</td><td>Transcription, analyse du contenu, parfois de la voix et du visage</td></tr>
+      <tr><td><b>Entretien en visioconférence</b></td><td>Enregistrement audio et vidéo d’un échange en direct</td><td>Transcription et prise de notes automatiques</td></tr>
+      <tr><td><b>Centre de contact</b></td><td>Appels de conseillers enregistrés</td><td>Contrôle qualité, repérage des appels difficiles, accompagnement</td></tr>
+      <tr><td><b>Formation</b></td><td>Mises en situation filmées, jeux de rôle</td><td>Retour automatique sur le débit, les hésitations, le temps de parole</td></tr>
+      <tr><td><b>Sécurité au travail</b></td><td>Caméras sur les sites industriels</td><td>Détection du port des équipements de protection, de chutes</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card r"><h3>Deux niveaux très différents</h3><p><b>Le contenu</b> : ce que dit la personne, transcrit en texte et analysé comme au T1. <b>La forme</b> : comment elle le dit, avec quelle voix, quelles expressions, quels gestes. C’est sur la forme que se concentrent les controverses.</p></div>
+    <div class="key" style="margin:0"><b>Donnée biométrique :</b> une image du visage ou un enregistrement de voix traités pour identifier ou caractériser une personne sont des données sensibles au sens du RGPD (art. 9). Leur traitement est en principe interdit, sauf exceptions strictes.</div>
+  </div>
+  <span class="src">Réf. H4</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Ce que la machine extrait d’une vidéo</h2>
+  <p class="lead">Un enregistrement est décomposé en trois flux, chacun traité par des modèles de deep learning spécialisés. Ces modèles produisent des mesures, appelées caractéristiques, qui servent ensuite à prédire un score.</p>
+  <div class="g3">
+    <div class="card t"><span class="tag">Verbal</span><h3 style="margin-top:2mm">Ce qui est dit</h3><ul><li>Reconnaissance automatique de la parole (transcription)</li><li>Vocabulaire, longueur des réponses, structure</li><li>Thèmes abordés, mots-clés liés aux compétences</li></ul></div>
+    <div class="card t"><span class="tag">Vocal</span><h3 style="margin-top:2mm">Comment c’est dit</h3><ul><li>Débit, pauses, hésitations</li><li>Hauteur et variations de la voix</li><li>Intensité, rythme</li></ul></div>
+    <div class="card t"><span class="tag">Visuel</span><h3 style="margin-top:2mm">Ce qui est montré</h3><ul><li>Mouvements du visage (sourire, sourcils), regard</li><li>Orientation de la tête, posture, gestes</li><li>Arrière-plan, éclairage</li></ul></div>
+  </div>
+  <div class="flow" style="margin-top:6mm">
+    <div><span class="step">MESURES</span><p class="small" style="margin-top:1mm">Des centaines de caractéristiques par vidéo : nombre de sourires, débit moyen, mots utilisés…</p></div>
+    <div><span class="step">MODÈLE</span><p class="small" style="margin-top:1mm">Entraîné à relier ces mesures à une cible, le plus souvent des notes attribuées par des évaluateurs humains.</p></div>
+    <div style="background:var(--sand)"><span class="step" style="color:var(--sand-d)">SCORE</span><p class="small" style="margin-top:1mm">« Extraversion : 72 », « enthousiasme élevé », « adéquation culturelle »…</p></div>
+  </div>
+  <div class="key"><b>Point clé :</b> la machine mesure des mouvements et des sons. La « personnalité » ou « l’émotion » sont des <b>inférences</b> à partir de ces mesures. Toute la question est de savoir si ces inférences sont valides.</div>
+  <span class="src">Réf. H4</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Les entretiens vidéo différés</h2>
+  <p class="lead">Le candidat se connecte quand il le souhaite, lit une question, dispose de quelques secondes de réflexion, puis enregistre sa réponse. Le recruteur visionne plus tard. Le format s’est largement diffusé depuis les années 2010.</p>
+  <div class="g2">
+    <div>
+      <h3>Pourquoi les entreprises l’utilisent</h3>
+      <ul>
+        <li>Gain de temps : pas de planification, visionnage accéléré.</li>
+        <li>Standardisation : mêmes questions, même temps de réponse pour tous.</li>
+        <li>Volumes : utile pour des recrutements massifs (stages, jeunes diplômés, commerce).</li>
+        <li>Flexibilité pour les candidats en poste ou à l’étranger.</li>
+      </ul>
+      <h3 style="margin-top:4mm">Ce qu’en disent les candidats</h3>
+      <p>La recherche sur les réactions des candidats (synthétisée par König et Langer) montre que ces entretiens sont souvent perçus comme moins justes et moins chaleureux qu’un entretien en face à face. Les candidats regrettent l’absence d’interaction et la difficulté à « se vendre » à une caméra. L’ajout d’une évaluation automatique accentue ce sentiment, surtout quand le candidat ne sait pas ce qui est analysé.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <table><thead><tr><th>Niveau d’automatisation</th><th>Risque</th></tr></thead><tbody>
+        <tr><td>Visionnage humain uniquement</td><td>Faible (biais humains classiques)</td></tr>
+        <tr><td>Transcription et aide à la prise de notes</td><td>Modéré</td></tr>
+        <tr><td>Score sur le contenu des réponses</td><td>Élevé : IA à haut risque</td></tr>
+        <tr><td>Score sur la voix et le visage</td><td>Très élevé, en partie interdit</td></tr>
+      </tbody></table>
+      <div class="key" style="margin:0"><b>Un tournant :</b> en janvier 2021, HireVue, l’un des principaux éditeurs d’entretiens vidéo, a annoncé l’abandon de l’analyse des expressions faciales dans ses évaluations, après de fortes critiques sur leur validité et leurs biais.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H4, H8</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Que vaut la mesure ? La question de la validité</h2>
+  <p class="lead">En sélection du personnel, un outil n’est utile que s’il est fiable et valide. König et Langer rappellent que ces exigences s’appliquent aux outils d’IA comme aux tests classiques.</p>
+  <table>
+    <thead><tr><th style="width:20%">Critère</th><th style="width:38%">Question</th><th>Constat pour l’analyse vidéo</th></tr></thead>
+    <tbody>
+      <tr><td><b>Fidélité</b></td><td>La même personne obtient-elle le même score si elle recommence ?</td><td>Sensible à l’éclairage, à la caméra, au stress du moment : un même candidat peut obtenir des scores différents.</td></tr>
+      <tr><td><b>Validité de construit</b></td><td>Le score mesure-t-il bien ce qu’il prétend mesurer ?</td><td>Les modèles prédisent surtout la <i>première impression</i> qu’aurait un évaluateur humain, pas la personnalité réelle.</td></tr>
+      <tr><td><b>Validité prédictive</b></td><td>Le score prédit-il la performance future dans le poste ?</td><td>Très peu d’études indépendantes publiées ; les éditeurs avancent des résultats rarement vérifiables.</td></tr>
+      <tr><td><b>Équité</b></td><td>Le score est-il comparable entre groupes ?</td><td>Écarts documentés selon l’accent, la couleur de peau, le handicap (voir page 18).</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card r"><h3>Le piège de la cible</h3><p>Beaucoup de modèles sont entraînés sur des bases de vidéos courtes annotées par des évaluateurs, comme le jeu de données ChaLearn « First Impressions » (2016). Ils apprennent à reproduire des impressions humaines, avec leurs stéréotypes, et non à détecter un trait réel.</p></div>
+    <div class="key" style="margin:0"><b>Question à poser à tout éditeur :</b> « Sur quelle cible votre modèle a-t-il été entraîné, et quelles études indépendantes montrent qu’il prédit la performance dans le poste ? »</div>
+  </div>
+  <span class="src">Réf. H4, H8</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Reconnaître les émotions : l’affective computing</h2>
+  <p class="lead">L’affective computing désigne les systèmes qui cherchent à reconnaître, interpréter ou simuler les émotions humaines. En RH, il est proposé pour mesurer l’engagement, le stress ou l’enthousiasme.</p>
+  <div class="g2">
+    <div>
+      <h3>L’hypothèse de départ</h3>
+      <p>Beaucoup d’outils reposent sur l’idée que quelques émotions de base (joie, colère, peur, tristesse, surprise, dégoût) s’expriment par des configurations faciales universelles, qu’il suffirait de détecter.</p>
+      <h3 style="margin-top:4mm">Ce que dit la recherche</h3>
+      <p>Une revue de référence (Barrett et al., 2019) conclut que les expressions faciales ne permettent pas d’inférer de façon fiable l’état émotionnel d’une personne : on peut être en colère sans froncer les sourcils, et froncer les sourcils pour bien d’autres raisons. L’expression varie selon les personnes, les cultures et les situations.</p>
+      <div class="key"><b>Conséquence :</b> un « score d’enthousiasme » mesure des mouvements du visage, pas l’enthousiasme.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Usages envisagés en RH (Becker et al.)</h3><ul><li>Sélection : évaluer l’émotion exprimée en entretien.</li><li>Bien-être : détecter le stress ou la fatigue.</li><li>Relation client : analyser la tonalité des appels.</li><li>Formation : retours sur l’expression orale.</li></ul></div>
+      <div class="card s"><h3>Les risques identifiés</h3><ul><li>Intrusion dans la vie intérieure des salariés.</li><li>Pression à « afficher » les bonnes émotions.</li><li>Effet de surveillance permanente.</li><li>Décisions fondées sur des inférences non valides.</li></ul></div>
+    </div>
+  </div>
+  <span class="src">Réf. H13</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Des erreurs qui ne touchent pas tout le monde de la même façon</h2>
+  <p class="lead">Les modèles de vision et de reconnaissance vocale sont entraînés sur des données qui ne représentent pas toute la population. Leurs erreurs se concentrent sur certains groupes.</p>
+  <div class="g2">
+    <div class="card n"><h3>Une étude de référence : « Gender Shades » (2018)</h3><p>Joy Buolamwini et Timnit Gebru ont testé trois systèmes commerciaux de classification du genre à partir du visage. Le taux d’erreur atteignait <b>34,7 %</b> pour les femmes à la peau foncée, contre <b>0,8 %</b> pour les hommes à la peau claire. Les éditeurs ont ensuite amélioré leurs modèles, mais l’étude a montré l’ampleur possible des écarts.</p></div>
+    <table><thead><tr><th>Groupe exposé</th><th>Source d’erreur</th></tr></thead><tbody>
+      <tr><td><b>Accents, langue seconde</b></td><td>Transcription moins exacte, donc contenu mal évalué</td></tr>
+      <tr><td><b>Personnes en situation de handicap</b></td><td>Paralysie faciale, trouble de la parole, mobilité réduite</td></tr>
+      <tr><td><b>Personnes neuroatypiques</b></td><td>Contact visuel, expressions ou rythme différents</td></tr>
+      <tr><td><b>Peaux foncées</b></td><td>Détection du visage moins fiable, surtout en faible éclairage</td></tr>
+      <tr><td><b>Conditions matérielles</b></td><td>Webcam, connexion, logement : reflet du niveau social</td></tr>
+    </tbody></table>
+  </div>
+  <div class="key"><b>Discrimination indirecte :</b> un critère apparemment neutre (le débit, le contact visuel) qui désavantage un groupe protégé sans justification peut constituer une discrimination indirecte au sens du droit français et européen. L’employeur doit aussi prévoir des aménagements raisonnables pour les candidats handicapés.</div>
+  <span class="src">Réf. H4</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Le cadre juridique : ce qui est interdit, encadré ou acceptable</h2>
+  <p class="lead">L’Europe a fait des systèmes d’analyse des émotions au travail l’une des rares pratiques d’IA purement interdites.</p>
+  <table>
+    <thead><tr><th style="width:18%">Statut</th><th style="width:40%">Usage</th><th>Fondement</th></tr></thead>
+    <tbody>
+      <tr><td><b style="color:#a33">Interdit</b></td><td>Systèmes déduisant les émotions d’une personne sur le lieu de travail ou en recrutement, sauf raisons médicales ou de sécurité</td><td>AI Act, art. 5 §1 f), applicable depuis le 2 février 2025</td></tr>
+      <tr><td><b style="color:#a33">Interdit</b></td><td>Catégorisation biométrique déduisant l’origine, les opinions, l’appartenance syndicale, l’orientation sexuelle</td><td>AI Act, art. 5 §1 g)</td></tr>
+      <tr><td><b style="color:#8a4d0f">Haut risque</b></td><td>Évaluation ou classement de candidats à partir du contenu de leurs réponses vidéo</td><td>AI Act, annexe III, point 4 ; RGPD, art. 22</td></tr>
+      <tr><td><b style="color:#8a4d0f">Encadré</b></td><td>Traitement de données biométriques (voix, visage) pour identifier une personne</td><td>RGPD, art. 9 ; analyse d’impact (AIPD) obligatoire</td></tr>
+      <tr><td><b style="color:#0a5f59">Acceptable sous conditions</b></td><td>Transcription d’un entretien pour aider le recruteur à prendre des notes, avec information et accord du candidat</td><td>RGPD (information, minimisation, durée de conservation) ; Code du travail, art. L1221-8</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card r"><h3>Information du candidat</h3><p>Le candidat doit être informé, avant leur utilisation, des méthodes et techniques d’aide au recrutement employées (Code du travail, art. L1221-8). Ces méthodes doivent être pertinentes au regard de la finalité poursuivie.</p></div>
+    <div class="card r"><h3>Bonne pratique</h3><p>Proposer une alternative (entretien en direct) aux candidats qui le souhaitent, ne conserver les vidéos que le temps du recrutement, et garantir qu’un humain visionne les réponses.</p></div>
+  </div>
+  <span class="src">Réf. H4, H13</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Ce qui reste utile : des usages proportionnés</h2>
+  <p class="lead">Écarter l’analyse des émotions ne signifie pas renoncer à toute IA sur l’audio et la vidéo. Plusieurs usages apportent une vraie valeur avec des risques maîtrisables.</p>
+  <div class="g3">
+    <div class="card t"><span class="tag">Recrutement</span><h3 style="margin-top:2mm">Transcrire pour mieux écouter</h3><p>La transcription automatique libère le recruteur de la prise de notes et facilite la comparaison des réponses sur une grille structurée. L’évaluation reste humaine et porte sur le contenu.</p></div>
+    <div class="card t"><span class="tag">Accessibilité</span><h3 style="margin-top:2mm">Sous-titrer et traduire</h3><p>Sous-titrage des vidéos de formation et des réunions pour les personnes sourdes ou malentendantes, traduction pour les équipes internationales.</p></div>
+    <div class="card t"><span class="tag">Formation</span><h3 style="margin-top:2mm">S’entraîner à l’oral</h3><p>Retour à l’apprenant lui-même sur son débit, ses hésitations ou son temps de parole lors d’un exercice, sans transmission à l’employeur ni évaluation.</p></div>
+    <div class="card t"><span class="tag">Sécurité</span><h3 style="margin-top:2mm">Prévenir les accidents</h3><p>Détection du port des équipements de protection ou d’une chute sur un site industriel, sans identification des personnes, après information du CSE.</p></div>
+    <div class="card t"><span class="tag">Relation client</span><h3 style="margin-top:2mm">Repérer les appels difficiles</h3><p>Signaler au manager les appels longs ou conflictuels pour proposer un soutien au conseiller, plutôt que pour le noter.</p></div>
+    <div class="card t"><span class="tag">Synthèse</span><h3 style="margin-top:2mm">Comptes rendus de réunion</h3><p>Résumé automatique des réunions, avec accord des participants, relu avant diffusion.</p></div>
+  </div>
+  <div class="key"><b>Test de proportionnalité :</b> l’usage sert-il la personne ou seulement son évaluation ? Existe-t-il un moyen moins intrusif ? La personne est-elle informée, peut-elle refuser, et un humain décide-t-il ?</div>
+  <span class="src">Réf. H4, H13</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>À retenir, activité et quiz • T2</h2>
+  <div class="g2">
+    <div class="card n"><h3>À retenir</h3><ul>
+      <li>Une vidéo se décompose en trois flux : verbal, vocal, visuel.</li>
+      <li>La machine mesure des sons et des mouvements ; la personnalité et l’émotion sont des inférences.</li>
+      <li>Ces inférences ont une validité scientifique faible ou non démontrée, et des erreurs inégalement réparties.</li>
+      <li>L’AI Act interdit la reconnaissance des émotions au travail et en recrutement, sauf raisons médicales ou de sécurité.</li>
+      <li>La transcription et l’analyse du contenu restent possibles, sous conditions strictes.</li>
+    </ul></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><span class="tag s">Activité individuelle • 30 min • Réflexion</span><h3 style="margin-top:2mm">Faut-il adopter VisioTalent ?</h3><p>Un prestataire propose à votre direction un outil d’analyse vidéo des candidats. À partir de sa présentation commerciale, rédigez une note argumentée recommandant ou non son adoption, en totalité, en partie ou sous conditions.</p><p style="margin:0"><b>Livrable :</b> note d’une page (document « J2-T2 Activité »).</p></div>
+      <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions de validation</h3><p style="margin:0">Flux de données, validité, affective computing, cadre juridique.</p></div>
+    </div>
+  </div>
+</section>
