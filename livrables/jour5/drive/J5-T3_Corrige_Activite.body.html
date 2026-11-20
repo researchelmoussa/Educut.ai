@@ -1,0 +1,51 @@
+<p class="k">Intelligence artificielle et transformation numérique en GRH • Jour 5 • Après-midi • T3 • Document formateur</p>
+<h1>J5-T3 • Corrigé de l’activité : le modèle de NovaTech Services</h1>
+
+<h2>1. Calculs</h2>
+<table>
+<tr><th style="width:20%">Indicateur</th><th style="width:22%">Calcul</th><th>Interprétation</th></tr>
+<tr><td><b>Précision</b></td><td>120 / 300 = <b>40 %</b></td><td>Sur 10 personnes signalées, 4 partent et 6 restent : toute action ciblée sur la liste touche surtout des salariés qui ne seraient pas partis.</td></tr>
+<tr><td><b>Rappel</b></td><td>120 / 240 = <b>50 %</b></td><td>Le modèle repère un départ sur deux ; la moitié des départs ne sont pas anticipés.</td></tr>
+<tr><td><b>Exactitude</b></td><td>(120 + 1 980) / 2 400 = <b>87,5 %</b></td><td>Chiffre trompeur : un modèle qui prédit « personne ne part » obtient 2 160 / 2 400 = <b>90 %</b>. Le modèle fait moins bien que cette règle naïve en exactitude, ce qui montre que l’exactitude n’est pas le bon indicateur avec des classes déséquilibrées.</td></tr>
+</table>
+<p>Lecture par service : le taux de signalement suit globalement le taux de départ (Support client : 18 % de départs, 22 % signalés), mais les Fonctions support ont 30 signalés pour 15 départs, ce qui laisse supposer beaucoup de faux positifs dans ce service.</p>
+
+<h2>2. Analyse des variables</h2>
+<table>
+<tr><th style="width:34%">Variable</th><th style="width:18%">Catégorie</th><th>Justification</th></tr>
+<tr><td>1. Pas d’augmentation depuis 2 ans</td><td>Actionnable, mais ambiguë</td><td>Cause possible (manque de reconnaissance) ou reflet d’une performance jugée faible : à vérifier par enquête ou entretiens de départ.</td></tr>
+<tr><td>2. Ancienneté &lt; 18 mois</td><td>Actionnable</td><td>Signale un problème d’intégration : action collective sur l’onboarding.</td></tr>
+<tr><td>3. Jours d’arrêt maladie</td><td>Sensible, illégitime</td><td>Lié à l’état de santé : agir sur cette base serait discriminatoire (L1132-1) ; à retirer du modèle.</td></tr>
+<tr><td>4. Engagement de l’équipe</td><td>Actionnable</td><td>Donnée collective, déjà agrégée : base d’actions managériales.</td></tr>
+<tr><td>5. Retour de congé parental</td><td>Sensible, illégitime</td><td>Situation de famille : risque de discrimination, notamment envers les femmes ; à retirer ; en revanche, signal utile pour améliorer l’accompagnement des retours de congé pour tous.</td></tr>
+<tr><td>6. Profil sur un réseau social</td><td>Illégitime</td><td>Collecte déloyale, non annoncée, hors finalité ; contraire à la minimisation (RGPD art. 5) et à L1222-4 ; à supprimer.</td></tr>
+<tr><td>7. Distance domicile-travail</td><td>Ambiguë</td><td>Actionnable collectivement (télétravail, mobilité), mais proxy possible de l’origine sociale ou du lieu de résidence.</td></tr>
+</table>
+
+<h2>3. Limites et risques attendus</h2>
+<ul>
+<li>Précision de 40 % : 180 faux positifs ; rappel de 50 % : 120 départs non anticipés.</li>
+<li>Variables discriminatoires (3, 5) et données collectées illégalement (6) : le modèle doit être revu avant tout usage.</li>
+<li>Diffusion nominative aux managers : prophétie autoréalisatrice, stigmatisation, perte de confiance, risque de discrimination (p. 30).</li>
+<li>Corrélation et causalité confondues (variable 1).</li>
+<li>Conformité : absence d’information des salariés et du CSE, AIPD à réaliser ; système pouvant relever du haut risque s’il influence des décisions sur la relation de travail.</li>
+<li>Dérive : modèle testé sur une seule année.</li>
+</ul>
+
+<h2>4. Plan d’action type</h2>
+<table>
+<tr><th style="width:18%">Niveau</th><th>Mesure</th></tr>
+<tr><td>Organisation</td><td>Revoir la politique d’augmentation et la rendre lisible (critères, calendrier) après vérification par enquête du lien avec les départs.</td></tr>
+<tr><td>Organisation</td><td>Renforcer l’intégration des 18 premiers mois (référent, points à 3, 6 et 12 mois), pour tous les nouveaux arrivants.</td></tr>
+<tr><td>Organisation</td><td>Améliorer l’accompagnement des retours de congé parental, pour tous les salariés concernés.</td></tr>
+<tr><td>Équipe</td><td>Plan d’action dans le Support client (charge, perspectives) à partir des résultats agrégés d’engagement ; indicateurs d’équipe seulement au-delà de 10 personnes.</td></tr>
+<tr><td>Individu</td><td>Entretien de maintien proposé à tous les salariés, sans lien avec un score.</td></tr>
+</table>
+<p><b>Gouvernance :</b> refus de la diffusion nominative ; retrait des variables 3, 5, 6 ; accès restreint à l’équipe d’analyse ; information des salariés et consultation du CSE ; AIPD ; suivi des effets par groupe.</p>
+
+<h2>5. Repères de correction</h2>
+<ul>
+<li>La comparaison avec la règle naïve (90 %) est un signe de très bonne compréhension.</li>
+<li>La variable 6 doit impérativement être identifiée comme illégitime.</li>
+<li>Un plan qui accepte la proposition de la direction ne peut obtenir la moyenne au quatrième critère.</li>
+</ul>

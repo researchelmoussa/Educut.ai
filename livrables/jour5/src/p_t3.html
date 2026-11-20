@@ -1,0 +1,216 @@
+<section class="page" data-t="T3">
+  <div class="opener">
+    <div>
+      <div class="num">T3</div>
+      <h2 style="margin-top:6mm">Analytique prédictive : engagement et attrition</h2>
+      <p class="lead">Chaque départ non souhaité coûte cher : recrutement, intégration, perte de savoir-faire, désorganisation des équipes. Les modèles de prédiction des départs promettent d’anticiper. Mais que faire d’une probabilité qui concerne une personne ?</p>
+      <p class="q">Si un outil indiquait qu’un membre de votre équipe a 70 % de risque de partir dans l’année, que feriez-vous lundi matin ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Situer l’analytique prédictive dans la démarche de people analytics.</li><li>Identifier les facteurs d’engagement et de départ, et les données utilisables.</li><li>Lire les résultats d’un modèle de prédiction des départs.</li><li>Passer de la prédiction à l’action sans effets pervers.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>E • Ch. 7</b> Talent management (p. 131 et suiv.)</p><p><b>H • Ch. 2</b> HR machine learning – an introduction (Strohmeier, pp. 25-45)</p><p style="margin:0"><b>H • Ch. 5</b> HR machine learning on social media data (Harrison, Hartwell, pp. 89-104)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Les quatre niveaux du people analytics</h2>
+  <p class="lead">Le people analytics consiste à utiliser les données sur le personnel pour éclairer les décisions RH. On distingue habituellement quatre niveaux de maturité, du constat à la recommandation.</p>
+  <div class="lvl">
+    <div style="height:34mm"><span class="step">1 • DESCRIPTIF</span><h3>Que s’est-il passé ?</h3><p class="small" style="margin:0">Taux de départ par service</p></div>
+    <div style="height:44mm"><span class="step">2 • DIAGNOSTIC</span><h3>Pourquoi ?</h3><p class="small" style="margin:0">Départs liés au manager, au salaire, à la charge ?</p></div>
+    <div style="height:54mm;border-top:3px solid var(--teal)"><span class="step">3 • PRÉDICTIF</span><h3>Que va-t-il se passer ?</h3><p class="small" style="margin:0">Probabilité de départ à 12 mois</p></div>
+    <div style="height:64mm"><span class="step">4 • PRESCRIPTIF</span><h3>Que faire ?</h3><p class="small" style="margin:0">Action recommandée et effet attendu</p></div>
+    <div style="height:64mm;background:var(--sand);border-color:#efd6b5"><span class="step" style="color:var(--sand-d)">RÉALITÉ</span><h3 style="color:var(--sand-d)">Où en sont les entreprises ?</h3><p class="small" style="margin:0">La plupart restent aux niveaux 1 et 2 ; les niveaux 3 et 4 exigent des données fiables et des compétences rares.</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card t"><h3>Le bon ordre</h3><p style="margin:0">Un modèle prédictif n’a de sens que si les indicateurs descriptifs sont fiables : définitions partagées des départs, historique propre, données à jour.</p></div>
+    <div class="key" style="margin:0"><b>À retenir :</b> l’analyse diagnostique (comprendre les causes) est souvent plus utile que la prédiction individuelle, car c’est elle qui guide l’action.</div>
+  </div>
+  <span class="src">Réf. E7, H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Engagement et départs : de quoi parle-t-on ?</h2>
+  <p class="lead">Tous les départs ne se valent pas. Avant de prédire, il faut définir précisément ce que l’on veut prévoir et pourquoi.</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Type de départ</th><th>Exemple</th><th>À prédire ?</th></tr></thead>
+        <tbody>
+          <tr><td><b>Volontaire regretté</b></td><td>Démission d’un salarié performant</td><td>Cible habituelle</td></tr>
+          <tr><td><b>Volontaire non regretté</b></td><td>Démission d’un salarié en difficulté</td><td>Rarement</td></tr>
+          <tr><td><b>Involontaire</b></td><td>Licenciement, fin de contrat</td><td>Non : décision de l’employeur</td></tr>
+          <tr><td><b>Naturel</b></td><td>Retraite</td><td>Planification, pas prédiction</td></tr>
+        </tbody>
+      </table>
+      <p class="small" style="margin-top:3mm">La notion de départ « regretté » repose sur un jugement de l’entreprise : elle doit être définie et appliquée de façon cohérente.</p>
+    </div>
+    <div>
+      <h3>Facteurs d’engagement et de départ</h3>
+      <div class="g2" style="gap:3mm">
+        <div class="card r"><b>Relation au manager</b><p class="small" style="margin:0">Reconnaissance, soutien, équité perçue</p></div>
+        <div class="card r"><b>Perspectives</b><p class="small" style="margin:0">Évolution, formation, mobilité</p></div>
+        <div class="card r"><b>Rémunération</b><p class="small" style="margin:0">Niveau, progression, comparaison externe</p></div>
+        <div class="card r"><b>Charge et conditions</b><p class="small" style="margin:0">Horaires, trajet, pénibilité, télétravail</p></div>
+        <div class="card r"><b>Sens du travail</b><p class="small" style="margin:0">Utilité, autonomie, valeurs</p></div>
+        <div class="card r"><b>Marché externe</b><p class="small" style="margin:0">Offres concurrentes, tension du métier</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="key"><b>Engagement :</b> état d’énergie et d’implication dans le travail. Il se mesure surtout par enquête ; un engagement faible précède souvent le départ, sans le rendre certain.</div>
+  <span class="src">Réf. E7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Quelles données pour prédire les départs ?</h2>
+  <p class="lead">Plus un modèle utilise de données, plus il est précis en apparence ; plus il est aussi intrusif. La question n’est pas seulement « est-ce prédictif ? » mais « est-ce légitime ? ».</p>
+  <table>
+    <thead><tr><th style="width:20%">Source</th><th style="width:34%">Exemples</th><th style="width:22%">Valeur prédictive</th><th>Légitimité</th></tr></thead>
+    <tbody>
+      <tr><td><b>SIRH</b></td><td>Ancienneté, augmentations, promotions, mobilité, absences, temps de trajet</td><td>Bonne</td><td>Généralement acceptable si finalité annoncée ; attention aux absences (santé)</td></tr>
+      <tr><td><b>Enquêtes</b></td><td>Engagement, intention de rester, climat</td><td>Bonne</td><td>Acceptable si anonymat ou confidentialité garantis et respectés</td></tr>
+      <tr><td><b>Données passives internes</b></td><td>Métadonnées de messagerie, réunions, réseau de collaboration</td><td>Variable</td><td>Très discutable : surveillance, détournement de finalité</td></tr>
+      <tr><td><b>Réseaux sociaux externes</b></td><td>Mise à jour d’un profil professionnel, activité publique</td><td>Variable</td><td>À proscrire pour un suivi individuel (vie privée, loyauté de la collecte)</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card r"><h3>Ce que montre le Handbook (H5)</h3><p style="margin:0">Harrison et Hartwell montrent que les données des réseaux sociaux renseignent sur les personnes, mais posent des problèmes de représentativité, de validité et d’éthique qui limitent fortement leur usage en GRH.</p></div>
+    <div class="key" style="margin:0"><b>Règle de minimisation (RGPD, art. 5) :</b> ne collecter que les données adéquates, pertinentes et limitées à ce qui est nécessaire à la finalité.</div>
+  </div>
+  <span class="src">Réf. H5, H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Construire un modèle de prédiction des départs</h2>
+  <p class="lead">Il s’agit d’un problème de classification supervisée (jour 1) : à partir de la situation des salariés à une date donnée, prédire qui sera parti un an plus tard.</p>
+  <div class="flow">
+    <div><span class="step">1 • CIBLE</span><h3>Définir</h3><p class="small" style="margin:0">Départ volontaire dans les 12 mois</p></div>
+    <div><span class="step">2 • DONNÉES</span><h3>Photographier</h3><p class="small" style="margin:0">Situation de chaque salarié au 1<sup>er</sup> janvier, puis départ ou non</p></div>
+    <div><span class="step">3 • APPRENDRE</span><h3>Entraîner</h3><p class="small" style="margin:0">Régression logistique, arbres, forêts aléatoires</p></div>
+    <div><span class="step">4 • TESTER</span><h3>Valider</h3><p class="small" style="margin:0">Sur une année que le modèle n’a pas vue</p></div>
+    <div><span class="step">5 • SUIVRE</span><h3>Surveiller</h3><p class="small" style="margin:0">Performance et équité dans le temps</p></div>
+  </div>
+  <div class="g3" style="margin-top:5mm">
+    <div class="card s"><h3>Classes déséquilibrées</h3><p style="margin:0">Si 8 % des salariés partent, un modèle qui prédit « personne ne part » a 92 % d’exactitude… et ne sert à rien. Il faut d’autres mesures (page 27).</p></div>
+    <div class="card s"><h3>Fuite d’information</h3><p style="margin:0">Une variable connue seulement juste avant le départ (solde de congés liquidé, demande de rupture) rend le modèle excellent en test et inutile en pratique.</p></div>
+    <div class="card s"><h3>Dérive</h3><p style="margin:0">Une crise, un changement de politique salariale ou un marché qui se tend rendent les anciennes relations obsolètes. Le modèle doit être réévalué régulièrement.</p></div>
+  </div>
+  <div class="key"><b>Modèles simples d’abord :</b> une régression logistique bien construite est souvent presque aussi performante qu’un modèle complexe et beaucoup plus facile à expliquer.</div>
+  <span class="src">Réf. H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Lire les résultats (1) : la matrice de confusion</h2>
+  <p class="lead">Exemple : 1 000 salariés suivis pendant un an, 100 sont partis. Le modèle avait signalé 150 personnes « à risque élevé ».</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th></th><th>Parti</th><th>Resté</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr><td><b>Signalé à risque</b></td><td style="background:#dff1ee"><b>60</b> vrais positifs</td><td style="background:#fbeedd"><b>90</b> faux positifs</td><td>150</td></tr>
+          <tr><td><b>Non signalé</b></td><td style="background:#fbeedd"><b>40</b> faux négatifs</td><td style="background:#dff1ee"><b>810</b> vrais négatifs</td><td>850</td></tr>
+          <tr><td><b>Total</b></td><td>100</td><td>900</td><td>1 000</td></tr>
+        </tbody>
+      </table>
+      <div class="g3" style="margin-top:4mm;gap:3mm">
+        <div class="card t"><div class="big">40 %</div><p class="small" style="margin:0"><b>Précision</b> : 60 / 150. Parmi les signalés, 4 sur 10 partent.</p></div>
+        <div class="card t"><div class="big">60 %</div><p class="small" style="margin:0"><b>Rappel</b> : 60 / 100. Le modèle repère 6 départs sur 10.</p></div>
+        <div class="card t"><div class="big">87 %</div><p class="small" style="margin:0"><b>Exactitude</b> : 870 / 1 000. Trompeuse ici.</p></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Ce que cela signifie</h3><p style="margin:0">Sur 150 personnes signalées, 90 ne seraient pas parties. Toute action ciblée sur la liste touchera majoritairement des salariés qui n’avaient pas l’intention de partir.</p></div>
+      <div class="card r"><h3>Le compromis du seuil</h3><p style="margin:0">Abaisser le seuil augmente le rappel mais multiplie les faux positifs ; le relever fait l’inverse. Le choix dépend du coût de chaque erreur et de l’action prévue.</p></div>
+      <div class="card r"><h3>AUC</h3><p style="margin:0">L’aire sous la courbe ROC résume la capacité du modèle à classer un partant au-dessus d’un non-partant : 0,5 = hasard, 1 = parfait.</p></div>
+    </div>
+  </div>
+  <span class="src">Réf. H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Lire les résultats (2) : facteurs et explications</h2>
+  <p class="lead">Au-delà de la performance globale, un modèle indique quelles variables pèsent le plus. Ces résultats éclairent les causes possibles, à condition de ne pas confondre association et causalité.</p>
+  <div class="g2">
+    <div>
+      <h3>Importance des variables (exemple)</h3>
+      <svg viewBox="0 0 460 210" width="100%" role="img" aria-label="Importance relative de six variables dans un modèle de départ">
+        <g font-family="Source Sans 3" font-size="12" fill="#1a2b3c">
+          <text x="0" y="22">Pas d’augmentation depuis 3 ans</text><rect x="200" y="10" width="240" height="16" fill="#0b7f78"/>
+          <text x="0" y="54">Changement de manager récent</text><rect x="200" y="42" width="190" height="16" fill="#0b7f78"/>
+          <text x="0" y="86">Ancienneté inférieure à 2 ans</text><rect x="200" y="74" width="170" height="16" fill="#0b7f78"/>
+          <text x="0" y="118">Score d’engagement d’équipe bas</text><rect x="200" y="106" width="150" height="16" fill="#0b7f78"/>
+          <text x="0" y="150">Temps de trajet supérieur à 1 h</text><rect x="200" y="138" width="110" height="16" fill="#0b7f78"/>
+          <text x="0" y="182">Âge</text><rect x="200" y="170" width="90" height="16" fill="#8a4d0f"/>
+        </g>
+      </svg>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:3mm">
+      <div class="card t"><h3>Facteurs actionnables</h3><p style="margin:0">Politique salariale, accompagnement des changements de manager, intégration des nouveaux : l’entreprise peut agir collectivement.</p></div>
+      <div class="card s"><h3>Facteurs sensibles</h3><p style="margin:0">Âge, situation familiale, santé : un modèle peut les utiliser directement ou par proxy. Agir sur cette base serait discriminatoire (C. trav., L1132-1).</p></div>
+      <div class="card r"><h3>Explications individuelles</h3><p style="margin:0">Des méthodes comme SHAP indiquent, pour une personne, les variables qui ont augmenté ou diminué son score. Elles expliquent le modèle, pas les intentions de la personne.</p></div>
+    </div>
+  </div>
+  <div class="key"><b>Corrélation n’est pas causalité :</b> l’absence d’augmentation est associée aux départs ; elle peut en être une cause, ou refléter une performance jugée faible, ou un service en difficulté. Un test ou une enquête permet de trancher.</div>
+  <span class="src">Réf. H2, E7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>De la prédiction à l’action</h2>
+  <p class="lead">La valeur d’un modèle ne vient pas de la liste qu’il produit, mais des décisions qu’il permet. Eubanks insiste : une prédiction sans action prévue est inutile, et une action mal conçue peut nuire.</p>
+  <table>
+    <thead><tr><th style="width:24%">Niveau d’action</th><th style="width:40%">Exemples</th><th>Usage des données</th></tr></thead>
+    <tbody>
+      <tr><td><b>Organisation</b></td><td>Révision de la politique d’augmentation, parcours d’intégration renforcé, plan de carrière par métier</td><td>Facteurs agrégés ; recommandé</td></tr>
+      <tr><td><b>Équipe</b></td><td>Accompagnement d’un manager, rééquilibrage de la charge, plan de reconnaissance</td><td>Indicateurs d’équipe à partir d’un effectif minimal (par exemple 10 personnes)</td></tr>
+      <tr><td><b>Individu</b></td><td>Entretien de carrière, proposition de mobilité ou de formation</td><td>Proposé à tous ou à une population entière, jamais sur la seule base d’un score</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card n"><h3>Principes de confidentialité</h3><ul><li>Pas de score individuel communiqué aux managers.</li><li>Accès restreint à une équipe d’analyse identifiée.</li><li>Information des salariés et du CSE sur la finalité et les données.</li><li>AIPD avant mise en œuvre.</li></ul></div>
+    <div class="key" style="margin:0"><b>L’alternative simple :</b> l’entretien de « rétention » ou de « maintien » proposé à tous (« qu’est-ce qui vous ferait rester ? ») produit souvent plus d’informations utiles qu’un score, sans les risques.</div>
+  </div>
+  <span class="src">Réf. E7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Effets pervers et prophéties autoréalisatrices</h2>
+  <p class="lead">Un score de risque n’est pas neutre : il modifie la façon dont on regarde une personne. Les effets pervers sont d’autant plus forts que le score circule.</p>
+  <div class="g2">
+    <div>
+      <svg viewBox="0 0 440 240" width="100%" role="img" aria-label="Cycle de la prophétie autoréalisatrice d’un score de départ">
+        <g font-family="Source Sans 3" font-size="12.5" text-anchor="middle">
+          <rect x="140" y="5" width="160" height="44" rx="4" fill="#17324d"/><text x="220" y="24" fill="#fff" font-weight="700">Score « risque élevé »</text><text x="220" y="40" fill="#8fe0d6">communiqué au manager</text>
+          <rect x="280" y="95" width="155" height="44" rx="4" fill="#dff1ee"/><text x="357" y="114" fill="#17324d" font-weight="700">Moins de projets</text><text x="357" y="130" fill="#17324d">« il va partir de toute façon »</text>
+          <rect x="140" y="185" width="160" height="44" rx="4" fill="#fbeedd"/><text x="220" y="204" fill="#8a4d0f" font-weight="700">Démotivation</text><text x="220" y="220" fill="#8a4d0f">sentiment de mise à l’écart</text>
+          <rect x="5" y="95" width="155" height="44" rx="4" fill="#8a4d0f"/><text x="82" y="114" fill="#fff" font-weight="700">Départ effectif</text><text x="82" y="130" fill="#fff">le modèle « avait raison »</text>
+          <g stroke="#0b7f78" stroke-width="2.5" fill="none"><path d="M300,40 L350,92"/><path d="M350,142 L300,190"/><path d="M140,205 L90,142"/><path d="M90,92 L140,40"/></g>
+        </g>
+      </svg>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:3mm">
+      <div class="card s"><h3>Discrimination indirecte</h3><p style="margin:0">Si le modèle associe le risque à l’âge, à un congé parental ou à des absences, les actions qui en découlent pénalisent ces groupes.</p></div>
+      <div class="card s"><h3>Perte de confiance</h3><p style="margin:0">Des salariés qui découvrent qu’on calcule leur « probabilité de départ » peuvent y voir une surveillance déloyale.</p></div>
+      <div class="card s"><h3>Loi de Goodhart</h3><p style="margin:0">« Quand une mesure devient un objectif, elle cesse d’être une bonne mesure. » Des managers évalués sur le score de leur équipe peuvent chercher à l’améliorer plutôt qu’à améliorer la situation.</p></div>
+    </div>
+  </div>
+  <div class="key"><b>Conséquence :</b> les effets d’un modèle de départ doivent être évalués comme ceux de toute politique RH, y compris sur les groupes protégés.</div>
+  <span class="src">Réf. E7, H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>À retenir, activité et quiz • T3</h2>
+  <div class="g3">
+    <div class="card n" style="grid-column:span 2"><h3>Les idées clés</h3><ul>
+      <li>Le people analytics progresse du descriptif au prescriptif ; le diagnostic des causes guide l’action.</li>
+      <li>La cible doit être précise (départ volontaire regretté à 12 mois) ; les données doivent être légitimes et minimisées.</li>
+      <li>Avec des classes déséquilibrées, on lit précision et rappel, pas l’exactitude.</li>
+      <li>Les facteurs expliquent le modèle ; corrélation n’est pas causalité ; certains facteurs sont sensibles.</li>
+      <li>Agir d’abord au niveau collectif, ne pas diffuser de scores individuels, surveiller les effets pervers.</li>
+    </ul></div>
+    <div class="card r"><h3>Pour l’activité</h3><p style="margin:0">Mobilisez les pages 27 (matrice), 28 (facteurs), 29 (actions) et 30 (effets pervers).</p></div>
+    <div class="card s" style="grid-column:span 2"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Interpréter les résultats d’un modèle de risque de départ</h3><p>À partir des résultats fournis (matrice de confusion, importance des variables, résultats par service), calculez et interprétez les indicateurs, identifiez les limites, puis proposez un plan d’action managérial respectueux de la confidentialité.</p><p style="margin:0"><b>Livrable :</b> note d’analyse (document « J5-T3 Activité »).</p></div>
+    <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions</h3><p style="margin:0">Niveaux d’analyse, données, précision et rappel, causalité, actions.</p></div>
+  </div>
+</section>
