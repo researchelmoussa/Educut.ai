@@ -1,0 +1,187 @@
+<section class="page" data-t="T2">
+  <div class="opener">
+    <div>
+      <div class="num">T2</div>
+      <h2 style="margin-top:6mm">Machine learning dans le recrutement</h2>
+      <p class="lead">Trier 400 candidatures en quelques secondes : c’est la promesse des outils de présélection. Comment apprennent-ils, comment les recruteurs les utilisent-ils, et comment savoir s’ils traitent tous les candidats équitablement ?</p>
+      <p class="q">Un outil de tri retient 18 % des hommes et 10 % des femmes. Est-ce forcément une discrimination ? Que faudrait-il vérifier ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Connaître les résultats de la recherche sur l’adoption du ML par les recruteurs.</li><li>Comprendre comment apprend un modèle de présélection et le problème des étiquettes.</li><li>Mesurer l’équité et diagnostiquer un biais.</li><li>Organiser la collaboration humain-machine dans le respect du cadre juridique.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 6</b> HR machine learning in recruiting (Laumer, Maier, Weitzel, pp. 105-126)</p><p style="margin:0"><b>H • Ch. 3</b> HR machine learning on text data (Gross, pp. 46-67)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Ce que la recherche dit de l’adoption par les recruteurs</h2>
+  <p class="lead">Laumer, Maier et Weitzel étudient depuis de nombreuses années la manière dont les recruteurs adoptent les technologies. Leur chapitre montre que le succès d’un outil dépend autant des personnes et de l’organisation que de l’algorithme.</p>
+  <div class="g3">
+    <div class="card t"><h3>Des usages inégaux</h3><p>Les outils sont surtout utilisés pour les tâches de volume (tri, classement, sourcing) et beaucoup moins pour la décision finale, que les recruteurs souhaitent garder.</p></div>
+    <div class="card t"><h3>Des perceptions ambivalentes</h3><p>Les recruteurs apprécient le gain de temps mais craignent la perte de contrôle, l’opacité et la remise en cause de leur expertise.</p></div>
+    <div class="card t"><h3>Des facteurs d’adoption</h3><p>Utilité perçue, facilité d’usage, confiance dans les résultats, soutien de la hiérarchie, compétences numériques de l’équipe.</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card n"><h3>Deux biais opposés</h3><p><b>Biais d’automatisation :</b> suivre la machine sans examen (jour 1, p. 19).</p><p style="margin:0"><b>Aversion algorithmique :</b> rejeter un outil après l’avoir vu se tromper une fois, même s’il se trompe moins qu’un humain. Les deux faussent la décision.</p></div>
+    <div class="key" style="margin:0"><b>Un nouveau métier de recruteur :</b> moins de tri, davantage de conseil aux managers, d’échange avec les candidats et de contrôle des outils. Ce déplacement suppose une formation et une redéfinition explicite des rôles.</div>
+  </div>
+  <span class="src">Réf. H6</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Comment apprend un modèle de présélection</h2>
+  <p class="lead">Un outil de présélection fondé sur le machine learning applique la logique vue au jour 1 : des exemples passés, une cible, un modèle. Tout dépend de la cible choisie.</p>
+  <div class="flow" style="margin-bottom:6mm">
+    <div><span class="step">DONNÉES</span><h3 style="margin-top:1.5mm">Candidatures passées</h3><p class="small">CV extraits et normalisés (jour 2), réponses aux questions, parcours.</p></div>
+    <div style="background:var(--sand)"><span class="step" style="color:var(--sand-d)">CIBLE</span><h3 style="margin-top:1.5mm">Qu’est-ce qu’un « bon » candidat ?</h3><p class="small">Retenu en entretien ? Embauché ? Performant à un an ? Encore en poste à deux ans ?</p></div>
+    <div><span class="step">MODÈLE</span><h3 style="margin-top:1.5mm">Apprentissage</h3><p class="small">Classification ou score de 0 à 100.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">USAGE</span><h3 style="margin-top:1.5mm">Classement</h3><p class="small">Tri des nouvelles candidatures, seuil éventuel.</p></div>
+  </div>
+  <table>
+    <thead><tr><th style="width:24%">Cible choisie</th><th>Ce que le modèle apprend réellement</th></tr></thead>
+    <tbody>
+      <tr><td><b>« Retenu en présélection »</b></td><td>Les habitudes de tri des recruteurs passés, avec leurs biais</td></tr>
+      <tr><td><b>« Embauché »</b></td><td>Les préférences des recruteurs et des managers</td></tr>
+      <tr><td><b>« Performant à un an »</b></td><td>Les critères des évaluations de performance, elles-mêmes subjectives (jour 1, p. 28)</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Le problème des étiquettes manquantes :</b> on ne connaît la performance que des personnes <b>embauchées</b>. On ne sait jamais ce qu’auraient donné les candidats refusés. Le modèle apprend donc sur une population déjà filtrée par les décisions passées, et ne peut pas corriger leurs erreurs.</div>
+  <span class="src">Réf. H6</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Un cas d’école : l’outil expérimental d’Amazon</h2>
+  <p class="lead">En octobre 2018, l’agence Reuters révèle qu’Amazon a abandonné un outil expérimental de notation des CV. Ce cas est devenu la référence pour comprendre comment un modèle reproduit les discriminations du passé.</p>
+  <div class="g2">
+    <div>
+      <h3>Ce qui s’est passé, selon Reuters</h3>
+      <ul>
+        <li>L’outil, développé à partir de 2014, notait les candidatures de 1 à 5 étoiles.</li>
+        <li>Il avait été entraîné sur les CV reçus pendant une dizaine d’années, majoritairement masculins dans les métiers techniques.</li>
+        <li>Il a appris à pénaliser les CV contenant le mot « women’s » (par exemple « capitaine d’un club d’échecs féminin ») et à déclasser des diplômées de certaines universités pour femmes.</li>
+        <li>Les ingénieurs ont corrigé ces termes, sans pouvoir garantir que l’outil ne trouverait pas d’autres façons de discriminer.</li>
+        <li>Le projet a été abandonné ; selon Amazon, l’outil n’a jamais été utilisé seul pour évaluer des candidats.</li>
+      </ul>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Les leçons</h3><ol><li><b>Le passé n’est pas neutre :</b> un historique déséquilibré produit un modèle déséquilibré.</li><li><b>Retirer une variable ne suffit pas :</b> le modèle trouve des proxys (mots, écoles, activités).</li><li><b>Le biais était invisible</b> tant qu’on ne l’a pas cherché.</li><li><b>L’abandon est une option</b> légitime quand les garanties ne sont pas réunies.</li></ol></div>
+      <div class="key" style="margin:0"><b>Pour une PME :</b> le risque est souvent plus grand, car les outils achetés sont entraînés sur des données d’autres entreprises, que l’acheteur ne connaît pas.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H6</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Mesurer l’équité d’un outil de présélection</h2>
+  <p class="lead">L’équité se mesure. Plusieurs indicateurs existent ; ils ne disent pas la même chose et ne peuvent pas, en général, être satisfaits tous à la fois.</p>
+  <table>
+    <thead><tr><th style="width:24%">Indicateur</th><th style="width:40%">Définition</th><th>Exemple</th></tr></thead>
+    <tbody>
+      <tr><td><b>Taux de sélection par groupe</b></td><td>Part des candidats de chaque groupe retenus par l’outil</td><td>Femmes 10 %, hommes 18 %</td></tr>
+      <tr><td><b>Ratio d’impact</b></td><td>Taux du groupe le moins retenu ÷ taux du groupe le plus retenu</td><td>10 / 18 = 0,56. Aux États-Unis, un ratio inférieur à 0,8 (« règle des quatre cinquièmes ») est traditionnellement considéré comme un signal d’alerte</td></tr>
+      <tr><td><b>Égalité des taux d’erreur</b></td><td>L’outil écarte-t-il à tort des candidats compétents dans la même proportion pour chaque groupe ?</td><td>Rappel de 80 % pour les hommes, 55 % pour les femmes : l’outil « rate » davantage de femmes qualifiées</td></tr>
+      <tr><td><b>Calibration</b></td><td>Un même score correspond-il à la même probabilité de réussite pour chaque groupe ?</td><td>Un score de 70 annonce-t-il la même chose pour tous ?</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card r"><h3>Un résultat de la recherche</h3><p>Des travaux (Kleinberg et al., 2016 ; Chouldechova, 2017) ont montré que, lorsque les groupes diffèrent dans les données, il est mathématiquement impossible de satisfaire simultanément plusieurs de ces critères. Choisir un critère d’équité est donc un choix de valeurs, à expliciter.</p></div>
+    <div class="key" style="margin:0"><b>En France :</b> la règle des quatre cinquièmes n’est pas une norme juridique, mais le ratio d’impact reste un indicateur utile pour repérer une possible discrimination indirecte (C. trav., L1132-1) et déclencher une analyse.</div>
+  </div>
+  <span class="src">Réf. H6</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Diagnostiquer un biais : une démarche en quatre temps</h2>
+  <p class="lead">Un écart de taux de sélection est un signal, pas une preuve. Il faut en chercher les causes avant de conclure et d’agir. C’est la démarche de votre activité.</p>
+  <div class="flow" style="margin-bottom:6mm">
+    <div><span class="step">1 • CONSTATER</span><p class="small" style="margin-top:1mm">Mesurer l’écart sur un volume suffisant ; le comparer aux recrutements précédents et au vivier de candidats qualifiés.</p></div>
+    <div><span class="step">2 • FORMULER DES HYPOTHÈSES</span><p class="small" style="margin-top:1mm">Où l’écart peut-il naître ? Données, variables, cible, seuil, extraction des CV.</p></div>
+    <div><span class="step">3 • CHERCHER DES PREUVES</span><p class="small" style="margin-top:1mm">Tests, analyses, documentation de l’éditeur, revue de dossiers écartés.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">4 • AGIR ET SUIVRE</span><p class="small" style="margin-top:1mm">Corriger, suspendre, compenser ; mesurer à nouveau.</p></div>
+  </div>
+  <table>
+    <thead><tr><th style="width:22%">Cause possible</th><th style="width:40%">Exemple</th><th>Preuve à rechercher</th></tr></thead>
+    <tbody>
+      <tr><td><b>Données d’entraînement</b></td><td>Historique majoritairement masculin</td><td>Composition des données fournies par l’éditeur</td></tr>
+      <tr><td><b>Variable proxy</b></td><td>Interruption de carrière, sport, association</td><td>Poids des variables ; test de CV identiques modifiés</td></tr>
+      <tr><td><b>Cible biaisée</b></td><td>Cible « embauché » héritant des préférences passées</td><td>Définition de la cible dans la documentation</td></tr>
+      <tr><td><b>Seuil</b></td><td>Seuil fixé haut, qui amplifie de petits écarts de score</td><td>Taux de sélection à différents seuils</td></tr>
+      <tr><td><b>Extraction des CV</b></td><td>CV de reconversion ou mises en page atypiques mal lus</td><td>Revue manuelle d’un échantillon de dossiers écartés</td></tr>
+      <tr><td><b>Offre et vivier</b></td><td>Exigences gonflées ; diffusion ciblée (T1)</td><td>Composition des candidatures par canal</td></tr>
+    </tbody>
+  </table>
+  <span class="src">Réf. H6, H3</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Tester un outil avant de l’adopter</h2>
+  <p class="lead">Les chiffres de l’éditeur ne suffisent pas : un outil doit être testé sur les postes et les candidatures de l’entreprise avant d’être utilisé pour de vraies décisions. Trois méthodes complémentaires existent.</p>
+  <div class="g3">
+    <div class="card t"><span class="tag">Méthode 1</span><h3 style="margin-top:2mm">Le testing de CV appariés</h3><p>Soumettre à l’outil des CV identiques sur le fond, qui ne diffèrent que par un élément : prénom, genre grammatical, âge déductible, adresse, interruption de carrière. Comparer les scores.</p><p class="small">Transposition du « testing » utilisé pour mesurer les discriminations à l’embauche.</p></div>
+    <div class="card t"><span class="tag">Méthode 2</span><h3 style="margin-top:2mm">Le pilote en parallèle</h3><p>Pendant quelques recrutements, les recruteurs trient comme d’habitude et l’outil trie de son côté, sans effet sur les décisions. On compare : accords, désaccords, et qui a raison.</p><p class="small">Mesure aussi les taux de sélection par groupe sur de vraies candidatures.</p></div>
+    <div class="card t"><span class="tag">Méthode 3</span><h3 style="margin-top:2mm">La revue des dossiers écartés</h3><p>Relire un échantillon aléatoire de candidatures classées en bas par l’outil. Combien auraient mérité un entretien ? Pour quelles raisons ont-elles été mal notées ?</p><p class="small">Révèle les erreurs d’extraction et les proxys.</p></div>
+  </div>
+  <table style="margin-top:6mm">
+    <thead><tr><th style="width:30%">Question à l’éditeur</th><th>Pourquoi</th></tr></thead>
+    <tbody>
+      <tr><td>Sur quelles données et quelle cible le modèle a-t-il été entraîné ?</td><td>Pour savoir ce qu’il reproduit (page 14)</td></tr>
+      <tr><td>Quels résultats d’équité par groupe, sur quels postes ?</td><td>Pour connaître les écarts avant de les subir</td></tr>
+      <tr><td>Peut-on paramétrer le seuil, les variables, l’affichage du score ?</td><td>Pour organiser le contrôle humain (page 19)</td></tr>
+          </tbody>
+  </table>
+  <span class="src">Réf. H6</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Organiser la collaboration humain-machine</h2>
+  <p class="lead">L’AI Act impose un contrôle humain effectif des systèmes à haut risque. Ce contrôle ne se décrète pas : il se conçoit, dans les outils comme dans l’organisation du travail.</p>
+  <div class="g2">
+    <table><thead><tr><th style="width:38%">Choix de conception</th><th>Effet</th></tr></thead><tbody>
+      <tr><td><b>Lire avant de voir le score</b></td><td>Le recruteur se forme un avis indépendant ; réduit l’ancrage sur le score</td></tr>
+      <tr><td><b>Expliquer le score</b></td><td>Montrer les compétences prises en compte permet de repérer les erreurs</td></tr>
+      <tr><td><b>Pas de refus automatique</b></td><td>Les candidats sous le seuil sont revus par échantillon, et jamais refusés sans humain</td></tr>
+      <tr><td><b>Échantillons de contrôle</b></td><td>Revoir régulièrement des dossiers écartés, au hasard</td></tr>
+      <tr><td><b>Droit de contredire</b></td><td>Le recruteur peut retenir un candidat mal noté sans justification plus lourde</td></tr>
+      <tr><td><b>Charge de travail réaliste</b></td><td>Un contrôle humain n’existe que si le recruteur a le temps de l’exercer</td></tr>
+    </tbody></table>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Pourquoi c’est décisif</h3><p>Un « humain dans la boucle » qui valide 300 classements par jour sans les lire n’apporte aucune garantie. Il sert seulement d’alibi juridique, ce que les régulateurs examinent de plus en plus.</p></div>
+      <div class="card t"><h3>Former les recruteurs</h3><p>Comprendre ce que mesure le score, connaître ses limites et ses taux d’erreur, savoir quand ne pas le suivre. L’AI Act impose aux déployeurs de veiller à un niveau suffisant de maîtrise de l’IA de leur personnel (art. 4).</p></div>
+    </div>
+  </div>
+  <span class="src">Réf. H6</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Le cadre juridique de la présélection automatisée</h2>
+  <p class="lead">La présélection automatisée se situe au croisement de quatre ensembles de règles. L’employeur qui l’utilise en est responsable, même si l’outil est fourni par un éditeur.</p>
+  <table>
+    <thead><tr><th style="width:20%">Cadre</th><th>Obligations principales pour l’employeur</th></tr></thead>
+    <tbody>
+      <tr><td><b>AI Act</b></td><td>Système à haut risque (annexe III, point 4). Le déployeur doit notamment l’utiliser conformément à la notice, assurer un contrôle humain par des personnes compétentes, veiller à la pertinence des données qu’il fournit, surveiller le fonctionnement, conserver les journaux au moins six mois et informer les représentants du personnel et les salariés concernés avant la mise en service (art. 26). Calendrier d’application à vérifier (report discuté en 2026).</td></tr>
+      <tr><td><b>RGPD</b></td><td>Information des candidats, base légale, minimisation, analyse d’impact (AIPD) ; pas de décision fondée exclusivement sur un traitement automatisé produisant des effets significatifs, sauf exceptions encadrées (art. 22).</td></tr>
+      <tr><td><b>Code du travail</b></td><td>Information préalable du candidat sur les méthodes d’aide au recrutement et pertinence de ces méthodes (L1221-8) ; information et consultation du CSE (L2312-8, L2312-38).</td></tr>
+      <tr><td><b>Non-discrimination</b></td><td>Interdiction des discriminations directes et indirectes (L1132-1). En cas de litige, le candidat présente des éléments laissant supposer une discrimination, et l’employeur doit prouver que sa décision repose sur des éléments objectifs (L1134-1). Le Défenseur des droits peut être saisi.</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Conséquence pratique :</b> l’employeur doit pouvoir expliquer pourquoi un candidat a été écarté. « C’est l’algorithme » n’est pas une justification. Avant tout achat, exiger de l’éditeur la documentation technique, les résultats d’équité par groupe et les modalités de contrôle humain.</div>
+  <span class="src">Réf. H6</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>À retenir, activité et quiz • T2</h2>
+  <div class="g2">
+    <div class="card n"><h3>À retenir</h3><ul>
+      <li>L’adoption du ML par les recruteurs dépend autant de la confiance et de l’organisation que de l’algorithme.</li>
+      <li>Un modèle de présélection apprend ce que dit sa cible ; il ne voit jamais les candidats refusés.</li>
+      <li>Le cas Amazon montre qu’un historique déséquilibré produit un modèle discriminant, même sans variable « sexe ».</li>
+      <li>L’équité se mesure (taux de sélection, ratio d’impact, taux d’erreur) ; les critères ne sont pas tous compatibles.</li>
+      <li>Un écart se diagnostique : constater, formuler des hypothèses, chercher des preuves, agir.</li>
+    </ul></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><span class="tag s">Activité individuelle • 30 min • Réflexion</span><h3 style="margin-top:2mm">Diagnostiquer un outil de tri</h3><p>Un outil de tri de CV écarte majoritairement un groupe de candidats. À partir des données fournies, calculez les indicateurs d’équité, formulez les causes possibles, indiquez les preuves à rechercher et proposez des mesures.</p><p style="margin:0"><b>Livrable :</b> analyse structurée (document « J4-T2 Activité »).</p></div>
+      <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions de validation</h3><p style="margin:0">Adoption, cible et étiquettes, mesure de l’équité, cadre juridique.</p></div>
+    </div>
+  </div>
+</section>

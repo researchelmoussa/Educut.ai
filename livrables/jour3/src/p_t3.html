@@ -1,0 +1,188 @@
+<section class="page" data-t="T3">
+  <div class="opener">
+    <div>
+      <div class="num">T3</div>
+      <h2 style="margin-top:6mm">Calcul évolutionnaire et optimisation RH</h2>
+      <p class="lead">Construire les plannings d’un service hospitalier, affecter des intervenants à domicile, composer des équipes projet : ces problèmes RH consistent à trouver la meilleure solution parmi un nombre gigantesque de possibilités. C’est le domaine de l’optimisation.</p>
+      <p class="q">Vous devez faire le planning de 20 personnes sur une semaine, avec trois postes par jour. Combien de plannings différents sont possibles, à votre avis ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Reconnaître les problèmes d’optimisation en RH.</li><li>Formuler un problème : variables, contraintes dures et souples, objectif.</li><li>Comprendre le principe des algorithmes génétiques.</li><li>Analyser les arbitrages entre coûts, équité et préférences.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 11</b> HR evolutionary computing (Wolbeck, Köhler, pp. 207-225)</p><p style="margin:0"><b>H • Ch. 7</b> Machine learning in HR staffing (Meier, Laumer, pp. 127-148)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Les problèmes d’optimisation en RH</h2>
+  <p class="lead">Wolbeck et Köhler recensent de nombreux problèmes RH qui relèvent de l’optimisation combinatoire : il s’agit de choisir la meilleure combinaison parmi un nombre fini, mais immense, de possibilités.</p>
+  <div class="g3">
+    <div class="card t"><h3>Plannings d’équipes</h3><p>Affecter chaque personne à un poste (matin, après-midi, nuit, repos) chaque jour. Cas emblématique : le planning infirmier (<i>nurse rostering</i>).</p></div>
+    <div class="card t"><h3>Affectation</h3><p>Attribuer des personnes à des postes, des missions ou des projets selon leurs compétences, leur disponibilité et leurs souhaits.</p></div>
+    <div class="card t"><h3>Tournées</h3><p>Organiser les visites d’aides à domicile ou de techniciens : qui va chez qui, dans quel ordre, avec quels temps de trajet.</p></div>
+    <div class="card t"><h3>Constitution d’équipes</h3><p>Composer des équipes équilibrées en compétences, en expérience, en diversité.</p></div>
+    <div class="card t"><h3>Planification de formation</h3><p>Programmer des sessions en tenant compte des salles, des formateurs et de la continuité du service.</p></div>
+    <div class="card t"><h3>Plans de succession</h3><p>Choisir des parcours de mobilité qui pourvoient les postes clés tout en développant les personnes.</p></div>
+  </div>
+  <div class="key"><b>Différence avec le machine learning :</b> le machine learning <b>prédit</b> à partir du passé (combien de patients demain ?). L’optimisation <b>décide</b> la meilleure organisation sous contraintes (qui travaille demain ?). Les deux se complètent : la prévision de charge du T1 alimente l’optimisation du planning.</div>
+  <span class="src">Réf. H11</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Formuler un problème d’optimisation</h2>
+  <p class="lead">Avant tout algorithme, il faut décrire le problème avec précision. Toute formulation comporte quatre éléments. C’est ce que vous ferez dans l’activité.</p>
+  <div class="g2">
+    <div style="display:flex;flex-direction:column;gap:3mm">
+      <div class="card n"><h3>1. Variables de décision</h3><p>Ce que l’on choisit. <i>Ex. : pour chaque infirmier et chaque jour, le poste attribué (matin, après-midi, nuit, repos).</i></p></div>
+      <div class="card t"><h3>2. Contraintes dures</h3><p>Règles impératives : une solution qui les viole est inacceptable. <i>Ex. : au moins 4 infirmiers le matin ; 11 h de repos entre deux postes.</i></p></div>
+      <div class="card s"><h3>3. Contraintes souples</h3><p>Souhaits à respecter autant que possible ; chaque violation coûte une pénalité. <i>Ex. : pas plus de deux nuits d’affilée ; souhaits de repos ; week-ends équitables.</i></p></div>
+      <div class="card r"><h3>4. Fonction objectif</h3><p>Ce que l’on cherche à minimiser ou maximiser. <i>Ex. : minimiser la somme des pénalités et le coût des heures supplémentaires.</i></p></div>
+    </div>
+    <div>
+      <h3>Les contraintes légales françaises, à intégrer comme contraintes dures</h3>
+      <table><thead><tr><th>Règle</th><th>Référence</th></tr></thead><tbody>
+        <tr><td>Repos quotidien d’au moins 11 heures consécutives</td><td>C. trav., L3131-1</td></tr>
+        <tr><td>Repos hebdomadaire d’au moins 24 heures, auxquelles s’ajoutent les 11 heures de repos quotidien</td><td>C. trav., L3132-2</td></tr>
+        <tr><td>Durée quotidienne maximale de 10 heures, sauf dérogations</td><td>C. trav., L3121-18</td></tr>
+        <tr><td>Durée hebdomadaire maximale de 48 heures sur une semaine</td><td>C. trav., L3121-20</td></tr>
+      </tbody></table>
+      <div class="key"><b>Choix de gestion :</b> décider qu’une règle est « dure » ou « souple » n’est pas technique. En faire une contrainte souple, c’est accepter qu’elle soit parfois sacrifiée : cela se discute avec les équipes.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H11</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Pourquoi ces problèmes sont-ils si difficiles ?</h2>
+  <p class="lead">Retour à la question d’ouverture. Chaque personne, chaque jour, peut recevoir l’un des quatre statuts : matin, après-midi, nuit ou repos.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8mm">
+    <div class="card n" style="display:flex;flex-direction:column;justify-content:center">
+      <p style="font-family:'Space Grotesk',sans-serif;font-size:18px;margin-bottom:4mm">20 personnes × 7 jours = 140 cases</p>
+      <p style="font-family:'Space Grotesk',sans-serif;font-size:18px;margin-bottom:4mm">4 possibilités par case</p>
+      <p style="font-family:'Space Grotesk',sans-serif;font-size:30px;color:#8fe0d6;margin:0">4<sup>140</sup> ≈ 10<sup>84</sup> plannings</p>
+      <p class="small" style="color:#d7e4ee;margin-top:4mm">C’est davantage que le nombre d’atomes estimé dans l’univers observable (environ 10<sup>80</sup>). Même un ordinateur qui examinerait un milliard de plannings par seconde n’en verrait qu’une infime fraction.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Explosion combinatoire</h3><p>Ajouter une personne ou un jour multiplie le nombre de possibilités. On ne peut pas tout essayer : il faut des méthodes qui cherchent intelligemment.</p></div>
+      <div class="card t"><h3>Problèmes « NP-difficiles »</h3><p>En informatique, ces problèmes appartiennent à une classe pour laquelle on ne connaît pas de méthode garantissant de trouver la solution optimale rapidement quand la taille augmente.</p></div>
+      <div class="key" style="margin:0"><b>Conséquence pratique :</b> on se contente souvent d’une <b>très bonne</b> solution trouvée en quelques minutes, plutôt que de la meilleure solution possible qu’on mettrait des années à garantir.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H11</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Les familles de méthodes</h2>
+  <p class="lead">Plusieurs approches existent pour résoudre ces problèmes. Le choix dépend de la taille du problème, du temps disponible et du besoin de garantir l’optimum.</p>
+  <table>
+    <thead><tr><th style="width:22%">Famille</th><th style="width:38%">Principe</th><th>Usage typique</th></tr></thead>
+    <tbody>
+      <tr><td><b>Méthodes exactes</b><br><span class="small">programmation linéaire en nombres entiers</span></td><td>Modéliser le problème en équations et explorer l’espace des solutions de manière à garantir l’optimum</td><td>Problèmes de taille raisonnable, quand la preuve d’optimalité compte</td></tr>
+      <tr><td><b>Heuristiques</b></td><td>Règles simples de construction d’une solution (« affecter d’abord les postes les plus difficiles à pourvoir »)</td><td>Solution rapide de départ</td></tr>
+      <tr><td><b>Recherche locale</b><br><span class="small">recuit simulé, recherche tabou</span></td><td>Partir d’une solution et l’améliorer par petites modifications successives, en s’autorisant parfois des détériorations pour ne pas rester bloqué</td><td>Plannings, tournées</td></tr>
+      <tr><td><b>Algorithmes évolutionnaires</b><br><span class="small">dont algorithmes génétiques</span></td><td>Faire évoluer une population de solutions selon des mécanismes inspirés de la sélection naturelle</td><td>Problèmes complexes, multi-objectifs</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card r"><h3>Des « métaheuristiques »</h3><p>La recherche locale et les algorithmes évolutionnaires sont des métaheuristiques : des stratégies générales de recherche, adaptables à de nombreux problèmes, qui trouvent de bonnes solutions sans garantir l’optimum.</p></div>
+    <div class="key" style="margin:0"><b>Est-ce de l’IA ?</b> Le calcul évolutionnaire est classé dans l’intelligence artificielle au sens large (méthodes d’optimisation, jour 1, page 16). Il n’apprend pas à partir de données historiques : il cherche une solution à un problème posé.</div>
+  </div>
+  <span class="src">Réf. H11</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Le principe des algorithmes génétiques</h2>
+  <p class="lead">Les algorithmes génétiques, popularisés par John Holland dans les années 1970, imitent l’évolution : les « individus » sont des solutions, et les meilleures se reproduisent pour en produire de meilleures encore.</p>
+  <div class="flow" style="margin-bottom:6mm">
+    <div><span class="step">1 • POPULATION</span><h3 style="margin-top:1.5mm">Créer</h3><p class="small">Générer, par exemple, 100 plannings au hasard ou par heuristique.</p></div>
+    <div><span class="step">2 • ÉVALUATION</span><h3 style="margin-top:1.5mm">Noter</h3><p class="small">Calculer la « fitness » de chaque planning : pénalités pour chaque contrainte violée.</p></div>
+    <div><span class="step">3 • SÉLECTION</span><h3 style="margin-top:1.5mm">Choisir</h3><p class="small">Les meilleurs plannings ont plus de chances d’être retenus comme « parents ».</p></div>
+    <div><span class="step">4 • CROISEMENT</span><h3 style="margin-top:1.5mm">Combiner</h3><p class="small">Créer un nouveau planning en prenant la première moitié de la semaine d’un parent et la seconde de l’autre.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">5 • MUTATION</span><h3 style="margin-top:1.5mm">Modifier</h3><p class="small">Échanger au hasard deux postes, pour explorer de nouvelles solutions.</p></div>
+  </div>
+  <div class="g3">
+    <div class="card t"><h3>On recommence</h3><p>La nouvelle population remplace l’ancienne. Après des centaines de générations, les plannings s’améliorent nettement.</p></div>
+    <div class="card t"><h3>Pourquoi ça marche</h3><p>Le croisement combine de bonnes « briques » de solutions ; la mutation évite de rester enfermé dans une solution moyenne.</p></div>
+    <div class="card s"><h3>Les paramètres comptent</h3><p>Taille de la population, taux de mutation, nombre de générations : ils influencent fortement le résultat et se règlent par essais.</p></div>
+  </div>
+  <span class="src">Réf. H11</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Exemple : noter un planning infirmier</h2>
+  <p class="lead">Le cœur d’un algorithme génétique est la fonction d’évaluation. Elle traduit les règles et les priorités de l’organisation en nombres. Voici un exemple simplifié pour un service de 20 infirmiers.</p>
+  <div class="g2">
+    <table><thead><tr><th>Règle</th><th>Type</th><th>Pénalité par violation</th></tr></thead><tbody>
+      <tr><td>Effectif minimal par poste non atteint</td><td>Dure</td><td>10 000</td></tr>
+      <tr><td>Repos de 11 h non respecté</td><td>Dure</td><td>10 000</td></tr>
+      <tr><td>Infirmier non qualifié affecté en réanimation</td><td>Dure</td><td>10 000</td></tr>
+      <tr><td>Plus de deux nuits consécutives</td><td>Souple</td><td>50</td></tr>
+      <tr><td>Souhait de repos non respecté</td><td>Souple</td><td>30</td></tr>
+      <tr><td>Écart de plus d’un week-end travaillé par rapport à la moyenne</td><td>Souple</td><td>40</td></tr>
+      <tr><td>Heure supplémentaire</td><td>Coût</td><td>5</td></tr>
+    </tbody></table>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Lecture</h3><p>Les contraintes dures reçoivent une pénalité si élevée qu’aucun planning qui les viole ne peut être retenu. Les contraintes souples ont des pénalités qui expriment des <b>priorités</b> : ici, enchaîner trois nuits est jugé plus grave que refuser un souhait de repos.</p></div>
+      <div class="card s"><h3>Les pénalités sont des choix de valeurs</h3><p>Qui décide qu’un week-end inéquitable « vaut » 40 et un souhait refusé 30 ? Ces chiffres traduisent des arbitrages entre efficacité, équité et qualité de vie. Ils doivent être explicites et discutés.</p></div>
+      <div class="key" style="margin:0"><b>Intérêt pratique :</b> les travaux recensés par Wolbeck et Köhler illustrent la capacité de ces méthodes à produire rapidement des plannings qui respectent les contraintes et prennent en compte un grand nombre de préférences, ce qui est très difficile à la main.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H11</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Arbitrer entre plusieurs objectifs</h2>
+  <p class="lead">Un planning doit souvent satisfaire des objectifs contradictoires. Réduire les coûts, respecter les souhaits individuels et répartir équitablement les contraintes ne vont pas toujours ensemble.</p>
+  <div style="display:grid;grid-template-columns:118mm 1fr;gap:8mm;align-items:start">
+    <svg viewBox="0 0 420 300" width="118mm" role="img" aria-label="Front de Pareto entre coût et équité">
+      <g font-family="Source Sans 3" font-size="12" fill="#56687a">
+        <line x1="50" y1="250" x2="400" y2="250" stroke="#9fb4c2"/><line x1="50" y1="20" x2="50" y2="250" stroke="#9fb4c2"/>
+        <text x="225" y="285" text-anchor="middle">Coût (heures supplémentaires) →</text>
+        <text x="20" y="135" text-anchor="middle" transform="rotate(-90 20 135)">Inéquité entre salariés →</text>
+      </g>
+      <g fill="#cfdde3"><circle cx="230" cy="170" r="5"/><circle cx="300" cy="120" r="5"/><circle cx="260" cy="210" r="5"/><circle cx="340" cy="190" r="5"/><circle cx="180" cy="200" r="5"/><circle cx="320" cy="80" r="5"/></g>
+      <polyline fill="none" stroke="#0b7f78" stroke-width="2" points="80,60 110,110 150,160 210,200 290,225 370,238"/>
+      <g fill="#0b7f78"><circle cx="80" cy="60" r="6"/><circle cx="110" cy="110" r="6"/><circle cx="150" cy="160" r="6"/><circle cx="210" cy="200" r="6"/><circle cx="290" cy="225" r="6"/><circle cx="370" cy="238" r="6"/></g>
+      <g font-family="Source Sans 3" font-size="11.5"><text x="90" y="52" fill="#17324d">A : peu coûteux, peu équitable</text><text x="300" y="215" fill="#17324d">B : équitable, coûteux</text><text x="215" y="150" fill="#0a5f59" font-weight="700">Front de Pareto</text></g>
+    </svg>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Le front de Pareto</h3><p>Les points verts sont des plannings « non dominés » : on ne peut améliorer l’un des objectifs sans dégrader l’autre. Les points gris sont moins bons sur les deux plans. Les algorithmes évolutionnaires multi-objectifs savent produire ce front.</p></div>
+      <div class="card n"><h3>L’algorithme propose, l’organisation choisit</h3><p>Choisir entre A et B, ou un point intermédiaire, n’est pas une question technique. C’est un choix de gestion et de justice organisationnelle, qui peut être discuté avec les équipes et les représentants du personnel.</p></div>
+      <div class="key" style="margin:0"><b>Intérêt pour le dialogue social :</b> montrer le front de Pareto rend visibles les arbitrages, au lieu de les cacher dans des pénalités.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H11</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Garder l’humain dans la boucle</h2>
+  <p class="lead">Un planning touche directement la vie des salariés : horaires, week-ends, vie familiale. L’optimisation automatique doit s’accompagner de règles qui garantissent son acceptation.</p>
+  <div class="g3">
+    <div class="card t"><h3>Le planificateur garde la main</h3><p>L’outil propose ; le cadre de santé ou le chef d’équipe ajuste, notamment pour les situations que l’outil ignore (raisons personnelles, tensions dans l’équipe).</p></div>
+    <div class="card t"><h3>Transparence des règles</h3><p>Les salariés doivent connaître les règles et priorités utilisées : effectif minimal, critères d’équité, traitement des souhaits.</p></div>
+    <div class="card t"><h3>Équité vérifiable</h3><p>Publier des indicateurs : nombre de week-ends et de nuits par personne sur le trimestre, taux de souhaits respectés.</p></div>
+    <div class="card t"><h3>Stabilité</h3><p>Un planning optimal recalculé chaque jour serait invivable. Fixer des délais de prévenance et limiter les modifications.</p></div>
+    <div class="card t"><h3>Explicabilité</h3><p>Une métaheuristique ne « justifie » pas sa solution. Il faut pouvoir répondre à « pourquoi moi ce week-end ? » par les règles et les indicateurs.</p></div>
+    <div class="card t"><h3>Concertation</h3><p>L’outil modifie l’organisation du travail : information et consultation du CSE (C. trav., L2312-8).</p></div>
+  </div>
+  <div class="key"><b>Un écueil documenté :</b> des plannings générés automatiquement, modifiés à très court terme selon la charge, ont été critiqués dans le commerce et la logistique pour leur effet sur la vie personnelle des salariés. L’optimisation de la charge ne doit pas se faire au détriment de la prévisibilité.</div>
+  <span class="src">Réf. H11</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>À retenir, activité et quiz • T3</h2>
+  <div class="g2">
+    <div class="card n"><h3>À retenir</h3><ul>
+      <li>Plannings, affectations, tournées, équipes : de nombreux problèmes RH relèvent de l’optimisation combinatoire.</li>
+      <li>Une formulation comprend des variables, des contraintes dures, des contraintes souples et une fonction objectif.</li>
+      <li>L’explosion combinatoire impose des méthodes de recherche intelligentes, dont les algorithmes génétiques.</li>
+      <li>Les pénalités et objectifs traduisent des choix de valeurs : coûts, équité, qualité de vie.</li>
+      <li>L’algorithme propose ; l’humain ajuste, explique et concerte.</li>
+    </ul></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><span class="tag s">Activité individuelle • 30 min • Réflexion</span><h3 style="margin-top:2mm">Formuler un problème de planning</h3><p>Pour le magasin décrit dans le document, formulez le problème de planning (variables, contraintes dures, contraintes souples avec pénalités, objectif), puis discutez en 250 mots les arbitrages d’équité que votre formulation implique.</p><p style="margin:0"><b>Livrable :</b> formulation et réflexion (document « J3-T3 Activité »).</p></div>
+      <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions de validation</h3><p style="margin:0">Formulation, contraintes, algorithmes génétiques, arbitrages.</p></div>
+    </div>
+  </div>
+</section>

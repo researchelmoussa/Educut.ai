@@ -1,0 +1,907 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Space+Grotesk:wght@500;700&display=swap"><style>@page{size:A4 landscape;margin:0}
+:root{--navy:#17324d;--teal:#0b7f78;--teal-l:#dff1ee;--sand:#fbeedd;--sand-d:#8a4d0f;--row:#eef4f6;--line:#cfdde3;--fg:#1a2b3c;--muted:#56687a}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Source Sans 3","Segoe UI",sans-serif;color:var(--fg);font-size:15px;line-height:1.45;background:#fff}
+.page{width:297mm;height:210mm;position:relative;overflow:hidden;page-break-after:always;padding:22mm 16mm 16mm}
+.page .hd{position:absolute;top:0;left:0;right:0;height:13mm;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 16mm;font-size:10.5px;letter-spacing:.04em}
+.page .hd b{color:#8fe0d6;font-weight:700}
+.page .ft{position:absolute;bottom:6mm;left:16mm;right:16mm;display:flex;justify-content:space-between;font-size:9.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:2mm}
+h1,h2,h3{font-family:"Space Grotesk","Segoe UI",sans-serif;margin:0;color:var(--navy);text-wrap:balance}
+h2{font-size:28px;line-height:1.15;margin-bottom:3mm}
+h2 + .lead{margin-top:0}
+h3{font-size:16px;color:var(--teal);margin-bottom:2mm}
+.lead{font-size:16.5px;color:var(--muted);margin:0 0 5mm;max-width:230mm}
+p{margin:0 0 2.5mm}
+ul,ol{margin:0;padding-left:5mm}
+li{margin-bottom:1.6mm}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:7mm}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm}
+.g6{display:grid;grid-template-columns:repeat(6,1fr);gap:3mm}
+.card{border:1px solid var(--line);border-radius:3px;padding:4mm;background:#fff}
+.card.t{border-top:3px solid var(--teal)}
+.card.n{background:var(--navy);color:#fff;border:none}
+.card.n h3{color:#8fe0d6}
+.card.s{background:var(--sand);border-color:#efd6b5}
+.card.s h3{color:var(--sand-d)}
+.card.r{background:var(--row)}
+.key{background:var(--teal-l);border-left:4px solid var(--teal);padding:3mm 4mm;margin-top:4mm}
+.key b{color:#0a5f59}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{background:var(--navy);color:#fff;text-align:left;padding:2.2mm 3mm}
+td{border-top:1px solid var(--line);padding:2.2mm 3mm;vertical-align:top}
+tbody tr:nth-child(even) td{background:var(--row)}
+.src{position:absolute;bottom:13mm;right:16mm;font-size:10px;color:var(--teal);font-weight:700}
+.tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:.6mm 2mm;border-radius:2px;background:var(--teal-l);color:#0a5f59}
+.tag.s{background:var(--sand);color:var(--sand-d)}
+.big{font-family:"Space Grotesk",sans-serif;font-size:30px;font-weight:700;color:var(--teal);line-height:1}
+.flow{display:flex;gap:3mm;align-items:stretch}
+.flow>div{flex:1;border:1px solid var(--line);border-radius:3px;padding:3mm;background:var(--row);position:relative}
+.flow>div:not(:last-child)::after{content:"›";position:absolute;right:-3.2mm;top:40%;font-size:18px;color:var(--teal);font-weight:700}
+.step{font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--teal);font-size:12px}
+.tl{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border-top:3px solid var(--teal);margin-top:8mm}
+.tl>div{padding:3mm 2.5mm 0;position:relative;font-size:13.5px}
+.tl>div::before{content:"";position:absolute;top:-2.6mm;left:2.5mm;width:4mm;height:4mm;border-radius:50%;background:#fff;border:2px solid var(--teal)}
+.tl .y{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:17px;color:var(--navy);margin-bottom:1mm}
+.small{font-size:12.5px;color:var(--muted)}
+.opener{display:grid;grid-template-columns:1.1fr 1fr;gap:10mm;height:100%}
+.opener .num{font-family:"Space Grotesk",sans-serif;font-size:80px;font-weight:700;color:var(--teal-l);line-height:.9;-webkit-text-stroke:1.5px var(--teal)}
+.opener h2{font-size:32px}
+.q{font-family:"Space Grotesk",sans-serif;font-size:18px;color:var(--navy);border-left:4px solid var(--sand-d);padding-left:4mm;margin-top:6mm}
+.cover{background:var(--navy);color:#fff;padding:0}
+.cover .in{padding:30mm 22mm;height:100%;display:flex;flex-direction:column;justify-content:space-between}
+.cover h1{color:#fff;font-size:42px;line-height:1.08;max-width:220mm}
+.cover .k{color:#8fe0d6;font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
+.cover .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5mm}
+.cover .grid div{border-top:2px solid #8fe0d6;padding-top:3mm;font-size:13px}
+.cover .grid b{display:block;font-family:"Space Grotesk",sans-serif;font-size:12px;color:#8fe0d6}
+.bar{height:6mm;background:var(--teal);border-radius:2px}
+.lvl{display:grid;grid-template-columns:repeat(5,1fr);gap:3mm;align-items:end}
+.lvl>div{border:1px solid var(--line);border-radius:3px;padding:3mm;background:#fff}
+.mx{display:grid;grid-template-columns:22mm 1fr 1fr;grid-template-rows:auto 1fr 1fr;gap:2mm;height:100mm}
+.mx .c{border-radius:3px;padding:3mm;font-size:12px}
+</style></head><body><section class="page cover">
+  <div class="in">
+    <div>
+      <p class="k">Intelligence artificielle et transformation numérique en GRH • Fascicule de cours</p>
+      <h1 style="margin-top:8mm">Jour 5<br>Développement et gestion des talents</h1>
+      <p style="font-size:16px;margin-top:6mm;max-width:210mm;color:#d7e4ee">6 heures • 4 thématiques de 1 h 30 • Cours, activités individuelles à rendre et quiz de validation</p>
+    </div>
+    <div class="grid">
+      <div><b>MATIN • T1</b>Formation et développement</div>
+      <div><b>MATIN • T2</b>Gestion des talents</div>
+      <div><b>APRÈS-MIDI • T3</b>Analytique prédictive : engagement et attrition</div>
+      <div><b>APRÈS-MIDI • T4</b>Affective computing et expérience collaborateur</div>
+    </div>
+    <p class="small" style="color:#9db0bf">Lectures : Eubanks, <i>Artificial Intelligence for HR</i> (2022), ch. 6 et 7 • Strohmeier (dir.), <i>Handbook of Research on AI in HRM</i> (2022), ch. 2, 4, 5, 12 et 13.</p>
+  </div>
+</section>
+
+<section class="page" data-t="T0">
+  <h2>Programme et objectifs de la journée</h2>
+  <p class="lead">Après le recrutement, place au salarié en poste : comment il apprend, comment on reconnaît et développe ses talents, comment on anticipe son départ, et jusqu’où l’on peut aller dans la mesure de son état émotionnel.</p>
+  <table>
+    <thead><tr><th style="width:17%">Créneau</th><th style="width:30%">Thématique</th><th>Activité individuelle à rendre</th><th style="width:16%">Lectures</th></tr></thead>
+    <tbody>
+      <tr><td><b>Matin • T1</b><br><span class="small">50 + 30 + 10 min</span></td><td>Formation et développement</td><td>Concevoir un parcours de formation personnalisé assisté par l’IA pour un profil donné</td><td>E6, H12</td></tr>
+      <tr><td><b>Matin • T2</b><br><span class="small">50 + 30 + 10 min</span></td><td>Gestion des talents</td><td>Prendre position : l’IA peut-elle évaluer la performance plus équitablement qu’un manager ?</td><td>E7, H2</td></tr>
+      <tr><td><b>Après-midi • T3</b><br><span class="small">50 + 30 + 10 min</span></td><td>Analytique prédictive : engagement et attrition</td><td>Interpréter les résultats d’un modèle de risque de départ et proposer un plan d’action</td><td>E7, H2, H5</td></tr>
+      <tr><td><b>Après-midi • T4</b><br><span class="small">50 + 30 + 10 min</span></td><td>Affective computing et expérience collaborateur</td><td>Analyser un dispositif de suivi du bien-être : bénéfices, risques, proportionnalité</td><td>H13, H4</td></tr>
+    </tbody>
+  </table>
+  <div class="g3" style="margin-top:6mm">
+    <div class="card t"><h3>À la fin de la journée, vous saurez…</h3><ul><li>situer l’IA dans le cycle de formation et dans la gestion des talents ;</li><li>lire les résultats d’un modèle prédictif de départ.</li></ul></div>
+    <div class="card t"><h3>…et vous pourrez</h3><ul><li>concevoir un parcours personnalisé et argumenter sur l’équité des évaluations ;</li><li>juger la proportionnalité d’un dispositif de suivi du bien-être.</li></ul></div>
+    <div class="card s"><h3>Évaluation du jour</h3><ul><li>4 livrables individuels, rendus en fin de séance ou sous 48 h ;</li><li>4 quiz de 8 questions, corrigés en séance.</li></ul></div>
+  </div>
+</section>
+
+<section class="page" data-t="T1">
+  <div class="opener">
+    <div>
+      <div class="num">T1</div>
+      <h2 style="margin-top:6mm">Formation et développement</h2>
+      <p class="lead">Les compétences vieillissent vite et les budgets de formation restent limités. L’IA promet des parcours adaptés à chacun, des contenus produits en quelques heures et des tuteurs disponibles à toute heure. Reste à savoir si l’on apprend mieux.</p>
+      <p class="q">Quelle est la dernière formation professionnelle qui vous a vraiment servi ? Qu’est-ce qui l’a rendue utile ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Situer l’IA à chaque étape du cycle de formation.</li><li>Expliquer la personnalisation, les recommandations et l’apprentissage adaptatif.</li><li>Utiliser l’IA générative et les tuteurs virtuels avec des garde-fous.</li><li>Mesurer l’efficacité d’une formation.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>E • Ch. 6</b> Learning and development (pp. 109-130)</p><p style="margin:0"><b>H • Ch. 12</b> HR natural language processing – conversational agents in HRM (Laumer, Morana, pp. 226-242)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Le cycle de la formation et la place de l’IA</h2>
+  <p class="lead">La formation suit un cycle en quatre temps. Eubanks montre que l’IA peut intervenir à chacun d’eux ; l’enjeu est de savoir où elle apporte réellement de la valeur.</p>
+  <div class="flow">
+    <div><span class="step">1 • ANALYSER</span><h3>Les besoins</h3><p class="small" style="margin:0">Écarts entre compétences détenues et compétences requises, aujourd’hui et demain</p></div>
+    <div><span class="step">2 • CONCEVOIR</span><h3>Les dispositifs</h3><p class="small" style="margin:0">Objectifs, contenus, modalités, parcours</p></div>
+    <div><span class="step">3 • DÉPLOYER</span><h3>L’apprentissage</h3><p class="small" style="margin:0">Présentiel, distanciel, en situation de travail, accompagnement</p></div>
+    <div><span class="step">4 • ÉVALUER</span><h3>Les effets</h3><p class="small" style="margin:0">Satisfaction, acquis, transfert au poste, résultats</p></div>
+  </div>
+  <table style="margin-top:5mm">
+    <thead><tr><th style="width:16%">Étape</th><th style="width:44%">Apports possibles de l’IA</th><th>Point de vigilance</th></tr></thead>
+    <tbody>
+      <tr><td><b>Analyser</b></td><td>Inférence des compétences à partir des CV, des postes et des projets ; cartographie des écarts</td><td>Une compétence inférée n’est pas une compétence démontrée</td></tr>
+      <tr><td><b>Concevoir</b></td><td>Génération de scénarios, de quiz, de cas, de traductions ; recommandation de ressources</td><td>Exactitude, droits d’auteur, qualité pédagogique</td></tr>
+      <tr><td><b>Déployer</b></td><td>Parcours adaptatifs, rappels espacés, tuteurs conversationnels</td><td>Charge de travail, temps réellement dégagé pour apprendre</td></tr>
+      <tr><td><b>Évaluer</b></td><td>Analyse des traces d’apprentissage, des commentaires, corrélation avec des indicateurs métier</td><td>Surveillance, confusion entre activité et apprentissage</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Cadre français :</b> l’employeur doit assurer l’adaptation des salariés à leur poste et veiller à leur employabilité (C. trav., L6321-1) ; l’entretien professionnel, tous les deux ans, porte sur les perspectives d’évolution (L6315-1). L’IA outille ces obligations, elle ne les remplace pas.</div>
+  <span class="src">Réf. E6</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Analyser les besoins en compétences</h2>
+  <p class="lead">Le premier apport de l’IA est de donner une vision des compétences à grande échelle. Les outils d’« inférence de compétences » lisent les documents existants et en déduisent ce que chaque salarié sait probablement faire.</p>
+  <div class="g2">
+    <div>
+      <h3>Comment fonctionne l’inférence</h3>
+      <ol>
+        <li><b>Collecte :</b> CV, fiches de poste, historique de formations, descriptions de projets, parfois profils professionnels publics.</li>
+        <li><b>Extraction :</b> le traitement du langage repère des compétences (jour 2, T1).</li>
+        <li><b>Normalisation :</b> rattachement à un référentiel (ESCO, ROME, référentiel interne).</li>
+        <li><b>Inférence :</b> déduction de compétences voisines (« qui maîtrise X maîtrise souvent Y »).</li>
+        <li><b>Comparaison :</b> écart avec les compétences requises par le poste ou par la stratégie.</li>
+      </ol>
+      <div class="key"><b>Usage pertinent :</b> une vue collective (par métier, par site) pour orienter le plan de développement des compétences, plutôt qu’un verdict sur chaque personne.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Ce que l’outil apporte</h3><ul><li>Un inventaire impossible à réaliser à la main pour des milliers de salariés.</li><li>La détection de compétences « cachées » utiles à la mobilité.</li><li>Une base commune pour discuter avec les managers.</li></ul></div>
+      <div class="card s"><h3>Ses limites</h3><ul><li>Les documents décrivent mal le travail réel, surtout pour les métiers de terrain.</li><li>Une inférence peut être fausse ; le niveau de maîtrise est rarement connu.</li><li>Les salariés qui écrivent bien semblent plus compétents.</li></ul></div>
+      <div class="card n"><h3>Bonne pratique</h3><p style="margin:0">Le salarié voit les compétences qui lui sont attribuées, les corrige et les complète ; le manager les valide lors de l’entretien professionnel.</p></div>
+    </div>
+  </div>
+  <span class="src">Réf. E6, E7</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Personnaliser les parcours : plateformes et recommandations</h2>
+  <p class="lead">Les plateformes d’apprentissage sont passées d’un catalogue imposé à une logique de recommandation, sur le modèle des plateformes de vidéo ou de musique.</p>
+  <table>
+    <thead><tr><th style="width:20%"></th><th style="width:40%">LMS (Learning Management System)</th><th>LXP (Learning Experience Platform)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Logique</b></td><td>Gérer : inscriptions, obligations, traçabilité</td><td>Engager : découvrir, choisir, apprendre en continu</td></tr>
+      <tr><td><b>Contenus</b></td><td>Catalogue interne, formations validées</td><td>Contenus internes et externes, courts, variés</td></tr>
+      <tr><td><b>Rôle de l’IA</b></td><td>Limité : relances, rapports</td><td>Central : recommandations selon le poste, les compétences visées, l’historique</td></tr>
+    </tbody>
+  </table>
+  <div class="g3" style="margin-top:5mm">
+    <div class="card t"><h3>Les signaux utilisés</h3><ul><li>Poste et compétences cibles</li><li>Formations suivies et abandonnées</li><li>Choix de collègues au profil proche (filtrage collaboratif, jour 4)</li><li>Objectifs déclarés par le salarié</li></ul></div>
+    <div class="card s"><h3>Les risques</h3><ul><li><b>Effet de popularité :</b> on recommande ce qui est déjà beaucoup suivi.</li><li><b>Facilité :</b> les contenus courts et distrayants l’emportent sur les contenus exigeants.</li><li><b>Enfermement :</b> on ne propose que ce qui ressemble au passé.</li></ul></div>
+    <div class="card n"><h3>Garde-fous</h3><ul><li>Recommandations liées à des objectifs de compétences explicites</li><li>Part réservée à la découverte</li><li>Choix final laissé au salarié et au manager</li></ul></div>
+  </div>
+  <div class="key"><b>À retenir :</b> une recommandation pertinente se mesure à la compétence acquise, pas au nombre de clics ou de minutes passées sur la plateforme.</div>
+  <span class="src">Réf. E6</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Apprentissage adaptatif et ancrage des connaissances</h2>
+  <p class="lead">Un système adaptatif ajuste en temps réel la difficulté, l’ordre et le rythme des contenus selon les réponses de l’apprenant. Il s’appuie sur des résultats solides de la psychologie cognitive.</p>
+  <div class="g2">
+    <div>
+      <svg viewBox="0 0 460 230" width="100%" role="img" aria-label="Courbe d’oubli sans rappel et avec rappels espacés">
+        <g font-family="Source Sans 3" font-size="12">
+          <line x1="40" y1="20" x2="40" y2="190" stroke="#56687a"/><line x1="40" y1="190" x2="450" y2="190" stroke="#56687a"/>
+          <text x="10" y="30" fill="#56687a">100 %</text><text x="20" y="190" fill="#56687a">0</text>
+          <text x="400" y="210" fill="#56687a">Temps</text>
+          <path d="M40,25 C80,110 140,150 450,172" fill="none" stroke="#8a4d0f" stroke-width="3"/>
+          <path d="M40,25 C60,70 80,85 100,90 L100,30 C130,60 160,70 190,72 L190,30 C240,50 280,55 320,57 L320,30 C370,42 410,45 450,46" fill="none" stroke="#0b7f78" stroke-width="3"/>
+          <text x="250" y="148" fill="#8a4d0f" font-weight="700">sans rappel</text>
+          <text x="330" y="28" fill="#0b7f78" font-weight="700">avec rappels espacés</text>
+        </g>
+      </svg>
+      <p class="small">Courbe d’oubli décrite par Ebbinghaus (1885) : sans réactivation, une large part de ce qui est appris s’efface en quelques jours. Chaque rappel au bon moment ralentit l’oubli.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:3mm">
+      <div class="card t"><h3>Ce que fait l’IA</h3><ul><li><b>Diagnostic initial :</b> elle évite de refaire ce qui est maîtrisé.</li><li><b>Répétition espacée :</b> elle programme les rappels quand le risque d’oubli augmente.</li><li><b>Pratique de récupération :</b> elle interroge plutôt que de faire relire.</li><li><b>Remédiation :</b> elle propose une autre explication après une erreur.</li></ul></div>
+      <div class="card s"><h3>Conditions d’efficacité</h3><ul><li>Des objectifs et des items d’évaluation de qualité, conçus par des experts.</li><li>Du temps de formation reconnu sur le temps de travail.</li><li>Des contenus adaptés aux savoirs ; plus limités pour les savoir-être et les gestes.</li></ul></div>
+    </div>
+  </div>
+  <div class="key"><b>Micro-learning :</b> des séquences de quelques minutes facilitent les rappels, mais ne remplacent pas les formations longues nécessaires aux compétences complexes.</div>
+  <span class="src">Réf. E6</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>L’IA générative pour concevoir des contenus</h2>
+  <p class="lead">Concevoir une heure de formation en ligne demandait traditionnellement plusieurs dizaines d’heures de travail. L’IA générative réduit fortement ce temps, à condition de garder l’expertise pédagogique et métier aux commandes.</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Usage</th><th>Gain</th><th>Risque principal</th></tr></thead>
+        <tbody>
+          <tr><td>Plan et objectifs pédagogiques</td><td>Premier jet rapide</td><td>Objectifs vagues, non mesurables</td></tr>
+          <tr><td>Quiz et études de cas</td><td>Volume, variété</td><td>Réponses fausses, distracteurs absurdes</td></tr>
+          <tr><td>Synthèses de procédures internes</td><td>Mise à jour rapide</td><td>Fuite de documents confidentiels</td></tr>
+          <tr><td>Traduction, sous-titres</td><td>Accessibilité, international</td><td>Termes techniques mal rendus</td></tr>
+          <tr><td>Vidéos avec avatar et voix de synthèse</td><td>Coût de production</td><td>Droit à l’image, consentement des personnes clonées</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><h3>Les erreurs générées</h3><p style="margin:0">Une règle juridique inventée ou périmée dans un module de formation sera répétée à des centaines de salariés. La relecture par un expert métier est obligatoire avant diffusion.</p></div>
+      <div class="card n"><h3>Grille de relecture en cinq points</h3><ol><li>Exactitude des faits, chiffres et références</li><li>Alignement sur les objectifs pédagogiques</li><li>Adaptation au public et au contexte de l’entreprise</li><li>Langage inclusif et exemples variés</li><li>Droits : sources, images, voix, données utilisées</li></ol></div>
+    </div>
+  </div>
+  <div class="key"><b>Règle d’usage :</b> ne pas saisir de données personnelles ou confidentielles dans un outil non validé par l’entreprise (jour 3) ; mentionner l’usage de l’IA dans la conception lorsque c’est pertinent.</div>
+  <span class="src">Réf. E6</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Tuteurs et coachs virtuels</h2>
+  <p class="lead">Laumer et Morana montrent que les agents conversationnels se diffusent dans de nombreux processus RH. En formation, ils jouent trois rôles : répondre, entraîner et accompagner.</p>
+  <div class="g3">
+    <div class="card t"><span class="tag">Répondre</span><h3 style="margin-top:2mm">Tuteur de contenu</h3><p>Explique une notion, reformule, donne un exemple, renvoie vers la bonne ressource, à toute heure.</p><p class="small" style="margin:0">Ex. : assistant d’un module sur la paie qui répond aux questions des gestionnaires.</p></div>
+    <div class="card t"><span class="tag">Entraîner</span><h3 style="margin-top:2mm">Partenaire de simulation</h3><p>Joue un client mécontent, un candidat, un collaborateur en difficulté ; donne un retour sur la conduite de l’échange.</p><p class="small" style="margin:0">Ex. : entraînement d’un nouveau manager à l’entretien annuel.</p></div>
+    <div class="card t"><span class="tag">Accompagner</span><h3 style="margin-top:2mm">Coach</h3><p>Aide à fixer des objectifs, relance, propose des exercices de réflexion entre deux séances avec un coach humain.</p><p class="small" style="margin:0">Ex. : suivi d’un plan de développement individuel.</p></div>
+  </div>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card r"><h3>Facteurs d’acceptation (H12)</h3><ul><li>Utilité perçue et facilité d’usage</li><li>Qualité et cohérence des réponses</li><li>Confiance : confidentialité des échanges, absence de jugement</li><li>Possibilité de joindre un humain</li></ul></div>
+    <div class="card s"><h3>Règles à fixer</h3><ul><li>Indiquer clairement qu’il s’agit d’un système automatisé (AI Act, art. 50).</li><li>Préciser si les échanges sont conservés et qui peut les lire.</li><li>Ne pas utiliser les conversations pour évaluer le salarié à son insu.</li></ul></div>
+  </div>
+  <span class="src">Réf. H12, E6</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Mesurer l’efficacité d’une formation</h2>
+  <p class="lead">Le modèle de Kirkpatrick distingue quatre niveaux d’évaluation. L’IA facilite surtout la mesure des deux premiers ; les plus importants restent les plus difficiles à établir.</p>
+  <table>
+    <thead><tr><th style="width:17%">Niveau</th><th style="width:28%">Question</th><th style="width:30%">Ce que l’IA peut apporter</th><th>Limite</th></tr></thead>
+    <tbody>
+      <tr><td><b>1. Réaction</b></td><td>Les participants sont-ils satisfaits ?</td><td>Analyse automatique des commentaires libres (jour 2)</td><td>Satisfaction n’est pas apprentissage</td></tr>
+      <tr><td><b>2. Apprentissage</b></td><td>Ont-ils acquis les connaissances visées ?</td><td>Évaluations adaptatives, analyse des erreurs fréquentes</td><td>Les savoirs se mesurent mieux que les savoir-faire</td></tr>
+      <tr><td><b>3. Comportement</b></td><td>Appliquent-ils au poste ?</td><td>Rapprochement avec des indicateurs de travail, enquêtes auprès des managers</td><td>Le transfert dépend de l’environnement de travail</td></tr>
+      <tr><td><b>4. Résultats</b></td><td>Quel effet sur l’organisation ?</td><td>Comparaison de groupes formés et non formés</td><td>Nombreux facteurs, causalité difficile</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card s"><h3>Piège : mesurer l’activité</h3><p style="margin:0">Minutes passées, modules terminés, connexions : ces indicateurs sont faciles à produire mais ne disent rien de l’apprentissage. Ils peuvent aussi glisser vers la surveillance individuelle.</p></div>
+    <div class="key" style="margin:0"><b>Bonne pratique :</b> définir dès la conception l’indicateur de niveau 3 ou 4 visé (par exemple, baisse des erreurs de saisie de paie), et analyser les données d’apprentissage à un niveau agrégé.</div>
+  </div>
+  <span class="src">Réf. E6</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>À retenir, activité et quiz • T1</h2>
+  <div class="g3">
+    <div class="card n" style="grid-column:span 2"><h3>Les idées clés</h3><ul>
+      <li>L’IA intervient à chaque étape du cycle : analyse des besoins, conception, déploiement, évaluation.</li>
+      <li>L’inférence de compétences donne une vue collective utile, à faire valider par les salariés.</li>
+      <li>Recommandation et apprentissage adaptatif personnalisent les parcours ; leur succès se mesure en compétences acquises.</li>
+      <li>L’IA générative accélère la conception, mais un expert relit tout contenu avant diffusion.</li>
+      <li>Les tuteurs virtuels répondent, entraînent et accompagnent, avec transparence et confidentialité.</li>
+    </ul></div>
+    <div class="card r"><h3>Littératie en IA</h3><p style="margin:0">Depuis février 2025, l’AI Act (art. 4) impose aux entreprises qui utilisent des systèmes d’IA de veiller à un niveau suffisant de maîtrise de l’IA chez leur personnel. La fonction formation est en première ligne.</p></div>
+    <div class="card s" style="grid-column:span 2"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Concevoir un parcours de formation personnalisé assisté par l’IA</h3><p>Pour le profil décrit dans le document (une gestionnaire de paie qui évolue vers un poste de contrôleuse SIRH), construisez un parcours en cinq étapes en précisant, à chaque étape, le rôle de l’IA, le rôle des humains et l’indicateur d’efficacité.</p><p style="margin:0"><b>Livrable :</b> parcours détaillé (document « J5-T1 Activité »).</p></div>
+    <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions</h3><p style="margin:0">Cycle de formation, personnalisation, adaptatif, IA générative, mesure de l’efficacité.</p></div>
+  </div>
+</section>
+
+<section class="page" data-t="T2">
+  <div class="opener">
+    <div>
+      <div class="num">T2</div>
+      <h2 style="margin-top:6mm">Gestion des talents</h2>
+      <p class="lead">Évaluer la performance, repérer les potentiels, préparer les successions : ces décisions orientent les carrières. Elles reposent souvent sur le jugement de quelques managers. L’IA promet plus d’objectivité ; elle peut aussi rendre les biais plus discrets et plus systématiques.</p>
+      <p class="q">Avez-vous déjà eu le sentiment qu’une évaluation, la vôtre ou celle d’un collègue, était injuste ? Sur quoi reposait ce sentiment ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Décrire les processus de gestion des talents et les usages de l’IA.</li><li>Comparer entretien annuel et gestion continue de la performance.</li><li>Analyser l’identification des potentiels et les plans de succession.</li><li>Discuter l’équité des évaluations humaines et algorithmiques.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>E • Ch. 7</b> Talent management (p. 131 et suiv.)</p><p style="margin:0"><b>H • Ch. 2</b> HR machine learning – an introduction (Strohmeier, pp. 25-45)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Les processus de gestion des talents</h2>
+  <p class="lead">Eubanks présente la gestion des talents comme un ensemble de processus reliés, qui accompagnent le salarié de son arrivée à son départ. L’IA s’y insère par touches successives.</p>
+  <table>
+    <thead><tr><th style="width:20%">Processus</th><th style="width:34%">Question de gestion</th><th>Usages d’IA observés</th></tr></thead>
+    <tbody>
+      <tr><td><b>Performance</b></td><td>Le salarié atteint-il ses objectifs ?</td><td>Suivi des objectifs, synthèse des retours, aide à la rédaction des évaluations</td></tr>
+      <tr><td><b>Feedback</b></td><td>Comment l’aider à progresser ?</td><td>Analyse des retours à 360°, suggestions de formulation</td></tr>
+      <tr><td><b>Potentiel</b></td><td>Qui peut évoluer vers des responsabilités plus larges ?</td><td>Scores de potentiel, détection de profils « à haut potentiel »</td></tr>
+      <tr><td><b>Développement</b></td><td>Quelles compétences acquérir ?</td><td>Recommandations de formations et de missions (T1, jour 4)</td></tr>
+      <tr><td><b>Succession</b></td><td>Qui pourra occuper les postes clés demain ?</td><td>Identification des viviers, estimation de la « disponibilité »</td></tr>
+      <tr><td><b>Rétention</b></td><td>Qui risque de partir, et pourquoi ?</td><td>Modèles de prédiction des départs (T3)</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card t"><h3>Ce qui change avec l’IA</h3><p style="margin:0">Des décisions autrefois prises une fois par an, par quelques personnes, peuvent être éclairées en continu par des données nombreuses.</p></div>
+    <div class="card s"><h3>Ce qui est en jeu</h3><p style="margin:0">Rémunération, promotion, accès à la formation, maintien dans l’emploi : ces usages relèvent de la catégorie « haut risque » de l’AI Act (page 20).</p></div>
+  </div>
+  <span class="src">Réf. E7</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>De l’entretien annuel à la gestion continue de la performance</h2>
+  <p class="lead">Depuis les années 2010, de nombreuses entreprises ont allégé ou supprimé l’entretien annuel de notation au profit d’échanges plus fréquents. Les outils numériques ont accompagné ce mouvement.</p>
+  <table>
+    <thead><tr><th style="width:20%"></th><th style="width:40%">Entretien annuel classique</th><th>Gestion continue de la performance</th></tr></thead>
+    <tbody>
+      <tr><td><b>Fréquence</b></td><td>Une fois par an</td><td>Points réguliers (mensuels ou trimestriels)</td></tr>
+      <tr><td><b>Objectifs</b></td><td>Fixés en début d’année</td><td>Révisés en cours d’année, parfois sous forme d’OKR</td></tr>
+      <tr><td><b>Orientation</b></td><td>Bilan et notation</td><td>Progression et développement</td></tr>
+      <tr><td><b>Sources</b></td><td>Le manager</td><td>Manager, pairs, clients internes, auto-évaluation</td></tr>
+      <tr><td><b>Faiblesse</b></td><td>Effet de récence, lourdeur, faible utilité perçue</td><td>Charge pour les managers, dispersion des données</td></tr>
+    </tbody>
+  </table>
+  <div class="g3" style="margin-top:5mm">
+    <div class="card t"><h3>Préparer</h3><p style="margin:0">L’outil rassemble les objectifs, les retours reçus et les réalisations de la période, et propose une trame d’échange.</p></div>
+    <div class="card t"><h3>Rédiger</h3><p style="margin:0">L’IA générative aide à formuler une synthèse claire et factuelle, que le manager relit et assume.</p></div>
+    <div class="card t"><h3>Suivre</h3><p style="margin:0">Rappels, suivi des engagements, repérage des objectifs restés sans nouvelles.</p></div>
+  </div>
+  <div class="key"><b>Vigilance :</b> une synthèse générée à partir des traces numériques valorise ce qui laisse des traces. Le travail invisible (entraide, gestion de crise, transmission) doit être ajouté par le manager.</div>
+  <span class="src">Réf. E7</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Le feedback augmenté par l’IA</h2>
+  <p class="lead">Le feedback est l’un des leviers les plus puissants du développement, à condition d’être précis, fréquent et orienté vers l’action. Le traitement du langage permet d’analyser les retours et d’aider à les formuler.</p>
+  <div class="g2">
+    <div>
+      <h3>Trois usages</h3>
+      <div class="card r" style="margin-bottom:3mm"><b>Analyser des retours à 360°</b><p class="small" style="margin:0">Regrouper par thèmes des dizaines de commentaires, repérer les points forts et les axes de progrès récurrents.</p></div>
+      <div class="card r" style="margin-bottom:3mm"><b>Aider à formuler</b><p class="small" style="margin:0">Reformuler un retour trop vague ou blessant en un retour factuel : situation, comportement observé, effet, piste d’action.</p></div>
+      <div class="card r"><b>Repérer les biais de langage</b><p class="small" style="margin:0">Signaler les termes liés à la personnalité plutôt qu’au travail, ou des écarts systématiques entre groupes.</p></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Un constat de recherche</h3><p style="margin:0">Analysant des évaluations dans des entreprises technologiques, Correll et Simard (2016) observent que les femmes reçoivent plus souvent des retours vagues et moins liés à des résultats précis que les hommes. Un outil peut aider à repérer ces écarts, à l’échelle de l’organisation.</p></div>
+      <div class="card s"><h3>Risques</h3><ul><li>Des retours générés, polis et interchangeables, qui perdent leur valeur.</li><li>L’analyse des commentaires utilisée pour noter les salariés à leur insu.</li><li>La fin de l’anonymat des retours à 360° si les textes sont trop identifiables.</li></ul></div>
+    </div>
+  </div>
+  <div class="key"><b>Principe :</b> l’IA aide à donner un meilleur feedback ; elle ne donne pas le feedback à la place du manager.</div>
+  <span class="src">Réf. E7</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Identifier les potentiels</h2>
+  <p class="lead">La matrice « performance × potentiel », souvent appelée 9-box, reste l’outil le plus répandu des revues de talents. Des modèles de machine learning prétendent aujourd’hui prédire le potentiel.</p>
+  <div class="g2">
+    <div>
+      <div style="display:grid;grid-template-columns:18mm repeat(3,1fr);gap:2mm;font-size:12px">
+        <div style="writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;font-weight:700;color:#17324d;grid-row:span 3">POTENTIEL</div>
+        <div class="card r">Énigme<br><span class="small">potentiel élevé, performance faible</span></div><div class="card t">Futur talent</div><div class="card n">Haut potentiel</div>
+        <div class="card r">À accompagner</div><div class="card r">Contributeur clé</div><div class="card t">Futur talent</div>
+        <div class="card s">Performance insuffisante</div><div class="card r">Professionnel efficace</div><div class="card r">Expert</div>
+        <div></div><div style="grid-column:span 3;text-align:center;font-weight:700;color:#17324d">PERFORMANCE</div>
+      </div>
+      <p class="small" style="margin-top:3mm">La performance porte sur le passé ; le potentiel est une prédiction sur l’avenir, définie de façon variable selon les entreprises.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:3mm">
+      <div class="card t"><h3>Ce que fait un modèle</h3><p style="margin:0">Il apprend, à partir des salariés déjà classés « haut potentiel » ou promus, les caractéristiques qui les distinguent, puis attribue un score aux autres.</p></div>
+      <div class="card s"><h3>Le problème de la cible</h3><p style="margin:0">Comme en recrutement (jour 4), le modèle apprend les jugements passés des managers : s’ils ont favorisé les profils visibles, disponibles ou semblables à eux, le modèle le reproduit.</p></div>
+      <div class="card n"><h3>L’effet Pygmalion</h3><p style="margin:0">Être désigné « haut potentiel » ouvre l’accès aux missions et aux formations, ce qui améliore ensuite la performance : la prédiction se confirme d’elle-même.</p></div>
+    </div>
+  </div>
+  <span class="src">Réf. E7, H2</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Plans de succession</h2>
+  <p class="lead">Un plan de succession identifie, pour chaque poste clé, des successeurs possibles et leur degré de préparation. L’IA peut élargir le vivier au-delà des candidats auxquels on pense spontanément.</p>
+  <div class="flow">
+    <div><span class="step">1</span><h3>Postes clés</h3><p class="small" style="margin:0">Rareté des compétences, impact, risque de vacance</p></div>
+    <div><span class="step">2</span><h3>Profil requis</h3><p class="small" style="margin:0">Compétences et expériences attendues, à formuler pour demain</p></div>
+    <div><span class="step">3</span><h3>Vivier</h3><p class="small" style="margin:0">Appariement des profils internes, y compris hors de la filière</p></div>
+    <div><span class="step">4</span><h3>Préparation</h3><p class="small" style="margin:0">Prêt maintenant, dans 1 à 2 ans, à plus long terme</p></div>
+    <div><span class="step">5</span><h3>Plan d’action</h3><p class="small" style="margin:0">Missions, formation, mentorat ; revue annuelle</p></div>
+  </div>
+  <div class="g3" style="margin-top:5mm">
+    <div class="card t"><h3>Apport de l’IA</h3><p style="margin:0">Repérer des successeurs « improbables » dont les compétences correspondent, y compris dans d’autres services ou pays.</p></div>
+    <div class="card s"><h3>Risque de clonage</h3><p style="margin:0">Si le profil requis est déduit de l’occupant actuel, le modèle recherche sa copie et reproduit l’homogénéité des équipes dirigeantes.</p></div>
+    <div class="card r"><h3>Transparence</h3><p style="margin:0">Faut-il dire aux salariés qu’ils figurent dans un plan de succession ? Le secret protège la souplesse ; l’information favorise l’engagement et l’équité.</p></div>
+  </div>
+  <div class="key"><b>Bonne pratique :</b> définir le profil requis à partir de la stratégie, suivre la diversité des viviers à chaque revue et documenter les raisons des choix.</div>
+  <span class="src">Réf. E7</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Vers une organisation fondée sur les compétences</h2>
+  <p class="lead">Plusieurs entreprises cherchent à organiser le travail autour des compétences plutôt que des postes : on recrute, développe, rémunère et mobilise selon ce que les personnes savent faire. L’IA rend ce modèle praticable à grande échelle.</p>
+  <table>
+    <thead><tr><th style="width:22%"></th><th style="width:39%">Organisation par postes</th><th>Organisation par compétences</th></tr></thead>
+    <tbody>
+      <tr><td><b>Unité de base</b></td><td>Le poste et sa fiche</td><td>La compétence et son niveau</td></tr>
+      <tr><td><b>Mobilité</b></td><td>D’un poste à un autre, dans une filière</td><td>Vers des projets et missions selon les compétences</td></tr>
+      <tr><td><b>Recrutement</b></td><td>Diplômes, années d’expérience</td><td>Compétences démontrées</td></tr>
+      <tr><td><b>Rôle de l’IA</b></td><td>Faible</td><td>Inférence, mise à jour et appariement des compétences</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card t"><h3>Promesses</h3><ul><li>Plus d’agilité pour affecter les personnes aux priorités.</li><li>Ouverture à des profils sans diplôme classique.</li><li>Visibilité des compétences pour chaque salarié.</li></ul></div>
+    <div class="card s"><h3>Limites</h3><ul><li>La qualité dépend du référentiel et des données ; un référentiel trop fin devient ingérable.</li><li>Les classifications conventionnelles restent fondées sur les emplois.</li><li>Risque de réduire la personne à une liste de compétences.</li></ul></div>
+  </div>
+  <span class="src">Réf. E7, E6</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>L’équité des évaluations : humains et algorithmes</h2>
+  <p class="lead">Les évaluations humaines sont imparfaites ; c’est l’argument principal en faveur de l’IA. Mais un algorithme hérite des données et de la cible qu’on lui donne. Strohmeier rappelle qu’un modèle supervisé apprend à reproduire les étiquettes fournies.</p>
+  <div class="g2">
+    <div>
+      <h3>Biais d’évaluation humains</h3>
+      <table>
+        <tbody>
+          <tr><td><b>Halo</b></td><td>Une qualité marquante colore tout le jugement</td></tr>
+          <tr><td><b>Récence</b></td><td>Les derniers mois pèsent plus que l’année</td></tr>
+          <tr><td><b>Indulgence, sévérité</b></td><td>Notes systématiquement hautes ou basses selon l’évaluateur</td></tr>
+          <tr><td><b>Tendance centrale</b></td><td>Tout le monde « dans la moyenne »</td></tr>
+          <tr><td><b>Similarité</b></td><td>Préférence pour ceux qui nous ressemblent</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3>Biais des évaluations algorithmiques</h3>
+      <table>
+        <tbody>
+          <tr><td><b>Cible biaisée</b></td><td>Le modèle apprend les notes passées des managers</td></tr>
+          <tr><td><b>Mesurabilité</b></td><td>Ce qui se compte (tickets, ventes) écrase ce qui compte</td></tr>
+          <tr><td><b>Proxys</b></td><td>Temps partiel, horaires, congés liés à la santé ou à la famille</td></tr>
+          <tr><td><b>Contexte</b></td><td>Équipe, clientèle, outils : le modèle les ignore</td></tr>
+          <tr><td><b>Échelle</b></td><td>Une erreur s’applique à tous, de façon uniforme</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="key"><b>Piste équilibrée :</b> utiliser l’IA pour <b>détecter</b> les écarts entre évaluateurs et entre groupes (calibration), plutôt que pour <b>produire</b> la note.</div>
+  <span class="src">Réf. H2, E7</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Le cadre juridique de l’évaluation des salariés</h2>
+  <p class="lead">L’évaluation du personnel est encadrée de longue date en droit du travail français. L’AI Act ajoute des obligations lorsque des systèmes d’IA y contribuent.</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th style="width:30%">Texte</th><th>Exigence</th></tr></thead>
+        <tbody>
+          <tr><td><b>C. trav., L1222-3</b></td><td>Le salarié est informé préalablement des méthodes et techniques d’évaluation ; elles doivent être pertinentes au regard de la finalité poursuivie ; les résultats sont confidentiels.</td></tr>
+          <tr><td><b>C. trav., L1222-4</b></td><td>Aucune information concernant personnellement un salarié ne peut être collectée par un dispositif qui n’a pas été porté préalablement à sa connaissance.</td></tr>
+          <tr><td><b>C. trav., L2312-38</b></td><td>Le CSE est informé et consulté, préalablement, sur les moyens ou techniques permettant un contrôle de l’activité des salariés.</td></tr>
+          <tr><td><b>RGPD, art. 22</b></td><td>Pas de décision fondée exclusivement sur un traitement automatisé produisant des effets significatifs, sauf exceptions et garanties.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>AI Act, annexe III, point 4 b)</h3><p style="margin:0">Sont à haut risque les systèmes destinés à prendre des décisions ou à les influencer sur la promotion, le licenciement, l’attribution des tâches selon le comportement ou les traits de personnalité, ainsi qu’à <b>suivre et évaluer les performances et le comportement</b> des salariés.</p></div>
+      <div class="card s"><h3>Conséquences pour l’employeur déployeur</h3><ul><li>Contrôle humain par des personnes compétentes</li><li>Information des salariés et de leurs représentants</li><li>Conservation des journaux, AIPD</li></ul></div>
+    </div>
+  </div>
+  <span class="src">Réf. E7</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>À retenir, activité et quiz • T2</h2>
+  <div class="g3">
+    <div class="card n" style="grid-column:span 2"><h3>Les idées clés</h3><ul>
+      <li>La gestion des talents réunit performance, feedback, potentiel, développement, succession et rétention.</li>
+      <li>La gestion continue de la performance multiplie les données ; l’IA aide à préparer, rédiger et suivre.</li>
+      <li>Les modèles de potentiel et de succession apprennent les jugements passés et peuvent cloner les profils existants.</li>
+      <li>Humains et algorithmes ont des biais différents ; l’IA est plus sûre pour détecter les écarts que pour noter.</li>
+      <li>L’évaluation par l’IA relève du haut risque et des règles du Code du travail (information, pertinence, CSE).</li>
+    </ul></div>
+    <div class="card r"><h3>Pour l’activité</h3><p style="margin:0">Mobilisez les pages 16 (potentiel), 19 (biais) et 20 (droit), ainsi que la notion de cible vue au jour 4.</p></div>
+    <div class="card s" style="grid-column:span 2"><span class="tag s">Activité individuelle • 30 min • Réflexion</span><h3 style="margin-top:2mm">L’IA peut-elle évaluer la performance plus équitablement qu’un manager ?</h3><p>Prenez position dans un essai argumenté de 500 mots : trois arguments, trois contre-arguments, puis votre conclusion assortie de conditions concrètes.</p><p style="margin:0"><b>Livrable :</b> essai de 500 mots (document « J5-T2 Activité »).</p></div>
+    <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions</h3><p style="margin:0">Processus, gestion continue, potentiel, succession, biais, droit.</p></div>
+  </div>
+</section>
+
+<section class="page" data-t="T3">
+  <div class="opener">
+    <div>
+      <div class="num">T3</div>
+      <h2 style="margin-top:6mm">Analytique prédictive : engagement et attrition</h2>
+      <p class="lead">Chaque départ non souhaité coûte cher : recrutement, intégration, perte de savoir-faire, désorganisation des équipes. Les modèles de prédiction des départs promettent d’anticiper. Mais que faire d’une probabilité qui concerne une personne ?</p>
+      <p class="q">Si un outil indiquait qu’un membre de votre équipe a 70 % de risque de partir dans l’année, que feriez-vous lundi matin ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Situer l’analytique prédictive dans la démarche de people analytics.</li><li>Identifier les facteurs d’engagement et de départ, et les données utilisables.</li><li>Lire les résultats d’un modèle de prédiction des départs.</li><li>Passer de la prédiction à l’action sans effets pervers.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>E • Ch. 7</b> Talent management (p. 131 et suiv.)</p><p><b>H • Ch. 2</b> HR machine learning – an introduction (Strohmeier, pp. 25-45)</p><p style="margin:0"><b>H • Ch. 5</b> HR machine learning on social media data (Harrison, Hartwell, pp. 89-104)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Les quatre niveaux du people analytics</h2>
+  <p class="lead">Le people analytics consiste à utiliser les données sur le personnel pour éclairer les décisions RH. On distingue habituellement quatre niveaux de maturité, du constat à la recommandation.</p>
+  <div class="lvl">
+    <div style="height:34mm"><span class="step">1 • DESCRIPTIF</span><h3>Que s’est-il passé ?</h3><p class="small" style="margin:0">Taux de départ par service</p></div>
+    <div style="height:44mm"><span class="step">2 • DIAGNOSTIC</span><h3>Pourquoi ?</h3><p class="small" style="margin:0">Départs liés au manager, au salaire, à la charge ?</p></div>
+    <div style="height:54mm;border-top:3px solid var(--teal)"><span class="step">3 • PRÉDICTIF</span><h3>Que va-t-il se passer ?</h3><p class="small" style="margin:0">Probabilité de départ à 12 mois</p></div>
+    <div style="height:64mm"><span class="step">4 • PRESCRIPTIF</span><h3>Que faire ?</h3><p class="small" style="margin:0">Action recommandée et effet attendu</p></div>
+    <div style="height:64mm;background:var(--sand);border-color:#efd6b5"><span class="step" style="color:var(--sand-d)">RÉALITÉ</span><h3 style="color:var(--sand-d)">Où en sont les entreprises ?</h3><p class="small" style="margin:0">La plupart restent aux niveaux 1 et 2 ; les niveaux 3 et 4 exigent des données fiables et des compétences rares.</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card t"><h3>Le bon ordre</h3><p style="margin:0">Un modèle prédictif n’a de sens que si les indicateurs descriptifs sont fiables : définitions partagées des départs, historique propre, données à jour.</p></div>
+    <div class="key" style="margin:0"><b>À retenir :</b> l’analyse diagnostique (comprendre les causes) est souvent plus utile que la prédiction individuelle, car c’est elle qui guide l’action.</div>
+  </div>
+  <span class="src">Réf. E7, H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Engagement et départs : de quoi parle-t-on ?</h2>
+  <p class="lead">Tous les départs ne se valent pas. Avant de prédire, il faut définir précisément ce que l’on veut prévoir et pourquoi.</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th>Type de départ</th><th>Exemple</th><th>À prédire ?</th></tr></thead>
+        <tbody>
+          <tr><td><b>Volontaire regretté</b></td><td>Démission d’un salarié performant</td><td>Cible habituelle</td></tr>
+          <tr><td><b>Volontaire non regretté</b></td><td>Démission d’un salarié en difficulté</td><td>Rarement</td></tr>
+          <tr><td><b>Involontaire</b></td><td>Licenciement, fin de contrat</td><td>Non : décision de l’employeur</td></tr>
+          <tr><td><b>Naturel</b></td><td>Retraite</td><td>Planification, pas prédiction</td></tr>
+        </tbody>
+      </table>
+      <p class="small" style="margin-top:3mm">La notion de départ « regretté » repose sur un jugement de l’entreprise : elle doit être définie et appliquée de façon cohérente.</p>
+    </div>
+    <div>
+      <h3>Facteurs d’engagement et de départ</h3>
+      <div class="g2" style="gap:3mm">
+        <div class="card r"><b>Relation au manager</b><p class="small" style="margin:0">Reconnaissance, soutien, équité perçue</p></div>
+        <div class="card r"><b>Perspectives</b><p class="small" style="margin:0">Évolution, formation, mobilité</p></div>
+        <div class="card r"><b>Rémunération</b><p class="small" style="margin:0">Niveau, progression, comparaison externe</p></div>
+        <div class="card r"><b>Charge et conditions</b><p class="small" style="margin:0">Horaires, trajet, pénibilité, télétravail</p></div>
+        <div class="card r"><b>Sens du travail</b><p class="small" style="margin:0">Utilité, autonomie, valeurs</p></div>
+        <div class="card r"><b>Marché externe</b><p class="small" style="margin:0">Offres concurrentes, tension du métier</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="key"><b>Engagement :</b> état d’énergie et d’implication dans le travail. Il se mesure surtout par enquête ; un engagement faible précède souvent le départ, sans le rendre certain.</div>
+  <span class="src">Réf. E7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Quelles données pour prédire les départs ?</h2>
+  <p class="lead">Plus un modèle utilise de données, plus il est précis en apparence ; plus il est aussi intrusif. La question n’est pas seulement « est-ce prédictif ? » mais « est-ce légitime ? ».</p>
+  <table>
+    <thead><tr><th style="width:20%">Source</th><th style="width:34%">Exemples</th><th style="width:22%">Valeur prédictive</th><th>Légitimité</th></tr></thead>
+    <tbody>
+      <tr><td><b>SIRH</b></td><td>Ancienneté, augmentations, promotions, mobilité, absences, temps de trajet</td><td>Bonne</td><td>Généralement acceptable si finalité annoncée ; attention aux absences (santé)</td></tr>
+      <tr><td><b>Enquêtes</b></td><td>Engagement, intention de rester, climat</td><td>Bonne</td><td>Acceptable si anonymat ou confidentialité garantis et respectés</td></tr>
+      <tr><td><b>Données passives internes</b></td><td>Métadonnées de messagerie, réunions, réseau de collaboration</td><td>Variable</td><td>Très discutable : surveillance, détournement de finalité</td></tr>
+      <tr><td><b>Réseaux sociaux externes</b></td><td>Mise à jour d’un profil professionnel, activité publique</td><td>Variable</td><td>À proscrire pour un suivi individuel (vie privée, loyauté de la collecte)</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card r"><h3>Ce que montre le Handbook (H5)</h3><p style="margin:0">Harrison et Hartwell montrent que les données des réseaux sociaux renseignent sur les personnes, mais posent des problèmes de représentativité, de validité et d’éthique qui limitent fortement leur usage en GRH.</p></div>
+    <div class="key" style="margin:0"><b>Règle de minimisation (RGPD, art. 5) :</b> ne collecter que les données adéquates, pertinentes et limitées à ce qui est nécessaire à la finalité.</div>
+  </div>
+  <span class="src">Réf. H5, H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Construire un modèle de prédiction des départs</h2>
+  <p class="lead">Il s’agit d’un problème de classification supervisée (jour 1) : à partir de la situation des salariés à une date donnée, prédire qui sera parti un an plus tard.</p>
+  <div class="flow">
+    <div><span class="step">1 • CIBLE</span><h3>Définir</h3><p class="small" style="margin:0">Départ volontaire dans les 12 mois</p></div>
+    <div><span class="step">2 • DONNÉES</span><h3>Photographier</h3><p class="small" style="margin:0">Situation de chaque salarié au 1<sup>er</sup> janvier, puis départ ou non</p></div>
+    <div><span class="step">3 • APPRENDRE</span><h3>Entraîner</h3><p class="small" style="margin:0">Régression logistique, arbres, forêts aléatoires</p></div>
+    <div><span class="step">4 • TESTER</span><h3>Valider</h3><p class="small" style="margin:0">Sur une année que le modèle n’a pas vue</p></div>
+    <div><span class="step">5 • SUIVRE</span><h3>Surveiller</h3><p class="small" style="margin:0">Performance et équité dans le temps</p></div>
+  </div>
+  <div class="g3" style="margin-top:5mm">
+    <div class="card s"><h3>Classes déséquilibrées</h3><p style="margin:0">Si 8 % des salariés partent, un modèle qui prédit « personne ne part » a 92 % d’exactitude… et ne sert à rien. Il faut d’autres mesures (page 27).</p></div>
+    <div class="card s"><h3>Fuite d’information</h3><p style="margin:0">Une variable connue seulement juste avant le départ (solde de congés liquidé, demande de rupture) rend le modèle excellent en test et inutile en pratique.</p></div>
+    <div class="card s"><h3>Dérive</h3><p style="margin:0">Une crise, un changement de politique salariale ou un marché qui se tend rendent les anciennes relations obsolètes. Le modèle doit être réévalué régulièrement.</p></div>
+  </div>
+  <div class="key"><b>Modèles simples d’abord :</b> une régression logistique bien construite est souvent presque aussi performante qu’un modèle complexe et beaucoup plus facile à expliquer.</div>
+  <span class="src">Réf. H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Lire les résultats (1) : la matrice de confusion</h2>
+  <p class="lead">Exemple : 1 000 salariés suivis pendant un an, 100 sont partis. Le modèle avait signalé 150 personnes « à risque élevé ».</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th></th><th>Parti</th><th>Resté</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr><td><b>Signalé à risque</b></td><td style="background:#dff1ee"><b>60</b> vrais positifs</td><td style="background:#fbeedd"><b>90</b> faux positifs</td><td>150</td></tr>
+          <tr><td><b>Non signalé</b></td><td style="background:#fbeedd"><b>40</b> faux négatifs</td><td style="background:#dff1ee"><b>810</b> vrais négatifs</td><td>850</td></tr>
+          <tr><td><b>Total</b></td><td>100</td><td>900</td><td>1 000</td></tr>
+        </tbody>
+      </table>
+      <div class="g3" style="margin-top:4mm;gap:3mm">
+        <div class="card t"><div class="big">40 %</div><p class="small" style="margin:0"><b>Précision</b> : 60 / 150. Parmi les signalés, 4 sur 10 partent.</p></div>
+        <div class="card t"><div class="big">60 %</div><p class="small" style="margin:0"><b>Rappel</b> : 60 / 100. Le modèle repère 6 départs sur 10.</p></div>
+        <div class="card t"><div class="big">87 %</div><p class="small" style="margin:0"><b>Exactitude</b> : 870 / 1 000. Trompeuse ici.</p></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Ce que cela signifie</h3><p style="margin:0">Sur 150 personnes signalées, 90 ne seraient pas parties. Toute action ciblée sur la liste touchera majoritairement des salariés qui n’avaient pas l’intention de partir.</p></div>
+      <div class="card r"><h3>Le compromis du seuil</h3><p style="margin:0">Abaisser le seuil augmente le rappel mais multiplie les faux positifs ; le relever fait l’inverse. Le choix dépend du coût de chaque erreur et de l’action prévue.</p></div>
+      <div class="card r"><h3>AUC</h3><p style="margin:0">L’aire sous la courbe ROC résume la capacité du modèle à classer un partant au-dessus d’un non-partant : 0,5 = hasard, 1 = parfait.</p></div>
+    </div>
+  </div>
+  <span class="src">Réf. H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Lire les résultats (2) : facteurs et explications</h2>
+  <p class="lead">Au-delà de la performance globale, un modèle indique quelles variables pèsent le plus. Ces résultats éclairent les causes possibles, à condition de ne pas confondre association et causalité.</p>
+  <div class="g2">
+    <div>
+      <h3>Importance des variables (exemple)</h3>
+      <svg viewBox="0 0 460 210" width="100%" role="img" aria-label="Importance relative de six variables dans un modèle de départ">
+        <g font-family="Source Sans 3" font-size="12" fill="#1a2b3c">
+          <text x="0" y="22">Pas d’augmentation depuis 3 ans</text><rect x="200" y="10" width="240" height="16" fill="#0b7f78"/>
+          <text x="0" y="54">Changement de manager récent</text><rect x="200" y="42" width="190" height="16" fill="#0b7f78"/>
+          <text x="0" y="86">Ancienneté inférieure à 2 ans</text><rect x="200" y="74" width="170" height="16" fill="#0b7f78"/>
+          <text x="0" y="118">Score d’engagement d’équipe bas</text><rect x="200" y="106" width="150" height="16" fill="#0b7f78"/>
+          <text x="0" y="150">Temps de trajet supérieur à 1 h</text><rect x="200" y="138" width="110" height="16" fill="#0b7f78"/>
+          <text x="0" y="182">Âge</text><rect x="200" y="170" width="90" height="16" fill="#8a4d0f"/>
+        </g>
+      </svg>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:3mm">
+      <div class="card t"><h3>Facteurs actionnables</h3><p style="margin:0">Politique salariale, accompagnement des changements de manager, intégration des nouveaux : l’entreprise peut agir collectivement.</p></div>
+      <div class="card s"><h3>Facteurs sensibles</h3><p style="margin:0">Âge, situation familiale, santé : un modèle peut les utiliser directement ou par proxy. Agir sur cette base serait discriminatoire (C. trav., L1132-1).</p></div>
+      <div class="card r"><h3>Explications individuelles</h3><p style="margin:0">Des méthodes comme SHAP indiquent, pour une personne, les variables qui ont augmenté ou diminué son score. Elles expliquent le modèle, pas les intentions de la personne.</p></div>
+    </div>
+  </div>
+  <div class="key"><b>Corrélation n’est pas causalité :</b> l’absence d’augmentation est associée aux départs ; elle peut en être une cause, ou refléter une performance jugée faible, ou un service en difficulté. Un test ou une enquête permet de trancher.</div>
+  <span class="src">Réf. H2, E7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>De la prédiction à l’action</h2>
+  <p class="lead">La valeur d’un modèle ne vient pas de la liste qu’il produit, mais des décisions qu’il permet. Eubanks insiste : une prédiction sans action prévue est inutile, et une action mal conçue peut nuire.</p>
+  <table>
+    <thead><tr><th style="width:24%">Niveau d’action</th><th style="width:40%">Exemples</th><th>Usage des données</th></tr></thead>
+    <tbody>
+      <tr><td><b>Organisation</b></td><td>Révision de la politique d’augmentation, parcours d’intégration renforcé, plan de carrière par métier</td><td>Facteurs agrégés ; recommandé</td></tr>
+      <tr><td><b>Équipe</b></td><td>Accompagnement d’un manager, rééquilibrage de la charge, plan de reconnaissance</td><td>Indicateurs d’équipe à partir d’un effectif minimal (par exemple 10 personnes)</td></tr>
+      <tr><td><b>Individu</b></td><td>Entretien de carrière, proposition de mobilité ou de formation</td><td>Proposé à tous ou à une population entière, jamais sur la seule base d’un score</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card n"><h3>Principes de confidentialité</h3><ul><li>Pas de score individuel communiqué aux managers.</li><li>Accès restreint à une équipe d’analyse identifiée.</li><li>Information des salariés et du CSE sur la finalité et les données.</li><li>AIPD avant mise en œuvre.</li></ul></div>
+    <div class="key" style="margin:0"><b>L’alternative simple :</b> l’entretien de « rétention » ou de « maintien » proposé à tous (« qu’est-ce qui vous ferait rester ? ») produit souvent plus d’informations utiles qu’un score, sans les risques.</div>
+  </div>
+  <span class="src">Réf. E7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Effets pervers et prophéties autoréalisatrices</h2>
+  <p class="lead">Un score de risque n’est pas neutre : il modifie la façon dont on regarde une personne. Les effets pervers sont d’autant plus forts que le score circule.</p>
+  <div class="g2">
+    <div>
+      <svg viewBox="0 0 440 240" width="100%" role="img" aria-label="Cycle de la prophétie autoréalisatrice d’un score de départ">
+        <g font-family="Source Sans 3" font-size="12.5" text-anchor="middle">
+          <rect x="140" y="5" width="160" height="44" rx="4" fill="#17324d"/><text x="220" y="24" fill="#fff" font-weight="700">Score « risque élevé »</text><text x="220" y="40" fill="#8fe0d6">communiqué au manager</text>
+          <rect x="280" y="95" width="155" height="44" rx="4" fill="#dff1ee"/><text x="357" y="114" fill="#17324d" font-weight="700">Moins de projets</text><text x="357" y="130" fill="#17324d">« il va partir de toute façon »</text>
+          <rect x="140" y="185" width="160" height="44" rx="4" fill="#fbeedd"/><text x="220" y="204" fill="#8a4d0f" font-weight="700">Démotivation</text><text x="220" y="220" fill="#8a4d0f">sentiment de mise à l’écart</text>
+          <rect x="5" y="95" width="155" height="44" rx="4" fill="#8a4d0f"/><text x="82" y="114" fill="#fff" font-weight="700">Départ effectif</text><text x="82" y="130" fill="#fff">le modèle « avait raison »</text>
+          <g stroke="#0b7f78" stroke-width="2.5" fill="none"><path d="M300,40 L350,92"/><path d="M350,142 L300,190"/><path d="M140,205 L90,142"/><path d="M90,92 L140,40"/></g>
+        </g>
+      </svg>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:3mm">
+      <div class="card s"><h3>Discrimination indirecte</h3><p style="margin:0">Si le modèle associe le risque à l’âge, à un congé parental ou à des absences, les actions qui en découlent pénalisent ces groupes.</p></div>
+      <div class="card s"><h3>Perte de confiance</h3><p style="margin:0">Des salariés qui découvrent qu’on calcule leur « probabilité de départ » peuvent y voir une surveillance déloyale.</p></div>
+      <div class="card s"><h3>Loi de Goodhart</h3><p style="margin:0">« Quand une mesure devient un objectif, elle cesse d’être une bonne mesure. » Des managers évalués sur le score de leur équipe peuvent chercher à l’améliorer plutôt qu’à améliorer la situation.</p></div>
+    </div>
+  </div>
+  <div class="key"><b>Conséquence :</b> les effets d’un modèle de départ doivent être évalués comme ceux de toute politique RH, y compris sur les groupes protégés.</div>
+  <span class="src">Réf. E7, H2</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>À retenir, activité et quiz • T3</h2>
+  <div class="g3">
+    <div class="card n" style="grid-column:span 2"><h3>Les idées clés</h3><ul>
+      <li>Le people analytics progresse du descriptif au prescriptif ; le diagnostic des causes guide l’action.</li>
+      <li>La cible doit être précise (départ volontaire regretté à 12 mois) ; les données doivent être légitimes et minimisées.</li>
+      <li>Avec des classes déséquilibrées, on lit précision et rappel, pas l’exactitude.</li>
+      <li>Les facteurs expliquent le modèle ; corrélation n’est pas causalité ; certains facteurs sont sensibles.</li>
+      <li>Agir d’abord au niveau collectif, ne pas diffuser de scores individuels, surveiller les effets pervers.</li>
+    </ul></div>
+    <div class="card r"><h3>Pour l’activité</h3><p style="margin:0">Mobilisez les pages 27 (matrice), 28 (facteurs), 29 (actions) et 30 (effets pervers).</p></div>
+    <div class="card s" style="grid-column:span 2"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Interpréter les résultats d’un modèle de risque de départ</h3><p>À partir des résultats fournis (matrice de confusion, importance des variables, résultats par service), calculez et interprétez les indicateurs, identifiez les limites, puis proposez un plan d’action managérial respectueux de la confidentialité.</p><p style="margin:0"><b>Livrable :</b> note d’analyse (document « J5-T3 Activité »).</p></div>
+    <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions</h3><p style="margin:0">Niveaux d’analyse, données, précision et rappel, causalité, actions.</p></div>
+  </div>
+</section>
+
+<section class="page" data-t="T4">
+  <div class="opener">
+    <div>
+      <div class="num">T4</div>
+      <h2 style="margin-top:6mm">Affective computing et expérience collaborateur</h2>
+      <p class="lead">Des outils prétendent détecter le stress dans la voix, la fatigue sur un visage ou le moral d’une équipe dans ses messages. Ils parlent de bien-être ; ils touchent à l’intimité. L’AI Act a tranché pour une partie de ces usages : ils sont interdits au travail.</p>
+      <p class="q">Accepteriez-vous qu’un logiciel analyse votre voix pendant vos appels pour mesurer votre niveau de stress ? À quelles conditions ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Définir l’affective computing et ses modalités.</li><li>Évaluer la validité scientifique de la reconnaissance des émotions.</li><li>Distinguer suivi du bien-être et surveillance des salariés.</li><li>Appliquer le cadre juridique et une grille de proportionnalité.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 13</b> HR affective computing (Becker, Tuskey, Beugré, pp. 243-260)</p><p style="margin:0"><b>H • Ch. 4</b> HR machine learning on audio and video data (Fernández-Martínez, Fernández, pp. 68-88)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Qu’est-ce que l’affective computing ?</h2>
+  <p class="lead">Le terme a été proposé par Rosalind Picard (MIT, 1997) pour désigner les systèmes capables de reconnaître, d’interpréter ou de simuler des états affectifs. Becker, Tuskey et Beugré en décrivent les applications possibles en GRH.</p>
+  <table>
+    <thead><tr><th style="width:15%">Modalité</th><th style="width:32%">Signaux analysés</th><th style="width:27%">Exemple RH</th><th>Technique (jours 1 et 2)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Texte</b></td><td>Mots, ton, émoticônes dans les messages, enquêtes, commentaires</td><td>Analyse du climat dans les verbatims d’une enquête</td><td>Analyse de sentiments (NLP)</td></tr>
+      <tr><td><b>Voix</b></td><td>Hauteur, débit, intensité, pauses</td><td>« Stress » des conseillers en centre d’appels</td><td>Traitement du signal audio (H4)</td></tr>
+      <tr><td><b>Visage</b></td><td>Expressions, mouvements des muscles faciaux, regard</td><td>Analyse vidéo d’entretiens ou de réunions</td><td>Vision par ordinateur (H4)</td></tr>
+      <tr><td><b>Physiologie</b></td><td>Rythme cardiaque, conductance de la peau, sommeil</td><td>Bracelets connectés de programmes de bien-être</td><td>Capteurs, séries temporelles</td></tr>
+      <tr><td><b>Comportement</b></td><td>Rythme de frappe, usage des outils, déplacements</td><td>Détection de « surcharge » à partir de l’activité numérique</td><td>Machine learning sur traces</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card t"><h3>Trois fonctions</h3><p style="margin:0"><b>Reconnaître</b> un état, <b>réagir</b> à cet état (adapter une interface, alerter), <b>simuler</b> une émotion (agent conversationnel « empathique »).</p></div>
+    <div class="key" style="margin:0"><b>Distinction essentielle :</b> un système détecte des <b>signaux</b> (un sourire, une voix aiguë) ; il en <b>infère</b> une émotion. C’est cette inférence qui pose problème.</div>
+  </div>
+  <span class="src">Réf. H13, H4</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Que vaut la reconnaissance des émotions ?</h2>
+  <p class="lead">L’idée que chaque émotion se lit sur le visage de façon universelle a longtemps dominé. Elle est aujourd’hui fortement contestée par la recherche.</p>
+  <div class="g2">
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Une revue de référence</h3><p style="margin:0">Barrett et ses collègues (2019) ont passé en revue plus de mille études : les expressions faciales ne permettent pas d’inférer de façon fiable l’émotion ressentie. On peut sourire sans être heureux, être en colère sans froncer les sourcils ; les expressions varient selon les personnes, les cultures et les situations.</p></div>
+      <div class="card s"><h3>Des erreurs inégalement réparties</h3><p style="margin:0">Une étude de Rhue (2018) sur deux services commerciaux d’analyse faciale a montré qu’ils attribuaient plus d’émotions négatives aux visages de joueurs de basket noirs qu’à ceux de joueurs blancs, à sourire équivalent.</p></div>
+    </div>
+    <div>
+      <table>
+        <thead><tr><th>Problème</th><th>Conséquence en entreprise</th></tr></thead>
+        <tbody>
+          <tr><td><b>Émotion exprimée ≠ ressentie</b></td><td>Les salariés qui « jouent le jeu » sont mieux notés</td></tr>
+          <tr><td><b>Contexte ignoré</b></td><td>Une voix tendue peut venir d’un client difficile, d’un rhume, d’une langue étrangère</td></tr>
+          <tr><td><b>Variabilité culturelle et individuelle</b></td><td>Erreurs plus fréquentes pour certains groupes, autisme, handicap</td></tr>
+          <tr><td><b>Étiquettes d’entraînement</b></td><td>Émotions souvent jouées par des acteurs, puis annotées</td></tr>
+        </tbody>
+      </table>
+      <div class="key"><b>À retenir :</b> la précision annoncée par un éditeur est souvent mesurée en laboratoire, sur des expressions posées ; elle ne dit rien de la validité en situation de travail.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H13, H4</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Bien-être et stress au travail : quels usages ?</h2>
+  <p class="lead">L’employeur a une obligation de sécurité : il doit prendre les mesures nécessaires pour protéger la santé physique et mentale des salariés (C. trav., L4121-1), y compris face aux risques psychosociaux. Certains outils numériques peuvent y contribuer ; d’autres vont trop loin.</p>
+  <table>
+    <thead><tr><th style="width:28%">Usage</th><th style="width:16%">Intrusivité</th><th>Commentaire</th></tr></thead>
+    <tbody>
+      <tr><td><b>Enquêtes courtes et fréquentes</b>, résultats agrégés par équipe</td><td><span class="tag">Faible</span></td><td>Utile si l’anonymat est réel et si les résultats donnent lieu à des actions</td></tr>
+      <tr><td><b>Analyse de sentiments</b> des verbatims d’enquête, au niveau collectif</td><td><span class="tag">Faible</span></td><td>Aide à traiter de gros volumes ; vérifier la qualité de l’analyse en français</td></tr>
+      <tr><td><b>Assistant de bien-être</b> (exercices, ressources, orientation vers un professionnel)</td><td><span class="tag">Modérée</span></td><td>Confidentialité vis-à-vis de l’employeur indispensable</td></tr>
+      <tr><td><b>Indicateurs de charge</b> issus des outils (réunions, courriels hors horaires)</td><td><span class="tag s">Élevée</span></td><td>Acceptable seulement agrégés, pour agir sur l’organisation du travail</td></tr>
+      <tr><td><b>Objets connectés</b> (sommeil, rythme cardiaque)</td><td><span class="tag s">Très élevée</span></td><td>Données de santé ; volontariat difficile à garantir dans un lien de subordination</td></tr>
+      <tr><td><b>Analyse de la voix ou du visage</b> pour mesurer le stress</td><td><span class="tag s">Interdite</span></td><td>Reconnaissance des émotions au travail (page 37)</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Prévention primaire d’abord :</b> les risques psychosociaux se traitent en agissant sur la charge, l’autonomie, le soutien et la reconnaissance. Mesurer l’état émotionnel des personnes ne réduit pas les causes.</div>
+  <span class="src">Réf. H13</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>La surveillance numérique des salariés</h2>
+  <p class="lead">Avec le télétravail se sont diffusés des logiciels de contrôle de l’activité, parfois appelés « bossware » : captures d’écran, enregistrement des frappes, suivi de l’activité de la souris, webcam. Le droit français les encadre strictement.</p>
+  <div class="g2">
+    <div>
+      <div class="card n" style="margin-bottom:4mm"><h3>Le principe</h3><p style="margin:0">Nul ne peut apporter aux droits des personnes et aux libertés individuelles et collectives de restrictions qui ne seraient pas justifiées par la nature de la tâche à accomplir ni proportionnées au but recherché (C. trav., L1121-1).</p></div>
+      <table>
+        <thead><tr><th>Dispositif</th><th>Position de la CNIL</th></tr></thead>
+        <tbody>
+          <tr><td>Enregistreur de frappe</td><td>Illicite, sauf impératif de sécurité exceptionnel</td></tr>
+          <tr><td>Captures d’écran régulières</td><td>Disproportionnées en règle générale</td></tr>
+          <tr><td>Webcam allumée en permanence</td><td>Disproportionnée</td></tr>
+          <tr><td>Partage d’écran imposé en continu</td><td>Disproportionné</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><h3>Un cas de référence</h3><p style="margin:0">Fin 2023, la CNIL a infligé une amende de 32 millions d’euros à Amazon France Logistique, notamment pour un système de suivi de l’activité des préparateurs jugé excessivement intrusif, avec des indicateurs mesurant à la seconde les interruptions d’activité.</p></div>
+      <div class="card r"><h3>Conditions de tout dispositif de contrôle</h3><ul><li>Finalité légitime et proportionnalité</li><li>Information préalable des salariés (L1222-4)</li><li>Consultation préalable du CSE (L2312-38)</li><li>AIPD si suivi systématique</li></ul></div>
+    </div>
+  </div>
+  <span class="src">Réf. H13</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Le cadre juridique : l’interdiction de l’AI Act</h2>
+  <p class="lead">Depuis le 2 février 2025, l’AI Act interdit certaines pratiques. La reconnaissance des émotions sur le lieu de travail en fait partie.</p>
+  <div class="g2">
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Article 5, paragraphe 1, point f)</h3><p style="margin:0">Est interdite la mise sur le marché, la mise en service ou l’utilisation de systèmes d’IA pour <b>inférer les émotions</b> d’une personne physique sur le lieu de travail et dans les établissements d’enseignement, <b>sauf</b> lorsque le système est destiné à être mis en place pour des raisons médicales ou de sécurité.</p></div>
+      <div class="card r"><h3>Ce que couvre l’interdiction</h3><ul><li>Les systèmes fondés sur des <b>données biométriques</b> : visage, voix, gestes, signaux physiologiques (art. 3, point 39).</li><li>Toutes les situations de travail, y compris le recrutement et le télétravail, selon les lignes directrices de la Commission (2025).</li></ul></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <table>
+        <thead><tr><th>Cas</th><th>Statut</th></tr></thead>
+        <tbody>
+          <tr><td>Analyse de la voix des conseillers pour mesurer leur stress</td><td><b>Interdit</b></td></tr>
+          <tr><td>Analyse faciale lors d’un entretien vidéo</td><td><b>Interdit</b></td></tr>
+          <tr><td>Détection de la somnolence d’un conducteur de poids lourd</td><td>Exception de sécurité possible</td></tr>
+          <tr><td>Analyse de sentiments de verbatims écrits</td><td>Hors interdiction (pas biométrique), RGPD applicable</td></tr>
+        </tbody>
+      </table>
+      <div class="card s"><h3>Au-delà de l’AI Act</h3><p style="margin:0">Données biométriques et de santé : données sensibles (RGPD, art. 9). Les règles du Code du travail sur le contrôle de l’activité s’appliquent dans tous les cas.</p></div>
+    </div>
+  </div>
+  <span class="src">Réf. H13, H4</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Juger la proportionnalité d’un dispositif</h2>
+  <p class="lead">Pour un dispositif qui n’est pas interdit, la question devient : est-il proportionné ? Cette grille en cinq questions reprend la logique du RGPD et du Code du travail. C’est la grille de votre activité.</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th style="width:8%">#</th><th>Question</th></tr></thead>
+        <tbody>
+          <tr><td><b>1</b></td><td><b>Finalité :</b> l’objectif est-il précis, légitime et annoncé ?</td></tr>
+          <tr><td><b>2</b></td><td><b>Nécessité :</b> le dispositif est-il nécessaire pour l’atteindre ? Est-il efficace et scientifiquement valide ?</td></tr>
+          <tr><td><b>3</b></td><td><b>Alternatives :</b> existe-t-il un moyen moins intrusif d’atteindre le même objectif ?</td></tr>
+          <tr><td><b>4</b></td><td><b>Minimisation :</b> données limitées, agrégées, conservées peu de temps, accès restreint ?</td></tr>
+          <tr><td><b>5</b></td><td><b>Garanties :</b> volontariat réel, information, CSE, AIPD, absence d’usage disciplinaire ?</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3>Des alternatives moins intrusives</h3>
+      <table>
+        <thead><tr><th>Objectif</th><th>Au lieu de…</th><th>Plutôt…</th></tr></thead>
+        <tbody>
+          <tr><td>Réduire le stress en centre d’appels</td><td>Analyse vocale</td><td>Pauses après appels difficiles, analyse agrégée de la charge</td></tr>
+          <tr><td>Mesurer le climat</td><td>Analyse des messageries</td><td>Enquête anonyme et groupes d’expression</td></tr>
+          <tr><td>Prévenir l’épuisement</td><td>Bracelets connectés</td><td>Droit à la déconnexion, suivi de la charge par le manager</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="key"><b>Règle de décision :</b> si la réponse à la question 2 ou 3 est défavorable (dispositif non valide, ou alternative moins intrusive disponible), le dispositif n’est pas proportionné.</div>
+  <span class="src">Réf. H13</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Confiance et expérience collaborateur</h2>
+  <p class="lead">L’expérience collaborateur désigne l’ensemble des interactions vécues par un salarié avec son entreprise. Les outils d’IA en font partie. Leur acceptation dépend moins de la technique que de la confiance.</p>
+  <div class="g3">
+    <div class="card t"><h3>Transparence</h3><p style="margin:0">Dire quelles données sont utilisées, à quelles fins, par qui, et ce qui n’est pas fait.</p></div>
+    <div class="card t"><h3>Utilité pour le salarié</h3><p style="margin:0">Le dispositif apporte un bénéfice concret à ceux dont les données sont utilisées, pas seulement à l’organisation.</p></div>
+    <div class="card t"><h3>Maîtrise</h3><p style="margin:0">Le salarié accède à ses données, les corrige, peut refuser sans conséquence quand le dispositif est facultatif.</p></div>
+    <div class="card t"><h3>Dialogue social</h3><p style="margin:0">Co-construction avec le CSE et les salariés, expérimentation limitée, bilan partagé.</p></div>
+    <div class="card t"><h3>Séparation des usages</h3><p style="margin:0">Les données de bien-être ou de formation ne servent jamais à l’évaluation ou à la sanction.</p></div>
+    <div class="card t"><h3>Réversibilité</h3><p style="margin:0">Un dispositif qui ne fait pas ses preuves est arrêté, et les données sont supprimées.</p></div>
+  </div>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card s"><h3>Le paradoxe du bien-être surveillé</h3><p style="margin:0">Un dispositif destiné à réduire le stress peut l’augmenter s’il est perçu comme un contrôle. La perception du salarié fait partie de l’efficacité du dispositif.</p></div>
+    <div class="key" style="margin:0"><b>Question test :</b> « Serions-nous à l’aise pour présenter ce dispositif en détail à tous les salariés et à la presse ? » Si la réponse est non, il faut le revoir.</div>
+  </div>
+  <span class="src">Réf. H13</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Synthèse de la journée, activité et quiz • T4</h2>
+  <div class="g3">
+    <div class="card n" style="grid-column:span 2"><h3>Ce que la journée a établi</h3><ul>
+      <li><b>T1 :</b> l’IA personnalise et accélère la formation ; l’efficacité se mesure en compétences et en transfert au poste.</li>
+      <li><b>T2 :</b> les outils de gestion des talents apprennent les jugements passés ; ils servent mieux à détecter les écarts qu’à noter.</li>
+      <li><b>T3 :</b> un modèle de départ se lit avec précision et rappel ; on agit collectivement, sans diffuser de scores.</li>
+      <li><b>T4 :</b> la reconnaissance des émotions au travail est interdite ; tout suivi du bien-être doit être proportionné et digne de confiance.</li>
+    </ul></div>
+    <div class="card r"><h3>Préparer le jour 6</h3><p>Adoption, conséquences et compétences de demain : défis de l’adoption, effets de l’IA sur la GRH, compétences RH du futur, étude de cas finale.</p><p class="small"><b>À lire :</b> E • Ch. 8 et 9 ; H • Ch. 8 et 14.</p></div>
+    <div class="card s" style="grid-column:span 2"><span class="tag s">Activité individuelle • 30 min • Réflexion</span><h3 style="margin-top:2mm">Analyser un dispositif de suivi du bien-être</h3><p>Appliquez la grille de proportionnalité au dispositif décrit dans le document (plateforme de bien-être d’un centre de relation client), identifiez ce qui est interdit, les bénéfices, les risques, et proposez des alternatives moins intrusives.</p><p style="margin:0"><b>Livrable :</b> analyse d’une page (document « J5-T4 Activité »).</p></div>
+    <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions</h3><p style="margin:0">Modalités, validité, surveillance, AI Act, proportionnalité.</p></div>
+  </div>
+</section>
+
+ <script>const T={T0:"Jour 5 • Développement et gestion des talents",T1:"T1 • Formation et développement",T2:"T2 • Gestion des talents",T3:"T3 • Analytique prédictive : engagement et attrition",T4:"T4 • Affective computing et expérience collaborateur"};
+const pages=[...document.querySelectorAll('.page')];
+pages.forEach((p,i)=>{ if(p.classList.contains('cover')) return; const t=p.dataset.t||'T0';
+ p.insertAdjacentHTML('afterbegin','<div class="hd"><span><b>JOUR 5</b> &nbsp;•&nbsp; Développement et gestion des talents</span><span>'+T[t]+'</span></div>');
+ p.insertAdjacentHTML('beforeend','<div class="ft"><span>Intelligence artificielle et transformation numérique en GRH</span><span>Page '+(i+1)+' / '+pages.length+'</span></div>');});
+</script></body></html>

@@ -1,0 +1,45 @@
+<p class="k">Intelligence artificielle et transformation numérique en GRH • Jour 1 • Après-midi • T3 • Document formateur</p>
+<h1>J1-T3 • Corrigé de l’activité : cadrer un problème RH en ML (cas LogiPlus)</h1>
+<p>Plusieurs cadrages sont défendables. Ce corrigé présente un <b>cadrage recommandé</b>, une <b>variante individuelle acceptable sous conditions</b>, puis les repères de correction.</p>
+
+<h2>1. Cadrage recommandé : prédire au niveau des recrutements et des entrepôts</h2>
+<table>
+<tr><th style="width:26%">Rubrique</th><th>Cadrage proposé</th></tr>
+<tr><td><b>Décision RH visée</b></td><td>Chaque trimestre, cibler les actions d’amélioration (parcours d’intégration, tutorat, horaires proposés, choix des sources de recrutement) sur les <b>entrepôts, postes et canaux de recrutement</b> où le risque de départ précoce est le plus élevé, et mesurer l’effet des actions. Le modèle sert à comprendre et à prioriser, pas à juger des personnes.</td></tr>
+<tr><td><b>Cible</b></td><td>Départ <b>à l’initiative du salarié</b> (démission, rupture de période d’essai par le salarié) dans les <b>12 mois</b> suivant l’embauche. Exclure les fins de CDD prévues, les licenciements et les ruptures de période d’essai à l’initiative de l’employeur, qui relèvent d’une autre logique. Prédiction agrégée par cohorte (entrepôt × poste × horaire × source × trimestre d’embauche). Tâche : classification (départ oui/non) puis agrégation des probabilités, ou régression du taux de départ par cohorte.</td></tr>
+<tr><td><b>Variables envisagées</b></td><td>Entrepôt, poste, type de contrat, horaires (nuit, week-end), salaire d’embauche par rapport à la référence locale, source de recrutement, participation à la journée d’accueil, tuteur désigné, heures supplémentaires et changements d’horaires durant les premiers mois, manager ou équipe (sous forme agrégée).</td></tr>
+<tr><td><b>Variables exclues</b></td><td>Sexe, âge, nationalité, situation familiale : critères protégés par le droit de la non-discrimination ; leur usage pour prédire serait illicite et injustifiable. Motifs d’absence liés à la santé : donnée de santé (catégorie particulière RGPD). Adresse et distance domicile-travail : <b>proxy</b> possible de l’origine sociale ou ethnique ; à exclure ou à n’utiliser qu’en agrégat après analyse d’impact. Résultats des tests de recrutement : disponibles seulement depuis 2023, à réserver à une analyse ultérieure.</td></tr>
+<tr><td><b>Données et qualité</b></td><td>≈ 2 000 embauches, ≈ 440 départs précoces : volume modeste, risque de surapprentissage ; préférer un modèle simple et lisible. Source de recrutement manquante dans 30 % des cas et motif « autre » dans 15 % des sorties : à fiabiliser avant entraînement (requalification manuelle des motifs). Tuteur renseigné de façon irrégulière : variable à fiabiliser ou à écarter. Vérifier que les années récentes ne sont pas atypiques.</td></tr>
+<tr><td><b>Type d’apprentissage</b></td><td>Supervisé : l’issue (parti ou non dans les 12 mois) est connue pour les embauches passées. Un clustering non supervisé peut compléter l’analyse pour décrire des profils de cohortes.</td></tr>
+<tr><td><b>Mesure de performance et référence</b></td><td>Comme l’événement est minoritaire (22 %), ne pas utiliser l’exactitude seule. Pour un usage de priorisation d’actions collectives peu coûteuses, privilégier le <b>rappel</b> (ne pas manquer les cohortes à risque), avec une précision suffisante. Suivre l’AUC et l’erreur sur le taux de départ par cohorte. <b>Référence :</b> la moyenne historique par entrepôt et par poste ; le modèle n’a d’intérêt que s’il fait mieux. Indicateur métier final : évolution du taux de départ précoce après les actions.</td></tr>
+<tr><td><b>Risques et garde-fous</b></td><td>Glissement vers un scoring individuel des nouveaux arrivants : interdit par la charte du projet ; résultats seulement agrégés, avec un seuil minimal d’effectif par cohorte. Discrimination indirecte : tester les erreurs du modèle par sexe et par âge (sans les utiliser comme variables). Confusion corrélation-causalité : présenter les facteurs comme des pistes, pas comme des causes ; tester les actions. Conformité : information du CSE, avis du DPO, analyse d’impact (AIPD) si un traitement de données personnelles à grande échelle le justifie, registre des traitements à jour. Suivi : réentraînement annuel, contrôle de la dérive.</td></tr>
+</table>
+
+<h2>2. Variante individuelle : acceptable sous conditions</h2>
+<p>Certains apprenants proposeront de prédire le risque de départ <b>de chaque nouvel arrivant</b> pour déclencher un accompagnement renforcé (entretien supplémentaire, tuteur). Ce cadrage est acceptable s’il est accompagné de garde-fous solides :</p>
+<ul>
+<li>l’action déclenchée est uniquement bénéfique et non stigmatisante (offre d’accompagnement, jamais de réduction de formation ou de rémunération) ;</li>
+<li>la prédiction n’est pas transmise au manager sous forme de score, pour éviter l’étiquetage et la prophétie autoréalisatrice ;</li>
+<li>les salariés sont informés du traitement et de sa finalité ; aucune décision n’est fondée exclusivement sur le score (RGPD, art. 22) ;</li>
+<li>l’usage de l’IA pour suivre et évaluer les salariés relève de la catégorie à haut risque de l’AI Act (annexe III, emploi) : obligations de contrôle humain, de qualité des données et de documentation.</li>
+</ul>
+<p>Comme l’action est peu coûteuse, le rappel est à privilégier. Une copie qui propose la variante individuelle sans garde-fous ne doit pas obtenir plus de 2 points sur 4 au critère « risques ».</p>
+
+<h2>3. Repères de correction</h2>
+<ul>
+<li><b>Décision visée :</b> elle doit être une action réelle de LogiPlus. « Prédire les départs » n’est pas une décision.</li>
+<li><b>Cible :</b> distinguer départs volontaires et fins de contrat ou décisions de l’employeur ; préciser l’horizon de 12 mois.</li>
+<li><b>Exclusions :</b> au minimum sexe, âge, nationalité, situation familiale et données de santé. La mention des proxys (adresse, distance) est un signe de très bonne compréhension.</li>
+<li><b>Données :</b> relever au moins un problème de qualité (source manquante, motif « autre », tuteur irrégulier, tests récents).</li>
+<li><b>Performance :</b> rejeter l’exactitude seule ; justifier le choix entre précision et rappel par la nature de l’action ; proposer une référence.</li>
+<li><b>Risques :</b> étiquetage, discrimination indirecte, corrélation et causalité, conformité (CSE, DPO, AIPD, AI Act).</li>
+</ul>
+
+<h2>4. Erreurs fréquentes</h2>
+<ul>
+<li>Intégrer l’âge ou la situation familiale « parce qu’ils sont prédictifs ».</li>
+<li>Utiliser comme cible tous les départs, y compris les fins de CDD.</li>
+<li>Annoncer un objectif d’exactitude de 90 % (un modèle qui ne prédit aucun départ atteindrait 78 %).</li>
+<li>Oublier la référence de comparaison.</li>
+<li>Considérer que l’IA « réduira les départs » par elle-même : ce sont les actions RH qui les réduisent.</li>
+</ul>

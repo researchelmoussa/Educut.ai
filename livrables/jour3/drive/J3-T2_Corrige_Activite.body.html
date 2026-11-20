@@ -1,0 +1,30 @@
+<p class="k">Intelligence artificielle et transformation numérique en GRH • Jour 3 • Matin • T2 • Document formateur</p>
+<h1>J3-T2 • Corrigé de l’activité : cartographier l’entrée d’un collaborateur</h1>
+
+<h2>1. Carte attendue (description)</h2>
+<p><b>Couloirs :</b> Manager • RH (chargée RH, gestionnaire, assistante, responsable) • Informatique • Salarié.</p>
+<p><b>Enchaînement :</b> début → (Manager) courriel de demande (1) → (RH) rédaction du contrat (2) → (RH / Salarié) signature et retour (3) → décision « cas particulier ? » → si oui : traitement par la responsable RH (11) → (RH) DPAE (4) → saisie SIRH (5) → ressaisie paie (6) → affiliation mutuelle (7) → courriel à l’informatique (8) → (Informatique) création des comptes → (RH) livret et formations (9) → suivi hebdomadaire et relances (10) → fin. La DPAE peut être placée avant la signature : elle doit être faite avant la prise de poste.</p>
+
+<h2>2. Classement type des étapes</h2>
+<table>
+<tr><th>Étape</th><th>Classement</th><th>Justification</th></tr>
+<tr><td>1 Courriel du manager</td><td><b>Simplifier : workflow</b></td><td>Remplacer le courriel libre par un formulaire structuré avec champs obligatoires ; supprime les relances et fournit des données exploitables par toutes les étapes suivantes.</td></tr>
+<tr><td>2 Rédaction du contrat</td><td><b>Génération automatique</b> (+ relecture humaine)</td><td>Contrat généré depuis le formulaire et le modèle ; relecture par la chargée RH, notamment pour les clauses particulières.</td></tr>
+<tr><td>3 Signature papier</td><td><b>Digitalisation</b> : signature électronique</td><td>Ce n’est pas un cas de RPA : la signature électronique supprime l’impression, le courrier et le scan.</td></tr>
+<tr><td>4 DPAE</td><td><b>Intégration</b> (ou RPA) avec contrôle</td><td>De nombreux SIRH produisent la DPAE ; obligation légale avant la prise de poste : contrôle humain systématique de la bonne transmission.</td></tr>
+<tr><td>5 Saisie SIRH</td><td><b>Intégration</b> depuis le formulaire</td><td>Les données du formulaire alimentent directement le SIRH ; vérification humaine.</td></tr>
+<tr><td>6 Ressaisie paie</td><td><b>Candidate RPA</b></td><td>Règles claires, données déjà saisies, volume régulier, pas d’interface disponible : cas d’école de la RPA, en attendant une intégration.</td></tr>
+<tr><td>7 Affiliation mutuelle</td><td><b>Candidate RPA</b></td><td>Portail externe stable, données déjà connues ; vérifier que le portail de l’assureur ne change pas trop souvent.</td></tr>
+<tr><td>8 Comptes informatiques</td><td><b>Intégration ou RPA</b></td><td>Supprimer la double saisie entre RH et informatique ; les droits d’accès restent validés par l’informatique.</td></tr>
+<tr><td>9 Livret et formations</td><td><b>Candidate RPA / workflow</b></td><td>Envoi automatique du livret et inscription automatique selon le poste.</td></tr>
+<tr><td>10 Suivi et relances</td><td><b>Supprimer</b> (remplacé par le workflow)</td><td>Le tableau de bord du workflow et les relances automatiques rendent le tableur inutile.</td></tr>
+<tr><td>11 Cas particuliers</td><td><b>Humain</b></td><td>Jugement, obligations légales spécifiques (vérification de l’autorisation de travail, aménagement de poste) : critère bloquant. Le système détecte et oriente.</td></tr>
+</table>
+
+<h2>3. Repères de correction</h2>
+<ul>
+<li><b>Point clé :</b> repérer que plusieurs étapes doivent être simplifiées ou supprimées <b>avant</b> toute automatisation (1, 3, 10) : « ne pas automatiser le désordre ».</li>
+<li><b>Distinguer</b> RPA, intégration, workflow et signature électronique : une copie qui classe tout en « RPA » est insuffisante.</li>
+<li><b>Étape 11</b> doit être explicitement gardée humaine, avec le motif juridique.</li>
+<li><b>Bonus :</b> calcul du gain. Durée manuelle par entrée hors délai de courrier ≈ 15 + 30 + 10 + 25 + 20 + 10 + 10 + 15 + 20 = 155 min, soit environ 181 h par an pour 70 entrées ; un gain de l’ordre de 60 % sur les 80 % de cas standard représente environ 87 h par an, auxquelles s’ajoute la réduction du délai d’arrivée.</li>
+</ul>

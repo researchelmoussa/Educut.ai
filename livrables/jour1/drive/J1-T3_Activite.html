@@ -1,0 +1,72 @@
+<html><head><meta charset="utf-8"><style>
+body{font-family:Arial,sans-serif;font-size:11pt;color:#1a2b3c}
+h1{color:#17324d;font-size:20pt}
+h2{color:#0b7f78;font-size:14pt}
+h3{color:#17324d;font-size:12pt}
+table{border-collapse:collapse;width:100%}
+th{background:#17324d;color:#ffffff;border:1px solid #17324d;padding:6px;text-align:left}
+td{border:1px solid #9fb4c2;padding:6px;vertical-align:top}
+.k{color:#56687a}
+</style></head><body>
+<p class="k">Intelligence artificielle et transformation numérique en GRH • Jour 1 • Après-midi • T3</p>
+<h1>J1-T3 • Activité individuelle : cadrer un problème RH en problème de machine learning</h1>
+<p><b>Type :</b> application • <b>Durée :</b> 30 minutes • <b>Livrable :</b> canevas complété (une page) • <b>Remise :</b> en fin de séance ou sous 48 h, au format « NOM_Prenom_J1-T3 »</p>
+<p><b>Pages du fascicule à mobiliser :</b> 23 (définition T, E, P), 25 (vocabulaire, variables proxy), 27 (précision et rappel), 28 (spécificités des données RH), 29 et 30 (cycle de projet et canevas). <b>Lectures :</b> Handbook ch. 2 (Strohmeier).</p>
+
+<h2>1. Le besoin exprimé</h2>
+<p>La directrice générale de <b>LogiPlus</b> vous adresse ce message : « Nous perdons beaucoup trop de nouveaux embauchés. Je veux que nous utilisions l’IA pour <b>réduire les départs volontaires dans la première année</b>. Pouvez-vous me proposer un cadrage d’ici vendredi ? »</p>
+
+<h2>2. Le contexte</h2>
+<ul>
+<li><b>Entreprise :</b> prestataire logistique, 1 800 salariés répartis sur 6 entrepôts. Environ 500 embauches par an en CDI et CDD de plus de six mois, dont 80 % de préparateurs de commandes et de caristes.</li>
+<li><b>Constat :</b> 22 % des personnes embauchées quittent l’entreprise dans les douze mois. Les écarts entre entrepôts sont importants (de 12 % à 35 %).</li>
+<li><b>Actions possibles déjà évoquées :</b> renforcer le parcours d’intégration, désigner un tuteur, revoir les horaires proposés, revoir les sources de recrutement, entretiens de suivi à 1 et 3 mois.</li>
+<li><b>Instances :</b> un comité social et économique (CSE) central et un délégué à la protection des données (DPO) mutualisé avec le groupe.</li>
+</ul>
+<p><b>Données disponibles dans le SIRH depuis 2021</b> (environ 2 000 embauches historiques) :</p>
+<table>
+<tr><th>Catégorie</th><th>Données</th><th>Remarques de qualité</th></tr>
+<tr><td>Embauche</td><td>Date d’entrée, poste, entrepôt, type de contrat, salaire d’embauche, horaires (jour, nuit, week-end), manager</td><td>Complètes</td></tr>
+<tr><td>Recrutement</td><td>Source de recrutement (agence d’intérim, site d’emploi, cooptation, salon), résultats des tests de recrutement</td><td>Source renseignée à 70 % ; tests seulement depuis 2023</td></tr>
+<tr><td>Intégration</td><td>Participation à la journée d’accueil, tuteur désigné (oui/non), évaluation de fin de période d’essai</td><td>Tuteur renseigné de façon irrégulière</td></tr>
+<tr><td>Vie du contrat</td><td>Absences (dates, motifs), heures supplémentaires, changements d’horaires</td><td>Motifs d’absence incluant les arrêts maladie</td></tr>
+<tr><td>Personnelles</td><td>Âge, sexe, nationalité, situation familiale, adresse (donc distance domicile-travail)</td><td>Complètes</td></tr>
+<tr><td>Sortie</td><td>Date de sortie, motif (démission, rupture de période d’essai à l’initiative du salarié ou de l’employeur, fin de CDD, licenciement…)</td><td>Motif « autre » utilisé dans 15 % des cas</td></tr>
+</table>
+
+<h2>3. Consignes</h2>
+<p>Complétez le canevas ci-dessous, rubrique par rubrique, en vous inspirant de l’exemple de la page 30 du fascicule. Soyez précis et justifiez vos choix. Plusieurs cadrages sont possibles : ce qui compte est leur cohérence.</p>
+<ol>
+<li>Commencez par la <b>décision RH visée</b> : que fera concrètement LogiPlus d’une prédiction ?</li>
+<li>Définissez précisément la <b>cible</b> : quel événement, sur quel horizon, à quel niveau (individu, équipe, entrepôt, recrutement) ?</li>
+<li>Listez les <b>variables envisagées</b> et les <b>variables exclues</b>, en expliquant les exclusions.</li>
+<li>Évaluez les <b>données</b> : volume, qualité, période utilisable.</li>
+<li>Précisez le <b>type d’apprentissage</b> et la <b>tâche</b>.</li>
+<li>Définissez la <b>mesure de performance</b>, en indiquant si vous privilégiez la précision ou le rappel, et la <b>référence</b> de comparaison.</li>
+<li>Identifiez les <b>risques</b> et proposez des <b>garde-fous</b>.</li>
+</ol>
+
+<h2>4. Canevas à compléter</h2>
+<table>
+<tr><th style="width:28%">Rubrique</th><th>Votre cadrage</th></tr>
+<tr><td><b>Décision RH visée</b></td><td></td></tr>
+<tr><td><b>Cible</b> (événement, horizon, niveau, type de tâche)</td><td></td></tr>
+<tr><td><b>Variables envisagées</b></td><td></td></tr>
+<tr><td><b>Variables exclues</b> et pourquoi</td><td></td></tr>
+<tr><td><b>Données et qualité</b></td><td></td></tr>
+<tr><td><b>Type d’apprentissage</b></td><td></td></tr>
+<tr><td><b>Mesure de performance</b> et référence</td><td></td></tr>
+<tr><td><b>Risques et garde-fous</b></td><td></td></tr>
+</table>
+
+<h2>5. Critères d’évaluation (sur 20)</h2>
+<table>
+<tr><th>Critère</th><th>Points</th></tr>
+<tr><td>Décision visée claire et utile, cohérente avec la cible</td><td>4</td></tr>
+<tr><td>Cible précise (événement, horizon, niveau)</td><td>3</td></tr>
+<tr><td>Choix et exclusion des variables argumentés (données sensibles, proxys)</td><td>4</td></tr>
+<tr><td>Analyse réaliste des données</td><td>2</td></tr>
+<tr><td>Mesure de performance adaptée (précision, rappel, référence)</td><td>3</td></tr>
+<tr><td>Risques et garde-fous pertinents</td><td>4</td></tr>
+</table>
+</body></html>

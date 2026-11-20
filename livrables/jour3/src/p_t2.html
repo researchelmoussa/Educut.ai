@@ -1,0 +1,188 @@
+<section class="page" data-t="T2">
+  <div class="opener">
+    <div>
+      <div class="num">T2</div>
+      <h2 style="margin-top:6mm">Automatisation robotisée des processus RH (RPA)</h2>
+      <p class="lead">Des « robots » logiciels qui copient, collent, saisissent et envoient à la place des gestionnaires : la RPA promet d’automatiser vite, sans refondre les systèmes. Que fait-elle vraiment, et où s’arrête-t-elle ?</p>
+      <p class="q">Pensez à une tâche administrative que vous faites en ouvrant trois logiciels et en recopiant des informations de l’un à l’autre. Qu’est-ce qui empêche de la confier à un robot ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Définir la RPA et la distinguer du workflow, de l’intégration et de l’IA.</li><li>Comprendre l’automatisation intelligente (RPA + IA).</li><li>Évaluer l’éligibilité d’un processus et le cartographier.</li><li>Gouverner les robots et anticiper les effets sur les emplois.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 10</b> HR robotic process automation (Fettke, Strohmeier, pp. 187-206)</p><p style="margin:0"><b>E • Ch. 4</b> Core HR and workforce management (pp. 67-84)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Qu’est-ce que la RPA ?</h2>
+  <p class="lead">Fettke et Strohmeier définissent la RPA comme l’automatisation de tâches réalisées par des humains sur des interfaces logicielles, au moyen de « robots » logiciels qui reproduisent leurs actions : cliquer, saisir, copier, lire un écran, envoyer un courriel.</p>
+  <div class="g2">
+    <div class="card n"><h3>Comment fonctionne un robot</h3><ol><li>On décrit ou on enregistre la séquence d’actions d’un gestionnaire.</li><li>Le robot rejoue cette séquence, dans les mêmes logiciels, avec les mêmes écrans.</li><li>Il traite les cas un par un, jour et nuit, sans fatigue.</li><li>Les cas qui sortent du scénario sont renvoyés à un humain.</li></ol></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Ce que la RPA est</h3><p>Une automatisation par <b>l’interface utilisateur</b>, sans modifier les logiciels existants. Elle se déploie vite et coûte relativement peu.</p></div>
+      <div class="card s"><h3>Ce que la RPA n’est pas</h3><p>Une intelligence artificielle. Le robot n’apprend pas, ne comprend pas, ne décide pas : il exécute des règles. Si un écran change, il s’arrête.</p></div>
+    </div>
+  </div>
+  <div class="key"><b>Image utile :</b> la RPA est un « stagiaire numérique » très rapide, très fiable sur une procédure écrite, mais incapable de gérer ce qui n’a pas été prévu. On l’appelle souvent une solution de « ruban adhésif » entre des systèmes qui ne communiquent pas.</div>
+  <span class="src">Réf. H10</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>RPA, workflow, intégration, IA : quatre façons d’automatiser</h2>
+  <p class="lead">Ces quatre approches sont souvent confondues dans les discours commerciaux. Elles répondent pourtant à des besoins différents et peuvent se combiner.</p>
+  <table>
+    <thead><tr><th style="width:16%">Approche</th><th style="width:30%">Principe</th><th style="width:28%">Exemple RH</th><th>Force et limite</th></tr></thead>
+    <tbody>
+      <tr><td><b>Workflow</b></td><td>Organiser la circulation d’une demande entre personnes, avec étapes et validations</td><td>Demande de congés : salarié → manager → RH</td><td>Structure le processus ; les tâches restent humaines</td></tr>
+      <tr><td><b>Intégration (API)</b></td><td>Faire communiquer directement deux logiciels, de système à système</td><td>Le logiciel de recrutement envoie le nouvel embauché au SIRH</td><td>Robuste et durable ; demande un développement</td></tr>
+      <tr><td><b>RPA</b></td><td>Un robot reproduit les actions d’un humain sur les écrans</td><td>Le robot recopie chaque nuit les données d’un tableur dans le logiciel de paie</td><td>Rapide à déployer ; fragile si les écrans changent</td></tr>
+      <tr><td><b>IA</b></td><td>Un modèle comprend, classe, extrait ou prédit à partir de données</td><td>Lecture d’un arrêt de travail scanné ; classement des demandes</td><td>Traite l’imprévu et le non structuré ; probabiliste, donc à contrôler</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card r"><h3>Une règle de choix</h3><p>Si deux logiciels peuvent être reliés par une intégration, c’est souvent la meilleure solution à long terme. La RPA est pertinente quand l’intégration est impossible, trop coûteuse ou trop longue à obtenir.</p></div>
+    <div class="key" style="margin:0"><b>Rappel du jour 1 :</b> l’outil « PayFlow Auto » de l’activité J1-T2 était de la RPA vendue comme de « l’IA ». Savoir distinguer ces approches protège des promesses excessives.</div>
+  </div>
+  <span class="src">Réf. H10</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>L’automatisation intelligente : RPA et IA ensemble</h2>
+  <p class="lead">La RPA seule ne sait traiter que des données structurées. Associée à des briques d’IA, elle peut lire des documents, comprendre des demandes et gérer davantage de cas. On parle d’automatisation intelligente, ou cognitive.</p>
+  <div class="flow" style="margin-bottom:6mm">
+    <div><span class="step">ENTRÉE</span><h3 style="margin-top:1.5mm">Un document arrive</h3><p class="small">Courriel d’un salarié avec un arrêt de travail en pièce jointe.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">IA • LECTURE</span><h3 style="margin-top:1.5mm">Comprendre</h3><p class="small">Reconnaissance de caractères et extraction des dates, du type d’arrêt, du matricule.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">IA • CLASSEMENT</span><h3 style="margin-top:1.5mm">Décider du circuit</h3><p class="small">Arrêt initial ou prolongation ? Pièce lisible ou non ?</p></div>
+    <div><span class="step">RPA • EXÉCUTION</span><h3 style="margin-top:1.5mm">Saisir</h3><p class="small">Le robot saisit l’absence dans le SIRH et met à jour le compteur.</p></div>
+    <div><span class="step">HUMAIN</span><h3 style="margin-top:1.5mm">Exceptions</h3><p class="small">Document illisible, incohérence : transmis au gestionnaire.</p></div>
+  </div>
+  <div class="g3">
+    <div class="card t"><h3>Un continuum</h3><p>Fettke et Strohmeier situent la RPA sur un continuum, de l’automatisation fondée sur des règles jusqu’à des formes plus « cognitives » intégrant l’apprentissage.</p></div>
+    <div class="card t"><h3>Les LLM élargissent le champ</h3><p>Un modèle de langage peut comprendre un courriel libre (« je serai absent lundi pour mon déménagement ») et le transformer en demande structurée.</p></div>
+    <div class="card s"><h3>Mais ajoutent de l’incertitude</h3><p>La RPA classique est déterministe ; l’IA est probabiliste. Il faut des seuils de confiance : en dessous, le cas part chez un humain.</p></div>
+  </div>
+  <span class="src">Réf. H10</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Des cas d’usage RH typiques</h2>
+  <p class="lead">Les processus RH comportent de nombreuses tâches de transfert et de saisie entre systèmes. Ce sont les cibles naturelles de la RPA.</p>
+  <table>
+    <thead><tr><th style="width:24%">Processus</th><th style="width:44%">Tâches automatisables</th><th>Type</th></tr></thead>
+    <tbody>
+      <tr><td><b>Entrée d’un collaborateur</b></td><td>Création du dossier dans le SIRH, de la fiche de paie, des comptes informatiques ; envoi du livret d’accueil ; inscription aux formations obligatoires</td><td>RPA, intégration</td></tr>
+      <tr><td><b>Variables de paie</b></td><td>Consolidation des heures et primes depuis plusieurs sources ; contrôle de cohérence ; import dans le logiciel de paie</td><td>RPA + IA (anomalies)</td></tr>
+      <tr><td><b>Attestations et documents</b></td><td>Production d’attestations employeur, de certificats de travail, de courriers types</td><td>RPA + génération de documents</td></tr>
+      <tr><td><b>Mobilité interne</b></td><td>Mise à jour du poste, du rattachement, des droits d’accès, du centre de coût</td><td>RPA, intégration</td></tr>
+      <tr><td><b>Justificatifs</b></td><td>Lecture et saisie des arrêts de travail, des pièces d’identité, des RIB</td><td>IA (lecture) + RPA</td></tr>
+      <tr><td><b>Départ</b></td><td>Désactivation des accès, calcul du solde de congés, production des documents de fin de contrat</td><td>RPA + contrôle humain</td></tr>
+      <tr><td><b>Reporting</b></td><td>Extraction mensuelle des indicateurs RH, mise en forme, envoi aux managers</td><td>RPA</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Point commun :</b> ces tâches sont pénibles et sources d’erreurs pour les gestionnaires, mais elles comportent toutes des cas particuliers (contrat atypique, temps partiel, expatriation). Le robot traite le cas général, l’humain les exceptions.</div>
+  <span class="src">Réf. H10, E4</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Un processus est-il éligible à la RPA ?</h2>
+  <p class="lead">Tous les processus ne se prêtent pas à la RPA. Une grille simple permet d’évaluer chaque étape avant de lancer un projet.</p>
+  <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:8mm">
+    <table><thead><tr><th>Critère</th><th>Favorable</th><th>Défavorable</th></tr></thead><tbody>
+      <tr><td><b>Règles</b></td><td>Règles claires et stables</td><td>Jugement, interprétation</td></tr>
+      <tr><td><b>Entrées</b></td><td>Numériques et structurées</td><td>Papier, manuscrit, formats variables</td></tr>
+      <tr><td><b>Volume</b></td><td>Élevé et régulier</td><td>Rare ou très irrégulier</td></tr>
+      <tr><td><b>Exceptions</b></td><td>Peu nombreuses</td><td>Nombreuses, imprévisibles</td></tr>
+      <tr><td><b>Systèmes</b></td><td>Écrans et logiciels stables</td><td>Logiciel en cours de remplacement</td></tr>
+      <tr><td><b>Processus</b></td><td>Standardisé et documenté</td><td>Chacun fait à sa manière</td></tr>
+    </tbody></table>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Score d’éligibilité</h3><p>Noter chaque critère de 1 à 3 pour chaque étape. Une étape avec un score total élevé et peu de « défavorable » est candidate. Une étape avec un critère bloquant (jugement humain, logiciel en cours de remplacement) ne l’est pas, quel que soit son score.</p></div>
+      <div class="key" style="margin:0"><b>Piège classique :</b> automatiser un processus mal conçu. Fettke et Strohmeier rappellent qu’il faut d’abord simplifier et standardiser le processus, puis automatiser. Sinon, on automatise le désordre (jour 1, page 8).</div>
+    </div>
+  </div>
+  <span class="src">Réf. H10</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Cartographier un processus avant de l’automatiser</h2>
+  <p class="lead">La cartographie rend visibles les étapes, les acteurs, les systèmes et les décisions. La notation BPMN (Business Process Model and Notation) est le standard ; une version simplifiée suffit pour repérer les candidats à la RPA.</p>
+  <svg viewBox="0 0 1000 250" width="100%" role="img" aria-label="Processus simplifié d'entrée d'un collaborateur en couloirs : manager, RH, informatique">
+    <g font-family="Source Sans 3" font-size="12">
+      <rect x="0" y="0" width="1000" height="80" fill="#eef4f6"/><rect x="0" y="85" width="1000" height="80" fill="#ffffff" stroke="#cfdde3"/><rect x="0" y="170" width="1000" height="80" fill="#eef4f6"/>
+      <text x="12" y="45" font-weight="700" fill="#17324d">Manager</text><text x="12" y="130" font-weight="700" fill="#17324d">RH</text><text x="12" y="215" font-weight="700" fill="#17324d">Informatique</text>
+      <circle cx="110" cy="40" r="12" fill="#fff" stroke="#17324d" stroke-width="2"/>
+      <rect x="140" y="20" width="120" height="40" rx="5" fill="#fff" stroke="#17324d"/><text x="200" y="44" text-anchor="middle">Valide l’embauche</text>
+      <rect x="290" y="105" width="120" height="40" rx="5" fill="#fff" stroke="#17324d"/><text x="350" y="122" text-anchor="middle">Saisit le dossier</text><text x="350" y="137" text-anchor="middle">dans le SIRH</text>
+      <rect x="440" y="105" width="120" height="40" rx="5" fill="#dff1ee" stroke="#0b7f78" stroke-width="2"/><text x="500" y="122" text-anchor="middle">Ressaisit dans</text><text x="500" y="137" text-anchor="middle">la paie</text>
+      <polygon points="620,125 645,105 670,125 645,145" fill="#fff" stroke="#8a4d0f"/><text x="645" y="160" text-anchor="middle" font-size="10.5" fill="#8a4d0f">Contrat atypique ?</text>
+      <rect x="700" y="105" width="120" height="40" rx="5" fill="#dff1ee" stroke="#0b7f78" stroke-width="2"/><text x="760" y="122" text-anchor="middle">Envoie le livret</text><text x="760" y="137" text-anchor="middle">et les accès</text>
+      <rect x="700" y="20" width="120" height="40" rx="5" fill="#fbeedd" stroke="#8a4d0f"/><text x="760" y="37" text-anchor="middle">Traitement manuel</text><text x="760" y="52" text-anchor="middle">avec le manager</text>
+      <rect x="700" y="190" width="120" height="40" rx="5" fill="#dff1ee" stroke="#0b7f78" stroke-width="2"/><text x="760" y="207" text-anchor="middle">Crée les comptes</text><text x="760" y="222" text-anchor="middle">informatiques</text>
+      <circle cx="900" cy="125" r="12" fill="#fff" stroke="#17324d" stroke-width="4"/>
+    </g>
+    <g stroke="#56687a" stroke-width="1.5" fill="none">
+      <path d="M122 40 L140 40"/><path d="M260 40 L275 40 L275 125 L290 125"/><path d="M410 125 L440 125"/><path d="M560 125 L620 125"/>
+      <path d="M670 125 L700 125"/><path d="M645 105 L645 40 L700 40"/><path d="M760 145 L760 190"/><path d="M820 125 L888 125"/><path d="M820 40 L900 40 L900 113"/>
+    </g>
+  </svg>
+  <div class="g3" style="margin-top:4mm">
+    <div class="card r"><h3>Lecture</h3><p>Les couloirs montrent qui agit ; le losange, une décision ; les cercles, le début et la fin.</p></div>
+    <div class="card t"><h3>En vert : candidats RPA</h3><p>Ressaisie dans la paie, envoi du livret, création des comptes : règles claires, données déjà saisies.</p></div>
+    <div class="card s"><h3>En orange : à garder humain</h3><p>Les contrats atypiques demandent un jugement. Le robot les détecte et les oriente.</p></div>
+  </div>
+  <span class="src">Réf. H10</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Gouverner les robots</h2>
+  <p class="lead">Un robot logiciel agit dans les systèmes RH avec des droits d’accès, sur des données personnelles. Il doit être géré comme un « collaborateur numérique », avec des règles précises.</p>
+  <div class="g3">
+    <div class="card t"><h3>Identité et droits</h3><p>Chaque robot a son propre compte, avec les seuls droits nécessaires. Jamais le compte d’un gestionnaire.</p></div>
+    <div class="card t"><h3>Traçabilité</h3><p>Chaque action est journalisée : quel robot, quel dossier, quelle modification, à quelle heure. Indispensable en cas d’erreur ou de contrôle.</p></div>
+    <div class="card t"><h3>Responsable métier</h3><p>Chaque robot a un « propriétaire » RH qui valide le scénario et répond de son fonctionnement.</p></div>
+    <div class="card t"><h3>Maintenance</h3><p>Une mise à jour du SIRH, un écran modifié, une nouvelle règle de paie : le robot doit être adapté, sinon il s’arrête ou se trompe.</p></div>
+    <div class="card t"><h3>Gestion des exceptions</h3><p>Une file d’attente des cas rejetés, traitée par un humain dans un délai défini.</p></div>
+    <div class="card t"><h3>Protection des données</h3><p>Le robot traite des données personnelles : registre des traitements, sécurité, durée de conservation des journaux.</p></div>
+  </div>
+  <div class="key"><b>Centre d’excellence :</b> les organisations qui déploient de nombreux robots créent souvent une équipe transverse qui choisit les processus, développe les robots et assure leur maintenance. Fettke et Strohmeier soulignent que les coûts de maintenance sont souvent sous-estimés au moment du choix.</div>
+  <span class="src">Réf. H10</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>Quels effets sur les emplois administratifs RH ?</h2>
+  <p class="lead">La RPA vise précisément les tâches qui composent une grande partie des postes de gestionnaires administratifs et de paie. Ses effets sur ces emplois doivent être anticipés.</p>
+  <div class="g2">
+    <div>
+      <h3>Ce que l’on observe</h3>
+      <ul>
+        <li><b>Des tâches, pas des postes :</b> la RPA automatise des tâches ; les postes se recomposent autour des exceptions, du contrôle et de la relation avec les salariés.</li>
+        <li><b>De nouveaux rôles :</b> analyste de processus, gestionnaire des robots, contrôleur de qualité des données.</li>
+        <li><b>Un risque de déqualification :</b> si le gestionnaire ne fait plus que traiter les rejets du robot, son travail peut s’appauvrir.</li>
+        <li><b>Un risque d’intensification :</b> les cas restants sont les plus complexes, et le volume attendu peut augmenter.</li>
+      </ul>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Les conditions d’une transition réussie</h3><ul><li>Associer les gestionnaires à la cartographie : ce sont eux qui connaissent les exceptions.</li><li>Former aux nouveaux rôles.</li><li>Décider ouvertement de l’usage du temps libéré.</li><li>Informer et consulter le CSE sur l’introduction de nouvelles technologies (Code du travail, art. L2312-8).</li></ul></div>
+      <div class="key" style="margin:0"><b>Lien avec Renkema (jour 1, page 38) :</b> les conséquences se jouent au niveau individuel (contenu du travail), de la fonction RH (compétences) et de l’organisation (climat social).</div>
+    </div>
+  </div>
+  <span class="src">Réf. H10</span>
+</section>
+
+<section class="page" data-t="T2">
+  <h2>À retenir, activité et quiz • T2</h2>
+  <div class="g2">
+    <div class="card n"><h3>À retenir</h3><ul>
+      <li>La RPA automatise des tâches en reproduisant les actions d’un humain sur les écrans ; elle n’apprend pas.</li>
+      <li>Workflow, intégration, RPA et IA sont quatre approches distinctes et combinables.</li>
+      <li>L’automatisation intelligente associe la RPA à des briques d’IA (lecture, classement), avec des seuils de confiance.</li>
+      <li>Un processus éligible a des règles claires, des entrées numériques, du volume et peu d’exceptions ; on le simplifie avant de l’automatiser.</li>
+      <li>Les robots se gouvernent (droits, traces, maintenance) et leurs effets sur les emplois s’anticipent avec les équipes et le CSE.</li>
+    </ul></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Cartographier l’entrée d’un collaborateur</h3><p>À partir de la description fournie, cartographiez le processus d’entrée d’un collaborateur, évaluez chaque étape avec la grille d’éligibilité et désignez les étapes candidates à la RPA, en justifiant.</p><p style="margin:0"><b>Livrable :</b> carte de processus annotée et grille (document « J3-T2 Activité »).</p></div>
+      <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions de validation</h3><p style="margin:0">Définition de la RPA, distinctions, éligibilité, gouvernance.</p></div>
+    </div>
+  </div>
+</section>

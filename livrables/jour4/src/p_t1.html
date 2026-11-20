@@ -1,0 +1,174 @@
+<section class="page" data-t="T1">
+  <div class="opener">
+    <div>
+      <div class="num">T1</div>
+      <h2 style="margin-top:6mm">L’acquisition des talents augmentée par l’IA</h2>
+      <p class="lead">Attirer, trouver, informer, convaincre : avant toute sélection, le recrutement est une affaire de communication et de logistique. L’IA y apporte vitesse et personnalisation, mais aussi de nouvelles façons d’exclure sans le vouloir.</p>
+      <p class="q">Repensez à votre dernière candidature. À quel moment avez-vous failli abandonner, et pourquoi ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Décrire l’entonnoir de recrutement et ses indicateurs.</li><li>Situer l’IA à chaque étape.</li><li>Rédiger et auditer une offre d’emploi avec l’IA générative.</li><li>Comprendre les risques de la diffusion ciblée et soigner l’expérience candidat.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>E • Ch. 5</b> Talent acquisition (pp. 85-108)</p><p style="margin:0"><b>H • Ch. 6</b> HR machine learning in recruiting (Laumer, Maier, Weitzel, pp. 105-126)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>L’entonnoir de recrutement et ses indicateurs</h2>
+  <p class="lead">Un recrutement se représente comme un entonnoir : à chaque étape, des candidats entrent, d’autres sortent. Mesurer ce qui se passe à chaque étape est la condition pour améliorer le processus, avec ou sans IA.</p>
+  <svg viewBox="0 0 1000 200" width="100%" role="img" aria-label="Entonnoir de recrutement en six étapes avec effectifs décroissants">
+    <g font-family="Source Sans 3" text-anchor="middle">
+      <polygon points="10,20 170,35 170,165 10,180" fill="#17324d"/><text x="90" y="95" fill="#8fe0d6" font-size="13" font-weight="700">ATTRACTION</text><text x="90" y="115" fill="#fff" font-size="12">5 000 vues</text>
+      <polygon points="175,35 335,48 335,152 175,165" fill="#1f4466"/><text x="255" y="95" fill="#8fe0d6" font-size="13" font-weight="700">CANDIDATURE</text><text x="255" y="115" fill="#fff" font-size="12">400 candidats</text>
+      <polygon points="340,48 500,60 500,140 340,152" fill="#0b7f78"/><text x="420" y="95" fill="#fff" font-size="13" font-weight="700">PRÉSÉLECTION</text><text x="420" y="115" fill="#fff" font-size="12">60 retenus</text>
+      <polygon points="505,60 665,72 665,128 505,140" fill="#2b8f88"/><text x="585" y="95" fill="#fff" font-size="13" font-weight="700">ENTRETIENS</text><text x="585" y="115" fill="#fff" font-size="12">15</text>
+      <polygon points="670,72 830,82 830,118 670,128" fill="#8a4d0f"/><text x="750" y="98" fill="#fff" font-size="12" font-weight="700">OFFRE • 2</text>
+      <polygon points="835,82 990,90 990,110 835,118" fill="#b56a1c"/><text x="912" y="104" fill="#fff" font-size="11" font-weight="700">INTÉGRATION • 1</text>
+    </g>
+  </svg>
+  <table style="margin-top:3mm">
+    <thead><tr><th>Indicateur</th><th>Définition</th><th>Ce qu’il révèle</th></tr></thead>
+    <tbody>
+      <tr><td><b>Délai de recrutement</b> <span class="small">(time to hire)</span></td><td>Jours entre la publication et l’acceptation de l’offre</td><td>Réactivité ; risque de perdre les meilleurs candidats</td></tr>
+      <tr><td><b>Coût par recrutement</b></td><td>Dépenses totales divisées par le nombre d’embauches</td><td>Efficience des canaux et des outils</td></tr>
+      <tr><td><b>Taux de passage</b></td><td>Part des candidats qui franchissent chaque étape</td><td>Où se perdent les candidats ; <b>à suivre par groupe</b> pour détecter les biais</td></tr>
+      <tr><td><b>Taux d’abandon</b></td><td>Candidats qui renoncent d’eux-mêmes</td><td>Qualité de l’expérience candidat</td></tr>
+      <tr><td><b>Qualité du recrutement</b></td><td>Performance et maintien en poste des recrutés après un an</td><td>Le seul indicateur de résultat, mais difficile à mesurer</td></tr>
+    </tbody>
+  </table>
+  <span class="src">Réf. E5</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Où l’IA intervient dans l’entonnoir</h2>
+  <p class="lead">Eubanks parcourt les étapes de l’acquisition des talents et montre que chacune dispose désormais d’outils fondés sur l’IA. Leur niveau de risque augmente à mesure qu’on se rapproche de la décision.</p>
+  <table>
+    <thead><tr><th style="width:15%">Étape</th><th style="width:37%">Usages d’IA</th><th style="width:22%">Techniques (jours 1 à 3)</th><th>Niveau de risque</th></tr></thead>
+    <tbody>
+      <tr><td><b>Attraction</b></td><td>Rédaction et optimisation des offres ; diffusion ciblée ; contenus de marque employeur</td><td>IA générative, recommandation</td><td>Faible à modéré (exclusion de publics)</td></tr>
+      <tr><td><b>Sourcing</b></td><td>Recherche de profils, candidats passifs, messages personnalisés</td><td>NLP, appariement, référentiels</td><td>Modéré (information des personnes)</td></tr>
+      <tr><td><b>Candidature</b></td><td>Formulaire simplifié, extraction du CV, assistant candidat</td><td>Extraction, agents conversationnels</td><td>Faible à modéré</td></tr>
+      <tr><td><b>Présélection</b></td><td>Tri, classement, score d’adéquation</td><td>Machine learning supervisé</td><td><b>Élevé</b> : haut risque AI Act (T2)</td></tr>
+      <tr><td><b>Évaluation</b></td><td>Tests en ligne, jeux, entretiens différés, analyse des réponses</td><td>ML, NLP, parfois vidéo</td><td><b>Élevé</b>, en partie interdit (T4, jour 2)</td></tr>
+      <tr><td><b>Décision et intégration</b></td><td>Aide à la décision, préparation de l’offre, onboarding</td><td>IA générative, RPA</td><td>Variable</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="key" style="margin:0"><b>Promesse :</b> recruter plus vite, élargir le vivier, améliorer l’expérience des candidats et libérer les recruteurs pour l’échange humain.</div>
+    <div class="key" style="margin:0;background:var(--sand);border-color:var(--sand-d)"><b style="color:var(--sand-d)">Vigilance :</b> à chaque étape, un outil peut écarter des candidats sans que personne ne l’ait décidé. Les biais s’additionnent d’une étape à l’autre.</div>
+  </div>
+  <span class="src">Réf. E5, H6</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Rédiger une offre d’emploi avec l’IA générative</h2>
+  <p class="lead">L’offre est la première rencontre entre l’entreprise et le candidat. L’IA générative produit en quelques secondes une offre bien écrite : c’est un gain réel, à condition de savoir ce qu’est une bonne offre.</p>
+  <div class="g2">
+    <div>
+      <h3>Ce qu’une bonne offre contient</h3>
+      <ul>
+        <li><b>Les missions réelles</b>, concrètes et hiérarchisées.</li>
+        <li><b>Les exigences indispensables</b>, distinguées des atouts appréciés.</li>
+        <li><b>Les conditions</b> : lieu, horaires, télétravail, type de contrat.</li>
+        <li><b>La rémunération</b> ou une fourchette.</li>
+        <li><b>Le processus</b> : étapes, délais, outils utilisés (y compris l’IA).</li>
+        <li><b>Un engagement</b> en matière d’égalité et d’accessibilité.</li>
+      </ul>
+      <div class="key"><b>À savoir :</b> la directive européenne sur la transparence des rémunérations (2023/970), à transposer d’ici juin 2026, impose notamment d’informer les candidats de la rémunération initiale ou de sa fourchette.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Bien utiliser l’IA générative</h3><ol><li>Lui fournir la vraie fiche de poste, pas trois mots-clés.</li><li>Lui demander explicitement un langage inclusif et des exigences limitées à l’essentiel.</li><li>Relire chaque phrase : l’outil invente des avantages ou des exigences.</li><li>Ne jamais y saisir de données sur des personnes.</li></ol></div>
+      <div class="card s"><h3>Les défauts typiques des offres générées</h3><ul><li>Exigences gonflées (« 5 ans d’expérience » pour un poste débutant).</li><li>Clichés et superlatifs (« environnement dynamique », « rockstar »).</li><li>Vocabulaire à connotation masculine (jour 2, p. 10).</li><li>Promesses que l’entreprise ne tient pas.</li></ul></div>
+    </div>
+  </div>
+  <span class="src">Réf. E5</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Auditer une offre : une grille en six points</h2>
+  <p class="lead">Avant publication, toute offre, qu’elle soit rédigée par un humain ou par une IA, peut être relue avec une grille simple. C’est la grille de votre activité.</p>
+  <table>
+    <thead><tr><th style="width:22%">Point de contrôle</th><th style="width:40%">Question</th><th>Exemple à corriger</th></tr></thead>
+    <tbody>
+      <tr><td><b>1. Légalité</b></td><td>L’offre contient-elle un critère interdit ou une limite d’âge ?</td><td>« Jeune et dynamique », « 25-35 ans », « nationalité française » (C. trav., L1132-1, L5331-2)</td></tr>
+      <tr><td><b>2. Langage inclusif</b></td><td>Le poste est-il présenté aux femmes comme aux hommes ? Le vocabulaire est-il neutre ?</td><td>« Le chef d’équipe » seul ; « conquérant », « dominer le marché »</td></tr>
+      <tr><td><b>3. Exigences réelles</b></td><td>Chaque exigence est-elle indispensable au poste ?</td><td>Bac + 5 exigé pour un poste d’assistant ; permis de conduire sans déplacement</td></tr>
+      <tr><td><b>4. Exactitude</b></td><td>Les avantages et conditions annoncés existent-ils ?</td><td>« Télétravail flexible » alors que la politique prévoit un jour par semaine</td></tr>
+      <tr><td><b>5. Transparence</b></td><td>La rémunération et le processus, y compris l’usage d’outils automatisés, sont-ils indiqués ?</td><td>Aucune mention du tri automatique des candidatures (C. trav., L1221-8)</td></tr>
+      <tr><td><b>6. Accessibilité</b></td><td>L’offre est-elle lisible, et propose-t-elle des aménagements ?</td><td>Phrases longues, jargon interne ; pas de contact pour les candidats en situation de handicap</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Exigences gonflées :</b> une liste longue d’exigences décourage particulièrement les candidats qui ne cochent pas toutes les cases, et ce phénomène touche souvent davantage les femmes. Distinguer « indispensable » et « apprécié » élargit le vivier sans baisser le niveau.</div>
+  <span class="src">Réf. E5</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Diffuser l’offre : le ciblage algorithmique</h2>
+  <p class="lead">Les plateformes d’emploi et les réseaux sociaux choisissent à qui montrer une offre, selon des algorithmes qui optimisent l’engagement ou le coût. Ce choix peut écarter des publics sans que l’employeur l’ait voulu.</p>
+  <div class="g2">
+    <div class="card n"><h3>Deux études de référence</h3>
+      <p><b>Lambrecht et Tucker (2019)</b> : une annonce pour des métiers scientifiques et techniques, conçue pour être neutre, a été montrée à moins de femmes que d’hommes. L’explication tient en partie au coût publicitaire plus élevé pour toucher les femmes jeunes : l’algorithme, en minimisant le coût, a réduit leur exposition.</p>
+      <p style="margin:0"><b>Ali et al. (2019)</b> : sur Facebook, des offres d’emploi diffusées avec un ciblage identique ont atteint des publics très différents selon le métier, par exemple davantage de femmes pour des postes de caissier et davantage d’hommes pour des postes de bûcheron, du seul fait de l’optimisation de la diffusion.</p></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Diffusion programmatique</h3><p>Des outils répartissent automatiquement le budget entre les sites d’emploi selon les résultats obtenus (clics, candidatures). Efficace pour le coût, mais l’optimisation sur le nombre de clics ne garantit ni la qualité ni la diversité des candidatures.</p></div>
+      <div class="card s"><h3>Bonnes pratiques</h3><ul><li>Diffuser sur plusieurs canaux, dont des canaux spécialisés (handicap, quartiers, reconversion).</li><li>Suivre la composition des candidatures par canal.</li><li>Interroger le prestataire sur ses critères d’optimisation.</li></ul></div>
+    </div>
+  </div>
+  <div class="key"><b>Leçon :</b> la discrimination peut naître sans intention, de l’optimisation d’un objectif apparemment neutre (le coût, le clic). C’est la même logique que la variable proxy du jour 1.</div>
+  <span class="src">Réf. E5, H6</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>L’expérience candidat</h2>
+  <p class="lead">Un candidat qui n’obtient pas de réponse, qui remplit trois fois les mêmes informations ou qui ne sait pas où en est sa candidature risque d’abandonner, et de le faire savoir. Eubanks fait de l’expérience candidat un levier majeur de l’acquisition des talents.</p>
+  <div class="g3">
+    <div class="card t"><h3>Simplifier</h3><p>Candidature en quelques minutes, depuis un téléphone ; extraction automatique du CV pour éviter les ressaisies ; candidature sans lettre de motivation quand elle n’apporte rien.</p></div>
+    <div class="card t"><h3>Informer</h3><p>Accusé de réception, étapes et délais annoncés, suivi en ligne, assistant capable de répondre aux questions fréquentes à toute heure (jour 3, T4).</p></div>
+    <div class="card t"><h3>Répondre à tous</h3><p>Réponse à chaque candidature, y compris négative, dans un délai raisonnable. L’automatisation des messages le rend possible ; un retour personnalisé reste un plus pour les finalistes.</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card r"><h3>Mesurer l’expérience</h3><p>Taux d’abandon par étape, délai moyen de réponse, enquête courte auprès de tous les candidats, y compris non retenus, avis publiés sur les plateformes (jour 2, T3).</p></div>
+    <div class="key" style="margin:0"><b>Limite de l’automatisation :</b> les candidats acceptent bien l’automatisation de la logistique (rendez-vous, informations), beaucoup moins celle du jugement. Un refus automatique sans explication est très mal vécu (T4).</div>
+  </div>
+  <span class="src">Réf. E5</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Piloter l’équité tout au long de l’entonnoir</h2>
+  <p class="lead">Les biais s’accumulent d’une étape à l’autre. Suivre les taux de passage par groupe permet de voir où se perdent certains candidats. Exemple fictif pour 400 candidatures, dont 160 femmes.</p>
+  <table style="text-align:center">
+    <thead><tr><th style="text-align:left">Étape</th><th style="text-align:center">Femmes</th><th style="text-align:center">Hommes</th><th style="text-align:center">Taux de passage femmes</th><th style="text-align:center">Taux de passage hommes</th></tr></thead>
+    <tbody>
+      <tr><td style="text-align:left"><b>Candidatures</b></td><td>160</td><td>240</td><td>–</td><td>–</td></tr>
+      <tr><td style="text-align:left"><b>Présélection</b></td><td>16</td><td>44</td><td style="background:#fbeedd"><b>10 %</b></td><td>18 %</td></tr>
+      <tr><td style="text-align:left"><b>Entretiens</b></td><td>5</td><td>10</td><td>31 %</td><td>23 %</td></tr>
+      <tr><td style="text-align:left"><b>Offres</b></td><td>1</td><td>1</td><td>20 %</td><td>10 %</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card n"><h3>Lecture</h3><p>Les femmes représentent 40 % des candidatures mais seulement 27 % des présélectionnés : l’écart se crée à la <b>présélection</b>. Aux étapes suivantes, leur taux de passage est même supérieur. C’est donc la présélection qu’il faut examiner : critères, outil de tri, mots-clés. C’est le cas de l’activité T2.</p></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card r"><h3>Quelles données ?</h3><p>Le suivi par genre est possible à partir des informations du dossier ; pour d’autres critères (origine, handicap), il suppose des enquêtes volontaires, anonymes et encadrées. On analyse des statistiques agrégées, jamais des individus.</p></div>
+      <div class="key" style="margin:0"><b>Prudence statistique :</b> sur de petits effectifs, les écarts peuvent être dus au hasard. On suit les indicateurs sur plusieurs recrutements.</div>
+    </div>
+  </div>
+  <span class="src">Réf. E5, H6</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>À retenir, activité et quiz • T1</h2>
+  <div class="g2">
+    <div class="card n"><h3>À retenir</h3><ul>
+      <li>L’entonnoir de recrutement se pilote par indicateurs : délai, coût, taux de passage, abandon, qualité du recrutement.</li>
+      <li>L’IA intervient à chaque étape ; le risque augmente à mesure qu’on approche de la décision.</li>
+      <li>L’IA générative rédige vite, mais une offre se relit avec une grille : légalité, inclusion, exigences réelles, exactitude, transparence, accessibilité.</li>
+      <li>La diffusion ciblée peut exclure des publics par simple optimisation du coût ou du clic.</li>
+      <li>Suivre les taux de passage par groupe permet de localiser l’étape où naît un biais.</li>
+    </ul></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Rédiger, auditer, corriger</h3><p>À partir de la fiche de poste fournie, faites rédiger une offre par un outil d’IA générative, auditez-la avec la grille en six points, puis rédigez la version corrigée.</p><p style="margin:0"><b>Livrable :</b> deux versions de l’offre et grille d’audit (document « J4-T1 Activité »).</p></div>
+      <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions de validation</h3><p style="margin:0">Entonnoir, indicateurs, audit d’une offre, diffusion ciblée.</p></div>
+    </div>
+  </div>
+</section>

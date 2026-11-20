@@ -1,0 +1,46 @@
+<p class="k">Intelligence artificielle et transformation numérique en GRH • Jour 3 • Après-midi • T3 • Document formateur</p>
+<h1>J3-T3 • Corrigé de l’activité : formulation du planning de Marché Plus</h1>
+<p>Plusieurs formulations sont correctes. Le corrigé propose une formulation type, puis des éléments de réflexion et des repères de correction. Les références juridiques sont à vérifier au regard de la convention collective applicable.</p>
+
+<h2>1. Formulation type</h2>
+<table>
+<tr><th style="width:24%">Élément</th><th>Formulation</th></tr>
+<tr><td><b>Variables</b></td><td>Pour chaque salarié <i>s</i>, chaque jour <i>j</i> de la période (par exemple quatre semaines) et chaque poste <i>p</i> (matin, après-midi, dimanche) : x(s, j, p) = 1 si <i>s</i> travaille au poste <i>p</i> le jour <i>j</i>, 0 sinon.</td></tr>
+<tr><td><b>Contraintes dures</b></td><td>
+<ul>
+<li>Besoins minimaux couverts pour chaque poste et chaque jour.</li>
+<li>Présence d’au moins une personne formée à la caisse centrale sur chaque poste.</li>
+<li>Au plus un poste par salarié et par jour.</li>
+<li>Durée contractuelle respectée sur la période (35 h, 28 h, 24 h), dans les limites prévues pour les heures complémentaires et supplémentaires.</li>
+<li>Repos quotidien d’au moins 11 h (L3131-1) et repos hebdomadaire d’au moins 24 h + 11 h (L3132-2).</li>
+<li>Durée maximale de 10 h par jour (L3121-18) et de 48 h par semaine (L3121-20).</li>
+<li>Temps partiel : pas plus d’une interruption d’activité dans la journée ni d’interruption de plus de deux heures, sauf accord collectif ; respect du délai de prévenance en cas de modification de la répartition des horaires.</li>
+<li>Indisponibilité impérative (garde d’enfant le mardi et le jeudi après 18 h) : peut être traitée comme contrainte dure si l’entreprise s’y engage.</li>
+</ul></td></tr>
+<tr><td><b>Contraintes souples et pénalités (exemple)</b></td><td>
+<ul>
+<li>Plus d’un dimanche travaillé par mois : 60 par dimanche excédentaire.</li>
+<li>Écart au planning fixe souhaité par la salariée concernée : 40 par jour modifié.</li>
+<li>Étudiants affectés un matin de semaine : 30 par occurrence.</li>
+<li>Répartition inéquitable des samedis après-midi entre salariés : 40 par samedi d’écart à la moyenne.</li>
+<li>Heure complémentaire ou supplémentaire : 5 par heure.</li>
+</ul>
+<p><i>Justification :</i> les dimanches pèsent le plus sur la vie familiale ; la stabilité des horaires d’un temps partiel est essentielle pour cumuler un autre emploi ou organiser sa vie ; les souhaits des étudiants sont importants mais plus flexibles ; le coût financier est pris en compte sans dominer.</p></td></tr>
+<tr><td><b>Objectif</b></td><td>Minimiser la somme des pénalités des contraintes souples et du coût des heures complémentaires et supplémentaires, sous respect de toutes les contraintes dures.</td></tr>
+</table>
+
+<h2>2. Éléments de réflexion attendus</h2>
+<ul>
+<li><b>Les temps partiels risquent d’être la variable d’ajustement :</b> l’algorithme comblera les trous de planning avec leurs heures complémentaires, au détriment de la stabilité de leurs horaires. Une pénalité forte sur les modifications et un plafond d’heures complémentaires les protègent.</li>
+<li><b>Tension entre souhaits individuels :</b> si les étudiants prennent les samedis, les autres salariés en font moins, mais les personnes sans souhait exprimé risquent de récupérer les créneaux les moins demandés (fermeture, dimanche). Il faut une règle d’équité sur la durée (trimestre).</li>
+<li><b>Contrainte dure ou souple :</b> faire de la garde d’enfant une contrainte dure protège la salariée mais réduit la flexibilité ; c’est un choix assumé à expliquer.</li>
+<li><b>Transparence :</b> présenter les règles et les pénalités à l’équipe ; publier chaque mois les compteurs (dimanches, samedis, fermetures par personne) ; permettre de signaler ses souhaits avant la génération ; publier le planning trois semaines à l’avance et limiter les modifications ; laisser au responsable la possibilité d’ajuster ; consulter les représentants du personnel le cas échéant.</li>
+</ul>
+
+<h2>3. Repères de correction</h2>
+<ul>
+<li>Les contraintes légales doivent figurer en contraintes dures ; une copie qui les met en souples perd des points.</li>
+<li>La présence d’une personne qualifiée par poste (caisse centrale) est souvent oubliée.</li>
+<li>Les pénalités doivent être <b>ordonnées et justifiées</b> ; des chiffres sans explication ne valent pas de points.</li>
+<li>La réflexion doit identifier au moins un groupe potentiellement désavantagé et proposer au moins deux mesures de transparence.</li>
+</ul>

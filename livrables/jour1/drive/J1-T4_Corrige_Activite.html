@@ -1,0 +1,54 @@
+<html><head><meta charset="utf-8"><style>
+body{font-family:Arial,sans-serif;font-size:11pt;color:#1a2b3c}
+h1{color:#17324d;font-size:20pt}
+h2{color:#0b7f78;font-size:14pt}
+h3{color:#17324d;font-size:12pt}
+table{border-collapse:collapse;width:100%}
+th{background:#17324d;color:#ffffff;border:1px solid #17324d;padding:6px;text-align:left}
+td{border:1px solid #9fb4c2;padding:6px;vertical-align:top}
+.k{color:#56687a}
+</style></head><body>
+<p class="k">Intelligence artificielle et transformation numérique en GRH • Jour 1 • Après-midi • T4 • Document formateur</p>
+<h1>J1-T4 • Corrigé de l’activité : carte des cas d’usage et priorisation</h1>
+<p>Les copies portent sur des organisations différentes. Ce corrigé propose un <b>corrigé type sur Distrib’Ouest</b>, cohérent avec le diagnostic de maturité du corrigé J1-T1, puis des repères de correction.</p>
+
+<h2>1. Cartographie et notation : Distrib’Ouest</h2>
+<table>
+<tr><th>#</th><th>Étape</th><th>Cas d’usage</th><th>Brique</th><th>Valeur</th><th>Faisabilité</th><th>Risque</th><th>Commentaire</th></tr>
+<tr><td>1</td><td>Intégrer / administrer</td><td>Assistant RH répondant aux questions fréquentes (congés, bulletins, mutuelle) à partir des documents</td><td>Assistant conversationnel (LLM + documents)</td><td>5</td><td>4</td><td>2</td><td>Irritant mesuré : un tiers du temps des gestionnaires. Ne nécessite pas de données intégrées au départ.</td></tr>
+<tr><td>2</td><td>Attirer</td><td>Aide à la rédaction des offres d’emploi et vérification du vocabulaire inclusif</td><td>IA générative</td><td>2</td><td>5</td><td>1</td><td>Gain modeste mais immédiat ; relecture humaine.</td></tr>
+<tr><td>3</td><td>Recruter</td><td>Assistant candidat : accusé de réception, réponses, prise de rendez-vous</td><td>Assistant conversationnel</td><td>4</td><td>3</td><td>2</td><td>Répond au problème des candidats sans réponse ; suppose un outil de suivi des candidatures.</td></tr>
+<tr><td>4</td><td>Recruter</td><td>Tri automatique des candidatures (demande de la direction)</td><td>Analytique prédictive</td><td>3</td><td>1</td><td>5</td><td>Aucun historique structuré ; IA à haut risque ; risque de biais. À écarter à court terme.</td></tr>
+<tr><td>5</td><td>Intégrer / administrer</td><td>Lecture automatique des justificatifs (arrêts, documents d’embauche)</td><td>Automatisation intelligente</td><td>3</td><td>3</td><td>2</td><td>Utile une fois le SIRH en place ; données de santé à protéger.</td></tr>
+<tr><td>6</td><td>Administrer</td><td>Détection d’anomalies dans les variables de paie avant envoi au cabinet</td><td>ML non supervisé / règles</td><td>4</td><td>2</td><td>1</td><td>≈ 15 erreurs par mois ; faisable après fiabilisation des données de temps.</td></tr>
+<tr><td>7</td><td>Développer</td><td>Analyse des souhaits de formation exprimés en entretien annuel</td><td>NLP</td><td>3</td><td>1</td><td>2</td><td>Impossible tant que les entretiens sont des PDF non structurés.</td></tr>
+<tr><td>8</td><td>Administrer</td><td>Prévision des besoins en personnel par magasin (saisonnalité, promotions)</td><td>Analytique prédictive</td><td>4</td><td>2</td><td>1</td><td>Prévision agrégée, sans données individuelles ; suppose des données de temps fiables.</td></tr>
+<tr><td>9</td><td>Fidéliser</td><td>Prédiction individuelle des départs</td><td>Analytique prédictive</td><td>3</td><td>1</td><td>4</td><td>Données insuffisantes ; risque d’étiquetage. Projet structurant à long terme.</td></tr>
+<tr><td>10</td><td>Fidéliser</td><td>Analyse des commentaires d’un futur baromètre social</td><td>NLP, clustering</td><td>3</td><td>3</td><td>3</td><td>Anonymat difficile dans les petits magasins : seuils minimaux de répondants.</td></tr>
+</table>
+
+<h2>2. Priorités retenues et justification type</h2>
+<table>
+<tr><th>Rang</th><th>Cas</th><th>Quadrant</th><th>Garde-fou principal</th></tr>
+<tr><td>1</td><td>Assistant RH (cas 1)</td><td>À lancer en priorité</td><td>Réponses limitées aux documents validés, sources citées, escalade vers un gestionnaire pour toute situation individuelle</td></tr>
+<tr><td>2</td><td>Assistant candidat (cas 3), avec mise en place d’un outil de suivi des candidatures</td><td>À lancer en priorité / structurant</td><td>Information claire que le candidat échange avec une machine ; aucune décision de sélection par l’assistant</td></tr>
+<tr><td>3</td><td>Aide à la rédaction des offres (cas 2)</td><td>Amélioration simple</td><td>Relecture systématique par la chargée de recrutement</td></tr>
+</table>
+<p><b>Justification type (≈ 300 mots).</b> Le diagnostic de maturité de Distrib’Ouest montre des processus aux niveaux 1 et 2 : les données sur les candidats et les salariés sont dispersées et peu fiables. Les cas d’usage fondés sur l’analytique prédictive, comme le tri des candidatures ou la prédiction des départs, ont donc une faisabilité très faible, et ils présentent en outre un risque élevé : ils portent sur des décisions concernant des personnes, relèvent de la catégorie à haut risque de l’AI Act et reproduiraient les biais d’un historique de toute façon inexistant. La demande de la direction d’acheter un outil de tri doit être différée, et cette position expliquée. Je retiens en priorité l’assistant RH, qui répond à l’irritant le mieux mesuré (un tiers du temps des gestionnaires) et concerne les 450 salariés. Il s’appuie sur des documents existants plutôt que sur des données personnelles, ce qui le rend faisable malgré la faible maturité ; son niveau d’autonomie reste celui de l’information, avec escalade vers un humain. En deuxième priorité, l’assistant candidat améliore l’expérience des 180 recrutements annuels et l’image de l’enseigne ; il impose de déployer d’abord un outil de suivi des candidatures, ce qui fait progresser la maturité du processus et prépare des projets ultérieurs. En troisième lieu, l’aide à la rédaction d’offres est un gain rapide et peu risqué. Au niveau individuel, ces choix améliorent les réponses aux salariés et aux candidats ; pour la fonction RH, ils libèrent du temps pour le conseil ; pour l’organisation, ils limitent les risques juridiques. Les projets prédictifs (prévision des besoins par magasin, détection d’anomalies de paie) deviendront pertinents une fois le SIRH et la gestion des temps intégrés.</p>
+
+<h2>3. Repères de correction</h2>
+<ul>
+<li><b>Cartographie :</b> au moins huit cas, quatre étapes, briques correctement identifiées.</li>
+<li><b>Notes :</b> la faisabilité doit refléter la maturité numérique ; une faisabilité de 4 ou 5 pour un projet prédictif dans une organisation de niveau 1 est incohérente. Le risque doit être plus élevé pour les décisions sur des personnes (recrutement, performance, départs) que pour les tâches.</li>
+<li><b>Priorités :</b> cohérentes avec les notes et avec la règle « faible risque, tâches avant décisions » ; un choix différent est acceptable s’il est argumenté (par exemple un projet à risque élevé accompagné de garde-fous précis).</li>
+<li><b>Notions :</b> au moins trois notions du jour mobilisées explicitement.</li>
+</ul>
+
+<h2>4. Erreurs fréquentes</h2>
+<ul>
+<li>Lister des technologies au lieu de cas d’usage (« un chatbot », sans dire pour qui et pour quoi).</li>
+<li>Noter tous les cas 4 ou 5 en valeur, sans hiérarchie.</li>
+<li>Choisir le projet le plus spectaculaire sans tenir compte de la faisabilité.</li>
+<li>Ignorer la dimension sociale : information du CSE, acceptation par les salariés.</li>
+</ul>
+</body></html>

@@ -1,0 +1,167 @@
+<section class="page" data-t="T1">
+  <div class="opener">
+    <div>
+      <div class="num">T1</div>
+      <h2 style="margin-top:6mm">Machine learning sur données textuelles</h2>
+      <p class="lead">La fonction RH produit et reçoit chaque jour une grande quantité de texte : CV, offres, évaluations, commentaires d’enquêtes, demandes des salariés. C’est la matière première la plus abondante, et la plus difficile à exploiter sans outil.</p>
+      <p class="q">Votre baromètre social a recueilli 4 000 commentaires libres. Combien de temps faudrait-il pour les lire tous, et que risquez-vous de manquer en ne lisant qu’un échantillon ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Identifier les sources de données textuelles en RH.</li><li>Décrire la chaîne de traitement d’un texte, du nettoyage à la représentation.</li><li>Distinguer les principales tâches : classification, sentiment, thèmes, extraction, appariement.</li><li>Repérer les biais propres au langage.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 3</b> HR machine learning on text data (Gross, pp. 46-67)</p><p style="margin:0"><b>H • Ch. 12</b> HR natural language processing – conversational agents in HRM (Laumer, Morana, pp. 226-242)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Le texte, première donnée des RH</h2>
+  <p class="lead">Les données d’un SIRH sont surtout structurées : des champs, des codes, des dates. Mais une grande partie de l’information utile se trouve dans du texte libre, que les outils classiques ne savent pas analyser.</p>
+  <div class="g2">
+    <table><thead><tr><th>Source textuelle</th><th>Exemples d’usage</th></tr></thead><tbody>
+      <tr><td><b>CV et lettres</b></td><td>Extraction des expériences et compétences, appariement avec les offres</td></tr>
+      <tr><td><b>Offres d’emploi</b></td><td>Rédaction, analyse du vocabulaire, veille sur le marché</td></tr>
+      <tr><td><b>Évaluations et entretiens</b></td><td>Synthèse des retours, repérage des souhaits de formation</td></tr>
+      <tr><td><b>Enquêtes (questions ouvertes)</b></td><td>Thèmes dominants, tonalité, évolution du climat</td></tr>
+      <tr><td><b>Demandes et tickets RH</b></td><td>Orientation automatique, réponses aux questions fréquentes</td></tr>
+      <tr><td><b>Entretiens de sortie</b></td><td>Causes de départ récurrentes</td></tr>
+      <tr><td><b>Documents de référence</b></td><td>Convention collective, accords : base d’un assistant RH</td></tr>
+    </tbody></table>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card r"><h3>Données structurées</h3><p>Ancienneté, salaire, poste, code d’absence. Chaque valeur a un format et un sens fixés. Un tableur ou un logiciel les traite directement.</p></div>
+      <div class="card n"><h3>Données non structurées</h3><p>Phrases, paragraphes, documents. Le sens dépend du contexte, de la syntaxe, des sous-entendus. Il faut d’abord les transformer en nombres pour qu’une machine puisse les traiter : c’est l’objet du traitement automatique du langage (TAL, en anglais NLP).</p></div>
+      <div class="key" style="margin:0"><b>Enjeu RH :</b> le texte contient souvent ce que les cases ne disent pas : les raisons d’un départ, la nature d’un désaccord, une compétence non répertoriée.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H3</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>La chaîne de traitement d’un texte</h2>
+  <p class="lead">Quel que soit l’outil, un texte passe par une série d’étapes avant d’être analysé. Chacune implique des choix qui influencent le résultat.</p>
+  <div class="flow">
+    <div><span class="step">1 • COLLECTE</span><h3 style="margin-top:1.5mm">Rassembler</h3><p class="small">Exporter les commentaires, convertir les PDF de CV en texte, vérifier la base juridique et l’information des personnes.</p></div>
+    <div><span class="step">2 • NETTOYAGE</span><h3 style="margin-top:1.5mm">Préparer</h3><p class="small">Retirer les noms et les informations identifiantes, corriger l’encodage, supprimer les doublons.</p></div>
+    <div><span class="step">3 • PRÉTRAITEMENT</span><h3 style="margin-top:1.5mm">Découper</h3><p class="small">Tokenisation (mots), mise en minuscules, suppression des mots vides (« le », « de »), lemmatisation (« travaillons » → « travailler »).</p></div>
+    <div><span class="step">4 • REPRÉSENTATION</span><h3 style="margin-top:1.5mm">Transformer en nombres</h3><p class="small">Comptage de mots, pondération TF-IDF ou plongements vectoriels (embeddings).</p></div>
+    <div style="background:var(--teal-l)"><span class="step">5 • ANALYSE</span><h3 style="margin-top:1.5mm">Modéliser et interpréter</h3><p class="small">Classer, regrouper, extraire, comparer. Puis relire des exemples pour vérifier.</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card r"><h3>Exemple de prétraitement</h3><p><i>« Les managers ne nous écoutent pas vraiment depuis la réorganisation. »</i></p><p>→ <b>manager • écouter • pas • vraiment • réorganisation</b></p><p class="small">Attention : supprimer « ne… pas » comme mot vide inverserait le sens. Le choix des mots vides n’est jamais neutre.</p></div>
+    <div class="card r"><h3>Anonymiser avant d’analyser</h3><p>Un commentaire peut contenir un nom, un site, une situation de santé. Le nettoyage doit retirer ces éléments, surtout si l’analyse est confiée à un outil externe. C’est une exigence du RGPD (minimisation) et de confiance envers les répondants.</p></div>
+  </div>
+  <span class="src">Réf. H3</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Représenter un texte par des nombres</h2>
+  <p class="lead">Une machine ne lit pas des mots, elle calcule sur des nombres. Trois grandes familles de représentation se sont succédé, de la plus simple à la plus riche.</p>
+  <div class="g3">
+    <div class="card t"><h3>Sac de mots</h3><p>On compte les occurrences de chaque mot dans chaque document. L’ordre des mots est perdu.</p>
+      <table style="font-size:12px;margin-top:2mm"><thead><tr><th>Commentaire</th><th>salaire</th><th>manager</th><th>charge</th></tr></thead><tbody>
+      <tr><td>C1</td><td>2</td><td>0</td><td>1</td></tr><tr><td>C2</td><td>0</td><td>1</td><td>2</td></tr></tbody></table>
+      <p class="small" style="margin-top:2mm">Simple et lisible, mais « pas content » et « content » se ressemblent.</p></div>
+    <div class="card t"><h3>TF-IDF</h3><p>On pondère chaque mot : il compte davantage s’il est fréquent dans le document (TF) mais rare dans l’ensemble du corpus (IDF).</p><p class="small">Dans des commentaires RH, « entreprise » apparaît partout et pèse peu ; « télétravail » apparaît dans certains commentaires seulement et devient discriminant.</p></div>
+    <div class="card n"><h3>Plongements (embeddings)</h3><p>Chaque mot ou phrase devient un vecteur de plusieurs centaines de nombres, appris sur de grands corpus. Des sens proches donnent des vecteurs proches.</p><p class="small" style="color:#d7e4ee">« rémunération » et « salaire » sont voisins. Les modèles récents produisent des vecteurs qui dépendent du contexte de la phrase.</p></div>
+  </div>
+  <div class="key"><b>Pourquoi c’est important pour les RH :</b> la représentation détermine ce que la machine peut voir. Un appariement CV-offre fondé sur des mots-clés ignorera un candidat qui écrit « gestion de la paie » quand l’offre demande « administration du personnel ». Un appariement fondé sur des embeddings les rapprochera, mais héritera des associations, y compris biaisées, présentes dans les textes d’apprentissage.</div>
+  <span class="src">Réf. H3</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Six tâches courantes sur le texte RH</h2>
+  <p class="lead">Ces tâches reprennent les catégories du jour 1 (classification, clustering, recommandation) appliquées au langage.</p>
+  <table>
+    <thead><tr><th style="width:20%">Tâche</th><th style="width:34%">Principe</th><th style="width:28%">Exemple RH</th><th>Type d’apprentissage</th></tr></thead>
+    <tbody>
+      <tr><td><b>Classification</b></td><td>Attribuer une catégorie à un texte</td><td>Orienter une demande vers « paie », « congés » ou « mutuelle »</td><td>Supervisé</td></tr>
+      <tr><td><b>Analyse de sentiment</b></td><td>Estimer la tonalité : positive, neutre, négative</td><td>Suivre le climat par direction dans un baromètre</td><td>Supervisé (ou lexique)</td></tr>
+      <tr><td><b>Modélisation de thèmes</b></td><td>Faire émerger les sujets récurrents d’un corpus (ex. LDA)</td><td>Dégager les thèmes de 4 000 commentaires</td><td>Non supervisé</td></tr>
+      <tr><td><b>Extraction d’entités</b></td><td>Repérer des éléments précis : diplômes, employeurs, dates, compétences</td><td>Analyse automatique des CV (parsing)</td><td>Supervisé</td></tr>
+      <tr><td><b>Similarité et appariement</b></td><td>Mesurer la proximité de deux textes</td><td>Rapprocher un CV d’une offre, une offre d’une formation</td><td>Représentations apprises</td></tr>
+      <tr><td><b>Génération et résumé</b></td><td>Produire un texte nouveau à partir d’une consigne</td><td>Synthétiser des retours, rédiger une offre</td><td>LLM</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="key" style="margin:0"><b>Les LLM changent la donne :</b> une seule consigne (« classe ces commentaires en thèmes ») remplace souvent un projet d’apprentissage complet. Mais le résultat doit être contrôlé : un LLM peut inventer un thème ou mal compter.</div>
+    <div class="key" style="margin:0;background:var(--sand);border-color:var(--sand-d)"><b style="color:var(--sand-d)">Ironie et négation :</b> « Super, encore une réorganisation » est négatif. Les méthodes par mots-clés se trompent ; les modèles récents font mieux, sans être infaillibles.</div>
+  </div>
+  <span class="src">Réf. H3, H12</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Cas d’usage 1 : analyser les commentaires d’un baromètre social</h2>
+  <p class="lead">C’est l’usage le plus répandu et l’un des plus utiles : transformer des milliers de verbatims en une vue d’ensemble exploitable par la direction et les managers.</p>
+  <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:8mm">
+    <div>
+      <h3>Démarche recommandée</h3>
+      <ol>
+        <li><b>Définir les questions</b> : quels sujets la direction veut-elle comprendre ? Par entité ? Dans le temps ?</li>
+        <li><b>Combiner</b> une grille de thèmes connue (rémunération, management, charge, conditions de travail…) et une exploration non supervisée pour faire émerger les thèmes imprévus.</li>
+        <li><b>Mesurer la tonalité par thème</b>, plutôt qu’une tonalité globale par commentaire.</li>
+        <li><b>Vérifier sur un échantillon</b> codé à la main : l’outil classe-t-il comme un humain ?</li>
+        <li><b>Restituer avec des verbatims</b> représentatifs et anonymisés, pas seulement des chiffres.</li>
+      </ol>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Ce que l’outil apporte</h3><p>Exhaustivité, rapidité, comparaison entre entités et dans le temps, repérage de signaux faibles.</p></div>
+      <div class="card s"><h3>Les pièges</h3><ul><li><b>Anonymat :</b> dans une équipe de cinq personnes, un verbatim est vite attribué. Fixer un seuil minimal de répondants.</li><li><b>Thèmes « fourre-tout »</b> qui masquent des réalités différentes.</li><li><b>Surinterprétation</b> d’un pourcentage calculé sur peu de commentaires.</li></ul></div>
+    </div>
+  </div>
+  <div class="key"><b>Règle de confiance :</b> les salariés ont accepté de s’exprimer librement. Utiliser leurs commentaires pour identifier des personnes ou sanctionner trahirait cet engagement et tarirait la source.</div>
+  <span class="src">Réf. H3</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Cas d’usage 2 : analyser les CV et les rapprocher des offres</h2>
+  <p class="lead">Les outils de recrutement extraient les informations des CV (parsing), puis calculent une proximité avec l’offre. C’est une étape clé de la présélection automatisée.</p>
+  <div class="flow" style="margin-bottom:5mm">
+    <div><span class="step">EXTRACTION</span><h3 style="margin-top:1.5mm">Lire le CV</h3><p class="small">Conversion du fichier, repérage des rubriques, extraction des postes, dates, diplômes, compétences.</p></div>
+    <div><span class="step">NORMALISATION</span><h3 style="margin-top:1.5mm">Harmoniser</h3><p class="small">« Resp. paie », « payroll manager » et « responsable de la paie » ramenés à un même intitulé, souvent grâce à un référentiel (voir T4).</p></div>
+    <div><span class="step">APPARIEMENT</span><h3 style="margin-top:1.5mm">Comparer</h3><p class="small">Score de proximité entre le profil et les exigences de l’offre.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">CLASSEMENT</span><h3 style="margin-top:1.5mm">Ordonner</h3><p class="small">Liste des candidatures triée, présentée au recruteur.</p></div>
+  </div>
+  <div class="g3">
+    <div class="card r"><h3>Erreurs d’extraction</h3><p>Mises en page en colonnes, CV graphiques, intitulés atypiques : des informations sont perdues avant même l’analyse. Les candidats qui maîtrisent les codes du « CV lisible par machine » sont avantagés.</p></div>
+    <div class="card r"><h3>Effet mots-clés</h3><p>Un appariement par mots-clés favorise ceux qui recopient le vocabulaire de l’offre, et pénalise les reconversions et les parcours atypiques.</p></div>
+    <div class="card r"><h3>Biais appris</h3><p>Un modèle entraîné sur les embauches passées peut associer à la réussite des mots liés au genre ou à l’origine : nom d’une école, d’un sport, d’une association.</p></div>
+  </div>
+  <div class="key"><b>Cadre :</b> ces systèmes relèvent de la catégorie à haut risque de l’AI Act (annexe III, emploi). Le Code du travail impose aussi d’informer le candidat des méthodes d’aide au recrutement utilisées (art. L1221-8).</div>
+  <span class="src">Réf. H3</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Les biais logés dans le langage</h2>
+  <p class="lead">Le texte n’est pas neutre : il porte les stéréotypes de ceux qui l’écrivent. Les modèles qui apprennent sur des textes les reproduisent, parfois en les amplifiant.</p>
+  <div class="g3">
+    <div class="card t"><h3>Biais des plongements</h3><p>Bolukbasi et al. (2016) ont montré que des embeddings entraînés sur des articles de presse produisaient l’analogie « homme est à programmeur ce que femme est à femme au foyer ». Ces associations se retrouvent dans les outils qui les utilisent.</p></div>
+    <div class="card t"><h3>Langage genré des offres</h3><p>Gaucher, Friesen et Kay (2011) ont montré que des offres rédigées avec un vocabulaire à connotation masculine (« compétitif », « dominant ») attirent moins les candidates. Les outils d’aide à la rédaction peuvent corriger, ou reproduire, ce phénomène.</p></div>
+    <div class="card t"><h3>Langage des évaluations</h3><p>Les commentaires d’évaluation décrivent souvent les femmes avec des termes de personnalité et les hommes avec des termes de compétence. Un modèle entraîné sur ces textes apprend ces écarts.</p></div>
+  </div>
+  <table style="margin-top:5mm">
+    <thead><tr><th style="width:28%">Contrôle</th><th>Comment le mettre en œuvre</th></tr></thead>
+    <tbody>
+      <tr><td><b>Tester par groupe</b></td><td>Comparer les scores obtenus par des CV identiques ne différant que par le prénom ou le genre grammatical.</td></tr>
+      <tr><td><b>Relire des échantillons</b></td><td>Vérifier manuellement les classements et les thèmes sur une sélection aléatoire.</td></tr>
+      <tr><td><b>Limiter les variables</b></td><td>Retirer les informations sans lien avec le poste avant l’analyse (photo, âge, adresse, loisirs).</td></tr>
+    </tbody>
+  </table>
+  <span class="src">Réf. H3</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>À retenir, activité et quiz • T1</h2>
+  <div class="g2">
+    <div class="card n"><h3>À retenir</h3><ul>
+      <li>Le texte est la donnée RH la plus abondante ; il doit être transformé en nombres pour être analysé.</li>
+      <li>La chaîne de traitement (nettoyage, prétraitement, représentation, analyse) comporte des choix qui influencent le résultat.</li>
+      <li>Sac de mots, TF-IDF et embeddings captent le sens de façon de plus en plus riche, avec des biais de plus en plus difficiles à voir.</li>
+      <li>Six tâches courantes : classification, sentiment, thèmes, extraction, appariement, génération.</li>
+      <li>L’analyse automatique se vérifie toujours sur un échantillon codé à la main.</li>
+    </ul></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Humain contre machine sur 20 verbatims</h3><p>Codez vous-même 20 commentaires d’un baromètre social selon une grille de thèmes et de tonalité, puis comparez votre codage à l’analyse produite par un outil d’IA fournie dans le document. Expliquez les écarts.</p><p style="margin:0"><b>Livrable :</b> tableau comparatif et trois enseignements (document « J2-T1 Activité »).</p></div>
+      <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions de validation</h3><p style="margin:0">Chaîne de traitement, représentations, tâches sur le texte, biais du langage.</p></div>
+    </div>
+  </div>
+</section>

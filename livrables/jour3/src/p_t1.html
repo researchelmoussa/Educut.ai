@@ -1,0 +1,173 @@
+<section class="page" data-t="T1">
+  <div class="opener">
+    <div>
+      <div class="num">T1</div>
+      <h2 style="margin-top:6mm">Core HR et gestion des effectifs</h2>
+      <p class="lead">Le « core RH » est le socle administratif de la fonction : dossier salarié, paie, temps, absences, déclarations. Peu visible quand il fonctionne, il conditionne tout le reste, y compris les projets d’IA.</p>
+      <p class="q">Combien de fois la même information sur un nouveau salarié (adresse, poste, salaire) est-elle saisie dans votre organisation, et par combien de personnes ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Délimiter le périmètre du core RH et son rôle de « source de vérité ».</li><li>Identifier les apports de l’IA en temps, absences et paie.</li><li>Comprendre la planification des effectifs à court et à long terme.</li><li>Repérer et chiffrer des tâches automatisables.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>E • Ch. 4</b> Core HR and workforce management (pp. 67-84)</p><p style="margin:0"><b>H • Ch. 7</b> Machine learning in HR staffing (Meier, Laumer, pp. 127-148)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Le périmètre du core RH</h2>
+  <p class="lead">Le core RH regroupe les processus administratifs obligatoires et répétitifs qui accompagnent toute la vie du contrat de travail. Eubanks le décrit comme la fondation sur laquelle reposent toutes les autres activités RH.</p>
+  <div class="g3">
+    <div class="card t"><h3>Dossier du salarié</h3><p>Identité, contrat, poste, rattachement, rémunération, historique. C’est le « système d’enregistrement » (<i>system of record</i>) : la version de référence de chaque information.</p></div>
+    <div class="card t"><h3>Paie et déclarations</h3><p>Calcul des salaires, cotisations, prélèvement à la source, déclaration sociale nominative (DSN) mensuelle.</p></div>
+    <div class="card t"><h3>Temps et absences</h3><p>Horaires, heures supplémentaires, congés, arrêts maladie, compteurs, astreintes.</p></div>
+    <div class="card t"><h3>Avantages sociaux</h3><p>Mutuelle, prévoyance, titres-restaurant, épargne salariale, avantages du CSE.</p></div>
+    <div class="card t"><h3>Mouvements</h3><p>Entrées, mutations, promotions, changements d’horaires, sorties et soldes de tout compte.</p></div>
+    <div class="card t"><h3>Libre-service</h3><p>Portails salariés et managers : demandes, validations, consultation des bulletins et compteurs.</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card n"><h3>Caractéristiques communes</h3><p>Volumes élevés, règles légales et conventionnelles précises, échéances fixes, tolérance à l’erreur quasi nulle. Une erreur de paie touche directement le salarié et la confiance.</p></div>
+    <div class="key" style="margin:0"><b>Pour l’IA :</b> ces processus sont de bons candidats à l’automatisation parce qu’ils sont répétitifs et réglés. Mais le calcul légal lui-même doit rester <b>déterministe</b> : on ne « prédit » pas un salaire, on le calcule.</div>
+  </div>
+  <span class="src">Réf. E4</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Le core RH, source de vérité des projets d’IA</h2>
+  <p class="lead">Toutes les applications vues aux jours 1 et 2 puisent dans le core RH : un modèle de prédiction des départs utilise l’ancienneté, le salaire, les absences ; un assistant RH répond à partir des compteurs de congés. Si la source est fausse, tout ce qui en découle l’est aussi.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8mm">
+    <div>
+      <h3>Les problèmes de données les plus fréquents</h3>
+      <table><thead><tr><th>Problème</th><th>Exemple</th></tr></thead><tbody>
+        <tr><td><b>Doublons</b></td><td>Un salarié réembauché a deux matricules</td></tr>
+        <tr><td><b>Définitions divergentes</b></td><td>« Effectif » calculé différemment par la paie et le contrôle de gestion</td></tr>
+        <tr><td><b>Données périmées</b></td><td>Poste non mis à jour après une mutation</td></tr>
+        <tr><td><b>Saisies multiples</b></td><td>Même information ressaisie dans trois outils, avec trois versions</td></tr>
+        <tr><td><b>Champs libres</b></td><td>Intitulés de poste rédigés différemment pour le même emploi</td></tr>
+      </tbody></table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Gouvernance des données RH</h3><ul><li>Un responsable pour chaque donnée de référence.</li><li>Un dictionnaire des données : définitions communes.</li><li>Des contrôles réguliers de qualité.</li><li>Une saisie unique, propagée aux autres outils.</li></ul></div>
+      <div class="key" style="margin:0"><b>Lien avec le jour 1 :</b> c’est ce qui distingue le niveau 2 (outillé) du niveau 3 (intégré) de la grille de maturité. Un projet d’IA sur un core RH de niveau 2 est rarement une bonne idée.</div>
+    </div>
+  </div>
+  <span class="src">Réf. E4</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Temps et absences : ce que l’IA peut apporter</h2>
+  <p class="lead">La gestion des temps est le processus du core RH qui produit le plus de données, et le plus d’erreurs : badgeages oubliés, plannings modifiés, compteurs incohérents.</p>
+  <div class="g2">
+    <table><thead><tr><th style="width:36%">Usage</th><th>Principe</th></tr></thead><tbody>
+      <tr><td><b>Détection d’anomalies</b></td><td>Repérer les badgeages manquants, les heures supplémentaires inhabituelles, les compteurs négatifs, avant la clôture de paie.</td></tr>
+      <tr><td><b>Prévision de l’absentéisme agrégé</b></td><td>Anticiper le nombre d’absences par équipe et par semaine pour ajuster les remplacements (cas vu au jour 1, page 30).</td></tr>
+      <tr><td><b>Lecture des justificatifs</b></td><td>Extraire automatiquement les dates d’un arrêt de travail transmis par le salarié.</td></tr>
+      <tr><td><b>Assistant sur les compteurs</b></td><td>Répondre « il vous reste 12 jours de congés » à partir des données du SIRH.</td></tr>
+    </tbody></table>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><h3>Limite légale et éthique</h3><p>Les données d’absence pour maladie touchent à la santé. La prévision doit rester <b>agrégée</b> (équipe, site) et ne jamais viser à identifier les salariés « susceptibles d’être malades ». Le motif médical n’est d’ailleurs pas connu de l’employeur.</p></div>
+      <div class="card r"><h3>Contrôle du temps de travail</h3><p>Les outils de suivi de l’activité ne peuvent être mis en place qu’après information et consultation du CSE et information des salariés (Code du travail, art. L1222-4 et L2312-38). Ils doivent rester proportionnés.</p></div>
+    </div>
+  </div>
+  <span class="src">Réf. E4</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>La paie : contrôler plutôt que calculer</h2>
+  <p class="lead">Le calcul de la paie repose sur des règles légales et conventionnelles : c’est le domaine des logiciels classiques, pas du machine learning. L’IA intervient autour du calcul, pour le fiabiliser et répondre aux questions.</p>
+  <div class="flow" style="margin-bottom:6mm">
+    <div><span class="step">1 • COLLECTE</span><h3 style="margin-top:1.5mm">Variables</h3><p class="small">Heures, absences, primes, entrées et sorties du mois.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">2 • CONTRÔLE (IA)</span><h3 style="margin-top:1.5mm">Détection d’anomalies</h3><p class="small">Variation inhabituelle d’un salaire, prime versée deux fois, taux incohérent.</p></div>
+    <div><span class="step">3 • CALCUL</span><h3 style="margin-top:1.5mm">Moteur de paie</h3><p class="small">Règles déterministes, paramétrées et mises à jour.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">4 • VÉRIFICATION (IA)</span><h3 style="margin-top:1.5mm">Écarts mois à mois</h3><p class="small">Comparaison avec le mois précédent et signalement des écarts à expliquer.</p></div>
+    <div><span class="step">5 • DIFFUSION</span><h3 style="margin-top:1.5mm">Bulletins et DSN</h3><p class="small">Dématérialisation, réponses aux questions (assistant).</p></div>
+  </div>
+  <div class="g3">
+    <div class="card t"><h3>Apprentissage non supervisé</h3><p>La détection d’anomalies apprend ce qui est « normal » pour chaque salarié et chaque rubrique, et signale ce qui s’en écarte. C’est l’usage vu au jour 1 (page 24).</p></div>
+    <div class="card t"><h3>Un humain valide</h3><p>L’outil signale, le gestionnaire de paie vérifie et corrige. Une alerte n’est pas une erreur : un écart peut être justifié (prime exceptionnelle).</p></div>
+    <div class="card s"><h3>Ce que l’IA ne doit pas faire</h3><p>Calculer elle-même un montant légal, ou modifier un bulletin sans validation. Une IA générative peut se tromper sur un taux ou une règle.</p></div>
+  </div>
+  <span class="src">Réf. E4</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Planifier les effectifs : court terme et long terme</h2>
+  <p class="lead">La gestion des effectifs (<i>workforce management</i>) consiste à disposer du bon nombre de personnes, avec les bonnes compétences, au bon moment. Elle se joue à deux horizons très différents.</p>
+  <div class="g2">
+    <div class="card n"><h3>Court terme : de la charge au planning</h3><p>Semaines ou jours. Exemples : commerce, logistique, centres d’appels, hôpitaux.</p>
+      <ol><li>Prévoir la charge (clients, colis, appels, patients).</li><li>Traduire la charge en besoin de personnel par créneau.</li><li>Construire les plannings (T3).</li><li>Ajuster en temps réel (absences, imprévus).</li></ol>
+      <p class="small" style="color:#d7e4ee">L’IA intervient surtout à l’étape 1 : prévision par séries temporelles intégrant saisonnalité, promotions, météo, jours fériés.</p></div>
+    <div class="card t"><h3>Long terme : la planification stratégique</h3><p>Un à cinq ans. En France, elle prend la forme de la gestion des emplois et des parcours professionnels (GEPP, ex-GPEC).</p>
+      <ol><li>Projeter les besoins selon la stratégie.</li><li>Projeter les ressources : départs en retraite, mobilité, turnover.</li><li>Analyser les écarts par métier et compétence.</li><li>Décider : recruter, former, réorganiser.</li></ol>
+      <p class="small">L’IA aide à projeter les départs et à analyser les compétences (référentiels du jour 2).</p></div>
+  </div>
+  <div class="key"><b>Staffing (Meier et Laumer) :</b> le chapitre 7 du Handbook montre que le machine learning est utilisé pour prévoir les besoins et pour affecter les personnes aux postes ou missions. Nous approfondirons l’affectation au jour 4.</div>
+  <span class="src">Réf. E4, H7</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Prévoir la charge : un exemple</h2>
+  <p class="lead">Un entrepôt prévoit le nombre de colis à préparer chaque jour, puis en déduit le nombre de préparateurs nécessaires. Le graphique illustre une prévision hebdomadaire.</p>
+  <div style="display:grid;grid-template-columns:150mm 1fr;gap:8mm;align-items:start">
+    <svg viewBox="0 0 560 270" width="150mm" role="img" aria-label="Colis réels et prévus par semaine, avec un pic en fin d'année">
+      <g font-family="Source Sans 3" font-size="11" fill="#56687a">
+        <line x1="50" y1="230" x2="540" y2="230" stroke="#9fb4c2"/>
+        <line x1="50" y1="30" x2="50" y2="230" stroke="#9fb4c2"/>
+        <text x="44" y="234" text-anchor="end">0</text><text x="44" y="184" text-anchor="end">10 000</text><text x="44" y="134" text-anchor="end">20 000</text><text x="44" y="84" text-anchor="end">30 000</text><text x="44" y="34" text-anchor="end">40 000</text>
+        <line x1="50" y1="180" x2="540" y2="180" stroke="#eef4f6"/><line x1="50" y1="130" x2="540" y2="130" stroke="#eef4f6"/><line x1="50" y1="80" x2="540" y2="80" stroke="#eef4f6"/>
+        <text x="80" y="250">S40</text><text x="170" y="250">S43</text><text x="260" y="250">S46</text><text x="350" y="250">S49</text><text x="440" y="250">S52</text>
+      </g>
+      <polyline fill="none" stroke="#17324d" stroke-width="2.5" points="80,150 110,148 140,145 170,140 200,138 230,128 260,110 290,95 320,90 350,70 380,55 410,60"/>
+      <polyline fill="none" stroke="#0b7f78" stroke-width="2.5" stroke-dasharray="6 4" points="410,60 440,45 470,75 500,150 530,160"/>
+      <rect x="400" y="30" width="140" height="200" fill="#0b7f78" opacity="0.06"/>
+      <g font-family="Source Sans 3" font-size="12"><text x="300" y="80" fill="#17324d" font-weight="700">Réel</text><text x="455" y="40" fill="#0b7f78" font-weight="700">Prévision</text></g>
+    </svg>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card r"><h3>Du colis à l’effectif</h3><p>Si un préparateur traite en moyenne 120 colis par heure et travaille 7 heures, une journée à 33 600 colis demande 40 préparateurs. La semaine de pic nécessite donc des renforts à recruter des semaines à l’avance.</p></div>
+      <div class="card r"><h3>Les variables de la prévision</h3><p>Historique, saisonnalité, opérations commerciales, jours fériés, tendance de croissance. Données <b>agrégées</b>, sans information personnelle.</p></div>
+      <div class="key" style="margin:0"><b>Valeur RH :</b> anticiper les recrutements saisonniers, éviter les sous-effectifs qui épuisent les équipes, limiter les heures supplémentaires et le recours tardif à l’intérim.</div>
+    </div>
+  </div>
+  <span class="src">Réf. E4</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>Repérer et chiffrer les tâches automatisables</h2>
+  <p class="lead">Avant d’acheter un outil, il faut savoir quelles tâches automatiser, combien de temps cela fera gagner et quels contrôles humains conserver. C’est la méthode de votre activité.</p>
+  <div class="g2">
+    <div>
+      <h3>Six critères de sélection</h3>
+      <table><thead><tr><th>Critère</th><th>Question</th></tr></thead><tbody>
+        <tr><td><b>Volume</b></td><td>La tâche est-elle fréquente ?</td></tr>
+        <tr><td><b>Répétitivité</b></td><td>Se déroule-t-elle toujours de la même façon ?</td></tr>
+        <tr><td><b>Règles</b></td><td>Les décisions suivent-elles des règles claires ?</td></tr>
+        <tr><td><b>Données numériques</b></td><td>Les entrées sont-elles déjà numériques et structurées ?</td></tr>
+        <tr><td><b>Risque d’erreur</b></td><td>Les erreurs humaines sont-elles fréquentes ou coûteuses ?</td></tr>
+        <tr><td><b>Valeur humaine</b></td><td>La tâche demande-t-elle jugement, empathie, négociation ?</td></tr>
+      </tbody></table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Calcul du temps gagné</h3><p style="font-family:'Space Grotesk',sans-serif;font-size:15px">Temps gagné par an = fréquence annuelle × durée unitaire × taux d’automatisation</p><p class="small" style="color:#d7e4ee"><b>Exemple :</b> 1 800 attestations par an × 15 min × 80 % automatisables = 360 heures, soit environ un quart de poste de gestionnaire.</p></div>
+      <div class="card t"><h3>Contrôle humain à conserver</h3><p>Pour chaque tâche : qui vérifie, quoi, à quelle fréquence ? Contrôle systématique, par échantillon ou sur exception. Plus la conséquence d’une erreur est grave pour le salarié, plus le contrôle doit être serré.</p></div>
+      <div class="key" style="margin:0"><b>Attention :</b> le temps gagné n’est pas un gain réel tant qu’on n’a pas décidé de ce qu’on en fait : plus de conseil, de meilleurs délais, ou des économies.</div>
+    </div>
+  </div>
+  <span class="src">Réf. E4</span>
+</section>
+
+<section class="page" data-t="T1">
+  <h2>À retenir, activité et quiz • T1</h2>
+  <div class="g2">
+    <div class="card n"><h3>À retenir</h3><ul>
+      <li>Le core RH (dossier, paie, temps, absences, mouvements) est la source de vérité de tous les projets d’IA RH.</li>
+      <li>La qualité des données de référence se gouverne : responsables, définitions communes, saisie unique.</li>
+      <li>L’IA contrôle, prévoit et répond ; le calcul légal reste déterministe et validé par un humain.</li>
+      <li>La planification des effectifs se joue à court terme (charge, plannings) et à long terme (GEPP).</li>
+      <li>Une tâche automatisable se repère avec six critères et se chiffre : fréquence × durée × taux d’automatisation.</li>
+    </ul></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Tableau d’opportunités</h3><p>Pour l’entreprise de 500 salariés décrite dans le document, identifiez cinq tâches du core RH automatisables, estimez le temps gagné par an et définissez les contrôles humains à conserver.</p><p style="margin:0"><b>Livrable :</b> tableau d’opportunités (document « J3-T1 Activité »).</p></div>
+      <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions de validation</h3><p style="margin:0">Périmètre du core RH, données de référence, paie, planification des effectifs.</p></div>
+    </div>
+  </div>
+</section>

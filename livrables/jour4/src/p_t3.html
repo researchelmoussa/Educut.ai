@@ -1,0 +1,170 @@
+<section class="page" data-t="T3">
+  <div class="opener">
+    <div>
+      <div class="num">T3</div>
+      <h2 style="margin-top:6mm">Machine learning dans le staffing et la mobilité interne</h2>
+      <p class="lead">Le meilleur candidat pour un poste travaille parfois déjà dans l’entreprise, sans que personne ne le sache. Les outils de staffing et de marché interne des talents cherchent à rapprocher les personnes, les postes et les missions.</p>
+      <p class="q">Dans votre organisation, comment apprend-on qu’un poste se libère ? Et comment un salarié fait-il connaître ses souhaits d’évolution ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Définir le staffing et le distinguer du recrutement.</li><li>Comprendre le fonctionnement d’un marché interne des talents.</li><li>Connaître les principes des systèmes de recommandation et leurs biais.</li><li>Concevoir un dispositif transparent, respectueux du choix des salariés.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 7</b> Machine learning in HR staffing (Meier, Laumer, pp. 127-148)</p><p style="margin:0"><b>E • Ch. 7</b> Talent management (p. 131 et suiv.)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Qu’est-ce que le staffing ?</h2>
+  <p class="lead">Meier et Laumer définissent le staffing de manière large : l’ensemble des activités qui visent à faire correspondre des personnes et des postes, des missions ou des projets, à l’intérieur comme à l’extérieur de l’organisation.</p>
+  <div class="g2">
+    <div class="card r"><h3>Recrutement et staffing</h3><table style="font-size:13px"><thead><tr><th></th><th>Recrutement externe</th><th>Staffing interne</th></tr></thead><tbody>
+      <tr><td><b>Vivier</b></td><td>Candidats extérieurs</td><td>Salariés en poste</td></tr>
+      <tr><td><b>Information</b></td><td>CV, entretiens</td><td>Historique, évaluations, compétences, souhaits</td></tr>
+      <tr><td><b>Horizon</b></td><td>Un poste</td><td>Postes, missions, projets, mentorat</td></tr>
+      <tr><td><b>Enjeu</b></td><td>Attirer</td><td>Développer et retenir</td></tr>
+    </tbody></table></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Deux familles d’usages du ML (Meier et Laumer)</h3><ul><li><b>Prévoir</b> les besoins de personnel (jour 3, T1).</li><li><b>Apparier</b> les personnes et les postes ou missions : c’est l’objet de cette séance.</li></ul></div>
+      <div class="key" style="margin:0"><b>Pourquoi la mobilité interne compte :</b> pourvoir un poste en interne est souvent plus rapide et moins coûteux, réduit le risque d’erreur (on connaît la personne) et constitue un levier de fidélisation. Mais les postes ouverts restent souvent invisibles, et les souhaits des salariés, inconnus.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Le marché interne des talents</h2>
+  <p class="lead">Un marché interne des talents (<i>talent marketplace</i>) est une plateforme où les salariés décrivent leurs compétences et leurs aspirations, et où l’organisation publie postes, missions courtes, projets et offres de mentorat. Un moteur de recommandation rapproche les deux.</p>
+  <div class="flow" style="margin-bottom:6mm">
+    <div><span class="step">PROFIL</span><h3 style="margin-top:1.5mm">Le salarié</h3><p class="small">Compétences (déclarées, déduites du parcours), aspirations, disponibilité, mobilité géographique.</p></div>
+    <div><span class="step">OPPORTUNITÉS</span><h3 style="margin-top:1.5mm">L’organisation</h3><p class="small">Postes ouverts, missions de quelques semaines, projets transverses, mentorat, formations.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">RECOMMANDATION</span><h3 style="margin-top:1.5mm">Le moteur</h3><p class="small">Propose à chacun des opportunités adaptées, et aux managers des profils.</p></div>
+    <div><span class="step">DÉCISION</span><h3 style="margin-top:1.5mm">Les personnes</h3><p class="small">Le salarié choisit de postuler ; le manager choisit de retenir.</p></div>
+  </div>
+  <div class="g3">
+    <div class="card t"><h3>Pour le salarié</h3><p>Visibilité des opportunités, développement de compétences par des missions courtes, parcours personnalisés.</p></div>
+    <div class="card t"><h3>Pour l’organisation</h3><p>Mobiliser rapidement des compétences pour un projet, réduire les recrutements externes, mieux connaître les compétences disponibles.</p></div>
+    <div class="card s"><h3>Conditions de réussite</h3><p>Des managers qui acceptent de « laisser partir » leurs talents, du temps réellement dégagé pour les missions, un référentiel de compétences vivant (jour 2, T4).</p></div>
+  </div>
+  <span class="src">Réf. H7, E7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Les données du staffing interne</h2>
+  <p class="lead">Un moteur de recommandation interne s’appuie sur des données que l’organisation possède déjà ou collecte. Leur qualité et leur légitimité conditionnent la confiance des salariés.</p>
+  <table>
+    <thead><tr><th style="width:22%">Donnée</th><th style="width:30%">Source</th><th>Point de vigilance</th></tr></thead>
+    <tbody>
+      <tr><td><b>Compétences</b></td><td>Autodéclaration, CV, formations suivies, référentiel</td><td>Autodéclaration inégale : certains se sous-estiment, d’autres se surestiment</td></tr>
+      <tr><td><b>Parcours</b></td><td>SIRH : postes, durées, mobilités</td><td>Reproduit les parcours passés, y compris leurs inégalités</td></tr>
+      <tr><td><b>Aspirations</b></td><td>Saisies par le salarié, entretiens professionnels</td><td>Doivent rester sous le contrôle du salarié, modifiables à tout moment</td></tr>
+      <tr><td><b>Évaluations</b></td><td>Entretiens annuels</td><td>Subjectives ; leur usage dans la recommandation doit être limité et connu</td></tr>
+      <tr><td><b>Comportement sur la plateforme</b></td><td>Clics, consultations, candidatures</td><td>Utiles pour améliorer les suggestions ; ne doivent pas servir à repérer des salariés « prêts à partir »</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="key" style="margin:0"><b>Confidentialité :</b> un salarié qui explore des postes ne souhaite pas forcément que son manager le sache. La visibilité des souhaits doit être réglée par le salarié lui-même.</div>
+    <div class="key" style="margin:0;background:var(--sand);border-color:var(--sand-d)"><b style="color:var(--sand-d)">Finalité :</b> des données collectées pour développer les salariés ne doivent pas être détournées pour les évaluer ou prédire leur départ (RGPD, principe de finalité).</div>
+  </div>
+  <span class="src">Réf. H7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Comment fonctionne un système de recommandation</h2>
+  <p class="lead">Les systèmes de recommandation, popularisés par le commerce en ligne et les plateformes de vidéo, reposent sur trois grandes approches. Les plateformes RH les combinent souvent.</p>
+  <div class="g3">
+    <div class="card t"><h3>Filtrage par contenu</h3><p>Recommander des opportunités <b>semblables au profil</b> : compétences communes entre le salarié et le poste, calculées grâce au référentiel et aux embeddings (jour 2).</p><p class="small"><b>Atout :</b> explicable (« vous avez 7 des 9 compétences »).<br><b>Limite :</b> propose peu de surprises, enferme dans son métier.</p></div>
+    <div class="card t"><h3>Filtrage collaboratif</h3><p>Recommander ce qu’ont choisi des <b>personnes au profil similaire</b> : « les salariés qui ont occupé votre poste sont souvent allés vers… ».</p><p class="small"><b>Atout :</b> révèle des passerelles inattendues.<br><b>Limite :</b> reproduit les parcours passés, y compris genrés.</p></div>
+    <div class="card n"><h3>Approche hybride</h3><p>Combiner les deux, et ajouter des règles : diversité des suggestions, priorités de l’entreprise, exclusion de certaines variables.</p><p class="small" style="color:#d7e4ee"><b>Atout :</b> équilibre pertinence et ouverture.<br><b>Limite :</b> plus complexe à expliquer.</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card r"><h3>Le démarrage à froid</h3><p>Un nouveau salarié, ou une nouvelle mission sans historique, ne peut pas bénéficier du filtrage collaboratif. Le filtrage par contenu prend alors le relais, d’où l’importance d’un profil de compétences renseigné dès l’arrivée.</p></div>
+    <div class="key" style="margin:0"><b>Une recommandation n’est pas une décision :</b> c’est le niveau 2 d’autonomie vu au jour 1. Elle ne doit ni empêcher un salarié de postuler à une offre non recommandée, ni le priver d’une opportunité parce qu’elle ne lui a pas été suggérée.</div>
+  </div>
+  <span class="src">Réf. H7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Les biais propres aux recommandations internes</h2>
+  <p class="lead">Les recommandations orientent ce que les salariés voient. Si elles sont biaisées, certaines personnes ne voient jamais certaines opportunités, sans même le savoir.</p>
+  <table>
+    <thead><tr><th style="width:24%">Biais</th><th style="width:44%">Mécanisme</th><th>Mesure</th></tr></thead>
+    <tbody>
+      <tr><td><b>Reproduction des parcours</b></td><td>Peu de femmes sont passées de la production au management : l’outil le propose rarement aux femmes de production</td><td>Contrôler les recommandations par groupe ; règles de diversité</td></tr>
+      <tr><td><b>Boucle de rétroaction</b></td><td>Les opportunités recommandées reçoivent plus de candidatures, deviennent « populaires » et sont encore plus recommandées</td><td>Réserver une part de suggestions à la découverte</td></tr>
+      <tr><td><b>Biais de visibilité</b></td><td>Les salariés au profil le plus complet sont mieux recommandés ; ceux qui ont peu de temps ou d’accès numérique disparaissent</td><td>Aider à renseigner les profils ; alternatives hors plateforme</td></tr>
+      <tr><td><b>Rétention par les managers</b></td><td>Des managers dissuadent leurs meilleurs collaborateurs de postuler pour les garder</td><td>Règles de mobilité, indicateurs par équipe, reconnaissance des managers « exportateurs de talents »</td></tr>
+      <tr><td><b>Biais d’autodéclaration</b></td><td>Les compétences déclarées dépendent de la confiance en soi plus que du niveau réel</td><td>Compléter par des preuves (formations, réalisations) ; accompagnement</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Effet cumulatif :</b> une recommandation biaisée aujourd’hui crée l’historique biaisé de demain, sur lequel le modèle sera réentraîné. Les écarts peuvent ainsi s’amplifier avec le temps.</div>
+  <span class="src">Réf. H7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Transparence et contrôle par le salarié</h2>
+  <p class="lead">Un dispositif de mobilité n’a de valeur que si les salariés lui font confiance et l’utilisent. Quatre principes en sont la base. Ils structurent la fiche de votre activité.</p>
+  <div class="g2">
+    <div class="card t"><h3>1. Expliquer chaque recommandation</h3><p>« Cette mission vous est proposée car elle mobilise 6 de vos compétences et développe la compétence “gestion de projet” que vous avez indiquée comme objectif. » Le salarié comprend et peut corriger son profil.</p></div>
+    <div class="card t"><h3>2. Laisser le salarié maître de son profil</h3><p>Il voit les données utilisées, peut les compléter, les corriger, masquer ses souhaits à son manager, ou désactiver les recommandations.</p></div>
+    <div class="card t"><h3>3. Garantir le droit de refuser</h3><p>Ignorer ou refuser une recommandation n’a aucune conséquence : pas de trace dans l’évaluation, pas de signal transmis au manager.</p></div>
+    <div class="card t"><h3>4. Ouvrir toutes les opportunités à tous</h3><p>Les recommandations s’ajoutent à la publication de toutes les offres ; elles ne filtrent pas l’accès.</p></div>
+  </div>
+  <div class="key"><b>Cadre :</b> information des salariés sur le traitement et sa finalité (RGPD, art. 13) ; information et consultation du CSE ; vigilance sur la qualification à haut risque si l’outil influence des décisions de promotion ou d’affectation (AI Act, annexe III, point 4) ; entretien professionnel obligatoire tous les deux ans, que la plateforme complète sans le remplacer.</div>
+  <span class="src">Réf. H7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Le staffing opérationnel : affecter aux missions</h2>
+  <p class="lead">Dans les sociétés de conseil, d’ingénierie, de services ou de travail temporaire, le staffing est quotidien : affecter les bonnes personnes aux bonnes missions, au bon moment. Machine learning et optimisation s’y combinent.</p>
+  <div class="flow" style="margin-bottom:6mm">
+    <div><span class="step">PRÉVOIR (ML)</span><p class="small" style="margin-top:1mm">Missions à venir, durées, probabilité de signature des projets.</p></div>
+    <div><span class="step">ÉVALUER L’ADÉQUATION (ML)</span><p class="small" style="margin-top:1mm">Score de correspondance entre chaque personne et chaque mission.</p></div>
+    <div><span class="step">AFFECTER (OPTIMISATION)</span><p class="small" style="margin-top:1mm">Meilleure affectation d’ensemble sous contraintes : disponibilités, coûts, déplacements, souhaits (jour 3, T3).</p></div>
+    <div style="background:var(--teal-l)"><span class="step">VALIDER (HUMAIN)</span><p class="small" style="margin-top:1mm">Le responsable d’affectation ajuste et échange avec les personnes.</p></div>
+  </div>
+  <div class="g3">
+    <div class="card t"><h3>Valeur</h3><p>Moins de temps d’inactivité entre deux missions, meilleure adéquation, réponses plus rapides aux clients.</p></div>
+    <div class="card s"><h3>Risque d’équité</h3><p>Les missions intéressantes ou bien placées reviennent toujours aux mêmes ; d’autres n’ont que des missions qui ne les développent pas.</p></div>
+    <div class="card r"><h3>Bonne pratique</h3><p>Intégrer le développement des personnes et la répartition des missions recherchées dans les objectifs, pas seulement l’adéquation immédiate.</p></div>
+  </div>
+  <span class="src">Réf. H7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>Mesurer le succès d’un dispositif de mobilité</h2>
+  <p class="lead">Un marché interne des talents se pilote comme tout projet RH. Les indicateurs doivent couvrir l’usage, les résultats et l’équité.</p>
+  <table>
+    <thead><tr><th style="width:24%">Dimension</th><th>Indicateurs</th></tr></thead>
+    <tbody>
+      <tr><td><b>Usage</b></td><td>Part des salariés ayant un profil renseigné ; consultations ; candidatures internes</td></tr>
+      <tr><td><b>Résultats</b></td><td>Taux de postes pourvus en interne ; délai de pourvoi ; missions réalisées ; compétences développées</td></tr>
+      <tr><td><b>Rétention</b></td><td>Départs volontaires des salariés ayant bénéficié d’une mobilité, comparés aux autres</td></tr>
+      <tr><td><b>Équité</b></td><td>Recommandations reçues, candidatures et mobilités obtenues <b>par groupe</b> (genre, âge, site, catégorie)</td></tr>
+      <tr><td><b>Satisfaction</b></td><td>Pertinence perçue des recommandations ; confiance dans le dispositif</td></tr>
+      <tr><td><b>Managers</b></td><td>Mobilités sortantes acceptées par équipe ; délais de libération</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card n"><h3>Lecture par groupe</h3><p>Si les femmes reçoivent autant de recommandations mais obtiennent moins de mobilités, le problème est dans la décision des managers. Si elles reçoivent moins de recommandations, il est dans l’outil ou les données. Le même raisonnement par étape qu’en T1.</p></div>
+    <div class="key" style="margin:0"><b>Attention :</b> le nombre de recommandations n’est pas un résultat. Ce qui compte, ce sont les mobilités réalisées et réussies, et leur répartition.</div>
+  </div>
+  <span class="src">Réf. H7, E7</span>
+</section>
+
+<section class="page" data-t="T3">
+  <h2>À retenir, activité et quiz • T3</h2>
+  <div class="g2">
+    <div class="card n"><h3>À retenir</h3><ul>
+      <li>Le staffing fait correspondre personnes et postes, missions ou projets, à l’intérieur comme à l’extérieur.</li>
+      <li>Le marché interne des talents rend visibles les opportunités et les compétences grâce à la recommandation.</li>
+      <li>Filtrage par contenu, collaboratif ou hybride : chacun a ses atouts et ses biais.</li>
+      <li>Reproduction des parcours, boucle de rétroaction, visibilité, rétention par les managers : des biais à surveiller par groupe.</li>
+      <li>Expliquer, laisser le salarié maître de son profil, garantir le droit de refuser, ouvrir toutes les opportunités à tous.</li>
+    </ul></div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Concevoir un dispositif de mobilité</h3><p>Pour le groupe décrit dans le document, concevez un dispositif de recommandation de mobilité interne : données utilisées et exclues, logique de recommandation, information du salarié, droit de refus, indicateurs d’équité.</p><p style="margin:0"><b>Livrable :</b> fiche dispositif (document « J4-T3 Activité »).</p></div>
+      <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions de validation</h3><p style="margin:0">Staffing, marché interne, recommandation, biais, transparence.</p></div>
+    </div>
+  </div>
+</section>

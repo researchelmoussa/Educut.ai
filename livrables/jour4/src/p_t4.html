@@ -1,0 +1,162 @@
+<section class="page" data-t="T4">
+  <div class="opener">
+    <div>
+      <div class="num">T4</div>
+      <h2 style="margin-top:6mm">Machine learning dans la sélection du personnel</h2>
+      <p class="lead">La sélection est le moment où l’on décide qui rejoint l’organisation. La psychologie du travail dispose depuis longtemps de critères exigeants pour juger une méthode de sélection. Les outils d’IA doivent y répondre comme les autres.</p>
+      <p class="q">Si vous deviez choisir une seule méthode pour sélectionner un candidat (CV, entretien libre, entretien structuré, test, mise en situation), laquelle prendriez-vous, et pourquoi ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Rappeler ce que la recherche sait de la validité des méthodes de sélection.</li><li>Situer les outils d’IA en sélection et leurs exigences psychométriques.</li><li>Comprendre les réactions des candidats et la justice perçue.</li><li>Évaluer un outil avec une grille en cinq critères.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 8</b> Machine learning in personnel selection (König, Langer, pp. 149-168)</p><p style="margin:0"><b>H • Ch. 4</b> HR machine learning on audio and video data (pp. 68-88)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Ce que la recherche sait des méthodes de sélection</h2>
+  <p class="lead">Des décennies de recherche, synthétisées par des méta-analyses, permettent de comparer la validité prédictive des méthodes : leur capacité à prédire la performance future dans le poste.</p>
+  <div class="g2">
+    <table><thead><tr><th>Méthode</th><th>Validité prédictive (ordre de grandeur)</th></tr></thead><tbody>
+      <tr><td><b>Entretien structuré</b> (mêmes questions, grille de notation)</td><td>Parmi les plus élevées</td></tr>
+      <tr><td><b>Test de connaissances du métier</b></td><td>Élevée</td></tr>
+      <tr><td><b>Mise en situation, échantillon de travail</b></td><td>Élevée à moyenne</td></tr>
+      <tr><td><b>Test d’aptitudes cognitives</b></td><td>Moyenne, avec des écarts de résultats entre groupes à surveiller</td></tr>
+      <tr><td><b>Questionnaire de personnalité</b></td><td>Faible à moyenne selon le trait et le poste</td></tr>
+      <tr><td><b>Entretien non structuré</b></td><td>Plus faible que l’entretien structuré</td></tr>
+      <tr><td><b>Années d’expérience</b>, graphologie</td><td>Faible à nulle</td></tr>
+    </tbody></table>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Deux méta-analyses de référence</h3><p>Schmidt et Hunter (1998) ont longtemps fait autorité. Une révision de Sackett et ses collègues (2022) a corrigé certaines estimations et placé l’<b>entretien structuré</b> en tête des méthodes les plus valides, devant les tests d’aptitudes cognitives.</p></div>
+      <div class="key" style="margin:0"><b>Conséquence pour l’IA :</b> un outil d’IA doit être comparé à ces références. S’il ne fait pas mieux qu’un entretien structuré bien conduit, il n’apporte pas de valeur prédictive, seulement de la vitesse. Et s’il imite un entretien non structuré, il automatise une méthode faible.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H8</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Où l’IA intervient dans la sélection</h2>
+  <p class="lead">König et Langer distinguent plusieurs familles d’outils de sélection fondés sur le machine learning. Certaines automatisent des méthodes classiques, d’autres créent de nouvelles sources d’information sur les candidats.</p>
+  <table>
+    <thead><tr><th style="width:24%">Outil</th><th style="width:40%">Principe</th><th>Question clé</th></tr></thead>
+    <tbody>
+      <tr><td><b>Tests adaptatifs</b></td><td>Les questions s’ajustent au niveau du candidat ; des modèles estiment ses aptitudes</td><td>La mesure est-elle aussi valide qu’un test classique ?</td></tr>
+      <tr><td><b>Évaluations ludiques</b> <span class="small">(game-based)</span></td><td>Des mini-jeux mesurent attention, prise de risque, mémoire ; le ML relie ces traces à des profils</td><td>Que mesure vraiment le jeu ? Les joueurs habitués sont-ils avantagés ?</td></tr>
+      <tr><td><b>Analyse des réponses écrites</b></td><td>Le NLP évalue des réponses à des questions ouvertes ou des mises en situation écrites</td><td>Le scoring reproduit-il un jugement d’expert validé ?</td></tr>
+      <tr><td><b>Entretiens analysés</b></td><td>Transcription et analyse du contenu des réponses ; parfois de la voix et du visage</td><td>Contenu : haut risque. Émotions : interdit (jour 2, T2)</td></tr>
+      <tr><td><b>Agents conversationnels d’entretien</b></td><td>Un chatbot pose les questions et note les réponses</td><td>Le candidat sait-il qu’il est évalué, et sur quoi ?</td></tr>
+      <tr><td><b>Prédiction à partir du CV</b></td><td>Score de réussite prédite à partir du parcours (T2)</td><td>Quelle cible ? Quels proxys ?</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Promesse et réalité :</b> ces outils promettent standardisation, rapidité et parfois réduction des biais humains. König et Langer soulignent que les preuves de leur validité et de leur équité restent souvent insuffisantes ou non publiées.</div>
+  <span class="src">Réf. H8, H4</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Les exigences psychométriques appliquées à l’IA</h2>
+  <p class="lead">Les critères de qualité d’une méthode de sélection sont connus. Ils s’appliquent aux outils d’IA, avec des difficultés propres.</p>
+  <div class="g2">
+    <table><thead><tr><th style="width:26%">Critère</th><th>Question</th></tr></thead><tbody>
+      <tr><td><b>Fidélité</b></td><td>Le résultat est-il stable si le candidat repasse l’évaluation ?</td></tr>
+      <tr><td><b>Validité de construit</b></td><td>Mesure-t-on bien la compétence annoncée ?</td></tr>
+      <tr><td><b>Validité prédictive</b></td><td>Le résultat prédit-il la performance dans le poste visé ?</td></tr>
+      <tr><td><b>Équité</b></td><td>Résultats et erreurs comparables entre groupes (T2) ?</td></tr>
+      <tr><td><b>Utilité</b></td><td>Le gain de qualité ou de temps justifie-t-il le coût et les risques ?</td></tr>
+    </tbody></table>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Les difficultés propres à l’IA</h3><ul><li><b>Opacité :</b> il est difficile de savoir ce que le modèle mesure.</li><li><b>Dérive :</b> un modèle réentraîné change ; sa validité doit être revérifiée.</li><li><b>Généralisation :</b> validé dans une entreprise ou un pays, il peut ne pas l’être ailleurs.</li><li><b>Optimisation de la mauvaise cible :</b> prédire la note d’un évaluateur plutôt que la performance.</li></ul></div>
+      <div class="key" style="margin:0"><b>Ce qu’il faut exiger :</b> une documentation technique et des études de validation indépendantes, réalisées sur des postes comparables, avec des résultats par groupe. C’est aussi ce que demande l’AI Act au fournisseur d’un système à haut risque.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H8</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Les réactions des candidats et la justice perçue</h2>
+  <p class="lead">Les candidats jugent la sélection, et ce jugement influence leur décision d’accepter une offre, leur image de l’entreprise et leur propension à contester. La théorie de la justice organisationnelle, appliquée à la sélection par Gilliland (1993), éclaire ces réactions.</p>
+  <div class="g3">
+    <div class="card t"><h3>Justice procédurale</h3><p>La méthode est-elle cohérente pour tous, liée au poste, et me permet-elle de montrer mes compétences ? Puis-je obtenir une explication ou contester ?</p></div>
+    <div class="card t"><h3>Justice interactionnelle</h3><p>Suis-je traité avec respect ? M’informe-t-on honnêtement et à temps ?</p></div>
+    <div class="card t"><h3>Justice distributive</h3><p>Le résultat me paraît-il mérité au regard de mes compétences ?</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card n"><h3>Ce que montrent les recherches sur l’IA</h3><p>Les travaux recensés par König et Langer, dont plusieurs études expérimentales de Langer et ses collègues, indiquent que les candidats perçoivent souvent l’évaluation automatisée comme moins juste et plus impersonnelle qu’une évaluation humaine, notamment parce qu’elle leur laisse moins l’occasion de se montrer et de s’expliquer. Ils la trouvent parfois plus cohérente.</p></div>
+    <div class="key" style="margin:0"><b>Conséquence :</b> même un outil valide peut dégrader l’attractivité de l’employeur s’il est mal présenté. La manière d’informer et la place laissée à l’humain comptent autant que la qualité technique.</div>
+  </div>
+  <span class="src">Réf. H8</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Informer et expliquer au candidat</h2>
+  <p class="lead">Les candidats ont le droit d’être informés, et l’information bien faite améliore la perception de justice. Mais la recherche montre que trop d’information, ou une information mal formulée, peut aussi inquiéter.</p>
+  <div class="g2">
+    <div>
+      <h3>Ce que le candidat doit savoir</h3>
+      <ul>
+        <li><b>Avant :</b> qu’un outil automatisé est utilisé, à quelle étape, ce qu’il évalue, et qu’un humain intervient dans la décision (C. trav., L1221-8 ; RGPD, art. 13).</li>
+        <li><b>Pendant :</b> comment se déroule l’évaluation ; possibilité de demander un aménagement.</li>
+        <li><b>Après :</b> la décision, dans un délai raisonnable ; sur demande, les principaux éléments qui l’ont motivée.</li>
+        <li><b>Toujours :</b> à qui s’adresser pour poser une question ou contester.</li>
+      </ul>
+      <div class="key"><b>Droit à l’explication :</b> l’AI Act (art. 86) prévoit que toute personne faisant l’objet d’une décision fondée sur un système à haut risque et produisant des effets importants peut obtenir des explications claires sur le rôle du système dans la décision.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Une information utile</h3><p>« Vos réponses écrites seront analysées par un outil qui vérifie la présence des éléments attendus dans une grille définie par nos recruteurs. Un recruteur lit ensuite chaque réponse. Aucun refus n’est décidé automatiquement. »</p></div>
+      <div class="card s"><h3>Une information à éviter</h3><p>« Notre IA de pointe analyse votre profil pour déterminer votre adéquation culturelle. » Vague, anxiogène, invérifiable.</p></div>
+    </div>
+  </div>
+  <span class="src">Réf. H8</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Aménagements, accessibilité et alternative humaine</h2>
+  <p class="lead">Une évaluation automatisée conçue pour un candidat « standard » peut désavantager fortement les personnes en situation de handicap ou dans des situations particulières.</p>
+  <table>
+    <thead><tr><th style="width:26%">Situation</th><th style="width:38%">Risque avec un outil automatisé</th><th>Aménagement possible</th></tr></thead>
+    <tbody>
+      <tr><td><b>Handicap visuel</b></td><td>Interface non accessible aux lecteurs d’écran</td><td>Version accessible, temps supplémentaire</td></tr>
+      <tr><td><b>Troubles de l’attention, dyslexie</b></td><td>Tests chronométrés, jeux rapides</td><td>Temps majoré, format alternatif</td></tr>
+      <tr><td><b>Troubles de la parole, surdité</b></td><td>Entretien oral transcrit et analysé</td><td>Réponses écrites ou entretien humain</td></tr>
+      <tr><td><b>Autisme</b></td><td>Évaluation des interactions, du regard</td><td>Entretien structuré humain, consignes explicites</td></tr>
+      <tr><td><b>Accès numérique limité</b></td><td>Matériel, connexion, environnement bruyant</td><td>Évaluation sur place, créneaux flexibles</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card n"><h3>Une obligation</h3><p>L’employeur doit prendre les mesures appropriées pour permettre aux personnes en situation de handicap d’accéder à un emploi (C. trav., L5213-6). Refuser un aménagement raisonnable peut constituer une discrimination.</p></div>
+    <div class="key" style="margin:0"><b>Bonne pratique :</b> proposer systématiquement, dès l’annonce de l’évaluation, un contact pour demander un aménagement et une alternative humaine, sans avoir à justifier sa demande en détail.</div>
+  </div>
+  <span class="src">Réf. H8, H4</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Évaluer un outil de sélection : une grille en cinq critères</h2>
+  <p class="lead">Cette grille synthétise la journée. Elle permet d’évaluer un outil avant achat ou pendant son utilisation. C’est la grille de votre activité.</p>
+  <table>
+    <thead><tr><th style="width:18%">Critère</th><th style="width:44%">Questions à poser</th><th>Preuves attendues</th></tr></thead>
+    <tbody>
+      <tr><td><b>1. Validité</b></td><td>Que mesure l’outil ? Prédit-il la performance dans nos postes ? Fait-il mieux qu’un entretien structuré ?</td><td>Études de validation indépendantes, sur des postes comparables</td></tr>
+      <tr><td><b>2. Équité</b></td><td>Quels taux de sélection et d’erreur par groupe ? Quels proxys possibles ? Quelle cible ?</td><td>Résultats par groupe ; ratio d’impact ; tests réalisés en interne</td></tr>
+      <tr><td><b>3. Transparence</b></td><td>Peut-on expliquer un résultat au recruteur et au candidat ? Les candidats sont-ils informés ?</td><td>Explications fournies par l’outil ; texte d’information</td></tr>
+      <tr><td><b>4. Conformité</b></td><td>Classification AI Act, obligations du déployeur, AIPD, information du CSE, absence de pratiques interdites</td><td>Documentation technique, déclaration de conformité, AIPD</td></tr>
+      <tr><td><b>5. Expérience candidat</b></td><td>Durée, accessibilité, aménagements, alternative humaine, délai de réponse</td><td>Test de l’outil par l’équipe ; retours de candidats</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Règle de décision proposée :</b> un critère bloquant (pratique interdite, absence de toute validation, refus automatique sans humain) suffit à écarter l’outil. Sinon, on note chaque critère de 1 à 4 et l’on fixe des conditions d’utilisation pour les critères faibles.</div>
+  <span class="src">Réf. H8</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Synthèse de la journée, activité et quiz • T4</h2>
+  <div class="g3">
+    <div class="card n" style="grid-column:span 2"><h3>Ce que la journée a établi</h3><ul>
+      <li><b>T1 :</b> l’entonnoir se pilote par indicateurs, par groupe ; l’IA générative rédige, l’humain audite ; la diffusion ciblée peut exclure.</li>
+      <li><b>T2 :</b> un modèle de présélection apprend sa cible et l’historique ; l’équité se mesure et un biais se diagnostique.</li>
+      <li><b>T3 :</b> la mobilité interne repose sur la recommandation, utile si elle est expliquée, contrôlée par le salarié et suivie par groupe.</li>
+      <li><b>T4 :</b> un outil de sélection se juge sur sa validité, son équité, sa transparence, sa conformité et l’expérience candidat.</li>
+    </ul></div>
+    <div class="card r"><h3>Préparer le jour 5</h3><p>Développement et gestion des talents : formation, gestion des talents, analytique prédictive, affective computing.</p><p class="small"><b>À lire :</b> E • Ch. 6 et 7 ; H • Ch. 13.</p></div>
+    <div class="card s" style="grid-column:span 2"><span class="tag s">Activité individuelle • 30 min • Réflexion</span><h3 style="margin-top:2mm">Évaluer un outil de sélection</h3><p>Appliquez la grille en cinq critères à l’outil décrit dans le document (évaluation ludique et entretien par agent conversationnel), notez chaque critère, identifiez les points bloquants et formulez une recommandation argumentée.</p><p style="margin:0"><b>Livrable :</b> grille remplie et recommandation (document « J4-T4 Activité »).</p></div>
+    <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions</h3><p style="margin:0">Validité, outils, justice perçue, information, grille.</p></div>
+  </div>
+</section>
