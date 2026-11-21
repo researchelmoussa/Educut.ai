@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-19T03:17:42.933Z",
+  "updated_at": "2026-11-21T02:53:48.723Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -5155,7 +5155,7 @@
       "deadline": "2026-11-19T12:00:00-08:00",
       "content_hash": "sha256:39f942b6de692b79f4ad8e4d76d6a84d29734c6763e0c474ebb5a22cd69f183a",
       "last_verified_at": "2026-10-17T01:55:26.113Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T01:55:26.296Z",
       "history": [
         {
@@ -5199,6 +5199,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-20T02:50:40.569Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-19T12:00:00-08:00 passed"
         }
       ],
       "offer_number": 51
@@ -13770,7 +13777,7 @@
       "deadline": "2026-11-18",
       "content_hash": "sha256:57e1543620b847d2b95eb55a28bcab5dab521e5097831efdfd7b6516a9a49883",
       "last_verified_at": "2026-10-24T02:05:03.007Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-24T02:05:13.007Z",
       "history": [
         {
@@ -13814,6 +13821,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-20T02:50:40.569Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-18 passed"
         }
       ],
       "offer_number": 181
@@ -15898,7 +15912,7 @@
       "deadline": "2026-11-18",
       "content_hash": "sha256:a1a753c8c0b1c95131f5d9c67bfb34730d538cd427d47856de18b62750c87a75",
       "last_verified_at": "2026-10-25T03:02:57.013Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-25T03:03:07.034Z",
       "history": [
         {
@@ -15942,6 +15956,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-20T02:50:40.569Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-18 passed"
         }
       ],
       "offer_number": 214
@@ -18568,7 +18589,7 @@
       "deadline": "2026-11-18",
       "content_hash": "sha256:b88b600ef0fa1b6b1629fc17765ce7a3f2a0c0bd2d889acf50e96f8d37c86442",
       "last_verified_at": "2026-10-27T03:09:03.233Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-27T03:09:03.391Z",
       "history": [
         {
@@ -18598,6 +18619,13 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-20T02:50:40.569Z",
+          "from": "UNDER_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-18 passed"
         }
       ],
       "offer_number": 260
@@ -46769,6 +46797,1626 @@
         }
       ],
       "offer_number": 687
+    },
+    "opp_69a36204fef021e1": {
+      "id": "opp_69a36204fef021e1",
+      "fingerprint": "5c550dabdfc48482",
+      "title": "Undergraduate School on Experimental Quantum Information Processing 2027",
+      "institution": "Institute for Quantum Computing, University of Waterloo",
+      "city": "Waterloo",
+      "country": "Canada",
+      "source_url": "https://uwaterloo.ca/institute-for-quantum-computing/events/undergraduate-school-experimental-quantum-information-0",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://uwaterloo.ca/institute-for-quantum-computing/outreach/useqip",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-03",
+      "content_hash": "sha256:7d36e5cad6134e5b27dcfe5b4204dc67e5b35d66e459579fa21dc6599e2d31ca",
+      "last_verified_at": "2026-11-20T02:53:37.362Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T02:53:37.564Z",
+      "history": [
+        {
+          "at": "2026-11-20T02:53:37.564Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T02:53:37.564Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:03.218Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:03.218Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:38.929Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:38.930Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 694
+    },
+    "opp_755737986bb8c05d": {
+      "id": "opp_755737986bb8c05d",
+      "fingerprint": "2204c94cb963b72b",
+      "title": "Undergraduate Summer Research Awards and Summer Student Research Program for Non‑Medical Students",
+      "institution": "Dalhousie University, Faculty of Medicine",
+      "city": "Halifax",
+      "country": "Canada",
+      "source_url": "https://medicine.dal.ca/research-dal-med/capacity/USRA.html",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://medicine.dal.ca/research-dal-med/capacity/USRA.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T17:00:00-04:00",
+      "content_hash": "sha256:9cb739265288b499b9ff33e0e2198d3bec60047a7a9877ed0275018fa2a13392",
+      "last_verified_at": "2026-11-21T02:53:11.966Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T02:53:37.877Z",
+      "history": [
+        {
+          "at": "2026-11-20T02:53:37.877Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T02:53:37.877Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:53:12.172Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-21T02:53:15.576Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:53:15.576Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:41.776Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:41.776Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 700
+    },
+    "opp_dcdfbe693dcdc943": {
+      "id": "opp_dcdfbe693dcdc943",
+      "fingerprint": "88bcffaf071b0b84",
+      "title": "Postdoctoral Researcher, Abdulla Unit",
+      "institution": "Okinawa Institute of Science and Technology (OIST)",
+      "city": "Onna, Okinawa",
+      "country": "Japan",
+      "source_url": "https://www.oist.jp/careers/postdoctoral-researcher-abdulla-unit",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.oist.jp/careers/postdoctoral-researcher-abdulla-unit",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28T23:59:00+09:00",
+      "content_hash": "sha256:07a99004fff7fabc2e6e358d068879d0436f4d812fb5cd1839ff5df9a031d81f",
+      "last_verified_at": "2026-11-20T02:55:03.138Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T02:55:03.321Z",
+      "history": [
+        {
+          "at": "2026-11-20T02:55:03.321Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T02:55:03.321Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:31.351Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:31.352Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:46.393Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:46.394Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 710
+    },
+    "opp_84bcbaf7f53688ce": {
+      "id": "opp_84bcbaf7f53688ce",
+      "fingerprint": "7c49ed19c9486f04",
+      "title": "Steven M. Teutsch Prevention Effectiveness Fellowship",
+      "institution": "Centers for Disease Control and Prevention (CDC)",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.cdc.gov/pef/php/participants/application.html",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.cdc.gov/pef/php/participants/application.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08T23:59:00-05:00",
+      "content_hash": "sha256:9acce1da957fbef3ea563cb69e9c62084f3ed7e67abe8c6104f510b1215b8e99",
+      "last_verified_at": "2026-11-20T02:56:51.202Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T02:56:51.389Z",
+      "history": [
+        {
+          "at": "2026-11-20T02:56:51.389Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T02:56:51.389Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:51:37.722Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:51:37.723Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:39.824Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:39.824Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 696
+    },
+    "opp_9f48300f68c9d22e": {
+      "id": "opp_9f48300f68c9d22e",
+      "fingerprint": "c7a1cd39a48d7d54",
+      "title": "Takemi Program in International Health",
+      "institution": "Harvard T.H. Chan School of Public Health",
+      "city": "Boston",
+      "country": "United States",
+      "source_url": "https://hsph.harvard.edu/fellowship-special-program/takemi/apply-to-the-program/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://hsph.harvard.edu/fellowship-special-program/takemi/apply-to-the-program/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31T23:59:00-05:00",
+      "content_hash": "sha256:d959584b5c54ab744f3f6eef700769996e7470220d6b5180c072028641367d76",
+      "last_verified_at": "2026-11-20T02:56:51.515Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T02:56:51.684Z",
+      "history": [
+        {
+          "at": "2026-11-20T02:56:51.684Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T02:56:51.684Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:02.705Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:02.705Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:38.480Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:38.480Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 693
+    },
+    "opp_912c767ab154f7bb": {
+      "id": "opp_912c767ab154f7bb",
+      "fingerprint": "2fe34aa39310fcab",
+      "title": "Knight Science Journalism Academic-Year Fellowship",
+      "institution": "Knight Science Journalism @MIT",
+      "city": "Cambridge, Massachusetts",
+      "country": "United States",
+      "source_url": "https://ksj.mit.edu/news/2026/11/15/ksj-seeks-outstanding-journalists-for-its-2027-28-fellowship-class/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://ksj.mit.edu/fellowships/academic-year-fellowship/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-09T23:59:00-05:00",
+      "content_hash": "sha256:8e6ba5ecd9b082e8a0c81331d98594fef58fca3a652f448dd52378d86ff95abd",
+      "last_verified_at": "2026-11-20T02:57:57.228Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T02:57:57.391Z",
+      "history": [
+        {
+          "at": "2026-11-20T02:57:57.391Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T02:57:57.392Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:51:38.368Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:51:38.368Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:40.330Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:40.331Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 697
+    },
+    "opp_d641b0722bc8c35a": {
+      "id": "opp_d641b0722bc8c35a",
+      "fingerprint": "dcd81c9e6be862a9",
+      "title": "Fellowship for Advancing Science Journalism in Africa and the Middle East",
+      "institution": "Knight Science Journalism @MIT",
+      "city": "Cambridge, Massachusetts",
+      "country": "United States",
+      "source_url": "https://ksj.mit.edu/fellowships/africa-middle-east-fellowship/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://ksj.mit.edu/fellowships/africa-middle-east-fellowship/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-09T23:59:00-05:00",
+      "content_hash": "sha256:3268e22aa106040c4eea96a743967eb901d29f42bd5c018014b13dce76ab7924",
+      "last_verified_at": "2026-11-20T02:57:57.519Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T02:57:57.695Z",
+      "history": [
+        {
+          "at": "2026-11-20T02:57:57.695Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T02:57:57.696Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:51:38.892Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:51:38.892Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:40.801Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:40.802Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 698
+    },
+    "opp_5322ffd301fd947b": {
+      "id": "opp_5322ffd301fd947b",
+      "fingerprint": "41ed424b55bd82ca",
+      "title": "Spring 2027 Internship",
+      "institution": "United Nations Development Programme (UNDP), Washington",
+      "city": "Washington, D.C.",
+      "country": "United States",
+      "source_url": "https://www.undp.org/united-states/internships",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.undp.org/united-states/internships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:00-05:00",
+      "content_hash": "sha256:5ff696e11180c20be45421e1970dab6485a2e36a4d55bea09c147ac5e6a3d372",
+      "last_verified_at": "2026-11-21T02:53:15.800Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T02:59:08.341Z",
+      "history": [
+        {
+          "at": "2026-11-20T02:59:08.341Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T02:59:08.341Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:53:16.033Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-21T02:53:18.181Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:53:18.181Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:42.311Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:42.311Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 701
+    },
+    "opp_b8963178459594d8": {
+      "id": "opp_b8963178459594d8",
+      "fingerprint": "8c48360ea9af9629",
+      "title": "NIG International Symposium on the Future of Biocuration, AI, and Knowledge",
+      "institution": "National Institute of Genetics (NIG)",
+      "city": "Mishima",
+      "country": "Japan",
+      "source_url": "https://easychair.org/cfp/biocuration2027",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://easychair.org/cfp/biocuration2027",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:39f333329153efe79c618373aaf26417720e18fbf8a20b1000a7840a12650c8e",
+      "last_verified_at": "2026-11-20T02:59:08.468Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T02:59:08.652Z",
+      "history": [
+        {
+          "at": "2026-11-20T02:59:08.652Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T02:59:08.652Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:51:59.373Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:51:59.373Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:43.221Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:43.222Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 703
+    },
+    "opp_dbd6372aa849c80b": {
+      "id": "opp_dbd6372aa849c80b",
+      "fingerprint": "bffd173bbbcb3d6a",
+      "title": "Early-career Writing Scholarships for Doctoral and Postdoctoral Scholars",
+      "institution": "Max Weber Forum for South Asian Studies Delhi (MWF Delhi)",
+      "city": "New Delhi",
+      "country": "India",
+      "source_url": "https://www.maxweberstiftung.de/en/max-weber-foundation/single-news-press-releases/call-for-applications-early-career-writing-scholarships-for-doctoral-and-postdoctoral-scholars-mwf-delhi-1.html",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.maxweberstiftung.de/en/max-weber-foundation/single-news-press-releases/call-for-applications-early-career-writing-scholarships-for-doctoral-and-postdoctoral-scholars-mwf-delhi-1.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-07",
+      "content_hash": "sha256:0f9913dd066f95b42e973777232c624191317db78563db711aada291a0a8c6d2",
+      "last_verified_at": "2026-11-20T03:00:52.342Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:00:52.526Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:00:52.526Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:00:52.526Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:29.154Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:29.155Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:44.617Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:44.618Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 706
+    },
+    "opp_f17a80704400e0c7": {
+      "id": "opp_f17a80704400e0c7",
+      "fingerprint": "ddd6b36ed466963a",
+      "title": "Medieval History Seminar 2027",
+      "institution": "German Historical Institute London (DHI London)",
+      "city": "London",
+      "country": "United Kingdom",
+      "source_url": "https://www.maxweberstiftung.de/max-weber-stiftung/einzelansicht-alle-news/call-for-applications-medieval-history-seminar-2027-dhi-london.html",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.maxweberstiftung.de/max-weber-stiftung/einzelansicht-alle-news/call-for-applications-medieval-history-seminar-2027-dhi-london.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:49e1eed7a02c49096211319f3f1fac73bad35fe646432c09504ea6c214008a47",
+      "last_verified_at": "2026-11-20T03:00:52.647Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:00:52.828Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:00:52.828Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:00:52.828Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:51:59.806Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:51:59.806Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:43.709Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:43.709Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 704
+    },
+    "opp_ffe9035bd3e55460": {
+      "id": "opp_ffe9035bd3e55460",
+      "fingerprint": "f5e0296a7d4ce151",
+      "title": "Ideas, Authors and Circulation: Intellectual Production from the Early Modern Era to the 19th Century",
+      "institution": "Orient-Institut Istanbul",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "source_url": "https://www.maxweberstiftung.de/en/max-weber-foundation/single-news-press-releases/call-for-applications-ideas-authors-and-circulation-intellectual-production-from-the-early-modern-era-to-the-19th-century-oi-istanbul.html",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.maxweberstiftung.de/en/max-weber-foundation/single-news-press-releases/call-for-applications-ideas-authors-and-circulation-intellectual-production-from-the-early-modern-era-to-the-19th-century-oi-istanbul.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08",
+      "content_hash": "sha256:be914faa5f6c6c93620f9c701d03d8f0565cc3d45579dfe1c5fd784aa2502f2b",
+      "last_verified_at": "2026-11-20T03:01:33.866Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:01:34.047Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:01:34.047Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:01:34.048Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:03.725Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:03.726Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:39.401Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:39.402Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 695
+    },
+    "opp_62e21f2d20d73b48": {
+      "id": "opp_62e21f2d20d73b48",
+      "fingerprint": "2f37e3cd33cb407a",
+      "title": "Wadsworth African Fellowship",
+      "institution": "Wenner-Gren Foundation",
+      "city": null,
+      "country": "South Africa",
+      "source_url": "https://wennergren.org/program/wadsworth-african-fellowship/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://wennergren.org/program/wadsworth-african-fellowship/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-15",
+      "content_hash": "sha256:815a805d9ddc9b9c0940d9a312e645ab2a3d5102f48f21ec48b47eb20279e060",
+      "last_verified_at": "2026-11-20T03:02:47.582Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:02:47.758Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:02:47.758Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:02:47.759Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:01.762Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:01.764Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:37.556Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:37.557Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 691
+    },
+    "opp_d74c1a0d9e6994bc": {
+      "id": "opp_d74c1a0d9e6994bc",
+      "fingerprint": "b7607bda633b798a",
+      "title": "Forced Migration",
+      "institution": "Gerda Henkel Foundation",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.gerda-henkel-stiftung.de/en/forced_migration",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.gerda-henkel-stiftung.de/en/forced_migration",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-29",
+      "content_hash": "sha256:ccf3f48841fa089aac3991016ce1a972efe1caf3add6001655013dee3db62a89",
+      "last_verified_at": "2026-11-20T03:02:47.900Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:02:48.063Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:02:48.063Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:02:48.063Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:11.882Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:11.882Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:47.412Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:47.412Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 712
+    },
+    "opp_6caa463f56a445d7": {
+      "id": "opp_6caa463f56a445d7",
+      "fingerprint": "c430d408613b0a12",
+      "title": "Lost Cities",
+      "institution": "Gerda Henkel Foundation",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.gerda-henkel-stiftung.de/en/lost_cities",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.gerda-henkel-stiftung.de/en/lost_cities",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-19",
+      "content_hash": "sha256:6e6b64fc5c4852103643e43850a764ca5d232567d55f3ba069cac39a7250fba0",
+      "last_verified_at": "2026-11-21T02:53:24.150Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:02:48.376Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:02:48.376Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:02:48.376Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:53:24.374Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-21T02:53:26.724Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:53:26.724Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:47.863Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:47.864Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 713
+    },
+    "opp_bba6815287461b4c": {
+      "id": "opp_bba6815287461b4c",
+      "fingerprint": "fdd112bcf454bf23",
+      "title": "Fundamentals of Density Functional Theory",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées)",
+      "city": "Nairobi",
+      "country": "Kenya",
+      "source_url": "https://www.cimpa.info/en/ecoles/fundamentals-density-functional-theory",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.cimpa.info/en/ecoles/fundamentals-density-functional-theory",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28",
+      "content_hash": "sha256:f1e60856968d2dbd2c042aa81ece808b406f0212e645ef17ae56e165b456b850",
+      "last_verified_at": "2026-11-20T03:04:35.395Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:04:35.577Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:04:35.577Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:04:35.578Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:30.735Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:30.735Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:45.931Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:45.931Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 709
+    },
+    "opp_4c2f90d3d5456370": {
+      "id": "opp_4c2f90d3d5456370",
+      "fingerprint": "472bf50205632e39",
+      "title": "Algebraic Geometry (VI ELGA)",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées)",
+      "city": "Medellín",
+      "country": "Colombia",
+      "source_url": "https://www.cimpa.info/en/ecoles/algebraic-geometry-vi-elga",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.cimpa.info/en/ecoles/algebraic-geometry-vi-elga",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-21",
+      "content_hash": "sha256:63b3274f37b33d1d48246d240fbf4d2427f4a0d7b3eb9d904389fae46689a1aa",
+      "last_verified_at": "2026-11-20T03:04:35.737Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:04:35.899Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:04:35.899Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:04:35.899Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:29.649Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:29.649Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:45.045Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:45.045Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 707
+    },
+    "opp_0d04c7308507dd40": {
+      "id": "opp_0d04c7308507dd40",
+      "fingerprint": "288279781e00ba97",
+      "title": "Flavors of Representation Theory",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées)",
+      "city": "Shillong",
+      "country": "India",
+      "source_url": "https://cimpa.info/en/ecoles/flavors-representation-theory",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://cimpa.info/en/ecoles/flavors-representation-theory",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-19",
+      "content_hash": "sha256:7aef9ca75dbced5b5ad34df58d772962459ef149648fac8aa3d1f8b30246524b",
+      "last_verified_at": "2026-11-21T02:53:21.376Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:04:36.248Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:04:36.248Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:04:36.249Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:11.130Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:11.130Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:21.570Z",
+          "from": "UNDER_REVIEW",
+          "to": "UNDER_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-21T02:53:21.570Z",
+          "from": "UNDER_REVIEW",
+          "to": "NEEDS_REVIEW",
+          "actor": "opportunity-scout",
+          "reason": "source record changed after content was generated"
+        },
+        {
+          "at": "2026-11-21T02:53:23.698Z",
+          "from": "NEEDS_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Shortened description / removed unquoted duration claims"
+        },
+        {
+          "at": "2026-11-21T02:53:23.942Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:53:23.942Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:46.868Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:46.869Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 711
+    },
+    "opp_15c44080be7fc848": {
+      "id": "opp_15c44080be7fc848",
+      "fingerprint": "da2c72e266bb0000",
+      "title": "Fondements mathématiques de l'informatique",
+      "institution": "CIMPA (Centre International de Mathématiques Pures et Appliquées)",
+      "city": "Antsiranana",
+      "country": "Madagascar",
+      "source_url": "https://cimpa.info/en/ecoles/fondements-mathematiques-de-linformatique",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://cimpa.info/en/ecoles/fondements-mathematiques-de-linformatique",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28",
+      "content_hash": "sha256:b34de11743fca147f920ab3a750352b163615fdd24a8a6036a1ad4bab166b391",
+      "last_verified_at": "2026-11-20T03:05:04.768Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:05:04.950Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:05:04.950Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:05:04.950Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:30.225Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:30.225Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:45.476Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:45.476Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 708
+    },
+    "opp_2b6bfd80fb1e309e": {
+      "id": "opp_2b6bfd80fb1e309e",
+      "fingerprint": "1fe1be7408157eb8",
+      "title": "Geometry in Groups II",
+      "institution": "International Centre for Theoretical Sciences (ICTS-TIFR)",
+      "city": "Bengaluru",
+      "country": "India",
+      "source_url": "https://www.icts.res.in/programs/upcoming",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.icts.res.in/programs/upcoming",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:8a08106d42cb43e2cc3e7448eda2dc082300562d84c6f22684a9b3194326b4b9",
+      "last_verified_at": "2026-11-20T03:05:55.345Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:05:55.514Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:05:55.514Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:05:55.514Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:51:39.670Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:51:39.670Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:41.232Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:41.232Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 699
+    },
+    "opp_9c1dae98a930f013": {
+      "id": "opp_9c1dae98a930f013",
+      "fingerprint": "c5901c0a52265bfb",
+      "title": "Workshop on Active Matter: Motion, Mechanics, and Emergence",
+      "institution": "ICTP South American Institute for Fundamental Research (ICTP-SAIFR)",
+      "city": "São Paulo",
+      "country": "Brazil",
+      "source_url": "https://www.ictp-saifr.org/2027-activities/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.ictp-saifr.org/2027-activities/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-04",
+      "content_hash": "sha256:6db90ec5f153bb38616ab41aa36f8fc90af7d2c4fc8648d3bdf47caea226c6a3",
+      "last_verified_at": "2026-11-20T03:05:55.659Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:05:55.847Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:05:55.847Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:05:55.848Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:00.352Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:00.353Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:44.178Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:44.179Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 705
+    },
+    "opp_0cda0f4c71ec3474": {
+      "id": "opp_0cda0f4c71ec3474",
+      "fingerprint": "27265f0f4833b03d",
+      "title": "Senior Research Scientists, Research Scientists, and Postdoctoral Researchers (26-1583)",
+      "institution": "RIKEN Center for Interdisciplinary Theoretical and Mathematical Sciences (iTHEMS)",
+      "city": "Wako",
+      "country": "Japan",
+      "source_url": "https://ithems.riken.jp/en/opportunities",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://ithems.riken.jp/en/opportunities",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-18",
+      "content_hash": "sha256:60d326cc28c3e8a19339baa9db84b8eb211293108caf737f4bc1cee0adeca8e8",
+      "last_verified_at": "2026-11-20T03:07:06.425Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:07:06.605Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:07:06.605Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:07:06.606Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:02.247Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:02.247Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:38.060Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:38.060Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 692
+    },
+    "opp_0b0ece541194c02a": {
+      "id": "opp_0b0ece541194c02a",
+      "fingerprint": "cb8dc8292baec7d4",
+      "title": "CERN OPENLAB Summer Student Programme 2027",
+      "institution": "CERN openlab",
+      "city": "Geneva",
+      "country": "Switzerland",
+      "source_url": "https://openlab.cern/cern-openlab-summer-student-programme/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://careers.cern/jobs/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": null,
+      "content_hash": "sha256:1e96835b89a643c6c4e6a17d1d7232f0d55a0500d9245406da80ca3d4b2f2d96",
+      "last_verified_at": "2026-11-21T02:53:26.932Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:08:28.285Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:08:28.285Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:08:28.285Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:53:27.135Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-21T02:53:29.681Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:53:29.681Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:48.722Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:48.723Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 715
+    },
+    "opp_ce1db93566508e65": {
+      "id": "opp_ce1db93566508e65",
+      "fingerprint": "38fab9d149613b18",
+      "title": "Short Term Internship 2027",
+      "institution": "CERN",
+      "city": "Geneva",
+      "country": "Switzerland",
+      "source_url": "https://careers.cern/jobs/short-term-internship/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://careers.cern/jobs/short-term-internship/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-11-01T23:59:00+01:00",
+      "content_hash": "sha256:6d777fbac85664689208726c7625c41f66fe09567cedf866d154075b339d56dd",
+      "last_verified_at": "2026-11-20T03:08:28.434Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:08:28.624Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:08:28.624Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:08:28.624Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:52:13.082Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:52:13.082Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:48.299Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:48.299Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 714
+    },
+    "opp_abe272a1f7908a2c": {
+      "id": "opp_abe272a1f7908a2c",
+      "fingerprint": "72aa921ebbf0d05b",
+      "title": "Global PhD in therapy innovation for lung cancer",
+      "institution": "Macquarie University",
+      "city": "Sydney",
+      "country": "Australia",
+      "source_url": "https://www.mq.edu.au/research/phd-and-research-degrees/how-to-apply/scholarship-opportunities/scholarship-search/global-phd-in-therapy-innovation-for-lung-cancer",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.mq.edu.au/research/phd-and-research-degrees/how-to-apply/scholarship-opportunities/scholarship-search/global-phd-in-therapy-innovation-for-lung-cancer",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:1519f4261ba80fe9f30f9551c37e83fc526753a4fc6b49e21be633a06ed849b7",
+      "last_verified_at": "2026-11-21T02:53:18.394Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-20T03:09:08.468Z",
+      "history": [
+        {
+          "at": "2026-11-20T03:09:08.468Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-20T03:09:08.468Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T02:53:18.620Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-21T02:53:21.161Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T02:53:21.161Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-21T02:53:42.779Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-21T02:53:42.779Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 702
     }
   },
   "seen_urls": {
@@ -47186,7 +48834,7 @@
     "https://cpal.cc/proceedings_track": "opp_ea48a3f8c38a2f58",
     "https://isie2027.ieee-ies.org/important-dates": "opp_d79643d73c9bf130",
     "https://dasfaa2027.github.io/CallforResearchTrack/list.htm": "opp_5e4dd327b100a91d",
-    "https://ictp-saifr.org/2027-activities": "opp_70717221d192a157",
+    "https://ictp-saifr.org/2027-activities": "opp_9c1dae98a930f013",
     "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals": "opp_b6640f7d341c6672",
     "https://apply-scholarships.si.se/": "opp_b6640f7d341c6672",
     "https://summerstudents.desy.de/application": "opp_915889911174be99",
@@ -47727,7 +49375,7 @@
     "https://uni-mannheim.de/gess/apply": "opp_6ed0da2bba1cf32d",
     "https://aspenphys.org/summer-workshops": "opp_d5cffdb1827a7ba0",
     "https://aspenphys.org/summer/step-by-step-application-instructions": "opp_d5cffdb1827a7ba0",
-    "https://icts.res.in/programs/upcoming": "opp_ac54cabbf97f69e7",
+    "https://icts.res.in/programs/upcoming": "opp_2b6bfd80fb1e309e",
     "https://register1.icts.res.in/": "opp_ac54cabbf97f69e7",
     "https://se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/school-of-natural-sciences-scholarship": "opp_6c3962419c58556f",
     "https://k.u-tokyo.ac.jp/en/education/for_undergraduate/how_to_apply": "opp_bfa4228d24909141",
@@ -47755,7 +49403,33 @@
     "https://psi.ch/en/hr/job-opportunities/75382-radiation-protection-physicist-engineer": "opp_a84b304668da48f2",
     "https://jobbnorge.no/en/available-jobs/job/311433/professor-associate-professor-in-educational-psychology": "opp_e1ba2695531c45cc",
     "https://careers.universiteitleiden.nl/job/PhD-Candidate-Museums%2C-Collections-and-Society-Indigenous-Heritage-%281_0-FTE%29/17018-en_US": "opp_4a5551999d9248c6",
-    "https://jobs.inria.fr/public/classic/en/offres/2026-10564": "opp_3ea9e68a3fec834e"
+    "https://jobs.inria.fr/public/classic/en/offres/2026-10564": "opp_3ea9e68a3fec834e",
+    "https://uwaterloo.ca/institute-for-quantum-computing/events/undergraduate-school-experimental-quantum-information-0": "opp_69a36204fef021e1",
+    "https://uwaterloo.ca/institute-for-quantum-computing/outreach/useqip": "opp_69a36204fef021e1",
+    "https://medicine.dal.ca/research-dal-med/capacity/USRA.html": "opp_755737986bb8c05d",
+    "https://oist.jp/careers/postdoctoral-researcher-abdulla-unit": "opp_dcdfbe693dcdc943",
+    "https://cdc.gov/pef/php/participants/application.html": "opp_84bcbaf7f53688ce",
+    "https://hsph.harvard.edu/fellowship-special-program/takemi/apply-to-the-program": "opp_9f48300f68c9d22e",
+    "https://ksj.mit.edu/news/2026/11/15/ksj-seeks-outstanding-journalists-for-its-2027-28-fellowship-class": "opp_912c767ab154f7bb",
+    "https://ksj.mit.edu/fellowships/academic-year-fellowship": "opp_912c767ab154f7bb",
+    "https://ksj.mit.edu/fellowships/africa-middle-east-fellowship": "opp_d641b0722bc8c35a",
+    "https://undp.org/united-states/internships": "opp_5322ffd301fd947b",
+    "https://easychair.org/cfp/biocuration2027": "opp_b8963178459594d8",
+    "https://maxweberstiftung.de/en/max-weber-foundation/single-news-press-releases/call-for-applications-early-career-writing-scholarships-for-doctoral-and-postdoctoral-scholars-mwf-delhi-1.html": "opp_dbd6372aa849c80b",
+    "https://maxweberstiftung.de/max-weber-stiftung/einzelansicht-alle-news/call-for-applications-medieval-history-seminar-2027-dhi-london.html": "opp_f17a80704400e0c7",
+    "https://maxweberstiftung.de/en/max-weber-foundation/single-news-press-releases/call-for-applications-ideas-authors-and-circulation-intellectual-production-from-the-early-modern-era-to-the-19th-century-oi-istanbul.html": "opp_ffe9035bd3e55460",
+    "https://wennergren.org/program/wadsworth-african-fellowship": "opp_62e21f2d20d73b48",
+    "https://gerda-henkel-stiftung.de/en/forced_migration": "opp_d74c1a0d9e6994bc",
+    "https://gerda-henkel-stiftung.de/en/lost_cities": "opp_6caa463f56a445d7",
+    "https://cimpa.info/en/ecoles/fundamentals-density-functional-theory": "opp_bba6815287461b4c",
+    "https://cimpa.info/en/ecoles/algebraic-geometry-vi-elga": "opp_4c2f90d3d5456370",
+    "https://cimpa.info/en/ecoles/flavors-representation-theory": "opp_0d04c7308507dd40",
+    "https://cimpa.info/en/ecoles/fondements-mathematiques-de-linformatique": "opp_15c44080be7fc848",
+    "https://ithems.riken.jp/en/opportunities": "opp_0cda0f4c71ec3474",
+    "https://openlab.cern/cern-openlab-summer-student-programme": "opp_0b0ece541194c02a",
+    "https://careers.cern/jobs": "opp_0b0ece541194c02a",
+    "https://careers.cern/jobs/short-term-internship": "opp_ce1db93566508e65",
+    "https://mq.edu.au/research/phd-and-research-degrees/how-to-apply/scholarship-opportunities/scholarship-search/global-phd-in-therapy-innovation-for-lung-cancer": "opp_abe272a1f7908a2c"
   },
-  "last_offer_number": 690
+  "last_offer_number": 715
 }
