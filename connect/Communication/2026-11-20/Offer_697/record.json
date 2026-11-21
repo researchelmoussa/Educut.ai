@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Knight Science Journalism Academic-Year Fellowship",
+    "evidence_url": "https://ksj.mit.edu/fellowships/academic-year-fellowship/",
+    "evidence_quote": "Knight Science Journalism Academic-Year Fellowship"
+  },
+  "institution": {
+    "name": "Knight Science Journalism @MIT",
+    "website": "https://ksj.mit.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ksj.mit.edu/fellowships/academic-year-fellowship/",
+  "source_url": "https://ksj.mit.edu/news/2026/11/15/ksj-seeks-outstanding-journalists-for-its-2027-28-fellowship-class/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Cambridge, Massachusetts",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Science journalism",
+  "seniority": "Professional journalists",
+  "qualifications": [
+    "Applicants cannot have completed a residential fellowship of four months or longer in the two years before applying",
+    "Fellows must live in the Boston/Cambridge area during the 2027-28 academic year"
+  ],
+  "skills": [],
+  "description_short": "Knight Science Journalism @MIT accepts applications for its 2027-28 Academic-Year Fellowship class, based in the Boston/Cambridge area, United States, from mid-August 2027 to May 2028. Applications opened 15 November 2026 and close 9 January 2027, 11:59 pm Eastern Time.",
+  "published_at": {
+    "value": "2026-11-15",
+    "evidence_url": "https://ksj.mit.edu/news/2026/11/15/ksj-seeks-outstanding-journalists-for-its-2027-28-fellowship-class/",
+    "evidence_quote": "KSJ Seeks Outstanding Journalists for its 2027-28 Fellowship Class"
+  },
+  "deadline": {
+    "value": "2027-01-09T23:59:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://ksj.mit.edu/fellowships/academic-year-fellowship/",
+    "evidence_quote": "Applications for 2027-2028 fellowship class will open on November 15, 2026 and close on January 9, 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official KSJ programme page (seen in search results) states applications for the 2027-2028 class open on November 15, 2026 and close on January 9, 2027 (11:59 pm Eastern Time)",
+    "KSJ news post dated 2026-11-15 announces the search for the 2027-28 fellowship class",
+    "Deadline is in the future relative to the run date 2026-11-20",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "published_at derived from the date in the official news post URL",
+    "Stipend and benefits not recorded; exact application portal URL not seen"
+  ],
+  "id": "opp_912c767ab154f7bb",
+  "fingerprint": "2fe34aa39310fcab",
+  "discovered_at": "2026-11-20T02:57:57.228Z",
+  "last_verified_at": "2026-11-20T02:57:57.228Z",
+  "content_hash": "sha256:8e6ba5ecd9b082e8a0c81331d98594fef58fca3a652f448dd52378d86ff95abd"
+}

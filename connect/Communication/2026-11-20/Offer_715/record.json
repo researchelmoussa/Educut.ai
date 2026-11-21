@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "CERN OPENLAB Summer Student Programme 2027",
+    "evidence_url": "https://careers.cern/jobs/",
+    "evidence_quote": "CERN OPENLAB Summer Student Programme 2027"
+  },
+  "institution": {
+    "name": "CERN openlab",
+    "website": "https://openlab.cern",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://careers.cern/jobs/",
+  "source_url": "https://openlab.cern/cern-openlab-summer-student-programme/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Geneva",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Computing and information technologies",
+  "seniority": "Bachelor's and Master's students",
+  "qualifications": [
+    "Bachelor or Master student (not PhD) with a strong computing profile",
+    "Students expecting to graduate during European summer 2027 (as of May) are also eligible",
+    "All requested documents must be ready when starting the application on the career portal"
+  ],
+  "skills": [],
+  "description_short": "The call for applications for the 2027 CERN openlab summer student programme in Geneva, Switzerland, is open to Bachelor's and Master's students with a strong computing profile. Applications go through the CERN career portal; no closing date is published.",
+  "published_at": null,
+  "deadline": null,
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CERN openlab page (seen in search results) states: 'The call for applications for the 2027 CERN openlab summer student programme is now open'",
+    "careers.cern job listing shows 'CERN OPENLAB Summer Student Programme 2027' (SUM-OPENLAB-2027)",
+    "No closing date shown in the evidence seen; replies to applicants by early April 2027",
+    "Status capped at OPEN_LIKELY: official pages not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Application deadline not stated in the evidence seen; check the careers.cern posting",
+    "Exact individual posting URL on careers.cern not seen; application_url is the CERN job offers page",
+    "Location assumed Geneva (CERN site); city not explicitly stated in the evidence",
+    "Contract terms and allowance not recorded"
+  ],
+  "id": "opp_0b0ece541194c02a",
+  "fingerprint": "cb8dc8292baec7d4",
+  "discovered_at": "2026-11-20T03:08:28.094Z",
+  "last_verified_at": "2026-11-21T02:53:26.932Z",
+  "content_hash": "sha256:1e96835b89a643c6c4e6a17d1d7232f0d55a0500d9245406da80ca3d4b2f2d96"
+}

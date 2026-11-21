@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Fondements mathématiques de l'informatique",
+    "evidence_url": "https://cimpa.info/en/ecoles/fondements-mathematiques-de-linformatique",
+    "evidence_quote": "Fondements mathématiques de l'informatique"
+  },
+  "institution": {
+    "name": "CIMPA (Centre International de Mathématiques Pures et Appliquées)",
+    "website": "https://www.cimpa.info",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://cimpa.info/en/ecoles/fondements-mathematiques-de-linformatique",
+  "source_url": "https://cimpa.info/en/ecoles/fondements-mathematiques-de-linformatique",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Antsiranana",
+    "country": "Madagascar",
+    "country_code": "MG"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Mathematics and theoretical computer science",
+  "seniority": "Master's students, doctoral students and early-career researchers",
+  "qualifications": [
+    "See the official CIMPA school page for eligibility"
+  ],
+  "skills": [],
+  "description_short": "CIMPA lists the school Fondements mathématiques de l'informatique (Mathematical Foundations of Computer Science) in Antsiranana, Madagascar, from 28 June to 9 July 2027, with a local organiser at the Institut Supérieur de Technologie d'Antsiranana. The application deadline is 28 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-28",
+    "timezone": "Indian/Antananarivo",
+    "evidence_url": "https://cimpa.info/en/ecoles/fondements-mathematiques-de-linformatique",
+    "evidence_quote": "28 February, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CIMPA school page (seen in search results) lists Antsiranana, Madagascar, 28 June to 9 July 2027, deadline 28 February 2027; applications via the CIMPA application site",
+    "Deadline is in the future relative to the run date 2026-11-20",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Only the date string is quoted; time zone of the deadline not stated (local time assumed)",
+    "Seniority reflects CIMPA's general audience (at least Master's level); school-specific eligibility not seen",
+    "Fees and any support not recorded",
+    "The programme is described as tentative; the definitive programme is on the event's own webpage",
+    "Host institution taken from the local organiser's affiliation on the CIMPA listing"
+  ],
+  "id": "opp_15c44080be7fc848",
+  "fingerprint": "da2c72e266bb0000",
+  "discovered_at": "2026-11-20T03:05:04.768Z",
+  "last_verified_at": "2026-11-20T03:05:04.768Z",
+  "content_hash": "sha256:b34de11743fca147f920ab3a750352b163615fdd24a8a6036a1ad4bab166b391"
+}

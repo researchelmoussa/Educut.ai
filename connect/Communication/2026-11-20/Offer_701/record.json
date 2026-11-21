@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Spring 2027 Internship",
+    "evidence_url": "https://www.undp.org/united-states/internships",
+    "evidence_quote": "Spring 2027"
+  },
+  "institution": {
+    "name": "United Nations Development Programme (UNDP), Washington",
+    "website": "https://www.undp.org/united-states",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.undp.org/united-states/internships",
+  "source_url": "https://www.undp.org/united-states/internships",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Washington, D.C.",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Communications and development (economics, public or business administration, environmental studies)",
+  "seniority": "Graduate students",
+  "qualifications": [
+    "Graduate-level students in communications or a development-related field",
+    "Must plan to return to studies after the internship"
+  ],
+  "skills": [],
+  "description_short": "The UNDP office in Washington, D.C., United States, accepts applications for its Spring 2027 internship from graduate students in communications or development-related fields. Applications (CV, signed application form, one reference letter) go by email; the deadline is 15 January 2027, 11:59 pm ET.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15T23:59:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.undp.org/united-states/internships",
+    "evidence_quote": "15 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UNDP Washington internships page (seen in search results) lists the Spring 2027 internship (March to 15 June 2027) with applications closing 15 January 2027 at 11:59 p.m. ET",
+    "Applications are submitted by email (CV, signed UNDP internship application form, one reference letter) as described on the official page",
+    "Deadline is in the future relative to the run date 2026-11-20",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Only the date string is quoted; the full deadline line was not shown verbatim",
+    "Exact published title of the posting not seen; title reflects the session name on the page",
+    "Application is by email, not an online portal; email addresses are on the official page",
+    "Compensation not recorded"
+  ],
+  "id": "opp_5322ffd301fd947b",
+  "fingerprint": "41ed424b55bd82ca",
+  "discovered_at": "2026-11-20T02:59:08.161Z",
+  "last_verified_at": "2026-11-21T02:53:15.800Z",
+  "content_hash": "sha256:5ff696e11180c20be45421e1970dab6485a2e36a4d55bea09c147ac5e6a3d372"
+}

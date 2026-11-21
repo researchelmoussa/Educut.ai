@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Steven M. Teutsch Prevention Effectiveness Fellowship",
+    "evidence_url": "https://www.cdc.gov/pef/php/participants/application.html",
+    "evidence_quote": "Steven M. Teutsch Prevention Effectiveness Fellowship"
+  },
+  "institution": {
+    "name": "Centers for Disease Control and Prevention (CDC)",
+    "website": "https://www.cdc.gov",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.cdc.gov/pef/php/participants/application.html",
+  "source_url": "https://www.cdc.gov/pef/php/participants/application.html",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Public health, health economics, decision science and disease modelling",
+  "seniority": "Postdoctoral / early career",
+  "qualifications": [
+    "See the official eligibility page: https://www.cdc.gov/pef/php/participants/eligibility.html"
+  ],
+  "skills": [],
+  "description_short": "The Centers for Disease Control and Prevention (CDC) in the United States accepts applications for the Class of 2027 of the Steven M. Teutsch Prevention Effectiveness Fellowship. Applications, recommendations and unofficial transcripts are due by 11:59 pm ET on 8 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08T23:59:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.cdc.gov/pef/php/participants/application.html",
+    "evidence_quote": "January 8, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CDC Prevention Effectiveness Fellowship pages (seen in search results) give the Class of 2027 application period as opening 8 a.m. ET on September 8, 2026 and closing 11:59 p.m. ET on January 8, 2027",
+    "The same pages state recommendations and unofficial transcripts must be received by the application deadline",
+    "Deadline is in the future relative to the run date 2026-11-20",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Only the date string is quoted; the full deadline line was not shown verbatim",
+    "A separate CDC doctoral-opportunities listing gives a looser October-January window",
+    "Duty location (city) not stated in the evidence seen",
+    "Eligibility details and compensation not recorded"
+  ],
+  "id": "opp_84bcbaf7f53688ce",
+  "fingerprint": "7c49ed19c9486f04",
+  "discovered_at": "2026-11-20T02:56:51.202Z",
+  "last_verified_at": "2026-11-20T02:56:51.202Z",
+  "content_hash": "sha256:9acce1da957fbef3ea563cb69e9c62084f3ed7e67abe8c6104f510b1215b8e99"
+}
