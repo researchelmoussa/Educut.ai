@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Takemi Program in International Health",
+    "evidence_url": "https://hsph.harvard.edu/fellowship-special-program/takemi/",
+    "evidence_quote": "Takemi Program in International Health"
+  },
+  "institution": {
+    "name": "Harvard T.H. Chan School of Public Health",
+    "website": "https://hsph.harvard.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://hsph.harvard.edu/fellowship-special-program/takemi/apply-to-the-program/",
+  "source_url": "https://hsph.harvard.edu/fellowship-special-program/takemi/apply-to-the-program/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Boston",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "International health",
+  "seniority": "Mid-career professionals",
+  "qualifications": [
+    "Generally mid-career applicants who have completed graduate degrees, published in internationally recognized journals and shown leadership potential",
+    "Three references willing to submit letters of recommendation",
+    "Proof of English (TOEFL/IELTS accepted)"
+  ],
+  "skills": [],
+  "description_short": "The Takemi Program in International Health at the Harvard T.H. Chan School of Public Health in Boston, United States, accepts applications for its 2027–2028 fellowship year (August to June). Applications are open until midnight EST on 31 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-31T23:59:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://hsph.harvard.edu/fellowship-special-program/takemi/apply-to-the-program/",
+    "evidence_quote": "applications are OPEN until December 31, 2026 at midnight EST, USA"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Harvard Chan School Takemi 'Apply to the Program' page (seen in search results) states applications are OPEN until December 31, 2026 at midnight EST",
+    "Program overview page states the portal closes on December 31 every year and the fellowship runs from August 1 through June 30",
+    "Deadline is in the future relative to the run date 2026-11-20",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "The official site states the Takemi Program does not provide funding; no compensation is recorded",
+    "Institution name given as the school hosting the programme; exact published name of the host department not verified"
+  ],
+  "id": "opp_9f48300f68c9d22e",
+  "fingerprint": "c7a1cd39a48d7d54",
+  "discovered_at": "2026-11-20T02:56:51.515Z",
+  "last_verified_at": "2026-11-20T02:56:51.515Z",
+  "content_hash": "sha256:d959584b5c54ab744f3f6eef700769996e7470220d6b5180c072028641367d76"
+}

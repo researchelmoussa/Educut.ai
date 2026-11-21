@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "Lost Cities",
+    "evidence_url": "https://www.gerda-henkel-stiftung.de/en/lost_cities",
+    "evidence_quote": "Lost Cities"
+  },
+  "institution": {
+    "name": "Gerda Henkel Foundation",
+    "website": "https://www.gerda-henkel-stiftung.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.gerda-henkel-stiftung.de/en/lost_cities",
+  "source_url": "https://www.gerda-henkel-stiftung.de/en/lost_cities",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Humanities and social sciences (urban history and archaeology of lost cities)",
+  "seniority": "Postdoctoral researchers",
+  "qualifications": [
+    "Postdoctoral researchers based at a university in the humanities or social sciences",
+    "Doctoral candidates may not apply on their own",
+    "Individual applications are not accepted; projects need a team of at least two scholars",
+    "Digital application in English or German"
+  ],
+  "skills": [],
+  "description_short": "The Gerda Henkel Foundation's Lost Cities special programme invites research groups of at least two postdoctoral scholars in the humanities or social sciences to apply. The next deadline is 19 May 2027, with digital applications in English or German.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-05-19",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://www.gerda-henkel-stiftung.de/en/lost_cities",
+    "evidence_quote": "19 May 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Gerda Henkel Foundation Lost Cities page (seen in search results) lists the next application deadline as 19 May 2027 and states the call is announced once a year",
+    "Deadline is in the future relative to the run date 2026-11-20",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Only the date string is quoted; time zone of the deadline not stated",
+    "Research location not fixed by the programme; no city or country recorded (the Foundation is based in Düsseldorf, Germany)",
+    "Title is the programme name as published on the official page",
+    "Funding limits and duration not recorded"
+  ],
+  "id": "opp_6caa463f56a445d7",
+  "fingerprint": "c430d408613b0a12",
+  "discovered_at": "2026-11-20T03:02:48.190Z",
+  "last_verified_at": "2026-11-21T02:53:24.150Z",
+  "content_hash": "sha256:6e6b64fc5c4852103643e43850a764ca5d232567d55f3ba069cac39a7250fba0"
+}

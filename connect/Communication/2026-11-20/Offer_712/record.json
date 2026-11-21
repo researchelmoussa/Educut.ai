@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Forced Migration",
+    "evidence_url": "https://www.gerda-henkel-stiftung.de/en/forced_migration",
+    "evidence_quote": "Forced Migration"
+  },
+  "institution": {
+    "name": "Gerda Henkel Foundation",
+    "website": "https://www.gerda-henkel-stiftung.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.gerda-henkel-stiftung.de/en/forced_migration",
+  "source_url": "https://www.gerda-henkel-stiftung.de/en/forced_migration",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Forced migration research (humanities and social sciences)",
+  "seniority": "Postdoctoral researchers",
+  "qualifications": [
+    "Only individual research scholarships for postdoctoral researchers are funded in the 2027 call",
+    "Doctorate no more than eight years old at the time of application",
+    "Digital application in English"
+  ],
+  "skills": [],
+  "description_short": "The Gerda Henkel Foundation's Forced Migration special programme accepts applications for individual postdoctoral research scholarships. Applicants must hold a doctorate no more than eight years old; digital applications in English must reach the Foundation by 29 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-29",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://www.gerda-henkel-stiftung.de/en/forced_migration",
+    "evidence_quote": "29 April 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Gerda Henkel Foundation Forced Migration page (seen in search results) gives the next application deadline as 29 April 2027, with committees meeting in November 2027",
+    "Deadline is in the future relative to the run date 2026-11-20",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Only the date string is quoted; time zone of the deadline not stated",
+    "Research location not fixed by the programme; no city or country recorded (the Foundation is based in Düsseldorf, Germany)",
+    "Title is the programme name as published on the official page",
+    "Scholarship amount and duration not recorded"
+  ],
+  "id": "opp_d74c1a0d9e6994bc",
+  "fingerprint": "b7607bda633b798a",
+  "discovered_at": "2026-11-20T03:02:47.900Z",
+  "last_verified_at": "2026-11-20T03:02:47.900Z",
+  "content_hash": "sha256:ccf3f48841fa089aac3991016ce1a972efe1caf3add6001655013dee3db62a89"
+}

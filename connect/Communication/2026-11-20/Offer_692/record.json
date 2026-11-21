@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Senior Research Scientists, Research Scientists, and Postdoctoral Researchers (26-1583)",
+    "evidence_url": "https://www.riken.jp/careers/openings/index.html",
+    "evidence_quote": "Senior Research Scientists, Research Scientists, and Postdoctoral Researchers"
+  },
+  "institution": {
+    "name": "RIKEN Center for Interdisciplinary Theoretical and Mathematical Sciences (iTHEMS)",
+    "website": "https://ithems.riken.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ithems.riken.jp/en/opportunities",
+  "source_url": "https://ithems.riken.jp/en/opportunities",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": "Wako",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "unspecified",
+  "field": "Theoretical physics in a broad sense and related fields",
+  "seniority": "Postdoctoral to senior research scientist",
+  "qualifications": [
+    "Researchers who can advance theoretical physics in a broad sense and related fields and are familiar with iTHEMS's interdisciplinary approach across mathematics, physics and biology"
+  ],
+  "skills": [],
+  "description_short": "RIKEN iTHEMS (Division of Fundamental Mathematical Science) in Wako, Japan, is recruiting Senior Research Scientists, Research Scientists and Postdoctoral Researchers in theoretical physics and related fields under reference 26-1583. The application deadline is 18 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-18",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://ithems.riken.jp/en/opportunities",
+    "evidence_quote": "Deadline: December 18, 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official iTHEMS opportunities page (seen in search results) lists position 26-1583 (theoretical physics and related fields) with Deadline: December 18, 2026",
+    "RIKEN careers openings listing shows the same reference number, deadline and location (Wako)",
+    "Deadline is in the future relative to the run date 2026-11-20",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Exact published title wording reconstructed from the RIKEN careers listing; the full job description was not seen",
+    "Eligibility requirements, application instructions and compensation not recorded",
+    "Time zone of the deadline not stated; Japan time assumed",
+    "application_url is the iTHEMS opportunities page; the individual posting URL was not seen"
+  ],
+  "id": "opp_0cda0f4c71ec3474",
+  "fingerprint": "27265f0f4833b03d",
+  "discovered_at": "2026-11-20T03:07:06.425Z",
+  "last_verified_at": "2026-11-20T03:07:06.425Z",
+  "content_hash": "sha256:60d326cc28c3e8a19339baa9db84b8eb211293108caf737f4bc1cee0adeca8e8"
+}

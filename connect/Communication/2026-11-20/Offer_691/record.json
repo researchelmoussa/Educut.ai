@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Wadsworth African Fellowship",
+    "evidence_url": "https://wennergren.org/program/wadsworth-african-fellowship/",
+    "evidence_quote": "Wadsworth African Fellowship"
+  },
+  "institution": {
+    "name": "Wenner-Gren Foundation",
+    "website": "https://wennergren.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://wennergren.org/program/wadsworth-african-fellowship/",
+  "source_url": "https://wennergren.org/program/wadsworth-african-fellowship/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "South Africa",
+    "country_code": "ZA"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Anthropology and archaeology",
+  "seniority": "Doctoral students (first year or applying)",
+  "qualifications": [
+    "Citizens and residents of an African country at the time of application",
+    "Members of a group underrepresented in academic anthropology and archaeology",
+    "Doctoral application pending at a South African university, or in the first year of the doctoral programme",
+    "Applicants seeking only fieldwork or dissertation write-up support are not eligible",
+    "Two sponsor letters (home and host) must arrive by the deadline; application in English"
+  ],
+  "skills": [],
+  "description_short": "The Wenner-Gren Foundation's Wadsworth African Fellowship supports African doctoral students in anthropology at South African universities, for fellowships beginning in the following academic year. The online portal opens 1 November and applications, with both sponsor letters, are due 15 December 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-15",
+    "timezone": null,
+    "evidence_url": "https://wennergren.org/program/wadsworth-african-fellowship/",
+    "evidence_quote": "The application deadline is December 15 for fellowships beginning in the following academic year. The online portal is opened on November 1st."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Wenner-Gren programme page (seen in search results) states the application deadline is December 15 for fellowships beginning in the following academic year and that the online portal opens on November 1",
+    "Run date 2026-11-20 falls between the stated portal opening (November 1) and the deadline (December 15, 2026)",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Quotes reproduce the wording as shown in search results; exact page wording not seen",
+    "The official page states a recurring annual deadline (December 15) without a year; 2026 inferred from the current cycle",
+    "City not stated (any South African university); time zone not stated",
+    "Award amount not recorded"
+  ],
+  "id": "opp_62e21f2d20d73b48",
+  "fingerprint": "2f37e3cd33cb407a",
+  "discovered_at": "2026-11-20T03:02:47.582Z",
+  "last_verified_at": "2026-11-20T03:02:47.582Z",
+  "content_hash": "sha256:815a805d9ddc9b9c0940d9a312e645ab2a3d5102f48f21ec48b47eb20279e060"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Early-career Writing Scholarships for Doctoral and Postdoctoral Scholars",
+    "evidence_url": "https://www.maxweberstiftung.de/en/max-weber-foundation/single-news-press-releases/call-for-applications-early-career-writing-scholarships-for-doctoral-and-postdoctoral-scholars-mwf-delhi-1.html",
+    "evidence_quote": "Early-career Writing Scholarships for Doctoral and Postdoctoral Scholars"
+  },
+  "institution": {
+    "name": "Max Weber Forum for South Asian Studies Delhi (MWF Delhi)",
+    "website": "https://www.maxweberstiftung.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.maxweberstiftung.de/en/max-weber-foundation/single-news-press-releases/call-for-applications-early-career-writing-scholarships-for-doctoral-and-postdoctoral-scholars-mwf-delhi-1.html",
+  "source_url": "https://www.maxweberstiftung.de/en/max-weber-foundation/single-news-press-releases/call-for-applications-early-career-writing-scholarships-for-doctoral-and-postdoctoral-scholars-mwf-delhi-1.html",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "New Delhi",
+    "country": "India",
+    "country_code": "IN"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Humanities and social sciences with an emphasis on South Asia",
+  "seniority": "Doctoral students and postdoctoral scholars",
+  "qualifications": [
+    "Germany-based doctoral students and postdoctoral scholars in the humanities and social sciences",
+    "Projects using primary sources with an emphasis on South Asia"
+  ],
+  "skills": [],
+  "description_short": "The Max Weber Forum for South Asian Studies Delhi (MWF Delhi) invites Germany-based doctoral and postdoctoral scholars in the humanities and social sciences working on South Asia to apply for Early-career Writing Scholarships starting 1 September 2027. The application deadline is 7 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-07",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://www.maxweberstiftung.de/en/max-weber-foundation/single-news-press-releases/call-for-applications-early-career-writing-scholarships-for-doctoral-and-postdoctoral-scholars-mwf-delhi-1.html",
+    "evidence_quote": "07.02.2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Max Weber Stiftung call page (seen in search results) gives the application deadline 07.02.2027 for scholarships beginning 1 September 2027",
+    "Deadline is in the future relative to the run date 2026-11-20",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Only the date string is quoted; time zone of the deadline not stated",
+    "City inferred from the host institute (MWF Delhi); whether the 2027 scholarship is residential in Delhi was not confirmed for this cycle",
+    "Full 2027 eligibility and award terms not seen; figures from the 2026 cycle are not recorded",
+    "Exact application submission channel not seen; application_url is the official call page"
+  ],
+  "id": "opp_dbd6372aa849c80b",
+  "fingerprint": "bffd173bbbcb3d6a",
+  "discovered_at": "2026-11-20T03:00:52.342Z",
+  "last_verified_at": "2026-11-20T03:00:52.342Z",
+  "content_hash": "sha256:0f9913dd066f95b42e973777232c624191317db78563db711aada291a0a8c6d2"
+}

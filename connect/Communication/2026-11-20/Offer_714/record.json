@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Short Term Internship 2027",
+    "evidence_url": "https://careers.cern/jobs/short-term-internship/",
+    "evidence_quote": "Short Term Internship 2027"
+  },
+  "institution": {
+    "name": "CERN",
+    "website": "https://home.cern",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://careers.cern/jobs/short-term-internship/",
+  "source_url": "https://careers.cern/jobs/short-term-internship/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Geneva",
+    "country": "Switzerland",
+    "country_code": "CH"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Physics, engineering, computing and related fields",
+  "seniority": "Students",
+  "qualifications": [
+    "See the official careers.cern posting for eligibility"
+  ],
+  "skills": [],
+  "description_short": "CERN, in Geneva, Switzerland, lists its Short Term Internship 2027 on the CERN careers portal, with field-specific postings including data science, AI and analytics, and information technologies. The postings close on 1 November 2027 at 23:59 Geneva time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-11-01T23:59:00+01:00",
+    "timezone": "Europe/Zurich",
+    "evidence_url": "https://careers.cern/jobs/short-term-internship/",
+    "evidence_quote": "01/11/2027 at 23:59 (Geneva Time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official careers.cern Short-Term Internship 2027 postings (seen in search results) close before 01/11/2027 at 23:59 (Geneva Time)",
+    "Deadline is in the future relative to the run date 2026-11-20",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Date written 01/11/2027 on a Geneva site; interpreted as day/month (1 November 2027)",
+    "Several field-specific Short-Term Internship 2027 postings exist; this record points to the general posting",
+    "Eligibility, duration and allowance not recorded"
+  ],
+  "id": "opp_ce1db93566508e65",
+  "fingerprint": "38fab9d149613b18",
+  "discovered_at": "2026-11-20T03:08:28.434Z",
+  "last_verified_at": "2026-11-20T03:08:28.434Z",
+  "content_hash": "sha256:6d777fbac85664689208726c7625c41f66fe09567cedf866d154075b339d56dd"
+}

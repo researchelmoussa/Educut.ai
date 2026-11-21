@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Workshop on Active Matter: Motion, Mechanics, and Emergence",
+    "evidence_url": "https://www.ictp-saifr.org/2027-activities/",
+    "evidence_quote": "Workshop on Active Matter: Motion, Mechanics, and Emergence"
+  },
+  "institution": {
+    "name": "ICTP South American Institute for Fundamental Research (ICTP-SAIFR)",
+    "website": "https://www.ictp-saifr.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ictp-saifr.org/2027-activities/",
+  "source_url": "https://www.ictp-saifr.org/2027-activities/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "São Paulo",
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Physics (active matter, soft and biological physics)",
+  "seniority": null,
+  "qualifications": [],
+  "skills": [],
+  "description_short": "ICTP-SAIFR holds the Workshop on Active Matter: Motion, Mechanics, and Emergence at Instituto Principia in São Paulo, Brazil, from 5 to 9 April 2027. Applications are made online; the deadline is 4 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-04",
+    "timezone": "America/Sao_Paulo",
+    "evidence_url": "https://www.ictp-saifr.org/2027-activities/",
+    "evidence_quote": "February 4, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ICTP-SAIFR 2027 activities page and workshop page (seen in search results) list the workshop on April 5-9, 2027 at Instituto Principia, São Paulo, with an online application deadline of February 4, 2027",
+    "Deadline is in the future relative to the run date 2026-11-20",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Only the date string is quoted; time zone of the deadline not stated",
+    "The workshop page also shows a separate 'January 18 - 28, 2027' block whose relation to this workshop is unclear",
+    "The dedicated workshop page URL was not seen; application_url is the official 2027 activities page",
+    "Eligibility, fees and any support not recorded"
+  ],
+  "id": "opp_9c1dae98a930f013",
+  "fingerprint": "c5901c0a52265bfb",
+  "discovered_at": "2026-11-20T03:05:55.659Z",
+  "last_verified_at": "2026-11-20T03:05:55.659Z",
+  "content_hash": "sha256:6db90ec5f153bb38616ab41aa36f8fc90af7d2c4fc8648d3bdf47caea226c6a3"
+}
