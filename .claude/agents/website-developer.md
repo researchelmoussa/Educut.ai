@@ -48,16 +48,17 @@ Commands: `node connect/cli.mjs <cmd> …`.
      "don't miss out"), no "we are hiring": EduCut AI only lists the opportunity.
 3. **Card photo (landscape).** Every listing card shows a landscape photo from the administrator's Google
    Drive, `EduCut Connect/Landmarks/`:
-   - the offer's `city.jpg` / `city.png` if the offer folder has one (already taken from Landmarks), else
+   - the offer's `city.jpg` / `city.png` if the offer folder has one (the renderer already chose it: country
+     photo first, default only when the country has no folder), else
    - the country photo in `Landmarks/images/<CC>/` (CC = the record's `location.country_code`, e.g. `US`):
      list that folder with the Google Drive connector (`parentId = '<folder id>'`), skip `.DS_Store` and
      other non-images, download the image (`download_file_content`; if the result is saved to a file,
      decode its `content` with `jq -r .content <file> | base64 -d`) into the run folder.
    Open the image (Read) to see what it shows, then pass `--photo <file> --photo-alt "<what it shows,
    e.g. New York skyline with the Statue of Liberty, United States>"`. `site-add` crops it to 3:2 and
-   saves it as `educut-connect/<slug>/photo.jpg`. Only use photos from that Drive folder. When the offer
-   has no city (even if the country is known) or the country has no folder, use
-   `Landmarks/images/DEFAULT/` (the default photo); the rendered `city.jpg` already follows this rule.
+   saves it as `educut-connect/<slug>/photo.jpg`. Only use photos from that Drive folder. Use
+   `Landmarks/images/DEFAULT/` (the default photo) only when the country is unknown or has no folder; the
+   rendered `city.jpg` already follows this rule.
 4. `site-add $OFFER_DIR --approved-by "<name>"` (or `--preview`), plus the photo flags. It checks the entry (length, key points,
    no URLs, no invented pay or deadline, no banned phrases) and copies the card images to
    `educut-connect/<slug>/`. Fix every failure it reports and run it again.

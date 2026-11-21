@@ -17,16 +17,11 @@ Commands: `node connect/cli.mjs <cmd> … --run $RUN_DIR`.
 
 ## Procedure
 1. Read `OFFER_DIR/record.json`.
-2. **Landmark photo.** `landmark "<city>" <CC>`. It returns a cached photo or downloads a freely
-   licensed one (CC0 / public domain / CC BY / CC BY-SA) from Wikimedia Commons and records the credit.
-   - The default subject per city is in `connect/lib/landmarks.mjs` (Geneva → Jet d'Eau, Paris → Eiffel
-     Tower, London → Tower Bridge, Dubai → Burj Khalifa, New York → Manhattan skyline, …). For another city,
-     pass `--query "<well-known landmark> <city>"`. Choose a landmark that really is in that city.
-   - Open the downloaded image (Read the file) and confirm it shows that landmark. If it does not, run again
-     with a more precise `--query`, or `--refresh`.
-   - If no city is given, do not look for a landmark: the renderer uses the administrator's default photo
-     (registered as `Default DEFAULT` from Drive `Landmarks/images/DEFAULT/`), even when the country is
-     known. Never use an image without licence data.
+2. **Photo.** Do not search for a photo yourself. The orchestrator has registered the administrator's
+   photos from Drive `Landmarks/images/`, and the renderer chooses: the **country photo first** (registered
+   under the country name, even when the offer has a city), a city photo only if the country has none, and
+   the default photo (`Default DEFAULT`) only when there is no country photo. After rendering, open
+   `city.jpg` and describe what it actually shows in the alt text. Never use an image without licence data.
 3. **Write `OFFER_DIR/design-input.json`:**
    ```json
    {
