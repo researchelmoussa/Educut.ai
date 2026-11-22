@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Cilia",
+    "evidence_url": "https://meetings.embo.org/event/27-cilia",
+    "evidence_quote": "Cilia"
+  },
+  "institution": {
+    "name": "EMBO",
+    "website": "https://www.embo.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://meetings.embo.org/event/27-cilia",
+  "source_url": "https://meetings.embo.org/event/27-cilia",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Stresa",
+    "country": "Italy",
+    "country_code": "IT"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Cell biology",
+  "seniority": "Researchers (as stated on the event page)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "EMBO Workshop \"Cilia\" will take place in Stresa, Italy, from 9 to 12 March 2027. Registration closes on 1 January 2027. A late registration deadline of 22 February 2027 is also listed. Applications are made through the event page on the EMBO meetings website.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-01",
+    "timezone": null,
+    "evidence_url": "https://meetings.embo.org/event/27-cilia",
+    "evidence_quote": "Regular Registration Deadline 1 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official EMBO event page (seen in search results) lists: 'Regular Registration Deadline 1 January 2027'",
+    "Event page states: 'The EMBO Workshop \"Cilia\" runs 9–12 March 2027 in Stresa, Italy'",
+    "Deadline is in the future (today 2026-11-21)",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Participant selection criteria and eligibility not fully seen; check the event page",
+    "Abstract submission dates shown in the evidence were inconsistent; check the event page"
+  ],
+  "id": "opp_bf063b7c8d99d677",
+  "fingerprint": "3ca286c6b78a1a6c",
+  "discovered_at": "2026-11-21T03:00:58.763Z",
+  "last_verified_at": "2026-11-21T03:00:58.763Z",
+  "content_hash": "sha256:ce2c867e6d32df306ee3acb8c4134c7c023b1cb135e7e417619893738f7f7a34"
+}
