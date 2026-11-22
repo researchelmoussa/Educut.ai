@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-22T02:52:06.048Z",
+  "updated_at": "2026-11-22T03:20:21.868Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -49533,6 +49533,1633 @@
         }
       ],
       "offer_number": 729
+    },
+    "opp_69bf8418e1e70bc4": {
+      "id": "opp_69bf8418e1e70bc4",
+      "fingerprint": "13201e516f65bee1",
+      "title": "HZDR Summer Student Program 2027",
+      "institution": "Helmholtz-Zentrum Dresden-Rossendorf (HZDR)",
+      "city": "Dresden",
+      "country": "Germany",
+      "source_url": "https://fellowshipsguide.com/hzdr-summer-student-program/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.hzdr.de/db/!Conference.SummerStudents.Registration?pLang=en&pNid=2535",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-24T22:00:00+01:00",
+      "content_hash": "sha256:448a950c832278fb15868ac83faada143e53a4a70ea5f475b3ff4408244fe49a",
+      "last_verified_at": "2026-11-22T03:11:40.998Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T02:52:18.849Z",
+      "history": [
+        {
+          "at": "2026-11-22T02:52:18.849Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T02:52:18.849Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:11:41.273Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-22T03:18:07.016Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:18:07.016Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:18.742Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:18.742Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 751
+    },
+    "opp_e90a5baf05e3ffaa": {
+      "id": "opp_e90a5baf05e3ffaa",
+      "fingerprint": "103b1ec39ef1a3b7",
+      "title": "Broad Summer Research Program (BSRP)",
+      "institution": "Broad Institute of MIT and Harvard",
+      "city": "Cambridge, Massachusetts",
+      "country": "United States",
+      "source_url": "https://fellowshipsguide.com/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.broadinstitute.org/bsrp/broad-summer-research-program-bsrp",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10T23:59:00-05:00",
+      "content_hash": "sha256:d509d1a28d878729a7573fb16e17a7a64cebc8efcd42f201945a02439b739a62",
+      "last_verified_at": "2026-11-22T02:53:59.441Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T02:53:59.688Z",
+      "history": [
+        {
+          "at": "2026-11-22T02:53:59.688Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T02:53:59.688Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:15:39.720Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:15:39.720Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:15.467Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:15.467Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 744
+    },
+    "opp_f47c8a01166529ca": {
+      "id": "opp_f47c8a01166529ca",
+      "fingerprint": "42eb7518ab5dce4f",
+      "title": "Postdoctoral Associate in Jewish Philosophy",
+      "institution": "Cornell University, Jewish Studies Program",
+      "city": "Ithaca, New York",
+      "country": "United States",
+      "source_url": "https://vacancyedu.com/2026/11/21/postdoctoral-fellowship-17-at-cornell-university-new-york-united-states/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/jobs/33115",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:cedcff8b551cdb8d5eb07e326c206d6a0c1db108c457766b0645e1a782e475bd",
+      "last_verified_at": "2026-11-22T03:11:40.522Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T02:54:37.211Z",
+      "history": [
+        {
+          "at": "2026-11-22T02:54:37.211Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T02:54:37.211Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:11:40.746Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-22T03:18:04.934Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:18:04.934Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:16.949Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:16.949Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 747
+    },
+    "opp_be8c23475ede040a": {
+      "id": "opp_be8c23475ede040a",
+      "fingerprint": "d1b665cda0e7972e",
+      "title": "3 Year Postdoctoral Fellowships in Animal Behavior",
+      "institution": "Smithsonian Tropical Research Institute (STRI)",
+      "city": null,
+      "country": "Panama",
+      "source_url": "https://stri.si.edu/academic-programs/fellowships",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://stri.si.edu/academic-programs/fellowships/tropical-animal-behavior-3-year-fellowship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-01",
+      "content_hash": "sha256:40bc3d7984db11b5eccd1e51dfa5dc6966cbe2ec68244ca68dc0c383da8ff398",
+      "last_verified_at": "2026-11-22T02:56:45.132Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T02:56:45.414Z",
+      "history": [
+        {
+          "at": "2026-11-22T02:56:45.414Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T02:56:45.414Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:19:30.447Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:19:30.447Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:21.868Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:21.868Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 758
+    },
+    "opp_77d5971a8e313a86": {
+      "id": "opp_77d5971a8e313a86",
+      "fingerprint": "fee9bc8c3e2613bf",
+      "title": "Joint Japan/World Bank Graduate Scholarship Program (JJ/WBGSP) 2027",
+      "institution": "World Bank",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-26",
+      "content_hash": "sha256:477bb14b8982e043db62eadf273ba05dfd163576bf46ce348e5e474f1a4fdcde",
+      "last_verified_at": "2026-11-22T02:59:16.500Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T02:59:16.771Z",
+      "history": [
+        {
+          "at": "2026-11-22T02:59:16.771Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T02:59:16.771Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:19:09.141Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:19:09.141Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:20.120Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:20.121Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 754
+    },
+    "opp_d33a642bcdac3369": {
+      "id": "opp_d33a642bcdac3369",
+      "fingerprint": "2034b1afd4bd0dbf",
+      "title": "UNSW HDR Scholarships: UNSW 2027 March Release (Term 2, 2027 start)",
+      "institution": "UNSW Sydney",
+      "city": "Sydney",
+      "country": "Australia",
+      "source_url": "https://www.unsw.edu.au/research/hdr/application",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.unsw.edu.au/research/hdr/application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:00+11:00",
+      "content_hash": "sha256:836e2bd0e85d1bfcae9f00fcea4c9fc238d2ea06ebc7d700da7794c16d36f59e",
+      "last_verified_at": "2026-11-22T03:00:02.112Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:00:02.376Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:00:02.376Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:00:02.376Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:18:05.479Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:18:05.480Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:17.389Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:17.389Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 748
+    },
+    "opp_f21cd0437fb39421": {
+      "id": "opp_f21cd0437fb39421",
+      "fingerprint": "92097f67713d08bf",
+      "title": "Postdoctoral Position in Theoretical Astrophysics and Particle Phenomenology (POSTDOC2027)",
+      "institution": "City University of Hong Kong, Department of Physics",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "source_url": "https://academicjobsonline.org/ajo/jobs/33303",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/jobs/33303",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:b64674b5d73195865cc65c730532719069ca9eb22bca99bf3892600ec25bc851",
+      "last_verified_at": "2026-11-22T03:01:21.391Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:01:21.700Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:01:21.700Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:01:21.700Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:14:53.780Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:14:53.780Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:13.205Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:13.205Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 739
+    },
+    "opp_66c54b0a7faa17c0": {
+      "id": "opp_66c54b0a7faa17c0",
+      "fingerprint": "7018c6727a29b8a4",
+      "title": "Postdoctoral Position in Theory, Particle and Nuclear Division",
+      "institution": "Tsung-Dao Lee Institute (TDLI), Shanghai Jiao Tong University",
+      "city": "Shanghai",
+      "country": "China",
+      "source_url": "https://academicjobsonline.org/ajo/TDLI/POSTDOCTHEOPOSITION1",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/TDLI/POSTDOCTHEOPOSITION1",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-20",
+      "content_hash": "sha256:5d8e5459297aa259684f78dbe9560a5c63cc8ed349f618c77ff0215cf1774b1b",
+      "last_verified_at": "2026-11-22T03:01:21.969Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:01:22.320Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:01:22.320Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:01:22.321Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:14:09.305Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:14:09.305Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:12.316Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:12.316Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 737
+    },
+    "opp_2651053ff80b0a5d": {
+      "id": "opp_2651053ff80b0a5d",
+      "fingerprint": "7903cbaad27ddc3a",
+      "title": "Postdoctoral Positions in Theoretical Particle Physics",
+      "institution": "Technion - Israel Institute of Technology, Physics",
+      "city": "Haifa",
+      "country": "Israel",
+      "source_url": "https://academicjobsonline.org/ajo/jobs/33439",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/jobs/33439",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08T23:59:59+02:00",
+      "content_hash": "sha256:57d135ade3841b73559051098625bb0c0f1bebe5b2a3be5948b0bf133013a522",
+      "last_verified_at": "2026-11-22T03:01:22.599Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:01:22.918Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:01:22.918Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:01:22.919Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:14:55.879Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:14:55.880Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:15.037Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:15.038Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 743
+    },
+    "opp_c828188ede7f71a0": {
+      "id": "opp_c828188ede7f71a0",
+      "fingerprint": "98ccc83c40d08889",
+      "title": "Research Fellow Positions in Particle Physics",
+      "institution": "Korea Institute for Advanced Study (KIAS), School of Physics",
+      "city": "Seoul",
+      "country": "South Korea",
+      "source_url": "https://academicjobsonline.org/ajo/KIAS/PHYS_PARTICLE_OCT_2026",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/KIAS/PHYS_PARTICLE_OCT_2026",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-29",
+      "content_hash": "sha256:a668e4707319d08640afcd6b60605f38452788b433b55d1f35b6540a26900787",
+      "last_verified_at": "2026-11-22T03:11:41.492Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:02:15.996Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:02:15.996Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:02:15.996Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:11:41.743Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-22T03:19:08.156Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:19:08.156Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:19.172Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:19.172Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 752
+    },
+    "opp_e5a343e126ec02b7": {
+      "id": "opp_e5a343e126ec02b7",
+      "fingerprint": "cb08e07cf75d5f30",
+      "title": "Postdoctoral Positions, NCTS Math Division (2027)",
+      "institution": "National Center for Theoretical Sciences (NCTS), Math Division",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "source_url": "https://www.mathjobs.org/jobs/NCTSMATH/PD",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.mathjobs.org/jobs/NCTSMATH/PD",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28",
+      "content_hash": "sha256:3b053c5a304c47e9b57c31823e55fc21cfd3d154a0fdedc6dc97bf5c67f6a7d7",
+      "last_verified_at": "2026-11-22T03:11:41.979Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:02:16.628Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:02:16.628Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:02:16.628Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:11:42.228Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-22T03:19:09.638Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:19:09.638Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:20.570Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:20.570Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 755
+    },
+    "opp_753e695ff3eb4f8f": {
+      "id": "opp_753e695ff3eb4f8f",
+      "fingerprint": "79a38d27b54d176b",
+      "title": "Qiushi Fellow and Postdoctoral Researcher Positions (2027)",
+      "institution": "Zhejiang University, Institute for Advanced Study in Mathematics",
+      "city": "Hangzhou",
+      "country": "China",
+      "source_url": "https://www.mathjobs.org/jobs/2531/ALLRANKSDOCTORAL2027",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.mathjobs.org/jobs/2531/ALLRANKSDOCTORAL2027",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-14T23:59:59",
+      "content_hash": "sha256:001264229facfe55e27d0b91c38bddebeaabb460cb458ff97ae507eb44a70196",
+      "last_verified_at": "2026-11-22T03:02:57.950Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:02:58.257Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:02:58.257Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:02:58.258Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:14:07.679Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:14:07.679Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:10.760Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:10.760Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 734
+    },
+    "opp_efd8c4e56c593504": {
+      "id": "opp_efd8c4e56c593504",
+      "fingerprint": "78cc0cd2d4ffd93d",
+      "title": "Tenure-track Position in Algebra",
+      "institution": "Universidad Nacional Autónoma de México, Centro de Ciencias Matemáticas",
+      "city": "Morelia",
+      "country": "Mexico",
+      "source_url": "https://www.mathjobs.org/jobs/list/29578",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.mathjobs.org/jobs/list/29578",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:7308d4ccdbe89c530f882b8d96aa2b5c9c1500a871240215e1925216b22cd419",
+      "last_verified_at": "2026-11-22T03:02:58.520Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:02:58.780Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:02:58.780Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:02:58.780Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:14:09.807Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:14:09.807Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:12.753Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:12.753Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 738
+    },
+    "opp_14339093ec224dc8": {
+      "id": "opp_14339093ec224dc8",
+      "fingerprint": "ab5f8e29f2cfd465",
+      "title": "Tenure-track Faculty and Postdoctoral Fellow Positions in Mathematics",
+      "institution": "Great Bay University, School of Sciences",
+      "city": "Dongguan",
+      "country": "China",
+      "source_url": "https://www.mathjobs.org/jobs/3527/FACULTY1",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.mathjobs.org/jobs/3527/FACULTY1",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-10T23:59:59",
+      "content_hash": "sha256:efa5702808221bf2c0ec8a44e0dc62b3308a56f7496134417072ceb4c6329169",
+      "last_verified_at": "2026-11-22T03:03:34.914Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:03:35.244Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:03:35.244Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:03:35.244Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:19:08.628Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:19:08.628Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:19.651Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:19.652Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 753
+    },
+    "opp_e102ff82d6cef3cc": {
+      "id": "opp_e102ff82d6cef3cc",
+      "fingerprint": "aa1ce2de1407f026",
+      "title": "Postdoctoral Positions in Particle Physics (Neutrino, Dark Matter and Astroparticle Physics)",
+      "institution": "Southern University of Science and Technology (SUSTech), Department of Physics",
+      "city": "Shenzhen",
+      "country": "China",
+      "source_url": "https://academicjobsonline.org/ajo/jobs/32225",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/jobs/32225",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31T23:59:59",
+      "content_hash": "sha256:a3b96ec19d31db3f954941fbd4ab3c36e257af3bbcdcbfba67f1819dc45ab696",
+      "last_verified_at": "2026-11-22T03:04:25.576Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:04:25.914Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:04:25.914Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:04:25.914Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:14:54.894Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:14:54.894Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:14.118Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:14.119Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 741
+    },
+    "opp_796ebcac09e941d8": {
+      "id": "opp_796ebcac09e941d8",
+      "fingerprint": "cd509a1c1dbc1b96",
+      "title": "Postdoctoral Researcher in Experimental Cosmology",
+      "institution": "University of Chicago, Department of Astronomy and Astrophysics",
+      "city": "Chicago",
+      "country": "United States",
+      "source_url": "https://academicjobsonline.org/ajo/jobs/33259",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/jobs/33259",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:59",
+      "content_hash": "sha256:d604d43a8d93ca7d59f440a25fd676bba4939a3ea9f731e3f7068c1f7063c796",
+      "last_verified_at": "2026-11-22T03:05:36.454Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:05:36.715Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:05:36.715Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:05:36.715Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:18:06.010Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:18:06.010Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:17.820Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:17.820Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 749
+    },
+    "opp_696d88af6f4d6f41": {
+      "id": "opp_696d88af6f4d6f41",
+      "fingerprint": "8b70e0d18503b15a",
+      "title": "CAS-ANSO Scholarship 2027 (Master's and PhD at UCAS)",
+      "institution": "University of Chinese Academy of Sciences (UCAS)",
+      "city": "Beijing",
+      "country": "China",
+      "source_url": "https://english.ucas.ac.cn/index.php/admission/international-students/financial-aid/6825-cas-anso-scholarship-2027-call-for-applications-to-study-at-ucas",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://english.ucas.ac.cn/index.php/admission/international-students/financial-aid/6825-cas-anso-scholarship-2027-call-for-applications-to-study-at-ucas",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28T23:59:59+08:00",
+      "content_hash": "sha256:a05d638a06f4798b437e94bdb2c35d6f73920d443ae76d007ecf02906838d736",
+      "last_verified_at": "2026-11-22T03:07:00.711Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:07:00.999Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:07:00.999Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:07:01.002Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:19:10.117Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:19:10.117Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:20.996Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:20.996Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 756
+    },
+    "opp_eeb70904ff7f5b00": {
+      "id": "opp_eeb70904ff7f5b00",
+      "fingerprint": "610819d18395e653",
+      "title": "Postdoctoral Research Scholars (Computation and Machine Learning, Chemical Physics, Nano-science, Biophysics, Statistical Physics)",
+      "institution": "National Center for Theoretical Sciences (NCTS), Physics Division",
+      "city": "Taipei",
+      "country": "Taiwan",
+      "source_url": "https://academicjobsonline.org/ajo/jobs/32557",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/jobs/32557",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-31T23:59:59",
+      "content_hash": "sha256:3b9c99ead756836de76e34fde5ae289a5c2185ce4a4b777f5eb23b645040cbbb",
+      "last_verified_at": "2026-11-22T03:08:20.774Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:08:21.065Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:08:21.065Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:08:21.065Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:19:29.889Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:19:29.889Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:21.450Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:21.450Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 757
+    },
+    "opp_f49774ef97446ac0": {
+      "id": "opp_f49774ef97446ac0",
+      "fingerprint": "49f8492633159b17",
+      "title": "ERC Funded Postdoctoral Positions in Theoretical Particle Physics, Theoretical Cosmology/Gravitation",
+      "institution": "Institut de Física d'Altes Energies (IFAE), Theory Division",
+      "city": "Barcelona",
+      "country": "Spain",
+      "source_url": "https://academicjobsonline.org/ajo/jobs/33210",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/jobs/33210",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:d9533ddfb812811311bda1498c7696fe28079a710c29ffd4647af954e9004413",
+      "last_verified_at": "2026-11-22T03:08:21.355Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:08:21.651Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:08:21.651Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:08:21.651Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:14:54.316Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:14:54.316Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:13.661Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:13.661Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 740
+    },
+    "opp_9342b96b1e1c0703": {
+      "id": "opp_9342b96b1e1c0703",
+      "fingerprint": "4514be7d70cb5065",
+      "title": "ERC Funded PhD Position in Theoretical Physics (High-Frequency Gravitational Waves)",
+      "institution": "Institut de Física d'Altes Energies (IFAE), Theory Division",
+      "city": "Barcelona",
+      "country": "Spain",
+      "source_url": "https://academicjobsonline.org/ajo/jobs/33211",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/jobs/33211",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:2aabbc68b31d6258abdc343910662fb5972c1df11769f2785b9924b8b4ed8dde",
+      "last_verified_at": "2026-11-22T03:11:39.474Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:08:22.218Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:08:22.218Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:08:22.218Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:11:39.738Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-22T03:15:40.249Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:15:40.250Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:15.945Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:15.945Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 745
+    },
+    "opp_7cf1e46dd6e2632f": {
+      "id": "opp_7cf1e46dd6e2632f",
+      "fingerprint": "d72c54596a933c14",
+      "title": "Postdoctoral Positions in Particle Astrophysics (WIPAC)",
+      "institution": "University of Wisconsin - Madison, Wisconsin IceCube Particle Astrophysics Center (WIPAC)",
+      "city": "Madison, Wisconsin",
+      "country": "United States",
+      "source_url": "https://academicjobsonline.org/ajo/jobs/33396",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/jobs/33396",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-04T23:59:59",
+      "content_hash": "sha256:f048ef8c1e7a5ba52871578e9ce401270539d6d30bab8675ae8fdb4bf2b7977d",
+      "last_verified_at": "2026-11-22T03:08:22.482Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:08:22.806Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:08:22.806Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:08:22.806Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:14:55.399Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:14:55.399Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:14.594Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:14.594Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 742
+    },
+    "opp_a2ddd9f8d284d8d8": {
+      "id": "opp_a2ddd9f8d284d8d8",
+      "fingerprint": "8477e7d55e30019b",
+      "title": "Postdoctoral Positions 2027 at CMM",
+      "institution": "Center for Mathematical Modeling (CMM), Universidad de Chile",
+      "city": "Santiago",
+      "country": "Chile",
+      "source_url": "https://www.cmm.uchile.cl/trabajo/postdoctoral-positions-2027-at-cmm/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.cmm.uchile.cl/trabajo/postdoctoral-positions-2027-at-cmm/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-18",
+      "content_hash": "sha256:ab1b76c6399cd31d02d7b1dd9fd686ec7652935ca8e7fc72d424085b951024e9",
+      "last_verified_at": "2026-11-22T03:11:38.963Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:09:04.805Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:09:04.805Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:09:04.805Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:11:39.219Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-22T03:14:08.758Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:14:08.758Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:11.845Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:11.845Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 736
+    },
+    "opp_4309ac3c6c1a3e77": {
+      "id": "opp_4309ac3c6c1a3e77",
+      "fingerprint": "2261a60d932f4383",
+      "title": "CMM Postdoctoral Visiting Program 2026-2027",
+      "institution": "Center for Mathematical Modeling (CMM), Universidad de Chile",
+      "city": "Santiago",
+      "country": "Chile",
+      "source_url": "https://www.cmm.uchile.cl/en/jobs/call-for-cmm-postdoctoral-visiting-program-2026-2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.cmm.uchile.cl/en/jobs/call-for-cmm-postdoctoral-visiting-program-2026-2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-18",
+      "content_hash": "sha256:a6fb163c1e6766e3656b7217a05103aefe57fc0965d6240115424c18d445cd80",
+      "last_verified_at": "2026-11-22T03:11:38.498Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:09:05.372Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:09:05.372Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:09:05.373Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:11:38.705Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-22T03:14:08.213Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:14:08.213Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:11.311Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:11.311Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 735
+    },
+    "opp_bba6d6915a940a8e": {
+      "id": "opp_bba6d6915a940a8e",
+      "fingerprint": "cfc0ba8aa6a4e243",
+      "title": "2027 Diploma Program (Regular Decision)",
+      "institution": "African Leadership Academy",
+      "city": "Johannesburg",
+      "country": "South Africa",
+      "source_url": "https://www.africanleadershipacademy.org/2026/07/21/apply-2027-cohort/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://ala2.submittable.com/submit/360300/2027-diploma-program-eng",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:72a6aaac63eb8ee302fc8904f102ed2e0cfa56deb443bbea82fd0537a16ea21a",
+      "last_verified_at": "2026-11-22T03:16:50.216Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:10:03.244Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:10:03.244Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:10:03.244Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:11:40.244Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-22T03:15:40.817Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:15:40.817Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:16:57.609Z",
+          "from": "UNDER_REVIEW",
+          "to": "VERIFIED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "revision requested: Removed unsupported scholarship type: no financial aid terms in evidence"
+        },
+        {
+          "at": "2026-11-22T03:16:57.890Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:16:57.890Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:16.458Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:16.458Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 746
+    },
+    "opp_32aeabe020a9f739": {
+      "id": "opp_32aeabe020a9f739",
+      "fingerprint": "830ed0b4181676ef",
+      "title": "Yale Young African Scholars (YYAS) 2027",
+      "institution": "Yale University, Yale Young African Scholars",
+      "city": null,
+      "country": null,
+      "source_url": "https://africanscholars.yale.edu/admissions/application-deadlines",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://africanscholars.yale.edu/admissions/application-deadlines",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-20T23:59:00-05:00",
+      "content_hash": "sha256:52803017d314d7de3a56a1198c2cf4ce5de99d548fae0ad96ea8f2e37b38eca8",
+      "last_verified_at": "2026-11-22T03:10:03.493Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-22T03:10:03.816Z",
+      "history": [
+        {
+          "at": "2026-11-22T03:10:03.816Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-22T03:10:03.817Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T03:18:06.508Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T03:18:06.508Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T03:20:18.287Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T03:20:18.287Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 750
     }
   },
   "seen_urls": {
@@ -49639,7 +51266,7 @@
     "https://phd.tech.au.dk/for-applicants/apply-here/saeropslag/phd-position-in-physical-ai-adaptive-foundation-models-for-robotics": "opp_4999d5f961bb61b9",
     "https://fellowshipsguide.com/aauw-fellowships": "opp_2589aee0cb0d083e",
     "https://aauw.org/resources/programs/fellowships-grants/aauw-international-fellowships": "opp_2589aee0cb0d083e",
-    "https://fellowshipsguide.com/": "opp_b6640f7d341c6672",
+    "https://fellowshipsguide.com/": "opp_e90a5baf05e3ffaa",
     "https://us.boell.org/en/internships": "opp_8eff0836a9d2b10b",
     "https://fellowshipsguide.com/branco-weiss-postdoctoral": "opp_88db489f065bb0e6",
     "https://brancoweissfellowship.org/who-should-apply/application": "opp_88db489f065bb0e6",
@@ -50564,7 +52191,36 @@
     "https://grc.org/neuroimmune-communication-in-health-and-disease-conference/2027": "opp_e16b6aeacf1397ec",
     "https://ibro.org/grant/iwc-travel-grants": "opp_df4c17116df6b21f",
     "https://fellowshipsguide.com/2027-uniqlo-management-program": "opp_fd74898a632fb30c",
-    "https://fastretailing.com/employment/en/uniqlo/graduate/gmp": "opp_fd74898a632fb30c"
+    "https://fastretailing.com/employment/en/uniqlo/graduate/gmp": "opp_fd74898a632fb30c",
+    "https://fellowshipsguide.com/hzdr-summer-student-program": "opp_69bf8418e1e70bc4",
+    "https://hzdr.de/db/!Conference.SummerStudents.Registration?pLang=en&pNid=2535": "opp_69bf8418e1e70bc4",
+    "https://broadinstitute.org/bsrp/broad-summer-research-program-bsrp": "opp_e90a5baf05e3ffaa",
+    "https://vacancyedu.com/2026/11/21/postdoctoral-fellowship-17-at-cornell-university-new-york-united-states": "opp_f47c8a01166529ca",
+    "https://academicjobsonline.org/ajo/jobs/33115": "opp_f47c8a01166529ca",
+    "https://stri.si.edu/academic-programs/fellowships": "opp_be8c23475ede040a",
+    "https://stri.si.edu/academic-programs/fellowships/tropical-animal-behavior-3-year-fellowship": "opp_be8c23475ede040a",
+    "https://worldbank.org/en/programs/scholarships/jj-wbgsp": "opp_77d5971a8e313a86",
+    "https://unsw.edu.au/research/hdr/application": "opp_d33a642bcdac3369",
+    "https://academicjobsonline.org/ajo/jobs/33303": "opp_f21cd0437fb39421",
+    "https://academicjobsonline.org/ajo/TDLI/POSTDOCTHEOPOSITION1": "opp_66c54b0a7faa17c0",
+    "https://academicjobsonline.org/ajo/jobs/33439": "opp_2651053ff80b0a5d",
+    "https://academicjobsonline.org/ajo/KIAS/PHYS_PARTICLE_OCT_2026": "opp_c828188ede7f71a0",
+    "https://mathjobs.org/jobs/NCTSMATH/PD": "opp_e5a343e126ec02b7",
+    "https://mathjobs.org/jobs/2531/ALLRANKSDOCTORAL2027": "opp_753e695ff3eb4f8f",
+    "https://mathjobs.org/jobs/list/29578": "opp_efd8c4e56c593504",
+    "https://mathjobs.org/jobs/3527/FACULTY1": "opp_14339093ec224dc8",
+    "https://academicjobsonline.org/ajo/jobs/32225": "opp_e102ff82d6cef3cc",
+    "https://academicjobsonline.org/ajo/jobs/33259": "opp_796ebcac09e941d8",
+    "https://english.ucas.ac.cn/index.php/admission/international-students/financial-aid/6825-cas-anso-scholarship-2027-call-for-applications-to-study-at-ucas": "opp_696d88af6f4d6f41",
+    "https://academicjobsonline.org/ajo/jobs/32557": "opp_eeb70904ff7f5b00",
+    "https://academicjobsonline.org/ajo/jobs/33210": "opp_f49774ef97446ac0",
+    "https://academicjobsonline.org/ajo/jobs/33211": "opp_9342b96b1e1c0703",
+    "https://academicjobsonline.org/ajo/jobs/33396": "opp_7cf1e46dd6e2632f",
+    "https://cmm.uchile.cl/trabajo/postdoctoral-positions-2027-at-cmm": "opp_a2ddd9f8d284d8d8",
+    "https://cmm.uchile.cl/en/jobs/call-for-cmm-postdoctoral-visiting-program-2026-2027": "opp_4309ac3c6c1a3e77",
+    "https://africanleadershipacademy.org/2026/07/21/apply-2027-cohort": "opp_bba6d6915a940a8e",
+    "https://ala2.submittable.com/submit/360300/2027-diploma-program-eng": "opp_bba6d6915a940a8e",
+    "https://africanscholars.yale.edu/admissions/application-deadlines": "opp_32aeabe020a9f739"
   },
-  "last_offer_number": 733
+  "last_offer_number": 758
 }
