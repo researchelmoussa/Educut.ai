@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "HZDR Summer Student Program 2027",
+    "evidence_url": "https://www.hzdr.de/db/!Conference.SummerStudents.Registration?pLang=en&pNid=2535",
+    "evidence_quote": "HZDR Summer Student Program - Application form"
+  },
+  "institution": {
+    "name": "Helmholtz-Zentrum Dresden-Rossendorf (HZDR)",
+    "website": "https://www.hzdr.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.hzdr.de/db/!Conference.SummerStudents.Registration?pLang=en&pNid=2535",
+  "source_url": "https://fellowshipsguide.com/hzdr-summer-student-program/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Dresden",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Natural sciences, life sciences, medicine and engineering",
+  "seniority": "University students (see official page for eligibility)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "HZDR in Dresden, Germany, invites students from around the world to apply for its 2027 Summer Student Program, with placements between July and September 2027. A letter of recommendation must arrive before the 24 January 2027 deadline.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-24T22:00:00+01:00",
+    "timezone": "Europe/Berlin",
+    "evidence_url": "https://www.hzdr.de/db/Cms?pOid=34486&pNid=2538&pLang=en",
+    "evidence_quote": "The deadline for applications is sharp at 10 p.m. Central European Time (9 p.m. Coordinated Universal Time)."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official HZDR 'important dates' page (seen in search results): 'Students from around the world can apply between 2 November 2026 and 24 January 2027.'",
+    "Deadline 24 January 2027, 10 p.m. CET, is in the future",
+    "Official application form exists at hzdr.de (!Conference.SummerStudents.Registration) but could not be loaded",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source list was unreachable from this environment; found by web search of fellowshipsguide.com and confirmed on the official page",
+    "Remuneration (aggregator says paid) not recorded: no verbatim official quote",
+    "Exact eligibility (study level, fields) not confirmed verbatim on the official page"
+  ],
+  "id": "opp_69bf8418e1e70bc4",
+  "fingerprint": "13201e516f65bee1",
+  "discovered_at": "2026-11-22T02:52:12.529Z",
+  "last_verified_at": "2026-11-22T03:11:40.998Z",
+  "content_hash": "sha256:448a950c832278fb15868ac83faada143e53a4a70ea5f475b3ff4408244fe49a"
+}

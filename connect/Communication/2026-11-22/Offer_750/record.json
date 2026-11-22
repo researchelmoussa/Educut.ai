@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Yale Young African Scholars (YYAS) 2027",
+    "evidence_url": "https://africanscholars.yale.edu/program/yyas-faq",
+    "evidence_quote": "YYAS 2027 - Frequently Asked Questions"
+  },
+  "institution": {
+    "name": "Yale University, Yale Young African Scholars",
+    "website": "https://africanscholars.yale.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://africanscholars.yale.edu/admissions/application-deadlines",
+  "source_url": "https://africanscholars.yale.edu/admissions/application-deadlines",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "University preparation, academic and leadership skills",
+  "seniority": "African secondary-school students (10th or 11th grade, aged 14-18)",
+  "qualifications": [
+    "Aged 14-18 on the first day of the program in 2027",
+    "Current 10th or 11th grade student or international equivalent"
+  ],
+  "skills": [],
+  "description_short": "Yale Young African Scholars 2027 is a program for African secondary-school students in 10th or 11th grade, aged 14 to 18. Regular-decision applications close on 20 January 2027 at 11:59 PM ET, with decisions by 20 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-20T23:59:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://africanscholars.yale.edu/admissions/application-deadlines",
+    "evidence_quote": "11:59 PM ET on 20 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official YYAS 'Application Timeline & Deadlines' page (seen in search results): Application Deadline 11:59 PM ET on 20 January 2027; decisions by 11:59pm ET on 20 March 2027",
+    "Early action deadline (20 October 2026) has passed; regular round is open",
+    "Deadline is in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Program host country/session locations for 2027 not confirmed, so location is null",
+    "Costs/financial support not recorded: no verbatim official quote",
+    "Program dates not recorded beyond the eligibility reference date"
+  ],
+  "id": "opp_32aeabe020a9f739",
+  "fingerprint": "830ed0b4181676ef",
+  "discovered_at": "2026-11-22T03:10:03.493Z",
+  "last_verified_at": "2026-11-22T03:10:03.493Z",
+  "content_hash": "sha256:52803017d314d7de3a56a1198c2cf4ce5de99d548fae0ad96ea8f2e37b38eca8"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Broad Summer Research Program (BSRP)",
+    "evidence_url": "https://www.broadinstitute.org/bsrp/broad-summer-research-program-bsrp",
+    "evidence_quote": "Broad Summer Research Program (BSRP)"
+  },
+  "institution": {
+    "name": "Broad Institute of MIT and Harvard",
+    "website": "https://www.broadinstitute.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.broadinstitute.org/bsrp/broad-summer-research-program-bsrp",
+  "source_url": "https://fellowshipsguide.com/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Cambridge, Massachusetts",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Physical, biological or computer sciences, engineering and mathematics",
+  "seniority": "Undergraduate students (see official page for eligibility)",
+  "qualifications": [
+    "Enrolled at a four-year U.S. institution, graduation date of December 2027 or later (per official FAQ)",
+    "Legally authorized to work in the United States at the time of applying"
+  ],
+  "skills": [],
+  "description_short": "The Broad Institute's 2027 Summer Research Program is for non-graduating undergraduates at four-year U.S. institutions. Applicants submit an online form, five short essays, transcripts, a CV and two letters of recommendation. Applications close on 10 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-10T23:59:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.broadinstitute.org/bsrp/frequently-asked-questions-about-bsrp",
+    "evidence_quote": "The application deadline for BSRP is January 10, 2027 at 11:59 PM ET."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Broad Institute BSRP FAQ (seen in search results): 'The application deadline for BSRP is January 10, 2027 at 11:59 PM ET.'",
+    "Official FAQ: BSRP 'is restricted to non-graduating students (with a graduation date of December 2027 or later)'",
+    "Deadline is in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source list was unreachable from this environment; seen on the fellowshipsguide.com homepage listing (post 'Broad Institute of MIT and Harvard Summer Research Program 2027') via web search; exact post URL not confirmed, so source_url is the homepage",
+    "Programme dates (search summary says June 7 to August 6, 2027) not recorded: no verbatim official quote",
+    "Stipend/housing/travel support not recorded: no verbatim official quote",
+    "Minimum GPA and eligible majors should be checked on the official page"
+  ],
+  "id": "opp_e90a5baf05e3ffaa",
+  "fingerprint": "103b1ec39ef1a3b7",
+  "discovered_at": "2026-11-22T02:53:59.441Z",
+  "last_verified_at": "2026-11-22T02:53:59.441Z",
+  "content_hash": "sha256:d509d1a28d878729a7573fb16e17a7a64cebc8efcd42f201945a02439b739a62"
+}

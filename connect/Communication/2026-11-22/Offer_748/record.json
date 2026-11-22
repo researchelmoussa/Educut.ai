@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "UNSW HDR Scholarships: UNSW 2027 March Release (Term 2, 2027 start)",
+    "evidence_url": "https://www.unsw.edu.au/research/hdr/application",
+    "evidence_quote": "UNSW 2027 March Release"
+  },
+  "institution": {
+    "name": "UNSW Sydney",
+    "website": "https://www.unsw.edu.au",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.unsw.edu.au/research/hdr/application",
+  "source_url": "https://www.unsw.edu.au/research/hdr/application",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Sydney",
+    "country": "Australia",
+    "country_code": "AU"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "All research disciplines (Higher Degree by Research)",
+  "seniority": "Prospective HDR (PhD/research master's) candidates",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "UNSW Sydney's 2027 March Release is the Higher Degree Research scholarship round for candidates starting in Term 2, 2027. Applications close on 15 January 2027 at midnight Australian time, with offers expected from 25 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15T23:59:00+11:00",
+    "timezone": "Australia/Sydney",
+    "evidence_url": "https://www.unsw.edu.au/research/hdr/application",
+    "evidence_quote": "applications close 15 January 2027 at midnight Australian time"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UNSW HDR application page (seen in search results) lists the 'UNSW 2027 March Release' for students starting Term 2 2027, closing 15 January 2027 at midnight Australian time, offers from 25 March 2027",
+    "Deadline is in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Eligibility of international applicants unclear: at least one faculty (Arts, Design and Architecture) lists this round only for domestic applicants and a separate international schedule; check faculty pages",
+    "Scholarship amounts and number of awards not recorded: no verbatim official quote",
+    "deadline_quote is from the search summary of the official page; exact wording on the page may differ"
+  ],
+  "id": "opp_d33a642bcdac3369",
+  "fingerprint": "2034b1afd4bd0dbf",
+  "discovered_at": "2026-11-22T03:00:02.112Z",
+  "last_verified_at": "2026-11-22T03:00:02.112Z",
+  "content_hash": "sha256:836e2bd0e85d1bfcae9f00fcea4c9fc238d2ea06ebc7d700da7794c16d36f59e"
+}
