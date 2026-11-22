@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Cell biology of the nervous system: development, degeneration, and repair",
+    "evidence_url": "https://meetings.embo.org/event/27-nervoussystem",
+    "evidence_quote": "Cell biology of the nervous system: development, degeneration, and repair"
+  },
+  "institution": {
+    "name": "EMBO",
+    "website": "https://www.embo.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://meetings.embo.org/event/27-nervoussystem",
+  "source_url": "https://meetings.embo.org/event/27-nervoussystem",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Heraklion",
+    "country": "Greece",
+    "country_code": "GR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Neuroscience",
+  "seniority": "Researchers (as stated on the event page)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "EMBO Workshop \"Cell biology of the nervous system: development, degeneration, and repair\" will take place in Heraklion, Greece, from 3 to 6 May 2027. Registration closes on 12 February 2027. Applications are made through the event page on the EMBO meetings website.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-12",
+    "timezone": null,
+    "evidence_url": "https://meetings.embo.org/event/27-nervoussystem",
+    "evidence_quote": "Registration Deadline 12 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official EMBO event page (seen in search results) lists: 'Registration Deadline 12 February 2027'",
+    "Event page states: 'The EMBO Workshop is scheduled for 3–6 May 2027 in Heraklion, Greece'",
+    "Deadline is in the future (today 2026-11-21)",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Participant selection criteria and eligibility not fully seen; check the event page",
+    "The event page lists several dates (12 February, 26 February, 19 March 2027) whose labels were unclear in the evidence; 12 February 2027 is recorded as the registration deadline"
+  ],
+  "id": "opp_6f60cbb0d2eb3719",
+  "fingerprint": "850fdf1eff583be2",
+  "discovered_at": "2026-11-21T03:00:59.301Z",
+  "last_verified_at": "2026-11-21T03:00:59.301Z",
+  "content_hash": "sha256:13ec95630ed853915f6cb24ae8e3fa5e188cf21bfcf0066f3a76e585576923e6"
+}

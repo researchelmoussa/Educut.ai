@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Statistical Analysis of Genome Scale Data",
+    "evidence_url": "https://meetings.cshl.edu/courses.aspx?course=C-DATA",
+    "evidence_quote": "Statistical Analysis of Genome Scale Data 2027"
+  },
+  "institution": {
+    "name": "Cold Spring Harbor Laboratory (CSHL)",
+    "website": "https://www.cshl.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://meetings.cshl.edu/courses.aspx?course=C-DATA",
+  "source_url": "https://meetings.cshl.edu/courses.aspx?course=C-DATA",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Cold Spring Harbor",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Genomics and statistics",
+  "seniority": "Researchers and graduate students (as stated on the course page)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Cold Spring Harbor Laboratory course \"Statistical Analysis of Genome Scale Data\", scheduled for 11 to 25 June 2027. The application deadline is 5 March 2027. Applications are made through the course page on the CSHL meetings and courses website.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-05",
+    "timezone": null,
+    "evidence_url": "https://meetings.cshl.edu/courses.aspx?course=C-DATA",
+    "evidence_quote": "Application Deadline: March 5, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official CSHL course page (seen in search results): 'Application Deadline: March 5, 2027'",
+    "Deadline is in the future (today 2026-11-21)",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Venue not stated in the evidence seen; CSHL courses are normally held on the Laboratory's campus in Cold Spring Harbor, New York",
+    "Eligibility and selection criteria not fully seen; check the course page"
+  ],
+  "id": "opp_a498e1b21e4b4b18",
+  "fingerprint": "e6715839151c02da",
+  "discovered_at": "2026-11-21T03:00:57.629Z",
+  "last_verified_at": "2026-11-21T03:00:57.629Z",
+  "content_hash": "sha256:0915023cff4b4edea91125c857c80ed288fca467bdc54d3719e7d755f2825f31"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "IBRO World Congress Travel Grants",
+    "evidence_url": "https://ibro.org/grant/iwc-travel-grants/",
+    "evidence_quote": "IBRO World Congress Travel Grants - IBRO"
+  },
+  "institution": {
+    "name": "International Brain Research Organization (IBRO)",
+    "website": "https://ibro.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://ibro.org/grant/iwc-travel-grants/",
+  "source_url": "https://ibro.org/grant/iwc-travel-grants/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "country_code": "ZA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Neuroscience",
+  "seniority": "PhD students and early-career postdoctoral fellows",
+  "qualifications": [
+    "PhD neuroscience students and early-career postdoctoral fellows (maximum 5 years from the start of the postdoc)",
+    "Must have submitted an abstract to the Congress as first author; a valid abstract ID is required"
+  ],
+  "skills": [],
+  "description_short": "IBRO World Congress Travel Grants support attendance at the IBRO 2027 World Congress in Cape Town, South Africa, from 13 to 16 September 2027. Applications open on 11 January 2027 and close on 15 March 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-15",
+    "timezone": null,
+    "evidence_url": "https://ibro.org/grant/iwc-travel-grants/",
+    "evidence_quote": "Application start date: 11 January 2027, Application deadline: 15 March 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "IBRO travel grants page (seen in search results): 'Application start date: 11 January 2027, Application deadline: 15 March 2027'",
+    "Application window opens 11 January 2027; not yet open on 2026-11-21",
+    "Congress runs 13–16 September 2027 in Cape Town",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "A separate IBRO page gives the window as '11 Jan 2027 - 17 Mar 2027'; the earlier date (15 March 2027) is recorded",
+    "Grant amount and covered costs not recorded (no verbatim official quote captured)"
+  ],
+  "id": "opp_df4c17116df6b21f",
+  "fingerprint": "4ab1f874a9ee1707",
+  "discovered_at": "2026-11-21T03:01:00.969Z",
+  "last_verified_at": "2026-11-21T03:01:00.969Z",
+  "content_hash": "sha256:5fa44d4973a755e8fc3a2730f0d800cfbf71b5083bbec635397268bb060518c4"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-21T02:53:48.723Z",
+  "updated_at": "2026-11-22T02:52:06.048Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -48417,6 +48417,1122 @@
         }
       ],
       "offer_number": 702
+    },
+    "opp_066d6bfe47005280": {
+      "id": "opp_066d6bfe47005280",
+      "fingerprint": "f24ac97361a70810",
+      "title": "Methods in Cancer Neuroscience",
+      "institution": "Cold Spring Harbor Laboratory (CSHL)",
+      "city": "Cold Spring Harbor",
+      "country": "United States",
+      "source_url": "https://meetings.cshl.edu/courses.aspx?course=C-MCN",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://meetings.cshl.edu/courses.aspx?course=C-MCN",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08",
+      "content_hash": "sha256:663aa4fb19e051cc913172caf58f779132951e7e593023ea16290a4acae0a4a8",
+      "last_verified_at": "2026-11-21T03:00:57.359Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:12.910Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:12.910Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:12.910Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:50:25.019Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:50:25.019Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:51:59.741Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:51:59.741Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 721
+    },
+    "opp_a498e1b21e4b4b18": {
+      "id": "opp_a498e1b21e4b4b18",
+      "fingerprint": "e6715839151c02da",
+      "title": "Statistical Analysis of Genome Scale Data",
+      "institution": "Cold Spring Harbor Laboratory (CSHL)",
+      "city": "Cold Spring Harbor",
+      "country": "United States",
+      "source_url": "https://meetings.cshl.edu/courses.aspx?course=C-DATA",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://meetings.cshl.edu/courses.aspx?course=C-DATA",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-05",
+      "content_hash": "sha256:0915023cff4b4edea91125c857c80ed288fca467bdc54d3719e7d755f2825f31",
+      "last_verified_at": "2026-11-21T03:00:57.629Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:13.200Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:13.200Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:13.200Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:51:35.816Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:51:35.816Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:04.263Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:04.263Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 730
+    },
+    "opp_0be8dbb96e354c7d": {
+      "id": "opp_0be8dbb96e354c7d",
+      "fingerprint": "ce5ae510aa96b0ac",
+      "title": "Single Cell & Spatial Transcriptomics Analysis",
+      "institution": "Cold Spring Harbor Laboratory (CSHL)",
+      "city": "Cold Spring Harbor",
+      "country": "United States",
+      "source_url": "https://meetings.cshl.edu/courses.aspx?course=C-SINGLE",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://meetings.cshl.edu/courses.aspx?course=C-SINGLE",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-12",
+      "content_hash": "sha256:e457aff460961c09c24f3d1ce225da6f15932e44d37adbe01e11d2a59af160a5",
+      "last_verified_at": "2026-11-21T03:00:57.853Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:13.492Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:13.492Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:13.492Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T03:04:45.169Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T03:04:45.169Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:04.911Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:04.911Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 731
+    },
+    "opp_9508e36a050d1a0b": {
+      "id": "opp_9508e36a050d1a0b",
+      "fingerprint": "fd15fe256b9dbb79",
+      "title": "Cell & Developmental Biology of Xenopus: Gene Discovery & Disease",
+      "institution": "Cold Spring Harbor Laboratory (CSHL)",
+      "city": "Cold Spring Harbor",
+      "country": "United States",
+      "source_url": "https://meetings.cshl.edu/courses.aspx?course=c-xeno",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://meetings.cshl.edu/courses.aspx?course=c-xeno",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-16",
+      "content_hash": "sha256:8fc3a021743615333693ea21dff1dd9ebbb3730baa6d89a6276edd516c0c23fc",
+      "last_verified_at": "2026-11-21T03:00:58.068Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:13.811Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:13.811Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:13.811Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:50:22.402Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:50:22.403Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:51:57.550Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:51:57.550Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 716
+    },
+    "opp_c173050ec009e4f6": {
+      "id": "opp_c173050ec009e4f6",
+      "fingerprint": "d2d5ad4485edc532",
+      "title": "Bacterial and archaeal cell division: diverse mechanisms and models",
+      "institution": "EMBO",
+      "city": "Barga",
+      "country": "Italy",
+      "source_url": "https://meetings.embo.org/event/27-cell-division",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://meetings.embo.org/event/27-cell-division",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-06",
+      "content_hash": "sha256:213a4e50f22832f77ed99b577c455f099c8f6623b546d619b93804b1d136f907",
+      "last_verified_at": "2026-11-21T03:00:58.289Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:14.064Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:14.064Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:14.065Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:50:24.565Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:50:24.565Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:51:59.287Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:51:59.287Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 720
+    },
+    "opp_64828f08da6cf418": {
+      "id": "opp_64828f08da6cf418",
+      "fingerprint": "d6383f68cce4c572",
+      "title": "Cell polarity and membrane dynamics",
+      "institution": "EMBO",
+      "city": "Sant Feliu de Guíxols",
+      "country": "Spain",
+      "source_url": "https://meetings.embo.org/event/27-cell-polarity",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://meetings.embo.org/event/27-cell-polarity",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-21",
+      "content_hash": "sha256:d92864d333c972654eda415b029a61d0532d0448591e24f094bf5e1ea318f7f9",
+      "last_verified_at": "2026-11-21T03:00:58.517Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:14.292Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:14.292Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:14.293Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T03:04:46.029Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T03:04:46.029Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:06.047Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:06.048Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 733
+    },
+    "opp_bf063b7c8d99d677": {
+      "id": "opp_bf063b7c8d99d677",
+      "fingerprint": "3ca286c6b78a1a6c",
+      "title": "Cilia",
+      "institution": "EMBO",
+      "city": "Stresa",
+      "country": "Italy",
+      "source_url": "https://meetings.embo.org/event/27-cilia",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://meetings.embo.org/event/27-cilia",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-01",
+      "content_hash": "sha256:ce2c867e6d32df306ee3acb8c4134c7c023b1cb135e7e417619893738f7f7a34",
+      "last_verified_at": "2026-11-21T03:00:58.763Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:14.558Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:14.558Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:14.558Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:50:23.514Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:50:23.514Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:51:58.435Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:51:58.435Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 718
+    },
+    "opp_2f6b4d18e4d636d5": {
+      "id": "opp_2f6b4d18e4d636d5",
+      "fingerprint": "bd00e049e403a5dc",
+      "title": "Spectral flow cytometry: principles, hands on, and data analysis",
+      "institution": "EMBO",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "source_url": "https://meetings.embo.org/event/27-flow-cytometry",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://meetings.embo.org/event/27-flow-cytometry",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:31cb3e18a4d6613c02e9b7f5ad6eb78004f1f16ebe34469d6e18c6a904693d58",
+      "last_verified_at": "2026-11-21T03:00:59.028Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:14.870Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:14.870Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:14.870Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:50:25.516Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:50:25.516Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:00.247Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:00.247Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 722
+    },
+    "opp_6f60cbb0d2eb3719": {
+      "id": "opp_6f60cbb0d2eb3719",
+      "fingerprint": "850fdf1eff583be2",
+      "title": "Cell biology of the nervous system: development, degeneration, and repair",
+      "institution": "EMBO",
+      "city": "Heraklion",
+      "country": "Greece",
+      "source_url": "https://meetings.embo.org/event/27-nervoussystem",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://meetings.embo.org/event/27-nervoussystem",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-12",
+      "content_hash": "sha256:13ec95630ed853915f6cb24ae8e3fa5e188cf21bfcf0066f3a76e585576923e6",
+      "last_verified_at": "2026-11-21T03:00:59.301Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:15.137Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:15.137Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:15.137Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:51:33.589Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:51:33.589Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:02.282Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:02.283Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 726
+    },
+    "opp_cc96d05731df3f0d": {
+      "id": "opp_cc96d05731df3f0d",
+      "fingerprint": "713c0285d77cd2b6",
+      "title": "Physical virology: from form to function",
+      "institution": "EMBO",
+      "city": "Sant Feliu de Guíxols",
+      "country": "Spain",
+      "source_url": "https://meetings.embo.org/event/27-physical-virology",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://meetings.embo.org/event/27-physical-virology",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-15",
+      "content_hash": "sha256:05792dfb11e9d301068c03d1aab40399cae5bb30d46877a383af43131d287aeb",
+      "last_verified_at": "2026-11-21T03:00:59.537Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:15.367Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:15.368Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:15.368Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:51:34.155Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:51:34.156Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:02.815Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:02.815Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 727
+    },
+    "opp_a9934a6fd160ef04": {
+      "id": "opp_a9934a6fd160ef04",
+      "fingerprint": "1d99bb66a88bea50",
+      "title": "Functional Genomics of Human Brain Development and Disease Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Ventura",
+      "country": "United States",
+      "source_url": "https://www.grc.org/functional-genomics-of-human-brain-development-and-disease-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/functional-genomics-of-human-brain-development-and-disease-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-21",
+      "content_hash": "sha256:be5777c91b1e06e102b046735de92ccb93c41cf3b4903d7934e94c4810cd4cc8",
+      "last_verified_at": "2026-11-21T03:00:59.747Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:15.651Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:15.651Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:15.651Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:51:34.645Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:51:34.645Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:03.332Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:03.332Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 728
+    },
+    "opp_276daea406a641d6": {
+      "id": "opp_276daea406a641d6",
+      "fingerprint": "12c58a54556eabee",
+      "title": "Cilia, Mucus and Mucociliary Interactions Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Barga",
+      "country": "Italy",
+      "source_url": "https://www.grc.org/cilia-mucus-and-mucociliary-interactions-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/cilia-mucus-and-mucociliary-interactions-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-17",
+      "content_hash": "sha256:a55c3d9ec61ae3dbd0297e8f5768a8522da9f24b4c82d1474e408ba3abe5eb32",
+      "last_verified_at": "2026-11-21T03:00:59.965Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:15.927Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:15.927Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:15.928Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:50:25.984Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:50:25.984Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:00.778Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:00.778Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 723
+    },
+    "opp_49554d3afdf471ca": {
+      "id": "opp_49554d3afdf471ca",
+      "fingerprint": "05a6fe66238d34a0",
+      "title": "Fundamental to Applied Chemical Reactivity Across Interfaces and Droplets Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Oxnard",
+      "country": "United States",
+      "source_url": "https://www.grc.org/fundamental-to-applied-chemical-reactivity-across-interfaces-and-droplets-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/fundamental-to-applied-chemical-reactivity-across-interfaces-and-droplets-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-24",
+      "content_hash": "sha256:406a543f8b8577e606d1bfdd3c25f6c0f3258726c58eb00038af159f9d6ead24",
+      "last_verified_at": "2026-11-21T03:01:00.155Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:16.153Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:16.153Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:16.154Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:50:26.455Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:50:26.455Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:01.263Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:01.263Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 724
+    },
+    "opp_41fb1e9525c2894a": {
+      "id": "opp_41fb1e9525c2894a",
+      "fingerprint": "75ada7371cf9f5bc",
+      "title": "Exocrine Glands: Development, Function and Disease Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Ventura",
+      "country": "United States",
+      "source_url": "https://www.grc.org/exocrine-glands-development-function-and-disease-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/exocrine-glands-development-function-and-disease-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-03",
+      "content_hash": "sha256:a108c372aa3c0e658f7dfea3ed0493fde9906d9ea5ad0ebf7375add700fa17c6",
+      "last_verified_at": "2026-11-21T03:01:00.363Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:16.419Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:16.419Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:16.419Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:50:23.989Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:50:23.989Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:51:58.863Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:51:58.863Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 719
+    },
+    "opp_7ae396acadcd3dac": {
+      "id": "opp_7ae396acadcd3dac",
+      "fingerprint": "bd8b3a1924f09647",
+      "title": "Inorganic Reaction Mechanisms Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Oxnard",
+      "country": "United States",
+      "source_url": "https://www.grc.org/inorganic-reaction-mechanisms-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/inorganic-reaction-mechanisms-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:647522d6f4e3b3557aa9d1eaec76f2fd233423a82b716fb220c82abcb1725e80",
+      "last_verified_at": "2026-11-21T03:01:00.575Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:16.664Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:16.664Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:16.664Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:50:26.870Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:50:26.870Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:01.743Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:01.743Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 725
+    },
+    "opp_e16b6aeacf1397ec": {
+      "id": "opp_e16b6aeacf1397ec",
+      "fingerprint": "63847a0ffbba8f63",
+      "title": "Neuroimmune Communication in Health and Disease Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Ventura",
+      "country": "United States",
+      "source_url": "https://www.grc.org/neuroimmune-communication-in-health-and-disease-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/neuroimmune-communication-in-health-and-disease-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-27",
+      "content_hash": "sha256:29570920e7f2803dadcda4f5e4b523ba74d835805297c36580ce7cacc0585155",
+      "last_verified_at": "2026-11-21T03:01:00.783Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:16.915Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:16.915Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:16.916Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:50:22.826Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:50:22.826Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:51:58.011Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:51:58.012Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 717
+    },
+    "opp_df4c17116df6b21f": {
+      "id": "opp_df4c17116df6b21f",
+      "fingerprint": "4ab1f874a9ee1707",
+      "title": "IBRO World Congress Travel Grants",
+      "institution": "International Brain Research Organization (IBRO)",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "source_url": "https://ibro.org/grant/iwc-travel-grants/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://ibro.org/grant/iwc-travel-grants/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-15",
+      "content_hash": "sha256:5fa44d4973a755e8fc3a2730f0d800cfbf71b5083bbec635397268bb060518c4",
+      "last_verified_at": "2026-11-21T03:01:00.969Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:17.165Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:17.165Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:17.166Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-21T03:04:45.579Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-21T03:04:45.579Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:05.498Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:05.498Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 732
+    },
+    "opp_fd74898a632fb30c": {
+      "id": "opp_fd74898a632fb30c",
+      "fingerprint": "2a596e5fab2c3899",
+      "title": "Global Management Program 2027",
+      "institution": "UNIQLO",
+      "city": "Tokyo",
+      "country": "Japan",
+      "source_url": "https://fellowshipsguide.com/2027-uniqlo-management-program/",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.fastretailing.com/employment/en/uniqlo/graduate/gmp/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-28T09:00:00+09:00",
+      "content_hash": "sha256:6911d23e4271f8c311fc60e8628eda91a7c315ddd9f1f82d6fba2dd541fdcad3",
+      "last_verified_at": "2026-11-21T03:01:01.173Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-21T03:01:17.436Z",
+      "history": [
+        {
+          "at": "2026-11-21T03:01:17.437Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-21T03:01:17.437Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-22T02:51:35.400Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-22T02:51:35.400Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-22T02:52:03.779Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-22T02:52:03.779Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 729
     }
   },
   "seen_urls": {
@@ -49429,7 +50545,26 @@
     "https://openlab.cern/cern-openlab-summer-student-programme": "opp_0b0ece541194c02a",
     "https://careers.cern/jobs": "opp_0b0ece541194c02a",
     "https://careers.cern/jobs/short-term-internship": "opp_ce1db93566508e65",
-    "https://mq.edu.au/research/phd-and-research-degrees/how-to-apply/scholarship-opportunities/scholarship-search/global-phd-in-therapy-innovation-for-lung-cancer": "opp_abe272a1f7908a2c"
+    "https://mq.edu.au/research/phd-and-research-degrees/how-to-apply/scholarship-opportunities/scholarship-search/global-phd-in-therapy-innovation-for-lung-cancer": "opp_abe272a1f7908a2c",
+    "https://meetings.cshl.edu/courses.aspx?course=C-MCN": "opp_066d6bfe47005280",
+    "https://meetings.cshl.edu/courses.aspx?course=C-DATA": "opp_a498e1b21e4b4b18",
+    "https://meetings.cshl.edu/courses.aspx?course=C-SINGLE": "opp_0be8dbb96e354c7d",
+    "https://meetings.cshl.edu/courses.aspx?course=c-xeno": "opp_9508e36a050d1a0b",
+    "https://meetings.embo.org/event/27-cell-division": "opp_c173050ec009e4f6",
+    "https://meetings.embo.org/event/27-cell-polarity": "opp_64828f08da6cf418",
+    "https://meetings.embo.org/event/27-cilia": "opp_bf063b7c8d99d677",
+    "https://meetings.embo.org/event/27-flow-cytometry": "opp_2f6b4d18e4d636d5",
+    "https://meetings.embo.org/event/27-nervoussystem": "opp_6f60cbb0d2eb3719",
+    "https://meetings.embo.org/event/27-physical-virology": "opp_cc96d05731df3f0d",
+    "https://grc.org/functional-genomics-of-human-brain-development-and-disease-conference/2027": "opp_a9934a6fd160ef04",
+    "https://grc.org/cilia-mucus-and-mucociliary-interactions-conference/2027": "opp_276daea406a641d6",
+    "https://grc.org/fundamental-to-applied-chemical-reactivity-across-interfaces-and-droplets-conference/2027": "opp_49554d3afdf471ca",
+    "https://grc.org/exocrine-glands-development-function-and-disease-conference/2027": "opp_41fb1e9525c2894a",
+    "https://grc.org/inorganic-reaction-mechanisms-conference/2027": "opp_7ae396acadcd3dac",
+    "https://grc.org/neuroimmune-communication-in-health-and-disease-conference/2027": "opp_e16b6aeacf1397ec",
+    "https://ibro.org/grant/iwc-travel-grants": "opp_df4c17116df6b21f",
+    "https://fellowshipsguide.com/2027-uniqlo-management-program": "opp_fd74898a632fb30c",
+    "https://fastretailing.com/employment/en/uniqlo/graduate/gmp": "opp_fd74898a632fb30c"
   },
-  "last_offer_number": 715
+  "last_offer_number": 733
 }

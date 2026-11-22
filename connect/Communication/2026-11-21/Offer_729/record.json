@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Global Management Program 2027",
+    "evidence_url": "https://www.fastretailing.com/employment/en/uniqlo/graduate/gmp/",
+    "evidence_quote": "The official Global Management Program 2027 page"
+  },
+  "institution": {
+    "name": "UNIQLO",
+    "website": "https://www.fastretailing.com",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.fastretailing.com/employment/en/uniqlo/graduate/gmp/",
+  "source_url": "https://fellowshipsguide.com/2027-uniqlo-management-program/",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": "Tokyo",
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Retail management",
+  "seniority": "Students (see official page for eligibility)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "UNIQLO's Global Management Program 2027 will be held on site at the Ariake Office in Tokyo, Japan, from 25 to 30 July 2027. Selection involves an application, an online assessment and interviews. Applications close on 28 February 2027 at 9:00 AM Japan time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-28T09:00:00+09:00",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://www.fastretailing.com/employment/en/uniqlo/graduate/gmp/",
+    "evidence_quote": "February 28, 2027, at 9:00 AM Japan time (UTC+9)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Fast Retailing/UNIQLO GMP page (seen in search results) gives the deadline 'February 28, 2027, at 9:00 AM Japan time (UTC+9)'",
+    "Program runs 'July 25 to July 30, 2027, at the Ariake Office in Tokyo'",
+    "Offer announcement 'by May 30, 2027'",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Eligibility (aggregator says undergraduates) not confirmed on the official page",
+    "Selection process may vary from country to country according to the official page; check the regional page",
+    "Programme costs/coverage not recorded"
+  ],
+  "id": "opp_fd74898a632fb30c",
+  "fingerprint": "2a596e5fab2c3899",
+  "discovered_at": "2026-11-21T03:01:01.173Z",
+  "last_verified_at": "2026-11-21T03:01:01.173Z",
+  "content_hash": "sha256:6911d23e4271f8c311fc60e8628eda91a7c315ddd9f1f82d6fba2dd541fdcad3"
+}
