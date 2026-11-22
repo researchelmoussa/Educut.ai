@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "CAS-ANSO Scholarship 2027 (Master's and PhD at UCAS)",
+    "evidence_url": "https://english.ucas.ac.cn/index.php/admission/international-students/financial-aid/6825-cas-anso-scholarship-2027-call-for-applications-to-study-at-ucas",
+    "evidence_quote": "CAS-ANSO Scholarship 2027 Call for Applications to Study at UCAS"
+  },
+  "institution": {
+    "name": "University of Chinese Academy of Sciences (UCAS)",
+    "website": "https://english.ucas.ac.cn",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://english.ucas.ac.cn/index.php/admission/international-students/financial-aid/6825-cas-anso-scholarship-2027-call-for-applications-to-study-at-ucas",
+  "source_url": "https://english.ucas.ac.cn/index.php/admission/international-students/financial-aid/6825-cas-anso-scholarship-2027-call-for-applications-to-study-at-ucas",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Beijing",
+    "country": "China",
+    "country_code": "CN"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Science and technology (master's and doctoral programmes)",
+  "seniority": "Master's and PhD applicants (non-Chinese citizens)",
+  "qualifications": [
+    "Non-Chinese citizen with a valid passport",
+    "Master's applicants born after 1 January 1997; PhD applicants born after 1 January 1992",
+    "High level of English proficiency (HSK 5, 180+, for Chinese-taught programmes)"
+  ],
+  "skills": [],
+  "description_short": "The CAS-ANSO Scholarship 2027 supports non-Chinese citizens applying for master's or PhD study at the University of Chinese Academy of Sciences. Applications opened on 17 November 2026; the deadline for applicants and referees is 28 February 2027 (Beijing time).",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-28T23:59:59+08:00",
+    "timezone": "Asia/Shanghai",
+    "evidence_url": "https://english.ucas.ac.cn/index.php/admission/international-students/financial-aid/6825-cas-anso-scholarship-2027-call-for-applications-to-study-at-ucas",
+    "evidence_quote": "Deadline for applicants and referees: 28th February 2027 (Beijing Time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official UCAS call (seen in search results): 'The 2027 CAS-ANSO Scholarship is open for application on 17th November 2026.'",
+    "Official UCAS call: 'Deadline for applicants and referees: 28th February 2027 (Beijing Time)'; UCAS deadline page lists 2027-02-28 23:59:59",
+    "Deadline is in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Applicants cannot apply for the CAS-ANSO Scholarship at both USTC and UCAS simultaneously; this record covers the UCAS route",
+    "Scholarship coverage items not recorded: no verbatim list of amounts",
+    "Programme location may be at CAS institutes outside Beijing"
+  ],
+  "id": "opp_696d88af6f4d6f41",
+  "fingerprint": "8b70e0d18503b15a",
+  "discovered_at": "2026-11-22T03:07:00.711Z",
+  "last_verified_at": "2026-11-22T03:07:00.711Z",
+  "content_hash": "sha256:a05d638a06f4798b437e94bdb2c35d6f73920d443ae76d007ecf02906838d736"
+}

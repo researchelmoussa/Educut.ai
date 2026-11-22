@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "3 Year Postdoctoral Fellowships in Animal Behavior",
+    "evidence_url": "https://stri.si.edu/academic-programs/fellowships/tropical-animal-behavior-3-year-fellowship",
+    "evidence_quote": "3 Year Postdoctoral Fellowships in Animal Behavior"
+  },
+  "institution": {
+    "name": "Smithsonian Tropical Research Institute (STRI)",
+    "website": "https://stri.si.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://stri.si.edu/academic-programs/fellowships/tropical-animal-behavior-3-year-fellowship",
+  "source_url": "https://stri.si.edu/academic-programs/fellowships",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "Panama",
+    "country_code": "PA"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Animal behavior (tropical biology)",
+  "seniority": "Postdoctoral (PhD completed before the fellowship begins)",
+  "qualifications": [
+    "PhD in a relevant field, completed before the fellowship begins",
+    "At least three advisors identified, at least one a STRI staff scientist"
+  ],
+  "skills": [],
+  "description_short": "STRI's NOMIS–STRI three-year postdoctoral fellowships in animal behavior support projects rooted in natural history with a strong field component, on any animal taxa. Fellows must reside in Panama. Applications are due 1 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-01",
+    "timezone": "America/Panama",
+    "evidence_url": "https://stri.si.edu/academic-programs/fellowships/tropical-animal-behavior-3-year-fellowship",
+    "evidence_quote": "April 1, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official STRI programme page (seen in search results) gives the deadline April 1, 2027 for the NOMIS–STRI Three-Year Postdoctoral Fellowships in Animal Behavior",
+    "Official page: 'NOMIS–STRI Fellows are required to reside in Panama'",
+    "Deadline is in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Application guidelines are labelled for the 2026 cycle; check for updated 2027 guidelines",
+    "Stipend and research budget not recorded: amounts seen only in search summaries, no verified verbatim quote",
+    "Work location within Panama (city/field station) not stated",
+    "work_arrangement 'onsite' based on the stated requirement to reside in Panama"
+  ],
+  "id": "opp_be8c23475ede040a",
+  "fingerprint": "d1b665cda0e7972e",
+  "discovered_at": "2026-11-22T02:56:45.132Z",
+  "last_verified_at": "2026-11-22T02:56:45.132Z",
+  "content_hash": "sha256:40bc3d7984db11b5eccd1e51dfa5dc6966cbe2ec68244ca68dc0c383da8ff398"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Joint Japan/World Bank Graduate Scholarship Program (JJ/WBGSP) 2027",
+    "evidence_url": "https://thedocs.worldbank.org/en/doc/fb18adc82a2cc6746503a520fe18a3f9-0050052026/original/2027-Application-Guidelines-for-DevelopingCountryNationals-W1.pdf",
+    "evidence_quote": "Joint Japan/World Bank Graduate Scholarship Program (JJ/WBGSP)"
+  },
+  "institution": {
+    "name": "World Bank",
+    "website": "https://www.worldbank.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp",
+  "source_url": "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Development-related master's programmes",
+  "seniority": "Master's applicants from developing countries (see official guidelines)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The World Bank's Joint Japan/World Bank Graduate Scholarship Program 2027 is for developing-country nationals applying to listed development-related master's programmes. Window 1 runs from 18 January to 26 February 2027; Window 2 runs from 29 March to 21 May 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-26",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp",
+    "evidence_quote": "Application Window #1 from January 18 to February 26, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official World Bank JJ/WBGSP page (seen in search results): 'Application Window #1 from January 18 to February 26, 2027'",
+    "Official 2027 Window 2 guidelines/page: Window 2 open from March 29 to May 21, 2027, deadline 12:00 noon EST",
+    "Applications must be submitted electronically through the JJ/WBGSP portal by the window deadline",
+    "Application windows have not opened yet (first opens 18 January 2027); deadlines are in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Applications are not yet open: Window 1 opens 18 January 2027",
+    "Deadline recorded is Window 1 (26 February 2027); applicants must apply in the window under which their targeted master's programme is listed (Window 2 closes 21 May 2027)",
+    "Exact closing time for Window 1 not confirmed",
+    "Separate window and dates for Japanese nationals not covered by this record",
+    "Scholarship benefits not recorded: no verbatim official quote",
+    "Study location depends on the chosen participating programme"
+  ],
+  "id": "opp_77d5971a8e313a86",
+  "fingerprint": "fee9bc8c3e2613bf",
+  "discovered_at": "2026-11-22T02:59:16.500Z",
+  "last_verified_at": "2026-11-22T02:59:16.500Z",
+  "content_hash": "sha256:477bb14b8982e043db62eadf273ba05dfd163576bf46ce348e5e474f1a4fdcde"
+}
