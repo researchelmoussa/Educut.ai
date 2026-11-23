@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "School of Engineering Scholarship",
+    "evidence_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/school-of-engineering-scholarship/",
+    "evidence_quote": "School of Engineering Scholarship"
+  },
+  "institution": {
+    "name": "The University of Manchester, School of Engineering",
+    "website": "https://www.manchester.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": null,
+  "source_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/school-of-engineering-scholarship/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": "Manchester",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Engineering and computer science",
+  "seniority": "Doctoral (PhD starting September 2027)",
+  "qualifications": [
+    "First Class or 2:1 UK honours degree or international equivalent"
+  ],
+  "skills": [],
+  "description_short": "University of Manchester PhD scholarship tied to advertised projects in aerospace, chemical, civil, electrical and electronic, and mechanical engineering and computer science. Round two closes 15 January 2027 for PhDs starting September 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/school-of-engineering-scholarship/",
+    "evidence_quote": "15 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official School of Engineering page (seen in search results): second round deadline 15 January 2027 for PhD starting September 2027",
+    "Round-two projects announced 16 November 2026",
+    "Deadline is in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote is only the date as shown in search results; full sentence not available",
+    "Applies to the second round only; applicants must apply to an advertised project",
+    "Application URL not identified",
+    "Stipend and fee coverage deliberately not recorded in compensation"
+  ],
+  "id": "opp_35da5675850254a7",
+  "fingerprint": "6da259c9e168265a",
+  "discovered_at": "2026-11-23T03:01:09.837Z",
+  "last_verified_at": "2026-11-23T03:01:09.837Z",
+  "content_hash": "sha256:937ea2227da8372c6e05624167e43d6848b6088dddb1d33127c83955eca1bee5"
+}
