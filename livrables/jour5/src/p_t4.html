@@ -1,0 +1,190 @@
+<section class="page" data-t="T4">
+  <div class="opener">
+    <div>
+      <div class="num">T4</div>
+      <h2 style="margin-top:6mm">Affective computing et expérience collaborateur</h2>
+      <p class="lead">Des outils prétendent détecter le stress dans la voix, la fatigue sur un visage ou le moral d’une équipe dans ses messages. Ils parlent de bien-être ; ils touchent à l’intimité. L’AI Act a tranché pour une partie de ces usages : ils sont interdits au travail.</p>
+      <p class="q">Accepteriez-vous qu’un logiciel analyse votre voix pendant vos appels pour mesurer votre niveau de stress ? À quelles conditions ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Définir l’affective computing et ses modalités.</li><li>Évaluer la validité scientifique de la reconnaissance des émotions.</li><li>Distinguer suivi du bien-être et surveillance des salariés.</li><li>Appliquer le cadre juridique et une grille de proportionnalité.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 13</b> HR affective computing (Becker, Tuskey, Beugré, pp. 243-260)</p><p style="margin:0"><b>H • Ch. 4</b> HR machine learning on audio and video data (Fernández-Martínez, Fernández, pp. 68-88)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Qu’est-ce que l’affective computing ?</h2>
+  <p class="lead">Le terme a été proposé par Rosalind Picard (MIT, 1997) pour désigner les systèmes capables de reconnaître, d’interpréter ou de simuler des états affectifs. Becker, Tuskey et Beugré en décrivent les applications possibles en GRH.</p>
+  <table>
+    <thead><tr><th style="width:15%">Modalité</th><th style="width:32%">Signaux analysés</th><th style="width:27%">Exemple RH</th><th>Technique (jours 1 et 2)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Texte</b></td><td>Mots, ton, émoticônes dans les messages, enquêtes, commentaires</td><td>Analyse du climat dans les verbatims d’une enquête</td><td>Analyse de sentiments (NLP)</td></tr>
+      <tr><td><b>Voix</b></td><td>Hauteur, débit, intensité, pauses</td><td>« Stress » des conseillers en centre d’appels</td><td>Traitement du signal audio (H4)</td></tr>
+      <tr><td><b>Visage</b></td><td>Expressions, mouvements des muscles faciaux, regard</td><td>Analyse vidéo d’entretiens ou de réunions</td><td>Vision par ordinateur (H4)</td></tr>
+      <tr><td><b>Physiologie</b></td><td>Rythme cardiaque, conductance de la peau, sommeil</td><td>Bracelets connectés de programmes de bien-être</td><td>Capteurs, séries temporelles</td></tr>
+      <tr><td><b>Comportement</b></td><td>Rythme de frappe, usage des outils, déplacements</td><td>Détection de « surcharge » à partir de l’activité numérique</td><td>Machine learning sur traces</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card t"><h3>Trois fonctions</h3><p style="margin:0"><b>Reconnaître</b> un état, <b>réagir</b> à cet état (adapter une interface, alerter), <b>simuler</b> une émotion (agent conversationnel « empathique »).</p></div>
+    <div class="key" style="margin:0"><b>Distinction essentielle :</b> un système détecte des <b>signaux</b> (un sourire, une voix aiguë) ; il en <b>infère</b> une émotion. C’est cette inférence qui pose problème.</div>
+  </div>
+  <span class="src">Réf. H13, H4</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Que vaut la reconnaissance des émotions ?</h2>
+  <p class="lead">L’idée que chaque émotion se lit sur le visage de façon universelle a longtemps dominé. Elle est aujourd’hui fortement contestée par la recherche.</p>
+  <div class="g2">
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Une revue de référence</h3><p style="margin:0">Barrett et ses collègues (2019) ont passé en revue plus de mille études : les expressions faciales ne permettent pas d’inférer de façon fiable l’émotion ressentie. On peut sourire sans être heureux, être en colère sans froncer les sourcils ; les expressions varient selon les personnes, les cultures et les situations.</p></div>
+      <div class="card s"><h3>Des erreurs inégalement réparties</h3><p style="margin:0">Une étude de Rhue (2018) sur deux services commerciaux d’analyse faciale a montré qu’ils attribuaient plus d’émotions négatives aux visages de joueurs de basket noirs qu’à ceux de joueurs blancs, à sourire équivalent.</p></div>
+    </div>
+    <div>
+      <table>
+        <thead><tr><th>Problème</th><th>Conséquence en entreprise</th></tr></thead>
+        <tbody>
+          <tr><td><b>Émotion exprimée ≠ ressentie</b></td><td>Les salariés qui « jouent le jeu » sont mieux notés</td></tr>
+          <tr><td><b>Contexte ignoré</b></td><td>Une voix tendue peut venir d’un client difficile, d’un rhume, d’une langue étrangère</td></tr>
+          <tr><td><b>Variabilité culturelle et individuelle</b></td><td>Erreurs plus fréquentes pour certains groupes, autisme, handicap</td></tr>
+          <tr><td><b>Étiquettes d’entraînement</b></td><td>Émotions souvent jouées par des acteurs, puis annotées</td></tr>
+        </tbody>
+      </table>
+      <div class="key"><b>À retenir :</b> la précision annoncée par un éditeur est souvent mesurée en laboratoire, sur des expressions posées ; elle ne dit rien de la validité en situation de travail.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H13, H4</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Bien-être et stress au travail : quels usages ?</h2>
+  <p class="lead">L’employeur a une obligation de sécurité : il doit prendre les mesures nécessaires pour protéger la santé physique et mentale des salariés (C. trav., L4121-1), y compris face aux risques psychosociaux. Certains outils numériques peuvent y contribuer ; d’autres vont trop loin.</p>
+  <table>
+    <thead><tr><th style="width:28%">Usage</th><th style="width:16%">Intrusivité</th><th>Commentaire</th></tr></thead>
+    <tbody>
+      <tr><td><b>Enquêtes courtes et fréquentes</b>, résultats agrégés par équipe</td><td><span class="tag">Faible</span></td><td>Utile si l’anonymat est réel et si les résultats donnent lieu à des actions</td></tr>
+      <tr><td><b>Analyse de sentiments</b> des verbatims d’enquête, au niveau collectif</td><td><span class="tag">Faible</span></td><td>Aide à traiter de gros volumes ; vérifier la qualité de l’analyse en français</td></tr>
+      <tr><td><b>Assistant de bien-être</b> (exercices, ressources, orientation vers un professionnel)</td><td><span class="tag">Modérée</span></td><td>Confidentialité vis-à-vis de l’employeur indispensable</td></tr>
+      <tr><td><b>Indicateurs de charge</b> issus des outils (réunions, courriels hors horaires)</td><td><span class="tag s">Élevée</span></td><td>Acceptable seulement agrégés, pour agir sur l’organisation du travail</td></tr>
+      <tr><td><b>Objets connectés</b> (sommeil, rythme cardiaque)</td><td><span class="tag s">Très élevée</span></td><td>Données de santé ; volontariat difficile à garantir dans un lien de subordination</td></tr>
+      <tr><td><b>Analyse de la voix ou du visage</b> pour mesurer le stress</td><td><span class="tag s">Interdite</span></td><td>Reconnaissance des émotions au travail (page 37)</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Prévention primaire d’abord :</b> les risques psychosociaux se traitent en agissant sur la charge, l’autonomie, le soutien et la reconnaissance. Mesurer l’état émotionnel des personnes ne réduit pas les causes.</div>
+  <span class="src">Réf. H13</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>La surveillance numérique des salariés</h2>
+  <p class="lead">Avec le télétravail se sont diffusés des logiciels de contrôle de l’activité, parfois appelés « bossware » : captures d’écran, enregistrement des frappes, suivi de l’activité de la souris, webcam. Le droit français les encadre strictement.</p>
+  <div class="g2">
+    <div>
+      <div class="card n" style="margin-bottom:4mm"><h3>Le principe</h3><p style="margin:0">Nul ne peut apporter aux droits des personnes et aux libertés individuelles et collectives de restrictions qui ne seraient pas justifiées par la nature de la tâche à accomplir ni proportionnées au but recherché (C. trav., L1121-1).</p></div>
+      <table>
+        <thead><tr><th>Dispositif</th><th>Position de la CNIL</th></tr></thead>
+        <tbody>
+          <tr><td>Enregistreur de frappe</td><td>Illicite, sauf impératif de sécurité exceptionnel</td></tr>
+          <tr><td>Captures d’écran régulières</td><td>Disproportionnées en règle générale</td></tr>
+          <tr><td>Webcam allumée en permanence</td><td>Disproportionnée</td></tr>
+          <tr><td>Partage d’écran imposé en continu</td><td>Disproportionné</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><h3>Un cas de référence</h3><p style="margin:0">Fin 2023, la CNIL a infligé une amende de 32 millions d’euros à Amazon France Logistique, notamment pour un système de suivi de l’activité des préparateurs jugé excessivement intrusif, avec des indicateurs mesurant à la seconde les interruptions d’activité.</p></div>
+      <div class="card r"><h3>Conditions de tout dispositif de contrôle</h3><ul><li>Finalité légitime et proportionnalité</li><li>Information préalable des salariés (L1222-4)</li><li>Consultation préalable du CSE (L2312-38)</li><li>AIPD si suivi systématique</li></ul></div>
+    </div>
+  </div>
+  <span class="src">Réf. H13</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Le cadre juridique : l’interdiction de l’AI Act</h2>
+  <p class="lead">Depuis le 2 février 2025, l’AI Act interdit certaines pratiques. La reconnaissance des émotions sur le lieu de travail en fait partie.</p>
+  <div class="g2">
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card n"><h3>Article 5, paragraphe 1, point f)</h3><p style="margin:0">Est interdite la mise sur le marché, la mise en service ou l’utilisation de systèmes d’IA pour <b>inférer les émotions</b> d’une personne physique sur le lieu de travail et dans les établissements d’enseignement, <b>sauf</b> lorsque le système est destiné à être mis en place pour des raisons médicales ou de sécurité.</p></div>
+      <div class="card r"><h3>Ce que couvre l’interdiction</h3><ul><li>Les systèmes fondés sur des <b>données biométriques</b> : visage, voix, gestes, signaux physiologiques (art. 3, point 39).</li><li>Toutes les situations de travail, y compris le recrutement et le télétravail, selon les lignes directrices de la Commission (2025).</li></ul></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <table>
+        <thead><tr><th>Cas</th><th>Statut</th></tr></thead>
+        <tbody>
+          <tr><td>Analyse de la voix des conseillers pour mesurer leur stress</td><td><b>Interdit</b></td></tr>
+          <tr><td>Analyse faciale lors d’un entretien vidéo</td><td><b>Interdit</b></td></tr>
+          <tr><td>Détection de la somnolence d’un conducteur de poids lourd</td><td>Exception de sécurité possible</td></tr>
+          <tr><td>Analyse de sentiments de verbatims écrits</td><td>Hors interdiction (pas biométrique), RGPD applicable</td></tr>
+        </tbody>
+      </table>
+      <div class="card s"><h3>Au-delà de l’AI Act</h3><p style="margin:0">Données biométriques et de santé : données sensibles (RGPD, art. 9). Les règles du Code du travail sur le contrôle de l’activité s’appliquent dans tous les cas.</p></div>
+    </div>
+  </div>
+  <span class="src">Réf. H13, H4</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Juger la proportionnalité d’un dispositif</h2>
+  <p class="lead">Pour un dispositif qui n’est pas interdit, la question devient : est-il proportionné ? Cette grille en cinq questions reprend la logique du RGPD et du Code du travail. C’est la grille de votre activité.</p>
+  <div class="g2">
+    <div>
+      <table>
+        <thead><tr><th style="width:8%">#</th><th>Question</th></tr></thead>
+        <tbody>
+          <tr><td><b>1</b></td><td><b>Finalité :</b> l’objectif est-il précis, légitime et annoncé ?</td></tr>
+          <tr><td><b>2</b></td><td><b>Nécessité :</b> le dispositif est-il nécessaire pour l’atteindre ? Est-il efficace et scientifiquement valide ?</td></tr>
+          <tr><td><b>3</b></td><td><b>Alternatives :</b> existe-t-il un moyen moins intrusif d’atteindre le même objectif ?</td></tr>
+          <tr><td><b>4</b></td><td><b>Minimisation :</b> données limitées, agrégées, conservées peu de temps, accès restreint ?</td></tr>
+          <tr><td><b>5</b></td><td><b>Garanties :</b> volontariat réel, information, CSE, AIPD, absence d’usage disciplinaire ?</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3>Des alternatives moins intrusives</h3>
+      <table>
+        <thead><tr><th>Objectif</th><th>Au lieu de…</th><th>Plutôt…</th></tr></thead>
+        <tbody>
+          <tr><td>Réduire le stress en centre d’appels</td><td>Analyse vocale</td><td>Pauses après appels difficiles, analyse agrégée de la charge</td></tr>
+          <tr><td>Mesurer le climat</td><td>Analyse des messageries</td><td>Enquête anonyme et groupes d’expression</td></tr>
+          <tr><td>Prévenir l’épuisement</td><td>Bracelets connectés</td><td>Droit à la déconnexion, suivi de la charge par le manager</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="key"><b>Règle de décision :</b> si la réponse à la question 2 ou 3 est défavorable (dispositif non valide, ou alternative moins intrusive disponible), le dispositif n’est pas proportionné.</div>
+  <span class="src">Réf. H13</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Confiance et expérience collaborateur</h2>
+  <p class="lead">L’expérience collaborateur désigne l’ensemble des interactions vécues par un salarié avec son entreprise. Les outils d’IA en font partie. Leur acceptation dépend moins de la technique que de la confiance.</p>
+  <div class="g3">
+    <div class="card t"><h3>Transparence</h3><p style="margin:0">Dire quelles données sont utilisées, à quelles fins, par qui, et ce qui n’est pas fait.</p></div>
+    <div class="card t"><h3>Utilité pour le salarié</h3><p style="margin:0">Le dispositif apporte un bénéfice concret à ceux dont les données sont utilisées, pas seulement à l’organisation.</p></div>
+    <div class="card t"><h3>Maîtrise</h3><p style="margin:0">Le salarié accède à ses données, les corrige, peut refuser sans conséquence quand le dispositif est facultatif.</p></div>
+    <div class="card t"><h3>Dialogue social</h3><p style="margin:0">Co-construction avec le CSE et les salariés, expérimentation limitée, bilan partagé.</p></div>
+    <div class="card t"><h3>Séparation des usages</h3><p style="margin:0">Les données de bien-être ou de formation ne servent jamais à l’évaluation ou à la sanction.</p></div>
+    <div class="card t"><h3>Réversibilité</h3><p style="margin:0">Un dispositif qui ne fait pas ses preuves est arrêté, et les données sont supprimées.</p></div>
+  </div>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card s"><h3>Le paradoxe du bien-être surveillé</h3><p style="margin:0">Un dispositif destiné à réduire le stress peut l’augmenter s’il est perçu comme un contrôle. La perception du salarié fait partie de l’efficacité du dispositif.</p></div>
+    <div class="key" style="margin:0"><b>Question test :</b> « Serions-nous à l’aise pour présenter ce dispositif en détail à tous les salariés et à la presse ? » Si la réponse est non, il faut le revoir.</div>
+  </div>
+  <span class="src">Réf. H13</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Synthèse de la journée, activité et quiz • T4</h2>
+  <div class="g3">
+    <div class="card n" style="grid-column:span 2"><h3>Ce que la journée a établi</h3><ul>
+      <li><b>T1 :</b> l’IA personnalise et accélère la formation ; l’efficacité se mesure en compétences et en transfert au poste.</li>
+      <li><b>T2 :</b> les outils de gestion des talents apprennent les jugements passés ; ils servent mieux à détecter les écarts qu’à noter.</li>
+      <li><b>T3 :</b> un modèle de départ se lit avec précision et rappel ; on agit collectivement, sans diffuser de scores.</li>
+      <li><b>T4 :</b> la reconnaissance des émotions au travail est interdite ; tout suivi du bien-être doit être proportionné et digne de confiance.</li>
+    </ul></div>
+    <div class="card r"><h3>Préparer le jour 6</h3><p>Adoption, conséquences et compétences de demain : défis de l’adoption, effets de l’IA sur la GRH, compétences RH du futur, étude de cas finale.</p><p class="small"><b>À lire :</b> E • Ch. 8 et 9 ; H • Ch. 8 et 14.</p></div>
+    <div class="card s" style="grid-column:span 2"><span class="tag s">Activité individuelle • 30 min • Réflexion</span><h3 style="margin-top:2mm">Analyser un dispositif de suivi du bien-être</h3><p>Appliquez la grille de proportionnalité au dispositif décrit dans le document (plateforme de bien-être d’un centre de relation client), identifiez ce qui est interdit, les bénéfices, les risques, et proposez des alternatives moins intrusives.</p><p style="margin:0"><b>Livrable :</b> analyse d’une page (document « J5-T4 Activité »).</p></div>
+    <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions</h3><p style="margin:0">Modalités, validité, surveillance, AI Act, proportionnalité.</p></div>
+  </div>
+</section>

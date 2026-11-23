@@ -1,0 +1,191 @@
+<section class="page" data-t="T4">
+  <div class="opener">
+    <div>
+      <div class="num">T4</div>
+      <h2 style="margin-top:6mm">Représentation des connaissances et raisonnement</h2>
+      <p class="lead">Pour qu’une machine rapproche un candidat d’un poste ou un salarié d’une formation, elle doit savoir ce qu’est une compétence et comment les compétences, les métiers et les formations sont liés. C’est le rôle des référentiels et de l’IA symbolique.</p>
+      <p class="q">« Gestion de la paie », « administration du personnel », « payroll » : comment une machine peut-elle savoir que ces expressions désignent des compétences voisines ?</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm;padding-top:8mm">
+      <div class="card t"><h3>Objectifs</h3><ul><li>Distinguer connaissance explicite (symbolique) et connaissance apprise.</li><li>Connaître les principaux référentiels de compétences : ESCO, ROME, O*NET.</li><li>Comprendre ontologies, graphes de connaissances et raisonnement.</li><li>Modéliser un mini-référentiel de compétences.</li></ul></div>
+      <div class="card r"><h3>Lectures</h3><p><b>H • Ch. 9</b> HR knowledge representation and reasoning (Martinez-Gil, pp. 169-186)</p><p style="margin:0"><b>E • Ch. 7</b> Talent management (p. 131 et suiv.)</p></div>
+      <div class="card s"><h3>Déroulé • 1 h 30</h3><p style="margin:0">Cours 50 min • Activité individuelle 30 min • Quiz 10 min</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Connaissance explicite et connaissance apprise</h2>
+  <p class="lead">Au jour 1, nous avons distingué l’IA symbolique, fondée sur des règles écrites, et l’IA apprenante. La représentation des connaissances est le cœur de l’approche symbolique.</p>
+  <div class="g2">
+    <div class="card n"><h3>Représenter la connaissance</h3><p>Décrire explicitement, dans un format lisible par une machine, les concepts d’un domaine et leurs relations : « le métier de gestionnaire de paie requiert la compétence “calculer les cotisations sociales” », « Excel est un tableur ».</p></div>
+    <div class="card t"><h3>Raisonner</h3><p>Déduire automatiquement de nouvelles informations à partir de cette description : si un salarié maîtrise toutes les compétences requises par un métier sauf une, il est proche de ce métier et une formation précise peut combler l’écart.</p></div>
+  </div>
+  <table style="margin-top:6mm">
+    <thead><tr><th style="width:22%"></th><th>Connaissance explicite (symbolique)</th><th>Connaissance apprise (machine learning)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Origine</b></td><td>Experts, institutions, référentiels</td><td>Régularités dans les données</td></tr>
+      <tr><td><b>Lisibilité</b></td><td>Élevée : on peut lire et contester chaque relation</td><td>Faible : relations implicites dans le modèle</td></tr>
+      <tr><td><b>Mise à jour</b></td><td>Coûteuse, manuelle</td><td>Automatique, par réentraînement</td></tr>
+      <tr><td><b>Nouveaux cas</b></td><td>Ignore ce qui n’est pas décrit</td><td>Généralise, parfois à tort</td></tr>
+      <tr><td><b>Exemple RH</b></td><td>Référentiel de compétences d’une branche</td><td>Embeddings rapprochant des intitulés de postes</td></tr>
+    </tbody>
+  </table>
+  <div class="key"><b>Pourquoi les RH s’y intéressent :</b> dans un domaine où il faut expliquer et justifier les décisions, la lisibilité de la connaissance explicite est un atout majeur.</div>
+  <span class="src">Réf. H9</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Les grands référentiels de compétences et de métiers</h2>
+  <p class="lead">Plusieurs institutions publient des référentiels gratuits, structurés et lisibles par machine. Ils servent de socle à de nombreux outils RH.</p>
+  <div class="g3">
+    <div class="card n"><span class="tag">Union européenne</span><h3 style="margin-top:2mm">ESCO</h3><p><i>European Skills, Competences, Qualifications and Occupations</i>, publié par la Commission européenne. Environ 3 000 professions et près de 14 000 compétences, décrites dans les langues de l’UE et reliées entre elles.</p><p class="small" style="color:#d7e4ee">Distingue compétences essentielles et facultatives pour chaque profession.</p></div>
+    <div class="card t"><span class="tag">France</span><h3 style="margin-top:2mm">ROME</h3><p>Répertoire opérationnel des métiers et des emplois, géré par France Travail. Utilisé pour les offres d’emploi et l’orientation. Sa version 4.0 (2023) l’a enrichi d’une approche par compétences.</p></div>
+    <div class="card t"><span class="tag">États-Unis</span><h3 style="margin-top:2mm">O*NET</h3><p>Base du ministère du Travail américain. Près de 1 000 professions décrites en détail : tâches, compétences, connaissances, conditions de travail.</p></div>
+  </div>
+  <div class="g2" style="margin-top:6mm">
+    <div class="card r"><h3>Référentiels internes</h3><p>Beaucoup d’entreprises et de branches professionnelles ont leurs propres référentiels de compétences, souvent rédigés pour la GPEC. Ils sont rarement structurés pour être lus par une machine, ce qui limite leur exploitation.</p></div>
+    <div class="key" style="margin:0"><b>Intérêt d’un référentiel commun :</b> il permet de rapprocher des données de sources différentes (CV, offres, formations, entretiens) parce qu’elles sont décrites avec le même vocabulaire. C’est l’étape de normalisation vue en T1.</div>
+  </div>
+  <span class="src">Réf. H9, E7</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Lire une fiche profession ESCO</h2>
+  <p class="lead">Une fiche ESCO suit toujours la même structure. Savoir la lire est la première étape de votre activité. L’extrait ci-dessous est simplifié et adapté pour l’exemple.</p>
+  <div class="g2">
+    <table><thead><tr><th style="width:34%">Rubrique de la fiche</th><th>Contenu</th></tr></thead><tbody>
+      <tr><td><b>Intitulé préféré</b></td><td>Le nom de référence de la profession, dans chaque langue de l’UE.</td></tr>
+      <tr><td><b>Intitulés alternatifs</b></td><td>Synonymes et variantes (« consultant en recrutement », « talent acquisition specialist ») : utiles pour normaliser les CV et les offres.</td></tr>
+      <tr><td><b>Code ISCO</b></td><td>Rattachement à la classification internationale type des professions de l’OIT, qui permet les comparaisons entre pays.</td></tr>
+      <tr><td><b>Description</b></td><td>Définition courte des missions.</td></tr>
+      <tr><td><b>Compétences et connaissances essentielles</b></td><td>Celles que tout titulaire de la profession doit avoir.</td></tr>
+      <tr><td><b>Compétences et connaissances facultatives</b></td><td>Celles qui dépendent du contexte, du secteur ou du poste.</td></tr>
+    </tbody></table>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card t"><h3>Trois types d’éléments</h3><ul><li><b>Savoir-faire</b> (skills) : « mener des entretiens d’embauche ».</li><li><b>Connaissances</b> (knowledge) : « droit du travail ».</li><li><b>Compétences transversales</b> : « faire preuve d’empathie », « communiquer ».</li></ul></div>
+      <div class="card r"><h3>Les relations exploitables</h3><p>Chaque compétence a sa propre fiche, avec ses synonymes, son niveau de généralité et la liste des professions qui la requièrent. C’est ce maillage qui permet de calculer les passerelles entre métiers.</p></div>
+      <div class="key" style="margin:0"><b>À savoir :</b> ESCO ne précise pas de niveau de maîtrise attendu. L’entreprise doit l’ajouter selon ses postes : c’est l’un des enjeux de votre activité.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H9</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Taxonomie, ontologie, graphe de connaissances</h2>
+  <p class="lead">Trois niveaux de structuration, du plus simple au plus riche. Le schéma montre un extrait d’ontologie autour d’un métier.</p>
+  <div style="display:grid;grid-template-columns:1fr 128mm;gap:8mm;align-items:start">
+    <table><thead><tr><th style="width:28%">Niveau</th><th>Description</th></tr></thead><tbody>
+      <tr><td><b>Liste</b></td><td>Simple énumération de compétences, sans relations.</td></tr>
+      <tr><td><b>Taxonomie</b></td><td>Classement hiérarchique : « Excel » est un « tableur », qui relève de la « bureautique ». Une seule relation : « est un ».</td></tr>
+      <tr><td><b>Ontologie</b></td><td>Concepts reliés par des relations variées et définies : « requiert », « est proche de », « s’acquiert par », « a pour niveau ». Elle inclut des règles.</td></tr>
+      <tr><td><b>Graphe de connaissances</b></td><td>Ontologie peuplée de données réelles : les salariés, les postes, les formations de l’entreprise, reliés aux concepts.</td></tr>
+    </tbody></table>
+    <svg viewBox="0 0 480 300" width="128mm" role="img" aria-label="Extrait d'ontologie autour du métier de chargé de recrutement">
+      <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#56687a"/></marker></defs>
+      <g font-family="Source Sans 3" font-size="12">
+        <rect x="160" y="10" width="160" height="40" rx="4" fill="#17324d"/><text x="240" y="35" text-anchor="middle" fill="#fff" font-weight="700">Chargé de recrutement</text>
+        <rect x="10" y="120" width="140" height="36" rx="4" fill="#dff1ee" stroke="#0b7f78"/><text x="80" y="143" text-anchor="middle" fill="#0a5f59">Mener un entretien</text>
+        <rect x="170" y="120" width="140" height="36" rx="4" fill="#dff1ee" stroke="#0b7f78"/><text x="240" y="143" text-anchor="middle" fill="#0a5f59">Rédiger une offre</text>
+        <rect x="330" y="120" width="140" height="36" rx="4" fill="#dff1ee" stroke="#0b7f78"/><text x="400" y="143" text-anchor="middle" fill="#0a5f59">Droit de la non-discr.</text>
+        <rect x="10" y="240" width="140" height="36" rx="4" fill="#fbeedd" stroke="#8a4d0f"/><text x="80" y="263" text-anchor="middle" fill="#8a4d0f">Écoute active</text>
+        <rect x="170" y="240" width="140" height="36" rx="4" fill="#eef4f6" stroke="#17324d"/><text x="240" y="263" text-anchor="middle" fill="#17324d">Formation « Recruter</text>
+        <rect x="330" y="240" width="140" height="36" rx="4" fill="#eef4f6" stroke="#17324d"/><text x="400" y="263" text-anchor="middle" fill="#17324d">Conseiller emploi</text>
+        <text x="240" y="273" text-anchor="middle" fill="#17324d" font-size="10" dy="1">sans discriminer »</text>
+      </g>
+      <g stroke="#56687a" stroke-width="1.5" fill="none" marker-end="url(#a)">
+        <path d="M200 50 L95 118"/><path d="M240 50 L240 118"/><path d="M280 50 L385 118"/>
+        <path d="M80 156 L80 238"/><path d="M380 238 L390 158"/><path d="M260 238 L380 158"/>
+      </g>
+      <g font-family="Source Sans 3" font-size="10.5" fill="#56687a">
+        <text x="105" y="80">requiert</text><text x="245" y="90">requiert</text><text x="330" y="80">requiert</text>
+        <text x="86" y="200">s’appuie sur</text><text x="398" y="205">requiert</text><text x="268" y="190">développe</text>
+      </g>
+    </svg>
+  </div>
+  <div class="key"><b>Lecture du schéma :</b> la machine peut raisonner : la formation développe une compétence requise par le métier ; un conseiller emploi partage une compétence avec le chargé de recrutement, ce qui suggère une passerelle de mobilité.</div>
+  <span class="src">Réf. H9</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Raisonner sur les compétences</h2>
+  <p class="lead">Une fois la connaissance représentée, des règles d’inférence permettent de produire des conclusions qui n’étaient écrites nulle part. Martinez-Gil présente plusieurs usages de ce raisonnement en RH.</p>
+  <table>
+    <thead><tr><th style="width:24%">Type de raisonnement</th><th style="width:40%">Exemple de règle</th><th>Conclusion produite</th></tr></thead>
+    <tbody>
+      <tr><td><b>Héritage</b></td><td>Si X maîtrise « Excel » et qu’« Excel » est un « tableur »…</td><td>…alors X maîtrise au moins un tableur.</td></tr>
+      <tr><td><b>Écart de compétences</b></td><td>Compétences requises par le poste moins compétences détenues</td><td>Liste des compétences manquantes et formations associées.</td></tr>
+      <tr><td><b>Proximité de métiers</b></td><td>Deux métiers partageant une forte part de compétences essentielles</td><td>Passerelles de mobilité ou de reconversion.</td></tr>
+      <tr><td><b>Cohérence</b></td><td>Un niveau « expert » suppose le niveau « confirmé » sur les prérequis</td><td>Signalement des profils incohérents à vérifier.</td></tr>
+      <tr><td><b>Éligibilité</b></td><td>Règles d’une convention collective (vu au jour 1 avec les systèmes experts)</td><td>Droit ou non à un dispositif.</td></tr>
+    </tbody>
+  </table>
+  <div class="g2" style="margin-top:5mm">
+    <div class="card r"><h3>Un atout : l’explication</h3><p>Le système peut justifier sa conclusion : « ce poste vous est proposé parce que vous maîtrisez 8 des 10 compétences essentielles ; il vous manque A et B ». C’est exactement ce qu’exigent la transparence et l’explicabilité.</p></div>
+    <div class="key" style="margin:0"><b>Limite :</b> le raisonnement n’est jamais meilleur que la connaissance représentée. Une relation erronée ou manquante produit des conclusions fausses, de façon systématique.</div>
+  </div>
+  <span class="src">Réf. H9</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>L’appariement sémantique : quand symbolique et apprentissage se combinent</h2>
+  <p class="lead">Les outils actuels d’appariement entre personnes, postes et formations combinent les deux approches. Martinez-Gil montre l’intérêt de ces méthodes hybrides pour mesurer la proximité entre compétences.</p>
+  <div class="flow" style="margin-bottom:6mm">
+    <div><span class="step">1 • EXTRAIRE</span><p class="small" style="margin-top:1mm">Repérer les compétences dans un CV ou une offre (NLP, T1).</p></div>
+    <div><span class="step">2 • NORMALISER</span><p class="small" style="margin-top:1mm">Rattacher chaque expression au concept du référentiel : « payroll » → « gérer la paie » (ESCO). Les embeddings aident à trouver le bon concept.</p></div>
+    <div><span class="step">3 • RAISONNER</span><p class="small" style="margin-top:1mm">Utiliser les relations de l’ontologie : compétences essentielles, voisines, prérequis.</p></div>
+    <div style="background:var(--teal-l)"><span class="step">4 • SCORER ET EXPLIQUER</span><p class="small" style="margin-top:1mm">Calculer une proximité et présenter les compétences communes et manquantes.</p></div>
+  </div>
+  <table>
+    <thead><tr><th>Méthode d’appariement</th><th>Force</th><th>Faiblesse</th></tr></thead>
+    <tbody>
+      <tr><td><b>Mots-clés</b></td><td>Simple, transparente</td><td>Ignore les synonymes et les formulations atypiques</td></tr>
+      <tr><td><b>Embeddings seuls</b></td><td>Capte les proximités de sens</td><td>Opaque ; peut rapprocher à tort ; hérite des biais des textes</td></tr>
+      <tr><td><b>Ontologie seule</b></td><td>Explicable, contrôlable</td><td>Rigide ; dépend de la couverture du référentiel</td></tr>
+      <tr><td><b>Hybride</b></td><td>Combine compréhension du langage et explication</td><td>Plus complexe à construire et à maintenir</td></tr>
+    </tbody>
+  </table>
+  <span class="src">Réf. H9</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Usages RH et limites des référentiels</h2>
+  <p class="lead">Les référentiels structurés sont au centre des démarches d’organisation fondée sur les compétences (<i>skills-based organization</i>) décrites par Eubanks dans le chapitre consacré à la gestion des talents.</p>
+  <div class="g2">
+    <div>
+      <h3>Usages</h3>
+      <table><thead><tr><th>Usage</th><th>Apport du référentiel</th></tr></thead><tbody>
+        <tr><td><b>GPEC / planification</b></td><td>Cartographier les compétences actuelles et futures</td></tr>
+        <tr><td><b>Mobilité interne</b></td><td>Repérer les passerelles entre métiers</td></tr>
+        <tr><td><b>Formation</b></td><td>Recommander les modules qui comblent un écart</td></tr>
+        <tr><td><b>Recrutement</b></td><td>Rédiger des offres fondées sur des compétences plutôt que sur des diplômes</td></tr>
+        <tr><td><b>Rémunération</b></td><td>Relier les compétences rares au positionnement salarial</td></tr>
+      </tbody></table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:4mm">
+      <div class="card s"><h3>Limites</h3><ul>
+        <li><b>Maintenance :</b> les compétences évoluent plus vite que les référentiels.</li>
+        <li><b>Granularité :</b> trop fin, ingérable ; trop large, inutile.</li>
+        <li><b>Compétences tacites :</b> savoir-être, expérience du terrain, difficiles à décrire.</li>
+        <li><b>Évaluation :</b> qui atteste le niveau ? L’autodéclaration est souvent biaisée.</li>
+        <li><b>Contexte :</b> une même compétence ne s’exerce pas de la même façon partout.</li></ul></div>
+      <div class="key" style="margin:0"><b>Clé du succès :</b> partir d’un référentiel public (ESCO, ROME), l’adapter à l’entreprise avec les managers, et le faire vivre.</div>
+    </div>
+  </div>
+  <span class="src">Réf. H9, E7</span>
+</section>
+
+<section class="page" data-t="T4">
+  <h2>Synthèse de la journée, activité et quiz • T4</h2>
+  <div class="g3">
+    <div class="card n" style="grid-column:span 2"><h3>Ce que la journée a établi</h3><ul>
+      <li><b>T1 :</b> le texte doit être transformé en nombres ; chaque représentation apporte du sens et des biais ; l’analyse se vérifie sur un échantillon codé à la main.</li>
+      <li><b>T2 :</b> la machine mesure des sons et des mouvements ; personnalité et émotions sont des inférences peu valides ; l’AI Act interdit la reconnaissance des émotions au travail.</li>
+      <li><b>T3 :</b> une donnée publique n’est pas libre d’usage ; le risque croît avec l’identification des personnes et le caractère privé des données.</li>
+      <li><b>T4 :</b> les référentiels et ontologies rendent les compétences lisibles par la machine et les décisions explicables ; les meilleurs outils combinent symbolique et apprentissage.</li>
+    </ul></div>
+    <div class="card r"><h3>Préparer le jour 3</h3><p>Core RH, automatisation et optimisation : gestion des effectifs, RPA, calcul évolutionnaire, agents conversationnels.</p><p class="small"><b>À lire :</b> E • Ch. 4 ; H • Ch. 10.</p></div>
+    <div class="card s" style="grid-column:span 2"><span class="tag s">Activité individuelle • 30 min • Application</span><h3 style="margin-top:2mm">Mini-référentiel de compétences</h3><p>À partir de la fiche ESCO fournie pour le métier de chargé de recrutement, construisez un mini-référentiel de dix compétences : type, niveau attendu, relations entre compétences, compétences partagées avec un métier voisin. Représentez-le sous forme de tableau et de schéma.</p><p style="margin:0"><b>Livrable :</b> tableau et schéma (document « J2-T4 Activité »).</p></div>
+    <div class="card t"><span class="tag">Quiz • 10 min</span><h3 style="margin-top:2mm">8 questions</h3><p style="margin:0">Symbolique et apprentissage, référentiels, ontologies, raisonnement.</p></div>
+  </div>
+</section>

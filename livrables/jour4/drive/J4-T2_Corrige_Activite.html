@@ -1,0 +1,51 @@
+<html><head><meta charset="utf-8"><style>
+body{font-family:Arial,sans-serif;font-size:11pt;color:#1a2b3c}
+h1{color:#17324d;font-size:20pt}
+h2{color:#0b7f78;font-size:14pt}
+h3{color:#17324d;font-size:12pt}
+table{border-collapse:collapse;width:100%}
+th{background:#17324d;color:#ffffff;border:1px solid #17324d;padding:6px;text-align:left}
+td{border:1px solid #9fb4c2;padding:6px;vertical-align:top}
+.k{color:#56687a}
+</style></head><body>
+<p class="k">Intelligence artificielle et transformation numérique en GRH • Jour 4 • Matin • T2 • Document formateur</p>
+<h1>J4-T2 • Corrigé de l’activité : diagnostic de SortPro (TechniServ)</h1>
+
+<h2>1. Calculs</h2>
+<table>
+<tr><th>Groupe</th><th>Taux de présélection</th><th>Ratio d’impact</th></tr>
+<tr><td>Femmes</td><td>16 / 200 = <b>8 %</b></td><td rowspan="2">8 / 16 = <b>0,50</b></td></tr>
+<tr><td>Hommes</td><td>128 / 800 = <b>16 %</b></td></tr>
+<tr><td>Moins de 45 ans</td><td>112 / 700 = <b>16 %</b></td><td rowspan="2">10,7 / 16 ≈ <b>0,67</b></td></tr>
+<tr><td>45 ans et plus</td><td>32 / 300 ≈ <b>10,7 %</b></td></tr>
+</table>
+<p><b>Interprétation :</b> les deux ratios sont nettement inférieurs à 0,8. La part de candidatures diplômées est comparable entre groupes (70-73 %) : l’écart ne s’explique pas par la qualification requise. C’est un signal fort de possible discrimination indirecte, qui justifie une analyse approfondie (le volume, 1 000 candidatures, rend un effet du hasard peu probable).</p>
+
+<h2>2. Hypothèses, preuves, méthodes</h2>
+<table>
+<tr><th>Hypothèse</th><th>Indice</th><th>Preuve</th><th>Méthode</th></tr>
+<tr><td><b>Données d’entraînement déséquilibrées</b></td><td>25 000 recrutements industriels 2012-2020</td><td>Composition par genre et âge des recrutements d’entraînement</td><td>Demande écrite à l’éditeur</td></tr>
+<tr><td><b>Cible biaisée</b></td><td>Cible = « embauche »</td><td>Le modèle reproduit les préférences passées des recruteurs</td><td>Documentation ; comparaison avec une cible de performance</td></tr>
+<tr><td><b>Proxy de l’âge</b></td><td>Date d’obtention des diplômes</td><td>Écart de score entre CV identiques ne différant que par l’année du diplôme</td><td>Testing de CV appariés</td></tr>
+<tr><td><b>Proxy du genre et de l’âge</b></td><td>« Continuité du parcours » (congés maternité, parentaux)</td><td>Pénalité des interruptions de carrière</td><td>Testing ; poids des variables</td></tr>
+<tr><td><b>Proxy du genre</b></td><td>« Activités extra-professionnelles »</td><td>Activités associées aux femmes moins bien notées</td><td>Testing ; revue des dossiers écartés</td></tr>
+<tr><td><b>Proxy social ou d’origine</b></td><td>« Distance au site »</td><td>Pénalité selon le lieu de résidence</td><td>Testing par adresse</td></tr>
+<tr><td><b>Seuil élevé</b></td><td>Seuil 75/100</td><td>Écarts amplifiés au-dessus du seuil</td><td>Taux de sélection à différents seuils</td></tr>
+<tr><td><b>Erreurs d’extraction</b></td><td>Aucune relecture des écartés</td><td>CV atypiques (reconversions, seniors) mal lus</td><td>Revue manuelle d’un échantillon d’écartés</td></tr>
+</table>
+
+<h2>3. Manquements juridiques à relever</h2>
+<ul>
+<li><b>Refus automatique</b> sans intervention humaine : décision fondée exclusivement sur un traitement automatisé (RGPD, art. 22) ; contrôle humain absent (AI Act, art. 14 et 26).</li>
+<li><b>Absence d’information</b> des candidats (C. trav., L1221-8 ; RGPD, art. 13).</li>
+<li><b>CSE non consulté</b> (L2312-8, L2312-38) ; information préalable des représentants prévue par l’AI Act (art. 26).</li>
+<li><b>Discrimination indirecte possible</b> (L1132-1), avec aménagement de la charge de la preuve (L1134-1) : l’employeur devra justifier objectivement ses décisions.</li>
+<li>Affirmation « il est donc neutre » de l’éditeur : erronée (variables proxy).</li>
+</ul>
+
+<h2>4. Mesures recommandées</h2>
+<p><b>Immédiatement :</b> suspendre les refus automatiques ; faire relire par un humain les candidatures sous le seuil (au minimum un échantillon large, idéalement toutes celles qui remplissent les exigences indispensables) ; revoir les candidatures écartées depuis six mois remplissant les exigences et recontacter les candidats concernés ; informer les candidats de l’usage de l’outil ; informer et consulter le CSE.</p>
+<p><b>À court terme :</b> obtenir de l’éditeur la documentation (données, cible, variables, résultats par groupe) ; réaliser un testing de CV appariés ; mener une AIPD ; former les recruteurs.</p>
+<p><b>À moyen terme :</b> retirer les variables proxy (date de diplôme, continuité, activités, distance) ; abaisser le seuil ou utiliser l’outil comme aide au classement et non comme filtre ; pilote en parallèle ; suivi trimestriel des ratios d’impact. Si l’éditeur ne peut ni documenter ni corriger : <b>abandonner l’outil</b> et revenir à un tri humain structuré.</p>
+<p><b>Recommandation type :</b> suspendre SortPro en tant que filtre dès maintenant ; ne le réutiliser, éventuellement, qu’après correction démontrée et sous contrôle humain réel.</p>
+</body></html>

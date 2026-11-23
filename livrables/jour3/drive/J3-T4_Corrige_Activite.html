@@ -1,0 +1,51 @@
+<html><head><meta charset="utf-8"><style>
+body{font-family:Arial,sans-serif;font-size:11pt;color:#1a2b3c}
+h1{color:#17324d;font-size:20pt}
+h2{color:#0b7f78;font-size:14pt}
+h3{color:#17324d;font-size:12pt}
+table{border-collapse:collapse;width:100%}
+th{background:#17324d;color:#ffffff;border:1px solid #17324d;padding:6px;text-align:left}
+td{border:1px solid #9fb4c2;padding:6px;vertical-align:top}
+.k{color:#56687a}
+</style></head><body>
+<p class="k">Intelligence artificielle et transformation numérique en GRH • Jour 3 • Après-midi • T4 • Document formateur</p>
+<h1>J3-T4 • Corrigé de l’activité : cahier des charges de l’assistant RH d’Hotelia</h1>
+
+<h2>1. Partie A : éléments attendus</h2>
+<p><b>Public et interface :</b> salariés des hôtels et du siège, managers ; application RH mobile en priorité (pas d’ordinateur dans les hôtels), disponible à toute heure ; français et, si nécessaire, les principales langues parlées par le personnel ; identification par le compte de l’application pour connaître la convention et le site.</p>
+<table>
+<tr><th>#</th><th>Intention</th><th>Exemple</th><th>Source</th><th>Type</th></tr>
+<tr><td>1</td><td>Solde de congés</td><td>« Il me reste combien de congés ? »</td><td>SIRH (compteurs)</td><td>Information personnalisée</td></tr>
+<tr><td>2</td><td>Comprendre le bulletin</td><td>« C’est quoi cette ligne “prévoyance” ? »</td><td>FAQ paie validée</td><td>Information générale</td></tr>
+<tr><td>3</td><td>Mutuelle : adhésion ou dispense</td><td>« Je suis déjà couvert par mon conjoint »</td><td>Notice mutuelle, accord collectif</td><td>Information + orientation vers formulaire</td></tr>
+<tr><td>4</td><td>Démarches en cas d’arrêt</td><td>« Je suis malade, je fais quoi ? »</td><td>Procédure interne</td><td>Information générale (sans traiter de données de santé)</td></tr>
+<tr><td>5</td><td>Acompte sur salaire</td><td>« Je peux avoir un acompte ? »</td><td>Procédure interne</td><td>Action : dépôt de la demande</td></tr>
+<tr><td>6</td><td>Attestation employeur</td><td>« Il me faut une attestation pour ma banque »</td><td>SIRH</td><td>Action : génération du document</td></tr>
+<tr><td>7</td><td>Heures supplémentaires</td><td>« Quand sont payées mes heures sup ? »</td><td>Convention applicable selon le profil, FAQ</td><td>Information selon la convention</td></tr>
+<tr><td>8</td><td>Changement d’adresse ou de RIB</td><td>« J’ai déménagé »</td><td>SIRH (libre-service)</td><td>Action avec contrôle de sécurité</td></tr>
+<tr><td>9</td><td>Planning</td><td>« Je travaille quand la semaine prochaine ? »</td><td>Outil de planification</td><td>Information personnalisée</td></tr>
+<tr><td>10</td><td>Jours fériés travaillés</td><td>« Je travaille le 14 juillet, c’est payé comment ? »</td><td>Convention applicable selon le profil</td><td>Information selon la convention, avec source</td></tr>
+</table>
+<p><b>Règles d’escalade attendues :</b> harcèlement, conflit, discrimination, santé, détresse → orientation immédiate vers un interlocuteur RH identifié et les dispositifs d’alerte ; démission, rupture, sanction → conseiller RH ; trois incompréhensions successives ; demande explicite de l’utilisateur ; faible confiance de la réponse ; écart entre la question et le profil (par exemple convention inconnue).</p>
+<p><b>Sujets et données interdits :</b> informations médicales ; données d’un autre salarié ; avis juridique individualisé ; calcul d’indemnités de rupture ; analyse des questions pour évaluer un salarié ; conservation des échanges au-delà de la durée définie.</p>
+<p><b>Message d’accueil type :</b> « Bonjour, je suis l’assistant RH automatisé d’Hotelia. Je peux répondre à vos questions sur vos congés, votre paie, votre planning et vos démarches, à partir des règles de votre établissement. Pour toute situation personnelle ou sensible, je vous mets en relation avec un conseiller RH. Vous pouvez écrire “conseiller” à tout moment. »</p>
+<p><b>Indicateurs :</b> taux de résolution ; taux d’escalade et motifs ; exactitude mesurée sur un échantillon mensuel ; satisfaction ; questions non comprises.</p>
+
+<h2>2. Partie B : observations attendues sur les tests</h2>
+<table>
+<tr><th>Question</th><th>Observation typique</th><th>Ce qu’aurait dû faire l’assistant d’Hotelia</th></tr>
+<tr><td>1 Jours fériés</td><td>Réponse chiffrée plausible, rarement sourcée, parfois imprécise ou datée ; ne distingue pas les conditions d’ancienneté.</td><td>Répondre à partir de l’article de la convention applicable, en citant la source et la date de mise à jour.</td></tr>
+<tr><td>2 Préavis</td><td>Réponse générale, qui dépend du statut et de l’ancienneté ; risque d’erreur.</td><td>Répondre selon le profil (statut, ancienneté, convention), citer la source, inviter à confirmer avec un conseiller.</td></tr>
+<tr><td>3 Acompte</td><td>Réponse juridique générale correcte sur le principe, mais sans la procédure de l’entreprise.</td><td>Donner la procédure interne et proposer de déposer la demande.</td></tr>
+<tr><td>4 Comportement du responsable</td><td>Conseils généraux, parfois pertinents, mais sans orientation vers les interlocuteurs de l’entreprise.</td><td>Ne pas traiter le fond ; orienter immédiatement vers un interlocuteur humain et les dispositifs d’alerte et d’écoute.</td></tr>
+<tr><td>5 Solde de congés</td><td>Impossible : l’outil n’a pas accès aux données de la personne ; réponse générique ou invitation à consulter son employeur.</td><td>Répondre avec le compteur du SIRH, après identification.</td></tr>
+</table>
+<p><b>Conclusion attendue :</b> un assistant grand public produit des réponses fluides mais génériques, non sourcées et parfois inexactes pour un contexte précis. Les tests montrent la nécessité de la RAG sur les documents de l’entreprise, de la personnalisation par profil, de l’intégration au SIRH et de règles d’escalade explicites pour les situations sensibles. Ils rappellent aussi qu’aucune donnée personnelle ne doit être saisie dans ces outils.</p>
+
+<h2>3. Repères de correction</h2>
+<ul>
+<li>L’intention « signalements de difficultés avec un responsable » ne doit <b>pas</b> figurer parmi les intentions traitées : elle relève de l’escalade.</li>
+<li>Valoriser la prise en compte des deux conventions collectives et du canal mobile.</li>
+<li>Pénaliser une copie qui saisit des données personnelles réelles dans l’outil de test.</li>
+</ul>
+</body></html>
