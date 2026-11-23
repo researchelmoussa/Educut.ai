@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Master of Science in Imaging and Light in Extended Reality",
+    "evidence_url": "https://www.imlex.org/how-to-apply/",
+    "evidence_quote": "Master of Science in Imaging and Light in Extended Reality"
+  },
+  "institution": {
+    "name": "IMLEX Erasmus Mundus Joint Master (coordinated by the University of Eastern Finland)",
+    "website": "https://www.imlex.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://studyinfo.fi",
+  "source_url": "https://www.imlex.org/how-to-apply/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "Finland",
+    "country_code": "FI"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Imaging, photonics and extended reality",
+  "seniority": "Master's",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "IMLEX, an Erasmus Mundus joint master's in imaging and light in extended reality, takes applications for its September 2027 intake through Studyinfo from 2 December 2026 to 13 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-13T23:59:00+02:00",
+    "timezone": "Europe/Helsinki",
+    "evidence_url": "https://www.imlex.org/how-to-apply/",
+    "evidence_quote": "closes on 13 January 2027 at 11:59 p.m. (UTC+2)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official IMLEX admission page (seen in search results): application window 2 December 2026 to 13 January 2027, 23:59 UTC+2",
+    "Application period has not opened yet (opens 2 December 2026)",
+    "Deadline is in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote paraphrased in search results; exact page wording not verified",
+    "Programme is delivered by a multi-country consortium; Finland recorded as the coordinating (University of Eastern Finland) country",
+    "Application window opens 2 December 2026, so the portal is not live yet",
+    "Scholarship amounts deliberately not recorded in compensation",
+    "A general UEF round (7-21 January 2027) differs; the IMLEX-specific date is used"
+  ],
+  "id": "opp_641327f5ba919474",
+  "fingerprint": "e01c9cd1d2be057a",
+  "discovered_at": "2026-11-23T03:01:09.631Z",
+  "last_verified_at": "2026-11-23T03:02:14.465Z",
+  "content_hash": "sha256:ef01f48e7860f322d3502de1965156b97fa73a347963fa8672d72eaa027c7c75"
+}

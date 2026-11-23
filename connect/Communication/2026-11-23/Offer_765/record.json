@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Moon Base Challenge",
+    "evidence_url": "https://www.nasa.gov/news-release/nasa-announces-1-million-to-students-for-moon-base-challenge/",
+    "evidence_quote": "NASA Announces $1 Million to Students for Moon Base Challenge"
+  },
+  "institution": {
+    "name": "NASA",
+    "website": "https://www.nasa.gov",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.nasa.gov/moonbase/",
+  "source_url": "https://www.nasa.gov/news-release/nasa-announces-1-million-to-students-for-moon-base-challenge/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Space exploration, engineering design",
+  "seniority": "High school and post-secondary students (U.S. schools)",
+  "qualifications": [
+    "Student teams at U.S. high schools and post-secondary schools"
+  ],
+  "skills": [],
+  "description_short": "NASA student design challenge inviting teams from U.S. high schools and post-secondary schools to propose Moon Base solutions in power, construction, life support, surface mobility, communications and astronaut safety. Registration through NASA STEM Gateway closes 25 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-25",
+    "timezone": null,
+    "evidence_url": "https://www.nasa.gov/news-release/nasa-announces-1-million-to-students-for-moon-base-challenge/",
+    "evidence_quote": "Registration is open until Jan. 25, 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official NASA news release (seen in search results): registration through NASA STEM Gateway is open until 25 January 2027",
+    "Same date shown on NASA Moon Base and educator pages",
+    "Deadline is in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Also listed on fellowshipsguide.com (nasa-moon-base-challenge); exact category of that listing not confirmed",
+    "Deadline time and time zone not stated",
+    "Later project-phase milestones only seen on third-party sites; official rules are at moonbasechallenge.org",
+    "Eligibility limited to U.S. schools per NASA release; detailed rules not reviewed",
+    "Prize amounts deliberately not recorded in compensation"
+  ],
+  "id": "opp_19440f80ed86e479",
+  "fingerprint": "91bf70ec1b089d2c",
+  "discovered_at": "2026-11-23T03:01:10.147Z",
+  "last_verified_at": "2026-11-23T03:01:10.147Z",
+  "content_hash": "sha256:0e04e0487b766241e0cb9b84f10d8c27e8412354c773cddad235c5f156f06a05"
+}

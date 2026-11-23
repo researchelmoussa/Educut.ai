@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-22T03:20:21.868Z",
+  "updated_at": "2026-11-23T03:06:01.368Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -12291,7 +12291,7 @@
       "deadline": "2026-11-19",
       "content_hash": "sha256:7c23a3ee57953086a81b34f923fbc96d6886617476d399223d43e98157d22143",
       "last_verified_at": "2026-10-22T02:00:59.748Z",
-      "pipeline_status": "NEEDS_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-22T02:01:23.718Z",
       "history": [
         {
@@ -12307,6 +12307,13 @@
           "to": "NEEDS_REVIEW",
           "actor": "opportunity-scout",
           "reason": "application_status=NEEDS_REVIEW"
+        },
+        {
+          "at": "2026-11-23T02:50:04.580Z",
+          "from": "NEEDS_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-19 passed"
         }
       ]
     },
@@ -12867,7 +12874,7 @@
       "deadline": "2026-11-20",
       "content_hash": "sha256:80375df5349a94bc1ef31fde67eaf48db9886c918287ace4b1b665c7e6961798",
       "last_verified_at": "2026-10-23T01:59:50.383Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-23T01:59:59.393Z",
       "history": [
         {
@@ -12911,6 +12918,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-23T02:50:04.581Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-20 passed"
         }
       ],
       "offer_number": 167
@@ -13846,7 +13860,7 @@
       "deadline": "2026-11-20",
       "content_hash": "sha256:706f2ae66ae163cd3ef61bfbcd0d3331fd806996d58ab73454b14412057bf736",
       "last_verified_at": "2026-10-24T02:05:03.134Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-24T02:05:13.134Z",
       "history": [
         {
@@ -13890,6 +13904,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-23T02:50:04.581Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-20 passed"
         }
       ],
       "offer_number": 182
@@ -14287,7 +14308,7 @@
       "deadline": "2026-11-20",
       "content_hash": "sha256:e7e461be2cfd00bb066cf7f25c11efb793b2ccdc0c8186d082d789e0434b9dd1",
       "last_verified_at": "2026-10-24T02:05:04.122Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-24T02:05:14.261Z",
       "history": [
         {
@@ -14331,6 +14352,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-23T02:50:04.581Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-20 passed"
         }
       ],
       "offer_number": 189
@@ -14899,7 +14927,7 @@
       "deadline": "2026-11-20",
       "content_hash": "sha256:06d70b1b13b8e2e2dad4d3b3d966fc3a9942fcfd9225d9d9f22d3b22ac138035",
       "last_verified_at": "2026-10-25T03:02:55.065Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-25T03:03:04.816Z",
       "history": [
         {
@@ -14943,6 +14971,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-23T02:50:04.581Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-20 passed"
         }
       ],
       "offer_number": 198
@@ -15850,7 +15885,7 @@
       "deadline": "2026-11-20",
       "content_hash": "sha256:6684c494291d23ae4a0e4de31eb88c248596107078ff81412c48ccd964a8dcb6",
       "last_verified_at": "2026-10-25T03:02:56.907Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-25T03:03:06.903Z",
       "history": [
         {
@@ -15894,6 +15929,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-23T02:50:04.581Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-20 passed"
         }
       ],
       "offer_number": 213
@@ -16739,7 +16781,7 @@
       "deadline": "2026-11-20",
       "content_hash": "sha256:f7b5fdc19c0dd025da737a9af49017194416d3c253643ceb5fd383b1dc33babe",
       "last_verified_at": "2026-10-26T02:59:56.300Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-26T02:59:56.442Z",
       "history": [
         {
@@ -16783,6 +16825,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-23T02:50:04.581Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-20 passed"
         }
       ],
       "offer_number": 227
@@ -18095,7 +18144,7 @@
       "deadline": "2026-11-20",
       "content_hash": "sha256:7b1ba178576338407531d9f0508455b4d004491d4782e46534836b9feb5ae378",
       "last_verified_at": "2026-10-27T03:01:50.966Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-27T03:01:51.107Z",
       "history": [
         {
@@ -18125,6 +18174,13 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-23T02:50:04.581Z",
+          "from": "UNDER_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-20 passed"
         }
       ],
       "offer_number": 250
@@ -19321,7 +19377,7 @@
       "deadline": "2026-11-19",
       "content_hash": "sha256:b4039a795e520d1bf69bbf3d3a3f257c074e221673e0534f1d6d585e6c184fe9",
       "last_verified_at": "2026-10-28T02:58:36.814Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-28T02:58:36.941Z",
       "history": [
         {
@@ -19365,6 +19421,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-23T02:50:04.581Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-19 passed"
         }
       ],
       "offer_number": 275
@@ -19983,7 +20046,7 @@
       "deadline": "2026-11-20",
       "content_hash": "sha256:c4444d33b3ded5ea588b2126fbe9e1e227c7d8ebedbfa7fe706f836b8fc7039a",
       "last_verified_at": "2026-10-28T03:03:21.046Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-28T03:03:21.163Z",
       "history": [
         {
@@ -20027,6 +20090,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-23T02:50:04.581Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-20 passed"
         }
       ],
       "offer_number": 285
@@ -51160,6 +51230,563 @@
         }
       ],
       "offer_number": 750
+    },
+    "opp_6dbe93ed24fbc347": {
+      "id": "opp_6dbe93ed24fbc347",
+      "fingerprint": "444bb6886b984e29",
+      "title": "Bioceb - European Master in Biological and Chemical Engineering for a Sustainable Bioeconomy",
+      "institution": "Bioceb Erasmus Mundus Joint Master (AgroParisTech)",
+      "city": null,
+      "country": "France",
+      "source_url": "https://www.bioceb.eu/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://candidatures-erasmusmundus.agroparistech.fr/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-19T11:30:00+01:00",
+      "content_hash": "sha256:12dc03646cebd36a4a48cab31ae27ab32f2359a1da48b6d064bc5e93a47e2b76",
+      "last_verified_at": "2026-11-23T03:01:09.463Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-23T03:01:14.422Z",
+      "history": [
+        {
+          "at": "2026-11-23T03:01:14.422Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-23T03:01:14.422Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-23T03:06:00.253Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-23T03:06:00.253Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-23T03:06:00.456Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-23T03:06:00.456Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 764
+    },
+    "opp_641327f5ba919474": {
+      "id": "opp_641327f5ba919474",
+      "fingerprint": "e01c9cd1d2be057a",
+      "title": "Master of Science in Imaging and Light in Extended Reality",
+      "institution": "IMLEX Erasmus Mundus Joint Master (coordinated by the University of Eastern Finland)",
+      "city": null,
+      "country": "Finland",
+      "source_url": "https://www.imlex.org/how-to-apply/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://studyinfo.fi",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-13T23:59:00+02:00",
+      "content_hash": "sha256:ef01f48e7860f322d3502de1965156b97fa73a347963fa8672d72eaa027c7c75",
+      "last_verified_at": "2026-11-23T03:02:14.465Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-23T03:01:14.637Z",
+      "history": [
+        {
+          "at": "2026-11-23T03:01:14.637Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-23T03:01:14.638Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-23T03:02:14.660Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-23T03:05:58.841Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-23T03:05:58.841Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-23T03:05:59.086Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-23T03:05:59.086Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 761
+    },
+    "opp_35da5675850254a7": {
+      "id": "opp_35da5675850254a7",
+      "fingerprint": "6da259c9e168265a",
+      "title": "School of Engineering Scholarship",
+      "institution": "The University of Manchester, School of Engineering",
+      "city": "Manchester",
+      "country": "United Kingdom",
+      "source_url": "https://www.se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/school-of-engineering-scholarship/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:937ea2227da8372c6e05624167e43d6848b6088dddb1d33127c83955eca1bee5",
+      "last_verified_at": "2026-11-23T03:01:09.837Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-23T03:01:14.828Z",
+      "history": [
+        {
+          "at": "2026-11-23T03:01:14.828Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-23T03:01:14.829Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-23T03:05:59.782Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-23T03:05:59.782Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-23T03:06:00.027Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-23T03:06:00.027Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 763
+    },
+    "opp_c2a853f4be760145": {
+      "id": "opp_c2a853f4be760145",
+      "fingerprint": "4a4f16728792e3fa",
+      "title": "2027 Human Lander Challenge",
+      "institution": "NASA",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.nasa.gov/directorates/esdmd/artemis-campaign-development-division/human-landing-system-program/nasa-opens-2027-human-lander-challenge-for-lunar-communications/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://hulc.nianet.org",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-04",
+      "content_hash": "sha256:0f7a88f51390cfe8b76afa38bc855cdb1ba589df140ee423ae6c781677826877",
+      "last_verified_at": "2026-11-23T03:01:09.999Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-23T03:01:15.022Z",
+      "history": [
+        {
+          "at": "2026-11-23T03:01:15.022Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-23T03:01:15.022Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-23T03:06:01.138Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-23T03:06:01.139Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-23T03:06:01.368Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-23T03:06:01.368Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 766
+    },
+    "opp_19440f80ed86e479": {
+      "id": "opp_19440f80ed86e479",
+      "fingerprint": "91bf70ec1b089d2c",
+      "title": "Moon Base Challenge",
+      "institution": "NASA",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.nasa.gov/news-release/nasa-announces-1-million-to-students-for-moon-base-challenge/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.nasa.gov/moonbase/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-25",
+      "content_hash": "sha256:0e04e0487b766241e0cb9b84f10d8c27e8412354c773cddad235c5f156f06a05",
+      "last_verified_at": "2026-11-23T03:01:10.147Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-23T03:01:15.223Z",
+      "history": [
+        {
+          "at": "2026-11-23T03:01:15.223Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-23T03:01:15.223Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-23T03:06:00.675Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-23T03:06:00.675Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-23T03:06:00.870Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-23T03:06:00.870Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 765
+    },
+    "opp_568e92cebcd5ca24": {
+      "id": "opp_568e92cebcd5ca24",
+      "fingerprint": "94b1081eed866964",
+      "title": "2027 RASC-AL Competition",
+      "institution": "NASA",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-competition-invites-students-to-help-imagine-a-future-enabled-by-lunar-technologies/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": null,
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-24",
+      "content_hash": "sha256:29c53f70717eef8f8308bc7a2897537638d504264f67a00de282607413744702",
+      "last_verified_at": "2026-11-23T03:01:10.297Z",
+      "pipeline_status": "VERIFIED",
+      "first_seen": "2026-11-23T03:01:15.435Z",
+      "history": [
+        {
+          "at": "2026-11-23T03:01:15.435Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-23T03:01:15.435Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        }
+      ]
+    },
+    "opp_d0d60b4df17dae6c": {
+      "id": "opp_d0d60b4df17dae6c",
+      "fingerprint": "89fa13b20bb732c7",
+      "title": "Fusion Power (EPSRC CDT)",
+      "institution": "University of Oxford",
+      "city": "Oxford",
+      "country": "United Kingdom",
+      "source_url": "https://www.ox.ac.uk/admissions/graduate/courses/cdt-fusion-power",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.ox.ac.uk/admissions/graduate/courses/cdt-fusion-power",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-06T12:00:00+00:00",
+      "content_hash": "sha256:5ed3d742795d0e2ff92366a241ce06377c54a9f47f7c8e420087ffc1a2376148",
+      "last_verified_at": "2026-11-23T03:02:13.660Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-23T03:01:15.691Z",
+      "history": [
+        {
+          "at": "2026-11-23T03:01:15.691Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-23T03:01:15.691Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-23T03:02:13.849Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-23T03:05:57.925Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-23T03:05:57.925Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-23T03:05:58.152Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-23T03:05:58.153Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 759
+    },
+    "opp_56a1d45a408a3719": {
+      "id": "opp_56a1d45a408a3719",
+      "fingerprint": "3ce152a802dc0fc2",
+      "title": "Samuel P. Langley Postdoctoral Fellow",
+      "institution": "University of Pittsburgh, Department of Physics and Astronomy",
+      "city": "Pittsburgh",
+      "country": "United States",
+      "source_url": "https://academicjobsonline.org/ajo/jobs/33039",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://academicjobsonline.org/ajo/jobs/33039",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-12",
+      "content_hash": "sha256:ce8507e510c6aa6a10d19a809b0a1a37ad10c5b5fce82c58a9795938953edf3b",
+      "last_verified_at": "2026-11-23T03:02:14.062Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-23T03:01:15.895Z",
+      "history": [
+        {
+          "at": "2026-11-23T03:01:15.895Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-23T03:01:15.895Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-23T03:02:14.249Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-23T03:05:58.402Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-23T03:05:58.402Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-23T03:05:58.620Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-23T03:05:58.620Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 760
+    },
+    "opp_27dad58e450c4d7e": {
+      "id": "opp_27dad58e450c4d7e",
+      "fingerprint": "30ddc39ba6a552fd",
+      "title": "PhD Position in Accounting",
+      "institution": "University of Zurich",
+      "city": "Zurich",
+      "country": "Switzerland",
+      "source_url": "https://jobs.uzh.ch/job-vacancies/phd-position-in-accounting/b3235234-813b-4f30-b9e2-7d7a998186dc",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://jobs.uzh.ch/job-vacancies/phd-position-in-accounting/b3235234-813b-4f30-b9e2-7d7a998186dc",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:30619993f31a95b78aa68ac11bf0e052559a8367ea7d3f495d063f76e2aa02a3",
+      "last_verified_at": "2026-11-23T03:02:14.864Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-23T03:01:16.100Z",
+      "history": [
+        {
+          "at": "2026-11-23T03:01:16.100Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-23T03:01:16.100Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-23T03:02:15.032Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-23T03:05:59.313Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-23T03:05:59.313Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-23T03:05:59.557Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-23T03:05:59.558Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 762
     }
   },
   "seen_urls": {
@@ -52220,7 +52847,20 @@
     "https://cmm.uchile.cl/en/jobs/call-for-cmm-postdoctoral-visiting-program-2026-2027": "opp_4309ac3c6c1a3e77",
     "https://africanleadershipacademy.org/2026/07/21/apply-2027-cohort": "opp_bba6d6915a940a8e",
     "https://ala2.submittable.com/submit/360300/2027-diploma-program-eng": "opp_bba6d6915a940a8e",
-    "https://africanscholars.yale.edu/admissions/application-deadlines": "opp_32aeabe020a9f739"
+    "https://africanscholars.yale.edu/admissions/application-deadlines": "opp_32aeabe020a9f739",
+    "https://bioceb.eu/": "opp_6dbe93ed24fbc347",
+    "https://candidatures-erasmusmundus.agroparistech.fr/": "opp_6dbe93ed24fbc347",
+    "https://imlex.org/how-to-apply": "opp_641327f5ba919474",
+    "https://studyinfo.fi/": "opp_641327f5ba919474",
+    "https://se.manchester.ac.uk/study/postgraduate-research/fees-and-funding/search-for-funding/school-of-engineering-scholarship": "opp_35da5675850254a7",
+    "https://nasa.gov/directorates/esdmd/artemis-campaign-development-division/human-landing-system-program/nasa-opens-2027-human-lander-challenge-for-lunar-communications": "opp_c2a853f4be760145",
+    "https://hulc.nianet.org/": "opp_c2a853f4be760145",
+    "https://nasa.gov/news-release/nasa-announces-1-million-to-students-for-moon-base-challenge": "opp_19440f80ed86e479",
+    "https://nasa.gov/moonbase": "opp_19440f80ed86e479",
+    "https://nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-competition-invites-students-to-help-imagine-a-future-enabled-by-lunar-technologies": "opp_568e92cebcd5ca24",
+    "https://ox.ac.uk/admissions/graduate/courses/cdt-fusion-power": "opp_d0d60b4df17dae6c",
+    "https://academicjobsonline.org/ajo/jobs/33039": "opp_56a1d45a408a3719",
+    "https://jobs.uzh.ch/job-vacancies/phd-position-in-accounting/b3235234-813b-4f30-b9e2-7d7a998186dc": "opp_27dad58e450c4d7e"
   },
-  "last_offer_number": 758
+  "last_offer_number": 766
 }

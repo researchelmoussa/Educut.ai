@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Bioceb - European Master in Biological and Chemical Engineering for a Sustainable Bioeconomy",
+    "evidence_url": "https://www.bioceb.eu/",
+    "evidence_quote": "Bioceb - European Master in Biological and Chemical Engineering for a Sustainable Bioeconomy"
+  },
+  "institution": {
+    "name": "Bioceb Erasmus Mundus Joint Master (AgroParisTech)",
+    "website": "https://www.bioceb.eu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://candidatures-erasmusmundus.agroparistech.fr/",
+  "source_url": "https://www.bioceb.eu/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "France",
+    "country_code": "FR"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Biological and chemical engineering, bioeconomy",
+  "seniority": "Master's",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Bioceb, an Erasmus Mundus joint master's in biological and chemical engineering for a sustainable bioeconomy, accepts applications for its 2027-2029 cohort via the AgroParisTech portal until 19 January 2027, 11:30 Paris time.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-19T11:30:00+01:00",
+    "timezone": "Europe/Paris",
+    "evidence_url": "https://www.bioceb.eu/",
+    "evidence_quote": "From November 3rd, 2026, 11:30 a.m. (Paris CET) until January 19th, 2027, 11:30 a.m. (Paris CET)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Bioceb homepage (seen in search results): 2027-2029 application period 3 November 2026 to 19 January 2027, 11:30 Paris time",
+    "AgroParisTech application portal lists the Bioceb 2027-2029 campaign closing 19/01/2027 at 11:30",
+    "Deadline is in the future",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Programme is delivered by a multi-country consortium; France recorded because applications are handled by AgroParisTech",
+    "Selection timeline for 2027-2029 not confirmed",
+    "Scholarship amounts deliberately not recorded in compensation"
+  ],
+  "id": "opp_6dbe93ed24fbc347",
+  "fingerprint": "444bb6886b984e29",
+  "discovered_at": "2026-11-23T03:01:09.463Z",
+  "last_verified_at": "2026-11-23T03:01:09.463Z",
+  "content_hash": "sha256:12dc03646cebd36a4a48cab31ae27ab32f2359a1da48b6d064bc5e93a47e2b76"
+}
