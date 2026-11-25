@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-23T03:06:01.368Z",
+  "updated_at": "2026-11-25T03:05:11.359Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -1449,7 +1449,7 @@
       "deadline": "2026-11-24T09:00:00+00:00",
       "content_hash": "sha256:dacb77eac78db01a9742e835bad7f11309f44e185df5e960b85fff16a4784bd7",
       "last_verified_at": "2026-10-14T07:13:33.273Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-14T07:13:43.406Z",
       "history": [
         {
@@ -1493,6 +1493,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-25T02:49:43.091Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-24T09:00:00+00:00 passed"
         }
       ],
       "offer_number": 18
@@ -5010,7 +5017,7 @@
       "deadline": "2026-11-23",
       "content_hash": "sha256:c0d4653044a255fef0ff1ff9932e7fa76db49baf1a18a1da770368e75d434e61",
       "last_verified_at": "2026-10-17T01:55:25.398Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T01:55:25.570Z",
       "history": [
         {
@@ -5068,6 +5075,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-25T02:49:43.092Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-23 passed"
         }
       ],
       "offer_number": 49
@@ -5286,7 +5300,7 @@
       "deadline": "2026-11-23",
       "content_hash": "sha256:fed07602e66a8f2bdd3d04bd485ad3c2298a36382eec39e4077506f9627be216",
       "last_verified_at": "2026-10-17T01:55:26.810Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-17T01:55:26.977Z",
       "history": [
         {
@@ -5330,6 +5344,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-25T02:49:43.092Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-23 passed"
         }
       ],
       "offer_number": 53
@@ -14865,7 +14886,7 @@
       "deadline": "2026-11-23T23:59:00-05:00",
       "content_hash": "sha256:297159facc2c08ae05b8c82519fc9d7de932ec7ccfbbf26c4ca0b8db1372d546",
       "last_verified_at": "2026-10-25T03:02:54.936Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-25T03:03:04.694Z",
       "history": [
         {
@@ -14909,6 +14930,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-25T02:49:43.092Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-23T23:59:00-05:00 passed"
         }
       ],
       "offer_number": 197
@@ -16340,7 +16368,7 @@
       "deadline": "2026-11-22",
       "content_hash": "sha256:2287927e7af79a63463fadd2192c9899487d88a0c8b2eb4bc27c9016598a4cc8",
       "last_verified_at": "2026-10-26T02:59:54.522Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-26T02:59:54.651Z",
       "history": [
         {
@@ -16384,6 +16412,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-24T02:49:54.150Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-22 passed"
         }
       ],
       "offer_number": 220
@@ -17656,7 +17691,7 @@
       "deadline": "2026-11-23",
       "content_hash": "sha256:e68514ab2838f901674979fbc79b5d6352d97c4d32abbe0915bd08057ae41098",
       "last_verified_at": "2026-10-26T03:10:08.849Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-26T03:10:08.996Z",
       "history": [
         {
@@ -17700,6 +17735,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-25T02:49:43.092Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-23 passed"
         }
       ],
       "offer_number": 241
@@ -18823,7 +18865,7 @@
       "deadline": "2026-11-22",
       "content_hash": "sha256:da96fe231d8cbb5dd1db62253f8e65189c8cb678c583f5570798df5515387120",
       "last_verified_at": "2026-10-27T03:13:20.356Z",
-      "pipeline_status": "VERIFIED",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-27T03:13:20.519Z",
       "history": [
         {
@@ -18839,6 +18881,13 @@
           "to": "VERIFIED",
           "actor": "opportunity-scout",
           "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-24T02:49:54.150Z",
+          "from": "VERIFIED",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-22 passed"
         }
       ],
       "offer_number": 264
@@ -19150,7 +19199,7 @@
       "deadline": "2026-11-23",
       "content_hash": "sha256:d68088964fd8bd62a93dad6d79f3d03617c87feb15fe82899d7885a5602e4ec9",
       "last_verified_at": "2026-10-28T02:58:35.807Z",
-      "pipeline_status": "VERIFIED",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-28T02:58:35.938Z",
       "history": [
         {
@@ -19166,6 +19215,13 @@
           "to": "VERIFIED",
           "actor": "opportunity-scout",
           "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T02:49:43.092Z",
+          "from": "VERIFIED",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-23 passed"
         }
       ],
       "offer_number": 271
@@ -20184,7 +20240,7 @@
       "deadline": "2026-11-23",
       "content_hash": "sha256:7db778de12aeb12d93bb4d93ba64416a39b9d3045600c9d7e113f18bd57871e6",
       "last_verified_at": "2026-10-28T03:03:21.510Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-28T03:03:21.612Z",
       "history": [
         {
@@ -20228,6 +20284,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-25T02:49:43.092Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-23 passed"
         }
       ],
       "offer_number": 287
@@ -22079,7 +22142,7 @@
       "deadline": "2026-11-23T15:55:00+02:00",
       "content_hash": "sha256:c359f25f622b6b0c87404baa6aa15ffb4f6db99b623b71640c0ba51a1ce090ba",
       "last_verified_at": "2026-10-30T03:20:12.391Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-30T03:20:23.709Z",
       "history": [
         {
@@ -22123,6 +22186,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-24T02:49:54.150Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-23T15:55:00+02:00 passed"
         }
       ],
       "offer_number": 317
@@ -51787,6 +51857,1042 @@
         }
       ],
       "offer_number": 762
+    },
+    "opp_1180a9201dfcdfa1": {
+      "id": "opp_1180a9201dfcdfa1",
+      "fingerprint": "449e9d5f175158a7",
+      "title": "Wang Gungwu Visiting Fellows Programme",
+      "institution": "ISEAS-Yusof Ishak Institute",
+      "city": "Singapore",
+      "country": "Singapore",
+      "source_url": "https://www.iseas.edu.sg/about-us/opportunities/fellowships/wang-gungwu-visiting-fellows-programme/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.iseas.edu.sg/about-us/opportunities/fellowships/wang-gungwu-visiting-fellows-programme/",
+      "application_status": "CLOSED",
+      "deadline": null,
+      "content_hash": "sha256:799bd28c881dc884574d1ccbbef32ad3db4e80ef9964703b9266b993f197e454",
+      "last_verified_at": "2026-11-24T02:58:21.867Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-11-24T02:58:25.577Z",
+      "history": [
+        {
+          "at": "2026-11-24T02:58:25.577Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-24T02:58:25.577Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_24419624d141711c": {
+      "id": "opp_24419624d141711c",
+      "fingerprint": "9e63226049c530bb",
+      "title": "Doctoral Programme for Advancing Forest-Based Bioeconomy (DP-FOBI)",
+      "institution": "University of Eastern Finland",
+      "city": null,
+      "country": "Finland",
+      "source_url": "https://sites.uef.fi/dp-fobi/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://sites.uef.fi/dp-fobi/how-to-apply/",
+      "application_status": "CLOSED",
+      "deadline": "2026-08-10",
+      "content_hash": "sha256:22b50b87a796bd7c986b6689eebd8d07ebfcd874f8ce844c4b5ff2705efa0acf",
+      "last_verified_at": "2026-11-24T02:58:22.069Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-11-24T02:58:25.798Z",
+      "history": [
+        {
+          "at": "2026-11-24T02:58:25.798Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-24T02:58:25.798Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_1ce2aed7e285131f": {
+      "id": "opp_1ce2aed7e285131f",
+      "fingerprint": "7a44c0b2befec9c9",
+      "title": "Boren Fellowships",
+      "institution": "Boren Awards",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.borenawards.org/apply-now",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.borenawards.org/application-instructions-boren-fellowships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-20T17:00:00-05:00",
+      "content_hash": "sha256:067545d593411b6a115c0d9048c18c1af189e57fc4ebf12be07508a317a5eeb8",
+      "last_verified_at": "2026-11-25T02:57:41.018Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:55.518Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:55.518Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:55.519Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:09.035Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:09.035Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:09.255Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:09.255Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 776
+    },
+    "opp_0c35d443e208d04b": {
+      "id": "opp_0c35d443e208d04b",
+      "fingerprint": "5a6b6352fdc2e11e",
+      "title": "Boren Scholarships",
+      "institution": "Boren Awards",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.borenawards.org/apply-now",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.borenawards.org/scholarships/thinking-applying/deadlines-timelines/boren-scholarship-calendar",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-27T17:00:00-05:00",
+      "content_hash": "sha256:346809c54e6c602f9a4ee77548b51a63b19ed2b0b2ea43fd4d110877e82cd0ef",
+      "last_verified_at": "2026-11-25T02:57:41.189Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:55.739Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:55.739Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:55.739Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:10.699Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:10.700Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:10.908Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:10.909Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 780
+    },
+    "opp_30de5f7fbd9c25d8": {
+      "id": "opp_30de5f7fbd9c25d8",
+      "fingerprint": "c0cd1e9bdc304fd0",
+      "title": "CERN Summer Student Programme 2027 (Member and Non-Member State)",
+      "institution": "CERN",
+      "city": "Geneva",
+      "country": "Switzerland",
+      "source_url": "https://jobs.smartrecruiters.com/CERN/744000159603499-cern-summer-student-programme-2027-member-and-non-member-state-",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://jobs.smartrecruiters.com/CERN/744000159603499-cern-summer-student-programme-2027-member-and-non-member-state-",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-21T23:59:00+01:00",
+      "content_hash": "sha256:4a95b68d4c74b323da0bb84b4d86f472080ed710edb5702c3001ff4f63fb73a4",
+      "last_verified_at": "2026-11-25T02:57:41.381Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:55.941Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:55.941Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:55.941Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:09.448Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:09.448Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:09.656Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:09.657Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 777
+    },
+    "opp_d44e38299dd11a6b": {
+      "id": "opp_d44e38299dd11a6b",
+      "fingerprint": "b85c9ef36cb1bb86",
+      "title": "UK Summer Institutes",
+      "institution": "US-UK Fulbright Commission",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/uk-summer-institutes/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/uk-summer-institutes/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-02",
+      "content_hash": "sha256:6e187bf90c9ebd1d562a21a2041e39ac9c8ffdb762bac4f1588c70bf64f1dd2e",
+      "last_verified_at": "2026-11-25T02:57:41.568Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:56.144Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:56.144Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:56.145Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:11.140Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:11.140Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:11.359Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:11.359Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 781
+    },
+    "opp_e927d5838cced0d5": {
+      "id": "opp_e927d5838cced0d5",
+      "fingerprint": "aa630b50bf69a0f3",
+      "title": "Grant and Postdoctoral Fellowship",
+      "institution": "Huntington's Disease Foundation",
+      "city": null,
+      "country": null,
+      "source_url": "https://hdfoundation.org/grant-and-postdoctoral-fellowship-application/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://hdfoundation.org/grant-and-postdoctoral-fellowship-application/",
+      "application_status": "CLOSED",
+      "deadline": "2027-01-06T23:59:00-05:00",
+      "content_hash": "sha256:2e6c39b0303405358219404dec071b5810a20b9da863b72f447377c8dcb5e5cb",
+      "last_verified_at": "2026-11-25T02:57:41.751Z",
+      "pipeline_status": "CLOSED",
+      "first_seen": "2026-11-25T02:57:56.341Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:56.341Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:56.341Z",
+          "from": "DISCOVERED",
+          "to": "CLOSED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=CLOSED"
+        }
+      ]
+    },
+    "opp_ac0904ec1b553090": {
+      "id": "opp_ac0904ec1b553090",
+      "fingerprint": "08064c9b98f6c2a0",
+      "title": "The KU Leuven ASEAN Scholarship",
+      "institution": "KU Leuven",
+      "city": "Leuven",
+      "country": "Belgium",
+      "source_url": "https://www.kuleuven.be/scholarships/year/2027-2028/ku-leuven-asean-scholarship",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.kuleuven.be/scholarships/year/2027-2028/ku-leuven-asean-scholarship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:00+01:00",
+      "content_hash": "sha256:f759d5db56a3877ade4b93b68bd47b5050b3a60cb210ca174f183846a023cf5d",
+      "last_verified_at": "2026-11-25T02:57:41.921Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:56.536Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:56.536Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:56.536Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:08.219Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:08.219Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:08.407Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:08.407Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 774
+    },
+    "opp_8966d0f30af470b8": {
+      "id": "opp_8966d0f30af470b8",
+      "fingerprint": "9f18198d51f8cc0c",
+      "title": "The Inspiring the Outstanding Scholarship",
+      "institution": "KU Leuven",
+      "city": "Leuven",
+      "country": "Belgium",
+      "source_url": "https://www.kuleuven.be/scholarships/year/2027-2028/inspiring-the-outstanding-scholarship",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.kuleuven.be/scholarships/year/2027-2028/inspiring-the-outstanding-scholarship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:00+01:00",
+      "content_hash": "sha256:6b61ef76d07d80928427f49a93bd703e8021feb4e8ec1c7f330c194a3a1e162c",
+      "last_verified_at": "2026-11-25T02:57:42.093Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:56.750Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:56.750Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:56.750Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:07.448Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:07.448Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:07.639Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:07.639Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 772
+    },
+    "opp_923ced8c388edf81": {
+      "id": "opp_923ced8c388edf81",
+      "fingerprint": "931a47fff9f484bf",
+      "title": "The Master Mind Scholarship",
+      "institution": "KU Leuven",
+      "city": "Leuven",
+      "country": "Belgium",
+      "source_url": "https://www.kuleuven.be/scholarships/year/2027-2028/master-mind-scholarship",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.kuleuven.be/scholarships/year/2027-2028/master-mind-scholarship",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:00+01:00",
+      "content_hash": "sha256:b8aa7520bbac1bb537d64014087870bd351ad1aa361119742c5fd7ffa9616626",
+      "last_verified_at": "2026-11-25T02:57:42.256Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:56.955Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:56.956Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:56.956Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:07.825Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:07.825Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:08.028Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:08.029Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 773
+    },
+    "opp_6708459645f47006": {
+      "id": "opp_6708459645f47006",
+      "fingerprint": "da55c892a88f9e9c",
+      "title": "KU Leuven Scholarship for Africa",
+      "institution": "KU Leuven",
+      "city": "Leuven",
+      "country": "Belgium",
+      "source_url": "https://www.kuleuven.be/scholarships/year/2027-2028/ku-leuven-scholarship-for-africa",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.kuleuven.be/scholarships/year/2027-2028/ku-leuven-scholarship-for-africa",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:00+01:00",
+      "content_hash": "sha256:225de62f153c8b89238c5b5c9f3dd94db3fb90573d0ffbb5819b1f840d7aabdc",
+      "last_verified_at": "2026-11-25T02:57:42.422Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:57.153Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:57.153Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:57.153Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:07.049Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:07.049Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:07.259Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:07.259Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 771
+    },
+    "opp_29375114859bc815": {
+      "id": "opp_29375114859bc815",
+      "fingerprint": "d6c3deb30f0f188e",
+      "title": "Summer Undergraduate Research Fellowship (SURF)",
+      "institution": "National Institute of Standards and Technology (NIST)",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.nist.gov/surf",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.nist.gov/surf/surf-application",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-26",
+      "content_hash": "sha256:6d17de7b8706b78ffa4950ba2313fe6a05168f4156fcf5984bed2a452bb163ed",
+      "last_verified_at": "2026-11-25T02:57:42.576Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:57.339Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:57.339Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:57.340Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:10.308Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:10.308Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:10.498Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:10.498Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 779
+    },
+    "opp_fe03f93bf007ae7b": {
+      "id": "opp_fe03f93bf007ae7b",
+      "fingerprint": "cedd435d312bb9db",
+      "title": "Sutton Trust Fulbright US Programme",
+      "institution": "Sutton Trust and US-UK Fulbright Commission",
+      "city": null,
+      "country": "United Kingdom",
+      "source_url": "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/sutton-trust-fulbright-us-programme/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://us.suttontrust.com/how-to-apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10T23:59:00+00:00",
+      "content_hash": "sha256:df1e41965cd14c7ca16fbc9d602955bfa0498a3eed836f764f5ab461c486e2f0",
+      "last_verified_at": "2026-11-25T02:57:42.758Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:57.536Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:57.536Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:57.537Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:06.204Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:06.204Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:06.415Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:06.415Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 769
+    },
+    "opp_3eb201e752b7efe8": {
+      "id": "opp_3eb201e752b7efe8",
+      "fingerprint": "83bf3ac3af81388f",
+      "title": "SVRI Early Career Research Fellowships",
+      "institution": "Sexual Violence Research Initiative (SVRI)",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.svri.org/svri-early-career-research-fellowships/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.svri.org/svri-early-career-research-fellowships/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:00+02:00",
+      "content_hash": "sha256:0cec5525de937949e87fd487db4c971c88c256f6b32cee62ca615ab3d268dcee",
+      "last_verified_at": "2026-11-25T02:57:42.941Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:57.752Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:57.752Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:57.753Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:08.622Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:08.622Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:08.848Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:08.849Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 775
+    },
+    "opp_ae757452721622e6": {
+      "id": "opp_ae757452721622e6",
+      "fingerprint": "7113067d58c6cab2",
+      "title": "Post-doctoral Fellowship in China Studies",
+      "institution": "University of Hyderabad and Harvard-Yenching Institute",
+      "city": "Hyderabad",
+      "country": "India",
+      "source_url": "https://www.harvard-yenching.org/programs/post-doctoral-fellowship-in-china-studies/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.harvard-yenching.org/programs/post-doctoral-fellowship-in-china-studies/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:1eda404ef7f68ddf9ec7a5757f582fb7eed6a202c5f2f17994ed7fbb54a53bde",
+      "last_verified_at": "2026-11-25T02:57:43.122Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:57.943Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:57.943Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:57.944Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:06.625Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:06.625Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:06.823Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:06.824Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 770
+    },
+    "opp_59d9ab049f4c9bce": {
+      "id": "opp_59d9ab049f4c9bce",
+      "fingerprint": "d6f1d11dbdc1a1de",
+      "title": "InterACT International Postdoctoral Fellowships",
+      "institution": "Vrije Universiteit Brussel (VUB)",
+      "city": "Brussels",
+      "country": "Belgium",
+      "source_url": "https://www.vub.be/en/news/interact-opens-first-international-postdoctoral-call",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://interact-programme.be",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-08T17:00:00+01:00",
+      "content_hash": "sha256:941d00d2540afd965d76b38343ab338ab3caf331b984761a7147c77938b662c9",
+      "last_verified_at": "2026-11-25T02:59:48.189Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:57:58.158Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:57:58.158Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:57:58.159Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T02:59:48.375Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-25T03:05:05.807Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:05.807Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:06.002Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:06.002Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 768
+    },
+    "opp_2bee160a055141f0": {
+      "id": "opp_2bee160a055141f0",
+      "fingerprint": "a63d82aa5bef26ae",
+      "title": "AFRIPAL 2027",
+      "institution": "International Association of Legislation (IAL)",
+      "city": "Gaborone",
+      "country": "Botswana",
+      "source_url": "https://ial-online.org/call-for-papers-afripal-2027-deadline-22-january-2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://ial-online.org/call-for-papers-afripal-2027-deadline-22-january-2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-22",
+      "content_hash": "sha256:8960527ff0467b4e22b867fe54554baee0803ced75a207a18b7e4f852552a6ab",
+      "last_verified_at": "2026-11-25T02:58:43.279Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:58:47.755Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:58:47.755Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:58:47.756Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:09.887Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:09.887Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:10.099Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:10.099Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 778
+    },
+    "opp_1f3bc559699a8557": {
+      "id": "opp_1f3bc559699a8557",
+      "fingerprint": "93145ddd30b59fd5",
+      "title": "ECAS2027",
+      "institution": "AEGIS (Africa-Europe Group for Interdisciplinary Studies)",
+      "city": "Lisbon",
+      "country": "Portugal",
+      "source_url": "https://www.ecasconference.org/2027/call-for-papers/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.ecasconference.org/2027/call-for-papers/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-31",
+      "content_hash": "sha256:09af67079a655b80ff927e3742d689b1bb1077bbdb0aa1f68849fc1cb342d8df",
+      "last_verified_at": "2026-11-25T02:58:43.438Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-25T02:58:47.996Z",
+      "history": [
+        {
+          "at": "2026-11-25T02:58:47.996Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-25T02:58:47.996Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-25T03:05:05.389Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-25T03:05:05.389Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-25T03:05:05.598Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-25T03:05:05.598Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 767
     }
   },
   "seen_urls": {
@@ -52860,7 +53966,30 @@
     "https://nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/nasa-competition-invites-students-to-help-imagine-a-future-enabled-by-lunar-technologies": "opp_568e92cebcd5ca24",
     "https://ox.ac.uk/admissions/graduate/courses/cdt-fusion-power": "opp_d0d60b4df17dae6c",
     "https://academicjobsonline.org/ajo/jobs/33039": "opp_56a1d45a408a3719",
-    "https://jobs.uzh.ch/job-vacancies/phd-position-in-accounting/b3235234-813b-4f30-b9e2-7d7a998186dc": "opp_27dad58e450c4d7e"
+    "https://jobs.uzh.ch/job-vacancies/phd-position-in-accounting/b3235234-813b-4f30-b9e2-7d7a998186dc": "opp_27dad58e450c4d7e",
+    "https://iseas.edu.sg/about-us/opportunities/fellowships/wang-gungwu-visiting-fellows-programme": "opp_1180a9201dfcdfa1",
+    "https://sites.uef.fi/dp-fobi": "opp_24419624d141711c",
+    "https://sites.uef.fi/dp-fobi/how-to-apply": "opp_24419624d141711c",
+    "https://borenawards.org/apply-now": "opp_0c35d443e208d04b",
+    "https://borenawards.org/application-instructions-boren-fellowships": "opp_1ce2aed7e285131f",
+    "https://borenawards.org/scholarships/thinking-applying/deadlines-timelines/boren-scholarship-calendar": "opp_0c35d443e208d04b",
+    "https://jobs.smartrecruiters.com/CERN/744000159603499-cern-summer-student-programme-2027-member-and-non-member-state-": "opp_30de5f7fbd9c25d8",
+    "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/uk-summer-institutes": "opp_d44e38299dd11a6b",
+    "https://hdfoundation.org/grant-and-postdoctoral-fellowship-application": "opp_e927d5838cced0d5",
+    "https://kuleuven.be/scholarships/year/2027-2028/ku-leuven-asean-scholarship": "opp_ac0904ec1b553090",
+    "https://kuleuven.be/scholarships/year/2027-2028/inspiring-the-outstanding-scholarship": "opp_8966d0f30af470b8",
+    "https://kuleuven.be/scholarships/year/2027-2028/master-mind-scholarship": "opp_923ced8c388edf81",
+    "https://kuleuven.be/scholarships/year/2027-2028/ku-leuven-scholarship-for-africa": "opp_6708459645f47006",
+    "https://nist.gov/surf": "opp_29375114859bc815",
+    "https://nist.gov/surf/surf-application": "opp_29375114859bc815",
+    "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/sutton-trust-fulbright-us-programme": "opp_fe03f93bf007ae7b",
+    "https://us.suttontrust.com/how-to-apply": "opp_fe03f93bf007ae7b",
+    "https://svri.org/svri-early-career-research-fellowships": "opp_3eb201e752b7efe8",
+    "https://harvard-yenching.org/programs/post-doctoral-fellowship-in-china-studies": "opp_ae757452721622e6",
+    "https://vub.be/en/news/interact-opens-first-international-postdoctoral-call": "opp_59d9ab049f4c9bce",
+    "https://interact-programme.be/": "opp_59d9ab049f4c9bce",
+    "https://ial-online.org/call-for-papers-afripal-2027-deadline-22-january-2027": "opp_2bee160a055141f0",
+    "https://ecasconference.org/2027/call-for-papers": "opp_1f3bc559699a8557"
   },
-  "last_offer_number": 766
+  "last_offer_number": 781
 }
