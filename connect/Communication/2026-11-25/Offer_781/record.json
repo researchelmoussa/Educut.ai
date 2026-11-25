@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "UK Summer Institutes",
+    "evidence_url": "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/uk-summer-institutes/",
+    "evidence_quote": "UK Summer Institutes"
+  },
+  "institution": {
+    "name": "US-UK Fulbright Commission",
+    "website": "https://fulbright.org.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/uk-summer-institutes/",
+  "source_url": "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/uk-summer-institutes/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Summer study programmes at UK universities",
+  "seniority": "Undergraduate students (US citizens)",
+  "qualifications": [
+    "US citizen with a US passport",
+    "Minimum GPA 3.6",
+    "At least two years of undergraduate study remaining after the Institute"
+  ],
+  "skills": [],
+  "description_short": "The US-UK Fulbright Commission invites US undergraduate students with little or no experience outside North America to apply for its 2027 UK Summer Institutes. Applications opened on 12 November 2026.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-02",
+    "timezone": null,
+    "evidence_url": "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/uk-summer-institutes/",
+    "evidence_quote": "2 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Fulbright UK page (seen in search results): \"Applications for 2027 open on 12 November 2026\" and deadline 2 February 2027",
+    "Deadline is in the future relative to the run date 2026-11-25",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Only the date string is quoted; closing time not seen",
+    "Host universities and city not recorded",
+    "Funding details not recorded"
+  ],
+  "id": "opp_d44e38299dd11a6b",
+  "fingerprint": "b85c9ef36cb1bb86",
+  "discovered_at": "2026-11-25T02:57:41.568Z",
+  "last_verified_at": "2026-11-25T02:57:41.568Z",
+  "content_hash": "sha256:6e187bf90c9ebd1d562a21a2041e39ac9c8ffdb762bac4f1588c70bf64f1dd2e"
+}

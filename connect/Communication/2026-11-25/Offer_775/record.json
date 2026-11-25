@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "SVRI Early Career Research Fellowships",
+    "evidence_url": "https://www.svri.org/svri-early-career-research-fellowships/",
+    "evidence_quote": "SVRI Early Career Research Fellowships"
+  },
+  "institution": {
+    "name": "Sexual Violence Research Initiative (SVRI)",
+    "website": "https://www.svri.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.svri.org/svri-early-career-research-fellowships/",
+  "source_url": "https://www.svri.org/svri-early-career-research-fellowships/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "Violence against women and violence against children research",
+  "seniority": "Doctoral and postdoctoral researchers in low- and middle-income countries",
+  "qualifications": [
+    "National of a low- or middle-income country",
+    "Enrolled full-time at an accredited institution in an LMIC"
+  ],
+  "skills": [],
+  "description_short": "SVRI invites doctoral and postdoctoral researchers from low- and middle-income countries to apply for its 2027 Early Career Research Fellowships on the intersection of violence against women and violence against children.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15T23:59:00+02:00",
+    "timezone": "Africa/Johannesburg",
+    "evidence_url": "https://www.svri.org/svri-early-career-research-fellowships/",
+    "evidence_quote": "by 15 January 2027 at 11:59pm (South African Time)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official SVRI page (seen in search results): applications through Proposal Central \"by 15 January 2027 at 11:59pm (South African Time)\"",
+    "Deadline is in the future relative to the run date 2026-11-25",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Applications are submitted via Proposal Central; the direct Proposal Central link was not seen, so application_url is the SVRI call page",
+    "No single host location: fellows are based at institutions in LMICs",
+    "Award amounts and number of fellowships appear on the page but are not used in the description"
+  ],
+  "id": "opp_3eb201e752b7efe8",
+  "fingerprint": "83bf3ac3af81388f",
+  "discovered_at": "2026-11-25T02:57:42.941Z",
+  "last_verified_at": "2026-11-25T02:57:42.941Z",
+  "content_hash": "sha256:0cec5525de937949e87fd487db4c971c88c256f6b32cee62ca615ab3d268dcee"
+}

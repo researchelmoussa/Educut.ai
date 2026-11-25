@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Sutton Trust Fulbright US Programme",
+    "evidence_url": "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/sutton-trust-fulbright-us-programme/",
+    "evidence_quote": "Sutton Trust Fulbright US Programme"
+  },
+  "institution": {
+    "name": "Sutton Trust and US-UK Fulbright Commission",
+    "website": "https://us.suttontrust.com",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://us.suttontrust.com/how-to-apply/",
+  "source_url": "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/sutton-trust-fulbright-us-programme/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Undergraduate study in the United States",
+  "seniority": "UK state-school students (Year 12 / S5 / Year 13 NI)",
+  "qualifications": [
+    "Currently in Year 12 (England and Wales), S5 (Scotland) or Year 13 (Northern Ireland)",
+    "Attended a state-funded school"
+  ],
+  "skills": [],
+  "description_short": "The Sutton Trust and the US-UK Fulbright Commission invite UK state-school students in Year 12, S5 or Year 13 (Northern Ireland) to apply for the 2027 Sutton Trust Fulbright US Programme.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-10T23:59:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://fulbright.org.uk/our-programmes/undergraduate-and-pre-university-programmes/sutton-trust-fulbright-us-programme/",
+    "evidence_quote": "11:59pm on Sunday 10 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Fulbright UK programme page (seen in search results) states applications are open and close at 11:59pm on Sunday 10 January 2027",
+    "Deadline is in the future relative to the run date 2026-11-25",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Income criterion described differently across official pages",
+    "location.country refers to where applicants are based; the programme leads to study in the United States"
+  ],
+  "id": "opp_fe03f93bf007ae7b",
+  "fingerprint": "cedd435d312bb9db",
+  "discovered_at": "2026-11-25T02:57:42.758Z",
+  "last_verified_at": "2026-11-25T02:57:42.758Z",
+  "content_hash": "sha256:df1e41965cd14c7ca16fbc9d602955bfa0498a3eed836f764f5ab461c486e2f0"
+}

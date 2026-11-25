@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "InterACT International Postdoctoral Fellowships",
+    "evidence_url": "https://www.vub.be/en/news/interact-international-postdoctoral-fellowships-build-bridg",
+    "evidence_quote": "InterACT: International postdoctoral fellowships"
+  },
+  "institution": {
+    "name": "Vrije Universiteit Brussel (VUB)",
+    "website": "https://www.vub.be",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://interact-programme.be",
+  "source_url": "https://www.vub.be/en/news/interact-opens-first-international-postdoctoral-call",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Brussels",
+    "country": "Belgium",
+    "country_code": "BE"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "unspecified",
+  "field": "All scientific disciplines",
+  "seniority": "Postdoctoral researchers",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Vrije Universiteit Brussel has opened the first call of InterACT, an international, interdisciplinary and intersectoral postdoctoral programme under Marie Skłodowska-Curie Actions. Researchers from all scientific disciplines may apply. Applications close on 8 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-08T17:00:00+01:00",
+    "timezone": "Europe/Brussels",
+    "evidence_url": "https://www.vub.be/en/news/interact-opens-first-international-postdoctoral-call",
+    "evidence_quote": "Applications are open until 8th of January, 2027, 17:00 CET"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "VUB news page (seen in search results): \"Applications are open until 8th of January, 2027, 17:00 CET\"",
+    "Deadline is in the future relative to the run date 2026-11-25",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Exact official programme title not confirmed; title taken from the VUB news headline",
+    "application_url (interact-programme.be) taken from the VUB announcement as reported in search results; not loaded",
+    "Eligibility rules are on the InterACT website and were not seen",
+    "Not to be confused with the University of Copenhagen INTERACT PhD programme"
+  ],
+  "id": "opp_59d9ab049f4c9bce",
+  "fingerprint": "d6f1d11dbdc1a1de",
+  "discovered_at": "2026-11-25T02:57:43.295Z",
+  "last_verified_at": "2026-11-25T02:59:48.189Z",
+  "content_hash": "sha256:941d00d2540afd965d76b38343ab338ab3caf331b984761a7147c77938b662c9"
+}

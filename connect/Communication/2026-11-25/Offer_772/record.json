@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "The Inspiring the Outstanding Scholarship",
+    "evidence_url": "https://www.kuleuven.be/scholarships/year/2027-2028/inspiring-the-outstanding-scholarship",
+    "evidence_quote": "The Inspiring the Outstanding Scholarship"
+  },
+  "institution": {
+    "name": "KU Leuven",
+    "website": "https://www.kuleuven.be",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.kuleuven.be/scholarships/year/2027-2028/inspiring-the-outstanding-scholarship",
+  "source_url": "https://www.kuleuven.be/scholarships/year/2027-2028/inspiring-the-outstanding-scholarship",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Leuven",
+    "country": "Belgium",
+    "country_code": "BE"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Master's programmes (eligible list published by KU Leuven)",
+  "seniority": "Prospective master's students",
+  "qualifications": [
+    "Complete application for an eligible KU Leuven master's programme",
+    "Language test taken before 15 January 2027"
+  ],
+  "skills": [],
+  "description_short": "KU Leuven invites applicants of all nationalities with previous degrees from outside Flanders to apply for The Inspiring the Outstanding Scholarship for an eligible master's programme starting in 2027-2028.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15T23:59:00+01:00",
+    "timezone": "Europe/Brussels",
+    "evidence_url": "https://www.kuleuven.be/scholarships/year/2027-2028/inspiring-the-outstanding-scholarship",
+    "evidence_quote": "15 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official KU Leuven 2027-2028 scholarship page (seen in search results): applications open 15 October 2026; programme application and online candidacy registration both due before 15 January 2027, 23:59 CET",
+    "Deadline is in the future relative to the run date 2026-11-25",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Only the date string is quoted; 23:59 CET taken from the same page as summarised in search results",
+    "Award value appears on the page but is not used in the description",
+    "Several KU Leuven 2027-2028 scholarships share this deadline; candidates may only hold one"
+  ],
+  "id": "opp_8966d0f30af470b8",
+  "fingerprint": "9f18198d51f8cc0c",
+  "discovered_at": "2026-11-25T02:57:42.093Z",
+  "last_verified_at": "2026-11-25T02:57:42.093Z",
+  "content_hash": "sha256:6b61ef76d07d80928427f49a93bd703e8021feb4e8ec1c7f330c194a3a1e162c"
+}

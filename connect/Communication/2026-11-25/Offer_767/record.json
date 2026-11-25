@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "ECAS2027",
+    "evidence_url": "https://www.ecasconference.org/2027/",
+    "evidence_quote": "ECAS2027"
+  },
+  "institution": {
+    "name": "AEGIS (Africa-Europe Group for Interdisciplinary Studies)",
+    "website": "https://www.aegis-eu.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.ecasconference.org/2027/call-for-papers/",
+  "source_url": "https://www.ecasconference.org/2027/call-for-papers/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Lisbon",
+    "country": "Portugal",
+    "country_code": "PT"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "African studies",
+  "seniority": "Researchers",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "AEGIS calls for paper proposals for ECAS2027, the European Conference on African Studies on the theme \"African Prisms\", a face-to-face event in Lisbon from 30 June to 3 July 2027, organised locally by CEI-Iscte.",
+  "published_at": null,
+  "deadline": {
+    "value": "2026-12-31",
+    "timezone": null,
+    "evidence_url": "https://www.ecasconference.org/2027/best-practices-for-delegates/",
+    "evidence_quote": "26 Oct-31 Dec 2026"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official ECAS2027 site (seen in search results) lists the call for papers as open from 26 October",
+    "Deadline is in the future relative to the run date 2026-11-25",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Conflicting closing dates on the official site: the main call pages give 4 January 2027, the delegates page gives 31 December 2026; the earlier date is used",
+    "Online attendance is not offered",
+    "Expansion of the acronym AEGIS not quoted from the evidence"
+  ],
+  "id": "opp_1f3bc559699a8557",
+  "fingerprint": "93145ddd30b59fd5",
+  "discovered_at": "2026-11-25T02:58:43.438Z",
+  "last_verified_at": "2026-11-25T02:58:43.438Z",
+  "content_hash": "sha256:09af67079a655b80ff927e3742d689b1bb1077bbdb0aa1f68849fc1cb342d8df"
+}
