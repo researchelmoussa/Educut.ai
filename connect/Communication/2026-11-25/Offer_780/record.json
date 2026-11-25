@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Boren Scholarships",
+    "evidence_url": "https://www.borenawards.org/apply-now",
+    "evidence_quote": "Boren Scholarships"
+  },
+  "institution": {
+    "name": "Boren Awards",
+    "website": "https://www.borenawards.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.borenawards.org/scholarships/thinking-applying/deadlines-timelines/boren-scholarship-calendar",
+  "source_url": "https://www.borenawards.org/apply-now",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "Language and area studies (less commonly taught languages)",
+  "seniority": "Undergraduate students (US citizens)",
+  "qualifications": [
+    "US citizen"
+  ],
+  "skills": [],
+  "description_short": "The Boren Awards invite US undergraduate students to apply for 2027-28 Boren Scholarships to study less commonly taught languages abroad.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-27T17:00:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.borenawards.org/apply-now",
+    "evidence_quote": "January 27, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official Boren Awards site (seen in search results) gives the national deadline as January 27, 2027 at 5pm Eastern time and states the 2027-2028 cycle is open",
+    "Deadline is in the future relative to the run date 2026-11-25",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Many universities set earlier campus deadlines",
+    "Study destination varies (abroad); no single location",
+    "Award amounts appear on the site but are not used in the description",
+    "One line on the Apply Now page mislabels the Fellowship deadline as the Scholarship deadline"
+  ],
+  "id": "opp_0c35d443e208d04b",
+  "fingerprint": "5a6b6352fdc2e11e",
+  "discovered_at": "2026-11-25T02:57:41.189Z",
+  "last_verified_at": "2026-11-25T02:57:41.189Z",
+  "content_hash": "sha256:346809c54e6c602f9a4ee77548b51a63b19ed2b0b2ea43fd4d110877e82cd0ef"
+}

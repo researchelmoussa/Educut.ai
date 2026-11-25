@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Summer Undergraduate Research Fellowship (SURF)",
+    "evidence_url": "https://www.nist.gov/surf",
+    "evidence_quote": "Summer Undergraduate Research Fellowship (SURF)"
+  },
+  "institution": {
+    "name": "National Institute of Standards and Technology (NIST)",
+    "website": "https://www.nist.gov",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.nist.gov/surf/surf-application",
+  "source_url": "https://www.nist.gov/surf",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Science, engineering and measurement research",
+  "seniority": "Undergraduate students",
+  "qualifications": [
+    "US citizen or permanent resident",
+    "Full-time undergraduate at an accredited US two-year or four-year college"
+  ],
+  "skills": [],
+  "description_short": "NIST invites US undergraduate students to apply for its 2027 Summer Undergraduate Research Fellowship (SURF) at Gaithersburg or Boulder. Applications go through USAJobs vacancy announcements.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-26",
+    "timezone": "America/New_York",
+    "evidence_url": "https://www.nist.gov/standardsgov/nist-standards-coordination-office-curricula-development-cooperative-agreement-program",
+    "evidence_quote": "Deadline is Jan 26, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "NIST SURF page (seen in search results): \"2027 SURF Vacancy Announcements are open!\"",
+    "A NIST Standards Coordination Office page states \"NIST 2027 Summer Undergraduate Research Fellowship Program Accepting Applications – Deadline is Jan 26, 2027\"",
+    "Deadline is in the future relative to the run date 2026-11-25",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline seen on a secondary NIST page, not on the SURF page itself; the binding closing date is in the USAJobs announcement, which was not seen",
+    "Applications close 11:59 p.m. Eastern on the announcement closing date per the NIST SURF application page",
+    "City not fixed: Gaithersburg or Boulder"
+  ],
+  "id": "opp_29375114859bc815",
+  "fingerprint": "d6c3deb30f0f188e",
+  "discovered_at": "2026-11-25T02:57:42.576Z",
+  "last_verified_at": "2026-11-25T02:57:42.576Z",
+  "content_hash": "sha256:6d17de7b8706b78ffa4950ba2313fe6a05168f4156fcf5984bed2a452bb163ed"
+}
