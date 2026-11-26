@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Viruses and Cells Conference",
+    "evidence_url": "https://www.grc.org/viruses-and-cells-conference/2027/",
+    "evidence_quote": "2027 Viruses and Cells Conference GRC"
+  },
+  "institution": {
+    "name": "Gordon Research Conferences",
+    "website": "https://www.grc.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.grc.org/viruses-and-cells-conference/2027/",
+  "source_url": "https://www.grc.org/viruses-and-cells-conference/2027/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Castelldefels",
+    "country": "Spain",
+    "country_code": "ES"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Virology and cell biology",
+  "seniority": "Researchers (as stated on the conference page)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The 2027 Gordon Research Conference \"Viruses and Cells\" takes place from 23 to 28 May 2027 at the Rey Don Jaime Grand Hotel in Castelldefels (Barcelona), Spain. Applications are submitted through the conference page on grc.org.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-25",
+    "timezone": null,
+    "evidence_url": "https://www.grc.org/viruses-and-cells-conference/2027/",
+    "evidence_quote": "Applications for this meeting must be submitted by April 25, 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official page (seen in search results): 'Applications for this meeting must be submitted by April 25, 2027.'",
+    "GRC pages advise applying early because some meetings become oversubscribed (full) before the deadline",
+    "Deadline 2027-04-25 is in the future (today 2026-11-26) and after 2026-12-16",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Meeting may fill before the stated deadline (oversubscription warning on GRC pages)",
+    "Associated Gordon Research Seminar (GRS) requires a separate application and is not covered by this record",
+    "Registration fees and eligibility details not seen",
+    "The conference subtitle seen in search results ('Single Molecules to Multi-omics') is not part of the recorded title"
+  ],
+  "id": "opp_700a8c71b59da43d",
+  "fingerprint": "4a9a162de48536ec",
+  "discovered_at": "2026-11-26T02:58:03.000Z",
+  "last_verified_at": "2026-11-26T02:58:04.281Z",
+  "content_hash": "sha256:e6ea7caf06ada7cb745e5fee9649538a5f6d845f66bb3b538547450ff5351846"
+}
