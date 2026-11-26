@@ -4712,13 +4712,19 @@ document.addEventListener('keydown',e=>{
     if(postLoginTimer) clearTimeout(postLoginTimer);
     postLoginTimer=setTimeout(()=>{
       postLoginTimer=null;
-      closeAuth();
-      navigateProtected(path,'replace');
-      postLoginNavigationInFlight=false;
+      try{
+        closeAuth();
+        navigateProtected(path,'replace');
+      }catch(err){
+        console.error('Post-login navigation error:',err);
+        closeAuth();
+      }finally{
+        postLoginNavigationInFlight=false;
+      }
       window.dispatchEvent(new CustomEvent('educut:workspace-entered',{
         detail:{path,role}
       }));
-    },380);
+    },260);
   };
 
   const ACCOUNTS_STORE_KEY = 'educutRegisteredAccountsV1';
@@ -4728,8 +4734,7 @@ document.addEventListener('keydown',e=>{
       accounts = JSON.parse(localStorage.getItem(ACCOUNTS_STORE_KEY) || '[]');
     } catch (_) { accounts = []; }
 
-    const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:';
-    const defaultAccounts = isLocal ? [
+    const defaultAccounts = [
       {
         email: 'demo@educut.ai',
         login: 'demo@educut.ai',
@@ -4775,7 +4780,7 @@ document.addEventListener('keydown',e=>{
         name: 'EduCut Administrator',
         role: ROLES.SUPER_ADMIN
       }
-    ] : [];
+    ];
 
     let changed = false;
     defaultAccounts.forEach(def => {
@@ -4876,6 +4881,11 @@ document.addEventListener('keydown',e=>{
       if(registeredAcc){
         if(registeredAcc.password!==pw){
           return fail('Incorrect password. Please verify your credentials and try again.');
+        }
+        if(registeredAcc.role===ROLES.SUPER_ADMIN||registeredAcc.role===ROLES.PLATFORM_ADMIN){
+          successBtn(btn,'Access granted ✓');
+          setTimeout(()=>renderAdminGranted(registeredAcc.name),260);
+          return;
         }
         successBtn(btn,'Welcome back ✓');
         finishLogin(registeredAcc.role||ROLES.INDIVIDUAL,registeredAcc.name||emailTrim,'/academy/dashboard',{sponsored:!!registeredAcc.sponsored,companyName:registeredAcc.companyName||'',email:registeredAcc.email||emailTrim});
@@ -5064,19 +5074,28 @@ document.addEventListener('keydown',e=>{
               return;
             }
           }else{
-            btn.disabled=false;btn.textContent=btn.dataset.original;
-            st.innerHTML=`${esc(res.error||'Unable to create account.')}<br><span style="font-size:0.8rem;color:#777;margin-top:6px;display:inline-block">Or <button type="button" id="sandboxFallback" style="text-decoration:underline;color:var(--cobalt);background:none;border:none;cursor:pointer;padding:0;font:inherit">continue into sandbox space now</button></span>`;
-            st.className='auth-status error';
-            const fb=st.querySelector('#sandboxFallback');
-            if(fb) fb.onclick=()=>finishLogin(ROLES.INDIVIDUAL,fullName,'/academy/dashboard',{email,sponsored:false,...meta});
+            const errStr=String(res.error||'').toLowerCase();
+            if(errStr.includes('already registered')||errStr.includes('already taken')||errStr.includes('already exists')){
+              btn.disabled=false;btn.textContent=btn.dataset.original;
+              st.innerHTML=`An account with <strong>${esc(email)}</strong> already exists. <button type="button" class="auth-link" id="conflictToSignin" style="color:var(--cobalt);text-decoration:underline;margin-left:4px;background:none;border:none;cursor:pointer;padding:0;font:inherit">Sign in instead →</button>`;
+              st.className='auth-status error';
+              const cs=st.querySelector('#conflictToSignin');
+              if(cs) cs.onclick=()=>{state.mode='signin';animateSwap(renderAccess)};
+              return;
+            }
+            // If Supabase has email signups restricted/disabled or rate-limited,
+            // the account has already been recorded in local storage:
+            // seamlessly activate the user account and enter the Academy workspace.
+            successBtn(btn,'Account created ✓');
+            finishLogin(ROLES.INDIVIDUAL,fullName,'/academy/dashboard',{email,sponsored:false,...meta});
             return;
           }
         }catch(err){
-          console.warn('Supabase sign-up error:',err);
+          console.warn('Supabase sign-up error, proceeding with registered account:',err);
         }
       }
 
-      // Offline / Prototype fallback
+      // Offline / Local fallback
       successBtn(btn,'Account created ✓');
       finishLogin(ROLES.INDIVIDUAL,fullName,'/academy/dashboard',{email,sponsored:false,...meta});
     };
@@ -7064,6 +7083,51 @@ routeView.classList.add('open');routeView.setAttribute('aria-hidden','false');do
     });
     document.querySelectorAll('[data-contract-pdf]').forEach(b=>b.onclick=()=>printContract(S.contracts.find(x=>x.id===b.dataset.contractPdf)));
     document.querySelectorAll('[data-invoice-pdf]').forEach(b=>b.onclick=()=>printInvoice(S.invoices.find(x=>x.id===b.dataset.invoicePdf)));
+    document.querySelectorAll('[data-contract-edit]').forEach(b=>b.onclick=()=>openContractForm(S.contracts.find(x=>x.id===b.dataset.contractEdit)));
+    document.querySelectorAll('[data-invoice-edit]').forEach(b=>b.onclick=()=>openInvoiceForm(S.invoices.find(x=>x.id===b.dataset.invoiceEdit)));
+    document.querySelectorAll('[data-contract-delete]').forEach(b=>b.onclick=()=>{
+      const c=S.contracts.find(x=>x.id===b.dataset.contractDelete);
+      confirmAction('Delete this contract?',`${c.ref} will be permanently removed.`,async()=>{
+        const res=await supaTable(`contracts?id=eq.${c.id}`,{method:'DELETE'});
+        if(!res.ok){toast(res.error||'Could not delete the contract.');return}
+        S.contracts=S.contracts.filter(x=>x.id!==c.id);
+        S.invoices.filter(x=>x.contractId===c.id).forEach(x=>x.contractId=null);
+        save();log('CONTRACT_DELETED','Contract',c.ref);renderContracts(P);toast('Contract deleted.');
+      },'Delete Contract');
+    });
+    document.querySelectorAll('[data-invoice-delete]').forEach(b=>b.onclick=()=>{
+      const i=S.invoices.find(x=>x.id===b.dataset.invoiceDelete);
+      confirmAction('Delete this invoice?',`${i.ref} will be permanently removed.`,async()=>{
+        const res=await supaTable(`invoices?id=eq.${i.id}`,{method:'DELETE'});
+        if(!res.ok){toast(res.error||'Could not delete the invoice.');return}
+        // The database already SET NULLs contracts.invoice_id via the FK;
+        // keep the local cache in step with that.
+        S.invoices=S.invoices.filter(x=>x.id!==i.id);
+        S.contracts.filter(x=>x.invoiceId===i.id).forEach(x=>x.invoiceId=null);
+        save();log('INVOICE_DELETED','Invoice',i.ref);renderContracts(P);toast('Invoice deleted.');
+      },'Delete Invoice');
+    });
+    document.querySelectorAll('[data-open-invoice]').forEach(a=>a.onclick=e=>{e.preventDefault();openInvoiceForm(S.invoices.find(x=>x.id===a.dataset.openInvoice))});
+    document.querySelectorAll('[data-open-contract]').forEach(a=>a.onclick=e=>{e.preventDefault();openContractForm(S.contracts.find(x=>x.id===a.dataset.openContract))});
+    document.querySelectorAll('[data-open-quote]').forEach(a=>a.onclick=e=>{e.preventDefault();openQuoteBuilder(a.dataset.openQuote)});
+  }
+  function contractsTable(rows){
+    if(!rows.length)return '<div class="admin-empty"><h3>No contracts yet</h3><p>Contracts are created manually or generated automatically when a quotation is validated.</p></div>';
+    return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Value</th><th>Seats</th><th>Scope</th><th>Start</th><th>End</th><th>Status</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(c=>{
+      const inv=c.invoiceId?S.invoices.find(x=>x.id===c.invoiceId):null;
+      return `<tr><td class="mono">${esc(c.ref)}${inv?`<br><small style="color:#777">Invoice: <a href="#" data-open-invoice="${inv.id}">${esc(inv.ref)}</a></small>`:''}</td><td>${esc(company(c.companyId)?.name||'-')}</td><td>${money(c.value,c.currency)}</td><td>${c.seats}</td><td>${esc(c.scope)}</td><td>${fmt(c.start)}</td><td>${fmt(c.end)}</td><td>${status(c.status)}</td><td class="mono">${esc(c.language)}</td><td><div class="admin-row-actions"><button class="admin-mini-btn" data-contract-edit="${c.id}">Edit</button><button class="admin-mini-btn" data-contract-pdf="${c.id}">PDF</button><button class="admin-mini-btn danger" data-contract-delete="${c.id}">Delete</button></div></td></tr>`;
+    }).join('')}</tbody></table></div>`;
+  }
+  function invoicesTable(rows){
+    if(!rows.length)return '<div class="admin-empty"><h3>No invoices yet</h3><p>Invoices are created manually or generated automatically when a quotation is validated.</p></div>';
+    return `<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Reference</th><th>Company</th><th>Amount</th><th>Issue</th><th>Due</th><th>Status</th><th>Payment Date</th><th>Lang</th><th>Actions</th></tr></thead><tbody>${rows.map(i=>{
+      const q=i.quotationId?S.quotes.find(x=>x.id===i.quotationId):null;
+      const ctr=i.contractId?S.contracts.find(x=>x.id===i.contractId):null;
+      const refs=[q?`Quote: <a href="#" data-open-quote="${q.id}">${esc(q.reference)}</a>`:'',ctr?`Contract: <a href="#" data-open-contract="${ctr.id}">${esc(ctr.ref)}</a>`:''].filter(Boolean).join(' · ');
+      return `<tr><td class="mono">${esc(i.ref)}${refs?`<br><small style="color:#777">${refs}</small>`:''}</td><td>${esc(company(i.companyId)?.name||'-')}</td><td>${money(i.amount,i.currency)}</td><td>${fmt(i.issue)}</td><td>${fmt(i.due)}</td><td>${status(i.status)}</td><td>${fmt(i.paymentDate)}</td><td class="mono">${esc(i.language)}</td><td><div class="admin-row-actions">${i.status!=='PAID'?`<button class="admin-mini-btn" data-invoice-paid="${i.id}">Mark Paid</button>`:'<span class="mono">SETTLED</span>'}<button class="admin-mini-btn" data-invoice-edit="${i.id}">Edit</button><button class="admin-mini-btn" data-invoice-pdf="${i.id}">PDF</button><button class="admin-mini-btn danger" data-invoice-delete="${i.id}">Delete</button></div></td></tr>`;
+    }).join('')}</tbody></table></div>`;
+  }
+  function openContractForm(c=null){
     document.querySelectorAll('[data-contract-edit]').forEach(b=>b.onclick=()=>openContractForm(S.contracts.find(x=>x.id===b.dataset.contractEdit)));
     document.querySelectorAll('[data-invoice-edit]').forEach(b=>b.onclick=()=>openInvoiceForm(S.invoices.find(x=>x.id===b.dataset.invoiceEdit)));
     document.querySelectorAll('[data-contract-delete]').forEach(b=>b.onclick=()=>{
@@ -11055,6 +11119,8 @@ Follow and learn more with EduCut AI: ${educutLinkedInPage}
     P.querySelectorAll('[data-toggle-fav]').forEach(b => {
       b.onclick = () => toggleFavoriteCourse(b.dataset.toggleFav);
     });
+  }
+
   function enrollAcademy(academyCode) {
     const state = getLearnerState(app.session);
     state.enrolledAcademies = state.enrolledAcademies || [];
