@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "91st Symposium: Organelles 2027",
+    "evidence_url": "https://meetings.cshl.edu/meetings.aspx?meet=SYMP",
+    "evidence_quote": "91st Symposium: Organelles 2027"
+  },
+  "institution": {
+    "name": "Cold Spring Harbor Laboratory (CSHL)",
+    "website": "https://www.cshl.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://meetings.cshl.edu/meetings.aspx?meet=SYMP",
+  "source_url": "https://meetings.cshl.edu/meetings.aspx?meet=SYMP",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Cold Spring Harbor",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Cell biology (organelles)",
+  "seniority": "Researchers submitting abstracts or attending",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Cold Spring Harbor Laboratory's 91st Symposium on Quantitative Biology, \"Organelles\", starts on 1 June 2027. Poster abstracts are due 12 March 2027; abstract submitters are asked to attend in person.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-12",
+    "timezone": null,
+    "evidence_url": "https://meetings.cshl.edu/meetings.aspx?meet=SYMP",
+    "evidence_quote": "Poster Abstract Deadline: March 12, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official page (seen in search results): 'Poster Abstract Deadline: March 12, 2027'",
+    "CSHL meetings table lists 'Abstracts Due: Mar 12, 2027'",
+    "Deadline 2027-03-12 is in the future (today 2026-11-26) and after 2026-12-16",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "End date differs across CSHL pages (June 5 vs June 6, 2027)",
+    "Registration fees not seen",
+    "Symposium page description reportedly contains text unrelated to the Organelles theme; confirm details on the official page"
+  ],
+  "id": "opp_2a16b26cbfa1ea7f",
+  "fingerprint": "28378965614816eb",
+  "discovered_at": "2026-11-26T03:03:39.000Z",
+  "last_verified_at": "2026-11-26T03:13:00.712Z",
+  "content_hash": "sha256:35a6b64848dde97264c1a99dabf42f5e1a5f96e2e33fd317b5d3dc49d2a93489"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-25T03:05:11.359Z",
+  "updated_at": "2026-11-26T03:13:11.294Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -14467,7 +14467,7 @@
       "deadline": "2026-11-24",
       "content_hash": "sha256:e67a4bf3a55bfa1f65f7748ed90224f5d5e475ecb855881e3eb0c0edf38262ad",
       "last_verified_at": "2026-10-24T02:05:04.387Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-24T02:05:14.564Z",
       "history": [
         {
@@ -14511,6 +14511,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-26T02:50:26.618Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-24 passed"
         }
       ],
       "offer_number": 191
@@ -52893,6 +52900,1563 @@
         }
       ],
       "offer_number": 767
+    },
+    "opp_61fdba58a0e8dd03": {
+      "id": "opp_61fdba58a0e8dd03",
+      "fingerprint": "02b9388d48fbd611",
+      "title": "Call for Papers · CHIL 2027",
+      "institution": "Conference on Health, Inference, and Learning (CHIL), Association for Health Learning and Inference (AHLI)",
+      "city": "Chicago",
+      "country": "United States",
+      "source_url": "https://chil.ahli.cc/submit/call-for-papers/",
+      "source_list_url": "https://mlscientist.com/category/conference-calls/",
+      "application_url": "https://chil.ahli.cc/submit/call-for-papers/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-03",
+      "content_hash": "sha256:353de751bef32d926f0a9194509172c712cb0587a60743aaeb7af670daf8eccd",
+      "last_verified_at": "2026-11-26T02:58:03.246Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T02:58:08.724Z",
+      "history": [
+        {
+          "at": "2026-11-26T02:58:08.724Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T02:58:08.724Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:05.015Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:05.015Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:05.182Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:05.182Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 789
+    },
+    "opp_785cb394de83ed01": {
+      "id": "opp_785cb394de83ed01",
+      "fingerprint": "4465e57e7143e68f",
+      "title": "Mechano-Genomics and AI",
+      "institution": "EMBO",
+      "city": "Baden",
+      "country": "Switzerland",
+      "source_url": "https://meetings.embo.org/event/27-mechano-genomics",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://meetings.embo.org/event/27-mechano-genomics",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01",
+      "content_hash": "sha256:a4780a06091880a679a2029dd71d987f907b426309878aabb9357f5fcc2ce7fe",
+      "last_verified_at": "2026-11-26T02:58:03.383Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T02:58:08.892Z",
+      "history": [
+        {
+          "at": "2026-11-26T02:58:08.892Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T02:58:08.892Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:04.676Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:04.676Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:04.841Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:04.842Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 788
+    },
+    "opp_d236e4a734c37e9f": {
+      "id": "opp_d236e4a734c37e9f",
+      "fingerprint": "001f03bb48a565f0",
+      "title": "RNA meets protein decay",
+      "institution": "EMBO",
+      "city": "Fürstenfeldbruck",
+      "country": "Germany",
+      "source_url": "https://meetings.embo.org/event/27-rna-protein-decay",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://meetings.embo.org/event/27-rna-protein-decay",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-01",
+      "content_hash": "sha256:f0646621121cbe4efbb1093b4d9023da16b3fe3f610d44f422c5bd173c35c20d",
+      "last_verified_at": "2026-11-26T02:58:03.543Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T02:58:09.060Z",
+      "history": [
+        {
+          "at": "2026-11-26T02:58:09.060Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T02:58:09.060Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:05.371Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:05.371Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:05.551Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:05.551Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 790
+    },
+    "opp_75bed376f7317bad": {
+      "id": "opp_75bed376f7317bad",
+      "fingerprint": "ebf180e17c0cd21a",
+      "title": "Antimicrobial Peptides Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Barga",
+      "country": "Italy",
+      "source_url": "https://www.grc.org/antimicrobial-peptides-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/antimicrobial-peptides-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-03",
+      "content_hash": "sha256:c90314f1938efefd838d1cd7a3a83ad7b517c79727431596c2e90f90778945ec",
+      "last_verified_at": "2026-11-26T02:58:03.695Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T02:58:09.253Z",
+      "history": [
+        {
+          "at": "2026-11-26T02:58:09.253Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T02:58:09.253Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:02.801Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:02.801Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:02.977Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:02.977Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 783
+    },
+    "opp_a3691b9bcf3c87c8": {
+      "id": "opp_a3691b9bcf3c87c8",
+      "fingerprint": "ba2bd65f3e7cddab",
+      "title": "Fertilization and Activation of Development Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Noordwijkerhout",
+      "country": "Netherlands",
+      "source_url": "https://www.grc.org/fertilization-and-activation-of-development-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/fertilization-and-activation-of-development-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-07-04",
+      "content_hash": "sha256:448e59ac76521432dd02063c941d1715e399d7a4efe3b6f5c0a43b3925363768",
+      "last_verified_at": "2026-11-26T02:58:03.843Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T02:58:09.422Z",
+      "history": [
+        {
+          "at": "2026-11-26T02:58:09.422Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T02:58:09.422Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:11.137Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:11.137Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:11.294Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:11.294Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 806
+    },
+    "opp_c86a17763d874bb0": {
+      "id": "opp_c86a17763d874bb0",
+      "fingerprint": "bed68c9200846b36",
+      "title": "Metabolomics and Human Health Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Barga",
+      "country": "Italy",
+      "source_url": "https://www.grc.org/metabolomics-and-human-health-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/metabolomics-and-human-health-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:daa4d73251f043892517d484e53436465bc6db8f20cfc894ea84597043fa7ccf",
+      "last_verified_at": "2026-11-26T02:58:03.984Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T02:58:09.579Z",
+      "history": [
+        {
+          "at": "2026-11-26T02:58:09.579Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T02:58:09.579Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:04.265Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:04.265Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:04.468Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:04.468Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 787
+    },
+    "opp_283775254d84739a": {
+      "id": "opp_283775254d84739a",
+      "fingerprint": "3d638b14b31c267b",
+      "title": "Translation Machinery in Health and Disease Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Oxnard",
+      "country": "United States",
+      "source_url": "https://www.grc.org/translation-machinery-in-health-and-disease-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/translation-machinery-in-health-and-disease-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:c8cd3ecf73497e9ebdfcacfbc876ede91bba73335bb406dfe38c04b5c4b64166",
+      "last_verified_at": "2026-11-26T02:58:04.144Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T02:58:09.743Z",
+      "history": [
+        {
+          "at": "2026-11-26T02:58:09.743Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T02:58:09.743Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:03.886Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:03.886Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:04.070Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:04.070Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 786
+    },
+    "opp_700a8c71b59da43d": {
+      "id": "opp_700a8c71b59da43d",
+      "fingerprint": "4a9a162de48536ec",
+      "title": "Viruses and Cells Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Castelldefels",
+      "country": "Spain",
+      "source_url": "https://www.grc.org/viruses-and-cells-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/viruses-and-cells-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-25",
+      "content_hash": "sha256:e6ea7caf06ada7cb745e5fee9649538a5f6d845f66bb3b538547450ff5351846",
+      "last_verified_at": "2026-11-26T02:58:04.281Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T02:58:09.910Z",
+      "history": [
+        {
+          "at": "2026-11-26T02:58:09.910Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T02:58:09.910Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:06.769Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:06.769Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:06.938Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:06.938Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 794
+    },
+    "opp_cb4f24d9c0c0d84a": {
+      "id": "opp_cb4f24d9c0c0d84a",
+      "fingerprint": "823c766534881100",
+      "title": "Wnt Signaling Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Castelldefels",
+      "country": "Spain",
+      "source_url": "https://www.grc.org/wnt-signaling-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/wnt-signaling-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-06-27",
+      "content_hash": "sha256:563336b7c39a25863aad16cf45990a7398d3f811302e5d2f6d3c3bd36bac0d78",
+      "last_verified_at": "2026-11-26T02:58:04.418Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T02:58:10.070Z",
+      "history": [
+        {
+          "at": "2026-11-26T02:58:10.070Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T02:58:10.070Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:10.811Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:10.811Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:10.972Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:10.972Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 805
+    },
+    "opp_31a2e1cc56bbd22d": {
+      "id": "opp_31a2e1cc56bbd22d",
+      "fingerprint": "ae72415b02b39618",
+      "title": "CO2 Assimilation in Plants from Genome to Biome Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Barga",
+      "country": "Italy",
+      "source_url": "https://www.grc.org/co2-assimilation-in-plants-from-genome-to-biome-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/co2-assimilation-in-plants-from-genome-to-biome-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-18",
+      "content_hash": "sha256:0f303a73197e7f9413bbf423ffd702d84b9118dc3cb3434929237bb72434f92f",
+      "last_verified_at": "2026-11-26T03:03:39.655Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:03:39.809Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:03:39.809Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:03:39.809Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:06.415Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:06.415Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:06.594Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:06.594Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 793
+    },
+    "opp_e3ee84eccd705b9f": {
+      "id": "opp_e3ee84eccd705b9f",
+      "fingerprint": "13a426c51dba3d9e",
+      "title": "Animal-Microbe Symbioses Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Barga",
+      "country": "Italy",
+      "source_url": "https://www.grc.org/animal-microbe-symbioses-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/animal-microbe-symbioses-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-23",
+      "content_hash": "sha256:0b96cf91796df941c7ca41df8222abc53eb2c4a4f438da3f1fb35c2df0c2d44b",
+      "last_verified_at": "2026-11-26T03:03:39.982Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:03:40.133Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:03:40.133Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:03:40.133Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:08.326Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:08.326Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:08.494Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:08.494Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 798
+    },
+    "opp_cb024b8de9a5c2c3": {
+      "id": "opp_cb024b8de9a5c2c3",
+      "fingerprint": "4dec1683f4f87d0d",
+      "title": "Modulation of Neural Circuits and Behavior Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Castelldefels",
+      "country": "Spain",
+      "source_url": "https://www.grc.org/modulation-of-neural-circuits-and-behavior-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/modulation-of-neural-circuits-and-behavior-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-02",
+      "content_hash": "sha256:068bb6e91cf39d685335375807ea9cdaf24b3df1e3283309e16277be58024f1d",
+      "last_verified_at": "2026-11-26T03:03:40.296Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:03:40.449Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:03:40.449Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:03:40.449Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:07.510Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:07.510Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:07.728Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:07.728Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 796
+    },
+    "opp_f550914bcbe9fff0": {
+      "id": "opp_f550914bcbe9fff0",
+      "fingerprint": "a3d53baa95185059",
+      "title": "Endocytosis: from mechanisms and functions to evolution",
+      "institution": "EMBO",
+      "city": "Ischia",
+      "country": "Italy",
+      "source_url": "https://meetings.embo.org/event/27-endocytosis",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://meetings.embo.org/event/27-endocytosis",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-30",
+      "content_hash": "sha256:d5091df10c5dfd3668d1fd06e7a27a59d738a8e98965ce779728533c500bccf3",
+      "last_verified_at": "2026-11-26T03:03:40.598Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:03:40.750Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:03:40.750Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:03:40.750Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:09.057Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:09.057Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:09.245Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:09.245Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 800
+    },
+    "opp_e719b5ab3a88bb6a": {
+      "id": "opp_e719b5ab3a88bb6a",
+      "fingerprint": "cc927ad8d6ba0401",
+      "title": "Mitochondria in life, death and disease",
+      "institution": "EMBO",
+      "city": "Landshut",
+      "country": "Germany",
+      "source_url": "https://meetings.embo.org/event/27-mitochondria",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://meetings.embo.org/event/27-mitochondria",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-06-04",
+      "content_hash": "sha256:a961d7c52402cd39675d1744d26a9b91732ff4a22154787d64366d98b9793f26",
+      "last_verified_at": "2026-11-26T03:03:40.902Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:03:41.056Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:03:41.056Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:03:41.056Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:09.419Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:09.419Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:09.619Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:09.619Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 801
+    },
+    "opp_e6993dc133f7a88a": {
+      "id": "opp_e6993dc133f7a88a",
+      "fingerprint": "9beb6c9c25d98655",
+      "title": "Chromatin evolution from molecules to genomes",
+      "institution": "EMBO",
+      "city": "Sant Feliu de Guíxols",
+      "country": "Spain",
+      "source_url": "https://meetings.embo.org/event/27-chromatin-evo",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://meetings.embo.org/event/27-chromatin-evo",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-06-10",
+      "content_hash": "sha256:c8dd895fb92b6066503c043f87af9dd92155c4e483c35dfa75ba728be7e9cb64",
+      "last_verified_at": "2026-11-26T03:03:41.200Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:03:41.379Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:03:41.379Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:03:41.379Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:09.800Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:09.800Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:09.970Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:09.970Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 802
+    },
+    "opp_d07873c50289593f": {
+      "id": "opp_d07873c50289593f",
+      "fingerprint": "0aa42ef99aec8597",
+      "title": "Biological surfaces and interfaces: applications, challenges, and opportunities across disciplines",
+      "institution": "EMBO",
+      "city": "Sant Feliu de Guíxols",
+      "country": "Spain",
+      "source_url": "https://meetings.embo.org/event/27-bio-interfaces",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://meetings.embo.org/event/27-bio-interfaces",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-31",
+      "content_hash": "sha256:f5a2f181b08814381ac345d6a8b610cf40cd9f26e1b39b9ac8cd56ab965f4c9c",
+      "last_verified_at": "2026-11-26T03:03:41.542Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:03:41.689Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:03:41.689Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:03:41.689Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:06.061Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:06.061Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:06.244Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:06.244Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 792
+    },
+    "opp_0990ae22dec74c94": {
+      "id": "opp_0990ae22dec74c94",
+      "fingerprint": "f282d85928bdf130",
+      "title": "OIST Computational Neuroscience Course (OCNC 2027)",
+      "institution": "Okinawa Institute of Science and Technology (OIST)",
+      "city": "Okinawa",
+      "country": "Japan",
+      "source_url": "https://www.oist.jp/conference/OCNC-2027",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.oist.jp/conference/OCNC-2027",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31",
+      "content_hash": "sha256:3ff223a341f4608c5e87580a078c3525f7f5f053a8a17c1f3e63fa528c1f1725",
+      "last_verified_at": "2026-11-26T03:03:41.834Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:03:41.992Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:03:41.992Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:03:41.993Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:03.515Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:03.515Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:03.712Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:03.713Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 785
+    },
+    "opp_2a16b26cbfa1ea7f": {
+      "id": "opp_2a16b26cbfa1ea7f",
+      "fingerprint": "28378965614816eb",
+      "title": "91st Symposium: Organelles 2027",
+      "institution": "Cold Spring Harbor Laboratory (CSHL)",
+      "city": "Cold Spring Harbor",
+      "country": "United States",
+      "source_url": "https://meetings.cshl.edu/meetings.aspx?meet=SYMP",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://meetings.cshl.edu/meetings.aspx?meet=SYMP",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-12",
+      "content_hash": "sha256:35a6b64848dde97264c1a99dabf42f5e1a5f96e2e33fd317b5d3dc49d2a93489",
+      "last_verified_at": "2026-11-26T03:13:00.712Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:03:42.290Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:03:42.290Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:03:42.290Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:00.862Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-26T03:13:05.721Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:05.721Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:05.893Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:05.893Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 791
+    },
+    "opp_46631c19568a2a5d": {
+      "id": "opp_46631c19568a2a5d",
+      "fingerprint": "7f3ec8df150cb3ff",
+      "title": "Origins of Solar Systems Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "South Hadley",
+      "country": "United States",
+      "source_url": "https://www.grc.org/origins-of-solar-systems-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/origins-of-solar-systems-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-16",
+      "content_hash": "sha256:2ed413e1039d118934dad93ee6738c8f10d0688b28a8a72df26191291b6db57b",
+      "last_verified_at": "2026-11-26T03:05:06.839Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:05:07.034Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:05:07.034Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:05:07.034Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:07.922Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:07.922Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:08.128Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:08.129Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 797
+    },
+    "opp_4e39e6cfa6996724": {
+      "id": "opp_4e39e6cfa6996724",
+      "fingerprint": "c6f63e44cd408173",
+      "title": "Advances in Nanoferroic Phenomena Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Lewiston",
+      "country": "United States",
+      "source_url": "https://www.grc.org/advances-in-nanoferroic-phenomena-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/advances-in-nanoferroic-phenomena-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-06-13",
+      "content_hash": "sha256:c2d13add8905185d9c1a1aa43a90505db965ad720ff88c38922860b4d66c2e1a",
+      "last_verified_at": "2026-11-26T03:05:07.186Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:05:07.335Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:05:07.335Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:05:07.335Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:10.143Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:10.143Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:10.304Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:10.305Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 803
+    },
+    "opp_6ac40563c9d1f6d0": {
+      "id": "opp_6ac40563c9d1f6d0",
+      "fingerprint": "62c5ff3121e9cd13",
+      "title": "Alzheimer's Disease Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Ventura",
+      "country": "United States",
+      "source_url": "https://www.grc.org/alzheimer-s-disease-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/alzheimer-s-disease-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-30",
+      "content_hash": "sha256:5e925defb24f2899913ec76b2d40dea53405f5aa23f203662b3d9d5add13ca19",
+      "last_verified_at": "2026-11-26T03:05:07.486Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:05:07.632Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:05:07.632Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:05:07.632Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:08.669Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:08.669Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:08.876Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:08.876Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 799
+    },
+    "opp_4a163a29d594a4b3": {
+      "id": "opp_4a163a29d594a4b3",
+      "fingerprint": "e92b1bc52c8af7e9",
+      "title": "Speciation Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Barga",
+      "country": "Italy",
+      "source_url": "https://www.grc.org/speciation-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/speciation-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2026-12-27",
+      "content_hash": "sha256:c7285ce7e1e5f7ebe30754532eaec2f201faa98e10bd1f42c3781964ba214243",
+      "last_verified_at": "2026-11-26T03:05:07.785Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:05:07.965Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:05:07.966Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:05:07.966Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:02.467Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:02.467Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:02.631Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:02.631Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 782
+    },
+    "opp_1e3228b62a1a9e7a": {
+      "id": "opp_1e3228b62a1a9e7a",
+      "fingerprint": "8e2239d66b302f30",
+      "title": "Microbial Adhesion and Signal Transduction Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Newport",
+      "country": "United States",
+      "source_url": "https://www.grc.org/microbial-adhesion-and-signal-transduction-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/microbial-adhesion-and-signal-transduction-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-06-20",
+      "content_hash": "sha256:3e81185656fb50c4e564b1c79893594fa89f7c7f853b066498a69e6d3c27658e",
+      "last_verified_at": "2026-11-26T03:05:08.120Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:05:08.279Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:05:08.279Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:05:08.279Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:10.487Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:10.487Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:10.647Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:10.647Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 804
+    },
+    "opp_b8f5c3f801fcddc5": {
+      "id": "opp_b8f5c3f801fcddc5",
+      "fingerprint": "2f450cfae2c88c76",
+      "title": "Urban Evolution and Ecology Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Ventura",
+      "country": "United States",
+      "source_url": "https://www.grc.org/urban-evolution-and-ecology-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/urban-evolution-and-ecology-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-03",
+      "content_hash": "sha256:242c0e4c2be93cd827410efe08102cf8eedb617db30988914495a4cfc1c33e6d",
+      "last_verified_at": "2026-11-26T03:05:08.428Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:05:08.576Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:05:08.576Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:05:08.576Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:03.147Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:03.147Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:03.340Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:03.340Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 784
+    },
+    "opp_785d0a49fb7019c7": {
+      "id": "opp_785d0a49fb7019c7",
+      "fingerprint": "03a6a46934465ac4",
+      "title": "Movement Ecology of Animals Conference",
+      "institution": "Gordon Research Conferences",
+      "city": "Barga",
+      "country": "Italy",
+      "source_url": "https://www.grc.org/movement-ecology-of-animals-conference/2027/",
+      "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+      "application_url": "https://www.grc.org/movement-ecology-of-animals-conference/2027/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-05-02",
+      "content_hash": "sha256:7015c3b46539ab0a1172a19527921c2569995178e6dd5aa0d9da512ec3f847b8",
+      "last_verified_at": "2026-11-26T03:05:08.760Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-26T03:05:08.909Z",
+      "history": [
+        {
+          "at": "2026-11-26T03:05:08.909Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-26T03:05:08.909Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-26T03:13:07.141Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-26T03:13:07.141Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-26T03:13:07.317Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-26T03:13:07.317Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 795
     }
   },
   "seen_urls": {
@@ -53989,7 +55553,32 @@
     "https://vub.be/en/news/interact-opens-first-international-postdoctoral-call": "opp_59d9ab049f4c9bce",
     "https://interact-programme.be/": "opp_59d9ab049f4c9bce",
     "https://ial-online.org/call-for-papers-afripal-2027-deadline-22-january-2027": "opp_2bee160a055141f0",
-    "https://ecasconference.org/2027/call-for-papers": "opp_1f3bc559699a8557"
+    "https://ecasconference.org/2027/call-for-papers": "opp_1f3bc559699a8557",
+    "https://chil.ahli.cc/submit/call-for-papers": "opp_61fdba58a0e8dd03",
+    "https://meetings.embo.org/event/27-mechano-genomics": "opp_785cb394de83ed01",
+    "https://meetings.embo.org/event/27-rna-protein-decay": "opp_d236e4a734c37e9f",
+    "https://grc.org/antimicrobial-peptides-conference/2027": "opp_75bed376f7317bad",
+    "https://grc.org/fertilization-and-activation-of-development-conference/2027": "opp_a3691b9bcf3c87c8",
+    "https://grc.org/metabolomics-and-human-health-conference/2027": "opp_c86a17763d874bb0",
+    "https://grc.org/translation-machinery-in-health-and-disease-conference/2027": "opp_283775254d84739a",
+    "https://grc.org/viruses-and-cells-conference/2027": "opp_700a8c71b59da43d",
+    "https://grc.org/wnt-signaling-conference/2027": "opp_cb4f24d9c0c0d84a",
+    "https://grc.org/co2-assimilation-in-plants-from-genome-to-biome-conference/2027": "opp_31a2e1cc56bbd22d",
+    "https://grc.org/animal-microbe-symbioses-conference/2027": "opp_e3ee84eccd705b9f",
+    "https://grc.org/modulation-of-neural-circuits-and-behavior-conference/2027": "opp_cb024b8de9a5c2c3",
+    "https://meetings.embo.org/event/27-endocytosis": "opp_f550914bcbe9fff0",
+    "https://meetings.embo.org/event/27-mitochondria": "opp_e719b5ab3a88bb6a",
+    "https://meetings.embo.org/event/27-chromatin-evo": "opp_e6993dc133f7a88a",
+    "https://meetings.embo.org/event/27-bio-interfaces": "opp_d07873c50289593f",
+    "https://oist.jp/conference/OCNC-2027": "opp_0990ae22dec74c94",
+    "https://meetings.cshl.edu/meetings.aspx?meet=SYMP": "opp_2a16b26cbfa1ea7f",
+    "https://grc.org/origins-of-solar-systems-conference/2027": "opp_46631c19568a2a5d",
+    "https://grc.org/advances-in-nanoferroic-phenomena-conference/2027": "opp_4e39e6cfa6996724",
+    "https://grc.org/alzheimer-s-disease-conference/2027": "opp_6ac40563c9d1f6d0",
+    "https://grc.org/speciation-conference/2027": "opp_4a163a29d594a4b3",
+    "https://grc.org/microbial-adhesion-and-signal-transduction-conference/2027": "opp_1e3228b62a1a9e7a",
+    "https://grc.org/urban-evolution-and-ecology-conference/2027": "opp_b8f5c3f801fcddc5",
+    "https://grc.org/movement-ecology-of-animals-conference/2027": "opp_785d0a49fb7019c7"
   },
-  "last_offer_number": 781
+  "last_offer_number": 806
 }

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Endocytosis: from mechanisms and functions to evolution",
+    "evidence_url": "https://meetings.embo.org/event/27-endocytosis",
+    "evidence_quote": "Endocytosis: from mechanisms and functions to evolution"
+  },
+  "institution": {
+    "name": "EMBO",
+    "website": "https://www.embo.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://meetings.embo.org/event/27-endocytosis",
+  "source_url": "https://meetings.embo.org/event/27-endocytosis",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Ischia",
+    "country": "Italy",
+    "country_code": "IT"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Cell biology",
+  "seniority": "Researchers (as stated on the event page)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "EMBO Workshop \"Endocytosis: from mechanisms and functions to evolution\" takes place in Ischia, Italy, from 5 to 10 September 2027. Abstracts are due 1 May 2027 and registration closes 30 May 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-05-30",
+    "timezone": null,
+    "evidence_url": "https://meetings.embo.org/event/27-endocytosis",
+    "evidence_quote": "Registration Deadline 30 May 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official page (seen in search results): 'Registration Deadline 30 May 2027'",
+    "Search results of the official page: abstract submission closes 1 May 2027; selected participants notified by 15 May 2027",
+    "Deadline 2027-05-30 is in the future (today 2026-11-26) and after 2026-12-16",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Participants are selected; registration is confirmed only after selection and payment",
+    "Registration fees not recorded (not verified in full on the official page)",
+    "Abstract deadline (1 May 2027) precedes the registration deadline"
+  ],
+  "id": "opp_f550914bcbe9fff0",
+  "fingerprint": "a3d53baa95185059",
+  "discovered_at": "2026-11-26T03:03:39.000Z",
+  "last_verified_at": "2026-11-26T03:03:40.598Z",
+  "content_hash": "sha256:d5091df10c5dfd3668d1fd06e7a27a59d738a8e98965ce779728533c500bccf3"
+}

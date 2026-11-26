@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "research",
+  "title": {
+    "value": "Call for Papers · CHIL 2027",
+    "evidence_url": "https://chil.ahli.cc/submit/call-for-papers/",
+    "evidence_quote": "Call for Papers · CHIL 2027"
+  },
+  "institution": {
+    "name": "Conference on Health, Inference, and Learning (CHIL), Association for Health Learning and Inference (AHLI)",
+    "website": "https://chil.ahli.cc",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://chil.ahli.cc/submit/call-for-papers/",
+  "source_url": "https://chil.ahli.cc/submit/call-for-papers/",
+  "source_list_url": "https://mlscientist.com/category/conference-calls/",
+  "location": {
+    "city": "Chicago",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Machine learning for health",
+  "seniority": "Researchers submitting papers",
+  "qualifications": [
+    "All authors need an OpenReview account with a complete profile"
+  ],
+  "skills": [],
+  "description_short": "CHIL 2027, the Conference on Health, Inference, and Learning, invites paper submissions through OpenReview by 3 February 2027. The conference is held in Chicago from 28 to 30 June 2027; author notification is 12 April 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-03",
+    "timezone": null,
+    "evidence_url": "https://chil.ahli.cc/submit/call-for-papers/",
+    "evidence_quote": "please register by January 15 to ensure you can submit by the February 3 deadline"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official page (seen in search results): 'please register by January 15 to ensure you can submit by the February 3 deadline'",
+    "Official call for papers lists reviews due March 2, 2027 and author notification April 12, 2027",
+    "Deadline 2027-02-03 is in the future (today 2026-11-26) and after 2026-12-16",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Deadline quote is the OpenReview account-registration reminder on the call page; it references the February 3 deadline without a year (year inferred from the CHIL 2027 page)",
+    "OpenReview account approval can take up to two weeks: authors should register by 15 January 2027",
+    "Exact time zone of the submission deadline not seen",
+    "Direct OpenReview submission URL not seen; application_url is the official call page",
+    "Page-length rules for 2027 not seen"
+  ],
+  "id": "opp_61fdba58a0e8dd03",
+  "fingerprint": "02b9388d48fbd611",
+  "discovered_at": "2026-11-26T02:58:03.000Z",
+  "last_verified_at": "2026-11-26T02:58:03.246Z",
+  "content_hash": "sha256:353de751bef32d926f0a9194509172c712cb0587a60743aaeb7af670daf8eccd"
+}

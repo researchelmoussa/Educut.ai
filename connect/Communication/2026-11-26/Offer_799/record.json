@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "Alzheimer's Disease Conference",
+    "evidence_url": "https://www.grc.org/alzheimer-s-disease-conference/2027/",
+    "evidence_quote": "2027 Alzheimer's Disease Conference GRC"
+  },
+  "institution": {
+    "name": "Gordon Research Conferences",
+    "website": "https://www.grc.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.grc.org/alzheimer-s-disease-conference/2027/",
+  "source_url": "https://www.grc.org/alzheimer-s-disease-conference/2027/",
+  "source_list_url": "https://fellowshipsguide.com/category/conferences/",
+  "location": {
+    "city": "Ventura",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Neuroscience and neurodegeneration",
+  "seniority": "Researchers (as stated on the conference page)",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "The 2027 Gordon Research Conference \"Alzheimer's Disease\" takes place from 27 June to 2 July 2027 at the Ventura Beach Marriott in Ventura, California. Applications are submitted through the conference page on grc.org.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-05-30",
+    "timezone": null,
+    "evidence_url": "https://www.grc.org/alzheimer-s-disease-conference/2027/",
+    "evidence_quote": "Applications for this meeting must be submitted by May 30, 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Official page (seen in search results): 'Applications for this meeting must be submitted by May 30, 2027.'",
+    "GRC pages advise applying early because some meetings become oversubscribed (full) before the deadline",
+    "Deadline 2027-05-30 is in the future (today 2026-11-26) and after 2026-12-16",
+    "Status capped at OPEN_LIKELY: official page not loadable from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official page, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Meeting may fill before the stated deadline (oversubscription warning on GRC pages)",
+    "Associated Gordon Research Seminar (GRS) requires a separate application and is not covered by this record",
+    "Registration fees and eligibility details not seen",
+    "Meeting theme seen in search results ('Translating Alzheimer's Genetics into Mechanisms and Therapeutic Targets') is not part of the recorded title"
+  ],
+  "id": "opp_6ac40563c9d1f6d0",
+  "fingerprint": "62c5ff3121e9cd13",
+  "discovered_at": "2026-11-26T03:05:06.000Z",
+  "last_verified_at": "2026-11-26T03:05:07.486Z",
+  "content_hash": "sha256:5e925defb24f2899913ec76b2d40dea53405f5aa23f203662b3d9d5add13ca19"
+}
