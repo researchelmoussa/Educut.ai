@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+\usepackage{franklin}
+\renewcommand{\hdrtitle}{Final Exam --- Derivatives \& Antiderivatives}
+\renewcommand{\hdrsub}{Sections 2.1--2.2 \& 5.1 \textbullet{} Fall 2026}
+\renewcommand{\durationtext}{90 minutes}
+\begin{document}
+\makecover{Calculus \textbullet{} Final Examination}{Final Exam}{Derivatives \& Antidifferentiation}%
+{Three Exercises --- Multiple Choice, Differentiation and Antidifferentiation\\ Scored out of 100 points}%
+{Do not open this booklet until instructed. No notes, no calculators unless authorised.}
+
+\section*{Instructions}
+\studentbox
+\bigskip
+This examination covers the three course documents: \emph{Prerequisite Review \& Limits 1.5},
+\emph{Derivative 2.1 \& Elementary Techniques of Differentiation 2.2}, and
+\emph{Antidifferentiation 5.1}. It contains three exercises and is scored out of \textbf{100 points}.
+\begin{itemize}[itemsep=2pt]
+  \item \textbf{Exercise 1:} tick exactly \emph{one} box per question. No justification is required; a wrong or multiple answer scores 0.
+  \item \textbf{Exercises 2--3:} show every step --- rewrite the function as powers of $x$, name the rule, then simplify. Unjustified answers receive no credit.
+  \item Only the Constant, Power, Constant Multiple and Sum Rules are needed for derivatives: rewrite products, quotients and powers of binomials \emph{before} differentiating.
+  \item For every indefinite integral include $+C$; for definite integrals give the exact value and a decimal to three places when it contains $e$ or $\ln$.
+\end{itemize}
+\scoretable
+
+\newpage
+\subsection*{Exercise 1 --- Multiple Choice \hfill {\normalsize\color{fnavy}30 points}}
+\meta{(Level 3 --- Hard)\quad 5 questions $\times$ 6 points --- exactly one correct answer each}
+\begin{enumerate}[label=\textbf{Q\arabic*.},leftmargin=*,itemsep=10pt]
+\qcm{For $f(x)=\dfrac{1}{x-2}$, the simplified difference quotient $\dfrac{f(x+h)-f(x)}{h}$ is:}
+  {$\dfrac{1}{(x-2)(x+h-2)}$}{$\dfrac{-h}{(x-2)(x+h-2)}$}{$\dfrac{-1}{(x-2)(x+h-2)}$}{$\dfrac{-1}{(x-2)^2}$}
+\qcm{If $y=\dfrac{x^2-6\sqrt{x}}{x}$, then $y'(9)$ equals:}
+  {$\tfrac89$}{$\tfrac{10}{9}$}{$0$}{$2$}
+\qcm{Which function is an antiderivative of $f(x)=\dfrac{e^{3x}+2}{e^{x}}$?}
+  {$\tfrac12 e^{2x}+2e^{-x}$}{$2e^{2x}-2e^{-x}$}{$\tfrac12 e^{2x}-2e^{-x}-5$}{$\dfrac{\frac13 e^{3x}+2x}{e^{x}}$}
+\qcm{$\displaystyle\int_{4}^{1}\left(6\sqrt{x}-1\right)dx=$}
+  {$25$}{$-31$}{$31$}{$-25$}
+\qcm{Let $F'(x)=\dfrac{3}{x}-4x^3$ for $x>0$, with $F(1)=0$. Then $F(e)=$}
+  {$3-e^4$}{$4+e^4$}{$-e^4$}{$4-e^4$}
+\end{enumerate}
+
+\newpage
+\subsection*{Exercise 2 --- Differentiation \hfill {\normalsize\color{fnavy}40 points}}
+\meta{(Level 2--3 --- Medium to Hard)\quad 5 questions $\times$ 8 points --- rewrite before you differentiate}
+\begin{enumerate}[label=\textbf{(\alph*)},leftmargin=*,itemsep=4pt]
+\item Find $f'(x)$ for $f(x)=2x^5-6\sqrt[4]{x^3}+\dfrac{4}{x^2}-e^3$. \pts{8}\answerspace{3.2cm}
+\item Find $g'(x)$ for $g(x)=\left(\sqrt{x}-3\right)\left(x+\dfrac{2}{\sqrt{x}}\right)$. \pts{8}\answerspace{3.2cm}
+\item Find $h'(x)$ for $h(x)=\dfrac{2x^3+5x-8}{x^2}$. \pts{8}\answerspace{3.2cm}
+\item Find $k'(t)$ for $k(t)=(3t+2)^3$. \emph{(Expand first.)} \pts{8}\answerspace{3.2cm}
+\item Let $f(x)=\dfrac{(x-3)^2}{\sqrt{x}}$. Find $f'(x)$, then the equation of the tangent line to the graph of $f$ at $x=9$. \pts{8}\answerspace{4cm}
+\end{enumerate}
+
+\newpage
+\subsection*{Exercise 3 --- Antidifferentiation \hfill {\normalsize\color{fnavy}30 points}}
+\meta{(Level 2 --- Medium)\quad 3 questions $\times$ 10 points}
+\begin{enumerate}[label=\textbf{(\alph*)},leftmargin=*,itemsep=4pt]
+\item Find $\displaystyle\int\left(9x^2+\frac{5}{x}-4e^{-2x}\right)dx$. \pts{10}\answerspace{5cm}
+\item Find $\displaystyle\int\frac{(x-2)^2}{\sqrt{x}}\,dx$. \pts{10}\answerspace{5cm}
+\item Evaluate $\displaystyle\int_{1}^{3}\left(3x^2+\frac{4}{x^2}-\frac{2}{x}\right)dx$. \pts{10}\answerspace{4cm}
+\end{enumerate}
+\end{document}

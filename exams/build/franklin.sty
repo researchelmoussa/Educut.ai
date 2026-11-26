@@ -1,0 +1,112 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{franklin}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage[a4paper,margin=2.2cm,top=2.8cm,headheight=1.4cm,headsep=0.6cm]{geometry}
+\RequirePackage{amsmath,amssymb}
+\RequirePackage{graphicx}
+\RequirePackage[dvipsnames,table]{xcolor}
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\RequirePackage{titlesec}
+\RequirePackage{enumitem}
+\RequirePackage{array,booktabs,tabularx}
+\RequirePackage{needspace}
+\RequirePackage[hidelinks]{hyperref}
+
+\definecolor{fnavy}{HTML}{1F2A48}
+\definecolor{fred}{HTML}{C8102E}
+\definecolor{fgray}{HTML}{6B6B6B}
+\definecolor{flight}{HTML}{F3F4F7}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+% ---------- header / footer ----------
+\newcommand{\hdrtitle}{}
+\newcommand{\hdrsub}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{\color{fnavy}\hdrtitle}\\[1pt]{\small\color{fgray}\hdrsub}}
+\fancyhead[R]{\includegraphics[height=0.95cm]{franklin-logo.png}}
+\fancyfoot[C]{\small\color{fgray}Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{black!20}\hrule width\headwidth height\headrulewidth}
+
+% ---------- headings ----------
+\titleformat{\section}{\Large\bfseries\color{fnavy}}{}{0pt}{}
+\titleformat{\subsection}{\large\bfseries\color{fred}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+
+% ---------- cover ----------
+% \makecover{kicker}{title line 1}{title line 2}{subtitle}{footnote}
+\newcommand{\makecover}[5]{%
+  \begin{titlepage}
+  \centering
+  \vspace*{3.2cm}
+  \includegraphics[width=9cm]{franklin-logo.png}\par
+  \vspace{1.6cm}
+  {\large\color{fgray}#1}\par
+  \vspace{0.6cm}
+  {\color{black!20}\rule{\textwidth}{0.5pt}}\par
+  \vspace{1.4cm}
+  {\LARGE\bfseries\color{fnavy}#2\\[4pt]#3}\par
+  \vspace{1.0cm}
+  {\large\bfseries\color{fred}#4}\par
+  \vspace{1.4cm}
+  {\color{black!20}\rule{\textwidth}{0.5pt}}\par
+  \vspace{1.4cm}
+  \begin{tabular}{r l}
+    {\color{fgray}Professor} & \textbf{\color{fnavy}Prof.\ Dr.\ Noura El Moussa}\\[4pt]
+    {\color{fgray}Term} & \textbf{\color{fnavy}Fall 2026}\\[4pt]
+    {\color{fgray}Institution} & \textbf{\color{fnavy}Franklin University Switzerland}
+  \end{tabular}\par
+  \vfill
+  {\itshape\color{fgray}#5}\par
+  \vspace{0.5cm}
+  \end{titlepage}\setcounter{page}{2}}
+
+% ---------- exam pieces ----------
+\newcommand{\studentbox}{%
+  \renewcommand{\arraystretch}{2.0}%
+  \begin{tabularx}{\textwidth}{|>{\bfseries\color{fnavy}}l X|>{\bfseries\color{fnavy}}l p{3.2cm}|}
+    \hline
+    Name: & & Student ID: & \\ \hline
+    Date: & & Duration: & \durationtext \\ \hline
+  \end{tabularx}\renewcommand{\arraystretch}{1.0}\par}
+\newcommand{\durationtext}{}
+
+\newcommand{\scoretable}{%
+  \begin{center}
+  \renewcommand{\arraystretch}{1.7}%
+  \begin{tabular}{|>{\bfseries\color{fnavy}}l|c|c|}
+    \hline
+    \rowcolor{flight}\textbf{Exercise} & \textbf{Points} & \textbf{Score} \\ \hline
+    Exercise 1 --- Multiple Choice & 30 & \hspace{2.2cm} \\ \hline
+    Exercise 2 --- Differentiation & 40 & \\ \hline
+    Exercise 3 --- Antidifferentiation & 30 & \\ \hline
+    \rowcolor{flight}Total & \textbf{100} & \textbf{\quad\ /100} \\ \hline
+  \end{tabular}\renewcommand{\arraystretch}{1.0}
+  \end{center}}
+
+\newcommand{\meta}[1]{{\itshape\color{fgray}#1}\par\smallskip}
+\newcommand{\pts}[1]{\hfill{\small\bfseries\color{fred}[#1 pts]}}
+\newcommand{\answerspace}[1]{\par\vspace*{#1}}
+\newcommand{\choice}{\ensuremath{\square}}
+
+% QCM: \qcm{question}{A}{B}{C}{D}
+\newcommand{\qcm}[5]{%
+  \item #1 \pts{6}\par\smallskip
+  \begin{tabular}{@{\hspace{0.4cm}}p{0.44\textwidth}p{0.44\textwidth}}
+    $\square$ \textbf{A)}\; #2 & $\square$ \textbf{B)}\; #3 \\[12pt]
+    $\square$ \textbf{C)}\; #4 & $\square$ \textbf{D)}\; #5
+  \end{tabular}\par\medskip}
+
+% ---------- solution pieces ----------
+\newcommand{\solhead}[1]{\needspace{6\baselineskip}\subsection*{#1}\vspace{-6pt}{\color{black!20}\rule{\textwidth}{0.4pt}}\par}
+\newcommand{\given}[1]{\textbf{Given:} #1\par}
+\newcommand{\method}[1]{\textbf{Method:} #1\par}
+\newcommand{\step}[2]{\textbf{Step #1:} #2\par}
+\newcommand{\final}[1]{\textbf{Final Answer:} #1\par}
+\newcommand{\pointsnote}[1]{{\small\itshape\color{fgray}Marking: #1}\par}

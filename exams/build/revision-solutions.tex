@@ -1,0 +1,156 @@
+\documentclass[11pt]{article}
+\usepackage{franklin}
+\renewcommand{\hdrtitle}{Revision Sheet --- Solutions Booklet}
+\renewcommand{\hdrsub}{Sections 2.1--2.2 \& 5.1 \textbullet{} Fall 2026}
+\begin{document}
+\makecover{Calculus \textbullet{} Revision Sheet}{Revision Sheet}{Complete Solutions}%
+{Multiple Choice, Differentiation and Antidifferentiation\\ Step-by-step corrections and marking scheme}%
+{Instructor answer key --- distribute after the revision session.}
+
+\section*{About This Booklet}
+This booklet contains complete, step-by-step solutions to the three exercises of the Revision Sheet.
+Each solution restates the problem (\textbf{Given}), names the rule used (\textbf{Method}), works the
+algebra step by step, and ends with a \textbf{Final Answer}. A short marking guide follows each item.
+
+\subsection*{Answer Key at a Glance}
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|>{\bfseries\color{fnavy}}l|c|c|c|c|c|}
+\hline
+\rowcolor{flight} Exercise 1 & Q1 & Q2 & Q3 & Q4 & Q5\\ \hline
+Correct answer & A & A & B & B & A \\ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{|>{\bfseries\color{fnavy}}l|l|}
+\hline
+\rowcolor{flight} Item & Final answer\\ \hline
+2(a) & $12x^3-\frac{10}{3}x^{-1/3}-21x^{-4}$\\ \hline
+2(b) & $\frac32 x^{1/2}+2+x^{-3/2}$\\ \hline
+2(c) & $1+\frac{4}{x^2}-\frac{12}{x^3}$\\ \hline
+2(d) & $24t^2-24t+6$\\ \hline
+2(e) & $f'(4)=\frac74$;\ tangent $y=\frac74x-5$\\ \hline
+3(a) & $2x^3-4\ln|x|-\frac32e^{-2x}+C$\\ \hline
+3(b) & $\frac25x^{5/2}+\frac43x^{3/2}+2x^{1/2}+C$\\ \hline
+3(c) & $6+\ln 2\approx 6.693$\\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+\section*{Exercise 1 --- Multiple Choice (30 points)}
+
+\solhead{Q1 --- Solution \quad (Answer: A)}
+\given{$f(x)=\dfrac{1}{x+1}$.}
+\method{Write $f(x+h)-f(x)$ over a common denominator, then divide by $h$.}
+\step{1}{$f(x+h)-f(x)=\dfrac{1}{x+h+1}-\dfrac{1}{x+1}=\dfrac{(x+1)-(x+h+1)}{(x+1)(x+h+1)}=\dfrac{-h}{(x+1)(x+h+1)}$.}
+\step{2}{Divide by $h$: $\dfrac{1}{h}\cdot\dfrac{-h}{(x+1)(x+h+1)}=\dfrac{-1}{(x+1)(x+h+1)}$.}
+\final{\textbf{A}. (C forgets to divide by $h$; D is the limit $h\to0$, i.e.\ $f'(x)$, not the difference quotient.)}
+
+\solhead{Q2 --- Solution \quad (Answer: A)}
+\given{$y=\dfrac{x^2-4\sqrt{x}}{x}$.}
+\method{Split the quotient into powers of $x$, then apply the Power and Sum Rules.}
+\step{1}{$y=\dfrac{x^2}{x}-\dfrac{4x^{1/2}}{x}=x-4x^{-1/2}$.}
+\step{2}{$y'=1-4\left(-\tfrac12\right)x^{-3/2}=1+2x^{-3/2}$.}
+\step{3}{$y'(4)=1+\dfrac{2}{4^{3/2}}=1+\dfrac{2}{8}=\dfrac54$.}
+\final{\textbf{A}. (B comes from the sign error $1-2x^{-3/2}$.)}
+
+\solhead{Q3 --- Solution \quad (Answer: B)}
+\given{$f(x)=\dfrac{e^{2x}-3}{e^{x}}$.}
+\method{Split the quotient, then use $\int e^{kx}dx=\frac1k e^{kx}+C$.}
+\step{1}{$f(x)=e^{2x-x}-3e^{-x}=e^{x}-3e^{-x}$.}
+\step{2}{$\displaystyle\int\left(e^{x}-3e^{-x}\right)dx=e^{x}-3\cdot\frac{1}{-1}e^{-x}+C=e^{x}+3e^{-x}+C$.}
+\step{3}{Choosing $C=7$ gives option B. Check: $\frac{d}{dx}\left[e^{x}+3e^{-x}+7\right]=e^{x}-3e^{-x}=f(x)$ \checkmark.}
+\final{\textbf{B}. (A is $f$ itself, not an antiderivative.)}
+
+\solhead{Q4 --- Solution \quad (Answer: B)}
+\given{$\displaystyle\int_4^1\left(3\sqrt{x}-2\right)dx$ --- note the limits run from $4$ down to $1$.}
+\method{Find $F$, then compute $F(b)-F(a)$ with $a=4$, $b=1$.}
+\step{1}{$F(x)=3\cdot\dfrac{x^{3/2}}{3/2}-2x=2x^{3/2}-2x$.}
+\step{2}{$F(1)=2-2=0$;\quad $F(4)=2\cdot8-8=8$.}
+\step{3}{$\displaystyle\int_4^1=F(1)-F(4)=0-8=-8$.}
+\final{\textbf{B}. (A is the value with the limits reversed.)}
+
+\solhead{Q5 --- Solution \quad (Answer: A)}
+\given{$F'(x)=\dfrac2x-6x^2$, $x>0$, $F(1)=0$.}
+\method{Antidifferentiate, then use the initial condition to find $C$.}
+\step{1}{$F(x)=2\ln x-2x^3+C$.}
+\step{2}{$F(1)=2\ln1-2+C=-2+C=0\Rightarrow C=2$.}
+\step{3}{$F(e)=2\ln e-2e^3+2=2-2e^3+2=4-2e^3$.}
+\final{\textbf{A}. (B forgets the constant $C=2$.)}
+
+\pointsnote{6 points per correct answer; 0 for a wrong, blank or multiple answer.}
+
+\newpage
+\section*{Exercise 2 --- Differentiation (40 points)}
+
+\solhead{2(a) --- Solution}
+\given{$f(x)=3x^4-5\sqrt[3]{x^2}+\dfrac{7}{x^3}-\pi^2$.}
+\method{Rewrite every term as a power of $x$; $\pi^2$ is a constant (Constant Rule).}
+\step{1}{$f(x)=3x^4-5x^{2/3}+7x^{-3}-\pi^2$.}
+\step{2}{$f'(x)=3(4x^3)-5\cdot\tfrac23x^{-1/3}+7(-3)x^{-4}-0$.}
+\final{$f'(x)=12x^3-\dfrac{10}{3}x^{-1/3}-21x^{-4}=12x^3-\dfrac{10}{3\sqrt[3]{x}}-\dfrac{21}{x^4}$.}
+\pointsnote{rewriting 3 pts; each correct term 1 pt (incl.\ $\frac{d}{dx}\pi^2=0$); simplification 1 pt.}
+
+\solhead{2(b) --- Solution}
+\given{$g(x)=\left(\sqrt{x}+2\right)\left(x-\dfrac1{\sqrt{x}}\right)$.}
+\method{Expand the product (no product rule is needed), then apply the Power and Sum Rules.}
+\step{1}{$g(x)=x^{1/2}\cdot x-x^{1/2}\cdot x^{-1/2}+2x-2x^{-1/2}=x^{3/2}-1+2x-2x^{-1/2}$.}
+\step{2}{$g'(x)=\tfrac32x^{1/2}-0+2-2\left(-\tfrac12\right)x^{-3/2}$.}
+\final{$g'(x)=\dfrac32\sqrt{x}+2+x^{-3/2}=\dfrac32\sqrt{x}+2+\dfrac{1}{x\sqrt{x}}$.}
+\pointsnote{correct expansion 4 pts; derivative 4 pts.}
+
+\solhead{2(c) --- Solution}
+\given{$h(x)=\dfrac{x^3-4x+6}{x^2}$.}
+\method{Split the quotient term by term, then differentiate.}
+\step{1}{$h(x)=x-4x^{-1}+6x^{-2}$.}
+\step{2}{$h'(x)=1-4(-1)x^{-2}+6(-2)x^{-3}=1+4x^{-2}-12x^{-3}$.}
+\final{$h'(x)=1+\dfrac{4}{x^2}-\dfrac{12}{x^3}$.}
+\pointsnote{splitting 4 pts; derivative 4 pts.}
+
+\solhead{2(d) --- Solution}
+\given{$k(t)=(2t-1)^3$.}
+\method{Expand with $(a-b)^3=a^3-3a^2b+3ab^2-b^3$, then differentiate term by term.}
+\step{1}{$k(t)=8t^3-3(4t^2)(1)+3(2t)(1)-1=8t^3-12t^2+6t-1$.}
+\step{2}{$k'(t)=24t^2-24t+6$.}
+\final{$k'(t)=24t^2-24t+6\;\big(=6(2t-1)^2\big)$.}
+\pointsnote{expansion 4 pts; derivative 4 pts.}
+
+\solhead{2(e) --- Solution}
+\given{$f(x)=\dfrac{(x-2)^2}{\sqrt{x}}$; tangent line at $x=4$.}
+\method{Expand the numerator, divide by $x^{1/2}$, differentiate; then use $y-f(a)=f'(a)(x-a)$.}
+\step{1}{$f(x)=\dfrac{x^2-4x+4}{x^{1/2}}=x^{3/2}-4x^{1/2}+4x^{-1/2}$.}
+\step{2}{$f'(x)=\tfrac32x^{1/2}-2x^{-1/2}-2x^{-3/2}$.}
+\step{3}{$f(4)=\dfrac{(2)^2}{2}=2$;\quad $f'(4)=\tfrac32(2)-\tfrac22-\tfrac{2}{8}=3-1-\tfrac14=\tfrac74$.}
+\step{4}{$y-2=\tfrac74(x-4)\Rightarrow y=\tfrac74x-7+2$.}
+\final{$f'(x)=\dfrac32\sqrt{x}-\dfrac{2}{\sqrt{x}}-\dfrac{2}{x\sqrt{x}}$;\quad tangent: $y=\dfrac74x-5$.}
+\pointsnote{rewriting 2 pts; $f'(x)$ 3 pts; $f(4)$, $f'(4)$ 2 pts; tangent equation 1 pt.}
+
+\newpage
+\section*{Exercise 3 --- Antidifferentiation (30 points)}
+
+\solhead{3(a) --- Solution}
+\given{$\displaystyle\int\left(6x^2-\frac4x+3e^{-2x}\right)dx$.}
+\method{Sum Rule with the Power, Logarithmic and Exponential Rules.}
+\step{1}{$\int 6x^2dx=2x^3$;\quad $\int\frac4x dx=4\ln|x|$;\quad $\int3e^{-2x}dx=3\cdot\frac{1}{-2}e^{-2x}=-\frac32e^{-2x}$.}
+\step{2}{Check: $\frac{d}{dx}\!\left[2x^3-4\ln|x|-\frac32e^{-2x}\right]=6x^2-\frac4x+3e^{-2x}$ \checkmark.}
+\final{$2x^3-4\ln|x|-\dfrac32e^{-2x}+C$.}
+\pointsnote{3 pts per term; 1 pt for $+C$.}
+
+\solhead{3(b) --- Solution}
+\given{$\displaystyle\int\frac{(x+1)^2}{\sqrt{x}}\,dx$.}
+\method{Expand, split into powers of $x$, then apply the Power Rule.}
+\step{1}{$\dfrac{x^2+2x+1}{x^{1/2}}=x^{3/2}+2x^{1/2}+x^{-1/2}$.}
+\step{2}{$\int x^{3/2}dx=\frac25x^{5/2}$;\quad $\int2x^{1/2}dx=\frac43x^{3/2}$;\quad $\int x^{-1/2}dx=2x^{1/2}$.}
+\final{$\dfrac25x^{5/2}+\dfrac43x^{3/2}+2\sqrt{x}+C$.}
+\pointsnote{rewriting 4 pts; 2 pts per term (6 pts).}
+
+\solhead{3(c) --- Solution}
+\given{$\displaystyle\int_1^2\left(3x^2-\frac2{x^2}+\frac1x\right)dx$.}
+\method{Find an antiderivative $F$, then compute $F(2)-F(1)$.}
+\step{1}{$3x^2-2x^{-2}+x^{-1}$ has antiderivative $F(x)=x^3+2x^{-1}+\ln x$.}
+\step{2}{$F(2)=8+1+\ln2=9+\ln2$;\quad $F(1)=1+2+0=3$.}
+\step{3}{$F(2)-F(1)=6+\ln2$.}
+\final{$6+\ln 2\approx 6.693$.}
+\pointsnote{antiderivative 5 pts; evaluation 4 pts; decimal 1 pt.}
+\end{document}
