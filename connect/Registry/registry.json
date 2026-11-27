@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-26T03:13:11.294Z",
+  "updated_at": "2026-11-27T03:10:54.039Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -17264,7 +17264,7 @@
       "deadline": "2026-11-25",
       "content_hash": "sha256:71f5a9110668a9da062607793322deb712bd00a60401a83e313497a5d29b7090",
       "last_verified_at": "2026-10-26T03:07:05.531Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-26T03:07:05.674Z",
       "history": [
         {
@@ -17308,6 +17308,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-27T02:49:53.086Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-25 passed"
         }
       ],
       "offer_number": 234
@@ -17388,7 +17395,7 @@
       "deadline": "2026-11-25",
       "content_hash": "sha256:38759d589e2900ec9513c70e32745ac64e0ca9583af325d27794dca2b52fdf61",
       "last_verified_at": "2026-10-26T03:07:06.097Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-26T03:07:06.235Z",
       "history": [
         {
@@ -17432,6 +17439,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-27T02:49:53.086Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-25 passed"
         }
       ],
       "offer_number": 236
@@ -25951,7 +25965,7 @@
       "deadline": "2026-11-25",
       "content_hash": "sha256:a68ad02c86cf3f31474c478f330395d5b61902f7bf77d519527a2515e6c75d23",
       "last_verified_at": "2026-11-02T03:15:44.186Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-11-02T03:15:52.505Z",
       "history": [
         {
@@ -25995,6 +26009,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-27T02:49:53.086Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-25 passed"
         }
       ],
       "offer_number": 377
@@ -54457,6 +54478,254 @@
         }
       ],
       "offer_number": 795
+    },
+    "opp_9395857e7486d51a": {
+      "id": "opp_9395857e7486d51a",
+      "fingerprint": "3e2c9501b045e33d",
+      "title": "UNESCO-TWAS/FAPESP Call for Proposals for Postdoctoral Fellowships for Researchers from Developing Countries",
+      "institution": "FAPESP and UNESCO-TWAS",
+      "city": null,
+      "country": "Brazil",
+      "source_url": "https://twas.org/opportunities/fellowships/postdoctoral",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://fapesp.br/18367/unesco-twasfapesp-call-for-proposals-for-postdoctoral-fellowships-for-researchers-from-developing-countries",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-04-01",
+      "content_hash": "sha256:0c98de454d72294cd8c09827cd49215c7c517d1154bf08eef2d2c3e4687ab772",
+      "last_verified_at": "2026-11-27T03:04:40.858Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-27T03:04:49.260Z",
+      "history": [
+        {
+          "at": "2026-11-27T03:04:49.260Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-27T03:04:49.261Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-27T03:10:53.806Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-27T03:10:53.806Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-27T03:10:54.039Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-27T03:10:54.039Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 810
+    },
+    "opp_fb31b61c54fae465": {
+      "id": "opp_fb31b61c54fae465",
+      "fingerprint": "13868a0fbb966a5e",
+      "title": "Master of Public Policy",
+      "institution": "Hamad Bin Khalifa University (HBKU), College of Public Policy",
+      "city": "Doha",
+      "country": "Qatar",
+      "source_url": "https://www.hbku.edu.qa/en/cpp/master-public-policy",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://www.hbku.edu.qa/en/cpp/admission-requirements",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01",
+      "content_hash": "sha256:20c4c1b38f9702fde626f37590775a9eacf32e7c375106ff275d6c8c1a91bf1d",
+      "last_verified_at": "2026-11-27T03:04:49.056Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-27T03:04:49.498Z",
+      "history": [
+        {
+          "at": "2026-11-27T03:04:49.498Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-27T03:04:49.498Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-27T03:10:53.347Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-27T03:10:53.347Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-27T03:10:53.569Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-27T03:10:53.569Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 809
+    },
+    "opp_153666f2220b264d": {
+      "id": "opp_153666f2220b264d",
+      "fingerprint": "9751bfb84478ffbb",
+      "title": "Postdoctoral Positions in FRB, pulsar, Tsinghua University",
+      "institution": "Tsinghua University, Department of Astronomy",
+      "city": "Beijing",
+      "country": "China",
+      "source_url": "https://aas.org/jobregister/ad/07a40dc5",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://aas.org/jobregister/ad/07a40dc5",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:a0ec9b69cbd9da86e743ee4032db51aa91a532be84af0eb6494e8b5f77f80a88",
+      "last_verified_at": "2026-11-27T03:04:41.254Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-27T03:04:49.712Z",
+      "history": [
+        {
+          "at": "2026-11-27T03:04:49.712Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-27T03:04:49.713Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-27T03:10:52.860Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-27T03:10:52.861Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-27T03:10:53.113Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-27T03:10:53.113Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 808
+    },
+    "opp_4aece95be67ebd65": {
+      "id": "opp_4aece95be67ebd65",
+      "fingerprint": "50a95a7c68cff3d7",
+      "title": "Assistant Professor Position in Solar Physics at the National Astronomical Observatory of Japan",
+      "institution": "National Astronomical Observatory of Japan (NAOJ), Solar Science Observatory",
+      "city": null,
+      "country": "Japan",
+      "source_url": "https://solarnews.aas.org/2026/assistant-professor-position-in-solar-physics-at-the-national-astronomical-observatory-of-japan/",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.nao.ac.jp/en/contents/careers/jobs/20261106-solar-en.pdf",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-12T12:00:00+09:00",
+      "content_hash": "sha256:dad9f3e540724a328f492749255936786f0eb950195a7d84179f92a8eb988c63",
+      "last_verified_at": "2026-11-27T03:05:39.524Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-27T03:05:39.781Z",
+      "history": [
+        {
+          "at": "2026-11-27T03:05:39.781Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-27T03:05:39.781Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-27T03:10:52.316Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-27T03:10:52.316Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-27T03:10:52.592Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-27T03:10:52.592Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 807
     }
   },
   "seen_urls": {
@@ -55578,7 +55847,14 @@
     "https://grc.org/speciation-conference/2027": "opp_4a163a29d594a4b3",
     "https://grc.org/microbial-adhesion-and-signal-transduction-conference/2027": "opp_1e3228b62a1a9e7a",
     "https://grc.org/urban-evolution-and-ecology-conference/2027": "opp_b8f5c3f801fcddc5",
-    "https://grc.org/movement-ecology-of-animals-conference/2027": "opp_785d0a49fb7019c7"
+    "https://grc.org/movement-ecology-of-animals-conference/2027": "opp_785d0a49fb7019c7",
+    "https://twas.org/opportunities/fellowships/postdoctoral": "opp_9395857e7486d51a",
+    "https://fapesp.br/18367/unesco-twasfapesp-call-for-proposals-for-postdoctoral-fellowships-for-researchers-from-developing-countries": "opp_9395857e7486d51a",
+    "https://hbku.edu.qa/en/cpp/master-public-policy": "opp_fb31b61c54fae465",
+    "https://hbku.edu.qa/en/cpp/admission-requirements": "opp_fb31b61c54fae465",
+    "https://aas.org/jobregister/ad/07a40dc5": "opp_153666f2220b264d",
+    "https://solarnews.aas.org/2026/assistant-professor-position-in-solar-physics-at-the-national-astronomical-observatory-of-japan": "opp_4aece95be67ebd65",
+    "https://nao.ac.jp/en/contents/careers/jobs/20261106-solar-en.pdf": "opp_4aece95be67ebd65"
   },
-  "last_offer_number": 806
+  "last_offer_number": 810
 }
