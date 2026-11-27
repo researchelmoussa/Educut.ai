@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "academic_position",
+  "title": {
+    "value": "Assistant Professor Position in Solar Physics at the National Astronomical Observatory of Japan",
+    "evidence_url": "https://solarnews.aas.org/2026/assistant-professor-position-in-solar-physics-at-the-national-astronomical-observatory-of-japan/",
+    "evidence_quote": "Assistant Professor Position in Solar Physics at the National Astronomical Observatory of Japan"
+  },
+  "institution": {
+    "name": "National Astronomical Observatory of Japan (NAOJ), Solar Science Observatory",
+    "website": "https://www.nao.ac.jp",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.nao.ac.jp/en/contents/careers/jobs/20261106-solar-en.pdf",
+  "source_url": "https://solarnews.aas.org/2026/assistant-professor-position-in-solar-physics-at-the-national-astronomical-observatory-of-japan/",
+  "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+  "location": {
+    "city": null,
+    "country": "Japan",
+    "country_code": "JP"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Solar physics, solar-stellar research",
+  "seniority": "Assistant Professor",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "NAOJ's Solar Science Observatory seeks an assistant professor to promote solar-stellar research using existing solar observation facilities and to contribute to the performance evaluation of the SOLAR-C EUVST.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-12T12:00:00+09:00",
+    "timezone": "Asia/Tokyo",
+    "evidence_url": "https://solarnews.aas.org/2026/assistant-professor-position-in-solar-physics-at-the-national-astronomical-observatory-of-japan/",
+    "evidence_quote": "Deadline: 12:00 pm on January 12, 2027 (JST)."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "SolarNews (AAS Solar Physics Division) listing seen in search results: 'Deadline: 12:00 pm on January 12, 2027 (JST).'",
+    "The listing links to NAOJ's official PDF announcement at nao.ac.jp/en/contents/careers/jobs/20261106-solar-en.pdf",
+    "Deadline 2027-01-12 is after 2026-12-17 (today 2026-11-27)",
+    "Status capped at OPEN_LIKELY: neither the listing nor the NAOJ PDF could be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the SolarNews listing; the official NAOJ PDF itself could not be fetched or read from this environment",
+    "Approved source lists were unreachable from this environment; found by web search, so source_list_url is the closest approved category rather than the page it was listed on",
+    "Title is the SolarNews listing title; the exact title in the NAOJ PDF was not seen",
+    "Work location (city/campus) not stated in the evidence seen",
+    "Eligibility, application documents, appointment terms and salary not seen; check the NAOJ PDF",
+    "application_url is the official NAOJ announcement PDF linked from the listing (it describes how to apply); the submission method itself was not seen"
+  ],
+  "discovered_at": "2026-11-27T04:30:00.000Z",
+  "last_verified_at": "2026-11-27T03:05:39.524Z",
+  "id": "opp_4aece95be67ebd65",
+  "fingerprint": "50a95a7c68cff3d7",
+  "content_hash": "sha256:dad9f3e540724a328f492749255936786f0eb950195a7d84179f92a8eb988c63"
+}
