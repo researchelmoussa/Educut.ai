@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "UNESCO-TWAS/FAPESP Call for Proposals for Postdoctoral Fellowships for Researchers from Developing Countries",
+    "evidence_url": "https://fapesp.br/18367/unesco-twasfapesp-call-for-proposals-for-postdoctoral-fellowships-for-researchers-from-developing-countries",
+    "evidence_quote": "UNESCO-TWAS/FAPESP Call for Proposals for Postdoctoral Fellowships for Researchers from Developing Countries"
+  },
+  "institution": {
+    "name": "FAPESP and UNESCO-TWAS",
+    "website": "https://fapesp.br",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://fapesp.br/18367/unesco-twasfapesp-call-for-proposals-for-postdoctoral-fellowships-for-researchers-from-developing-countries",
+  "source_url": "https://twas.org/opportunities/fellowships/postdoctoral",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": "Brazil",
+    "country_code": "BR"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Natural, applied and social sciences",
+  "seniority": "Postdoctoral researchers (doctorate within the last seven years)",
+  "qualifications": [
+    "Native and permanent resident of a country classified by TWAS as developing, with the exception of Brazil",
+    "Doctorate in an area of natural, applied or social sciences, applying within seven years of obtaining it",
+    "Not already in Brazil and not holding a temporary or permanent residence visa in Brazil or in any developed country",
+    "A matched supervisor in the state of São Paulo who submits the full proposal to FAPESP through SAGe"
+  ],
+  "skills": [],
+  "description_short": "UNESCO-TWAS and FAPESP call for postdoctoral fellowships for researchers from TWAS-defined developing countries (Brazil excepted), hosted at institutions in São Paulo state. After a candidate-supervisor match, the supervisor submits the full proposal to FAPESP through SAGe.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-04-01",
+    "timezone": null,
+    "evidence_url": "https://twas.org/opportunities/fellowships/postdoctoral",
+    "evidence_quote": "Deadline for submission of full proposals: 1 April 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "TWAS postdoctoral fellowships page (seen in search results): 'Deadline for submission of full proposals: 1 April 2027'",
+    "FAPESP Portuguese call page (seen in search results): 'Data-limite para submissão de propostas · 01/04/2027'",
+    "Official call text (seen in search results): 'After a supervisor and candidate have established a match, the full proposal must be submitted by the supervisor to FAPESP through SAGe, under the Postdoctoral Fellowship modality'",
+    "Deadline 2027-04-01 is after 2026-12-17 (today 2026-11-27)",
+    "Status capped at OPEN_LIKELY: official pages could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official TWAS/FAPESP pages, so source_list_url is the closest approved category rather than the page it was listed on",
+    "The supervisors' expression-of-interest stage closed on 1 November 2026; candidates now need a match with a supervisor from the published list (list announced for 1 December 2026) before the full proposal",
+    "One copy of the call PDF gives the SAGe opening as 01/12/2027 instead of 01/12/2026 (likely a typo); confirm on the FAPESP call page",
+    "City not fixed: hosting institutions are anywhere in the state of São Paulo",
+    "Number of fellowships, duration and stipend not quoted here; check the official call",
+    "Researchers awarded under the previous 2023 call are not eligible; one proposal per TWAS programme per calendar year"
+  ],
+  "discovered_at": "2026-11-27T04:00:00.000Z",
+  "last_verified_at": "2026-11-27T03:04:40.858Z",
+  "id": "opp_9395857e7486d51a",
+  "fingerprint": "3e2c9501b045e33d",
+  "content_hash": "sha256:0c98de454d72294cd8c09827cd49215c7c517d1154bf08eef2d2c3e4687ab772"
+}

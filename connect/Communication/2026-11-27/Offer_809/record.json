@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "other",
+  "title": {
+    "value": "Master of Public Policy",
+    "evidence_url": "https://www.hbku.edu.qa/en/cpp/master-public-policy",
+    "evidence_quote": "Master of Public Policy"
+  },
+  "institution": {
+    "name": "Hamad Bin Khalifa University (HBKU), College of Public Policy",
+    "website": "https://www.hbku.edu.qa",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.hbku.edu.qa/en/cpp/admission-requirements",
+  "source_url": "https://www.hbku.edu.qa/en/cpp/master-public-policy",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "Doha",
+    "country": "Qatar",
+    "country_code": "QA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Public policy",
+  "seniority": "Graduate (master's) applicants",
+  "qualifications": [
+    "Bachelor's degree with a strong academic record (minimum 3.0 GPA out of 4.0) from a recognized university",
+    "IELTS score of 6.5 or TOEFL score of 79, unless exempt",
+    "Official electronic copies of transcripts with the online application"
+  ],
+  "skills": [],
+  "description_short": "Hamad Bin Khalifa University's College of Public Policy in Doha invites applications to its Master of Public Policy. Applicants from all fields may apply, with preference for social-science backgrounds; international applicants apply online by 1 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": "Asia/Qatar",
+    "evidence_url": "https://www.hbku.edu.qa/en/cpp/admission-requirements",
+    "evidence_quote": "01 Feb 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "HBKU College of Public Policy admissions page (seen in search results) lists 01 Feb 2027 as the deadline for international graduate applicants",
+    "Same page (seen in search results): 'Online graduate admission application opens to the public 01 Oct 2026'",
+    "HBKU graduate admissions page (seen in search results) lists the same 01 Feb 2027 date for international graduate applicants",
+    "Deadline 2027-02-01 is after 2026-12-17 (today 2026-11-27)",
+    "Status capped at OPEN_LIKELY: official pages could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search on the official HBKU domain, so source_list_url is the closest approved category rather than the page it was listed on",
+    "The deadline quote is the date as shown on the admissions page; the surrounding label (international graduate applicants) was seen only in the search summary",
+    "Qatari and resident applicants seeking funding have a different date (15 Mar 2027)",
+    "An older HBKU graduate admission policy mentions a regular deadline of March 1; the current admissions pages show 01 Feb 2027 for international applicants",
+    "The 2024-2025 MPP factsheet lists a 3.2 GPA minimum; current pages show 3.0",
+    "Direct online application portal URL not seen; application_url is the official College of Public Policy admissions page",
+    "Funding or scholarship availability for international MPP applicants not confirmed in the evidence seen"
+  ],
+  "discovered_at": "2026-11-27T04:00:00.000Z",
+  "last_verified_at": "2026-11-27T03:04:49.056Z",
+  "id": "opp_fb31b61c54fae465",
+  "fingerprint": "13868a0fbb966a5e",
+  "content_hash": "sha256:20c4c1b38f9702fde626f37590775a9eacf32e7c375106ff275d6c8c1a91bf1d"
+}
