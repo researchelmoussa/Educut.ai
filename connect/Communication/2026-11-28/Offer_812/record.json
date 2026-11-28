@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "AFS Global STEM Academies",
+    "evidence_url": "https://afs.org/global-stem/academies/",
+    "evidence_quote": "AFS Global STEM Academies"
+  },
+  "institution": {
+    "name": "AFS Intercultural Programs",
+    "website": "https://afs.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://afs.org/global-stem/academies/",
+  "source_url": "https://afs.org/global-stem/academies/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "unspecified",
+  "field": "STEM",
+  "seniority": "Secondary-school students aged 15 to 17.5",
+  "qualifications": [
+    "Nationality/citizenship or legal residence in Azerbaijan, Brazil, Egypt, Hungary, India, Indonesia, Malaysia, Mexico, South Africa, Trinidad & Tobago or the United Kingdom (per the official page)",
+    "Aged 15 to 17.5 years at the program start date",
+    "Able to follow a program taught entirely in English and to travel internationally for the full four weeks"
+  ],
+  "skills": [],
+  "description_short": "AFS Global STEM Academies is a scholarship programme for students aged 15 to 17.5 from eligible countries, including Brazil, Egypt, India, Indonesia, Mexico and South Africa. It is taught in English and includes international travel.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-10",
+    "timezone": null,
+    "evidence_url": "https://afs.org/global-stem/academies/",
+    "evidence_quote": "the Global STEM Academies application must be completed no later than January 10, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "AFS Global STEM Academies page (seen in search results): application window opened November 16, 2026; application 'must be completed no later than January 10, 2027'; late forms not accepted",
+    "Decisions are due February 12, 2027 by email; applications reviewed on a rolling basis with virtual interviews for semi-finalists",
+    "Deadline 2027-01-10 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the AFS page and application portal could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Deadline quote comes from search-result text of the AFS page; re-check the exact wording on the live page",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official AFS page, so source_list_url is the closest approved category",
+    "Eligible-country lists differ between afs.org and national AFS pages (Egypt, India); the record follows afs.org",
+    "Host destination(s) and the virtual/in-person split were not confirmed, so location and work arrangement are unspecified",
+    "Scholarship coverage not quoted here",
+    "AFS Vietnam's January 17, 2027 deadline concerns a different AFS scholarship"
+  ],
+  "discovered_at": "2026-11-28T04:30:00.000Z",
+  "last_verified_at": "2026-11-28T03:08:13.039Z",
+  "id": "opp_3aeb88ac4623f0ec",
+  "fingerprint": "a8f9bfd51503dbd2",
+  "content_hash": "sha256:43835a7c5e126db491fda8889d6eea4977fc62a0097f9d6dc65307a3eb2739e3"
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Judicial Fellowship Programme",
+    "evidence_url": "https://www.icj-cij.org/judicial-fellows-program",
+    "evidence_quote": "Judicial Fellowship Programme"
+  },
+  "institution": {
+    "name": "International Court of Justice (ICJ)",
+    "website": "https://www.icj-cij.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.icj-cij.org/judicial-fellows-program",
+  "source_url": "https://www.icj-cij.org/judicial-fellows-program",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "The Hague",
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "International law",
+  "seniority": "Recent law graduates nominated by their universities",
+  "qualifications": [
+    "Candidates must be nominated, and their application submitted, by their university; the Court does not accept applications from individuals",
+    "Candidates should be no more than 31 years of age at the start of the Programme, with possible exceptions in special circumstances",
+    "From the 2027-2028 edition, sponsoring universities must provide each selected candidate with a monthly stipend, health insurance and travel costs"
+  ],
+  "skills": [],
+  "description_short": "The International Court of Justice's Judicial Fellowship Programme for 2027-2028 accepts candidates nominated by universities worldwide; the Court does not accept individual applications. Nominations are due 5 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-05",
+    "timezone": "Europe/Amsterdam",
+    "evidence_url": "https://www.icj-cij.org/judicial-fellows-program",
+    "evidence_quote": "the deadline for the submission of applications is 5 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "ICJ Judicial Fellowship Programme page (seen in search results): 'the deadline for the submission of applications is 5 February 2027', with the final selection expected by April 2027",
+    "ICJ page (seen in search results): 'The Court is currently welcoming applications from eligible universities worldwide for the 2027-2028 programme'",
+    "Deadline 2027-02-05 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the ICJ page could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Deadline and title quotes come from search-result text of the ICJ page; re-check the exact wording on the live page",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official ICJ page, so source_list_url is the closest approved category",
+    "Individuals cannot apply directly: the application must be submitted by the nominating university; university internal deadlines may be earlier",
+    "Time of day for the deadline not stated in what was seen",
+    "Number of places is reported as up to 16 on the current page and up to 15 in an older annual report; not repeated in the description",
+    "A trust fund supports candidates from developing countries whose universities cannot pay; details not quoted here"
+  ],
+  "discovered_at": "2026-11-28T03:30:00.000Z",
+  "last_verified_at": "2026-11-28T03:23:54.787Z",
+  "id": "opp_17b24697c0fe00c6",
+  "fingerprint": "d7cacfc55909041c",
+  "content_hash": "sha256:ac3ba1e7c8dfb68f448c4a3092dc96130abd9a11a4278ab6bd91331fe6b70a99"
+}

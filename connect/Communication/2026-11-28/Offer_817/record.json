@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Falak Sufi Scholarship",
+    "evidence_url": "https://gsas.nyu.edu/admissions/financial-aid/falak-sufi-scholarship.html",
+    "evidence_quote": "Falak Sufi Scholarship"
+  },
+  "institution": {
+    "name": "New York University, Graduate School of Arts & Science (Hagop Kevorkian Center for Near Eastern Studies)",
+    "website": "https://gsas.nyu.edu",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://gsas.nyu.edu/admissions/financial-aid/falak-sufi-scholarship.html",
+  "source_url": "https://gsas.nyu.edu/admissions/financial-aid/falak-sufi-scholarship.html",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": "New York",
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Near Eastern Studies",
+  "seniority": "Master's students",
+  "qualifications": [
+    "Students from South Asian countries with a majority Muslim population who might otherwise lack access to graduate education (preferably female)",
+    "Admission to the two-year master's program in Near Eastern Studies (joint degree with Journalism and concentrations also eligible)",
+    "Commitment to women in academia and to the study of gender in the Near East, Middle East and/or South Asia",
+    "No separate form: add one paragraph to the Statement of Purpose explaining how the criteria are met"
+  ],
+  "skills": [],
+  "description_short": "NYU's Falak Sufi Scholarship supports students, preferably women, from majority-Muslim South Asian countries in the Near Eastern Studies master's program. Candidates apply through the regular admission application with an added Statement of Purpose paragraph.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15",
+    "timezone": "America/New_York",
+    "evidence_url": "https://gsas.nyu.edu/admissions/financial-aid/falak-sufi-scholarship.html",
+    "evidence_quote": "The application deadline for admission is January 15, 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "NYU GSAS Falak Sufi Scholarship page (seen in search results): admission application deadline January 15, 2027",
+    "Scholarship consideration is through the general GSAS admission application (no separate form)",
+    "Deadline 2027-01-15 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the NYU page and the admission portal could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Deadline quote comes from search-result text of the GSAS page; re-check the exact wording on the live page",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official NYU pages, so source_list_url is the closest approved category",
+    "Award amount is stated differently on the GSAS and Near Eastern Studies pages; not repeated in this record",
+    "Time of day for the deadline not stated in what was seen",
+    "application_url is the official scholarship page; applications are submitted via the GSAS admission application"
+  ],
+  "discovered_at": "2026-11-28T04:10:00.000Z",
+  "last_verified_at": "2026-11-28T03:15:48.472Z",
+  "id": "opp_d120dc5efb431276",
+  "fingerprint": "8700bb585cba8e68",
+  "content_hash": "sha256:b22c5138db3fce6dc3610dd41dd013a00c4d7a0f9f47c6a02c906e79d4661be4"
+}

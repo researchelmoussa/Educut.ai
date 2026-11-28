@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "The Ryoichi Sasakawa Young Leaders Fellowship Fund (Sylff) Postgraduate Scholarship",
+    "evidence_url": "https://www.massey.ac.nz/study/scholarships-and-awards/the-ryoichi-sasakawa-young-leaders-fellowship-fund-sylff-postgraduate-scholarship/",
+    "evidence_quote": "The Ryoichi Sasakawa Young Leaders Fellowship Fund (Sylff) Postgraduate Scholarship"
+  },
+  "institution": {
+    "name": "Massey University",
+    "website": "https://www.massey.ac.nz",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.massey.ac.nz/study/scholarships-and-awards/the-ryoichi-sasakawa-young-leaders-fellowship-fund-sylff-postgraduate-scholarship/",
+  "source_url": "https://www.massey.ac.nz/study/scholarships-and-awards/the-ryoichi-sasakawa-young-leaders-fellowship-fund-sylff-postgraduate-scholarship/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": "New Zealand",
+    "country_code": "NZ"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": null,
+  "seniority": "Master's and doctoral students",
+  "qualifications": [],
+  "skills": [],
+  "description_short": "Massey University's Sylff Postgraduate Scholarship, established from a Nippon Foundation endowment, supports master's or doctoral study at Massey. Applications open on 12 January 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-03-01",
+    "timezone": "Pacific/Auckland",
+    "evidence_url": "https://www.massey.ac.nz/study/scholarships-and-awards/the-ryoichi-sasakawa-young-leaders-fellowship-fund-sylff-postgraduate-scholarship/",
+    "evidence_quote": "Applications open: 12 January 2027. Closing date: 1 March 2027."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Massey Sylff scholarship page (seen in search results): 'Applications open: 12 January 2027. Closing date: 1 March 2027.'",
+    "Deadline 2027-03-01 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the Massey page could not be loaded from this environment; the application window has not opened yet"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official Massey page, so source_list_url is the closest approved category",
+    "Applications do not open until 12 January 2027; the page currently shows a 'Closed' status label",
+    "Eligibility criteria are in the scholarship regulations, which were not seen; qualifications left empty",
+    "Award value and number of awards are stated on the page but not repeated in the description",
+    "An aggregator gives 28 February 2027; the official page says 1 March 2027"
+  ],
+  "discovered_at": "2026-11-28T05:00:00.000Z",
+  "last_verified_at": "2026-11-28T03:10:50.296Z",
+  "id": "opp_4dbd0ed7a80ea14a",
+  "fingerprint": "a7474b3a97d42ee9",
+  "content_hash": "sha256:35ee63440125f4aaed93e5dcbbd675a3ad892ff87acc2770cabec4b6cdb23caa"
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "postdoc",
+  "title": {
+    "value": "Fellowship Program",
+    "evidence_url": "https://lalorfound.org/postdoctoral-fellowship-program/229-2/",
+    "evidence_quote": "The Lalor Foundation's Fellowship Program awards fellowships to institutions for basic postdoctoral research in mammalian reproductive biology as related to the regulation of fertility."
+  },
+  "institution": {
+    "name": "The Lalor Foundation",
+    "website": "https://lalorfound.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://lalorfound.org/postdoctoral-fellowship-program/application-instructions/",
+  "source_url": "https://lalorfound.org/postdoctoral-fellowship-program/application-instructions/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Mammalian reproductive biology (regulation of fertility)",
+  "seniority": "Postdoctoral researchers",
+  "qualifications": [
+    "Any nonprofit research institution, such as a university or medical research center, may apply; proof of nonprofit status is required",
+    "Applicants in their final year of doctoral study must expect to receive their degree in the year they apply",
+    "Four letters are required: two independent expert reviews, one letter of reference and one letter of support from the proposed sponsor/mentor"
+  ],
+  "skills": [],
+  "description_short": "The Lalor Foundation's Fellowship Program awards fellowships to nonprofit research institutions for basic postdoctoral research in mammalian reproductive biology related to the regulation of fertility. Applications, including four letters, are submitted online.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-15T23:59:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://lalorfound.org/postdoctoral-fellowship-program/application-instructions/",
+    "evidence_quote": "The 2027 application deadline is 11:59PM EST on Friday, January 15, 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Lalor Foundation application instructions (seen in search results): 'The 2027 application deadline is 11:59PM EST on Friday, January 15, 2027'",
+    "Deadline 2027-01-15 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the official page could not be loaded from this environment and the online portal was not independently confirmed"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official Lalor Foundation pages, so source_list_url is the closest approved category",
+    "The programme's exact public name is shown as 'Fellowship Program' on the guidelines page; the URL path says 'postdoctoral-fellowship-program'",
+    "The application-instructions page metadata looks older than the 2027 date it states; confirm the date on the live portal",
+    "Host institution can be any eligible nonprofit research institution, so location is null",
+    "Award amount and duration are stated on the foundation's pages but are deliberately not repeated in this record; check the official guidelines",
+    "Letters of recommendation are strongly recommended by January 1"
+  ],
+  "discovered_at": "2026-11-28T03:00:00.000Z",
+  "last_verified_at": "2026-11-28T02:56:52.707Z",
+  "id": "opp_f075c8275773d95a",
+  "fingerprint": "cea2fa17607625c8",
+  "content_hash": "sha256:d8ab1d32ffa3d4cd9e40fb7e64eb9dbb6bf52bb845d2d42ff15dd21550a551b2"
+}

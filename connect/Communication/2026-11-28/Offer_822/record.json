@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "HIAS Fellowships 2028-2029",
+    "evidence_url": "https://hias-hamburg.de/en/fellowship/application/",
+    "evidence_quote": "HIAS Fellowships 2028-2029"
+  },
+  "institution": {
+    "name": "Hamburg Institute for Advanced Study (HIAS)",
+    "website": "https://hias-hamburg.de",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://hias-hamburg.de/en/application/",
+  "source_url": "https://hias-hamburg.de/en/fellowship/application/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "Hamburg",
+    "country": "Germany",
+    "country_code": "DE"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "onsite",
+  "field": "Humanities, social sciences, natural and life sciences, and the arts",
+  "seniority": "Researchers with a doctorate; artists",
+  "qualifications": [
+    "A doctorate is the minimum for applicants in the humanities, social sciences and natural/life sciences",
+    "Arts applicants should show a connection to research where possible",
+    "Applicants choose a preferred fellowship period of at least three months within the academic year"
+  ],
+  "skills": [],
+  "description_short": "The Hamburg Institute for Advanced Study invites applications for its 2028-2029 fellowships, in the academic year from 1 October 2028 to 30 June 2029; a doctorate is required outside the arts. Applications close 1 February 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01T23:59:00+01:00",
+    "timezone": "CET",
+    "evidence_url": "https://hias-hamburg.de/en/fellowship/application/",
+    "evidence_quote": "The application deadline is February 1, 2027, at 23:59 CET."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "HIAS calls page (seen in search results): HIAS Fellowships 2028-2029, application deadline February 1, 2027, 23:59 CET; academic year from October 1, 2028 to June 30, 2029",
+    "Deadline 2027-02-01 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the HIAS page could not be loaded from this environment and the application form was not independently confirmed"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Deadline quote comes from search-result text of the HIAS calls page; re-check the exact wording on the live page",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official HIAS page, so source_list_url is the closest approved category",
+    "The HIAS calls page also lists the expired 2027-2028 call (deadline March 2, 2026); make sure the post refers to the 2028-2029 call",
+    "Fellowship benefits (stipend, housing) not quoted here; check the HIAS information page",
+    "application_url is the HIAS application page found in search results; the exact online form was not confirmed"
+  ],
+  "discovered_at": "2026-11-28T03:30:00.000Z",
+  "last_verified_at": "2026-11-28T03:15:49.285Z",
+  "id": "opp_cae1d1646e24dedf",
+  "fingerprint": "fcb3c80efbc6f8ed",
+  "content_hash": "sha256:87fb700b065bbcd4f4911b78a89f1d7e233bf29f8972c857d2bbd736a721ad10"
+}

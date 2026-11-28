@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "fellowship",
+  "title": {
+    "value": "Asia House Fellowship 2027/2028",
+    "evidence_url": "https://www.asiahouse.org/2026/11/16/applications-now-open-for-the-asia-house-fellowship-2027-2028/",
+    "evidence_quote": "Applications Open for the Asia House Fellowship 2027/2028"
+  },
+  "institution": {
+    "name": "Asia House",
+    "website": "https://www.asiahouse.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.asiahouse.org/fellowship-programme/",
+  "source_url": "https://www.asiahouse.org/2026/11/16/applications-now-open-for-the-asia-house-fellowship-2027-2028/",
+  "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+  "location": {
+    "city": "London",
+    "country": "United Kingdom",
+    "country_code": "GB"
+  },
+  "employment_type": "fellowship",
+  "work_arrangement": "remote",
+  "field": "Economic, political and commercial issues in Asia and the Middle East",
+  "seniority": "Early-career researchers",
+  "qualifications": [
+    "A completed Master's and/or PhD by October 2027",
+    "Fluent written and spoken English",
+    "In the early stages of their career",
+    "Open to people of all nationalities and in all locations"
+  ],
+  "skills": [],
+  "description_short": "Asia House's 2027/2028 Fellowship supports early-career researchers in a research project on issues driving change across Asia and/or the Middle East. It can be completed remotely and is open to all nationalities.",
+  "published_at": {
+    "value": "2026-11-16",
+    "evidence_url": "https://www.asiahouse.org/2026/11/16/applications-now-open-for-the-asia-house-fellowship-2027-2028/",
+    "evidence_quote": "Applications Open for the Asia House Fellowship 2027/2028"
+  },
+  "deadline": {
+    "value": "2027-01-31T23:59:00+00:00",
+    "timezone": "Europe/London",
+    "evidence_url": "https://www.asiahouse.org/fellowship-programme/",
+    "evidence_quote": "the closing date for applications is 31 January, 2027, at 23:59"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Asia House announcement dated 2026-11-16 (seen in search results): 'Applications Open for the Asia House Fellowship 2027/2028'",
+    "Asia House pages (seen in search results): closing date 31 January 2027 at 23:59; 'We will not accept late applications.'",
+    "Deadline 2027-01-31 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the Asia House pages and application form could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official pages; the pages could not be fetched from this environment",
+    "Deadline quote comes from search-result text of the Asia House pages; re-check the exact wording on the live page",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official Asia House pages, so source_list_url is the closest approved category",
+    "published_at taken from the date in the announcement URL (2026/11/16)",
+    "The fellowship can be completed remotely; London is Asia House's base, not a required location",
+    "The 2027/2028 stipend was not found (2026/2027 figure differs by cycle); not stated in this record",
+    "Time zone of the 23:59 deadline not stated; assumed UK time"
+  ],
+  "discovered_at": "2026-11-28T05:20:00.000Z",
+  "last_verified_at": "2026-11-28T03:15:48.895Z",
+  "id": "opp_d1a7bb06db3eef2b",
+  "fingerprint": "e5967ee552e354b0",
+  "content_hash": "sha256:90210005f2e8c15d28088a2b8d4d2cc5e218ae2e19c78c4f91cb23872f8af428"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Vienna BioCenter Summer School",
+    "evidence_url": "https://training.vbc.ac.at/summer-school/",
+    "evidence_quote": "Vienna BioCenter Summer School"
+  },
+  "institution": {
+    "name": "Vienna BioCenter (VBC)",
+    "website": "https://training.vbc.ac.at",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://training.vbc.ac.at/how-to-apply/",
+  "source_url": "https://training.vbc.ac.at/summer-school/",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Vienna",
+    "country": "Austria",
+    "country_code": "AT"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Life sciences",
+  "seniority": "Undergraduate and master's students",
+  "qualifications": [
+    "At least 2 full years of university study completed before 30 June 2027",
+    "Still enrolled at university when the program starts",
+    "Two-part application: online form plus an offline PDF uploaded before the deadline"
+  ],
+  "skills": [],
+  "description_short": "The Vienna BioCenter Summer School offers university students summer research training at the Vienna BioCenter; the Open Program starts 1 July 2027. Applicants submit an online form plus an offline PDF, with no application fee.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-11T23:00:00+01:00",
+    "timezone": "CET",
+    "evidence_url": "https://training.vbc.ac.at/how-to-apply/",
+    "evidence_quote": "Applications must be submitted in the online system by 11 January 2027 at 2300hrs (CET)"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "VBC How to Apply page (seen in search results): 'Applications must be submitted in the online system by 11 January 2027 at 2300hrs (CET)'",
+    "VBC page (seen in search results): portal opens 17 November 2026; 'Decisions: 1 March 2027 Open Program start: 1 July 2027'",
+    "VBC FAQ (seen in search results): 'The summer school does not charge an application fee.'",
+    "Deadline 2027-01-11 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the VBC pages and application platform could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official pages; the pages could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official VBC pages, so source_list_url is the closest approved category",
+    "The Talents for Future track has its own schedule (start 1 June 2027) and the Talents page states a three-year coursework requirement, which conflicts with the two-year rule on the main pages",
+    "Stipend, housing and travel support not quoted here; check the VBC Housing/Benefits page"
+  ],
+  "discovered_at": "2026-11-28T04:30:00.000Z",
+  "last_verified_at": "2026-11-28T03:08:12.795Z",
+  "id": "opp_2c9909e2d0561378",
+  "fingerprint": "65e7393a94462faa",
+  "content_hash": "sha256:a0b44188decb15da1bb9168678e71fb515b8532ead8a838c0ce88a4dfa370d2f"
+}

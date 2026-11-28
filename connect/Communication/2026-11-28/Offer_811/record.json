@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "Call for Expression of Interest – Internship Programme for Asia and the Pacific (RAP)",
+    "evidence_url": "https://www.fao.org/srilanka/our-office/employment-and-procurement/en",
+    "evidence_quote": "Call for Expression of Interest – Internship Programme for Asia and the Pacific (RAP)"
+  },
+  "institution": {
+    "name": "Food and Agriculture Organization of the United Nations (FAO), Regional Office for Asia and the Pacific",
+    "website": "https://www.fao.org",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.fao.org/employment/young-talent-programme/internship-programme/en",
+  "source_url": "https://www.fao.org/srilanka/our-office/employment-and-procurement/en",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "internship",
+  "work_arrangement": "onsite",
+  "field": "Food and agriculture",
+  "seniority": "University students and recent graduates",
+  "qualifications": [
+    "Aged between 21 and 30 at the start of the internship",
+    "Application through FAO's online career portal with a motivation letter and evidence of attendance at a recognized university",
+    "Candidates not selected before the closing date must re-apply to new calls"
+  ],
+  "skills": [],
+  "description_short": "FAO's call for expressions of interest for its Internship Programme in Asia and the Pacific invites candidates aged 21 to 30 to apply through FAO's online career portal with a motivation letter and proof of university attendance.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-01",
+    "timezone": null,
+    "evidence_url": "https://www.fao.org/srilanka/our-office/employment-and-procurement/en",
+    "evidence_quote": "the current closing date for receiving applications is 01 January 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "FAO Sri Lanka employment page (seen in search results) lists the RAP internship call with closing date 01 January 2027",
+    "FAO Internship Programme page (seen in search results): candidates aged 21-30; assignments of 3 to 11 months; applications via the online career portal",
+    "Deadline 2027-01-01 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: FAO pages and the career portal could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of official FAO pages; the pages could not be fetched from this environment",
+    "Deadline quote comes from search-result text of the FAO Sri Lanka page; re-check the exact wording and the posting on jobs.fao.org",
+    "Approved source lists were unreachable from this environment; found by web search on official FAO pages, so source_list_url is the closest approved category",
+    "Secondary sites give the closing time as 22:59 UTC on 31 December 2026 or early 1 January 2027; the exact time was not confirmed on FAO's portal",
+    "Duty stations across Asia and the Pacific are not specified, so location is null",
+    "Direct link to the call on the FAO career portal not seen; application_url is the official FAO Internship Programme page",
+    "Stipend terms not quoted here"
+  ],
+  "discovered_at": "2026-11-28T05:30:00.000Z",
+  "last_verified_at": "2026-11-28T03:14:17.368Z",
+  "id": "opp_3a33e897753b1263",
+  "fingerprint": "93172a0c4ab886b7",
+  "content_hash": "sha256:bbaab8494e07591fc55a55c0eadeabc6c277e724070046fc4f910eba3badff95"
+}
