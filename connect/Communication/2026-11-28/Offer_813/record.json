@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "professional_development",
+  "title": {
+    "value": "IACA Regional Summer Academy - Central and South America 2027",
+    "evidence_url": "https://www.iaca.int/iaca-programmes/open-trainings/regional-summer-academy.html",
+    "evidence_quote": "IACA Regional Summer Academy - Central and South America 2027 will be delivered in person in Panama City, Panama."
+  },
+  "institution": {
+    "name": "International Anti-Corruption Academy (IACA)",
+    "website": "https://www.iaca.int",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.iaca.int/iaca-programmes/open-trainings/regional-summer-academy.html",
+  "source_url": "https://www.iaca.int/iaca-programmes/open-trainings/regional-summer-academy.html",
+  "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+  "location": {
+    "city": "Panama City",
+    "country": "Panama",
+    "country_code": "PA"
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": "Anti-corruption and compliance",
+  "seniority": "Professionals (experienced preferred)",
+  "qualifications": [
+    "Passport from one of the eligible countries: Argentina, Belize, Bolivia, Brazil, Chile, Colombia, Costa Rica, Ecuador, El Salvador, Guatemala, Guyana, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Suriname, Uruguay or Venezuela",
+    "Experienced professionals are preferred; applicants with junior experience may be admitted subject to available seats"
+  ],
+  "skills": [],
+  "description_short": "The International Anti-Corruption Academy's Regional Summer Academy for Central and South America is an in-person programme in Panama City, 19-23 April 2027, for anti-corruption and compliance professionals holding passports from eligible countries in the region.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-10",
+    "timezone": null,
+    "evidence_url": "https://www.iaca.int/iaca-programmes/open-trainings/regional-summer-academy.html",
+    "evidence_quote": "Scholarship holders: 10 January 2027; Self-Payers: 24 February 2027"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "IACA programme page (seen in search results): 'Applications Open for IACA Regional Summer Academy - Central and South America 2027'",
+    "IACA programme page (seen in search results): 'Scholarship holders: 10 January 2027; Self-Payers: 24 February 2027'",
+    "Deadline 2027-01-10 (scholarship holders) is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the IACA page could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official IACA page, so source_list_url is the closest approved category",
+    "Two deadlines: 10 January 2027 for scholarship holders and 24 February 2027 for self-payers; the record uses the earlier one",
+    "Applications are processed on a rolling basis, so places may be offered before the deadline",
+    "The page URL/title still carries an older 'Regional Summer Academy Africa 2023' label, and IACA's general Apply page lists the deadline as TBC; the programme page gives the 2027 dates",
+    "A training fee applies and participants cover their own travel; scholarship terms not quoted here",
+    "Time zone of the deadline not stated"
+  ],
+  "discovered_at": "2026-11-28T04:20:00.000Z",
+  "last_verified_at": "2026-11-28T03:07:23.404Z",
+  "id": "opp_4adfffc49c5899af",
+  "fingerprint": "738d6854e8a48609",
+  "content_hash": "sha256:36679bed25490902f95bfe0a718ca44eb77b629811edd367e905b16cf7f50c5f"
+}

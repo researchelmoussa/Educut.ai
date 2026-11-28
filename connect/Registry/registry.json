@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-27T03:10:54.039Z",
+  "updated_at": "2026-11-28T03:24:04.664Z",
   "opportunities": {
     "opp_8fc9fa0bd2be2658": {
       "id": "opp_8fc9fa0bd2be2658",
@@ -18310,7 +18310,7 @@
       "deadline": "2026-11-26",
       "content_hash": "sha256:187188de57d6f73394b4c7f629a4efa3d09766c6e1257cb6f29450be2b2a379d",
       "last_verified_at": "2026-10-27T03:01:51.571Z",
-      "pipeline_status": "UNDER_REVIEW",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-27T03:01:51.746Z",
       "history": [
         {
@@ -18340,6 +18340,13 @@
           "to": "UNDER_REVIEW",
           "actor": "validator",
           "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T02:50:18.621Z",
+          "from": "UNDER_REVIEW",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-26 passed"
         }
       ],
       "offer_number": 252
@@ -23045,7 +23052,7 @@
       "deadline": "2026-11-27T17:00:00+00:00",
       "content_hash": "sha256:8daea816699a9748f0ff338a1f46ce9fa72e2a01bf2ead502bdf9cc0c7975a69",
       "last_verified_at": "2026-10-30T03:20:09.811Z",
-      "pipeline_status": "READY_TO_PUBLISH",
+      "pipeline_status": "EXPIRED",
       "first_seen": "2026-10-30T03:20:25.851Z",
       "history": [
         {
@@ -23089,6 +23096,13 @@
           "to": "READY_TO_PUBLISH",
           "actor": "system",
           "reason": "approved; status re-checked"
+        },
+        {
+          "at": "2026-11-28T02:50:18.621Z",
+          "from": "READY_TO_PUBLISH",
+          "to": "EXPIRED",
+          "actor": "system",
+          "reason": "deadline 2026-11-27T17:00:00+00:00 passed"
         }
       ],
       "offer_number": 331
@@ -54726,6 +54740,1088 @@
         }
       ],
       "offer_number": 807
+    },
+    "opp_3c8a4ccc9bbb996a": {
+      "id": "opp_3c8a4ccc9bbb996a",
+      "fingerprint": "60a1fd96e2826c16",
+      "title": "Queen Elizabeth Commonwealth Scholarships",
+      "institution": "Association of Commonwealth Universities (ACU)",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.acu.ac.uk/funding-opportunities/for-students/scholarships/queen-elizabeth-commonwealth-scholarships/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.acu.ac.uk/funding-opportunities/for-students/scholarships/queen-elizabeth-commonwealth-scholarships/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-13T15:00:00+00:00",
+      "content_hash": "sha256:947c3e1ab24e5ad1e413389f77c5556570b024aae221d7d5ce0c8183abe984e1",
+      "last_verified_at": "2026-11-28T02:56:52.547Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T02:56:56.614Z",
+      "history": [
+        {
+          "at": "2026-11-28T02:56:56.614Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T02:56:56.614Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:23:59.089Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:23:59.089Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:23:59.318Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:23:59.319Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 815
+    },
+    "opp_f075c8275773d95a": {
+      "id": "opp_f075c8275773d95a",
+      "fingerprint": "cea2fa17607625c8",
+      "title": "Fellowship Program",
+      "institution": "The Lalor Foundation",
+      "city": null,
+      "country": null,
+      "source_url": "https://lalorfound.org/postdoctoral-fellowship-program/application-instructions/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://lalorfound.org/postdoctoral-fellowship-program/application-instructions/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15T23:59:00-05:00",
+      "content_hash": "sha256:d8ab1d32ffa3d4cd9e40fb7e64eb9dbb6bf52bb845d2d42ff15dd21550a551b2",
+      "last_verified_at": "2026-11-28T02:56:52.707Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T02:56:56.791Z",
+      "history": [
+        {
+          "at": "2026-11-28T02:56:56.791Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T02:56:56.791Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:24:00.514Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:24:00.515Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:24:00.745Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:24:00.746Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 818
+    },
+    "opp_bfdfc0e64ae750df": {
+      "id": "opp_bfdfc0e64ae750df",
+      "fingerprint": "268b36468d4cbef8",
+      "title": "Lee Kuan Yew Postdoctoral Fellowship (LKYPDF)",
+      "institution": "Nanyang Technological University (NTU)",
+      "city": "Singapore",
+      "country": "Singapore",
+      "source_url": "https://www.ntu.edu.sg/research/research-careers/lee-kuan-yew-postdoctoral-fellowship-(lkypdf)",
+      "source_list_url": "https://vacancyedu.com/postdoctoral-positions/",
+      "application_url": "https://www.ntu.edu.sg/research/research-careers/lee-kuan-yew-postdoctoral-fellowship-(lkypdf)",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-10",
+      "content_hash": "sha256:83ead1bd8d8289c360c86bdd0c6335b21310758db2448c2f371e96872e6d7d14",
+      "last_verified_at": "2026-11-28T02:56:52.889Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T02:56:56.984Z",
+      "history": [
+        {
+          "at": "2026-11-28T02:56:56.984Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T02:56:56.984Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:24:03.184Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:24:03.184Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:24:03.399Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:24:03.399Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 824
+    },
+    "opp_17b24697c0fe00c6": {
+      "id": "opp_17b24697c0fe00c6",
+      "fingerprint": "d7cacfc55909041c",
+      "title": "Judicial Fellowship Programme",
+      "institution": "International Court of Justice (ICJ)",
+      "city": "The Hague",
+      "country": "Netherlands",
+      "source_url": "https://www.icj-cij.org/judicial-fellows-program",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.icj-cij.org/judicial-fellows-program",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-05",
+      "content_hash": "sha256:ac3ba1e7c8dfb68f448c4a3092dc96130abd9a11a4278ab6bd91331fe6b70a99",
+      "last_verified_at": "2026-11-28T03:23:54.787Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:01:29.832Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:01:29.832Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:01:29.833Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:23:55.006Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-28T03:24:02.716Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:24:02.717Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:24:02.949Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:24:02.950Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 823
+    },
+    "opp_cae1d1646e24dedf": {
+      "id": "opp_cae1d1646e24dedf",
+      "fingerprint": "fcb3c80efbc6f8ed",
+      "title": "HIAS Fellowships 2028-2029",
+      "institution": "Hamburg Institute for Advanced Study (HIAS)",
+      "city": "Hamburg",
+      "country": "Germany",
+      "source_url": "https://hias-hamburg.de/en/fellowship/application/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://hias-hamburg.de/en/application/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01T23:59:00+01:00",
+      "content_hash": "sha256:87fb700b065bbcd4f4911b78a89f1d7e233bf29f8972c857d2bbd736a721ad10",
+      "last_verified_at": "2026-11-28T03:15:49.285Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:01:30.285Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:01:30.285Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:01:30.285Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:15:49.467Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-28T03:24:02.289Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:24:02.289Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:24:02.514Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:24:02.514Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 822
+    },
+    "opp_5ca4e05242897850": {
+      "id": "opp_5ca4e05242897850",
+      "fingerprint": "6dcd15f06f4795dc",
+      "title": "2027 Summer Internship Program",
+      "institution": "Television Academy Foundation",
+      "city": null,
+      "country": "United States",
+      "source_url": "https://www.televisionacademy.com/foundation/programs/internships/summer",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://internship.televisionacademy.com/login",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-13T17:00:00-08:00",
+      "content_hash": "sha256:c41945b9e0b7bf2b553b0733cc8ef1d04e04da476318d383206608fe3daee0af",
+      "last_verified_at": "2026-11-28T03:02:48.977Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:02:49.161Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:02:49.162Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:02:49.162Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:23:59.541Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:23:59.541Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:23:59.796Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:23:59.797Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 816
+    },
+    "opp_c1caac2a460a0307": {
+      "id": "opp_c1caac2a460a0307",
+      "fingerprint": "3598723924272b51",
+      "title": "Scholarship",
+      "institution": "Daughters for Life Foundation (DFL)",
+      "city": null,
+      "country": null,
+      "source_url": "https://daughtersforlife.com/programs/scholarship-2027-2028/",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://daughtersforlife.com/programs/scholarship-2027-2028/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-22T23:59:00-05:00",
+      "content_hash": "sha256:d7c807b475227404f09c69445b0e7e6226919499dd62da187d48d38a38ec83a8",
+      "last_verified_at": "2026-11-28T03:04:47.010Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:04:50.098Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:04:50.098Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:04:50.098Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:24:00.968Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:24:00.968Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:24:01.172Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:24:01.172Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 819
+    },
+    "opp_d120dc5efb431276": {
+      "id": "opp_d120dc5efb431276",
+      "fingerprint": "8700bb585cba8e68",
+      "title": "Falak Sufi Scholarship",
+      "institution": "New York University, Graduate School of Arts & Science (Hagop Kevorkian Center for Near Eastern Studies)",
+      "city": "New York",
+      "country": "United States",
+      "source_url": "https://gsas.nyu.edu/admissions/financial-aid/falak-sufi-scholarship.html",
+      "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+      "application_url": "https://gsas.nyu.edu/admissions/financial-aid/falak-sufi-scholarship.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-15",
+      "content_hash": "sha256:b22c5138db3fce6dc3610dd41dd013a00c4d7a0f9f47c6a02c906e79d4661be4",
+      "last_verified_at": "2026-11-28T03:15:48.472Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:05:49.296Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:05:49.296Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:05:49.296Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:15:48.666Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-28T03:24:00.072Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:24:00.072Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:24:00.288Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:24:00.288Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 817
+    },
+    "opp_4adfffc49c5899af": {
+      "id": "opp_4adfffc49c5899af",
+      "fingerprint": "738d6854e8a48609",
+      "title": "IACA Regional Summer Academy - Central and South America 2027",
+      "institution": "International Anti-Corruption Academy (IACA)",
+      "city": "Panama City",
+      "country": "Panama",
+      "source_url": "https://www.iaca.int/iaca-programmes/open-trainings/regional-summer-academy.html",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://www.iaca.int/iaca-programmes/open-trainings/regional-summer-academy.html",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10",
+      "content_hash": "sha256:36679bed25490902f95bfe0a718ca44eb77b629811edd367e905b16cf7f50c5f",
+      "last_verified_at": "2026-11-28T03:07:23.404Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:07:26.262Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:07:26.262Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:07:26.262Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:23:58.178Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:23:58.178Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:23:58.422Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:23:58.422Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 813
+    },
+    "opp_2c9909e2d0561378": {
+      "id": "opp_2c9909e2d0561378",
+      "fingerprint": "65e7393a94462faa",
+      "title": "Vienna BioCenter Summer School",
+      "institution": "Vienna BioCenter (VBC)",
+      "city": "Vienna",
+      "country": "Austria",
+      "source_url": "https://training.vbc.ac.at/summer-school/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://training.vbc.ac.at/how-to-apply/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-11T23:00:00+01:00",
+      "content_hash": "sha256:a0b44188decb15da1bb9168678e71fb515b8532ead8a838c0ce88a4dfa370d2f",
+      "last_verified_at": "2026-11-28T03:08:12.795Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:08:17.052Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:08:17.052Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:08:17.052Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:23:58.650Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:23:58.650Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:23:58.853Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:23:58.853Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 814
+    },
+    "opp_3aeb88ac4623f0ec": {
+      "id": "opp_3aeb88ac4623f0ec",
+      "fingerprint": "a8f9bfd51503dbd2",
+      "title": "AFS Global STEM Academies",
+      "institution": "AFS Intercultural Programs",
+      "city": null,
+      "country": null,
+      "source_url": "https://afs.org/global-stem/academies/",
+      "source_list_url": "https://fellowshipsguide.com/category/summer-schools/",
+      "application_url": "https://afs.org/global-stem/academies/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-10",
+      "content_hash": "sha256:43835a7c5e126db491fda8889d6eea4977fc62a0097f9d6dc65307a3eb2739e3",
+      "last_verified_at": "2026-11-28T03:08:13.039Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:08:17.268Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:08:17.268Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:08:17.268Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:23:57.752Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:23:57.752Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:23:57.973Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:23:57.973Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 812
+    },
+    "opp_d29cdcdf8e53da92": {
+      "id": "opp_d29cdcdf8e53da92",
+      "fingerprint": "c1994fa55739039f",
+      "title": "Up to Six PhD Positions in Economics",
+      "institution": "University of Gothenburg, Department of Economics",
+      "city": "Gothenburg",
+      "country": "Sweden",
+      "source_url": "https://www.gu.se/en/vacancies",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.gu.se/en/economics/doctoral-studies/application-and-admission",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-01",
+      "content_hash": "sha256:97b2b1295ea7d07dcce17d05e66f47580a1f6b4acdd78fe8b439c6030ec56c30",
+      "last_verified_at": "2026-11-28T03:09:24.556Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:09:28.167Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:09:28.167Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:09:28.167Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:24:01.794Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:24:01.794Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:24:02.036Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:24:02.037Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 821
+    },
+    "opp_549fbc657d050079": {
+      "id": "opp_549fbc657d050079",
+      "fingerprint": "64e95c7085d826fd",
+      "title": "PhDs in the Humanities 2027",
+      "institution": "Dutch Research Council (NWO)",
+      "city": null,
+      "country": "Netherlands",
+      "source_url": "https://www.nwo.nl/en/news/phds-in-the-humanities-2027-open-for-applications",
+      "source_list_url": "https://mlscientist.com/category/phd-positions/",
+      "application_url": "https://www.nwo.nl/en/calls/phds-in-the-humanities-2027",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-02-16T14:00:00+01:00",
+      "content_hash": "sha256:ab38f5cd3fabdd59cfa1a7b33f9860e8e452c1500ae33d7572eaf9f767a00597",
+      "last_verified_at": "2026-11-28T03:09:59.296Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:10:02.929Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:10:02.929Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:10:02.930Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:24:03.619Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:24:03.619Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:24:03.830Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:24:03.830Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 825
+    },
+    "opp_4dbd0ed7a80ea14a": {
+      "id": "opp_4dbd0ed7a80ea14a",
+      "fingerprint": "a7474b3a97d42ee9",
+      "title": "The Ryoichi Sasakawa Young Leaders Fellowship Fund (Sylff) Postgraduate Scholarship",
+      "institution": "Massey University",
+      "city": null,
+      "country": "New Zealand",
+      "source_url": "https://www.massey.ac.nz/study/scholarships-and-awards/the-ryoichi-sasakawa-young-leaders-fellowship-fund-sylff-postgraduate-scholarship/",
+      "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+      "application_url": "https://www.massey.ac.nz/study/scholarships-and-awards/the-ryoichi-sasakawa-young-leaders-fellowship-fund-sylff-postgraduate-scholarship/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-01",
+      "content_hash": "sha256:35ee63440125f4aaed93e5dcbbd675a3ad892ff87acc2770cabec4b6cdb23caa",
+      "last_verified_at": "2026-11-28T03:10:50.296Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:10:53.571Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:10:53.571Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:10:53.572Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:24:04.038Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:24:04.038Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:24:04.254Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:24:04.254Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 826
+    },
+    "opp_b333a64e7c49599b": {
+      "id": "opp_b333a64e7c49599b",
+      "fingerprint": "dc12f12f114a8392",
+      "title": "Taiwan Program Kwoh-Ting Li Visiting Fellowship",
+      "institution": "Walter H. Shorenstein Asia-Pacific Research Center (APARC), Stanford University",
+      "city": "Stanford",
+      "country": "United States",
+      "source_url": "https://aparc.fsi.stanford.edu/education/fellowship-and-training-opportunities/contemporary-taiwan-fellowships",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://aparc.fsi.stanford.edu/education/fellowship-and-training-opportunities/contemporary-taiwan-fellowships",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-03-01",
+      "content_hash": "sha256:f8ea2f2d49519ca8c4b97f0f90a2eb92bf6030847de7adcef5649f3760695e30",
+      "last_verified_at": "2026-11-28T03:11:21.704Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:11:25.020Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:11:25.020Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:11:25.020Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:24:04.476Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:24:04.476Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:24:04.664Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:24:04.664Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 827
+    },
+    "opp_d1a7bb06db3eef2b": {
+      "id": "opp_d1a7bb06db3eef2b",
+      "fingerprint": "e5967ee552e354b0",
+      "title": "Asia House Fellowship 2027/2028",
+      "institution": "Asia House",
+      "city": "London",
+      "country": "United Kingdom",
+      "source_url": "https://www.asiahouse.org/2026/11/16/applications-now-open-for-the-asia-house-fellowship-2027-2028/",
+      "source_list_url": "https://fellowshipsguide.com/category/fellowships/",
+      "application_url": "https://www.asiahouse.org/fellowship-programme/",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-31T23:59:00+00:00",
+      "content_hash": "sha256:90210005f2e8c15d28088a2b8d4d2cc5e218ae2e19c78c4f91cb23872f8af428",
+      "last_verified_at": "2026-11-28T03:15:48.895Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:12:47.589Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:12:47.589Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:12:47.589Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:15:49.081Z",
+          "from": "VERIFIED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "record content changed"
+        },
+        {
+          "at": "2026-11-28T03:24:01.381Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:24:01.381Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:24:01.594Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:24:01.594Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 820
+    },
+    "opp_3a33e897753b1263": {
+      "id": "opp_3a33e897753b1263",
+      "fingerprint": "93172a0c4ab886b7",
+      "title": "Call for Expression of Interest – Internship Programme for Asia and the Pacific (RAP)",
+      "institution": "Food and Agriculture Organization of the United Nations (FAO), Regional Office for Asia and the Pacific",
+      "city": null,
+      "country": null,
+      "source_url": "https://www.fao.org/srilanka/our-office/employment-and-procurement/en",
+      "source_list_url": "https://fellowshipsguide.com/category/internships/",
+      "application_url": "https://www.fao.org/employment/young-talent-programme/internship-programme/en",
+      "application_status": "OPEN_LIKELY",
+      "deadline": "2027-01-01",
+      "content_hash": "sha256:bbaab8494e07591fc55a55c0eadeabc6c277e724070046fc4f910eba3badff95",
+      "last_verified_at": "2026-11-28T03:14:17.368Z",
+      "pipeline_status": "READY_TO_PUBLISH",
+      "first_seen": "2026-11-28T03:14:21.319Z",
+      "history": [
+        {
+          "at": "2026-11-28T03:14:21.319Z",
+          "from": null,
+          "to": "DISCOVERED",
+          "actor": "opportunity-scout",
+          "reason": "first seen"
+        },
+        {
+          "at": "2026-11-28T03:14:21.320Z",
+          "from": "DISCOVERED",
+          "to": "VERIFIED",
+          "actor": "opportunity-scout",
+          "reason": "application_status=OPEN_LIKELY"
+        },
+        {
+          "at": "2026-11-28T03:23:57.314Z",
+          "from": "VERIFIED",
+          "to": "CONTENT_GENERATED",
+          "actor": "validator",
+          "reason": "image and caption produced"
+        },
+        {
+          "at": "2026-11-28T03:23:57.314Z",
+          "from": "CONTENT_GENERATED",
+          "to": "UNDER_REVIEW",
+          "actor": "validator",
+          "reason": "checks PASS_WITH_FLAGS"
+        },
+        {
+          "at": "2026-11-28T03:23:57.529Z",
+          "from": "UNDER_REVIEW",
+          "to": "APPROVED",
+          "actor": "admin:EduCut administrator (auto-approval)",
+          "reason": "approved"
+        },
+        {
+          "at": "2026-11-28T03:23:57.529Z",
+          "from": "APPROVED",
+          "to": "READY_TO_PUBLISH",
+          "actor": "system",
+          "reason": "approved; status re-checked"
+        }
+      ],
+      "offer_number": 811
     }
   },
   "seen_urls": {
@@ -55854,7 +56950,31 @@
     "https://hbku.edu.qa/en/cpp/admission-requirements": "opp_fb31b61c54fae465",
     "https://aas.org/jobregister/ad/07a40dc5": "opp_153666f2220b264d",
     "https://solarnews.aas.org/2026/assistant-professor-position-in-solar-physics-at-the-national-astronomical-observatory-of-japan": "opp_4aece95be67ebd65",
-    "https://nao.ac.jp/en/contents/careers/jobs/20261106-solar-en.pdf": "opp_4aece95be67ebd65"
+    "https://nao.ac.jp/en/contents/careers/jobs/20261106-solar-en.pdf": "opp_4aece95be67ebd65",
+    "https://acu.ac.uk/funding-opportunities/for-students/scholarships/queen-elizabeth-commonwealth-scholarships": "opp_3c8a4ccc9bbb996a",
+    "https://lalorfound.org/postdoctoral-fellowship-program/application-instructions": "opp_f075c8275773d95a",
+    "https://ntu.edu.sg/research/research-careers/lee-kuan-yew-postdoctoral-fellowship-(lkypdf)": "opp_bfdfc0e64ae750df",
+    "https://icj-cij.org/judicial-fellows-program": "opp_17b24697c0fe00c6",
+    "https://hias-hamburg.de/en/fellowship/application": "opp_cae1d1646e24dedf",
+    "https://hias-hamburg.de/en/application": "opp_cae1d1646e24dedf",
+    "https://televisionacademy.com/foundation/programs/internships/summer": "opp_5ca4e05242897850",
+    "https://internship.televisionacademy.com/login": "opp_5ca4e05242897850",
+    "https://daughtersforlife.com/programs/scholarship-2027-2028": "opp_c1caac2a460a0307",
+    "https://gsas.nyu.edu/admissions/financial-aid/falak-sufi-scholarship.html": "opp_d120dc5efb431276",
+    "https://iaca.int/iaca-programmes/open-trainings/regional-summer-academy.html": "opp_4adfffc49c5899af",
+    "https://training.vbc.ac.at/summer-school": "opp_2c9909e2d0561378",
+    "https://training.vbc.ac.at/how-to-apply": "opp_2c9909e2d0561378",
+    "https://afs.org/global-stem/academies": "opp_3aeb88ac4623f0ec",
+    "https://gu.se/en/vacancies": "opp_d29cdcdf8e53da92",
+    "https://gu.se/en/economics/doctoral-studies/application-and-admission": "opp_d29cdcdf8e53da92",
+    "https://nwo.nl/en/news/phds-in-the-humanities-2027-open-for-applications": "opp_549fbc657d050079",
+    "https://nwo.nl/en/calls/phds-in-the-humanities-2027": "opp_549fbc657d050079",
+    "https://massey.ac.nz/study/scholarships-and-awards/the-ryoichi-sasakawa-young-leaders-fellowship-fund-sylff-postgraduate-scholarship": "opp_4dbd0ed7a80ea14a",
+    "https://aparc.fsi.stanford.edu/education/fellowship-and-training-opportunities/contemporary-taiwan-fellowships": "opp_b333a64e7c49599b",
+    "https://asiahouse.org/2026/11/16/applications-now-open-for-the-asia-house-fellowship-2027-2028": "opp_d1a7bb06db3eef2b",
+    "https://asiahouse.org/fellowship-programme": "opp_d1a7bb06db3eef2b",
+    "https://fao.org/srilanka/our-office/employment-and-procurement/en": "opp_3a33e897753b1263",
+    "https://fao.org/employment/young-talent-programme/internship-programme/en": "opp_3a33e897753b1263"
   },
-  "last_offer_number": 810
+  "last_offer_number": 827
 }

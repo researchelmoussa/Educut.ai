@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Scholarship",
+    "evidence_url": "https://daughtersforlife.com/programs/scholarship-2027-2028/",
+    "evidence_quote": "Scholarship"
+  },
+  "institution": {
+    "name": "Daughters for Life Foundation (DFL)",
+    "website": "https://daughtersforlife.com",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://daughtersforlife.com/programs/scholarship-2027-2028/",
+  "source_url": "https://daughtersforlife.com/programs/scholarship-2027-2028/",
+  "source_list_url": "https://fellowshipsguide.com/category/bs-ms-scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": null,
+  "seniority": "Master's students",
+  "qualifications": [
+    "Female student who is a citizen and current resident of a MENA country (dual citizens or residents of countries outside the MENA region are not eligible)",
+    "Demonstrated financial and socio-economic need and commitment to return to the home country after studies",
+    "Minimum GPA of 75% or equivalent, community service or leadership record, and English proficiency for the chosen university",
+    "Offer of admission from a DFL academic partner; applicants must apply to both DFL and the partner university"
+  ],
+  "skills": [],
+  "description_short": "The Daughters for Life Foundation's 2027/2028 scholarship supports women from MENA countries in master's programmes at partner universities, including KU Leuven, the University of Antwerp, Ghent University and the University of the Fraser Valley.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-22T23:59:00-05:00",
+    "timezone": "America/New_York",
+    "evidence_url": "https://daughtersforlife.com/programs/scholarship-2027-2028/",
+    "evidence_quote": "The application portal will close on January 22, 2027. It will not be possible to submit an application after the application close date"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "DFL 2027/2028 scholarship page (seen in search results): 'The application portal will close on January 22, 2027.'",
+    "DFL page (seen in search results): applications received only through the DFL portal; emailed applications are not considered",
+    "DFL homepage (seen in search results) says the 2027/2028 programme is now open",
+    "Deadline 2027-01-22 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the DFL page and portal could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official DFL page, so source_list_url is the closest approved category",
+    "The page title is simply 'Scholarship'; the card should make clear it is the Daughters for Life 2027/2028 scholarship",
+    "The 11:59 PM ET closing time comes from a search summary, not a verbatim quote; only the date is quoted",
+    "The main DFL scholarship page still shows the 2026/27 cycle (January 2026 deadline); the 2027/28 details are on a separate page",
+    "Host countries vary by partner university (Belgium, Canada), so location is null; York University and VUB are also mentioned in some results",
+    "Partner universities may have their own admission deadlines; scholarship coverage not quoted here",
+    "Direct portal link not seen; application_url is the official 2027/2028 scholarship page"
+  ],
+  "discovered_at": "2026-11-28T04:00:00.000Z",
+  "last_verified_at": "2026-11-28T03:04:47.010Z",
+  "id": "opp_c1caac2a460a0307",
+  "fingerprint": "3598723924272b51",
+  "content_hash": "sha256:d7c807b475227404f09c69445b0e7e6226919499dd62da187d48d38a38ec83a8"
+}

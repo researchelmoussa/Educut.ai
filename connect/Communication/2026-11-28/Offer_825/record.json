@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "PhDs in the Humanities 2027",
+    "evidence_url": "https://www.nwo.nl/en/calls/phds-in-the-humanities-2027",
+    "evidence_quote": "PhDs in the Humanities 2027"
+  },
+  "institution": {
+    "name": "Dutch Research Council (NWO)",
+    "website": "https://www.nwo.nl",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.nwo.nl/en/calls/phds-in-the-humanities-2027",
+  "source_url": "https://www.nwo.nl/en/news/phds-in-the-humanities-2027-open-for-applications",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": null,
+    "country": "Netherlands",
+    "country_code": "NL"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Humanities",
+  "seniority": "Prospective PhD candidates (with a supervisor as main applicant)",
+  "qualifications": [
+    "Main discipline and primary research question in the humanities",
+    "Main applicant is the daily supervisor with a tenured or tenure-track position at a participating humanities faculty",
+    "Candidate must complete a (research) master's degree before 1 September 2027 and must not hold or be undertaking a funded PhD",
+    "Only candidates pre-selected by the dean of a participating humanities faculty can be submitted; proposal in English"
+  ],
+  "skills": [],
+  "description_short": "NWO's PhDs in the Humanities 2027 call funds PhD positions at participating humanities faculties. Supervisors apply with candidates pre-selected by their faculty dean; candidates need a (research) master's degree before 1 September 2027.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-16T14:00:00+01:00",
+    "timezone": "CET",
+    "evidence_url": "https://www.nwo.nl/en/news/phds-in-the-humanities-2027-open-for-applications",
+    "evidence_quote": "The deadline for submitting an application is 16 February 2027, 14:00 CET."
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "NWO news item (seen in search results): 'PhDs in the Humanities 2027 open for applications'; 'The deadline for submitting an application is 16 February 2027, 14:00 CET.'",
+    "NWO call page and call-for-proposals PDF (seen in search results) give the same date and hour",
+    "Deadline 2027-02-16 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the NWO pages and submission system could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official pages; the pages could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official NWO pages, so source_list_url is the closest approved category",
+    "Prospective PhD candidates cannot apply alone: the supervisor submits, and faculty pre-selection (with earlier internal deadlines) applies",
+    "Participating universities include institutions in the Netherlands, Aruba, Curaçao and Sint Maarten; city not fixed",
+    "Budget and number of positions not quoted in the description",
+    "The NWO call page omits the CET label that the news page gives"
+  ],
+  "discovered_at": "2026-11-28T04:50:00.000Z",
+  "last_verified_at": "2026-11-28T03:09:59.296Z",
+  "id": "opp_549fbc657d050079",
+  "fingerprint": "64e95c7085d826fd",
+  "content_hash": "sha256:ab38f5cd3fabdd59cfa1a7b33f9860e8e452c1500ae33d7572eaf9f767a00597"
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "phd",
+  "title": {
+    "value": "Up to Six PhD Positions in Economics",
+    "evidence_url": "https://www.gu.se/en/vacancies",
+    "evidence_quote": "Up to Six PhD Positions in Economics"
+  },
+  "institution": {
+    "name": "University of Gothenburg, Department of Economics",
+    "website": "https://www.gu.se",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.gu.se/en/economics/doctoral-studies/application-and-admission",
+  "source_url": "https://www.gu.se/en/vacancies",
+  "source_list_url": "https://mlscientist.com/category/phd-positions/",
+  "location": {
+    "city": "Gothenburg",
+    "country": "Sweden",
+    "country_code": "SE"
+  },
+  "employment_type": "full_time",
+  "work_arrangement": "onsite",
+  "field": "Economics",
+  "seniority": "Doctoral students",
+  "qualifications": [
+    "A master's degree in economics or a related field, such as finance or statistics"
+  ],
+  "skills": [],
+  "description_short": "The University of Gothenburg's Department of Economics advertises up to six PhD positions in Economics (reference PAR 2026/802) for autumn 2027 admission, as fixed-term doctoral employment. Applications go through the university's recruitment system.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-02-01",
+    "timezone": "Europe/Stockholm",
+    "evidence_url": "https://www.gu.se/en/vacancies",
+    "evidence_quote": "Reference no PAR 2026/802 | Application deadline 2027-02-01"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "University of Gothenburg vacancies page (seen in search results): 'Up to Six PhD Positions in Economics', 'Reference no PAR 2026/802 | Application deadline 2027-02-01', fixed-term employment",
+    "Department of Economics admission page (seen in search results) says applications are open with a deadline of February 1st 2027",
+    "Deadline 2027-02-01 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the university pages and recruitment system could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official pages; the pages could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official University of Gothenburg pages, so source_list_url is the closest approved category",
+    "The full advertisement (start date, salary, application documents) was not seen; only the vacancy listing summary",
+    "Direct link to the advertisement in the recruitment system not found; application_url is the department's application-and-admission page",
+    "Do not confuse with the Business Administration PhD call (deadline 1 March 2027)"
+  ],
+  "discovered_at": "2026-11-28T04:40:00.000Z",
+  "last_verified_at": "2026-11-28T03:09:24.556Z",
+  "id": "opp_d29cdcdf8e53da92",
+  "fingerprint": "c1994fa55739039f",
+  "content_hash": "sha256:97b2b1295ea7d07dcce17d05e66f47580a1f6b4acdd78fe8b439c6030ec56c30"
+}

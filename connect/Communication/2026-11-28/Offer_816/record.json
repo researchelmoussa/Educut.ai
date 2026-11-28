@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "internship",
+  "title": {
+    "value": "2027 Summer Internship Program",
+    "evidence_url": "https://www.televisionacademy.com/features/news/foundation-news/2027-summer-internships-release",
+    "evidence_quote": "Foundation Opens Applications for 2027 Summer Internship Program"
+  },
+  "institution": {
+    "name": "Television Academy Foundation",
+    "website": "https://www.televisionacademy.com/foundation",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://internship.televisionacademy.com/login",
+  "source_url": "https://www.televisionacademy.com/foundation/programs/internships/summer",
+  "source_list_url": "https://fellowshipsguide.com/category/internships/",
+  "location": {
+    "city": null,
+    "country": "United States",
+    "country_code": "US"
+  },
+  "employment_type": "internship",
+  "work_arrangement": "unspecified",
+  "field": "Television industry",
+  "seniority": "Undergraduate and graduate students",
+  "qualifications": [
+    "Undergraduate and graduate students enrolled in accredited colleges and universities, as well as students graduating in spring 2027",
+    "A 350-word essay describing what innovation and leadership mean to the applicant",
+    "Video work samples for some categories (e.g. Production, Cinematography)"
+  ],
+  "skills": [],
+  "description_short": "The Television Academy Foundation's 2027 summer internships place enrolled college students in television-industry roles from June 14 to August 6, 2027. Applicants submit a 350-word essay; some categories require video work samples.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-13T17:00:00-08:00",
+    "timezone": "America/Los_Angeles",
+    "evidence_url": "https://internship.televisionacademy.com/login",
+    "evidence_quote": "Wednesday, January 13 at 5:00pm PT"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "Television Academy internship site (seen in search results): deadline 'Wednesday, January 13 at 5:00pm PT'",
+    "Summer Internships page and the Foundation press release (seen in search results) give January 13, 2027 at 5:00 PM PT",
+    "Summer Internships page (seen in search results): 'Summer internships will take place June 14 - August 6, 2027.'",
+    "Deadline 2027-01-13 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the pages could not be loaded from this environment"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official pages; the pages could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on official Television Academy pages, so source_list_url is the closest approved category",
+    "The internship site quote omits the year; the Summer Internships page and the 2027 press release place it in January 2027",
+    "Placements may be in-person, hybrid or remote depending on the opportunity, so work_arrangement and city are unspecified",
+    "Pay and number of internships not quoted here",
+    "Eligibility appears limited to students at U.S. accredited institutions; confirm on the official page"
+  ],
+  "discovered_at": "2026-11-28T03:45:00.000Z",
+  "last_verified_at": "2026-11-28T03:02:48.977Z",
+  "id": "opp_5ca4e05242897850",
+  "fingerprint": "6dcd15f06f4795dc",
+  "content_hash": "sha256:c41945b9e0b7bf2b553b0733cc8ef1d04e04da476318d383206608fe3daee0af"
+}

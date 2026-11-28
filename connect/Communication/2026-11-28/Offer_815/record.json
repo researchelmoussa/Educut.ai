@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "opportunity_type": "scholarship",
+  "title": {
+    "value": "Queen Elizabeth Commonwealth Scholarships",
+    "evidence_url": "https://www.acu.ac.uk/funding-opportunities/for-students/scholarships/queen-elizabeth-commonwealth-scholarships/",
+    "evidence_quote": "The Queen Elizabeth Commonwealth Scholarships (QECS) offer a unique opportunity to study a two-year master's degree in a low or middle-income Commonwealth country."
+  },
+  "institution": {
+    "name": "Association of Commonwealth Universities (ACU)",
+    "website": "https://www.acu.ac.uk",
+    "logo": {
+      "source_url": null,
+      "local_path": null,
+      "license": "unknown",
+      "permission": "not_verified"
+    }
+  },
+  "application_url": "https://www.acu.ac.uk/funding-opportunities/for-students/scholarships/queen-elizabeth-commonwealth-scholarships/",
+  "source_url": "https://www.acu.ac.uk/funding-opportunities/for-students/scholarships/queen-elizabeth-commonwealth-scholarships/",
+  "source_list_url": "https://fellowshipsguide.com/category/scholarships/",
+  "location": {
+    "city": null,
+    "country": null,
+    "country_code": null
+  },
+  "employment_type": "other",
+  "work_arrangement": "onsite",
+  "field": null,
+  "seniority": "Master's students",
+  "qualifications": [
+    "Applicants must also apply for admission to their chosen university course directly with the university, in addition to the QECS application"
+  ],
+  "skills": [],
+  "description_short": "The Association of Commonwealth Universities' Queen Elizabeth Commonwealth Scholarships support study for a two-year master's degree in a low or middle-income Commonwealth country. Applicants apply separately for admission to their chosen university course.",
+  "published_at": null,
+  "deadline": {
+    "value": "2027-01-13T15:00:00+00:00",
+    "timezone": "UTC",
+    "evidence_url": "https://www.acu.ac.uk/funding-opportunities/for-students/scholarships/queen-elizabeth-commonwealth-scholarships/",
+    "evidence_quote": "Applications open: 26 November 2026 Applications close: 13 January 2027, 15:00 UTC"
+  },
+  "compensation": null,
+  "application_status": "OPEN_LIKELY",
+  "status_evidence": [
+    "ACU QECS page (seen in search results): 'Applications open: 26 November 2026 Applications close: 13 January 2027, 15:00 UTC'",
+    "ACU QECS FAQs (seen in search results): extensions will not be granted under any circumstances",
+    "Deadline 2027-01-13 is after 2026-12-18 (today 2026-11-28)",
+    "Status capped at OPEN_LIKELY: the ACU page could not be loaded from this environment and the application portal was not independently confirmed"
+  ],
+  "pipeline_status": "DISCOVERED",
+  "uncertainties": [
+    "Evidence seen through web-search results of the official page; the page itself could not be fetched from this environment",
+    "Approved source lists were unreachable from this environment; found by web search and confirmed on the official ACU page, so source_list_url is the closest approved category",
+    "The ACU funding calendar gives 18 November 2026 as the opening date while the scholarship page says 26 November 2026; the closing date (13 January 2027) agrees",
+    "A second cycle (3 March to 27 April 2027, per the ACU calendar) covers courses starting January-February; this record covers cycle 1",
+    "The eligible host universities, countries of study and applicant eligibility were not quoted here; check the ACU page",
+    "Host country varies by chosen university, so location is null",
+    "The direct application-portal link was not seen; application_url is the official ACU scholarship page",
+    "Scholarship value and coverage not quoted here"
+  ],
+  "discovered_at": "2026-11-28T03:00:00.000Z",
+  "last_verified_at": "2026-11-28T02:56:52.547Z",
+  "id": "opp_3c8a4ccc9bbb996a",
+  "fingerprint": "60a1fd96e2826c16",
+  "content_hash": "sha256:947c3e1ab24e5ad1e413389f77c5556570b024aae221d7d5ce0c8183abe984e1"
+}
